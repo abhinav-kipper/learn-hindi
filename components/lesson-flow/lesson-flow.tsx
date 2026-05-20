@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import Link from 'next/link'
 import { Lesson } from '@/types/lesson'
 import { ProgressDots } from './progress-dots'
 import { SectionIntro } from './section-intro'
@@ -45,6 +46,20 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
     }
   }
 
+  const goTo = (index: number) => {
+    setDirection(index > sectionIndex ? 1 : -1)
+    setSectionIndex(index)
+  }
+
+  const sectionLabels: Record<Section, string> = {
+    intro: 'Intro',
+    phrases: 'Phrases',
+    grammar: 'Grammar',
+    culture: 'Culture',
+    skills: 'Skills',
+    cta: 'Practice',
+  }
+
   const sectionVariants = {
     enter: (d: number) => ({ x: d > 0 ? '100%' : '-100%', opacity: 0 }),
     center: { x: 0, opacity: 1 },
@@ -78,12 +93,40 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
         <button
           onClick={goBack}
           disabled={sectionIndex === 0}
-          className="text-sm text-gray-500 disabled:opacity-0"
+          className="text-sm text-gray-500 disabled:opacity-0 w-12"
         >
-          ← Back
+          ←
         </button>
-        <ProgressDots total={sections.length} current={sectionIndex} />
-        <a href="/" className="text-sm text-gray-500">✕</a>
+        <ProgressDots
+          total={sections.length}
+          current={sectionIndex}
+          onTap={goTo}
+          labels={sections.map(s => sectionLabels[s])}
+        />
+        <a href="/" className="text-sm text-gray-500 w-12 text-right">✕</a>
+      </div>
+
+      {/* Quick action bar */}
+      <div className="flex items-center justify-center gap-3 px-4 py-2">
+        {sections.map((s, i) => (
+          <button
+            key={s}
+            onClick={() => goTo(i)}
+            className={`text-xs px-2.5 py-1 rounded-full transition-all ${
+              i === sectionIndex
+                ? 'bg-indigo-100 text-indigo-700 font-medium'
+                : 'text-gray-400 hover:text-gray-600'
+            }`}
+          >
+            {sectionLabels[s]}
+          </button>
+        ))}
+        <Link
+          href={`/practice/${lesson.id}`}
+          className="text-xs px-3 py-1 rounded-full bg-indigo-500 text-white font-medium ml-1 hover:bg-indigo-600 transition-colors"
+        >
+          💬 Practice
+        </Link>
       </div>
 
       {/* Section content */}

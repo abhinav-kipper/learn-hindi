@@ -79,6 +79,17 @@ export function LessonCard({ lesson, index }: LessonCardProps) {
                 </span>
               ))}
             </div>
+
+            {/* Quick actions */}
+            <div className="flex gap-2 mt-4">
+              <Link
+                href={`/practice/${lesson.id}`}
+                onClick={(e) => e.stopPropagation()}
+                className="text-xs px-3 py-1.5 rounded-full bg-indigo-500 text-white font-medium hover:bg-indigo-600 transition-colors"
+              >
+                💬 Practice
+              </Link>
+            </div>
           </div>
         </div>
       </Link>

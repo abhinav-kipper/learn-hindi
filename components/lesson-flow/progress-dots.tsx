@@ -3,21 +3,25 @@
 interface ProgressDotsProps {
   total: number
   current: number
+  onTap?: (index: number) => void
+  labels?: string[]
 }
 
-export function ProgressDots({ total, current }: ProgressDotsProps) {
+export function ProgressDots({ total, current, onTap, labels }: ProgressDotsProps) {
   return (
-    <div className="flex items-center gap-1.5">
+    <div className="flex items-center gap-1">
       {Array.from({ length: total }).map((_, i) => (
-        <div
+        <button
           key={i}
-          className={`h-1.5 rounded-full transition-all duration-300 ${
+          onClick={() => onTap?.(i)}
+          className={`rounded-full transition-all duration-300 ${
             i === current
-              ? 'w-6 bg-indigo-500'
+              ? 'h-2 w-8 bg-indigo-500'
               : i < current
-              ? 'w-1.5 bg-indigo-300'
-              : 'w-1.5 bg-gray-300'
+              ? 'h-2 w-2 bg-indigo-300'
+              : 'h-2 w-2 bg-gray-300'
           }`}
+          aria-label={labels?.[i] || `Section ${i + 1}`}
         />
       ))}
     </div>
