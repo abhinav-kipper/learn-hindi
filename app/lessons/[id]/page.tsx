@@ -22,22 +22,22 @@ export default async function LessonPage({ params }: LessonPageProps) {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       <div>
-        <Link href="/" className="text-sm text-orange-600 hover:text-orange-700">
+        <Link href="/" className="text-sm text-indigo-500 hover:text-indigo-600 font-medium transition-colors">
           ← Back to lessons
         </Link>
-        <h1 className="text-2xl font-bold text-gray-900 mt-2">{lesson.title}</h1>
+        <h1 className="text-2xl font-extrabold text-slate-900 mt-3 tracking-tight">{lesson.title}</h1>
       </div>
 
-      <div className="p-4 bg-orange-50 rounded-xl border border-orange-200">
-        <p className="text-sm font-medium text-orange-700 mb-1">The Situation</p>
-        <p className="text-gray-800">{lesson.situation}</p>
+      <div className="p-5 bg-gradient-to-br from-indigo-50 to-violet-50 rounded-2xl border border-indigo-100">
+        <p className="text-xs font-semibold text-indigo-600 uppercase tracking-wide mb-1.5">The Situation</p>
+        <p className="text-slate-700 leading-relaxed">{lesson.situation}</p>
       </div>
 
       <div>
-        <h2 className="text-lg font-bold text-gray-900 mb-3">Key Phrases</h2>
-        <div className="space-y-2">
+        <h2 className="text-lg font-bold text-slate-900 mb-4">Key Phrases</h2>
+        <div className="space-y-2.5">
           {lesson.phrases.map((phrase, index) => (
             <PhraseCard key={index} phrase={phrase} index={index} />
           ))}
@@ -46,12 +46,12 @@ export default async function LessonPage({ params }: LessonPageProps) {
 
       {lesson.grammar_notes.length > 0 && (
         <div>
-          <h2 className="text-lg font-bold text-gray-900 mb-3">Grammar Notes</h2>
-          <ul className="space-y-2">
+          <h2 className="text-lg font-bold text-slate-900 mb-3">Grammar Notes</h2>
+          <ul className="space-y-2.5">
             {lesson.grammar_notes.map((note, index) => (
-              <li key={index} className="flex gap-2 text-sm text-gray-700">
-                <span className="text-orange-400">•</span>
-                {note}
+              <li key={index} className="flex gap-3 text-sm text-slate-600 leading-relaxed">
+                <span className="text-indigo-400 font-bold mt-0.5">•</span>
+                <span>{note}</span>
               </li>
             ))}
           </ul>
@@ -60,12 +60,12 @@ export default async function LessonPage({ params }: LessonPageProps) {
 
       {lesson.culture_notes.length > 0 && (
         <div>
-          <h2 className="text-lg font-bold text-gray-900 mb-3">Culture Tips</h2>
-          <ul className="space-y-2">
+          <h2 className="text-lg font-bold text-slate-900 mb-3">Culture Tips</h2>
+          <ul className="space-y-2.5">
             {lesson.culture_notes.map((note, index) => (
-              <li key={index} className="flex gap-2 text-sm text-gray-700">
-                <span className="text-amber-500">💡</span>
-                {note}
+              <li key={index} className="flex gap-3 text-sm text-slate-600 leading-relaxed">
+                <span className="mt-0.5">💡</span>
+                <span>{note}</span>
               </li>
             ))}
           </ul>
@@ -73,18 +73,18 @@ export default async function LessonPage({ params }: LessonPageProps) {
       )}
 
       <div>
-        <h2 className="text-lg font-bold text-gray-900 mb-3">Skills You&apos;re Learning</h2>
-        <div className="space-y-2">
+        <h2 className="text-lg font-bold text-slate-900 mb-3">Skills You&apos;re Learning</h2>
+        <div className="space-y-2.5">
           {lesson.skill_breakdown.map((skill, index) => (
             <SkillBreakdown key={index} skill={skill} />
           ))}
         </div>
       </div>
 
-      <div className="flex flex-col gap-3 pt-4 border-t border-gray-200">
+      <div className="flex flex-col gap-3 pt-6 border-t border-slate-200">
         <Link
           href={`/practice/${lesson.id}`}
-          className="block w-full text-center py-3 px-4 bg-orange-500 text-white font-semibold rounded-xl hover:bg-orange-600 transition-colors"
+          className="block w-full text-center py-3.5 px-4 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl hover:from-indigo-600 hover:to-violet-600 transition-all duration-200 shadow-md shadow-indigo-200"
         >
           Practice This Lesson →
         </Link>

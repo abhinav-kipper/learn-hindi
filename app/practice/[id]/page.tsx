@@ -1,8 +1,9 @@
 'use client'
 
-import { useState, useEffect, useRef, useCallback, FormEvent, ChangeEvent } from 'react'
+import { useState, useEffect, useRef, useCallback, useMemo, FormEvent, ChangeEvent } from 'react'
 import { use } from 'react'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import { ChatMessage } from '@/components/chat-message'
 import { incrementPracticeCount } from '@/lib/progress'
 
@@ -20,6 +21,7 @@ function useChat({ api, body }: { api: string; body: Record<string, unknown> }) 
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleInputChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value)
@@ -29,6 +31,8 @@ function useChat({ api, body }: { api: string; body: Record<string, unknown> }) 
     async (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault()
       if (!input.trim() || isLoading) return
+
+      setError(null)
 
       const userMessage: Message = {
         id: Date.now().toString(),
@@ -51,8 +55,13 @@ function useChat({ api, body }: { api: string; body: Record<string, unknown> }) 
           }),
         })
 
-        if (!response.ok || !response.body) {
-          throw new Error('Failed to fetch response')
+        if (!response.ok) {
+          const errorText = await response.text()
+          throw new Error(errorText || `Server error: ${response.status}`)
+        }
+
+        if (!response.body) {
+          throw new Error('No response body')
         }
 
         const assistantId = (Date.now() + 1).toString()
@@ -81,6 +90,8 @@ function useChat({ api, body }: { api: string; body: Record<string, unknown> }) 
         }
       } catch (err) {
         console.error('Chat error:', err)
+        const errorMessage = err instanceof Error ? err.message : 'Something went wrong'
+        setError(errorMessage)
         setMessages((prev) => [
           ...prev,
           {
@@ -96,16 +107,18 @@ function useChat({ api, body }: { api: string; body: Record<string, unknown> }) 
     [input, isLoading, messages, api, body]
   )
 
-  return { messages, input, handleInputChange, handleSubmit, isLoading }
+  return { messages, input, handleInputChange, handleSubmit, isLoading, error }
 }
 
 export default function PracticePage({ params }: PracticePageProps) {
   const { id } = use(params)
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
-  const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({
+  const body = useMemo(() => ({ lessonId: id }), [id])
+
+  const { messages, input, handleInputChange, handleSubmit, isLoading, error } = useChat({
     api: '/api/chat',
-    body: { lessonId: id },
+    body,
   })
 
   useEffect(() => {
@@ -119,23 +132,28 @@ export default function PracticePage({ params }: PracticePageProps) {
   return (
     <div className="flex flex-col h-[calc(100vh-3rem)]">
       {/* Header */}
-      <div className="flex items-center justify-between pb-3 border-b border-gray-200">
+      <div className="flex items-center justify-between pb-4 border-b border-slate-200">
         <Link
           href={`/lessons/${id}`}
-          className="text-sm text-orange-600 hover:text-orange-700"
+          className="text-sm text-indigo-500 hover:text-indigo-600 font-medium transition-colors"
         >
           ← Back to lesson
         </Link>
-        <span className="text-sm font-medium text-gray-500">Practice Mode</span>
+        <span className="text-xs font-semibold text-slate-400 uppercase tracking-wide">Practice Mode</span>
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto py-4 space-y-3">
+      <div className="flex-1 overflow-y-auto py-5 space-y-3">
         {messages.length === 0 && (
-          <div className="text-center text-gray-400 text-sm mt-8">
-            <p>Start typing to begin practicing!</p>
-            <p className="mt-1">Write in romanized Hindi or English.</p>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="text-center text-slate-400 text-sm mt-12"
+          >
+            <p className="font-medium">Start typing to begin practicing!</p>
+            <p className="mt-1.5 text-slate-300">Write in romanized Hindi or English.</p>
+          </motion.div>
         )}
         {messages.map((message) => (
           <ChatMessage
@@ -145,17 +163,26 @@ export default function PracticePage({ params }: PracticePageProps) {
           />
         ))}
         {isLoading && messages[messages.length - 1]?.role !== 'assistant' && (
-          <div className="flex justify-start">
-            <div className="bg-white border border-gray-200 px-4 py-3 rounded-2xl rounded-bl-md">
-              <span className="text-gray-400 text-sm">Typing...</span>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="flex justify-start"
+          >
+            <div className="bg-white border border-slate-200 px-4 py-3 rounded-2xl rounded-bl-md shadow-sm">
+              <span className="text-slate-400 text-sm">Typing...</span>
             </div>
+          </motion.div>
+        )}
+        {error && (
+          <div className="text-center text-xs text-red-500 mt-2">
+            {error}
           </div>
         )}
         <div ref={messagesEndRef} />
       </div>
 
       {/* Input */}
-      <div className="pt-3 border-t border-gray-200">
+      <div className="pt-4 border-t border-slate-200">
         <form onSubmit={handleSubmit} className="flex gap-2">
           <input
             type="text"
@@ -163,12 +190,12 @@ export default function PracticePage({ params }: PracticePageProps) {
             onChange={handleInputChange}
             placeholder="Type in Hindi (roman) or English..."
             disabled={isLoading}
-            className="flex-1 px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-orange-400 text-sm disabled:opacity-50"
+            className="flex-1 px-4 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 text-sm disabled:opacity-50 transition-all duration-200"
           />
           <button
             type="submit"
             disabled={isLoading || !input.trim()}
-            className="px-4 py-3 bg-orange-500 text-white rounded-xl font-medium hover:bg-orange-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="px-5 py-3 bg-gradient-to-r from-indigo-500 to-violet-500 text-white rounded-xl font-semibold hover:from-indigo-600 hover:to-violet-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-sm"
           >
             Send
           </button>
