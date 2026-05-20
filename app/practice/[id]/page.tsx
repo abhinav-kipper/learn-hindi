@@ -5,6 +5,7 @@ import { use } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ChatMessage } from '@/components/chat-message'
+import { VoiceButton } from '@/components/voice-button'
 import { incrementPracticeCount } from '@/lib/progress'
 
 interface Message {
@@ -107,7 +108,7 @@ function useChat({ api, body }: { api: string; body: Record<string, unknown> }) 
     [input, isLoading, messages, api, body]
   )
 
-  return { messages, input, handleInputChange, handleSubmit, isLoading, error }
+  return { messages, input, setInput, handleInputChange, handleSubmit, isLoading, error }
 }
 
 export default function PracticePage({ params }: PracticePageProps) {
@@ -116,10 +117,14 @@ export default function PracticePage({ params }: PracticePageProps) {
 
   const body = useMemo(() => ({ lessonId: id }), [id])
 
-  const { messages, input, handleInputChange, handleSubmit, isLoading, error } = useChat({
+  const { messages, input, setInput, handleInputChange, handleSubmit, isLoading, error } = useChat({
     api: '/api/chat',
     body,
   })
+
+  const handleTranscript = useCallback((text: string) => {
+    setInput(text)
+  }, [setInput])
 
   useEffect(() => {
     incrementPracticeCount()
@@ -192,6 +197,7 @@ export default function PracticePage({ params }: PracticePageProps) {
             disabled={isLoading}
             className="flex-1 px-4 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 text-sm disabled:opacity-50 transition-all duration-200"
           />
+          <VoiceButton onTranscript={handleTranscript} disabled={isLoading} />
           <button
             type="submit"
             disabled={isLoading || !input.trim()}
