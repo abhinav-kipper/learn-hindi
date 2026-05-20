@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { InstallPrompt } from '@/components/install-prompt'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -36,6 +37,7 @@ export default function RootLayout({
         <main className="max-w-md mx-auto px-4 py-6">
           {children}
         </main>
+        <InstallPrompt />
       </body>
     </html>
   )
