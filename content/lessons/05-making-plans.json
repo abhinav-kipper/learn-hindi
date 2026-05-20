@@ -1,0 +1,54 @@
+{
+  "id": "making-plans",
+  "title": "Making Plans with Friends",
+  "situation": "It's Thursday evening and you're trying to make weekend plans with your friend group chat.",
+  "skills": ["future tense (ga/ge/gi)", "conditional (agar...toh)", "suggestions & invitations"],
+  "phrases": [
+    { "hindi": "yaar weekend pe kuch karte hain?", "english": "Dude shall we do something this weekend?", "context": "'kuch karte hain' = let's do something — casual suggestion" },
+    { "hindi": "agar Saturday free ho toh chalein kahin?", "english": "If you're free Saturday then shall we go somewhere?", "context": "'agar...toh' = if...then — conditional structure" },
+    { "hindi": "main toh aa jaunga, tum batao", "english": "I'll definitely come, you guys say", "context": "'toh' here = definitely/for sure. 'tum batao' = you decide" },
+    { "hindi": "Connaught Place chalein? wahan naya restaurant khula hai", "english": "Shall we go to CP? A new restaurant opened there", "context": "'chalein' = shall we go (inclusive suggestion)" },
+    { "hindi": "done, 7 baje milte hain metro pe", "english": "Done, let's meet at 7 at the metro", "context": "'baje' = o'clock, 'milte hain' = let's meet" },
+    { "hindi": "late mat hona, pichli baar ek ghanta wait kiya tha", "english": "Don't be late, last time I waited one hour", "context": "Friendly warning — totally normal among friends" }
+  ],
+  "grammar_notes": [
+    "Future tense: verb root + unga/ega/ogi/enge etc. 'Main jaunga' = I will go (male). 'Main jaungi' = I will go (female)",
+    "'Chalein?' = shall we go? — the 'ein' ending makes it a suggestion for 'we'",
+    "'Baje' = o'clock. 'Saat baje' = at 7. 'Kitne baje?' = what time?"
+  ],
+  "culture_notes": [
+    "Plans in India are fluid — 'pakka' (confirmed) vs 'dekhte hain' (let's see = probably no)",
+    "Being 15-30 min late is culturally normal among friends — but don't admit that to anyone",
+    "'IST' joke = Indian Stretchable Time"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "future tense (ga/ge/gi)",
+      "explanation": "Verb root + suffixes based on gender/person. Male 'I': -unga (jaunga). Female 'I': -ungi (jaungi). 'You/He': -ega (jayega). 'She': -egi (jayegi). 'We/They/Respect': -enge (jayenge).",
+      "more_examples": [
+        { "hindi": "kal main call karunga", "english": "I'll call tomorrow (male)" },
+        { "hindi": "woh aayegi kya?", "english": "will she come?" },
+        { "hindi": "hum sab chalenge", "english": "we'll all go" }
+      ]
+    },
+    {
+      "skill": "conditional (agar...toh)",
+      "explanation": "'Agar' = if, 'toh' = then. Structure: agar + condition + toh + result. 'Toh' is often dropped in casual speech. You can also start with the condition and just add 'toh'.",
+      "more_examples": [
+        { "hindi": "agar baarish hui toh cancel", "english": "if it rains then cancelled" },
+        { "hindi": "time ho toh bata dena", "english": "if you have time then let me know" },
+        { "hindi": "mood ho toh aa jaana", "english": "if you feel like it then come over" }
+      ]
+    },
+    {
+      "skill": "suggestions & invitations",
+      "explanation": "'Chalein?' (shall we go?), 'karte hain' (let's do it), 'aa jao' (come over), 'chalo' (let's go/come on). These are the building blocks of all plans.",
+      "more_examples": [
+        { "hindi": "movie dekhein?", "english": "shall we watch a movie?" },
+        { "hindi": "ghar pe aao, kuch khate hain", "english": "come home, let's eat something" },
+        { "hindi": "chalo yaar, ho jayega", "english": "come on dude, it'll be fine" }
+      ]
+    }
+  ],
+  "practice_prompt": "It's Friday. You want to go to a new cafe in Hauz Khas Village this Saturday with friends. One friend is saying 'dekhte hain' (non-committal). Try to make a firm plan — suggest a time, a meeting point, and convince the reluctant friend."
+}

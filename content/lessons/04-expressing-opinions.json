@@ -1,0 +1,52 @@
+{
+  "id": "expressing-opinions",
+  "title": "Expressing Opinions",
+  "situation": "You just watched a Bollywood movie with friends and everyone's sharing their take on it.",
+  "skills": ["past tense (tha/thi/the)", "lagta hai pattern", "agreement & disagreement"],
+  "phrases": [
+    { "hindi": "mujhe toh acchi lagi", "english": "I liked it though", "context": "'mujhe lagta/lagi' = I feel/felt — your go-to opinion structure" },
+    { "hindi": "yaar, first half boring tha na?", "english": "Dude, the first half was boring right?", "context": "'tha' = was (masculine). Seeking agreement with 'na?'" },
+    { "hindi": "haan but end mein twist tha, woh mast tha", "english": "Yeah but there was a twist at the end, that was cool", "context": "'mast' = cool/awesome (Mumbai slang, used everywhere now)" },
+    { "hindi": "mujhe nahi lagta ki itni acchi thi", "english": "I don't think it was that good", "context": "Polite disagreement — 'mujhe nahi lagta' = I don't feel/think" },
+    { "hindi": "acting toh kamaal thi lekin story weak thi", "english": "The acting was amazing though but story was weak", "context": "'toh' emphasizes, 'lekin' = but — natural contrast structure" }
+  ],
+  "grammar_notes": [
+    "Past tense uses 'tha/thi/the': masculine singular = tha, feminine singular = thi, plural = the",
+    "'Mujhe lagta hai' = I think/feel (present). 'Mujhe laga' = I felt (past)",
+    "'toh' adds emphasis to whatever comes before it — 'woh toh accha tha' = that WAS good"
+  ],
+  "culture_notes": [
+    "Indians are very expressive about movies — strong opinions are expected and fun",
+    "Using English words mixed in ('boring', 'twist', 'acting') is totally normal in Hindi conversation"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "past tense (tha/thi/the)",
+      "explanation": "Simple past: was/were. Masculine = tha, Feminine = thi, Plural/Respect = the. Matches the SUBJECT not the speaker. 'Film acchi thi' (film=feminine, so thi).",
+      "more_examples": [
+        { "hindi": "kal bahut maza aaya", "english": "yesterday was great fun (maza=masc)" },
+        { "hindi": "party mein kaun kaun tha?", "english": "who all were at the party?" },
+        { "hindi": "khana accha tha", "english": "the food was good (khana=masc)" }
+      ]
+    },
+    {
+      "skill": "lagta hai pattern",
+      "explanation": "'Lagta hai' = it seems/I think. Most natural way to express opinions. Structure: mujhe + [adjective] + lagta/lagti + hai. Past: mujhe + [adjective] + laga/lagi.",
+      "more_examples": [
+        { "hindi": "mujhe lagta hai woh sahi bol raha hai", "english": "I think he's speaking right" },
+        { "hindi": "tumhe kaisa laga?", "english": "how did you find it? (what did you feel?)" },
+        { "hindi": "mujhe boring laga", "english": "I found it boring" }
+      ]
+    },
+    {
+      "skill": "agreement & disagreement",
+      "explanation": "Agree: 'haan bilkul' (yes absolutely), 'sahi baat hai' (that's right), 'ekdum' (exactly). Disagree politely: 'mujhe nahi lagta' (I don't think so), 'haan lekin...' (yeah but...), 'ho sakta hai par...' (could be but...).",
+      "more_examples": [
+        { "hindi": "bilkul sahi kaha", "english": "absolutely right (you said it)" },
+        { "hindi": "nahi yaar, aisa nahi hai", "english": "no dude, it's not like that" },
+        { "hindi": "ho sakta hai, par mujhe alag laga", "english": "could be, but I felt differently" }
+      ]
+    }
+  ],
+  "practice_prompt": "You and a friend just watched 'Animal' on Netflix. You thought it was too long but the acting was great. Your friend loved everything about it. Discuss the movie — share your opinion, agree on some things, politely disagree on others."
+}

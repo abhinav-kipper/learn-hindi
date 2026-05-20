@@ -1,0 +1,54 @@
+{
+  "id": "giving-directions",
+  "title": "Giving & Asking Directions",
+  "situation": "A lost person stops you near a market and asks how to get to the nearest metro station.",
+  "skills": ["postpositions (mein/pe/ke paas)", "location vocabulary", "sequential instructions"],
+  "phrases": [
+    { "hindi": "bhaiya, metro station kidhar hai?", "english": "Brother, where's the metro station?", "context": "'kidhar' = where (direction). More casual than 'kahan'" },
+    { "hindi": "seedha jaiye, phir left le lena", "english": "Go straight, then take a left", "context": "'seedha' = straight, 'le lena' = take (direction)" },
+    { "hindi": "woh red light ke baad, right side mein hai", "english": "It's after the red light, on the right side", "context": "'ke baad' = after, 'mein' = in/on" },
+    { "hindi": "yahan se paanch minute mein pahunch jaoge", "english": "You'll reach in 5 minutes from here", "context": "'pahunch jaoge' = you'll reach — reassuring" },
+    { "hindi": "uss building ke saamne hai, miss nahi hoga", "english": "It's in front of that building, you won't miss it", "context": "'ke saamne' = in front of. 'miss nahi hoga' = can't miss it" },
+    { "hindi": "kisi se bhi pooch lena, sab ko pata hai", "english": "Just ask anyone, everyone knows", "context": "Common Indian ending to directions — ask around!" }
+  ],
+  "grammar_notes": [
+    "Hindi uses postpositions (come AFTER the noun): 'ghar mein' = in the house, 'station ke paas' = near the station",
+    "'ke' connects nouns to postpositions: 'market ke saamne' = in front of market",
+    "'le lena' (take), 'mud jaana' (turn) — compound verbs for directions"
+  ],
+  "culture_notes": [
+    "Indians give directions using landmarks, not street names: 'gol chakkar ke baad' (after the roundabout)",
+    "Everyone will help with directions — sometimes even if they don't know the way",
+    "'Thoda aage' (a little ahead) can mean anywhere from 100m to 2km"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "postpositions (mein/pe/ke paas)",
+      "explanation": "Unlike English prepositions (in, on, at) that come BEFORE nouns, Hindi postpositions come AFTER. Key ones: mein (in/inside), pe/par (on/at), ke paas (near), ke saamne (in front of), ke peeche (behind), ke upar (above), ke neeche (below).",
+      "more_examples": [
+        { "hindi": "bag mein rakh do", "english": "put it in the bag" },
+        { "hindi": "table pe hai", "english": "it's on the table" },
+        { "hindi": "mere ghar ke paas ek park hai", "english": "there's a park near my house" }
+      ]
+    },
+    {
+      "skill": "location vocabulary",
+      "explanation": "seedha (straight), left/right (same in Hindi), aage (ahead), peeche (behind), yahan (here), wahan (there), idhar (this side), udhar (that side), andar (inside), bahar (outside).",
+      "more_examples": [
+        { "hindi": "thoda aage jaao", "english": "go a little ahead" },
+        { "hindi": "andar aao", "english": "come inside" },
+        { "hindi": "bahar khade raho", "english": "stand outside" }
+      ]
+    },
+    {
+      "skill": "sequential instructions",
+      "explanation": "'Pehle' (first), 'phir' (then), 'uske baad' (after that), 'last mein' (finally). Chain these to give step-by-step instructions. Each step: direction + landmark.",
+      "more_examples": [
+        { "hindi": "pehle seedha jao, phir signal pe left", "english": "first go straight, then left at the signal" },
+        { "hindi": "uske baad ek chemist dikhega, wahan se right", "english": "after that you'll see a chemist, turn right from there" },
+        { "hindi": "bas, pahunch gaye", "english": "that's it, you've arrived" }
+      ]
+    }
+  ],
+  "practice_prompt": "Someone stops you outside Lajpat Nagar market asking for directions to the Lajpat Nagar metro station. You know it's about 10 minutes walking — go straight, cross the main road at the signal, then it's on the left side after a big Haldiram's restaurant. Give them directions using landmarks."
+}

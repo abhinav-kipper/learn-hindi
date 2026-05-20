@@ -1,0 +1,54 @@
+{
+  "id": "auto-negotiation",
+  "title": "Arguing with an Auto Driver",
+  "situation": "You're outside a metro station and need to get to Hauz Khas. The auto driver wants 200 rupees for a 50-rupee ride.",
+  "skills": ["present continuous tense", "imperative mood", "negotiation softeners"],
+  "phrases": [
+    { "hindi": "bhaiya, Hauz Khas chaloge?", "english": "Brother, will you go to Hauz Khas?", "context": "'bhaiya' (brother) is how you address auto/taxi drivers" },
+    { "hindi": "arey, do sau? itna zyada kyun?", "english": "Come on, 200? Why so much?", "context": "Show disbelief at the price — standard opening move" },
+    { "hindi": "meter se chalo na bhaiya", "english": "Go by meter please, brother", "context": "'na' at end = please/softener. Makes demands polite." },
+    { "hindi": "sau mein chalo, zyada nahi dunga", "english": "Go for 100, I won't give more", "context": "Final offer stance — firm but not rude" },
+    { "hindi": "chodo, doosra auto dekh leta hoon", "english": "Forget it, I'll find another auto", "context": "The walk-away — most effective negotiation tool" },
+    { "hindi": "theek hai, chal baith ja", "english": "Fine, come sit", "context": "What the driver says when he agrees — you won!" }
+  ],
+  "grammar_notes": [
+    "'na' at the end of any sentence softens it — 'chalo' (go!) vs 'chalo na' (please go)",
+    "'dunga/dungi' = I will give (male/female speaker)",
+    "'chaloge?' = will you go? — future tense with polite 'ge' ending"
+  ],
+  "culture_notes": [
+    "Always negotiate BEFORE sitting in the auto",
+    "Saying 'meter se chalo' is your right but most drivers refuse — so negotiate a fair price",
+    "Walking away is the strongest move — they'll often call you back"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "present continuous tense",
+      "explanation": "Structure: verb root + raha/rahe/rahi + hoon/hai/ho/hain. Gender matters: male = raha, female = rahi, plural/respectful = rahe.",
+      "more_examples": [
+        { "hindi": "main ja raha hoon", "english": "I am going (male speaker)" },
+        { "hindi": "tum kya kar rahe ho?", "english": "what are you doing?" },
+        { "hindi": "woh bol rahi hai", "english": "she is saying" }
+      ]
+    },
+    {
+      "skill": "imperative mood",
+      "explanation": "Giving commands/requests. 'Tu' form: verb root (ja!). 'Tum' form: root + o (jao). 'Aap' form: root + iye (jaiye). Add 'na' to soften any of them.",
+      "more_examples": [
+        { "hindi": "idhar aao", "english": "come here (to a peer)" },
+        { "hindi": "zara suno na", "english": "listen for a sec, please" },
+        { "hindi": "baitho baitho", "english": "sit sit (casual, welcoming)" }
+      ]
+    },
+    {
+      "skill": "negotiation softeners",
+      "explanation": "Hindi has many ways to be firm but polite: 'na' (please), 'yaar' (dude/friend), 'bhaiya/didi' (brother/sister), 'zara' (just/a little). Stack them to sound natural.",
+      "more_examples": [
+        { "hindi": "thoda kam karo na yaar", "english": "reduce it a bit please dude" },
+        { "hindi": "bhaiya, itna toh mat bolo", "english": "brother, don't ask that much at least" },
+        { "hindi": "zara dekhiye na", "english": "just look at it please (polite)" }
+      ]
+    }
+  ],
+  "practice_prompt": "You're outside Saket metro station. You need to get to Select Citywalk mall (5 min drive). An auto driver says 150 rupees. You know it should be 40-50. Negotiate him down — use 'bhaiya', 'na', try the walk-away if needed."
+}

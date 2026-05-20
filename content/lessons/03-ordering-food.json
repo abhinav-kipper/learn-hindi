@@ -1,0 +1,54 @@
+{
+  "id": "ordering-food",
+  "title": "Ordering Chai & Street Food",
+  "situation": "You're at a roadside chai stall with a friend. You want chai and some snacks.",
+  "skills": ["quantities & numbers", "wala constructions", "polite requests"],
+  "phrases": [
+    { "hindi": "bhaiya, do chai dena", "english": "Brother, give two teas", "context": "'dena' = give — basic way to order anything" },
+    { "hindi": "elaichi wali chai milegi?", "english": "Will I get cardamom tea?", "context": "'wali' = the one with — incredibly versatile word" },
+    { "hindi": "ek plate momos bhi laga do", "english": "Put one plate of momos too", "context": "'laga do' = serve/put — common at food stalls" },
+    { "hindi": "cheeni kam rakhna", "english": "Keep less sugar", "context": "'kam' = less, 'zyada' = more — customize any order" },
+    { "hindi": "kitne hue bhaiya?", "english": "How much total, brother?", "context": "Ask this when you're done — means 'what's the bill?'" },
+    { "hindi": "chhutta hai?", "english": "Do you have change?", "context": "Always ask before handing a big note" }
+  ],
+  "grammar_notes": [
+    "'dena' (give) is the universal ordering verb at food stalls",
+    "'milega/milegi?' = will I get? (male/female noun) — polite way to ask availability",
+    "Numbers: ek (1), do (2), teen (3), chaar (4), paanch (5)"
+  ],
+  "culture_notes": [
+    "At street stalls, you don't wait to be served — just call out your order",
+    "Chai is always shared — offering chai = offering friendship",
+    "'Cutting chai' in Mumbai = half cup, perfect for a quick break"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "quantities & numbers",
+      "explanation": "Basic numbers: ek(1), do(2), teen(3), chaar(4), paanch(5), chhe(6), saat(7), aath(8), nau(9), das(10). For ordering: number + item + dena.",
+      "more_examples": [
+        { "hindi": "teen samose dena", "english": "give three samosas" },
+        { "hindi": "do plate laga do", "english": "serve two plates" },
+        { "hindi": "ek aur dena", "english": "give one more" }
+      ]
+    },
+    {
+      "skill": "wala constructions",
+      "explanation": "'Wala/wali/wale' = the one who/which/with. Attach to anything: noun+wala = the one with that thing. Incredibly flexible — you can describe anything.",
+      "more_examples": [
+        { "hindi": "paneer wala burger", "english": "the paneer burger (the burger with paneer)" },
+        { "hindi": "woh red wali building", "english": "that red building" },
+        { "hindi": "auto wala", "english": "the auto guy" }
+      ]
+    },
+    {
+      "skill": "polite requests",
+      "explanation": "'Dena' (give), 'rakhna' (keep), 'banana' (make) — use these verb roots + what you want. Add 'zara' (just/please) for extra politeness.",
+      "more_examples": [
+        { "hindi": "zara pani dena", "english": "give some water please" },
+        { "hindi": "mirchi mat rakhna", "english": "don't put chili" },
+        { "hindi": "thoda aur garam karo", "english": "heat it up a bit more" }
+      ]
+    }
+  ],
+  "practice_prompt": "You're at a chai stall near your office. You want one special chai (less sugar, extra ginger) and one plate of bread pakora. Your friend wants cold coffee. Order for both of you, ask the price, and deal with the guy not having change for 500 rupees."
+}

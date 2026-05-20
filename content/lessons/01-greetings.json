@@ -1,0 +1,43 @@
+{
+  "id": "greetings",
+  "title": "Greetings & Fillers",
+  "situation": "You're meeting your friend's Indian roommate for the first time at a house party",
+  "skills": ["interjections & fillers", "informal pronouns (tu/tum/aap)", "casual greetings"],
+  "phrases": [
+    { "hindi": "arey, kya haal hai?", "english": "Hey, how's it going?", "context": "'arey' is a casual attention-getter, like 'hey' or 'oh'" },
+    { "hindi": "sab badhiya? tum kya karte ho?", "english": "All good? What do you do?", "context": "'tum' is informal 'you' — use with peers/friends" },
+    { "hindi": "accha accha, matlab tum yahan naye ho?", "english": "Oh I see, so you're new here?", "context": "'accha' repeated = processing info. 'matlab' = 'so/meaning'" },
+    { "hindi": "haan yaar, chal milte hain phir", "english": "Yeah dude, let's catch up again", "context": "'yaar' = friend/dude. 'phir' = again/later" },
+    { "hindi": "koi baat nahi, hota hai", "english": "No worries, it happens", "context": "Universal reassurance phrase — use it everywhere" }
+  ],
+  "grammar_notes": [
+    "'arey' can express surprise, frustration, or just get attention depending on tone",
+    "'accha' alone means 'good' but repeated or with rising tone means 'oh really?'",
+    "'matlab' is a filler that means 'meaning/like/basically' — overuse it to sound natural"
+  ],
+  "culture_notes": [
+    "Indians often ask personal questions quickly (job, marriage) — it's friendly, not rude",
+    "'Tum' vs 'Aap': Use 'aap' for elders/strangers, 'tum' for friends/peers, 'tu' only for very close friends or when angry"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "interjections & fillers",
+      "explanation": "Hindi conversations are full of fillers: 'arey' (hey/oh), 'accha' (I see/okay), 'matlab' (meaning/like), 'bas' (that's it), 'yaar' (dude). They make you sound natural.",
+      "more_examples": [
+        { "hindi": "arey wah!", "english": "oh wow!" },
+        { "hindi": "bas bas, samajh gaya", "english": "okay okay, I got it" },
+        { "hindi": "matlab, kaise bolu...", "english": "like, how do I say this..." }
+      ]
+    },
+    {
+      "skill": "informal pronouns (tu/tum/aap)",
+      "explanation": "'Tu' = very intimate/rude, 'Tum' = friendly/casual, 'Aap' = respectful/formal. Verb changes with each: tu karta hai, tum karte ho, aap karte hain.",
+      "more_examples": [
+        { "hindi": "tum kahan se ho?", "english": "where are you from? (friendly)" },
+        { "hindi": "aap kaise hain?", "english": "how are you? (respectful)" },
+        { "hindi": "tu pagal hai kya?", "english": "are you crazy? (very informal)" }
+      ]
+    }
+  ],
+  "practice_prompt": "You just arrived at a friend's house party. You see someone new sitting on the couch. Start a casual conversation — introduce yourself, ask what they do, use fillers naturally."
+}
