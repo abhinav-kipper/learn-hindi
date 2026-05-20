@@ -8,6 +8,7 @@ import { getProgress, updateStreak } from '@/lib/progress'
 import { QuizQuestion, QuizResult } from '@/types/quiz'
 import { QuizCard } from '@/components/quiz/quiz-card'
 import { QuizResults } from '@/components/quiz/quiz-results'
+import { FeatureTooltip } from '@/components/feature-tooltip'
 
 export default function QuizPage() {
   const router = useRouter()
@@ -18,12 +19,18 @@ export default function QuizPage() {
   const [results, setResults] = useState<QuizResult[]>([])
   const [quizComplete, setQuizComplete] = useState(false)
   const [loading, setLoading] = useState(true)
+  const [locked, setLocked] = useState(false)
 
   const startQuiz = useCallback(() => {
     const progress = getProgress()
-    const lessonIds = progress.completedLessons.length > 0
-      ? progress.completedLessons
-      : ['greetings'] // Default to greetings if nothing completed
+
+    if (progress.completedLessons.length === 0) {
+      setLocked(true)
+      setLoading(false)
+      return
+    }
+
+    const lessonIds = progress.completedLessons
     const generated = generateQuiz(lessonIds, 10)
     setQuestions(generated)
     setCurrentIndex(0)
@@ -64,9 +71,7 @@ export default function QuizPage() {
         const allResults = [...results, result]
         const score = allResults.filter(r => r.isCorrect).length
         const progress = getProgress()
-        const lessonIds = progress.completedLessons.length > 0
-          ? progress.completedLessons
-          : ['greetings']
+        const lessonIds = progress.completedLessons
         saveQuizScore(score, questions.length, lessonIds)
         updateStreak()
         setQuizComplete(true)
@@ -82,6 +87,22 @@ export default function QuizPage() {
           transition={{ repeat: Infinity, duration: 1, ease: 'linear' }}
           className="w-8 h-8 border-3 border-indigo-600 border-t-transparent rounded-full"
         />
+      </div>
+    )
+  }
+
+  if (locked) {
+    return (
+      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
+        <div className="text-5xl mb-4">🔒</div>
+        <h2 className="text-xl font-bold text-slate-900 mb-2">Quiz Locked</h2>
+        <p className="text-base text-slate-600 text-center mb-6">Complete your first lesson to unlock quizzes!</p>
+        <button
+          onClick={() => router.push('/')}
+          className="py-3 px-6 bg-indigo-600 text-white font-semibold rounded-xl"
+        >
+          Go to Lessons
+        </button>
       </div>
     )
   }
@@ -119,14 +140,20 @@ export default function QuizPage() {
                 {currentIndex + 1} / {questions.length}
               </span>
             </div>
-            <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
-              <motion.div
-                className="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"
-                initial={{ width: 0 }}
-                animate={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
-                transition={{ duration: 0.3 }}
-              />
-            </div>
+            <FeatureTooltip
+              id="quiz"
+              message="Test what you've learned! 10 questions from completed lessons."
+              position="bottom"
+            >
+              <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+                <motion.div
+                  className="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"
+                  initial={{ width: 0 }}
+                  animate={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
+                  transition={{ duration: 0.3 }}
+                />
+              </div>
+            </FeatureTooltip>
           </div>
 
           {/* Question */}

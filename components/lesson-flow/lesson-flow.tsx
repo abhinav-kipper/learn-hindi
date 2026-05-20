@@ -11,6 +11,7 @@ import { SectionGrammar } from './section-grammar'
 import { SectionCulture } from './section-culture'
 import { SectionSkills } from './section-skills'
 import { SectionCta } from './section-cta'
+import { FeatureTooltip } from '@/components/feature-tooltip'
 
 type Section = 'intro' | 'phrases' | 'grammar' | 'culture' | 'skills' | 'cta'
 
@@ -97,12 +98,18 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
         >
           ←
         </button>
-        <ProgressDots
-          total={sections.length}
-          current={sectionIndex}
-          onTap={goTo}
-          labels={sections.map(s => sectionLabels[s])}
-        />
+        <FeatureTooltip
+          id="lesson"
+          message="Swipe through sections — or tap these dots to jump."
+          position="bottom"
+        >
+          <ProgressDots
+            total={sections.length}
+            current={sectionIndex}
+            onTap={goTo}
+            labels={sections.map(s => sectionLabels[s])}
+          />
+        </FeatureTooltip>
         <a href="/" className="text-sm text-gray-500 w-12 text-right">✕</a>
       </div>
 

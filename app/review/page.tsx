@@ -4,7 +4,8 @@ import { useState, useCallback, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import { getReviewPhrases, markReviewed, saveReviewSession, ReviewPhrase } from '@/lib/review'
-import { updateStreak } from '@/lib/progress'
+import { getProgress, updateStreak } from '@/lib/progress'
+import { FeatureTooltip } from '@/components/feature-tooltip'
 
 export default function ReviewPage() {
   const router = useRouter()
@@ -14,8 +15,15 @@ export default function ReviewPage() {
   const [gotItCount, setGotItCount] = useState(0)
   const [complete, setComplete] = useState(false)
   const [direction, setDirection] = useState(0)
+  const [locked, setLocked] = useState(false)
 
   const loadPhrases = useCallback(() => {
+    const progress = getProgress()
+    if (progress.completedLessons.length === 0) {
+      setLocked(true)
+      return
+    }
+
     const reviewPhrases = getReviewPhrases(8)
     setPhrases(reviewPhrases)
     setCurrentIndex(0)
@@ -53,7 +61,23 @@ export default function ReviewPage() {
     }
   }
 
-  if (phrases.length === 0) {
+  if (locked) {
+    return (
+      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50">
+        <div className="text-5xl mb-4">🔒</div>
+        <h2 className="text-xl font-bold text-slate-900 mb-2">Review Locked</h2>
+        <p className="text-base text-slate-600 text-center mb-6">Complete your first lesson to unlock reviews!</p>
+        <button
+          onClick={() => router.push('/')}
+          className="py-3 px-6 bg-teal-600 text-white font-semibold rounded-xl"
+        >
+          Go to Lessons
+        </button>
+      </div>
+    )
+  }
+
+  if (phrases.length === 0 && !locked) {
     return (
       <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50">
         <p className="text-lg text-slate-600 text-center mb-4">No phrases to review yet. Complete a lesson first!</p>
@@ -123,13 +147,19 @@ export default function ReviewPage() {
             {currentIndex + 1} / {phrases.length}
           </span>
         </div>
-        <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
-          <motion.div
-            className="h-full bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full"
-            animate={{ width: `${((currentIndex + 1) / phrases.length) * 100}%` }}
-            transition={{ duration: 0.3 }}
-          />
-        </div>
+        <FeatureTooltip
+          id="review"
+          message="Review phrases you've learned. Tap to reveal, then rate yourself!"
+          position="bottom"
+        >
+          <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+            <motion.div
+              className="h-full bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full"
+              animate={{ width: `${((currentIndex + 1) / phrases.length) * 100}%` }}
+              transition={{ duration: 0.3 }}
+            />
+          </div>
+        </FeatureTooltip>
       </div>
 
       {/* Card area */}

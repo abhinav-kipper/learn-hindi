@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 import { ChatMessage } from '@/components/chat-message'
 import { VoiceButton } from '@/components/voice-button'
 import { incrementPracticeCount } from '@/lib/progress'
+import { FeatureTooltip } from '@/components/feature-tooltip'
 
 interface Message {
   id: string
@@ -158,15 +159,21 @@ export default function PracticePage({ params }: PracticePageProps) {
       {/* Messages */}
       <div className="flex-1 overflow-y-auto py-5 space-y-3">
         {messages.length === 0 && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="text-center text-slate-400 text-sm mt-12"
+          <FeatureTooltip
+            id="practice"
+            message="The AI will start talking first — reply in Hindi (romanized) or English!"
+            position="center"
           >
-            <p className="font-medium">Setting the scene...</p>
-            <p className="mt-1.5 text-slate-300">Your conversation partner is about to start talking.</p>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+              className="text-center text-slate-400 text-sm mt-12"
+            >
+              <p className="font-medium">Setting the scene...</p>
+              <p className="mt-1.5 text-slate-300">Your conversation partner is about to start talking.</p>
+            </motion.div>
+          </FeatureTooltip>
         )}
         {messages.map((message) => (
           <ChatMessage

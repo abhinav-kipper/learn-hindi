@@ -1,21 +1,29 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { getProgress } from '@/lib/progress'
 
 const tabs = [
-  { href: '/', label: 'Home', icon: HomeIcon },
-  { href: '/quiz', label: 'Quiz', icon: QuizIcon },
-  { href: '/review', label: 'Review', icon: ReviewIcon },
-  { href: '/progress', label: 'Progress', icon: ProgressIcon },
+  { href: '/', label: 'Home', icon: HomeIcon, requiresLesson: false },
+  { href: '/quiz', label: 'Quiz', icon: QuizIcon, requiresLesson: true },
+  { href: '/review', label: 'Review', icon: ReviewIcon, requiresLesson: true },
+  { href: '/progress', label: 'Progress', icon: ProgressIcon, requiresLesson: false },
 ]
 
 export function BottomNav() {
   const pathname = usePathname()
+  const [hasCompletedLesson, setHasCompletedLesson] = useState(true) // default true to prevent flash
 
-  // Hide on lesson and practice pages (full-screen experiences)
-  if (pathname.startsWith('/lessons/') || pathname.startsWith('/practice/')) {
+  useEffect(() => {
+    const progress = getProgress()
+    setHasCompletedLesson(progress.completedLessons.length > 0)
+  }, [pathname]) // Re-check on navigation
+
+  // Hide on lesson, practice, and onboarding pages (full-screen experiences)
+  if (pathname.startsWith('/lessons/') || pathname.startsWith('/practice/') || pathname.startsWith('/onboarding')) {
     return null
   }
 
@@ -25,6 +33,27 @@ export function BottomNav() {
         <div className="flex items-center justify-around">
           {tabs.map(tab => {
             const isActive = pathname === tab.href
+            const isLocked = tab.requiresLesson && !hasCompletedLesson
+
+            if (isLocked) {
+              return (
+                <div
+                  key={tab.href}
+                  className="relative flex flex-col items-center gap-0.5 py-1 px-3 rounded-lg opacity-40"
+                >
+                  <span className="relative z-10">
+                    <tab.icon active={false} />
+                  </span>
+                  <span className="relative z-10 text-[10px] font-medium text-slate-400">
+                    {tab.label}
+                  </span>
+                  <span className="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 bg-slate-300 rounded-full flex items-center justify-center">
+                    <LockIcon />
+                  </span>
+                </div>
+              )
+            }
+
             return (
               <Link
                 key={tab.href}
@@ -52,6 +81,15 @@ export function BottomNav() {
         </div>
       </div>
     </nav>
+  )
+}
+
+function LockIcon() {
+  return (
+    <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+      <path d="M7 11V7a5 5 0 0110 0v4" />
+    </svg>
   )
 }
 
