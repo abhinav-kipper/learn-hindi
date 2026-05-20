@@ -11,12 +11,33 @@ interface LessonCardProps {
   index: number
 }
 
+const gradients = [
+  'from-indigo-500/10 to-indigo-600/5',
+  'from-violet-500/10 to-violet-600/5',
+  'from-emerald-500/10 to-emerald-600/5',
+  'from-amber-500/10 to-amber-600/5',
+  'from-sky-500/10 to-sky-600/5',
+  'from-pink-500/10 to-pink-600/5',
+]
+
+const accentColors = [
+  'text-indigo-500',
+  'text-violet-500',
+  'text-emerald-500',
+  'text-amber-500',
+  'text-sky-500',
+  'text-pink-500',
+]
+
 export function LessonCard({ lesson, index }: LessonCardProps) {
   const [completed, setCompleted] = useState(false)
 
   useEffect(() => {
     setCompleted(isLessonComplete(lesson.id))
   }, [lesson.id])
+
+  const gradient = gradients[index % gradients.length]
+  const accent = accentColors[index % accentColors.length]
 
   return (
     <motion.div
@@ -25,36 +46,39 @@ export function LessonCard({ lesson, index }: LessonCardProps) {
       transition={{ duration: 0.3, delay: index * 0.08, ease: 'easeOut' }}
     >
       <Link href={`/lessons/${lesson.id}`}>
-        <div className={`p-5 rounded-2xl border transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 ${
-          completed
-            ? 'border-emerald-200 bg-gradient-to-br from-emerald-50 to-green-50 shadow-sm'
-            : 'border-slate-200 bg-white hover:border-indigo-300 shadow-sm'
-        }`}>
-          <div className="flex items-start justify-between">
-            <div className="flex-1">
-              <div className="flex items-center gap-2">
-                <span className="text-xs font-semibold text-indigo-500 uppercase tracking-wide">
-                  Lesson {index + 1}
-                </span>
-                {completed && (
-                  <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full font-medium">
-                    Complete
-                  </span>
-                )}
-              </div>
-              <h3 className="font-bold text-slate-900 mt-1.5 text-base">{lesson.title}</h3>
-              <p className="text-sm text-slate-500 mt-1 leading-relaxed">{lesson.situation}</p>
+        <div className={`relative min-h-[200px] p-6 rounded-3xl border border-white/50 bg-gradient-to-br ${gradient} shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 overflow-hidden`}>
+          {/* Background number */}
+          <span className="absolute -right-2 -top-4 text-8xl font-black text-slate-900/[0.03] select-none pointer-events-none">
+            {index + 1}
+          </span>
+
+          {/* Completion badge */}
+          {completed && (
+            <div className="absolute top-4 right-4 w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center shadow-md">
+              <span className="text-white text-sm font-bold">✓</span>
             </div>
-          </div>
-          <div className="flex flex-wrap gap-1.5 mt-3">
-            {lesson.skills.map((skill) => (
-              <span
-                key={skill}
-                className="text-xs bg-indigo-50 text-indigo-600 px-2.5 py-0.5 rounded-full font-medium"
-              >
-                {skill}
-              </span>
-            ))}
+          )}
+
+          {/* Content */}
+          <div className="relative z-10">
+            <span className={`text-xs font-semibold uppercase tracking-wide ${accent}`}>
+              Lesson {index + 1}
+            </span>
+            <h3 className="font-bold text-slate-900 mt-2 text-xl">{lesson.title}</h3>
+            <p className="text-sm text-slate-600 mt-2 leading-relaxed line-clamp-2">
+              {lesson.situation}
+            </p>
+
+            <div className="flex flex-wrap gap-1.5 mt-4">
+              {lesson.skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="text-xs bg-white/60 text-slate-600 px-2.5 py-1 rounded-full font-medium backdrop-blur-sm"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </Link>

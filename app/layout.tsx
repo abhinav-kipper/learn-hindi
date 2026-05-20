@@ -34,7 +34,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/icon.svg" />
       </head>
       <body className={`${inter.className} min-h-screen`}>
-        <main className="max-w-md mx-auto px-4 py-6">
+        <main>
           {children}
         </main>
         <InstallPrompt />
