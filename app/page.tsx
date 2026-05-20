@@ -8,6 +8,7 @@ import { LessonCard } from '@/components/lesson-card'
 import { StreakCounter } from '@/components/streak-counter'
 import { FeatureTooltip } from '@/components/feature-tooltip'
 import { isOnboardingComplete, getUserProfile } from '@/lib/onboarding'
+import { playSound } from '@/lib/sounds'
 
 export default function Home() {
   const router = useRouter()
@@ -68,6 +69,7 @@ export default function Home() {
           const card = (
             <div
               key={lesson.id}
+              onClick={() => playSound('tap')}
               className={`snap-start ${isLocked ? 'opacity-50 pointer-events-none' : ''}`}
             >
               <LessonCard lesson={lesson} index={index} />
@@ -82,7 +84,7 @@ export default function Home() {
                 message="Start here! Tap a lesson to begin learning."
                 position="bottom"
               >
-                <div className="snap-start">
+                <div className="snap-start" onClick={() => playSound('tap')}>
                   <LessonCard lesson={lesson} index={index} />
                 </div>
               </FeatureTooltip>

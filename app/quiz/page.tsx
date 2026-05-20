@@ -9,6 +9,7 @@ import { QuizQuestion, QuizResult } from '@/types/quiz'
 import { QuizCard } from '@/components/quiz/quiz-card'
 import { QuizResults } from '@/components/quiz/quiz-results'
 import { FeatureTooltip } from '@/components/feature-tooltip'
+import { playSound } from '@/lib/sounds'
 
 export default function QuizPage() {
   const router = useRouter()
@@ -53,6 +54,13 @@ export default function QuizPage() {
     const question = questions[currentIndex]
     const isCorrect = question.answers.find(a => a.id === answerId)?.isCorrect ?? false
 
+    // Play sound based on answer
+    if (isCorrect) {
+      playSound('correct')
+    } else {
+      playSound('wrong')
+    }
+
     const result: QuizResult = {
       questionId: question.id,
       selectedAnswerId: answerId,
@@ -75,6 +83,10 @@ export default function QuizPage() {
         saveQuizScore(score, questions.length, lessonIds)
         updateStreak()
         setQuizComplete(true)
+        // Play complete sound if good score (50%+)
+        if (score >= questions.length / 2) {
+          playSound('complete')
+        }
       }
     }, 1200)
   }

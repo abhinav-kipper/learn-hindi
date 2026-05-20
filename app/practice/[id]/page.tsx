@@ -8,6 +8,7 @@ import { ChatMessage } from '@/components/chat-message'
 import { VoiceButton } from '@/components/voice-button'
 import { incrementPracticeCount } from '@/lib/progress'
 import { FeatureTooltip } from '@/components/feature-tooltip'
+import { playSound } from '@/lib/sounds'
 
 interface Message {
   id: string
@@ -56,6 +57,7 @@ function useChat({ api, body }: { api: string; body: Record<string, unknown> }) 
           ...prev,
           { id: assistantId, role: 'assistant', content: '' },
         ])
+        playSound('pop')
 
         const reader = response.body.getReader()
         const decoder = new TextDecoder()
@@ -102,6 +104,8 @@ function useChat({ api, body }: { api: string; body: Record<string, unknown> }) 
     async (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault()
       if (!input.trim() || isLoading) return
+
+      playSound('tap')
 
       const userMessage: Message = {
         id: Date.now().toString(),

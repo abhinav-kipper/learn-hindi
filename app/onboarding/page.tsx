@@ -4,6 +4,7 @@ import { useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import { saveUserProfile } from '@/lib/onboarding'
+import { playSound } from '@/lib/sounds'
 
 const reasons = [
   { id: 'family', label: 'Partner/family speaks Hindi', emoji: '👨‍👩‍👧' },
@@ -32,6 +33,7 @@ export default function OnboardingPage() {
   const next = useCallback(() => {
     setDirection(1)
     setSlide(s => Math.min(s + 1, totalSlides - 1))
+    playSound('swipe')
   }, [])
 
   const goTo = useCallback((index: number) => {
@@ -47,6 +49,7 @@ export default function OnboardingPage() {
       onboardingComplete: true,
     })
     setShowConfetti(true)
+    playSound('complete')
     setTimeout(() => {
       router.push('/')
     }, 2000)
@@ -265,7 +268,7 @@ function SlideAboutYou({
           {reasons.map((r) => (
             <button
               key={r.id}
-              onClick={() => setReason(r.id)}
+              onClick={() => { setReason(r.id); playSound('pop') }}
               className={`flex items-center gap-3 px-4 py-3 rounded-xl border-2 transition-all text-left text-sm ${
                 reason === r.id
                   ? 'border-indigo-500 bg-indigo-50 text-indigo-700'
@@ -326,7 +329,7 @@ function SlideDailyGoal({
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 + i * 0.1 }}
-            onClick={() => setDailyGoal(g.minutes)}
+            onClick={() => { setDailyGoal(g.minutes); playSound('pop') }}
             className={`w-full flex items-center gap-4 px-5 py-4 rounded-2xl border-2 transition-all text-left ${
               dailyGoal === g.minutes
                 ? 'border-indigo-500 bg-indigo-50'

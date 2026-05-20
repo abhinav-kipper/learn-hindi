@@ -12,6 +12,7 @@ import { SectionCulture } from './section-culture'
 import { SectionSkills } from './section-skills'
 import { SectionCta } from './section-cta'
 import { FeatureTooltip } from '@/components/feature-tooltip'
+import { playSound } from '@/lib/sounds'
 
 type Section = 'intro' | 'phrases' | 'grammar' | 'culture' | 'skills' | 'cta'
 
@@ -37,6 +38,7 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
     if (sectionIndex < sections.length - 1) {
       setDirection(1)
       setSectionIndex(i => i + 1)
+      playSound('swipe')
     }
   }
 
@@ -44,12 +46,14 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
     if (sectionIndex > 0) {
       setDirection(-1)
       setSectionIndex(i => i - 1)
+      playSound('swipe')
     }
   }
 
   const goTo = (index: number) => {
     setDirection(index > sectionIndex ? 1 : -1)
     setSectionIndex(index)
+    playSound('tap')
   }
 
   const sectionLabels: Record<Section, string> = {

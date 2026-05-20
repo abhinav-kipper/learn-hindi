@@ -4,6 +4,8 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Phrase } from '@/types/lesson'
 import { SwipeableCarousel } from './swipeable-carousel'
+import { ReadAloudButton } from '@/components/read-aloud-button'
+import { playSound } from '@/lib/sounds'
 
 interface SectionPhrasesProps {
   phrases: Phrase[]
@@ -13,14 +15,24 @@ interface SectionPhrasesProps {
 function PhraseCardContent({ phrase }: { phrase: Phrase }) {
   const [revealed, setRevealed] = useState(false)
 
+  const handleReveal = () => {
+    if (!revealed) {
+      playSound('pop')
+    }
+    setRevealed(!revealed)
+  }
+
   return (
     <div
-      onClick={() => setRevealed(!revealed)}
+      onClick={handleReveal}
       className="bg-white rounded-3xl shadow-lg p-8 min-h-[320px] flex flex-col items-center justify-center cursor-pointer select-none border border-violet-100"
     >
-      <p className="text-2xl md:text-3xl font-bold text-slate-900 text-center leading-relaxed">
-        {phrase.hindi}
-      </p>
+      <div className="flex items-center gap-2">
+        <p className="text-2xl md:text-3xl font-bold text-slate-900 text-center leading-relaxed">
+          {phrase.hindi}
+        </p>
+        <ReadAloudButton text={phrase.hindi} />
+      </div>
 
       {phrase.pronunciation && (
         <p className="mt-2 text-sm text-indigo-400 font-mono text-center">

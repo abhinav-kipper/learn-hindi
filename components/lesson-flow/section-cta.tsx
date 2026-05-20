@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import confetti from 'canvas-confetti'
 import { Lesson } from '@/types/lesson'
 import { markLessonComplete, isLessonComplete } from '@/lib/progress'
+import { playSound } from '@/lib/sounds'
 
 interface SectionCtaProps {
   lesson: Lesson
@@ -20,6 +21,7 @@ export function SectionCta({ lesson }: SectionCtaProps) {
   const handleComplete = () => {
     markLessonComplete(lesson.id)
     setCompleted(true)
+    playSound('levelup')
 
     confetti({
       particleCount: 80,

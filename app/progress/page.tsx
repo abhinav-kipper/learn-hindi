@@ -7,6 +7,7 @@ import { getProgress } from '@/lib/progress'
 import { getQuizScores, getAverageQuizScore } from '@/lib/quiz'
 import { getReviewSessions } from '@/lib/review'
 import { getAllLessons } from '@/lib/lessons'
+import { playSound } from '@/lib/sounds'
 
 interface Stats {
   phrasesLearned: number
@@ -47,6 +48,11 @@ export default function ProgressPage() {
       currentStreak: progress.currentStreak,
       lastActiveDate: progress.lastActiveDate,
     })
+
+    // Play streak sound if streak is active
+    if (progress.currentStreak > 0) {
+      playSound('streak')
+    }
 
     // Build recent activity
     const recentActivities: ActivityItem[] = []

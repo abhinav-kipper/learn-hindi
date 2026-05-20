@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import { getReviewPhrases, markReviewed, saveReviewSession, ReviewPhrase } from '@/lib/review'
 import { getProgress, updateStreak } from '@/lib/progress'
 import { FeatureTooltip } from '@/components/feature-tooltip'
+import { playSound } from '@/lib/sounds'
 
 export default function ReviewPage() {
   const router = useRouter()
@@ -40,12 +41,14 @@ export default function ReviewPage() {
     const phrase = phrases[currentIndex]
     markReviewed(phrase.phraseId, true)
     setGotItCount(prev => prev + 1)
+    playSound('correct')
     advance()
   }
 
   const handleStillLearning = () => {
     const phrase = phrases[currentIndex]
     markReviewed(phrase.phraseId, false)
+    playSound('pop')
     advance()
   }
 
@@ -58,6 +61,7 @@ export default function ReviewPage() {
       saveReviewSession(phrases.length, gotItCount + (phrases[currentIndex] ? 0 : 0))
       updateStreak()
       setComplete(true)
+      playSound('complete')
     }
   }
 

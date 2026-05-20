@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { playSound } from '@/lib/sounds'
 
 interface SwipeableCarouselProps {
   items: React.ReactNode[]
@@ -16,6 +17,7 @@ export function SwipeableCarousel({ items, onComplete }: SwipeableCarouselProps)
     if (currentIndex < items.length - 1) {
       setDirection(1)
       setCurrentIndex(i => i + 1)
+      playSound('swipe')
     } else if (onComplete) {
       onComplete()
     }
@@ -25,6 +27,7 @@ export function SwipeableCarousel({ items, onComplete }: SwipeableCarouselProps)
     if (currentIndex > 0) {
       setDirection(-1)
       setCurrentIndex(i => i - 1)
+      playSound('swipe')
     }
   }
 
