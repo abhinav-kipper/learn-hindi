@@ -162,7 +162,7 @@ export function VoiceButton({ onTranscript, disabled = false }: VoiceButtonProps
       onClick={handleClick}
       disabled={disabled && !isListening}
       title={isListening ? 'Stop listening' : 'Speak in Hindi'}
-      className={`relative flex items-center justify-center w-12 h-12 rounded-xl font-semibold transition-all duration-200 shadow-sm
+      className={`relative flex items-center justify-center w-12 h-12 rounded-xl font-semibold transition-all duration-200 shadow-sm dark:shadow-none
         ${isListening
           ? 'bg-red-500 hover:bg-red-600 text-white'
           : 'bg-gradient-to-r from-indigo-500 to-violet-500 hover:from-indigo-600 hover:to-violet-600 text-white disabled:opacity-50 disabled:cursor-not-allowed'

@@ -67,13 +67,13 @@ export default function ReviewPage() {
 
   if (locked) {
     return (
-      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50">
+      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50 dark:from-[var(--bg-base)] dark:via-[var(--bg-base)] dark:to-[var(--bg-base)]">
         <div className="text-5xl mb-4">🔒</div>
-        <h2 className="text-xl font-bold text-slate-900 mb-2">Review Locked</h2>
-        <p className="text-base text-slate-600 text-center mb-6">Complete your first lesson to unlock reviews!</p>
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">Review Locked</h2>
+        <p className="text-base text-[var(--text-secondary)] text-center mb-6">Complete your first lesson to unlock reviews!</p>
         <button
           onClick={() => router.push('/')}
-          className="py-3 px-6 bg-teal-600 text-white font-semibold rounded-xl"
+          className="py-3 px-6 bg-teal-600 dark:bg-teal-500 text-white font-semibold rounded-xl"
         >
           Go to Lessons
         </button>
@@ -83,11 +83,11 @@ export default function ReviewPage() {
 
   if (phrases.length === 0 && !locked) {
     return (
-      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50">
-        <p className="text-lg text-slate-600 text-center mb-4">No phrases to review yet. Complete a lesson first!</p>
+      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50 dark:from-[var(--bg-base)] dark:via-[var(--bg-base)] dark:to-[var(--bg-base)]">
+        <p className="text-lg text-[var(--text-secondary)] text-center mb-4">No phrases to review yet. Complete a lesson first!</p>
         <button
           onClick={() => router.push('/')}
-          className="py-3 px-6 bg-teal-600 text-white font-semibold rounded-xl"
+          className="py-3 px-6 bg-teal-600 dark:bg-teal-500 text-white font-semibold rounded-xl"
         >
           Go to Lessons
         </button>
@@ -97,28 +97,28 @@ export default function ReviewPage() {
 
   if (complete) {
     return (
-      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50 safe-top safe-bottom">
+      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50 dark:from-[var(--bg-base)] dark:via-[var(--bg-base)] dark:to-[var(--bg-base)] safe-top safe-bottom">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           className="text-center"
         >
           <div className="text-5xl mb-4">🎯</div>
-          <h2 className="text-2xl font-bold text-slate-900 mb-2">Review Complete!</h2>
-          <p className="text-lg text-slate-600 mb-1">
+          <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-2">Review Complete!</h2>
+          <p className="text-lg text-[var(--text-secondary)] mb-1">
             {gotItCount}/{phrases.length} phrases mastered
           </p>
-          <p className="text-sm text-slate-400 mb-8">Come back tomorrow for more practice</p>
+          <p className="text-sm text-[var(--text-tertiary)] mb-8">Come back tomorrow for more practice</p>
           <div className="flex flex-col gap-3 w-full max-w-xs mx-auto">
             <button
               onClick={loadPhrases}
-              className="w-full py-3 px-6 bg-teal-600 text-white font-semibold rounded-xl hover:bg-teal-700 transition-colors"
+              className="w-full py-3 px-6 bg-teal-600 dark:bg-teal-500 text-white font-semibold rounded-xl hover:opacity-90 transition-colors"
             >
               Review Again
             </button>
             <button
               onClick={() => router.push('/')}
-              className="w-full py-3 px-6 bg-slate-100 text-slate-700 font-semibold rounded-xl hover:bg-slate-200 transition-colors"
+              className="w-full py-3 px-6 bg-[var(--bg-elevated)] text-[var(--text-primary)] font-semibold rounded-xl hover:bg-[var(--bg-hover)] transition-colors border border-[var(--border)]"
             >
               Back to Home
             </button>
@@ -137,17 +137,17 @@ export default function ReviewPage() {
   }
 
   return (
-    <div className="min-h-dvh flex flex-col bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50 safe-top safe-bottom">
+    <div className="min-h-dvh flex flex-col bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50 dark:from-[var(--bg-base)] dark:via-[var(--bg-base)] dark:to-[var(--bg-base)] safe-top safe-bottom">
       {/* Header */}
       <div className="px-4 pt-4 pb-2">
         <div className="flex items-center justify-between mb-2">
           <button
             onClick={() => router.push('/')}
-            className="text-sm text-slate-500 hover:text-slate-700"
+            className="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
           >
             &times; Close
           </button>
-          <span className="text-sm font-medium text-slate-600">
+          <span className="text-sm font-medium text-[var(--text-secondary)]">
             {currentIndex + 1} / {phrases.length}
           </span>
         </div>
@@ -156,7 +156,7 @@ export default function ReviewPage() {
           message="Review phrases you've learned. Tap to reveal, then rate yourself!"
           position="bottom"
         >
-          <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+          <div className="w-full h-2 bg-[var(--border)] rounded-full overflow-hidden">
             <motion.div
               className="h-full bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full"
               animate={{ width: `${((currentIndex + 1) / phrases.length) * 100}%` }}
@@ -181,13 +181,13 @@ export default function ReviewPage() {
           >
             <div
               onClick={() => !revealed && setRevealed(true)}
-              className="bg-white rounded-2xl shadow-lg border border-slate-100 p-8 min-h-[300px] flex flex-col items-center justify-center cursor-pointer"
+              className="bg-[var(--bg-surface)] rounded-2xl shadow-lg dark:shadow-none border border-[var(--border)] p-8 min-h-[300px] flex flex-col items-center justify-center cursor-pointer"
             >
               {/* Hindi */}
-              <p className="text-2xl font-bold text-slate-900 text-center mb-2">
+              <p className="text-2xl font-bold text-[var(--text-primary)] text-center mb-2">
                 {currentPhrase.phrase.hindi}
               </p>
-              <p className="text-sm text-slate-400 text-center mb-4">
+              <p className="text-sm text-[var(--text-tertiary)] text-center mb-4">
                 {currentPhrase.phrase.pronunciation}
               </p>
 
@@ -196,17 +196,17 @@ export default function ReviewPage() {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="mt-4 pt-4 border-t border-slate-100 w-full text-center"
+                  className="mt-4 pt-4 border-t border-[var(--border)] w-full text-center"
                 >
-                  <p className="text-lg text-teal-700 font-medium">
+                  <p className="text-lg text-teal-700 dark:text-teal-400 font-medium">
                     {currentPhrase.phrase.english}
                   </p>
-                  <p className="text-xs text-slate-400 mt-2">
+                  <p className="text-xs text-[var(--text-tertiary)] mt-2">
                     {currentPhrase.phrase.context}
                   </p>
                 </motion.div>
               ) : (
-                <p className="text-sm text-slate-400 mt-4">Tap to reveal translation</p>
+                <p className="text-sm text-[var(--text-tertiary)] mt-4">Tap to reveal translation</p>
               )}
             </div>
 
@@ -219,13 +219,13 @@ export default function ReviewPage() {
               >
                 <button
                   onClick={handleStillLearning}
-                  className="flex-1 py-3 px-4 bg-amber-50 border-2 border-amber-200 text-amber-700 font-semibold rounded-xl hover:bg-amber-100 transition-colors"
+                  className="flex-1 py-3 px-4 bg-amber-50 dark:bg-amber-500/10 border-2 border-amber-200 dark:border-amber-500/30 text-amber-700 dark:text-amber-400 font-semibold rounded-xl hover:bg-amber-100 dark:hover:bg-amber-500/15 transition-colors"
                 >
                   Still Learning
                 </button>
                 <button
                   onClick={handleGotIt}
-                  className="flex-1 py-3 px-4 bg-emerald-50 border-2 border-emerald-200 text-emerald-700 font-semibold rounded-xl hover:bg-emerald-100 transition-colors"
+                  className="flex-1 py-3 px-4 bg-emerald-50 dark:bg-emerald-500/10 border-2 border-emerald-200 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-400 font-semibold rounded-xl hover:bg-emerald-100 dark:hover:bg-emerald-500/15 transition-colors"
                 >
                   Got it!
                 </button>

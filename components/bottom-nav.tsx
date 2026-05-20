@@ -29,7 +29,7 @@ export function BottomNav() {
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-40 safe-bottom">
-      <div className="max-w-md mx-auto bg-white/90 backdrop-blur-lg border-t border-slate-200/60 px-2 pt-2 pb-1">
+      <div className="max-w-md mx-auto bg-[var(--bg-surface)]/90 backdrop-blur-lg border-t border-[var(--border)] px-2 pt-2 pb-1">
         <div className="flex items-center justify-around">
           {tabs.map(tab => {
             const isActive = pathname === tab.href
@@ -44,10 +44,10 @@ export function BottomNav() {
                   <span className="relative z-10">
                     <tab.icon active={false} />
                   </span>
-                  <span className="relative z-10 text-[10px] font-medium text-slate-400">
+                  <span className="relative z-10 text-[10px] font-medium text-[var(--text-tertiary)]">
                     {tab.label}
                   </span>
-                  <span className="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 bg-slate-300 rounded-full flex items-center justify-center">
+                  <span className="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 bg-[var(--text-tertiary)] rounded-full flex items-center justify-center">
                     <LockIcon />
                   </span>
                 </div>
@@ -63,7 +63,7 @@ export function BottomNav() {
                 {isActive && (
                   <motion.div
                     layoutId="nav-indicator"
-                    className="absolute inset-0 bg-indigo-50 rounded-lg"
+                    className="absolute inset-0 bg-[var(--accent-soft)] rounded-lg"
                     transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                   />
                 )}
@@ -71,7 +71,7 @@ export function BottomNav() {
                   <tab.icon active={isActive} />
                 </span>
                 <span className={`relative z-10 text-[10px] font-medium ${
-                  isActive ? 'text-indigo-600' : 'text-slate-400'
+                  isActive ? 'text-[var(--accent)]' : 'text-[var(--text-tertiary)]'
                 }`}>
                   {tab.label}
                 </span>
@@ -86,7 +86,7 @@ export function BottomNav() {
 
 function LockIcon() {
   return (
-    <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
       <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
       <path d="M7 11V7a5 5 0 0110 0v4" />
     </svg>
@@ -95,7 +95,7 @@ function LockIcon() {
 
 function HomeIcon({ active }: { active: boolean }) {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={active ? '#4f46e5' : '#94a3b8'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={active ? 'var(--accent)' : 'var(--text-tertiary)'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
       <polyline points="9,22 9,12 15,12 15,22" />
     </svg>
@@ -104,7 +104,7 @@ function HomeIcon({ active }: { active: boolean }) {
 
 function QuizIcon({ active }: { active: boolean }) {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={active ? '#4f46e5' : '#94a3b8'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={active ? 'var(--accent)' : 'var(--text-tertiary)'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="12" cy="12" r="10" />
       <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3" />
       <line x1="12" y1="17" x2="12.01" y2="17" />
@@ -114,7 +114,7 @@ function QuizIcon({ active }: { active: boolean }) {
 
 function ReviewIcon({ active }: { active: boolean }) {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={active ? '#4f46e5' : '#94a3b8'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={active ? 'var(--accent)' : 'var(--text-tertiary)'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <polyline points="23,4 23,10 17,10" />
       <path d="M20.49 15a9 9 0 11-2.12-9.36L23 10" />
     </svg>
@@ -123,7 +123,7 @@ function ReviewIcon({ active }: { active: boolean }) {
 
 function ProgressIcon({ active }: { active: boolean }) {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={active ? '#4f46e5' : '#94a3b8'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={active ? 'var(--accent)' : 'var(--text-tertiary)'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <line x1="18" y1="20" x2="18" y2="10" />
       <line x1="12" y1="20" x2="12" y2="4" />
       <line x1="6" y1="20" x2="6" y2="14" />

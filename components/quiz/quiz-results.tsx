@@ -64,7 +64,7 @@ export function QuizResults({ score, total, onTryAgain, onGoHome }: QuizResultsP
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
-        className="text-2xl font-bold text-slate-900 mb-2"
+        className="text-2xl font-bold text-[var(--text-primary)] mb-2"
       >
         {getMessage()}
       </motion.h2>
@@ -75,10 +75,10 @@ export function QuizResults({ score, total, onTryAgain, onGoHome }: QuizResultsP
         transition={{ delay: 0.4 }}
         className="mb-8"
       >
-        <div className="text-5xl font-extrabold text-indigo-600">
+        <div className="text-5xl font-extrabold text-[var(--accent)]">
           {score}/{total}
         </div>
-        <p className="text-sm text-slate-500 mt-1">{percentage}% correct</p>
+        <p className="text-sm text-[var(--text-secondary)] mt-1">{percentage}% correct</p>
       </motion.div>
 
       <motion.div
@@ -89,13 +89,13 @@ export function QuizResults({ score, total, onTryAgain, onGoHome }: QuizResultsP
       >
         <button
           onClick={onTryAgain}
-          className="w-full py-3 px-6 bg-indigo-600 text-white font-semibold rounded-xl hover:bg-indigo-700 transition-colors"
+          className="w-full py-3 px-6 bg-[var(--accent)] text-white font-semibold rounded-xl hover:opacity-90 transition-colors"
         >
           Try Again
         </button>
         <button
           onClick={onGoHome}
-          className="w-full py-3 px-6 bg-slate-100 text-slate-700 font-semibold rounded-xl hover:bg-slate-200 transition-colors"
+          className="w-full py-3 px-6 bg-[var(--bg-elevated)] text-[var(--text-primary)] font-semibold rounded-xl hover:bg-[var(--bg-hover)] transition-colors border border-[var(--border)]"
         >
           Back to Home
         </button>

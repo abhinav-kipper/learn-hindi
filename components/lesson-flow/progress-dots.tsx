@@ -16,10 +16,10 @@ export function ProgressDots({ total, current, onTap, labels }: ProgressDotsProp
           onClick={() => onTap?.(i)}
           className={`rounded-full transition-all duration-300 ${
             i === current
-              ? 'h-2 w-8 bg-indigo-500'
+              ? 'h-2 w-8 bg-[var(--accent)]'
               : i < current
-              ? 'h-2 w-2 bg-indigo-300'
-              : 'h-2 w-2 bg-gray-300'
+              ? 'h-2 w-2 bg-[var(--accent)]/50'
+              : 'h-2 w-2 bg-[var(--border)]'
           }`}
           aria-label={labels?.[i] || `Section ${i + 1}`}
         />

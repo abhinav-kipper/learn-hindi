@@ -11,6 +11,15 @@ interface LessonCardProps {
   index: number
 }
 
+const darkGradients = [
+  'dark:from-indigo-500/8 dark:to-indigo-600/3',
+  'dark:from-violet-500/8 dark:to-violet-600/3',
+  'dark:from-emerald-500/8 dark:to-emerald-600/3',
+  'dark:from-amber-500/8 dark:to-amber-600/3',
+  'dark:from-sky-500/8 dark:to-sky-600/3',
+  'dark:from-pink-500/8 dark:to-pink-600/3',
+]
+
 const gradients = [
   'from-indigo-500/10 to-indigo-600/5',
   'from-violet-500/10 to-violet-600/5',
@@ -21,12 +30,12 @@ const gradients = [
 ]
 
 const accentColors = [
-  'text-indigo-500',
-  'text-violet-500',
-  'text-emerald-500',
-  'text-amber-500',
-  'text-sky-500',
-  'text-pink-500',
+  'text-indigo-500 dark:text-indigo-400',
+  'text-violet-500 dark:text-violet-400',
+  'text-emerald-500 dark:text-emerald-400',
+  'text-amber-500 dark:text-amber-400',
+  'text-sky-500 dark:text-sky-400',
+  'text-pink-500 dark:text-pink-400',
 ]
 
 export function LessonCard({ lesson, index }: LessonCardProps) {
@@ -37,6 +46,7 @@ export function LessonCard({ lesson, index }: LessonCardProps) {
   }, [lesson.id])
 
   const gradient = gradients[index % gradients.length]
+  const darkGradient = darkGradients[index % darkGradients.length]
   const accent = accentColors[index % accentColors.length]
 
   return (
@@ -46,9 +56,9 @@ export function LessonCard({ lesson, index }: LessonCardProps) {
       transition={{ duration: 0.3, delay: index * 0.08, ease: 'easeOut' }}
     >
       <Link href={`/lessons/${lesson.id}`}>
-        <div className={`relative min-h-[200px] p-6 rounded-3xl border border-white/50 bg-gradient-to-br ${gradient} shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 overflow-hidden`}>
+        <div className={`relative min-h-[200px] p-6 rounded-3xl border border-white/50 dark:border-[var(--border)] bg-gradient-to-br ${gradient} ${darkGradient} shadow-sm hover:shadow-lg dark:shadow-none dark:hover:border-[var(--border-hover)] hover:-translate-y-0.5 transition-all duration-200 overflow-hidden`}>
           {/* Background number */}
-          <span className="absolute -right-2 -top-4 text-8xl font-black text-slate-900/[0.03] select-none pointer-events-none">
+          <span className="absolute -right-2 -top-4 text-8xl font-black text-slate-900/[0.03] dark:text-white/[0.03] select-none pointer-events-none">
             {index + 1}
           </span>
 
@@ -64,8 +74,8 @@ export function LessonCard({ lesson, index }: LessonCardProps) {
             <span className={`text-xs font-semibold uppercase tracking-wide ${accent}`}>
               Lesson {index + 1}
             </span>
-            <h3 className="font-bold text-slate-900 mt-2 text-xl">{lesson.title}</h3>
-            <p className="text-sm text-slate-600 mt-2 leading-relaxed line-clamp-2">
+            <h3 className="font-bold text-[var(--text-primary)] mt-2 text-xl">{lesson.title}</h3>
+            <p className="text-sm text-[var(--text-secondary)] mt-2 leading-relaxed line-clamp-2">
               {lesson.situation}
             </p>
 
@@ -73,7 +83,7 @@ export function LessonCard({ lesson, index }: LessonCardProps) {
               {lesson.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="text-xs bg-white/60 text-slate-600 px-2.5 py-1 rounded-full font-medium backdrop-blur-sm"
+                  className="text-xs bg-white/60 dark:bg-white/10 text-[var(--text-secondary)] px-2.5 py-1 rounded-full font-medium backdrop-blur-sm"
                 >
                   {skill}
                 </span>
@@ -85,7 +95,7 @@ export function LessonCard({ lesson, index }: LessonCardProps) {
               <Link
                 href={`/practice/${lesson.id}`}
                 onClick={(e) => e.stopPropagation()}
-                className="text-xs px-3 py-1.5 rounded-full bg-indigo-500 text-white font-medium hover:bg-indigo-600 transition-colors"
+                className="text-xs px-3 py-1.5 rounded-full bg-[var(--accent)] text-white font-medium hover:opacity-90 transition-colors"
               >
                 💬 Practice
               </Link>

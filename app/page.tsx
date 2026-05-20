@@ -34,7 +34,7 @@ export default function Home() {
   if (!ready) {
     return (
       <div className="min-h-dvh flex items-center justify-center">
-        <div className="w-8 h-8 border-3 border-indigo-600 border-t-transparent rounded-full animate-spin" />
+        <div className="w-8 h-8 border-3 border-[var(--accent)] border-t-transparent rounded-full animate-spin" />
       </div>
     )
   }
@@ -43,10 +43,10 @@ export default function Home() {
     <div className="max-w-md mx-auto px-4 py-6">
       <div className="flex items-center justify-between mb-2">
         <div>
-          <h1 className="text-2xl font-extrabold text-slate-900 tracking-tight">
+          <h1 className="text-2xl font-extrabold text-[var(--text-primary)] tracking-tight">
             Hey {userName}! 👋
           </h1>
-          <p className="text-sm text-slate-500 mt-1">
+          <p className="text-sm text-[var(--text-secondary)] mt-1">
             {dailyGoal} min today — you got this!
           </p>
         </div>
@@ -54,8 +54,8 @@ export default function Home() {
       </div>
 
       {completedCount === 0 && (
-        <div className="mb-4 p-3 bg-indigo-50 rounded-xl border border-indigo-100">
-          <p className="text-sm text-indigo-700 font-medium">
+        <div className="mb-4 p-3 bg-[var(--accent-soft)] rounded-xl border border-[var(--accent)]/20">
+          <p className="text-sm text-[var(--accent-text)] font-medium">
             Start with lesson 1 — everything builds from here ✨
           </p>
         </div>

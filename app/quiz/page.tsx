@@ -93,11 +93,11 @@ export default function QuizPage() {
 
   if (loading) {
     return (
-      <div className="min-h-dvh flex items-center justify-center bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
+      <div className="min-h-dvh flex items-center justify-center bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-[var(--bg-base)] dark:via-[var(--bg-base)] dark:to-[var(--bg-base)]">
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 1, ease: 'linear' }}
-          className="w-8 h-8 border-3 border-indigo-600 border-t-transparent rounded-full"
+          className="w-8 h-8 border-3 border-[var(--accent)] border-t-transparent rounded-full"
         />
       </div>
     )
@@ -105,13 +105,13 @@ export default function QuizPage() {
 
   if (locked) {
     return (
-      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
+      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-[var(--bg-base)] dark:via-[var(--bg-base)] dark:to-[var(--bg-base)]">
         <div className="text-5xl mb-4">🔒</div>
-        <h2 className="text-xl font-bold text-slate-900 mb-2">Quiz Locked</h2>
-        <p className="text-base text-slate-600 text-center mb-6">Complete your first lesson to unlock quizzes!</p>
+        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">Quiz Locked</h2>
+        <p className="text-base text-[var(--text-secondary)] text-center mb-6">Complete your first lesson to unlock quizzes!</p>
         <button
           onClick={() => router.push('/')}
-          className="py-3 px-6 bg-indigo-600 text-white font-semibold rounded-xl"
+          className="py-3 px-6 bg-[var(--accent)] text-white font-semibold rounded-xl"
         >
           Go to Lessons
         </button>
@@ -121,11 +121,11 @@ export default function QuizPage() {
 
   if (questions.length === 0) {
     return (
-      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
-        <p className="text-lg text-slate-600 text-center mb-4">Complete a lesson first to take a quiz!</p>
+      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-[var(--bg-base)] dark:via-[var(--bg-base)] dark:to-[var(--bg-base)]">
+        <p className="text-lg text-[var(--text-secondary)] text-center mb-4">Complete a lesson first to take a quiz!</p>
         <button
           onClick={() => router.push('/')}
-          className="py-3 px-6 bg-indigo-600 text-white font-semibold rounded-xl"
+          className="py-3 px-6 bg-[var(--accent)] text-white font-semibold rounded-xl"
         >
           Go to Lessons
         </button>
@@ -136,7 +136,7 @@ export default function QuizPage() {
   const score = results.filter(r => r.isCorrect).length
 
   return (
-    <div className="min-h-dvh flex flex-col bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 safe-top safe-bottom">
+    <div className="min-h-dvh flex flex-col bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-[var(--bg-base)] dark:via-[var(--bg-base)] dark:to-[var(--bg-base)] safe-top safe-bottom">
       {!quizComplete && (
         <>
           {/* Progress bar */}
@@ -144,11 +144,11 @@ export default function QuizPage() {
             <div className="flex items-center justify-between mb-2">
               <button
                 onClick={() => router.push('/')}
-                className="text-sm text-slate-500 hover:text-slate-700"
+                className="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
               >
                 &times; Close
               </button>
-              <span className="text-sm font-medium text-slate-600">
+              <span className="text-sm font-medium text-[var(--text-secondary)]">
                 {currentIndex + 1} / {questions.length}
               </span>
             </div>
@@ -157,7 +157,7 @@ export default function QuizPage() {
               message="Test what you've learned! 10 questions from completed lessons."
               position="bottom"
             >
-              <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
+              <div className="w-full h-2 bg-[var(--border)] rounded-full overflow-hidden">
                 <motion.div
                   className="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"
                   initial={{ width: 0 }}

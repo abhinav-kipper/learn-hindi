@@ -71,12 +71,12 @@ export function SwipeableCarousel({ items, onComplete }: SwipeableCarouselProps)
             <div
               key={i}
               className={`h-2 w-2 rounded-full transition-all ${
-                i === currentIndex ? 'bg-indigo-500 scale-125' : 'bg-gray-300'
+                i === currentIndex ? 'bg-[var(--accent)] scale-125' : 'bg-[var(--border)]'
               }`}
             />
           ))}
         </div>
-        <p className="text-xs text-gray-400">{currentIndex + 1} / {items.length}</p>
+        <p className="text-xs text-[var(--text-tertiary)]">{currentIndex + 1} / {items.length}</p>
       </div>
     </div>
   )

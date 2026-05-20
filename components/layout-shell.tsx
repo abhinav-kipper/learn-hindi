@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { BottomNav } from '@/components/bottom-nav'
 import { NotificationPrompt } from '@/components/notification-prompt'
 import { MuteToggle } from '@/components/mute-toggle'
+import { ThemeToggle } from '@/components/theme-toggle'
 import { registerServiceWorker, shouldShowNotificationPrompt, scheduleLocalReminder, getNotificationPreference } from '@/lib/notifications'
 
 export function LayoutShell({ children }: { children: React.ReactNode }) {
@@ -34,7 +35,10 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
         {children}
       </main>
       <BottomNav />
-      <MuteToggle />
+      <div className="fixed top-4 right-4 z-50 flex items-center gap-2">
+        <ThemeToggle />
+        <MuteToggle />
+      </div>
       <NotificationPrompt
         show={showNotificationPrompt}
         onDismiss={() => setShowNotificationPrompt(false)}

@@ -101,7 +101,7 @@ export default function ProgressPage() {
   if (!stats) {
     return (
       <div className="min-h-dvh flex items-center justify-center">
-        <div className="w-8 h-8 border-3 border-indigo-600 border-t-transparent rounded-full animate-spin" />
+        <div className="w-8 h-8 border-3 border-[var(--accent)] border-t-transparent rounded-full animate-spin" />
       </div>
     )
   }
@@ -115,14 +115,14 @@ export default function ProgressPage() {
   })
 
   return (
-    <div className="min-h-dvh bg-gradient-to-br from-slate-50 via-white to-indigo-50/30 safe-top pb-24">
+    <div className="min-h-dvh bg-gradient-to-br from-slate-50 via-white to-indigo-50/30 dark:from-[var(--bg-base)] dark:via-[var(--bg-base)] dark:to-[var(--bg-base)] safe-top pb-24">
       <div className="max-w-md mx-auto px-4 py-6">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
-          <h1 className="text-2xl font-bold text-slate-900">Progress</h1>
+          <h1 className="text-2xl font-bold text-[var(--text-primary)]">Progress</h1>
           <button
             onClick={() => router.push('/')}
-            className="text-sm text-slate-500 hover:text-slate-700"
+            className="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
           >
             Home
           </button>
@@ -132,20 +132,20 @@ export default function ProgressPage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-2xl p-5 border border-orange-100 mb-4"
+          className="bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-500/10 dark:to-amber-500/10 rounded-2xl p-5 border border-orange-100 dark:border-orange-500/20 mb-4"
         >
           <div className="flex items-center gap-3 mb-4">
             <span className="text-3xl">🔥</span>
             <div>
-              <AnimatedNumber value={stats.currentStreak} className="text-3xl font-extrabold text-orange-700" />
-              <p className="text-sm text-orange-600/70">day streak</p>
+              <AnimatedNumber value={stats.currentStreak} className="text-3xl font-extrabold text-orange-700 dark:text-orange-400" />
+              <p className="text-sm text-orange-600/70 dark:text-orange-400/60">day streak</p>
             </div>
           </div>
           <div className="flex justify-between">
             {streakDays.map((active, i) => (
               <div key={i} className="flex flex-col items-center gap-1">
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-medium ${
-                  active ? 'bg-orange-400 text-white' : 'bg-orange-100 text-orange-300'
+                  active ? 'bg-orange-400 text-white' : 'bg-orange-100 dark:bg-orange-500/15 text-orange-300 dark:text-orange-500/50'
                 }`}>
                   {reorderedLabels[i]}
                 </div>
@@ -167,25 +167,25 @@ export default function ProgressPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm mb-4"
+          className="bg-[var(--bg-surface)] rounded-2xl p-5 border border-[var(--border)] shadow-sm dark:shadow-none mb-4"
         >
-          <h3 className="text-sm font-semibold text-slate-700 mb-3">Lesson Progress</h3>
+          <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-3">Lesson Progress</h3>
           <div className="space-y-3">
             {lessons.map((lesson) => {
               const isComplete = stats && getProgress().completedLessons.includes(lesson.id)
               return (
                 <div key={lesson.id}>
                   <div className="flex justify-between text-xs mb-1">
-                    <span className="text-slate-600 truncate mr-2">{lesson.title}</span>
-                    <span className="text-slate-400">{isComplete ? '100%' : '0%'}</span>
+                    <span className="text-[var(--text-secondary)] truncate mr-2">{lesson.title}</span>
+                    <span className="text-[var(--text-tertiary)]">{isComplete ? '100%' : '0%'}</span>
                   </div>
-                  <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                  <div className="w-full h-2 bg-[var(--bg-elevated)] rounded-full overflow-hidden">
                     <motion.div
                       initial={{ width: 0 }}
                       animate={{ width: isComplete ? '100%' : '0%' }}
                       transition={{ duration: 0.8, delay: 0.4 }}
                       className={`h-full rounded-full ${
-                        isComplete ? 'bg-gradient-to-r from-emerald-400 to-teal-500' : 'bg-slate-200'
+                        isComplete ? 'bg-gradient-to-r from-emerald-400 to-teal-500' : 'bg-[var(--border)]'
                       }`}
                     />
                   </div>
@@ -201,9 +201,9 @@ export default function ProgressPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm"
+            className="bg-[var(--bg-surface)] rounded-2xl p-5 border border-[var(--border)] shadow-sm dark:shadow-none"
           >
-            <h3 className="text-sm font-semibold text-slate-700 mb-3">Recent Activity</h3>
+            <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-3">Recent Activity</h3>
             <div className="space-y-2">
               {activities.map((activity, i) => (
                 <div key={i} className="flex items-center gap-3 py-2">
@@ -211,8 +211,8 @@ export default function ProgressPage() {
                     {activity.type === 'quiz' ? '🎯' : activity.type === 'review' ? '🔄' : '📖'}
                   </span>
                   <div className="flex-1">
-                    <p className="text-sm text-slate-700">{activity.description}</p>
-                    <p className="text-xs text-slate-400">
+                    <p className="text-sm text-[var(--text-primary)]">{activity.description}</p>
+                    <p className="text-xs text-[var(--text-tertiary)]">
                       {new Date(activity.date).toLocaleDateString()}
                     </p>
                   </div>
@@ -238,12 +238,12 @@ function StatCard({ label, value, icon, suffix, delay }: {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay }}
-      className="bg-white rounded-xl p-4 border border-slate-100 shadow-sm"
+      className="bg-[var(--bg-surface)] rounded-xl p-4 border border-[var(--border)] shadow-sm dark:shadow-none"
     >
       <span className="text-xl">{icon}</span>
       <div className="mt-2">
-        <AnimatedNumber value={value} className="text-2xl font-bold text-slate-900" suffix={suffix} />
-        <p className="text-xs text-slate-500 mt-0.5">{label}</p>
+        <AnimatedNumber value={value} className="text-2xl font-bold text-[var(--text-primary)]" suffix={suffix} />
+        <p className="text-xs text-[var(--text-secondary)] mt-0.5">{label}</p>
       </div>
     </motion.div>
   )

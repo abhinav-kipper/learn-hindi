@@ -72,12 +72,12 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
   }
 
   const sectionBg: Record<Section, string> = {
-    intro: 'bg-gradient-to-b from-indigo-50 to-white',
-    phrases: 'bg-gradient-to-b from-violet-50 to-white',
-    grammar: 'bg-gradient-to-b from-emerald-50 to-white',
-    culture: 'bg-gradient-to-b from-amber-50 to-white',
-    skills: 'bg-gradient-to-b from-sky-50 to-white',
-    cta: 'bg-gradient-to-b from-pink-50 to-white',
+    intro: 'bg-gradient-to-b from-indigo-50 to-white dark:from-[#0f0f18] dark:to-[var(--bg-base)]',
+    phrases: 'bg-gradient-to-b from-violet-50 to-white dark:from-[#12101c] dark:to-[var(--bg-base)]',
+    grammar: 'bg-gradient-to-b from-emerald-50 to-white dark:from-[#0f1412] dark:to-[var(--bg-base)]',
+    culture: 'bg-gradient-to-b from-amber-50 to-white dark:from-[#14120f] dark:to-[var(--bg-base)]',
+    skills: 'bg-gradient-to-b from-sky-50 to-white dark:from-[#0f1214] dark:to-[var(--bg-base)]',
+    cta: 'bg-gradient-to-b from-pink-50 to-white dark:from-[#14101c] dark:to-[var(--bg-base)]',
   }
 
   const renderSection = () => {
@@ -98,7 +98,7 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
         <button
           onClick={goBack}
           disabled={sectionIndex === 0}
-          className="text-sm text-gray-500 disabled:opacity-0 w-12"
+          className="text-sm text-[var(--text-tertiary)] disabled:opacity-0 w-12"
         >
           ←
         </button>
@@ -114,7 +114,7 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
             labels={sections.map(s => sectionLabels[s])}
           />
         </FeatureTooltip>
-        <a href="/" className="text-sm text-gray-500 w-12 text-right">✕</a>
+        <a href="/" className="text-sm text-[var(--text-tertiary)] w-12 text-right">✕</a>
       </div>
 
       {/* Quick action bar */}
@@ -125,8 +125,8 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
             onClick={() => goTo(i)}
             className={`text-xs px-2.5 py-1 rounded-full transition-all ${
               i === sectionIndex
-                ? 'bg-indigo-100 text-indigo-700 font-medium'
-                : 'text-gray-400 hover:text-gray-600'
+                ? 'bg-[var(--accent-soft)] text-[var(--accent)] font-medium'
+                : 'text-[var(--text-tertiary)] hover:text-[var(--text-secondary)]'
             }`}
           >
             {sectionLabels[s]}
@@ -134,7 +134,7 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
         ))}
         <Link
           href={`/practice/${lesson.id}`}
-          className="text-xs px-3 py-1 rounded-full bg-indigo-500 text-white font-medium ml-1 hover:bg-indigo-600 transition-colors"
+          className="text-xs px-3 py-1 rounded-full bg-[var(--accent)] text-white font-medium ml-1 hover:opacity-90 transition-colors"
         >
           💬 Practice
         </Link>

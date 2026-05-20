@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useCallback, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import { speakHindi, stopSpeaking, isSpeaking } from '@/lib/speech'
 
 interface ReadAloudButtonProps {
@@ -40,8 +41,8 @@ export function ReadAloudButton({ text, className = '' }: ReadAloudButtonProps) 
       title={speaking ? 'Stop' : 'Listen'}
       className={`p-2 rounded-full transition-colors duration-150 ${
         speaking
-          ? 'text-indigo-500 bg-indigo-50 scale-110'
-          : 'text-slate-400 hover:text-indigo-500 hover:bg-indigo-50'
+          ? 'text-[var(--accent)] bg-[var(--accent-soft)] scale-110'
+          : 'text-[var(--text-tertiary)] hover:text-[var(--accent)] hover:bg-[var(--accent-soft)]'
       } ${className}`}
     >
       {speaking ? (

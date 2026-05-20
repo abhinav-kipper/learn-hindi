@@ -25,17 +25,17 @@ function PhraseCardContent({ phrase }: { phrase: Phrase }) {
   return (
     <div
       onClick={handleReveal}
-      className="bg-white rounded-3xl shadow-lg p-8 min-h-[320px] flex flex-col items-center justify-center cursor-pointer select-none border border-violet-100"
+      className="bg-[var(--bg-surface)] rounded-3xl shadow-lg dark:shadow-none p-8 min-h-[320px] flex flex-col items-center justify-center cursor-pointer select-none border border-violet-100 dark:border-[var(--border)]"
     >
       <div className="flex items-center gap-2">
-        <p className="text-2xl md:text-3xl font-bold text-slate-900 text-center leading-relaxed">
+        <p className="text-2xl md:text-3xl font-bold text-[var(--text-primary)] text-center leading-relaxed">
           {phrase.hindi}
         </p>
         <ReadAloudButton text={phrase.hindi} />
       </div>
 
       {phrase.pronunciation && (
-        <p className="mt-2 text-sm text-indigo-400 font-mono text-center">
+        <p className="mt-2 text-sm text-indigo-400 dark:text-indigo-300 font-mono text-center">
           {phrase.pronunciation}
         </p>
       )}
@@ -46,11 +46,11 @@ function PhraseCardContent({ phrase }: { phrase: Phrase }) {
           animate={{ opacity: 1, y: 0 }}
           className="mt-6 text-center"
         >
-          <p className="text-lg text-slate-700 font-medium">{phrase.english}</p>
-          <p className="text-sm text-slate-500 mt-2 italic">{phrase.context}</p>
+          <p className="text-lg text-[var(--text-primary)] font-medium">{phrase.english}</p>
+          <p className="text-sm text-[var(--text-secondary)] mt-2 italic">{phrase.context}</p>
         </motion.div>
       ) : (
-        <p className="mt-6 text-sm text-violet-400 font-medium">Tap to reveal translation</p>
+        <p className="mt-6 text-sm text-violet-400 dark:text-violet-300 font-medium">Tap to reveal translation</p>
       )}
     </div>
   )
@@ -63,7 +63,7 @@ export function SectionPhrases({ phrases, onNext }: SectionPhrasesProps) {
 
   return (
     <div className="flex flex-col flex-1 pt-4">
-      <h2 className="text-sm font-semibold text-violet-600 uppercase tracking-wide text-center mb-2">
+      <h2 className="text-sm font-semibold text-violet-600 dark:text-violet-400 uppercase tracking-wide text-center mb-2">
         Key Phrases
       </h2>
       <SwipeableCarousel items={cards} onComplete={onNext} />

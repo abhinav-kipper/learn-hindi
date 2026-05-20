@@ -20,7 +20,7 @@ export function MuteToggle() {
       onClick={handleToggle}
       aria-label={muted ? 'Unmute sounds' : 'Mute sounds'}
       title={muted ? 'Unmute sounds' : 'Mute sounds'}
-      className="fixed top-4 right-4 z-50 w-9 h-9 flex items-center justify-center rounded-full bg-white/80 backdrop-blur-sm border border-slate-200 shadow-sm text-slate-500 hover:text-slate-700 hover:bg-white transition-all duration-150"
+      className="w-9 h-9 flex items-center justify-center rounded-full bg-[var(--bg-surface)] backdrop-blur-sm border border-[var(--border)] shadow-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:border-[var(--border-hover)] transition-all duration-150"
     >
       {muted ? (
         // Muted icon

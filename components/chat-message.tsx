@@ -54,8 +54,8 @@ function SpeakerButton({ text }: { text: string }) {
       title={speaking ? 'Stop' : 'Listen'}
       className={`ml-2 flex-shrink-0 self-end mb-0.5 p-1 rounded-full transition-colors duration-150
         ${speaking
-          ? 'text-indigo-500 bg-indigo-50'
-          : 'text-slate-300 hover:text-indigo-400 hover:bg-indigo-50'
+          ? 'text-[var(--accent)] bg-[var(--accent-soft)]'
+          : 'text-[var(--text-tertiary)] hover:text-[var(--accent)] hover:bg-[var(--accent-soft)]'
         }`}
     >
       {speaking ? (
@@ -91,7 +91,7 @@ export function ChatMessage({ role, content }: ChatMessageProps) {
           className={`px-4 py-3 rounded-2xl text-sm leading-relaxed ${
             isUser
               ? 'bg-gradient-to-br from-indigo-500 to-violet-500 text-white rounded-br-md shadow-sm'
-              : 'bg-white border border-slate-200 text-slate-800 rounded-bl-md shadow-sm'
+              : 'bg-[var(--bg-elevated)] border border-[var(--border)] text-[var(--text-primary)] rounded-bl-md shadow-sm'
           }`}
         >
           {content}

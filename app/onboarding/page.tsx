@@ -62,7 +62,7 @@ export default function OnboardingPage() {
   }
 
   return (
-    <div className="h-dvh flex flex-col bg-white safe-top safe-bottom overflow-hidden">
+    <div className="h-dvh flex flex-col bg-[var(--bg-base)] safe-top safe-bottom overflow-hidden">
       {/* Progress dots */}
       <div className="flex items-center justify-center gap-2 pt-6 pb-4 px-4">
         {Array.from({ length: totalSlides }).map((_, i) => (
@@ -71,10 +71,10 @@ export default function OnboardingPage() {
             onClick={() => goTo(i)}
             className={`h-2 rounded-full transition-all duration-300 ${
               i === slide
-                ? 'w-8 bg-indigo-500'
+                ? 'w-8 bg-[var(--accent)]'
                 : i < slide
-                ? 'w-2 bg-indigo-300'
-                : 'w-2 bg-slate-200'
+                ? 'w-2 bg-[var(--accent)]/50'
+                : 'w-2 bg-[var(--border)]'
             }`}
           />
         ))}
@@ -136,7 +136,7 @@ function SlideWelcome({ onNext }: { onNext: () => void }) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
-        className="text-4xl font-extrabold text-slate-900 tracking-tight"
+        className="text-4xl font-extrabold text-[var(--text-primary)] tracking-tight"
       >
         Bolna Seekho
       </motion.h1>
@@ -144,7 +144,7 @@ function SlideWelcome({ onNext }: { onNext: () => void }) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
-        className="text-lg text-slate-500 mt-3"
+        className="text-lg text-[var(--text-secondary)] mt-3"
       >
         Learn to speak Hindi the way people actually talk
       </motion.p>
@@ -153,7 +153,7 @@ function SlideWelcome({ onNext }: { onNext: () => void }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7 }}
         onClick={onNext}
-        className="mt-10 py-4 px-8 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg"
+        className="mt-10 py-4 px-8 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 dark:shadow-none hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg"
       >
         Let&apos;s go →
       </motion.button>
@@ -173,7 +173,7 @@ function SlideHowItWorks({ onNext }: { onNext: () => void }) {
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-2xl font-bold text-slate-900 mb-8"
+        className="text-2xl font-bold text-[var(--text-primary)] mb-8"
       >
         How it works
       </motion.h2>
@@ -184,10 +184,10 @@ function SlideHowItWorks({ onNext }: { onNext: () => void }) {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 + i * 0.15 }}
-            className="flex items-center gap-4 bg-slate-50 rounded-2xl p-5"
+            className="flex items-center gap-4 bg-[var(--bg-elevated)] rounded-2xl p-5"
           >
             <span className="text-3xl">{step.emoji}</span>
-            <span className="text-base text-slate-700 font-medium text-left">{step.text}</span>
+            <span className="text-base text-[var(--text-primary)] font-medium text-left">{step.text}</span>
           </motion.div>
         ))}
       </div>
@@ -196,7 +196,7 @@ function SlideHowItWorks({ onNext }: { onNext: () => void }) {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
         onClick={onNext}
-        className="mt-10 py-4 px-8 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg"
+        className="mt-10 py-4 px-8 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 dark:shadow-none hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg"
       >
         Next →
       </motion.button>
@@ -222,7 +222,7 @@ function SlideAboutYou({
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-2xl font-bold text-slate-900 mb-2"
+        className="text-2xl font-bold text-[var(--text-primary)] mb-2"
       >
         About you
       </motion.h2>
@@ -230,7 +230,7 @@ function SlideAboutYou({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.1 }}
-        className="text-sm text-slate-500 mb-6"
+        className="text-sm text-[var(--text-secondary)] mb-6"
       >
         So we can personalize your experience
       </motion.p>
@@ -242,7 +242,7 @@ function SlideAboutYou({
         transition={{ delay: 0.2 }}
         className="w-full mb-6"
       >
-        <label className="text-sm font-medium text-slate-700 mb-2 block">
+        <label className="text-sm font-medium text-[var(--text-primary)] mb-2 block">
           What should we call you?
         </label>
         <input
@@ -250,7 +250,7 @@ function SlideAboutYou({
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="Your name"
-          className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 text-base"
+          className="w-full px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--bg-surface)] text-[var(--text-primary)] placeholder:text-[var(--text-tertiary)] focus:outline-none focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20 text-base"
         />
       </motion.div>
 
@@ -261,7 +261,7 @@ function SlideAboutYou({
         transition={{ delay: 0.3 }}
         className="w-full mb-6"
       >
-        <label className="text-sm font-medium text-slate-700 mb-2 block">
+        <label className="text-sm font-medium text-[var(--text-primary)] mb-2 block">
           Why are you learning Hindi?
         </label>
         <div className="grid grid-cols-1 gap-2">
@@ -271,8 +271,8 @@ function SlideAboutYou({
               onClick={() => { setReason(r.id); playSound('pop') }}
               className={`flex items-center gap-3 px-4 py-3 rounded-xl border-2 transition-all text-left text-sm ${
                 reason === r.id
-                  ? 'border-indigo-500 bg-indigo-50 text-indigo-700'
-                  : 'border-slate-200 bg-white text-slate-600 hover:border-slate-300'
+                  ? 'border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--accent)]'
+                  : 'border-[var(--border)] bg-[var(--bg-surface)] text-[var(--text-secondary)] hover:border-[var(--border-hover)]'
               }`}
             >
               <span className="text-lg">{r.emoji}</span>
@@ -287,7 +287,7 @@ function SlideAboutYou({
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
         onClick={onNext}
-        className="mt-4 py-4 px-8 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg"
+        className="mt-4 py-4 px-8 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 dark:shadow-none hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg"
       >
         Next →
       </motion.button>
@@ -309,7 +309,7 @@ function SlideDailyGoal({
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-2xl font-bold text-slate-900 mb-2"
+        className="text-2xl font-bold text-[var(--text-primary)] mb-2"
       >
         Daily goal
       </motion.h2>
@@ -317,7 +317,7 @@ function SlideDailyGoal({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.1 }}
-        className="text-sm text-slate-500 mb-8"
+        className="text-sm text-[var(--text-secondary)] mb-8"
       >
         How much time per day?
       </motion.p>
@@ -332,13 +332,13 @@ function SlideDailyGoal({
             onClick={() => { setDailyGoal(g.minutes); playSound('pop') }}
             className={`w-full flex items-center gap-4 px-5 py-4 rounded-2xl border-2 transition-all text-left ${
               dailyGoal === g.minutes
-                ? 'border-indigo-500 bg-indigo-50'
-                : 'border-slate-200 bg-white hover:border-slate-300'
+                ? 'border-[var(--accent)] bg-[var(--accent-soft)]'
+                : 'border-[var(--border)] bg-[var(--bg-surface)] hover:border-[var(--border-hover)]'
             }`}
           >
             <span className="text-2xl">{g.emoji}</span>
             <span className={`font-medium ${
-              dailyGoal === g.minutes ? 'text-indigo-700' : 'text-slate-600'
+              dailyGoal === g.minutes ? 'text-[var(--accent)]' : 'text-[var(--text-secondary)]'
             }`}>
               {g.label}
             </span>
@@ -351,7 +351,7 @@ function SlideDailyGoal({
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
         onClick={onNext}
-        className="mt-10 py-4 px-8 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg"
+        className="mt-10 py-4 px-8 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 dark:shadow-none hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg"
       >
         Next →
       </motion.button>
@@ -385,7 +385,7 @@ function SlideReady({
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
-        className="text-2xl font-bold text-slate-900"
+        className="text-2xl font-bold text-[var(--text-primary)]"
       >
         You&apos;re ready{name ? `, ${name}` : ''}!
       </motion.h2>
@@ -393,7 +393,7 @@ function SlideReady({
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5 }}
-        className="text-base text-slate-500 mt-3"
+        className="text-base text-[var(--text-secondary)] mt-3"
       >
         Let&apos;s start with your first lesson — Greetings &amp; Fillers
       </motion.p>
@@ -403,7 +403,7 @@ function SlideReady({
         transition={{ delay: 0.7 }}
         onClick={onFinish}
         disabled={showConfetti}
-        className="mt-10 py-4 px-8 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-bold rounded-2xl shadow-lg shadow-indigo-200 hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg disabled:opacity-80"
+        className="mt-10 py-4 px-8 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-bold rounded-2xl shadow-lg shadow-indigo-200 dark:shadow-none hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg disabled:opacity-80"
       >
         Start learning 🚀
       </motion.button>
