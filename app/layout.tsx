@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="apple-touch-icon" href="/icon-192.png" />
+        <link rel="apple-touch-icon" href="/icon.svg" />
       </head>
       <body className={`${inter.className} bg-amber-50 min-h-screen`}>
         <main className="max-w-md mx-auto px-4 py-6">
