@@ -2,6 +2,7 @@ export interface Phrase {
   hindi: string
   english: string
   context: string
+  pronunciation: string  // stress marks and syllable hints, e.g. "a-REY, kya HAAL hai?"
 }
 
 export interface SkillExample {

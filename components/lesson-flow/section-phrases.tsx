@@ -16,11 +16,17 @@ function PhraseCardContent({ phrase }: { phrase: Phrase }) {
   return (
     <div
       onClick={() => setRevealed(!revealed)}
-      className="bg-white rounded-3xl shadow-lg p-8 min-h-[280px] flex flex-col items-center justify-center cursor-pointer select-none border border-violet-100"
+      className="bg-white rounded-3xl shadow-lg p-8 min-h-[320px] flex flex-col items-center justify-center cursor-pointer select-none border border-violet-100"
     >
       <p className="text-2xl md:text-3xl font-bold text-slate-900 text-center leading-relaxed">
         {phrase.hindi}
       </p>
+
+      {phrase.pronunciation && (
+        <p className="mt-2 text-sm text-indigo-400 font-mono text-center">
+          {phrase.pronunciation}
+        </p>
+      )}
 
       {revealed ? (
         <motion.div
@@ -32,7 +38,7 @@ function PhraseCardContent({ phrase }: { phrase: Phrase }) {
           <p className="text-sm text-slate-500 mt-2 italic">{phrase.context}</p>
         </motion.div>
       ) : (
-        <p className="mt-6 text-sm text-indigo-400 font-medium">Tap to reveal translation</p>
+        <p className="mt-6 text-sm text-violet-400 font-medium">Tap to reveal translation</p>
       )}
     </div>
   )
