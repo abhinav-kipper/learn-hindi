@@ -23,35 +23,20 @@ function useChat({ api, body }: { api: string; body: Record<string, unknown> }) 
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const hasSentInitial = useRef(false)
 
-  const handleInputChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-    setInput(e.target.value)
-  }, [])
-
-  const handleSubmit = useCallback(
-    async (e: FormEvent<HTMLFormElement>) => {
-      e.preventDefault()
-      if (!input.trim() || isLoading) return
-
-      setError(null)
-
-      const userMessage: Message = {
-        id: Date.now().toString(),
-        role: 'user',
-        content: input.trim(),
-      }
-
-      const newMessages = [...messages, userMessage]
-      setMessages(newMessages)
-      setInput('')
+  // Auto-send initial message to make AI start the conversation
+  const sendMessages = useCallback(
+    async (messagesToSend: Message[]) => {
       setIsLoading(true)
+      setError(null)
 
       try {
         const response = await fetch(api, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            messages: newMessages.map(({ role, content }) => ({ role, content })),
+            messages: messagesToSend.map(({ role, content }) => ({ role, content })),
             ...body,
           }),
         })
@@ -93,19 +78,42 @@ function useChat({ api, body }: { api: string; body: Record<string, unknown> }) 
         console.error('Chat error:', err)
         const errorMessage = err instanceof Error ? err.message : 'Something went wrong'
         setError(errorMessage)
-        setMessages((prev) => [
-          ...prev,
-          {
-            id: (Date.now() + 1).toString(),
-            role: 'assistant',
-            content: 'Sorry, something went wrong. Please try again.',
-          },
-        ])
       } finally {
         setIsLoading(false)
       }
     },
-    [input, isLoading, messages, api, body]
+    [api, body]
+  )
+
+  // Trigger AI's opening message on mount
+  useEffect(() => {
+    if (!hasSentInitial.current) {
+      hasSentInitial.current = true
+      sendMessages([])
+    }
+  }, [sendMessages])
+
+  const handleInputChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+    setInput(e.target.value)
+  }, [])
+
+  const handleSubmit = useCallback(
+    async (e: FormEvent<HTMLFormElement>) => {
+      e.preventDefault()
+      if (!input.trim() || isLoading) return
+
+      const userMessage: Message = {
+        id: Date.now().toString(),
+        role: 'user',
+        content: input.trim(),
+      }
+
+      const newMessages = [...messages, userMessage]
+      setMessages(newMessages)
+      setInput('')
+      await sendMessages(newMessages)
+    },
+    [input, isLoading, messages, sendMessages]
   )
 
   return { messages, input, setInput, handleInputChange, handleSubmit, isLoading, error }
@@ -156,8 +164,8 @@ export default function PracticePage({ params }: PracticePageProps) {
             transition={{ duration: 0.4 }}
             className="text-center text-slate-400 text-sm mt-12"
           >
-            <p className="font-medium">Start typing to begin practicing!</p>
-            <p className="mt-1.5 text-slate-300">Write in romanized Hindi or English.</p>
+            <p className="font-medium">Setting the scene...</p>
+            <p className="mt-1.5 text-slate-300">Your conversation partner is about to start talking.</p>
           </motion.div>
         )}
         {messages.map((message) => (
