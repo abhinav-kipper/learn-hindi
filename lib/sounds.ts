@@ -105,17 +105,54 @@ function playSoundTap() {
   playNoise(0.03, 0.15, 3000, 2.0)
 }
 
-/** Happy, bright "ding-ding!" — two quick ascending notes (C6 -> E6) */
+/** Satisfying "correct!" chime — bright major chord with shimmer (like Duolingo) */
 function playSoundCorrect() {
   const ctx = getAudioContext()
   if (!ctx) return
 
-  // C6 = 1047Hz, E6 = 1319Hz
-  playTone(1047, 0.15, 'sine', 0.6, ctx.currentTime)
-  playTone(1319, 0.2, 'sine', 0.6, ctx.currentTime + 0.1)
-  // Add a subtle harmonic layer
-  playTone(2094, 0.12, 'sine', 0.15, ctx.currentTime)
-  playTone(2637, 0.15, 'sine', 0.15, ctx.currentTime + 0.1)
+  const now = ctx.currentTime
+
+  // Main bright bell-like tone (G5 = 784Hz) with quick attack
+  const osc1 = ctx.createOscillator()
+  const gain1 = ctx.createGain()
+  osc1.connect(gain1)
+  gain1.connect(ctx.destination)
+  osc1.frequency.value = 784
+  osc1.type = 'sine'
+  gain1.gain.setValueAtTime(0.001, now)
+  gain1.gain.exponentialRampToValueAtTime(0.5, now + 0.01)
+  gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.4)
+  osc1.start(now)
+  osc1.stop(now + 0.45)
+
+  // Higher octave shimmer (G6 = 1568Hz) — delayed slightly
+  const osc2 = ctx.createOscillator()
+  const gain2 = ctx.createGain()
+  osc2.connect(gain2)
+  gain2.connect(ctx.destination)
+  osc2.frequency.value = 1568
+  osc2.type = 'sine'
+  gain2.gain.setValueAtTime(0.001, now + 0.05)
+  gain2.gain.exponentialRampToValueAtTime(0.3, now + 0.06)
+  gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.35)
+  osc2.start(now + 0.05)
+  osc2.stop(now + 0.4)
+
+  // Third (B5 = 988Hz) for major chord color
+  const osc3 = ctx.createOscillator()
+  const gain3 = ctx.createGain()
+  osc3.connect(gain3)
+  gain3.connect(ctx.destination)
+  osc3.frequency.value = 988
+  osc3.type = 'sine'
+  gain3.gain.setValueAtTime(0.001, now + 0.02)
+  gain3.gain.exponentialRampToValueAtTime(0.25, now + 0.03)
+  gain3.gain.exponentialRampToValueAtTime(0.001, now + 0.35)
+  osc3.start(now + 0.02)
+  osc3.stop(now + 0.4)
+
+  // Sparkle noise for that "ding" texture
+  playNoise(0.06, 0.08, 5000, 3.0)
 }
 
 /** Distinctive low "bonk" — short 200Hz with quick pitch drop to 100Hz */

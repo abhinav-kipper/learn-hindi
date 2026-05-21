@@ -14,10 +14,15 @@ export async function POST(req: Request) {
 
     const systemPrompt = buildSystemPrompt(lesson)
 
+    // If no messages (initial trigger), send a hidden user message to prompt the AI to start
+    const chatMessages = messages.length === 0
+      ? [{ role: 'user' as const, content: 'Start the conversation. Set the scene and talk to me in character.' }]
+      : messages
+
     const result = await streamText({
       model: google('gemini-2.5-flash'),
       system: systemPrompt,
-      messages,
+      messages: chatMessages,
     })
 
     return result.toTextStreamResponse()
