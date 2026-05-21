@@ -1,6 +1,7 @@
 import { QuizQuestion, QuizAnswer, QuizType } from '@/types/quiz'
 import { getAllContent } from '@/lib/lessons'
 import { Phrase } from '@/types/lesson'
+import { getExploredVocabWords, VocabWord } from '@/lib/vocabulary'
 
 function shuffle<T>(array: T[]): T[] {
   const arr = [...array]
@@ -20,75 +21,104 @@ function pickRandom<T>(arr: T[], count: number, exclude?: T[]): T[] {
   return shuffle(filtered).slice(0, count)
 }
 
-interface PhraseWithMeta {
-  phrase: Phrase
+interface PhraseTarget {
+  source: 'phrase'
+  hindi: string
+  english: string
+  context: string
   lessonId: string
   phraseIndex: number
 }
 
-function getAllPhrases(lessonIds?: string[]): PhraseWithMeta[] {
-  const lessons = getAllContent()
-  const filtered = lessonIds
-    ? lessons.filter(l => lessonIds.includes(l.id))
-    : lessons
-
-  const phrases: PhraseWithMeta[] = []
-  for (const lesson of filtered) {
-    lesson.phrases.forEach((phrase, index) => {
-      phrases.push({ phrase, lessonId: lesson.id, phraseIndex: index })
-    })
-  }
-  return phrases
+interface VocabTarget {
+  source: 'vocab'
+  hindi: string
+  english: string
+  context: string
+  lessonId: string
+  phraseIndex: number
 }
 
-function generateTranslateToEnglish(target: PhraseWithMeta, allPhrases: PhraseWithMeta[]): QuizQuestion {
-  const wrongPhrases = pickRandom(allPhrases, 3, [target])
-  const answers: QuizAnswer[] = shuffle([
-    { id: randomId(), text: target.phrase.english, isCorrect: true },
-    ...wrongPhrases.map(p => ({ id: randomId(), text: p.phrase.english, isCorrect: false })),
-  ])
+type Target = PhraseTarget | VocabTarget
 
+function phrasesToTargets(lessonIds?: string[]): PhraseTarget[] {
+  const lessons = getAllContent()
+  const filtered = lessonIds ? lessons.filter(l => lessonIds.includes(l.id)) : lessons
+  const targets: PhraseTarget[] = []
+  for (const lesson of filtered) {
+    lesson.phrases.forEach((phrase: Phrase, index: number) => {
+      targets.push({
+        source: 'phrase',
+        hindi: phrase.hindi,
+        english: phrase.english,
+        context: phrase.context,
+        lessonId: lesson.id,
+        phraseIndex: index,
+      })
+    })
+  }
+  return targets
+}
+
+function vocabToTargets(): VocabTarget[] {
+  const explored = getExploredVocabWords()
+  return explored.map((word: VocabWord) => ({
+    source: 'vocab' as const,
+    hindi: word.hindi,
+    english: word.english,
+    context: word.example,
+    lessonId: 'vocab',
+    phraseIndex: -1,
+  }))
+}
+
+function generateTranslateToEnglish(target: Target, pool: Target[]): QuizQuestion {
+  const wrong = pickRandom(pool, 3, [target])
+  const answers: QuizAnswer[] = shuffle([
+    { id: randomId(), text: target.english, isCorrect: true },
+    ...wrong.map(p => ({ id: randomId(), text: p.english, isCorrect: false })),
+  ])
   return {
     id: randomId(),
     type: 'translate-to-english',
-    prompt: target.phrase.hindi,
+    prompt: target.hindi,
     subPrompt: 'What does this mean in English?',
     answers,
     lessonId: target.lessonId,
     phraseIndex: target.phraseIndex,
+    source: target.source,
   }
 }
 
-function generateTranslateToHindi(target: PhraseWithMeta, allPhrases: PhraseWithMeta[]): QuizQuestion {
-  const wrongPhrases = pickRandom(allPhrases, 3, [target])
+function generateTranslateToHindi(target: Target, pool: Target[]): QuizQuestion {
+  const wrong = pickRandom(pool, 3, [target])
   const answers: QuizAnswer[] = shuffle([
-    { id: randomId(), text: target.phrase.hindi, isCorrect: true },
-    ...wrongPhrases.map(p => ({ id: randomId(), text: p.phrase.hindi, isCorrect: false })),
+    { id: randomId(), text: target.hindi, isCorrect: true },
+    ...wrong.map(p => ({ id: randomId(), text: p.hindi, isCorrect: false })),
   ])
-
   return {
     id: randomId(),
     type: 'translate-to-hindi',
-    prompt: target.phrase.english,
+    prompt: target.english,
     subPrompt: 'How do you say this in Hindi?',
     answers,
     lessonId: target.lessonId,
     phraseIndex: target.phraseIndex,
+    source: target.source,
   }
 }
 
-function generateFillInBlank(target: PhraseWithMeta, allPhrases: PhraseWithMeta[]): QuizQuestion {
-  const words = target.phrase.hindi.split(' ')
+function generateFillInBlank(target: PhraseTarget, allPhrases: PhraseTarget[]): QuizQuestion {
+  const words = target.hindi.split(' ')
   if (words.length < 2) {
     return generateTranslateToEnglish(target, allPhrases)
   }
-
   const blankIndex = Math.floor(Math.random() * words.length)
   const correctWord = words[blankIndex]
-  const blankedPhrase = words.map((w, i) => i === blankIndex ? '___' : w).join(' ')
+  const blankedPhrase = words.map((w, i) => (i === blankIndex ? '___' : w)).join(' ')
 
   const otherWords = allPhrases
-    .flatMap(p => p.phrase.hindi.split(' '))
+    .flatMap(p => p.hindi.split(' '))
     .filter(w => w !== correctWord && w.length > 1)
   const wrongWords = pickRandom([...new Set(otherWords)], 3)
 
@@ -96,61 +126,81 @@ function generateFillInBlank(target: PhraseWithMeta, allPhrases: PhraseWithMeta[
     { id: randomId(), text: correctWord, isCorrect: true },
     ...wrongWords.map(w => ({ id: randomId(), text: w, isCorrect: false })),
   ])
-
   return {
     id: randomId(),
     type: 'fill-in-blank',
     prompt: blankedPhrase,
-    subPrompt: `Fill in the blank: "${target.phrase.english}"`,
+    subPrompt: `Fill in the blank: "${target.english}"`,
     answers,
     lessonId: target.lessonId,
     phraseIndex: target.phraseIndex,
+    source: 'phrase',
   }
 }
 
-function generateContextMatch(target: PhraseWithMeta, allPhrases: PhraseWithMeta[]): QuizQuestion {
-  const wrongPhrases = pickRandom(allPhrases, 3, [target])
+function generateContextMatch(target: Target, pool: Target[]): QuizQuestion {
+  const wrong = pickRandom(pool, 3, [target])
   const answers: QuizAnswer[] = shuffle([
-    { id: randomId(), text: target.phrase.hindi, isCorrect: true },
-    ...wrongPhrases.map(p => ({ id: randomId(), text: p.phrase.hindi, isCorrect: false })),
+    { id: randomId(), text: target.hindi, isCorrect: true },
+    ...wrong.map(p => ({ id: randomId(), text: p.hindi, isCorrect: false })),
   ])
-
   return {
     id: randomId(),
     type: 'context-match',
-    prompt: target.phrase.context,
+    prompt: target.context,
     subPrompt: 'Which phrase fits this situation?',
     answers,
     lessonId: target.lessonId,
     phraseIndex: target.phraseIndex,
+    source: target.source,
   }
 }
 
-const quizGenerators: Record<QuizType, (target: PhraseWithMeta, all: PhraseWithMeta[]) => QuizQuestion> = {
-  'translate-to-english': generateTranslateToEnglish,
-  'translate-to-hindi': generateTranslateToHindi,
-  'fill-in-blank': generateFillInBlank,
-  'context-match': generateContextMatch,
+const phraseQuizTypes: QuizType[] = ['translate-to-english', 'translate-to-hindi', 'fill-in-blank', 'context-match']
+const vocabQuizTypes: QuizType[] = ['translate-to-english', 'translate-to-hindi', 'context-match']
+
+function makePhraseQuestion(target: PhraseTarget, pool: PhraseTarget[]): QuizQuestion {
+  const type = phraseQuizTypes[Math.floor(Math.random() * phraseQuizTypes.length)]
+  switch (type) {
+    case 'translate-to-english': return generateTranslateToEnglish(target, pool)
+    case 'translate-to-hindi': return generateTranslateToHindi(target, pool)
+    case 'fill-in-blank': return generateFillInBlank(target, pool)
+    case 'context-match': return generateContextMatch(target, pool)
+  }
 }
 
-const quizTypes: QuizType[] = ['translate-to-english', 'translate-to-hindi', 'fill-in-blank', 'context-match']
+function makeVocabQuestion(target: VocabTarget, pool: VocabTarget[]): QuizQuestion {
+  const type = vocabQuizTypes[Math.floor(Math.random() * vocabQuizTypes.length)]
+  switch (type) {
+    case 'translate-to-english': return generateTranslateToEnglish(target, pool)
+    case 'translate-to-hindi': return generateTranslateToHindi(target, pool)
+    case 'context-match': return generateContextMatch(target, pool)
+    default: return generateTranslateToEnglish(target, pool)
+  }
+}
 
 export function generateQuiz(lessonIds: string[], count: number): QuizQuestion[] {
-  const allPhrases = getAllPhrases()
-  const targetPhrases = getAllPhrases(lessonIds)
+  const phraseTargets = phrasesToTargets(lessonIds)
+  if (phraseTargets.length === 0) return []
 
-  if (targetPhrases.length === 0) return []
+  const vocabTargets = vocabToTargets()
+  const canMixVocab = vocabTargets.length >= 3
 
-  const selected = shuffle(targetPhrases).slice(0, count)
-  const questions: QuizQuestion[] = selected.map(target => {
-    const type = quizTypes[Math.floor(Math.random() * quizTypes.length)]
-    return quizGenerators[type](target, allPhrases)
-  })
+  let vocabCount = canMixVocab ? Math.round(count * 0.3) : 0
+  vocabCount = Math.min(vocabCount, vocabTargets.length)
+  const phraseCount = count - vocabCount
 
-  return questions
+  const allPhrasePool = phrasesToTargets()
+
+  const selectedPhrases = shuffle(phraseTargets).slice(0, phraseCount)
+  const selectedVocab = shuffle(vocabTargets).slice(0, vocabCount)
+
+  const phraseQuestions = selectedPhrases.map(t => makePhraseQuestion(t, allPhrasePool))
+  const vocabQuestions = selectedVocab.map(t => makeVocabQuestion(t, vocabTargets))
+
+  return shuffle([...phraseQuestions, ...vocabQuestions])
 }
 
-// Store quiz scores in localStorage
 const QUIZ_SCORES_KEY = 'hindi-quiz-scores'
 
 export interface QuizScore {
@@ -164,7 +214,6 @@ export function saveQuizScore(score: number, total: number, lessonIds: string[])
   if (typeof window === 'undefined') return
   const scores = getQuizScores()
   scores.push({ score, total, date: new Date().toISOString(), lessonIds })
-  // Keep only last 50 scores
   const trimmed = scores.slice(-50)
   localStorage.setItem(QUIZ_SCORES_KEY, JSON.stringify(trimmed))
 }
