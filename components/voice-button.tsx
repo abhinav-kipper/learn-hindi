@@ -71,7 +71,20 @@ export function VoiceButton({ onTranscript, disabled = false }: VoiceButtonProps
   useEffect(() => {
     const SpeechRecognitionAPI =
       window.SpeechRecognition || window.webkitSpeechRecognition
-    setSupported(!!SpeechRecognitionAPI)
+
+    // iOS Safari has the API in the window but it doesn't actually work
+    const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent)
+    const isIOSSafari = isIOS && /safari/i.test(navigator.userAgent) && !/chrome|crios|fxios/i.test(navigator.userAgent)
+
+    // Also detect standalone PWA on iOS (no browser UA)
+    const isStandalone = (window.navigator as unknown as { standalone?: boolean }).standalone === true
+    const isIOSPWA = isIOS && isStandalone
+
+    if (isIOSSafari || isIOSPWA) {
+      setSupported(false)
+    } else {
+      setSupported(!!SpeechRecognitionAPI)
+    }
   }, [])
 
   const stopListening = useCallback(() => {
