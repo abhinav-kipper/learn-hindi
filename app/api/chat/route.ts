@@ -7,7 +7,7 @@ import { getDutchAnyLessonById } from '@/lib/dutch/lessons'
 
 export async function POST(req: Request) {
   try {
-    const { messages, lessonId, language = 'hindi' } = await req.json()
+    const { messages, lessonId, language = 'hindi', userContext } = await req.json()
 
     const lesson = language === 'dutch'
       ? getDutchAnyLessonById(lessonId)
@@ -18,8 +18,8 @@ export async function POST(req: Request) {
     }
 
     const systemPrompt = language === 'dutch'
-      ? buildDutchSystemPrompt(lesson)
-      : buildSystemPrompt(lesson)
+      ? buildDutchSystemPrompt(lesson, userContext)
+      : buildSystemPrompt(lesson, userContext)
 
     const chatMessages = messages.length === 0
       ? [{ role: 'user' as const, content: 'Start the session. Introduce today\'s topic and give the first prompt.' }]

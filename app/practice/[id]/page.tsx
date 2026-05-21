@@ -13,6 +13,8 @@ import { getUniversalLessonById } from '@/lib/all-content'
 import { FeatureTooltip } from '@/components/feature-tooltip'
 import { playSound } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
+import { getUserProfile } from '@/lib/onboarding'
+import { getReasonInfo } from '@/lib/personalization'
 
 interface Message {
   id: string
@@ -126,7 +128,14 @@ export default function PracticePage({ params }: PracticePageProps) {
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const [showFinish, setShowFinish] = useState(false)
 
-  const body = useMemo(() => ({ lessonId: id, language }), [id, language])
+  const body = useMemo(() => {
+    const profile = typeof window !== 'undefined' ? getUserProfile() : null
+    const reasonInfo = profile ? getReasonInfo(profile.reason) : null
+    const userContext = reasonInfo
+      ? { name: profile?.name, reasonContext: reasonInfo.context }
+      : undefined
+    return { lessonId: id, language, userContext }
+  }, [id, language])
   const lesson = getUniversalLessonById(id)
 
   const { messages, input, setInput, handleInputChange, handleSubmit, isLoading, error } = useChat({

@@ -1,11 +1,16 @@
 import { Lesson } from '@/types/lesson'
+import type { UserContext } from './system-prompt'
 
-export function buildDutchSystemPrompt(lesson: Lesson): string {
+export function buildDutchSystemPrompt(lesson: Lesson, userContext?: UserContext): string {
   const phrasesText = lesson.phrases
     .map((p) => `- "${p.hindi}" (${p.english})`)
     .join('\n')
 
-  return `You are a patient Dutch grammar tutor for a language learning app. The learner is a complete beginner living in the Netherlands.
+  const learnerLine = userContext?.reasonContext
+    ? `\nLEARNER CONTEXT: The learner${userContext.name ? ' (' + userContext.name + ')' : ''} ${userContext.reasonContext}. Acknowledge this in passing when natural; don't force it.\n`
+    : ''
+
+  return `You are a patient Dutch grammar tutor for a language learning app. The learner is a complete beginner living in the Netherlands.${learnerLine}
 
 ═══════════════════════════════════════
 YOUR ROLE:

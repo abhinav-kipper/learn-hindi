@@ -1,11 +1,20 @@
 import { Lesson } from '@/types/lesson'
 
-export function buildSystemPrompt(lesson: Lesson): string {
+export interface UserContext {
+  name?: string
+  reasonContext?: string
+}
+
+export function buildSystemPrompt(lesson: Lesson, userContext?: UserContext): string {
   const phrasesText = lesson.phrases
     .map((p) => `- "${p.hindi}" (${p.english})`)
     .join('\n')
 
-  return `You are a Hindi conversation practice partner for a language learning app.
+  const learnerLine = userContext?.reasonContext
+    ? `\nLEARNER CONTEXT: ${userContext.name ? `The learner${userContext.name ? ' (' + userContext.name + ')' : ''}` : 'The learner'} ${userContext.reasonContext}. Keep this in mind when choosing examples or asides — don't reference it directly unless natural.\n`
+    : ''
+
+  return `You are a Hindi conversation practice partner for a language learning app.${learnerLine}
 
 ═══════════════════════════════════════
 CRITICAL LANGUAGE RULE — READ THIS FIRST:

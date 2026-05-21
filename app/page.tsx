@@ -14,6 +14,7 @@ import { isOnboardingComplete, getUserProfile } from '@/lib/onboarding'
 import { playSound, isMuted, toggleMute } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
 import { DutchWelcomeModal } from '@/components/dutch-welcome-modal'
+import { getReasonInfo, reorderLessonsByReason } from '@/lib/personalization'
 
 type Tab = 'situations' | 'foundations'
 
@@ -23,12 +24,17 @@ export default function Home() {
   const [ready, setReady] = useState(false)
   const [userName, setUserName] = useState('')
   const [dailyGoal, setDailyGoal] = useState(5)
+  const [reason, setReason] = useState('')
   const [completedCount, setCompletedCount] = useState(0)
   const [muted, setMuted] = useState(false)
   const [activeTab, setActiveTab] = useState<Tab>('situations')
 
-  const lessons = language === 'dutch' ? getDutchLessons() : getAllLessons()
+  const rawLessons = language === 'dutch' ? getDutchLessons() : getAllLessons()
   const foundations = language === 'dutch' ? getDutchFoundations() : getAllFoundations()
+  // Reorder situations by the user's onboarding reason — Hindi only (Dutch has
+  // too few lessons to bother reordering)
+  const lessons = language === 'hindi' ? reorderLessonsByReason(rawLessons, reason) : rawLessons
+  const reasonInfo = getReasonInfo(reason)
 
   useEffect(() => {
     if (!isOnboardingComplete()) {
@@ -38,6 +44,7 @@ export default function Home() {
     const profile = getUserProfile()
     setUserName(profile.name || 'Friend')
     setDailyGoal(profile.dailyGoal)
+    setReason(profile.reason || '')
     const progress = getProgress(config.storagePrefix)
     setCompletedCount(progress.completedLessons.length)
     setMuted(isMuted())
@@ -88,6 +95,13 @@ export default function Home() {
           </button>
         </div>
       </div>
+
+      {reasonInfo && language === 'hindi' && (
+        <div className="mt-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--accent-soft)] border border-[var(--accent)]/20 text-xs font-medium text-[var(--accent-text)]">
+          <span>{reasonInfo.emoji}</span>
+          <span>{reasonInfo.label}</span>
+        </div>
+      )}
 
       {/* Tabs */}
       <div className="flex items-center gap-2 mb-4 mt-3">
