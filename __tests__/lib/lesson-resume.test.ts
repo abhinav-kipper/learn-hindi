@@ -24,6 +24,7 @@ function fakeLesson(id: string, phraseCount: number): Lesson {
     practice_prompt: '',
     grammar_notes: [],
     culture_notes: [],
+    skill_breakdown: [],
     phrases: Array.from({ length: phraseCount }, (_, i) => ({
       hindi: `h${i}`, english: `e${i}`, pronunciation: 'p', context: 'c',
     })),

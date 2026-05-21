@@ -7,6 +7,7 @@ import { SwipeableCarousel } from './swipeable-carousel'
 import { ReadAloudButton } from '@/components/read-aloud-button'
 import { playSound } from '@/lib/sounds'
 import { markPhraseViewed } from '@/lib/phrase-progress'
+import { setLastActiveLesson } from '@/lib/last-active-lesson'
 import { useLanguage } from '@/lib/language-context'
 
 interface SectionPhrasesProps {
@@ -245,7 +246,10 @@ export function SectionPhrases({ lessonId, phrases, grammarNotes, cultureNotes, 
       <SwipeableCarousel
         items={carouselItems}
         onComplete={onNext}
-        onIndexChange={(i) => markPhraseViewed(lessonId, i, config.storagePrefix)}
+        onIndexChange={(i) => {
+          markPhraseViewed(lessonId, i, config.storagePrefix)
+          setLastActiveLesson(lessonId, config.storagePrefix)
+        }}
         initialIndex={initialIndex}
       />
     </div>

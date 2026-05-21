@@ -18,6 +18,8 @@ import { getUserProfile } from '@/lib/onboarding'
 import { getReasonInfo } from '@/lib/personalization'
 import { addMistake } from '@/lib/mistakes'
 import type { ChatReply } from '@/lib/chat-schema'
+import { loadChatHistory, saveChatHistory, clearChatHistory, type ChatTurn } from '@/lib/chat-persistence'
+import { setLastActiveLesson, clearLastActiveLesson } from '@/lib/last-active-lesson'
 
 interface Message {
   id: string
@@ -40,12 +42,18 @@ function useChat({
   api,
   body,
   onAssistantReply,
+  persistKey,
 }: {
   api: string
   body: Record<string, unknown>
   onAssistantReply?: (reply: ChatReply) => void
+  /** { lessonId, prefix } for chat-persistence. When omitted, history is not saved/loaded. */
+  persistKey?: { lessonId: string; prefix: string }
 }) {
-  const [messages, setMessages] = useState<Message[]>([])
+  const [messages, setMessages] = useState<Message[]>(() => {
+    if (!persistKey || typeof window === 'undefined') return []
+    return loadChatHistory(persistKey.lessonId, persistKey.prefix)
+  })
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -116,11 +124,25 @@ function useChat({
   )
 
   useEffect(() => {
+    // Only fetch the initial greeting if we don't already have hydrated history.
     if (!hasSentInitial.current) {
       hasSentInitial.current = true
-      sendMessages([])
+      if (messages.length === 0) sendMessages([])
     }
-  }, [sendMessages])
+  }, [sendMessages, messages.length])
+
+  // Persist successful turns on every change so closing the page mid-session
+  // can be resumed. Failed/transient bubbles are filtered inside saveChatHistory.
+  useEffect(() => {
+    if (!persistKey) return
+    saveChatHistory(persistKey.lessonId, messages as ChatTurn[], persistKey.prefix)
+  }, [messages, persistKey])
+
+  const resetChat = useCallback(() => {
+    if (persistKey) clearChatHistory(persistKey.lessonId, persistKey.prefix)
+    setMessages([])
+    hasSentInitial.current = false
+  }, [persistKey])
 
   const handleInputChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value)
@@ -159,7 +181,7 @@ function useChat({
     await sendMessages(trimmed)
   }, [messages, sendMessages])
 
-  return { messages, input, setInput, handleInputChange, handleSubmit, isLoading, error, retryLast }
+  return { messages, input, setInput, handleInputChange, handleSubmit, isLoading, error, retryLast, resetChat }
 }
 
 export default function PracticePage({ params }: PracticePageProps) {
@@ -217,11 +239,26 @@ export default function PracticePage({ params }: PracticePageProps) {
     [id, config.storagePrefix],
   )
 
-  const { messages, input, setInput, handleInputChange, handleSubmit, isLoading, error, retryLast } = useChat({
+  const persistKey = useMemo(
+    () => ({ lessonId: id, prefix: config.storagePrefix }),
+    [id, config.storagePrefix],
+  )
+
+  const { messages, input, setInput, handleInputChange, handleSubmit, isLoading, error, retryLast, resetChat } = useChat({
     api: '/api/chat',
     body,
     onAssistantReply: handleAssistantReply,
+    persistKey,
   })
+
+  // Whenever the practice page is open and there's been any conversation,
+  // mark this lesson as the most recently touched one (drives the "Continue"
+  // affordance on the home page).
+  useEffect(() => {
+    if (messages.length > 0) {
+      setLastActiveLesson(id, config.storagePrefix)
+    }
+  }, [messages.length, id, config.storagePrefix])
 
   const handleTranscript = useCallback((text: string) => {
     setInput(text)
@@ -255,6 +292,10 @@ export default function PracticePage({ params }: PracticePageProps) {
     markLessonComplete(id, config.storagePrefix)
     updateStreak(config.storagePrefix)
     incrementPracticeCount(config.storagePrefix)
+    // Conversation is closed — clear persisted history so the next session
+    // starts fresh, and stop pointing the "Continue" CTA at this lesson.
+    clearChatHistory(id, config.storagePrefix)
+    clearLastActiveLesson(config.storagePrefix)
     playSound('levelup')
     confetti({
       particleCount: 100,
@@ -266,6 +307,12 @@ export default function PracticePage({ params }: PracticePageProps) {
       scalar: 0.9,
     })
     setShowFinish(true)
+  }
+
+  const handleReset = () => {
+    if (!confirm('Start the conversation over? This will clear the current chat.')) return
+    resetChat()
+    playSound('tap')
   }
 
   return (
@@ -292,6 +339,19 @@ export default function PracticePage({ params }: PracticePageProps) {
           Lesson
         </Link>
         <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={handleReset}
+            disabled={messages.length === 0 || isLoading}
+            title="Start a fresh conversation"
+            aria-label="Reset conversation"
+            className="text-[var(--text-tertiary)] hover:text-[var(--accent)] disabled:opacity-30 disabled:hover:text-[var(--text-tertiary)] transition-colors p-1.5"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="1 4 1 10 7 10" />
+              <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
+            </svg>
+          </button>
           <button
             type="button"
             onClick={toggleHandsFree}

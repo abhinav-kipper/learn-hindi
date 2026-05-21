@@ -45,6 +45,31 @@ export default function CategoryPage() {
     setReviewSet(new Set(getVocabReview()))
   }, [categoryId, router, isDutch])
 
+  // Scroll-position restore: save on scroll (throttled by rAF), restore once
+  // after the first paint when category data has loaded. Keyed by language
+  // prefix + category so swipes in Hindi don't displace Dutch state.
+  const scrollKey = `${config.storagePrefix}-vocab-scroll-${categoryId}`
+  useEffect(() => {
+    if (!category) return
+    const saved = sessionStorage.getItem(scrollKey)
+    if (saved) {
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: parseInt(saved, 10) || 0, behavior: 'auto' })
+      })
+    }
+    let ticking = false
+    const onScroll = () => {
+      if (ticking) return
+      ticking = true
+      requestAnimationFrame(() => {
+        sessionStorage.setItem(scrollKey, String(window.scrollY))
+        ticking = false
+      })
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [category, scrollKey])
+
   const handleCardTap = (word: VocabWord) => {
     if (flippedCard === word.hindi) {
       setFlippedCard(null)

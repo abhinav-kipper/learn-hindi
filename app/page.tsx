@@ -15,6 +15,10 @@ import { playSound, isMuted, toggleMute } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
 import { DutchWelcomeModal } from '@/components/dutch-welcome-modal'
 import { getReasonInfo, reorderLessonsByReason } from '@/lib/personalization'
+import { getLastActiveLesson } from '@/lib/last-active-lesson'
+import { getLessonPercent } from '@/lib/phrase-progress'
+import { getUniversalLessonById } from '@/lib/all-content'
+import { isLessonComplete } from '@/lib/progress'
 
 type Tab = 'situations' | 'foundations'
 
@@ -27,7 +31,15 @@ export default function Home() {
   const [reason, setReason] = useState('')
   const [completedCount, setCompletedCount] = useState(0)
   const [muted, setMuted] = useState(false)
+  const tabStorageKey = `${config.storagePrefix}-home-tab`
   const [activeTab, setActiveTab] = useState<Tab>('situations')
+  const [continueInfo, setContinueInfo] = useState<{ id: string; title: string; percent: number } | null>(null)
+
+  const setTab = (next: Tab) => {
+    setActiveTab(next)
+    if (typeof window !== 'undefined') localStorage.setItem(tabStorageKey, next)
+    playSound('tap')
+  }
 
   const rawLessons = language === 'dutch' ? getDutchLessons() : getAllLessons()
   const foundations = language === 'dutch' ? getDutchFoundations() : getAllFoundations()
@@ -48,8 +60,34 @@ export default function Home() {
     const progress = getProgress(config.storagePrefix)
     setCompletedCount(progress.completedLessons.length)
     setMuted(isMuted())
+
+    // Restore the last-active tab for this language (Situations vs Foundations).
+    const storedTab = localStorage.getItem(tabStorageKey)
+    if (storedTab === 'situations' || storedTab === 'foundations') {
+      setActiveTab(storedTab)
+    } else {
+      setActiveTab('situations')
+    }
+
+    // Resolve the "Continue …" CTA target. Skip if it's already completed.
+    const lastId = getLastActiveLesson(config.storagePrefix)
+    if (lastId && !isLessonComplete(lastId, config.storagePrefix)) {
+      const lesson = getUniversalLessonById(lastId)
+      if (lesson) {
+        setContinueInfo({
+          id: lesson.id,
+          title: lesson.title,
+          percent: getLessonPercent(lesson, config.storagePrefix),
+        })
+      } else {
+        setContinueInfo(null)
+      }
+    } else {
+      setContinueInfo(null)
+    }
+
     setReady(true)
-  }, [router, language, config.storagePrefix])
+  }, [router, language, config.storagePrefix, tabStorageKey])
 
   if (!ready) {
     return (
@@ -103,10 +141,24 @@ export default function Home() {
         </div>
       )}
 
+      {continueInfo && (
+        <button
+          onClick={() => { playSound('tap'); router.push(`/lessons/${continueInfo.id}`) }}
+          className="w-full mt-3 px-4 py-3 rounded-2xl bg-gradient-to-r from-indigo-500 to-violet-500 text-white text-left shadow-md hover:opacity-95 transition-opacity flex items-center justify-between"
+        >
+          <div className="min-w-0">
+            <p className="text-[10px] uppercase tracking-wider opacity-80 font-semibold">Continue</p>
+            <p className="text-sm font-bold truncate">{continueInfo.title}</p>
+            <p className="text-xs opacity-80">{continueInfo.percent}% done — pick up where you left off</p>
+          </div>
+          <span className="text-xl flex-shrink-0 ml-2">→</span>
+        </button>
+      )}
+
       {/* Tabs */}
       <div className="flex items-center gap-2 mb-4 mt-3">
         <button
-          onClick={() => { setActiveTab('situations'); playSound('tap') }}
+          onClick={() => setTab('situations')}
           className={`px-4 py-2 text-sm font-semibold rounded-full transition-all ${
             activeTab === 'situations'
               ? 'bg-[var(--accent)] text-white shadow-md'
@@ -116,7 +168,7 @@ export default function Home() {
           Situations
         </button>
         <button
-          onClick={() => { setActiveTab('foundations'); playSound('tap') }}
+          onClick={() => setTab('foundations')}
           className={`px-4 py-2 text-sm font-semibold rounded-full transition-all ${
             activeTab === 'foundations'
               ? 'bg-[var(--accent)] text-white shadow-md'
