@@ -12,8 +12,39 @@ interface ChatMessageProps {
   parsed?: ChatReply
   /** True if the API failed for this message. */
   failed?: boolean
+  /** Seconds to wait before retry succeeds — present when the failure was a rate limit. */
+  retryAfterSeconds?: number
   /** Retry callback shown alongside failed assistant messages. */
   onRetry?: () => void
+}
+
+function RateLimitMessage({ retryAfterSeconds, onRetry }: { retryAfterSeconds: number; onRetry?: () => void }) {
+  const [remaining, setRemaining] = useState(retryAfterSeconds)
+
+  useEffect(() => {
+    if (remaining <= 0) return
+    const timer = setInterval(() => setRemaining(r => Math.max(0, r - 1)), 1000)
+    return () => clearInterval(timer)
+  }, [remaining])
+
+  return (
+    <div className="flex items-center gap-2">
+      <span>⏳ Tutor&apos;s catching its breath.</span>
+      {remaining > 0 ? (
+        <span className="text-xs font-semibold">Retry in {remaining}s</span>
+      ) : (
+        onRetry && (
+          <button
+            type="button"
+            onClick={onRetry}
+            className="text-xs font-semibold underline hover:text-sky-900"
+          >
+            Try again
+          </button>
+        )
+      )}
+    </div>
+  )
 }
 
 function SpeakerButton({ text }: { text: string }) {
@@ -72,27 +103,38 @@ function SpeakerButton({ text }: { text: string }) {
   )
 }
 
-export function ChatMessage({ role, content, parsed, failed, onRetry }: ChatMessageProps) {
+export function ChatMessage({ role, content, parsed, failed, retryAfterSeconds, onRetry }: ChatMessageProps) {
   const isUser = role === 'user'
 
   // Failed assistant message — show a friendly recovery affordance.
   if (!isUser && failed) {
+    const isRateLimited = retryAfterSeconds !== undefined
     return (
       <motion.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         className="flex justify-start"
       >
-        <div className="flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-800 rounded-2xl rounded-bl-md px-4 py-3 text-sm shadow-sm">
-          <span>⚠️ Couldn&apos;t get a clean reply.</span>
-          {onRetry && (
-            <button
-              type="button"
-              onClick={onRetry}
-              className="text-xs font-semibold underline hover:text-amber-900"
-            >
-              Try again
-            </button>
+        <div className={`flex items-center gap-2 rounded-2xl rounded-bl-md px-4 py-3 text-sm shadow-sm ${
+          isRateLimited
+            ? 'bg-sky-50 border border-sky-200 text-sky-800'
+            : 'bg-amber-50 border border-amber-200 text-amber-800'
+        }`}>
+          {isRateLimited ? (
+            <RateLimitMessage retryAfterSeconds={retryAfterSeconds} onRetry={onRetry} />
+          ) : (
+            <>
+              <span>⚠️ Couldn&apos;t get a clean reply.</span>
+              {onRetry && (
+                <button
+                  type="button"
+                  onClick={onRetry}
+                  className="text-xs font-semibold underline hover:text-amber-900"
+                >
+                  Try again
+                </button>
+              )}
+            </>
           )}
         </div>
       </motion.div>

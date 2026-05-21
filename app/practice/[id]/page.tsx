@@ -28,6 +28,8 @@ interface Message {
   parsed?: ChatReply
   /** True if the API call for this assistant message failed (parse/network/server). */
   failed?: boolean
+  /** Seconds to wait before retrying — set when the failure was a rate-limit (HTTP 429). */
+  retryAfterSeconds?: number
 }
 
 interface PracticePageProps {
@@ -64,6 +66,20 @@ function useChat({
             ...body,
           }),
         })
+
+        // Rate-limit: server returns a structured 429 with retryAfterSeconds
+        // so the UI can show a friendly countdown instead of a generic error.
+        if (response.status === 429) {
+          const body = await response.json().catch(() => ({}))
+          const retryAfterSeconds: number | undefined =
+            typeof body?.retryAfterSeconds === 'number' ? body.retryAfterSeconds : undefined
+          setMessages((prev) => [
+            ...prev,
+            { id: assistantId, role: 'assistant', content: '', failed: true, retryAfterSeconds },
+          ])
+          setError('rate_limited')
+          return
+        }
 
         if (!response.ok) {
           throw new Error(`Server error: ${response.status}`)
@@ -335,6 +351,7 @@ export default function PracticePage({ params }: PracticePageProps) {
             content={message.content}
             parsed={message.parsed}
             failed={message.failed}
+            retryAfterSeconds={message.retryAfterSeconds}
             onRetry={message.failed ? retryLast : undefined}
           />
         ))}
