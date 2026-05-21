@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { getCategory, markWordLearned, isWordLearned, VocabWord, VocabCategory } from '@/lib/vocabulary'
+import { ReadAloudButton } from '@/components/read-aloud-button'
 
 export default function CategoryPage() {
   const params = useParams()
@@ -121,18 +122,19 @@ export default function CategoryPage() {
                 {/* Front side - always visible */}
                 <div className="p-4">
                   <div className="flex items-start justify-between">
-                    <div>
+                    <div className="flex items-center gap-2">
                       <p className="text-xl font-bold text-[var(--text-primary)]">
                         {word.hindi}
                       </p>
-                      <p className="text-xs text-[var(--text-tertiary)] mt-0.5">
-                        {word.pronunciation}
-                      </p>
+                      <ReadAloudButton text={word.hindi} />
                     </div>
                     <span className="text-[10px] px-2 py-0.5 bg-[var(--bg-elevated)] text-[var(--text-tertiary)] rounded-full font-medium">
                       {word.type}
                     </span>
                   </div>
+                  <p className="text-xs text-[var(--text-tertiary)] mt-0.5">
+                    {word.pronunciation}
+                  </p>
                   <p className="text-sm text-[var(--text-secondary)] mt-2">
                     {word.english}
                   </p>
