@@ -4,7 +4,7 @@ import { ChatReplySchema } from '@/lib/chat-schema'
 describe('ChatReplySchema', () => {
   it('accepts a minimal valid reply', () => {
     const result = ChatReplySchema.safeParse({
-      hindi: 'arey kya haal hai?',
+      reply: 'arey kya haal hai?',
       english: 'How are you?',
     })
     expect(result.success).toBe(true)
@@ -12,7 +12,7 @@ describe('ChatReplySchema', () => {
 
   it('accepts a reply with a correction', () => {
     const result = ChatReplySchema.safeParse({
-      hindi: 'haan bilkul',
+      reply: 'haan bilkul',
       english: 'Yeah, totally',
       correction: {
         original: 'main jaata hain',
@@ -26,19 +26,19 @@ describe('ChatReplySchema', () => {
     }
   })
 
-  it('rejects empty hindi field', () => {
-    const result = ChatReplySchema.safeParse({ hindi: '', english: 'Hi' })
+  it('rejects empty reply field', () => {
+    const result = ChatReplySchema.safeParse({ reply: '', english: 'Hi' })
     expect(result.success).toBe(false)
   })
 
   it('rejects empty english field', () => {
-    const result = ChatReplySchema.safeParse({ hindi: 'arey', english: '' })
+    const result = ChatReplySchema.safeParse({ reply: 'arey', english: '' })
     expect(result.success).toBe(false)
   })
 
   it('rejects a correction missing required fields', () => {
     const result = ChatReplySchema.safeParse({
-      hindi: 'arey',
+      reply: 'arey',
       english: 'Hi',
       correction: { original: 'X' }, // missing correct + reason
     })
@@ -47,7 +47,7 @@ describe('ChatReplySchema', () => {
 
   it('treats correction as optional — omitting it is fine', () => {
     const result = ChatReplySchema.safeParse({
-      hindi: 'arey',
+      reply: 'arey',
       english: 'Hi',
     })
     expect(result.success).toBe(true)

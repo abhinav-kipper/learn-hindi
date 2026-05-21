@@ -12,7 +12,7 @@ import { ChatReplySchema, type ChatReply } from '@/lib/chat-schema'
 const NON_LATIN_RE = /[ऀ-ॿঀ-৿਀-૿઀-૿଀-୿஀-௿ఀ-౿ಀ-೿ഀ-ൿ؀-ۿ֐-׿]/
 
 function hasForbiddenScript(reply: ChatReply): boolean {
-  return NON_LATIN_RE.test(reply.hindi)
+  return NON_LATIN_RE.test(reply.reply)
 }
 
 /**
@@ -63,7 +63,7 @@ export async function POST(req: Request) {
 
     // generateObject already retries internally on schema/parse failures, so
     // we keep our own retry layer minimal — just one extra attempt if the
-    // model emits non-Latin script into the hindi field. maxRetries: 1 (down
+    // model emits non-Latin script into the reply field. maxRetries: 1 (down
     // from the SDK default of 2) keeps total backend calls bounded so we
     // don't burn the Gemini free-tier rate limit (20 req/min).
     let reply: ChatReply
@@ -77,14 +77,14 @@ export async function POST(req: Request) {
     })
     reply = result.object
 
-    // Defense: if the model slipped non-Latin script into the hindi field
+    // Defense: if the model slipped non-Latin script into the reply field
     // (e.g. Devanagari), retry once asking for romanization.
     if (language === 'hindi' && hasForbiddenScript(reply)) {
       try {
         const retry = await generateObject({
           model: google('gemini-2.5-flash'),
           schema: ChatReplySchema,
-          system: systemPrompt + '\n\nIMPORTANT: Your previous reply contained Devanagari/non-Latin script. Re-emit it with the hindi field FULLY romanized (English alphabet a-z only).',
+          system: systemPrompt + '\n\nIMPORTANT: Your previous reply contained Devanagari/non-Latin script. Re-emit it with the reply field FULLY romanized (English alphabet a-z only).',
           messages: chatMessages,
           temperature: 0.3,
           maxRetries: 0,

@@ -160,14 +160,14 @@ export function ChatMessage({ role, content, parsed, failed, retryAfterSeconds, 
         >
           {parsed ? (
             <div>
-              <p className="font-medium">{parsed.hindi}</p>
+              <p className="font-medium">{parsed.reply}</p>
               <p className="mt-1.5 text-xs opacity-60 italic">{parsed.english}</p>
             </div>
           ) : (
             content
           )}
         </div>
-        {!isUser && parsed && <SpeakerButton text={parsed.hindi} />}
+        {!isUser && parsed && <SpeakerButton text={parsed.reply} />}
       </div>
     </motion.div>
   )

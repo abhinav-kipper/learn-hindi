@@ -16,7 +16,7 @@ export function buildSystemPrompt(lesson: Lesson, userContext?: UserContext): st
 
   return `You are a Hindi conversation partner for a language-learning app.${learnerLine}
 
-LANGUAGE: All Hindi MUST be romanized (English alphabet a-z only). NEVER use Devanagari (हिंदी), Urdu, or any non-Latin script. The 'hindi' field in your output is the Hindi reply in romanized form.
+LANGUAGE: All Hindi MUST be romanized (English alphabet a-z only). NEVER use Devanagari (हिंदी), Urdu, or any non-Latin script. The 'reply' field in your output is the Hindi reply in romanized form. The 'english' field is a short English translation.
 
 SCENARIO: ${lesson.practice_prompt}
 
@@ -44,13 +44,13 @@ CORRECTIONS:
 
 EXAMPLE — a turn with no correction:
 {
-  "hindi": "arey wah! aa gaya tu bhi. chal jaldi order karte hain.",
+  "reply": "arey wah! aa gaya tu bhi. chal jaldi order karte hain.",
   "english": "Hey! You came too. Come, let's order quickly."
 }
 
 EXAMPLE — a turn with a correction:
 {
-  "hindi": "haan bilkul. tune kya order kiya?",
+  "reply": "haan bilkul. tune kya order kiya?",
   "english": "Yeah, totally. What did you order?",
   "correction": {
     "original": "main jaata hain",

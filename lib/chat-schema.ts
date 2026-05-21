@@ -3,15 +3,15 @@ import { z } from 'zod'
 /**
  * Schema for assistant chat messages. The chat API uses Gemini's structured
  * output to enforce this shape, so the client never has to parse free-form
- * text. `correction` is optional — it's set only when the tutor is correcting
- * a user mistake.
+ * text. `correction` is optional — set only when the tutor is correcting a
+ * user mistake.
  */
 export const ChatReplySchema = z.object({
-  hindi: z
+  reply: z
     .string()
     .min(1)
     .describe(
-      'The reply IN THE TARGET LANGUAGE, romanized ASCII only (English alphabet, no Devanagari/Arabic). Despite the field name, this is also where Dutch text goes when the lesson is Dutch.',
+      'The reply in the target language (Hindi or Dutch), romanized in ASCII for Hindi (English alphabet, no Devanagari/Arabic). For Dutch, write it in standard Dutch orthography.',
     ),
   english: z
     .string()

@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { requestNotificationPermission, setNotificationPreference } from '@/lib/notifications'
+import { useLanguage } from '@/lib/language-context'
 
 interface NotificationPromptProps {
   show: boolean
@@ -10,6 +11,7 @@ interface NotificationPromptProps {
 }
 
 export function NotificationPrompt({ show, onDismiss }: NotificationPromptProps) {
+  const { config } = useLanguage()
   const [requesting, setRequesting] = useState(false)
 
   const handleEnable = async () => {
@@ -40,7 +42,7 @@ export function NotificationPrompt({ show, onDismiss }: NotificationPromptProps)
               <div className="flex-1">
                 <h3 className="font-semibold text-[var(--text-primary)] text-sm">Daily Practice Reminders</h3>
                 <p className="text-xs text-[var(--text-secondary)] mt-1">
-                  Get a gentle reminder to practice Hindi every day and keep your streak alive!
+                  Get a gentle reminder to practice {config.name} every day and keep your streak alive!
                 </p>
               </div>
             </div>

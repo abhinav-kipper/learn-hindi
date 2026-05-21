@@ -93,7 +93,7 @@ function useChat({
           {
             id: assistantId,
             role: 'assistant',
-            content: reply.hindi,
+            content: reply.reply,
             parsed: reply,
           },
         ])
@@ -231,7 +231,7 @@ export default function PracticePage({ params }: PracticePageProps) {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages])
 
-  // Hands-free: when a new assistant message arrives, speak the hindi field
+  // Hands-free: when a new assistant message arrives, speak the reply
   // and auto-arm the mic when speech ends. Spoken at most once per message.
   useEffect(() => {
     if (!handsFree) return
@@ -240,7 +240,7 @@ export default function PracticePage({ params }: PracticePageProps) {
     if (!last || last.role !== 'assistant' || last.failed || !last.parsed) return
     if (spokenIdsRef.current.has(last.id)) return
     spokenIdsRef.current.add(last.id)
-    speak(last.parsed.hindi, config.ttsLocale, () => {
+    speak(last.parsed.reply, config.ttsLocale, () => {
       voiceRef.current?.start()
     })
   }, [messages, isLoading, handsFree, config.ttsLocale])
@@ -389,7 +389,13 @@ export default function PracticePage({ params }: PracticePageProps) {
             disabled={isLoading}
             className="flex-1 px-4 py-3 rounded-full border border-[var(--border)] bg-[var(--bg-elevated)] text-[var(--text-primary)] placeholder:text-[var(--text-tertiary)] focus:outline-none focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20 text-sm disabled:opacity-50 transition-all"
           />
-          <VoiceButton ref={voiceRef} onTranscript={handleTranscript} disabled={isLoading} locale={sttLocale} />
+          <VoiceButton
+            ref={voiceRef}
+            onTranscript={handleTranscript}
+            disabled={isLoading}
+            locale={sttLocale}
+            listenLabel={`Speak in ${config.name}`}
+          />
           <button
             type="submit"
             disabled={isLoading || !input.trim()}

@@ -8,6 +8,8 @@ interface VoiceButtonProps {
   disabled?: boolean
   /** BCP-47 locale to recognize (e.g. 'hi-IN', 'nl-NL'). Defaults to 'hi-IN'. */
   locale?: string
+  /** Tooltip shown when idle. Defaults to 'Speak'. */
+  listenLabel?: string
 }
 
 export interface VoiceButtonHandle {
@@ -70,7 +72,7 @@ declare global {
 }
 
 export const VoiceButton = forwardRef<VoiceButtonHandle, VoiceButtonProps>(function VoiceButton(
-  { onTranscript, disabled = false, locale = 'hi-IN' },
+  { onTranscript, disabled = false, locale = 'hi-IN', listenLabel = 'Speak' },
   ref,
 ) {
   const [state, setState] = useState<ListenState>('idle')
@@ -192,7 +194,7 @@ export const VoiceButton = forwardRef<VoiceButtonHandle, VoiceButtonProps>(funct
       type="button"
       onClick={handleClick}
       disabled={disabled && !isListening}
-      title={isListening ? 'Stop listening' : 'Speak in Hindi'}
+      title={isListening ? 'Stop listening' : listenLabel}
       className={`relative flex items-center justify-center w-12 h-12 rounded-xl font-semibold transition-all duration-200 shadow-sm
         ${isListening
           ? 'bg-red-500 hover:bg-red-600 text-white'
