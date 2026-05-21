@@ -153,7 +153,7 @@ function SlideWelcome({ onNext }: { onNext: () => void }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7 }}
         onClick={onNext}
-        className="mt-10 py-4 px-8 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 dark:shadow-none hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg"
+        className="mt-10 py-4 px-8 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg"
       >
         Let&apos;s go →
       </motion.button>
@@ -196,7 +196,7 @@ function SlideHowItWorks({ onNext }: { onNext: () => void }) {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
         onClick={onNext}
-        className="mt-10 py-4 px-8 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 dark:shadow-none hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg"
+        className="mt-10 py-4 px-8 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg"
       >
         Next →
       </motion.button>
@@ -287,7 +287,7 @@ function SlideAboutYou({
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
         onClick={onNext}
-        className="mt-4 py-4 px-8 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 dark:shadow-none hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg"
+        className="mt-4 py-4 px-8 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg"
       >
         Next →
       </motion.button>
@@ -351,7 +351,7 @@ function SlideDailyGoal({
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
         onClick={onNext}
-        className="mt-10 py-4 px-8 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 dark:shadow-none hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg"
+        className="mt-10 py-4 px-8 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg"
       >
         Next →
       </motion.button>
@@ -403,7 +403,7 @@ function SlideReady({
         transition={{ delay: 0.7 }}
         onClick={onFinish}
         disabled={showConfetti}
-        className="mt-10 py-4 px-8 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-bold rounded-2xl shadow-lg shadow-indigo-200 dark:shadow-none hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg disabled:opacity-80"
+        className="mt-10 py-4 px-8 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-bold rounded-2xl shadow-lg shadow-indigo-200 hover:shadow-xl hover:-translate-y-0.5 transition-all text-lg disabled:opacity-80"
       >
         Start learning 🚀
       </motion.button>

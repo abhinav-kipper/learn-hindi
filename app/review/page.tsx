@@ -67,13 +67,13 @@ export default function ReviewPage() {
 
   if (locked) {
     return (
-      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50 dark:from-[var(--bg-base)] dark:via-[var(--bg-base)] dark:to-[var(--bg-base)]">
+      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50">
         <div className="text-5xl mb-4">🔒</div>
         <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">Review Locked</h2>
         <p className="text-base text-[var(--text-secondary)] text-center mb-6">Complete your first lesson to unlock reviews!</p>
         <button
           onClick={() => router.push('/')}
-          className="py-3 px-6 bg-teal-600 dark:bg-teal-500 text-white font-semibold rounded-xl"
+          className="py-3 px-6 bg-teal-600 text-white font-semibold rounded-xl"
         >
           Go to Lessons
         </button>
@@ -83,11 +83,11 @@ export default function ReviewPage() {
 
   if (phrases.length === 0 && !locked) {
     return (
-      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50 dark:from-[var(--bg-base)] dark:via-[var(--bg-base)] dark:to-[var(--bg-base)]">
+      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50">
         <p className="text-lg text-[var(--text-secondary)] text-center mb-4">No phrases to review yet. Complete a lesson first!</p>
         <button
           onClick={() => router.push('/')}
-          className="py-3 px-6 bg-teal-600 dark:bg-teal-500 text-white font-semibold rounded-xl"
+          className="py-3 px-6 bg-teal-600 text-white font-semibold rounded-xl"
         >
           Go to Lessons
         </button>
@@ -97,7 +97,7 @@ export default function ReviewPage() {
 
   if (complete) {
     return (
-      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50 dark:from-[var(--bg-base)] dark:via-[var(--bg-base)] dark:to-[var(--bg-base)] safe-top safe-bottom">
+      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50 safe-top safe-bottom">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -112,7 +112,7 @@ export default function ReviewPage() {
           <div className="flex flex-col gap-3 w-full max-w-xs mx-auto">
             <button
               onClick={loadPhrases}
-              className="w-full py-3 px-6 bg-teal-600 dark:bg-teal-500 text-white font-semibold rounded-xl hover:opacity-90 transition-colors"
+              className="w-full py-3 px-6 bg-teal-600 text-white font-semibold rounded-xl hover:opacity-90 transition-colors"
             >
               Review Again
             </button>
@@ -137,7 +137,7 @@ export default function ReviewPage() {
   }
 
   return (
-    <div className="min-h-dvh flex flex-col bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50 dark:from-[var(--bg-base)] dark:via-[var(--bg-base)] dark:to-[var(--bg-base)] safe-top safe-bottom">
+    <div className="min-h-dvh flex flex-col bg-gradient-to-br from-teal-50 via-emerald-50 to-cyan-50 safe-top safe-bottom">
       {/* Header */}
       <div className="px-4 pt-4 pb-2">
         <div className="flex items-center justify-between mb-2">
@@ -181,7 +181,7 @@ export default function ReviewPage() {
           >
             <div
               onClick={() => !revealed && setRevealed(true)}
-              className="bg-[var(--bg-surface)] rounded-2xl shadow-lg dark:shadow-none border border-[var(--border)] p-8 min-h-[300px] flex flex-col items-center justify-center cursor-pointer"
+              className="bg-[var(--bg-surface)] rounded-2xl shadow-lg border border-[var(--border)] p-8 min-h-[300px] flex flex-col items-center justify-center cursor-pointer"
             >
               {/* Hindi */}
               <p className="text-2xl font-bold text-[var(--text-primary)] text-center mb-2">
@@ -198,7 +198,7 @@ export default function ReviewPage() {
                   animate={{ opacity: 1, y: 0 }}
                   className="mt-4 pt-4 border-t border-[var(--border)] w-full text-center"
                 >
-                  <p className="text-lg text-teal-700 dark:text-teal-400 font-medium">
+                  <p className="text-lg text-teal-700 font-medium">
                     {currentPhrase.phrase.english}
                   </p>
                   <p className="text-xs text-[var(--text-tertiary)] mt-2">
@@ -219,13 +219,13 @@ export default function ReviewPage() {
               >
                 <button
                   onClick={handleStillLearning}
-                  className="flex-1 py-3 px-4 bg-amber-50 dark:bg-amber-500/10 border-2 border-amber-200 dark:border-amber-500/30 text-amber-700 dark:text-amber-400 font-semibold rounded-xl hover:bg-amber-100 dark:hover:bg-amber-500/15 transition-colors"
+                  className="flex-1 py-3 px-4 bg-amber-50 border-2 border-amber-200 text-amber-700 font-semibold rounded-xl hover:bg-amber-100 transition-colors"
                 >
                   Still Learning
                 </button>
                 <button
                   onClick={handleGotIt}
-                  className="flex-1 py-3 px-4 bg-emerald-50 dark:bg-emerald-500/10 border-2 border-emerald-200 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-400 font-semibold rounded-xl hover:bg-emerald-100 dark:hover:bg-emerald-500/15 transition-colors"
+                  className="flex-1 py-3 px-4 bg-emerald-50 border-2 border-emerald-200 text-emerald-700 font-semibold rounded-xl hover:bg-emerald-100 transition-colors"
                 >
                   Got it!
                 </button>

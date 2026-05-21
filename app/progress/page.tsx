@@ -115,7 +115,7 @@ export default function ProgressPage() {
   })
 
   return (
-    <div className="min-h-dvh bg-gradient-to-br from-slate-50 via-white to-indigo-50/30 dark:from-[var(--bg-base)] dark:via-[var(--bg-base)] dark:to-[var(--bg-base)] safe-top pb-24">
+    <div className="min-h-dvh bg-gradient-to-br from-slate-50 via-white to-indigo-50/30 safe-top pb-24">
       <div className="max-w-md mx-auto px-4 py-6">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
@@ -132,20 +132,20 @@ export default function ProgressPage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-gradient-to-r from-orange-50 to-amber-50 dark:from-orange-500/10 dark:to-amber-500/10 rounded-2xl p-5 border border-orange-100 dark:border-orange-500/20 mb-4"
+          className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-2xl p-5 border border-orange-100 mb-4"
         >
           <div className="flex items-center gap-3 mb-4">
             <span className="text-3xl">🔥</span>
             <div>
-              <AnimatedNumber value={stats.currentStreak} className="text-3xl font-extrabold text-orange-700 dark:text-orange-400" />
-              <p className="text-sm text-orange-600/70 dark:text-orange-400/60">day streak</p>
+              <AnimatedNumber value={stats.currentStreak} className="text-3xl font-extrabold text-orange-700" />
+              <p className="text-sm text-orange-600/70">day streak</p>
             </div>
           </div>
           <div className="flex justify-between">
             {streakDays.map((active, i) => (
               <div key={i} className="flex flex-col items-center gap-1">
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-medium ${
-                  active ? 'bg-orange-400 text-white' : 'bg-orange-100 dark:bg-orange-500/15 text-orange-300 dark:text-orange-500/50'
+                  active ? 'bg-orange-400 text-white' : 'bg-orange-100 text-orange-300'
                 }`}>
                   {reorderedLabels[i]}
                 </div>
@@ -167,7 +167,7 @@ export default function ProgressPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-[var(--bg-surface)] rounded-2xl p-5 border border-[var(--border)] shadow-sm dark:shadow-none mb-4"
+          className="bg-[var(--bg-surface)] rounded-2xl p-5 border border-[var(--border)] shadow-sm mb-4"
         >
           <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-3">Lesson Progress</h3>
           <div className="space-y-3">
@@ -201,7 +201,7 @@ export default function ProgressPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="bg-[var(--bg-surface)] rounded-2xl p-5 border border-[var(--border)] shadow-sm dark:shadow-none"
+            className="bg-[var(--bg-surface)] rounded-2xl p-5 border border-[var(--border)] shadow-sm"
           >
             <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-3">Recent Activity</h3>
             <div className="space-y-2">
@@ -238,7 +238,7 @@ function StatCard({ label, value, icon, suffix, delay }: {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay }}
-      className="bg-[var(--bg-surface)] rounded-xl p-4 border border-[var(--border)] shadow-sm dark:shadow-none"
+      className="bg-[var(--bg-surface)] rounded-xl p-4 border border-[var(--border)] shadow-sm"
     >
       <span className="text-xl">{icon}</span>
       <div className="mt-2">

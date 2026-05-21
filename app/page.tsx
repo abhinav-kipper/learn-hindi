@@ -8,7 +8,7 @@ import { LessonCard } from '@/components/lesson-card'
 import { StreakCounter } from '@/components/streak-counter'
 import { FeatureTooltip } from '@/components/feature-tooltip'
 import { isOnboardingComplete, getUserProfile } from '@/lib/onboarding'
-import { playSound } from '@/lib/sounds'
+import { playSound, isMuted, toggleMute } from '@/lib/sounds'
 
 export default function Home() {
   const router = useRouter()
@@ -16,6 +16,7 @@ export default function Home() {
   const [userName, setUserName] = useState('')
   const [dailyGoal, setDailyGoal] = useState(5)
   const [completedCount, setCompletedCount] = useState(0)
+  const [muted, setMuted] = useState(false)
   const lessons = getAllLessons()
 
   useEffect(() => {
@@ -28,6 +29,7 @@ export default function Home() {
     setDailyGoal(profile.dailyGoal)
     const progress = getProgress()
     setCompletedCount(progress.completedLessons.length)
+    setMuted(isMuted())
     setReady(true)
   }, [router])
 
@@ -50,7 +52,26 @@ export default function Home() {
             {dailyGoal} min today — you got this!
           </p>
         </div>
-        <StreakCounter />
+        <div className="flex items-center gap-2">
+          <StreakCounter />
+          <button
+            onClick={() => { const m = toggleMute(); setMuted(m) }}
+            aria-label={muted ? 'Unmute sounds' : 'Mute sounds'}
+            className="w-8 h-8 flex items-center justify-center rounded-full bg-[var(--bg-surface)] border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+          >
+            {muted ? (
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+                <path d="M10 3.75a.75.75 0 0 0-1.264-.546L4.703 7H3.167a.75.75 0 0 0-.7.48A6.985 6.985 0 0 0 2 10c0 .887.165 1.737.468 2.52.111.29.39.48.7.48h1.535l4.033 3.796A.75.75 0 0 0 10 16.25V3.75Z" />
+                <path d="M14.22 7.22a.75.75 0 0 1 1.06 0L16.5 8.44l1.22-1.22a.75.75 0 1 1 1.06 1.06L17.56 9.5l1.22 1.22a.75.75 0 1 1-1.06 1.06L16.5 10.56l-1.22 1.22a.75.75 0 1 1-1.06-1.06l1.22-1.22-1.22-1.22a.75.75 0 0 1 0-1.06Z" />
+              </svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+                <path d="M10 3.75a.75.75 0 0 0-1.264-.546L4.703 7H3.167a.75.75 0 0 0-.7.48A6.985 6.985 0 0 0 2 10c0 .887.165 1.737.468 2.52.111.29.39.48.7.48h1.535l4.033 3.796A.75.75 0 0 0 10 16.25V3.75ZM15.95 5.05a.75.75 0 0 0-1.06 1.061 5.5 5.5 0 0 1 0 7.778.75.75 0 0 0 1.06 1.06 7 7 0 0 0 0-9.899Z" />
+                <path d="M13.829 7.172a.75.75 0 0 0-1.061 1.06 2.5 2.5 0 0 1 0 3.536.75.75 0 0 0 1.06 1.06 4 4 0 0 0 0-5.656Z" />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
 
       {completedCount === 0 && (

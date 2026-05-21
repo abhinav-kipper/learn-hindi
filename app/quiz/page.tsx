@@ -93,7 +93,7 @@ export default function QuizPage() {
 
   if (loading) {
     return (
-      <div className="min-h-dvh flex items-center justify-center bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-[var(--bg-base)] dark:via-[var(--bg-base)] dark:to-[var(--bg-base)]">
+      <div className="min-h-dvh flex items-center justify-center bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 1, ease: 'linear' }}
@@ -105,7 +105,7 @@ export default function QuizPage() {
 
   if (locked) {
     return (
-      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-[var(--bg-base)] dark:via-[var(--bg-base)] dark:to-[var(--bg-base)]">
+      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
         <div className="text-5xl mb-4">🔒</div>
         <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">Quiz Locked</h2>
         <p className="text-base text-[var(--text-secondary)] text-center mb-6">Complete your first lesson to unlock quizzes!</p>
@@ -121,7 +121,7 @@ export default function QuizPage() {
 
   if (questions.length === 0) {
     return (
-      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-[var(--bg-base)] dark:via-[var(--bg-base)] dark:to-[var(--bg-base)]">
+      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
         <p className="text-lg text-[var(--text-secondary)] text-center mb-4">Complete a lesson first to take a quiz!</p>
         <button
           onClick={() => router.push('/')}
@@ -136,7 +136,7 @@ export default function QuizPage() {
   const score = results.filter(r => r.isCorrect).length
 
   return (
-    <div className="min-h-dvh flex flex-col bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 dark:from-[var(--bg-base)] dark:via-[var(--bg-base)] dark:to-[var(--bg-base)] safe-top safe-bottom">
+    <div className="min-h-dvh flex flex-col bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 safe-top safe-bottom">
       {!quizComplete && (
         <>
           {/* Progress bar */}

@@ -22,7 +22,7 @@ function CultureCardContent({ note }: { note: string }) {
   const hindiText = extractHindiText(note)
 
   return (
-    <div className="bg-[var(--bg-surface)] rounded-3xl shadow-lg dark:shadow-none p-8 min-h-[240px] flex flex-col items-center justify-center border border-amber-100 dark:border-[var(--border)]">
+    <div className="bg-[var(--bg-surface)] rounded-3xl shadow-lg p-8 min-h-[240px] flex flex-col items-center justify-center border border-amber-100">
       <span className="text-3xl mb-4">💡</span>
       <p className="text-lg text-[var(--text-secondary)] text-center leading-relaxed font-medium">
         {note}
@@ -43,7 +43,7 @@ export function SectionCulture({ notes, onNext }: SectionCultureProps) {
 
   return (
     <div className="flex flex-col flex-1 pt-4">
-      <h2 className="text-sm font-semibold text-amber-600 dark:text-amber-400 uppercase tracking-wide text-center mb-2">
+      <h2 className="text-sm font-semibold text-amber-600 uppercase tracking-wide text-center mb-2">
         Culture Tips
       </h2>
       <SwipeableCarousel items={cards} onComplete={onNext} />

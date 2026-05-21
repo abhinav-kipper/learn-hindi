@@ -15,13 +15,13 @@ function SkillCard({ skill }: { skill: SkillBreakdown }) {
   return (
     <div
       onClick={() => setExpanded(!expanded)}
-      className="bg-[var(--bg-surface)] rounded-2xl p-5 border border-sky-100 dark:border-[var(--border)] shadow-sm dark:shadow-none cursor-pointer select-none"
+      className="bg-[var(--bg-surface)] rounded-2xl p-5 border border-sky-100 shadow-sm cursor-pointer select-none"
     >
       <div className="flex items-center justify-between">
         <h3 className="font-semibold text-[var(--text-primary)]">{skill.skill}</h3>
         <motion.span
           animate={{ rotate: expanded ? 180 : 0 }}
-          className="text-sky-400 dark:text-sky-300 text-sm"
+          className="text-sky-400 text-sm"
         >
           ▼
         </motion.span>
@@ -40,7 +40,7 @@ function SkillCard({ skill }: { skill: SkillBreakdown }) {
             {skill.more_examples.length > 0 && (
               <div className="mt-3 space-y-2">
                 {skill.more_examples.map((ex, i) => (
-                  <div key={i} className="text-sm pl-3 border-l-2 border-sky-200 dark:border-sky-500/30">
+                  <div key={i} className="text-sm pl-3 border-l-2 border-sky-200">
                     <p className="font-medium text-[var(--text-primary)]">{ex.hindi}</p>
                     <p className="text-[var(--text-secondary)]">{ex.english}</p>
                   </div>
@@ -57,7 +57,7 @@ function SkillCard({ skill }: { skill: SkillBreakdown }) {
 export function SectionSkills({ skills, onNext }: SectionSkillsProps) {
   return (
     <div className="flex flex-col flex-1 px-6 pt-4 pb-6">
-      <h2 className="text-sm font-semibold text-sky-600 dark:text-sky-400 uppercase tracking-wide text-center mb-4">
+      <h2 className="text-sm font-semibold text-sky-600 uppercase tracking-wide text-center mb-4">
         Skills Summary
       </h2>
 
@@ -69,7 +69,7 @@ export function SectionSkills({ skills, onNext }: SectionSkillsProps) {
 
       <button
         onClick={onNext}
-        className="mt-4 w-full py-3.5 px-6 bg-gradient-to-r from-sky-500 to-blue-500 text-white font-semibold rounded-2xl shadow-lg shadow-sky-200 dark:shadow-none"
+        className="mt-4 w-full py-3.5 px-6 bg-gradient-to-r from-sky-500 to-blue-500 text-white font-semibold rounded-2xl shadow-lg shadow-sky-200"
       >
         Next →
       </button>

@@ -26,7 +26,7 @@ export function SectionIntro({ lesson, onNext }: SectionIntroProps) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
-        className="mt-8 w-full p-6 bg-white/70 dark:bg-[var(--bg-surface)]/80 backdrop-blur-sm rounded-3xl border border-indigo-100 dark:border-[var(--border)] shadow-lg shadow-indigo-100/50 dark:shadow-none"
+        className="mt-8 w-full p-6 bg-white/70 backdrop-blur-sm rounded-3xl border border-indigo-100 shadow-lg shadow-indigo-100/50"
       >
         <p className="text-xs font-semibold text-[var(--accent)] uppercase tracking-wide mb-2">The Situation</p>
         <p className="text-[var(--text-secondary)] leading-relaxed text-base">{lesson.situation}</p>
@@ -42,7 +42,7 @@ export function SectionIntro({ lesson, onNext }: SectionIntroProps) {
         {lesson.skills.map((skill) => (
           <span
             key={skill}
-            className="text-xs bg-indigo-100 dark:bg-[var(--accent-soft)] text-indigo-700 dark:text-[var(--accent-text)] px-3 py-1.5 rounded-full font-medium"
+            className="text-xs bg-indigo-100 text-indigo-700 px-3 py-1.5 rounded-full font-medium"
           >
             {skill}
           </span>
@@ -56,7 +56,7 @@ export function SectionIntro({ lesson, onNext }: SectionIntroProps) {
         transition={{ delay: 0.5 }}
         onClick={onNext}
         whileTap={{ scale: 0.97 }}
-        className="mt-auto mb-4 w-full py-4 px-6 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 dark:shadow-none text-lg"
+        className="mt-auto mb-4 w-full py-4 px-6 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 text-lg"
       >
         Start Learning →
       </motion.button>

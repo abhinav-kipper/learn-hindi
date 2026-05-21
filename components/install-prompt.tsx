@@ -18,7 +18,7 @@ export function InstallPrompt() {
   if (!showPrompt) return null
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 max-w-md mx-auto bg-[var(--bg-surface)] border border-orange-200 dark:border-orange-500/30 rounded-xl p-4 shadow-lg z-50">
+    <div className="fixed bottom-4 left-4 right-4 max-w-md mx-auto bg-[var(--bg-surface)] border border-orange-200 rounded-xl p-4 shadow-lg z-50">
       <div className="flex items-start justify-between">
         <div className="flex-1">
           <p className="font-semibold text-[var(--text-primary)] text-sm">Install this app</p>

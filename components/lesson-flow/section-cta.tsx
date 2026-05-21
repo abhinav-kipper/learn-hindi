@@ -54,7 +54,7 @@ export function SectionCta({ lesson }: SectionCtaProps) {
       <div className="w-full mt-auto space-y-3">
         <a
           href={`/practice/${lesson.id}`}
-          className="block w-full text-center py-4 px-6 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 dark:shadow-none text-lg"
+          className="block w-full text-center py-4 px-6 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 text-lg"
         >
           Practice Now →
         </a>
@@ -65,7 +65,7 @@ export function SectionCta({ lesson }: SectionCtaProps) {
               key="completed"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="text-center py-3.5 text-emerald-600 dark:text-emerald-400 font-semibold text-sm bg-emerald-50 dark:bg-emerald-500/10 rounded-2xl border border-emerald-200 dark:border-emerald-500/30"
+              className="text-center py-3.5 text-emerald-600 font-semibold text-sm bg-emerald-50 rounded-2xl border border-emerald-200"
             >
               ✓ Lesson completed
             </motion.div>

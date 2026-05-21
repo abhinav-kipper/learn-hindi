@@ -25,8 +25,8 @@ function GrammarCardContent({ note }: { note: string }) {
   const hindiText = extractHindiText(note)
 
   return (
-    <div className="bg-[var(--bg-surface)] rounded-3xl shadow-lg dark:shadow-none p-8 min-h-[240px] flex flex-col items-center justify-center border border-emerald-100 dark:border-[var(--border)]">
-      <div className="w-10 h-1 bg-emerald-300 dark:bg-emerald-500/50 rounded-full mb-6" />
+    <div className="bg-[var(--bg-surface)] rounded-3xl shadow-lg p-8 min-h-[240px] flex flex-col items-center justify-center border border-emerald-100">
+      <div className="w-10 h-1 bg-emerald-300 rounded-full mb-6" />
       <p className="text-lg text-[var(--text-secondary)] text-center leading-relaxed font-medium">
         {note}
       </p>
@@ -46,7 +46,7 @@ export function SectionGrammar({ notes, onNext }: SectionGrammarProps) {
 
   return (
     <div className="flex flex-col flex-1 pt-4">
-      <h2 className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wide text-center mb-2">
+      <h2 className="text-sm font-semibold text-emerald-600 uppercase tracking-wide text-center mb-2">
         Grammar Notes
       </h2>
       <SwipeableCarousel items={cards} onComplete={onNext} />

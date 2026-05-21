@@ -55,7 +55,7 @@ export function FeatureTooltip({ id, message, position = 'bottom', children }: F
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="absolute inset-0 z-[101] pointer-events-none rounded-2xl ring-4 ring-white/80 dark:ring-white/20 shadow-[0_0_0_9999px_rgba(0,0,0,0.5)]"
+              className="absolute inset-0 z-[101] pointer-events-none rounded-2xl ring-4 ring-white/80 shadow-[0_0_0_9999px_rgba(0,0,0,0.5)]"
             />
             {/* Tooltip bubble */}
             <motion.div

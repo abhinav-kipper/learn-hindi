@@ -192,13 +192,13 @@ export default function PracticePage({ params }: PracticePageProps) {
             animate={{ opacity: 1 }}
             className="flex justify-start"
           >
-            <div className="bg-[var(--bg-elevated)] border border-[var(--border)] px-4 py-3 rounded-2xl rounded-bl-md shadow-sm dark:shadow-none">
+            <div className="bg-[var(--bg-elevated)] border border-[var(--border)] px-4 py-3 rounded-2xl rounded-bl-md shadow-sm">
               <span className="text-[var(--text-tertiary)] text-sm">Typing...</span>
             </div>
           </motion.div>
         )}
         {error && (
-          <div className="text-center text-xs text-red-500 dark:text-red-400 mt-2">
+          <div className="text-center text-xs text-red-500 mt-2">
             {error}
           </div>
         )}
@@ -220,7 +220,7 @@ export default function PracticePage({ params }: PracticePageProps) {
           <button
             type="submit"
             disabled={isLoading || !input.trim()}
-            className="px-5 py-3 bg-gradient-to-r from-indigo-500 to-violet-500 text-white rounded-xl font-semibold hover:from-indigo-600 hover:to-violet-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-sm dark:shadow-none"
+            className="px-5 py-3 bg-gradient-to-r from-indigo-500 to-violet-500 text-white rounded-xl font-semibold hover:from-indigo-600 hover:to-violet-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-sm"
           >
             Send
           </button>

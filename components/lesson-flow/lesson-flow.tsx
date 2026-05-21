@@ -72,12 +72,12 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
   }
 
   const sectionBg: Record<Section, string> = {
-    intro: 'bg-gradient-to-b from-indigo-50 to-white dark:from-[#0f0f18] dark:to-[var(--bg-base)]',
-    phrases: 'bg-gradient-to-b from-violet-50 to-white dark:from-[#12101c] dark:to-[var(--bg-base)]',
-    grammar: 'bg-gradient-to-b from-emerald-50 to-white dark:from-[#0f1412] dark:to-[var(--bg-base)]',
-    culture: 'bg-gradient-to-b from-amber-50 to-white dark:from-[#14120f] dark:to-[var(--bg-base)]',
-    skills: 'bg-gradient-to-b from-sky-50 to-white dark:from-[#0f1214] dark:to-[var(--bg-base)]',
-    cta: 'bg-gradient-to-b from-pink-50 to-white dark:from-[#14101c] dark:to-[var(--bg-base)]',
+    intro: 'bg-gradient-to-b from-indigo-50 to-white',
+    phrases: 'bg-gradient-to-b from-violet-50 to-white',
+    grammar: 'bg-gradient-to-b from-emerald-50 to-white',
+    culture: 'bg-gradient-to-b from-amber-50 to-white',
+    skills: 'bg-gradient-to-b from-sky-50 to-white',
+    cta: 'bg-gradient-to-b from-pink-50 to-white',
   }
 
   const renderSection = () => {
