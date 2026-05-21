@@ -6,7 +6,7 @@
 A PWA for learning conversational/colloquial Hindi (romanized, no Devanagari). Built for one user initially, scalable later.
 
 **Live:** https://hindi-app.vercel.app
-**Deploy:** `vercel --prod --yes` (uses pnpm)
+**Deploy:** push to `main` — GitHub is connected to Vercel, auto-deploys on every push. Do NOT run `vercel --prod` manually.
 
 ## Tech Stack
 - Next.js 16 (App Router) + TypeScript
@@ -54,7 +54,9 @@ npx vitest run
 
 ### Deploy
 ```bash
-vercel --prod --yes
+git add <changed files>
+git commit -m "description"
+git push origin main   # triggers Vercel auto-deploy via GitHub integration
 ```
 
 ## Environment Variables
