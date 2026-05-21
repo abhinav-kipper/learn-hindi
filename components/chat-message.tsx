@@ -2,7 +2,8 @@
 
 import { useState, useCallback, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { speakHindi, stopSpeaking, isSpeaking } from '@/lib/speech'
+import { speak, stopSpeaking, isSpeaking } from '@/lib/speech'
+import { useLanguage } from '@/lib/language-context'
 import type { ChatReply } from '@/lib/chat-schema'
 
 interface ChatMessageProps {
@@ -48,6 +49,7 @@ function RateLimitMessage({ retryAfterSeconds, onRetry }: { retryAfterSeconds: n
 }
 
 function SpeakerButton({ text }: { text: string }) {
+  const { config } = useLanguage()
   const [speaking, setSpeaking] = useState(false)
 
   // Poll isSpeaking to keep state in sync with audio playback
@@ -71,9 +73,9 @@ function SpeakerButton({ text }: { text: string }) {
     const cleaned = text.trim()
     if (!cleaned) return
 
-    speakHindi(cleaned)
+    speak(cleaned, config.ttsLocale)
     setSpeaking(true)
-  }, [text, speaking])
+  }, [text, speaking, config.ttsLocale])
 
   return (
     <button

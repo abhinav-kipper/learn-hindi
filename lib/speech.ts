@@ -57,11 +57,6 @@ export function speak(text: string, ttsLocale = 'hi', onEnd?: () => void): void 
   playChunks(chunks, 0, ttsLocale, onEnd)
 }
 
-/** Speak Hindi text — kept for backward compatibility */
-export function speakHindi(text: string): void {
-  speak(text, 'hi')
-}
-
 function playChunks(chunks: string[], index: number, ttsLocale = 'hi', onEnd?: () => void): void {
   if (index >= chunks.length) {
     currentAudio = null
