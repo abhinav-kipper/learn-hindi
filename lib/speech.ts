@@ -10,13 +10,11 @@ function stripParenthetical(text: string): string {
 }
 
 /**
- * Generate Google Translate TTS URL for Hindi text
- * Uses the same endpoint Google Translate uses (undocumented but stable)
- * Limit: ~200 characters per request
+ * Generate TTS URL via our own API proxy (avoids CORS issues with Google Translate)
  */
-function getGoogleTTSUrl(text: string): string {
+function getTTSUrl(text: string): string {
   const encoded = encodeURIComponent(text.slice(0, 200))
-  return `https://translate.google.com/translate_tts?ie=UTF-8&tl=hi&client=tw-ob&q=${encoded}`
+  return `/api/tts?text=${encoded}`
 }
 
 /**
@@ -64,7 +62,7 @@ function playChunks(chunks: string[], index: number): void {
     return
   }
 
-  const url = getGoogleTTSUrl(chunks[index])
+  const url = getTTSUrl(chunks[index])
   const audio = new Audio(url)
 
   audio.onended = () => {
