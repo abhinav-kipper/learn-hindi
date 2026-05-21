@@ -6,8 +6,10 @@ import { Phrase } from '@/types/lesson'
 import { SwipeableCarousel } from './swipeable-carousel'
 import { ReadAloudButton } from '@/components/read-aloud-button'
 import { playSound } from '@/lib/sounds'
+import { markPhraseViewed } from '@/lib/phrase-progress'
 
 interface SectionPhrasesProps {
+  lessonId: string
   phrases: Phrase[]
   grammarNotes: string[]
   cultureNotes: string[]
@@ -178,7 +180,7 @@ function PhraseCardContent({
   )
 }
 
-export function SectionPhrases({ phrases, grammarNotes, cultureNotes, onNext }: SectionPhrasesProps) {
+export function SectionPhrases({ lessonId, phrases, grammarNotes, cultureNotes, onNext }: SectionPhrasesProps) {
   // Match grammar notes to phrases by keyword relevance
   // Track which grammar notes have been used to avoid duplicates
   const usedGrammarNotes = new Set<string>()
@@ -237,7 +239,11 @@ export function SectionPhrases({ phrases, grammarNotes, cultureNotes, onNext }: 
       <h2 className="text-sm font-semibold text-violet-600 uppercase tracking-wide text-center mb-2">
         Key Phrases
       </h2>
-      <SwipeableCarousel items={carouselItems} onComplete={onNext} />
+      <SwipeableCarousel
+        items={carouselItems}
+        onComplete={onNext}
+        onIndexChange={(i) => markPhraseViewed(lessonId, i)}
+      />
     </div>
   )
 }

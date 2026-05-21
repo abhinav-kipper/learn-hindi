@@ -73,6 +73,7 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
       case 'intro': return <SectionIntro lesson={lesson} onNext={goNext} />
       case 'phrases': return (
         <SectionPhrases
+          lessonId={lesson.id}
           phrases={lesson.phrases}
           grammarNotes={lesson.grammar_notes}
           cultureNotes={lesson.culture_notes}
