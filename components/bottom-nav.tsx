@@ -20,9 +20,9 @@ export function BottomNav() {
   const [hasCompletedLesson, setHasCompletedLesson] = useState(true) // default true to prevent flash
 
   useEffect(() => {
-    const progress = getProgress()
+    const progress = getProgress(config.storagePrefix)
     setHasCompletedLesson(progress.completedLessons.length > 0)
-  }, [pathname]) // Re-check on navigation
+  }, [pathname, config.storagePrefix])
 
   // Hide on lesson, practice, and onboarding pages (full-screen experiences)
   if (pathname.startsWith('/lessons/') || pathname.startsWith('/practice/') || pathname.startsWith('/onboarding')) {

@@ -13,14 +13,14 @@ interface LanguageContextValue {
 const LanguageContext = createContext<LanguageContextValue | null>(null)
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('hindi')
-
-  useEffect(() => {
+  // Lazy initializer reads localStorage synchronously on first client render,
+  // so children see the correct language immediately without a useEffect delay.
+  const [language, setLanguageState] = useState<Language>(() => {
+    if (typeof window === 'undefined') return 'hindi'
     const stored = localStorage.getItem(ACTIVE_LANGUAGE_KEY)
-    if (stored === 'dutch' || stored === 'hindi') {
-      setLanguageState(stored)
-    }
-  }, [])
+    if (stored === 'dutch' || stored === 'hindi') return stored
+    return 'hindi'
+  })
 
   function setLanguage(lang: Language) {
     setLanguageState(lang)

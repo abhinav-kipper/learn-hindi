@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useCallback, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import { speak, stopSpeaking, isSpeaking } from '@/lib/speech'
 import { useLanguage } from '@/lib/language-context'
 
@@ -32,7 +31,7 @@ export function ReadAloudButton({ text, className = '' }: ReadAloudButtonProps) 
     }
     speak(text, config.ttsLocale)
     setSpeaking(true)
-  }, [text, speaking])
+  }, [text, speaking, config.ttsLocale])
 
   if (typeof window === 'undefined') return null
 

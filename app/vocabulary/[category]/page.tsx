@@ -4,13 +4,16 @@ import { useEffect, useState, useCallback, useMemo } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { motion, AnimatePresence, useMotionValue, useTransform, PanInfo } from 'framer-motion'
 import { getCategory, markWordLearned, isWordLearned, VocabWord, VocabCategory } from '@/lib/vocabulary'
+import { getDutchCategory, markDutchWordLearned, isDutchWordLearned } from '@/lib/dutch/vocabulary'
 import { getVocabKnown, getVocabReview, addVocabKnown, addVocabReview, removeVocabKnown, removeVocabReview } from '@/lib/vocab-review'
 import { ReadAloudButton } from '@/components/read-aloud-button'
 import { playSound } from '@/lib/sounds'
+import { useLanguage } from '@/lib/language-context'
 
 export default function CategoryPage() {
   const params = useParams()
   const router = useRouter()
+  const { language, config } = useLanguage()
   const categoryId = params.category as string
 
   const [category, setCategory] = useState<VocabCategory | null>(null)
@@ -19,27 +22,28 @@ export default function CategoryPage() {
   const [reviewSet, setReviewSet] = useState<Set<string>>(new Set())
   const [flippedCard, setFlippedCard] = useState<string | null>(null)
 
+  const isDutch = language === 'dutch'
+
   useEffect(() => {
-    const cat = getCategory(categoryId)
+    const cat = isDutch ? getDutchCategory(categoryId) : getCategory(categoryId)
     if (!cat) {
       router.replace('/vocabulary')
       return
     }
     setCategory(cat)
 
-    // Load learned state
     const learned = new Set<string>()
     cat.words.forEach(word => {
-      if (isWordLearned(categoryId, word.hindi)) {
-        learned.add(word.hindi)
-      }
+      const learned_ = isDutch
+        ? isDutchWordLearned(categoryId, word.hindi)
+        : isWordLearned(categoryId, word.hindi)
+      if (learned_) learned.add(word.hindi)
     })
     setLearnedSet(learned)
 
-    // Load known/review sets
     setKnownSet(new Set(getVocabKnown()))
     setReviewSet(new Set(getVocabReview()))
-  }, [categoryId, router])
+  }, [categoryId, router, isDutch])
 
   const handleCardTap = (word: VocabWord) => {
     if (flippedCard === word.hindi) {
@@ -47,9 +51,9 @@ export default function CategoryPage() {
     } else {
       setFlippedCard(word.hindi)
       playSound('pop')
-      // Mark as learned on first tap
       if (!learnedSet.has(word.hindi)) {
-        markWordLearned(categoryId, word.hindi)
+        if (isDutch) markDutchWordLearned(categoryId, word.hindi)
+        else markWordLearned(categoryId, word.hindi)
         setLearnedSet(prev => new Set([...prev, word.hindi]))
       }
     }
@@ -57,7 +61,6 @@ export default function CategoryPage() {
 
   const handleSwipeRight = useCallback((word: VocabWord) => {
     playSound('correct')
-    // Mark as known
     addVocabKnown(word.hindi)
     removeVocabReview(word.hindi)
     setKnownSet(prev => new Set([...prev, word.hindi]))
@@ -66,16 +69,15 @@ export default function CategoryPage() {
       next.delete(word.hindi)
       return next
     })
-    // Also mark as learned
     if (!learnedSet.has(word.hindi)) {
-      markWordLearned(categoryId, word.hindi)
+      if (isDutch) markDutchWordLearned(categoryId, word.hindi)
+      else markWordLearned(categoryId, word.hindi)
       setLearnedSet(prev => new Set([...prev, word.hindi]))
     }
-  }, [categoryId, learnedSet])
+  }, [categoryId, learnedSet, isDutch])
 
   const handleSwipeLeft = useCallback((word: VocabWord) => {
     playSound('swipe')
-    // Mark for review
     addVocabReview(word.hindi)
     removeVocabKnown(word.hindi)
     setReviewSet(prev => new Set([...prev, word.hindi]))
@@ -84,12 +86,22 @@ export default function CategoryPage() {
       next.delete(word.hindi)
       return next
     })
-    // Also mark as learned
     if (!learnedSet.has(word.hindi)) {
-      markWordLearned(categoryId, word.hindi)
+      if (isDutch) markDutchWordLearned(categoryId, word.hindi)
+      else markWordLearned(categoryId, word.hindi)
       setLearnedSet(prev => new Set([...prev, word.hindi]))
     }
-  }, [categoryId, learnedSet])
+  }, [categoryId, learnedSet, isDutch])
+
+  // useMemo must be before any early returns to satisfy Rules of Hooks
+  const sortedWords = useMemo(() => {
+    if (!category) return []
+    return [...category.words].sort((a, b) => {
+      const aKnown = knownSet.has(a.hindi) ? 1 : 0
+      const bKnown = knownSet.has(b.hindi) ? 1 : 0
+      return aKnown - bKnown
+    })
+  }, [category, knownSet])
 
   if (!category) {
     return (
@@ -101,15 +113,6 @@ export default function CategoryPage() {
 
   const learnedCount = learnedSet.size
   const totalCount = category.words.length
-
-  // Sort: unknown/review words first, known words at bottom
-  const sortedWords = useMemo(() => {
-    return [...category.words].sort((a, b) => {
-      const aKnown = knownSet.has(a.hindi) ? 1 : 0
-      const bKnown = knownSet.has(b.hindi) ? 1 : 0
-      return aKnown - bKnown
-    })
-  }, [category.words, knownSet])
 
   return (
     <div className="max-w-md mx-auto px-4 py-6 pb-24">
@@ -135,7 +138,6 @@ export default function CategoryPage() {
             </p>
           </div>
         </div>
-        {/* Progress bar */}
         <div className="mt-3 w-full h-2 bg-[var(--border)] rounded-full overflow-hidden">
           <motion.div
             className={`h-full bg-gradient-to-r ${category.gradient} rounded-full`}
@@ -143,7 +145,6 @@ export default function CategoryPage() {
             transition={{ duration: 0.4 }}
           />
         </div>
-        {/* Swipe hint */}
         <p className="mt-2 text-xs text-[var(--text-tertiary)] text-center">
           Swipe right = known | Swipe left = needs review
         </p>
@@ -189,7 +190,6 @@ function SwipeableWordCard({
   onSwipeLeft: (word: VocabWord) => void
 }) {
   const x = useMotionValue(0)
-  const bgOpacity = useTransform(x, [-100, 0, 100], [0.3, 0, 0.3])
   const bgColorRight = useTransform(x, [0, 100], ['rgba(16,185,129,0)', 'rgba(16,185,129,0.15)'])
   const bgColorLeft = useTransform(x, [-100, 0], ['rgba(245,158,11,0.15)', 'rgba(245,158,11,0)'])
 
@@ -246,7 +246,7 @@ function SwipeableWordCard({
           )}
         </div>
 
-        {/* Front side - always visible */}
+        {/* Front side */}
         <div className="p-4">
           <div className="flex items-start justify-between">
             <div className="flex items-center gap-2">
@@ -267,7 +267,7 @@ function SwipeableWordCard({
           </p>
         </div>
 
-        {/* Back side - details on flip */}
+        {/* Back side */}
         <AnimatePresence>
           {isFlipped && (
             <motion.div

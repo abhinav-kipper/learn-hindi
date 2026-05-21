@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Lesson } from '@/types/lesson'
 import { isLessonComplete } from '@/lib/progress'
+import { useLanguage } from '@/lib/language-context'
 
 interface LessonCardProps {
   lesson: Lesson
@@ -30,11 +31,12 @@ const accentColors = [
 ]
 
 export function LessonCard({ lesson, index }: LessonCardProps) {
+  const { config } = useLanguage()
   const [completed, setCompleted] = useState(false)
 
   useEffect(() => {
-    setCompleted(isLessonComplete(lesson.id))
-  }, [lesson.id])
+    setCompleted(isLessonComplete(lesson.id, config.storagePrefix))
+  }, [lesson.id, config.storagePrefix])
 
   const gradient = gradients[index % gradients.length]
   const accent = accentColors[index % accentColors.length]
