@@ -15,6 +15,7 @@ interface SectionPhrasesProps {
   grammarNotes: string[]
   cultureNotes: string[]
   onNext: () => void
+  initialIndex?: number
 }
 
 /**
@@ -181,7 +182,7 @@ function PhraseCardContent({
   )
 }
 
-export function SectionPhrases({ lessonId, phrases, grammarNotes, cultureNotes, onNext }: SectionPhrasesProps) {
+export function SectionPhrases({ lessonId, phrases, grammarNotes, cultureNotes, onNext, initialIndex = 0 }: SectionPhrasesProps) {
   const { config } = useLanguage()
   // Match grammar notes to phrases by keyword relevance
   // Track which grammar notes have been used to avoid duplicates
@@ -245,6 +246,7 @@ export function SectionPhrases({ lessonId, phrases, grammarNotes, cultureNotes, 
         items={carouselItems}
         onComplete={onNext}
         onIndexChange={(i) => markPhraseViewed(lessonId, i, config.storagePrefix)}
+        initialIndex={initialIndex}
       />
     </div>
   )

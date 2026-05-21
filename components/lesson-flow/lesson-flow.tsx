@@ -10,6 +10,8 @@ import { SectionPhrases } from './section-phrases'
 import { SectionCta } from './section-cta'
 import { FeatureTooltip } from '@/components/feature-tooltip'
 import { playSound } from '@/lib/sounds'
+import { computeLessonResume } from '@/lib/phrase-progress'
+import { useLanguage } from '@/lib/language-context'
 
 type Section = 'intro' | 'phrases' | 'cta'
 
@@ -19,11 +21,20 @@ interface LessonFlowProps {
 
 export function LessonFlow({ lesson }: LessonFlowProps) {
   const router = useRouter()
+  const { config } = useLanguage()
   const sections: Section[] = useMemo(() => {
     return ['intro', 'phrases', 'cta']
   }, [])
 
-  const [sectionIndex, setSectionIndex] = useState(0)
+  // Resume position is computed ONCE on mount so opening a lesson the user
+  // half-finished drops them where they left off (last viewed phrase or the
+  // Practice CTA). Recomputing later would yank them mid-session.
+  const resume = useMemo(
+    () => computeLessonResume(lesson, config.storagePrefix),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [],
+  )
+  const [sectionIndex, setSectionIndex] = useState(resume.sectionIndex)
   const [direction, setDirection] = useState(0)
 
   const currentSection = sections[sectionIndex]
@@ -78,6 +89,7 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
           grammarNotes={lesson.grammar_notes}
           cultureNotes={lesson.culture_notes}
           onNext={goNext}
+          initialIndex={resume.phraseIndex}
         />
       )
       case 'cta': return <SectionCta lesson={lesson} />

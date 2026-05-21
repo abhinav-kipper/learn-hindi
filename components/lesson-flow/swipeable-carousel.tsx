@@ -8,10 +8,13 @@ interface SwipeableCarouselProps {
   items: React.ReactNode[]
   onComplete?: () => void
   onIndexChange?: (index: number) => void
+  /** Index to start on (e.g. resume position). Clamped to [0, items.length - 1]. */
+  initialIndex?: number
 }
 
-export function SwipeableCarousel({ items, onComplete, onIndexChange }: SwipeableCarouselProps) {
-  const [currentIndex, setCurrentIndex] = useState(0)
+export function SwipeableCarousel({ items, onComplete, onIndexChange, initialIndex = 0 }: SwipeableCarouselProps) {
+  const clampedInitial = Math.min(Math.max(0, initialIndex), Math.max(0, items.length - 1))
+  const [currentIndex, setCurrentIndex] = useState(clampedInitial)
   const [direction, setDirection] = useState(0)
 
   useEffect(() => {
