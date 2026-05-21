@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { Lesson } from '@/types/lesson'
 import { isLessonComplete } from '@/lib/progress'
@@ -31,6 +32,7 @@ const accentColors = [
 ]
 
 export function LessonCard({ lesson, index }: LessonCardProps) {
+  const router = useRouter()
   const { config } = useLanguage()
   const [completed, setCompleted] = useState(false)
 
@@ -47,7 +49,10 @@ export function LessonCard({ lesson, index }: LessonCardProps) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: index * 0.08, ease: 'easeOut' }}
     >
-      <Link href={`/lessons/${lesson.id}`}>
+      <div
+        onClick={() => router.push(`/lessons/${lesson.id}`)}
+        className="cursor-pointer"
+      >
         <div className={`relative min-h-[200px] p-6 rounded-3xl border border-white/50 bg-gradient-to-br ${gradient} shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 overflow-hidden`}>
           {/* Background number */}
           <span className="absolute -right-2 -top-4 text-8xl font-black text-slate-900/[0.03] select-none pointer-events-none">
@@ -94,7 +99,7 @@ export function LessonCard({ lesson, index }: LessonCardProps) {
             </div>
           </div>
         </div>
-      </Link>
+      </div>
     </motion.div>
   )
 }
