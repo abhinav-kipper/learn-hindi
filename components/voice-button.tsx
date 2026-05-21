@@ -1,11 +1,18 @@
 'use client'
 
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef, useCallback, forwardRef, useImperativeHandle } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 interface VoiceButtonProps {
   onTranscript: (text: string) => void
   disabled?: boolean
+  /** BCP-47 locale to recognize (e.g. 'hi-IN', 'nl-NL'). Defaults to 'hi-IN'. */
+  locale?: string
+}
+
+export interface VoiceButtonHandle {
+  /** Start listening programmatically (e.g. from hands-free mode). */
+  start: () => void
 }
 
 type ListenState = 'idle' | 'listening' | 'processing'
@@ -62,7 +69,10 @@ declare global {
   }
 }
 
-export function VoiceButton({ onTranscript, disabled = false }: VoiceButtonProps) {
+export const VoiceButton = forwardRef<VoiceButtonHandle, VoiceButtonProps>(function VoiceButton(
+  { onTranscript, disabled = false, locale = 'hi-IN' },
+  ref,
+) {
   const [state, setState] = useState<ListenState>('idle')
   const [supported, setSupported] = useState(false)
   const [permissionDenied, setPermissionDenied] = useState(false)
@@ -104,7 +114,7 @@ export function VoiceButton({ onTranscript, disabled = false }: VoiceButtonProps
     const recognition = new SpeechRecognitionAPI()
     recognitionRef.current = recognition
 
-    recognition.lang = 'hi-IN'
+    recognition.lang = locale
     recognition.continuous = false
     recognition.interimResults = false
     recognition.maxAlternatives = 1
@@ -139,7 +149,15 @@ export function VoiceButton({ onTranscript, disabled = false }: VoiceButtonProps
       setState('idle')
       recognitionRef.current = null
     }
-  }, [onTranscript])
+  }, [onTranscript, locale])
+
+  useImperativeHandle(ref, () => ({
+    start: () => {
+      if (!supported || permissionDenied || disabled) return
+      if (recognitionRef.current) return // already listening
+      startListening()
+    },
+  }), [supported, permissionDenied, disabled, startListening])
 
   const handleClick = useCallback(() => {
     if (state === 'listening') {
@@ -206,4 +224,4 @@ export function VoiceButton({ onTranscript, disabled = false }: VoiceButtonProps
       </svg>
     </button>
   )
-}
+})

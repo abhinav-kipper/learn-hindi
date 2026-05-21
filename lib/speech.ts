@@ -42,16 +42,19 @@ function splitText(text: string, maxLen = 180): string[] {
 }
 
 /** Speak text in the given locale using Google Translate TTS with fallback to browser */
-export function speak(text: string, ttsLocale = 'hi'): void {
+export function speak(text: string, ttsLocale = 'hi', onEnd?: () => void): void {
   if (typeof window === 'undefined') return
 
   stopSpeaking()
 
   const cleaned = stripParenthetical(text)
-  if (!cleaned) return
+  if (!cleaned) {
+    onEnd?.()
+    return
+  }
 
   const chunks = splitText(cleaned)
-  playChunks(chunks, 0, ttsLocale)
+  playChunks(chunks, 0, ttsLocale, onEnd)
 }
 
 /** Speak Hindi text — kept for backward compatibility */
@@ -59,9 +62,10 @@ export function speakHindi(text: string): void {
   speak(text, 'hi')
 }
 
-function playChunks(chunks: string[], index: number, ttsLocale = 'hi'): void {
+function playChunks(chunks: string[], index: number, ttsLocale = 'hi', onEnd?: () => void): void {
   if (index >= chunks.length) {
     currentAudio = null
+    onEnd?.()
     return
   }
 
@@ -69,23 +73,26 @@ function playChunks(chunks: string[], index: number, ttsLocale = 'hi'): void {
   const audio = new Audio(url)
 
   audio.onended = () => {
-    playChunks(chunks, index + 1, ttsLocale)
+    playChunks(chunks, index + 1, ttsLocale, onEnd)
   }
 
   audio.onerror = () => {
     console.warn('Google TTS failed, falling back to browser voice')
-    fallbackSpeak(chunks.slice(index).join(' '), ttsLocale)
+    fallbackSpeak(chunks.slice(index).join(' '), ttsLocale, onEnd)
   }
 
   currentAudio = audio
   audio.play().catch(() => {
-    fallbackSpeak(chunks.slice(index).join(' '), ttsLocale)
+    fallbackSpeak(chunks.slice(index).join(' '), ttsLocale, onEnd)
   })
 }
 
 /** Fallback: use browser speechSynthesis */
-function fallbackSpeak(text: string, ttsLocale = 'hi'): void {
-  if (!window.speechSynthesis) return
+function fallbackSpeak(text: string, ttsLocale = 'hi', onEnd?: () => void): void {
+  if (!window.speechSynthesis) {
+    onEnd?.()
+    return
+  }
 
   const bcp47 = ttsLocale === 'nl' ? 'nl-NL' : 'hi-IN'
   const utterance = new SpeechSynthesisUtterance(text)
@@ -96,6 +103,8 @@ function fallbackSpeak(text: string, ttsLocale = 'hi'): void {
   if (voice) utterance.voice = voice
   utterance.lang = bcp47
   utterance.rate = 0.9
+  utterance.onend = () => onEnd?.()
+  utterance.onerror = () => onEnd?.()
 
   window.speechSynthesis.speak(utterance)
 }

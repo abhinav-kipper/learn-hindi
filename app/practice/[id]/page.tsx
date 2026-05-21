@@ -7,7 +7,8 @@ import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import confetti from 'canvas-confetti'
 import { ChatMessage } from '@/components/chat-message'
-import { VoiceButton } from '@/components/voice-button'
+import { VoiceButton, type VoiceButtonHandle } from '@/components/voice-button'
+import { speak, stopSpeaking } from '@/lib/speech'
 import { incrementPracticeCount, markLessonComplete, updateStreak } from '@/lib/progress'
 import { getUniversalLessonById } from '@/lib/all-content'
 import { FeatureTooltip } from '@/components/feature-tooltip'
@@ -151,7 +152,28 @@ export default function PracticePage({ params }: PracticePageProps) {
   const router = useRouter()
   const { language, config } = useLanguage()
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const voiceRef = useRef<VoiceButtonHandle>(null)
+  const spokenIdsRef = useRef<Set<string>>(new Set())
   const [showFinish, setShowFinish] = useState(false)
+  const [handsFree, setHandsFree] = useState(false)
+  const handsFreeKey = `${config.storagePrefix}-hands-free`
+  const sttLocale = config.ttsLocale === 'nl' ? 'nl-NL' : 'hi-IN'
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    setHandsFree(localStorage.getItem(handsFreeKey) === '1')
+  }, [handsFreeKey])
+
+  const toggleHandsFree = useCallback(() => {
+    setHandsFree(prev => {
+      const next = !prev
+      if (typeof window !== 'undefined') {
+        localStorage.setItem(handsFreeKey, next ? '1' : '0')
+      }
+      if (!next) stopSpeaking()
+      return next
+    })
+  }, [handsFreeKey])
 
   const body = useMemo(() => {
     const profile = typeof window !== 'undefined' ? getUserProfile() : null
@@ -187,6 +209,23 @@ export default function PracticePage({ params }: PracticePageProps) {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages])
+
+  // Hands-free: when a new assistant message finishes streaming, speak it and
+  // then auto-arm the mic when speech ends. Each message is spoken at most once.
+  useEffect(() => {
+    if (!handsFree) return
+    if (isLoading) return
+    const last = messages[messages.length - 1]
+    if (!last || last.role !== 'assistant') return
+    if (spokenIdsRef.current.has(last.id)) return
+    spokenIdsRef.current.add(last.id)
+    speak(last.content, config.ttsLocale, () => {
+      voiceRef.current?.start()
+    })
+  }, [messages, isLoading, handsFree, config.ttsLocale])
+
+  // Clean up any in-flight speech when leaving the page.
+  useEffect(() => () => stopSpeaking(), [])
 
   const userMessageCount = messages.filter(m => m.role === 'user').length
 
@@ -231,14 +270,29 @@ export default function PracticePage({ params }: PracticePageProps) {
           </svg>
           Lesson
         </Link>
-        <button
-          type="button"
-          onClick={handleFinish}
-          disabled={userMessageCount === 0 || isLoading}
-          className="text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-4 py-1.5 rounded-full disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
-        >
-          Finish ✓
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={toggleHandsFree}
+            title={handsFree ? 'Turn off hands-free mode' : 'Hands-free: auto-read replies + listen'}
+            aria-pressed={handsFree}
+            className={`text-xs font-semibold px-3 py-1.5 rounded-full transition-all ${
+              handsFree
+                ? 'bg-indigo-500 text-white shadow-sm'
+                : 'bg-[var(--bg-elevated)] text-[var(--text-secondary)] border border-[var(--border)]'
+            }`}
+          >
+            {handsFree ? '🎙️ On' : '🎙️ Off'}
+          </button>
+          <button
+            type="button"
+            onClick={handleFinish}
+            disabled={userMessageCount === 0 || isLoading}
+            className="text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-4 py-1.5 rounded-full disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
+          >
+            Finish ✓
+          </button>
+        </div>
       </div>
 
       {/* Messages */}
@@ -310,7 +364,7 @@ export default function PracticePage({ params }: PracticePageProps) {
             disabled={isLoading}
             className="flex-1 px-4 py-3 rounded-full border border-[var(--border)] bg-[var(--bg-elevated)] text-[var(--text-primary)] placeholder:text-[var(--text-tertiary)] focus:outline-none focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20 text-sm disabled:opacity-50 transition-all"
           />
-          <VoiceButton onTranscript={handleTranscript} disabled={isLoading} />
+          <VoiceButton ref={voiceRef} onTranscript={handleTranscript} disabled={isLoading} locale={sttLocale} />
           <button
             type="submit"
             disabled={isLoading || !input.trim()}
