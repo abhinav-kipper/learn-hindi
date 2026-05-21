@@ -2,32 +2,25 @@
 
 import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import Link from 'next/link'
 import { Lesson } from '@/types/lesson'
 import { ProgressDots } from './progress-dots'
 import { SectionIntro } from './section-intro'
 import { SectionPhrases } from './section-phrases'
-import { SectionGrammar } from './section-grammar'
-import { SectionCulture } from './section-culture'
 import { SectionSkills } from './section-skills'
 import { SectionCta } from './section-cta'
 import { FeatureTooltip } from '@/components/feature-tooltip'
 import { playSound } from '@/lib/sounds'
 
-type Section = 'intro' | 'phrases' | 'grammar' | 'culture' | 'skills' | 'cta'
+type Section = 'intro' | 'phrases' | 'skills' | 'cta'
 
 interface LessonFlowProps {
   lesson: Lesson
 }
 
 export function LessonFlow({ lesson }: LessonFlowProps) {
-  const sections = useMemo(() => {
-    const s: Section[] = ['intro', 'phrases']
-    if (lesson.grammar_notes.length > 0) s.push('grammar')
-    if (lesson.culture_notes.length > 0) s.push('culture')
-    s.push('skills', 'cta')
-    return s
-  }, [lesson])
+  const sections: Section[] = useMemo(() => {
+    return ['intro', 'phrases', 'skills', 'cta']
+  }, [])
 
   const [sectionIndex, setSectionIndex] = useState(0)
   const [direction, setDirection] = useState(0)
@@ -59,8 +52,6 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
   const sectionLabels: Record<Section, string> = {
     intro: 'Intro',
     phrases: 'Phrases',
-    grammar: 'Grammar',
-    culture: 'Culture',
     skills: 'Skills',
     cta: 'Practice',
   }
@@ -74,8 +65,6 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
   const sectionBg: Record<Section, string> = {
     intro: 'bg-gradient-to-b from-indigo-50 to-white',
     phrases: 'bg-gradient-to-b from-violet-50 to-white',
-    grammar: 'bg-gradient-to-b from-emerald-50 to-white',
-    culture: 'bg-gradient-to-b from-amber-50 to-white',
     skills: 'bg-gradient-to-b from-sky-50 to-white',
     cta: 'bg-gradient-to-b from-pink-50 to-white',
   }
@@ -83,9 +72,14 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
   const renderSection = () => {
     switch (currentSection) {
       case 'intro': return <SectionIntro lesson={lesson} onNext={goNext} />
-      case 'phrases': return <SectionPhrases phrases={lesson.phrases} onNext={goNext} />
-      case 'grammar': return <SectionGrammar notes={lesson.grammar_notes} onNext={goNext} />
-      case 'culture': return <SectionCulture notes={lesson.culture_notes} onNext={goNext} />
+      case 'phrases': return (
+        <SectionPhrases
+          phrases={lesson.phrases}
+          grammarNotes={lesson.grammar_notes}
+          cultureNotes={lesson.culture_notes}
+          onNext={goNext}
+        />
+      )
       case 'skills': return <SectionSkills skills={lesson.skill_breakdown} onNext={goNext} />
       case 'cta': return <SectionCta lesson={lesson} />
     }
@@ -117,7 +111,7 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
         <a href="/" className="text-sm text-[var(--text-tertiary)] w-12 text-right">✕</a>
       </div>
 
-      {/* Quick action bar */}
+      {/* Quick action bar — section labels only, no separate practice button */}
       <div className="flex items-center justify-center gap-3 px-4 py-2">
         {sections.map((s, i) => (
           <button
@@ -132,12 +126,6 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
             {sectionLabels[s]}
           </button>
         ))}
-        <Link
-          href={`/practice/${lesson.id}`}
-          className="text-xs px-3 py-1 rounded-full bg-[var(--accent)] text-white font-medium ml-1 hover:opacity-90 transition-colors"
-        >
-          💬 Practice
-        </Link>
       </div>
 
       {/* Section content */}
