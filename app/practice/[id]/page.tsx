@@ -148,20 +148,27 @@ export default function PracticePage({ params }: PracticePageProps) {
   }, [messages])
 
   return (
-    <div className="flex flex-col h-[calc(100vh-3rem)]">
+    <div className="flex flex-col h-dvh max-w-lg mx-auto">
       {/* Header */}
-      <div className="flex items-center justify-between pb-4 border-b border-[var(--border)]">
+      <div className="flex items-center justify-between px-4 py-3 bg-[var(--bg-surface)] border-b border-[var(--border)] safe-top">
         <Link
           href={`/lessons/${id}`}
-          className="text-sm text-[var(--accent)] hover:opacity-80 font-medium transition-colors"
+          className="flex items-center gap-1 text-sm text-[var(--accent)] font-medium"
         >
-          ← Back to lesson
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+            <path fillRule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clipRule="evenodd" />
+          </svg>
+          Lesson
         </Link>
-        <span className="text-xs font-semibold text-[var(--text-tertiary)] uppercase tracking-wide">Practice Mode</span>
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-semibold bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full">
+            💬 Practice
+          </span>
+        </div>
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto py-5 space-y-3">
+      <div className="flex-1 overflow-y-auto px-4 py-4 space-y-3">
         {messages.length === 0 && (
           <FeatureTooltip
             id="practice"
@@ -172,10 +179,13 @@ export default function PracticePage({ params }: PracticePageProps) {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="text-center text-[var(--text-tertiary)] text-sm mt-12"
+              className="text-center mt-16"
             >
-              <p className="font-medium">Setting the scene...</p>
-              <p className="mt-1.5 text-[var(--text-tertiary)]/70">Your conversation partner is about to start talking.</p>
+              <div className="w-12 h-12 mx-auto mb-4 bg-indigo-100 rounded-full flex items-center justify-center">
+                <span className="text-xl">💬</span>
+              </div>
+              <p className="font-medium text-[var(--text-primary)]">Setting the scene...</p>
+              <p className="mt-1.5 text-sm text-[var(--text-secondary)]">Your conversation partner is about to start talking.</p>
             </motion.div>
           </FeatureTooltip>
         )}
@@ -193,12 +203,16 @@ export default function PracticePage({ params }: PracticePageProps) {
             className="flex justify-start"
           >
             <div className="bg-[var(--bg-elevated)] border border-[var(--border)] px-4 py-3 rounded-2xl rounded-bl-md shadow-sm">
-              <span className="text-[var(--text-tertiary)] text-sm">Typing...</span>
+              <div className="flex gap-1">
+                <span className="w-2 h-2 bg-[var(--text-tertiary)] rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                <span className="w-2 h-2 bg-[var(--text-tertiary)] rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                <span className="w-2 h-2 bg-[var(--text-tertiary)] rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+              </div>
             </div>
           </motion.div>
         )}
         {error && (
-          <div className="text-center text-xs text-red-500 mt-2">
+          <div className="text-center text-xs text-red-500 bg-red-50 rounded-lg py-2 px-3 mx-auto">
             {error}
           </div>
         )}
@@ -206,23 +220,25 @@ export default function PracticePage({ params }: PracticePageProps) {
       </div>
 
       {/* Input */}
-      <div className="pt-4 border-t border-[var(--border)]">
-        <form onSubmit={handleSubmit} className="flex gap-2">
+      <div className="px-4 py-3 bg-[var(--bg-surface)] border-t border-[var(--border)] safe-bottom">
+        <form onSubmit={handleSubmit} className="flex gap-2 items-center">
           <input
             type="text"
             value={input}
             onChange={handleInputChange}
-            placeholder="Type in Hindi (roman) or English..."
+            placeholder="Type in Hindi or English..."
             disabled={isLoading}
-            className="flex-1 px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--bg-surface)] text-[var(--text-primary)] placeholder:text-[var(--text-tertiary)] focus:outline-none focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20 text-sm disabled:opacity-50 transition-all duration-200"
+            className="flex-1 px-4 py-3 rounded-full border border-[var(--border)] bg-[var(--bg-elevated)] text-[var(--text-primary)] placeholder:text-[var(--text-tertiary)] focus:outline-none focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20 text-sm disabled:opacity-50 transition-all"
           />
           <VoiceButton onTranscript={handleTranscript} disabled={isLoading} />
           <button
             type="submit"
             disabled={isLoading || !input.trim()}
-            className="px-5 py-3 bg-gradient-to-r from-indigo-500 to-violet-500 text-white rounded-xl font-semibold hover:from-indigo-600 hover:to-violet-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-sm"
+            className="w-11 h-11 flex items-center justify-center bg-gradient-to-r from-indigo-500 to-violet-500 text-white rounded-full hover:from-indigo-600 hover:to-violet-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-sm"
           >
-            Send
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+              <path d="M3.105 2.288a.75.75 0 0 0-.826.95l1.414 4.926A1.5 1.5 0 0 0 5.135 9.25h6.115a.75.75 0 0 1 0 1.5H5.135a1.5 1.5 0 0 0-1.442 1.086l-1.414 4.926a.75.75 0 0 0 .826.95 28.897 28.897 0 0 0 15.293-7.155.75.75 0 0 0 0-1.114A28.897 28.897 0 0 0 3.105 2.288Z" />
+            </svg>
           </button>
         </form>
       </div>
