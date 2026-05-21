@@ -30,7 +30,7 @@ export default function ProgressPage() {
   const router = useRouter()
   const [stats, setStats] = useState<Stats | null>(null)
   const [activities, setActivities] = useState<ActivityItem[]>([])
-  const [streakDays, setStreakDays] = useState<boolean[]>([])
+  const [streakDays, setStreakDays] = useState<Array<'active' | 'pending' | 'inactive'>>([])
 
   useEffect(() => {
     const progress = getProgress()
@@ -83,23 +83,34 @@ export default function ProgressPage() {
     recentActivities.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     setActivities(recentActivities.slice(0, 5))
 
-    // Build streak calendar (last 7 days)
-    const today = new Date()
-    const days: boolean[] = []
-    for (let i = 6; i >= 0; i--) {
-      const d = new Date(today)
-      d.setDate(d.getDate() - i)
-      const dateStr = d.toISOString().split('T')[0]
-      // A day is active if it's the lastActiveDate or within the streak
-      if (progress.lastActiveDate && progress.currentStreak > 0) {
-        const lastActive = new Date(progress.lastActiveDate)
-        const daysDiff = Math.floor((lastActive.getTime() - d.getTime()) / (1000 * 60 * 60 * 24))
-        days.push(daysDiff >= 0 && daysDiff < progress.currentStreak)
-      } else {
-        days.push(false)
+    // Build streak calendar (last 7 days) — DST-safe, using YYYY-MM-DD comparison
+    const todayStr = new Date().toISOString().split('T')[0]
+    const activeSet = new Set<string>()
+    if (progress.lastActiveDate && progress.currentStreak > 0) {
+      const last = new Date(progress.lastActiveDate)
+      for (let i = 0; i < progress.currentStreak; i++) {
+        const d = new Date(last)
+        d.setDate(d.getDate() - i)
+        activeSet.add(d.toISOString().split('T')[0])
       }
     }
-    setStreakDays(days)
+
+    const dayStates: Array<'active' | 'pending' | 'inactive'> = []
+    const todayDate = new Date()
+    for (let i = 6; i >= 0; i--) {
+      const d = new Date(todayDate)
+      d.setDate(d.getDate() - i)
+      const dateStr = d.toISOString().split('T')[0]
+      if (activeSet.has(dateStr)) {
+        dayStates.push('active')
+      } else if (dateStr === todayStr && progress.currentStreak > 0) {
+        // Streak still alive (counted from yesterday or earlier) but user hasn't acted today yet
+        dayStates.push('pending')
+      } else {
+        dayStates.push('inactive')
+      }
+    }
+    setStreakDays(dayStates)
   }, [])
 
   if (!stats) {
@@ -112,10 +123,12 @@ export default function ProgressPage() {
 
   const lessons = getAllLessons()
   const foundations = getAllFoundations()
-  const dayLabels = ['M', 'T', 'W', 'T', 'F', 'S', 'S']
-  const today = new Date().getDay()
+  // Sun-indexed array so dayLabels[getDay()] gives the correct letter (Sun=S, Mon=M, ...)
+  const dayLabels = ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+  const todayDow = new Date().getDay()
   const reorderedLabels = [...Array(7)].map((_, i) => {
-    const idx = (today - 6 + i + 7) % 7
+    // Column i shows the date that is (6 - i) days ago, so its DoW is (todayDow - (6 - i)) mod 7
+    const idx = (todayDow - (6 - i) + 7) % 7
     return dayLabels[idx]
   })
 
@@ -147,10 +160,14 @@ export default function ProgressPage() {
             </div>
           </div>
           <div className="flex justify-between">
-            {streakDays.map((active, i) => (
+            {streakDays.map((state, i) => (
               <div key={i} className="flex flex-col items-center gap-1">
                 <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-medium ${
-                  active ? 'bg-orange-400 text-white' : 'bg-orange-100 text-orange-300'
+                  state === 'active'
+                    ? 'bg-orange-400 text-white'
+                    : state === 'pending'
+                      ? 'bg-transparent border-2 border-dashed border-orange-300 text-orange-500'
+                      : 'bg-orange-100 text-orange-300'
                 }`}>
                   {reorderedLabels[i]}
                 </div>
