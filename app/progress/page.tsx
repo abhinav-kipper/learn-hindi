@@ -6,7 +6,8 @@ import { useRouter } from 'next/navigation'
 import { getProgress } from '@/lib/progress'
 import { getQuizScores, getAverageQuizScore } from '@/lib/quiz'
 import { getReviewSessions } from '@/lib/review'
-import { getAllLessons } from '@/lib/lessons'
+import { getAllLessons, getAllContent } from '@/lib/lessons'
+import { getAllFoundations } from '@/lib/foundations'
 import { playSound } from '@/lib/sounds'
 
 interface Stats {
@@ -33,11 +34,13 @@ export default function ProgressPage() {
   useEffect(() => {
     const progress = getProgress()
     const lessons = getAllLessons()
+    const foundations = getAllFoundations()
+    const allContent = getAllContent()
     const quizScores = getQuizScores()
     const reviewSessions = getReviewSessions()
 
-    // Compute phrases learned (9 phrases per lesson average)
-    const completedLessons = lessons.filter(l => progress.completedLessons.includes(l.id))
+    // Compute phrases learned (from both situations and foundations)
+    const completedLessons = allContent.filter(l => progress.completedLessons.includes(l.id))
     const phrasesLearned = completedLessons.reduce((sum, l) => sum + l.phrases.length, 0)
 
     setStats({
@@ -107,6 +110,7 @@ export default function ProgressPage() {
   }
 
   const lessons = getAllLessons()
+  const foundations = getAllFoundations()
   const dayLabels = ['M', 'T', 'W', 'T', 'F', 'S', 'S']
   const today = new Date().getDay()
   const reorderedLabels = [...Array(7)].map((_, i) => {
@@ -169,7 +173,7 @@ export default function ProgressPage() {
           transition={{ delay: 0.3 }}
           className="bg-[var(--bg-surface)] rounded-2xl p-5 border border-[var(--border)] shadow-sm mb-4"
         >
-          <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-3">Lesson Progress</h3>
+          <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-3">Situations</h3>
           <div className="space-y-3">
             {lessons.map((lesson) => {
               const isComplete = stats && getProgress().completedLessons.includes(lesson.id)
@@ -186,6 +190,31 @@ export default function ProgressPage() {
                       transition={{ duration: 0.8, delay: 0.4 }}
                       className={`h-full rounded-full ${
                         isComplete ? 'bg-gradient-to-r from-emerald-400 to-teal-500' : 'bg-[var(--border)]'
+                      }`}
+                    />
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+
+          <h3 className="text-sm font-semibold text-[var(--text-primary)] mt-5 mb-3">Foundations</h3>
+          <div className="space-y-3">
+            {foundations.map((lesson) => {
+              const isComplete = stats && getProgress().completedLessons.includes(lesson.id)
+              return (
+                <div key={lesson.id}>
+                  <div className="flex justify-between text-xs mb-1">
+                    <span className="text-[var(--text-secondary)] truncate mr-2">{lesson.title}</span>
+                    <span className="text-[var(--text-tertiary)]">{isComplete ? '100%' : '0%'}</span>
+                  </div>
+                  <div className="w-full h-2 bg-[var(--bg-elevated)] rounded-full overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: isComplete ? '100%' : '0%' }}
+                      transition={{ duration: 0.8, delay: 0.4 }}
+                      className={`h-full rounded-full ${
+                        isComplete ? 'bg-gradient-to-r from-violet-400 to-indigo-500' : 'bg-[var(--border)]'
                       }`}
                     />
                   </div>

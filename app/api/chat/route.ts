@@ -1,13 +1,13 @@
 import { streamText } from 'ai'
 import { google } from '@ai-sdk/google'
 import { buildSystemPrompt } from '@/lib/system-prompt'
-import { getLessonById } from '@/lib/lessons'
+import { getAnyLessonById } from '@/lib/lessons'
 
 export async function POST(req: Request) {
   try {
     const { messages, lessonId } = await req.json()
 
-    const lesson = getLessonById(lessonId)
+    const lesson = getAnyLessonById(lessonId)
     if (!lesson) {
       return new Response('Lesson not found', { status: 404 })
     }

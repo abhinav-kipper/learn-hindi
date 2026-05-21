@@ -1,5 +1,5 @@
 import { QuizQuestion, QuizAnswer, QuizType } from '@/types/quiz'
-import { getAllLessons } from '@/lib/lessons'
+import { getAllContent } from '@/lib/lessons'
 import { Phrase } from '@/types/lesson'
 
 function shuffle<T>(array: T[]): T[] {
@@ -27,7 +27,7 @@ interface PhraseWithMeta {
 }
 
 function getAllPhrases(lessonIds?: string[]): PhraseWithMeta[] {
-  const lessons = getAllLessons()
+  const lessons = getAllContent()
   const filtered = lessonIds
     ? lessons.filter(l => lessonIds.includes(l.id))
     : lessons

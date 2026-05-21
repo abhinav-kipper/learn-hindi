@@ -1,5 +1,5 @@
 import { Phrase } from '@/types/lesson'
-import { getAllLessons } from '@/lib/lessons'
+import { getAllContent } from '@/lib/lessons'
 import { getProgress } from '@/lib/progress'
 
 export interface ReviewPhrase {
@@ -54,7 +54,7 @@ export function markReviewed(phraseId: string, correct: boolean): void {
 
 export function getReviewPhrases(count: number): ReviewPhrase[] {
   const progress = getProgress()
-  const lessons = getAllLessons()
+  const lessons = getAllContent()
   const completedLessons = lessons.filter(l => progress.completedLessons.includes(l.id))
 
   if (completedLessons.length === 0) {

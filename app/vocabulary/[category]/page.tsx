@@ -1,11 +1,12 @@
 'use client'
 
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState, useCallback, useMemo } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { motion, AnimatePresence, useMotionValue, useTransform, PanInfo } from 'framer-motion'
 import { getCategory, markWordLearned, isWordLearned, VocabWord, VocabCategory } from '@/lib/vocabulary'
 import { getVocabKnown, getVocabReview, addVocabKnown, addVocabReview, removeVocabKnown, removeVocabReview } from '@/lib/vocab-review'
 import { ReadAloudButton } from '@/components/read-aloud-button'
+import { playSound } from '@/lib/sounds'
 
 export default function CategoryPage() {
   const params = useParams()
@@ -45,6 +46,7 @@ export default function CategoryPage() {
       setFlippedCard(null)
     } else {
       setFlippedCard(word.hindi)
+      playSound('pop')
       // Mark as learned on first tap
       if (!learnedSet.has(word.hindi)) {
         markWordLearned(categoryId, word.hindi)
@@ -54,6 +56,7 @@ export default function CategoryPage() {
   }
 
   const handleSwipeRight = useCallback((word: VocabWord) => {
+    playSound('correct')
     // Mark as known
     addVocabKnown(word.hindi)
     removeVocabReview(word.hindi)
@@ -71,6 +74,7 @@ export default function CategoryPage() {
   }, [categoryId, learnedSet])
 
   const handleSwipeLeft = useCallback((word: VocabWord) => {
+    playSound('swipe')
     // Mark for review
     addVocabReview(word.hindi)
     removeVocabKnown(word.hindi)
@@ -97,6 +101,15 @@ export default function CategoryPage() {
 
   const learnedCount = learnedSet.size
   const totalCount = category.words.length
+
+  // Sort: unknown/review words first, known words at bottom
+  const sortedWords = useMemo(() => {
+    return [...category.words].sort((a, b) => {
+      const aKnown = knownSet.has(a.hindi) ? 1 : 0
+      const bKnown = knownSet.has(b.hindi) ? 1 : 0
+      return aKnown - bKnown
+    })
+  }, [category.words, knownSet])
 
   return (
     <div className="max-w-md mx-auto px-4 py-6 pb-24">
@@ -138,19 +151,21 @@ export default function CategoryPage() {
 
       {/* Word Cards */}
       <div className="space-y-3">
-        {category.words.map((word, index) => (
-          <SwipeableWordCard
-            key={word.hindi}
-            word={word}
-            index={index}
-            isFlipped={flippedCard === word.hindi}
-            isKnown={knownSet.has(word.hindi)}
-            isReview={reviewSet.has(word.hindi)}
-            onTap={handleCardTap}
-            onSwipeRight={handleSwipeRight}
-            onSwipeLeft={handleSwipeLeft}
-          />
-        ))}
+        <AnimatePresence mode="popLayout">
+          {sortedWords.map((word, index) => (
+            <SwipeableWordCard
+              key={word.hindi}
+              word={word}
+              index={index}
+              isFlipped={flippedCard === word.hindi}
+              isKnown={knownSet.has(word.hindi)}
+              isReview={reviewSet.has(word.hindi)}
+              onTap={handleCardTap}
+              onSwipeRight={handleSwipeRight}
+              onSwipeLeft={handleSwipeLeft}
+            />
+          ))}
+        </AnimatePresence>
       </div>
     </div>
   )
@@ -190,15 +205,19 @@ function SwipeableWordCard({
 
   return (
     <motion.div
+      layout
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.04 }}
+      exit={{ opacity: 0, x: 100 }}
+      transition={{ layout: { type: 'spring', stiffness: 400, damping: 30 }, delay: Math.min(index * 0.02, 0.3) }}
     >
       <motion.div
         style={{ x }}
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
-        dragElastic={0.5}
+        dragElastic={0.15}
+        dragMomentum={false}
+        dragTransition={{ bounceStiffness: 600, bounceDamping: 30 }}
         onDragEnd={handleDragEnd}
         onClick={() => onTap(word)}
         className={`relative bg-[var(--bg-surface)] rounded-xl border transition-all duration-200 cursor-pointer overflow-hidden ${

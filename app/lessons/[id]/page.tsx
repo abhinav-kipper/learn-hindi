@@ -2,8 +2,7 @@
 
 import { use } from 'react'
 import { notFound } from 'next/navigation'
-import { getLessonById } from '@/lib/lessons'
-import { getFoundationById } from '@/lib/foundations'
+import { getAnyLessonById } from '@/lib/lessons'
 import { LessonFlow } from '@/components/lesson-flow/lesson-flow'
 
 interface LessonPageProps {
@@ -12,7 +11,7 @@ interface LessonPageProps {
 
 export default function LessonPage({ params }: LessonPageProps) {
   const { id } = use(params)
-  const lesson = getLessonById(id) || getFoundationById(id)
+  const lesson = getAnyLessonById(id)
 
   if (!lesson) {
     notFound()

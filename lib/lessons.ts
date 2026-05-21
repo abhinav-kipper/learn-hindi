@@ -1,4 +1,5 @@
 import { Lesson } from '@/types/lesson'
+import { getFoundationById, getAllFoundations } from '@/lib/foundations'
 
 import greetings from '@/content/lessons/01-greetings.json'
 import autoNegotiation from '@/content/lessons/02-auto-negotiation.json'
@@ -26,4 +27,14 @@ export function getLessonById(id: string): Lesson | undefined {
 
 export function getLessonIds(): string[] {
   return lessons.map((lesson) => lesson.id)
+}
+
+/** Get any lesson by ID — checks both situation lessons and foundations */
+export function getAnyLessonById(id: string): Lesson | undefined {
+  return getLessonById(id) || getFoundationById(id)
+}
+
+/** Get all content — both situation lessons and foundations combined */
+export function getAllContent(): Lesson[] {
+  return [...lessons, ...getAllFoundations()]
 }
