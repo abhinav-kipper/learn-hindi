@@ -3,16 +3,17 @@
 import { useState, useCallback, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { speakHindi, stopSpeaking, isSpeaking } from '@/lib/speech'
+import type { ChatReply } from '@/lib/chat-schema'
 
 interface ChatMessageProps {
   role: 'user' | 'assistant'
   content: string
-}
-
-// Strip content in parentheses (typically English translations) so only
-// the Hindi/romanized text is spoken.
-function stripParenthetical(text: string): string {
-  return text.replace(/\s*\([^)]*\)/g, '').trim()
+  /** Structured reply from the API. Present on successful assistant messages. */
+  parsed?: ChatReply
+  /** True if the API failed for this message. */
+  failed?: boolean
+  /** Retry callback shown alongside failed assistant messages. */
+  onRetry?: () => void
 }
 
 function SpeakerButton({ text }: { text: string }) {
@@ -36,7 +37,7 @@ function SpeakerButton({ text }: { text: string }) {
       return
     }
 
-    const cleaned = stripParenthetical(text)
+    const cleaned = text.trim()
     if (!cleaned) return
 
     speakHindi(cleaned)
@@ -71,34 +72,32 @@ function SpeakerButton({ text }: { text: string }) {
   )
 }
 
-/**
- * Parse an AI message into Hindi/Dutch text and the English translation.
- *
- * Accepted formats (in order of preference):
- *   - "hindi\n\n(english)"        block separator
- *   - "hindi\n(english)"          single newline
- *   - "hindi (english)"           inline
- * Trailing whitespace is tolerated. Nested parentheses are not supported —
- * the English block must not itself contain `(` or `)`.
- */
-function parseMessage(content: string): { hindi: string; english: string } | null {
-  const trimmed = content.trim()
-  if (!trimmed) return null
-
-  // Single regex covers all three formats: any whitespace (including newlines)
-  // between the foreign text and the parenthetical at the end.
-  const match = trimmed.match(/^([\s\S]+?)\s*\(([^()]+)\)\s*$/)
-  if (!match) return null
-
-  const hindi = match[1].trim()
-  const english = match[2].trim()
-  if (!hindi || !english) return null
-  return { hindi, english }
-}
-
-export function ChatMessage({ role, content }: ChatMessageProps) {
+export function ChatMessage({ role, content, parsed, failed, onRetry }: ChatMessageProps) {
   const isUser = role === 'user'
-  const parsed = !isUser ? parseMessage(content) : null
+
+  // Failed assistant message — show a friendly recovery affordance.
+  if (!isUser && failed) {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="flex justify-start"
+      >
+        <div className="flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-800 rounded-2xl rounded-bl-md px-4 py-3 text-sm shadow-sm">
+          <span>⚠️ Couldn&apos;t get a clean reply.</span>
+          {onRetry && (
+            <button
+              type="button"
+              onClick={onRetry}
+              className="text-xs font-semibold underline hover:text-amber-900"
+            >
+              Try again
+            </button>
+          )}
+        </div>
+      </motion.div>
+    )
+  }
 
   return (
     <motion.div
@@ -124,7 +123,7 @@ export function ChatMessage({ role, content }: ChatMessageProps) {
             content
           )}
         </div>
-        {!isUser && <SpeakerButton text={content} />}
+        {!isUser && parsed && <SpeakerButton text={parsed.hindi} />}
       </div>
     </motion.div>
   )

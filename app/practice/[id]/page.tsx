@@ -16,12 +16,18 @@ import { playSound } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
 import { getUserProfile } from '@/lib/onboarding'
 import { getReasonInfo } from '@/lib/personalization'
-import { extractCorrections, addMistake } from '@/lib/mistakes'
+import { addMistake } from '@/lib/mistakes'
+import type { ChatReply } from '@/lib/chat-schema'
 
 interface Message {
   id: string
   role: 'user' | 'assistant'
+  /** For users: the text they typed. For assistants: the hindi reply (used as context on subsequent API calls). */
   content: string
+  /** Structured reply from the API — present only on assistant messages that came back successfully. */
+  parsed?: ChatReply
+  /** True if the API call for this assistant message failed (parse/network/server). */
+  failed?: boolean
 }
 
 interface PracticePageProps {
@@ -31,11 +37,11 @@ interface PracticePageProps {
 function useChat({
   api,
   body,
-  onAssistantComplete,
+  onAssistantReply,
 }: {
   api: string
   body: Record<string, unknown>
-  onAssistantComplete?: (content: string) => string
+  onAssistantReply?: (reply: ChatReply) => void
 }) {
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState('')
@@ -48,6 +54,7 @@ function useChat({
       setIsLoading(true)
       setError(null)
 
+      const assistantId = (Date.now() + 1).toString()
       try {
         const response = await fetch(api, {
           method: 'POST',
@@ -59,60 +66,37 @@ function useChat({
         })
 
         if (!response.ok) {
-          const errorText = await response.text()
-          throw new Error(errorText || `Server error: ${response.status}`)
+          throw new Error(`Server error: ${response.status}`)
         }
-        if (!response.body) throw new Error('No response body')
 
-        const assistantId = (Date.now() + 1).toString()
+        const reply = (await response.json()) as ChatReply | { error: string }
+        if ('error' in reply) throw new Error(reply.error)
+
         setMessages((prev) => [
           ...prev,
-          { id: assistantId, role: 'assistant', content: '' },
+          {
+            id: assistantId,
+            role: 'assistant',
+            content: reply.hindi,
+            parsed: reply,
+          },
         ])
         playSound('pop')
-
-        const reader = response.body.getReader()
-        const decoder = new TextDecoder()
-        let done = false
-        let fullContent = ''
-        while (!done) {
-          const { value, done: readerDone } = await reader.read()
-          done = readerDone
-          if (value) {
-            const chunk = decoder.decode(value, { stream: true })
-            fullContent += chunk
-            setMessages((prev) =>
-              prev.map((msg) =>
-                msg.id === assistantId
-                  ? { ...msg, content: msg.content + chunk }
-                  : msg
-              )
-            )
-          }
-        }
-
-        // Stream complete — let caller post-process the full message (e.g.
-        // extract correction tags and replace the content with a cleaned
-        // version so the user never sees the tag).
-        if (onAssistantComplete) {
-          const cleaned = onAssistantComplete(fullContent)
-          if (cleaned !== fullContent) {
-            setMessages((prev) =>
-              prev.map((msg) =>
-                msg.id === assistantId ? { ...msg, content: cleaned } : msg,
-              ),
-            )
-          }
-        }
+        onAssistantReply?.(reply)
       } catch (err) {
         console.error('Chat error:', err)
         const errorMessage = err instanceof Error ? err.message : 'Something went wrong'
         setError(errorMessage)
+        // Add a placeholder failed assistant message so the UI can offer "Try again".
+        setMessages((prev) => [
+          ...prev,
+          { id: assistantId, role: 'assistant', content: '', failed: true },
+        ])
       } finally {
         setIsLoading(false)
       }
     },
-    [api, body]
+    [api, body, onAssistantReply],
   )
 
   useEffect(() => {
@@ -141,10 +125,25 @@ function useChat({
       setInput('')
       await sendMessages(newMessages)
     },
-    [input, isLoading, messages, sendMessages]
+    [input, isLoading, messages, sendMessages],
   )
 
-  return { messages, input, setInput, handleInputChange, handleSubmit, isLoading, error }
+  const retryLast = useCallback(async () => {
+    // Drop the failed assistant message (and anything after the last user
+    // message) and resend.
+    const lastUserIdx = messages.map(m => m.role).lastIndexOf('user')
+    if (lastUserIdx < 0) {
+      // Nothing typed yet — re-trigger the initial greeting.
+      setMessages([])
+      await sendMessages([])
+      return
+    }
+    const trimmed = messages.slice(0, lastUserIdx + 1)
+    setMessages(trimmed)
+    await sendMessages(trimmed)
+  }, [messages, sendMessages])
+
+  return { messages, input, setInput, handleInputChange, handleSubmit, isLoading, error, retryLast }
 }
 
 export default function PracticePage({ params }: PracticePageProps) {
@@ -185,21 +184,27 @@ export default function PracticePage({ params }: PracticePageProps) {
   }, [id, language])
   const lesson = getUniversalLessonById(id)
 
-  const handleAssistantComplete = useCallback(
-    (fullContent: string) => {
-      const { cleaned, corrections } = extractCorrections(fullContent)
-      for (const correction of corrections) {
-        addMistake(correction, id, config.storagePrefix)
+  const handleAssistantReply = useCallback(
+    (reply: ChatReply) => {
+      if (reply.correction) {
+        addMistake(
+          {
+            original: reply.correction.original,
+            correction: reply.correction.correct,
+            reason: reply.correction.reason,
+          },
+          id,
+          config.storagePrefix,
+        )
       }
-      return cleaned
     },
     [id, config.storagePrefix],
   )
 
-  const { messages, input, setInput, handleInputChange, handleSubmit, isLoading, error } = useChat({
+  const { messages, input, setInput, handleInputChange, handleSubmit, isLoading, error, retryLast } = useChat({
     api: '/api/chat',
     body,
-    onAssistantComplete: handleAssistantComplete,
+    onAssistantReply: handleAssistantReply,
   })
 
   const handleTranscript = useCallback((text: string) => {
@@ -210,16 +215,16 @@ export default function PracticePage({ params }: PracticePageProps) {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages])
 
-  // Hands-free: when a new assistant message finishes streaming, speak it and
-  // then auto-arm the mic when speech ends. Each message is spoken at most once.
+  // Hands-free: when a new assistant message arrives, speak the hindi field
+  // and auto-arm the mic when speech ends. Spoken at most once per message.
   useEffect(() => {
     if (!handsFree) return
     if (isLoading) return
     const last = messages[messages.length - 1]
-    if (!last || last.role !== 'assistant') return
+    if (!last || last.role !== 'assistant' || last.failed || !last.parsed) return
     if (spokenIdsRef.current.has(last.id)) return
     spokenIdsRef.current.add(last.id)
-    speak(last.content, config.ttsLocale, () => {
+    speak(last.parsed.hindi, config.ttsLocale, () => {
       voiceRef.current?.start()
     })
   }, [messages, isLoading, handsFree, config.ttsLocale])
@@ -328,6 +333,9 @@ export default function PracticePage({ params }: PracticePageProps) {
             key={message.id}
             role={message.role as 'user' | 'assistant'}
             content={message.content}
+            parsed={message.parsed}
+            failed={message.failed}
+            onRetry={message.failed ? retryLast : undefined}
           />
         ))}
         {isLoading && messages[messages.length - 1]?.role !== 'assistant' && (
