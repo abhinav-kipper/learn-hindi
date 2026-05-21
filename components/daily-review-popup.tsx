@@ -3,6 +3,8 @@
 import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { getReviewPhrases, markReviewed, saveReviewSession, ReviewPhrase } from '@/lib/review'
+import { getVocabReview } from '@/lib/vocab-review'
+import { getAllCategories } from '@/lib/vocabulary'
 import { getProgress, updateStreak } from '@/lib/progress'
 import { playSound } from '@/lib/sounds'
 
@@ -51,12 +53,47 @@ export function DailyReviewPopup() {
   }, [])
 
   const handleLetsGo = useCallback(() => {
-    const reviewPhrases = getReviewPhrases(REVIEW_CARD_COUNT)
-    if (reviewPhrases.length === 0) {
+    // Get vocab words marked for review
+    const vocabReviewWords = getVocabReview()
+    const categories = getAllCategories()
+    const vocabPhrases: ReviewPhrase[] = []
+
+    for (const hindi of vocabReviewWords) {
+      // Find the word details from categories
+      for (const cat of categories) {
+        const word = cat.words.find(w => w.hindi === hindi)
+        if (word) {
+          vocabPhrases.push({
+            phraseId: `vocab-${hindi}`,
+            lessonId: `vocab-${cat.id}`,
+            phrase: {
+              hindi: word.hindi,
+              english: word.english,
+              pronunciation: word.pronunciation,
+              context: word.example,
+            },
+            lastReviewed: null,
+            correctCount: 0,
+            wrongCount: 0,
+          })
+          break
+        }
+      }
+    }
+
+    // Get lesson phrases for review
+    const lessonPhrases = getReviewPhrases(REVIEW_CARD_COUNT)
+
+    // Mix: up to 2 vocab words + fill the rest with lesson phrases, capped at REVIEW_CARD_COUNT
+    const vocabSlice = vocabPhrases.slice(0, 2)
+    const lessonSlice = lessonPhrases.slice(0, REVIEW_CARD_COUNT - vocabSlice.length)
+    const mixed = [...vocabSlice, ...lessonSlice].slice(0, REVIEW_CARD_COUNT)
+
+    if (mixed.length === 0) {
       handleDismiss()
       return
     }
-    setPhrases(reviewPhrases)
+    setPhrases(mixed)
     setCurrentIndex(0)
     setRevealed(false)
     setGotItCount(0)

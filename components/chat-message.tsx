@@ -1,7 +1,8 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { speakHindi, stopSpeaking, isSpeaking } from '@/lib/speech'
 
 interface ChatMessageProps {
   role: 'user' | 'assistant'
@@ -17,35 +18,30 @@ function stripParenthetical(text: string): string {
 function SpeakerButton({ text }: { text: string }) {
   const [speaking, setSpeaking] = useState(false)
 
-  const handleSpeak = useCallback(() => {
-    if (!window.speechSynthesis) return
+  // Poll isSpeaking to keep state in sync with audio playback
+  useEffect(() => {
+    if (!speaking) return
+    const interval = setInterval(() => {
+      if (!isSpeaking()) {
+        setSpeaking(false)
+      }
+    }, 300)
+    return () => clearInterval(interval)
+  }, [speaking])
 
+  const handleSpeak = useCallback(() => {
     if (speaking) {
-      window.speechSynthesis.cancel()
+      stopSpeaking()
       setSpeaking(false)
       return
     }
 
     const cleaned = stripParenthetical(text)
-    const utterance = new SpeechSynthesisUtterance(cleaned)
+    if (!cleaned) return
 
-    // Prefer a Hindi voice; fall back to whatever the browser picks
-    const voices = window.speechSynthesis.getVoices()
-    const hindiVoice =
-      voices.find((v) => v.lang === 'hi-IN') ||
-      voices.find((v) => v.lang.startsWith('hi'))
-    if (hindiVoice) utterance.voice = hindiVoice
-    utterance.lang = 'hi-IN'
-    utterance.rate = 0.9
-
-    utterance.onstart = () => setSpeaking(true)
-    utterance.onend = () => setSpeaking(false)
-    utterance.onerror = () => setSpeaking(false)
-
-    window.speechSynthesis.speak(utterance)
+    speakHindi(cleaned)
+    setSpeaking(true)
   }, [text, speaking])
-
-  if (typeof window === 'undefined' || !window.speechSynthesis) return null
 
   return (
     <button

@@ -79,6 +79,7 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
           phrases={lesson.phrases}
           grammarNotes={lesson.grammar_notes}
           cultureNotes={lesson.culture_notes}
+          skillBreakdown={lesson.skill_breakdown}
           onNext={goNext}
         />
       )

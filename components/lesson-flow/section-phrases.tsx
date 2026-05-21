@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Phrase } from '@/types/lesson'
+import { Phrase, SkillBreakdown } from '@/types/lesson'
 import { SwipeableCarousel } from './swipeable-carousel'
 import { ReadAloudButton } from '@/components/read-aloud-button'
 import { playSound } from '@/lib/sounds'
@@ -11,7 +11,80 @@ interface SectionPhrasesProps {
   phrases: Phrase[]
   grammarNotes: string[]
   cultureNotes: string[]
+  skillBreakdown?: SkillBreakdown[]
   onNext: () => void
+}
+
+/**
+ * Match a grammar note to a phrase by keyword relevance.
+ * Looks for overlapping words between the phrase (hindi + context) and the grammar note.
+ */
+function matchGrammarToPhrase(phrase: Phrase, grammarNotes: string[]): string | undefined {
+  const hindiWords = phrase.hindi.toLowerCase().split(/\s+/)
+  const contextWords = phrase.context.toLowerCase().split(/\s+/)
+
+  let bestMatch: { note: string; score: number } | null = null
+
+  for (const note of grammarNotes) {
+    const noteLower = note.toLowerCase()
+    let score = 0
+    for (const word of [...hindiWords, ...contextWords]) {
+      if (word.length > 2 && noteLower.includes(word)) score++
+    }
+    if (score > 0 && (!bestMatch || score > bestMatch.score)) {
+      bestMatch = { note, score }
+    }
+  }
+
+  return bestMatch?.note
+}
+
+/**
+ * Match a culture tip to a phrase by keyword relevance.
+ */
+function matchCultureToPhrase(phrase: Phrase, cultureNotes: string[]): string | undefined {
+  const hindiWords = phrase.hindi.toLowerCase().split(/\s+/)
+  const contextWords = phrase.context.toLowerCase().split(/\s+/)
+  const englishWords = phrase.english.toLowerCase().split(/\s+/)
+
+  let bestMatch: { note: string; score: number } | null = null
+
+  for (const note of cultureNotes) {
+    const noteLower = note.toLowerCase()
+    let score = 0
+    for (const word of [...hindiWords, ...contextWords, ...englishWords]) {
+      if (word.length > 2 && noteLower.includes(word)) score++
+    }
+    if (score > 0 && (!bestMatch || score > bestMatch.score)) {
+      bestMatch = { note, score }
+    }
+  }
+
+  return bestMatch?.note
+}
+
+function SkillMiniLesson({ skill }: { skill: SkillBreakdown }) {
+  return (
+    <div className="bg-indigo-50 border-2 border-indigo-200 rounded-3xl shadow-lg p-6 min-h-[320px] flex flex-col">
+      <div className="flex items-center gap-2 mb-3">
+        <span className="text-xl">🧠</span>
+        <span className="text-xs font-bold text-indigo-600 uppercase tracking-wider">Skill</span>
+      </div>
+      <h3 className="text-lg font-bold text-indigo-800 mb-2">{skill.skill}</h3>
+      <p className="text-sm text-indigo-700 leading-relaxed mb-4">{skill.explanation}</p>
+      {skill.more_examples.length > 0 && (
+        <div className="space-y-2 mt-auto">
+          <p className="text-xs font-semibold text-indigo-500 uppercase tracking-wide">Examples:</p>
+          {skill.more_examples.slice(0, 3).map((ex, i) => (
+            <div key={i} className="text-sm pl-3 border-l-2 border-indigo-300">
+              <p className="font-medium text-indigo-800">{ex.hindi}</p>
+              <p className="text-indigo-600 text-xs">{ex.english}</p>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  )
 }
 
 function PhraseCardContent({
@@ -130,42 +203,90 @@ function PhraseCardContent({
   )
 }
 
-export function SectionPhrases({ phrases, grammarNotes, cultureNotes, onNext }: SectionPhrasesProps) {
-  // Distribute grammar notes across phrases (1:1 by index)
-  // Distribute culture notes spaced evenly across phrases
-  const cultureInterval = cultureNotes.length > 0
-    ? Math.floor(phrases.length / cultureNotes.length)
-    : 0
+export function SectionPhrases({ phrases, grammarNotes, cultureNotes, skillBreakdown, onNext }: SectionPhrasesProps) {
+  // Match grammar notes to phrases by keyword relevance
+  // Track which grammar notes have been used to avoid duplicates
+  const usedGrammarNotes = new Set<string>()
+  const usedCultureNotes = new Set<string>()
 
-  const phraseCards = phrases.map((phrase, i) => {
-    // Match grammar note by index
-    const grammarNote = i < grammarNotes.length ? grammarNotes[i] : undefined
+  const phraseGrammarMap = phrases.map(phrase => {
+    const availableGrammar = grammarNotes.filter(n => !usedGrammarNotes.has(n))
+    const matched = matchGrammarToPhrase(phrase, availableGrammar)
+    if (matched) usedGrammarNotes.add(matched)
+    return matched
+  })
 
-    // Distribute culture tips evenly across phrase cards
-    let cultureTip: string | undefined
-    if (cultureInterval > 0) {
-      const cultureIdx = Math.floor(i / cultureInterval)
-      if (i % cultureInterval === 0 && cultureIdx < cultureNotes.length) {
-        cultureTip = cultureNotes[cultureIdx]
+  const phraseCultureMap = phrases.map(phrase => {
+    const availableCulture = cultureNotes.filter(n => !usedCultureNotes.has(n))
+    const matched = matchCultureToPhrase(phrase, availableCulture)
+    if (matched) usedCultureNotes.add(matched)
+    return matched
+  })
+
+  // Assign any unmatched grammar notes to the most relevant remaining phrases
+  const unmatchedGrammar = grammarNotes.filter(n => !usedGrammarNotes.has(n))
+  for (const note of unmatchedGrammar) {
+    // Find phrase without a grammar note that has best match
+    let bestIdx = -1
+    let bestScore = 0
+    for (let i = 0; i < phrases.length; i++) {
+      if (phraseGrammarMap[i]) continue
+      const hindiWords = phrases[i].hindi.toLowerCase().split(/\s+/)
+      const contextWords = phrases[i].context.toLowerCase().split(/\s+/)
+      const noteLower = note.toLowerCase()
+      let score = 0
+      for (const word of [...hindiWords, ...contextWords]) {
+        if (word.length > 2 && noteLower.includes(word)) score++
+      }
+      if (score > bestScore) {
+        bestScore = score
+        bestIdx = i
       }
     }
+    if (bestIdx >= 0) {
+      phraseGrammarMap[bestIdx] = note
+    }
+  }
 
-    return (
+  // Build carousel items, interleaving skill mini-lessons every 3-4 phrases
+  const skills = skillBreakdown || []
+  const carouselItems: React.ReactNode[] = []
+  let skillIdx = 0
+  const PHRASES_PER_SKILL = skills.length > 0 ? Math.ceil(phrases.length / skills.length) : phrases.length + 1
+
+  phrases.forEach((phrase, i) => {
+    carouselItems.push(
       <PhraseCardContent
         key={`phrase-${i}`}
         phrase={phrase}
-        grammarNote={grammarNote}
-        cultureTip={cultureTip}
+        grammarNote={phraseGrammarMap[i]}
+        cultureTip={phraseCultureMap[i]}
       />
     )
+
+    // After every PHRASES_PER_SKILL phrases (minimum 3), insert a skill card
+    if (skills.length > 0 && skillIdx < skills.length && (i + 1) % PHRASES_PER_SKILL === 0 && (i + 1) >= 3) {
+      carouselItems.push(
+        <SkillMiniLesson key={`skill-${skillIdx}`} skill={skills[skillIdx]} />
+      )
+      skillIdx++
+    }
   })
+
+  // Add any remaining skills at the end
+  while (skillIdx < skills.length) {
+    carouselItems.push(
+      <SkillMiniLesson key={`skill-${skillIdx}`} skill={skills[skillIdx]} />
+    )
+    skillIdx++
+  }
 
   return (
     <div className="flex flex-col flex-1 pt-4">
       <h2 className="text-sm font-semibold text-violet-600 uppercase tracking-wide text-center mb-2">
         Key Phrases
       </h2>
-      <SwipeableCarousel items={phraseCards} onComplete={onNext} />
+      <SwipeableCarousel items={carouselItems} onComplete={onNext} />
     </div>
   )
 }
