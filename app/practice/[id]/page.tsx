@@ -15,6 +15,7 @@ import { playSound } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
 import { getUserProfile } from '@/lib/onboarding'
 import { getReasonInfo } from '@/lib/personalization'
+import { extractCorrections, addMistake } from '@/lib/mistakes'
 
 interface Message {
   id: string
@@ -26,7 +27,15 @@ interface PracticePageProps {
   params: Promise<{ id: string }>
 }
 
-function useChat({ api, body }: { api: string; body: Record<string, unknown> }) {
+function useChat({
+  api,
+  body,
+  onAssistantComplete,
+}: {
+  api: string
+  body: Record<string, unknown>
+  onAssistantComplete?: (content: string) => string
+}) {
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
@@ -64,17 +73,33 @@ function useChat({ api, body }: { api: string; body: Record<string, unknown> }) 
         const reader = response.body.getReader()
         const decoder = new TextDecoder()
         let done = false
+        let fullContent = ''
         while (!done) {
           const { value, done: readerDone } = await reader.read()
           done = readerDone
           if (value) {
             const chunk = decoder.decode(value, { stream: true })
+            fullContent += chunk
             setMessages((prev) =>
               prev.map((msg) =>
                 msg.id === assistantId
                   ? { ...msg, content: msg.content + chunk }
                   : msg
               )
+            )
+          }
+        }
+
+        // Stream complete — let caller post-process the full message (e.g.
+        // extract correction tags and replace the content with a cleaned
+        // version so the user never sees the tag).
+        if (onAssistantComplete) {
+          const cleaned = onAssistantComplete(fullContent)
+          if (cleaned !== fullContent) {
+            setMessages((prev) =>
+              prev.map((msg) =>
+                msg.id === assistantId ? { ...msg, content: cleaned } : msg,
+              ),
             )
           }
         }
@@ -138,9 +163,21 @@ export default function PracticePage({ params }: PracticePageProps) {
   }, [id, language])
   const lesson = getUniversalLessonById(id)
 
+  const handleAssistantComplete = useCallback(
+    (fullContent: string) => {
+      const { cleaned, corrections } = extractCorrections(fullContent)
+      for (const correction of corrections) {
+        addMistake(correction, id, config.storagePrefix)
+      }
+      return cleaned
+    },
+    [id, config.storagePrefix],
+  )
+
   const { messages, input, setInput, handleInputChange, handleSubmit, isLoading, error } = useChat({
     api: '/api/chat',
     body,
+    onAssistantComplete: handleAssistantComplete,
   })
 
   const handleTranscript = useCallback((text: string) => {

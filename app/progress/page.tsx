@@ -189,6 +189,23 @@ export default function ProgressPage() {
           <StatCard label="Lessons Done" value={stats.lessonsCompleted} icon="📚" delay={0.25} />
         </div>
 
+        <motion.button
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.28 }}
+          onClick={() => router.push('/mistakes')}
+          className="w-full mb-4 px-4 py-3 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border)] shadow-sm text-left flex items-center justify-between hover:border-[var(--accent)]/40 transition-colors"
+        >
+          <div className="flex items-center gap-3">
+            <span className="text-xl">🔍</span>
+            <div>
+              <p className="text-sm font-semibold text-[var(--text-primary)]">Your mistakes</p>
+              <p className="text-xs text-[var(--text-secondary)]">Tutor corrections from practice</p>
+            </div>
+          </div>
+          <span className="text-[var(--text-tertiary)]">→</span>
+        </motion.button>
+
         {/* Lesson progress */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
