@@ -149,20 +149,9 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
         ))}
       </div>
 
-      {/* Section content — swipe left/right to navigate sections */}
-      <motion.div
-        className="flex-1 overflow-hidden relative"
-        drag="x"
-        dragConstraints={{ left: 0, right: 0 }}
-        dragElastic={0.3}
-        onDragEnd={(_, info) => {
-          if (info.offset.x < -80 || info.velocity.x < -500) {
-            goNext()
-          } else if (info.offset.x > 80 || info.velocity.x > 500) {
-            goBack()
-          }
-        }}
-      >
+      {/* Section content — use the dots/buttons to navigate; no horizontal
+          swipe here so it doesn't fight the phrase carousel's swipes inside. */}
+      <div className="flex-1 overflow-hidden relative">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={currentSection}
@@ -177,7 +166,7 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
             {renderSection()}
           </motion.div>
         </AnimatePresence>
-      </motion.div>
+      </div>
     </div>
   )
 }
