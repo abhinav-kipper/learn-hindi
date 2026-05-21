@@ -72,25 +72,28 @@ function SpeakerButton({ text }: { text: string }) {
 }
 
 /**
- * Parse AI message into Hindi and English parts.
- * Expected format:
- * "hindi text here\n\n(english translation here)"
- * Or fallback: "hindi text (english translation)"
+ * Parse an AI message into Hindi/Dutch text and the English translation.
+ *
+ * Accepted formats (in order of preference):
+ *   - "hindi\n\n(english)"        block separator
+ *   - "hindi\n(english)"          single newline
+ *   - "hindi (english)"           inline
+ * Trailing whitespace is tolerated. Nested parentheses are not supported —
+ * the English block must not itself contain `(` or `)`.
  */
 function parseMessage(content: string): { hindi: string; english: string } | null {
-  // Try format: hindi\n\n(english)
-  const blockMatch = content.match(/^([\s\S]+?)\n\n\(([^)]+)\)\s*$/)
-  if (blockMatch) {
-    return { hindi: blockMatch[1].trim(), english: blockMatch[2].trim() }
-  }
+  const trimmed = content.trim()
+  if (!trimmed) return null
 
-  // Try format: hindi (english) — inline parentheses at end
-  const inlineMatch = content.match(/^(.+?)\s*\(([^)]+)\)\s*$/)
-  if (inlineMatch) {
-    return { hindi: inlineMatch[1].trim(), english: inlineMatch[2].trim() }
-  }
+  // Single regex covers all three formats: any whitespace (including newlines)
+  // between the foreign text and the parenthetical at the end.
+  const match = trimmed.match(/^([\s\S]+?)\s*\(([^()]+)\)\s*$/)
+  if (!match) return null
 
-  return null
+  const hindi = match[1].trim()
+  const english = match[2].trim()
+  if (!hindi || !english) return null
+  return { hindi, english }
 }
 
 export function ChatMessage({ role, content }: ChatMessageProps) {
