@@ -1,17 +1,22 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { playSound } from '@/lib/sounds'
 
 interface SwipeableCarouselProps {
   items: React.ReactNode[]
   onComplete?: () => void
+  onIndexChange?: (index: number) => void
 }
 
-export function SwipeableCarousel({ items, onComplete }: SwipeableCarouselProps) {
+export function SwipeableCarousel({ items, onComplete, onIndexChange }: SwipeableCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [direction, setDirection] = useState(0)
+
+  useEffect(() => {
+    onIndexChange?.(currentIndex)
+  }, [currentIndex, onIndexChange])
 
   const next = () => {
     if (currentIndex < items.length - 1) {

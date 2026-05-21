@@ -8,7 +8,7 @@ const mockLesson: Lesson = {
   situation: 'Test situation',
   skills: ['test skill'],
   phrases: [
-    { hindi: 'namaste', english: 'hello', context: 'greeting' },
+    { hindi: 'namaste', english: 'hello', context: 'greeting', pronunciation: 'na-MAS-te' },
   ],
   grammar_notes: ['test note'],
   culture_notes: [],
