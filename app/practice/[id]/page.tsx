@@ -4,10 +4,12 @@ import { useState, useEffect, useRef, useCallback, useMemo, FormEvent, ChangeEve
 import { use } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
+import confetti from 'canvas-confetti'
 import { ChatMessage } from '@/components/chat-message'
 import { VoiceButton } from '@/components/voice-button'
-import { incrementPracticeCount } from '@/lib/progress'
+import { incrementPracticeCount, markLessonComplete, updateStreak } from '@/lib/progress'
+import { getAnyLessonById } from '@/lib/lessons'
 import { FeatureTooltip } from '@/components/feature-tooltip'
 import { playSound } from '@/lib/sounds'
 
@@ -28,7 +30,6 @@ function useChat({ api, body }: { api: string; body: Record<string, unknown> }) 
   const [error, setError] = useState<string | null>(null)
   const hasSentInitial = useRef(false)
 
-  // Auto-send initial message to make AI start the conversation
   const sendMessages = useCallback(
     async (messagesToSend: Message[]) => {
       setIsLoading(true)
@@ -48,10 +49,7 @@ function useChat({ api, body }: { api: string; body: Record<string, unknown> }) 
           const errorText = await response.text()
           throw new Error(errorText || `Server error: ${response.status}`)
         }
-
-        if (!response.body) {
-          throw new Error('No response body')
-        }
+        if (!response.body) throw new Error('No response body')
 
         const assistantId = (Date.now() + 1).toString()
         setMessages((prev) => [
@@ -63,7 +61,6 @@ function useChat({ api, body }: { api: string; body: Record<string, unknown> }) 
         const reader = response.body.getReader()
         const decoder = new TextDecoder()
         let done = false
-
         while (!done) {
           const { value, done: readerDone } = await reader.read()
           done = readerDone
@@ -89,7 +86,6 @@ function useChat({ api, body }: { api: string; body: Record<string, unknown> }) 
     [api, body]
   )
 
-  // Trigger AI's opening message on mount
   useEffect(() => {
     if (!hasSentInitial.current) {
       hasSentInitial.current = true
@@ -105,15 +101,12 @@ function useChat({ api, body }: { api: string; body: Record<string, unknown> }) 
     async (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault()
       if (!input.trim() || isLoading) return
-
       playSound('tap')
-
       const userMessage: Message = {
         id: Date.now().toString(),
         role: 'user',
         content: input.trim(),
       }
-
       const newMessages = [...messages, userMessage]
       setMessages(newMessages)
       setInput('')
@@ -129,8 +122,10 @@ export default function PracticePage({ params }: PracticePageProps) {
   const { id } = use(params)
   const router = useRouter()
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const [showFinish, setShowFinish] = useState(false)
 
   const body = useMemo(() => ({ lessonId: id }), [id])
+  const lesson = getAnyLessonById(id)
 
   const { messages, input, setInput, handleInputChange, handleSubmit, isLoading, error } = useChat({
     api: '/api/chat',
@@ -142,12 +137,28 @@ export default function PracticePage({ params }: PracticePageProps) {
   }, [setInput])
 
   useEffect(() => {
-    incrementPracticeCount()
-  }, [])
-
-  useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages])
+
+  const userMessageCount = messages.filter(m => m.role === 'user').length
+
+  const handleFinish = () => {
+    if (userMessageCount === 0) return
+    markLessonComplete(id)
+    updateStreak()
+    incrementPracticeCount()
+    playSound('levelup')
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+      colors: ['#6366f1', '#8b5cf6', '#a78bfa', '#34d399', '#fbbf24'],
+      ticks: 80,
+      gravity: 1.2,
+      scalar: 0.9,
+    })
+    setShowFinish(true)
+  }
 
   return (
     <motion.div
@@ -172,11 +183,14 @@ export default function PracticePage({ params }: PracticePageProps) {
           </svg>
           Lesson
         </Link>
-        <div className="flex items-center gap-2">
-          <span className="text-xs font-semibold bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full">
-            💬 Practice
-          </span>
-        </div>
+        <button
+          type="button"
+          onClick={handleFinish}
+          disabled={userMessageCount === 0 || isLoading}
+          className="text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-4 py-1.5 rounded-full disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
+        >
+          Finish ✓
+        </button>
       </div>
 
       {/* Messages */}
@@ -254,6 +268,56 @@ export default function PracticePage({ params }: PracticePageProps) {
           </button>
         </form>
       </div>
+
+      {/* Completion overlay */}
+      <AnimatePresence>
+        {showFinish && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm"
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              className="fixed inset-0 z-50 flex items-center justify-center px-6"
+            >
+              <div className="bg-[var(--bg-surface)] rounded-3xl shadow-2xl border border-[var(--border)] p-8 max-w-sm w-full text-center">
+                <div className="text-5xl mb-3">🎉</div>
+                <h2 className="text-2xl font-extrabold text-[var(--text-primary)]">
+                  Nice practice!
+                </h2>
+                <p className="text-sm text-[var(--text-secondary)] mt-2">
+                  {userMessageCount} message{userMessageCount === 1 ? '' : 's'} exchanged
+                </p>
+                {lesson && (
+                  <p className="text-xs text-[var(--text-tertiary)] mt-1">
+                    {lesson.title}
+                  </p>
+                )}
+                <div className="mt-6 space-y-2">
+                  <button
+                    onClick={() => router.push(`/lessons/${id}`)}
+                    className="block w-full text-center py-3 px-6 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-md"
+                  >
+                    Back to lesson
+                  </button>
+                  <button
+                    onClick={() => router.push('/')}
+                    className="block w-full text-center py-3 px-6 bg-[var(--bg-elevated)] text-[var(--text-primary)] font-semibold rounded-2xl border border-[var(--border)]"
+                  >
+                    Home
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </motion.div>
   )
 }
