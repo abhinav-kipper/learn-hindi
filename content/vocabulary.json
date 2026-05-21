@@ -1,0 +1,752 @@
+{
+  "categories": [
+    {
+      "id": "everyday",
+      "title": "Everyday Words",
+      "emoji": "🗣️",
+      "gradient": "from-blue-500 to-indigo-600",
+      "words": [
+        {
+          "hindi": "accha",
+          "pronunciation": "ach-CHAA",
+          "english": "good / okay / I see",
+          "example": "accha, theek hai — okay, fine then",
+          "type": "adjective"
+        },
+        {
+          "hindi": "theek",
+          "pronunciation": "THEEK",
+          "english": "fine / okay / correct",
+          "example": "sab theek hai? — is everything okay?",
+          "type": "adjective"
+        },
+        {
+          "hindi": "bas",
+          "pronunciation": "BUS",
+          "english": "enough / that's it / just",
+          "example": "bas, aur nahi chahiye — enough, don't want more",
+          "type": "filler"
+        },
+        {
+          "hindi": "bilkul",
+          "pronunciation": "bil-KUL",
+          "english": "absolutely / exactly / totally",
+          "example": "bilkul sahi! — absolutely right!",
+          "type": "adverb"
+        },
+        {
+          "hindi": "zaroor",
+          "pronunciation": "za-ROOR",
+          "english": "definitely / surely / of course",
+          "example": "zaroor aaunga — I'll definitely come",
+          "type": "adverb"
+        },
+        {
+          "hindi": "shayad",
+          "pronunciation": "SHAA-yad",
+          "english": "maybe / perhaps / possibly",
+          "example": "shayad kal mil jaaye — maybe we'll meet tomorrow",
+          "type": "adverb"
+        },
+        {
+          "hindi": "abhi",
+          "pronunciation": "a-BHI",
+          "english": "right now / just now",
+          "example": "abhi aata hoon — I'm coming right now",
+          "type": "adverb"
+        },
+        {
+          "hindi": "phir",
+          "pronunciation": "PHIR",
+          "english": "then / again / after that",
+          "example": "phir kya hua? — then what happened?",
+          "type": "adverb"
+        },
+        {
+          "hindi": "waise",
+          "pronunciation": "WAI-se",
+          "english": "by the way / otherwise / like that",
+          "example": "waise tum kahan ja rahe ho? — by the way, where are you going?",
+          "type": "filler"
+        },
+        {
+          "hindi": "lekin",
+          "pronunciation": "LE-kin",
+          "english": "but / however",
+          "example": "achha hai, lekin mehnga hai — it's good, but expensive",
+          "type": "filler"
+        },
+        {
+          "hindi": "kyunki",
+          "pronunciation": "KYUN-ki",
+          "english": "because / since",
+          "example": "nahi aaya kyunki baarish thi — didn't come because it was raining",
+          "type": "filler"
+        },
+        {
+          "hindi": "isliye",
+          "pronunciation": "IS-li-ye",
+          "english": "that's why / therefore",
+          "example": "late ho gaya, isliye auto liya — got late, that's why took an auto",
+          "type": "filler"
+        },
+        {
+          "hindi": "warna",
+          "pronunciation": "WAR-na",
+          "english": "otherwise / or else",
+          "example": "jaldi chal, warna late ho jaayenge — hurry up, otherwise we'll be late",
+          "type": "filler"
+        },
+        {
+          "hindi": "matlab",
+          "pronunciation": "MAT-lab",
+          "english": "meaning / you mean / like",
+          "example": "matlab kya kehna chahte ho? — what do you mean?",
+          "type": "filler"
+        },
+        {
+          "hindi": "yaar",
+          "pronunciation": "YAAR",
+          "english": "dude / buddy (casual address)",
+          "example": "yaar, chill kar — dude, relax",
+          "type": "filler"
+        },
+        {
+          "hindi": "bhai",
+          "pronunciation": "BHAI",
+          "english": "bro / brother (used casually with anyone)",
+          "example": "bhai, kya scene hai? — bro, what's the deal?",
+          "type": "filler"
+        },
+        {
+          "hindi": "dekho",
+          "pronunciation": "DE-kho",
+          "english": "look / see / listen up",
+          "example": "dekho, meri baat suno — look, listen to me",
+          "type": "verb"
+        },
+        {
+          "hindi": "suno",
+          "pronunciation": "SU-no",
+          "english": "listen / hey (to get attention)",
+          "example": "suno, ek baat batao — hey, tell me something",
+          "type": "verb"
+        },
+        {
+          "hindi": "chalo",
+          "pronunciation": "CHA-lo",
+          "english": "let's go / come on / okay then",
+          "example": "chalo, chalte hain — come on, let's leave",
+          "type": "verb"
+        },
+        {
+          "hindi": "ruko",
+          "pronunciation": "RU-ko",
+          "english": "wait / stop / hold on",
+          "example": "ruko, abhi aata hoon — wait, I'm coming",
+          "type": "verb"
+        }
+      ]
+    },
+    {
+      "id": "emotions",
+      "title": "Emotions & Feelings",
+      "emoji": "💭",
+      "gradient": "from-pink-500 to-rose-600",
+      "words": [
+        {
+          "hindi": "khush",
+          "pronunciation": "KHUSH",
+          "english": "happy / pleased",
+          "example": "bahut khush hoon aaj — I'm very happy today",
+          "type": "adjective"
+        },
+        {
+          "hindi": "udaas",
+          "pronunciation": "u-DAAS",
+          "english": "sad / gloomy / down",
+          "example": "kyun udaas hai? — why are you sad?",
+          "type": "adjective"
+        },
+        {
+          "hindi": "gussa",
+          "pronunciation": "GUS-sa",
+          "english": "angry / mad / furious",
+          "example": "itna gussa kyun hai? — why so angry?",
+          "type": "noun"
+        },
+        {
+          "hindi": "dar",
+          "pronunciation": "DAR",
+          "english": "fear / scared / afraid",
+          "example": "mujhe dar lag raha hai — I'm feeling scared",
+          "type": "noun"
+        },
+        {
+          "hindi": "pyaar",
+          "pronunciation": "PYAAR",
+          "english": "love / affection",
+          "example": "bahut pyaar karta hoon — I love you a lot",
+          "type": "noun"
+        },
+        {
+          "hindi": "mazaa",
+          "pronunciation": "ma-ZAA",
+          "english": "fun / enjoyment / good time",
+          "example": "bahut mazaa aaya — had a lot of fun",
+          "type": "noun"
+        },
+        {
+          "hindi": "bore",
+          "pronunciation": "BORE",
+          "english": "bored / boring",
+          "example": "yaar, bahut bore ho raha hoon — dude, I'm so bored",
+          "type": "adjective"
+        },
+        {
+          "hindi": "pareshan",
+          "pronunciation": "pa-re-SHAAN",
+          "english": "worried / troubled / annoyed",
+          "example": "kya pareshan kar raha hai? — what's bothering you?",
+          "type": "adjective"
+        },
+        {
+          "hindi": "excited",
+          "pronunciation": "ex-CITED",
+          "english": "excited / pumped up",
+          "example": "bahut excited hoon trip ke liye — I'm so excited for the trip",
+          "type": "adjective"
+        },
+        {
+          "hindi": "confused",
+          "pronunciation": "con-FUSED",
+          "english": "confused / lost",
+          "example": "main bohot confused hoon — I'm very confused",
+          "type": "adjective"
+        },
+        {
+          "hindi": "thaka",
+          "pronunciation": "THA-ka",
+          "english": "tired / exhausted",
+          "example": "bahut thaka hua hoon — I'm very tired",
+          "type": "adjective"
+        },
+        {
+          "hindi": "nervous",
+          "pronunciation": "NER-vus",
+          "english": "nervous / anxious",
+          "example": "interview ke liye nervous hoon — I'm nervous for the interview",
+          "type": "adjective"
+        },
+        {
+          "hindi": "relief",
+          "pronunciation": "re-LEEF",
+          "english": "relieved / relief",
+          "example": "finally relief mila — finally got some relief",
+          "type": "noun"
+        },
+        {
+          "hindi": "hairaan",
+          "pronunciation": "hai-RAAN",
+          "english": "surprised / shocked / amazed",
+          "example": "main toh hairaan reh gaya — I was shocked",
+          "type": "adjective"
+        },
+        {
+          "hindi": "jalan",
+          "pronunciation": "JA-lan",
+          "english": "jealousy / envy / burning",
+          "example": "usko meri jalan ho rahi hai — they're jealous of me",
+          "type": "noun"
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": "Food & Drinks",
+      "emoji": "🍛",
+      "gradient": "from-orange-500 to-amber-600",
+      "words": [
+        {
+          "hindi": "chai",
+          "pronunciation": "CHAI",
+          "english": "tea (usually with milk & sugar)",
+          "example": "ek cutting chai dena — give me a half-cup tea",
+          "type": "noun"
+        },
+        {
+          "hindi": "pani",
+          "pronunciation": "PAA-ni",
+          "english": "water",
+          "example": "thoda pani dena — give me some water",
+          "type": "noun"
+        },
+        {
+          "hindi": "roti",
+          "pronunciation": "RO-ti",
+          "english": "flatbread / chapati",
+          "example": "do roti aur laga do — give me two more rotis",
+          "type": "noun"
+        },
+        {
+          "hindi": "chawal",
+          "pronunciation": "CHAA-wal",
+          "english": "rice",
+          "example": "dal chawal khayenge? — shall we eat dal rice?",
+          "type": "noun"
+        },
+        {
+          "hindi": "dal",
+          "pronunciation": "DAAL",
+          "english": "lentils / lentil curry",
+          "example": "aaj dal bani hai — dal is made today",
+          "type": "noun"
+        },
+        {
+          "hindi": "sabzi",
+          "pronunciation": "SAB-zi",
+          "english": "vegetable / veggie dish",
+          "example": "kaunsi sabzi hai aaj? — what vegetable dish is there today?",
+          "type": "noun"
+        },
+        {
+          "hindi": "doodh",
+          "pronunciation": "DOODH",
+          "english": "milk",
+          "example": "doodh garam kar do — heat up the milk",
+          "type": "noun"
+        },
+        {
+          "hindi": "lassi",
+          "pronunciation": "LAS-si",
+          "english": "yogurt drink (sweet or salty)",
+          "example": "ek meethi lassi dena — give me a sweet lassi",
+          "type": "noun"
+        },
+        {
+          "hindi": "samosa",
+          "pronunciation": "sa-MO-sa",
+          "english": "fried stuffed pastry (potato filling)",
+          "example": "do samose pack kar do — pack two samosas",
+          "type": "noun"
+        },
+        {
+          "hindi": "biryani",
+          "pronunciation": "bir-YAA-ni",
+          "english": "spiced rice dish with meat/veggies",
+          "example": "aaj biryani ka mood hai — I'm in the mood for biryani today",
+          "type": "noun"
+        },
+        {
+          "hindi": "paneer",
+          "pronunciation": "pa-NEER",
+          "english": "cottage cheese (used in many dishes)",
+          "example": "paneer butter masala laga do — serve paneer butter masala",
+          "type": "noun"
+        },
+        {
+          "hindi": "masala",
+          "pronunciation": "ma-SAA-la",
+          "english": "spice / spice mix",
+          "example": "masala zyada mat daalna — don't add too much spice",
+          "type": "noun"
+        },
+        {
+          "hindi": "mirchi",
+          "pronunciation": "MIR-chi",
+          "english": "chili / spicy",
+          "example": "bahut mirchi hai yeh — this is very spicy",
+          "type": "noun"
+        },
+        {
+          "hindi": "namak",
+          "pronunciation": "NA-mak",
+          "english": "salt",
+          "example": "namak kam hai — there's less salt",
+          "type": "noun"
+        },
+        {
+          "hindi": "cheeni",
+          "pronunciation": "CHEE-ni",
+          "english": "sugar",
+          "example": "cheeni mat daalo — don't add sugar",
+          "type": "noun"
+        }
+      ]
+    },
+    {
+      "id": "people",
+      "title": "People & Relationships",
+      "emoji": "👥",
+      "gradient": "from-purple-500 to-violet-600",
+      "words": [
+        {
+          "hindi": "dost",
+          "pronunciation": "DOST",
+          "english": "friend",
+          "example": "woh mera puraana dost hai — he's my old friend",
+          "type": "noun"
+        },
+        {
+          "hindi": "yaar",
+          "pronunciation": "YAAR",
+          "english": "buddy / close friend / dude",
+          "example": "college ke yaar hain — friends from college",
+          "type": "noun"
+        },
+        {
+          "hindi": "bhai",
+          "pronunciation": "BHAI",
+          "english": "brother / bro (used with friends too)",
+          "example": "woh mera bhai jaisa hai — he's like a brother to me",
+          "type": "noun"
+        },
+        {
+          "hindi": "behen",
+          "pronunciation": "BE-hen",
+          "english": "sister",
+          "example": "meri choti behen hai — she's my younger sister",
+          "type": "noun"
+        },
+        {
+          "hindi": "maa",
+          "pronunciation": "MAA",
+          "english": "mother / mom",
+          "example": "maa ne bola ghar aaja — mom said come home",
+          "type": "noun"
+        },
+        {
+          "hindi": "papa",
+          "pronunciation": "PA-pa",
+          "english": "father / dad",
+          "example": "papa office gaye hain — dad has gone to office",
+          "type": "noun"
+        },
+        {
+          "hindi": "boss",
+          "pronunciation": "BOSS",
+          "english": "boss / manager (also used as casual address)",
+          "example": "boss ne chutti di — the boss gave time off",
+          "type": "noun"
+        },
+        {
+          "hindi": "padosi",
+          "pronunciation": "pa-DO-si",
+          "english": "neighbor",
+          "example": "padosi bahut shor karte hain — the neighbors make a lot of noise",
+          "type": "noun"
+        },
+        {
+          "hindi": "rishtedaar",
+          "pronunciation": "rish-te-DAAR",
+          "english": "relative / family member",
+          "example": "rishtedaar aa rahe hain — relatives are coming",
+          "type": "noun"
+        },
+        {
+          "hindi": "saathi",
+          "pronunciation": "SAA-thi",
+          "english": "companion / partner / teammate",
+          "example": "office ka saathi hai — office colleague",
+          "type": "noun"
+        },
+        {
+          "hindi": "senior",
+          "pronunciation": "SEE-nior",
+          "english": "senior / elder colleague",
+          "example": "senior ne help ki — the senior helped",
+          "type": "noun"
+        },
+        {
+          "hindi": "junior",
+          "pronunciation": "JOO-nior",
+          "english": "junior / younger colleague",
+          "example": "naya junior aaya hai — a new junior has joined",
+          "type": "noun"
+        },
+        {
+          "hindi": "bachcha",
+          "pronunciation": "BACH-cha",
+          "english": "child / kid",
+          "example": "bachche bahar khel rahe hain — the kids are playing outside",
+          "type": "noun"
+        },
+        {
+          "hindi": "budha",
+          "pronunciation": "BUD-dha",
+          "english": "old man / elderly (informal)",
+          "example": "woh budhe uncle bahut achhe hain — that old uncle is very nice",
+          "type": "noun"
+        },
+        {
+          "hindi": "jawan",
+          "pronunciation": "ja-WAAN",
+          "english": "young / youthful / young person",
+          "example": "abhi toh jawan hai — they're still young",
+          "type": "adjective"
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "title": "Time & Numbers",
+      "emoji": "⏰",
+      "gradient": "from-teal-500 to-cyan-600",
+      "words": [
+        {
+          "hindi": "aaj",
+          "pronunciation": "AAJ",
+          "english": "today",
+          "example": "aaj kya plan hai? — what's the plan for today?",
+          "type": "adverb"
+        },
+        {
+          "hindi": "kal",
+          "pronunciation": "KAL",
+          "english": "yesterday / tomorrow (context dependent!)",
+          "example": "kal milte hain — let's meet tomorrow",
+          "type": "adverb"
+        },
+        {
+          "hindi": "parso",
+          "pronunciation": "PAR-so",
+          "english": "day before yesterday / day after tomorrow",
+          "example": "parso chutti hai — there's a holiday day after tomorrow",
+          "type": "adverb"
+        },
+        {
+          "hindi": "abhi",
+          "pronunciation": "a-BHI",
+          "english": "right now / just now",
+          "example": "abhi nahi, baad mein — not now, later",
+          "type": "adverb"
+        },
+        {
+          "hindi": "baad mein",
+          "pronunciation": "BAAD mein",
+          "english": "later / afterwards",
+          "example": "baad mein baat karte hain — let's talk later",
+          "type": "adverb"
+        },
+        {
+          "hindi": "pehle",
+          "pronunciation": "PEH-le",
+          "english": "before / earlier / first",
+          "example": "pehle khaana kha lo — eat food first",
+          "type": "adverb"
+        },
+        {
+          "hindi": "subah",
+          "pronunciation": "su-BAH",
+          "english": "morning",
+          "example": "subah jaldi uthna hai — have to wake up early morning",
+          "type": "noun"
+        },
+        {
+          "hindi": "shaam",
+          "pronunciation": "SHAAM",
+          "english": "evening",
+          "example": "shaam ko milte hain — let's meet in the evening",
+          "type": "noun"
+        },
+        {
+          "hindi": "raat",
+          "pronunciation": "RAAT",
+          "english": "night",
+          "example": "raat ko der ho gayi — it got late at night",
+          "type": "noun"
+        },
+        {
+          "hindi": "dopahar",
+          "pronunciation": "do-PA-har",
+          "english": "afternoon / noon",
+          "example": "dopahar mein soya tha — slept in the afternoon",
+          "type": "noun"
+        },
+        {
+          "hindi": "ek",
+          "pronunciation": "EK",
+          "english": "one / a / an",
+          "example": "ek minute ruko — wait one minute",
+          "type": "noun"
+        },
+        {
+          "hindi": "do",
+          "pronunciation": "DO",
+          "english": "two",
+          "example": "do chai laga do — make two teas",
+          "type": "noun"
+        },
+        {
+          "hindi": "teen",
+          "pronunciation": "TEEN",
+          "english": "three",
+          "example": "teen din ki chutti chahiye — need three days off",
+          "type": "noun"
+        },
+        {
+          "hindi": "sau",
+          "pronunciation": "SAU",
+          "english": "hundred",
+          "example": "sau rupaye de do — give me a hundred rupees",
+          "type": "noun"
+        },
+        {
+          "hindi": "hazaar",
+          "pronunciation": "ha-ZAAR",
+          "english": "thousand",
+          "example": "do hazaar ka note hai? — do you have a two thousand note?",
+          "type": "noun"
+        }
+      ]
+    },
+    {
+      "id": "actions",
+      "title": "Actions",
+      "emoji": "🏃",
+      "gradient": "from-green-500 to-emerald-600",
+      "words": [
+        {
+          "hindi": "jaana",
+          "pronunciation": "JAA-na",
+          "english": "to go",
+          "example": "ghar jaana hai — have to go home",
+          "type": "verb"
+        },
+        {
+          "hindi": "aana",
+          "pronunciation": "AA-na",
+          "english": "to come",
+          "example": "kal aana — come tomorrow",
+          "type": "verb"
+        },
+        {
+          "hindi": "khaana",
+          "pronunciation": "KHAA-na",
+          "english": "to eat / food",
+          "example": "khaana kha liya? — have you eaten?",
+          "type": "verb"
+        },
+        {
+          "hindi": "peena",
+          "pronunciation": "PEE-na",
+          "english": "to drink",
+          "example": "kuch peena hai? — want to drink something?",
+          "type": "verb"
+        },
+        {
+          "hindi": "bolna",
+          "pronunciation": "BOL-na",
+          "english": "to speak / to say / to tell",
+          "example": "kya bola usne? — what did they say?",
+          "type": "verb"
+        },
+        {
+          "hindi": "sunna",
+          "pronunciation": "SUN-na",
+          "english": "to hear / to listen",
+          "example": "meri baat suno — listen to me",
+          "type": "verb"
+        },
+        {
+          "hindi": "dekhna",
+          "pronunciation": "DEKH-na",
+          "english": "to see / to look / to watch",
+          "example": "movie dekhni hai? — want to watch a movie?",
+          "type": "verb"
+        },
+        {
+          "hindi": "samajhna",
+          "pronunciation": "sa-MAJH-na",
+          "english": "to understand",
+          "example": "samajh aaya? — did you understand?",
+          "type": "verb"
+        },
+        {
+          "hindi": "seekhna",
+          "pronunciation": "SEEKH-na",
+          "english": "to learn",
+          "example": "Hindi seekh raha hoon — I'm learning Hindi",
+          "type": "verb"
+        },
+        {
+          "hindi": "likhna",
+          "pronunciation": "LIKH-na",
+          "english": "to write",
+          "example": "yahan likh do — write it here",
+          "type": "verb"
+        },
+        {
+          "hindi": "padhna",
+          "pronunciation": "PADH-na",
+          "english": "to read / to study",
+          "example": "kitaab padh raha hoon — I'm reading a book",
+          "type": "verb"
+        },
+        {
+          "hindi": "sona",
+          "pronunciation": "SO-na",
+          "english": "to sleep",
+          "example": "abhi sona hai — want to sleep now",
+          "type": "verb"
+        },
+        {
+          "hindi": "uthna",
+          "pronunciation": "UTH-na",
+          "english": "to wake up / to get up",
+          "example": "subah jaldi uthna padega — have to wake up early",
+          "type": "verb"
+        },
+        {
+          "hindi": "baithna",
+          "pronunciation": "BAITH-na",
+          "english": "to sit",
+          "example": "idhar baitho — sit here",
+          "type": "verb"
+        },
+        {
+          "hindi": "khada hona",
+          "pronunciation": "KHA-da HO-na",
+          "english": "to stand",
+          "example": "wahan khade mat ho — don't stand there",
+          "type": "verb"
+        },
+        {
+          "hindi": "bhaagna",
+          "pronunciation": "BHAAG-na",
+          "english": "to run / to flee",
+          "example": "late ho raha hai, bhaag! — you're getting late, run!",
+          "type": "verb"
+        },
+        {
+          "hindi": "rona",
+          "pronunciation": "RO-na",
+          "english": "to cry",
+          "example": "ab mat ro — don't cry now",
+          "type": "verb"
+        },
+        {
+          "hindi": "hasna",
+          "pronunciation": "HAS-na",
+          "english": "to laugh / to smile",
+          "example": "bahut has rahi thi — she was laughing a lot",
+          "type": "verb"
+        },
+        {
+          "hindi": "gaana",
+          "pronunciation": "GAA-na",
+          "english": "to sing / a song",
+          "example": "koi gaana lagao — play some song",
+          "type": "verb"
+        },
+        {
+          "hindi": "nachna",
+          "pronunciation": "NACH-na",
+          "english": "to dance",
+          "example": "shaadi mein nachenge — we'll dance at the wedding",
+          "type": "verb"
+        }
+      ]
+    }
+  ]
+}

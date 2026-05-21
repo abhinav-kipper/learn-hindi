@@ -9,7 +9,7 @@ import { getProgress } from '@/lib/progress'
 const tabs = [
   { href: '/', label: 'Home', icon: HomeIcon, requiresLesson: false },
   { href: '/quiz', label: 'Quiz', icon: QuizIcon, requiresLesson: true },
-  { href: '/review', label: 'Review', icon: ReviewIcon, requiresLesson: true },
+  { href: '/vocabulary', label: 'Vocabulary', icon: VocabIcon, requiresLesson: false },
   { href: '/progress', label: 'Progress', icon: ProgressIcon, requiresLesson: false },
 ]
 
@@ -112,11 +112,13 @@ function QuizIcon({ active }: { active: boolean }) {
   )
 }
 
-function ReviewIcon({ active }: { active: boolean }) {
+function VocabIcon({ active }: { active: boolean }) {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={active ? 'var(--accent)' : 'var(--text-tertiary)'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="23,4 23,10 17,10" />
-      <path d="M20.49 15a9 9 0 11-2.12-9.36L23 10" />
+      <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
+      <path d="M8 7h8" />
+      <path d="M8 11h6" />
     </svg>
   )
 }

@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { BottomNav } from '@/components/bottom-nav'
 import { NotificationPrompt } from '@/components/notification-prompt'
+import { DailyReviewPopup } from '@/components/daily-review-popup'
 import { registerServiceWorker, shouldShowNotificationPrompt, scheduleLocalReminder, getNotificationPreference } from '@/lib/notifications'
 
 export function LayoutShell({ children }: { children: React.ReactNode }) {
@@ -37,6 +38,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
         show={showNotificationPrompt}
         onDismiss={() => setShowNotificationPrompt(false)}
       />
+      <DailyReviewPopup />
     </>
   )
 }
