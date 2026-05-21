@@ -75,8 +75,31 @@ function SpeakerButton({ text }: { text: string }) {
   )
 }
 
+/**
+ * Parse AI message into Hindi and English parts.
+ * Expected format:
+ * "hindi text here\n\n(english translation here)"
+ * Or fallback: "hindi text (english translation)"
+ */
+function parseMessage(content: string): { hindi: string; english: string } | null {
+  // Try format: hindi\n\n(english)
+  const blockMatch = content.match(/^([\s\S]+?)\n\n\(([^)]+)\)\s*$/)
+  if (blockMatch) {
+    return { hindi: blockMatch[1].trim(), english: blockMatch[2].trim() }
+  }
+
+  // Try format: hindi (english) — inline parentheses at end
+  const inlineMatch = content.match(/^(.+?)\s*\(([^)]+)\)\s*$/)
+  if (inlineMatch) {
+    return { hindi: inlineMatch[1].trim(), english: inlineMatch[2].trim() }
+  }
+
+  return null
+}
+
 export function ChatMessage({ role, content }: ChatMessageProps) {
   const isUser = role === 'user'
+  const parsed = !isUser ? parseMessage(content) : null
 
   return (
     <motion.div
@@ -85,7 +108,6 @@ export function ChatMessage({ role, content }: ChatMessageProps) {
       transition={{ duration: 0.2, ease: 'easeOut' }}
       className={`flex ${isUser ? 'justify-end' : 'justify-start'}`}
     >
-      {/* Assistant messages get a speaker button alongside the bubble */}
       <div className={`flex items-end max-w-[85%] ${isUser ? 'flex-row-reverse' : 'flex-row'}`}>
         <div
           className={`px-4 py-3 rounded-2xl text-sm leading-relaxed ${
@@ -94,7 +116,14 @@ export function ChatMessage({ role, content }: ChatMessageProps) {
               : 'bg-[var(--bg-elevated)] border border-[var(--border)] text-[var(--text-primary)] rounded-bl-md shadow-sm'
           }`}
         >
-          {content}
+          {parsed ? (
+            <div>
+              <p className="font-medium">{parsed.hindi}</p>
+              <p className="mt-1.5 text-xs opacity-60 italic">{parsed.english}</p>
+            </div>
+          ) : (
+            content
+          )}
         </div>
         {!isUser && <SpeakerButton text={content} />}
       </div>
