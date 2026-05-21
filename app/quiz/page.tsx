@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import { generateQuiz, saveQuizScore } from '@/lib/quiz'
 import { getProgress, updateStreak } from '@/lib/progress'
+import { addMistake } from '@/lib/mistakes'
 import { QuizQuestion, QuizResult } from '@/types/quiz'
 import { QuizCard } from '@/components/quiz/quiz-card'
 import { QuizResults } from '@/components/quiz/quiz-results'
@@ -54,13 +55,28 @@ export default function QuizPage() {
     setShowResult(true)
 
     const question = questions[currentIndex]
-    const isCorrect = question.answers.find(a => a.id === answerId)?.isCorrect ?? false
+    const selectedAnswer = question.answers.find(a => a.id === answerId)
+    const isCorrect = selectedAnswer?.isCorrect ?? false
 
     // Play sound based on answer
     if (isCorrect) {
       playSound('correct')
     } else {
       playSound('wrong')
+      // Persist the mistake so it surfaces on the /mistakes page next to
+      // practice corrections.
+      const correctAnswer = question.answers.find(a => a.isCorrect)
+      if (selectedAnswer && correctAnswer) {
+        addMistake(
+          {
+            original: selectedAnswer.text,
+            correction: correctAnswer.text,
+            reason: `Quiz prompt: ${question.prompt}`,
+          },
+          question.lessonId,
+          config.storagePrefix,
+        )
+      }
     }
 
     const result: QuizResult = {

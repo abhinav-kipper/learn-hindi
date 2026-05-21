@@ -63,7 +63,7 @@ export default function MistakesPage() {
         Your mistakes
       </h1>
       <p className="text-sm text-[var(--text-secondary)] mt-1 mb-6">
-        Corrections the tutor gave you in practice
+        Corrections from practice + wrong quiz answers
       </p>
 
       {mistakes.length === 0 ? (
@@ -80,10 +80,14 @@ export default function MistakesPage() {
         <div className="space-y-6">
           {Object.entries(groups).map(([lessonId, items]) => {
             const lesson = getUniversalLessonById(lessonId)
+            const groupTitle = lesson?.title
+              ?? (lessonId === 'vocab' ? 'Vocabulary'
+              : lessonId.startsWith('vocab-') ? 'Vocabulary'
+              : lessonId)
             return (
               <div key={lessonId}>
                 <h2 className="text-xs uppercase tracking-wide font-bold text-[var(--text-tertiary)] mb-2">
-                  {lesson?.title ?? lessonId}
+                  {groupTitle}
                 </h2>
                 <div className="space-y-2">
                   <AnimatePresence initial={false}>

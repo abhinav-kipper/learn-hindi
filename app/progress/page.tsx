@@ -116,7 +116,7 @@ export default function ProgressPage() {
       }
     }
     setStreakDays(dayStates)
-  }, [])
+  }, [language, config.storagePrefix])
 
   if (!stats) {
     return (
@@ -200,7 +200,7 @@ export default function ProgressPage() {
             <span className="text-xl">🔍</span>
             <div>
               <p className="text-sm font-semibold text-[var(--text-primary)]">Your mistakes</p>
-              <p className="text-xs text-[var(--text-secondary)]">Tutor corrections from practice</p>
+              <p className="text-xs text-[var(--text-secondary)]">Corrections from practice + quiz</p>
             </div>
           </div>
           <span className="text-[var(--text-tertiary)]">→</span>
