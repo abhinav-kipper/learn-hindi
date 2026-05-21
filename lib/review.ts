@@ -1,5 +1,6 @@
 import { Phrase } from '@/types/lesson'
 import { getAllContent } from '@/lib/lessons'
+import { getDutchAllContent } from '@/lib/dutch/lessons'
 import { getProgress } from '@/lib/progress'
 
 export interface ReviewPhrase {
@@ -18,12 +19,21 @@ interface ReviewRecord {
   wrongCount: number
 }
 
-const REVIEW_KEY = 'hindi-review-data'
-const REVIEW_SESSION_KEY = 'hindi-review-sessions'
+function reviewKey(prefix: string): string {
+  return `${prefix}-review-data`
+}
 
-function getReviewRecords(): Record<string, ReviewRecord> {
+function sessionsKey(prefix: string): string {
+  return `${prefix}-review-sessions`
+}
+
+function getAllContentFor(prefix: string) {
+  return prefix === 'dutch' ? getDutchAllContent() : getAllContent()
+}
+
+function getReviewRecords(prefix: string): Record<string, ReviewRecord> {
   if (typeof window === 'undefined') return {}
-  const stored = localStorage.getItem(REVIEW_KEY)
+  const stored = localStorage.getItem(reviewKey(prefix))
   if (!stored) return {}
   try {
     return JSON.parse(stored) as Record<string, ReviewRecord>
@@ -32,13 +42,13 @@ function getReviewRecords(): Record<string, ReviewRecord> {
   }
 }
 
-function saveReviewRecords(records: Record<string, ReviewRecord>): void {
+function saveReviewRecords(records: Record<string, ReviewRecord>, prefix: string): void {
   if (typeof window === 'undefined') return
-  localStorage.setItem(REVIEW_KEY, JSON.stringify(records))
+  localStorage.setItem(reviewKey(prefix), JSON.stringify(records))
 }
 
-export function markReviewed(phraseId: string, correct: boolean): void {
-  const records = getReviewRecords()
+export function markReviewed(phraseId: string, correct: boolean, prefix = 'hindi'): void {
+  const records = getReviewRecords(prefix)
   const existing = records[phraseId] || { phraseId, lastReviewed: '', correctCount: 0, wrongCount: 0 }
 
   existing.lastReviewed = new Date().toISOString()
@@ -49,12 +59,12 @@ export function markReviewed(phraseId: string, correct: boolean): void {
   }
 
   records[phraseId] = existing
-  saveReviewRecords(records)
+  saveReviewRecords(records, prefix)
 }
 
-export function getReviewPhrases(count: number): ReviewPhrase[] {
-  const progress = getProgress()
-  const lessons = getAllContent()
+export function getReviewPhrases(count: number, prefix = 'hindi'): ReviewPhrase[] {
+  const progress = getProgress(prefix)
+  const lessons = getAllContentFor(prefix)
   const completedLessons = lessons.filter(l => progress.completedLessons.includes(l.id))
 
   if (completedLessons.length === 0) {
@@ -71,7 +81,7 @@ export function getReviewPhrases(count: number): ReviewPhrase[] {
     }))
   }
 
-  const records = getReviewRecords()
+  const records = getReviewRecords(prefix)
   const allPhrases: ReviewPhrase[] = []
 
   for (const lesson of completedLessons) {
@@ -121,17 +131,17 @@ export interface ReviewSession {
   gotIt: number
 }
 
-export function saveReviewSession(reviewed: number, gotIt: number): void {
+export function saveReviewSession(reviewed: number, gotIt: number, prefix = 'hindi'): void {
   if (typeof window === 'undefined') return
-  const sessions = getReviewSessions()
+  const sessions = getReviewSessions(prefix)
   sessions.push({ date: new Date().toISOString(), reviewed, gotIt })
   const trimmed = sessions.slice(-50)
-  localStorage.setItem(REVIEW_SESSION_KEY, JSON.stringify(trimmed))
+  localStorage.setItem(sessionsKey(prefix), JSON.stringify(trimmed))
 }
 
-export function getReviewSessions(): ReviewSession[] {
+export function getReviewSessions(prefix = 'hindi'): ReviewSession[] {
   if (typeof window === 'undefined') return []
-  const stored = localStorage.getItem(REVIEW_SESSION_KEY)
+  const stored = localStorage.getItem(sessionsKey(prefix))
   if (!stored) return []
   try {
     return JSON.parse(stored) as ReviewSession[]

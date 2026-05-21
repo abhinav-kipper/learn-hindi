@@ -43,7 +43,7 @@ export default function ProgressPage() {
     const foundations = language === 'dutch' ? getDutchFoundations() : getAllFoundations()
     const allContent = language === 'dutch' ? [...getDutchLessons(), ...getDutchFoundations()] : getAllContent()
     const quizScores = getQuizScores(prefix)
-    const reviewSessions = getReviewSessions()
+    const reviewSessions = getReviewSessions(prefix)
 
     // Compute phrases learned (from both situations and foundations)
     const completedLessons = allContent.filter(l => progress.completedLessons.includes(l.id))

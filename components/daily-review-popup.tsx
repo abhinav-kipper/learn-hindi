@@ -5,21 +5,26 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { getReviewPhrases, markReviewed, saveReviewSession, ReviewPhrase } from '@/lib/review'
 import { getVocabReview } from '@/lib/vocab-review'
 import { getAllCategories } from '@/lib/vocabulary'
+import { getDutchAllCategories } from '@/lib/dutch/vocabulary'
 import { getProgress, updateStreak } from '@/lib/progress'
 import { playSound } from '@/lib/sounds'
+import { useLanguage } from '@/lib/language-context'
 
-const LAST_REVIEW_KEY = 'hindi-daily-review-timestamp'
 const REVIEW_CARD_COUNT = 5
 
-function shouldShowReview(): boolean {
+function timestampKey(prefix: string): string {
+  return `${prefix}-daily-review-timestamp`
+}
+
+function shouldShowReview(prefix: string): boolean {
   if (typeof window === 'undefined') return false
 
-  // Check if user has completed at least 1 lesson
-  const progress = getProgress()
+  // Check if user has completed at least 1 lesson in this language
+  const progress = getProgress(prefix)
   if (progress.completedLessons.length === 0) return false
 
   // Check if 24 hours have passed since last review
-  const lastReview = localStorage.getItem(LAST_REVIEW_KEY)
+  const lastReview = localStorage.getItem(timestampKey(prefix))
   if (!lastReview) return true
 
   const lastTime = parseInt(lastReview, 10)
@@ -28,12 +33,14 @@ function shouldShowReview(): boolean {
   return now - lastTime >= twentyFourHours
 }
 
-function recordReviewTimestamp(): void {
+function recordReviewTimestamp(prefix: string): void {
   if (typeof window === 'undefined') return
-  localStorage.setItem(LAST_REVIEW_KEY, Date.now().toString())
+  localStorage.setItem(timestampKey(prefix), Date.now().toString())
 }
 
 export function DailyReviewPopup() {
+  const { language, config } = useLanguage()
+  const prefix = config.storagePrefix
   const [show, setShow] = useState(false)
   const [state, setState] = useState<'prompt' | 'reviewing' | 'complete'>('prompt')
   const [phrases, setPhrases] = useState<ReviewPhrase[]>([])
@@ -45,17 +52,24 @@ export function DailyReviewPopup() {
   useEffect(() => {
     // Delay a bit so it doesn't interfere with page load
     const timer = setTimeout(() => {
-      if (shouldShowReview()) {
+      if (shouldShowReview(prefix)) {
         setShow(true)
       }
     }, 1500)
     return () => clearTimeout(timer)
-  }, [])
+  }, [prefix])
+
+  const handleDismiss = useCallback(() => {
+    recordReviewTimestamp(prefix)
+    setShow(false)
+  }, [prefix])
 
   const handleLetsGo = useCallback(() => {
-    // Get vocab words marked for review
+    // Get vocab words marked for review (vocab-known/vocab-review keys are
+    // currently shared across languages; filter to the active language's
+    // categories so we don't surface mismatched words)
     const vocabReviewWords = getVocabReview()
-    const categories = getAllCategories()
+    const categories = language === 'dutch' ? getDutchAllCategories() : getAllCategories()
     const vocabPhrases: ReviewPhrase[] = []
 
     for (const hindi of vocabReviewWords) {
@@ -82,7 +96,7 @@ export function DailyReviewPopup() {
     }
 
     // Get lesson phrases for review
-    const lessonPhrases = getReviewPhrases(REVIEW_CARD_COUNT)
+    const lessonPhrases = getReviewPhrases(REVIEW_CARD_COUNT, prefix)
 
     // Mix: up to 2 vocab words + fill the rest with lesson phrases, capped at REVIEW_CARD_COUNT
     const vocabSlice = vocabPhrases.slice(0, 2)
@@ -98,16 +112,11 @@ export function DailyReviewPopup() {
     setRevealed(false)
     setGotItCount(0)
     setState('reviewing')
-  }, [])
-
-  const handleDismiss = () => {
-    recordReviewTimestamp()
-    setShow(false)
-  }
+  }, [language, prefix, handleDismiss])
 
   const handleGotIt = () => {
     const phrase = phrases[currentIndex]
-    markReviewed(phrase.phraseId, true)
+    markReviewed(phrase.phraseId, true, prefix)
     setGotItCount(prev => prev + 1)
     playSound('correct')
     advance()
@@ -115,7 +124,7 @@ export function DailyReviewPopup() {
 
   const handleStillLearning = () => {
     const phrase = phrases[currentIndex]
-    markReviewed(phrase.phraseId, false)
+    markReviewed(phrase.phraseId, false, prefix)
     playSound('pop')
     advance()
   }
@@ -126,9 +135,9 @@ export function DailyReviewPopup() {
       setCurrentIndex(prev => prev + 1)
       setRevealed(false)
     } else {
-      saveReviewSession(phrases.length, gotItCount + 1)
-      updateStreak()
-      recordReviewTimestamp()
+      saveReviewSession(phrases.length, gotItCount + 1, prefix)
+      updateStreak(prefix)
+      recordReviewTimestamp(prefix)
       setState('complete')
       playSound('complete')
       // Auto dismiss after 2 seconds
@@ -170,7 +179,7 @@ export function DailyReviewPopup() {
               {/* Content */}
               <div className="px-6 pb-8 pt-2">
                 {state === 'prompt' && (
-                  <PromptView onLetsGo={handleLetsGo} onDismiss={handleDismiss} />
+                  <PromptView onLetsGo={handleLetsGo} onDismiss={handleDismiss} languageName={config.name} />
                 )}
                 {state === 'reviewing' && phrases.length > 0 && (
                   <ReviewView
@@ -195,7 +204,7 @@ export function DailyReviewPopup() {
   )
 }
 
-function PromptView({ onLetsGo, onDismiss }: { onLetsGo: () => void; onDismiss: () => void }) {
+function PromptView({ onLetsGo, onDismiss, languageName }: { onLetsGo: () => void; onDismiss: () => void; languageName: string }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
@@ -207,7 +216,7 @@ function PromptView({ onLetsGo, onDismiss }: { onLetsGo: () => void; onDismiss: 
         Ready for a quick review?
       </h2>
       <p className="text-sm text-[var(--text-secondary)] mb-6">
-        {REVIEW_CARD_COUNT} flashcards to keep your Hindi sharp
+        {REVIEW_CARD_COUNT} flashcards to keep your {languageName} sharp
       </p>
       <div className="flex flex-col gap-3">
         <button

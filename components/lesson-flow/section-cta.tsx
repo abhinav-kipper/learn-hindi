@@ -4,22 +4,25 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import confetti from 'canvas-confetti'
 import { Lesson } from '@/types/lesson'
-import { markLessonComplete, isLessonComplete } from '@/lib/progress'
+import { markLessonComplete, isLessonComplete, updateStreak } from '@/lib/progress'
 import { playSound } from '@/lib/sounds'
+import { useLanguage } from '@/lib/language-context'
 
 interface SectionCtaProps {
   lesson: Lesson
 }
 
 export function SectionCta({ lesson }: SectionCtaProps) {
+  const { config } = useLanguage()
   const [completed, setCompleted] = useState(false)
 
   useEffect(() => {
-    setCompleted(isLessonComplete(lesson.id))
-  }, [lesson.id])
+    setCompleted(isLessonComplete(lesson.id, config.storagePrefix))
+  }, [lesson.id, config.storagePrefix])
 
   const handleComplete = () => {
-    markLessonComplete(lesson.id)
+    markLessonComplete(lesson.id, config.storagePrefix)
+    updateStreak(config.storagePrefix)
     setCompleted(true)
     playSound('levelup')
 
