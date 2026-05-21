@@ -20,7 +20,9 @@ export interface VocabularyData {
   categories: VocabCategory[]
 }
 
-const LEARNED_KEY = 'hindi-vocab-learned'
+function learnedKey(prefix: string): string {
+  return `${prefix}-vocab-learned`
+}
 
 export function getVocabularyData(): VocabularyData {
   return vocabularyData as VocabularyData
@@ -40,9 +42,9 @@ export function getTotalWordCount(): number {
 
 // --- Learned words tracking ---
 
-function getLearnedWords(): Record<string, string[]> {
+function getLearnedWords(prefix = 'hindi'): Record<string, string[]> {
   if (typeof window === 'undefined') return {}
-  const stored = localStorage.getItem(LEARNED_KEY)
+  const stored = localStorage.getItem(learnedKey(prefix))
   if (!stored) return {}
   try {
     return JSON.parse(stored) as Record<string, string[]>
@@ -51,39 +53,39 @@ function getLearnedWords(): Record<string, string[]> {
   }
 }
 
-function saveLearnedWords(data: Record<string, string[]>): void {
+function saveLearnedWords(data: Record<string, string[]>, prefix: string): void {
   if (typeof window === 'undefined') return
-  localStorage.setItem(LEARNED_KEY, JSON.stringify(data))
+  localStorage.setItem(learnedKey(prefix), JSON.stringify(data))
 }
 
-export function markWordLearned(categoryId: string, hindi: string): void {
-  const learned = getLearnedWords()
+export function markWordLearned(categoryId: string, hindi: string, prefix = 'hindi'): void {
+  const learned = getLearnedWords(prefix)
   if (!learned[categoryId]) {
     learned[categoryId] = []
   }
   if (!learned[categoryId].includes(hindi)) {
     learned[categoryId].push(hindi)
   }
-  saveLearnedWords(learned)
+  saveLearnedWords(learned, prefix)
 }
 
-export function isWordLearned(categoryId: string, hindi: string): boolean {
-  const learned = getLearnedWords()
+export function isWordLearned(categoryId: string, hindi: string, prefix = 'hindi'): boolean {
+  const learned = getLearnedWords(prefix)
   return learned[categoryId]?.includes(hindi) ?? false
 }
 
-export function getLearnedCountForCategory(categoryId: string): number {
-  const learned = getLearnedWords()
+export function getLearnedCountForCategory(categoryId: string, prefix = 'hindi'): number {
+  const learned = getLearnedWords(prefix)
   return learned[categoryId]?.length ?? 0
 }
 
-export function getTotalLearnedCount(): number {
-  const learned = getLearnedWords()
+export function getTotalLearnedCount(prefix = 'hindi'): number {
+  const learned = getLearnedWords(prefix)
   return Object.values(learned).reduce((sum, words) => sum + words.length, 0)
 }
 
-export function getExploredVocabWords(): VocabWord[] {
-  const learned = getLearnedWords()
+export function getExploredVocabWords(prefix = 'hindi'): VocabWord[] {
+  const learned = getLearnedWords(prefix)
   const explored: VocabWord[] = []
   for (const cat of vocabularyData.categories) {
     const learnedInCat = learned[cat.id] ?? []

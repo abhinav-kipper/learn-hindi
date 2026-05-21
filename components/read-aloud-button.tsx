@@ -2,7 +2,8 @@
 
 import { useState, useCallback, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { speakHindi, stopSpeaking, isSpeaking } from '@/lib/speech'
+import { speak, stopSpeaking, isSpeaking } from '@/lib/speech'
+import { useLanguage } from '@/lib/language-context'
 
 interface ReadAloudButtonProps {
   text: string
@@ -10,6 +11,7 @@ interface ReadAloudButtonProps {
 }
 
 export function ReadAloudButton({ text, className = '' }: ReadAloudButtonProps) {
+  const { config } = useLanguage()
   const [speaking, setSpeaking] = useState(false)
 
   useEffect(() => {
@@ -28,7 +30,7 @@ export function ReadAloudButton({ text, className = '' }: ReadAloudButtonProps) 
       setSpeaking(false)
       return
     }
-    speakHindi(text)
+    speak(text, config.ttsLocale)
     setSpeaking(true)
   }, [text, speaking])
 

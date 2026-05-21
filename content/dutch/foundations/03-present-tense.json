@@ -1,0 +1,39 @@
+{
+  "id": "dutch-present-tense",
+  "title": "Present Tense Conjugation",
+  "situation": "Foundation: conjugating regular verbs plus the essential hebben and zijn",
+  "skills": ["regular verb conjugation", "hebben (to have)", "zijn (to be)", "stem extraction"],
+  "phrases": [
+    { "hindi": "werken: ik werk, jij werkt, hij/zij werkt, wij werken, jullie werken, zij werken", "english": "to work: I work, you work, he/she works, we work, you (pl) work, they work", "context": "The pattern: find the stem (infinitive minus -en), then add nothing for ik, -t for jij/hij/zij, and -en stays for plural. 'Werken' stem = 'werk'", "pronunciation": "WER-ken: ik WERK, yay WERKT, hay/zay WERKT, way WER-ken, yul-YE WER-ken, zay WER-ken" },
+    { "hindi": "leven: ik leef, jij leeft, wij leven — spreken: ik spreek, jij spreekt, wij spreken", "english": "to live: I live, you live, we live — to speak: I speak, you speak, we speak", "context": "When the stem ends in 'v' or 'z', it reverts to 'f' or 's' for ik/jij/hij: 'leven' stem = 'leev' → 'leef'. 'Reizen' stem = 'reiz' → 'reis'", "pronunciation": "LAY-ven: ik LAYF, yay LAYFT, way LAY-ven — SPRAY-ken: ik SPRAYK, yay SPRAYKT, way SPRAY-ken" },
+    { "hindi": "hebben: ik heb, jij hebt, hij heeft, wij hebben, jullie hebben, zij hebben", "english": "to have: I have, you have, he has, we have, you (pl) have, they have", "context": "ESSENTIAL verb — used for the perfect tense ('ik heb gewerkt' = I worked), for possession, and in many expressions. Note: 'hij HEEFT' — irregular third person.", "pronunciation": "HEB-ben: ik HEB, yay HEPT, hay HAYFT, way HEB-ben, yul-YE HEB-ben, zay HEB-ben" },
+    { "hindi": "zijn: ik ben, jij bent, hij/zij is, wij zijn, jullie zijn, zij zijn", "english": "to be: I am, you are, he/she is, we are, you (pl) are, they are", "context": "The most irregular verb. 'Zijn' is BOTH the infinitive (to be) AND the plural/wij form. 'Ik ben' but 'wij zijn'. Used for identity, states, and some perfect tenses.", "pronunciation": "zayn: ik BEN, yay BENT, hay/zay IS, way ZAYN, yul-YE ZAYN, zay ZAYN" },
+    { "hindi": "Ik ben student. Jij bent mijn vriend. Hij is Nederlands. Wij zijn moe.", "english": "I am a student. You are my friend. He is Dutch. We are tired.", "context": "Basic sentences with zijn. No article needed with professions: 'ik ben student' (not 'een student'). 'Moe' = tired — one of the most useful adjectives.", "pronunciation": "ik ben stoo-DENT. yay BENT mayn FREENT. hay is NAY-der-lants. way ZAYN moo." },
+    { "hindi": "Ik heb een vraag. Heb jij tijd? Hij heeft honger. Wij hebben genoeg.", "english": "I have a question. Do you have time? He is hungry (has hunger). We have enough.", "context": "Key: Dutch says 'hebben honger/dorst' (have hunger/thirst) where English says 'to be hungry/thirsty'. Also 'ik heb het koud' (I have it cold = I am cold)", "pronunciation": "ik HEB ayn FRAACH. hep YAY tayt? hay HAYFT HON-ger. way HEB-ben ge-NOOCH." },
+    { "hindi": "Hoe gaat het? Het gaat goed, dank je. En met jou?", "english": "How are you? I'm fine, thank you. And you?", "context": "The standard greeting formula. 'Gaan' = to go, but 'het gaat' means 'it goes' = things are going (well/badly). 'Dank je' = informal thank you. 'Dank u' = formal.", "pronunciation": "hoo CHAAT het? het CHAAT CHOOT, dank ye. en met yow?" }
+  ],
+  "grammar_notes": [
+    "Stem extraction: take the infinitive (e.g. 'werken'), remove '-en', you get the stem ('werk'). All conjugation builds from the stem",
+    "The 'jij/je' inversion rule: when 'jij/je' comes AFTER the verb (in questions or inverted sentences), drop the -t: 'Werk jij?' NOT 'Werkt jij?'",
+    "Spelling rule: double the consonant when the vowel before it is short: 'zitten' (stem 'zit') — 'ik zit'. Open the vowel when the stem ends in long vowel: 'horen' stem 'hoor' → 'ik hoor'",
+    "There is no progressive tense in Dutch like English '-ing'. 'Ik werk' means both 'I work' AND 'I am working'"
+  ],
+  "culture_notes": [
+    "Dutch has two forms of 'you': 'jij/je' (informal) and 'u' (formal). With strangers/elders/professionals, use 'u'. With peers/friends/young people, 'jij/je'",
+    "In practice, Dutch people often use 'je' even in fairly formal situations. 'U' is becoming less common, especially in Amsterdam",
+    "The verb 'zijn' also means 'their' — 'hun' is also their but used differently. This trips up learners"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "regular verb conjugation",
+      "explanation": "Dutch verbs: ik [stem], jij/hij/zij [stem+t], wij/jullie/zij [infinitive]. Three forms to learn. The stem = infinitive minus -en. If the stem ends in t already, don't add another t. 'Zetten' stem = 'zet' — 'hij zet' not 'hij zett'.",
+      "more_examples": [
+        { "hindi": "lopen: ik loop, jij loopt, wij lopen", "english": "to walk: I walk, you walk, we walk" },
+        { "hindi": "kopen: ik koop, jij koopt, wij kopen", "english": "to buy: I buy, you buy, we buy" },
+        { "hindi": "eten: ik eet, jij eet, wij eten", "english": "to eat: I eat, you eat, we eat (stem=eet, jij eet not eet+t because stem already ends in t)" },
+        { "hindi": "heten: ik heet, jij heet, wij heten", "english": "to be called: I am called, you are called, we are called" }
+      ]
+    }
+  ],
+  "practice_prompt": "Present tense conjugation of regular verbs, hebben (to have), and zijn (to be)"
+}

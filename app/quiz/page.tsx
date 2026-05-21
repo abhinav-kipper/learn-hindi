@@ -10,9 +10,11 @@ import { QuizCard } from '@/components/quiz/quiz-card'
 import { QuizResults } from '@/components/quiz/quiz-results'
 import { FeatureTooltip } from '@/components/feature-tooltip'
 import { playSound } from '@/lib/sounds'
+import { useLanguage } from '@/lib/language-context'
 
 export default function QuizPage() {
   const router = useRouter()
+  const { language, config } = useLanguage()
   const [questions, setQuestions] = useState<QuizQuestion[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [selectedAnswerId, setSelectedAnswerId] = useState<string | null>(null)
@@ -23,7 +25,7 @@ export default function QuizPage() {
   const [locked, setLocked] = useState(false)
 
   const startQuiz = useCallback(() => {
-    const progress = getProgress()
+    const progress = getProgress(config.storagePrefix)
 
     if (progress.completedLessons.length === 0) {
       setLocked(true)
@@ -32,7 +34,7 @@ export default function QuizPage() {
     }
 
     const lessonIds = progress.completedLessons
-    const generated = generateQuiz(lessonIds, 10)
+    const generated = generateQuiz(lessonIds, 10, language)
     setQuestions(generated)
     setCurrentIndex(0)
     setSelectedAnswerId(null)
@@ -40,7 +42,7 @@ export default function QuizPage() {
     setResults([])
     setQuizComplete(false)
     setLoading(false)
-  }, [])
+  }, [language, config.storagePrefix])
 
   useEffect(() => {
     startQuiz()
@@ -78,10 +80,10 @@ export default function QuizPage() {
         // Quiz complete
         const allResults = [...results, result]
         const score = allResults.filter(r => r.isCorrect).length
-        const progress = getProgress()
+        const progress = getProgress(config.storagePrefix)
         const lessonIds = progress.completedLessons
-        saveQuizScore(score, questions.length, lessonIds)
-        updateStreak()
+        saveQuizScore(score, questions.length, lessonIds, config.storagePrefix)
+        updateStreak(config.storagePrefix)
         setQuizComplete(true)
         // Play complete sound if good score (50%+)
         if (score >= questions.length / 2) {

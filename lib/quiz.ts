@@ -41,8 +41,14 @@ interface VocabTarget {
 
 type Target = PhraseTarget | VocabTarget
 
-function phrasesToTargets(lessonIds?: string[]): PhraseTarget[] {
-  const lessons = getAllContent()
+function phrasesToTargets(lessonIds?: string[], language = 'hindi'): PhraseTarget[] {
+  let lessons = getAllContent()
+  // Lazy-load Dutch content when needed (avoids circular imports at module init)
+  if (language === 'dutch') {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const { getDutchAllContent } = require('@/lib/dutch/lessons')
+    lessons = getDutchAllContent()
+  }
   const filtered = lessonIds ? lessons.filter(l => lessonIds.includes(l.id)) : lessons
   const targets: PhraseTarget[] = []
   for (const lesson of filtered) {
@@ -60,8 +66,15 @@ function phrasesToTargets(lessonIds?: string[]): PhraseTarget[] {
   return targets
 }
 
-function vocabToTargets(): VocabTarget[] {
-  const explored = getExploredVocabWords()
+function vocabToTargets(prefix = 'hindi'): VocabTarget[] {
+  let explored: VocabWord[]
+  if (prefix === 'dutch') {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const { getDutchExploredVocabWords } = require('@/lib/dutch/vocabulary')
+    explored = getDutchExploredVocabWords()
+  } else {
+    explored = getExploredVocabWords()
+  }
   return explored.map((word: VocabWord) => ({
     source: 'vocab' as const,
     hindi: word.hindi,
@@ -100,7 +113,7 @@ function generateTranslateToHindi(target: Target, pool: Target[]): QuizQuestion 
     id: randomId(),
     type: 'translate-to-hindi',
     prompt: target.english,
-    subPrompt: 'How do you say this in Hindi?',
+    subPrompt: 'How do you say this?',
     answers,
     lessonId: target.lessonId,
     phraseIndex: target.phraseIndex,
@@ -179,18 +192,18 @@ function makeVocabQuestion(target: VocabTarget, pool: VocabTarget[]): QuizQuesti
   }
 }
 
-export function generateQuiz(lessonIds: string[], count: number): QuizQuestion[] {
-  const phraseTargets = phrasesToTargets(lessonIds)
+export function generateQuiz(lessonIds: string[], count: number, language = 'hindi'): QuizQuestion[] {
+  const phraseTargets = phrasesToTargets(lessonIds, language)
   if (phraseTargets.length === 0) return []
 
-  const vocabTargets = vocabToTargets()
+  const vocabTargets = vocabToTargets(language)
   const canMixVocab = vocabTargets.length >= 3
 
   let vocabCount = canMixVocab ? Math.round(count * 0.3) : 0
   vocabCount = Math.min(vocabCount, vocabTargets.length)
   const phraseCount = count - vocabCount
 
-  const allPhrasePool = phrasesToTargets()
+  const allPhrasePool = phrasesToTargets(undefined, language)
 
   const selectedPhrases = shuffle(phraseTargets).slice(0, phraseCount)
   const selectedVocab = shuffle(vocabTargets).slice(0, vocabCount)
@@ -201,8 +214,6 @@ export function generateQuiz(lessonIds: string[], count: number): QuizQuestion[]
   return shuffle([...phraseQuestions, ...vocabQuestions])
 }
 
-const QUIZ_SCORES_KEY = 'hindi-quiz-scores'
-
 export interface QuizScore {
   score: number
   total: number
@@ -210,17 +221,21 @@ export interface QuizScore {
   lessonIds: string[]
 }
 
-export function saveQuizScore(score: number, total: number, lessonIds: string[]): void {
-  if (typeof window === 'undefined') return
-  const scores = getQuizScores()
-  scores.push({ score, total, date: new Date().toISOString(), lessonIds })
-  const trimmed = scores.slice(-50)
-  localStorage.setItem(QUIZ_SCORES_KEY, JSON.stringify(trimmed))
+function quizScoresKey(prefix: string): string {
+  return `${prefix}-quiz-scores`
 }
 
-export function getQuizScores(): QuizScore[] {
+export function saveQuizScore(score: number, total: number, lessonIds: string[], prefix = 'hindi'): void {
+  if (typeof window === 'undefined') return
+  const scores = getQuizScores(prefix)
+  scores.push({ score, total, date: new Date().toISOString(), lessonIds })
+  const trimmed = scores.slice(-50)
+  localStorage.setItem(quizScoresKey(prefix), JSON.stringify(trimmed))
+}
+
+export function getQuizScores(prefix = 'hindi'): QuizScore[] {
   if (typeof window === 'undefined') return []
-  const stored = localStorage.getItem(QUIZ_SCORES_KEY)
+  const stored = localStorage.getItem(quizScoresKey(prefix))
   if (!stored) return []
   try {
     return JSON.parse(stored) as QuizScore[]
@@ -229,8 +244,8 @@ export function getQuizScores(): QuizScore[] {
   }
 }
 
-export function getAverageQuizScore(): number {
-  const scores = getQuizScores()
+export function getAverageQuizScore(prefix = 'hindi'): number {
+  const scores = getQuizScores(prefix)
   if (scores.length === 0) return 0
   const total = scores.reduce((sum, s) => sum + (s.score / s.total) * 100, 0)
   return Math.round(total / scores.length)

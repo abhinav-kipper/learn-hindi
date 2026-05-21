@@ -1,0 +1,68 @@
+{
+  "categories": [
+    {
+      "id": "dutch-greetings",
+      "title": "Greetings & Farewells",
+      "emoji": "👋",
+      "gradient": "from-orange-500 to-amber-600",
+      "words": [
+        { "hindi": "hallo", "pronunciation": "HA-loh", "english": "hello", "example": "Hallo, hoe gaat het? — Hello, how are you?", "type": "greeting" },
+        { "hindi": "goedemorgen", "pronunciation": "CHOO-de-MOR-gen", "english": "good morning", "example": "Goedemorgen! Heeft u lekker geslapen? — Good morning! Did you sleep well?", "type": "greeting" },
+        { "hindi": "goedemiddag", "pronunciation": "CHOO-de-MID-dach", "english": "good afternoon", "example": "Goedemiddag, kan ik u helpen? — Good afternoon, can I help you?", "type": "greeting" },
+        { "hindi": "goedenavond", "pronunciation": "CHOO-den-AA-vont", "english": "good evening", "example": "Goedenavond, welkom! — Good evening, welcome!", "type": "greeting" },
+        { "hindi": "tot ziens", "pronunciation": "tot ZEENS", "english": "goodbye", "example": "Tot ziens! Fijne dag! — Goodbye! Have a nice day!", "type": "farewell" },
+        { "hindi": "doei", "pronunciation": "DOO-ee", "english": "bye (informal)", "example": "Oke, doei doei! — Ok, bye bye!", "type": "farewell" },
+        { "hindi": "tot gauw", "pronunciation": "tot CHOW", "english": "see you soon", "example": "Tot gauw! — See you soon!", "type": "farewell" },
+        { "hindi": "dag", "pronunciation": "DACH", "english": "bye / day", "example": "Dag! Prettige dag verder! — Bye! Have a nice day!", "type": "farewell" }
+      ]
+    },
+    {
+      "id": "dutch-polite",
+      "title": "Polite Phrases",
+      "emoji": "🙏",
+      "gradient": "from-blue-500 to-indigo-600",
+      "words": [
+        { "hindi": "alstublieft", "pronunciation": "als-tu-BLEEFT", "english": "please (formal) / here you go", "example": "Een koffie alstublieft. — A coffee please.", "type": "phrase" },
+        { "hindi": "alsjeblieft", "pronunciation": "als-ye-BLEEFT", "english": "please (informal) / here you go", "example": "Hier, alsjeblieft! — Here you go!", "type": "phrase" },
+        { "hindi": "dank u", "pronunciation": "DANK u", "english": "thank you (formal)", "example": "Dank u wel voor uw hulp. — Thank you very much for your help.", "type": "phrase" },
+        { "hindi": "dank je", "pronunciation": "DANK ye", "english": "thank you (informal)", "example": "Dank je! Dat is heel lief. — Thank you! That is very kind.", "type": "phrase" },
+        { "hindi": "graag gedaan", "pronunciation": "CHAACH ge-DAAN", "english": "you're welcome", "example": "Dank je! — Graag gedaan! — Thank you! — You're welcome!", "type": "phrase" },
+        { "hindi": "excuseer", "pronunciation": "ek-su-ZAYR", "english": "excuse me", "example": "Excuseer, waar is het toilet? — Excuse me, where is the toilet?", "type": "phrase" },
+        { "hindi": "sorry", "pronunciation": "SO-ree", "english": "sorry", "example": "Oh sorry, dat was mijn fout. — Oh sorry, that was my mistake.", "type": "phrase" },
+        { "hindi": "graag", "pronunciation": "CHAACH", "english": "please / gladly / yes please", "example": "Wil je koffie? Graag! — Do you want coffee? Yes please!", "type": "adverb" }
+      ]
+    },
+    {
+      "id": "dutch-everyday",
+      "title": "Everyday Words",
+      "emoji": "🗣️",
+      "gradient": "from-green-500 to-teal-600",
+      "words": [
+        { "hindi": "ja", "pronunciation": "YAA", "english": "yes", "example": "Ja, dat klopt! — Yes, that's right!", "type": "adverb" },
+        { "hindi": "nee", "pronunciation": "NAY", "english": "no", "example": "Nee, dat wil ik niet. — No, I don't want that.", "type": "adverb" },
+        { "hindi": "goed", "pronunciation": "CHOOT", "english": "good / well", "example": "Het gaat goed. — Things are going well.", "type": "adjective" },
+        { "hindi": "lekker", "pronunciation": "LEK-ker", "english": "tasty / nice / good", "example": "Wat lekker! Dat is erg lekker. — How nice! That is very tasty.", "type": "adjective" },
+        { "hindi": "gezellig", "pronunciation": "ge-ZEL-lich", "english": "cozy / convivial / fun (untranslatable)", "example": "Wat gezellig hier! — How cozy/nice here!", "type": "adjective" },
+        { "hindi": "leuk", "pronunciation": "LURK", "english": "nice / fun / cool", "example": "Leuk dat je er bent! — Nice that you're here!", "type": "adjective" },
+        { "hindi": "even", "pronunciation": "AY-ven", "english": "just / a moment", "example": "Ik kom even langs. — I'll just drop by.", "type": "adverb" },
+        { "hindi": "eigenlijk", "pronunciation": "AY-chen-lik", "english": "actually / to be honest", "example": "Eigenlijk weet ik het niet. — Actually, I don't know.", "type": "adverb" }
+      ]
+    },
+    {
+      "id": "dutch-time",
+      "title": "Time Expressions",
+      "emoji": "⏰",
+      "gradient": "from-purple-500 to-violet-600",
+      "words": [
+        { "hindi": "nu", "pronunciation": "nu", "english": "now", "example": "Ik ga nu weg. — I'm leaving now.", "type": "adverb" },
+        { "hindi": "vandaag", "pronunciation": "van-DAACH", "english": "today", "example": "Vandaag is het mooi weer. — Today the weather is nice.", "type": "adverb" },
+        { "hindi": "gisteren", "pronunciation": "CHIS-ter-en", "english": "yesterday", "example": "Gisteren was het anders. — Yesterday it was different.", "type": "adverb" },
+        { "hindi": "morgen", "pronunciation": "MOR-chen", "english": "tomorrow / morning", "example": "Ik zie je morgen. — I'll see you tomorrow.", "type": "adverb" },
+        { "hindi": "later", "pronunciation": "LAA-ter", "english": "later", "example": "Ik bel je later. — I'll call you later.", "type": "adverb" },
+        { "hindi": "altijd", "pronunciation": "AL-tayt", "english": "always", "example": "Hij is altijd te laat. — He is always late.", "type": "adverb" },
+        { "hindi": "soms", "pronunciation": "SOMS", "english": "sometimes", "example": "Soms ga ik fietsen. — Sometimes I go cycling.", "type": "adverb" },
+        { "hindi": "nooit", "pronunciation": "NOHT", "english": "never", "example": "Ik eet nooit vlees. — I never eat meat.", "type": "adverb" }
+      ]
+    }
+  ]
+}

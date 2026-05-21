@@ -8,8 +8,11 @@ import { getQuizScores, getAverageQuizScore } from '@/lib/quiz'
 import { getReviewSessions } from '@/lib/review'
 import { getAllLessons, getAllContent } from '@/lib/lessons'
 import { getAllFoundations } from '@/lib/foundations'
+import { getDutchLessons } from '@/lib/dutch/lessons'
+import { getDutchFoundations } from '@/lib/dutch/foundations'
 import { getLessonPercent } from '@/lib/phrase-progress'
 import { playSound } from '@/lib/sounds'
+import { useLanguage } from '@/lib/language-context'
 
 interface Stats {
   phrasesLearned: number
@@ -28,16 +31,18 @@ interface ActivityItem {
 
 export default function ProgressPage() {
   const router = useRouter()
+  const { language, config } = useLanguage()
   const [stats, setStats] = useState<Stats | null>(null)
   const [activities, setActivities] = useState<ActivityItem[]>([])
   const [streakDays, setStreakDays] = useState<Array<'active' | 'pending' | 'inactive'>>([])
 
   useEffect(() => {
-    const progress = getProgress()
-    const lessons = getAllLessons()
-    const foundations = getAllFoundations()
-    const allContent = getAllContent()
-    const quizScores = getQuizScores()
+    const prefix = config.storagePrefix
+    const progress = getProgress(prefix)
+    const lessons = language === 'dutch' ? getDutchLessons() : getAllLessons()
+    const foundations = language === 'dutch' ? getDutchFoundations() : getAllFoundations()
+    const allContent = language === 'dutch' ? [...getDutchLessons(), ...getDutchFoundations()] : getAllContent()
+    const quizScores = getQuizScores(prefix)
     const reviewSessions = getReviewSessions()
 
     // Compute phrases learned (from both situations and foundations)
@@ -47,7 +52,7 @@ export default function ProgressPage() {
     setStats({
       phrasesLearned,
       practiceCount: progress.practiceSessionCount,
-      quizAverage: getAverageQuizScore(),
+      quizAverage: getAverageQuizScore(prefix),
       lessonsCompleted: progress.completedLessons.length,
       currentStreak: progress.currentStreak,
       lastActiveDate: progress.lastActiveDate,
@@ -121,8 +126,8 @@ export default function ProgressPage() {
     )
   }
 
-  const lessons = getAllLessons()
-  const foundations = getAllFoundations()
+  const lessons = language === 'dutch' ? getDutchLessons() : getAllLessons()
+  const foundations = language === 'dutch' ? getDutchFoundations() : getAllFoundations()
   // Sun-indexed array so dayLabels[getDay()] gives the correct letter (Sun=S, Mon=M, ...)
   const dayLabels = ['S', 'M', 'T', 'W', 'T', 'F', 'S']
   const todayDow = new Date().getDay()
@@ -194,7 +199,7 @@ export default function ProgressPage() {
           <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-3">Situations</h3>
           <div className="space-y-3">
             {lessons.map((lesson) => {
-              const pct = getLessonPercent(lesson)
+              const pct = getLessonPercent(lesson, config.storagePrefix)
               const isComplete = pct === 100
               const hasProgress = pct > 0
               return (
@@ -225,7 +230,7 @@ export default function ProgressPage() {
           <h3 className="text-sm font-semibold text-[var(--text-primary)] mt-5 mb-3">Foundations</h3>
           <div className="space-y-3">
             {foundations.map((lesson) => {
-              const pct = getLessonPercent(lesson)
+              const pct = getLessonPercent(lesson, config.storagePrefix)
               const isComplete = pct === 100
               const hasProgress = pct > 0
               return (

@@ -2,7 +2,7 @@
 
 import { use } from 'react'
 import { notFound } from 'next/navigation'
-import { getAnyLessonById } from '@/lib/lessons'
+import { getUniversalLessonById } from '@/lib/all-content'
 import { LessonFlow } from '@/components/lesson-flow/lesson-flow'
 
 interface LessonPageProps {
@@ -11,7 +11,7 @@ interface LessonPageProps {
 
 export default function LessonPage({ params }: LessonPageProps) {
   const { id } = use(params)
-  const lesson = getAnyLessonById(id)
+  const lesson = getUniversalLessonById(id)
 
   if (!lesson) {
     notFound()

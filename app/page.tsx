@@ -4,25 +4,31 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { getAllLessons } from '@/lib/lessons'
 import { getAllFoundations } from '@/lib/foundations'
+import { getDutchLessons } from '@/lib/dutch/lessons'
+import { getDutchFoundations } from '@/lib/dutch/foundations'
 import { getProgress } from '@/lib/progress'
 import { LessonCard } from '@/components/lesson-card'
 import { StreakCounter } from '@/components/streak-counter'
 import { FeatureTooltip } from '@/components/feature-tooltip'
 import { isOnboardingComplete, getUserProfile } from '@/lib/onboarding'
 import { playSound, isMuted, toggleMute } from '@/lib/sounds'
+import { useLanguage } from '@/lib/language-context'
+import { DutchWelcomeModal } from '@/components/dutch-welcome-modal'
 
 type Tab = 'situations' | 'foundations'
 
 export default function Home() {
   const router = useRouter()
+  const { language, config } = useLanguage()
   const [ready, setReady] = useState(false)
   const [userName, setUserName] = useState('')
   const [dailyGoal, setDailyGoal] = useState(5)
   const [completedCount, setCompletedCount] = useState(0)
   const [muted, setMuted] = useState(false)
   const [activeTab, setActiveTab] = useState<Tab>('situations')
-  const lessons = getAllLessons()
-  const foundations = getAllFoundations()
+
+  const lessons = language === 'dutch' ? getDutchLessons() : getAllLessons()
+  const foundations = language === 'dutch' ? getDutchFoundations() : getAllFoundations()
 
   useEffect(() => {
     if (!isOnboardingComplete()) {
@@ -32,11 +38,11 @@ export default function Home() {
     const profile = getUserProfile()
     setUserName(profile.name || 'Friend')
     setDailyGoal(profile.dailyGoal)
-    const progress = getProgress()
+    const progress = getProgress(config.storagePrefix)
     setCompletedCount(progress.completedLessons.length)
     setMuted(isMuted())
     setReady(true)
-  }, [router])
+  }, [router, language, config.storagePrefix])
 
   if (!ready) {
     return (
@@ -49,6 +55,8 @@ export default function Home() {
   const currentLessons = activeTab === 'situations' ? lessons : foundations
 
   return (
+    <>
+    {language === 'dutch' && <DutchWelcomeModal />}
     <div className="max-w-md mx-auto px-4 py-6">
       <div className="flex items-center justify-between mb-2">
         <div>
@@ -108,7 +116,9 @@ export default function Home() {
       {completedCount === 0 && activeTab === 'situations' && (
         <div className="mb-4 p-3 bg-[var(--accent-soft)] rounded-xl border border-[var(--accent)]/20">
           <p className="text-sm text-[var(--accent-text)] font-medium">
-            Start with lesson 1 — everything builds from here
+            {language === 'dutch'
+              ? 'Start with lesson 1 — or jump to Foundations to learn the grammar core first!'
+              : 'Start with lesson 1 — everything builds from here'}
           </p>
         </div>
       )}
@@ -116,7 +126,7 @@ export default function Home() {
       <div className="h-[calc(100dvh-220px)] overflow-y-auto snap-y snap-mandatory space-y-4 pb-8 scrollbar-hide">
         {currentLessons.map((lesson, index) => {
           const isFirst = index === 0 && activeTab === 'situations'
-          const isLocked = activeTab === 'situations' && completedCount === 0 && index > 0
+          const isLocked = activeTab === 'situations' && completedCount === 0 && index > 0 && language === 'hindi'
 
           const card = (
             <div
@@ -147,5 +157,6 @@ export default function Home() {
         })}
       </div>
     </div>
+    </>
   )
 }

@@ -1,0 +1,49 @@
+{
+  "id": "dutch-modals",
+  "title": "Core Verbs & Modal Auxiliaries",
+  "situation": "Foundation: willen, kunnen, moeten, mogen, gaan, komen, zijn, hebben",
+  "skills": ["modal verb conjugation", "modal + infinitive structure", "gaan + infinitive (future)", "negation with modals"],
+  "phrases": [
+    { "hindi": "willen: ik wil, jij wilt/wil, hij wil, wij willen — Ik wil Nederlands leren. Wil jij koffie?", "english": "to want: I want, you want, he wants, we want — I want to learn Dutch. Do you want coffee?", "context": "Modal + infinitive: the infinitive goes to the END of the clause. 'Ik wil Nederlands leren' — 'leren' is last. 'Willen' = strong want/wish. Informal: 'ik wil' and 'jij wil' (dropping -t) is common.", "pronunciation": "WIL-len: ik WIL, yay WILT, hay WIL, way WIL-len — ik WIL NAY-der-lants LAY-ren." },
+    { "hindi": "kunnen: ik kan, jij kunt/kan, hij kan, wij kunnen — Ik kan Nederlands spreken. Kun jij fietsen?", "english": "to be able to/can: I can, you can, he can, we can — I can speak Dutch. Can you cycle?", "context": "'Kunnen' = ability. 'Kan jij...' is one of the most useful question patterns. Note: 'kunt' and 'kan' are both used for 'jij' — 'kan jij?' is very common in speech.", "pronunciation": "KUN-nen: ik KAN, yay KUNT, hay KAN, way KUN-nen — ik KAN NAY-der-lants SPRAY-ken." },
+    { "hindi": "moeten: ik moet, jij moet, hij moet, wij moeten — Ik moet werken. Moet jij morgen vroeg op?", "english": "must/have to: I must, you must, he must, we must — I have to work. Do you have to get up early tomorrow?", "context": "'Moeten' = obligation/necessity. Stronger than 'willen'. 'Ik moet weg' = I have to go (common exit phrase). 'Moet je...' = do you need to...?", "pronunciation": "MOO-ten: ik MOOT, yay MOOT, hay MOOT, way MOO-ten — ik MOOT WER-ken." },
+    { "hindi": "mogen: ik mag, jij mag, hij mag, wij mogen — Mag ik binnenkomen? Hier mag je niet roken.", "english": "to be allowed to/may: I may, you may, he may, we may — May I come in? You may not smoke here.", "context": "'Mogen' = permission. 'Mag ik...?' = May I...? — very polite question pattern. 'Niet mogen' = not allowed. Essential for asking permission in shops, offices, etc.", "pronunciation": "MOH-chen: ik MACH, yay MACH, hay MACH, way MOH-chen — MACH ik BIN-nen-KOH-men?" },
+    { "hindi": "gaan + infinitive (future): Ik ga morgen werken. Wij gaan vanavond eten. Ga jij ook mee?", "english": "going to (future): I'm going to work tomorrow. We're going to eat tonight. Are you coming along?", "context": "'Gaan + infinitive' = the most natural way to express future in spoken Dutch. More common than the formal future ('zullen'). 'Vanavond' = this evening. 'Mee' = along/with.", "pronunciation": "CHAAN: ik CHAA MOR-gen WER-ken. way CHAAN van-AA-vont AY-ten. CHAA yay OHK MAY?" },
+    { "hindi": "Ik wil niet komen. Ik kan het niet doen. Je moet dat niet vergeten. Dat mag niet.", "english": "I don't want to come. I can't do it. You must not forget that. That is not allowed.", "context": "Negation with modals: 'niet' goes before the infinitive at the end. 'Ik wil niet komen' — 'niet' + 'komen'. 'Dat mag niet' — when there's no infinitive, 'niet' goes at end.", "pronunciation": "ik WIL NEET KOH-men. ik KAN het NEET DOON. ye MOOT dat NEET ver-CHE-ten. dat MACH NEET." },
+    { "hindi": "Zou jij kunnen helpen? Zou ik een vraag mogen stellen? Ik zou graag koffie willen.", "english": "Could you help? May I ask a question? I would like coffee.", "context": "'Zouden' = would/could — the conditional/polite form. 'Zou jij kunnen...?' = could you...? 'Ik zou graag... willen' = I would like... — the polite way to make requests in formal situations.", "pronunciation": "ZOW yay KUN-nen HEL-pen? ZOW ik uhn FRAACH MOH-chen STEL-len? ik ZOW CHAACH KO-fee WIL-len." }
+  ],
+  "grammar_notes": [
+    "Modal verb structure: modal (position 2) + [rest of sentence] + infinitive (at end). 'Ik moet [morgen vroeg] opstaan' — 'opstaan' is last, and separable verbs rejoin in this position",
+    "Double infinitive with perfect tense: 'Ik heb niet kunnen komen' (I was not able to come). The order is: heb + [niet] + kunnen + komen. The modal becomes an infinitive after heb.",
+    "Modal conjugations are often the same across persons: 'moeten': ik/jij/hij must all say 'moet'. Only 'willen' and 'kunnen' vary",
+    "Common fixed expressions: 'ik moet gaan' (I have to go), 'mag ik?' (may I?), 'kan ik helpen?' (can I help?), 'wil je thee?' (do you want tea?)"
+  ],
+  "culture_notes": [
+    "Dutch directness: Dutch people often say 'ik wil...' where English speakers would say 'could I possibly...' — it's not rude, just direct",
+    "'Zouden' + modal makes requests very polite — useful in formal settings like government offices, banks, or when writing emails",
+    "Cycling culture: 'fietsen' (to cycle) is so ingrained that 'kun jij fietsen?' is a genuine question people ask about life skills"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "modal verb conjugation",
+      "explanation": "Dutch modals are irregular but follow patterns. Most are the same across ik/jij/hij. Key conjugations: willen (wil/wilt/wil/willen), kunnen (kan/kunt/kan/kunnen), moeten (moet/moet/moet/moeten), mogen (mag/mag/mag/mogen), zullen (zal/zal/zal/zullen), zouden (zou/zou/zou/zouden).",
+      "more_examples": [
+        { "hindi": "Jullie willen weten...", "english": "You all want to know..." },
+        { "hindi": "Zij kunnen goed koken.", "english": "They can cook well." },
+        { "hindi": "Hij moet morgen werken.", "english": "He has to work tomorrow." },
+        { "hindi": "Wij mogen hier parkeren.", "english": "We are allowed to park here." }
+      ]
+    },
+    {
+      "skill": "gaan + infinitive (future)",
+      "explanation": "The most common future construction in spoken Dutch. 'Gaan' conjugates normally (ik ga, jij gaat, etc.), and the infinitive goes to the end. Much more natural than 'zullen' for everyday plans.",
+      "more_examples": [
+        { "hindi": "Ik ga dit weekend naar Den Haag.", "english": "I'm going to The Hague this weekend." },
+        { "hindi": "Gaan jullie ook naar het feest?", "english": "Are you all going to the party too?" },
+        { "hindi": "Hij gaat een nieuwe baan zoeken.", "english": "He's going to look for a new job." },
+        { "hindi": "We gaan Nederlands studeren.", "english": "We're going to study Dutch." }
+      ]
+    }
+  ],
+  "practice_prompt": "Dutch modal verbs — willen, kunnen, moeten, mogen, and gaan for expressing wants, abilities, and future plans"
+}

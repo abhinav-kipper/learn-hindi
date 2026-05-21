@@ -1,0 +1,49 @@
+{
+  "id": "dutch-word-order",
+  "title": "Word Order — V2 Rule & Verbs",
+  "situation": "Foundation: the V2 rule, separable verbs, and verb-final subordinate clauses",
+  "skills": ["V2 rule", "separable verbs", "subordinate clause verb-final", "question formation"],
+  "phrases": [
+    { "hindi": "Ik ga morgen naar Amsterdam. — Morgen ga ik naar Amsterdam.", "english": "I go tomorrow to Amsterdam. — Tomorrow, I go to Amsterdam.", "context": "The V2 (Verb Second) rule: in Dutch, the VERB must ALWAYS be in second position. When 'morgen' moves to position 1, the subject 'ik' flips to after the verb. The verb 'ga' stays in slot 2.", "pronunciation": "ik CHAA MOR-gen naar am-ster-DAM. — MOR-gen CHAA ik naar am-ster-DAM." },
+    { "hindi": "Nu eet ik. Thuis werk ik altijd. Gisteren was hij ziek.", "english": "Now I'm eating. At home I always work. Yesterday he was sick.", "context": "More V2 examples. Any element can go to position 1 (time, place, adverb), but the verb must stay second. This flipping of subject and verb is called 'inversion'.", "pronunciation": "nu AYT ik. TOWS WERK ik AL-tayt. CHIS-ter-en WAS hay ZEEK." },
+    { "hindi": "opstaan: Ik sta op. Ik sta om 7 uur op. Sta jij vroeg op?", "english": "to get up: I get up. I get up at 7. Do you get up early?", "context": "Separable verbs: 'op-staan' splits — the prefix 'op' goes to the END of the clause, the main verb stays second. 'Ik sta [om 7 uur] op' — 'op' always falls at the very end of the main clause.", "pronunciation": "op-STAAN: ik STAA op. ik STAA om ZEH-ven uur op. STAA yay VROOCH op?" },
+    { "hindi": "bellen: ik bel op, aanzetten: ik zet aan, uitleggen: ik leg uit, meenemen: ik neem mee", "english": "to call (up): I call, to turn on: I turn on, to explain: I explain (lay out), to take along: I take along", "context": "Common separable verbs. Pattern: prefix + main verb. In present tense: main verb in position 2, prefix to end. In written Dutch you can spot separable verbs because they're listed as 'op|staan' or 'op staan' in dictionaries.", "pronunciation": "BEL-len: ik BEL op, aan-ZET-ten: ik ZET aan, UIT-leg-gen: ik LEG owt, MEE-nemen: ik NAYM may" },
+    { "hindi": "omdat ik moe ben. omdat hij niet werkt. omdat wij Nederlands leren.", "english": "because I am tired. because he doesn't work. because we are learning Dutch.", "context": "CRITICAL: in subordinate clauses (after 'omdat', 'dat', 'als', 'want', etc.), the verb goes to the END. 'Ik ben moe' → 'omdat ik moe BEN'. The subject stays after the conjunction, verb goes last.", "pronunciation": "OM-dat ik MOO BEN. OM-dat hay NEET WERKT. OM-dat way NAY-der-lants LAY-ren." },
+    { "hindi": "Ik denk dat hij morgen komt. Ik weet dat zij Nederlands spreekt.", "english": "I think that he comes tomorrow. I know that she speaks Dutch.", "context": "Full sentences with subordinate clauses. 'Dat' triggers verb-final: 'hij morgen KOMT' (he tomorrow comes). Notice: in the main clause ('ik denk'), normal V2. In the 'dat' clause, verb goes last.", "pronunciation": "ik DENK dat hay MOR-gen KOMT. ik WAYT dat zay NAY-der-lants SPRAAKT." },
+    { "hindi": "Spreekt u Nederlands? Heb jij een pen? Gaat hij mee?", "english": "Do you speak Dutch? Do you have a pen? Is he coming along?", "context": "Yes/no questions: just invert subject and verb. No 'do' construction needed. 'Jij spreekt' → 'Spreekt jij?' Remember: 'jij/je' after verb drops the -t: 'Spreek JIJ?' not 'Spreekt jij?'", "pronunciation": "SPRAAKT u NAY-der-lants? hep YAY uhn PEN? CHAAT hay MAY?" }
+  ],
+  "grammar_notes": [
+    "V2 rule: Dutch verb is ALWAYS in second position in main clauses. Count positions from the left — the verb must be #2, no matter what's in position #1",
+    "Separable verbs in subordinate clauses: the prefix rejoins the verb at the end: 'omdat ik opsta' (because I get up) — 'opsta' written together",
+    "Verb cluster in subordinate clauses with modals: 'omdat hij kan werken' (because he can work) — the modal goes before the infinitive, both at the end",
+    "With perfect tense in subordinate clauses: 'omdat ik heb gewerkt' — auxiliary (heb) before past participle (gewerkt), both at end"
+  ],
+  "culture_notes": [
+    "The V2 rule makes Dutch news headlines confusing at first — they often start with a topic. Practice by noticing the verb in slot 2 whenever you read Dutch",
+    "'Want' vs 'omdat': both mean 'because', but 'want' uses normal word order (no verb-final), 'omdat' requires verb-final. 'Ik ben moe, want ik heb hard gewerkt' vs 'Ik ben moe omdat ik hard heb gewerkt'",
+    "Separable verbs are everywhere in Dutch — look for them in your dictionary and note the prefix"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "V2 rule",
+      "explanation": "Position 1 = anything (subject, time, place, adverb). Position 2 = ALWAYS the conjugated verb. Position 3+ = subject (if not in pos.1), objects, infinitives, etc. This is the backbone of Dutch sentence structure.",
+      "more_examples": [
+        { "hindi": "Vandaag kook ik.", "english": "Today I'm cooking. (vandaag=1, kook=2, ik=3)" },
+        { "hindi": "In Amsterdam wonen veel mensen.", "english": "In Amsterdam live many people. (location=1, wonen=2)" },
+        { "hindi": "Dat weet ik niet.", "english": "That I don't know. (dat=1, weet=2, ik=3)" },
+        { "hindi": "Eigenlijk ga ik niet.", "english": "Actually I'm not going. (eigenlijk=1, ga=2)" }
+      ]
+    },
+    {
+      "skill": "separable verbs",
+      "explanation": "Identify a separable verb: it has a prefix (op, aan, uit, mee, terug, neer, in, etc.) that can split off. In main clauses the prefix goes to the very end. In subordinate clauses and infinitive forms, they rejoin.",
+      "more_examples": [
+        { "hindi": "aankomen: de trein komt aan", "english": "to arrive: the train arrives (aan goes to end)" },
+        { "hindi": "uitzoeken: ik zoek het uit", "english": "to figure out: I figure it out" },
+        { "hindi": "meehelpen: kun jij meehelpen?", "english": "to help along: can you help? (in infinitive, stays together)" },
+        { "hindi": "terugkomen: wanneer kom je terug?", "english": "to come back: when are you coming back?" }
+      ]
+    }
+  ],
+  "practice_prompt": "Dutch word order — the V2 rule, separable verbs, and verb-final subordinate clauses"
+}

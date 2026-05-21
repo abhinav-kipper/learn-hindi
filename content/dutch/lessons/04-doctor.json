@@ -1,0 +1,41 @@
+{
+  "id": "dutch-doctor",
+  "title": "Doctor & Pharmacy",
+  "situation": "You're at the huisarts (GP) or apotheek (pharmacy) explaining symptoms and getting help.",
+  "skills": ["describing symptoms", "body parts", "asking about medication", "making appointments"],
+  "phrases": [
+    { "hindi": "Ik heb pijn in mijn... buik / hoofd / keel / rug / borst / been", "english": "I have pain in my... stomach / head / throat / back / chest / leg", "context": "'Ik heb pijn in mijn...' = the standard pain description formula. Body parts: 'buik' (belly/stomach), 'hoofd' (head), 'keel' (throat), 'rug' (back), 'borst' (chest), 'been' (leg), 'arm' (arm)", "pronunciation": "ik HEB PAYN in mayn... BOWK / HOHFT / KAYL / RUCH / BORST / BAYN" },
+    { "hindi": "Ik voel me niet goed. Ik ben ziek. Ik heb koorts.", "english": "I don't feel well. I'm sick. I have a fever.", "context": "'Ik voel me niet goed' = I don't feel well. 'Koorts' = fever. 'Ik heb het koud/warm' = I feel cold/warm. These are the first things a doctor will ask about.", "pronunciation": "ik FOOL me NEET CHOOT. ik BEN ZEEK. ik HEB KOHRTS." },
+    { "hindi": "Hoe lang heeft u dit al? Wanneer is het begonnen?", "english": "How long have you had this? When did it start?", "context": "What the doctor will ask. 'Hoe lang...al?' = how long...already? 'Begonnen' = started (past participle of 'beginnen'). Answer: 'Sinds gisteren' (since yesterday), 'Al drie dagen' (for three days already)", "pronunciation": "hoo LANG HAYFT u dit al? WAN-neer is het be-CHON-nen?" },
+    { "hindi": "Ik ben allergisch voor... penicilline / noten / pollen", "english": "I'm allergic to... penicillin / nuts / pollen", "context": "'Allergisch voor' = allergic to. IMPORTANT to communicate this clearly. 'Ik slik al medicijnen' = I already take medication. 'Mag ik de bijsluiter?' = may I have the package insert?", "pronunciation": "ik ben a-LER-chis VOOR... pen-i-si-LEE-ne / NOH-ten / POL-len" },
+    { "hindi": "Kunt u een recept uitschrijven? Heeft u dit zonder recept?", "english": "Can you write a prescription? Do you have this without a prescription?", "context": "'Recept uitschrijven' = to write a prescription ('uitschrijven' = separable). At pharmacy: 'Ik kom mijn medicijnen ophalen' (I'm coming to pick up my medication)", "pronunciation": "KUNT u uhn re-SEPT OWT-schray-ven? HAYFT u dit ZON-der re-SEPT?" },
+    { "hindi": "Wanneer moet ik dit innemen? Hoeveel keer per dag?", "english": "When should I take this? How many times per day?", "context": "'Innemen' = to take (medication), separable: 'neem in'. 'Per dag' = per day. Answer might be: 'Drie keer per dag, na het eten' (three times a day, after eating). 'Na het eten' = after eating.", "pronunciation": "WAN-neer MOOT ik dit IN-nay-men? HOO-feel KAYR per DACH?" },
+    { "hindi": "Ik wil graag een afspraak maken. Wanneer kunt u mij ontvangen?", "english": "I'd like to make an appointment. When can you see me?", "context": "'Afspraak maken' = to make an appointment. 'Ontvangen' = to receive/see (a patient). For the huisarts, you'll usually call the 'praktijk' (practice). 'Dringend' = urgent.", "pronunciation": "ik WIL CHAACH uhn AF-spraak MAA-ken. WAN-neer KUNT u may ont-VAN-chen?" },
+    { "hindi": "Is het ernstig? Moet ik rust houden? Wanneer ben ik beter?", "english": "Is it serious? Do I need to rest? When will I be better?", "context": "'Ernstig' = serious. 'Rust houden' = to rest (keep rest). 'Beter worden' = to get better. Natural follow-up questions after the doctor's diagnosis.", "pronunciation": "is het ERNS-tich? MOOT ik RUST HOW-den? WAN-neer BEN ik BAY-ter?" }
+  ],
+  "grammar_notes": [
+    "Body part ownership: Dutch uses 'mijn' (my): 'mijn hoofd doet pijn' (my head hurts). Lit: 'my head does pain'",
+    "'Pijn doen' = to hurt: 'mijn keel doet pijn' (my throat hurts). Also 'ik heb pijn in mijn...' (I have pain in my...)",
+    "Duration with 'al': 'ik heb dit al drie dagen' = I've had this for three days (already). 'Al' + time period shows duration from then to now",
+    "Separable verbs at pharmacy: innemen (in|nemen), ophalen (op|halen), uitschrijven (uit|schrijven)"
+  ],
+  "culture_notes": [
+    "The 'huisarts' (GP/family doctor) is the first point of contact — you need a referral to see specialists. Register with a huisarts in your neighborhood ASAP",
+    "Pharmacies are 'apotheek' — your doctor's prescription is sent electronically. Show your ID/BSN (citizen service number)",
+    "Dutch healthcare is generally excellent but can feel abrupt — doctors are efficient and direct. Don't expect long explanations unless you ask",
+    "Emergency number: 112 (EU standard). Non-emergency doctor: call your huisarts or 'huisartsenpost' (after-hours GP service)"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "describing symptoms",
+      "explanation": "Key patterns: 'Ik heb pijn in mijn [body part]', 'Ik heb [symptom]', 'Ik voel me [adjective]'. Learn the key body parts and symptom words. Dutch doctors will appreciate your attempt at Dutch.",
+      "more_examples": [
+        { "hindi": "Ik heb hoofdpijn.", "english": "I have a headache. (hoofd+pijn compound)" },
+        { "hindi": "Ik ben verkouden.", "english": "I have a cold. (lit: I am cold-ened)" },
+        { "hindi": "Ik hoest veel.", "english": "I cough a lot. (hoesten = to cough)" },
+        { "hindi": "Ik heb last van mijn maag.", "english": "I'm having trouble with my stomach." }
+      ]
+    }
+  ],
+  "practice_prompt": "Visiting a Dutch doctor or pharmacy — describing symptoms, asking about medication, and making appointments"
+}

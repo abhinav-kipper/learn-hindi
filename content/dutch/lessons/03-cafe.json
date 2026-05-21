@@ -1,0 +1,41 @@
+{
+  "id": "dutch-cafe",
+  "title": "Café & Restaurant",
+  "situation": "You're at a Dutch café. Ordering drinks, asking about the menu, and paying.",
+  "skills": ["ordering food and drinks", "asking questions about the menu", "getting the bill", "being polite in service situations"],
+  "phrases": [
+    { "hindi": "Mag ik een koffie, alstublieft? Graag een cappuccino.", "english": "May I have a coffee, please? I'd like a cappuccino.", "context": "'Mag ik...alstublieft?' = May I have...please? (formal). 'Graag' = please/gladly — often used at the end or alone. 'Alstublieft' (formal) vs 'alsjeblieft' (informal).", "pronunciation": "MACH ik uhn KO-fee, als-tu-BLEEFT? CHAACH uhn kap-pu-CHEE-no." },
+    { "hindi": "Met of zonder melk? Met suiker? Welk brood wilt u?", "english": "With or without milk? With sugar? Which bread do you want?", "context": "What the staff will ask you. 'Met' = with, 'zonder' = without. 'Suiker' = sugar. Dutch cafés often ask about customization — brown vs white bread ('bruin of wit?')", "pronunciation": "met of ZON-der MELK? met SOW-ker? WELK BROHT WILT u?" },
+    { "hindi": "Heeft u ook appelgebak? Is er een dagsschotel?", "english": "Do you also have apple pie? Is there a dish of the day?", "context": "Apple pie ('appelgebak' or 'appeltaart') is THE Dutch café staple — always with whipped cream ('slagroom'). 'Dagschotel' = today's special. These two questions will take you far.", "pronunciation": "HAYFT u ook AP-pel-ge-bak? is er uhn DACH-skoh-tel?" },
+    { "hindi": "Waar is het toilet? Is er wifi? Wat is het wachtwoord?", "english": "Where is the toilet? Is there wifi? What is the password?", "context": "Essential café questions. Dutch: 'toilet' not 'WC' in conversation. WiFi is usually free in Dutch cafés. 'Wachtwoord' = password (watch-word, guard-word).", "pronunciation": "WAAR is het twa-LET? is er WY-fy? wat is het WACHT-woort?" },
+    { "hindi": "Mag ik de rekening, alstublieft? Kunnen we afrekenen?", "english": "May I have the bill, please? Can we pay/settle up?", "context": "'De rekening' = the bill. 'Afrekenen' = to settle the bill (separable verb: 'reken af'). In Dutch cafés you often pay at the end, not per drink. Ask when you're ready to leave.", "pronunciation": "MACH ik de ray-KEN-ing, als-tu-BLEEFT? KUN-nen we AF-ray-ken-en?" },
+    { "hindi": "Kunnen we apart betalen? Ik betaal mijn deel.", "english": "Can we pay separately? I'll pay my share.", "context": "'Apart betalen' = splitting the bill. Very Dutch — 'going Dutch' is literally Dutch! 'Mijn deel' = my part/share. Modern approach: often done with Tikkie (Dutch payment app).", "pronunciation": "KUN-nen we a-PART be-TAA-len? ik be-TAAL mayn DAYL." },
+    { "hindi": "Kan ik pinnen? Accepteert u contant?", "english": "Can I pay by card? Do you accept cash?", "context": "Most Dutch places prefer 'pinnen' (card/contactless). But some smaller cafés are cash-only. Ask beforehand! 'Contactloos' = contactless payment.", "pronunciation": "KAN ik PIN-nen? ak-sep-TAYRT u kon-TANT?" },
+    { "hindi": "Het was erg lekker. Dank u voor het eten.", "english": "It was very tasty. Thank you for the food.", "context": "'Lekker' = tasty/nice/good — the most versatile positive word in Dutch. 'Erg lekker' = very tasty. Saying this to the staff is appreciated. 'Lekker' also means nice weather, nice feeling, etc.", "pronunciation": "het WAS ERCH LEK-ker. DANK u VOOR het AY-ten." }
+  ],
+  "grammar_notes": [
+    "'Alstublieft' (als-tu-bleeft) = formal 'please', used when receiving something too. 'Alsjeblieft' = informal. Both also mean 'here you go' when handing something over",
+    "Ordering with 'ik wil' vs 'mag ik': 'ik wil een koffie' is direct/abrupt in Dutch too. Better to say 'mag ik...' or 'ik wil graag...' or just '[item] graag'",
+    "'Graag' as a one-word answer: if someone asks 'wil je koffie?', just say 'graag' = yes please. One of the most useful words",
+    "Numbers with orders: 'twee koffie graag' = two coffees please. Dutch often omit the plural marker in spoken café orders"
+  ],
+  "culture_notes": [
+    "Dutch café culture: 'bruin café' (brown café) = traditional Dutch pub, usually with dark wood interior. Very cozy ('gezellig')",
+    "Coffee culture: Dutch drink a lot of coffee, often with a 'koekje' (biscuit). 'Koffie verkeerd' = coffee with lots of milk (like a latte)",
+    "Tipping is not mandatory in NL. Rounding up the bill is common. 10% is generous.",
+    "'Gezellig' is untranslatable — it means cozy/convivial/warm atmosphere. The highest compliment for a café. 'Wat gezellig hier!'"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "ordering food and drinks",
+      "explanation": "Most direct: '[item] graag' or 'mag ik [item]?'. For multiple items: 'mag ik een koffie en een appelgebak graag?' Always end with 'graag' or 'alstublieft/alsjeblieft' — it softens the request.",
+      "more_examples": [
+        { "hindi": "Een biertje graag.", "english": "A beer please. (biertje = diminutive, very common)" },
+        { "hindi": "Heeft u iets zonder suiker?", "english": "Do you have anything without sugar?" },
+        { "hindi": "Welke soepen heeft u?", "english": "What soups do you have?" },
+        { "hindi": "Hetzelfde graag.", "english": "The same again please. (when reordering)" }
+      ]
+    }
+  ],
+  "practice_prompt": "Visiting a Dutch café — ordering coffee and food, asking about the menu, and paying the bill"
+}

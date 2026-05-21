@@ -1,0 +1,49 @@
+{
+  "id": "dutch-numbers",
+  "title": "Numbers, Days & Time",
+  "situation": "Foundation: counting, days of the week, months, and telling the time",
+  "skills": ["cardinal numbers", "days and months", "telling time", "Dutch time quirks (half drie)"],
+  "phrases": [
+    { "hindi": "een, twee, drie, vier, vijf, zes, zeven, acht, negen, tien", "english": "one, two, three, four, five, six, seven, eight, nine, ten", "context": "The core numbers — drill these until they're automatic. 'Twee' rhymes with 'way', 'vijf' sounds like 'vayf'", "pronunciation": "AYN, tway, DREE, feer, VAYF, zes, ZAY-ven, acht, NAY-gen, teen" },
+    { "hindi": "twintig, dertig, veertig, vijftig, zestig, zeventig, tachtig, negentig, honderd, duizend", "english": "twenty, thirty, forty, fifty, sixty, seventy, eighty, ninety, hundred, thousand", "context": "'Tachtig' (80) is irregular — from 'acht'. 'Duizend' = thousand. Compound numbers: 'eenentwintig' = 21 (one-and-twenty)", "pronunciation": "TWIN-tich, DER-tich, VEER-tich, VAYF-tich, ZES-tich, ZAY-ven-tich, TACH-tich, NAY-gen-tich, HON-derd, DOW-zend" },
+    { "hindi": "maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag", "english": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday", "context": "Dutch week starts Monday. 'Woensdag' (Wednesday) is tricky — it's WOENS-dach. Abbreviated: ma, di, wo, do, vr, za, zo", "pronunciation": "MAAN-dach, DINS-dach, WOENS-dach, DON-der-dach, VRAY-dach, ZAA-ter-dach, ZON-dach" },
+    { "hindi": "januari, februari, maart, april, mei, juni, juli, augustus, september, oktober, november, december", "english": "January through December", "context": "Very similar to English. 'Maart' = March, 'Mei' = May, 'Juli' = July. Months are lowercase in Dutch.", "pronunciation": "ya-new-AA-ri, feb-ru-AA-ri, maart, ap-RIL, may, YU-ni, YU-li, ow-GUS-tus, sep-TEM-ber, ok-TOH-ber, no-VEM-ber, de-SEM-ber" },
+    { "hindi": "Hoe laat is het? Het is twee uur. Kwart over twee. Half drie. Kwart voor drie.", "english": "What time is it? It is two o'clock. Quarter past two. 2:30. Quarter to three.", "context": "CRITICAL quirk: 'half drie' = HALF past two (2:30), NOT half past three! Dutch count toward the next hour. 'Kwart over twee' = 2:15. 'Kwart voor drie' = 2:45", "pronunciation": "hoo laat is het? het is tway uur. kwart OH-ver tway. half dree. kwart vohr dree." },
+    { "hindi": "Op welke dag? Vandaag is het maandag. Gisteren was het zondag. Morgen is het dinsdag.", "english": "On which day? Today is Monday. Yesterday was Sunday. Tomorrow is Tuesday.", "context": "'Vandaag' (today), 'gisteren' (yesterday), 'morgen' (tomorrow). These are your most-used time words.", "pronunciation": "op WEL-ke dach? van-DAACH is het MAAN-dach. CHIS-ter-en was het ZON-dach. MOR-gen is het DINS-dach." },
+    { "hindi": "In welk jaar? In tweeduizend drieëntwintig. Welke datum? De vijfde mei.", "english": "In which year? In 2023. What date? The fifth of May.", "context": "Dates: 'de vijfde mei' (the fifth of May). For years: 'tweeduizend drieëntwintig' — say each part separately. Current year: 'tweeduizend zesentwintig'", "pronunciation": "in welk yaar? in tway-DOW-zend DREE-en-twin-tich. WEL-ke DAA-tum? de VAYF-de may." }
+  ],
+  "grammar_notes": [
+    "Dutch compound numbers are written as one word and said smallest-first: 21 = eenentwintig (one-and-twenty), 45 = vijfenveertig (five-and-forty)",
+    "CRITICAL: 'half + next hour' = 30 minutes before that hour. 'Half drie' = 2:30. Always think of the next hour when you hear 'half'",
+    "'Kwart' means quarter. 'Kwart over' = quarter past, 'kwart voor' = quarter to",
+    "Days and months are always lowercase in Dutch, unlike English"
+  ],
+  "culture_notes": [
+    "Dutch people are precise about time — being on time is important. 'Stipt op tijd' = exactly on time",
+    "The 24-hour clock is commonly used in official contexts (trains, appointments): 'Het is veertien uur dertig' = 14:30",
+    "When making appointments, Dutch people often check 'de agenda' (diary/calendar) before committing"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "cardinal numbers",
+      "explanation": "Dutch numbers follow a clear pattern. 1-12 are irregular and must be memorized. 13-19 add '-tien' (teen). 20-90 have their own words. Compound numbers (21-99) flip the order: unit + 'en' + ten.",
+      "more_examples": [
+        { "hindi": "dertien, veertien, vijftien", "english": "thirteen, fourteen, fifteen" },
+        { "hindi": "eenentwintig, tweeëntwintig", "english": "twenty-one, twenty-two" },
+        { "hindi": "honderdvijf", "english": "one hundred and five" },
+        { "hindi": "drieduizend vierhonderd twee", "english": "three thousand four hundred two" }
+      ]
+    },
+    {
+      "skill": "telling time",
+      "explanation": "Dutch uses a half-to system. Think of the clock face: 'half drie' means you are halfway to 3:00, so it's 2:30. For :15 and :45, use 'kwart over' and 'kwart voor'. For times like 2:20, say 'tien over half drie' (ten past half three = 2:20).",
+      "more_examples": [
+        { "hindi": "vijf over twee", "english": "five past two (2:05)" },
+        { "hindi": "tien voor half vier", "english": "ten to half four = 3:20" },
+        { "hindi": "vijf over half vier", "english": "five past half four = 3:35" },
+        { "hindi": "tien voor vier", "english": "ten to four (3:50)" }
+      ]
+    }
+  ],
+  "practice_prompt": "Numbers, days, months, and telling time in Dutch — including the tricky half-hour system"
+}

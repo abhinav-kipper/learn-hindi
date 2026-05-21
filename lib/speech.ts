@@ -1,5 +1,5 @@
-// Shared speech utility for Hindi text read-aloud
-// Uses Google Translate TTS for natural Hindi pronunciation (free, no API key)
+// Shared speech utility for Hindi and Dutch text read-aloud
+// Uses Google Translate TTS via our own proxy (avoids CORS, free, no API key)
 // Falls back to browser speechSynthesis if Google TTS fails
 
 let currentAudio: HTMLAudioElement | null = null
@@ -9,12 +9,10 @@ function stripParenthetical(text: string): string {
   return text.replace(/\s*\([^)]*\)/g, '').trim()
 }
 
-/**
- * Generate TTS URL via our own API proxy (avoids CORS issues with Google Translate)
- */
-function getTTSUrl(text: string): string {
+/** Generate TTS URL via our own API proxy */
+function getTTSUrl(text: string, ttsLocale = 'hi'): string {
   const encoded = encodeURIComponent(text.slice(0, 200))
-  return `/api/tts?text=${encoded}`
+  return `/api/tts?text=${encoded}&lang=${ttsLocale}`
 }
 
 /**
@@ -43,8 +41,8 @@ function splitText(text: string, maxLen = 180): string[] {
   return chunks
 }
 
-/** Speak Hindi text using Google Translate TTS with fallback to browser */
-export function speakHindi(text: string): void {
+/** Speak text in the given locale using Google Translate TTS with fallback to browser */
+export function speak(text: string, ttsLocale = 'hi'): void {
   if (typeof window === 'undefined') return
 
   stopSpeaking()
@@ -53,46 +51,50 @@ export function speakHindi(text: string): void {
   if (!cleaned) return
 
   const chunks = splitText(cleaned)
-  playChunks(chunks, 0)
+  playChunks(chunks, 0, ttsLocale)
 }
 
-function playChunks(chunks: string[], index: number): void {
+/** Speak Hindi text — kept for backward compatibility */
+export function speakHindi(text: string): void {
+  speak(text, 'hi')
+}
+
+function playChunks(chunks: string[], index: number, ttsLocale = 'hi'): void {
   if (index >= chunks.length) {
     currentAudio = null
     return
   }
 
-  const url = getTTSUrl(chunks[index])
+  const url = getTTSUrl(chunks[index], ttsLocale)
   const audio = new Audio(url)
 
   audio.onended = () => {
-    playChunks(chunks, index + 1)
+    playChunks(chunks, index + 1, ttsLocale)
   }
 
   audio.onerror = () => {
-    // Fallback to browser speech synthesis
     console.warn('Google TTS failed, falling back to browser voice')
-    fallbackSpeak(chunks.slice(index).join(' '))
+    fallbackSpeak(chunks.slice(index).join(' '), ttsLocale)
   }
 
   currentAudio = audio
   audio.play().catch(() => {
-    // If autoplay blocked or CORS issue, fallback
-    fallbackSpeak(chunks.slice(index).join(' '))
+    fallbackSpeak(chunks.slice(index).join(' '), ttsLocale)
   })
 }
 
 /** Fallback: use browser speechSynthesis */
-function fallbackSpeak(text: string): void {
+function fallbackSpeak(text: string, ttsLocale = 'hi'): void {
   if (!window.speechSynthesis) return
 
+  const bcp47 = ttsLocale === 'nl' ? 'nl-NL' : 'hi-IN'
   const utterance = new SpeechSynthesisUtterance(text)
   const voices = window.speechSynthesis.getVoices()
-  const hindiVoice =
-    voices.find((v) => v.lang === 'hi-IN') ||
-    voices.find((v) => v.lang.startsWith('hi'))
-  if (hindiVoice) utterance.voice = hindiVoice
-  utterance.lang = 'hi-IN'
+  const voice =
+    voices.find((v) => v.lang === bcp47) ||
+    voices.find((v) => v.lang.startsWith(ttsLocale))
+  if (voice) utterance.voice = voice
+  utterance.lang = bcp47
   utterance.rate = 0.9
 
   window.speechSynthesis.speak(utterance)

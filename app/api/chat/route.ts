@@ -1,22 +1,28 @@
 import { streamText } from 'ai'
 import { google } from '@ai-sdk/google'
 import { buildSystemPrompt } from '@/lib/system-prompt'
+import { buildDutchSystemPrompt } from '@/lib/system-prompt-dutch'
 import { getAnyLessonById } from '@/lib/lessons'
+import { getDutchAnyLessonById } from '@/lib/dutch/lessons'
 
 export async function POST(req: Request) {
   try {
-    const { messages, lessonId } = await req.json()
+    const { messages, lessonId, language = 'hindi' } = await req.json()
 
-    const lesson = getAnyLessonById(lessonId)
+    const lesson = language === 'dutch'
+      ? getDutchAnyLessonById(lessonId)
+      : getAnyLessonById(lessonId)
+
     if (!lesson) {
       return new Response('Lesson not found', { status: 404 })
     }
 
-    const systemPrompt = buildSystemPrompt(lesson)
+    const systemPrompt = language === 'dutch'
+      ? buildDutchSystemPrompt(lesson)
+      : buildSystemPrompt(lesson)
 
-    // If no messages (initial trigger), send a hidden user message to prompt the AI to start
     const chatMessages = messages.length === 0
-      ? [{ role: 'user' as const, content: 'Start the conversation. Set the scene and talk to me in character.' }]
+      ? [{ role: 'user' as const, content: 'Start the session. Introduce today\'s topic and give the first prompt.' }]
       : messages
 
     const result = await streamText({

@@ -4,25 +4,30 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { getAllCategories, getTotalWordCount, getTotalLearnedCount, getLearnedCountForCategory, VocabCategory } from '@/lib/vocabulary'
+import { getDutchAllCategories, getDutchTotalWordCount, getDutchTotalLearnedCount, getDutchLearnedCountForCategory } from '@/lib/dutch/vocabulary'
+import { useLanguage } from '@/lib/language-context'
 
 export default function VocabularyPage() {
+  const { language } = useLanguage()
   const [categories, setCategories] = useState<VocabCategory[]>([])
   const [totalLearned, setTotalLearned] = useState(0)
   const [totalWords, setTotalWords] = useState(0)
   const [categoryProgress, setCategoryProgress] = useState<Record<string, number>>({})
 
   useEffect(() => {
-    const cats = getAllCategories()
+    const cats = language === 'dutch' ? getDutchAllCategories() : getAllCategories()
     setCategories(cats)
-    setTotalWords(getTotalWordCount())
-    setTotalLearned(getTotalLearnedCount())
+    setTotalWords(language === 'dutch' ? getDutchTotalWordCount() : getTotalWordCount())
+    setTotalLearned(language === 'dutch' ? getDutchTotalLearnedCount() : getTotalLearnedCount())
 
     const progress: Record<string, number> = {}
     cats.forEach(cat => {
-      progress[cat.id] = getLearnedCountForCategory(cat.id)
+      progress[cat.id] = language === 'dutch'
+        ? getDutchLearnedCountForCategory(cat.id)
+        : getLearnedCountForCategory(cat.id)
     })
     setCategoryProgress(progress)
-  }, [])
+  }, [language])
 
   return (
     <div className="max-w-md mx-auto px-4 py-6">

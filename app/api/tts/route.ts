@@ -1,13 +1,14 @@
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url)
   const text = searchParams.get('text')
+  const lang = searchParams.get('lang') ?? 'hi'
 
   if (!text) {
     return new Response('Missing text parameter', { status: 400 })
   }
 
   const encoded = encodeURIComponent(text.slice(0, 200))
-  const ttsUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=hi&client=tw-ob&q=${encoded}`
+  const ttsUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&client=tw-ob&q=${encoded}`
 
   try {
     const response = await fetch(ttsUrl, {

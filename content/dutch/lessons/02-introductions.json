@@ -1,0 +1,41 @@
+{
+  "id": "dutch-introductions",
+  "title": "Introducing Yourself",
+  "situation": "You're meeting your new Dutch neighbors and colleagues for the first time.",
+  "skills": ["greetings and introductions", "talking about yourself", "where you're from", "small talk openers"],
+  "phrases": [
+    { "hindi": "Hallo, ik ben [naam]. Aangenaam.", "english": "Hello, I'm [name]. Pleased to meet you.", "context": "'Aangenaam' = pleased to meet you (lit. 'pleasant'). Slightly formal but universally appropriate. More casual: 'Hoi, ik ben...' or just 'Leuk je te ontmoeten' (nice to meet you, informal)", "pronunciation": "HA-loh, ik BEN [naam]. AAN-ge-naam." },
+    { "hindi": "Ik kom uit India. Ik ben hier al twee jaar.", "english": "I come from India. I've been here for two years already.", "context": "'Ik kom uit' = I come from + country. 'Al' = already (indicates you've been doing this for some time). Dutch people will ask 'hoe lang ben je hier al?' (how long have you been here)", "pronunciation": "ik KOM owt IN-dya. ik ben HEER al TWAY yaar." },
+    { "hindi": "Ik ben uw/jouw nieuwe buurman/buurvrouw. Ik woon nu op nummer [X].", "english": "I'm your new neighbor (m/f). I now live at number [X].", "context": "'Buurman' = male neighbor, 'buurvrouw' = female neighbor. 'Op nummer' = at number. Use 'uw' (formal) for older neighbors, 'jouw' for peers.", "pronunciation": "ik ben uw/yow NIOW-we BUUR-man/BUUR-vrow. ik WOHN nu op NUM-mer [X]." },
+    { "hindi": "Wat doe jij? Ik werk bij... Ik studeer...", "english": "What do you do? I work at... I study...", "context": "'Wat doe jij?' = what do you do (for work)? 'Ik werk bij' + company/organization. 'Ik studeer' + subject. The Dutch usually ask this early in conversations — it's friendly, not nosy.", "pronunciation": "wat DOO yay? ik WERK bay... ik stoo-DAYR..." },
+    { "hindi": "Spreek je ook Nederlands? Ik leer het nog. Mijn Nederlands is niet zo goed.", "english": "Do you speak Dutch too? I'm still learning it. My Dutch isn't so good.", "context": "Useful honesty phrase. Dutch people will often switch to English when they hear this, but it opens the door to patient Dutch conversation. 'Nog' = still (ongoing). They'll appreciate the effort.", "pronunciation": "SPRAYK ye ook NAY-der-lants? ik LAYR het NOK. mayn NAY-der-lants is NEET zo CHOOT." },
+    { "hindi": "Hoe gaat het met u/jou? Goed, dank je. En met jou?", "english": "How are you? Fine, thank you. And you?", "context": "Standard greeting after the introduction. 'Met u' (formal) or 'met jou' (informal). 'Goed, dank je / dank u' is the standard answer. Very few Dutch people give a long answer to this question.", "pronunciation": "hoo CHAAT het met u/yow? CHOOT, DANK ye. en met YOW?" },
+    { "hindi": "Welkom in de buurt! Als u iets nodig heeft, kom maar aankloppen.", "english": "Welcome to the neighborhood! If you need anything, just knock on the door.", "context": "What neighbors often say. 'Als u iets nodig heeft' = if you need anything. 'Aankloppen' = to knock (separable: 'kloppen aan'). A warm, neighborly phrase.", "pronunciation": "WEL-kom in de BURT! als u EETS NOH-dich HAYFT, KOM maar AAN-klop-pen." },
+    { "hindi": "Tot ziens! Tot gauw. Dag! Doei!", "english": "Goodbye! See you soon. Bye! Bye-bye (informal)!", "context": "Farewells: 'Tot ziens' = formal/standard goodbye. 'Tot gauw' = see you soon. 'Dag' = casual day-goodbye. 'Doei' = very casual, like 'bye'. Often said twice: 'Doei doei!'", "pronunciation": "tot ZEENS! tot CHOW. DACH! DOO-ee!" }
+  ],
+  "grammar_notes": [
+    "'Ik kom uit' + country without article: 'ik kom uit Nederland', 'ik kom uit India' — no 'het' or 'de' needed after 'uit' for country names (with a few exceptions like 'de Verenigde Staten')",
+    "Professions: no article in Dutch. 'Ik ben dokter' (I am a doctor) — NOT 'ik ben een dokter'. With adjective: 'Ik ben een goede dokter' — then you need 'een'",
+    "The informal 'je/jij' vs formal 'u': with new neighbors/strangers your age or younger → 'je/jij'. With older neighbors → start with 'u', they'll tell you if they prefer 'je'",
+    "Responding to 'Hoe gaat het?': Dutch people expect a short answer. 'Goed, dank je' is perfect. Long answers about your health will surprise them."
+  ],
+  "culture_notes": [
+    "Dutch people value directness — introduce yourself clearly with your name and what you do. Don't be vague",
+    "The Dutch are generally private people but friendly to neighbors. Bringing 'stroopwafels' or something small when you move in is appreciated",
+    "Dutch small talk topics: weather ('het weer'), cycling, work. Avoid: money, relationship status (initially), politics (unless invited)",
+    "Dutch people shake hands when meeting, less hugging/kissing than Southern Europeans"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "greetings and introductions",
+      "explanation": "Dutch greetings by time of day: 'Goedemorgen' (until ~12), 'Goedemiddag' (12-18), 'Goedenavond' (after 18). 'Hallo' and 'Hoi' work any time. 'Aangenaam' or 'Leuk u/je te ontmoeten' after the name exchange.",
+      "more_examples": [
+        { "hindi": "Goedemorgen, hoe gaat het?", "english": "Good morning, how are you?" },
+        { "hindi": "Ik stell mezelf even voor.", "english": "I'll just introduce myself." },
+        { "hindi": "Heb jij hier lang gewoond?", "english": "Have you lived here long?" },
+        { "hindi": "Leuk je te ontmoeten!", "english": "Nice to meet you! (informal)" }
+      ]
+    }
+  ],
+  "practice_prompt": "Introducing yourself to new Dutch neighbors or colleagues — greetings, sharing background, and making a good first impression"
+}

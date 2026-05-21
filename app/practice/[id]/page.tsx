@@ -9,9 +9,10 @@ import confetti from 'canvas-confetti'
 import { ChatMessage } from '@/components/chat-message'
 import { VoiceButton } from '@/components/voice-button'
 import { incrementPracticeCount, markLessonComplete, updateStreak } from '@/lib/progress'
-import { getAnyLessonById } from '@/lib/lessons'
+import { getUniversalLessonById } from '@/lib/all-content'
 import { FeatureTooltip } from '@/components/feature-tooltip'
 import { playSound } from '@/lib/sounds'
+import { useLanguage } from '@/lib/language-context'
 
 interface Message {
   id: string
@@ -121,11 +122,12 @@ function useChat({ api, body }: { api: string; body: Record<string, unknown> }) 
 export default function PracticePage({ params }: PracticePageProps) {
   const { id } = use(params)
   const router = useRouter()
+  const { language, config } = useLanguage()
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const [showFinish, setShowFinish] = useState(false)
 
-  const body = useMemo(() => ({ lessonId: id }), [id])
-  const lesson = getAnyLessonById(id)
+  const body = useMemo(() => ({ lessonId: id, language }), [id, language])
+  const lesson = getUniversalLessonById(id)
 
   const { messages, input, setInput, handleInputChange, handleSubmit, isLoading, error } = useChat({
     api: '/api/chat',
@@ -144,9 +146,9 @@ export default function PracticePage({ params }: PracticePageProps) {
 
   const handleFinish = () => {
     if (userMessageCount === 0) return
-    markLessonComplete(id)
-    updateStreak()
-    incrementPracticeCount()
+    markLessonComplete(id, config.storagePrefix)
+    updateStreak(config.storagePrefix)
+    incrementPracticeCount(config.storagePrefix)
     playSound('levelup')
     confetti({
       particleCount: 100,
@@ -198,7 +200,7 @@ export default function PracticePage({ params }: PracticePageProps) {
         {messages.length === 0 && (
           <FeatureTooltip
             id="practice"
-            message="The AI will start talking first — reply in Hindi (romanized) or English!"
+            message={config.practiceTooltip}
             position="center"
           >
             <motion.div
@@ -210,8 +212,14 @@ export default function PracticePage({ params }: PracticePageProps) {
               <div className="w-12 h-12 mx-auto mb-4 bg-indigo-100 rounded-full flex items-center justify-center">
                 <span className="text-xl">💬</span>
               </div>
-              <p className="font-medium text-[var(--text-primary)]">Setting the scene...</p>
-              <p className="mt-1.5 text-sm text-[var(--text-secondary)]">Your conversation partner is about to start talking.</p>
+              <p className="font-medium text-[var(--text-primary)]">
+                {language === 'dutch' ? 'Starting your session...' : 'Setting the scene...'}
+              </p>
+              <p className="mt-1.5 text-sm text-[var(--text-secondary)]">
+                {language === 'dutch'
+                  ? 'Your Dutch tutor is about to introduce the topic.'
+                  : 'Your conversation partner is about to start talking.'}
+              </p>
             </motion.div>
           </FeatureTooltip>
         )}
@@ -252,7 +260,7 @@ export default function PracticePage({ params }: PracticePageProps) {
             type="text"
             value={input}
             onChange={handleInputChange}
-            placeholder="Type in Hindi or English..."
+            placeholder={config.practiceInputPlaceholder}
             disabled={isLoading}
             className="flex-1 px-4 py-3 rounded-full border border-[var(--border)] bg-[var(--bg-elevated)] text-[var(--text-primary)] placeholder:text-[var(--text-tertiary)] focus:outline-none focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20 text-sm disabled:opacity-50 transition-all"
           />
@@ -289,7 +297,7 @@ export default function PracticePage({ params }: PracticePageProps) {
               <div className="bg-[var(--bg-surface)] rounded-3xl shadow-2xl border border-[var(--border)] p-8 max-w-sm w-full text-center">
                 <div className="text-5xl mb-3">🎉</div>
                 <h2 className="text-2xl font-extrabold text-[var(--text-primary)]">
-                  Nice practice!
+                  {language === 'dutch' ? 'Goed gedaan!' : 'Nice practice!'}
                 </h2>
                 <p className="text-sm text-[var(--text-secondary)] mt-2">
                   {userMessageCount} message{userMessageCount === 1 ? '' : 's'} exchanged

@@ -1,0 +1,49 @@
+{
+  "id": "dutch-past-tense",
+  "title": "Past Tense — Perfect with Hebben & Zijn",
+  "situation": "Foundation: forming the perfect tense, choosing hebben vs zijn, and irregular past participles",
+  "skills": ["perfect tense formation", "hebben vs zijn selection", "regular past participles", "common irregular participles"],
+  "phrases": [
+    { "hindi": "Ik heb gewerkt. Jij hebt gegeten. Hij heeft gespeeld. Wij hebben gelopen.", "english": "I worked. You ate. He played. We walked.", "context": "Perfect tense = hebben/zijn + past participle. Regular past participle: 'ge-' + stem + '-t' or '-d'. Rule for -t vs -d: use the 't kofschip' trick — if the stem's last letter is in 't kofschip', add -t, otherwise -d.", "pronunciation": "ik hep ge-WERKT. yay hept ge-AY-ten. hay heft ge-SPAYLT. way HEB-ben ge-LOH-pen." },
+    { "hindi": "'t kofschip: t, k, f, s, ch, p — gebruik -t. Andere letters — gebruik -d.", "english": "The letters t, k, f, s, ch, p use -t. All other letters use -d.", "context": "Memory trick for -t vs -d in past participles: 't kofschip' contains the letters after which you add -t. 'Werken' stem = 'werk' → last letter 'k' is in 't kofschip' → 'gewerkt'. 'Leven' stem = 'leef' → 'f' is in 't kofschip' → 'geleefd'... wait, 'f' IS in kofschip → 'geleefd'? No: 'leven' → stem 'leef' → but original last letter of root is 'v' (leven), and 'v' is NOT in kofschip → 'geleefd'.", "pronunciation": "t KOF-ship: tay, kaa, ef, es, CHAY, pay" },
+    { "hindi": "zijn + beweging/verandering: ik ben gegaan, ik ben gekomen, ik ben geweest, ik ben geworden", "english": "zijn + movement/change: I went, I came, I have been, I became", "context": "CRITICAL: use 'zijn' (not 'hebben') for verbs of movement or state change: gaan (go), komen (come), zijn (be), worden (become), rijden (ride/drive), vallen (fall), sterven (die), opstaan (get up)", "pronunciation": "zayn + bay-WAY-ching: ik ben ge-CHAAN, ik ben ge-KOH-men, ik ben ge-WAYST, ik ben ge-WOR-den" },
+    { "hindi": "Ik ben naar Amsterdam gegaan. Zij is gisteren aangekomen. Hij is ziek geworden.", "english": "I went to Amsterdam. She arrived yesterday. He became sick.", "context": "Full sentences with zijn-perfect. Notice separable verb 'aankomen' → past participle 'aangekomen' (prefix + ge + stem + en). The 'ge-' goes BETWEEN the prefix and the main part.", "pronunciation": "ik ben naar am-ster-DAM ge-CHAAN. zay is CHIS-ter-en AAN-ge-KOH-men. hay is ZEEK ge-WOR-den." },
+    { "hindi": "Irregular: ik heb gezien (zien), ik heb gedaan (doen), ik heb gehad (hebben), ik ben geweest (zijn)", "english": "Irregular: I have seen (see), I have done (do), I have had (have), I have been (be)", "context": "Common irregular past participles must be memorized. Key ones: zien→gezien, doen→gedaan, hebben→gehad, zijn→geweest, gaan→gegaan, komen→gekomen, schrijven→geschreven, rijden→gereden, kopen→gekocht", "pronunciation": "ik hep ge-ZEEN, ik hep ge-DAAN, ik hep ge-HAT, ik ben ge-WAYST" },
+    { "hindi": "Wat heb jij vandaag gedaan? Ik heb gewerkt en daarna heb ik gegeten.", "english": "What did you do today? I worked and afterwards I ate.", "context": "Conversation practice. 'Daarna' = afterwards/then. Notice: two main clauses joined by 'en' — each has normal V2 word order, with the past participle at the very end of each clause.", "pronunciation": "wat hep YAY van-DAACH ge-DAAN? ik hep ge-WERKT en DAAR-na hep ik ge-AY-ten." },
+    { "hindi": "Ik heb nooit Nederlands geleerd. Heb jij ooit in Amsterdam gewoond?", "english": "I have never learned Dutch. Have you ever lived in Amsterdam?", "context": "'Nooit' = never, 'ooit' = ever, 'al' = already, 'nog niet' = not yet — all go before the past participle. 'Heb jij ooit...' = inversion for question, participle last.", "pronunciation": "ik hep NOHT NAY-der-lants ge-LAYRD. hep YAY OHT in am-ster-DAM ge-WOHND?" }
+  ],
+  "grammar_notes": [
+    "Past participle pattern: ge- + stem + -t/-d for regular verbs. Use 't kofschip' (t,k,f,s,ch,p) to decide: if the ORIGINAL last consonant of the infinitive stem is in kofschip → -t, otherwise → -d",
+    "Zijn-verbs rule of thumb: intransitive verbs of movement (gaan, komen, rijden, lopen) AND state change (worden, blijven, zijn) take zijn. If in doubt, use hebben — you're more likely right",
+    "In subordinate clauses, the auxiliary (heb/is) comes before the past participle, both at the end: 'omdat ik heb gewerkt'",
+    "Separable verbs: ge- goes between prefix and root. 'op-staan' → 'opgestaan'. 'aan-komen' → 'aangekomen'. Verbs with inseparable prefixes (be-, ver-, ont-, her-) get no ge-: 'begrijpen' → 'begrepen' (not 'gebegrepen')"
+  ],
+  "culture_notes": [
+    "Dutch spoken language uses the perfect tense for almost all past events — the simple past ('ik werkte', 'ik ging') exists but is mainly in writing and formal speech",
+    "In everyday conversation, use the perfect tense ('ik heb gewerkt') not the simple past ('ik werkte')",
+    "Common mistake by English speakers: using 'hebben' for motion verbs. 'Ik heb gegaan' is wrong — always 'ik ben gegaan'"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "perfect tense formation",
+      "explanation": "Two parts: (1) conjugated hebben/zijn in position 2, (2) past participle at the END of the clause. For regular verbs: ge- + stem + t/d. For irregular verbs: memorize. The word order rule: participle always last in the clause.",
+      "more_examples": [
+        { "hindi": "Ik heb een brief geschreven.", "english": "I wrote a letter. (schrijven → geschreven, irregular)" },
+        { "hindi": "Wij hebben dat boek gekocht.", "english": "We bought that book. (kopen → gekocht, irregular)" },
+        { "hindi": "Zij heeft hard gestudeerd.", "english": "She studied hard. (studeren → gestudeerd)" },
+        { "hindi": "Hij heeft de deur geopend.", "english": "He opened the door. (openen → geopend)" }
+      ]
+    },
+    {
+      "skill": "hebben vs zijn selection",
+      "explanation": "Use zijn for: (1) movement verbs with a destination — gaan, komen, rijden, lopen, vliegen, zwemmen. (2) state change — worden, blijven, zijn, vallen, groeien, sterven. Use hebben for everything else.",
+      "more_examples": [
+        { "hindi": "Ik ben naar huis gelopen.", "english": "I walked home. (lopen + destination = zijn)" },
+        { "hindi": "Ik heb een uur gelopen.", "english": "I walked for an hour. (no destination = hebben!)" },
+        { "hindi": "Hij is gevallen.", "english": "He fell. (state change = zijn)" },
+        { "hindi": "Zij is in Amsterdam gebleven.", "english": "She stayed in Amsterdam. (blijven = zijn)" }
+      ]
+    }
+  ],
+  "practice_prompt": "Dutch perfect tense — forming it, choosing hebben vs zijn, and regular vs irregular past participles"
+}

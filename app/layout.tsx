@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { InstallPrompt } from '@/components/install-prompt'
 import { LayoutShell } from '@/components/layout-shell'
+import { LanguageProvider } from '@/lib/language-context'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -35,10 +36,12 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/icon.svg" />
       </head>
       <body className={`${inter.className} min-h-screen`}>
-        <LayoutShell>
-          {children}
-        </LayoutShell>
-        <InstallPrompt />
+        <LanguageProvider>
+          <LayoutShell>
+            {children}
+          </LayoutShell>
+          <InstallPrompt />
+        </LanguageProvider>
       </body>
     </html>
   )

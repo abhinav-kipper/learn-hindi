@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { getProgress } from '@/lib/progress'
+import { useLanguage } from '@/lib/language-context'
 
 const tabs = [
   { href: '/', label: 'Home', icon: HomeIcon, requiresLesson: false },
@@ -15,6 +16,7 @@ const tabs = [
 
 export function BottomNav() {
   const pathname = usePathname()
+  const { config, toggle } = useLanguage()
   const [hasCompletedLesson, setHasCompletedLesson] = useState(true) // default true to prevent flash
 
   useEffect(() => {
@@ -31,6 +33,14 @@ export function BottomNav() {
     <nav className="fixed bottom-0 left-0 right-0 z-40 safe-bottom">
       <div className="max-w-md mx-auto bg-[var(--bg-surface)]/90 backdrop-blur-lg border-t border-[var(--border)] px-2 pt-2 pb-1">
         <div className="flex items-center justify-around">
+          <button
+            onClick={toggle}
+            title={`Switch to ${config.code === 'hindi' ? 'Dutch' : 'Hindi'}`}
+            className="relative flex flex-col items-center gap-0.5 py-1 px-3 rounded-lg"
+          >
+            <span className="text-lg leading-none">{config.flag}</span>
+            <span className="text-[10px] font-medium text-[var(--text-tertiary)]">{config.name}</span>
+          </button>
           {tabs.map(tab => {
             const isActive = pathname === tab.href
             const isLocked = tab.requiresLesson && !hasCompletedLesson

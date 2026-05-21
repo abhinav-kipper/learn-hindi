@@ -5,7 +5,9 @@ export interface Progress {
   practiceSessionCount: number
 }
 
-const STORAGE_KEY = 'hindi-progress'
+function storageKey(prefix: string): string {
+  return `${prefix}-progress`
+}
 
 function defaultProgress(): Progress {
   return {
@@ -16,9 +18,9 @@ function defaultProgress(): Progress {
   }
 }
 
-export function getProgress(): Progress {
+export function getProgress(prefix = 'hindi'): Progress {
   if (typeof window === 'undefined') return defaultProgress()
-  const stored = localStorage.getItem(STORAGE_KEY)
+  const stored = localStorage.getItem(storageKey(prefix))
   if (!stored) return defaultProgress()
   try {
     return JSON.parse(stored) as Progress
@@ -27,30 +29,30 @@ export function getProgress(): Progress {
   }
 }
 
-function saveProgress(progress: Progress): void {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(progress))
+function saveProgress(progress: Progress, prefix: string): void {
+  localStorage.setItem(storageKey(prefix), JSON.stringify(progress))
 }
 
-export function markLessonComplete(lessonId: string): void {
-  const progress = getProgress()
+export function markLessonComplete(lessonId: string, prefix = 'hindi'): void {
+  const progress = getProgress(prefix)
   if (!progress.completedLessons.includes(lessonId)) {
     progress.completedLessons.push(lessonId)
-    saveProgress(progress)
+    saveProgress(progress, prefix)
   }
 }
 
-export function isLessonComplete(lessonId: string): boolean {
-  return getProgress().completedLessons.includes(lessonId)
+export function isLessonComplete(lessonId: string, prefix = 'hindi'): boolean {
+  return getProgress(prefix).completedLessons.includes(lessonId)
 }
 
-export function incrementPracticeCount(): void {
-  const progress = getProgress()
+export function incrementPracticeCount(prefix = 'hindi'): void {
+  const progress = getProgress(prefix)
   progress.practiceSessionCount += 1
-  saveProgress(progress)
+  saveProgress(progress, prefix)
 }
 
-export function updateStreak(): void {
-  const progress = getProgress()
+export function updateStreak(prefix = 'hindi'): void {
+  const progress = getProgress(prefix)
   const today = new Date().toISOString().split('T')[0]
 
   if (progress.lastActiveDate === today) return
@@ -70,9 +72,9 @@ export function updateStreak(): void {
   }
 
   progress.lastActiveDate = today
-  saveProgress(progress)
+  saveProgress(progress, prefix)
 }
 
-export function getStreak(): number {
-  return getProgress().currentStreak
+export function getStreak(prefix = 'hindi'): number {
+  return getProgress(prefix).currentStreak
 }
