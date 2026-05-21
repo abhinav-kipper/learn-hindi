@@ -81,3 +81,17 @@ export function getTotalLearnedCount(): number {
   const learned = getLearnedWords()
   return Object.values(learned).reduce((sum, words) => sum + words.length, 0)
 }
+
+export function getExploredVocabWords(): VocabWord[] {
+  const learned = getLearnedWords()
+  const explored: VocabWord[] = []
+  for (const cat of vocabularyData.categories) {
+    const learnedInCat = learned[cat.id] ?? []
+    for (const word of cat.words) {
+      if (learnedInCat.includes(word.hindi)) {
+        explored.push(word as VocabWord)
+      }
+    }
+  }
+  return explored
+}
