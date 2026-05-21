@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback, useMemo, FormEvent, ChangeEvent } from 'react'
 import { use } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { ChatMessage } from '@/components/chat-message'
 import { VoiceButton } from '@/components/voice-button'
@@ -126,6 +127,7 @@ function useChat({ api, body }: { api: string; body: Record<string, unknown> }) 
 
 export default function PracticePage({ params }: PracticePageProps) {
   const { id } = use(params)
+  const router = useRouter()
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
   const body = useMemo(() => ({ lessonId: id }), [id])
@@ -148,7 +150,17 @@ export default function PracticePage({ params }: PracticePageProps) {
   }, [messages])
 
   return (
-    <div className="flex flex-col h-dvh max-w-lg mx-auto">
+    <motion.div
+      className="flex flex-col h-dvh max-w-lg mx-auto"
+      drag="x"
+      dragConstraints={{ left: 0, right: 0 }}
+      dragElastic={0.3}
+      onDragEnd={(_, info) => {
+        if (info.offset.x > 120 || info.velocity.x > 600) {
+          router.push(`/lessons/${id}`)
+        }
+      }}
+    >
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3 bg-[var(--bg-surface)] border-b border-[var(--border)] safe-top">
         <Link
@@ -242,6 +254,6 @@ export default function PracticePage({ params }: PracticePageProps) {
           </button>
         </form>
       </div>
-    </div>
+    </motion.div>
   )
 }

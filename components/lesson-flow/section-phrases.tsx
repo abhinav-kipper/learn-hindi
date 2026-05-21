@@ -37,7 +37,7 @@ function PhraseCardContent({
     <div className="relative">
       <div
         onClick={handleReveal}
-        className="bg-[var(--bg-surface)] rounded-3xl shadow-lg p-6 min-h-[320px] flex flex-col items-center cursor-pointer select-none border border-violet-100"
+        className="bg-[var(--bg-surface)] rounded-3xl shadow-lg p-6 pb-14 min-h-[320px] flex flex-col items-center cursor-pointer select-none border border-violet-100"
       >
         {/* Hindi text + pronunciation + read aloud */}
         <div className="flex items-center gap-2 mt-2">
@@ -78,30 +78,30 @@ function PhraseCardContent({
         )}
       </div>
 
-      {/* Culture tip bubble — only shows if this card has one */}
-      {cultureTip && revealed && (
+      {/* Culture tip button — positioned outside the card at the bottom */}
+      {cultureTip && revealed && !showCulture && (
         <motion.button
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 5 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
           onClick={(e) => {
             e.stopPropagation()
             setShowCulture(true)
           }}
-          className="absolute bottom-3 right-3 bg-amber-100 text-amber-700 text-xs font-medium px-3 py-1.5 rounded-full shadow-sm hover:bg-amber-200 transition-colors"
+          className="mt-2 mx-auto block bg-amber-100 text-amber-700 text-xs font-medium px-4 py-2 rounded-full shadow-sm hover:bg-amber-200 transition-colors"
         >
           💡 Culture tip
         </motion.button>
       )}
 
-      {/* Culture tip popup */}
+      {/* Culture tip popup — centered overlay */}
       <AnimatePresence>
         {showCulture && cultureTip && (
           <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 10, scale: 0.95 }}
-            className="absolute inset-x-4 bottom-4 bg-white rounded-2xl shadow-xl border border-amber-200 p-5 z-10"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            className="absolute inset-x-2 top-1/2 -translate-y-1/2 bg-white rounded-2xl shadow-xl border border-amber-200 p-5 z-20"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-start justify-between">

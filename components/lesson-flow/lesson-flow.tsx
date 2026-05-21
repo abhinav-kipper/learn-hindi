@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useRouter } from 'next/navigation'
 import { Lesson } from '@/types/lesson'
 import { ProgressDots } from './progress-dots'
 import { SectionIntro } from './section-intro'
@@ -18,6 +19,7 @@ interface LessonFlowProps {
 }
 
 export function LessonFlow({ lesson }: LessonFlowProps) {
+  const router = useRouter()
   const sections: Section[] = useMemo(() => {
     return ['intro', 'phrases', 'skills', 'cta']
   }, [])
@@ -87,8 +89,18 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
 
   return (
     <div className={`h-dvh flex flex-col ${sectionBg[currentSection]} transition-colors duration-500`}>
-      {/* Top bar */}
-      <div className="flex items-center justify-between px-4 pt-4 safe-top">
+      {/* Top bar — swipe down to go home */}
+      <motion.div
+        className="flex items-center justify-between px-4 pt-4 safe-top"
+        drag="y"
+        dragConstraints={{ top: 0, bottom: 0 }}
+        dragElastic={0.5}
+        onDragEnd={(_, info) => {
+          if (info.offset.y > 100 || info.velocity.y > 500) {
+            router.push('/')
+          }
+        }}
+      >
         <button
           onClick={goBack}
           disabled={sectionIndex === 0}
@@ -109,7 +121,7 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
           />
         </FeatureTooltip>
         <a href="/" className="text-sm text-[var(--text-tertiary)] w-12 text-right">✕</a>
-      </div>
+      </motion.div>
 
       {/* Quick action bar — section labels only, no separate practice button */}
       <div className="flex items-center justify-center gap-3 px-4 py-2">
@@ -128,8 +140,20 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
         ))}
       </div>
 
-      {/* Section content */}
-      <div className="flex-1 overflow-hidden relative">
+      {/* Section content — swipe left/right to navigate sections */}
+      <motion.div
+        className="flex-1 overflow-hidden relative"
+        drag="x"
+        dragConstraints={{ left: 0, right: 0 }}
+        dragElastic={0.3}
+        onDragEnd={(_, info) => {
+          if (info.offset.x < -80 || info.velocity.x < -500) {
+            goNext()
+          } else if (info.offset.x > 80 || info.velocity.x > 500) {
+            goBack()
+          }
+        }}
+      >
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={currentSection}
@@ -144,7 +168,7 @@ export function LessonFlow({ lesson }: LessonFlowProps) {
             {renderSection()}
           </motion.div>
         </AnimatePresence>
-      </div>
+      </motion.div>
     </div>
   )
 }
