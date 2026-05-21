@@ -151,21 +151,19 @@ export default function CategoryPage() {
 
       {/* Word Cards */}
       <div className="space-y-3">
-        <AnimatePresence mode="popLayout">
-          {sortedWords.map((word, index) => (
-            <SwipeableWordCard
-              key={word.hindi}
-              word={word}
-              index={index}
-              isFlipped={flippedCard === word.hindi}
-              isKnown={knownSet.has(word.hindi)}
-              isReview={reviewSet.has(word.hindi)}
-              onTap={handleCardTap}
-              onSwipeRight={handleSwipeRight}
-              onSwipeLeft={handleSwipeLeft}
-            />
-          ))}
-        </AnimatePresence>
+        {sortedWords.map((word, index) => (
+          <SwipeableWordCard
+            key={word.hindi}
+            word={word}
+            index={index}
+            isFlipped={flippedCard === word.hindi}
+            isKnown={knownSet.has(word.hindi)}
+            isReview={reviewSet.has(word.hindi)}
+            onTap={handleCardTap}
+            onSwipeRight={handleSwipeRight}
+            onSwipeLeft={handleSwipeLeft}
+          />
+        ))}
       </div>
     </div>
   )
@@ -205,11 +203,9 @@ function SwipeableWordCard({
 
   return (
     <motion.div
-      layout
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, x: 100 }}
-      transition={{ layout: { type: 'spring', stiffness: 400, damping: 30 }, delay: Math.min(index * 0.02, 0.3) }}
+      transition={{ delay: Math.min(index * 0.02, 0.3) }}
     >
       <motion.div
         style={{ x }}
