@@ -14,6 +14,7 @@ export interface QuizQuestion {
   answers: QuizAnswer[]
   lessonId: string
   phraseIndex: number
+  source?: 'phrase' | 'vocab'
 }
 
 export interface QuizResult {
