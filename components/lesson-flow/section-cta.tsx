@@ -12,6 +12,33 @@ interface SectionCtaProps {
   lesson: Lesson
 }
 
+function CountUp({ target, duration = 1200, delay = 0 }: { target: number; duration?: number; delay?: number }) {
+  const [display, setDisplay] = useState(0)
+
+  useEffect(() => {
+    let raf = 0
+    let startTime: number | null = null
+    const timeoutId = window.setTimeout(() => {
+      const step = (timestamp: number) => {
+        if (startTime === null) startTime = timestamp
+        const elapsed = timestamp - startTime
+        const progress = Math.min(elapsed / duration, 1)
+        const eased = 1 - Math.pow(1 - progress, 3)
+        setDisplay(Math.round(eased * target))
+        if (progress < 1) raf = requestAnimationFrame(step)
+      }
+      raf = requestAnimationFrame(step)
+    }, delay)
+
+    return () => {
+      window.clearTimeout(timeoutId)
+      cancelAnimationFrame(raf)
+    }
+  }, [target, duration, delay])
+
+  return <span className="tabular-nums">{display}</span>
+}
+
 export function SectionCta({ lesson }: SectionCtaProps) {
   const { config } = useLanguage()
   const [completed, setCompleted] = useState(false)
@@ -39,22 +66,56 @@ export function SectionCta({ lesson }: SectionCtaProps) {
 
   return (
     <div className="flex flex-col items-center justify-center flex-1 px-6 py-8">
-      {/* Celebration */}
-      <motion.div
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 0.1, type: 'spring' }}
-        className="text-center"
-      >
-        <p className="text-5xl mb-4">🎉</p>
-        <h2 className="text-2xl font-extrabold text-[var(--text-primary)]">
-          You covered {lesson.phrases.length} phrases!
-        </h2>
-        <p className="text-[var(--text-secondary)] mt-2">Great progress on this lesson</p>
-      </motion.div>
+      <div className="text-center flex flex-col items-center">
+        {/* Bouncy emoji stamp */}
+        <motion.p
+          initial={{ scale: 0, rotate: -25, opacity: 0 }}
+          animate={{ scale: 1, rotate: 0, opacity: 1 }}
+          transition={{ delay: 0.35, type: 'spring', stiffness: 220, damping: 11 }}
+          className="text-7xl mb-2"
+        >
+          🎉
+        </motion.p>
 
-      {/* Actions */}
-      <div className="w-full mt-auto space-y-3">
+        {/* Hero number — counts up from 0 */}
+        <motion.div
+          initial={{ scale: 0.5, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 0.55, type: 'spring', stiffness: 180, damping: 16 }}
+          className="leading-none"
+        >
+          <span className="text-8xl font-extrabold bg-gradient-to-br from-indigo-500 via-violet-500 to-pink-500 bg-clip-text text-transparent">
+            <CountUp target={lesson.phrases.length} duration={1100} delay={700} />
+          </span>
+        </motion.div>
+
+        {/* Caption — fades in after the number lands */}
+        <motion.p
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.9, duration: 0.4 }}
+          className="text-lg font-semibold text-[var(--text-primary)] mt-3"
+        >
+          phrases learned
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2.15, duration: 0.4 }}
+          className="text-sm text-[var(--text-secondary)] mt-1"
+        >
+          Great progress on <span className="font-semibold text-[var(--text-primary)]">{lesson.title}</span>
+        </motion.p>
+      </div>
+
+      {/* Actions — fade in last so the hero moment lands first */}
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 2.4, duration: 0.5, ease: 'easeOut' }}
+        className="w-full mt-auto space-y-3"
+      >
         <a
           href={`/practice/${lesson.id}`}
           className="block w-full text-center py-4 px-6 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-200 text-lg"
@@ -90,7 +151,7 @@ export function SectionCta({ lesson }: SectionCtaProps) {
         >
           Back to Home
         </a>
-      </div>
+      </motion.div>
     </div>
   )
 }
