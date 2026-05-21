@@ -1,0 +1,81 @@
+{
+  "id": "postpositions",
+  "title": "Postpositions",
+  "situation": "Navigate space, time, and relationships — Hindi's version of prepositions (but they come AFTER)",
+  "skills": ["location postpositions", "time postpositions", "relationship postpositions"],
+  "phrases": [
+    {
+      "hindi": "ghar mein / office mein",
+      "english": "in the house / in the office",
+      "context": "'mein' = in/inside. THE most common postposition. Comes AFTER the noun, unlike English prepositions",
+      "pronunciation": "GHAR mein / OFFICE mein"
+    },
+    {
+      "hindi": "table pe / chahat pe",
+      "english": "on the table / on the roof",
+      "context": "'pe' (colloquial) or 'par' (formal) = on/at. 'pe' is what you'll hear in conversation 90% of the time",
+      "pronunciation": "TABLE pe / CHHAT pe"
+    },
+    {
+      "hindi": "mere paas phone hai",
+      "english": "I have a phone (near me / in my possession)",
+      "context": "'ke paas' = near/with/having. Hindi has NO verb 'to have' — you say 'near me [thing] is'. Mind-bending but essential",
+      "pronunciation": "ME-re PAAS phone hai"
+    },
+    {
+      "hindi": "store ke saamne / ghar ke peeche",
+      "english": "in front of the store / behind the house",
+      "context": "'ke saamne' = in front of, 'ke peeche' = behind. Two-word postpositions always use 'ke' as connector",
+      "pronunciation": "STORE ke SAAM-ne / GHAR ke PEE-chhe"
+    },
+    {
+      "hindi": "do baje ke baad / khaane se pehle",
+      "english": "after 2 o'clock / before eating",
+      "context": "'ke baad' = after, 'se pehle' = before. Note: 'before' uses 'se' not 'ke'. Time expressions need these",
+      "pronunciation": "DO ba-JE ke BAAD / KHA-ne se PEH-le"
+    },
+    {
+      "hindi": "yahan se wahan tak",
+      "english": "from here to there",
+      "context": "'se' = from, 'tak' = until/to. Together they create from→to. 'ghar se office tak' = from home to office",
+      "pronunciation": "ya-HAAN se wa-HAAN TAK"
+    },
+    {
+      "hindi": "chai ke liye / tumhare liye",
+      "english": "for tea / for you",
+      "context": "'ke liye' = for (purpose/benefit). With pronouns: 'mere liye' (for me), 'uske liye' (for him/her)",
+      "pronunciation": "CHAI ke LI-ye / tum-HA-re LI-ye"
+    },
+    {
+      "hindi": "bus mein / auto se / paidal",
+      "english": "by bus / by auto / on foot",
+      "context": "'mein' for enclosed vehicles (bus/train/car), 'se' for open vehicles (auto/bike) or means. 'paidal' = walking",
+      "pronunciation": "BUS mein / AUTO se / pai-DAL"
+    },
+    {
+      "hindi": "uske baare mein baat karo",
+      "english": "Talk about him/her/that",
+      "context": "'ke baare mein' = about (topic). Literally 'in the matter of'. Very common in conversation",
+      "pronunciation": "US-ke BAA-re mein BAAT ka-RO"
+    },
+    {
+      "hindi": "mere bina / tere saath",
+      "english": "without me / with you",
+      "context": "'ke bina' = without, 'ke saath' = with (accompanying). 'mere saath chal' = come with me",
+      "pronunciation": "ME-re bi-NA / TE-re SAATH"
+    }
+  ],
+  "grammar_notes": [
+    "POSTPOSITIONS come AFTER the noun (unlike English prepositions). English: 'in the house', Hindi: 'ghar mein' (house-in). Always noun + postposition",
+    "Simple postpositions: mein (in), pe/par (on/at), se (from/by/with), tak (until/to), ko (to/object marker)",
+    "Compound postpositions use 'ke/ki' as connector: ke paas (near), ke saamne (in front), ke peeche (behind), ke upar (above), ke neeche (below), ke baad (after), ke liye (for)",
+    "The connector changes with gender: 'ke' (masculine), 'ki' (feminine). 'Ghar ke saamne' but 'dukaan ki taraf' (toward the shop-feminine)",
+    "Pronouns change form before postpositions: main→mere/mujh, tu→tere/tujh, woh→uske/us, hum→hamare/hum. This is called the oblique case"
+  ],
+  "culture_notes": [
+    "Hindi has NO verb 'to have'. Possession is expressed as 'near me [thing] is': 'mere paas paise hain' = I have money (literally: near-me money is)",
+    "Directions in India use landmarks, not street names: 'mandir ke saamne' (in front of the temple), 'nadi ke us paar' (across the river)"
+  ],
+  "skill_breakdown": [],
+  "practice_prompt": "Practice postpositions by describing where things are, giving directions, or talking about time. Tell me where you live, how you get to work, or what's near your house. I'll help you get the word order right."
+}

@@ -1,0 +1,82 @@
+{
+  "id": "numbers",
+  "title": "Numbers & Counting",
+  "situation": "Master Hindi numbers — ordering quantities, telling time, negotiating prices",
+  "skills": ["numbers 1-10", "numbers 11-20", "tens & hundreds"],
+  "phrases": [
+    {
+      "hindi": "ek, do, teen, chaar, paanch",
+      "english": "one, two, three, four, five",
+      "context": "The first 5 — you'll use these constantly for ordering, counting, everything",
+      "pronunciation": "EK, DO, TEEN, CHAAR, PAANCH"
+    },
+    {
+      "hindi": "chhe, saat, aath, nau, das",
+      "english": "six, seven, eight, nine, ten",
+      "context": "6-10 completes your basic set. 'das' (ten) is especially common in prices",
+      "pronunciation": "CHHE, SAAT, AATH, NAU, DAS"
+    },
+    {
+      "hindi": "gyarah, baarah, terah, chaudah, pandrah",
+      "english": "eleven, twelve, thirteen, fourteen, fifteen",
+      "context": "11-15 are irregular — no pattern, just memorize. 'pandrah minute' (15 mins) is very common",
+      "pronunciation": "GYA-rah, BAA-rah, TE-rah, CHAU-dah, PAN-drah"
+    },
+    {
+      "hindi": "solah, satrah, atharah, unnis, bees",
+      "english": "sixteen, seventeen, eighteen, nineteen, twenty",
+      "context": "16-20 are also irregular. 'bees' (20) is important — 'bees rupaye' is a common price",
+      "pronunciation": "SO-lah, SAT-rah, ATHA-rah, UN-nis, BEES"
+    },
+    {
+      "hindi": "tees, chaalees, pachaas, saath, assi, nabbe, sau",
+      "english": "30, 40, 50, 60, 80, 90, 100",
+      "context": "The tens — 'sau' (100) is crucial for prices. Note: 70 is 'sattar', we skipped it above",
+      "pronunciation": "TEES, CHAA-lees, PA-chaas, SAATH, AS-si, NAB-be, SAU"
+    },
+    {
+      "hindi": "do chai dena",
+      "english": "Give me two teas",
+      "context": "Number + item + 'dena' (give) — the basic ordering formula. No 'please' needed, it's natural",
+      "pronunciation": "DO chai DE-na"
+    },
+    {
+      "hindi": "kitne ka hai? — paanch sau rupaye",
+      "english": "How much is it? — 500 rupees",
+      "context": "'kitne ka' = how much for. 'paanch sau' = five hundred. Combine numbers: 5 x 100",
+      "pronunciation": "KIT-ne ka hai? — PAANCH sau ru-PA-ye"
+    },
+    {
+      "hindi": "teen baje milte hain",
+      "english": "Let's meet at 3 o'clock",
+      "context": "'baje' = o'clock. Number + 'baje' for telling time. 'milte hain' = let's meet",
+      "pronunciation": "TEEN ba-JE MIL-te hain"
+    },
+    {
+      "hindi": "ek ghanta mein aa jaunga",
+      "english": "I'll come in one hour",
+      "context": "'ghanta' = hour. Number + time unit + 'mein' = in [duration]. Common for ETAs",
+      "pronunciation": "EK GHAN-ta mein AA jau-NGA"
+    },
+    {
+      "hindi": "paanch minute ruko",
+      "english": "Wait five minutes",
+      "context": "Casual and super common. 'ruko' = wait (informal command). Indians say this meaning 10-15 mins",
+      "pronunciation": "PAANCH mi-NUT RU-ko"
+    }
+  ],
+  "grammar_notes": [
+    "Hindi numbers 1-100 are mostly irregular — unlike English, there's no 'twenty-one, twenty-two' pattern. Each number has its own word (ikkees=21, baees=22, etc.)",
+    "For hundreds: number + 'sau' (100). 200=do sau, 300=teen sau, 500=paanch sau. For thousands: number + 'hazaar'",
+    "Time: number + 'baje' = o'clock. 'Sava' = quarter past, 'saadhe' = half past, 'paune' = quarter to",
+    "Ordering formula: number + item + 'dena' (give). 'Do samosa dena' = give 2 samosas. No articles needed",
+    "Duration: number + time-unit + 'mein' (in). 'Das minute mein' = in 10 minutes. 'Do ghante mein' = in 2 hours"
+  ],
+  "culture_notes": [
+    "Indians commonly say 'paanch minute' (5 minutes) meaning anywhere from 10-30 minutes. It's not lying — it's optimism",
+    "When bargaining, start at 50-60% of quoted price. Use numbers confidently: 'teen sau dega? nahi toh chhod' (will you give for 300? otherwise leave)",
+    "Phone numbers are read digit by digit, often grouped: 'nine eight seven, one two three, four five six seven'"
+  ],
+  "skill_breakdown": [],
+  "practice_prompt": "Practice using Hindi numbers in real situations. Ask me prices, times, or quantities — I'll respond naturally and help you get comfortable with numbers in conversation."
+}

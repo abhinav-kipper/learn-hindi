@@ -3,12 +3,15 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { getAllLessons } from '@/lib/lessons'
+import { getAllFoundations } from '@/lib/foundations'
 import { getProgress } from '@/lib/progress'
 import { LessonCard } from '@/components/lesson-card'
 import { StreakCounter } from '@/components/streak-counter'
 import { FeatureTooltip } from '@/components/feature-tooltip'
 import { isOnboardingComplete, getUserProfile } from '@/lib/onboarding'
 import { playSound, isMuted, toggleMute } from '@/lib/sounds'
+
+type Tab = 'situations' | 'foundations'
 
 export default function Home() {
   const router = useRouter()
@@ -17,7 +20,9 @@ export default function Home() {
   const [dailyGoal, setDailyGoal] = useState(5)
   const [completedCount, setCompletedCount] = useState(0)
   const [muted, setMuted] = useState(false)
+  const [activeTab, setActiveTab] = useState<Tab>('situations')
   const lessons = getAllLessons()
+  const foundations = getAllFoundations()
 
   useEffect(() => {
     if (!isOnboardingComplete()) {
@@ -41,12 +46,14 @@ export default function Home() {
     )
   }
 
+  const currentLessons = activeTab === 'situations' ? lessons : foundations
+
   return (
     <div className="max-w-md mx-auto px-4 py-6">
       <div className="flex items-center justify-between mb-2">
         <div>
           <h1 className="text-2xl font-extrabold text-[var(--text-primary)] tracking-tight">
-            Hey {userName}! 👋
+            Hey {userName}!
           </h1>
           <p className="text-sm text-[var(--text-secondary)] mt-1">
             {dailyGoal} min today — you got this!
@@ -74,18 +81,42 @@ export default function Home() {
         </div>
       </div>
 
-      {completedCount === 0 && (
+      {/* Tabs */}
+      <div className="flex items-center gap-2 mb-4 mt-3">
+        <button
+          onClick={() => { setActiveTab('situations'); playSound('tap') }}
+          className={`px-4 py-2 text-sm font-semibold rounded-full transition-all ${
+            activeTab === 'situations'
+              ? 'bg-[var(--accent)] text-white shadow-md'
+              : 'bg-[var(--bg-surface)] text-[var(--text-secondary)] border border-[var(--border)] hover:text-[var(--text-primary)]'
+          }`}
+        >
+          Situations
+        </button>
+        <button
+          onClick={() => { setActiveTab('foundations'); playSound('tap') }}
+          className={`px-4 py-2 text-sm font-semibold rounded-full transition-all ${
+            activeTab === 'foundations'
+              ? 'bg-[var(--accent)] text-white shadow-md'
+              : 'bg-[var(--bg-surface)] text-[var(--text-secondary)] border border-[var(--border)] hover:text-[var(--text-primary)]'
+          }`}
+        >
+          Foundations
+        </button>
+      </div>
+
+      {completedCount === 0 && activeTab === 'situations' && (
         <div className="mb-4 p-3 bg-[var(--accent-soft)] rounded-xl border border-[var(--accent)]/20">
           <p className="text-sm text-[var(--accent-text)] font-medium">
-            Start with lesson 1 — everything builds from here ✨
+            Start with lesson 1 — everything builds from here
           </p>
         </div>
       )}
 
-      <div className="h-[calc(100dvh-180px)] overflow-y-auto snap-y snap-mandatory space-y-4 pb-8 scrollbar-hide">
-        {lessons.map((lesson, index) => {
-          const isFirst = index === 0
-          const isLocked = completedCount === 0 && index > 0
+      <div className="h-[calc(100dvh-220px)] overflow-y-auto snap-y snap-mandatory space-y-4 pb-8 scrollbar-hide">
+        {currentLessons.map((lesson, index) => {
+          const isFirst = index === 0 && activeTab === 'situations'
+          const isLocked = activeTab === 'situations' && completedCount === 0 && index > 0
 
           const card = (
             <div

@@ -1,0 +1,81 @@
+{
+  "id": "present-tense",
+  "title": "Present Tense",
+  "situation": "Learn how to say what you do, what's happening now, and daily routines",
+  "skills": ["present habitual", "present continuous", "pronoun-verb agreement"],
+  "phrases": [
+    {
+      "hindi": "main karta hoon / main karti hoon",
+      "english": "I do (male) / I do (female)",
+      "context": "Base form: main + verb-ta/ti + hoon. Male speakers use '-ta', female use '-ti'. 'hoon' = am",
+      "pronunciation": "MAIN kar-TA hoon / MAIN kar-TI hoon"
+    },
+    {
+      "hindi": "tu karta hai / tu karti hai",
+      "english": "You do (intimate-male) / You do (intimate-female)",
+      "context": "'tu' = intimate you. Still '-ta/-ti' based on WHO you're talking about. 'hai' = is/are",
+      "pronunciation": "TU kar-TA hai / TU kar-TI hai"
+    },
+    {
+      "hindi": "tum karte ho / tum karti ho",
+      "english": "You do (casual-male) / You do (casual-female)",
+      "context": "'tum' = casual you. Note: '-te' for male plural/casual, '-ti' stays same for female. 'ho' = are",
+      "pronunciation": "TUM kar-TE ho / TUM kar-TI ho"
+    },
+    {
+      "hindi": "woh karta hai / woh karti hai",
+      "english": "He does / She does",
+      "context": "'woh' = he/she/that. Same 'hai' as 'tu'. Gender of the SUBJECT decides -ta/-ti",
+      "pronunciation": "WOH kar-TA hai / WOH kar-TI hai"
+    },
+    {
+      "hindi": "hum karte hain / hum karti hain",
+      "english": "We do (male) / We do (female)",
+      "context": "'hum' = we. 'hain' = are (plural). '-te' for male speakers, '-ti' for female group",
+      "pronunciation": "HUM kar-TE hain / HUM kar-TI hain"
+    },
+    {
+      "hindi": "main jaata hoon / main jaati hoon",
+      "english": "I go (male) / I go (female)",
+      "context": "Same pattern with 'jaana' (to go): jaa-ta/jaa-ti. Every verb follows this -ta/-ti/-te rule",
+      "pronunciation": "MAIN jaa-TA hoon / MAIN jaa-TI hoon"
+    },
+    {
+      "hindi": "tum kya karte ho?",
+      "english": "What do you do?",
+      "context": "Question word 'kya' (what) + normal sentence. Word order is flexible in Hindi questions",
+      "pronunciation": "TUM kya KAR-te ho?"
+    },
+    {
+      "hindi": "woh kaam karti hai",
+      "english": "She works",
+      "context": "'kaam karna' = to work (literally 'to do work'). Many Hindi verbs are noun + 'karna'",
+      "pronunciation": "WOH KAAM kar-TI hai"
+    },
+    {
+      "hindi": "hum roz chai peete hain",
+      "english": "We drink tea daily",
+      "context": "'roz' = daily. 'peena' = to drink, becomes 'pee-te' (male) / 'pee-ti' (female). Time words go anywhere",
+      "pronunciation": "HUM ROZ chai PEE-te hain"
+    },
+    {
+      "hindi": "tu kahan jaata hai subah?",
+      "english": "Where do you go in the morning?",
+      "context": "'kahan' = where, 'subah' = morning. Question words don't change the verb form at all",
+      "pronunciation": "TU ka-HAAN jaa-TA hai su-BAH?"
+    }
+  ],
+  "grammar_notes": [
+    "Present tense formula: Subject + verb root + ta/ti/te + hoon/hai/ho/hain. The '-ta' suffix changes by gender, the helper verb changes by person",
+    "Gender agreement: -ta (male singular), -ti (female singular/plural), -te (male plural or with 'tum/aap'). The gender matches the SUBJECT, not the object",
+    "Helper verbs: hoon (I am), hai (he/she/you-tu is), ho (you-tum are), hain (we/they/you-aap are)",
+    "Many verbs are compound: noun + karna. 'kaam karna'=work, 'baat karna'=talk, 'pyaar karna'=love, 'intezaar karna'=wait",
+    "For questions: add kya (what), kahan (where), kab (when), kyun (why) — verb form stays the same"
+  ],
+  "culture_notes": [
+    "Hindi has no 'do/does' helper for questions — you just change intonation or add a question word. 'Tum jaate ho?' with rising tone = 'Do you go?'",
+    "The present tense is used for habits, routines, and general truths — just like English simple present"
+  ],
+  "skill_breakdown": [],
+  "practice_prompt": "Practice making present tense sentences. Tell me about your daily routine, ask me what I do, or describe someone's habits. I'll help you nail the -ta/-ti/-te patterns."
+}

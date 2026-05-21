@@ -1,0 +1,81 @@
+{
+  "id": "pronouns-verbs",
+  "title": "Pronouns & Verb Agreement",
+  "situation": "Master who does what — how pronouns control verb forms in Hindi",
+  "skills": ["pronoun forms", "verb agreement", "oblique pronouns"],
+  "phrases": [
+    {
+      "hindi": "main / tu / tum / aap / woh / hum",
+      "english": "I / you(intimate) / you(casual) / you(formal) / he-she-they / we",
+      "context": "Hindi has 3 levels of 'you': tu (intimate), tum (friendly), aap (respectful). Using wrong one = social disaster",
+      "pronunciation": "MAIN / TU / TUM / AAP / WOH / HUM"
+    },
+    {
+      "hindi": "main karta hoon, tu karta hai, tum karte ho, aap karte hain",
+      "english": "I do, you(int) do, you(cas) do, you(formal) do",
+      "context": "Same verb 'karna' changes helper: hoon/hai/ho/hain. The verb ending (-ta/-te) also shifts for tum/aap",
+      "pronunciation": "MAIN kar-TA hoon, TU kar-TA hai, TUM kar-TE ho, AAP kar-TE hain"
+    },
+    {
+      "hindi": "mujhe / tujhe / tumhe / aapko / usko / humko",
+      "english": "to me / to you(int) / to you(cas) / to you(formal) / to him-her / to us",
+      "context": "Object forms — used when something happens TO someone. 'mujhe bhookh lagi' = I'm hungry (hunger struck to-me)",
+      "pronunciation": "MUJH-e / TUJH-e / TUM-he / AAP-ko / US-ko / HUM-ko"
+    },
+    {
+      "hindi": "mera / tera / tumhara / aapka / uska / hamara",
+      "english": "my / your(int) / your(cas) / your(formal) / his-her / our",
+      "context": "Possessives — these also change gender! mera (my-masc), meri (my-fem), mere (my-plural). Same pattern for all",
+      "pronunciation": "ME-ra / TE-ra / tum-HA-ra / AAP-ka / US-ka / ha-MA-ra"
+    },
+    {
+      "hindi": "meri behen / mera bhai / mere dost",
+      "english": "my sister / my brother / my friends",
+      "context": "Possessive matches the OWNED thing's gender: meri (fem noun), mera (masc noun), mere (plural noun)",
+      "pronunciation": "ME-ri be-HEN / ME-ra BHAI / ME-re DOST"
+    },
+    {
+      "hindi": "woh jaata hai / woh jaati hai / woh jaate hain",
+      "english": "He goes / She goes / They go",
+      "context": "'woh' means he/she/it/they! Same word. Verb form tells you: jaata=he, jaati=she, jaate hain=they",
+      "pronunciation": "WOH jaa-TA hai / WOH jaa-TI hai / WOH jaa-TE hain"
+    },
+    {
+      "hindi": "aap baitho / tum baitho / tu baith",
+      "english": "Please sit (formal) / Sit (casual) / Sit (intimate)",
+      "context": "Commands change by pronoun: aap/tum get '-o' or '-iye' (polite), tu gets bare root. 'aap baithiye' = very polite",
+      "pronunciation": "AAP BAITH-o / TUM BAITH-o / TU BAITH"
+    },
+    {
+      "hindi": "mujhe lagta hai ki woh nahi aayega",
+      "english": "I think (it seems to me) that he won't come",
+      "context": "'mujhe lagta hai' = it seems to me / I think. Literally 'to-me it-seems is'. Indirect construction — very natural in Hindi",
+      "pronunciation": "MUJH-e LAG-ta hai ki WOH na-HI aa-YE-ga"
+    },
+    {
+      "hindi": "tumse ek baat poochni hai",
+      "english": "I need to ask you something",
+      "context": "'tumse' = from you (tum + se). Pronoun + postposition forms: mujhse (from me), tumse (from you), usse (from him/her)",
+      "pronunciation": "TUM-se EK BAAT poochh-NI hai"
+    },
+    {
+      "hindi": "apna kaam karo, mera kaam mujhe karne do",
+      "english": "Do your own work, let me do my work",
+      "context": "'apna' = one's own (reflexive). Used when subject and possessor are same person. 'Main apna kaam karta hoon' = I do my own work",
+      "pronunciation": "AP-na KAAM ka-RO, ME-ra KAAM MUJH-e kar-NE do"
+    }
+  ],
+  "grammar_notes": [
+    "Three 'you' levels: tu (intimate — lovers, God, very close friends, anger), tum (casual — friends, peers, younger people), aap (formal — elders, strangers, respect). When in doubt, use 'aap'",
+    "Verb agreement pattern: main→hoon, tu/woh→hai, tum→ho, hum/aap/woh(plural)→hain. Plus verb ending: -ta with tu/woh, -te with tum/aap/hum",
+    "Possessives change for gender of owned noun: mera phone (my phone-masc), meri gaadi (my car-fem), mere kapde (my clothes-plural). Same rule for tera, uska, hamara etc.",
+    "'woh' is the Swiss Army knife pronoun: he, she, it, that, those, they. Only the verb form or context tells you which meaning is intended",
+    "Oblique case (before postpositions): main→mujh, tu→tujh, woh→us, hum→hum. Add -e/-ko for 'to': mujhe, tujhe. Add -se for 'from': mujhse, tumse"
+  ],
+  "culture_notes": [
+    "Using 'tu' with someone who expects 'aap' is deeply offensive — like calling your boss 'dude' x100. Start with 'aap', downgrade only when invited",
+    "'Apna' (one's own) is unique to Hindi/Urdu. It avoids ambiguity: 'usne apna kaam kiya' = he did HIS OWN work (not someone else's)"
+  ],
+  "skill_breakdown": [],
+  "practice_prompt": "Practice pronouns and verb agreement. Describe your family, tell me about your friends, or ask me questions using different 'you' forms. I'll catch any agreement mismatches and explain the rules."
+}

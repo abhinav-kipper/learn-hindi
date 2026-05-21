@@ -1,0 +1,81 @@
+{
+  "id": "future-tense",
+  "title": "Future Tense",
+  "situation": "Make plans, promises, and predictions — talk about what's going to happen",
+  "skills": ["simple future", "immediate future", "future with gender"],
+  "phrases": [
+    {
+      "hindi": "main karunga / main karungi",
+      "english": "I will do (male) / I will do (female)",
+      "context": "Future: verb root + unga/ungi (for 'main'). Male = -unga, female = -ungi. Simple!",
+      "pronunciation": "MAIN ka-RUN-ga / MAIN ka-RUN-gi"
+    },
+    {
+      "hindi": "tu karega / tu karegi",
+      "english": "You will do (male) / You will do (female)",
+      "context": "With 'tu': verb root + ega/egi. Same ga/gi gender split applies throughout",
+      "pronunciation": "TU ka-RE-ga / TU ka-RE-gi"
+    },
+    {
+      "hindi": "tum karoge / tum karogi",
+      "english": "You will do (casual-male) / You will do (casual-female)",
+      "context": "With 'tum': verb root + oge/ogi. The 'o' sound is the 'tum' marker in future",
+      "pronunciation": "TUM ka-RO-ge / TUM ka-RO-gi"
+    },
+    {
+      "hindi": "woh karega / woh karegi",
+      "english": "He will do / She will do",
+      "context": "'woh' uses same form as 'tu': -ega/-egi. Third person and intimate-you share the form",
+      "pronunciation": "WOH ka-RE-ga / WOH ka-RE-gi"
+    },
+    {
+      "hindi": "hum karenge / hum karengi",
+      "english": "We will do (male group) / We will do (female group)",
+      "context": "'hum' = -enge/-engi. Also used for 'aap' (formal you) and 'woh' (they). The respectful/plural form",
+      "pronunciation": "HUM ka-REN-ge / HUM ka-REN-gi"
+    },
+    {
+      "hindi": "main kal aaunga / main kal aaungi",
+      "english": "I'll come tomorrow (male) / I'll come tomorrow (female)",
+      "context": "'aana' (to come) → 'aaunga/aaungi'. 'kal' = tomorrow (or yesterday — context decides!)",
+      "pronunciation": "MAIN KAL aa-UN-ga / MAIN KAL aa-UN-gi"
+    },
+    {
+      "hindi": "tum kab aaoge?",
+      "english": "When will you come?",
+      "context": "'kab' = when. Just add question word — verb form doesn't change. Rising intonation optional",
+      "pronunciation": "TUM KAB aa-O-ge?"
+    },
+    {
+      "hindi": "main abhi aata hoon",
+      "english": "I'm coming right now (I'll be right there)",
+      "context": "TRICK: Present tense used for immediate future! 'abhi aata hoon' = coming right now. Very common",
+      "pronunciation": "MAIN ab-HI aa-TA hoon"
+    },
+    {
+      "hindi": "kal baarish hogi",
+      "english": "It will rain tomorrow",
+      "context": "'hogi' = will be/will happen (feminine, because 'baarish' is feminine). 'hona' → hoga/hogi/honge",
+      "pronunciation": "KAL BAA-rish HO-gi"
+    },
+    {
+      "hindi": "dekhte hain, kya hota hai",
+      "english": "Let's see what happens",
+      "context": "Non-committal future! 'dekhte hain' = let's see. Indians use this to avoid saying no directly",
+      "pronunciation": "DEKH-te hain, KYA ho-TA hai"
+    }
+  ],
+  "grammar_notes": [
+    "Future tense endings by person: main = -unga/-ungi, tu/woh = -ega/-egi, tum = -oge/-ogi, hum/aap/woh(plural) = -enge/-engi",
+    "Pattern: take verb root + the suffix. 'jaana'→root 'jaa': jaunga, jayega, jaoge, jayenge. 'khaana'→root 'kha': khaunga, khayega, khaoge, khayenge",
+    "The gender split is always -ga (male) vs -gi (female) at the end. This is the one consistent rule across all persons",
+    "'hona' (to be) in future: hoga (he/it-masc will be), hogi (she/it-fem will be), honge (they/we will be), houngi (I-fem will be)",
+    "Shortcut: Present tense + 'abhi/ab' often replaces future for immediate plans. 'Main abhi aata hoon' (I'm coming now) instead of 'main aaunga'"
+  ],
+  "culture_notes": [
+    "'Dekhte hain' (let's see) is the polite Indian no. If someone says this about your plan, it probably won't happen",
+    "Indians frequently use 'kal' without specifying yesterday vs tomorrow — you're expected to figure it out. If confused, ask 'beeta kal ya aane wala kal?'"
+  ],
+  "skill_breakdown": [],
+  "practice_prompt": "Practice future tense by making plans with me. Tell me what you'll do tomorrow, ask me when I'll arrive, or make predictions. I'll help you nail the -ga/-gi/-ge endings."
+}

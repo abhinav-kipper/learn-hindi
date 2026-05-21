@@ -1,0 +1,81 @@
+{
+  "id": "past-tense",
+  "title": "Past Tense",
+  "situation": "Talk about what happened — yesterday, last week, your whole life story",
+  "skills": ["simple past", "past habitual", "gender agreement in past"],
+  "phrases": [
+    {
+      "hindi": "main gaya / main gayi",
+      "english": "I went (male) / I went (female)",
+      "context": "Simple past: verb root + a/i/e. 'gaya' (male), 'gayi' (female). NO helper verb needed for 'I'",
+      "pronunciation": "MAIN ga-YA / MAIN ga-YI"
+    },
+    {
+      "hindi": "woh aaya / woh aayi",
+      "english": "He came / She came",
+      "context": "'aana' (to come) becomes 'aaya/aayi'. Pattern: verb stem + aa sound + ya/yi for gender",
+      "pronunciation": "WOH aa-YA / WOH aa-YI"
+    },
+    {
+      "hindi": "humne khana khaya",
+      "english": "We ate food",
+      "context": "When the verb is transitive (has an object), subject gets 'ne': hum→humne, main→maine, usne (he/she)",
+      "pronunciation": "HUM-ne KHA-na KHA-ya"
+    },
+    {
+      "hindi": "maine kaha tha / maine kahi thi",
+      "english": "I had said (to a male topic) / I had said (to a female topic)",
+      "context": "'tha/thi' after past verb = past perfect (had done). Gender matches OBJECT with transitive verbs!",
+      "pronunciation": "MAIN-ne KA-ha tha / MAIN-ne KA-hi thi"
+    },
+    {
+      "hindi": "tum kahan the? / tum kahan thi?",
+      "english": "Where were you? (to male) / Where were you? (to female)",
+      "context": "'tha/thi/the' alone = was/were. 'the' for male plural/tum-male, 'thi' for female. Very useful!",
+      "pronunciation": "TUM ka-HAAN THE? / TUM ka-HAAN THI?"
+    },
+    {
+      "hindi": "usne mujhe phone kiya",
+      "english": "He/she called me (on phone)",
+      "context": "'usne' = he/she + ne (past transitive marker). 'mujhe' = to me. 'phone karna' = to call",
+      "pronunciation": "US-ne MUJH-e PHONE ki-YA"
+    },
+    {
+      "hindi": "kal main office nahi gaya",
+      "english": "Yesterday I didn't go to office",
+      "context": "'kal' = yesterday/tomorrow (context decides). 'nahi' before verb = didn't. Simple negation!",
+      "pronunciation": "KAL MAIN office na-HI ga-YA"
+    },
+    {
+      "hindi": "bachhpan mein hum roz khelke aate the",
+      "english": "In childhood, we used to come back after playing daily",
+      "context": "Past habitual: verb + te/ti + the/thi/tha. 'aate the' = used to come. Expresses old habits",
+      "pronunciation": "BACH-pan mein HUM ROZ khel-TE aa-TE THE"
+    },
+    {
+      "hindi": "kya hua? sab theek hai?",
+      "english": "What happened? Everything okay?",
+      "context": "'hua' = happened (past of 'hona' = to be/happen). One of the most common past tense phrases",
+      "pronunciation": "KYA hu-A? SAB theek hai?"
+    },
+    {
+      "hindi": "maine socha ki tum aa rahe ho",
+      "english": "I thought that you were coming",
+      "context": "'socha' = thought (past of 'sochna'). 'ki' = that (conjunction). Combining tenses in one sentence",
+      "pronunciation": "MAIN-ne SO-cha ki TUM AA ra-HE ho"
+    }
+  ],
+  "grammar_notes": [
+    "Simple past: verb root + a (male sg), i (female sg), e (male plural). Example: kha-ya (ate-male), kha-yi (ate-female), kha-ye (ate-plural male)",
+    "The 'ne' rule: With transitive verbs (verbs that have an object), the subject takes 'ne' — maine, tune, usne, humne, unhone. The verb then agrees with the OBJECT's gender, not the subject!",
+    "Was/were: tha (male sg), thi (female sg), the (male plural/tum), theen (female plural). 'Main tha' = I was (male), 'Main thi' = I was (female)",
+    "Past habitual (used to): verb-ta/ti/te + tha/thi/the. 'Main jaata tha' = I used to go. Same as present tense form but with tha/thi/the instead of hoon/hai/ho",
+    "Common irregular past forms: jaana→gaya, aana→aaya, karna→kiya, dena→diya, lena→liya, hona→hua"
+  ],
+  "culture_notes": [
+    "'Kal' means both yesterday AND tomorrow — you figure out which from context. If ambiguous, add 'beeta kal' (past yesterday) or 'aane wala kal' (coming tomorrow)",
+    "Indians often use past tense to be polite: 'maine socha ki...' (I thought that...) instead of directly stating what you want"
+  ],
+  "skill_breakdown": [],
+  "practice_prompt": "Practice past tense by telling me about your day, what you did last weekend, or asking me what happened. I'll help you with the -a/-i/-e endings and the tricky 'ne' rule."
+}

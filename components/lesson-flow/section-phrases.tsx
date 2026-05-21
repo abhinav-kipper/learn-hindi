@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Phrase, SkillBreakdown } from '@/types/lesson'
+import { Phrase } from '@/types/lesson'
 import { SwipeableCarousel } from './swipeable-carousel'
 import { ReadAloudButton } from '@/components/read-aloud-button'
 import { playSound } from '@/lib/sounds'
@@ -11,7 +11,6 @@ interface SectionPhrasesProps {
   phrases: Phrase[]
   grammarNotes: string[]
   cultureNotes: string[]
-  skillBreakdown?: SkillBreakdown[]
   onNext: () => void
 }
 
@@ -61,30 +60,6 @@ function matchCultureToPhrase(phrase: Phrase, cultureNotes: string[]): string | 
   }
 
   return bestMatch?.note
-}
-
-function SkillMiniLesson({ skill }: { skill: SkillBreakdown }) {
-  return (
-    <div className="bg-indigo-50 border-2 border-indigo-200 rounded-3xl shadow-lg p-6 min-h-[320px] flex flex-col">
-      <div className="flex items-center gap-2 mb-3">
-        <span className="text-xl">🧠</span>
-        <span className="text-xs font-bold text-indigo-600 uppercase tracking-wider">Skill</span>
-      </div>
-      <h3 className="text-lg font-bold text-indigo-800 mb-2">{skill.skill}</h3>
-      <p className="text-sm text-indigo-700 leading-relaxed mb-4">{skill.explanation}</p>
-      {skill.more_examples.length > 0 && (
-        <div className="space-y-2 mt-auto">
-          <p className="text-xs font-semibold text-indigo-500 uppercase tracking-wide">Examples:</p>
-          {skill.more_examples.slice(0, 3).map((ex, i) => (
-            <div key={i} className="text-sm pl-3 border-l-2 border-indigo-300">
-              <p className="font-medium text-indigo-800">{ex.hindi}</p>
-              <p className="text-indigo-600 text-xs">{ex.english}</p>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  )
 }
 
 function PhraseCardContent({
@@ -138,7 +113,7 @@ function PhraseCardContent({
             {grammarNote && (
               <div className="mt-4 pt-4 border-t border-emerald-100 text-left w-full">
                 <p className="text-xs font-semibold text-emerald-600 uppercase tracking-wide mb-1">
-                  📝 Grammar
+                  Grammar
                 </p>
                 <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
                   {grammarNote}
@@ -163,7 +138,7 @@ function PhraseCardContent({
           }}
           className="mt-2 mx-auto block bg-amber-100 text-amber-700 text-xs font-medium px-4 py-2 rounded-full shadow-sm hover:bg-amber-200 transition-colors"
         >
-          💡 Culture tip
+          Culture tip
         </motion.button>
       )}
 
@@ -180,7 +155,7 @@ function PhraseCardContent({
             <div className="flex items-start justify-between">
               <div className="flex-1">
                 <p className="text-xs font-semibold text-amber-600 uppercase tracking-wide mb-2">
-                  💡 Culture Tip
+                  Culture Tip
                 </p>
                 <p className="text-sm text-[var(--text-primary)] leading-relaxed">
                   {cultureTip}
@@ -203,7 +178,7 @@ function PhraseCardContent({
   )
 }
 
-export function SectionPhrases({ phrases, grammarNotes, cultureNotes, skillBreakdown, onNext }: SectionPhrasesProps) {
+export function SectionPhrases({ phrases, grammarNotes, cultureNotes, onNext }: SectionPhrasesProps) {
   // Match grammar notes to phrases by keyword relevance
   // Track which grammar notes have been used to avoid duplicates
   const usedGrammarNotes = new Set<string>()
@@ -226,7 +201,6 @@ export function SectionPhrases({ phrases, grammarNotes, cultureNotes, skillBreak
   // Assign any unmatched grammar notes to the most relevant remaining phrases
   const unmatchedGrammar = grammarNotes.filter(n => !usedGrammarNotes.has(n))
   for (const note of unmatchedGrammar) {
-    // Find phrase without a grammar note that has best match
     let bestIdx = -1
     let bestScore = 0
     for (let i = 0; i < phrases.length; i++) {
@@ -248,38 +222,15 @@ export function SectionPhrases({ phrases, grammarNotes, cultureNotes, skillBreak
     }
   }
 
-  // Build carousel items, interleaving skill mini-lessons every 3-4 phrases
-  const skills = skillBreakdown || []
-  const carouselItems: React.ReactNode[] = []
-  let skillIdx = 0
-  const PHRASES_PER_SKILL = skills.length > 0 ? Math.ceil(phrases.length / skills.length) : phrases.length + 1
-
-  phrases.forEach((phrase, i) => {
-    carouselItems.push(
-      <PhraseCardContent
-        key={`phrase-${i}`}
-        phrase={phrase}
-        grammarNote={phraseGrammarMap[i]}
-        cultureTip={phraseCultureMap[i]}
-      />
-    )
-
-    // After every PHRASES_PER_SKILL phrases (minimum 3), insert a skill card
-    if (skills.length > 0 && skillIdx < skills.length && (i + 1) % PHRASES_PER_SKILL === 0 && (i + 1) >= 3) {
-      carouselItems.push(
-        <SkillMiniLesson key={`skill-${skillIdx}`} skill={skills[skillIdx]} />
-      )
-      skillIdx++
-    }
-  })
-
-  // Add any remaining skills at the end
-  while (skillIdx < skills.length) {
-    carouselItems.push(
-      <SkillMiniLesson key={`skill-${skillIdx}`} skill={skills[skillIdx]} />
-    )
-    skillIdx++
-  }
+  // Build carousel items — just phrase cards
+  const carouselItems: React.ReactNode[] = phrases.map((phrase, i) => (
+    <PhraseCardContent
+      key={`phrase-${i}`}
+      phrase={phrase}
+      grammarNote={phraseGrammarMap[i]}
+      cultureTip={phraseCultureMap[i]}
+    />
+  ))
 
   return (
     <div className="flex flex-col flex-1 pt-4">
