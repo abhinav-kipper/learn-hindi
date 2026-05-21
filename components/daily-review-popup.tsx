@@ -89,6 +89,9 @@ export function DailyReviewPopup() {
             lastReviewed: null,
             correctCount: 0,
             wrongCount: 0,
+            interval: 0,
+            easeFactor: 2.5,
+            nextReviewAt: null,
           })
           break
         }
