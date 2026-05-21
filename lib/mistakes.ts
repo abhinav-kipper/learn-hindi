@@ -9,6 +9,8 @@
  * is persisted under `{prefix}-mistakes`.
  */
 
+export type MistakeSource = 'practice' | 'quiz'
+
 export interface Mistake {
   id: string
   original: string
@@ -16,6 +18,10 @@ export interface Mistake {
   reason: string
   lessonId: string
   timestamp: string
+  /** Where the mistake came from. Optional for backward compat with records
+   * written before this field existed — readers should treat missing as
+   * 'practice' (the original source). */
+  source?: MistakeSource
 }
 
 function storageKey(prefix: string): string {
@@ -77,6 +83,7 @@ export function addMistake(
   extracted: ExtractedMistake,
   lessonId: string,
   prefix = 'hindi',
+  source: MistakeSource = 'practice',
 ): void {
   if (typeof window === 'undefined') return
   if (!extracted.original || !extracted.correction) return
@@ -88,6 +95,7 @@ export function addMistake(
     reason: extracted.reason,
     lessonId,
     timestamp: new Date().toISOString(),
+    source,
   })
   saveMistakes(mistakes, prefix)
 }

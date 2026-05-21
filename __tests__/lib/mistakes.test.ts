@@ -123,4 +123,22 @@ describe('addMistake + getMistakes', () => {
     expect(getMistakes('hindi')).toHaveLength(0)
     expect(getMistakes('dutch')).toHaveLength(1)
   })
+
+  it('defaults source to practice', () => {
+    addMistake({ original: 'A', correction: 'B', reason: '' }, 'l', 'hindi')
+    expect(getMistakes('hindi')[0].source).toBe('practice')
+  })
+
+  it('records source=quiz when passed', () => {
+    addMistake({ original: 'A', correction: 'B', reason: '' }, 'l', 'hindi', 'quiz')
+    expect(getMistakes('hindi')[0].source).toBe('quiz')
+  })
+
+  it('legacy mistakes (no source field) read back with undefined source', () => {
+    // Simulate a record from before the source field existed
+    localStorage.setItem('hindi-mistakes', JSON.stringify([
+      { id: 'legacy', original: 'X', correction: 'Y', reason: 'r', lessonId: 'l', timestamp: '2026-01-01T00:00:00Z' },
+    ]))
+    expect(getMistakes('hindi')[0].source).toBeUndefined()
+  })
 })

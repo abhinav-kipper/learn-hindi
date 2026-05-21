@@ -3,9 +3,25 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { getMistakes, deleteMistake, clearMistakes, type Mistake } from '@/lib/mistakes'
+import { getMistakes, deleteMistake, clearMistakes, type Mistake, type MistakeSource } from '@/lib/mistakes'
 import { useLanguage } from '@/lib/language-context'
 import { getUniversalLessonById } from '@/lib/all-content'
+
+function SourceChip({ source }: { source: MistakeSource }) {
+  const isQuiz = source === 'quiz'
+  return (
+    <span
+      className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wide ${
+        isQuiz
+          ? 'bg-indigo-100 text-indigo-700'
+          : 'bg-emerald-100 text-emerald-700'
+      }`}
+    >
+      <span>{isQuiz ? '🎯' : '💬'}</span>
+      <span>{isQuiz ? 'Quiz' : 'Practice'}</span>
+    </span>
+  )
+}
 
 export default function MistakesPage() {
   const router = useRouter()
@@ -102,6 +118,9 @@ export default function MistakesPage() {
                       >
                         <div className="flex items-start justify-between gap-2">
                           <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-2 mb-1">
+                              <SourceChip source={m.source ?? 'practice'} />
+                            </div>
                             <p className="text-sm">
                               <span className="line-through text-[var(--text-tertiary)]">{m.original}</span>
                               <span className="mx-2 text-[var(--text-tertiary)]">→</span>

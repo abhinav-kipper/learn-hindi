@@ -3,14 +3,16 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { getStreak, updateStreak } from '@/lib/progress'
+import { useLanguage } from '@/lib/language-context'
 
 export function StreakCounter() {
+  const { config } = useLanguage()
   const [streak, setStreak] = useState(0)
 
   useEffect(() => {
-    updateStreak()
-    setStreak(getStreak())
-  }, [])
+    updateStreak(config.storagePrefix)
+    setStreak(getStreak(config.storagePrefix))
+  }, [config.storagePrefix])
 
   return (
     <motion.div

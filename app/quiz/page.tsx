@@ -75,6 +75,7 @@ export default function QuizPage() {
           },
           question.lessonId,
           config.storagePrefix,
+          'quiz',
         )
       }
     }
