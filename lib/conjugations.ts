@@ -15,211 +15,217 @@ export interface Verb {
   tenses: Record<Tense, ConjRow[]>
 }
 
-// Present imperfective (-taa/-tee/-te + hoon/hai/ho/hain)
-// Past: intransitive → agrees with subject; transitive → ne construction, agree with object
-// Future: stem + -oon/-oge/-ogee/-ega/-egee/-enge/-engi
+// Romanization follows the app's existing style guide (see CONTENT.md):
+//   single-vowel endings (karta/karti, gaya/gayi, karunga/karungi, tha/thi)
+//   theen for fem. plural past (matches existing content)
+//
+// Present imperfective: stem + ta/ti/te + hoon/hai/ho/hain
+// Past intransitive: stem + (i)ya/(y)i/(y)e/(y)een — agrees with subject
+// Past transitive: uses ne construction, verb agrees with direct object
+// Future: stem + unga/ungi/oge/ogi/enge/engi/ega/egi
 
 export const VERBS: Verb[] = [
   {
     id: 'honaa',
-    infinitive: 'honaa',
+    infinitive: 'hona',
     stem: 'ho',
     meaning: 'to be',
     transitive: false,
     tenses: {
+      // honaa as the auxiliary doesn't show gender — single form per person
       present: [
         { subjectId: 'main', subject: 'main', form: 'hoon' },
-        { subjectId: 'tu', subject: 'tu', form: 'hai' },
         { subjectId: 'tum', subject: 'tum', form: 'ho' },
         { subjectId: 'aap', subject: 'aap', form: 'hain' },
-        { subjectId: 'voh-m', subject: 'voh (m)', form: 'hai' },
-        { subjectId: 'voh-f', subject: 'voh (f)', form: 'hai' },
+        { subjectId: 'voh', subject: 'voh', form: 'hai' },
         { subjectId: 'ham', subject: 'ham', form: 'hain' },
       ],
       past: [
-        { subjectId: 'main-m', subject: 'main (m)', form: 'thaa' },
-        { subjectId: 'main-f', subject: 'main (f)', form: 'thee' },
-        { subjectId: 'tu-m', subject: 'tu (m)', form: 'thaa' },
-        { subjectId: 'tu-f', subject: 'tu (f)', form: 'thee' },
+        { subjectId: 'main-m', subject: 'main (m)', form: 'tha' },
+        { subjectId: 'main-f', subject: 'main (f)', form: 'thi' },
         { subjectId: 'tum-m', subject: 'tum (m)', form: 'the' },
         { subjectId: 'tum-f', subject: 'tum (f)', form: 'theen' },
         { subjectId: 'aap-m', subject: 'aap (m)', form: 'the' },
         { subjectId: 'aap-f', subject: 'aap (f)', form: 'theen' },
-        { subjectId: 'voh-m', subject: 'voh (m)', form: 'thaa' },
-        { subjectId: 'voh-f', subject: 'voh (f)', form: 'thee' },
+        { subjectId: 'voh-m', subject: 'voh (m)', form: 'tha' },
+        { subjectId: 'voh-f', subject: 'voh (f)', form: 'thi' },
         { subjectId: 'ham-m', subject: 'ham (m)', form: 'the' },
         { subjectId: 'ham-f', subject: 'ham (f)', form: 'theen' },
       ],
       future: [
-        { subjectId: 'main-m', subject: 'main (m)', form: 'hongaa' },
-        { subjectId: 'main-f', subject: 'main (f)', form: 'hongee' },
+        { subjectId: 'main-m', subject: 'main (m)', form: 'hunga' },
+        { subjectId: 'main-f', subject: 'main (f)', form: 'hungi' },
         { subjectId: 'tum-m', subject: 'tum (m)', form: 'hoge' },
         { subjectId: 'tum-f', subject: 'tum (f)', form: 'hogi' },
         { subjectId: 'aap-m', subject: 'aap (m)', form: 'honge' },
         { subjectId: 'aap-f', subject: 'aap (f)', form: 'hongi' },
-        { subjectId: 'voh-m', subject: 'voh (m)', form: 'hogaa' },
-        { subjectId: 'voh-f', subject: 'voh (f)', form: 'hogee' },
+        { subjectId: 'voh-m', subject: 'voh (m)', form: 'hoga' },
+        { subjectId: 'voh-f', subject: 'voh (f)', form: 'hogi' },
         { subjectId: 'ham', subject: 'ham', form: 'honge' },
       ],
     },
   },
   {
     id: 'jaanaa',
-    infinitive: 'jaanaa',
+    infinitive: 'jaana',
     stem: 'jaa',
     meaning: 'to go',
     transitive: false,
     tenses: {
       present: [
-        { subjectId: 'main-m', subject: 'main (m)', form: 'jaataa hoon' },
-        { subjectId: 'main-f', subject: 'main (f)', form: 'jaatee hoon' },
+        { subjectId: 'main-m', subject: 'main (m)', form: 'jaata hoon' },
+        { subjectId: 'main-f', subject: 'main (f)', form: 'jaati hoon' },
         { subjectId: 'tum-m', subject: 'tum (m)', form: 'jaate ho' },
-        { subjectId: 'tum-f', subject: 'tum (f)', form: 'jaatee ho' },
-        { subjectId: 'aap', subject: 'aap', form: 'jaate hain' },
-        { subjectId: 'voh-m', subject: 'voh (m)', form: 'jaataa hai' },
-        { subjectId: 'voh-f', subject: 'voh (f)', form: 'jaatee hai' },
+        { subjectId: 'tum-f', subject: 'tum (f)', form: 'jaati ho' },
+        { subjectId: 'aap-m', subject: 'aap (m)', form: 'jaate hain' },
+        { subjectId: 'aap-f', subject: 'aap (f)', form: 'jaati hain' },
+        { subjectId: 'voh-m', subject: 'voh (m)', form: 'jaata hai' },
+        { subjectId: 'voh-f', subject: 'voh (f)', form: 'jaati hai' },
         { subjectId: 'ham', subject: 'ham', form: 'jaate hain' },
       ],
       past: [
-        { subjectId: 'main-m', subject: 'main (m)', form: 'gayaa' },
-        { subjectId: 'main-f', subject: 'main (f)', form: 'gayee' },
+        { subjectId: 'main-m', subject: 'main (m)', form: 'gaya' },
+        { subjectId: 'main-f', subject: 'main (f)', form: 'gayi' },
         { subjectId: 'tum-m', subject: 'tum (m)', form: 'gaye' },
-        { subjectId: 'tum-f', subject: 'tum (f)', form: 'gayin' },
+        { subjectId: 'tum-f', subject: 'tum (f)', form: 'gayeen' },
         { subjectId: 'aap-m', subject: 'aap (m)', form: 'gaye' },
-        { subjectId: 'aap-f', subject: 'aap (f)', form: 'gayin' },
-        { subjectId: 'voh-m', subject: 'voh (m)', form: 'gayaa' },
-        { subjectId: 'voh-f', subject: 'voh (f)', form: 'gayee' },
+        { subjectId: 'aap-f', subject: 'aap (f)', form: 'gayeen' },
+        { subjectId: 'voh-m', subject: 'voh (m)', form: 'gaya' },
+        { subjectId: 'voh-f', subject: 'voh (f)', form: 'gayi' },
         { subjectId: 'ham', subject: 'ham', form: 'gaye' },
       ],
       future: [
-        { subjectId: 'main-m', subject: 'main (m)', form: 'jaaungaa' },
-        { subjectId: 'main-f', subject: 'main (f)', form: 'jaaungee' },
-        { subjectId: 'tum-m', subject: 'tum (m)', form: 'jaoge' },
-        { subjectId: 'tum-f', subject: 'tum (f)', form: 'jaogi' },
+        { subjectId: 'main-m', subject: 'main (m)', form: 'jaaunga' },
+        { subjectId: 'main-f', subject: 'main (f)', form: 'jaaungi' },
+        { subjectId: 'tum-m', subject: 'tum (m)', form: 'jaaoge' },
+        { subjectId: 'tum-f', subject: 'tum (f)', form: 'jaaogi' },
         { subjectId: 'aap-m', subject: 'aap (m)', form: 'jaayenge' },
         { subjectId: 'aap-f', subject: 'aap (f)', form: 'jaayengi' },
-        { subjectId: 'voh-m', subject: 'voh (m)', form: 'jaayegaa' },
-        { subjectId: 'voh-f', subject: 'voh (f)', form: 'jaayegee' },
+        { subjectId: 'voh-m', subject: 'voh (m)', form: 'jaayega' },
+        { subjectId: 'voh-f', subject: 'voh (f)', form: 'jaayegi' },
         { subjectId: 'ham', subject: 'ham', form: 'jaayenge' },
       ],
     },
   },
   {
     id: 'karnaa',
-    infinitive: 'karnaa',
+    infinitive: 'karna',
     stem: 'kar',
     meaning: 'to do',
     transitive: true,
     tenses: {
       present: [
         { subjectId: 'main-m', subject: 'main (m)', form: 'karta hoon' },
-        { subjectId: 'main-f', subject: 'main (f)', form: 'kartee hoon' },
+        { subjectId: 'main-f', subject: 'main (f)', form: 'karti hoon' },
         { subjectId: 'tum-m', subject: 'tum (m)', form: 'karte ho' },
-        { subjectId: 'tum-f', subject: 'tum (f)', form: 'kartee ho' },
-        { subjectId: 'aap', subject: 'aap', form: 'karte hain' },
+        { subjectId: 'tum-f', subject: 'tum (f)', form: 'karti ho' },
+        { subjectId: 'aap-m', subject: 'aap (m)', form: 'karte hain' },
+        { subjectId: 'aap-f', subject: 'aap (f)', form: 'karti hain' },
         { subjectId: 'voh-m', subject: 'voh (m)', form: 'karta hai' },
-        { subjectId: 'voh-f', subject: 'voh (f)', form: 'kartee hai' },
+        { subjectId: 'voh-f', subject: 'voh (f)', form: 'karti hai' },
         { subjectId: 'ham', subject: 'ham', form: 'karte hain' },
       ],
-      // Transitive past: ergative construction. Verb agrees with direct object.
-      // Drill object agreement: show object gender, ask for verb form.
+      // Transitive past: ergative ("usne X kiya"). Verb agrees with direct
+      // object, not subject. We drill object-agreement rather than subject.
       past: [
-        { subjectId: 'obj-m-sg', subject: 'masc. object (sg)', form: 'kiyaa' },
-        { subjectId: 'obj-f-sg', subject: 'fem. object (sg)', form: 'kii' },
-        { subjectId: 'obj-m-pl', subject: 'masc. object (pl)', form: 'kiye' },
-        { subjectId: 'obj-f-pl', subject: 'fem. object (pl)', form: 'keen' },
+        { subjectId: 'obj-m-sg', subject: 'usne (m. obj sg)', form: 'kiya' },
+        { subjectId: 'obj-f-sg', subject: 'usne (f. obj sg)', form: 'ki' },
+        { subjectId: 'obj-m-pl', subject: 'usne (m. obj pl)', form: 'kiye' },
+        { subjectId: 'obj-f-pl', subject: 'usne (f. obj pl)', form: 'keen' },
       ],
       future: [
-        { subjectId: 'main-m', subject: 'main (m)', form: 'karuungaa' },
-        { subjectId: 'main-f', subject: 'main (f)', form: 'karuungee' },
+        { subjectId: 'main-m', subject: 'main (m)', form: 'karunga' },
+        { subjectId: 'main-f', subject: 'main (f)', form: 'karungi' },
         { subjectId: 'tum-m', subject: 'tum (m)', form: 'karoge' },
         { subjectId: 'tum-f', subject: 'tum (f)', form: 'karogi' },
         { subjectId: 'aap-m', subject: 'aap (m)', form: 'karenge' },
         { subjectId: 'aap-f', subject: 'aap (f)', form: 'karengi' },
-        { subjectId: 'voh-m', subject: 'voh (m)', form: 'karegaa' },
-        { subjectId: 'voh-f', subject: 'voh (f)', form: 'karegee' },
+        { subjectId: 'voh-m', subject: 'voh (m)', form: 'karega' },
+        { subjectId: 'voh-f', subject: 'voh (f)', form: 'karegi' },
         { subjectId: 'ham', subject: 'ham', form: 'karenge' },
       ],
     },
   },
   {
     id: 'aanaa',
-    infinitive: 'aanaa',
+    infinitive: 'aana',
     stem: 'aa',
     meaning: 'to come',
     transitive: false,
     tenses: {
       present: [
-        { subjectId: 'main-m', subject: 'main (m)', form: 'aataa hoon' },
-        { subjectId: 'main-f', subject: 'main (f)', form: 'aatee hoon' },
+        { subjectId: 'main-m', subject: 'main (m)', form: 'aata hoon' },
+        { subjectId: 'main-f', subject: 'main (f)', form: 'aati hoon' },
         { subjectId: 'tum-m', subject: 'tum (m)', form: 'aate ho' },
-        { subjectId: 'tum-f', subject: 'tum (f)', form: 'aatee ho' },
-        { subjectId: 'aap', subject: 'aap', form: 'aate hain' },
-        { subjectId: 'voh-m', subject: 'voh (m)', form: 'aataa hai' },
-        { subjectId: 'voh-f', subject: 'voh (f)', form: 'aatee hai' },
+        { subjectId: 'tum-f', subject: 'tum (f)', form: 'aati ho' },
+        { subjectId: 'aap-m', subject: 'aap (m)', form: 'aate hain' },
+        { subjectId: 'aap-f', subject: 'aap (f)', form: 'aati hain' },
+        { subjectId: 'voh-m', subject: 'voh (m)', form: 'aata hai' },
+        { subjectId: 'voh-f', subject: 'voh (f)', form: 'aati hai' },
         { subjectId: 'ham', subject: 'ham', form: 'aate hain' },
       ],
       past: [
-        { subjectId: 'main-m', subject: 'main (m)', form: 'aayaa' },
-        { subjectId: 'main-f', subject: 'main (f)', form: 'aayee' },
+        { subjectId: 'main-m', subject: 'main (m)', form: 'aaya' },
+        { subjectId: 'main-f', subject: 'main (f)', form: 'aayi' },
         { subjectId: 'tum-m', subject: 'tum (m)', form: 'aaye' },
-        { subjectId: 'tum-f', subject: 'tum (f)', form: 'aayin' },
+        { subjectId: 'tum-f', subject: 'tum (f)', form: 'aayeen' },
         { subjectId: 'aap-m', subject: 'aap (m)', form: 'aaye' },
-        { subjectId: 'aap-f', subject: 'aap (f)', form: 'aayin' },
-        { subjectId: 'voh-m', subject: 'voh (m)', form: 'aayaa' },
-        { subjectId: 'voh-f', subject: 'voh (f)', form: 'aayee' },
+        { subjectId: 'aap-f', subject: 'aap (f)', form: 'aayeen' },
+        { subjectId: 'voh-m', subject: 'voh (m)', form: 'aaya' },
+        { subjectId: 'voh-f', subject: 'voh (f)', form: 'aayi' },
         { subjectId: 'ham', subject: 'ham', form: 'aaye' },
       ],
       future: [
-        { subjectId: 'main-m', subject: 'main (m)', form: 'aaungaa' },
-        { subjectId: 'main-f', subject: 'main (f)', form: 'aaungee' },
+        { subjectId: 'main-m', subject: 'main (m)', form: 'aaunga' },
+        { subjectId: 'main-f', subject: 'main (f)', form: 'aaungi' },
         { subjectId: 'tum-m', subject: 'tum (m)', form: 'aaoge' },
         { subjectId: 'tum-f', subject: 'tum (f)', form: 'aaogi' },
-        { subjectId: 'aap-m', subject: 'aap (m)', form: 'aaenge' },
-        { subjectId: 'aap-f', subject: 'aap (f)', form: 'aaengi' },
-        { subjectId: 'voh-m', subject: 'voh (m)', form: 'aaegaa' },
-        { subjectId: 'voh-f', subject: 'voh (f)', form: 'aaegee' },
-        { subjectId: 'ham', subject: 'ham', form: 'aaenge' },
+        { subjectId: 'aap-m', subject: 'aap (m)', form: 'aayenge' },
+        { subjectId: 'aap-f', subject: 'aap (f)', form: 'aayengi' },
+        { subjectId: 'voh-m', subject: 'voh (m)', form: 'aayega' },
+        { subjectId: 'voh-f', subject: 'voh (f)', form: 'aayegi' },
+        { subjectId: 'ham', subject: 'ham', form: 'aayenge' },
       ],
     },
   },
   {
     id: 'bolnaa',
-    infinitive: 'bolnaa',
+    infinitive: 'bolna',
     stem: 'bol',
     meaning: 'to speak / say',
     transitive: false,
     tenses: {
       present: [
         { subjectId: 'main-m', subject: 'main (m)', form: 'bolta hoon' },
-        { subjectId: 'main-f', subject: 'main (f)', form: 'boltee hoon' },
+        { subjectId: 'main-f', subject: 'main (f)', form: 'bolti hoon' },
         { subjectId: 'tum-m', subject: 'tum (m)', form: 'bolte ho' },
-        { subjectId: 'tum-f', subject: 'tum (f)', form: 'boltee ho' },
-        { subjectId: 'aap', subject: 'aap', form: 'bolte hain' },
+        { subjectId: 'tum-f', subject: 'tum (f)', form: 'bolti ho' },
+        { subjectId: 'aap-m', subject: 'aap (m)', form: 'bolte hain' },
+        { subjectId: 'aap-f', subject: 'aap (f)', form: 'bolti hain' },
         { subjectId: 'voh-m', subject: 'voh (m)', form: 'bolta hai' },
-        { subjectId: 'voh-f', subject: 'voh (f)', form: 'boltee hai' },
+        { subjectId: 'voh-f', subject: 'voh (f)', form: 'bolti hai' },
         { subjectId: 'ham', subject: 'ham', form: 'bolte hain' },
       ],
       past: [
-        { subjectId: 'main-m', subject: 'main (m)', form: 'bolaa' },
-        { subjectId: 'main-f', subject: 'main (f)', form: 'bolee' },
+        { subjectId: 'main-m', subject: 'main (m)', form: 'bola' },
+        { subjectId: 'main-f', subject: 'main (f)', form: 'boli' },
         { subjectId: 'tum-m', subject: 'tum (m)', form: 'bole' },
-        { subjectId: 'tum-f', subject: 'tum (f)', form: 'bolin' },
+        { subjectId: 'tum-f', subject: 'tum (f)', form: 'boleen' },
         { subjectId: 'aap-m', subject: 'aap (m)', form: 'bole' },
-        { subjectId: 'aap-f', subject: 'aap (f)', form: 'bolin' },
-        { subjectId: 'voh-m', subject: 'voh (m)', form: 'bolaa' },
-        { subjectId: 'voh-f', subject: 'voh (f)', form: 'bolee' },
+        { subjectId: 'aap-f', subject: 'aap (f)', form: 'boleen' },
+        { subjectId: 'voh-m', subject: 'voh (m)', form: 'bola' },
+        { subjectId: 'voh-f', subject: 'voh (f)', form: 'boli' },
         { subjectId: 'ham', subject: 'ham', form: 'bole' },
       ],
       future: [
-        { subjectId: 'main-m', subject: 'main (m)', form: 'boluungaa' },
-        { subjectId: 'main-f', subject: 'main (f)', form: 'boluungee' },
+        { subjectId: 'main-m', subject: 'main (m)', form: 'bolunga' },
+        { subjectId: 'main-f', subject: 'main (f)', form: 'bolungi' },
         { subjectId: 'tum-m', subject: 'tum (m)', form: 'bologe' },
         { subjectId: 'tum-f', subject: 'tum (f)', form: 'bologi' },
         { subjectId: 'aap-m', subject: 'aap (m)', form: 'bolenge' },
         { subjectId: 'aap-f', subject: 'aap (f)', form: 'bolengi' },
-        { subjectId: 'voh-m', subject: 'voh (m)', form: 'bolegaa' },
-        { subjectId: 'voh-f', subject: 'voh (f)', form: 'bolegee' },
+        { subjectId: 'voh-m', subject: 'voh (m)', form: 'bolega' },
+        { subjectId: 'voh-f', subject: 'voh (f)', form: 'bolegi' },
         { subjectId: 'ham', subject: 'ham', form: 'bolenge' },
       ],
     },
@@ -235,14 +241,24 @@ export function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-/** Pick 3 wrong answers for multiple-choice from the same tense's other forms */
+/**
+ * Pick up to 3 wrong answers for multiple-choice. Prefer distractors from the
+ * SAME tense (they're more believable) and fall back to other tenses only if
+ * we don't have enough in-tense alternatives.
+ */
 export function getDistractors(verb: Verb, tense: Tense, correctForm: string): string[] {
-  const allForms = verb.tenses[tense].map(r => r.form).filter(f => f !== correctForm)
-  // Also pull from other tenses for more variety
-  const otherTenses: Tense[] = (['present', 'past', 'future'] as Tense[]).filter(t => t !== tense)
-  for (const t of otherTenses) {
-    allForms.push(...verb.tenses[t].map(r => r.form))
+  const sameTense = verb.tenses[tense]
+    .map(r => r.form)
+    .filter(f => f !== correctForm)
+  const inTense = [...new Set(sameTense)]
+  if (inTense.length >= 3) return shuffle(inTense).slice(0, 3)
+
+  // Not enough in-tense — pad from other tenses
+  const others: string[] = []
+  for (const t of (['present', 'past', 'future'] as Tense[])) {
+    if (t === tense) continue
+    others.push(...verb.tenses[t].map(r => r.form))
   }
-  const unique = [...new Set(allForms)].filter(f => f !== correctForm)
-  return shuffle(unique).slice(0, 3)
+  const otherUnique = [...new Set(others)].filter(f => f !== correctForm && !inTense.includes(f))
+  return [...shuffle(inTense), ...shuffle(otherUnique)].slice(0, 3)
 }

@@ -142,7 +142,7 @@ export default function ConjugationDrillPage() {
 
   // Done screen
   if (done) {
-    const pct = Math.round((score.correct / score.total) * 100)
+    const pct = score.total > 0 ? Math.round((score.correct / score.total) * 100) : 0
     return (
       <div className="max-w-md mx-auto px-4 py-12 text-center">
         <div className="text-5xl mb-4">{pct >= 80 ? '🎉' : pct >= 50 ? '💪' : '📚'}</div>
@@ -221,8 +221,8 @@ export default function ConjugationDrillPage() {
               {card.verb.infinitive} — {card.verb.meaning}
             </p>
             {card.verb.transitive && card.tense === 'past' && (
-              <p className="text-xs text-amber-600 mt-2 font-medium">
-                Verb agrees with direct object (ne construction)
+              <p className="text-xs text-amber-600 mt-3 font-medium leading-snug">
+                Ne construction — the verb agrees with the gender &amp; number of the direct object, not the subject.
               </p>
             )}
           </div>

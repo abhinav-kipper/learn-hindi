@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { getAllLessons } from '@/lib/lessons'
 import { getAllFoundations } from '@/lib/foundations'
@@ -43,6 +43,8 @@ export default function Home() {
     if (typeof window !== 'undefined') localStorage.setItem(tabStorageKey, next)
     playSound('tap')
   }
+
+  const handleCloseSearch = useCallback(() => setSearchOpen(false), [])
 
   const rawLessons = language === 'dutch' ? getDutchLessons() : getAllLessons()
   const foundations = language === 'dutch' ? getDutchFoundations() : getAllFoundations()
@@ -106,7 +108,7 @@ export default function Home() {
   return (
     <>
     {language === 'dutch' && <DutchWelcomeModal />}
-    <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} />
+    <SearchOverlay open={searchOpen} onClose={handleCloseSearch} />
     <div className="max-w-md mx-auto px-4 py-6">
       <div className="flex items-center justify-between mb-2">
         <div>

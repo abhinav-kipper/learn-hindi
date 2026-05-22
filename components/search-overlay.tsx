@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { getAllLessons } from '@/lib/lessons'
 import { getAllFoundations } from '@/lib/foundations'
+import { getDutchLessons } from '@/lib/dutch/lessons'
+import { getDutchFoundations } from '@/lib/dutch/foundations'
 import { getAllCategories } from '@/lib/vocabulary'
 import { useLanguage } from '@/lib/language-context'
 import { playSound } from '@/lib/sounds'
@@ -20,8 +22,10 @@ interface SearchResult {
 function buildIndex(language: string): SearchResult[] {
   const results: SearchResult[] = []
 
-  // Lessons + phrases
-  const lessons = [...getAllLessons(), ...getAllFoundations()]
+  const lessons = language === 'dutch'
+    ? [...getDutchLessons(), ...getDutchFoundations()]
+    : [...getAllLessons(), ...getAllFoundations()]
+
   for (const lesson of lessons) {
     results.push({
       type: 'lesson',
@@ -43,7 +47,7 @@ function buildIndex(language: string): SearchResult[] {
     }
   }
 
-  // Vocabulary
+  // Vocabulary is Hindi-only
   if (language !== 'dutch') {
     for (const cat of getAllCategories()) {
       for (const word of cat.words) {
@@ -89,23 +93,32 @@ export function SearchOverlay({ open, onClose }: SearchOverlayProps) {
   const { language } = useLanguage()
   const [query, setQuery] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
+  const previousFocusRef = useRef<HTMLElement | null>(null)
 
   const index = useMemo(() => buildIndex(language), [language])
   const results = useMemo(() => search(index, query), [index, query])
 
+  // On open: capture previously-focused element, reset query, focus input,
+  // and lock body scroll. On close: restore focus + scroll.
   useEffect(() => {
-    if (open) {
-      setQuery('')
-      setTimeout(() => inputRef.current?.focus(), 100)
-    }
-  }, [open])
+    if (!open) return
+    previousFocusRef.current = (document.activeElement as HTMLElement) ?? null
+    setQuery('')
+    const focusTimer = setTimeout(() => inputRef.current?.focus(), 80)
 
-  // Close on Escape
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
-    window.addEventListener('keydown', handler)
-    return () => window.removeEventListener('keydown', handler)
-  }, [onClose])
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    const escHandler = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
+    window.addEventListener('keydown', escHandler)
+
+    return () => {
+      clearTimeout(focusTimer)
+      window.removeEventListener('keydown', escHandler)
+      document.body.style.overflow = prevOverflow
+      previousFocusRef.current?.focus?.()
+    }
+  }, [open, onClose])
 
   const handleSelect = (result: SearchResult) => {
     playSound('tap')

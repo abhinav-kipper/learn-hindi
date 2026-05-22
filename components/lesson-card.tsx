@@ -32,11 +32,15 @@ const accentColors = [
 ]
 
 function daysAgoLabel(isoDate: string): string {
-  const completed = new Date(isoDate)
-  const now = new Date()
-  const diffMs = now.getTime() - completed.getTime()
-  const days = Math.floor(diffMs / (1000 * 60 * 60 * 24))
-  if (days === 0) return 'today'
+  const todayStr = new Date().toISOString().split('T')[0]
+  if (isoDate === todayStr) return 'today'
+  // Compare as UTC midnights — both inputs are YYYY-MM-DD strings, so this
+  // gives exact calendar-day diffs and is immune to timezone shenanigans.
+  const a = Date.parse(isoDate + 'T00:00:00Z')
+  const b = Date.parse(todayStr + 'T00:00:00Z')
+  if (isNaN(a) || isNaN(b)) return ''
+  const days = Math.round((b - a) / (1000 * 60 * 60 * 24))
+  if (days <= 0) return 'today'
   if (days === 1) return 'yesterday'
   if (days < 7) return `${days}d ago`
   if (days < 14) return '1 week ago'

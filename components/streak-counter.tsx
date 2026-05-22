@@ -26,18 +26,23 @@ export function StreakCounter() {
     const s = getStreak(config.storagePrefix)
     setStreak(s)
 
-    // Check for a milestone that hasn't been celebrated yet
+    // Only celebrate a milestone the moment it's freshly crossed. Using `===`
+    // (not `>=`) means an existing user with streak=30 doesn't retroactively
+    // get the 7/14 popups — they only see one the day their streak ticks up
+    // to a milestone value. Streak increments by 1 per day, so exact equality
+    // is reliable.
     const seen = getSeenStreakMilestones(config.storagePrefix)
-    const hit = MILESTONES.find(m => s >= m && !seen.includes(m))
+    const hit = MILESTONES.find(m => s === m && !seen.includes(m))
     if (hit) {
       setMilestone(hit)
       markStreakMilestoneSeen(hit, config.storagePrefix)
       playSound('streak')
 
-      // Fire confetti (lazy-loaded to avoid SSR issues)
-      import('canvas-confetti').then(({ default: confetti }) => {
-        confetti({ particleCount: 120, spread: 80, origin: { y: 0.5 }, colors: ['#f59e0b', '#f97316', '#ec4899'] })
-      })
+      import('canvas-confetti')
+        .then(({ default: confetti }) => {
+          confetti({ particleCount: 120, spread: 80, origin: { y: 0.5 }, colors: ['#f59e0b', '#f97316', '#ec4899'] })
+        })
+        .catch(() => { /* confetti is non-essential */ })
 
       timerRef.current = setTimeout(() => setMilestone(null), 4000)
     }

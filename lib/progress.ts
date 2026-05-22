@@ -104,14 +104,16 @@ export function updateStreak(prefix = 'hindi'): void {
   if (progress.lastActiveDate === today) return
 
   if (progress.lastActiveDate) {
-    const lastActive = new Date(progress.lastActiveDate)
-    const now = new Date(today)
-    const diffDays = Math.floor((now.getTime() - lastActive.getTime()) / (1000 * 60 * 60 * 24))
+    const lastActive = Date.parse(progress.lastActiveDate + 'T00:00:00Z')
+    const now = Date.parse(today + 'T00:00:00Z')
+    const diffDays = Math.round((now - lastActive) / (1000 * 60 * 60 * 24))
 
     if (diffDays === 1) {
       progress.currentStreak += 1
     } else {
       progress.currentStreak = 1
+      // Streak broken — let milestones celebrate again on the rebuild
+      progress.seenStreakMilestones = []
     }
   } else {
     progress.currentStreak = 1
