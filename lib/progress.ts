@@ -1,10 +1,12 @@
 export interface Progress {
   completedLessons: string[]
+  lessonCompletedAt: Record<string, string>  // lessonId → ISO date
   currentStreak: number
   lastActiveDate: string
   practiceSessionCount: number
   todaySessions: number
   todaySessionsDate: string
+  seenStreakMilestones: number[]
 }
 
 function storageKey(prefix: string): string {
@@ -18,11 +20,13 @@ function todayISO(): string {
 function defaultProgress(): Progress {
   return {
     completedLessons: [],
+    lessonCompletedAt: {},
     currentStreak: 0,
     lastActiveDate: '',
     practiceSessionCount: 0,
     todaySessions: 0,
     todaySessionsDate: '',
+    seenStreakMilestones: [],
   }
 }
 
@@ -45,6 +49,26 @@ export function markLessonComplete(lessonId: string, prefix = 'hindi'): void {
   const progress = getProgress(prefix)
   if (!progress.completedLessons.includes(lessonId)) {
     progress.completedLessons.push(lessonId)
+  }
+  if (!progress.lessonCompletedAt) progress.lessonCompletedAt = {}
+  progress.lessonCompletedAt[lessonId] = todayISO()
+  saveProgress(progress, prefix)
+}
+
+export function getLessonCompletedAt(lessonId: string, prefix = 'hindi'): string | null {
+  const p = getProgress(prefix)
+  return (p.lessonCompletedAt ?? {})[lessonId] ?? null
+}
+
+export function getSeenStreakMilestones(prefix = 'hindi'): number[] {
+  return getProgress(prefix).seenStreakMilestones ?? []
+}
+
+export function markStreakMilestoneSeen(milestone: number, prefix = 'hindi'): void {
+  const progress = getProgress(prefix)
+  if (!progress.seenStreakMilestones) progress.seenStreakMilestones = []
+  if (!progress.seenStreakMilestones.includes(milestone)) {
+    progress.seenStreakMilestones.push(milestone)
     saveProgress(progress, prefix)
   }
 }

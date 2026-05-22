@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Lesson } from '@/types/lesson'
-import { isLessonComplete } from '@/lib/progress'
+import { isLessonComplete, getLessonCompletedAt } from '@/lib/progress'
 import { useLanguage } from '@/lib/language-context'
 
 interface LessonCardProps {
@@ -31,16 +31,30 @@ const accentColors = [
   'text-pink-500',
 ]
 
+function daysAgoLabel(isoDate: string): string {
+  const completed = new Date(isoDate)
+  const now = new Date()
+  const diffMs = now.getTime() - completed.getTime()
+  const days = Math.floor(diffMs / (1000 * 60 * 60 * 24))
+  if (days === 0) return 'today'
+  if (days === 1) return 'yesterday'
+  if (days < 7) return `${days}d ago`
+  if (days < 14) return '1 week ago'
+  return `${Math.floor(days / 7)}w ago`
+}
+
 export function LessonCard({ lesson, index }: LessonCardProps) {
   const router = useRouter()
   const { config } = useLanguage()
   const [completed, setCompleted] = useState(false)
   const [expanded, setExpanded] = useState(true)
+  const [completedAt, setCompletedAt] = useState<string | null>(null)
 
   useEffect(() => {
     const done = isLessonComplete(lesson.id, config.storagePrefix)
     setCompleted(done)
     setExpanded(!done)
+    if (done) setCompletedAt(getLessonCompletedAt(lesson.id, config.storagePrefix))
   }, [lesson.id, config.storagePrefix])
 
   const gradient = gradients[index % gradients.length]
@@ -75,7 +89,12 @@ export function LessonCard({ lesson, index }: LessonCardProps) {
             <span className={`text-xs font-semibold uppercase tracking-wide ${accent} flex-shrink-0`}>
               {index + 1}
             </span>
-            <h3 className="font-semibold text-[var(--text-primary)] text-sm flex-1 truncate">{lesson.title}</h3>
+            <div className="flex-1 min-w-0">
+              <h3 className="font-semibold text-[var(--text-primary)] text-sm truncate">{lesson.title}</h3>
+              {completedAt && (
+                <p className="text-[10px] text-[var(--text-tertiary)]">{daysAgoLabel(completedAt)}</p>
+              )}
+            </div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 text-[var(--text-secondary)] flex-shrink-0">
               <path fillRule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />
             </svg>

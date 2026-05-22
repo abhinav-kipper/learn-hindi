@@ -211,13 +211,30 @@ export default function ProgressPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.32 }}
           onClick={() => router.push('/favorites')}
-          className="w-full mb-4 px-4 py-3 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border)] shadow-sm text-left flex items-center justify-between hover:border-[var(--accent)]/40 transition-colors"
+          className="w-full mb-3 px-4 py-3 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border)] shadow-sm text-left flex items-center justify-between hover:border-[var(--accent)]/40 transition-colors"
         >
           <div className="flex items-center gap-3">
             <span className="text-xl">⭐</span>
             <div>
               <p className="text-sm font-semibold text-[var(--text-primary)]">Saved phrases</p>
               <p className="text-xs text-[var(--text-secondary)]">Phrases you starred during lessons</p>
+            </div>
+          </div>
+          <span className="text-[var(--text-tertiary)]">→</span>
+        </motion.button>
+
+        <motion.button
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.35 }}
+          onClick={() => router.push('/drill/conjugation')}
+          className="w-full mb-4 px-4 py-3 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border)] shadow-sm text-left flex items-center justify-between hover:border-[var(--accent)]/40 transition-colors"
+        >
+          <div className="flex items-center gap-3">
+            <span className="text-xl">🔡</span>
+            <div>
+              <p className="text-sm font-semibold text-[var(--text-primary)]">Conjugation drill</p>
+              <p className="text-xs text-[var(--text-secondary)]">Drill verb tenses — present, past, future</p>
             </div>
           </div>
           <span className="text-[var(--text-tertiary)]">→</span>

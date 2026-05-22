@@ -19,6 +19,7 @@ import { getLastActiveLesson } from '@/lib/last-active-lesson'
 import { getLessonPercent } from '@/lib/phrase-progress'
 import { getUniversalLessonById } from '@/lib/all-content'
 import { isLessonComplete } from '@/lib/progress'
+import { SearchOverlay } from '@/components/search-overlay'
 
 type Tab = 'situations' | 'foundations'
 
@@ -32,6 +33,7 @@ export default function Home() {
   const [completedCount, setCompletedCount] = useState(0)
   const [todaySessions, setTodaySessions] = useState(0)
   const [muted, setMuted] = useState(false)
+  const [searchOpen, setSearchOpen] = useState(false)
   const tabStorageKey = `${config.storagePrefix}-home-tab`
   const [activeTab, setActiveTab] = useState<Tab>('situations')
   const [continueInfo, setContinueInfo] = useState<{ id: string; title: string; percent: number } | null>(null)
@@ -104,15 +106,25 @@ export default function Home() {
   return (
     <>
     {language === 'dutch' && <DutchWelcomeModal />}
+    <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} />
     <div className="max-w-md mx-auto px-4 py-6">
       <div className="flex items-center justify-between mb-2">
         <div>
           <h1 className="text-2xl font-extrabold text-[var(--text-primary)] tracking-tight">
-            Hey {userName}!
+            {timeGreeting(userName, language)}
           </h1>
           <DailyGoalBar today={todaySessions} goal={dailyGoal} />
         </div>
         <div className="flex items-center gap-2">
+          <button
+            onClick={() => { playSound('tap'); setSearchOpen(true) }}
+            aria-label="Search"
+            className="w-8 h-8 flex items-center justify-center rounded-full bg-[var(--bg-surface)] border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+              <path fillRule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clipRule="evenodd" />
+            </svg>
+          </button>
           <StreakCounter />
           <button
             onClick={() => { const m = toggleMute(); setMuted(m) }}
@@ -225,6 +237,20 @@ export default function Home() {
     </div>
     </>
   )
+}
+
+function timeGreeting(name: string, language: string): string {
+  const h = new Date().getHours()
+  if (language === 'hindi') {
+    if (h >= 5 && h < 12) return `Subah ho gayi, ${name}! 🌅`
+    if (h >= 12 && h < 17) return `Dopahar ho gayi, ${name}! ☀️`
+    if (h >= 17 && h < 21) return `Shaam ho gayi, ${name}! 🌆`
+    return `Raat ho gayi, ${name}! 🌙`
+  }
+  if (h >= 5 && h < 12) return `Good morning, ${name}!`
+  if (h >= 12 && h < 17) return `Good afternoon, ${name}!`
+  if (h >= 17 && h < 21) return `Good evening, ${name}!`
+  return `Good night, ${name}!`
 }
 
 function DailyGoalBar({ today, goal }: { today: number; goal: number }) {
