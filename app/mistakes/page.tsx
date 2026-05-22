@@ -6,6 +6,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { getMistakes, deleteMistake, clearMistakes, type Mistake, type MistakeSource } from '@/lib/mistakes'
 import { useLanguage } from '@/lib/language-context'
 import { getUniversalLessonById } from '@/lib/all-content'
+import { ReadAloudButton } from '@/components/read-aloud-button'
+import { playSound } from '@/lib/sounds'
 
 function SourceChip({ source }: { source: MistakeSource }) {
   const isQuiz = source === 'quiz'
@@ -29,6 +31,7 @@ export default function MistakesPage() {
   const prefix = config.storagePrefix
   const [mistakes, setMistakes] = useState<Mistake[]>([])
   const [confirmClear, setConfirmClear] = useState(false)
+  const [drilling, setDrilling] = useState(false)
 
   useEffect(() => {
     setMistakes(getMistakes(prefix))
@@ -66,12 +69,20 @@ export default function MistakesPage() {
           Back
         </button>
         {mistakes.length > 0 && (
-          <button
-            onClick={() => setConfirmClear(true)}
-            className="text-xs text-[var(--text-tertiary)] hover:text-red-500 transition-colors"
-          >
-            Clear all
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => { playSound('tap'); setDrilling(true) }}
+              className="text-xs font-semibold px-3 py-1.5 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 text-white shadow-sm hover:opacity-90 transition-opacity"
+            >
+              Drill ({mistakes.length})
+            </button>
+            <button
+              onClick={() => setConfirmClear(true)}
+              className="text-xs text-[var(--text-tertiary)] hover:text-red-500 transition-colors"
+            >
+              Clear all
+            </button>
+          </div>
         )}
       </div>
 
@@ -191,6 +202,178 @@ export default function MistakesPage() {
           </>
         )}
       </AnimatePresence>
+
+      <AnimatePresence>
+        {drilling && (
+          <DrillOverlay mistakes={mistakes} onClose={() => setDrilling(false)} />
+        )}
+      </AnimatePresence>
     </div>
+  )
+}
+
+function DrillOverlay({ mistakes, onClose }: { mistakes: Mistake[]; onClose: () => void }) {
+  const [order] = useState(() => [...mistakes].sort(() => Math.random() - 0.5))
+  const [index, setIndex] = useState(0)
+  const [revealed, setRevealed] = useState(false)
+  const [gotItCount, setGotItCount] = useState(0)
+  const current = order[index]
+  const isLast = index === order.length - 1
+  const complete = index >= order.length
+
+  const advance = (gotIt: boolean) => {
+    if (gotIt) {
+      setGotItCount(c => c + 1)
+      playSound('correct')
+    } else {
+      playSound('pop')
+    }
+    if (isLast) {
+      setIndex(order.length)
+    } else {
+      setIndex(i => i + 1)
+      setRevealed(false)
+    }
+  }
+
+  return (
+    <>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+        onClick={onClose}
+      />
+      <motion.div
+        initial={{ y: '100%' }}
+        animate={{ y: 0 }}
+        exit={{ y: '100%' }}
+        transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+        className="fixed bottom-0 left-0 right-0 z-50 max-w-md mx-auto"
+      >
+        <div className="bg-[var(--bg-surface)] rounded-t-3xl shadow-2xl border-t border-[var(--border)] overflow-hidden">
+          <div className="flex justify-center pt-3 pb-1">
+            <div className="w-10 h-1 bg-[var(--border)] rounded-full" />
+          </div>
+
+          <div className="px-6 pb-8 pt-2">
+            {complete ? (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="text-center py-4"
+              >
+                <div className="text-4xl mb-3">🎯</div>
+                <h2 className="text-xl font-bold text-[var(--text-primary)] mb-1">
+                  Drill done!
+                </h2>
+                <p className="text-sm text-[var(--text-secondary)] mb-5">
+                  {gotItCount}/{order.length} nailed
+                </p>
+                <button
+                  onClick={onClose}
+                  className="w-full py-3 px-6 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-xl shadow-md"
+                >
+                  Done
+                </button>
+              </motion.div>
+            ) : (
+              <>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-xs text-[var(--text-tertiary)] font-medium">
+                    {index + 1} / {order.length}
+                  </span>
+                  <div className="flex-1 mx-3 h-1.5 bg-[var(--border)] rounded-full overflow-hidden">
+                    <motion.div
+                      className="h-full bg-gradient-to-r from-indigo-500 to-violet-500 rounded-full"
+                      animate={{ width: `${((index + 1) / order.length) * 100}%` }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </div>
+                  <button
+                    onClick={onClose}
+                    aria-label="Close drill"
+                    className="text-[var(--text-tertiary)] hover:text-[var(--text-primary)] ml-2"
+                  >
+                    ✕
+                  </button>
+                </div>
+
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={current.id}
+                    initial={{ x: 100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    exit={{ x: -100, opacity: 0 }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                  >
+                    <div
+                      onClick={() => !revealed && (setRevealed(true), playSound('pop'))}
+                      className="bg-[var(--bg-elevated)] rounded-xl border border-[var(--border)] p-6 min-h-[200px] flex flex-col items-center justify-center cursor-pointer"
+                    >
+                      <p className="text-xs uppercase tracking-wide text-[var(--text-tertiary)] mb-2 font-semibold">
+                        You said
+                      </p>
+                      <div className="flex items-center gap-2">
+                        <p className="text-xl font-bold text-rose-500 line-through text-center">
+                          {current.original}
+                        </p>
+                      </div>
+
+                      {revealed ? (
+                        <motion.div
+                          initial={{ opacity: 0, y: 8 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          className="mt-4 pt-4 border-t border-[var(--border)] w-full text-center"
+                        >
+                          <p className="text-xs uppercase tracking-wide text-emerald-600 mb-2 font-semibold">
+                            Correct
+                          </p>
+                          <div className="flex items-center justify-center gap-2">
+                            <p className="text-lg font-bold text-emerald-600">
+                              {current.correction}
+                            </p>
+                            <ReadAloudButton text={current.correction} />
+                          </div>
+                          {current.reason && (
+                            <p className="text-xs text-[var(--text-secondary)] mt-2 italic">
+                              {current.reason}
+                            </p>
+                          )}
+                        </motion.div>
+                      ) : (
+                        <p className="text-xs text-[var(--text-tertiary)] mt-4">Tap to reveal the fix</p>
+                      )}
+                    </div>
+
+                    {revealed && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="flex gap-3 mt-4"
+                      >
+                        <button
+                          onClick={() => advance(false)}
+                          className="flex-1 py-2.5 px-4 bg-amber-50 border border-amber-200 text-amber-700 font-semibold rounded-xl text-sm"
+                        >
+                          Still learning
+                        </button>
+                        <button
+                          onClick={() => advance(true)}
+                          className="flex-1 py-2.5 px-4 bg-emerald-50 border border-emerald-200 text-emerald-700 font-semibold rounded-xl text-sm"
+                        >
+                          Got it!
+                        </button>
+                      </motion.div>
+                    )}
+                  </motion.div>
+                </AnimatePresence>
+              </>
+            )}
+          </div>
+        </div>
+      </motion.div>
+    </>
   )
 }
