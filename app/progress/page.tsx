@@ -1,7 +1,7 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import { useEffect, useMemo, useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import { getProgress } from '@/lib/progress'
 import { getQuizScores, getAverageQuizScore } from '@/lib/quiz'
@@ -13,6 +13,7 @@ import { getDutchFoundations } from '@/lib/dutch/foundations'
 import { getLessonPercent } from '@/lib/phrase-progress'
 import { playSound } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
+import type { Lesson } from '@/types/lesson'
 
 interface Stats {
   phrasesLearned: number
@@ -39,13 +40,10 @@ export default function ProgressPage() {
   useEffect(() => {
     const prefix = config.storagePrefix
     const progress = getProgress(prefix)
-    const lessons = language === 'dutch' ? getDutchLessons() : getAllLessons()
-    const foundations = language === 'dutch' ? getDutchFoundations() : getAllFoundations()
     const allContent = language === 'dutch' ? [...getDutchLessons(), ...getDutchFoundations()] : getAllContent()
     const quizScores = getQuizScores(prefix)
     const reviewSessions = getReviewSessions(prefix)
 
-    // Compute phrases learned (from both situations and foundations)
     const completedLessons = allContent.filter(l => progress.completedLessons.includes(l.id))
     const phrasesLearned = completedLessons.reduce((sum, l) => sum + l.phrases.length, 0)
 
@@ -58,15 +56,7 @@ export default function ProgressPage() {
       lastActiveDate: progress.lastActiveDate,
     })
 
-    // Play streak sound if streak is active
-    if (progress.currentStreak > 0) {
-      playSound('streak')
-    }
-
-    // Build recent activity
     const recentActivities: ActivityItem[] = []
-
-    // Add quiz scores
     quizScores.slice(-3).forEach(score => {
       recentActivities.push({
         type: 'quiz',
@@ -74,8 +64,6 @@ export default function ProgressPage() {
         date: score.date,
       })
     })
-
-    // Add review sessions
     reviewSessions.slice(-3).forEach(session => {
       recentActivities.push({
         type: 'review',
@@ -83,12 +71,10 @@ export default function ProgressPage() {
         date: session.date,
       })
     })
-
-    // Sort by date, newest first
     recentActivities.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     setActivities(recentActivities.slice(0, 5))
 
-    // Build streak calendar (last 7 days) — DST-safe, using YYYY-MM-DD comparison
+    // 7-day streak calendar — DST-safe via YYYY-MM-DD comparison
     const todayStr = new Date().toISOString().split('T')[0]
     const activeSet = new Set<string>()
     if (progress.lastActiveDate && progress.currentStreak > 0) {
@@ -109,7 +95,6 @@ export default function ProgressPage() {
       if (activeSet.has(dateStr)) {
         dayStates.push('active')
       } else if (dateStr === todayStr && progress.currentStreak > 0) {
-        // Streak still alive (counted from yesterday or earlier) but user hasn't acted today yet
         dayStates.push('pending')
       } else {
         dayStates.push('inactive')
@@ -117,6 +102,15 @@ export default function ProgressPage() {
     }
     setStreakDays(dayStates)
   }, [language, config.storagePrefix])
+
+  const lessons = useMemo(
+    () => language === 'dutch' ? getDutchLessons() : getAllLessons(),
+    [language],
+  )
+  const foundations = useMemo(
+    () => language === 'dutch' ? getDutchFoundations() : getAllFoundations(),
+    [language],
+  )
 
   if (!stats) {
     return (
@@ -126,13 +120,9 @@ export default function ProgressPage() {
     )
   }
 
-  const lessons = language === 'dutch' ? getDutchLessons() : getAllLessons()
-  const foundations = language === 'dutch' ? getDutchFoundations() : getAllFoundations()
-  // Sun-indexed array so dayLabels[getDay()] gives the correct letter (Sun=S, Mon=M, ...)
   const dayLabels = ['S', 'M', 'T', 'W', 'T', 'F', 'S']
   const todayDow = new Date().getDay()
   const reorderedLabels = [...Array(7)].map((_, i) => {
-    // Column i shows the date that is (6 - i) days ago, so its DoW is (todayDow - (6 - i)) mod 7
     const idx = (todayDow - (6 - i) + 7) % 7
     return dayLabels[idx]
   })
@@ -140,7 +130,6 @@ export default function ProgressPage() {
   return (
     <div className="min-h-dvh bg-gradient-to-br from-slate-50 via-white to-indigo-50/30 safe-top pb-24">
       <div className="max-w-md mx-auto px-4 py-6">
-        {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-2xl font-bold text-[var(--text-primary)]">Progress</h1>
           <button
@@ -183,62 +172,23 @@ export default function ProgressPage() {
 
         {/* Stats grid */}
         <div className="grid grid-cols-2 gap-3 mb-4">
-          <StatCard label="Phrases Learned" value={stats.phrasesLearned} icon="📝" delay={0.1} />
-          <StatCard label="Practice Sessions" value={stats.practiceCount} icon="💬" delay={0.15} />
-          <StatCard label="Quiz Average" value={stats.quizAverage} suffix="%" icon="🎯" delay={0.2} />
-          <StatCard label="Lessons Done" value={stats.lessonsCompleted} icon="📚" delay={0.25} />
+          <StatCard label="Phrases" value={stats.phrasesLearned} icon="📝" delay={0.05} />
+          <StatCard label="Practice" value={stats.practiceCount} icon="💬" delay={0.1} />
+          <StatCard label="Quiz avg" value={stats.quizAverage} suffix="%" icon="🎯" delay={0.15} />
+          <StatCard label="Lessons" value={stats.lessonsCompleted} icon="📚" delay={0.2} />
         </div>
 
-        <motion.button
+        {/* Tools row — compact 3-col grid replacing the old full-width tiles */}
+        <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.28 }}
-          onClick={() => router.push('/mistakes')}
-          className="w-full mb-3 px-4 py-3 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border)] shadow-sm text-left flex items-center justify-between hover:border-[var(--accent)]/40 transition-colors"
+          transition={{ delay: 0.25 }}
+          className="grid grid-cols-3 gap-3 mb-4"
         >
-          <div className="flex items-center gap-3">
-            <span className="text-xl">🔍</span>
-            <div>
-              <p className="text-sm font-semibold text-[var(--text-primary)]">Your mistakes</p>
-              <p className="text-xs text-[var(--text-secondary)]">Corrections from practice + quiz</p>
-            </div>
-          </div>
-          <span className="text-[var(--text-tertiary)]">→</span>
-        </motion.button>
-
-        <motion.button
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.32 }}
-          onClick={() => router.push('/favorites')}
-          className="w-full mb-3 px-4 py-3 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border)] shadow-sm text-left flex items-center justify-between hover:border-[var(--accent)]/40 transition-colors"
-        >
-          <div className="flex items-center gap-3">
-            <span className="text-xl">⭐</span>
-            <div>
-              <p className="text-sm font-semibold text-[var(--text-primary)]">Saved phrases</p>
-              <p className="text-xs text-[var(--text-secondary)]">Phrases you starred during lessons</p>
-            </div>
-          </div>
-          <span className="text-[var(--text-tertiary)]">→</span>
-        </motion.button>
-
-        <motion.button
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.35 }}
-          onClick={() => router.push('/drill/conjugation')}
-          className="w-full mb-4 px-4 py-3 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border)] shadow-sm text-left flex items-center justify-between hover:border-[var(--accent)]/40 transition-colors"
-        >
-          <div className="flex items-center gap-3">
-            <span className="text-xl">🔡</span>
-            <div>
-              <p className="text-sm font-semibold text-[var(--text-primary)]">Conjugation drill</p>
-              <p className="text-xs text-[var(--text-secondary)]">Drill verb tenses — present, past, future</p>
-            </div>
-          </div>
-          <span className="text-[var(--text-tertiary)]">→</span>
-        </motion.button>
+          <ToolButton emoji="🔍" label="Mistakes" onClick={() => router.push('/mistakes')} />
+          <ToolButton emoji="⭐" label="Saved" onClick={() => router.push('/favorites')} />
+          <ToolButton emoji="🔡" label="Drill" onClick={() => router.push('/drill/conjugation')} />
+        </motion.div>
 
         {/* Lesson progress */}
         <motion.div
@@ -247,70 +197,11 @@ export default function ProgressPage() {
           transition={{ delay: 0.3 }}
           className="bg-[var(--bg-surface)] rounded-2xl p-5 border border-[var(--border)] shadow-sm mb-4"
         >
-          <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-3">Situations</h3>
-          <div className="space-y-3">
-            {lessons.map((lesson) => {
-              const pct = getLessonPercent(lesson, config.storagePrefix)
-              const isComplete = pct === 100
-              const hasProgress = pct > 0
-              return (
-                <div key={lesson.id}>
-                  <div className="flex justify-between text-xs mb-1">
-                    <span className="text-[var(--text-secondary)] truncate mr-2">{lesson.title}</span>
-                    <span className="text-[var(--text-tertiary)]">{pct}%</span>
-                  </div>
-                  <div className="w-full h-2 bg-[var(--bg-elevated)] rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: `${pct}%` }}
-                      transition={{ duration: 0.8, delay: 0.4 }}
-                      className={`h-full rounded-full ${
-                        isComplete
-                          ? 'bg-gradient-to-r from-emerald-400 to-teal-500'
-                          : hasProgress
-                            ? 'bg-gradient-to-r from-indigo-400 to-violet-500'
-                            : 'bg-[var(--border)]'
-                      }`}
-                    />
-                  </div>
-                </div>
-              )
-            })}
-          </div>
-
-          <h3 className="text-sm font-semibold text-[var(--text-primary)] mt-5 mb-3">Foundations</h3>
-          <div className="space-y-3">
-            {foundations.map((lesson) => {
-              const pct = getLessonPercent(lesson, config.storagePrefix)
-              const isComplete = pct === 100
-              const hasProgress = pct > 0
-              return (
-                <div key={lesson.id}>
-                  <div className="flex justify-between text-xs mb-1">
-                    <span className="text-[var(--text-secondary)] truncate mr-2">{lesson.title}</span>
-                    <span className="text-[var(--text-tertiary)]">{pct}%</span>
-                  </div>
-                  <div className="w-full h-2 bg-[var(--bg-elevated)] rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: `${pct}%` }}
-                      transition={{ duration: 0.8, delay: 0.4 }}
-                      className={`h-full rounded-full ${
-                        isComplete
-                          ? 'bg-gradient-to-r from-violet-400 to-indigo-500'
-                          : hasProgress
-                            ? 'bg-gradient-to-r from-indigo-300 to-violet-400'
-                            : 'bg-[var(--border)]'
-                      }`}
-                    />
-                  </div>
-                </div>
-              )
-            })}
-          </div>
+          <LessonGroup title="Situations" lessons={lessons} prefix={config.storagePrefix} accent="violet" />
+          <div className="h-px bg-[var(--border)] my-5" />
+          <LessonGroup title="Foundations" lessons={foundations} prefix={config.storagePrefix} accent="indigo" />
         </motion.div>
 
-        {/* Recent activity */}
         {activities.length > 0 && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -318,10 +209,10 @@ export default function ProgressPage() {
             transition={{ delay: 0.4 }}
             className="bg-[var(--bg-surface)] rounded-2xl p-5 border border-[var(--border)] shadow-sm"
           >
-            <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-3">Recent Activity</h3>
+            <h3 className="text-sm font-semibold text-[var(--text-primary)] mb-3">Recent activity</h3>
             <div className="space-y-2">
               {activities.map((activity, i) => (
-                <div key={i} className="flex items-center gap-3 py-2">
+                <div key={i} className="flex items-center gap-3 py-1.5">
                   <span className="text-lg">
                     {activity.type === 'quiz' ? '🎯' : activity.type === 'review' ? '🔄' : '📖'}
                   </span>
@@ -336,6 +227,121 @@ export default function ProgressPage() {
             </div>
           </motion.div>
         )}
+      </div>
+    </div>
+  )
+}
+
+function ToolButton({ emoji, label, onClick }: { emoji: string; label: string; onClick: () => void }) {
+  return (
+    <motion.button
+      whileTap={{ scale: 0.95 }}
+      onClick={() => { playSound('tap'); onClick() }}
+      className="flex flex-col items-center justify-center gap-1.5 py-4 rounded-2xl bg-[var(--bg-surface)] border border-[var(--border)] shadow-sm hover:border-[var(--accent)]/40 transition-colors"
+    >
+      <span className="text-2xl">{emoji}</span>
+      <span className="text-xs font-semibold text-[var(--text-primary)]">{label}</span>
+    </motion.button>
+  )
+}
+
+function LessonGroup({
+  title,
+  lessons,
+  prefix,
+  accent,
+}: {
+  title: string
+  lessons: Lesson[]
+  prefix: string
+  accent: 'violet' | 'indigo'
+}) {
+  const [expandDone, setExpandDone] = useState(false)
+
+  const rows = useMemo(() => lessons.map(l => ({
+    lesson: l,
+    pct: getLessonPercent(l, prefix),
+  })), [lessons, prefix])
+
+  const active = rows.filter(r => r.pct < 100)
+  const done = rows.filter(r => r.pct === 100)
+
+  const activeBar = accent === 'violet'
+    ? 'bg-gradient-to-r from-indigo-400 to-violet-500'
+    : 'bg-gradient-to-r from-indigo-300 to-violet-400'
+
+  return (
+    <div>
+      <div className="flex items-baseline justify-between mb-3">
+        <h3 className="text-sm font-semibold text-[var(--text-primary)]">{title}</h3>
+        <span className="text-xs text-[var(--text-tertiary)] font-medium">
+          {done.length}/{rows.length} done
+        </span>
+      </div>
+
+      {active.length > 0 ? (
+        <div className="space-y-3">
+          {active.map(({ lesson, pct }) => (
+            <LessonRow key={lesson.id} title={lesson.title} pct={pct} barClass={pct > 0 ? activeBar : 'bg-[var(--border)]'} />
+          ))}
+        </div>
+      ) : (
+        <p className="text-xs text-emerald-600 font-medium">All done — nice work 🎉</p>
+      )}
+
+      {done.length > 0 && (
+        <div className="mt-3">
+          <button
+            onClick={() => { playSound('tap'); setExpandDone(v => !v) }}
+            className="w-full flex items-center justify-between text-xs text-[var(--text-secondary)] font-medium py-2 hover:text-[var(--text-primary)] transition-colors"
+          >
+            <span>{done.length} completed</span>
+            <motion.span animate={{ rotate: expandDone ? 180 : 0 }} transition={{ duration: 0.2 }}>
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />
+              </svg>
+            </motion.span>
+          </button>
+          <AnimatePresence initial={false}>
+            {expandDone && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                className="overflow-hidden"
+              >
+                <div className="pt-1 space-y-1.5">
+                  {done.map(({ lesson }) => (
+                    <div key={lesson.id} className="flex items-center gap-2 py-1">
+                      <span className="text-emerald-500 text-xs">✓</span>
+                      <span className="text-xs text-[var(--text-secondary)] truncate flex-1">{lesson.title}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      )}
+    </div>
+  )
+}
+
+function LessonRow({ title, pct, barClass }: { title: string; pct: number; barClass: string }) {
+  return (
+    <div>
+      <div className="flex justify-between text-xs mb-1">
+        <span className="text-[var(--text-secondary)] truncate mr-2">{title}</span>
+        <span className="text-[var(--text-tertiary)]">{pct}%</span>
+      </div>
+      <div className="w-full h-2 bg-[var(--bg-elevated)] rounded-full overflow-hidden">
+        <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: `${pct}%` }}
+          transition={{ duration: 0.6 }}
+          className={`h-full rounded-full ${barClass}`}
+        />
       </div>
     </div>
   )
