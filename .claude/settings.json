@@ -18,6 +18,11 @@
             "type": "command",
             "command": "npx claudepluginhub obra/superpowers --plugin superpowers 2>/dev/null || true",
             "statusMessage": "Updating superpowers plugin..."
+          },
+          {
+            "type": "command",
+            "command": "test -f CONTENT.md && printf '\\n=== Content map (CONTENT.md) — known issues ===\\n' && awk '/^## Known Issues/,/^## Loading/' CONTENT.md | head -n 30 || true",
+            "statusMessage": "Loading content map highlights..."
           }
         ]
       }
