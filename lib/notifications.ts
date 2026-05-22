@@ -1,5 +1,7 @@
+import { getProgress } from '@/lib/progress'
+
 const NOTIFICATION_PREF_KEY = 'hindi-notification-pref'
-const LAST_REMINDER_KEY = 'hindi-last-reminder-scheduled'
+const lastShownKey = (prefix: string) => `${prefix}-last-notification-shown`
 
 export function isNotificationSupported(): boolean {
   if (typeof window === 'undefined') return false
@@ -43,7 +45,6 @@ export async function requestNotificationPermission(): Promise<boolean> {
     const permission = await Notification.requestPermission()
     if (permission === 'granted') {
       setNotificationPreference('enabled')
-      await scheduleLocalReminder()
       return true
     }
     return false
@@ -52,33 +53,48 @@ export async function requestNotificationPermission(): Promise<boolean> {
   }
 }
 
-export async function scheduleLocalReminder(): Promise<void> {
+/**
+ * Check on every app open / tab focus whether a reminder should fire.
+ * Conditions: permission granted, not yet practiced today, past 10am local time,
+ * and we haven't already shown a notification today.
+ *
+ * This is more reliable than scheduling via setTimeout in a service worker,
+ * because SWs are killed by the browser when idle and lose their timers.
+ */
+export function maybeShowReminderOnOpen(storagePrefix: string): void {
   if (typeof window === 'undefined') return
-  if (!('serviceWorker' in navigator)) return
+  if (Notification.permission !== 'granted') return
+  if (getNotificationPreference() !== 'enabled') return
 
-  const registration = await navigator.serviceWorker.ready
+  const todayUtc = new Date().toISOString().split('T')[0]
 
-  // Calculate time until 10am tomorrow
-  const now = new Date()
-  const tomorrow = new Date(now)
-  tomorrow.setDate(tomorrow.getDate() + 1)
-  tomorrow.setHours(10, 0, 0, 0)
-  const delay = tomorrow.getTime() - now.getTime()
+  // Don't double-notify on the same day
+  if (localStorage.getItem(lastShownKey(storagePrefix)) === todayUtc) return
 
-  // Send message to service worker to schedule notification
-  if (registration.active) {
-    registration.active.postMessage({
-      type: 'SCHEDULE_REMINDER',
-      delay,
-    })
-    localStorage.setItem(LAST_REMINDER_KEY, new Date().toISOString())
-  }
+  // User already practiced today — no reminder needed
+  const progress = getProgress(storagePrefix)
+  if (progress.lastActiveDate === todayUtc) return
+
+  // Only remind after 10am local time so we're not annoying at 6am
+  if (new Date().getHours() < 10) return
+
+  const isHindi = storagePrefix === 'hindi'
+  const body = isHindi
+    ? "You haven't practiced Hindi yet today. Keep your streak alive!"
+    : 'Je hebt vandaag nog geen Nederlands geoefend. Houd je reeks gaande!'
+
+  localStorage.setItem(lastShownKey(storagePrefix), todayUtc)
+
+  new Notification('Bolna Seekho 🙏', {
+    body,
+    icon: '/icon.svg',
+    badge: '/icon.svg',
+    tag: 'daily-reminder',
+  })
 }
 
 export function shouldShowNotificationPrompt(): boolean {
   if (!isNotificationSupported()) return false
   if (getNotificationPreference() !== 'unset') return false
-  // Only show in standalone mode for iOS compatibility
-  // But also show on desktop browsers
   return true
 }
