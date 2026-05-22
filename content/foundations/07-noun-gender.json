@@ -1,0 +1,73 @@
+{
+  "id": "noun-gender",
+  "title": "Noun Gender",
+  "situation": "Every Hindi noun is either masculine or feminine — and every adjective, verb, and possessive must agree. Master this and the whole language clicks.",
+  "skills": ["identifying gender", "adjective agreement", "verb agreement with gender"],
+  "phrases": [
+    { "hindi": "yeh ladka hai, woh ladki hai", "english": "This is a boy, that is a girl", "context": "The cleanest illustration: most -aa nouns are masculine, most -ii nouns are feminine. Memorize this pair as your anchor.", "pronunciation": "YEH lad-KA hai, WOH lad-KI hai" },
+    { "hindi": "mera bhai accha hai, meri behen acchi hai", "english": "My brother is good, my sister is good", "context": "Watch the adjective AND the possessive both change. Three things flip together: mera→meri, accha→acchi.", "pronunciation": "ME-ra BHAI ac-CHA hai, ME-ri BE-hen ac-CHI hai" },
+    { "hindi": "yeh kitaab nayi hai, yeh phone naya hai", "english": "This book is new, this phone is new", "context": "Kitaab (book) is feminine despite ending in a consonant — many feminine nouns don't end in -ii. Phone is masculine (loanwords usually default masc).", "pronunciation": "YEH ki-TAAB na-YI hai, YEH PHONE na-YA hai" },
+    { "hindi": "paani thanda hai, chai garam hai", "english": "The water is cold, the tea is hot", "context": "Paani (water) is masculine even though it ends in -ii — a classic exception. Chai is feminine. Memorize the exceptions individually.", "pronunciation": "paa-NI than-DA hai, CHAI ga-RAM hai" },
+    { "hindi": "khaana ban gaya, roti ban gayi", "english": "The food is ready, the roti is ready", "context": "Watch the past verb: gaya (masc, agrees with khaana) vs gayi (fem, agrees with roti). Verb gender is non-negotiable in past tense.", "pronunciation": "KHAA-na ban ga-YA, RO-ti ban ga-YI" },
+    { "hindi": "mere paas do bhai aur ek behen hai", "english": "I have two brothers and one sister", "context": "When mixing masc + fem in a list, the verb agrees with the nearest noun. Here 'behen' (fem) is nearest, but the older convention takes masculine — both are heard. Don't overthink.", "pronunciation": "ME-re paas DO BHAI aur EK BE-hen hai" },
+    { "hindi": "Hindi mushkil hai par interesting hai", "english": "Hindi is hard but interesting", "context": "Hindi (the language) is feminine. 'Mushkil' is invariable — adjectives ending in non-aa don't change. So 'Hindi mushkil hai' (no change to mushkil).", "pronunciation": "HIN-di mush-KIL hai par IN-te-res-ting hai" },
+    { "hindi": "yeh aurat doctor hai, woh aadmi engineer hai", "english": "This woman is a doctor, that man is an engineer", "context": "Aurat (woman) is feminine, aadmi (man) is masculine despite ending in -ii. Profession words (doctor, engineer, teacher) typically don't show gender in modern usage.", "pronunciation": "YEH au-RAT DOC-tor hai, WOH aad-MI EN-gi-neer hai" },
+    { "hindi": "meri gaadi nayi hai, mera scooter purana hai", "english": "My car is new, my scooter is old", "context": "Gaadi (vehicle/car) is feminine — typical -ii ending. Scooter is masculine (English loanword defaulting to masc). Pattern: native words mostly follow -aa/-ii rule, loanwords mostly masc.", "pronunciation": "ME-ri GAA-di na-YI hai, ME-ra SCOO-ter pu-RAA-na hai" },
+    { "hindi": "achche dost milte hain mushkil se", "english": "Good friends are hard to come by", "context": "Plural masc: accha → acche, dost (friend) stays same. 'milte hain' = are found. Watch all three masculine markers: acche, dost (with plural verb), milte.", "pronunciation": "ac-CHE DOST mil-TE hain mush-KIL se" }
+  ],
+  "grammar_notes": [
+    "Hindi has TWO genders — masculine (pulling) and feminine (stri-ling). There is no neuter. Every single noun has a gender — including abstract ideas (pyaar = love, masc; khushi = happiness, fem)",
+    "Default rule #1: nouns ending in -aa are usually masculine (ladka, kamra, raasta, samosa). Default rule #2: nouns ending in -ii are usually feminine (ladki, kitaabi, gaadi, biwi)",
+    "Major exceptions to memorize: paani (water-M), aadmi (man-M), ghee (M) — end in -ii but masculine. Aurat (woman-F), kitaab (book-F), cheez (thing-F), raat (night-F) — end in consonant but feminine",
+    "Adjectives ending in -aa change with gender: accha → acchi → acche. Adjectives NOT ending in -aa never change: saaf (clean), mushkil (hard), khoobsoorat (beautiful), bekaar (useless) — same for all genders",
+    "Possessives ALWAYS agree with the OWNED noun, not the owner: mera bhai (my brother — owned thing is masc), meri behen (my sister — owned thing is fem), mere parents (my parents — plural). Same for tera/tumhara/uska/hamara",
+    "Past tense verbs agree with subject in intransitive sentences (ladka aaya / ladki aayi) and with object in 'ne'-marked transitive sentences (usne kitaab padhi / usne phone uthaya)",
+    "Loanwords from English usually default to masculine: phone, computer, scooter, table. Some have become feminine through usage: bus, car, train (because they replaced feminine native words like gaadi)"
+  ],
+  "culture_notes": [
+    "Native speakers don't 'think about' gender — it's automatic, like 'he/she/it' in English. As a learner, mistakes are forgivable but they'll mark you as a beginner",
+    "Some words have unstable gender depending on region — 'mobile' is usually masc in Delhi, sometimes fem in Lucknow. Don't stress, just pick one and stay consistent",
+    "When unsure, default to masculine — it's the unmarked gender and you'll be wrong less than 50% of the time on borrowed words"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "identifying gender",
+      "explanation": "Start with the -aa/-ii rule for native words. For nouns ending in consonants, memorize them as you encounter them. For loanwords, default to masculine unless it's clearly replacing a feminine native word. Build your gender intuition by always learning new nouns WITH a gender-revealing adjective.",
+      "more_examples": [
+        { "hindi": "yeh kursi (F) hai", "english": "this is a chair (fem)" },
+        { "hindi": "yeh mez (F) hai", "english": "this is a table (fem despite consonant ending)" },
+        { "hindi": "yeh kamra (M) hai", "english": "this is a room (masc, -aa ending)" },
+        { "hindi": "yeh sadak (F) hai", "english": "this is a road (fem despite consonant)" },
+        { "hindi": "yeh phool (M) hai", "english": "this is a flower (masc)" }
+      ]
+    },
+    {
+      "skill": "adjective agreement",
+      "explanation": "Only adjectives ending in -aa change. The change: -aa for masc singular, -ii for feminine, -e for masc plural or before 'aap'. Adjectives ending in consonants or other vowels (saaf, mushkil, bekaar, khoobsoorat) NEVER change. Quick test: does the adjective end in -aa? If yes, it agrees. If no, it doesn't.",
+      "more_examples": [
+        { "hindi": "bada kamra / badi kitaab / bade ghar", "english": "big room / big book / big houses" },
+        { "hindi": "saaf kamra / saaf kitaab", "english": "clean room / clean book (saaf never changes)" },
+        { "hindi": "naya phone / nayi gaadi / naye joote", "english": "new phone / new car / new shoes" },
+        { "hindi": "mushkil sawaal / mushkil baat", "english": "hard question / hard matter (mushkil invariable)" },
+        { "hindi": "thanda paani / thandi chai", "english": "cold water / cold tea" }
+      ]
+    },
+    {
+      "skill": "verb agreement with gender",
+      "explanation": "In present tense, verbs agree with subject: karta (M-sg), karti (F-sg), karte (M-pl/respectful). In past tense, intransitive verbs agree with subject (woh aaya/aayi), but transitive verbs with 'ne' agree with the OBJECT (usne kitaab padhi — padhi because kitaab is fem). This 'ne' rule is the trickiest part of Hindi grammar.",
+      "more_examples": [
+        { "hindi": "ladka khaana khaata hai", "english": "the boy eats food (present, masc subject)" },
+        { "hindi": "ladki khaana khaati hai", "english": "the girl eats food (present, fem subject)" },
+        { "hindi": "ladka aaya, ladki aayi", "english": "the boy came, the girl came (past, intransitive)" },
+        { "hindi": "usne roti khayi", "english": "he/she ate roti (ne + fem object → khayi)" },
+        { "hindi": "usne khaana khaya", "english": "he/she ate food (ne + masc object → khaya)" }
+      ]
+    }
+  ],
+  "practice_prompt": "Help me practice noun gender. Pick objects around me (chair, phone, water, book, table, room) and ask me to use them in sentences with adjectives — I should make accha/acchi/acche agree correctly. Then test me on past tense with 'ne' — give me sentences like 'I ate the roti / I drank the water' and check if I get the verb agreement right.",
+  "references": [
+    "Snell & Weightman, 'Teach Yourself Hindi' — Ch. 1-2 on noun gender and adjective agreement",
+    "McGregor, 'Outline of Hindi Grammar' — Sections on gender, oblique case, and the 'ne' construction",
+    "Afroz Taj, 'A Door Into Hindi' (UNC) — Lesson 2 introduces gender systematically with audio examples"
+  ]
+}

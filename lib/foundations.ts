@@ -6,6 +6,7 @@ import pastTense from '@/content/foundations/03-past-tense.json'
 import futureTense from '@/content/foundations/04-future-tense.json'
 import postpositions from '@/content/foundations/05-postpositions.json'
 import pronounsVerbs from '@/content/foundations/06-pronouns-verbs.json'
+import nounGender from '@/content/foundations/07-noun-gender.json'
 
 const foundations: Lesson[] = [
   numbers,
@@ -14,6 +15,7 @@ const foundations: Lesson[] = [
   futureTense,
   postpositions,
   pronounsVerbs,
+  nounGender,
 ] as Lesson[]
 
 export function getAllFoundations(): Lesson[] {

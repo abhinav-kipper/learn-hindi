@@ -4,7 +4,7 @@ Authoritative map of all learning content so future sessions don't re-read 1600 
 
 ## Inventory
 
-### Situations (`content/lessons/*.json`) — 6 lessons
+### Situations (`content/lessons/*.json`) — 7 lessons
 Conversational Hindi taught through scenarios. Each lesson: 9-10 phrases + grammar notes + culture notes + 2-3 skill breakdowns + AI practice prompt.
 
 | ID | Title | Situation | Skills |
@@ -15,9 +15,10 @@ Conversational Hindi taught through scenarios. Each lesson: 9-10 phrases + gramm
 | `04-expressing-opinions` | Expressing Opinions | Post-Bollywood-movie chat | past tense (tha/thi/the), `lagta hai` pattern, agree/disagree |
 | `05-making-plans` | Making Plans with Friends | WhatsApp group weekend plans | future tense (ga/ge/gi), conditional (agar...toh), suggestions |
 | `06-giving-directions` | Giving & Asking Directions | Stranger asks for metro | postpositions, location vocab, sequential instructions |
+| `07-home-visit` | Visiting Someone's Home | First time at a friend's parents' home in Lucknow | polite imperatives (-iye/-iyega), hospitality phrases, respectful address |
 
-### Foundations (`content/foundations/*.json`) — 6 lessons
-Grammar core. Same schema as situations but **`skill_breakdown` is currently empty `[]` in all 6**. Phrases + grammar_notes do the teaching.
+### Foundations (`content/foundations/*.json`) — 7 lessons
+Grammar core. Same schema as situations. Foundations 02-06 still have empty `skill_breakdown: []` (gap); `07-noun-gender` has full skill_breakdowns and is the template for backfilling the others.
 
 | ID | Title |
 |----|-------|
@@ -27,6 +28,7 @@ Grammar core. Same schema as situations but **`skill_breakdown` is currently emp
 | `04-future-tense` | Future Tense |
 | `05-postpositions` | Postpositions |
 | `06-pronouns-verbs` | Pronouns & Verb Agreement |
+| `07-noun-gender` | Noun Gender |
 
 ### Vocabulary (`content/vocabulary.json`)
 6 categories × ~15-20 words = **100 words total**: Everyday Words, Emotions & Feelings, Food & Drinks, People & Relationships, Time & Numbers, Actions.
@@ -43,9 +45,21 @@ Grammar core. Same schema as situations but **`skill_breakdown` is currently emp
   grammar_notes: string[]
   culture_notes: string[]
   skill_breakdown: { skill, explanation, more_examples: { hindi, english }[] }[]
-  practice_prompt: string  // sent to Gemini as scenario for chat practice
+  practice_prompt: string         // sent to Gemini as scenario for chat practice
+  references?: string[]           // optional: textbooks/sources consulted when authoring
 }
 ```
+
+## Pedagogical references
+
+When sourcing/authoring lessons we consult (without copying) these renowned references:
+
+- **Snell & Weightman, *Teach Yourself Hindi*** — gold standard for spoken-style pedagogy and grammar sequencing
+- **R.S. McGregor, *Outline of Hindi Grammar*** — academic-grade grammar reference
+- **Afroz Taj, *A Door Into Hindi* (UNC)** — free university course with hospitality / cultural modules
+- **NCERT Hindi textbooks** — Indian school curriculum, free PDFs
+
+The actual phrases/examples in our lessons are written originally in our app's voice — we draw on these for sequencing, grammar accuracy, and pedagogical structure only. Lessons store consulted sources in their `references` array.
 
 ## Style Guide (in use)
 

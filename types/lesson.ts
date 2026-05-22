@@ -26,4 +26,5 @@ export interface Lesson {
   culture_notes: string[]
   skill_breakdown: SkillBreakdown[]
   practice_prompt: string
+  references?: string[]
 }
