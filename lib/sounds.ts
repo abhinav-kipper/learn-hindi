@@ -324,9 +324,30 @@ const soundFunctions: Record<SoundType, () => void> = {
   pop: playSoundPop,
 }
 
+// Haptic patterns matched to each sound — same expressive intent, just felt.
+// Numbers are ms; arrays alternate vibrate/pause/vibrate/...
+const haptics: Record<SoundType, number | number[]> = {
+  tap: 8,
+  pop: 10,
+  swipe: 12,
+  correct: 20,
+  wrong: [30, 30, 30],
+  streak: [10, 40, 10, 40, 10],
+  complete: [20, 50, 30, 50, 40],
+  levelup: [40, 40, 60, 40, 100],
+}
+
+function vibrate(pattern: number | number[]): void {
+  if (typeof navigator === 'undefined') return
+  if (typeof navigator.vibrate !== 'function') return
+  try { navigator.vibrate(pattern) } catch { /* ignore */ }
+}
+
 export function playSound(type: SoundType): void {
   if (typeof window === 'undefined') return
   if (isMuted()) return
+
+  vibrate(haptics[type])
 
   try {
     soundFunctions[type]()
