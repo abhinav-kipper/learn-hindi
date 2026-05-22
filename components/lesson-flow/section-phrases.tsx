@@ -10,6 +10,7 @@ import { markPhraseViewed } from '@/lib/phrase-progress'
 import { setLastActiveLesson } from '@/lib/last-active-lesson'
 import { useLanguage } from '@/lib/language-context'
 import { isFavorite, toggleFavorite } from '@/lib/favorites'
+import { useCuteMoments } from '@/components/cute-moments'
 
 interface SectionPhrasesProps {
   lessonId: string
@@ -22,6 +23,7 @@ interface SectionPhrasesProps {
 
 function FavoriteStar({ phrase, lessonId, prefix }: { phrase: Phrase; lessonId: string; prefix: string }) {
   const [starred, setStarred] = useState(false)
+  const { show } = useCuteMoments()
 
   useEffect(() => {
     setStarred(isFavorite(lessonId, phrase.hindi, prefix))
@@ -32,6 +34,7 @@ function FavoriteStar({ phrase, lessonId, prefix }: { phrase: Phrase; lessonId: 
     const next = toggleFavorite(phrase, lessonId, prefix)
     setStarred(next)
     playSound(next ? 'pop' : 'tap')
+    if (next) show('⭐', 'Saved!')
   }
 
   return (
@@ -117,10 +120,14 @@ function PhraseCardContent({
 }) {
   const [revealed, setRevealed] = useState(false)
   const [showCulture, setShowCulture] = useState(false)
+  const { cheer } = useCuteMoments()
 
   const handleReveal = () => {
     if (!revealed) {
       playSound('pop')
+      // ~30% chance to fire a cute encouragement on reveal — the cooldown in
+      // CuteMomentsProvider keeps it from stacking even if the user spams reveals.
+      if (Math.random() < 0.3) cheer()
     }
     setRevealed(!revealed)
   }

@@ -8,6 +8,7 @@ import { useLanguage } from '@/lib/language-context'
 import { getUniversalLessonById } from '@/lib/all-content'
 import { ReadAloudButton } from '@/components/read-aloud-button'
 import { playSound } from '@/lib/sounds'
+import { useCuteMoments } from '@/components/cute-moments'
 
 function SourceChip({ source }: { source: MistakeSource }) {
   const isQuiz = source === 'quiz'
@@ -217,6 +218,7 @@ function DrillOverlay({ mistakes, onClose }: { mistakes: Mistake[]; onClose: () 
   const [index, setIndex] = useState(0)
   const [revealed, setRevealed] = useState(false)
   const [gotItCount, setGotItCount] = useState(0)
+  const { cheer } = useCuteMoments()
   const current = order[index]
   const isLast = index === order.length - 1
   const complete = index >= order.length
@@ -225,6 +227,7 @@ function DrillOverlay({ mistakes, onClose }: { mistakes: Mistake[]; onClose: () 
     if (gotIt) {
       setGotItCount(c => c + 1)
       playSound('correct')
+      cheer()
     } else {
       playSound('pop')
     }

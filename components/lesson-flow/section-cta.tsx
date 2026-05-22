@@ -7,6 +7,7 @@ import { Lesson } from '@/types/lesson'
 import { markLessonComplete, isLessonComplete, updateStreak } from '@/lib/progress'
 import { playSound } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
+import { useCuteMoments } from '@/components/cute-moments'
 
 interface SectionCtaProps {
   lesson: Lesson
@@ -41,6 +42,7 @@ function CountUp({ target, duration = 1200, delay = 0 }: { target: number; durat
 
 export function SectionCta({ lesson }: SectionCtaProps) {
   const { config } = useLanguage()
+  const { show } = useCuteMoments()
   const [completed, setCompleted] = useState(false)
 
   useEffect(() => {
@@ -52,6 +54,7 @@ export function SectionCta({ lesson }: SectionCtaProps) {
     updateStreak(config.storagePrefix)
     setCompleted(true)
     playSound('levelup')
+    show('🏆', 'Lesson complete!')
 
     confetti({
       particleCount: 80,

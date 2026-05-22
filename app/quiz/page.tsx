@@ -12,10 +12,12 @@ import { QuizResults } from '@/components/quiz/quiz-results'
 import { FeatureTooltip } from '@/components/feature-tooltip'
 import { playSound } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
+import { useCuteMoments } from '@/components/cute-moments'
 
 export default function QuizPage() {
   const router = useRouter()
   const { language, config } = useLanguage()
+  const { cheer } = useCuteMoments()
   const [questions, setQuestions] = useState<QuizQuestion[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [selectedAnswerId, setSelectedAnswerId] = useState<string | null>(null)
@@ -61,6 +63,7 @@ export default function QuizPage() {
     // Play sound based on answer
     if (isCorrect) {
       playSound('correct')
+      cheer()
     } else {
       playSound('wrong')
       // Persist the mistake so it surfaces on the /mistakes page next to

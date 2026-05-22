@@ -4,6 +4,7 @@ import './globals.css'
 import { InstallPrompt } from '@/components/install-prompt'
 import { LayoutShell } from '@/components/layout-shell'
 import { LanguageProvider } from '@/lib/language-context'
+import { CuteMomentsProvider } from '@/components/cute-moments'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -37,10 +38,12 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} min-h-screen`}>
         <LanguageProvider>
-          <LayoutShell>
-            {children}
-          </LayoutShell>
-          <InstallPrompt />
+          <CuteMomentsProvider>
+            <LayoutShell>
+              {children}
+            </LayoutShell>
+            <InstallPrompt />
+          </CuteMomentsProvider>
         </LanguageProvider>
       </body>
     </html>
