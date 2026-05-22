@@ -65,10 +65,12 @@ The actual phrases/examples in our lessons are written originally in our app's v
 
 - **Hinglish welcome** — English words mixed in (`boring`, `twist`, `interval`, `done`, `UPI`) match how urban Indians actually speak.
 - **Romanization** — Devanagari is never used. Conventions:
+  - **Single-vowel endings, not doubled** — `karta` (not `kartaa`), `karti` (not `kartee`), `gaya` (not `gayaa`), `karunga` (not `karuungaa`), `tha`/`thi`/`the`/`theen` for past of honaa
   - `accha` (not `achcha` or `acha`) — written this way throughout
   - `chh` = aspirated ch (`chhe` = 6, `chhutta` = change, `chhat` = roof)
   - `nahi` (not `nahin`)
   - No diacritics (no `ā`, `ī`)
+  - **`lib/conjugations.ts`** is the canonical reference for verb-form romanization — 5 verbs × 3 tenses, all aligned to this convention. New verb data should match.
 - **Pronunciation field** — uses CAPS to mark stress + hyphens for syllables (e.g. `BHAI-ya, kya HAAL hai?`). Not fully consistent across files.
 - **Voice** — first-person learner, conversational, "yaar / dude" energy. Practice prompts always describe a concrete scenario the user steps into.
 - **Cultural context** — every lesson grounds phrases in Indian social reality (auto-fare norms, WhatsApp group dynamics, `dekhte hain` = polite no).

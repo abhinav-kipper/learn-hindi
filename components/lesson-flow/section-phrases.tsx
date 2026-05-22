@@ -120,14 +120,10 @@ function PhraseCardContent({
 }) {
   const [revealed, setRevealed] = useState(false)
   const [showCulture, setShowCulture] = useState(false)
-  const { cheer } = useCuteMoments()
 
   const handleReveal = () => {
     if (!revealed) {
       playSound('pop')
-      // ~30% chance to fire a cute encouragement on reveal — the cooldown in
-      // CuteMomentsProvider keeps it from stacking even if the user spams reveals.
-      if (Math.random() < 0.3) cheer()
     }
     setRevealed(!revealed)
   }
