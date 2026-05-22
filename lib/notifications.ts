@@ -45,12 +45,47 @@ export async function requestNotificationPermission(): Promise<boolean> {
     const permission = await Notification.requestPermission()
     if (permission === 'granted') {
       setNotificationPreference('enabled')
+      fireOneTimeTestNotification()
       return true
     }
     return false
   } catch {
     return false
   }
+}
+
+const TEST_NOTIFICATION_FIRED_KEY = 'bolna-test-notification-fired-v1'
+
+const FUN_TEST_MESSAGES = [
+  '🙏 Namaste! Notifications are working — your tutor will nudge you daily.',
+  '☕ Chai is steeping. Time to learn some Hindi!',
+  "Bahut accha! You're all set up 🌟",
+  '🎉 Wah! Notifications wired up. Pakka, you got this.',
+  'Yaar, kya scene hai? Ready to practice? 😎',
+  '🗣️ Bolna seekho — let\'s bolna some Hindi!',
+  'Ek baat sun — a fresh day, a fresh streak 🔥',
+  "🌸 Aaja, let's roll. Today's lesson is waiting.",
+]
+
+/**
+ * One-shot fun notification to confirm the system is wired up. Fires at most
+ * once per browser (tracked in localStorage). Picks a random message from the
+ * pool. No-op if permission isn't granted yet.
+ */
+export function fireOneTimeTestNotification(): void {
+  if (typeof window === 'undefined') return
+  if (Notification.permission !== 'granted') return
+  if (localStorage.getItem(TEST_NOTIFICATION_FIRED_KEY) === 'yes') return
+
+  const msg = FUN_TEST_MESSAGES[Math.floor(Math.random() * FUN_TEST_MESSAGES.length)]
+  localStorage.setItem(TEST_NOTIFICATION_FIRED_KEY, 'yes')
+
+  new Notification('Bolna Seekho 🙏', {
+    body: msg,
+    icon: '/icon.svg',
+    badge: '/icon.svg',
+    tag: 'test-notification',
+  })
 }
 
 /**

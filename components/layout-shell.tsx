@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { BottomNav } from '@/components/bottom-nav'
 import { NotificationPrompt } from '@/components/notification-prompt'
 import { DailyReviewPopup } from '@/components/daily-review-popup'
-import { registerServiceWorker, shouldShowNotificationPrompt, maybeShowReminderOnOpen } from '@/lib/notifications'
+import { registerServiceWorker, shouldShowNotificationPrompt, maybeShowReminderOnOpen, fireOneTimeTestNotification } from '@/lib/notifications'
 import { useLanguage } from '@/lib/language-context'
 
 export function LayoutShell({ children }: { children: React.ReactNode }) {
@@ -13,6 +13,10 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     registerServiceWorker()
+
+    // One-shot fun notification — confirms the system is wired up.
+    // Fires at most once per browser (gated by localStorage).
+    fireOneTimeTestNotification()
 
     // Check on first open
     maybeShowReminderOnOpen(config.storagePrefix)
