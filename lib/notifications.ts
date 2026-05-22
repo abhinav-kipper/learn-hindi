@@ -54,7 +54,7 @@ export async function requestNotificationPermission(): Promise<boolean> {
   }
 }
 
-const TEST_NOTIFICATION_FIRED_KEY = 'bolna-test-notification-fired-v1'
+const TEST_NOTIFICATION_FIRED_KEY = 'bolna-test-notification-fired-v2'
 
 const FUN_TEST_MESSAGES = [
   '🙏 Namaste! Notifications are working — your tutor will nudge you daily.',
@@ -71,21 +71,26 @@ const FUN_TEST_MESSAGES = [
  * One-shot fun notification to confirm the system is wired up. Fires at most
  * once per browser (tracked in localStorage). Picks a random message from the
  * pool. No-op if permission isn't granted yet.
+ *
+ * Uses SW showNotification() instead of new Notification() — required for iOS PWAs.
  */
 export function fireOneTimeTestNotification(): void {
   if (typeof window === 'undefined') return
   if (Notification.permission !== 'granted') return
   if (localStorage.getItem(TEST_NOTIFICATION_FIRED_KEY) === 'yes') return
+  if (!('serviceWorker' in navigator)) return
 
   const msg = FUN_TEST_MESSAGES[Math.floor(Math.random() * FUN_TEST_MESSAGES.length)]
   localStorage.setItem(TEST_NOTIFICATION_FIRED_KEY, 'yes')
 
-  new Notification('Bolna Seekho 🙏', {
-    body: msg,
-    icon: '/icon.svg',
-    badge: '/icon.svg',
-    tag: 'test-notification',
-  })
+  navigator.serviceWorker.ready.then((reg) =>
+    reg.showNotification('Bolna Seekho 🙏', {
+      body: msg,
+      icon: '/icon.svg',
+      badge: '/icon.svg',
+      tag: 'test-notification',
+    })
+  ).catch(() => {/* silently ignore if SW unavailable */})
 }
 
 /**
@@ -118,14 +123,19 @@ export function maybeShowReminderOnOpen(storagePrefix: string): void {
     ? "You haven't practiced Hindi yet today. Keep your streak alive!"
     : 'Je hebt vandaag nog geen Nederlands geoefend. Houd je reeks gaande!'
 
+  if (!('serviceWorker' in navigator)) return
+
   localStorage.setItem(lastShownKey(storagePrefix), todayUtc)
 
-  new Notification('Bolna Seekho 🙏', {
-    body,
-    icon: '/icon.svg',
-    badge: '/icon.svg',
-    tag: 'daily-reminder',
-  })
+  // Use SW showNotification() — required for iOS PWAs (new Notification() is unsupported there).
+  navigator.serviceWorker.ready.then((reg) =>
+    reg.showNotification('Bolna Seekho 🙏', {
+      body,
+      icon: '/icon.svg',
+      badge: '/icon.svg',
+      tag: 'daily-reminder',
+    })
+  ).catch(() => {/* silently ignore if SW unavailable */})
 }
 
 export function shouldShowNotificationPrompt(): boolean {
