@@ -1,5 +1,7 @@
+import { getProgress } from '@/lib/progress'
+
 const NOTIFICATION_PREF_KEY = 'hindi-notification-pref'
-const LAST_REMINDER_KEY = 'hindi-last-reminder-scheduled'
+const lastShownKey = (prefix: string) => `${prefix}-last-notification-shown`
 
 export function isNotificationSupported(): boolean {
   if (typeof window === 'undefined') return false
@@ -43,7 +45,7 @@ export async function requestNotificationPermission(): Promise<boolean> {
     const permission = await Notification.requestPermission()
     if (permission === 'granted') {
       setNotificationPreference('enabled')
-      await scheduleLocalReminder()
+      fireOneTimeTestNotification()
       return true
     }
     return false
@@ -52,33 +54,92 @@ export async function requestNotificationPermission(): Promise<boolean> {
   }
 }
 
-export async function scheduleLocalReminder(): Promise<void> {
+const TEST_NOTIFICATION_FIRED_KEY = 'bolna-test-notification-fired-v2'
+
+const FUN_TEST_MESSAGES = [
+  '🙏 Namaste! Notifications are working — your tutor will nudge you daily.',
+  '☕ Chai is steeping. Time to learn some Hindi!',
+  "Bahut accha! You're all set up 🌟",
+  '🎉 Wah! Notifications wired up. Pakka, you got this.',
+  'Yaar, kya scene hai? Ready to practice? 😎',
+  '🗣️ Bolna seekho — let\'s bolna some Hindi!',
+  'Ek baat sun — a fresh day, a fresh streak 🔥',
+  "🌸 Aaja, let's roll. Today's lesson is waiting.",
+]
+
+/**
+ * One-shot fun notification to confirm the system is wired up. Fires at most
+ * once per browser (tracked in localStorage). Picks a random message from the
+ * pool. No-op if permission isn't granted yet.
+ *
+ * Uses SW showNotification() instead of new Notification() — required for iOS PWAs.
+ */
+export function fireOneTimeTestNotification(): void {
   if (typeof window === 'undefined') return
+  if (Notification.permission !== 'granted') return
+  if (localStorage.getItem(TEST_NOTIFICATION_FIRED_KEY) === 'yes') return
   if (!('serviceWorker' in navigator)) return
 
-  const registration = await navigator.serviceWorker.ready
+  const msg = FUN_TEST_MESSAGES[Math.floor(Math.random() * FUN_TEST_MESSAGES.length)]
+  localStorage.setItem(TEST_NOTIFICATION_FIRED_KEY, 'yes')
 
-  // Calculate time until 10am tomorrow
-  const now = new Date()
-  const tomorrow = new Date(now)
-  tomorrow.setDate(tomorrow.getDate() + 1)
-  tomorrow.setHours(10, 0, 0, 0)
-  const delay = tomorrow.getTime() - now.getTime()
-
-  // Send message to service worker to schedule notification
-  if (registration.active) {
-    registration.active.postMessage({
-      type: 'SCHEDULE_REMINDER',
-      delay,
+  navigator.serviceWorker.ready.then((reg) =>
+    reg.showNotification('Bolna Seekho 🙏', {
+      body: msg,
+      icon: '/icon.svg',
+      badge: '/icon.svg',
+      tag: 'test-notification',
     })
-    localStorage.setItem(LAST_REMINDER_KEY, new Date().toISOString())
-  }
+  ).catch(() => {/* silently ignore if SW unavailable */})
+}
+
+/**
+ * Check on every app open / tab focus whether a reminder should fire.
+ * Conditions: permission granted, not yet practiced today, past 10am local time,
+ * and we haven't already shown a notification today.
+ *
+ * This is more reliable than scheduling via setTimeout in a service worker,
+ * because SWs are killed by the browser when idle and lose their timers.
+ */
+export function maybeShowReminderOnOpen(storagePrefix: string): void {
+  if (typeof window === 'undefined') return
+  if (Notification.permission !== 'granted') return
+  if (getNotificationPreference() !== 'enabled') return
+
+  const todayUtc = new Date().toISOString().split('T')[0]
+
+  // Don't double-notify on the same day
+  if (localStorage.getItem(lastShownKey(storagePrefix)) === todayUtc) return
+
+  // User already practiced today — no reminder needed
+  const progress = getProgress(storagePrefix)
+  if (progress.lastActiveDate === todayUtc) return
+
+  // Only remind after 10am local time so we're not annoying at 6am
+  if (new Date().getHours() < 10) return
+
+  const isHindi = storagePrefix === 'hindi'
+  const body = isHindi
+    ? "You haven't practiced Hindi yet today. Keep your streak alive!"
+    : 'Je hebt vandaag nog geen Nederlands geoefend. Houd je reeks gaande!'
+
+  if (!('serviceWorker' in navigator)) return
+
+  localStorage.setItem(lastShownKey(storagePrefix), todayUtc)
+
+  // Use SW showNotification() — required for iOS PWAs (new Notification() is unsupported there).
+  navigator.serviceWorker.ready.then((reg) =>
+    reg.showNotification('Bolna Seekho 🙏', {
+      body,
+      icon: '/icon.svg',
+      badge: '/icon.svg',
+      tag: 'daily-reminder',
+    })
+  ).catch(() => {/* silently ignore if SW unavailable */})
 }
 
 export function shouldShowNotificationPrompt(): boolean {
   if (!isNotificationSupported()) return false
   if (getNotificationPreference() !== 'unset') return false
-  // Only show in standalone mode for iOS compatibility
-  // But also show on desktop browsers
   return true
 }

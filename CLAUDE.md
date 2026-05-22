@@ -178,3 +178,42 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - Node 20.x pinned in engines (Vercel compatibility)
 - `next/navigation` `useRouter` only — App Router, not pages-dir
 - canvas-confetti is dynamic-imported in `streak-counter.tsx` (SSR-safe) but statically imported in `section-cta.tsx` (already client component)
+
+## Testing
+Tests live in `__tests__/` — two directories:
+- `lib/` — unit tests for all utility functions (localStorage mocked via `Object.defineProperty`)
+- `components/` — React component tests using `@testing-library/react` + `jest-dom`
+
+Mocking conventions for component tests:
+- `framer-motion` → stub `motion.div` as plain `<div>` stripping animation props; `AnimatePresence` as fragment
+- `next/navigation` → `useRouter: () => ({ push: mockPush })`
+- `next/link` → render as `<a href={href}>`
+- `@/lib/language-context` → `useLanguage: () => ({ language: 'hindi', config: { storagePrefix: 'hindi' } })`
+
+Run tests: `npx vitest run` (or `npx vitest` for watch mode)
+
+## Backlog (not yet implemented)
+
+### High priority
+1. **CI — GitHub Actions** — Run `eslint + tsc --noEmit + vitest run` on every push to `main` and on PRs.
+   Gate merges on green. Prevents broken builds reaching Vercel prod.
+
+2. **Vercel preview deploys** — Link the GitHub repo to Vercel so every branch/PR gets
+   a preview URL automatically. Costs nothing; saves manual `vercel --prod` for testing branches.
+
+### Medium priority
+3. **AI session startup: print failing tests** — Add a SessionStart hook:
+   `npx vitest run --reporter=dot 2>&1 | tail -5`
+   So sessions start with instant awareness of any broken state.
+
+4. **Prettier with `--check` in CI** — Add `prettier --check .` to the CI workflow.
+   Keeps diffs clean and prevents whitespace noise in PRs.
+
+### Low priority
+5. **Practice page `useChat` hook tests** — Extract `useChat` into its own file
+   (`lib/use-chat.ts`) so it can be unit-tested with mocked `fetch`. Currently
+   embedded in the page component. Key cases: rate-limit 429 handling, retry logic,
+   initial greeting on mount.
+
+6. **More component coverage** — `section-cta.tsx` (mark-complete flow),
+   `section-phrases.tsx` (reveal/conceal), `streak-counter.tsx` (milestone badge).
