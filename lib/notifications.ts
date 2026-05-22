@@ -54,7 +54,10 @@ export async function requestNotificationPermission(): Promise<boolean> {
   }
 }
 
-const TEST_NOTIFICATION_FIRED_KEY = 'bolna-test-notification-fired-v2'
+const TEST_NOTIFICATION_FIRED_KEY = 'bolna-test-notification-fired-v3'
+const RANDOM_NUDGE_KEY = (prefix: string) => `${prefix}-last-random-nudge`
+const RANDOM_NUDGE_COOLDOWN_HOURS = 4
+const RANDOM_NUDGE_CHANCE = 0.4
 
 const FUN_TEST_MESSAGES = [
   '🙏 Namaste! Notifications are working — your tutor will nudge you daily.',
@@ -65,6 +68,21 @@ const FUN_TEST_MESSAGES = [
   '🗣️ Bolna seekho — let\'s bolna some Hindi!',
   'Ek baat sun — a fresh day, a fresh streak 🔥',
   "🌸 Aaja, let's roll. Today's lesson is waiting.",
+]
+
+const RANDOM_NUDGE_MESSAGES = [
+  '☕ Chai break? Practice one Hindi phrase before you go.',
+  '🌟 Aaja, ek mini-lesson — just 2 minutes.',
+  '🗣️ Bolna seekho — say one Hindi phrase out loud right now!',
+  '🎯 Quick win: knock out one practice session today.',
+  "🔥 Don't lose your streak — one phrase keeps it alive.",
+  '💡 Tip: try thinking in Hindi for the next 30 seconds.',
+  '🌸 Aaja yaar — your tutor misses you.',
+  '✨ Wah! Time for a quick Hindi moment.',
+  '🚀 Ek baat sun — small daily practice beats marathons.',
+  '🙏 Namaste! Ready for a tiny dose of Hindi?',
+  '🎉 Kya scene hai? Drop in for one phrase.',
+  '🌶️ Spice up your day — learn one cheeky Hindi expression.',
 ]
 
 /**
@@ -89,7 +107,8 @@ export function fireOneTimeTestNotification(): void {
       icon: '/icon.svg',
       badge: '/icon.svg',
       tag: 'test-notification',
-    })
+      renotify: true,
+    } as NotificationOptions)
   ).catch(() => {/* silently ignore if SW unavailable */})
 }
 
@@ -134,7 +153,46 @@ export function maybeShowReminderOnOpen(storagePrefix: string): void {
       icon: '/icon.svg',
       badge: '/icon.svg',
       tag: 'daily-reminder',
-    })
+      renotify: true,
+    } as NotificationOptions)
+  ).catch(() => {/* silently ignore if SW unavailable */})
+}
+
+/**
+ * Fire a random encouraging nudge when the user backgrounds the app.
+ *
+ * Firing on `visibilitychange → hidden` (rather than `→ visible`) gives iOS
+ * a chance to actually banner the notification — foregrounded PWAs silently
+ * deliver notifications to the list without showing a banner.
+ *
+ * Throttled to at most once per RANDOM_NUDGE_COOLDOWN_HOURS, and only fires
+ * with probability RANDOM_NUDGE_CHANCE so we're not predictable/annoying.
+ */
+export function maybeFireRandomNudge(storagePrefix: string): void {
+  if (typeof window === 'undefined') return
+  if (Notification.permission !== 'granted') return
+  if (getNotificationPreference() !== 'enabled') return
+  if (!('serviceWorker' in navigator)) return
+
+  const lastNudge = localStorage.getItem(RANDOM_NUDGE_KEY(storagePrefix))
+  if (lastNudge) {
+    const elapsedMs = Date.now() - parseInt(lastNudge, 10)
+    if (elapsedMs < RANDOM_NUDGE_COOLDOWN_HOURS * 60 * 60 * 1000) return
+  }
+
+  if (Math.random() > RANDOM_NUDGE_CHANCE) return
+
+  const msg = RANDOM_NUDGE_MESSAGES[Math.floor(Math.random() * RANDOM_NUDGE_MESSAGES.length)]
+  localStorage.setItem(RANDOM_NUDGE_KEY(storagePrefix), String(Date.now()))
+
+  navigator.serviceWorker.ready.then((reg) =>
+    reg.showNotification('Bolna Seekho 🙏', {
+      body: msg,
+      icon: '/icon.svg',
+      badge: '/icon.svg',
+      tag: 'random-nudge',
+      renotify: true,
+    } as NotificationOptions)
   ).catch(() => {/* silently ignore if SW unavailable */})
 }
 
