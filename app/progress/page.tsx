@@ -11,6 +11,7 @@ import { getAllFoundations } from '@/lib/foundations'
 import { getDutchLessons } from '@/lib/dutch/lessons'
 import { getDutchFoundations } from '@/lib/dutch/foundations'
 import { getLessonPercent } from '@/lib/phrase-progress'
+import { playSound } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
 import type { Lesson } from '@/types/lesson'
 

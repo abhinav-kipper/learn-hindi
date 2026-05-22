@@ -58,12 +58,23 @@ npm run dev          # needs .env.local with GOOGLE_GENERATIVE_AI_API_KEY
 npx vitest run
 ```
 
-### Deploy
+### Deploy / Ship
+Vercel auto-deploys on every push to `main` via the GitHub integration —
+**no Vercel CLI needed** (and `vercel --prod` will fail in cloud sessions
+that have no Vercel auth token).
+
+**Shipping a feature branch:**
 ```bash
-git add <changed files>
-git commit -m "description"
-git push origin main   # triggers Vercel auto-deploy via GitHub integration
+npx vitest run                    # 1. tests must pass first
+git checkout main && git pull
+git merge <feature-branch> --no-ff -m "Merge: <summary>"
+git push origin main              # 2. Vercel auto-deploys
 ```
+Resolve any merge conflicts, re-run `npx vitest run` and `npx tsc --noEmit`
+before pushing — a broken build on main blocks the deploy and there's no
+CI gate yet (backlog item #1).
+
+**Direct commit to main** (for solo hotfixes): same flow, just commit on `main` and push.
 
 ## Environment Variables
 - `GOOGLE_GENERATIVE_AI_API_KEY` — Gemini API key (set in .env.local locally, Vercel env for prod)
