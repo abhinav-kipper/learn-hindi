@@ -35,15 +35,22 @@ describe('generateQuiz', () => {
     expect(vocabCount).toBeLessThanOrEqual(3)
   })
 
-  it('falls back to phrases-only when fewer than 3 vocab words are explored', () => {
+  it('falls back to phrases-only when fewer than 4 vocab words are explored', () => {
+    // 2 words: well under threshold
     localStorage.setItem('hindi-vocab-learned', JSON.stringify({
       everyday: ['accha', 'theek'],
     }))
+    const q2 = generateQuiz(['greetings'], 10)
+    for (const q of q2) expect(q.source ?? 'phrase').toBe('phrase')
 
-    const questions = generateQuiz(['greetings'], 10)
-    for (const q of questions) {
-      expect(q.source ?? 'phrase').toBe('phrase')
-    }
+    localStorage.clear()
+
+    // 3 words: regression — threshold was wrongly 3 before (needed 4: target + 3 distractors)
+    localStorage.setItem('hindi-vocab-learned', JSON.stringify({
+      everyday: ['accha', 'theek', 'bas'],
+    }))
+    const q3 = generateQuiz(['greetings'], 10)
+    for (const q of q3) expect(q.source ?? 'phrase').toBe('phrase')
   })
 
   it('never emits fill-in-blank for vocab source', () => {
