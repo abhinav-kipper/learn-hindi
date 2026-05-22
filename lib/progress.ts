@@ -3,10 +3,16 @@ export interface Progress {
   currentStreak: number
   lastActiveDate: string
   practiceSessionCount: number
+  todaySessions: number
+  todaySessionsDate: string
 }
 
 function storageKey(prefix: string): string {
   return `${prefix}-progress`
+}
+
+function todayISO(): string {
+  return new Date().toISOString().split('T')[0]
 }
 
 function defaultProgress(): Progress {
@@ -15,6 +21,8 @@ function defaultProgress(): Progress {
     currentStreak: 0,
     lastActiveDate: '',
     practiceSessionCount: 0,
+    todaySessions: 0,
+    todaySessionsDate: '',
   }
 }
 
@@ -47,13 +55,27 @@ export function isLessonComplete(lessonId: string, prefix = 'hindi'): boolean {
 
 export function incrementPracticeCount(prefix = 'hindi'): void {
   const progress = getProgress(prefix)
+  const today = todayISO()
   progress.practiceSessionCount += 1
+  if (progress.todaySessionsDate !== today) {
+    progress.todaySessions = 1
+    progress.todaySessionsDate = today
+  } else {
+    progress.todaySessions += 1
+  }
   saveProgress(progress, prefix)
+}
+
+/** Today's practice sessions, auto-zeroed if the stored date is stale. */
+export function getTodaySessions(prefix = 'hindi'): number {
+  const progress = getProgress(prefix)
+  if (progress.todaySessionsDate !== todayISO()) return 0
+  return progress.todaySessions
 }
 
 export function updateStreak(prefix = 'hindi'): void {
   const progress = getProgress(prefix)
-  const today = new Date().toISOString().split('T')[0]
+  const today = todayISO()
 
   if (progress.lastActiveDate === today) return
 

@@ -6,7 +6,7 @@ import { getAllLessons } from '@/lib/lessons'
 import { getAllFoundations } from '@/lib/foundations'
 import { getDutchLessons } from '@/lib/dutch/lessons'
 import { getDutchFoundations } from '@/lib/dutch/foundations'
-import { getProgress } from '@/lib/progress'
+import { getProgress, getTodaySessions } from '@/lib/progress'
 import { LessonCard } from '@/components/lesson-card'
 import { StreakCounter } from '@/components/streak-counter'
 import { FeatureTooltip } from '@/components/feature-tooltip'
@@ -30,6 +30,7 @@ export default function Home() {
   const [dailyGoal, setDailyGoal] = useState(5)
   const [reason, setReason] = useState('')
   const [completedCount, setCompletedCount] = useState(0)
+  const [todaySessions, setTodaySessions] = useState(0)
   const [muted, setMuted] = useState(false)
   const tabStorageKey = `${config.storagePrefix}-home-tab`
   const [activeTab, setActiveTab] = useState<Tab>('situations')
@@ -59,6 +60,7 @@ export default function Home() {
     setReason(profile.reason || '')
     const progress = getProgress(config.storagePrefix)
     setCompletedCount(progress.completedLessons.length)
+    setTodaySessions(getTodaySessions(config.storagePrefix))
     setMuted(isMuted())
 
     // Restore the last-active tab for this language (Situations vs Foundations).
@@ -108,9 +110,7 @@ export default function Home() {
           <h1 className="text-2xl font-extrabold text-[var(--text-primary)] tracking-tight">
             Hey {userName}!
           </h1>
-          <p className="text-sm text-[var(--text-secondary)] mt-1">
-            {dailyGoal} min today — you got this!
-          </p>
+          <DailyGoalBar today={todaySessions} goal={dailyGoal} />
         </div>
         <div className="flex items-center gap-2">
           <StreakCounter />
@@ -224,5 +224,29 @@ export default function Home() {
       </div>
     </div>
     </>
+  )
+}
+
+function DailyGoalBar({ today, goal }: { today: number; goal: number }) {
+  const pct = goal > 0 ? Math.min(100, Math.round((today / goal) * 100)) : 0
+  const hit = today >= goal && goal > 0
+  return (
+    <div className="mt-1.5">
+      <div className="flex items-center justify-between mb-1">
+        <p className="text-xs text-[var(--text-secondary)] font-medium">
+          {hit ? `Daily goal hit — ${today}/${goal} 🎯` : `${today} of ${goal} today`}
+        </p>
+      </div>
+      <div className="w-40 h-1.5 bg-[var(--bg-surface)] rounded-full overflow-hidden">
+        <div
+          className={`h-full rounded-full transition-all duration-500 ${
+            hit
+              ? 'bg-gradient-to-r from-emerald-400 to-teal-500'
+              : 'bg-gradient-to-r from-indigo-400 to-violet-500'
+          }`}
+          style={{ width: `${pct}%` }}
+        />
+      </div>
+    </div>
   )
 }
