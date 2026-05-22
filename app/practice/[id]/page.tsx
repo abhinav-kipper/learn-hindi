@@ -356,6 +356,7 @@ export default function PracticePage({ params }: PracticePageProps) {
             type="button"
             onClick={toggleHandsFree}
             title={handsFree ? 'Turn off hands-free mode' : 'Hands-free: auto-read replies + listen'}
+            aria-label={handsFree ? 'Turn off hands-free mode' : 'Turn on hands-free mode'}
             aria-pressed={handsFree}
             className={`text-xs font-semibold px-3 py-1.5 rounded-full transition-all ${
               handsFree
@@ -432,7 +433,7 @@ export default function PracticePage({ params }: PracticePageProps) {
         )}
         {error && (
           <div className="text-center text-xs text-red-500 bg-red-50 rounded-lg py-2 px-3 mx-auto">
-            {error}
+            {error === 'rate_limited' ? 'Too many messages — please wait a moment and try again.' : error}
           </div>
         )}
         <div ref={messagesEndRef} />

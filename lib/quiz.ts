@@ -197,7 +197,7 @@ export function generateQuiz(lessonIds: string[], count: number, language = 'hin
   if (phraseTargets.length === 0) return []
 
   const vocabTargets = vocabToTargets(language)
-  const canMixVocab = vocabTargets.length >= 3
+  const canMixVocab = vocabTargets.length >= 4
 
   let vocabCount = canMixVocab ? Math.round(count * 0.3) : 0
   vocabCount = Math.min(vocabCount, vocabTargets.length)

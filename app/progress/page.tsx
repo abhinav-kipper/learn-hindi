@@ -11,7 +11,6 @@ import { getAllFoundations } from '@/lib/foundations'
 import { getDutchLessons } from '@/lib/dutch/lessons'
 import { getDutchFoundations } from '@/lib/dutch/foundations'
 import { getLessonPercent } from '@/lib/phrase-progress'
-import { playSound } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
 
 interface Stats {
@@ -57,11 +56,6 @@ export default function ProgressPage() {
       currentStreak: progress.currentStreak,
       lastActiveDate: progress.lastActiveDate,
     })
-
-    // Play streak sound if streak is active
-    if (progress.currentStreak > 0) {
-      playSound('streak')
-    }
 
     // Build recent activity
     const recentActivities: ActivityItem[] = []
