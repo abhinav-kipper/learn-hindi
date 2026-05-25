@@ -1,6 +1,6 @@
 'use client'
 
-import {
+import React, {
   createContext,
   useCallback,
   useContext,
@@ -98,7 +98,7 @@ function MomentStage({ active, onTap }: { active: ActiveState | null; onTap: () 
       style={{
         position: 'fixed',
         inset: 0,
-        zIndex: 30,
+        zIndex: 45,
         pointerEvents: 'none',
       }}
     >
@@ -113,7 +113,7 @@ function anchorStyle(cfg: Moment, cuttingSize: number): React.CSSProperties {
     case 'bottom-left':  return { left: 12, bottom: 16, position: 'absolute' }
     case 'top-right':    return { right: 12, top: 60, position: 'absolute' }
     case 'top-left':     return { left: 12, top: 60, position: 'absolute' }
-    case 'center':       return { left: '50%', top: '40%', transform: 'translate(-50%, -50%)', position: 'absolute' }
+    case 'center':       return { inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'absolute' }
     case 'bottom-edge':  return { right: 24, bottom: -cuttingSize * 0.55, position: 'absolute' }
     case 'walk':         return { left: 0, bottom: 16, position: 'absolute' }
     case 'inline-right': return { right: 24, top: 240, position: 'absolute' }
@@ -146,14 +146,32 @@ function MomentRender({
     ? { right: cuttingSize + 8, bottom: cuttingSize * 0.55, position: 'absolute' }
     : { left: cuttingSize + 8, bottom: cuttingSize * 0.55, position: 'absolute' }
 
+  // For center anchor, the mascot's enter/exit animations override transform-based
+  // centering. Use a flex wrapper that doesn't get the animation applied.
+  const useFlexCenter = cfg.anchor === 'center'
+  const mascotOuter: React.CSSProperties = useFlexCenter
+    ? { position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }
+    : aStyle
+  const mascotInner: React.CSSProperties = useFlexCenter
+    ? { width: cuttingSize, animation: animByPhase[phase], cursor: 'pointer', pointerEvents: 'auto' }
+    : { ...aStyle, width: cuttingSize, animation: animByPhase[phase], cursor: 'pointer', pointerEvents: 'auto' }
+
+  // Bubble wrapper uses the original aStyle (which for center anchor still uses
+  // transform-translate; that's fine because the bubble's only animation is
+  // bubble-pop, which animates scale/opacity, not translate).
+  const bubbleWrapperStyle: React.CSSProperties = useFlexCenter
+    ? { left: '50%', top: '40%', transform: 'translate(-50%, -50%)', position: 'absolute', pointerEvents: 'none' }
+    : { ...aStyle, pointerEvents: 'none' }
+
   return (
     <>
       {phase !== 'exit' && !walkAnchor && (
-        <div style={{ ...aStyle, pointerEvents: 'none' }}>
+        <div style={bubbleWrapperStyle}>
           <div
             data-testid="chaina-bubble"
             style={{
               ...bubblePos,
+              pointerEvents: 'none',
               animation: `bubble-pop ${Math.max(cfg.enterMs - 100, 240)}ms cubic-bezier(.34,1.56,.64,1) ${Math.max(cfg.enterMs - 280, 80)}ms backwards`,
             }}
           >
@@ -163,42 +181,50 @@ function MomentRender({
           </div>
         </div>
       )}
-      <div
-        onClick={onTap}
-        style={{
-          ...aStyle,
-          width: cuttingSize,
-          animation: animByPhase[phase],
-          cursor: 'pointer',
-          pointerEvents: 'auto',
-        }}
-      >
-        <div
-          style={{
-            width: '100%',
-            height: '100%',
-            animation: phase === 'hold' ? animByPhase.hold : 'none',
-            transformOrigin: 'center bottom',
-          }}
-        >
-          <Cutting size={cuttingSize} mood={cfg.mood} blink={cfg.mood !== 'sleepy'} />
+      {useFlexCenter ? (
+        <div style={mascotOuter}>
+          <div onClick={onTap} style={mascotInner}>
+            <div
+              style={{
+                width: '100%',
+                height: '100%',
+                animation: phase === 'hold' ? animByPhase.hold : 'none',
+                transformOrigin: 'center bottom',
+              }}
+            >
+              <Cutting size={cuttingSize} mood={cfg.mood} blink={cfg.mood !== 'sleepy'} />
+            </div>
+          </div>
         </div>
-        {walkAnchor && phase !== 'exit' && (
+      ) : (
+        <div onClick={onTap} style={mascotInner}>
           <div
-            data-testid="chaina-bubble"
             style={{
-              position: 'absolute',
-              left: cuttingSize - 18,
-              bottom: cuttingSize * 0.5,
-              animation: 'bubble-pop 360ms cubic-bezier(.34,1.56,.64,1) 200ms backwards',
+              width: '100%',
+              height: '100%',
+              animation: phase === 'hold' ? animByPhase.hold : 'none',
+              transformOrigin: 'center bottom',
             }}
           >
-            <SpeechBubble tail="bottom-left" caption={line.caption}>
-              {line.main}
-            </SpeechBubble>
+            <Cutting size={cuttingSize} mood={cfg.mood} blink={cfg.mood !== 'sleepy'} />
           </div>
-        )}
-      </div>
+          {walkAnchor && phase !== 'exit' && (
+            <div
+              data-testid="chaina-bubble"
+              style={{
+                position: 'absolute',
+                left: cuttingSize - 18,
+                bottom: cuttingSize * 0.5,
+                animation: 'bubble-pop 360ms cubic-bezier(.34,1.56,.64,1) 200ms backwards',
+              }}
+            >
+              <SpeechBubble tail="bottom-left" caption={line.caption}>
+                {line.main}
+              </SpeechBubble>
+            </div>
+          )}
+        </div>
+      )}
     </>
   )
 }
