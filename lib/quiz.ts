@@ -2,6 +2,8 @@ import { QuizQuestion, QuizAnswer, QuizType } from '@/types/quiz'
 import { getAllContent } from '@/lib/lessons'
 import { Phrase } from '@/types/lesson'
 import { getExploredVocabWords, VocabWord } from '@/lib/vocabulary'
+import { getDutchAllContent } from '@/lib/dutch/lessons'
+import { getDutchExploredVocabWords } from '@/lib/dutch/vocabulary'
 
 function shuffle<T>(array: T[]): T[] {
   const arr = [...array]
@@ -42,13 +44,7 @@ interface VocabTarget {
 type Target = PhraseTarget | VocabTarget
 
 function phrasesToTargets(lessonIds?: string[], language = 'hindi'): PhraseTarget[] {
-  let lessons = getAllContent()
-  // Lazy-load Dutch content when needed (avoids circular imports at module init)
-  if (language === 'dutch') {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const { getDutchAllContent } = require('@/lib/dutch/lessons')
-    lessons = getDutchAllContent()
-  }
+  const lessons = language === 'dutch' ? getDutchAllContent() : getAllContent()
   const filtered = lessonIds ? lessons.filter(l => lessonIds.includes(l.id)) : lessons
   const targets: PhraseTarget[] = []
   for (const lesson of filtered) {
@@ -67,14 +63,8 @@ function phrasesToTargets(lessonIds?: string[], language = 'hindi'): PhraseTarge
 }
 
 function vocabToTargets(prefix = 'hindi'): VocabTarget[] {
-  let explored: VocabWord[]
-  if (prefix === 'dutch') {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const { getDutchExploredVocabWords } = require('@/lib/dutch/vocabulary')
-    explored = getDutchExploredVocabWords()
-  } else {
-    explored = getExploredVocabWords()
-  }
+  const explored: VocabWord[] =
+    prefix === 'dutch' ? getDutchExploredVocabWords() : getExploredVocabWords()
   return explored.map((word: VocabWord) => ({
     source: 'vocab' as const,
     hindi: word.hindi,

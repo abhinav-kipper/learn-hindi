@@ -66,20 +66,12 @@ export function getVocabReviewPhrases(): { hindi: string; english: string; pronu
   const reviewWords = getSet(VOCAB_REVIEW_KEY)
   if (reviewWords.length === 0) return []
 
-  // Load vocabulary data to get full word details
-  try {
-    const vocabDataStr = localStorage.getItem('hindi-vocab-learned')
-    // We need to look up the words from the vocabulary JSON
-    // Since we only store the hindi text, we'll try to get full info from categories
-    // This is a best-effort approach — the vocabulary module isn't importable here without circular deps
-    // So we store minimal data and let the consumer look up full details
-    return reviewWords.map(hindi => ({
-      hindi,
-      english: '',
-      pronunciation: '',
-      context: 'Vocabulary word marked for review',
-    }))
-  } catch {
-    return []
-  }
+  // We only store the hindi text; consumers look up full details via the
+  // vocabulary module (kept out of here to avoid a circular import).
+  return reviewWords.map((hindi) => ({
+    hindi,
+    english: '',
+    pronunciation: '',
+    context: 'Vocabulary word marked for review',
+  }))
 }

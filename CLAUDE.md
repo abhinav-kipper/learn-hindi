@@ -273,32 +273,26 @@ Run tests: `npx vitest run` (or `npx vitest` for watch mode)
 ## Backlog (not yet implemented)
 
 ### High priority
-1. **ESLint in CI** — `.github/workflows/ci.yml` currently runs tsc + vitest.
-   ESLint is excluded because there are ~23 pre-existing violations (mostly
-   React 19's new `react-hooks/set-state-in-effect` rule, a few unused vars,
-   require-imports in tests). Fix those + add `npx eslint .` to the workflow.
-
-2. **Vercel preview deploys** — Link the GitHub repo to Vercel so every PR
+1. **Vercel preview deploys** — Link the GitHub repo to Vercel so every PR
    gets a preview URL automatically. Costs nothing; saves needing the CLI.
 
 ### Medium priority
-3. **Practice `useChat` hook tests** — Extract `useChat` from
+2. **Practice `useChat` hook tests** — Extract `useChat` from
    `app/practice/[id]/page.tsx` into `lib/use-chat.ts` so it can be
    unit-tested with mocked `fetch`. Key cases: rate-limit 429 handling,
    retry logic, initial greeting on mount, persistence.
 
-4. **Prettier with `--check` in CI** — Add `prettier --check .` to the CI
+3. **Prettier with `--check` in CI** — Add `prettier --check .` to the CI
    workflow. Keeps diffs clean and prevents whitespace noise in PRs.
 
-5. **SessionStart hook for AI sessions** — A `.claude/settings.json` hook
+4. **SessionStart hook for AI sessions** — A `.claude/settings.json` hook
    that runs `npx vitest run --reporter=dot 2>&1 | tail -5` on session
    start so each session begins with instant awareness of any broken state.
 
 ### Low priority
-6. **More component coverage** — `LessonChaiGalli` celebration view,
+5. **More component coverage** — `LessonChaiGalli` celebration view,
    `ChaiGalliChatMessage` correction sticker, `bottom-nav` active-tab
    animation. Existing coverage is in `__tests__/components/`.
 
-7. **Visual regression** — Playwright screenshots committed to repo, diffed
-   on every PR. The walking-tour test in `/tmp/test-audit.mjs` is a
-   starting point — promote it to a real `e2e/` suite.
+6. **Visual regression** — Playwright screenshots committed to repo, diffed
+   on every PR. Add as an `e2e/` suite once we settle on a baseline.

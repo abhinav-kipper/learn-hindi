@@ -1,7 +1,7 @@
 "use client";
 
-import { ReactNode, MouseEvent, useState } from "react";
-import { COLORS, BORDER, SHADOW, RADIUS } from "./tokens";
+import { ReactNode, useState } from "react";
+import { BORDER, SHADOW, RADIUS } from "./tokens";
 
 type StickerProps = {
   children: ReactNode;

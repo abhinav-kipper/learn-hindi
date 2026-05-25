@@ -29,7 +29,6 @@ import { useLanguage } from '@/lib/language-context'
 import {
   Sticker,
   Tag,
-  Cutting,
   DottedBg,
   MotifIcon,
   COLORS,

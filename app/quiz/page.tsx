@@ -14,7 +14,6 @@ import { playSound } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
 import { useCuteMoments } from '@/components/cute-moments'
 import {
-  Sticker,
   Tag,
   Cutting,
   DottedBg,

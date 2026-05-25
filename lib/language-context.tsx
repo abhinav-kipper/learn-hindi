@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
+import { createContext, useContext, useState, ReactNode } from 'react'
 import { Language, LanguageConfig, LANGUAGE_CONFIGS, ACTIVE_LANGUAGE_KEY } from './language-config'
 
 interface LanguageContextValue {

@@ -1,12 +1,7 @@
-# Bolna Seekho CI — runs type-check and the vitest suite on every push to
-# main and on every PR. Sets a red ❌ status on the commit if anything
+# Bolna Seekho CI — runs lint, type-check, and the vitest suite on every
+# push to main and on every PR. Sets a red ❌ on the commit if anything
 # fails, so a broken build is visible before / alongside the Vercel deploy
 # that's also triggered by the push.
-#
-# ESLint is intentionally skipped right now: there are ~23 pre-existing
-# rule violations (mostly React 19's new react-hooks/set-state-in-effect),
-# none of which actually break the app. Wire eslint in once those are
-# cleaned up — see CLAUDE.md backlog.
 
 name: ci
 
@@ -33,6 +28,9 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: npx eslint .
 
       - name: TypeScript check
         run: npx tsc --noEmit

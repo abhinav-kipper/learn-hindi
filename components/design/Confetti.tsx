@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { COLORS } from "./tokens";
 
 type ConfettiProps = {
@@ -16,6 +17,42 @@ const DEFAULT_COLORS = [
   COLORS.rose,
 ];
 
+interface Bit {
+  key: number;
+  left: number;
+  width: number;
+  height: number;
+  background: string;
+  borderRadius: string;
+  rotate: number;
+  duration: number;
+  delay: number;
+}
+
+/**
+ * Build N confetti bits with randomized positions, sizes, rotations, and
+ * timings. Extracted outside the component so the impure Math.random
+ * calls don't sit in the render path — they run once via the useState
+ * lazy initializer when the component first mounts.
+ */
+function buildBits(count: number, colors: string[]): Bit[] {
+  const out: Bit[] = [];
+  for (let i = 0; i < count; i++) {
+    out.push({
+      key: i,
+      left: Math.random() * 100,
+      duration: 1.6 + Math.random() * 1.4,
+      delay: Math.random() * 0.6,
+      width: 8 + Math.random() * 6,
+      height: (8 + Math.random() * 6) * 1.4,
+      background: colors[i % colors.length],
+      rotate: Math.random() * 360,
+      borderRadius: i % 3 === 0 ? "50%" : "3px",
+    });
+  }
+  return out;
+}
+
 /**
  * Lightweight pure-CSS confetti rain. Renders N falling shapes
  * (mixed circles and rectangles) over a `position: relative` parent.
@@ -25,40 +62,19 @@ const DEFAULT_COLORS = [
  *
  * IMPORTANT: The parent must be `position: relative` and `overflow: hidden`
  * so confetti is clipped to the screen area.
+ *
+ * The random positions are computed once on mount via the useState lazy
+ * initializer — they stay stable across re-renders so parent state changes
+ * don't restart the CSS animations mid-fall.
  */
 export function Confetti({
   active,
   colors = DEFAULT_COLORS,
   count = 36,
 }: ConfettiProps) {
-  if (!active) return null;
+  const [bits] = useState(() => buildBits(count, colors));
 
-  const bits = [];
-  for (let i = 0; i < count; i++) {
-    const left = Math.random() * 100;
-    const dur = 1.6 + Math.random() * 1.4;
-    const delay = Math.random() * 0.6;
-    const w = 8 + Math.random() * 6;
-    const c = colors[i % colors.length];
-    const rot = Math.random() * 360;
-    const shape = i % 3 === 0 ? "50%" : "3px";
-    bits.push(
-      <div
-        key={i}
-        style={{
-          position: "absolute",
-          top: -20,
-          left: `${left}%`,
-          width: w,
-          height: w * 1.4,
-          background: c,
-          borderRadius: shape,
-          transform: `rotate(${rot}deg)`,
-          animation: `confetti-fall ${dur}s ease-in ${delay}s forwards`,
-        }}
-      />
-    );
-  }
+  if (!active) return null;
 
   return (
     <div
@@ -70,7 +86,22 @@ export function Confetti({
         zIndex: 70,
       }}
     >
-      {bits}
+      {bits.map((b) => (
+        <div
+          key={b.key}
+          style={{
+            position: "absolute",
+            top: -20,
+            left: `${b.left}%`,
+            width: b.width,
+            height: b.height,
+            background: b.background,
+            borderRadius: b.borderRadius,
+            transform: `rotate(${b.rotate}deg)`,
+            animation: `confetti-fall ${b.duration}s ease-in ${b.delay}s forwards`,
+          }}
+        />
+      ))}
     </div>
   );
 }
