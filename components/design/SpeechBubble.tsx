@@ -1,6 +1,6 @@
 "use client";
 
-import { COLORS, FONTS } from "./tokens";
+import { COLORS, FONTS, BORDER, SHADOW, RADIUS } from "./tokens";
 
 type TailPos = "bottom-right" | "bottom-left" | "top-right" | "top-left";
 
@@ -31,9 +31,9 @@ export function SpeechBubble({
       style={{
         position: "relative",
         background: bg,
-        border: `2.5px solid ${COLORS.ink}`,
-        borderRadius: 18,
-        boxShadow: `4px 4px 0 ${COLORS.ink}`,
+        border: BORDER.sticker,
+        borderRadius: RADIUS.md,
+        boxShadow: SHADOW.sticker,
         padding: "10px 14px 11px",
         maxWidth: width,
         minWidth: 90,
@@ -53,7 +53,7 @@ export function SpeechBubble({
             fontWeight: 600,
             fontSize: 14,
             lineHeight: 1,
-            color: "#8a6a4a",
+            color: COLORS.ink45,
             marginTop: 4,
           }}
         >
