@@ -535,11 +535,10 @@ export default function Home() {
                         inset: 0,
                         background: COLORS.cream,
                         borderRadius: 99,
-                        zIndex: -1,
                       }}
                     />
                   )}
-                  <span style={{ position: 'relative' }}>{t}</span>
+                  <span style={{ position: 'relative', zIndex: 1 }}>{t}</span>
                 </button>
               )
             })}
