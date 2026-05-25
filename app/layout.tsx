@@ -2,10 +2,11 @@ import type { Metadata, Viewport } from 'next'
 import { Bricolage_Grotesque, Nunito, Mochiy_Pop_One, Caveat } from 'next/font/google'
 import './globals.css'
 import '@/components/design/animations.css'
+import '@/components/design/cutting-animations.css'
 import { InstallPrompt } from '@/components/install-prompt'
 import { LayoutShell } from '@/components/layout-shell'
 import { LanguageProvider } from '@/lib/language-context'
-import { CuteMomentsProvider } from '@/components/cute-moments'
+import { ChainaProvider } from '@/components/design'
 
 const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
@@ -60,10 +61,10 @@ export default function RootLayout({
         className={`${bricolage.variable} ${nunito.variable} ${mochiy.variable} ${caveat.variable} min-h-screen`}
       >
         <LanguageProvider>
-          <CuteMomentsProvider>
+          <ChainaProvider>
             <LayoutShell>{children}</LayoutShell>
             <InstallPrompt />
-          </CuteMomentsProvider>
+          </ChainaProvider>
         </LanguageProvider>
       </body>
     </html>
