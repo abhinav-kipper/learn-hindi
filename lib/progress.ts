@@ -7,6 +7,10 @@ export interface Progress {
   todaySessions: number
   todaySessionsDate: string
   seenStreakMilestones: number[]
+  /** Total ms the app has been visible/active today. Used by the daily-goal minute meter. */
+  todayActiveMs: number
+  /** ISO date the todayActiveMs value applies to. Stale dates → counter resets to 0. */
+  todayActiveDate: string
 }
 
 function storageKey(prefix: string): string {
@@ -27,6 +31,8 @@ function defaultProgress(): Progress {
     todaySessions: 0,
     todaySessionsDate: '',
     seenStreakMilestones: [],
+    todayActiveMs: 0,
+    todayActiveDate: '',
   }
 }
 
@@ -95,6 +101,31 @@ export function getTodaySessions(prefix = 'hindi'): number {
   const progress = getProgress(prefix)
   if (progress.todaySessionsDate !== todayISO()) return 0
   return progress.todaySessions
+}
+
+/**
+ * Accrue active-time toward today's daily-goal minute meter. Auto-resets the
+ * counter when the stored date rolls over. Caller is the layout-shell tick
+ * (every 30s while document.visibilityState === 'visible').
+ */
+export function addTodayActiveMs(ms: number, prefix = 'hindi'): void {
+  if (typeof window === 'undefined' || ms <= 0) return
+  const progress = getProgress(prefix)
+  const today = todayISO()
+  if (progress.todayActiveDate !== today) {
+    progress.todayActiveMs = ms
+    progress.todayActiveDate = today
+  } else {
+    progress.todayActiveMs = (progress.todayActiveMs ?? 0) + ms
+  }
+  saveProgress(progress, prefix)
+}
+
+/** Today's active minutes (rounded down). Auto-zeroed across midnight. */
+export function getTodayActiveMinutes(prefix = 'hindi'): number {
+  const progress = getProgress(prefix)
+  if (progress.todayActiveDate !== todayISO()) return 0
+  return Math.floor((progress.todayActiveMs ?? 0) / 60_000)
 }
 
 export function updateStreak(prefix = 'hindi'): void {

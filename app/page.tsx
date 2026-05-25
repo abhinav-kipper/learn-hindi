@@ -7,7 +7,7 @@ import { getAllLessons } from '@/lib/lessons'
 import { getAllFoundations } from '@/lib/foundations'
 import { getDutchLessons } from '@/lib/dutch/lessons'
 import { getDutchFoundations } from '@/lib/dutch/foundations'
-import { getProgress, getTodaySessions, isLessonComplete } from '@/lib/progress'
+import { getProgress, getTodayActiveMinutes, isLessonComplete } from '@/lib/progress'
 import { FeatureTooltip } from '@/components/feature-tooltip'
 import { isOnboardingComplete, getUserProfile } from '@/lib/onboarding'
 import { playSound, isMuted, toggleMute } from '@/lib/sounds'
@@ -48,7 +48,7 @@ export default function Home() {
   const [dailyGoal, setDailyGoal] = useState(5)
   const [reason, setReason] = useState('')
   const [completedCount, setCompletedCount] = useState(0)
-  const [todaySessions, setTodaySessions] = useState(0)
+  const [todayMinutes, setTodayMinutes] = useState(0)
   const [streak, setStreak] = useState(0)
   const [muted, setMuted] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
@@ -85,7 +85,7 @@ export default function Home() {
     setReason(profile.reason || '')
     const progress = getProgress(config.storagePrefix)
     setCompletedCount(progress.completedLessons.length)
-    setTodaySessions(getTodaySessions(config.storagePrefix))
+    setTodayMinutes(getTodayActiveMinutes(config.storagePrefix))
     setStreak(progress.currentStreak)
     setMuted(isMuted())
 
@@ -115,6 +115,19 @@ export default function Home() {
 
     setReady(true)
   }, [router, language, config.storagePrefix, tabStorageKey])
+
+  // Keep the daily-goal minute display in sync with the active-time ticker.
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const refresh = () => setTodayMinutes(getTodayActiveMinutes(config.storagePrefix))
+    refresh()
+    window.addEventListener('hindi-active-tick', refresh)
+    document.addEventListener('visibilitychange', refresh)
+    return () => {
+      window.removeEventListener('hindi-active-tick', refresh)
+      document.removeEventListener('visibilitychange', refresh)
+    }
+  }, [config.storagePrefix])
 
   useEffect(() => {
     if (!isOnboardingComplete()) return
@@ -160,8 +173,8 @@ export default function Home() {
   }
 
   const currentLessons = activeTab === 'situations' ? lessons : foundations
-  const goalPct = dailyGoal > 0 ? Math.min(100, Math.round((todaySessions / dailyGoal) * 100)) : 0
-  const goalHit = todaySessions >= dailyGoal && dailyGoal > 0
+  const goalPct = dailyGoal > 0 ? Math.min(100, Math.round((todayMinutes / dailyGoal) * 100)) : 0
+  const goalHit = todayMinutes >= dailyGoal && dailyGoal > 0
 
   return (
     <>
@@ -350,7 +363,7 @@ export default function Home() {
                   color: COLORS.ink,
                 }}
               >
-                <span style={{ color: COLORS.orange }}>{todaySessions}</span> / {dailyGoal} min
+                <span style={{ color: COLORS.orange }}>{todayMinutes}</span> / {dailyGoal} min
               </div>
             </div>
             <div

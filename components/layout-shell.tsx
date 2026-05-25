@@ -5,6 +5,7 @@ import { BottomNav } from '@/components/bottom-nav'
 import { NotificationPrompt } from '@/components/notification-prompt'
 import { DailyReviewPopup } from '@/components/daily-review-popup'
 import { registerServiceWorker, shouldShowNotificationPrompt, maybeShowReminderOnOpen, fireOneTimeTestNotification, maybeFireRandomNudge } from '@/lib/notifications'
+import { addTodayActiveMs } from '@/lib/progress'
 import { useLanguage } from '@/lib/language-context'
 import { useChaina, canFire, markFired } from '@/components/design'
 
@@ -24,8 +25,24 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
       } catch {}
     }
 
+    // Daily-goal active-time ticker. Accrue real elapsed time while the app
+    // is visible. Persist every 30s so a tab close doesn't lose progress.
+    let lastTick = Date.now()
+    const TICK_MS = 30_000
+    const flushElapsed = () => {
+      if (document.visibilityState !== 'visible') return
+      const now = Date.now()
+      const elapsed = Math.min(now - lastTick, 5 * 60 * 1000) // cap at 5min to avoid wakeup spikes
+      lastTick = now
+      addTodayActiveMs(elapsed, config.storagePrefix)
+      window.dispatchEvent(new CustomEvent('hindi-active-tick'))
+    }
+    const activeTickInterval = setInterval(flushElapsed, TICK_MS)
+
     const handleVisibility = () => {
       if (document.visibilityState === 'hidden') {
+        // Flush any partial elapsed time before backgrounding.
+        flushElapsed()
         fireOneTimeTestNotification()
         maybeFireRandomNudge(config.storagePrefix)
 
@@ -43,6 +60,8 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
           }
         } catch {}
       } else if (document.visibilityState === 'visible') {
+        // Reset tick baseline so we don't credit time spent backgrounded.
+        lastTick = Date.now()
         maybeShowReminderOnOpen(config.storagePrefix)
       }
     }
@@ -56,6 +75,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
 
     return () => {
       document.removeEventListener('visibilitychange', handleVisibility)
+      clearInterval(activeTickInterval)
       clearTimeout(timer)
     }
   }, [config.storagePrefix, play])
