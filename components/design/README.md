@@ -194,5 +194,5 @@ Every interaction fires both a sound and a vibration via
 3. Compose with `Sticker`, `Tag`, `Cutting`, `MotifIcon` — don't roll your own bordered card.
 4. Add motion: header slide-in + stagger on list items at minimum.
 5. Wire `playSound('tap')` on every clickable, `playSound('pop')` on navigation.
-6. If celebrating an accomplishment, fire `cheer()` from `useCuteMoments()` + maybe confetti via `<Confetti active />` (parent must be `relative; overflow: hidden`).
+6. If celebrating an accomplishment, fire `play('correctAnswer' | 'lessonComplete' | ...)` from `useChaina()` for character moments — see `moments.ts` for the 15-moment registry. Maybe pair with confetti via `<Confetti active />` (parent must be `relative; overflow: hidden`).
 7. Test with Playwright: render the page, click through, assert zero console errors.

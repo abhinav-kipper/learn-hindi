@@ -83,9 +83,15 @@ vi.mock('canvas-confetti', () => ({
   default: vi.fn(),
 }))
 
-vi.mock('@/components/cute-moments', () => ({
-  useCuteMoments: () => ({ show: vi.fn(), cheer: vi.fn() }),
-}))
+vi.mock('@/components/design', async () => {
+  const actual = await vi.importActual<typeof import('@/components/design')>('@/components/design')
+  return {
+    ...actual,
+    useChaina: () => ({ play: vi.fn(), stop: vi.fn() }),
+    canFire: () => false,
+    markFired: () => {},
+  }
+})
 
 const LESSON: Lesson = {
   id: 'auto-negotiation',

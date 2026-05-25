@@ -32,6 +32,9 @@ import {
   FONTS,
   BORDER,
   SHADOW,
+  useChaina,
+  canFire,
+  markFired,
 } from '@/components/design'
 
 type Tab = 'situations' | 'foundations'
@@ -39,6 +42,7 @@ type Tab = 'situations' | 'foundations'
 export default function Home() {
   const router = useRouter()
   const { language, config } = useLanguage()
+  const { play } = useChaina()
   const [ready, setReady] = useState(false)
   const [userName, setUserName] = useState('')
   const [dailyGoal, setDailyGoal] = useState(5)
@@ -112,6 +116,41 @@ export default function Home() {
     setReady(true)
   }, [router, language, config.storagePrefix, tabStorageKey])
 
+  useEffect(() => {
+    if (!isOnboardingComplete()) return
+    if (typeof window === 'undefined') return
+
+    const FIRST_EVER_KEY = 'chaina-first-ever-seen'
+    const LAST_TS_KEY = 'chaina-last-session-ts'
+    const seenFirstEver = localStorage.getItem(FIRST_EVER_KEY) === '1'
+    const lastTs = Number(localStorage.getItem(LAST_TS_KEY) || 0)
+    const now = Date.now()
+    const DAY_MS = 24 * 60 * 60 * 1000
+
+    if (!seenFirstEver) {
+      // firstEver is fired from /onboarding (Task 17). Mark + record on first home visit.
+      localStorage.setItem(FIRST_EVER_KEY, '1')
+      localStorage.setItem(LAST_TS_KEY, String(now))
+      return
+    }
+
+    // Mutex: welcomeBack OR firstOpenToday, not both. Once-per-session.
+    if (canFire('welcomeBack', 'once-per-session') && canFire('firstOpenToday', 'once-per-session')) {
+      const gap = now - lastTs
+      if (gap >= DAY_MS) {
+        play('welcomeBack')
+      } else {
+        play('firstOpenToday')
+      }
+      markFired('welcomeBack', 'once-per-session')
+      markFired('firstOpenToday', 'once-per-session')
+    }
+
+    localStorage.setItem(LAST_TS_KEY, String(now))
+    // Run only on mount
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   if (!ready) {
     return (
       <div className="min-h-dvh flex items-center justify-center">
@@ -174,7 +213,19 @@ export default function Home() {
               </div>
             </div>
             <div style={{ marginRight: -6, marginTop: -8 }}>
-              <Cutting size={92} />
+              <button
+                type="button"
+                onClick={() => {
+                  if (canFire('tap', 'debounce-800ms')) {
+                    play('tap')
+                    markFired('tap', 'debounce-800ms')
+                  }
+                }}
+                style={{ background: 'transparent', border: 0, padding: 0, cursor: 'pointer' }}
+                aria-label="Chaina says hi"
+              >
+                <Cutting size={92} />
+              </button>
             </div>
           </div>
 

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import { saveUserProfile } from '@/lib/onboarding'
@@ -16,6 +16,7 @@ import {
   BORDER,
   SHADOW,
 } from '@/components/design'
+import { useChaina } from '@/components/design'
 
 const reasons = [
   { id: 'family', label: 'partner/family speaks Hindi', emoji: '👨‍👩‍👧' },
@@ -32,6 +33,7 @@ const goals = [
 
 export default function OnboardingPage() {
   const router = useRouter()
+  const { play } = useChaina()
   const [slide, setSlide] = useState(0)
   const [direction, setDirection] = useState(0)
   const [name, setName] = useState('')
@@ -68,6 +70,16 @@ export default function OnboardingPage() {
       router.push('/')
     }, 1800)
   }, [name, reason, dailyGoal, router])
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    if (localStorage.getItem('chaina-first-ever-seen') === '1') return
+    play('firstEver')
+    localStorage.setItem('chaina-first-ever-seen', '1')
+    // Reset the last-session timestamp so home doesn't fire welcomeBack right after.
+    localStorage.setItem('chaina-last-session-ts', String(Date.now()))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const variants = {
     enter: (d: number) => ({ x: d > 0 ? '100%' : '-100%', opacity: 0 }),

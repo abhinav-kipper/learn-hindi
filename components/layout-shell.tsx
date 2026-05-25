@@ -6,32 +6,48 @@ import { NotificationPrompt } from '@/components/notification-prompt'
 import { DailyReviewPopup } from '@/components/daily-review-popup'
 import { registerServiceWorker, shouldShowNotificationPrompt, maybeShowReminderOnOpen, fireOneTimeTestNotification, maybeFireRandomNudge } from '@/lib/notifications'
 import { useLanguage } from '@/lib/language-context'
+import { useChaina, canFire, markFired } from '@/components/design'
 
 export function LayoutShell({ children }: { children: React.ReactNode }) {
   const { config } = useLanguage()
+  const { play } = useChaina()
   const [showNotificationPrompt, setShowNotificationPrompt] = useState(false)
 
   useEffect(() => {
     registerServiceWorker()
-
-    // Check daily reminder on first open
     maybeShowReminderOnOpen(config.storagePrefix)
 
-    // Fire notifications on visibility change. iOS only banners notifications
-    // that arrive while the PWA is NOT in foreground, so:
-    //   - hidden  → fire the one-shot test + maybe a random nudge (will banner)
-    //   - visible → re-check the daily reminder (silently delivered to list)
+    // Record session start (for Chaina sessionEnd 5-min threshold)
+    if (typeof window !== 'undefined') {
+      try {
+        sessionStorage.setItem('chaina-session-start-ts', String(Date.now()))
+      } catch {}
+    }
+
     const handleVisibility = () => {
       if (document.visibilityState === 'hidden') {
         fireOneTimeTestNotification()
         maybeFireRandomNudge(config.storagePrefix)
+
+        // Chaina sessionEnd: fire if session was ≥5min
+        try {
+          const startTs = Number(sessionStorage.getItem('chaina-session-start-ts') || 0)
+          const FIVE_MIN = 5 * 60 * 1000
+          if (
+            startTs &&
+            Date.now() - startTs >= FIVE_MIN &&
+            canFire('sessionEnd', 'once-per-session')
+          ) {
+            play('sessionEnd')
+            markFired('sessionEnd', 'once-per-session')
+          }
+        } catch {}
       } else if (document.visibilityState === 'visible') {
         maybeShowReminderOnOpen(config.storagePrefix)
       }
     }
     document.addEventListener('visibilitychange', handleVisibility)
 
-    // Show notification opt-in prompt after 30 s of first use
     const timer = setTimeout(() => {
       if (shouldShowNotificationPrompt()) {
         setShowNotificationPrompt(true)
@@ -42,7 +58,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
       document.removeEventListener('visibilitychange', handleVisibility)
       clearTimeout(timer)
     }
-  }, [config.storagePrefix])
+  }, [config.storagePrefix, play])
 
   return (
     <>

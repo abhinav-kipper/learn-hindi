@@ -4,7 +4,7 @@ import { useState, useCallback, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import { generateQuiz, saveQuizScore } from '@/lib/quiz'
-import { getProgress, updateStreak } from '@/lib/progress'
+import { getProgress, getStreak, getSeenStreakMilestones, markStreakMilestoneSeen, updateStreak } from '@/lib/progress'
 import { addMistake } from '@/lib/mistakes'
 import { QuizQuestion, QuizResult } from '@/types/quiz'
 import { QuizCard } from '@/components/quiz/quiz-card'
@@ -12,7 +12,7 @@ import { QuizResults } from '@/components/quiz/quiz-results'
 import { FeatureTooltip } from '@/components/feature-tooltip'
 import { playSound } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
-import { useCuteMoments } from '@/components/cute-moments'
+import { useChaina, canFire, markFired } from '@/components/design'
 import {
   Tag,
   Cutting,
@@ -26,7 +26,7 @@ import {
 export default function QuizPage() {
   const router = useRouter()
   const { language, config } = useLanguage()
-  const { cheer } = useCuteMoments()
+  const { play } = useChaina()
   const [questions, setQuestions] = useState<QuizQuestion[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [selectedAnswerId, setSelectedAnswerId] = useState<string | null>(null)
@@ -68,9 +68,10 @@ export default function QuizPage() {
 
     if (isCorrect) {
       playSound('correct')
-      cheer()
+      play('correctAnswer')
     } else {
       playSound('wrong')
+      play('wrongAnswer')
       const correctAnswer = question.answers.find((a) => a.isCorrect)
       if (selectedAnswer && correctAnswer) {
         addMistake(
@@ -83,6 +84,10 @@ export default function QuizPage() {
           config.storagePrefix,
           'quiz',
         )
+        if (canFire('firstMistake', 'once-per-day')) {
+          play('firstMistake')
+          markFired('firstMistake', 'once-per-day')
+        }
       }
     }
 
@@ -104,6 +109,15 @@ export default function QuizPage() {
         const progress = getProgress(config.storagePrefix)
         saveQuizScore(finalScore, questions.length, progress.completedLessons, config.storagePrefix)
         updateStreak(config.storagePrefix)
+        const newStreak = getStreak(config.storagePrefix)
+        const milestones = [7, 14, 30, 50, 100]
+        if (
+          milestones.includes(newStreak) &&
+          !getSeenStreakMilestones(config.storagePrefix).includes(newStreak)
+        ) {
+          play('streakMilestone')
+          markStreakMilestoneSeen(newStreak, config.storagePrefix)
+        }
         setQuizComplete(true)
         if (finalScore >= questions.length / 2) {
           playSound('complete')

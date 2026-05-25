@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import confetti from 'canvas-confetti'
 import { VoiceButton, type VoiceButtonHandle } from '@/components/voice-button'
 import { speak, stopSpeaking } from '@/lib/speech'
-import { incrementPracticeCount, markLessonComplete, updateStreak } from '@/lib/progress'
+import { incrementPracticeCount, markLessonComplete, updateStreak, getStreak, getSeenStreakMilestones, markStreakMilestoneSeen } from '@/lib/progress'
 import { getUniversalLessonById } from '@/lib/all-content'
 import { FeatureTooltip } from '@/components/feature-tooltip'
 import { playSound } from '@/lib/sounds'
@@ -32,6 +32,7 @@ import {
   BORDER,
   SHADOW,
 } from '@/components/design'
+import { useChaina, canFire, markFired } from '@/components/design'
 
 interface Message {
   id: string
@@ -189,6 +190,7 @@ export default function PracticePage({ params }: PracticePageProps) {
   const { id } = use(params)
   const router = useRouter()
   const { language, config } = useLanguage()
+  const { play } = useChaina()
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const voiceRef = useRef<VoiceButtonHandle>(null)
   const spokenIdsRef = useRef<Set<string>>(new Set())
@@ -236,9 +238,13 @@ export default function PracticePage({ params }: PracticePageProps) {
           id,
           config.storagePrefix,
         )
+        if (canFire('firstMistake', 'once-per-day')) {
+          play('firstMistake')
+          markFired('firstMistake', 'once-per-day')
+        }
       }
     },
-    [id, config.storagePrefix],
+    [id, config.storagePrefix, play],
   )
 
   const persistKey = useMemo(
@@ -300,6 +306,15 @@ export default function PracticePage({ params }: PracticePageProps) {
     if (userMessageCount === 0) return
     markLessonComplete(id, config.storagePrefix)
     updateStreak(config.storagePrefix)
+    const newStreak = getStreak(config.storagePrefix)
+    const milestones = [7, 14, 30, 50, 100]
+    if (
+      milestones.includes(newStreak) &&
+      !getSeenStreakMilestones(config.storagePrefix).includes(newStreak)
+    ) {
+      play('streakMilestone')
+      markStreakMilestoneSeen(newStreak, config.storagePrefix)
+    }
     incrementPracticeCount(config.storagePrefix)
     clearChatHistory(id, config.storagePrefix)
     clearLastActiveLesson(config.storagePrefix)

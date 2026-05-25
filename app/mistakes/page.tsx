@@ -14,7 +14,7 @@ import { useLanguage } from '@/lib/language-context'
 import { getUniversalLessonById } from '@/lib/all-content'
 import { speak } from '@/lib/speech'
 import { playSound } from '@/lib/sounds'
-import { useCuteMoments } from '@/components/cute-moments'
+import { useChaina } from '@/components/design'
 import {
   Sticker,
   Tag,
@@ -557,7 +557,7 @@ function DrillOverlay({ mistakes, onClose }: { mistakes: Mistake[]; onClose: () 
   const [index, setIndex] = useState(0)
   const [revealed, setRevealed] = useState(false)
   const [gotItCount, setGotItCount] = useState(0)
-  const { cheer } = useCuteMoments()
+  const { play } = useChaina()
   const current = order[index]
   const isLast = index === order.length - 1
   const complete = index >= order.length
@@ -566,7 +566,7 @@ function DrillOverlay({ mistakes, onClose }: { mistakes: Mistake[]; onClose: () 
     if (gotIt) {
       setGotItCount((c) => c + 1)
       playSound('correct')
-      cheer()
+      play('drillGotIt')
     } else {
       playSound('pop')
     }
