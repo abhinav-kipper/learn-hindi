@@ -1,5 +1,16 @@
 @AGENTS.md
 
+## STRICT-MODE — UI changes
+
+Before writing or modifying any UI component:
+
+1. Read `DESIGN.md` at repo root.
+2. Visit `/_dev/components` in dev to see existing primitives.
+3. Run `npm run lint:design` before committing.
+4. If your change touches a Big-5 route (home / lesson / practice / quiz / progress) the visual-regression check will run on your PR. Update baselines via `npm run test:visual:update` if the change is intentional.
+
+The lint enforces: palette tokens only (no raw hex), no soft shadows (no blur), only approved border widths, only approved UI libraries.
+
 # Bolna Seekho — Hindi Learning App
 
 ## Project Overview
