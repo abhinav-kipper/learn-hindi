@@ -66,7 +66,11 @@ class ChainaVoice {
 
   private stopAudio() {
     if (this.audio) {
-      try { this.audio.pause(); this.audio.src = ''; } catch {}
+      try {
+        this.audio.onerror = null;
+        this.audio.pause();
+        this.audio.src = '';
+      } catch {}
       this.audio = null;
     }
   }
@@ -107,10 +111,14 @@ class ChainaVoice {
     }
     audio.volume = 0.95;
     audio.onerror = () => {
+      if (this.audio !== audio) return;  // stale handler, ignore
+      if (this.missing.has(url)) return; // already handled by .catch()
       this.missing.add(url);
       if (fallbackText) this.speak(fallbackText);
     };
     audio.play().catch(() => {
+      if (this.audio !== audio) return;  // stale handler, ignore
+      if (this.missing.has(url)) return; // already handled by onerror
       this.missing.add(url);
       if (fallbackText) this.speak(fallbackText);
     });

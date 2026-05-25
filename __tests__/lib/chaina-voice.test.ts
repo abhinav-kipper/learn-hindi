@@ -36,7 +36,7 @@ describe('chainaVoice', () => {
     chainaVoice.play('tap', 0, 'fallback text')
 
     await new Promise(r => setTimeout(r, 50))
-    expect(speakSpy).toHaveBeenCalled()
+    expect(speakSpy).toHaveBeenCalledTimes(1)
   })
 
   it('respects the global bolna-seekho-muted key', async () => {
