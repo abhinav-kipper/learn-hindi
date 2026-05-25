@@ -24,9 +24,11 @@ interface Props {
   lesson: Lesson
   /** 1-based index within its content list. Used for the "chapter NN" tag. Optional. */
   chapterNumber?: number
+  /** Whether this lesson is a situation or a foundation. Used by the header tag. */
+  kind?: 'situations' | 'foundations'
 }
 
-export function LessonChaiGalli({ lesson, chapterNumber }: Props) {
+export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: Props) {
   const router = useRouter()
   const { config } = useLanguage()
 
@@ -199,7 +201,7 @@ export function LessonChaiGalli({ lesson, chapterNumber }: Props) {
         </div>
         <div style={{ marginTop: 10, maxWidth: 480, margin: '10px auto 0' }}>
           <Tag>
-            ☼ chapter {(chapterNumber ?? 1).toString().padStart(2, '0')} · situations
+            ☼ chapter {(chapterNumber ?? 1).toString().padStart(2, '0')} · {kind}
           </Tag>
           <div
             style={{
@@ -309,57 +311,59 @@ export function LessonChaiGalli({ lesson, chapterNumber }: Props) {
         <NavButton label="next →" disabled={idx === total - 1} onClick={() => go(1)} />
       </div>
 
-      {/* MARK COMPLETE */}
-      <div
-        style={{
-          padding: '16px 20px 0',
-          position: 'relative',
-          zIndex: 2,
-          maxWidth: 480,
-          margin: '0 auto',
-        }}
-      >
-        {completed ? (
-          <Sticker color={COLORS.mint2} radius={22} padding="18px">
-            <div
+      {/* MARK COMPLETE — only on last phrase (or when already done, to show the success sticker) */}
+      {(completed || idx === total - 1) && (
+        <div
+          style={{
+            padding: '16px 20px 0',
+            position: 'relative',
+            zIndex: 2,
+            maxWidth: 480,
+            margin: '0 auto',
+          }}
+        >
+          {completed ? (
+            <Sticker color={COLORS.mint2} radius={22} padding="18px">
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: 8,
+                  fontFamily: FONTS.display,
+                  fontWeight: 800,
+                  fontSize: 16,
+                  color: COLORS.ink,
+                  textTransform: 'lowercase',
+                }}
+              >
+                ✓ chapter complete — practice it now
+              </div>
+            </Sticker>
+          ) : (
+            <button
+              onClick={handleMarkComplete}
               style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: 8,
+                width: '100%',
+                padding: '18px',
+                borderRadius: 22,
+                background: COLORS.green,
+                color: '#fff',
+                border: BORDER.sticker,
                 fontFamily: FONTS.display,
                 fontWeight: 800,
-                fontSize: 16,
-                color: COLORS.ink,
+                fontSize: 17,
+                cursor: 'pointer',
+                boxShadow: SHADOW.sticker,
+                letterSpacing: 0.2,
                 textTransform: 'lowercase',
               }}
             >
-              ✓ chapter complete — practice it now
-            </div>
-          </Sticker>
-        ) : (
-          <button
-            onClick={handleMarkComplete}
-            style={{
-              width: '100%',
-              padding: '18px',
-              borderRadius: 22,
-              background: COLORS.green,
-              color: '#fff',
-              border: BORDER.sticker,
-              fontFamily: FONTS.display,
-              fontWeight: 800,
-              fontSize: 17,
-              cursor: 'pointer',
-              boxShadow: SHADOW.sticker,
-              letterSpacing: 0.2,
-              textTransform: 'lowercase',
-            }}
-          >
-            ✓ mark chapter complete
-          </button>
-        )}
-      </div>
+              ✓ mark chapter complete
+            </button>
+          )}
+        </div>
+      )}
     </div>
   )
 }

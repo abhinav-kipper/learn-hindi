@@ -175,6 +175,10 @@ describe('LessonChaiGalli', () => {
 
   it('mark-complete transitions into the celebration view', async () => {
     render(<LessonChaiGalli lesson={LESSON} />)
+    // Mark-complete is only shown on the last phrase; navigate there first.
+    await waitFor(() => screen.getByText('next →'))
+    fireEvent.click(screen.getByText('next →'))
+    fireEvent.click(screen.getByText('next →'))
     await waitFor(() => screen.getByText(/mark chapter complete/i))
     await act(async () => {
       fireEvent.click(screen.getByText(/mark chapter complete/i))

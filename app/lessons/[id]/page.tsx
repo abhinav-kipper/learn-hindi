@@ -19,21 +19,25 @@ export default function LessonPage({ params }: LessonPageProps) {
   const { language } = useLanguage()
   const lesson = getUniversalLessonById(id)
 
-  // Resolve a 1-based chapter number within the language's situations list,
-  // falling back to its foundations list. Used by the header tag.
-  const chapterNumber = useMemo(() => {
-    if (!lesson) return 1
+  // Resolve a 1-based chapter number + kind (situations vs foundations) within
+  // the language's content lists. Used by the header tag.
+  const { chapterNumber, kind } = useMemo<{
+    chapterNumber: number
+    kind: 'situations' | 'foundations'
+  }>(() => {
+    if (!lesson) return { chapterNumber: 1, kind: 'situations' }
     const situations = language === 'dutch' ? getDutchLessons() : getAllLessons()
     const sIdx = situations.findIndex((l) => l.id === lesson.id)
-    if (sIdx >= 0) return sIdx + 1
+    if (sIdx >= 0) return { chapterNumber: sIdx + 1, kind: 'situations' }
     const foundations = language === 'dutch' ? getDutchFoundations() : getAllFoundations()
     const fIdx = foundations.findIndex((l) => l.id === lesson.id)
-    return fIdx >= 0 ? fIdx + 1 : 1
+    if (fIdx >= 0) return { chapterNumber: fIdx + 1, kind: 'foundations' }
+    return { chapterNumber: 1, kind: 'situations' }
   }, [lesson, language])
 
   if (!lesson) {
     notFound()
   }
 
-  return <LessonChaiGalli lesson={lesson} chapterNumber={chapterNumber} />
+  return <LessonChaiGalli lesson={lesson} chapterNumber={chapterNumber} kind={kind} />
 }
