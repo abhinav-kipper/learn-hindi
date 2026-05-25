@@ -252,11 +252,10 @@ export default function ConjugationDrillPage() {
                         inset: 0,
                         background: COLORS.cream,
                         borderRadius: 99,
-                        zIndex: -1,
                       }}
                     />
                   )}
-                  <span style={{ position: 'relative' }}>{TENSE_LABELS[t]}</span>
+                  <span style={{ position: 'relative', zIndex: 1 }}>{TENSE_LABELS[t]}</span>
                 </button>
               )
             })}
