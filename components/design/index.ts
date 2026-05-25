@@ -10,6 +10,7 @@ export { DottedBg } from './DottedBg'
 export { SfxIndicator } from './SfxIndicator'
 export { LessonStickerCard } from './LessonStickerCard'
 export { LessonChaiGalli } from './LessonChaiGalli'
+export { ChaiGalliChatMessage, TypingDots } from './ChaiGalliChatMessage'
 
 export {
   COLORS,

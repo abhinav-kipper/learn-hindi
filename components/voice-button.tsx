@@ -181,7 +181,7 @@ export const VoiceButton = forwardRef<VoiceButtonHandle, VoiceButtonProps>(funct
 
   if (permissionDenied) {
     return (
-      <span className="text-xs text-red-400 px-2 self-center whitespace-nowrap">
+      <span className="text-xs px-2 self-center whitespace-nowrap" style={{ color: '#e85a5a' }}>
         Mic denied
       </span>
     )
@@ -195,13 +195,24 @@ export const VoiceButton = forwardRef<VoiceButtonHandle, VoiceButtonProps>(funct
       onClick={handleClick}
       disabled={disabled && !isListening}
       title={isListening ? 'Stop listening' : listenLabel}
-      className={`relative flex items-center justify-center w-12 h-12 rounded-xl font-semibold transition-all duration-200 shadow-sm
-        ${isListening
-          ? 'bg-red-500 hover:bg-red-600 text-white'
-          : 'bg-gradient-to-r from-indigo-500 to-violet-500 hover:from-indigo-600 hover:to-violet-600 text-white disabled:opacity-50 disabled:cursor-not-allowed'
-        }`}
+      style={{
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: 46,
+        height: 46,
+        borderRadius: 99,
+        background: isListening ? '#e85a5a' : '#f0701a',
+        color: '#fff',
+        border: '2.5px solid #36281e',
+        boxShadow: '3px 3px 0 #36281e',
+        cursor: disabled && !isListening ? 'not-allowed' : 'pointer',
+        opacity: disabled && !isListening ? 0.5 : 1,
+        flexShrink: 0,
+        padding: 0,
+      }}
     >
-      {/* Pulsing ring when listening */}
       <AnimatePresence>
         {isListening && (
           <motion.span
@@ -209,17 +220,21 @@ export const VoiceButton = forwardRef<VoiceButtonHandle, VoiceButtonProps>(funct
             initial={{ scale: 1, opacity: 0.7 }}
             animate={{ scale: 1.8, opacity: 0 }}
             transition={{ duration: 1, repeat: Infinity, ease: 'easeOut' }}
-            className="absolute inset-0 rounded-xl bg-red-400"
+            style={{
+              position: 'absolute',
+              inset: 0,
+              borderRadius: 99,
+              background: '#e85a5a',
+            }}
           />
         )}
       </AnimatePresence>
 
-      {/* Mic SVG icon */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
-        className="w-5 h-5 relative z-10"
+        style={{ width: 20, height: 20, position: 'relative', zIndex: 10 }}
       >
         <path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
         <path d="M19 10a1 1 0 0 0-2 0 5 5 0 0 1-10 0 1 1 0 0 0-2 0 7 7 0 0 0 6 6.92V19H9a1 1 0 0 0 0 2h6a1 1 0 0 0 0-2h-2v-2.08A7 7 0 0 0 19 10Z" />

@@ -2,20 +2,46 @@
 
 import { motion } from 'framer-motion'
 import { QuizQuestion } from '@/types/quiz'
+import { speak } from '@/lib/speech'
+import { useLanguage } from '@/lib/language-context'
+import { playSound } from '@/lib/sounds'
+import { Sticker, Tag, COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
 
 interface QuizCardProps {
   question: QuizQuestion
   selectedAnswerId: string | null
   onSelectAnswer: (answerId: string) => void
   showResult: boolean
+  index: number
+  total: number
 }
 
-export function QuizCard({ question, selectedAnswerId, onSelectAnswer, showResult }: QuizCardProps) {
-  const typeLabels: Record<string, string> = {
-    'translate-to-english': 'Translate to English',
-    'translate-to-hindi': 'Translate to Hindi',
-    'fill-in-blank': 'Fill in the Blank',
-    'context-match': 'Context Match',
+const PASTELS = [COLORS.peach2, COLORS.mint2, COLORS.butter, COLORS.lav2]
+const LETTERS = ['A', 'B', 'C', 'D']
+
+const TYPE_LABELS: Record<string, string> = {
+  'translate-to-english': 'translate to english',
+  'translate-to-hindi': 'translate to hindi',
+  'fill-in-blank': 'fill in the blank',
+  'context-match': 'context match',
+}
+
+export function QuizCard({
+  question,
+  selectedAnswerId,
+  onSelectAnswer,
+  showResult,
+  index,
+  total,
+}: QuizCardProps) {
+  const { config } = useLanguage()
+
+  const isHindiPrompt = question.type === 'translate-to-english'
+
+  const handleHear = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    playSound('pop')
+    speak(question.prompt, config.ttsLocale)
   }
 
   return (
@@ -23,58 +49,219 @@ export function QuizCard({ question, selectedAnswerId, onSelectAnswer, showResul
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.3 }}
-      className="w-full max-w-md mx-auto"
+      transition={{ duration: 0.25 }}
+      style={{ width: '100%', maxWidth: 480, margin: '0 auto' }}
     >
-      {/* Question type badge */}
-      <div className="mb-4">
-        <span className="text-xs font-medium text-[var(--accent)] bg-[var(--accent-soft)] px-3 py-1 rounded-full">
-          {typeLabels[question.type]}
-        </span>
-      </div>
+      {/* Question sticker */}
+      <Sticker color="#fff" radius={26} padding={22}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <span
+            style={{
+              fontFamily: FONTS.tag,
+              fontSize: 10,
+              background: COLORS.orange,
+              color: '#fff',
+              padding: '3px 9px',
+              borderRadius: 99,
+              letterSpacing: 0.6,
+              textTransform: 'uppercase',
+              border: BORDER.thin,
+            }}
+          >
+            question {index + 1} of {total}
+          </span>
+          <Tag bg={COLORS.lav2} color={COLORS.ink}>
+            {TYPE_LABELS[question.type] ?? question.type}
+          </Tag>
+        </div>
 
-      {/* Question prompt */}
-      <div className="mb-2">
-        <h2 className="text-2xl font-bold text-[var(--text-primary)] leading-tight">
+        <div
+          style={{
+            marginTop: 14,
+            fontFamily: FONTS.body,
+            fontWeight: 700,
+            fontSize: 13,
+            color: COLORS.ink60,
+            textTransform: 'lowercase',
+            letterSpacing: 0.2,
+          }}
+        >
+          what does this mean?
+        </div>
+        <div
+          style={{
+            marginTop: 6,
+            fontFamily: FONTS.display,
+            fontWeight: 800,
+            fontSize: isHindiPrompt ? 28 : 22,
+            color: COLORS.ink,
+            lineHeight: 1.15,
+            letterSpacing: isHindiPrompt ? -0.5 : -0.3,
+          }}
+        >
           {question.prompt}
-        </h2>
+        </div>
         {question.subPrompt && (
-          <p className="text-sm text-[var(--text-secondary)] mt-2">{question.subPrompt}</p>
+          <div
+            style={{
+              marginTop: 6,
+              fontFamily: FONTS.body,
+              fontSize: 12,
+              fontWeight: 600,
+              color: COLORS.ink60,
+            }}
+          >
+            {question.subPrompt}
+          </div>
         )}
-      </div>
 
-      {/* Answer options */}
-      <div className="space-y-3 mt-6">
-        {question.answers.map((answer) => {
-          let bgClass = 'bg-[var(--bg-surface)] border-[var(--border)] hover:border-[var(--accent)]/50 hover:bg-[var(--accent-soft)]/50'
-          let textClass = 'text-[var(--text-primary)]'
+        {isHindiPrompt && (
+          <button
+            type="button"
+            onClick={handleHear}
+            style={{
+              marginTop: 12,
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 6,
+              padding: '5px 12px',
+              borderRadius: 99,
+              background: COLORS.butter,
+              border: BORDER.sticker,
+              boxShadow: SHADOW.chip,
+              fontFamily: FONTS.display,
+              fontWeight: 800,
+              fontSize: 12,
+              color: COLORS.ink,
+              cursor: 'pointer',
+              textTransform: 'lowercase',
+            }}
+          >
+            📢 hear it
+          </button>
+        )}
+      </Sticker>
 
-          if (showResult && answer.isCorrect) {
-            bgClass = 'bg-emerald-50 border-emerald-400'
-            textClass = 'text-emerald-800'
-          } else if (showResult && selectedAnswerId === answer.id && !answer.isCorrect) {
-            bgClass = 'bg-red-50 border-red-400'
-            textClass = 'text-red-800'
-          } else if (selectedAnswerId === answer.id && !showResult) {
-            bgClass = 'bg-[var(--accent-soft)] border-[var(--accent)]'
-            textClass = 'text-[var(--accent)]'
-          }
+      {/* Options */}
+      <div style={{ marginTop: 16, display: 'flex', flexDirection: 'column', gap: 10 }}>
+        {question.answers.map((answer, i) => {
+          const isPickedWrong = showResult && selectedAnswerId === answer.id && !answer.isCorrect
+          const isCorrectShown = showResult && answer.isCorrect
+          const isUntouched = !showResult
+          const pastel: string = PASTELS[i % PASTELS.length]
+
+          let bg: string = pastel
+          if (isCorrectShown) bg = COLORS.mint
+          else if (isPickedWrong) bg = COLORS.redBg
+
+          const fadedNotPicked =
+            showResult && !answer.isCorrect && selectedAnswerId !== answer.id
 
           return (
             <motion.button
               key={answer.id}
-              whileTap={!showResult ? { scale: 0.98 } : undefined}
-              animate={showResult && selectedAnswerId === answer.id && !answer.isCorrect ? {
-                x: [0, -8, 8, -8, 8, 0],
-              } : undefined}
-              transition={{ duration: 0.4 }}
-              onClick={() => !showResult && onSelectAnswer(answer.id)}
+              whileTap={isUntouched ? { scale: 0.97 } : undefined}
+              animate={
+                isPickedWrong
+                  ? { x: [0, -8, 8, -8, 8, 0], transition: { duration: 0.4 } }
+                  : { x: 0 }
+              }
+              onClick={() => onSelectAnswer(answer.id)}
               disabled={showResult}
-              className={`w-full p-4 rounded-xl border-2 text-left transition-all ${bgClass}`}
+              style={{
+                display: 'flex',
+                alignItems: 'stretch',
+                background: bg,
+                border: BORDER.sticker,
+                borderRadius: 18,
+                boxShadow: SHADOW.chip,
+                cursor: showResult ? 'default' : 'pointer',
+                overflow: 'hidden',
+                padding: 0,
+                opacity: fadedNotPicked ? 0.55 : 1,
+                transition: 'opacity 0.2s',
+                width: '100%',
+                textAlign: 'left',
+              }}
             >
-              <span className={`text-base font-medium ${textClass}`}>
-                {answer.text}
-              </span>
+              <div
+                style={{
+                  width: 44,
+                  background: COLORS.ink,
+                  color: COLORS.cream,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontFamily: FONTS.display,
+                  fontWeight: 800,
+                  fontSize: 18,
+                  flexShrink: 0,
+                  borderRight: BORDER.sticker,
+                }}
+              >
+                {LETTERS[i] ?? '?'}
+              </div>
+              <div
+                style={{
+                  flex: 1,
+                  padding: '12px 14px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  gap: 10,
+                  minWidth: 0,
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: FONTS.display,
+                    fontWeight: 700,
+                    fontSize: 15,
+                    color: COLORS.ink,
+                    lineHeight: 1.3,
+                  }}
+                >
+                  {answer.text}
+                </span>
+                {isCorrectShown && (
+                  <span
+                    style={{
+                      width: 26,
+                      height: 26,
+                      borderRadius: 99,
+                      background: COLORS.green,
+                      color: '#fff',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontWeight: 800,
+                      flexShrink: 0,
+                      border: BORDER.thin,
+                    }}
+                  >
+                    ✓
+                  </span>
+                )}
+                {isPickedWrong && (
+                  <span
+                    style={{
+                      width: 26,
+                      height: 26,
+                      borderRadius: 99,
+                      background: COLORS.red,
+                      color: '#fff',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontWeight: 800,
+                      flexShrink: 0,
+                      border: BORDER.thin,
+                    }}
+                  >
+                    ✕
+                  </span>
+                )}
+              </div>
             </motion.button>
           )
         })}

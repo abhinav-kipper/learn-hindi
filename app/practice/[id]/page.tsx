@@ -2,11 +2,9 @@
 
 import { useState, useEffect, useRef, useCallback, useMemo, FormEvent, ChangeEvent } from 'react'
 import { use } from 'react'
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import confetti from 'canvas-confetti'
-import { ChatMessage } from '@/components/chat-message'
 import { VoiceButton, type VoiceButtonHandle } from '@/components/voice-button'
 import { speak, stopSpeaking } from '@/lib/speech'
 import { incrementPracticeCount, markLessonComplete, updateStreak } from '@/lib/progress'
@@ -20,17 +18,27 @@ import { addMistake } from '@/lib/mistakes'
 import type { ChatReply } from '@/lib/chat-schema'
 import { loadChatHistory, saveChatHistory, clearChatHistory, type ChatTurn } from '@/lib/chat-persistence'
 import { setLastActiveLesson, clearLastActiveLesson } from '@/lib/last-active-lesson'
+import {
+  Sticker,
+  Tag,
+  Cutting,
+  DottedBg,
+  MotifIcon,
+  Confetti as ChaiConfetti,
+  ChaiGalliChatMessage,
+  TypingDots,
+  COLORS,
+  FONTS,
+  BORDER,
+  SHADOW,
+} from '@/components/design'
 
 interface Message {
   id: string
   role: 'user' | 'assistant'
-  /** For users: the text they typed. For assistants: the hindi reply (used as context on subsequent API calls). */
   content: string
-  /** Structured reply from the API — present only on assistant messages that came back successfully. */
   parsed?: ChatReply
-  /** True if the API call for this assistant message failed (parse/network/server). */
   failed?: boolean
-  /** Seconds to wait before retrying — set when the failure was a rate-limit (HTTP 429). */
   retryAfterSeconds?: number
 }
 
@@ -47,7 +55,6 @@ function useChat({
   api: string
   body: Record<string, unknown>
   onAssistantReply?: (reply: ChatReply) => void
-  /** { lessonId, prefix } for chat-persistence. When omitted, history is not saved/loaded. */
   persistKey?: { lessonId: string; prefix: string }
 }) {
   const [messages, setMessages] = useState<Message[]>(() => {
@@ -75,8 +82,6 @@ function useChat({
           }),
         })
 
-        // Rate-limit: server returns a structured 429 with retryAfterSeconds
-        // so the UI can show a friendly countdown instead of a generic error.
         if (response.status === 429) {
           const body = await response.json().catch(() => ({}))
           const retryAfterSeconds: number | undefined =
@@ -89,21 +94,14 @@ function useChat({
           return
         }
 
-        if (!response.ok) {
-          throw new Error(`Server error: ${response.status}`)
-        }
+        if (!response.ok) throw new Error(`Server error: ${response.status}`)
 
         const reply = (await response.json()) as ChatReply | { error: string }
         if ('error' in reply) throw new Error(reply.error)
 
         setMessages((prev) => [
           ...prev,
-          {
-            id: assistantId,
-            role: 'assistant',
-            content: reply.reply,
-            parsed: reply,
-          },
+          { id: assistantId, role: 'assistant', content: reply.reply, parsed: reply },
         ])
         playSound('pop')
         onAssistantReply?.(reply)
@@ -111,7 +109,6 @@ function useChat({
         console.error('Chat error:', err)
         const errorMessage = err instanceof Error ? err.message : 'Something went wrong'
         setError(errorMessage)
-        // Add a placeholder failed assistant message so the UI can offer "Try again".
         setMessages((prev) => [
           ...prev,
           { id: assistantId, role: 'assistant', content: '', failed: true },
@@ -124,15 +121,12 @@ function useChat({
   )
 
   useEffect(() => {
-    // Only fetch the initial greeting if we don't already have hydrated history.
     if (!hasSentInitial.current) {
       hasSentInitial.current = true
       if (messages.length === 0) sendMessages([])
     }
   }, [sendMessages, messages.length])
 
-  // Persist successful turns on every change so closing the page mid-session
-  // can be resumed. Failed/transient bubbles are filtered inside saveChatHistory.
   useEffect(() => {
     if (!persistKey) return
     saveChatHistory(persistKey.lessonId, messages as ChatTurn[], persistKey.prefix)
@@ -167,11 +161,8 @@ function useChat({
   )
 
   const retryLast = useCallback(async () => {
-    // Drop the failed assistant message (and anything after the last user
-    // message) and resend.
-    const lastUserIdx = messages.map(m => m.role).lastIndexOf('user')
+    const lastUserIdx = messages.map((m) => m.role).lastIndexOf('user')
     if (lastUserIdx < 0) {
-      // Nothing typed yet — re-trigger the initial greeting.
       setMessages([])
       await sendMessages([])
       return
@@ -181,7 +172,17 @@ function useChat({
     await sendMessages(trimmed)
   }, [messages, sendMessages])
 
-  return { messages, input, setInput, handleInputChange, handleSubmit, isLoading, error, retryLast, resetChat }
+  return {
+    messages,
+    input,
+    setInput,
+    handleInputChange,
+    handleSubmit,
+    isLoading,
+    error,
+    retryLast,
+    resetChat,
+  }
 }
 
 export default function PracticePage({ params }: PracticePageProps) {
@@ -202,7 +203,7 @@ export default function PracticePage({ params }: PracticePageProps) {
   }, [handsFreeKey])
 
   const toggleHandsFree = useCallback(() => {
-    setHandsFree(prev => {
+    setHandsFree((prev) => {
       const next = !prev
       if (typeof window !== 'undefined') {
         localStorage.setItem(handsFreeKey, next ? '1' : '0')
@@ -210,6 +211,7 @@ export default function PracticePage({ params }: PracticePageProps) {
       if (!next) stopSpeaking()
       return next
     })
+    playSound('tap')
   }, [handsFreeKey])
 
   const body = useMemo(() => {
@@ -244,32 +246,40 @@ export default function PracticePage({ params }: PracticePageProps) {
     [id, config.storagePrefix],
   )
 
-  const { messages, input, setInput, handleInputChange, handleSubmit, isLoading, error, retryLast, resetChat } = useChat({
+  const {
+    messages,
+    input,
+    setInput,
+    handleInputChange,
+    handleSubmit,
+    isLoading,
+    error,
+    retryLast,
+    resetChat,
+  } = useChat({
     api: '/api/chat',
     body,
     onAssistantReply: handleAssistantReply,
     persistKey,
   })
 
-  // Whenever the practice page is open and there's been any conversation,
-  // mark this lesson as the most recently touched one (drives the "Continue"
-  // affordance on the home page).
   useEffect(() => {
     if (messages.length > 0) {
       setLastActiveLesson(id, config.storagePrefix)
     }
   }, [messages.length, id, config.storagePrefix])
 
-  const handleTranscript = useCallback((text: string) => {
-    setInput(text)
-  }, [setInput])
+  const handleTranscript = useCallback(
+    (text: string) => {
+      setInput(text)
+    },
+    [setInput],
+  )
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages])
 
-  // Hands-free: when a new assistant message arrives, speak the reply
-  // and auto-arm the mic when speech ends. Spoken at most once per message.
   useEffect(() => {
     if (!handsFree) return
     if (isLoading) return
@@ -282,18 +292,15 @@ export default function PracticePage({ params }: PracticePageProps) {
     })
   }, [messages, isLoading, handsFree, config.ttsLocale])
 
-  // Clean up any in-flight speech when leaving the page.
   useEffect(() => () => stopSpeaking(), [])
 
-  const userMessageCount = messages.filter(m => m.role === 'user').length
+  const userMessageCount = messages.filter((m) => m.role === 'user').length
 
   const handleFinish = () => {
     if (userMessageCount === 0) return
     markLessonComplete(id, config.storagePrefix)
     updateStreak(config.storagePrefix)
     incrementPracticeCount(config.storagePrefix)
-    // Conversation is closed — clear persisted history so the next session
-    // starts fresh, and stop pointing the "Continue" CTA at this lesson.
     clearChatHistory(id, config.storagePrefix)
     clearLastActiveLesson(config.storagePrefix)
     playSound('levelup')
@@ -301,10 +308,10 @@ export default function PracticePage({ params }: PracticePageProps) {
       particleCount: 100,
       spread: 70,
       origin: { y: 0.6 },
-      colors: ['#6366f1', '#8b5cf6', '#a78bfa', '#34d399', '#fbbf24'],
-      ticks: 80,
-      gravity: 1.2,
-      scalar: 0.9,
+      colors: [COLORS.peach, COLORS.mint, COLORS.lav2, COLORS.butter, COLORS.rose],
+      ticks: 90,
+      gravity: 1.1,
+      scalar: 1,
     })
     setShowFinish(true)
   }
@@ -317,7 +324,13 @@ export default function PracticePage({ params }: PracticePageProps) {
 
   return (
     <motion.div
-      className="flex flex-col h-dvh max-w-lg mx-auto"
+      style={{
+        position: 'relative',
+        minHeight: '100dvh',
+        background: COLORS.lav,
+        display: 'flex',
+        flexDirection: 'column',
+      }}
       drag="x"
       dragConstraints={{ left: 0, right: 0 }}
       dragElastic={0.3}
@@ -327,129 +340,319 @@ export default function PracticePage({ params }: PracticePageProps) {
         }
       }}
     >
-      {/* Header */}
-      <div className="flex items-center justify-between px-4 py-3 bg-[var(--bg-surface)] border-b border-[var(--border)] safe-top">
-        <Link
-          href={`/lessons/${id}`}
-          className="flex items-center gap-1 text-sm text-[var(--accent)] font-medium"
+      <DottedBg />
+
+      {/* HEADER BAND */}
+      <motion.div
+        initial={{ opacity: 0, y: -16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ type: 'spring', stiffness: 220, damping: 24 }}
+        style={{
+          position: 'relative',
+          padding: '50px 20px 18px',
+          background: COLORS.butter,
+          borderBottomLeftRadius: 36,
+          borderBottomRightRadius: 36,
+          borderBottom: BORDER.sticker,
+          boxShadow: SHADOW.headerBand,
+          zIndex: 2,
+        }}
+      >
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'flex-start',
+            maxWidth: 480,
+            margin: '0 auto',
+          }}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-            <path fillRule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clipRule="evenodd" />
-          </svg>
-          Lesson
-        </Link>
-        <div className="flex items-center gap-2">
           <button
             type="button"
-            onClick={handleReset}
-            disabled={messages.length === 0 || isLoading}
-            title="Start a fresh conversation"
-            aria-label="Reset conversation"
-            className="text-[var(--text-tertiary)] hover:text-[var(--accent)] disabled:opacity-30 disabled:hover:text-[var(--text-tertiary)] transition-colors p-1.5"
+            onClick={() => {
+              playSound('tap')
+              router.push(`/lessons/${id}`)
+            }}
+            aria-label="Back to lesson"
+            style={{
+              width: 40,
+              height: 40,
+              borderRadius: 99,
+              background: '#fff',
+              border: BORDER.sticker,
+              boxShadow: SHADOW.chip,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              color: COLORS.ink,
+              padding: 0,
+            }}
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="1 4 1 10 7 10" />
-              <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M19 12H5M12 19l-7-7 7-7" />
             </svg>
           </button>
-          <button
-            type="button"
-            onClick={toggleHandsFree}
-            title={handsFree ? 'Turn off hands-free mode' : 'Hands-free: auto-read replies + listen'}
-            aria-label={handsFree ? 'Turn off hands-free mode' : 'Turn on hands-free mode'}
-            aria-pressed={handsFree}
-            className={`text-xs font-semibold px-3 py-1.5 rounded-full transition-all ${
-              handsFree
-                ? 'bg-indigo-500 text-white shadow-sm'
-                : 'bg-[var(--bg-elevated)] text-[var(--text-secondary)] border border-[var(--border)]'
-            }`}
+          <div style={{ marginRight: -6, marginTop: -6 }}>
+            <Cutting size={66} mood="happy" />
+          </div>
+        </div>
+
+        <div style={{ marginTop: 10, maxWidth: 480, margin: '10px auto 0' }}>
+          <Tag>practice · roleplay</Tag>
+          <div
+            style={{
+              fontFamily: FONTS.display,
+              fontWeight: 800,
+              fontSize: 26,
+              color: COLORS.ink,
+              lineHeight: 1.05,
+              marginTop: 6,
+              letterSpacing: -0.5,
+            }}
           >
-            {handsFree ? '🎙️ On' : '🎙️ Off'}
-          </button>
+            {lesson?.title ?? 'Practice'}
+          </div>
+        </div>
+
+        {/* HANDS-FREE / RESET / FINISH actions */}
+        <div
+          style={{
+            marginTop: 12,
+            display: 'flex',
+            gap: 8,
+            flexWrap: 'wrap',
+            maxWidth: 480,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+          }}
+        >
+          <ToolbarPill
+            label={handsFree ? '🎙️ hands-free on' : '🎙️ hands-free'}
+            active={handsFree}
+            onClick={toggleHandsFree}
+          />
+          <ToolbarPill
+            label="↻ reset"
+            onClick={handleReset}
+            disabled={messages.length === 0 || isLoading}
+          />
           <button
             type="button"
             onClick={handleFinish}
             disabled={userMessageCount === 0 || isLoading}
-            className="text-xs font-semibold bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-4 py-1.5 rounded-full disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
+            style={{
+              marginLeft: 'auto',
+              padding: '6px 14px',
+              borderRadius: 99,
+              background: userMessageCount === 0 || isLoading ? '#fff' : COLORS.green,
+              color: userMessageCount === 0 || isLoading ? COLORS.ink60 : '#fff',
+              border: BORDER.sticker,
+              boxShadow:
+                userMessageCount === 0 || isLoading ? 'none' : SHADOW.chip,
+              fontFamily: FONTS.display,
+              fontWeight: 800,
+              fontSize: 12,
+              cursor: userMessageCount === 0 || isLoading ? 'not-allowed' : 'pointer',
+              textTransform: 'lowercase',
+              opacity: userMessageCount === 0 || isLoading ? 0.5 : 1,
+            }}
           >
-            Finish ✓
+            finish ✓
           </button>
         </div>
-      </div>
+      </motion.div>
 
-      {/* Messages */}
-      <div className="flex-1 overflow-y-auto px-4 py-4 space-y-3">
+      {/* SCENARIO STICKER */}
+      {lesson && (
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15, type: 'spring', stiffness: 240, damping: 22 }}
+          style={{
+            padding: '14px 14px 0',
+            position: 'relative',
+            zIndex: 2,
+            maxWidth: 480,
+            margin: '0 auto',
+            width: '100%',
+            boxSizing: 'border-box',
+          }}
+        >
+          <Sticker color={COLORS.mint2} radius={20} padding={14}>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
+              <div
+                style={{
+                  width: 44,
+                  height: 44,
+                  borderRadius: 12,
+                  background: '#fff',
+                  border: BORDER.thin,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}
+              >
+                <MotifIcon kind="chai" size={32} />
+              </div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <Tag>your scene</Tag>
+                <div
+                  style={{
+                    marginTop: 6,
+                    fontFamily: FONTS.body,
+                    fontWeight: 700,
+                    fontSize: 13,
+                    color: COLORS.ink,
+                    lineHeight: 1.4,
+                  }}
+                >
+                  {lesson.practice_prompt || lesson.situation}
+                </div>
+              </div>
+            </div>
+          </Sticker>
+        </motion.div>
+      )}
+
+      {/* MESSAGES */}
+      <div
+        style={{
+          flex: 1,
+          overflowY: 'auto',
+          padding: '14px 14px 140px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 10,
+          position: 'relative',
+          zIndex: 2,
+          maxWidth: 480,
+          margin: '0 auto',
+          width: '100%',
+          boxSizing: 'border-box',
+        }}
+        className="no-scrollbar"
+      >
         {messages.length === 0 && (
-          <FeatureTooltip
-            id="practice"
-            message={config.practiceTooltip}
-            position="center"
-          >
+          <FeatureTooltip id="practice" message={config.practiceTooltip} position="center">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="text-center mt-16"
+              style={{ textAlign: 'center', marginTop: 40 }}
             >
-              <div className="w-12 h-12 mx-auto mb-4 bg-indigo-100 rounded-full flex items-center justify-center">
-                <span className="text-xl">💬</span>
+              <div
+                style={{
+                  width: 48,
+                  height: 48,
+                  margin: '0 auto 12px',
+                  background: '#fff',
+                  border: BORDER.sticker,
+                  borderRadius: 99,
+                  boxShadow: SHADOW.chip,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: 22,
+                }}
+              >
+                💬
               </div>
-              <p className="font-medium text-[var(--text-primary)]">
+              <div
+                style={{
+                  fontFamily: FONTS.display,
+                  fontWeight: 800,
+                  fontSize: 16,
+                  color: COLORS.ink,
+                }}
+              >
                 {language === 'dutch' ? 'Starting your session...' : 'Setting the scene...'}
-              </p>
-              <p className="mt-1.5 text-sm text-[var(--text-secondary)]">
+              </div>
+              <div
+                style={{
+                  marginTop: 4,
+                  fontFamily: FONTS.body,
+                  fontWeight: 600,
+                  fontSize: 12,
+                  color: COLORS.ink60,
+                }}
+              >
                 {language === 'dutch'
                   ? 'Your Dutch tutor is about to introduce the topic.'
                   : 'Your conversation partner is about to start talking.'}
-              </p>
+              </div>
             </motion.div>
           </FeatureTooltip>
         )}
-        {messages.map((message) => (
-          <ChatMessage
-            key={message.id}
-            role={message.role as 'user' | 'assistant'}
-            content={message.content}
-            parsed={message.parsed}
-            failed={message.failed}
-            retryAfterSeconds={message.retryAfterSeconds}
-            onRetry={message.failed ? retryLast : undefined}
-          />
-        ))}
-        {isLoading && messages[messages.length - 1]?.role !== 'assistant' && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="flex justify-start"
+        <AnimatePresence initial={false}>
+          {messages.map((message) => (
+            <ChaiGalliChatMessage
+              key={message.id}
+              role={message.role as 'user' | 'assistant'}
+              content={message.content}
+              parsed={message.parsed}
+              failed={message.failed}
+              retryAfterSeconds={message.retryAfterSeconds}
+              onRetry={message.failed ? retryLast : undefined}
+            />
+          ))}
+        </AnimatePresence>
+        {isLoading && messages[messages.length - 1]?.role !== 'assistant' && <TypingDots />}
+        {error && error !== 'rate_limited' && (
+          <div
+            style={{
+              alignSelf: 'center',
+              fontFamily: FONTS.body,
+              fontSize: 12,
+              fontWeight: 700,
+              color: COLORS.red,
+              background: COLORS.redBg,
+              border: `1.8px solid ${COLORS.red}`,
+              borderRadius: 99,
+              padding: '6px 12px',
+            }}
           >
-            <div className="bg-[var(--bg-elevated)] border border-[var(--border)] px-4 py-3 rounded-2xl rounded-bl-md shadow-sm">
-              <div className="flex gap-1">
-                <span className="w-2 h-2 bg-[var(--text-tertiary)] rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                <span className="w-2 h-2 bg-[var(--text-tertiary)] rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                <span className="w-2 h-2 bg-[var(--text-tertiary)] rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
-              </div>
-            </div>
-          </motion.div>
-        )}
-        {error && (
-          <div className="text-center text-xs text-red-500 bg-red-50 rounded-lg py-2 px-3 mx-auto">
-            {error === 'rate_limited' ? 'Too many messages — please wait a moment and try again.' : error}
+            {error}
           </div>
         )}
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Input */}
-      <div className="px-4 py-3 bg-[var(--bg-surface)] border-t border-[var(--border)] safe-bottom">
-        <form onSubmit={handleSubmit} className="flex gap-2 items-center">
-          <input
-            type="text"
-            value={input}
-            onChange={handleInputChange}
-            placeholder={config.practiceInputPlaceholder}
-            disabled={isLoading}
-            className="flex-1 px-4 py-3 rounded-full border border-[var(--border)] bg-[var(--bg-elevated)] text-[var(--text-primary)] placeholder:text-[var(--text-tertiary)] focus:outline-none focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent)]/20 text-sm disabled:opacity-50 transition-all"
-          />
+      {/* INPUT BAR */}
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.3 }}
+        style={{
+          position: 'fixed',
+          bottom: 70,
+          left: 0,
+          right: 0,
+          padding: '0 14px',
+          paddingBottom: 'env(safe-area-inset-bottom, 0px)',
+          zIndex: 20,
+        }}
+      >
+        <form
+          onSubmit={handleSubmit}
+          style={{
+            display: 'flex',
+            gap: 8,
+            alignItems: 'center',
+            maxWidth: 480,
+            margin: '0 auto',
+          }}
+        >
           <VoiceButton
             ref={voiceRef}
             onTranscript={handleTranscript}
@@ -457,19 +660,67 @@ export default function PracticePage({ params }: PracticePageProps) {
             locale={sttLocale}
             listenLabel={`Speak in ${config.name}`}
           />
-          <button
+          <input
+            type="text"
+            value={input}
+            onChange={handleInputChange}
+            placeholder={config.practiceInputPlaceholder}
+            disabled={isLoading}
+            style={{
+              flex: 1,
+              padding: '12px 16px',
+              borderRadius: 99,
+              border: BORDER.sticker,
+              background: '#fff',
+              color: COLORS.ink,
+              fontFamily: FONTS.body,
+              fontSize: 14,
+              fontWeight: 600,
+              boxShadow: SHADOW.chip,
+              outline: 'none',
+              minWidth: 0,
+              opacity: isLoading ? 0.6 : 1,
+            }}
+          />
+          <motion.button
             type="submit"
             disabled={isLoading || !input.trim()}
-            className="w-11 h-11 flex items-center justify-center bg-gradient-to-r from-indigo-500 to-violet-500 text-white rounded-full hover:from-indigo-600 hover:to-violet-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-sm"
+            whileTap={!isLoading && input.trim() ? { scale: 0.9 } : undefined}
+            style={{
+              width: 46,
+              height: 46,
+              borderRadius: 99,
+              background:
+                !input.trim() || isLoading ? '#fff' : COLORS.green,
+              color: !input.trim() || isLoading ? COLORS.ink60 : '#fff',
+              border: BORDER.sticker,
+              boxShadow: !input.trim() || isLoading ? 'none' : SHADOW.chip,
+              cursor: !input.trim() || isLoading ? 'not-allowed' : 'pointer',
+              flexShrink: 0,
+              padding: 0,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              opacity: !input.trim() || isLoading ? 0.5 : 1,
+            }}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-              <path d="M3.105 2.288a.75.75 0 0 0-.826.95l1.414 4.926A1.5 1.5 0 0 0 5.135 9.25h6.115a.75.75 0 0 1 0 1.5H5.135a1.5 1.5 0 0 0-1.442 1.086l-1.414 4.926a.75.75 0 0 0 .826.95 28.897 28.897 0 0 0 15.293-7.155.75.75 0 0 0 0-1.114A28.897 28.897 0 0 0 3.105 2.288Z" />
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12" />
             </svg>
-          </button>
+          </motion.button>
         </form>
-      </div>
+      </motion.div>
 
-      {/* Completion overlay */}
+      {/* COMPLETION OVERLAY */}
       <AnimatePresence>
         {showFinish && (
           <>
@@ -477,40 +728,133 @@ export default function PracticePage({ params }: PracticePageProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm"
+              style={{
+                position: 'fixed',
+                inset: 0,
+                zIndex: 40,
+                background: 'rgba(54, 40, 30, 0.4)',
+                backdropFilter: 'blur(4px)',
+              }}
+              onClick={() => setShowFinish(false)}
             />
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              className="fixed inset-0 z-50 flex items-center justify-center px-6"
+              transition={{ type: 'spring', damping: 22, stiffness: 280 }}
+              style={{
+                position: 'fixed',
+                inset: 0,
+                zIndex: 50,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: 24,
+                pointerEvents: 'none',
+              }}
             >
-              <div className="bg-[var(--bg-surface)] rounded-3xl shadow-2xl border border-[var(--border)] p-8 max-w-sm w-full text-center">
-                <div className="text-5xl mb-3">🎉</div>
-                <h2 className="text-2xl font-extrabold text-[var(--text-primary)]">
-                  {language === 'dutch' ? 'Goed gedaan!' : 'Nice practice!'}
-                </h2>
-                <p className="text-sm text-[var(--text-secondary)] mt-2">
+              <div
+                style={{
+                  pointerEvents: 'auto',
+                  background: '#fff',
+                  border: BORDER.sticker,
+                  boxShadow: SHADOW.sticker,
+                  borderRadius: 24,
+                  padding: 28,
+                  maxWidth: 360,
+                  width: '100%',
+                  textAlign: 'center',
+                  position: 'relative',
+                  overflow: 'hidden',
+                }}
+              >
+                <ChaiConfetti active count={28} />
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 8 }}>
+                  <div style={{ animation: 'happy-hop 1.4s ease-in-out infinite' }}>
+                    <Cutting size={100} mood="happy" />
+                  </div>
+                </div>
+                <Tag>session complete</Tag>
+                <div
+                  style={{
+                    fontFamily: FONTS.display,
+                    fontWeight: 800,
+                    fontSize: 24,
+                    color: COLORS.ink,
+                    marginTop: 8,
+                    letterSpacing: -0.4,
+                  }}
+                >
+                  {language === 'dutch' ? 'Goed gedaan!' : 'Nice practice, dost!'}
+                </div>
+                <div
+                  style={{
+                    fontFamily: FONTS.body,
+                    fontWeight: 700,
+                    fontSize: 13,
+                    color: COLORS.ink60,
+                    marginTop: 6,
+                  }}
+                >
                   {userMessageCount} message{userMessageCount === 1 ? '' : 's'} exchanged
-                </p>
+                </div>
                 {lesson && (
-                  <p className="text-xs text-[var(--text-tertiary)] mt-1">
-                    {lesson.title}
-                  </p>
-                )}
-                <div className="mt-6 space-y-2">
-                  <button
-                    onClick={() => router.push(`/lessons/${id}`)}
-                    className="block w-full text-center py-3 px-6 bg-gradient-to-r from-indigo-500 to-violet-500 text-white font-semibold rounded-2xl shadow-md"
+                  <div
+                    style={{
+                      fontFamily: FONTS.body,
+                      fontSize: 11,
+                      color: COLORS.ink45,
+                      marginTop: 2,
+                      fontWeight: 600,
+                    }}
                   >
-                    Back to lesson
+                    {lesson.title}
+                  </div>
+                )}
+                <div style={{ marginTop: 20, display: 'flex', flexDirection: 'column', gap: 8 }}>
+                  <button
+                    onClick={() => {
+                      playSound('tap')
+                      router.push(`/lessons/${id}`)
+                    }}
+                    style={{
+                      width: '100%',
+                      padding: 14,
+                      borderRadius: 22,
+                      background: COLORS.orange,
+                      color: '#fff',
+                      border: BORDER.sticker,
+                      fontFamily: FONTS.display,
+                      fontWeight: 800,
+                      fontSize: 15,
+                      cursor: 'pointer',
+                      boxShadow: SHADOW.sticker,
+                      textTransform: 'lowercase',
+                    }}
+                  >
+                    back to lesson
                   </button>
                   <button
-                    onClick={() => router.push('/')}
-                    className="block w-full text-center py-3 px-6 bg-[var(--bg-elevated)] text-[var(--text-primary)] font-semibold rounded-2xl border border-[var(--border)]"
+                    onClick={() => {
+                      playSound('tap')
+                      router.push('/')
+                    }}
+                    style={{
+                      width: '100%',
+                      padding: 12,
+                      borderRadius: 22,
+                      background: '#fff',
+                      color: COLORS.ink,
+                      border: BORDER.sticker,
+                      fontFamily: FONTS.display,
+                      fontWeight: 800,
+                      fontSize: 13,
+                      cursor: 'pointer',
+                      boxShadow: SHADOW.chip,
+                      textTransform: 'lowercase',
+                    }}
                   >
-                    Home
+                    home
                   </button>
                 </div>
               </div>
@@ -519,5 +863,41 @@ export default function PracticePage({ params }: PracticePageProps) {
         )}
       </AnimatePresence>
     </motion.div>
+  )
+}
+
+function ToolbarPill({
+  label,
+  active,
+  disabled,
+  onClick,
+}: {
+  label: string
+  active?: boolean
+  disabled?: boolean
+  onClick: () => void
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={disabled}
+      style={{
+        padding: '6px 12px',
+        borderRadius: 99,
+        background: active ? COLORS.ink : '#fff',
+        color: active ? COLORS.cream : COLORS.ink,
+        border: BORDER.sticker,
+        boxShadow: disabled ? 'none' : SHADOW.chip,
+        fontFamily: FONTS.display,
+        fontWeight: 800,
+        fontSize: 12,
+        cursor: disabled ? 'not-allowed' : 'pointer',
+        opacity: disabled ? 0.4 : 1,
+        textTransform: 'lowercase',
+      }}
+    >
+      {label}
+    </button>
   )
 }

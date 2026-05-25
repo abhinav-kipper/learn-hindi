@@ -13,6 +13,16 @@ import { FeatureTooltip } from '@/components/feature-tooltip'
 import { playSound } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
 import { useCuteMoments } from '@/components/cute-moments'
+import {
+  Sticker,
+  Tag,
+  Cutting,
+  DottedBg,
+  COLORS,
+  FONTS,
+  BORDER,
+  SHADOW,
+} from '@/components/design'
 
 export default function QuizPage() {
   const router = useRouter()
@@ -29,15 +39,12 @@ export default function QuizPage() {
 
   const startQuiz = useCallback(() => {
     const progress = getProgress(config.storagePrefix)
-
     if (progress.completedLessons.length === 0) {
       setLocked(true)
       setLoading(false)
       return
     }
-
-    const lessonIds = progress.completedLessons
-    const generated = generateQuiz(lessonIds, 10, language)
+    const generated = generateQuiz(progress.completedLessons, 10, language)
     setQuestions(generated)
     setCurrentIndex(0)
     setSelectedAnswerId(null)
@@ -57,18 +64,15 @@ export default function QuizPage() {
     setShowResult(true)
 
     const question = questions[currentIndex]
-    const selectedAnswer = question.answers.find(a => a.id === answerId)
+    const selectedAnswer = question.answers.find((a) => a.id === answerId)
     const isCorrect = selectedAnswer?.isCorrect ?? false
 
-    // Play sound based on answer
     if (isCorrect) {
       playSound('correct')
       cheer()
     } else {
       playSound('wrong')
-      // Persist the mistake so it surfaces on the /mistakes page next to
-      // practice corrections.
-      const correctAnswer = question.answers.find(a => a.isCorrect)
+      const correctAnswer = question.answers.find((a) => a.isCorrect)
       if (selectedAnswer && correctAnswer) {
         addMistake(
           {
@@ -88,25 +92,21 @@ export default function QuizPage() {
       selectedAnswerId: answerId,
       isCorrect,
     }
-    setResults(prev => [...prev, result])
+    setResults((prev) => [...prev, result])
 
-    // Auto-advance after delay
     setTimeout(() => {
       if (currentIndex < questions.length - 1) {
-        setCurrentIndex(prev => prev + 1)
+        setCurrentIndex((prev) => prev + 1)
         setSelectedAnswerId(null)
         setShowResult(false)
       } else {
-        // Quiz complete
         const allResults = [...results, result]
-        const score = allResults.filter(r => r.isCorrect).length
+        const finalScore = allResults.filter((r) => r.isCorrect).length
         const progress = getProgress(config.storagePrefix)
-        const lessonIds = progress.completedLessons
-        saveQuizScore(score, questions.length, lessonIds, config.storagePrefix)
+        saveQuizScore(finalScore, questions.length, progress.completedLessons, config.storagePrefix)
         updateStreak(config.storagePrefix)
         setQuizComplete(true)
-        // Play complete sound if good score (50%+)
-        if (score >= questions.length / 2) {
+        if (finalScore >= questions.length / 2) {
           playSound('complete')
         }
       }
@@ -115,11 +115,25 @@ export default function QuizPage() {
 
   if (loading) {
     return (
-      <div className="min-h-dvh flex items-center justify-center bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
+      <div
+        style={{
+          minHeight: '100dvh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          background: COLORS.lav,
+        }}
+      >
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ repeat: Infinity, duration: 1, ease: 'linear' }}
-          className="w-8 h-8 border-3 border-[var(--accent)] border-t-transparent rounded-full"
+          style={{
+            width: 32,
+            height: 32,
+            borderRadius: 99,
+            border: `3px solid ${COLORS.ink}`,
+            borderTopColor: 'transparent',
+          }}
         />
       </div>
     )
@@ -127,94 +141,254 @@ export default function QuizPage() {
 
   if (locked) {
     return (
-      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
-        <div className="text-5xl mb-4">🔒</div>
-        <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">Quiz Locked</h2>
-        <p className="text-base text-[var(--text-secondary)] text-center mb-6">Complete your first lesson to unlock quizzes!</p>
-        <button
-          onClick={() => router.push('/')}
-          className="py-3 px-6 bg-[var(--accent)] text-white font-semibold rounded-xl"
-        >
-          Go to Lessons
-        </button>
-      </div>
+      <LockedScreen
+        title="quiz locked"
+        body="complete your first lesson to unlock quizzes!"
+        onGo={() => router.push('/')}
+      />
     )
   }
 
   if (questions.length === 0) {
     return (
-      <div className="min-h-dvh flex flex-col items-center justify-center px-6 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
-        <p className="text-lg text-[var(--text-secondary)] text-center mb-4">Complete a lesson first to take a quiz!</p>
-        <button
-          onClick={() => router.push('/')}
-          className="py-3 px-6 bg-[var(--accent)] text-white font-semibold rounded-xl"
-        >
-          Go to Lessons
-        </button>
-      </div>
+      <LockedScreen
+        title="no questions yet"
+        body="complete a lesson first to take a quiz!"
+        onGo={() => router.push('/')}
+      />
     )
   }
 
-  const score = results.filter(r => r.isCorrect).length
+  const score = results.filter((r) => r.isCorrect).length
+
+  if (quizComplete) {
+    return (
+      <QuizResults
+        score={score}
+        total={questions.length}
+        onTryAgain={startQuiz}
+        onGoHome={() => router.push('/')}
+        questions={questions}
+        results={results}
+      />
+    )
+  }
 
   return (
-    <div className="min-h-dvh flex flex-col bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 safe-top safe-bottom">
-      {!quizComplete && (
-        <>
-          {/* Progress bar */}
-          <div className="px-4 pt-4 pb-2">
-            <div className="flex items-center justify-between mb-2">
-              <button
-                onClick={() => router.push('/')}
-                className="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
-              >
-                &times; Close
-              </button>
-              <span className="text-sm font-medium text-[var(--text-secondary)]">
-                {currentIndex + 1} / {questions.length}
-              </span>
-            </div>
-            <FeatureTooltip
-              id="quiz"
-              message="Test what you've learned! 10 questions from completed lessons."
-              position="bottom"
-            >
-              <div className="w-full h-2 bg-[var(--border)] rounded-full overflow-hidden">
-                <motion.div
-                  className="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"
-                  initial={{ width: 0 }}
-                  animate={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
-                  transition={{ duration: 0.3 }}
-                />
-              </div>
-            </FeatureTooltip>
-          </div>
+    <div style={{ position: 'relative', minHeight: '100dvh', background: COLORS.lav, paddingBottom: 100 }}>
+      <DottedBg />
 
-          {/* Question */}
-          <div className="flex-1 flex items-center justify-center px-4 py-6">
-            <AnimatePresence mode="wait">
-              <QuizCard
-                key={questions[currentIndex].id}
-                question={questions[currentIndex]}
-                selectedAnswerId={selectedAnswerId}
-                onSelectAnswer={handleSelectAnswer}
-                showResult={showResult}
-              />
-            </AnimatePresence>
+      {/* HEADER BAND */}
+      <motion.div
+        initial={{ opacity: 0, y: -16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ type: 'spring', stiffness: 220, damping: 24 }}
+        style={{
+          position: 'relative',
+          padding: '50px 20px 18px',
+          background: COLORS.mint,
+          borderBottomLeftRadius: 36,
+          borderBottomRightRadius: 36,
+          borderBottom: BORDER.sticker,
+          boxShadow: SHADOW.headerBand,
+          zIndex: 2,
+        }}
+      >
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'flex-start',
+            maxWidth: 480,
+            margin: '0 auto',
+          }}
+        >
+          <button
+            type="button"
+            onClick={() => {
+              playSound('tap')
+              router.push('/')
+            }}
+            aria-label="Close quiz"
+            style={{
+              width: 40,
+              height: 40,
+              borderRadius: 99,
+              background: '#fff',
+              border: BORDER.sticker,
+              boxShadow: SHADOW.chip,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              color: COLORS.ink,
+              padding: 0,
+            }}
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
+          <div style={{ marginRight: -6, marginTop: -6 }}>
+            <Cutting
+              size={66}
+              mood={showResult && results[results.length - 1]?.isCorrect ? 'happy' : 'idle'}
+            />
           </div>
-        </>
-      )}
-
-      {quizComplete && (
-        <div className="flex-1 flex items-center justify-center">
-          <QuizResults
-            score={score}
-            total={questions.length}
-            onTryAgain={startQuiz}
-            onGoHome={() => router.push('/')}
-          />
         </div>
-      )}
+
+        <div style={{ marginTop: 10, maxWidth: 480, margin: '10px auto 0' }}>
+          <Tag>quiz · level a1</Tag>
+          <div
+            style={{
+              fontFamily: FONTS.display,
+              fontWeight: 800,
+              fontSize: 28,
+              color: COLORS.ink,
+              lineHeight: 1.05,
+              marginTop: 6,
+              letterSpacing: -0.5,
+            }}
+          >
+            quick check
+          </div>
+        </div>
+      </motion.div>
+
+      {/* PROGRESS DOTS — one segment per question */}
+      <FeatureTooltip
+        id="quiz"
+        message="Test what you've learned! 10 questions from completed lessons."
+        position="bottom"
+      >
+        <div
+          style={{
+            padding: '14px 20px 0',
+            display: 'flex',
+            gap: 4,
+            position: 'relative',
+            zIndex: 2,
+            maxWidth: 480,
+            margin: '0 auto',
+          }}
+        >
+          {questions.map((_, i) => {
+            const past = i < currentIndex
+            const current = i === currentIndex
+            return (
+              <div
+                key={i}
+                style={{
+                  height: 8,
+                  flex: current ? 2 : 1,
+                  borderRadius: 99,
+                  background: past
+                    ? results[i]?.isCorrect
+                      ? COLORS.green
+                      : COLORS.red
+                    : current
+                    ? COLORS.orange
+                    : '#fff',
+                  border: BORDER.thin,
+                  transition: 'all 0.3s',
+                }}
+              />
+            )
+          })}
+        </div>
+      </FeatureTooltip>
+
+      {/* QUESTION CARD */}
+      <div
+        style={{
+          padding: '18px 20px 0',
+          position: 'relative',
+          zIndex: 2,
+          maxWidth: 480,
+          margin: '0 auto',
+        }}
+      >
+        <AnimatePresence mode="wait">
+          <QuizCard
+            key={questions[currentIndex].id}
+            question={questions[currentIndex]}
+            selectedAnswerId={selectedAnswerId}
+            onSelectAnswer={handleSelectAnswer}
+            showResult={showResult}
+            index={currentIndex}
+            total={questions.length}
+          />
+        </AnimatePresence>
+      </div>
+    </div>
+  )
+}
+
+function LockedScreen({ title, body, onGo }: { title: string; body: string; onGo: () => void }) {
+  return (
+    <div
+      style={{
+        position: 'relative',
+        minHeight: '100dvh',
+        background: COLORS.lav,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 24,
+      }}
+    >
+      <DottedBg />
+      <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', maxWidth: 320 }}>
+        <div style={{ marginBottom: 12, display: 'flex', justifyContent: 'center' }}>
+          <Cutting size={120} />
+        </div>
+        <Tag>locked</Tag>
+        <div
+          style={{
+            fontFamily: FONTS.display,
+            fontWeight: 800,
+            fontSize: 24,
+            color: COLORS.ink,
+            marginTop: 10,
+            lineHeight: 1.1,
+            letterSpacing: -0.4,
+          }}
+        >
+          {title}
+        </div>
+        <div
+          style={{
+            fontFamily: FONTS.body,
+            fontWeight: 700,
+            fontSize: 13,
+            color: COLORS.ink60,
+            marginTop: 8,
+          }}
+        >
+          {body}
+        </div>
+        <button
+          type="button"
+          onClick={onGo}
+          style={{
+            marginTop: 20,
+            padding: '14px 24px',
+            borderRadius: 22,
+            background: COLORS.orange,
+            color: '#fff',
+            border: BORDER.sticker,
+            boxShadow: SHADOW.sticker,
+            fontFamily: FONTS.display,
+            fontWeight: 800,
+            fontSize: 14,
+            cursor: 'pointer',
+            textTransform: 'lowercase',
+          }}
+        >
+          go to lessons →
+        </button>
+      </div>
     </div>
   )
 }
