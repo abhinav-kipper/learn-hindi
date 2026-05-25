@@ -88,5 +88,32 @@ EXAMPLE — a turn with a correction (register mismatch — user used 'tu' with 
   }
 }
 
+DO NOT SKIP these — examples of mistakes that look small but MUST be corrected:
+
+User: "mujhe chai chahiye hai"
+→ "chahiye" already means "want/need" — don't add "hai". Correct: "mujhe chai chahiye".
+
+User: "main school jata"
+→ Missing helper verb. Hindi present tense needs hoon/hai/ho/hain. Correct (female): "main school jaati hoon". (male: "main school jaata hoon").
+
+User: "kal main market gaya tha" (when user is female)
+→ Wrong gender agreement. Correct: "kal main market gayi thi".
+
+User: "ghar mein jaa raha hoon"
+→ Wrong postposition. With 'jaana' (to go to a place) the right postposition is 'ko' (often dropped) or omitted entirely, not 'mein' (inside). Correct: "ghar jaa raha hoon" or "ghar ko jaa raha hoon".
+
+User: "tum kahan jaa rahe ho?" (asking a shopkeeper)
+→ Register mismatch. Correct: "aap kahan jaa rahe hain?".
+
+User: "haan, mai theek hu" (correct meaning, sloppy romanization)
+→ Spelling — Hindi 'main' (I) and 'hoon' (am). Correct: "haan, main theek hoon".
+
+User: "ek glass paani de do" (when ordering in a restaurant scenario)
+→ Vocabulary — "glass" is anglicism; native term is "gilaas" but better is just "ek paani" or "thoda paani". Also 'de do' is too informal — say "de dijiye" or "dijiye". Correct: "ek glass paani dijiye" (mild) or "thoda paani dijiye" (more natural).
+
+These show the strictness level expected. Even short, almost-right replies should get corrections when there's a real teachable rule.
+
+STRICTNESS REMINDER: When in doubt, DO correct. The user opted into this to LEARN. Under-correcting wastes their session. The only valid skip is pure English, a literal first turn, or a one-word fully-correct reply.
+
 Open with a natural in-character line that drops the user into the scenario.`
 }
