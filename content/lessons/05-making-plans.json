@@ -11,7 +11,7 @@
     { "hindi": "done, 7 baje milte hain metro pe", "english": "Done, let's meet at 7 at the metro", "context": "'baje' = o'clock, 'milte hain' = let's meet. 'Done' used as-is from English.", "pronunciation": "DONE, SAAT ba-JE mil-te hain MET-ro pe" },
     { "hindi": "late mat hona, pichli baar ek ghanta wait kiya tha", "english": "Don't be late, last time I waited one hour", "context": "Friendly warning/complaint — totally normal among friends who are always late", "pronunciation": "LATE mat HO-na, pich-LI baar EK ghan-TA wait KI-ya tha" },
     { "hindi": "arre yaar, dekhte hain... confirm nahi hai abhi", "english": "Hey dude, let's see... not confirmed yet", "context": "'dekhte hain' = let's see = PROBABLY NO. This is the classic non-commitment.", "pronunciation": "ar-RE yaar, DEKH-te hain... con-FIRM na-HI hai ab-HI" },
-    { "hindi": "pakka aa raha hai na tu? cancel mat karna", "english": "You're definitely coming right? Don't cancel", "context": "'pakka' = confirmed/for sure. Pinning someone down who says 'dekhte hain'.", "pronunciation": "PAK-ka aa ra-HA hai na TU? CAN-cel mat kar-NA" },
+    { "hindi": "pakka aa rahe ho na tum? cancel mat karna", "english": "You're definitely coming right? Don't cancel", "context": "'pakka' = confirmed/for sure. Pinning someone down who says 'dekhte hain'.", "pronunciation": "PAK-ka aa ra-HE ho na TUM? CAN-cel mat kar-NA" },
     { "hindi": "chal theek hai, agar mood hua toh aa jaana", "english": "Okay fine, if you feel like it then just come", "context": "'mood hua toh' = if the mood strikes. Giving someone an easy out while keeping invite open.", "pronunciation": "CHAL theek hai, A-gar MOOD hu-a toh AA jaa-NA" },
     { "hindi": "group mein daal de, sab ko pata chale", "english": "Put it in the group, so everyone knows", "context": "'group mein daal de' = drop it in the (WhatsApp) group — how all plans are coordinated", "pronunciation": "GROUP mein DAAL de, SAB ko pa-TA cha-LE" }
   ],
@@ -59,7 +59,7 @@
         { "hindi": "ghar pe aao, kuch khate hain", "english": "come home, let's eat something" },
         { "hindi": "chalo yaar, ho jayega", "english": "come on dude, it'll work out" },
         { "hindi": "plan bana lete hain pakka wala", "english": "let's make a confirmed plan" },
-        { "hindi": "tu bhi chal na, maza aayega", "english": "you come too, it'll be fun" }
+        { "hindi": "tum bhi chalo na, maza aayega", "english": "you come too, it'll be fun" }
       ]
     }
   ],

@@ -12,8 +12,8 @@
     },
     {
       "hindi": "tu karega / tu karegi",
-      "english": "You will do (male) / You will do (female)",
-      "context": "With 'tu': verb root + ega/egi. Same ga/gi gender split applies throughout",
+      "english": "You will do (intimate-male) / You will do (intimate-female)",
+      "context": "With 'tu': verb root + ega/egi. 'tu' is VERY informal — close-friends/playful only, sounds rude otherwise. Default to 'aap' or 'tum'. The ga/gi gender split applies throughout.",
       "pronunciation": "TU ka-RE-ga / TU ka-RE-gi"
     },
     {

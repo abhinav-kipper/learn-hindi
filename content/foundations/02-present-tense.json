@@ -13,7 +13,7 @@
     {
       "hindi": "tu karta hai / tu karti hai",
       "english": "You do (intimate-male) / You do (intimate-female)",
-      "context": "'tu' = intimate you. Still '-ta/-ti' based on WHO you're talking about. 'hai' = is/are",
+      "context": "'tu' = intimate you — VERY informal, used only with very close friends, kids, or in playful contexts. Sounds rude with anyone else. Default to 'aap' or 'tum' instead. Helper verb is 'hai' (same as 'woh').",
       "pronunciation": "TU kar-TA hai / TU kar-TI hai"
     },
     {
@@ -59,10 +59,10 @@
       "pronunciation": "HUM ROZ chai PEE-te hain"
     },
     {
-      "hindi": "tu kahan jaata hai subah?",
+      "hindi": "aap kahan jaate hain subah?",
       "english": "Where do you go in the morning?",
-      "context": "'kahan' = where, 'subah' = morning. Question words don't change the verb form at all",
-      "pronunciation": "TU ka-HAAN jaa-TA hai su-BAH?"
+      "context": "'kahan' = where, 'subah' = morning. Question words don't change the verb form at all. Using 'aap' (respectful) here — the safest default.",
+      "pronunciation": "AAP ka-HAAN jaa-TE hain su-BAH?"
     }
   ],
   "grammar_notes": [
