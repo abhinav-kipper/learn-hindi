@@ -9,6 +9,7 @@ import { getDutchAllCategories } from '@/lib/dutch/vocabulary'
 import { getProgress, updateStreak } from '@/lib/progress'
 import { playSound } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
+import { Sticker, Tag, Cutting, COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
 
 const REVIEW_CARD_COUNT = 5
 
@@ -18,15 +19,10 @@ function timestampKey(prefix: string): string {
 
 function shouldShowReview(prefix: string): boolean {
   if (typeof window === 'undefined') return false
-
-  // Check if user has completed at least 1 lesson in this language
   const progress = getProgress(prefix)
   if (progress.completedLessons.length === 0) return false
-
-  // Check if 24 hours have passed since last review
   const lastReview = localStorage.getItem(timestampKey(prefix))
   if (!lastReview) return true
-
   const lastTime = parseInt(lastReview, 10)
   const now = Date.now()
   const twentyFourHours = 24 * 60 * 60 * 1000
@@ -50,7 +46,6 @@ export function DailyReviewPopup() {
   const [direction, setDirection] = useState(0)
 
   useEffect(() => {
-    // Delay a bit so it doesn't interfere with page load
     const timer = setTimeout(() => {
       if (shouldShowReview(prefix)) {
         setShow(true)
@@ -65,17 +60,13 @@ export function DailyReviewPopup() {
   }, [prefix])
 
   const handleLetsGo = useCallback(() => {
-    // Get vocab words marked for review (vocab-known/vocab-review keys are
-    // currently shared across languages; filter to the active language's
-    // categories so we don't surface mismatched words)
     const vocabReviewWords = getVocabReview()
     const categories = language === 'dutch' ? getDutchAllCategories() : getAllCategories()
     const vocabPhrases: ReviewPhrase[] = []
 
     for (const hindi of vocabReviewWords) {
-      // Find the word details from categories
       for (const cat of categories) {
-        const word = cat.words.find(w => w.hindi === hindi)
+        const word = cat.words.find((w) => w.hindi === hindi)
         if (word) {
           vocabPhrases.push({
             phraseId: `vocab-${hindi}`,
@@ -98,10 +89,7 @@ export function DailyReviewPopup() {
       }
     }
 
-    // Get lesson phrases for review
     const lessonPhrases = getReviewPhrases(REVIEW_CARD_COUNT, prefix)
-
-    // Mix: up to 2 vocab words + fill the rest with lesson phrases, capped at REVIEW_CARD_COUNT
     const vocabSlice = vocabPhrases.slice(0, 2)
     const lessonSlice = lessonPhrases.slice(0, REVIEW_CARD_COUNT - vocabSlice.length)
     const mixed = [...vocabSlice, ...lessonSlice].slice(0, REVIEW_CARD_COUNT)
@@ -120,7 +108,7 @@ export function DailyReviewPopup() {
   const handleGotIt = () => {
     const phrase = phrases[currentIndex]
     markReviewed(phrase.phraseId, true, prefix)
-    setGotItCount(prev => prev + 1)
+    setGotItCount((prev) => prev + 1)
     playSound('correct')
     advance()
   }
@@ -135,7 +123,7 @@ export function DailyReviewPopup() {
   const advance = () => {
     setDirection(1)
     if (currentIndex < phrases.length - 1) {
-      setCurrentIndex(prev => prev + 1)
+      setCurrentIndex((prev) => prev + 1)
       setRevealed(false)
     } else {
       saveReviewSession(phrases.length, gotItCount + 1, prefix)
@@ -143,10 +131,7 @@ export function DailyReviewPopup() {
       recordReviewTimestamp(prefix)
       setState('complete')
       playSound('complete')
-      // Auto dismiss after 2 seconds
-      setTimeout(() => {
-        setShow(false)
-      }, 2500)
+      setTimeout(() => setShow(false), 2500)
     }
   }
 
@@ -156,49 +141,83 @@ export function DailyReviewPopup() {
     <AnimatePresence>
       {show && (
         <>
-          {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm"
             onClick={state === 'prompt' ? handleDismiss : undefined}
+            style={{
+              position: 'fixed',
+              inset: 0,
+              zIndex: 50,
+              background: 'rgba(54,40,30,0.5)',
+              backdropFilter: 'blur(4px)',
+            }}
           />
 
-          {/* Bottom Sheet */}
           <motion.div
             initial={{ y: '100%' }}
             animate={{ y: 0 }}
             exit={{ y: '100%' }}
             transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-            className="fixed bottom-0 left-0 right-0 z-50 max-w-md mx-auto"
+            style={{
+              position: 'fixed',
+              bottom: 0,
+              left: 0,
+              right: 0,
+              zIndex: 50,
+              maxWidth: 480,
+              margin: '0 auto',
+            }}
           >
-            <div className="bg-[var(--bg-surface)] rounded-t-3xl shadow-2xl border-t border-[var(--border)] overflow-hidden">
-              {/* Handle */}
-              <div className="flex justify-center pt-3 pb-1">
-                <div className="w-10 h-1 bg-[var(--border)] rounded-full" />
+            <div
+              style={{
+                background: COLORS.butter,
+                borderTopLeftRadius: 36,
+                borderTopRightRadius: 36,
+                borderTop: BORDER.sticker,
+                borderLeft: BORDER.sticker,
+                borderRight: BORDER.sticker,
+                boxShadow: SHADOW.sheet,
+                padding: '18px 20px 50px',
+              }}
+            >
+              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 8 }}>
+                <div
+                  style={{
+                    width: 48,
+                    height: 5,
+                    background: COLORS.ink,
+                    opacity: 0.5,
+                    borderRadius: 99,
+                  }}
+                />
               </div>
 
-              {/* Content */}
-              <div className="px-6 pb-8 pt-2">
-                {state === 'prompt' && (
-                  <PromptView onLetsGo={handleLetsGo} onDismiss={handleDismiss} languageName={config.name} />
-                )}
-                {state === 'reviewing' && phrases.length > 0 && (
-                  <ReviewView
-                    phrases={phrases}
-                    currentIndex={currentIndex}
-                    revealed={revealed}
-                    direction={direction}
-                    onReveal={() => setRevealed(true)}
-                    onGotIt={handleGotIt}
-                    onStillLearning={handleStillLearning}
-                  />
-                )}
-                {state === 'complete' && (
-                  <CompleteView gotItCount={gotItCount} total={phrases.length} />
-                )}
-              </div>
+              {state === 'prompt' && (
+                <PromptView
+                  onLetsGo={handleLetsGo}
+                  onDismiss={handleDismiss}
+                  languageName={config.name}
+                />
+              )}
+              {state === 'reviewing' && phrases.length > 0 && (
+                <ReviewView
+                  phrases={phrases}
+                  currentIndex={currentIndex}
+                  revealed={revealed}
+                  direction={direction}
+                  onReveal={() => {
+                    setRevealed(true)
+                    playSound('pop')
+                  }}
+                  onGotIt={handleGotIt}
+                  onStillLearning={handleStillLearning}
+                />
+              )}
+              {state === 'complete' && (
+                <CompleteView gotItCount={gotItCount} total={phrases.length} />
+              )}
             </div>
           </motion.div>
         </>
@@ -207,32 +226,87 @@ export function DailyReviewPopup() {
   )
 }
 
-function PromptView({ onLetsGo, onDismiss, languageName }: { onLetsGo: () => void; onDismiss: () => void; languageName: string }) {
+function PromptView({
+  onLetsGo,
+  onDismiss,
+  languageName,
+}: {
+  onLetsGo: () => void
+  onDismiss: () => void
+  languageName: string
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      className="text-center"
+      style={{ textAlign: 'center' }}
     >
-      <div className="text-4xl mb-3">🔄</div>
-      <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">
-        Ready for a quick review?
-      </h2>
-      <p className="text-sm text-[var(--text-secondary)] mb-6">
+      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 8 }}>
+        <Cutting size={88} />
+      </div>
+      <Tag>daily review</Tag>
+      <div
+        style={{
+          fontFamily: FONTS.display,
+          fontWeight: 800,
+          fontSize: 22,
+          color: COLORS.ink,
+          marginTop: 8,
+          letterSpacing: -0.4,
+        }}
+      >
+        ready for a quick review?
+      </div>
+      <div
+        style={{
+          fontFamily: FONTS.body,
+          fontWeight: 700,
+          fontSize: 13,
+          color: COLORS.ink60,
+          marginTop: 6,
+          marginBottom: 18,
+        }}
+      >
         {REVIEW_CARD_COUNT} flashcards to keep your {languageName} sharp
-      </p>
-      <div className="flex flex-col gap-3">
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
         <button
+          type="button"
           onClick={onLetsGo}
-          className="w-full py-3.5 px-6 bg-gradient-to-r from-teal-500 to-emerald-500 text-white font-semibold rounded-xl shadow-md hover:opacity-90 transition-opacity"
+          style={{
+            width: '100%',
+            padding: 14,
+            borderRadius: 22,
+            background: COLORS.orange,
+            color: '#fff',
+            border: BORDER.sticker,
+            boxShadow: SHADOW.sticker,
+            fontFamily: FONTS.display,
+            fontWeight: 800,
+            fontSize: 15,
+            cursor: 'pointer',
+            textTransform: 'lowercase',
+          }}
         >
-          Let&apos;s go
+          let&apos;s go →
         </button>
         <button
+          type="button"
           onClick={onDismiss}
-          className="w-full py-3 px-6 text-[var(--text-secondary)] font-medium hover:text-[var(--text-primary)] transition-colors"
+          style={{
+            width: '100%',
+            padding: 10,
+            background: 'transparent',
+            color: COLORS.ink60,
+            border: 'none',
+            fontFamily: FONTS.display,
+            fontWeight: 800,
+            fontSize: 13,
+            cursor: 'pointer',
+            textTransform: 'lowercase',
+          }}
         >
-          Not now
+          not now
         </button>
       </div>
     </motion.div>
@@ -266,21 +340,35 @@ function ReviewView({
 
   return (
     <div>
-      {/* Progress */}
-      <div className="flex items-center justify-between mb-3">
-        <span className="text-xs text-[var(--text-tertiary)] font-medium">
-          {currentIndex + 1} / {phrases.length}
-        </span>
-        <div className="flex-1 mx-3 h-1.5 bg-[var(--border)] rounded-full overflow-hidden">
-          <motion.div
-            className="h-full bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full"
-            animate={{ width: `${((currentIndex + 1) / phrases.length) * 100}%` }}
-            transition={{ duration: 0.3 }}
-          />
-        </div>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          marginBottom: 12,
+        }}
+      >
+        <Tag bg={COLORS.orange} color="#fff" border={COLORS.ink}>
+          review · {currentIndex + 1} / {phrases.length}
+        </Tag>
       </div>
 
-      {/* Card */}
+      <div style={{ display: 'flex', gap: 4, marginBottom: 14 }}>
+        {phrases.map((_, i) => (
+          <div
+            key={i}
+            style={{
+              flex: i === currentIndex ? 2 : 1,
+              height: 6,
+              background: i < currentIndex ? COLORS.green : i === currentIndex ? COLORS.orange : '#fff',
+              borderRadius: 99,
+              border: BORDER.thin,
+              transition: 'all 0.3s',
+            }}
+          />
+        ))}
+      </div>
+
       <AnimatePresence mode="wait" custom={direction}>
         <motion.div
           key={currentIndex}
@@ -289,57 +377,134 @@ function ReviewView({
           initial="enter"
           animate="center"
           exit="exit"
-          transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+          transition={{ type: 'spring', stiffness: 300, damping: 28 }}
         >
-          <div
-            onClick={() => !revealed && onReveal()}
-            className="bg-[var(--bg-elevated)] rounded-xl border border-[var(--border)] p-6 min-h-[180px] flex flex-col items-center justify-center cursor-pointer"
-          >
-            <p className="text-2xl font-bold text-[var(--text-primary)] text-center">
+          <Sticker color="#fff" radius={20} padding={18} onClick={() => !revealed && onReveal()}>
+            <div
+              style={{
+                fontFamily: FONTS.display,
+                fontWeight: 800,
+                fontSize: 24,
+                color: COLORS.ink,
+                textAlign: 'center',
+                lineHeight: 1.15,
+                letterSpacing: -0.4,
+              }}
+            >
               {currentPhrase.phrase.hindi}
-            </p>
-            <p className="text-xs text-[var(--text-tertiary)] text-center mt-1">
-              {currentPhrase.phrase.pronunciation}
-            </p>
-
+            </div>
+            {currentPhrase.phrase.pronunciation && (
+              <div
+                style={{
+                  marginTop: 4,
+                  fontFamily: FONTS.body,
+                  fontWeight: 600,
+                  fontSize: 11,
+                  color: COLORS.ink45,
+                  textAlign: 'center',
+                }}
+              >
+                {currentPhrase.phrase.pronunciation}
+              </div>
+            )}
             {revealed ? (
               <motion.div
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mt-4 pt-3 border-t border-[var(--border)] w-full text-center"
+                style={{
+                  marginTop: 12,
+                  padding: 12,
+                  background: COLORS.mint2,
+                  border: BORDER.thin,
+                  borderRadius: 14,
+                  textAlign: 'center',
+                }}
               >
-                <p className="text-base text-teal-600 font-medium">
+                <div
+                  style={{
+                    fontFamily: FONTS.display,
+                    fontWeight: 800,
+                    fontSize: 15,
+                    color: COLORS.green,
+                  }}
+                >
                   {currentPhrase.phrase.english}
-                </p>
+                </div>
                 {currentPhrase.phrase.context && (
-                  <p className="text-xs text-[var(--text-tertiary)] mt-1">
+                  <div
+                    style={{
+                      marginTop: 4,
+                      fontFamily: FONTS.body,
+                      fontWeight: 600,
+                      fontSize: 11,
+                      color: COLORS.ink60,
+                    }}
+                  >
                     {currentPhrase.phrase.context}
-                  </p>
+                  </div>
                 )}
               </motion.div>
             ) : (
-              <p className="text-xs text-[var(--text-tertiary)] mt-4">Tap to reveal</p>
+              <div
+                style={{
+                  marginTop: 12,
+                  fontFamily: FONTS.body,
+                  fontWeight: 700,
+                  fontSize: 12,
+                  color: COLORS.ink45,
+                  textAlign: 'center',
+                }}
+              >
+                tap to reveal
+              </div>
             )}
-          </div>
+          </Sticker>
 
-          {/* Action buttons */}
           {revealed && (
             <motion.div
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
-              className="flex gap-3 mt-4"
+              style={{ display: 'flex', gap: 10, marginTop: 14 }}
             >
               <button
+                type="button"
                 onClick={onStillLearning}
-                className="flex-1 py-2.5 px-4 bg-amber-50 border border-amber-200 text-amber-700 font-semibold rounded-xl text-sm"
+                style={{
+                  flex: 1,
+                  padding: 12,
+                  borderRadius: 18,
+                  background: '#fff',
+                  color: COLORS.ink,
+                  border: BORDER.sticker,
+                  boxShadow: SHADOW.chip,
+                  fontFamily: FONTS.display,
+                  fontWeight: 800,
+                  fontSize: 13,
+                  cursor: 'pointer',
+                  textTransform: 'lowercase',
+                }}
               >
-                Still Learning
+                still learning
               </button>
               <button
+                type="button"
                 onClick={onGotIt}
-                className="flex-1 py-2.5 px-4 bg-emerald-50 border border-emerald-200 text-emerald-700 font-semibold rounded-xl text-sm"
+                style={{
+                  flex: 1,
+                  padding: 12,
+                  borderRadius: 18,
+                  background: COLORS.green,
+                  color: '#fff',
+                  border: BORDER.sticker,
+                  boxShadow: SHADOW.chip,
+                  fontFamily: FONTS.display,
+                  fontWeight: 800,
+                  fontSize: 13,
+                  cursor: 'pointer',
+                  textTransform: 'lowercase',
+                }}
               >
-                Got it!
+                got it!
               </button>
             </motion.div>
           )}
@@ -354,15 +519,37 @@ function CompleteView({ gotItCount, total }: { gotItCount: number; total: number
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="text-center py-4"
+      style={{ textAlign: 'center', padding: '12px 0' }}
     >
-      <div className="text-4xl mb-3">🙌</div>
-      <h2 className="text-xl font-bold text-[var(--text-primary)] mb-1">
-        Nice! See you tomorrow
-      </h2>
-      <p className="text-sm text-[var(--text-secondary)]">
+      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 8 }}>
+        <div style={{ animation: 'happy-hop 1.4s ease-in-out infinite' }}>
+          <Cutting size={90} mood="happy" />
+        </div>
+      </div>
+      <Tag>review done</Tag>
+      <div
+        style={{
+          fontFamily: FONTS.display,
+          fontWeight: 800,
+          fontSize: 22,
+          color: COLORS.ink,
+          marginTop: 8,
+          letterSpacing: -0.4,
+        }}
+      >
+        nice, see you tomorrow!
+      </div>
+      <div
+        style={{
+          fontFamily: FONTS.body,
+          fontWeight: 700,
+          fontSize: 13,
+          color: COLORS.ink60,
+          marginTop: 4,
+        }}
+      >
         {gotItCount}/{total} phrases nailed
-      </p>
+      </div>
     </motion.div>
   )
 }

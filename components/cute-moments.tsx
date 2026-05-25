@@ -86,9 +86,21 @@ export function CuteMomentsProvider({ children }: { children: ReactNode }) {
             className="fixed inset-x-0 top-[28%] z-[100] flex justify-center pointer-events-none"
             aria-live="polite"
           >
-            <div className="flex flex-col items-center gap-1 bg-white rounded-3xl shadow-2xl px-7 py-5 border-2 border-amber-300">
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: 4,
+                background: '#fde9a8',
+                borderRadius: 26,
+                padding: '20px 28px',
+                border: '2.5px solid #36281e',
+                boxShadow: '4px 4px 0 #36281e',
+              }}
+            >
               <motion.span
-                className="text-5xl"
+                style={{ fontSize: 48 }}
                 initial={{ rotate: -12 }}
                 animate={{ rotate: [-12, 12, -6, 6, 0] }}
                 transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -96,7 +108,17 @@ export function CuteMomentsProvider({ children }: { children: ReactNode }) {
                 {moment.emoji}
               </motion.span>
               {moment.text && (
-                <p className="text-base font-extrabold text-amber-700 tracking-tight">
+                <p
+                  style={{
+                    fontFamily: 'var(--font-bricolage), system-ui, sans-serif',
+                    fontWeight: 800,
+                    fontSize: 16,
+                    color: '#36281e',
+                    letterSpacing: -0.3,
+                    margin: 0,
+                    textTransform: 'lowercase',
+                  }}
+                >
                   {moment.text}
                 </p>
               )}

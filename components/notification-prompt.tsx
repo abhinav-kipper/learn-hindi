@@ -4,6 +4,8 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { requestNotificationPermission, setNotificationPreference } from '@/lib/notifications'
 import { useLanguage } from '@/lib/language-context'
+import { playSound } from '@/lib/sounds'
+import { Tag, COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
 
 interface NotificationPromptProps {
   show: boolean
@@ -16,6 +18,7 @@ export function NotificationPrompt({ show, onDismiss }: NotificationPromptProps)
 
   const handleEnable = async () => {
     setRequesting(true)
+    playSound('tap')
     await requestNotificationPermission()
     setRequesting(false)
     onDismiss()
@@ -23,6 +26,7 @@ export function NotificationPrompt({ show, onDismiss }: NotificationPromptProps)
 
   const handleLater = () => {
     setNotificationPreference('disabled')
+    playSound('tap')
     onDismiss()
   }
 
@@ -33,32 +37,112 @@ export function NotificationPrompt({ show, onDismiss }: NotificationPromptProps)
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
-          transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-          className="fixed bottom-20 left-4 right-4 max-w-md mx-auto z-50"
+          transition={{ type: 'spring', damping: 25, stiffness: 220 }}
+          style={{
+            position: 'fixed',
+            bottom: 100,
+            left: 14,
+            right: 14,
+            maxWidth: 460,
+            margin: '0 auto',
+            zIndex: 50,
+          }}
         >
-          <div className="bg-[var(--bg-surface)] rounded-2xl p-5 shadow-xl border border-[var(--border)]">
-            <div className="flex items-start gap-3">
-              <span className="text-2xl">🔔</span>
-              <div className="flex-1">
-                <h3 className="font-semibold text-[var(--text-primary)] text-sm">Daily Practice Reminders</h3>
-                <p className="text-xs text-[var(--text-secondary)] mt-1">
-                  Get a gentle reminder to practice {config.name} every day and keep your streak alive!
-                </p>
+          <div
+            style={{
+              background: COLORS.butter,
+              border: BORDER.sticker,
+              borderRadius: 22,
+              boxShadow: SHADOW.sticker,
+              padding: 16,
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12 }}>
+              <div
+                style={{
+                  width: 40,
+                  height: 40,
+                  background: '#fff',
+                  border: BORDER.thin,
+                  borderRadius: 12,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: 22,
+                  flexShrink: 0,
+                }}
+              >
+                🔔
+              </div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <Tag>daily reminder</Tag>
+                <div
+                  style={{
+                    marginTop: 4,
+                    fontFamily: FONTS.display,
+                    fontWeight: 800,
+                    fontSize: 15,
+                    color: COLORS.ink,
+                    letterSpacing: -0.2,
+                  }}
+                >
+                  practice every day?
+                </div>
+                <div
+                  style={{
+                    marginTop: 2,
+                    fontFamily: FONTS.body,
+                    fontWeight: 600,
+                    fontSize: 12,
+                    color: COLORS.ink60,
+                  }}
+                >
+                  get a gentle nudge to keep your {config.name} streak alive
+                </div>
               </div>
             </div>
-            <div className="flex gap-2 mt-4">
+            <div style={{ display: 'flex', gap: 8, marginTop: 14 }}>
               <button
+                type="button"
                 onClick={handleLater}
-                className="flex-1 py-2.5 px-4 text-sm font-medium text-[var(--text-secondary)] bg-[var(--bg-elevated)] rounded-xl hover:bg-[var(--bg-hover)] transition-colors"
+                style={{
+                  flex: 1,
+                  padding: 10,
+                  borderRadius: 99,
+                  background: '#fff',
+                  color: COLORS.ink,
+                  border: BORDER.sticker,
+                  boxShadow: SHADOW.chip,
+                  fontFamily: FONTS.display,
+                  fontWeight: 800,
+                  fontSize: 13,
+                  cursor: 'pointer',
+                  textTransform: 'lowercase',
+                }}
               >
-                Later
+                later
               </button>
               <button
+                type="button"
                 onClick={handleEnable}
                 disabled={requesting}
-                className="flex-1 py-2.5 px-4 text-sm font-medium text-white bg-[var(--accent)] rounded-xl hover:opacity-90 transition-colors disabled:opacity-50"
+                style={{
+                  flex: 1,
+                  padding: 10,
+                  borderRadius: 99,
+                  background: COLORS.orange,
+                  color: '#fff',
+                  border: BORDER.sticker,
+                  boxShadow: SHADOW.chip,
+                  fontFamily: FONTS.display,
+                  fontWeight: 800,
+                  fontSize: 13,
+                  cursor: requesting ? 'not-allowed' : 'pointer',
+                  opacity: requesting ? 0.5 : 1,
+                  textTransform: 'lowercase',
+                }}
               >
-                {requesting ? 'Enabling...' : 'Enable'}
+                {requesting ? 'enabling…' : 'enable'}
               </button>
             </div>
           </div>

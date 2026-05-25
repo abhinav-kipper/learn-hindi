@@ -41,37 +41,84 @@ export function FeatureTooltip({ id, message, position = 'bottom', children }: F
       <AnimatePresence>
         {visible && (
           <>
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-black/50 z-[100]"
               onClick={dismiss}
+              style={{
+                position: 'fixed',
+                inset: 0,
+                background: 'rgba(54,40,30,0.5)',
+                backdropFilter: 'blur(2px)',
+                zIndex: 100,
+              }}
             />
-            {/* Spotlight - elevates the children above backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="absolute inset-0 z-[101] pointer-events-none rounded-2xl ring-4 ring-white/80 shadow-[0_0_0_9999px_rgba(0,0,0,0.5)]"
+              style={{
+                position: 'absolute',
+                inset: 0,
+                zIndex: 101,
+                pointerEvents: 'none',
+                borderRadius: 22,
+                outline: '4px solid rgba(255,243,207,0.85)',
+                outlineOffset: 2,
+                boxShadow: '0 0 0 9999px rgba(54,40,30,0.45)',
+              }}
             />
-            {/* Tooltip bubble */}
             <motion.div
               initial={{ opacity: 0, y: position === 'top' ? 10 : -10, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: position === 'top' ? 10 : -10, scale: 0.95 }}
               transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-              className={`absolute left-1/2 -translate-x-1/2 z-[102] w-[280px] ${tooltipPosition[position]}`}
+              className={`absolute left-1/2 -translate-x-1/2 ${tooltipPosition[position]}`}
+              style={{ zIndex: 102, width: 280 }}
             >
-              <div className="bg-[var(--bg-surface)] rounded-xl shadow-xl border border-[var(--border)] p-4">
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">{message}</p>
-                <button
-                  onClick={dismiss}
-                  className="mt-3 w-full py-2 px-4 bg-[var(--accent)] text-white text-sm font-semibold rounded-lg hover:opacity-90 transition-colors"
+              <div
+                style={{
+                  background: '#fff',
+                  border: '2.5px solid #36281e',
+                  boxShadow: '4px 4px 0 #36281e',
+                  borderRadius: 18,
+                  padding: 14,
+                }}
+              >
+                <p
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: 13,
+                    fontWeight: 700,
+                    color: '#36281e',
+                    lineHeight: 1.4,
+                    margin: 0,
+                  }}
                 >
-                  Got it ✓
+                  {message}
+                </p>
+                <button
+                  type="button"
+                  onClick={dismiss}
+                  style={{
+                    marginTop: 10,
+                    width: '100%',
+                    padding: 10,
+                    borderRadius: 99,
+                    background: '#f0701a',
+                    color: '#fff',
+                    border: '2.5px solid #36281e',
+                    boxShadow: '3px 3px 0 #36281e',
+                    fontFamily: 'var(--font-bricolage), system-ui, sans-serif',
+                    fontWeight: 800,
+                    fontSize: 13,
+                    cursor: 'pointer',
+                    textTransform: 'lowercase',
+                  }}
+                >
+                  got it ✓
                 </button>
               </div>
             </motion.div>
