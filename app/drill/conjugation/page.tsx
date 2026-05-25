@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { VERBS, Tense, shuffle, getDistractors, type Verb, type ConjRow } from '@/lib/conjugations'
 import { playSound } from '@/lib/sounds'
-import { useCuteMoments } from '@/components/cute-moments'
+import { useChaina } from '@/components/design'
 import {
   Sticker,
   Tag,
@@ -58,7 +58,7 @@ function buildDeck(verb: Verb, tense: Tense): DrillCard[] {
 
 export default function ConjugationDrillPage() {
   const router = useRouter()
-  const { cheer } = useCuteMoments()
+  const { play } = useChaina()
   const [selectedVerb, setSelectedVerb] = useState<Verb | null>(null)
   const [selectedTense, setSelectedTense] = useState<Tense>('present')
   const [deck, setDeck] = useState<DrillCard[]>([])
@@ -84,7 +84,7 @@ export default function ConjugationDrillPage() {
     setChosen(choice)
     const isCorrect = choice === deck[cardIdx].correct
     playSound(isCorrect ? 'correct' : 'wrong')
-    if (isCorrect) cheer()
+    if (isCorrect) play('conjugationCorrect')
     setScore((s) => ({
       correct: s.correct + (isCorrect ? 1 : 0),
       total: s.total + 1,
