@@ -181,6 +181,7 @@ export const MOMENTS: Record<string, Moment> = {
   streakMilestone: {
     label: 'Streak milestone', when: 'Streak crosses 7/14/30/50/100',
     anchor: 'walk',
+    // walk-across is self-terminating; total duration is enterMs alone.
     enter: 'walk-across', enterMs: 4200, holdMs: 0, exit: 'walk-across', exitMs: 0,
     mood: 'excited', moodAnim: 'wobble-z 1.0s ease-in-out infinite',
     bubbleTail: 'bottom-left', bubbleSide: 'right',
