@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import confetti from 'canvas-confetti'
@@ -18,7 +18,7 @@ import { setLastActiveLesson } from '@/lib/last-active-lesson'
 import { isLessonComplete, markLessonComplete, updateStreak } from '@/lib/progress'
 import { playSound } from '@/lib/sounds'
 import { speak, stopSpeaking, isSpeaking } from '@/lib/speech'
-import { useCuteMoments } from '@/components/cute-moments'
+import { useChaina, canFire, markFired } from '@/components/design'
 
 interface Props {
   lesson: Lesson
@@ -31,8 +31,10 @@ export function LessonChaiGalli({ lesson, chapterNumber }: Props) {
   const { config } = useLanguage()
 
   const resume = useMemo(() => computeLessonResume(lesson, config.storagePrefix), [lesson, config.storagePrefix])
+  const { play } = useChaina()
   const [idx, setIdx] = useState(resume.phraseIndex)
   const [revealed, setRevealed] = useState<Set<number>>(new Set([resume.phraseIndex]))
+  const consecutiveRevealsRef = useRef(0)
   const [completed, setCompleted] = useState(false)
   const [celebrate, setCelebrate] = useState(false)
 
@@ -40,6 +42,28 @@ export function LessonChaiGalli({ lesson, chapterNumber }: Props) {
     setCompleted(isLessonComplete(lesson.id, config.storagePrefix))
     markPhraseViewed(lesson.id, idx, config.storagePrefix)
     setLastActiveLesson(lesson.id, config.storagePrefix)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  const idleTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  useEffect(() => {
+    const arm = () => {
+      if (idleTimerRef.current) clearTimeout(idleTimerRef.current)
+      idleTimerRef.current = setTimeout(() => {
+        if (canFire('idleNudge', 'once-per-session')) {
+          play('idleNudge')
+          markFired('idleNudge', 'once-per-session')
+        }
+      }, 25_000)
+    }
+    arm()
+    const handlers = ['click', 'keydown', 'touchstart'] as const
+    handlers.forEach(e => window.addEventListener(e, arm, { passive: true }))
+    return () => {
+      handlers.forEach(e => window.removeEventListener(e, arm))
+      if (idleTimerRef.current) clearTimeout(idleTimerRef.current)
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -56,12 +80,22 @@ export function LessonChaiGalli({ lesson, chapterNumber }: Props) {
     setRevealed(next)
     playSound('pop')
     markPhraseViewed(lesson.id, idx, config.storagePrefix)
+
+    consecutiveRevealsRef.current += 1
+    if (
+      consecutiveRevealsRef.current >= 3 &&
+      canFire(`phraseStreak-${lesson.id}`, 'once-per-session')
+    ) {
+      play('phraseStreak')
+      markFired(`phraseStreak-${lesson.id}`, 'once-per-session')
+    }
   }
 
   const go = (dir: -1 | 1) => {
     const next = idx + dir
     if (next < 0 || next >= total) return
     setIdx(next)
+    consecutiveRevealsRef.current = 0
     playSound('swipe')
     markPhraseViewed(lesson.id, next, config.storagePrefix)
     setLastActiveLesson(lesson.id, config.storagePrefix)
@@ -74,6 +108,7 @@ export function LessonChaiGalli({ lesson, chapterNumber }: Props) {
     setCompleted(true)
     setCelebrate(true)
     playSound('levelup')
+    play('lessonComplete')
     confetti({
       particleCount: 100,
       spread: 70,
@@ -371,7 +406,7 @@ function PhraseSticker({
   lessonId: string
 }) {
   const { config } = useLanguage()
-  const { show } = useCuteMoments()
+  const { play } = useChaina()
   const [starred, setStarred] = useState(false)
   const [speaking, setSpeaking] = useState(false)
 
@@ -391,7 +426,10 @@ function PhraseSticker({
     const next = toggleFavorite(phrase, lessonId, config.storagePrefix)
     setStarred(next)
     playSound(next ? 'pop' : 'tap')
-    if (next) show('⭐', 'Saved!')
+    if (next && canFire('favoriteSaved', 'debounce-800ms')) {
+      play('favoriteSaved')
+      markFired('favoriteSaved', 'debounce-800ms')
+    }
   }
 
   const handleHear = (e: React.MouseEvent) => {
