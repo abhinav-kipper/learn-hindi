@@ -1,29 +1,36 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #1e293b;
+  --background: #ebe2f6;
+  --foreground: #36281e;
 
-  --bg-base: #ffffff;
+  /* Chai Galli tokens — also exposed as CSS vars for legacy components */
+  --bg-base: #fbf5e8;
   --bg-surface: #ffffff;
-  --bg-elevated: #f8fafc;
-  --bg-hover: #f1f5f9;
-  --text-primary: #0f172a;
-  --text-secondary: #64748b;
-  --text-tertiary: #94a3b8;
-  --border: #e2e8f0;
-  --border-hover: #cbd5e1;
-  --accent: #6366f1;
-  --accent-soft: #eef2ff;
-  --accent-text: #4f46e5;
+  --bg-elevated: #fff3cf;
+  --bg-hover: #ffe1cf;
+  --text-primary: #36281e;
+  --text-secondary: #5b4839;
+  --text-tertiary: #8a6a4a;
+  --border: #36281e;
+  --border-hover: #36281e;
+  --accent: #f0701a;
+  --accent-soft: #ffe1cf;
+  --accent-text: #36281e;
   --shadow-color: 0 0% 0%;
+
+  /* Font families wired by next/font in app/layout.tsx */
+  --font-display: var(--font-bricolage), system-ui, sans-serif;
+  --font-body: var(--font-nunito), system-ui, sans-serif;
+  --font-tag: var(--font-mochiy), system-ui, sans-serif;
+  --font-script: var(--font-caveat), cursive;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-nunito);
+  --font-display: var(--font-bricolage);
 }
 
 html, body {
@@ -32,9 +39,9 @@ html, body {
 }
 
 body {
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e8f0fe 100%);
+  background: #ebe2f6;
   color: var(--text-primary);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;

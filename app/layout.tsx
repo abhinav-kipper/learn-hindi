@@ -1,12 +1,32 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
+import { Bricolage_Grotesque, Nunito, Mochiy_Pop_One, Caveat } from 'next/font/google'
 import './globals.css'
+import '@/components/design/animations.css'
 import { InstallPrompt } from '@/components/install-prompt'
 import { LayoutShell } from '@/components/layout-shell'
 import { LanguageProvider } from '@/lib/language-context'
 import { CuteMomentsProvider } from '@/components/cute-moments'
 
-const inter = Inter({ subsets: ['latin'] })
+const bricolage = Bricolage_Grotesque({
+  subsets: ['latin'],
+  variable: '--font-bricolage',
+  weight: ['500', '700', '800'],
+})
+const nunito = Nunito({
+  subsets: ['latin'],
+  variable: '--font-nunito',
+  weight: ['400', '600', '700', '800', '900'],
+})
+const mochiy = Mochiy_Pop_One({
+  subsets: ['latin'],
+  variable: '--font-mochiy',
+  weight: '400',
+})
+const caveat = Caveat({
+  subsets: ['latin'],
+  variable: '--font-caveat',
+  weight: ['500', '700'],
+})
 
 export const metadata: Metadata = {
   title: 'Bolna Seekho',
@@ -20,7 +40,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#6366f1',
+  themeColor: '#ebe2f6',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
@@ -36,12 +56,12 @@ export default function RootLayout({
       <head>
         <link rel="apple-touch-icon" href="/icon.svg" />
       </head>
-      <body className={`${inter.className} min-h-screen`}>
+      <body
+        className={`${bricolage.variable} ${nunito.variable} ${mochiy.variable} ${caveat.variable} min-h-screen`}
+      >
         <LanguageProvider>
           <CuteMomentsProvider>
-            <LayoutShell>
-              {children}
-            </LayoutShell>
+            <LayoutShell>{children}</LayoutShell>
             <InstallPrompt />
           </CuteMomentsProvider>
         </LanguageProvider>

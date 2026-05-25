@@ -6,9 +6,7 @@ import { getAllLessons } from '@/lib/lessons'
 import { getAllFoundations } from '@/lib/foundations'
 import { getDutchLessons } from '@/lib/dutch/lessons'
 import { getDutchFoundations } from '@/lib/dutch/foundations'
-import { getProgress, getTodaySessions } from '@/lib/progress'
-import { LessonCard } from '@/components/lesson-card'
-import { StreakCounter } from '@/components/streak-counter'
+import { getProgress, getTodaySessions, isLessonComplete } from '@/lib/progress'
 import { FeatureTooltip } from '@/components/feature-tooltip'
 import { isOnboardingComplete, getUserProfile } from '@/lib/onboarding'
 import { playSound, isMuted, toggleMute } from '@/lib/sounds'
@@ -18,8 +16,22 @@ import { reorderLessonsByReason } from '@/lib/personalization'
 import { getLastActiveLesson } from '@/lib/last-active-lesson'
 import { getLessonPercent } from '@/lib/phrase-progress'
 import { getUniversalLessonById } from '@/lib/all-content'
-import { isLessonComplete } from '@/lib/progress'
 import { SearchOverlay } from '@/components/search-overlay'
+
+import {
+  Sticker,
+  Tag,
+  Cutting,
+  MotifIcon,
+  MarigoldStrip,
+  StreakChip,
+  DottedBg,
+  LessonStickerCard,
+  COLORS,
+  FONTS,
+  BORDER,
+  SHADOW,
+} from '@/components/design'
 
 type Tab = 'situations' | 'foundations'
 
@@ -32,11 +44,17 @@ export default function Home() {
   const [reason, setReason] = useState('')
   const [completedCount, setCompletedCount] = useState(0)
   const [todaySessions, setTodaySessions] = useState(0)
+  const [streak, setStreak] = useState(0)
   const [muted, setMuted] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
   const tabStorageKey = `${config.storagePrefix}-home-tab`
   const [activeTab, setActiveTab] = useState<Tab>('situations')
-  const [continueInfo, setContinueInfo] = useState<{ id: string; title: string; percent: number } | null>(null)
+  const [continueInfo, setContinueInfo] = useState<{
+    id: string
+    title: string
+    percent: number
+    motif: 'marigold' | 'auto' | 'chai' | 'film' | 'phone' | 'map'
+  } | null>(null)
 
   const setTab = (next: Tab) => {
     setActiveTab(next)
@@ -48,9 +66,8 @@ export default function Home() {
 
   const rawLessons = language === 'dutch' ? getDutchLessons() : getAllLessons()
   const foundations = language === 'dutch' ? getDutchFoundations() : getAllFoundations()
-  // Reorder situations by the user's onboarding reason — Hindi only (Dutch has
-  // too few lessons to bother reordering)
-  const lessons = language === 'hindi' ? reorderLessonsByReason(rawLessons, reason) : rawLessons
+  const lessons =
+    language === 'hindi' ? reorderLessonsByReason(rawLessons, reason) : rawLessons
 
   useEffect(() => {
     if (!isOnboardingComplete()) {
@@ -64,9 +81,9 @@ export default function Home() {
     const progress = getProgress(config.storagePrefix)
     setCompletedCount(progress.completedLessons.length)
     setTodaySessions(getTodaySessions(config.storagePrefix))
+    setStreak(progress.currentStreak)
     setMuted(isMuted())
 
-    // Restore the last-active tab for this language (Situations vs Foundations).
     const storedTab = localStorage.getItem(tabStorageKey)
     if (storedTab === 'situations' || storedTab === 'foundations') {
       setActiveTab(storedTab)
@@ -74,7 +91,6 @@ export default function Home() {
       setActiveTab('situations')
     }
 
-    // Resolve the "Continue …" CTA target. Skip if it's already completed.
     const lastId = getLastActiveLesson(config.storagePrefix)
     if (lastId && !isLessonComplete(lastId, config.storagePrefix)) {
       const lesson = getUniversalLessonById(lastId)
@@ -83,6 +99,7 @@ export default function Home() {
           id: lesson.id,
           title: lesson.title,
           percent: getLessonPercent(lesson, config.storagePrefix),
+          motif: 'chai',
         })
       } else {
         setContinueInfo(null)
@@ -103,160 +120,425 @@ export default function Home() {
   }
 
   const currentLessons = activeTab === 'situations' ? lessons : foundations
+  const goalPct = dailyGoal > 0 ? Math.min(100, Math.round((todaySessions / dailyGoal) * 100)) : 0
+  const goalHit = todaySessions >= dailyGoal && dailyGoal > 0
 
   return (
     <>
-    {language === 'dutch' && <DutchWelcomeModal />}
-    <SearchOverlay open={searchOpen} onClose={handleCloseSearch} />
-    <div className="max-w-md mx-auto px-4 py-6">
-      <div className="flex items-center justify-between mb-2">
-        <div>
-          <h1 className="text-2xl font-extrabold text-[var(--text-primary)] tracking-tight">
-            Hi, {userName}
-          </h1>
-          <DailyGoalBar today={todaySessions} goal={dailyGoal} />
-        </div>
-        <div className="flex items-center gap-3">
-          <StreakCounter />
-          <div className="flex items-center gap-1 bg-[var(--bg-surface)] border border-[var(--border)] rounded-full p-1">
-            <button
-              onClick={() => { playSound('tap'); setSearchOpen(true) }}
-              aria-label="Search"
-              className="w-7 h-7 flex items-center justify-center rounded-full text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-base)] transition-colors"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-                <path fillRule="evenodd" d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clipRule="evenodd" />
-              </svg>
-            </button>
-            <button
-              onClick={() => { const m = toggleMute(); setMuted(m) }}
-              aria-label={muted ? 'Unmute sounds' : 'Mute sounds'}
-              className="w-7 h-7 flex items-center justify-center rounded-full text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-base)] transition-colors"
-            >
-              {muted ? (
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-                  <path d="M10 3.75a.75.75 0 0 0-1.264-.546L4.703 7H3.167a.75.75 0 0 0-.7.48A6.985 6.985 0 0 0 2 10c0 .887.165 1.737.468 2.52.111.29.39.48.7.48h1.535l4.033 3.796A.75.75 0 0 0 10 16.25V3.75Z" />
-                  <path d="M14.22 7.22a.75.75 0 0 1 1.06 0L16.5 8.44l1.22-1.22a.75.75 0 1 1 1.06 1.06L17.56 9.5l1.22 1.22a.75.75 0 1 1-1.06 1.06L16.5 10.56l-1.22 1.22a.75.75 0 1 1-1.06-1.06l1.22-1.22-1.22-1.22a.75.75 0 0 1 0-1.06Z" />
-                </svg>
-              ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-                  <path d="M10 3.75a.75.75 0 0 0-1.264-.546L4.703 7H3.167a.75.75 0 0 0-.7.48A6.985 6.985 0 0 0 2 10c0 .887.165 1.737.468 2.52.111.29.39.48.7.48h1.535l4.033 3.796A.75.75 0 0 0 10 16.25V3.75ZM15.95 5.05a.75.75 0 0 0-1.06 1.061 5.5 5.5 0 0 1 0 7.778.75.75 0 0 0 1.06 1.06 7 7 0 0 0 0-9.899Z" />
-                  <path d="M13.829 7.172a.75.75 0 0 0-1.061 1.06 2.5 2.5 0 0 1 0 3.536.75.75 0 0 0 1.06 1.06 4 4 0 0 0 0-5.656Z" />
-                </svg>
-              )}
-            </button>
-          </div>
-        </div>
-      </div>
+      {language === 'dutch' && <DutchWelcomeModal />}
+      <SearchOverlay open={searchOpen} onClose={handleCloseSearch} />
 
-      {continueInfo && (
-        <button
-          onClick={() => { playSound('tap'); router.push(`/lessons/${continueInfo.id}`) }}
-          className="w-full mt-3 px-4 py-3 rounded-2xl bg-gradient-to-r from-indigo-500 to-violet-500 text-white text-left shadow-md hover:opacity-95 transition-opacity flex items-center justify-between"
-        >
-          <div className="min-w-0">
-            <p className="text-[10px] uppercase tracking-wider opacity-80 font-semibold">Continue</p>
-            <p className="text-sm font-bold truncate">{continueInfo.title}</p>
-            <p className="text-xs opacity-80">{continueInfo.percent}% done — pick up where you left off</p>
-          </div>
-          <span className="text-xl flex-shrink-0 ml-2">→</span>
-        </button>
-      )}
+      <div style={{ position: 'relative', minHeight: '100dvh', background: COLORS.lav }}>
+        <DottedBg />
 
-      {/* Tabs */}
-      <div className="flex items-center gap-2 mb-4 mt-3">
-        <button
-          onClick={() => setTab('situations')}
-          className={`px-4 py-2 text-sm font-semibold rounded-full transition-all ${
-            activeTab === 'situations'
-              ? 'bg-[var(--accent)] text-white shadow-md'
-              : 'bg-[var(--bg-surface)] text-[var(--text-secondary)] border border-[var(--border)] hover:text-[var(--text-primary)]'
-          }`}
-        >
-          Situations
-        </button>
-        <button
-          onClick={() => setTab('foundations')}
-          className={`px-4 py-2 text-sm font-semibold rounded-full transition-all ${
-            activeTab === 'foundations'
-              ? 'bg-[var(--accent)] text-white shadow-md'
-              : 'bg-[var(--bg-surface)] text-[var(--text-secondary)] border border-[var(--border)] hover:text-[var(--text-primary)]'
-          }`}
-        >
-          Foundations
-        </button>
-      </div>
-
-      {completedCount === 0 && activeTab === 'situations' && (
-        <div className="mb-4 p-3 bg-[var(--accent-soft)] rounded-xl border border-[var(--accent)]/20">
-          <p className="text-sm text-[var(--accent-text)] font-medium">
-            {language === 'dutch'
-              ? 'Start with lesson 1 — or jump to Foundations to learn the grammar core first!'
-              : 'Start with lesson 1 — everything builds from here'}
-          </p>
-        </div>
-      )}
-
-      <div className="h-[calc(100dvh-220px)] overflow-y-auto snap-y snap-mandatory space-y-4 pb-8 scrollbar-hide">
-        {currentLessons.map((lesson, index) => {
-          const isFirst = index === 0 && activeTab === 'situations'
-          const isLocked = activeTab === 'situations' && completedCount === 0 && index > 0 && language === 'hindi'
-
-          const card = (
-            <div
-              key={lesson.id}
-              onClick={() => playSound('tap')}
-              className={`snap-start ${isLocked ? 'opacity-50 pointer-events-none' : ''}`}
-            >
-              <LessonCard lesson={lesson} index={index} />
-            </div>
-          )
-
-          if (isFirst) {
-            return (
-              <FeatureTooltip
-                key={lesson.id}
-                id="home"
-                message="Start here! Tap a lesson to begin learning."
-                position="bottom"
-              >
-                <div className="snap-start" onClick={() => playSound('tap')}>
-                  <LessonCard lesson={lesson} index={index} />
-                </div>
-              </FeatureTooltip>
-            )
-          }
-
-          return card
-        })}
-      </div>
-    </div>
-    </>
-  )
-}
-
-function DailyGoalBar({ today, goal }: { today: number; goal: number }) {
-  const pct = goal > 0 ? Math.min(100, Math.round((today / goal) * 100)) : 0
-  const hit = today >= goal && goal > 0
-  return (
-    <div className="mt-1.5">
-      <div className="flex items-center justify-between mb-1">
-        <p className="text-xs text-[var(--text-secondary)] font-medium">
-          {hit
-            ? `Daily goal hit — ${today}/${goal} min 🎯`
-            : `${today} of ${goal} min today`}
-        </p>
-      </div>
-      <div className="w-40 h-1.5 bg-[var(--bg-surface)] rounded-full overflow-hidden">
+        {/* HEADER BAND */}
         <div
-          className={`h-full rounded-full transition-all duration-500 ${
-            hit
-              ? 'bg-gradient-to-r from-emerald-400 to-teal-500'
-              : 'bg-gradient-to-r from-indigo-400 to-violet-500'
-          }`}
-          style={{ width: `${pct}%` }}
-        />
+          style={{
+            position: 'relative',
+            padding: '52px 20px 16px',
+            background: 'linear-gradient(180deg, #ffc9a8 0%, #ffe1cf 100%)',
+            borderBottomLeftRadius: 36,
+            borderBottomRightRadius: 36,
+            borderBottom: BORDER.sticker,
+            boxShadow: SHADOW.headerBand,
+            zIndex: 2,
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'flex-start',
+              maxWidth: 480,
+              margin: '0 auto',
+            }}
+          >
+            <div>
+              <Tag>☼ namaste, dost</Tag>
+              <div
+                style={{
+                  fontFamily: FONTS.display,
+                  fontWeight: 800,
+                  fontSize: 34,
+                  color: COLORS.ink,
+                  lineHeight: 1,
+                  letterSpacing: -0.5,
+                  marginTop: 6,
+                }}
+              >
+                Hi, {userName}
+              </div>
+            </div>
+            <div style={{ marginRight: -6, marginTop: -8 }}>
+              <Cutting size={92} />
+            </div>
+          </div>
+
+          {/* search + mute pill + streak chip */}
+          <div
+            style={{
+              marginTop: 12,
+              display: 'flex',
+              gap: 8,
+              alignItems: 'center',
+              maxWidth: 480,
+              marginLeft: 'auto',
+              marginRight: 'auto',
+            }}
+          >
+            <div
+              onClick={() => {
+                playSound('tap')
+                setSearchOpen(true)
+              }}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  playSound('tap')
+                  setSearchOpen(true)
+                }
+              }}
+              role="button"
+              tabIndex={0}
+              aria-label="Search lessons"
+              style={{
+                flex: 1,
+                background: '#fff',
+                border: BORDER.sticker,
+                borderRadius: 99,
+                padding: '7px 14px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 8,
+                boxShadow: SHADOW.chip,
+                fontFamily: FONTS.body,
+                color: COLORS.ink60,
+                fontSize: 14,
+                fontWeight: 600,
+                cursor: 'pointer',
+              }}
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.8"
+                strokeLinecap="round"
+              >
+                <circle cx="11" cy="11" r="7" />
+                <path d="M21 21l-4.3-4.3" />
+              </svg>
+              search…
+              <button
+                onClick={(e) => {
+                  e.stopPropagation()
+                  const m = toggleMute()
+                  setMuted(m)
+                }}
+                aria-label={muted ? 'Unmute sounds' : 'Mute sounds'}
+                style={{
+                  marginLeft: 'auto',
+                  background: 'transparent',
+                  border: 'none',
+                  padding: 0,
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  color: COLORS.ink,
+                }}
+              >
+                {muted ? (
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 3.75a.75.75 0 0 0-1.264-.546L4.703 7H3.167a.75.75 0 0 0-.7.48A6.985 6.985 0 0 0 2 10c0 .887.165 1.737.468 2.52.111.29.39.48.7.48h1.535l4.033 3.796A.75.75 0 0 0 10 16.25V3.75Z" />
+                    <path d="M14.22 7.22a.75.75 0 0 1 1.06 0L16.5 8.44l1.22-1.22a.75.75 0 1 1 1.06 1.06L17.56 9.5l1.22 1.22a.75.75 0 1 1-1.06 1.06L16.5 10.56l-1.22 1.22a.75.75 0 1 1-1.06-1.06l1.22-1.22-1.22-1.22a.75.75 0 0 1 0-1.06Z" />
+                  </svg>
+                ) : (
+                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 3.75a.75.75 0 0 0-1.264-.546L4.703 7H3.167a.75.75 0 0 0-.7.48A6.985 6.985 0 0 0 2 10c0 .887.165 1.737.468 2.52.111.29.39.48.7.48h1.535l4.033 3.796A.75.75 0 0 0 10 16.25V3.75ZM15.95 5.05a.75.75 0 0 0-1.06 1.061 5.5 5.5 0 0 1 0 7.778.75.75 0 0 0 1.06 1.06 7 7 0 0 0 0-9.899Z" />
+                    <path d="M13.829 7.172a.75.75 0 0 0-1.061 1.06 2.5 2.5 0 0 1 0 3.536.75.75 0 0 0 1.06 1.06 4 4 0 0 0 0-5.656Z" />
+                  </svg>
+                )}
+              </button>
+            </div>
+            <StreakChip count={streak} onClick={() => playSound('streak')} />
+          </div>
+
+          {/* daily goal — pill bar */}
+          <div style={{ marginTop: 14, maxWidth: 480, marginLeft: 'auto', marginRight: 'auto' }}>
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                marginBottom: 6,
+              }}
+            >
+              <div
+                style={{
+                  fontFamily: FONTS.display,
+                  fontWeight: 700,
+                  fontSize: 13,
+                  color: COLORS.ink,
+                  textTransform: 'uppercase',
+                  letterSpacing: 0.4,
+                }}
+              >
+                {goalHit ? "today's goal — hit! 🎯" : "today's goal"}
+              </div>
+              <div
+                style={{
+                  fontFamily: FONTS.display,
+                  fontWeight: 800,
+                  fontSize: 14,
+                  color: COLORS.ink,
+                }}
+              >
+                <span style={{ color: COLORS.orange }}>{todaySessions}</span> / {dailyGoal} min
+              </div>
+            </div>
+            <div
+              style={{
+                height: 18,
+                background: '#fff',
+                borderRadius: 99,
+                position: 'relative',
+                overflow: 'hidden',
+                border: BORDER.sticker,
+              }}
+            >
+              <div
+                style={{
+                  width: `${goalPct}%`,
+                  height: '100%',
+                  background: goalHit
+                    ? `linear-gradient(90deg, ${COLORS.green}, #2f8a55)`
+                    : `linear-gradient(90deg, ${COLORS.orange2}, ${COLORS.orange})`,
+                  borderRight: goalPct > 0 && goalPct < 100 ? BORDER.sticker : 'none',
+                  transition: 'width 0.4s ease',
+                }}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* MARIGOLD DIVIDER */}
+        <div
+          style={{
+            padding: '14px 20px 0',
+            position: 'relative',
+            zIndex: 2,
+            maxWidth: 480,
+            margin: '0 auto',
+          }}
+        >
+          <MarigoldStrip count={9} />
+        </div>
+
+        {/* CONTINUE RICKSHAW-CHIP */}
+        {continueInfo && (
+          <div
+            style={{
+              padding: '14px 20px 0',
+              position: 'relative',
+              zIndex: 2,
+              maxWidth: 480,
+              margin: '0 auto',
+            }}
+          >
+            <Sticker
+              color={COLORS.cream}
+              radius={22}
+              padding={0}
+              onClick={() => {
+                playSound('pop')
+                router.push(`/lessons/${continueInfo.id}`)
+              }}
+              style={{ overflow: 'hidden' }}
+            >
+              <div style={{ display: 'flex', alignItems: 'stretch' }}>
+                <div
+                  style={{
+                    background: COLORS.teal,
+                    padding: 14,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    borderRight: BORDER.sticker,
+                  }}
+                >
+                  <MotifIcon kind={continueInfo.motif} size={64} />
+                </div>
+                <div style={{ flex: 1, padding: '14px 14px 14px 16px', minWidth: 0 }}>
+                  <Tag>pick up</Tag>
+                  <div
+                    style={{
+                      fontFamily: FONTS.display,
+                      fontWeight: 800,
+                      fontSize: 18,
+                      color: COLORS.ink,
+                      lineHeight: 1.15,
+                      marginTop: 4,
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    {continueInfo.title}
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: FONTS.body,
+                      fontSize: 12,
+                      color: COLORS.ink60,
+                      marginTop: 2,
+                      fontWeight: 600,
+                    }}
+                  >
+                    {continueInfo.percent}% done — pick up where you left off
+                  </div>
+                </div>
+                <div
+                  style={{
+                    background: COLORS.ink,
+                    color: COLORS.butter,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '0 18px',
+                    fontFamily: FONTS.display,
+                    fontWeight: 800,
+                    fontSize: 22,
+                  }}
+                >
+                  →
+                </div>
+              </div>
+            </Sticker>
+          </div>
+        )}
+
+        {/* TABS */}
+        <div
+          style={{
+            padding: '16px 20px 8px',
+            position: 'relative',
+            zIndex: 2,
+            maxWidth: 480,
+            margin: '0 auto',
+          }}
+        >
+          <div
+            style={{
+              background: COLORS.ink,
+              borderRadius: 99,
+              padding: 4,
+              display: 'flex',
+              border: BORDER.sticker,
+              boxShadow: SHADOW.chip,
+            }}
+          >
+            {(['situations', 'foundations'] as Tab[]).map((t) => {
+              const active = activeTab === t
+              return (
+                <button
+                  key={t}
+                  onClick={() => setTab(t)}
+                  style={{
+                    flex: 1,
+                    textAlign: 'center',
+                    padding: '7px 0',
+                    borderRadius: 99,
+                    background: active ? COLORS.cream : 'transparent',
+                    color: active ? COLORS.ink : COLORS.cream,
+                    fontFamily: FONTS.display,
+                    fontWeight: 800,
+                    fontSize: 14,
+                    cursor: 'pointer',
+                    textTransform: 'lowercase',
+                    border: 'none',
+                  }}
+                >
+                  {t}
+                </button>
+              )
+            })}
+          </div>
+        </div>
+
+        {completedCount === 0 && activeTab === 'situations' && (
+          <div
+            style={{
+              padding: '0 20px',
+              position: 'relative',
+              zIndex: 2,
+              maxWidth: 480,
+              margin: '8px auto 0',
+            }}
+          >
+            <div
+              style={{
+                background: COLORS.butter,
+                border: BORDER.sticker,
+                borderRadius: 16,
+                padding: '10px 14px',
+                fontFamily: FONTS.body,
+                fontWeight: 700,
+                fontSize: 13,
+                color: COLORS.ink,
+                boxShadow: SHADOW.chip,
+              }}
+            >
+              {language === 'dutch'
+                ? 'Start with lesson 1 — or jump to Foundations to learn the grammar core first!'
+                : 'Start with lesson 1 — everything builds from here'}
+            </div>
+          </div>
+        )}
+
+        {/* LESSON STICKER LIST */}
+        <div
+          style={{
+            padding: '12px 20px 120px',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 14,
+            position: 'relative',
+            zIndex: 2,
+            maxWidth: 480,
+            margin: '0 auto',
+          }}
+        >
+          {currentLessons.map((lesson, index) => {
+            const isFirst = index === 0 && activeTab === 'situations'
+            const isLocked =
+              activeTab === 'situations' &&
+              completedCount === 0 &&
+              index > 0 &&
+              language === 'hindi'
+
+            const card = (
+              <LessonStickerCard lesson={lesson} index={index} routeBase="lessons" locked={isLocked} />
+            )
+
+            if (isFirst) {
+              return (
+                <FeatureTooltip
+                  key={lesson.id}
+                  id="home"
+                  message="Start here! Tap a lesson to begin learning."
+                  position="bottom"
+                >
+                  {card}
+                </FeatureTooltip>
+              )
+            }
+
+            return <div key={lesson.id}>{card}</div>
+          })}
+        </div>
       </div>
-    </div>
+    </>
   )
 }
