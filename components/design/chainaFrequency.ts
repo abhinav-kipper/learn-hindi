@@ -15,23 +15,25 @@
 
 export type FreqMode = 'once-per-session' | 'once-per-day' | 'debounce-800ms';
 
-const k = (s: string) => `chaina-freq-${s}`;
+const k = (s: string, mode: FreqMode) => `chaina-freq-${mode}-${s}`;
 const today = () => new Date().toDateString();
 
 export function canFire(key: string, mode: FreqMode): boolean {
   if (typeof window === 'undefined') return false;
   switch (mode) {
     case 'once-per-day': {
-      const last = localStorage.getItem(k(key));
+      const last = localStorage.getItem(k(key, mode));
       return last !== today();
     }
     case 'debounce-800ms': {
-      const last = localStorage.getItem(k(key));
+      const last = localStorage.getItem(k(key, mode));
       if (!last) return true;
-      return Date.now() - Number(last) > 800;
+      const ts = Number(last);
+      if (Number.isNaN(ts)) return true; // corrupt value → treat as never fired
+      return Date.now() - ts > 800;
     }
     case 'once-per-session': {
-      return !sessionStorage.getItem(k(key));
+      return !sessionStorage.getItem(k(key, mode));
     }
   }
 }
@@ -40,13 +42,13 @@ export function markFired(key: string, mode: FreqMode): void {
   if (typeof window === 'undefined') return;
   switch (mode) {
     case 'once-per-day':
-      localStorage.setItem(k(key), today());
+      localStorage.setItem(k(key, mode), today());
       break;
     case 'debounce-800ms':
-      localStorage.setItem(k(key), String(Date.now()));
+      localStorage.setItem(k(key, mode), String(Date.now()));
       break;
     case 'once-per-session':
-      sessionStorage.setItem(k(key), '1');
+      sessionStorage.setItem(k(key, mode), '1');
       break;
   }
 }

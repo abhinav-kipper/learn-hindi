@@ -29,7 +29,7 @@ describe('chainaFrequency', () => {
     })
 
     it('returns true if last fired on a different day', () => {
-      localStorage.setItem('chaina-freq-foo', 'Wed May 21 2025')
+      localStorage.setItem('chaina-freq-once-per-day-foo', 'Wed May 21 2025')
       expect(canFire('foo', 'once-per-day')).toBe(true)
     })
   })
@@ -45,7 +45,7 @@ describe('chainaFrequency', () => {
     })
 
     it('returns true after >800ms', () => {
-      localStorage.setItem('chaina-freq-foo', String(Date.now() - 1000))
+      localStorage.setItem('chaina-freq-debounce-800ms-foo', String(Date.now() - 1000))
       expect(canFire('foo', 'debounce-800ms')).toBe(true)
     })
   })
