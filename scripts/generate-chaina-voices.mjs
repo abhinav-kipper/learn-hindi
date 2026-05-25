@@ -1,15 +1,19 @@
 // generate-chaina-voices.mjs
 // One-shot Node script: reads components/design/moments.ts and generates one
-// MP3 per line via ElevenLabs. Result: public/chaina/<momentKey>-<idx>.mp3
+// WAV per voice-enabled line via Gemini TTS (gemini-2.5-flash-preview-tts).
+// Result: public/chaina/<momentKey>-<idx>.wav
 //
 // Usage:
-//   1. Get an API key: https://elevenlabs.io → Profile → API Keys
-//   2. (optional) Pick a voice: https://elevenlabs.io/voice-library
-//   3. From repo root:
-//        ELEVENLABS_API_KEY=sk_... node scripts/generate-chaina-voices.mjs
-//   4. Files land in public/chaina/. Commit them.
+//   1. Reuses the existing GOOGLE_GENERATIVE_AI_API_KEY env var
+//      (same key the chat tutor uses — get one at
+//      https://aistudio.google.com/app/apikey).
+//   2. From repo root:
+//        GOOGLE_GENERATIVE_AI_API_KEY=... node scripts/generate-chaina-voices.mjs
+//   3. Files land in public/chaina/. Commit them.
 //
 // Re-running is idempotent: existing files are skipped unless you pass --force.
+// Override the voice with CHAINA_VOICE_NAME=<voice>. Default: Leda (youthful).
+// Other cute female options: Aoede (breezy), Kore (firm), Zephyr (bright).
 
 import { readFileSync, mkdirSync, existsSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
@@ -19,21 +23,21 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = resolve(__dirname, '..');
 const OUT_DIR = join(PROJECT_ROOT, 'public', 'chaina');
 
-const API_KEY = process.env.ELEVENLABS_API_KEY;
+const API_KEY = process.env.GOOGLE_GENERATIVE_AI_API_KEY;
 if (!API_KEY) {
-  console.error('Set ELEVENLABS_API_KEY first. Get one at https://elevenlabs.io/profile.');
+  console.error('Set GOOGLE_GENERATIVE_AI_API_KEY first. Same key the chat tutor uses.');
+  console.error('Get one at https://aistudio.google.com/app/apikey');
   process.exit(1);
 }
 
-const VOICE_ID = process.env.CHAINA_VOICE_ID || 'EXAVITQu4vr4xnSDxMaL';
-const MODEL = 'eleven_multilingual_v2';
-const VOICE_SETTINGS = {
-  stability: 0.55,
-  similarity_boost: 0.85,
-  style: 0.45,
-  use_speaker_boost: true,
-};
+const VOICE_NAME = process.env.CHAINA_VOICE_NAME || 'Leda';
+const MODEL = process.env.CHAINA_VOICE_MODEL || 'gemini-2.5-flash-preview-tts';
 const FORCE = process.argv.includes('--force');
+
+// Gemini TTS returns raw PCM: 16-bit little-endian, 24 kHz, mono.
+const SAMPLE_RATE = 24000;
+const BITS_PER_SAMPLE = 16;
+const NUM_CHANNELS = 1;
 
 function loadLines() {
   const path = join(PROJECT_ROOT, 'components', 'design', 'moments.ts');
@@ -56,27 +60,55 @@ function loadLines() {
   return { MOMENTS: moments, LINES };
 }
 
+// Wrap raw PCM bytes in a minimal 44-byte WAV header so the file is browser-playable.
+function wrapWav(pcm) {
+  const byteRate = SAMPLE_RATE * NUM_CHANNELS * BITS_PER_SAMPLE / 8;
+  const blockAlign = NUM_CHANNELS * BITS_PER_SAMPLE / 8;
+  const header = Buffer.alloc(44);
+  header.write('RIFF', 0);
+  header.writeUInt32LE(36 + pcm.length, 4);
+  header.write('WAVE', 8);
+  header.write('fmt ', 12);
+  header.writeUInt32LE(16, 16);           // PCM chunk size
+  header.writeUInt16LE(1, 20);            // AudioFormat = 1 (PCM)
+  header.writeUInt16LE(NUM_CHANNELS, 22);
+  header.writeUInt32LE(SAMPLE_RATE, 24);
+  header.writeUInt32LE(byteRate, 28);
+  header.writeUInt16LE(blockAlign, 32);
+  header.writeUInt16LE(BITS_PER_SAMPLE, 34);
+  header.write('data', 36);
+  header.writeUInt32LE(pcm.length, 40);
+  return Buffer.concat([header, pcm]);
+}
+
 async function tts(text) {
-  const url = `https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}`;
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`;
   const res = await fetch(url, {
     method: 'POST',
-    headers: {
-      'xi-api-key': API_KEY,
-      'Content-Type': 'application/json',
-      'Accept': 'audio/mpeg',
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      text,
-      model_id: MODEL,
-      voice_settings: VOICE_SETTINGS,
+      contents: [{ parts: [{ text }] }],
+      generationConfig: {
+        responseModalities: ['AUDIO'],
+        speechConfig: {
+          voiceConfig: {
+            prebuiltVoiceConfig: { voiceName: VOICE_NAME },
+          },
+        },
+      },
     }),
   });
   if (!res.ok) {
     const body = await res.text();
-    throw new Error(`ElevenLabs ${res.status}: ${body}`);
+    throw new Error(`Gemini ${res.status}: ${body.slice(0, 300)}`);
   }
-  const buf = Buffer.from(await res.arrayBuffer());
-  return buf;
+  const json = await res.json();
+  const inline = json?.candidates?.[0]?.content?.parts?.[0]?.inlineData;
+  if (!inline?.data) {
+    throw new Error(`Gemini response missing audio inlineData: ${JSON.stringify(json).slice(0, 300)}`);
+  }
+  const pcm = Buffer.from(inline.data, 'base64');
+  return wrapWav(pcm);
 }
 
 async function main() {
@@ -93,10 +125,10 @@ async function main() {
     for (let idx = 0; idx < cfg.lines.length; idx++) {
       const line = cfg.lines[idx];
       if (!line.speak) continue;
-      const outPath = join(OUT_DIR, `${key}-${idx}.mp3`);
+      const outPath = join(OUT_DIR, `${key}-${idx}.wav`);
       if (existsSync(outPath) && !FORCE) {
         skipped++;
-        console.log(`✓ have ${key}-${idx}.mp3`);
+        console.log(`✓ have ${key}-${idx}.wav`);
         continue;
       }
       try {
@@ -114,6 +146,7 @@ async function main() {
 
   console.log(`\nDone. generated=${generated} skipped=${skipped} failed=${failed}`);
   console.log(`Files: ${OUT_DIR}`);
+  console.log(`Voice: ${VOICE_NAME} (override with CHAINA_VOICE_NAME=<name>)`);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

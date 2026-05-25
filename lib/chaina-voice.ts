@@ -1,13 +1,13 @@
 /**
- * Chaina's voice — prefers pre-recorded MP3 clips, falls back to
+ * Chaina's voice — prefers pre-recorded clips, falls back to
  * window.speechSynthesis. SSR-safe (all window/localStorage access guarded).
  *
  * Architecture:
  *   1. Each line in moments.ts has a stable key + idx + speak string.
- *   2. Optionally pre-generate one MP3 per line via ElevenLabs into
- *      /public/chaina/<momentKey>-<idx>.mp3 (script in scripts/).
- *   3. chainaVoice.play(momentKey, idx, fallbackText) tries the MP3 first.
- *      If it 404s (or no MP3s shipped), falls back to speechSynthesis.
+ *   2. Optionally pre-generate one WAV per line via Gemini TTS into
+ *      /public/chaina/<momentKey>-<idx>.wav (script in scripts/).
+ *   3. chainaVoice.play(momentKey, idx, fallbackText) tries the WAV first.
+ *      If it 404s (or no clips shipped), falls back to speechSynthesis.
  *
  * Mute keys:
  *   bolna-seekho-muted  ← existing global SFX mute (also silences voice)
@@ -96,7 +96,7 @@ class ChainaVoice {
     if ('speechSynthesis' in window) {
       try { window.speechSynthesis.cancel(); } catch {}
     }
-    const url = `${this.clipBase}/${momentKey}-${idx}.mp3`;
+    const url = `${this.clipBase}/${momentKey}-${idx}.wav`;
     if (this.missing.has(url)) {
       if (fallbackText) this.speak(fallbackText);
       return;
