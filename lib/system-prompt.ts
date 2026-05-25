@@ -3,6 +3,8 @@ import { Lesson } from '@/types/lesson'
 export interface UserContext {
   name?: string
   reasonContext?: string
+  /** User's gender for in-character references (e.g. Hindi verb conjugations). Default 'female'. */
+  gender?: 'female' | 'male'
 }
 
 export function buildSystemPrompt(lesson: Lesson, userContext?: UserContext): string {

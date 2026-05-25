@@ -38,6 +38,7 @@ export default function OnboardingPage() {
   const [direction, setDirection] = useState(0)
   const [name, setName] = useState('')
   const [reason, setReason] = useState('')
+  const [gender, setGender] = useState<'female' | 'male'>('female')
   const [dailyGoal, setDailyGoal] = useState(5)
   const [showConfetti, setShowConfetti] = useState(false)
 
@@ -61,6 +62,7 @@ export default function OnboardingPage() {
     saveUserProfile({
       name: name.trim() || 'Friend',
       reason,
+      gender,
       dailyGoal,
       onboardingComplete: true,
     })
@@ -69,7 +71,7 @@ export default function OnboardingPage() {
     setTimeout(() => {
       router.push('/')
     }, 1800)
-  }, [name, reason, dailyGoal, router])
+  }, [name, reason, gender, dailyGoal, router])
 
   useEffect(() => {
     if (typeof window === 'undefined') return
@@ -160,6 +162,8 @@ export default function OnboardingPage() {
               <SlideAboutYou
                 name={name}
                 setName={setName}
+                gender={gender}
+                setGender={setGender}
                 reason={reason}
                 setReason={setReason}
                 onNext={next}
@@ -355,12 +359,16 @@ function SlideHowItWorks({ onNext }: { onNext: () => void }) {
 function SlideAboutYou({
   name,
   setName,
+  gender,
+  setGender,
   reason,
   setReason,
   onNext,
 }: {
   name: string
   setName: (n: string) => void
+  gender: 'female' | 'male'
+  setGender: (g: 'female' | 'male') => void
   reason: string
   setReason: (r: string) => void
   onNext: () => void
@@ -427,6 +435,58 @@ function SlideAboutYou({
             boxSizing: 'border-box',
           }}
         />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.14 }}
+        style={{ width: '100%', marginBottom: 14 }}
+      >
+        <div
+          style={{
+            fontFamily: FONTS.display,
+            fontWeight: 800,
+            fontSize: 12,
+            color: COLORS.ink,
+            textTransform: 'uppercase',
+            letterSpacing: 0.4,
+            marginBottom: 6,
+          }}
+        >
+          you are
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
+          {(['female', 'male'] as const).map((g) => (
+            <Sticker
+              key={g}
+              color={gender === g ? COLORS.mint : '#fff'}
+              radius={16}
+              padding={10}
+              selected={gender === g}
+              onClick={() => {
+                setGender(g)
+                playSound('pop')
+              }}
+            >
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ fontSize: 22 }}>{g === 'female' ? '👩' : '👨'}</div>
+                <div
+                  style={{
+                    marginTop: 4,
+                    fontFamily: FONTS.body,
+                    fontWeight: 700,
+                    fontSize: 11,
+                    color: COLORS.ink,
+                    lineHeight: 1.2,
+                  }}
+                >
+                  {g}
+                </div>
+              </div>
+            </Sticker>
+          ))}
+        </div>
       </motion.div>
 
       <motion.div

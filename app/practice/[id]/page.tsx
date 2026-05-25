@@ -219,8 +219,14 @@ export default function PracticePage({ params }: PracticePageProps) {
   const body = useMemo(() => {
     const profile = typeof window !== 'undefined' ? getUserProfile() : null
     const reasonInfo = profile ? getReasonInfo(profile.reason) : null
-    const userContext = reasonInfo
-      ? { name: profile?.name, reasonContext: reasonInfo.context }
+    // Always include gender so the tutor can address the user correctly,
+    // even when reason isn't set.
+    const userContext = profile
+      ? {
+          name: profile.name,
+          gender: profile.gender,
+          ...(reasonInfo ? { reasonContext: reasonInfo.context } : {}),
+        }
       : undefined
     return { lessonId: id, language, userContext }
   }, [id, language])

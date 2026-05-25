@@ -1,6 +1,10 @@
+export type UserGender = 'female' | 'male'
+
 export interface UserProfile {
   name: string
   reason: string
+  /** User's gender for in-character references. Default 'female'. */
+  gender: UserGender
   dailyGoal: number // minutes
   onboardingComplete: boolean
   tooltipsShown: {
@@ -18,6 +22,7 @@ function defaultProfile(): UserProfile {
   return {
     name: '',
     reason: '',
+    gender: 'female',
     dailyGoal: 5,
     onboardingComplete: false,
     tooltipsShown: {
