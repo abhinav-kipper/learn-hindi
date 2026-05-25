@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { motion } from 'framer-motion'
 import { getAllLessons } from '@/lib/lessons'
 import { getAllFoundations } from '@/lib/foundations'
 import { getDutchLessons } from '@/lib/dutch/lessons'
@@ -132,7 +133,10 @@ export default function Home() {
         <DottedBg />
 
         {/* HEADER BAND */}
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: -16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ type: 'spring', stiffness: 220, damping: 24 }}
           style={{
             position: 'relative',
             padding: '52px 20px 16px',
@@ -308,20 +312,21 @@ export default function Home() {
                 border: BORDER.sticker,
               }}
             >
-              <div
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: `${goalPct}%` }}
+                transition={{ delay: 0.3, duration: 0.9, ease: 'easeOut' }}
                 style={{
-                  width: `${goalPct}%`,
                   height: '100%',
                   background: goalHit
                     ? `linear-gradient(90deg, ${COLORS.green}, #2f8a55)`
                     : `linear-gradient(90deg, ${COLORS.orange2}, ${COLORS.orange})`,
                   borderRight: goalPct > 0 && goalPct < 100 ? BORDER.sticker : 'none',
-                  transition: 'width 0.4s ease',
                 }}
               />
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* MARIGOLD DIVIDER */}
         <div
@@ -338,7 +343,10 @@ export default function Home() {
 
         {/* CONTINUE RICKSHAW-CHIP */}
         {continueInfo && (
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15, type: 'spring', stiffness: 240, damping: 22 }}
             style={{
               padding: '14px 20px 0',
               position: 'relative',
@@ -412,11 +420,16 @@ export default function Home() {
                     fontSize: 22,
                   }}
                 >
-                  →
+                  <motion.span
+                    animate={{ x: [0, 4, 0] }}
+                    transition={{ duration: 1.6, ease: 'easeInOut', repeat: Infinity }}
+                  >
+                    →
+                  </motion.span>
                 </div>
               </div>
             </Sticker>
-          </div>
+          </motion.div>
         )}
 
         {/* TABS */}
@@ -447,10 +460,11 @@ export default function Home() {
                   onClick={() => setTab(t)}
                   style={{
                     flex: 1,
+                    position: 'relative',
                     textAlign: 'center',
                     padding: '7px 0',
                     borderRadius: 99,
-                    background: active ? COLORS.cream : 'transparent',
+                    background: 'transparent',
                     color: active ? COLORS.ink : COLORS.cream,
                     fontFamily: FONTS.display,
                     fontWeight: 800,
@@ -458,9 +472,23 @@ export default function Home() {
                     cursor: 'pointer',
                     textTransform: 'lowercase',
                     border: 'none',
+                    transition: 'color 0.2s',
                   }}
                 >
-                  {t}
+                  {active && (
+                    <motion.div
+                      layoutId="home-tab-active"
+                      transition={{ type: 'spring', stiffness: 320, damping: 28 }}
+                      style={{
+                        position: 'absolute',
+                        inset: 0,
+                        background: COLORS.cream,
+                        borderRadius: 99,
+                        zIndex: -1,
+                      }}
+                    />
+                  )}
+                  <span style={{ position: 'relative' }}>{t}</span>
                 </button>
               )
             })}
@@ -519,7 +547,23 @@ export default function Home() {
               language === 'hindi'
 
             const card = (
-              <LessonStickerCard lesson={lesson} index={index} routeBase="lessons" locked={isLocked} />
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.25 + index * 0.06,
+                  type: 'spring',
+                  stiffness: 240,
+                  damping: 22,
+                }}
+              >
+                <LessonStickerCard
+                  lesson={lesson}
+                  index={index}
+                  routeBase="lessons"
+                  locked={isLocked}
+                />
+              </motion.div>
             )
 
             if (isFirst) {

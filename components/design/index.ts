@@ -9,6 +9,7 @@ export { Confetti } from './Confetti'
 export { DottedBg } from './DottedBg'
 export { SfxIndicator } from './SfxIndicator'
 export { LessonStickerCard } from './LessonStickerCard'
+export { LessonChaiGalli } from './LessonChaiGalli'
 
 export {
   COLORS,
