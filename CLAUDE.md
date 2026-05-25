@@ -45,6 +45,16 @@ public/                 → PWA manifest, icon.svg
 2. Import and add to array in `lib/lessons.ts`
 3. Update CONTENT.md inventory table
 
+### Auto-generated weekly lesson
+The cron in `.github/workflows/generate-content.yml` fires every Monday
+9am UTC and does step 1-2 above automatically using Gemini, then opens
+a PR for review. Pops the next topic from `content/lesson-queue.json`.
+On failure (queue empty, schema fail, etc.) opens a GitHub issue instead.
+
+To trigger manually: GitHub → Actions → "generate-content" → Run workflow
+(optionally pass a topic id to override the queue order). To test locally:
+`GOOGLE_GENERATIVE_AI_API_KEY=… node scripts/generate-lesson.mjs --dry-run`.
+
 ### Modify AI behavior
 Edit `lib/system-prompt.ts` — `buildSystemPrompt()` generates the system prompt from lesson data.
 
