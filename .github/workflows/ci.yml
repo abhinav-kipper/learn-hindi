@@ -1,0 +1,41 @@
+# Bolna Seekho CI — runs type-check and the vitest suite on every push to
+# main and on every PR. Sets a red ❌ status on the commit if anything
+# fails, so a broken build is visible before / alongside the Vercel deploy
+# that's also triggered by the push.
+#
+# ESLint is intentionally skipped right now: there are ~23 pre-existing
+# rule violations (mostly React 19's new react-hooks/set-state-in-effect),
+# none of which actually break the app. Wire eslint in once those are
+# cleaned up — see CLAUDE.md backlog.
+
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: TypeScript check
+        run: npx tsc --noEmit
+
+      - name: Tests
+        run: npx vitest run
