@@ -155,9 +155,12 @@ function MomentRender({
   const mascotOuter: React.CSSProperties = useFlexCenter
     ? { position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }
     : aStyle
+  // Mascot is purely visual during a moment — pointer-events: none so it never
+  // eats taps on underlying CTAs (mark-complete, practice-now, quiz options).
+  // The persistent header Cutting (app/page.tsx etc.) has its own wrapper button.
   const mascotInner: React.CSSProperties = useFlexCenter
-    ? { width: cuttingSize, animation: animByPhase[phase], cursor: 'pointer', pointerEvents: 'auto' }
-    : { ...aStyle, width: cuttingSize, animation: animByPhase[phase], cursor: 'pointer', pointerEvents: 'auto' }
+    ? { width: cuttingSize, animation: animByPhase[phase], pointerEvents: 'none' }
+    : { ...aStyle, width: cuttingSize, animation: animByPhase[phase], pointerEvents: 'none' }
 
   // Bubble wrapper uses the original aStyle (which for center anchor still uses
   // transform-translate; that's fine because the bubble's only animation is
