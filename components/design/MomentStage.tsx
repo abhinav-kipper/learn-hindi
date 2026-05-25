@@ -5,6 +5,7 @@ import React, {
   useCallback,
   useContext,
   useEffect,
+  useMemo,
   useRef,
   useState,
   type ReactNode,
@@ -75,8 +76,10 @@ export function ChainaProvider({ children }: { children: ReactNode }) {
     chainaVoice.cancel()
   }, [])
 
+  const api = useMemo<ChainaAPI>(() => ({ play, stop }), [play, stop])
+
   return (
-    <Ctx.Provider value={{ play, stop }}>
+    <Ctx.Provider value={api}>
       {children}
       <MomentStage active={active} onTap={() => play('tap')} />
     </Ctx.Provider>
@@ -98,7 +101,7 @@ function MomentStage({ active, onTap }: { active: ActiveState | null; onTap: () 
       style={{
         position: 'fixed',
         inset: 0,
-        zIndex: 45,
+        zIndex: 55,
         pointerEvents: 'none',
       }}
     >

@@ -176,7 +176,7 @@ from these. Always import via the barrel `@/components/design`.
 | File | What it does |
 |------|--------------|
 | `bottom-nav.tsx` | Floating white sticker pill at the bottom of all non-fullscreen pages. Active-tab cream pill slides via Framer `layoutId`. Hidden on `/lessons/*`, `/practice/*`, `/onboarding`. |
-| `cute-moments.tsx` | **Global popup system.** `CuteMomentsProvider` mounts once in `app/layout.tsx`. `useCuteMoments()` returns `{ show(emoji, text?), cheer() }`. Springs in from screen-center, emoji wobbles, butter sticker w/ ink border. 1.2s cooldown prevents stacking |
+| `design/MomentStage.tsx` | **Chaina moments system.** `ChainaProvider` mounts once in `app/layout.tsx`. `useChaina()` returns `{ play(key), stop() }`. 15 moments registered in `moments.ts` (welcomeBack/correctAnswer/lessonComplete/streakMilestone/etc). Each moment fires `<Cutting>` + `<SpeechBubble>` w/ animations, plus voice via `chainaVoice.play()` (MP3 → speechSynthesis fallback). Frequency caps in `chainaFrequency.ts`. |
 | `search-overlay.tsx` | Full-screen search modal triggered from the home magnifying-glass. Language-aware index. Locks body scroll, restores focus on close, Esc to dismiss |
 | `daily-review-popup.tsx` | Butter bottom-sheet w/ Cutting, fires every 24h after first lesson complete. Mixes vocab + lesson phrases through SRS |
 | `feature-tooltip.tsx` | One-time tooltips (Chai Galli white sticker + orange CTA + cream halo spotlight), dismissed via localStorage |
@@ -187,13 +187,21 @@ from these. Always import via the barrel `@/components/design`.
 | `voice-button.tsx` | Mic button (Chai Galli orange pill, red + pulse when listening). STT via `lib/speech.ts` |
 | `quiz/quiz-card.tsx`, `quiz/quiz-results.tsx` | Quiz question + results screens. Use design primitives. |
 
-### Cute Moments triggers (where `cheer()` / `show()` is called)
-Only fire on **genuine accomplishments**, not passive actions. Revealing a translation isn't a win — earlier we tried celebrating phrase reveals and the popups felt out of place ("Kya baat!" on a passive tap). Stick to:
-- Star a favorite — `show('⭐', 'Saved!')`
-- Correct quiz answer — `cheer()`
-- Correct conjugation drill — `cheer()`
-- "Got it!" in mistakes drill — `cheer()`
-- Lesson complete — `show('🏆', 'Lesson complete!')` alongside confetti
+### Chaina moment triggers (where `play(key)` is called)
+Fire on real beats only — accomplishments, retention nudges, character touch points. Frequency-capped via `canFire`/`markFired`.
+- Home header tap — `play('tap')` (debounce-800ms)
+- Welcome back / first open today — fired from `app/page.tsx` mount (mutex, once-per-session)
+- Correct/wrong quiz — `play('correctAnswer')` / `play('wrongAnswer')`
+- First mistake of day — `play('firstMistake')` (once-per-day, fires from quiz/practice)
+- Conjugation drill correct — `play('conjugationCorrect')`
+- Mistakes drill "got it" — `play('drillGotIt')`
+- Star a phrase — `play('favoriteSaved')` (debounce-800ms)
+- Lesson complete — `play('lessonComplete')` alongside confetti
+- 3 consecutive phrase reveals — `play('phraseStreak')` (once-per-lesson-session)
+- 25s idle on lesson — `play('idleNudge')` (once-per-session)
+- Streak crosses 7/14/30/50/100 — `play('streakMilestone')` (gated by `seenStreakMilestones`)
+- App backgrounded after 5+ min — `play('sessionEnd')` (once-per-session)
+- First ever launch — `play('firstEver')` from `/onboarding` mount (once-ever)
 
 ### Storage keys (localStorage)
 
@@ -209,6 +217,11 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `${prefix}-home-tab` — restores Situations vs Foundations
 - `bolna-seekho-muted` (global, not prefixed) — sound mute toggle
 - `bolna-seekho-onboarding` (global) — user profile
+- `chaina-first-ever-seen` — set to '1' after firstEver fires once
+- `chaina-last-session-ts` — timestamp for welcomeBack/firstOpenToday discrimination
+- `chaina-voice-muted` — reserved future fine-grained Chaina mute (read but not yet UI-toggled)
+- `chaina-freq-<mode>-<key>` — frequency cap state per moment
+- `chaina-session-start-ts` (sessionStorage) — session start for sessionEnd 5min threshold
 
 ### Recent feature work log
 
