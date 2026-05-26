@@ -12,7 +12,9 @@ export interface KnmQuestion {
   id: string
   category: Category
   question_nl: string
+  question_en?: string
   options_nl: [string, string, string, string]
+  options_en?: [string, string, string, string]
   correct_index: 0 | 1 | 2 | 3
   explanation_en: string
   references?: string[]

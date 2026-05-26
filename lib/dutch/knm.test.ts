@@ -105,4 +105,14 @@ describe('knm', () => {
     expect(isLearned('knm-001')).toBe(true)
     expect(getLearnedCount()).toBe(2)
   })
+
+  it('every question has bilingual fields (question_en + options_en)', () => {
+    for (const q of getKnmQuestions()) {
+      expect(q.question_en).toBeDefined()
+      expect(q.question_en!.length).toBeGreaterThan(0)
+      expect(q.options_en).toBeDefined()
+      expect(q.options_en!.length).toBe(4)
+      q.options_en!.forEach((opt) => expect(opt.length).toBeGreaterThan(0))
+    }
+  })
 })
