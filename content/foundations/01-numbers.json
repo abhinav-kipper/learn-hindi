@@ -77,6 +77,37 @@
     "When bargaining, start at 50-60% of quoted price. Use numbers confidently: 'teen sau dega? nahi toh chhod' (will you give for 300? otherwise leave)",
     "Phone numbers are read digit by digit, often grouped: 'nine eight seven, one two three, four five six seven'"
   ],
-  "skill_breakdown": [],
+  "skill_breakdown": [
+    {
+      "skill": "Counting 1-10 essentials",
+      "explanation": "Hindi numbers 1-10 don't follow a predictable pattern — each must be memorized. Once you've got these, 11-19 are recognizable variations. Practice them out loud daily until they're automatic.",
+      "more_examples": [
+        { "hindi": "ek, do, teen", "english": "one, two, three" },
+        { "hindi": "chaar, paanch, chhe", "english": "four, five, six" },
+        { "hindi": "saat, aath, nau, das", "english": "seven, eight, nine, ten" },
+        { "hindi": "mere paas das rupaye hain", "english": "I have ten rupees" }
+      ]
+    },
+    {
+      "skill": "Money in rupees",
+      "explanation": "Hindi uses 'sau' (hundred), 'hazaar' (thousand), and 'lakh' (hundred-thousand) instead of 'thousand/million'. 1 lakh = 100,000. Indian currency conversations use lakhs and crores constantly.",
+      "more_examples": [
+        { "hindi": "sau rupaye", "english": "one hundred rupees" },
+        { "hindi": "paanch sau rupaye", "english": "five hundred rupees" },
+        { "hindi": "ek hazaar", "english": "one thousand" },
+        { "hindi": "ek lakh", "english": "one hundred thousand (1,00,000)" }
+      ]
+    },
+    {
+      "skill": "Ordinals (pehla/dusra/tisra)",
+      "explanation": "Ordinals agree with the gender of the noun they modify: pehla/pehli (first M/F), dusra/dusri (second), tisra/tisri (third). After third, just attach '-vaan' to the cardinal: chauthaa (fourth), paanchvaan (fifth).",
+      "more_examples": [
+        { "hindi": "pehla din", "english": "the first day" },
+        { "hindi": "dusri baar", "english": "the second time (feminine)" },
+        { "hindi": "tisra ladka", "english": "the third boy" },
+        { "hindi": "paanchvaan saal", "english": "the fifth year" }
+      ]
+    }
+  ],
   "practice_prompt": "Practice using Hindi numbers in real situations. Ask me prices, times, or quantities — I'll respond naturally and help you get comfortable with numbers in conversation."
 }
