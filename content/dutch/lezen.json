@@ -1,0 +1,926 @@
+{
+  "texts": [
+    {
+      "id": "lezen-001",
+      "tier": "A1",
+      "topic": "daily-routine",
+      "title_nl": "Mijn dag",
+      "title_en": "My day",
+      "body_nl": "Ik sta elke dag om zeven uur op. Eerst neem ik een douche en daarna eet ik ontbijt. Ik drink koffie en eet brood met kaas. Om acht uur ga ik naar mijn werk. Ik werk op een kantoor in Utrecht. Tussen de middag eet ik een broodje in de kantine. 's Avonds ben ik om zes uur weer thuis. Ik kook eten en kijk soms televisie. Om elf uur ga ik naar bed.",
+      "body_en": "I get up every day at seven o'clock. First I take a shower and then I eat breakfast. I drink coffee and eat bread with cheese. At eight o'clock I go to my work. I work in an office in Utrecht. At lunchtime I eat a sandwich in the canteen. In the evening I am back home at six o'clock. I cook food and sometimes watch television. At eleven o'clock I go to bed.",
+      "word_count": 78,
+      "questions": [
+        {
+          "type": "detail",
+          "question_nl": "Hoe laat staat de schrijver op?",
+          "question_en": "What time does the writer get up?",
+          "options_nl": [
+            "Om zes uur",
+            "Om zeven uur",
+            "Om acht uur",
+            "Om elf uur"
+          ],
+          "options_en": [
+            "At six o'clock",
+            "At seven o'clock",
+            "At eight o'clock",
+            "At eleven o'clock"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text says 'Ik sta elke dag om zeven uur op' — every day at seven."
+        },
+        {
+          "type": "detail",
+          "question_nl": "Waar werkt de schrijver?",
+          "question_en": "Where does the writer work?",
+          "options_nl": [
+            "In een fabriek",
+            "In een winkel",
+            "Op een kantoor",
+            "Thuis"
+          ],
+          "options_en": [
+            "In a factory",
+            "In a shop",
+            "In an office",
+            "At home"
+          ],
+          "correct_index": 2,
+          "explanation_en": "The text says 'Ik werk op een kantoor in Utrecht' — I work in an office in Utrecht."
+        },
+        {
+          "type": "hoofdgedachte",
+          "question_nl": "Waar gaat de tekst vooral over?",
+          "question_en": "What is the text mainly about?",
+          "options_nl": [
+            "De vakantie van de schrijver",
+            "Een dag in het leven van de schrijver",
+            "Het werk van de schrijver",
+            "Eten en drinken in Nederland"
+          ],
+          "options_en": [
+            "The writer's holiday",
+            "A day in the writer's life",
+            "The writer's job",
+            "Food and drink in the Netherlands"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text describes the writer's daily routine from morning to night — a typical day in their life."
+        },
+        {
+          "type": "hoofdgedachte",
+          "question_nl": "Wat doet de schrijver 's avonds?",
+          "question_en": "What does the writer do in the evening?",
+          "options_nl": [
+            "Werkt op kantoor",
+            "Gaat naar Utrecht",
+            "Kookt en kijkt televisie",
+            "Drinkt koffie"
+          ],
+          "options_en": [
+            "Works at the office",
+            "Goes to Utrecht",
+            "Cooks and watches television",
+            "Drinks coffee"
+          ],
+          "correct_index": 2,
+          "explanation_en": "The text says 'Ik kook eten en kijk soms televisie' — I cook food and sometimes watch television."
+        }
+      ],
+      "references": [
+        "Naar Nederland A1",
+        "rijksoverheid.nl style"
+      ]
+    },
+    {
+      "id": "lezen-002",
+      "tier": "A1",
+      "topic": "supermarket",
+      "title_nl": "In de supermarkt",
+      "title_en": "At the supermarket",
+      "body_nl": "Vandaag ga ik naar de supermarkt. Ik heb een lijst. Ik koop brood, melk, kaas, groente en fruit. De appels zijn in de aanbieding. Dat is goedkoop. Ik zoek ook yoghurt. Die is bij de melk. Ik heb een bonuskaart. Daarmee krijg ik korting. Aan het einde ga ik naar de kassa. Ik betaal met mijn pinpas. De kassamedewerker is vriendelijk. Ik ga naar huis met mijn boodschappen.",
+      "body_en": "Today I am going to the supermarket. I have a list. I buy bread, milk, cheese, vegetables and fruit. The apples are on offer. That is cheap. I am also looking for yoghurt. That is near the milk. I have a bonus card. With it I get a discount. At the end I go to the checkout. I pay with my debit card. The checkout assistant is friendly. I go home with my shopping.",
+      "word_count": 68,
+      "questions": [
+        {
+          "type": "detail",
+          "question_nl": "Wat koopt de schrijver niet in de supermarkt?",
+          "question_en": "What does the writer not buy at the supermarket?",
+          "options_nl": [
+            "Brood",
+            "Melk",
+            "Vlees",
+            "Fruit"
+          ],
+          "options_en": [
+            "Bread",
+            "Milk",
+            "Meat",
+            "Fruit"
+          ],
+          "correct_index": 2,
+          "explanation_en": "The text lists bread, milk, cheese, vegetables, fruit and yoghurt — meat is not mentioned."
+        },
+        {
+          "type": "detail",
+          "question_nl": "Hoe betaalt de schrijver?",
+          "question_en": "How does the writer pay?",
+          "options_nl": [
+            "Met contant geld",
+            "Met een creditcard",
+            "Met een pinpas",
+            "Met een bonuskaart"
+          ],
+          "options_en": [
+            "With cash",
+            "With a credit card",
+            "With a debit card",
+            "With a bonus card"
+          ],
+          "correct_index": 2,
+          "explanation_en": "The text says 'Ik betaal met mijn pinpas' — I pay with my debit card."
+        },
+        {
+          "type": "hoofdgedachte",
+          "question_nl": "Waar gaat de tekst vooral over?",
+          "question_en": "What is the text mainly about?",
+          "options_nl": [
+            "Een recept voor een maaltijd",
+            "Een bezoek aan de supermarkt",
+            "Werken bij een supermarkt",
+            "Gezond eten in Nederland"
+          ],
+          "options_en": [
+            "A recipe for a meal",
+            "A visit to the supermarket",
+            "Working at a supermarket",
+            "Healthy eating in the Netherlands"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text describes a shopping trip from start to finish — arriving with a list, buying items and paying at the checkout."
+        },
+        {
+          "type": "hoofdgedachte",
+          "question_nl": "Waarom is de bonuskaart handig?",
+          "question_en": "Why is the bonus card useful?",
+          "options_nl": [
+            "Je kunt ermee pinnen",
+            "Je krijgt er korting mee",
+            "Je kunt ermee de kassa overslaan",
+            "Je krijgt er gratis boodschappen mee"
+          ],
+          "options_en": [
+            "You can pay with it",
+            "You get a discount with it",
+            "You can skip the checkout with it",
+            "You get free groceries with it"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text says 'Daarmee krijg ik korting' — with it I get a discount."
+        }
+      ],
+      "references": [
+        "Naar Nederland A1",
+        "Albert Heijn bonuskaart informatie"
+      ]
+    },
+    {
+      "id": "lezen-003",
+      "tier": "A1",
+      "topic": "weather",
+      "title_nl": "Het weer vandaag",
+      "title_en": "The weather today",
+      "body_nl": "Vandaag is het typisch Nederlands weer. 's Ochtends is er zon. Het is niet te koud, maar ook niet warm. De temperatuur is tien graden. In de middag komt er regen. De wind is sterk. Ik neem mijn paraplu mee. Ik draag ook een jas en een sjaal. 's Avonds is het droog. Ik ga dan even naar buiten. In Nederland regent het vaak. Maar ik vind het niet erg.",
+      "body_en": "Today the weather is typically Dutch. In the morning there is sunshine. It is not too cold, but not warm either. The temperature is ten degrees. In the afternoon rain arrives. The wind is strong. I take my umbrella with me. I also wear a coat and a scarf. In the evening it is dry. I then go outside for a bit. In the Netherlands it often rains. But I don't mind.",
+      "word_count": 70,
+      "questions": [
+        {
+          "type": "detail",
+          "question_nl": "Wat is de temperatuur vandaag?",
+          "question_en": "What is the temperature today?",
+          "options_nl": [
+            "Vijf graden",
+            "Tien graden",
+            "Vijftien graden",
+            "Twintig graden"
+          ],
+          "options_en": [
+            "Five degrees",
+            "Ten degrees",
+            "Fifteen degrees",
+            "Twenty degrees"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text says 'De temperatuur is tien graden' — the temperature is ten degrees."
+        },
+        {
+          "type": "detail",
+          "question_nl": "Wat neemt de schrijver mee naar buiten?",
+          "question_en": "What does the writer take outside?",
+          "options_nl": [
+            "Een zonnebril",
+            "Een paraplu en een jas",
+            "Alleen een sjaal",
+            "Een regenjas en laarzen"
+          ],
+          "options_en": [
+            "Sunglasses",
+            "An umbrella and a coat",
+            "Only a scarf",
+            "A raincoat and boots"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text says 'Ik neem mijn paraplu mee. Ik draag ook een jas en een sjaal' — umbrella, coat and scarf."
+        },
+        {
+          "type": "hoofdgedachte",
+          "question_nl": "Waar gaat de tekst vooral over?",
+          "question_en": "What is the text mainly about?",
+          "options_nl": [
+            "Het weer in de zomer",
+            "Een typische dag met Nederlands weer",
+            "Kleding kopen in Nederland",
+            "Wandelen in de regen"
+          ],
+          "options_en": [
+            "The weather in summer",
+            "A typical day with Dutch weather",
+            "Buying clothes in the Netherlands",
+            "Walking in the rain"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text describes a full day of typical Dutch weather — sun in the morning and rain in the afternoon — and the writer's reaction to it."
+        },
+        {
+          "type": "hoofdgedachte",
+          "question_nl": "Wat vindt de schrijver van het Nederlandse weer?",
+          "question_en": "What does the writer think of Dutch weather?",
+          "options_nl": [
+            "Het is verschrikkelijk",
+            "Het is te warm",
+            "Het is niet erg",
+            "Het is altijd mooi"
+          ],
+          "options_en": [
+            "It is terrible",
+            "It is too warm",
+            "It is not a problem",
+            "It is always nice"
+          ],
+          "correct_index": 2,
+          "explanation_en": "The text ends with 'Maar ik vind het niet erg' — but I don't mind, showing acceptance of the rainy weather."
+        }
+      ],
+      "references": [
+        "Naar Nederland A1",
+        "KNMI weerinformatie"
+      ]
+    },
+    {
+      "id": "lezen-004",
+      "tier": "A1",
+      "topic": "food",
+      "title_nl": "Wat ik eet",
+      "title_en": "What I eat",
+      "body_nl": "Ik eet elke dag drie keer. 's Ochtends eet ik brood met hagelslag of kaas. Ik drink thee of koffie. Tussen de middag eet ik ook een broodje. Soms eet ik een stroopwafel als tussendoortje. 's Avonds eet ik warm. Ik eet aardappels met groente en vlees of vis. Op zondag eten we soms een groot ontbijt. Dan eten we eieren en spek. Ik vind Nederlands eten lekker.",
+      "body_en": "I eat three times every day. In the morning I eat bread with chocolate sprinkles or cheese. I drink tea or coffee. At lunchtime I also eat a sandwich. Sometimes I eat a stroopwafel as a snack. In the evening I eat a hot meal. I eat potatoes with vegetables and meat or fish. On Sunday we sometimes have a big breakfast. Then we eat eggs and bacon. I find Dutch food tasty.",
+      "word_count": 68,
+      "questions": [
+        {
+          "type": "detail",
+          "question_nl": "Wat eet de schrijver 's avonds?",
+          "question_en": "What does the writer eat in the evening?",
+          "options_nl": [
+            "Brood met hagelslag",
+            "Een stroopwafel",
+            "Aardappels met groente en vlees of vis",
+            "Eieren en spek"
+          ],
+          "options_en": [
+            "Bread with chocolate sprinkles",
+            "A stroopwafel",
+            "Potatoes with vegetables and meat or fish",
+            "Eggs and bacon"
+          ],
+          "correct_index": 2,
+          "explanation_en": "The text says 'Ik eet aardappels met groente en vlees of vis' as the evening meal."
+        },
+        {
+          "type": "detail",
+          "question_nl": "Wanneer eten ze soms een groot ontbijt?",
+          "question_en": "When do they sometimes have a big breakfast?",
+          "options_nl": [
+            "Op maandag",
+            "Op vrijdag",
+            "Op zaterdag",
+            "Op zondag"
+          ],
+          "options_en": [
+            "On Monday",
+            "On Friday",
+            "On Saturday",
+            "On Sunday"
+          ],
+          "correct_index": 3,
+          "explanation_en": "The text says 'Op zondag eten we soms een groot ontbijt' — on Sunday we sometimes have a big breakfast."
+        },
+        {
+          "type": "hoofdgedachte",
+          "question_nl": "Waar gaat de tekst vooral over?",
+          "question_en": "What is the text mainly about?",
+          "options_nl": [
+            "Koken in Nederland",
+            "Wat de schrijver elke dag eet",
+            "Gezond eten",
+            "Nederlandse restaurants"
+          ],
+          "options_en": [
+            "Cooking in the Netherlands",
+            "What the writer eats every day",
+            "Healthy eating",
+            "Dutch restaurants"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text gives an overview of the writer's eating habits from breakfast through to dinner, including typical Dutch foods."
+        },
+        {
+          "type": "hoofdgedachte",
+          "question_nl": "Wat is een typisch Nederlands tussendoortje volgens de tekst?",
+          "question_en": "What is a typical Dutch snack according to the text?",
+          "options_nl": [
+            "Een appel",
+            "Een stroopwafel",
+            "Een broodje kaas",
+            "Een koekje"
+          ],
+          "options_en": [
+            "An apple",
+            "A stroopwafel",
+            "A cheese sandwich",
+            "A biscuit"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text mentions 'Soms eet ik een stroopwafel als tussendoortje' — a stroopwafel as a snack, a well-known Dutch treat."
+        }
+      ],
+      "references": [
+        "Naar Nederland A1",
+        "Voedingscentrum.nl"
+      ]
+    },
+    {
+      "id": "lezen-005",
+      "tier": "A1",
+      "topic": "family",
+      "title_nl": "Mijn familie",
+      "title_en": "My family",
+      "body_nl": "Ik heb een grote familie. Mijn vader heet Jan en hij is leraar. Mijn moeder heet Maria en zij werkt in een ziekenhuis. Ik heb een broer en een zus. Mijn broer Tom is twintig jaar oud. Mijn zus Lisa is veertien. Ze gaat nog naar school. Mijn oma woont bij ons. Ze is zeventig jaar oud. We eten elke zondag samen. Dan zijn we met de hele familie.",
+      "body_en": "I have a large family. My father is called Jan and he is a teacher. My mother is called Maria and she works in a hospital. I have a brother and a sister. My brother Tom is twenty years old. My sister Lisa is fourteen. She still goes to school. My grandmother lives with us. She is seventy years old. Every Sunday we eat together. Then we are together as a whole family.",
+      "word_count": 69,
+      "questions": [
+        {
+          "type": "detail",
+          "question_nl": "Wat is het beroep van de vader?",
+          "question_en": "What is the father's job?",
+          "options_nl": [
+            "Dokter",
+            "Leraar",
+            "Verpleger",
+            "Kantoormedewerker"
+          ],
+          "options_en": [
+            "Doctor",
+            "Teacher",
+            "Nurse",
+            "Office worker"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text says 'Mijn vader heet Jan en hij is leraar' — my father is called Jan and he is a teacher."
+        },
+        {
+          "type": "detail",
+          "question_nl": "Hoe oud is Lisa?",
+          "question_en": "How old is Lisa?",
+          "options_nl": [
+            "Tien jaar",
+            "Veertien jaar",
+            "Twintig jaar",
+            "Zeventig jaar"
+          ],
+          "options_en": [
+            "Ten years old",
+            "Fourteen years old",
+            "Twenty years old",
+            "Seventy years old"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text says 'Mijn zus Lisa is veertien' — my sister Lisa is fourteen."
+        },
+        {
+          "type": "hoofdgedachte",
+          "question_nl": "Waar gaat de tekst vooral over?",
+          "question_en": "What is the text mainly about?",
+          "options_nl": [
+            "Een feestdag in Nederland",
+            "De familie van de schrijver",
+            "Het werk van de moeder",
+            "School in Nederland"
+          ],
+          "options_en": [
+            "A holiday in the Netherlands",
+            "The writer's family",
+            "The mother's job",
+            "School in the Netherlands"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text introduces the writer's whole family — father, mother, brother, sister and grandmother — giving their names, ages and jobs."
+        },
+        {
+          "type": "hoofdgedachte",
+          "question_nl": "Wanneer is de hele familie samen?",
+          "question_en": "When is the whole family together?",
+          "options_nl": [
+            "Elke dag bij het avondeten",
+            "Elke zondag bij het eten",
+            "Op feestdagen",
+            "Op zaterdag in de middag"
+          ],
+          "options_en": [
+            "Every day at dinner",
+            "Every Sunday at mealtime",
+            "On public holidays",
+            "On Saturday afternoon"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text says 'We eten elke zondag samen. Dan zijn we met de hele familie' — every Sunday they eat together as a whole family."
+        }
+      ],
+      "references": [
+        "Naar Nederland A1"
+      ]
+    },
+    {
+      "id": "lezen-006",
+      "tier": "A2",
+      "topic": "gp-visit",
+      "title_nl": "Naar de huisarts",
+      "title_en": "Going to the doctor",
+      "body_nl": "Gisteren voelde ik me niet goed. Ik had hoofdpijn en koorts. Ik besloot om de huisarts te bellen. De assistente vroeg naar mijn klachten en gaf me een afspraak voor dezelfde dag. De praktijk is niet ver van mijn huis, dus ik ging er op de fiets naartoe. Ik moest tien minuten wachten in de wachtkamer. Toen mocht ik naar binnen. De huisarts stelde veel vragen. Hij vroeg hoe lang ik al ziek was en of ik medicijnen gebruikte. Hij onderzocht me en zei dat ik griep had. Hij adviseerde me om veel te rusten en veel water te drinken. Hij schreef ook een recept voor de apotheek. Bij de apotheek kreeg ik tabletten voor de koorts en een neusspray. De apotheker legde uit hoe ik de medicijnen moest gebruiken en wanneer ik ze moest innemen. Ik ben blij dat ik snel een afspraak kon krijgen. Na twee dagen voelde ik me al beter.",
+      "body_en": "Yesterday I did not feel well. I had a headache and a fever. I decided to call the huisarts. The assistant asked about my symptoms and gave me an appointment for the same day. The practice is not far from my house, so I went there by bike. I had to wait ten minutes in the waiting room. Then I was allowed to go in. The huisarts asked many questions. He asked how long I had been ill and whether I was taking medication. He examined me and said that I had the flu. He advised me to rest a lot and drink plenty of water. He also wrote a prescription for the apotheek. At the apotheek I received tablets for the fever and a nasal spray. The pharmacist explained how I should take the medication and when to take it. I am glad that I could get an appointment quickly. After two days I already felt better.",
+      "word_count": 154,
+      "questions": [
+        {
+          "type": "detail",
+          "question_nl": "Welke klachten had de schrijver?",
+          "question_en": "What symptoms did the writer have?",
+          "options_nl": [
+            "Buikpijn en misselijkheid",
+            "Hoofdpijn en koorts",
+            "Keelpijn en hoesten",
+            "Rugpijn en vermoeidheid"
+          ],
+          "options_en": [
+            "Stomach ache and nausea",
+            "Headache and fever",
+            "Sore throat and coughing",
+            "Back pain and fatigue"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text says 'Ik had hoofdpijn en koorts' — I had a headache and a fever."
+        },
+        {
+          "type": "hoofdgedachte",
+          "question_nl": "Waar gaat de tekst vooral over?",
+          "question_en": "What is the text mainly about?",
+          "options_nl": [
+            "Hoe je medicijnen koopt bij de apotheek",
+            "Een bezoek aan de huisarts vanwege ziekte",
+            "Het werk van een huisarts in Nederland",
+            "Hoe je een zorgverzekering afsluit"
+          ],
+          "options_en": [
+            "How to buy medication at the apotheek",
+            "A visit to the huisarts because of illness",
+            "The work of a huisarts in the Netherlands",
+            "How to take out health insurance"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text follows the writer from feeling ill, through calling for an appointment, visiting the huisarts and collecting medication — a complete GP visit."
+        },
+        {
+          "type": "woordbetekenis",
+          "question_nl": "Wat betekent 'klachten' in de tekst?",
+          "question_en": "What does 'klachten' mean in the text?",
+          "options_nl": [
+            "Bezwaren tegen een beslissing",
+            "Symptomen of gezondheidsklachten",
+            "Klachten over slechte service",
+            "Een lijst met vragen"
+          ],
+          "options_en": [
+            "Objections to a decision",
+            "Symptoms or health complaints",
+            "Complaints about poor service",
+            "A list of questions"
+          ],
+          "correct_index": 1,
+          "explanation_en": "In a medical context, 'klachten' means symptoms or health complaints — the things that are bothering you physically."
+        },
+        {
+          "type": "woordbetekenis",
+          "question_nl": "Wat is een 'recept' in de tekst?",
+          "question_en": "What is a 'recept' in the text?",
+          "options_nl": [
+            "Een kookrecept voor een maaltijd",
+            "Een schriftelijk bewijs van betaling",
+            "Een document van de dokter voor medicijnen",
+            "Een afspraakkaartje van de praktijk"
+          ],
+          "options_en": [
+            "A cooking recipe for a meal",
+            "A written proof of payment",
+            "A document from the doctor for medication",
+            "An appointment card from the practice"
+          ],
+          "correct_index": 2,
+          "explanation_en": "In this context 'recept' is a medical prescription — a document written by the huisarts that allows you to collect medication from the apotheek."
+        }
+      ],
+      "references": [
+        "Naar Nederland A2",
+        "rijksoverheid.nl/huisarts"
+      ]
+    },
+    {
+      "id": "lezen-007",
+      "tier": "A2",
+      "topic": "ov-chipkaart",
+      "title_nl": "Een ov-chipkaart kopen",
+      "title_en": "Buying an OV-chipkaart",
+      "body_nl": "In Nederland reist iedereen met het openbaar vervoer met een ov-chipkaart. Je kunt de kaart kopen bij een automaat op het NS-station of bij een servicebalie. Er zijn twee soorten kaarten. Een anonieme ov-chipkaart kun je meteen gebruiken. Een persoonlijke ov-chipkaart heeft jouw naam en foto erop. Als je de persoonlijke kaart verliest, kun je het saldo terugkrijgen. Je moet de kaart opladen met geld, het zogeheten saldo. Dat kan bij de automaat, online of bij een servicepunt. Voordat je in de trein, bus, tram of metro stapt, moet je inchecken door de kaart tegen de lezer te houden. Als je uitstapt, moet je uitchecken. Als je vergeet uit te checken, wordt er een boete van het saldo afgeschreven. De ov-chipkaart is geldig voor alle vormen van openbaar vervoer in Nederland.",
+      "body_en": "In the Netherlands, everyone travelling by public transport uses an OV-chipkaart. You can buy the card at a machine at the NS station or at a service desk. There are two types of cards. An anonymous OV-chipkaart can be used immediately. A personal OV-chipkaart has your name and photo on it. If you lose the personal card, you can get the balance back. You must top up the card with money, known as the saldo. This can be done at the machine, online or at a service point. Before you board the train, bus, tram or metro, you must check in by holding the card against the reader. When you get off, you must check out. If you forget to check out, a fine is deducted from the balance. The OV-chipkaart is valid for all forms of public transport in the Netherlands.",
+      "word_count": 131,
+      "questions": [
+        {
+          "type": "detail",
+          "question_nl": "Wat is een voordeel van een persoonlijke ov-chipkaart boven een anonieme?",
+          "question_en": "What is an advantage of a personal OV-chipkaart over an anonymous one?",
+          "options_nl": [
+            "Je kunt er gratis mee reizen",
+            "Je kunt het saldo terugkrijgen als je de kaart verliest",
+            "Hij is goedkoper om te kopen",
+            "Je hoeft niet in te checken"
+          ],
+          "options_en": [
+            "You can travel for free with it",
+            "You can get the balance back if you lose the card",
+            "It is cheaper to buy",
+            "You do not have to check in"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text says 'Als je de persoonlijke kaart verliest, kun je het saldo terugkrijgen' — if you lose the personal card, you can get the balance back."
+        },
+        {
+          "type": "hoofdgedachte",
+          "question_nl": "Waar gaat de tekst vooral over?",
+          "question_en": "What is the text mainly about?",
+          "options_nl": [
+            "Reizen met de auto in Nederland",
+            "Hoe de ov-chipkaart werkt in Nederland",
+            "De prijzen van treinkaartjes",
+            "Hoe je een NS-abonnement koopt"
+          ],
+          "options_en": [
+            "Travelling by car in the Netherlands",
+            "How the OV-chipkaart works in the Netherlands",
+            "The prices of train tickets",
+            "How to buy an NS subscription"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text explains what the OV-chipkaart is, the types available, how to top it up, and how to check in and out — a complete overview of how it works."
+        },
+        {
+          "type": "woordbetekenis",
+          "question_nl": "Wat betekent 'saldo' in de tekst?",
+          "question_en": "What does 'saldo' mean in the text?",
+          "options_nl": [
+            "De naam op de kaart",
+            "Het geldbedrag op de kaart",
+            "Het kaarttype dat je hebt",
+            "De geldigheid van de kaart"
+          ],
+          "options_en": [
+            "The name on the card",
+            "The amount of money on the card",
+            "The type of card you have",
+            "The validity of the card"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text explains 'Je moet de kaart opladen met geld, het zogeheten saldo' — saldo is the amount of money loaded onto the card."
+        },
+        {
+          "type": "woordbetekenis",
+          "question_nl": "Wat betekent 'inchecken' in de tekst?",
+          "question_en": "What does 'inchecken' mean in the text?",
+          "options_nl": [
+            "Je kaart opladen bij de automaat",
+            "Je kaart registreren op internet",
+            "Je kaart tegen de lezer houden bij het instappen",
+            "Je kaart laten zien aan de conducteur"
+          ],
+          "options_en": [
+            "Topping up your card at the machine",
+            "Registering your card online",
+            "Holding your card against the reader when boarding",
+            "Showing your card to the conductor"
+          ],
+          "correct_index": 2,
+          "explanation_en": "The text says 'moet je inchecken door de kaart tegen de lezer te houden' — you check in by holding the card against the reader."
+        }
+      ],
+      "references": [
+        "NS.nl",
+        "ov-chipkaart.nl",
+        "Naar Nederland A2"
+      ]
+    },
+    {
+      "id": "lezen-008",
+      "tier": "A2",
+      "topic": "appointment",
+      "title_nl": "Een afspraak maken",
+      "title_en": "Making an appointment",
+      "body_nl": "In Nederland moet je voor veel dingen een afspraak maken. Bij de huisarts bel je de praktijk of je gaat naar de website om online een afspraak te boeken. Bij de tandarts werkt het op dezelfde manier. Voor zaken bij de gemeente, zoals een paspoort aanvragen of je inschrijven in de BRP, moet je ook een afspraak maken via de website van jouw gemeente. Je kunt niet zomaar binnenlopen bij de balie. Als je een afspraak niet kunt nakomen, moet je die ten minste vierentwintig uur van tevoren afzeggen. Dat doe je door te bellen of te mailen. Als je de afspraak niet afzegt, kan het zijn dat je een boete moet betalen of dat je vooraan in de wachtrij je plek verliest. Het is dus belangrijk om op tijd te annuleren als je niet kunt komen.",
+      "body_en": "In the Netherlands you need to make an appointment for many things. At the huisarts you call the practice or you go to the website to book an appointment online. At the dentist it works the same way. For matters at the gemeente, such as applying for a passport or registering in the BRP, you also need to make an appointment via your gemeente's website. You cannot just walk in at the balie. If you cannot keep an appointment, you must cancel it at least twenty-four hours in advance. You do this by calling or sending an email. If you do not cancel the appointment, you may have to pay a fine or you may lose your place at the front of the waiting list. It is therefore important to cancel in time if you cannot come.",
+      "word_count": 137,
+      "questions": [
+        {
+          "type": "detail",
+          "question_nl": "Hoe ver van tevoren moet je een afspraak afzeggen?",
+          "question_en": "How far in advance must you cancel an appointment?",
+          "options_nl": [
+            "Twaalf uur van tevoren",
+            "Vierentwintig uur van tevoren",
+            "Twee dagen van tevoren",
+            "Een week van tevoren"
+          ],
+          "options_en": [
+            "Twelve hours in advance",
+            "Twenty-four hours in advance",
+            "Two days in advance",
+            "One week in advance"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text says 'moet je die ten minste vierentwintig uur van tevoren afzeggen' — you must cancel at least twenty-four hours in advance."
+        },
+        {
+          "type": "hoofdgedachte",
+          "question_nl": "Wat is de belangrijkste boodschap van de tekst?",
+          "question_en": "What is the main message of the text?",
+          "options_nl": [
+            "Huisartsen in Nederland zijn altijd druk",
+            "In Nederland moet je voor veel dingen een afspraak maken en die op tijd afzeggen als je niet kunt",
+            "De gemeente heeft een slecht systeem voor afspraken",
+            "Online afspraken zijn beter dan telefonisch bellen"
+          ],
+          "options_en": [
+            "Huisartsen in Nederland are always busy",
+            "In the Netherlands you need to make appointments for many things and cancel them on time if you cannot come",
+            "The gemeente has a poor appointments system",
+            "Online appointments are better than calling by phone"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text explains how to make appointments at various institutions and stresses the importance of cancelling at least 24 hours in advance — planning ahead is the main theme."
+        },
+        {
+          "type": "woordbetekenis",
+          "question_nl": "Wat betekent 'afzeggen' in de tekst?",
+          "question_en": "What does 'afzeggen' mean in the text?",
+          "options_nl": [
+            "Een afspraak bevestigen",
+            "Een afspraak annuleren",
+            "Een nieuwe afspraak maken",
+            "Een afspraak verplaatsen"
+          ],
+          "options_en": [
+            "To confirm an appointment",
+            "To cancel an appointment",
+            "To make a new appointment",
+            "To reschedule an appointment"
+          ],
+          "correct_index": 1,
+          "explanation_en": "In context, 'afzeggen' means to cancel — the text contrasts 'nakomen' (keeping an appointment) with 'afzeggen' (cancelling it)."
+        },
+        {
+          "type": "woordbetekenis",
+          "question_nl": "Wat is een 'balie' in de tekst?",
+          "question_en": "What is a 'balie' in the text?",
+          "options_nl": [
+            "Een wachtruimte in een ziekenhuis",
+            "Een loket of receptie waar je iemand te woord staat",
+            "Een website van de gemeente",
+            "Een formulier dat je moet invullen"
+          ],
+          "options_en": [
+            "A waiting room in a hospital",
+            "A counter or reception desk where you are helped",
+            "A website of the gemeente",
+            "A form you have to fill in"
+          ],
+          "correct_index": 1,
+          "explanation_en": "'Balie' is a service counter or reception desk — the text says you cannot just walk in at the balie without an appointment."
+        }
+      ],
+      "references": [
+        "Naar Nederland A2",
+        "rijksoverheid.nl/gemeente-afspraken"
+      ]
+    },
+    {
+      "id": "lezen-009",
+      "tier": "A2",
+      "topic": "library",
+      "title_nl": "In de bibliotheek",
+      "title_en": "At the library",
+      "body_nl": "De bibliotheek is een fijne plek in Nederland. Je kunt er boeken, tijdschriften en dvd's lenen. Om gebruik te maken van de bibliotheek, moet je je eerst inschrijven. Dat doe je aan de balie met een geldig identiteitsbewijs. Je betaalt een kleine jaarlijkse bijdrage. Als lid mag je boeken drie weken lenen. Als je meer tijd nodig hebt, kun je de uitleentermijn verlengen. Dat kan online via de website of via de bibliotheekapp. Als iemand anders het boek heeft gereserveerd, kun je het niet verlengen. Als je te laat terugkomt, moet je een boete betalen. De bibliotheek biedt ook gratis workshops en activiteiten aan, zoals leeskringen en taalcursussen. Kinderen kunnen er ook boeken lenen. De bibliotheek wil graag dat iedereen kan lezen en leren.",
+      "body_en": "The library is a wonderful place in the Netherlands. You can borrow books, magazines and DVDs there. To make use of the library, you must first register. You do this at the balie with a valid identity document. You pay a small annual contribution. As a member you may borrow books for three weeks. If you need more time, you can extend the loan period. This can be done online via the website or through the library app. If someone else has reserved the book, you cannot extend it. If you return it too late, you have to pay a fine. The library also offers free workshops and activities, such as reading groups and language courses. Children can also borrow books there. The library wants everyone to be able to read and learn.",
+      "word_count": 124,
+      "questions": [
+        {
+          "type": "detail",
+          "question_nl": "Hoe lang mag je een boek lenen?",
+          "question_en": "How long may you borrow a book?",
+          "options_nl": [
+            "Één week",
+            "Twee weken",
+            "Drie weken",
+            "Een maand"
+          ],
+          "options_en": [
+            "One week",
+            "Two weeks",
+            "Three weeks",
+            "One month"
+          ],
+          "correct_index": 2,
+          "explanation_en": "The text says 'Als lid mag je boeken drie weken lenen' — as a member you may borrow books for three weeks."
+        },
+        {
+          "type": "hoofdgedachte",
+          "question_nl": "Waar gaat de tekst vooral over?",
+          "question_en": "What is the text mainly about?",
+          "options_nl": [
+            "Hoe je gratis boeken kunt kopen in Nederland",
+            "Hoe de Nederlandse bibliotheek werkt",
+            "Workshops voor kinderen in de bibliotheek",
+            "Hoe je een boek kunt reserveren"
+          ],
+          "options_en": [
+            "How to buy free books in the Netherlands",
+            "How the Dutch library works",
+            "Workshops for children at the library",
+            "How to reserve a book"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text explains how to join the library, borrow and extend loans, and what activities are available — a general overview of how the Dutch library works."
+        },
+        {
+          "type": "woordbetekenis",
+          "question_nl": "Wat betekent 'verlengen' in de tekst?",
+          "question_en": "What does 'verlengen' mean in the text?",
+          "options_nl": [
+            "Een boek teruggeven aan de bibliotheek",
+            "Een boek langer houden dan de uitleentermijn toestaat",
+            "De uitleentermijn met extra tijd verlengen",
+            "Een boek reserveren voor later"
+          ],
+          "options_en": [
+            "To return a book to the library",
+            "To keep a book longer than the loan period allows",
+            "To extend the loan period with extra time",
+            "To reserve a book for later"
+          ],
+          "correct_index": 2,
+          "explanation_en": "'Verlengen' means to extend — the text says you can extend the loan period (uitleentermijn verlengen) if you need more time."
+        },
+        {
+          "type": "woordbetekenis",
+          "question_nl": "Wat is een 'boete' in de tekst?",
+          "question_en": "What is a 'boete' in the text?",
+          "options_nl": [
+            "Een cadeau voor het inleveren van een boek",
+            "Een geldbedrag dat je betaalt als straf voor te laat terugbrengen",
+            "Een speciale lidmaatschapskaart",
+            "Een herinnering dat je boek bijna op tijd moet zijn"
+          ],
+          "options_en": [
+            "A gift for returning a book",
+            "A sum of money you pay as a penalty for returning late",
+            "A special membership card",
+            "A reminder that your book is almost due"
+          ],
+          "correct_index": 1,
+          "explanation_en": "'Boete' means a fine — a financial penalty you must pay if you return a borrowed item too late."
+        }
+      ],
+      "references": [
+        "Naar Nederland A2",
+        "bibliotheek.nl"
+      ]
+    },
+    {
+      "id": "lezen-010",
+      "tier": "B1",
+      "topic": "bsn-digid",
+      "title_nl": "Een BSN en DigiD aanvragen",
+      "title_en": "Getting a BSN and DigiD",
+      "body_nl": "Als u zich in Nederland vestigt, heeft u een burgerservicenummer (BSN) nodig. Het BSN is een uniek persoonlijk nummer dat door de overheid wordt gebruikt om uw gegevens te beheren. U heeft het nodig voor uw zorgverzekering, voor uw belastingaangifte en voor het openen van een bankrekening. Zonder BSN kunt u deze essentiële diensten niet gebruiken en is het moeilijk om normaal te functioneren in de Nederlandse samenleving.\n\nHet BSN krijgt u automatisch wanneer u zich inschrijft in de Basisregistratie Personen (BRP) bij uw gemeente. U moet daarvoor persoonlijk naar het gemeentehuis gaan en een geldig paspoort of identiteitsbewijs meenemen. In sommige gemeenten is een afspraak verplicht, dus het is verstandig om dit vooraf te controleren op de website van uw gemeente. Na de inschrijving ontvangt u een brief met uw BSN. Bewaar dit nummer goed, want u heeft het regelmatig nodig.\n\nNaast het BSN heeft u ook een DigiD nodig. DigiD is uw persoonlijke digitale identiteit waarmee u kunt inloggen op websites van de overheid, zoals die van de Belastingdienst, het UWV en uw gemeente. U vraagt DigiD aan via de website digid.nl. U vult uw BSN en persoonlijke gegevens in en maakt een gebruikersnaam en wachtwoord aan. Nadat u uw aanvraag heeft ingediend, wordt er een activatiecode per post verstuurd naar uw woonadres. Die code ontvangt u doorgaans binnen vijf werkdagen. Met die code activeert u uw DigiD account.\n\nMet uw DigiD kunt u onder andere uw belastingaangifte doen, huurtoeslag of zorgtoeslag aanvragen en uw gemeentelijke zaken online regelen. Ook kunt u uw medische gegevens inzien via het patiëntenportaal. Het is belangrijk dat u uw DigiD-inloggegevens geheimhoudt en nooit met anderen deelt. De overheid vraagt nooit per telefoon of e-mail om uw DigiD-gegevens. Als u vermoedt dat iemand anders toegang heeft tot uw DigiD, moet u dit onmiddellijk melden en uw wachtwoord wijzigen via de website digid.nl.",
+      "body_en": "When you settle in the Netherlands, you need a burgerservicenummer (BSN). The BSN is a unique personal number used by the government to manage your data. You need it for your health insurance, for your tax declaration and for opening a bank account. Without a BSN you cannot use these essential services and it is difficult to function normally in Dutch society.\n\nYou receive the BSN automatically when you register in the Basisregistratie Personen (BRP) at your gemeente. To do this you must go to the town hall in person and bring a valid passport or identity document. In some gemeenten an appointment is mandatory, so it is wise to check this in advance on your gemeente's website. After registration you receive a letter with your BSN. Keep this number safe, as you will need it regularly.\n\nIn addition to the BSN, you also need a DigiD. DigiD is your personal digital identity with which you can log in to government websites, such as those of the Belastingdienst, the UWV and your gemeente. You apply for DigiD via the website digid.nl. You fill in your BSN and personal details and create a username and password. After you have submitted your application, an activation code is sent by post to your home address. You typically receive that code within five working days. With that code you activate your DigiD account.\n\nWith your DigiD you can, among other things, file your tax return, apply for huurtoeslag or zorgtoeslag, and arrange your municipal affairs online. You can also view your medical data via the patient portal. It is important that you keep your DigiD login details secret and never share them with others. The government never asks for your DigiD details by phone or email. If you suspect that someone else has access to your DigiD, you must report this immediately and change your password via the website digid.nl.",
+      "word_count": 309,
+      "questions": [
+        {
+          "type": "detail",
+          "question_nl": "Hoe lang duurt het voordat de activatiecode van DigiD aankomt?",
+          "question_en": "How long does it take for the DigiD activation code to arrive?",
+          "options_nl": [
+            "Binnen één werkdag",
+            "Binnen drie werkdagen",
+            "Doorgaans binnen vijf werkdagen",
+            "Binnen twee weken"
+          ],
+          "options_en": [
+            "Within one working day",
+            "Within three working days",
+            "Typically within five working days",
+            "Within two weeks"
+          ],
+          "correct_index": 2,
+          "explanation_en": "The text says 'Die code ontvangt u doorgaans binnen vijf werkdagen' — you typically receive that code within five working days."
+        },
+        {
+          "type": "hoofdgedachte",
+          "question_nl": "Wat is het hoofdonderwerp van de tekst?",
+          "question_en": "What is the main subject of the text?",
+          "options_nl": [
+            "Hoe u belasting betaalt in Nederland",
+            "Hoe u een BSN en DigiD aanvraagt en waarvoor u ze gebruikt",
+            "Hoe u zich aanmeldt bij een zorgverzekeraar",
+            "Welke documenten u nodig heeft om te werken in Nederland"
+          ],
+          "options_en": [
+            "How to pay taxes in the Netherlands",
+            "How to apply for a BSN and DigiD and what they are used for",
+            "How to sign up with a health insurer",
+            "Which documents you need to work in the Netherlands"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text explains what the BSN and DigiD are, how to obtain them and what you can do with them — a practical guide to two essential registration numbers for newcomers."
+        },
+        {
+          "type": "woordbetekenis",
+          "question_nl": "Wat betekent 'activatiecode' in de tekst?",
+          "question_en": "What does 'activatiecode' mean in the text?",
+          "options_nl": [
+            "Uw persoonlijke BSN-nummer",
+            "Een code die per post wordt verstuurd om DigiD te activeren",
+            "Een wachtwoord dat u zelf kiest voor DigiD",
+            "Een bevestigingscode van de gemeente"
+          ],
+          "options_en": [
+            "Your personal BSN number",
+            "A code sent by post to activate DigiD",
+            "A password you choose yourself for DigiD",
+            "A confirmation code from the gemeente"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text explains 'wordt er een activatiecode per post verstuurd' — an activation code is sent by post, which you use to complete the DigiD registration."
+        },
+        {
+          "type": "gevolg",
+          "question_nl": "Wat gebeurt er als u geen BSN heeft?",
+          "question_en": "What happens if you do not have a BSN?",
+          "options_nl": [
+            "U kunt geen DigiD aanvragen",
+            "U kunt geen gebruik maken van zorgverzekering, belasting en bankrekening",
+            "U moet Nederland verlaten",
+            "U krijgt een boete van de gemeente"
+          ],
+          "options_en": [
+            "You cannot apply for a DigiD",
+            "You cannot use health insurance, tax services and a bank account",
+            "You have to leave the Netherlands",
+            "You receive a fine from the gemeente"
+          ],
+          "correct_index": 1,
+          "explanation_en": "The text states 'Zonder BSN kunt u deze diensten niet gebruiken' — without a BSN you cannot use these services, referring to health insurance, tax declarations and banking."
+        }
+      ],
+      "references": [
+        "rijksoverheid.nl/bsn",
+        "digid.nl",
+        "Naar Nederland B1",
+        "Belastingdienst.nl"
+      ]
+    }
+  ]
+}
