@@ -11,6 +11,7 @@ import { isLessonComplete, getLessonCompletedAt } from '@/lib/progress'
 import { getLessonPercent } from '@/lib/phrase-progress'
 import { useLanguage } from '@/lib/language-context'
 import { playSound } from '@/lib/sounds'
+import { markAsSeen } from '@/lib/seen-lessons'
 
 function daysAgo(isoDate: string): number {
   const todayStr = new Date().toISOString().split('T')[0]
@@ -26,9 +27,10 @@ interface Props {
   index: number
   routeBase?: 'lessons' | 'foundations'
   locked?: boolean
+  isNew?: boolean
 }
 
-export function LessonStickerCard({ lesson, index, routeBase = 'lessons', locked = false }: Props) {
+export function LessonStickerCard({ lesson, index, routeBase = 'lessons', locked = false, isNew = false }: Props) {
   const router = useRouter()
   const { config } = useLanguage()
   const { palette, motif } = deriveLessonStyle(lesson.id, index)
@@ -51,11 +53,28 @@ export function LessonStickerCard({ lesson, index, routeBase = 'lessons', locked
   const onClick = () => {
     if (locked) return
     playSound('pop')
+    if (isNew) markAsSeen(lesson.id)
     router.push(`/${routeBase}/${lesson.id}`)
   }
 
   return (
-    <div style={{ opacity: locked ? 0.5 : 1, pointerEvents: locked ? 'none' : 'auto' }}>
+    <div style={{ opacity: locked ? 0.5 : 1, pointerEvents: locked ? 'none' : 'auto', position: 'relative' }}>
+      {isNew && (
+        <span
+          aria-label="new"
+          style={{
+            position: 'absolute',
+            top: 6,
+            right: 6,
+            width: 10,
+            height: 10,
+            borderRadius: '50%',
+            background: COLORS.orange,
+            zIndex: 2,
+            boxShadow: '0 0 0 2px #fff', // @design-allow: white halo for dot contrast
+          }}
+        />
+      )}
       <Sticker color={bg} radius={22} padding={0} onClick={onClick} style={{ overflow: 'hidden' }}>
         <div style={{ display: 'flex', alignItems: 'stretch' }}>
           <div
