@@ -1,0 +1,80 @@
+# Allow-list (strict) design lint — runs nightly. Posts a GitHub issue
+# listing any new violations vs. last run. Non-blocking.
+
+name: design-strict
+
+on:
+  schedule:
+    - cron: '0 3 * * *'  # 03:00 UTC daily
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Run strict lint
+        run: node scripts/lint-design-strict.mjs
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: design-lint-report
+          path: e2e/design-lint-report.json
+
+      - name: Surface as issue if any hits
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = JSON.parse(fs.readFileSync('e2e/design-lint-report.json', 'utf8'));
+            if (report.hits.length === 0) return;
+
+            const body = [
+              `Found **${report.hits.length}** design-strict violation(s) at ${report.generatedAt}.`,
+              '',
+              'These are non-blocking but should be reviewed. They indicate places using literal CSS values where a token reference would be cleaner.',
+              '',
+              '| File:Line | Rule | Property | Value |',
+              '|---|---|---|---|',
+              ...report.hits.slice(0, 50).map(h => `| \`${h.file}:${h.line}\` | ${h.rule} | ${h.prop} | \`${h.value}\` |`),
+              report.hits.length > 50 ? `\n_+ ${report.hits.length - 50} more in the report artifact._` : '',
+            ].join('\n');
+
+            const title = 'design-strict drift report';
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: 'design-drift',
+              state: 'open',
+            });
+            const match = existing.data.find(i => i.title === title);
+            if (match) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: match.number,
+                body,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                labels: ['design-drift'],
+                body,
+              });
+            }
