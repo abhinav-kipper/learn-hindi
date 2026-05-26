@@ -21,7 +21,7 @@ Conversational Hindi taught through scenarios. Each lesson: 9-10 phrases + gramm
 | `10-phone-with-parents` | Phone Call with Parents | Weekly Sunday call with mummy & papa | sustained aap register, family terms, future plans, feminine future-tense verbs |
 
 ### Foundations (`content/foundations/*.json`) — 9 lessons
-Grammar core. Same schema as situations. Foundations 02-06 still have empty `skill_breakdown: []` (gap); `07-noun-gender` has full skill_breakdowns and is the template for backfilling the others.
+Grammar core. Same schema as situations. As of 2026-05-26 all 9 foundations have full skill_breakdowns (was previously a gap for 01-06; backfilled and 2 new foundations — compound-verbs + ne-rule — added).
 
 | ID | Title |
 |----|-------|
@@ -150,31 +150,42 @@ Step-by-step for adding a new lesson:
    ```
 9. Commit: `content(hindi): add <topic> lesson — <source citation>`
 
-## Known Issues (as of 2026-05-22)
+## Known Issues (as of 2026-05-26)
 
 ### Bugs (fixed)
 - ~~Typo `chahat pe` → `chhat pe` in `05-postpositions.json`~~ ✓
 - ~~Wrong "you" register `tere paas` → `tumhare paas` in `01-greetings.json` phrase 7~~ ✓
+- ~~Hindi situation lessons mixed `tum`-default with `aap`-default registers~~ — new lessons (08-10) all use aap-default per the practice tutor's policy; generator's STYLE_GUIDE flipped to enforce.
+- ~~`lib/dutch/level-map.ts` used bare IDs that never matched lesson JSONs~~ — fixed to use `dutch-` prefixed keys; 3-stage progress bars on Dutch home now compute correctly.
 
 ### Romanization & style inconsistency (not yet addressed)
-- Mixed stress system: sometimes CAPS-on-stressed-syllable (`BHAI-ya`), sometimes just hyphens for syllables (`KIT-ne`). Pick one.
+- Mixed stress system in older Hindi lesson JSONs: sometimes CAPS-on-stressed-syllable (`BHAI-ya`), sometimes just hyphens for syllables (`KIT-ne`). New lessons (08-10 + foundations 08-09) use SYLLABLE-stress consistently. Older lessons need a pass.
 - `cc` vs `chh` convention not documented in-content (style guide above defines it).
 - Pronunciation field formatting varies file to file.
 
 ### Structural gaps
-1. **Foundations have empty `skill_breakdown: []`** — situations have 2-3 rich skill breakdowns each, foundations have none.
-2. **Scope is small** — only 6+6+100. Roadmap question: polish-then-grow vs grow-then-polish.
-3. **No audio assets** — TTS via `lib/speech.ts` works, but no native recordings.
-4. **No level markers** — no A1/A2/B1 progression.
+- ~~**Foundations have empty `skill_breakdown: []`**~~ — RESOLVED 2026-05-26. All 9 Hindi foundations now have 3 skill_breakdowns each.
+- ~~**No level markers** — no A1/A2/B1 progression~~ — RESOLVED for Dutch (Lesson type has `level?` field; all Dutch lessons tagged via JSON + `lib/dutch/level-map.ts`). Hindi has no CEFR system intentionally.
+- **No audio assets** — TTS via `lib/speech.ts` works, but no native recordings. Most relevant for Dutch Phase 3 Luisteren when it ships.
+- **Scope is still growing** — Hindi: 10 situations + 9 foundations + 100 vocab. Dutch: 11 lessons + 7 foundations + 100 KNM + 10 Lezen texts. The grow-vs-polish balance is currently leaning grow.
 
 ## Loading
 
-- `lib/lessons.ts` — imports all 6 lesson JSONs into an array
-- `lib/foundations.ts` — imports all 9 foundation JSONs
+Hindi:
+- `lib/lessons.ts` — imports all 10 Hindi situation JSONs into an array
+- `lib/foundations.ts` — imports all 9 Hindi foundation JSONs
 - `lib/vocabulary.ts` — exports categories from vocabulary.json
-- `lib/all-content.ts` — universal lookup `getUniversalLessonById(id)` across both
-- `lib/personalization.ts` — `reorderLessonsByReason()` reshuffles situations based on onboarding (family/bollywood/moving/curious)
+- `lib/all-content.ts` — universal lookup `getUniversalLessonById(id)` across both Hindi + Dutch
+- `lib/personalization.ts` — `reorderLessonsByReason()` reshuffles Hindi situations based on onboarding (family/bollywood/moving/curious)
 - `lib/system-prompt.ts` — `buildSystemPrompt(lesson)` injects lesson into Gemini system prompt for `/practice/[id]`
+
+Dutch:
+- `lib/dutch/lessons.ts` — imports all 11 Dutch lesson JSONs (5 casual + 6 exam-targeted)
+- `lib/dutch/foundations.ts` — imports 7 Dutch grammar foundations
+- `lib/dutch/knm.ts` — KNM loader + drill draw + scoring + attempt history (TDD'd, 12 tests)
+- `lib/dutch/lezen.ts` — Lezen loader + tier filter + 5-text mock draw + scoring (TDD'd, 12 tests)
+- `lib/dutch/exam-target.ts` — A2/B1 preference (default B1)
+- `lib/dutch/level-map.ts` — ID → CEFR level lookup for the 3-stage progress bars
 
 ## Dutch — Exam-Prep Track (Inburgeringsexamen B1 + KNM)
 

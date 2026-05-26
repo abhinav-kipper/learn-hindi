@@ -41,10 +41,13 @@ A PWA for learning conversational/colloquial Hindi (romanized, no Devanagari). B
 app/                    → Pages (see "Pages" below)
 components/             → UI components
 lib/                    → Utilities (see "Libraries" below)
-content/lessons/        → 7 situation JSON files
-content/foundations/    → 7 foundation JSON files
+content/lessons/        → 10 Hindi situation JSON files (A1-A2)
+content/foundations/    → 9 Hindi foundation JSON files (A1-A2)
 content/vocabulary.json → 100 words in 6 categories
-content/dutch/          → Dutch lessons + foundations (separate language)
+content/dutch/lessons/  → 11 Dutch lesson JSONs (5 A1 casual + 6 A2/B1 exam-targeted)
+content/dutch/foundations/ → 7 Dutch foundation JSONs
+content/dutch/knm.json  → 100 KNM exam questions (bilingual, 6 categories)
+content/dutch/lezen.json → 10 Lezen B1-prep reading texts (bilingual, 40 MCQs)
 types/                  → TypeScript interfaces
 public/                 → PWA manifest, icon.svg
 ```
@@ -104,7 +107,13 @@ violations need cleanup first — backlog #1b).
 ## Environment Variables
 - `GOOGLE_GENERATIVE_AI_API_KEY` — Gemini API key (set in .env.local locally, Vercel env for prod)
 
-## Current App State (updated 2026-05-25, Chai Galli redesign complete)
+## Current App State (updated 2026-05-26, Dutch exam-prep track shipped)
+
+The app now serves two distinct learning goals:
+- **Hindi** — conversational/colloquial Hindi via 10 situational lessons + 9 grammar foundations + 100-word vocab. Casual learning, no exam.
+- **Dutch** — focused prep for the **Inburgeringsexamen B1 + KNM** (the Dutch civic-integration exam HSM holders take to naturalize). Dutch home reoriented as: Goal banner → 3-stage path (A1/A2/B1) → 5 exam-skill modules (KNM live, Reading live, Listening/Writing/Speaking soon) → Exam scenarios (6 lessons, A2/B1) → casual Lessons & Grammar.
+
+All UI/labels are English; Dutch only appears in (a) content being learned (KNM questions, Lezen texts, lesson phrases), (b) Chaina's voice lines (she speaks Dutch in the Dutch track, Hinglish in the Hindi track), (c) italic Dutch-skill-name subtitles for exposure.
 
 ### Visual: Chai Galli design system
 
@@ -141,6 +150,11 @@ shadows anywhere.
 | `/vocabulary/[category]` | Palette-matched header. Swipeable word cards: card tilts -3°/+3° as you drag, behind-card "✓ KNOWN" (mint right) and "REVIEW ↺" (butter left) indicators fade in. Card bg shifts white → mint2 (known) → butter (review). Tap-flip reveals mint example card. TTS play button. |
 | `/drill/conjugation` | Lavender header on picker. Sliding tense pill (present/past/future, `layoutId`). Verb stickers w/ ink number column + bobbing arrow. Active drill: header bg changes per tense (mint/peach/lav). Mascot reacts happy on correct. 🪢 ne tag + warning for transitive past. Done screen w/ confetti + happy-hop Cutting on ≥80% |
 | `/onboarding` | 5-slide flow on peach→butter gradient. Progress pills (current = 28px ink). Slides: namaste welcome w/ 170px Cutting → 3 how-it-works stickers → name + reason 2×2 picker (selected lift via Sticker `selected` prop) → daily-goal vertical stack → ready w/ happy-hop Cutting + confetti |
+| `/dutch/knm` | KNM module home (Dutch exam track). 6 category cards (Politics/Work/Education/Housing/Healthcare/History) with English label + Dutch subtitle. Orange "Start drill" Cutting CTA. Bilingual study cards (Dutch question + English subtitle + correct-answer mint highlight + English explanation + "Mark as learned" toggle). Past-attempts fold. |
+| `/dutch/knm/drill` | KNM 30-question mock. Dutch-only (no English crutch — exam-realistic). Sticker option picker w/ correct/wrong reveal. Pass at ≥80% (24/30) → Chaina `knmPassed` moment + Confetti + levelup sound. Fail → `knmAttemptComplete` encouragement. Attempt saved to `dutch-knm-attempts`. |
+| `/dutch/lezen` | Lezen (Reading) module home. 3 tier sections (Beginner A1 / Elementary A2 / Intermediate B1) collapsible with A1 open by default. Orange "Start timed mock" CTA (25-min, 5 texts, 20 Qs, Dutch-only). Past-mocks fold. |
+| `/dutch/lezen/[textId]` | Single Lezen text study mode. Dutch body w/ "Show English translation" toggle → mint sticker reveals `body_en`. Bilingual question cards (4 per text, types: hoofdgedachte/detail/woordbetekenis/gevolg). Mark-as-studied → Chaina `lezenStudyDone` + persist to `dutch-lezen-studied`. |
+| `/dutch/lezen/mock` | 25-min timed Lezen drill (Dutch-only). 5 random texts × 4 Qs = 20 questions. Live timer pill goes pink under 5 min. Auto-advance 1.5s after answer reveal. Pass ≥16/20 → `lezenMockPassed` + Confetti. Save to `dutch-lezen-mock-attempts`. |
 
 ### Libraries (`lib/`)
 
@@ -158,6 +172,12 @@ shadows anywhere.
 | `favorites.ts` | Star phrases — `toggleFavorite`, `isFavorite`, `getFavorites`. Key `${lessonId}::${hindi}` |
 | `conjugations.ts` | 5 verbs (hona/jaana/karna/aana/bolna) × 3 tenses (present/past/future), used by `/drill/conjugation`. Romanization follows CONTENT.md style (single-vowel endings: `karta`, `karunga`, `tha`) |
 | `speech.ts` | Browser TTS / STT — ReadAloudButton + voice input |
+| `seen-lessons.ts` | localStorage-backed Set tracking which lessons a user has seen (per-language). `initBaseline()` silent-tags existing IDs on first detection so the popup never false-fires; `getUnseenIds()`, `markAsSeen()`, `hasBeenSeen()`, `unseeIds()`. TDD'd, 9 tests. |
+| `dutch/lessons.ts`, `dutch/foundations.ts` | Parallel loaders for Dutch content (11 lessons + 7 foundations). `getDutchAllContent()` returns both combined for cross-module use (e.g. search). |
+| `dutch/knm.ts` | KNM loader + `drawDrillSet(30)` (Fisher-Yates) + `scoreAttempt()` (80% pass) + attempt history (capped at 50) + per-question studied tracking. TDD'd, 12 tests. |
+| `dutch/lezen.ts` | Same shape as `knm.ts` for the Lezen module — `drawMockSet(5)`, 20-Q scoring, 25-min `MOCK_TIMER_MS` constant, studied set. TDD'd, 12 tests. |
+| `dutch/exam-target.ts` | User preference `'a2' \| 'b1'` for exam-target level (default B1). Surfaced as toggle in Dutch welcome modal. |
+| `dutch/level-map.ts` | Lookup table tagging every Dutch content ID with `A1` / `A2` / `B1`. Powers the 3-stage progress bars on the Dutch home. Keys use the `dutch-` prefixed form to match lesson JSON IDs (fixed 2026-05-26 — pre-existing bug had bare keys that never matched). |
 
 ### Components
 
@@ -187,7 +207,7 @@ from these. Always import via the barrel `@/components/design`.
 | File | What it does |
 |------|--------------|
 | `bottom-nav.tsx` | Floating white sticker pill at the bottom of all non-fullscreen pages. Active-tab cream pill slides via Framer `layoutId`. Hidden on `/lessons/*`, `/practice/*`, `/onboarding`. |
-| `design/MomentStage.tsx` | **Chaina moments system.** `ChainaProvider` mounts once in `app/layout.tsx`. `useChaina()` returns `{ play(key), stop() }`. 15 moments registered in `moments.ts` (welcomeBack/correctAnswer/lessonComplete/streakMilestone/etc). Each moment fires `<Cutting>` + `<SpeechBubble>` w/ animations, plus voice via `chainaVoice.play()` (MP3 → speechSynthesis fallback). Frequency caps in `chainaFrequency.ts`. |
+| `design/MomentStage.tsx` | **Chaina moments system.** `ChainaProvider` mounts once in `app/layout.tsx`. `useChaina()` returns `{ play(key), stop() }`. **21 moments** registered in `moments.ts` (welcomeBack/correctAnswer/lessonComplete/streakMilestone/newContent/knmAttemptComplete/knmPassed/lezenStudyDone/lezenMockPassed/a2Milestone/etc). Each moment fires `<Cutting>` + `<SpeechBubble>` w/ animations, plus voice via `chainaVoice.play()` (MP3 → speechSynthesis fallback). Frequency caps in `chainaFrequency.ts`. |
 | `search-overlay.tsx` | Full-screen search modal triggered from the home magnifying-glass. Language-aware index. Locks body scroll, restores focus on close, Esc to dismiss |
 | `daily-review-popup.tsx` | Butter bottom-sheet w/ Cutting, fires every 24h after first lesson complete. Mixes vocab + lesson phrases through SRS |
 | `feature-tooltip.tsx` | One-time tooltips (Chai Galli white sticker + orange CTA + cream halo spotlight), dismissed via localStorage |
@@ -213,6 +233,12 @@ Fire on real beats only — accomplishments, retention nudges, character touch p
 - Streak crosses 7/14/30/50/100 — `play('streakMilestone')` (gated by `seenStreakMilestones`)
 - App backgrounded after 5+ min — `play('sessionEnd')` (once-per-session)
 - First ever launch — `play('firstEver')` from `/onboarding` mount (once-ever)
+- New content available — `play('newContent')` from home mount when `getUnseenIds()` returns >0 (once-per-session)
+- KNM mock complete (failed) — `play('knmAttemptComplete')` from `/dutch/knm/drill` (debounce-800ms). Encouraging tone, not celebratory
+- KNM mock passed — `play('knmPassed')` from `/dutch/knm/drill` on ≥80% score (debounce-800ms). Celebratory + voice
+- A2 stage milestone — `play('a2Milestone')` when A1 progress hits 100% on Dutch home (placeholder — trigger not yet wired into the home component)
+- Lezen text studied — `play('lezenStudyDone')` from `/dutch/lezen/[textId]` on "Mark as studied" tap (debounce-800ms)
+- Lezen mock passed — `play('lezenMockPassed')` from `/dutch/lezen/mock` on ≥80% score (debounce-800ms). Celebratory + voice
 
 ### Storage keys (localStorage)
 
@@ -234,7 +260,45 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `chaina-freq-<mode>-<key>` — frequency cap state per moment
 - `chaina-session-start-ts` (sessionStorage) — session start for sessionEnd 5min threshold
 
+**New-content surfacing (Hindi):**
+- `learn-hindi:seen-lesson-ids:hindi` — JSON array of lesson/foundation IDs the user has seen. Silent baseline on first detection (no false-positive popup). Powers the `newContent` Chaina moment + per-card NEW dot via `lib/seen-lessons.ts`.
+- `learn-hindi:demo-reset:2026-05-26-new-content` — one-shot flag (set to `'1'`) so the manual demo reset (which unsees the 5 newest Hindi additions) runs once per device, not on every load. Safe to remove after the demo has fired.
+
+**Dutch exam-prep keys:**
+- `dutch-exam-target` — `'a2' | 'b1'`, default `'b1'`. Toggle in Dutch welcome modal.
+- `dutch-knm-learned` — JSON array of question IDs the user has marked as learned in KNM study mode.
+- `dutch-knm-attempts` — JSON array of `{ts, score, total, passed}` capped at 50, most-recent-first.
+- `dutch-lezen-studied` — JSON array of Lezen text IDs.
+- `dutch-lezen-mock-attempts` — same shape as `dutch-knm-attempts`, plus `text_ids: string[]`.
+
 ### Recent feature work log
+
+**2026-05-26 wave — Dutch exam-prep track + Hindi content expansion + new-content surfacing**
+
+Massive content + feature wave. Eight specs/plans shipped in one session, ~50 commits.
+
+Hindi expansion:
+- 3 new situation lessons: `08-shopping-clothes` (Snell & Weightman Ch. 11), `09-doctor-visit` (Snell & Weightman Ch. 14 + Afroz Taj Lesson 9), `10-phone-with-parents` (Afroz Taj Lesson 11). Brought situations 7 → 10.
+- 6 foundations backfilled with full skill_breakdowns (01-numbers, 02-present-tense, 03-past-tense, 04-future-tense, 05-postpositions, 06-pronouns-verbs). The 7-foundation gap from CONTENT.md "Open gaps" is now closed.
+- 2 new foundations added: `08-compound-verbs` (le/de/kar dena patterns; Snell & Weightman Ch. 13), `09-ne-rule` (ergative-past; Snell & Weightman Ch. 12 + Afroz Taj Lesson 8). Foundations 7 → 9.
+- CONTENT.md updated with canonical-sources section (Snell & Weightman, Afroz Taj, McGregor) + new authoring workflow.
+- `scripts/generate-lesson.mjs` style guide flipped from `tum`-default to `aap`-default (matches the practice tutor's register policy). `references[]` field now required by the Zod schema.
+
+New-content surfacing for Hindi:
+- `lib/seen-lessons.ts` (TDD'd, 9 tests). Tracks which lessons the user has seen via localStorage. Silent-baselines existing IDs on first detection so no false-positive popup.
+- New `newContent` Chaina moment fires on home mount when unseen lessons exist (once-per-session cap).
+- `LessonStickerCard` gained `isNew?: boolean` prop — renders chai-orange dot in top-right corner. `markAsSeen()` called from card onClick before navigation.
+- One-shot demo-reset block in `app/page.tsx` mount effect unsees the 5 newest content adds so the popup fires once for the existing user (gated by `learn-hindi:demo-reset:2026-05-26-new-content` flag). **Remove this block after the demo has been observed.**
+
+Dutch exam-prep track (Inburgeringsexamen B1 + KNM):
+- Dutch section pivoted from "casual conversational" to a focused exam-prep frame. Goal banner + 3-stage A1/A2/B1 path + 5 skill-module grid on the Dutch home.
+- KNM module (`/dutch/knm/`): 100 original questions across 6 categories, bilingual study mode (Dutch + English subtitles), 30-question Dutch-only timed drill with ≥80% pass threshold.
+- Lezen module (`/dutch/lezen/`): 10 reading texts re-tiered 5 A1 + 4 A2 + 1 B1 preview (B1 was originally the only target — too ambitious for A0-A1 starting level). Bilingual study mode, 25-min Dutch-only timed mock.
+- 6 exam-targeted scenario lessons added: `dutch-gemeente`, `dutch-housing-problem`, `dutch-bank`, `dutch-huisarts-call`, `dutch-job-interview`, `dutch-primary-school`. Each has 10 phrases + 5 grammar notes + 4 culture notes + 3 skill_breakdowns + a B1-register `practice_prompt` for `/practice/[id]`.
+- 6 new Dutch Chaina moments (knmAttemptComplete, knmPassed, a2Milestone, lezenStudyDone, lezenMockPassed). Lines are Dutch ("arrey! nayi... " replaced with Dutch equivalents like "Geslaagd! 🎉").
+- `Lesson` type extended with optional `level: 'A1'|'A2'|'B1'` + `exam_targeted?: boolean` fields. All Dutch lessons tagged. Existing 5 conversational marked A1 + exam_targeted=false.
+- Welcome modal rewritten with exam-prep mission copy + B1/A2 target toggle (default B1, future-proof for the in-flux naturalization-level requirement).
+- `lib/dutch/level-map.ts` bug fix: keys are now `dutch-` prefixed to match lesson JSON IDs. The 3-stage progress bars on Dutch home now actually compute progress correctly (previously they always showed 0/N because the bare-key lookup never matched).
 
 **2026-05-25 wave — Chai Galli redesign (complete)**
 - New visual direction: sticker-pack Indian-bazaar style with chai-cup
@@ -275,12 +339,18 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 
 ### Open gaps (worth revisiting)
 
-- **Foundations 02-06 have empty `skill_breakdown: []`** — `07-noun-gender` is the template
-- **No XP / leveling arc** — `phrasesLearned` is just a stat tile, no progression visual
-- **No A1/A2/B1 markers** on lessons
-- **No audio assets** — only browser TTS
-- **Pronunciation field formatting inconsistent across lesson JSONs** (CAPS-stress vs hyphen-syllables)
-- **Conjugation drill is verb-by-verb** — no mixed-verb sets, no spaced-repetition wiring
+Resolved 2026-05-26:
+- ~~Foundations 02-06 have empty `skill_breakdown: []`~~ — backfilled with 3 entries each, plus 2 new foundations (compound-verbs, ne-rule). All 9 Hindi foundations now have full skill_breakdowns.
+- ~~No A1/A2/B1 markers on lessons~~ — `Lesson` type now has optional `level` field. Dutch lessons all tagged; Hindi lessons untagged (no CEFR system for Hindi).
+
+Still open:
+- **No XP / leveling arc** — `phrasesLearned` is just a stat tile, no progression visual.
+- **No audio assets** — only browser TTS. Native recordings would matter most for Phase 3 Luisteren (Dutch listening drills).
+- **Pronunciation field formatting inconsistent across older Hindi lesson JSONs** (CAPS-stress vs hyphen-syllables). New lessons use SYLLABLE-stress consistently; old ones need a pass.
+- **Conjugation drill is verb-by-verb** — no mixed-verb sets, no spaced-repetition wiring.
+- **Dutch Phase 3-6 still pending:** Luisteren (Listening), Schrijven (Writing), Spreken (Speaking), Mock-exam. Each gets its own spec → plan → ship cycle.
+- **`a2Milestone` Chaina moment registered but not triggered:** the moment fires when A1 progress hits 100% on Dutch home, but the trigger is not yet wired into `app/page.tsx`. Author it when first Dutch user crosses A1.
+- **One-shot demo-reset block in `app/page.tsx` mount effect** unsees 5 Hindi IDs to demo the newContent popup. Remove after observed (flag: `learn-hindi:demo-reset:2026-05-26-new-content`).
 
 ## Known Quirks
 - Vercel CLI spams `ECONNRESET` errors from a broken plugin — ignore them
