@@ -1,0 +1,63 @@
+{
+  "id": "phone-with-parents",
+  "title": "Phone Call with Parents",
+  "situation": "Your weekly Sunday-evening call with mummy and papa back home. They ask about work, food, sleep, and when you're visiting next. You're the daughter, calling from your apartment in another city.",
+  "skills": ["sustained aap register", "family terms", "future plans", "feminine future-tense verbs"],
+  "phrases": [
+    { "hindi": "namaste mummy, kaisi hain aap?", "english": "Namaste mummy, how are you?", "context": "Standard call opener. Always 'aap' to parents in respectful North Indian families. 'kaisi' (feminine) agrees with mummy.", "pronunciation": "na-mas-TE MUM-my, KAI-si hain AAP?" },
+    { "hindi": "papa kahaan hain? unhe bhi phone de dijiye", "english": "Where's papa? Please pass the phone to him too", "context": "'de dijiye' (please give over) — even with mummy you stay polite with imperatives. 'unhe bhi' (to him too) — 'bhi' (also) makes sure papa isn't left out.", "pronunciation": "PA-pa ka-HAAN hain? UN-he bhi PHONE de DI-ji-ye" },
+    { "hindi": "main bilkul theek hoon, aap chinta mat kijiye", "english": "I'm absolutely fine, please don't worry", "context": "'chinta mat kijiye' (don't worry, polite) — parents always worry, you always reassure. Standard exchange.", "pronunciation": "MAIN bil-KUL THEEK hoon, AAP chin-TA MAT KI-ji-ye" },
+    { "hindi": "aap dono kaise hain? khaana time pe khaa rahe hain?", "english": "How are you both? Are you eating meals on time?", "context": "Reciprocal concern. 'time pe' (on time) — food timing is a constant Indian parent topic. 'rahe hain' (you-plural-polite ongoing).", "pronunciation": "AAP DO-no KAI-se hain? khaa-NA TIME pe khaa ra-HE hain?" },
+    { "hindi": "kaam thoda zyaada hai is hafte, par sambhal lungi", "english": "Work is a bit much this week, but I'll manage", "context": "'sambhal lungi' (I'll manage, feminine future + 'le lena' completion compound). Downplaying work stress is standard — you don't want parents worrying.", "pronunciation": "KAAM tho-DA zyaa-DA hai IS haf-TE, PAR sam-BHAAL LOON-gi" },
+    { "hindi": "agle hafte zaroor aaungi, pakka", "english": "I'll definitely come next week, for sure", "context": "'agle hafte' (next week). 'aaungi' (will come, feminine future). 'pakka' (definitely/sure) — Indian-parent vocabulary for commitments.", "pronunciation": "AG-le HAF-te za-ROOR AAUN-gi, PAK-ka" },
+    { "hindi": "haan, sabzi banaai thi kal — papa ki recipe se", "english": "Yes, I made sabzi yesterday — using papa's recipe", "context": "'banaai thi' (had made, feminine perfect — agrees with sabzi). 'ki recipe se' (with X's recipe) — family recipes carry weight.", "pronunciation": "HAAN, SAB-zi ba-NAA-i thi KAL — PA-pa ki RE-ci-pe se" },
+    { "hindi": "ek baat batani thi aapko, baad mein phone karungi", "english": "I wanted to tell you something, I'll call back later", "context": "'batani thi' (wanted to tell, feminine + obligation). Bringing up something important then deferring is conversational scaffolding — parents will remember and ask.", "pronunciation": "EK BAAT ba-TAA-ni thi AAP-ko, BAAD mein PHONE ka-ROON-gi" },
+    { "hindi": "achchha mummy, ab rakhti hoon — kal phir baat karenge", "english": "Alright mummy, hanging up now — we'll talk again tomorrow", "context": "'rakhti hoon' (literally 'I'm putting down') = I'm hanging up — idiomatic for ending a phone call. 'baat karenge' (we will talk) — future tense neutral.", "pronunciation": "ACH-chha MUM-my, AB rakh-TI hoon — KAL phir BAAT ka-RE-nge" },
+    { "hindi": "aap apna khayaal rakhna, papa ko bhi pyaar de dena", "english": "Take care of yourself, give my love to papa too", "context": "'khayaal rakhna' (take care) — standard sign-off concern. 'pyaar de dena' (give love over) — pass affection to other family members; you'd never just hang up after talking only to one parent.", "pronunciation": "AAP AP-na kha-YAAL rakh-NA, PA-pa ko bhi PYAAR de DE-na" }
+  ],
+  "grammar_notes": [
+    "Sustained 'aap' register: parents are always 'aap' in respectful families. Verb agreement is plural-polite throughout: 'kaisi hain' (not 'kaisi ho'), 'kar rahe hain' (not 'kar rahe ho')",
+    "Feminine future tense for first person: '-ungi/-ungi' (main aaungi = I will come). Masculine is '-unga'. Verbs in this lesson use feminine throughout",
+    "Compound verb 'le lena' (take up) attaches to a main verb to express completion/finality: 'sambhal lungi' (I'll fully manage), 'rakh leti hoon' (I'm putting it down/hanging up)",
+    "'rakhna' (to keep/put) is the idiomatic verb for hanging up a phone — 'rakhti hoon' = I'm hanging up. Also 'phone rakh dena' (put the phone down)",
+    "'ki recipe se' / 'ke saath' / 'ke baare mein' — postpositions follow nouns and agree with gender: 'ki' for feminine, 'ka' for masculine, 'ke' for masculine plural"
+  ],
+  "culture_notes": [
+    "Sunday-evening calls with parents are an unwritten weekly ritual in most North Indian families — skipping one without warning prompts concerned calls",
+    "Parents are ALWAYS addressed as 'aap', no matter how close you are. Using 'tum' with parents sounds rude even in casual moments",
+    "Food, sleep, and weight are the holy trinity of parental concerns. Expect questions about all three every call. Acceptable answers: yes, yes, no I haven't lost weight",
+    "When ending a call, never just say goodbye to the parent you've been talking to — always 'pass on love' (pyaar dena) to the other parent / family members"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "Sustained aap register",
+      "explanation": "With parents, every verb takes the plural-polite form. 'aap' is always paired with '-hain' (not '-ho'), and imperatives use '-iye' / '-kijiye' (not '-o').",
+      "more_examples": [
+        { "hindi": "aap khaana khaaye?", "english": "did you eat?" },
+        { "hindi": "aap kab aa rahe hain?", "english": "when are you coming?" },
+        { "hindi": "aap thoda araam kijiye", "english": "please rest a bit" },
+        { "hindi": "aap chinta mat kijiye", "english": "please don't worry" }
+      ]
+    },
+    {
+      "skill": "Family terms",
+      "explanation": "Hindi family vocabulary distinguishes paternal vs maternal relatives. For parents and immediate family, the common forms: mummy/maa (mother), papa/pita ji (father), bhai (brother), didi (older sister), dadi (paternal grandma), nani (maternal grandma).",
+      "more_examples": [
+        { "hindi": "dadi kaisi hain?", "english": "how is paternal grandma?" },
+        { "hindi": "bhai se baat karwa dijiye", "english": "please let me speak to brother" },
+        { "hindi": "didi ko bhi namaste kehna", "english": "say namaste to older sister too" }
+      ]
+    },
+    {
+      "skill": "Future-tense plans and promises",
+      "explanation": "Future-tense first-person feminine: '-ungi'. Common verbs you'll need on calls: aaungi (will come), karungi (will do), bataungi (will tell), khaaungi (will eat).",
+      "more_examples": [
+        { "hindi": "agle mahine zaroor aaungi", "english": "I'll definitely come next month" },
+        { "hindi": "kal aapko phone karungi", "english": "I'll call you tomorrow" },
+        { "hindi": "baad mein bataungi", "english": "I'll tell you later" }
+      ]
+    }
+  ],
+  "practice_prompt": "You are the user's mother on a Sunday-evening phone call. Ask about food (have they eaten, what), sleep (are they sleeping enough), work (too much stress?), and when they're visiting next. Use 'tum' with the user (parents address children as 'tum' or 'tu'; you choose 'tum' here — warm but parental). Open with 'haan beta, kaisi ho? khaana khaaya?'",
+  "references": ["Afroz Taj Lesson 11", "Snell & Weightman Ch. 9"]
+}
