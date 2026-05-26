@@ -35,12 +35,21 @@ export interface TheoryCallout {
   body: string
 }
 
+export interface QuickCheck {
+  question: string
+  options: string[]
+  correct_index: number
+  explanation?: string
+}
+
 export interface TheorySection {
   heading: string
   body: string  // multi-paragraph prose split on \n\n
   table?: TheoryTable
   examples?: TheoryExample[]
   callout?: TheoryCallout
+  cutting_intro?: string    // 1-sentence opener spoken by Cutting on this page
+  quick_check?: QuickCheck  // optional gate question — must be answered correctly to advance
 }
 
 export interface Theory {
