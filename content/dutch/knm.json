@@ -4,11 +4,18 @@
       "id": "knm-001",
       "category": "politiek",
       "question_nl": "Wie is het staatshoofd van Nederland?",
+      "question_en": "Who is the head of state of the Netherlands?",
       "options_nl": [
         "De minister-president",
         "De koning",
         "De voorzitter van de Tweede Kamer",
         "De burgemeester van Amsterdam"
+      ],
+      "options_en": [
+        "The prime minister",
+        "The king",
+        "The chair of the Tweede Kamer",
+        "The mayor of Amsterdam"
       ],
       "correct_index": 1,
       "explanation_en": "The Netherlands is a constitutional monarchy. The King (currently King Willem-Alexander) is the head of state, while the prime minister leads the government.",
@@ -18,7 +25,9 @@
       "id": "knm-002",
       "category": "werk",
       "question_nl": "Hoeveel uur per week is een fulltime baan in Nederland meestal?",
+      "question_en": "How many hours per week is a full-time job in the Netherlands?",
       "options_nl": ["32 uur", "36-40 uur", "45 uur", "50 uur"],
+      "options_en": ["32 hours", "36-40 hours", "45 hours", "50 hours"],
       "correct_index": 1,
       "explanation_en": "A full-time job in the Netherlands is typically 36-40 hours per week. Many Dutch people also work part-time (32 hours or less).",
       "references": ["Naar Nederland Ch. 5"]
@@ -27,7 +36,9 @@
       "id": "knm-003",
       "category": "onderwijs",
       "question_nl": "Tot welke leeftijd zijn kinderen in Nederland leerplichtig?",
+      "question_en": "Up to what age are children in the Netherlands subject to compulsory education?",
       "options_nl": ["14 jaar", "16 jaar", "18 jaar", "21 jaar"],
+      "options_en": ["14 years", "16 years", "18 years", "21 years"],
       "correct_index": 1,
       "explanation_en": "In the Netherlands, children are subject to compulsory education (leerplicht) from age 5 to 16. After 16, a qualification obligation (kwalificatieplicht) applies until age 18 or until a basic qualification is obtained.",
       "references": ["Naar Nederland Ch. 4"]
@@ -36,11 +47,18 @@
       "id": "knm-004",
       "category": "wonen",
       "question_nl": "Wat is een woningcorporatie?",
+      "question_en": "What is a woningcorporatie?",
       "options_nl": [
         "Een bedrijf dat koophuizen bouwt en verkoopt",
         "Een organisatie die sociale huurwoningen beheert en verhuurt",
         "Een overheidsinstelling die belasting int op woningen",
         "Een makelaarsorganisatie voor vrije sector huur"
+      ],
+      "options_en": [
+        "A company that builds and sells homes for purchase",
+        "An organisation that manages and rents out social housing",
+        "A government body that collects tax on homes",
+        "An estate-agency organisation for free-market rentals"
       ],
       "correct_index": 1,
       "explanation_en": "A woningcorporatie (housing corporation) is a non-profit organization that manages and rents out social housing (sociale huurwoningen) to people with lower incomes. They are regulated by the government.",
@@ -50,11 +68,18 @@
       "id": "knm-005",
       "category": "gezondheid",
       "question_nl": "Wat moet u doen als u naar een specialist wilt in Nederland?",
+      "question_en": "What must you do if you want to see a specialist in the Netherlands?",
       "options_nl": [
         "U kunt rechtstreeks een afspraak maken bij de specialist",
         "U moet eerst naar de huisarts voor een verwijzing",
         "U moet toestemming vragen bij de gemeente",
         "U belt eerst de apotheek voor advies"
+      ],
+      "options_en": [
+        "You can make an appointment directly with the specialist",
+        "You must first see the huisarts for a referral",
+        "You must ask permission from the gemeente",
+        "You first call the apotheek for advice"
       ],
       "correct_index": 1,
       "explanation_en": "In the Dutch healthcare system, the huisarts (general practitioner) acts as a gatekeeper. You need a referral from your GP before you can see a specialist, unless it is an emergency.",
@@ -64,7 +89,9 @@
       "id": "knm-006",
       "category": "geschiedenis",
       "question_nl": "Op welke datum werd Nederland in 1945 bevrijd van de Duitse bezetting?",
+      "question_en": "On which date was the Netherlands liberated from German occupation in 1945?",
       "options_nl": ["1 mei", "5 mei", "8 mei", "15 augustus"],
+      "options_en": ["1 May", "5 May", "8 May", "15 August"],
       "correct_index": 1,
       "explanation_en": "The Netherlands was liberated on 5 May 1945, when Germany signed the capitulation. This date is commemorated annually as Bevrijdingsdag (Liberation Day), preceded by Dodenherdenking (Remembrance Day) on 4 May.",
       "references": ["Naar Nederland Ch. 8"]
@@ -73,7 +100,9 @@
       "id": "knm-007",
       "category": "politiek",
       "question_nl": "Hoeveel leden telt de Tweede Kamer der Staten-Generaal?",
+      "question_en": "How many members does the Tweede Kamer have?",
       "options_nl": ["75", "100", "150", "200"],
+      "options_en": ["75", "100", "150", "200"],
       "correct_index": 2,
       "explanation_en": "The Tweede Kamer (House of Representatives) has 150 members who are directly elected by Dutch citizens. Together with the Eerste Kamer (Senate, 75 members), it forms the Staten-Generaal (parliament).",
       "references": ["Naar Nederland Ch. 2"]
@@ -82,11 +111,18 @@
       "id": "knm-008",
       "category": "werk",
       "question_nl": "Wat is het doel van het BSN-nummer?",
+      "question_en": "What is the purpose of the BSN number?",
       "options_nl": [
         "Het is een rijbewijsnummer voor autorijders",
         "Het is een uniek persoonsnummer waarmee de overheid u identificeert",
         "Het is een bankrekeningnummer voor uitkeringen",
         "Het is een verzekeringsnummer voor de zorgverzekering"
+      ],
+      "options_en": [
+        "It is a driving-licence number for motorists",
+        "It is a unique personal number used by the government to identify you",
+        "It is a bank account number for benefit payments",
+        "It is an insurance number for health insurance"
       ],
       "correct_index": 1,
       "explanation_en": "The Burgerservicenummer (BSN) is a unique personal identification number used by the Dutch government to identify citizens in administrative processes such as tax, healthcare, and social services.",
@@ -96,7 +132,9 @@
       "id": "knm-009",
       "category": "onderwijs",
       "question_nl": "Welke toets doen leerlingen aan het einde van groep 8 van de basisschool?",
+      "question_en": "Which test do pupils take at the end of primary school (groep 8)?",
       "options_nl": ["Het eindexamen", "De CITO-toets", "De staatsexamen", "De toelatingstest"],
+      "options_en": ["The eindexamen", "The CITO-toets", "The staatsexamen", "The entrance test"],
       "correct_index": 1,
       "explanation_en": "At the end of primary school (groep 8), pupils take the CITO-toets (a national standardized test). The results, combined with the teacher's advice, determine which level of secondary school the child attends.",
       "references": ["Naar Nederland Ch. 4"]
@@ -105,7 +143,9 @@
       "id": "knm-010",
       "category": "wonen",
       "question_nl": "Binnen hoeveel dagen moet u zich inschrijven bij de gemeente nadat u naar Nederland bent verhuisd?",
+      "question_en": "Within how many days must you register with the gemeente after moving to the Netherlands?",
       "options_nl": ["Binnen 3 dagen", "Binnen 5 dagen", "Binnen 14 dagen", "Binnen 30 dagen"],
+      "options_en": ["Within 3 days", "Within 5 days", "Within 14 days", "Within 30 days"],
       "correct_index": 1,
       "explanation_en": "Anyone who moves to the Netherlands must register with the municipality (gemeente) in the Basisregistratie Personen (BRP) within 5 days of arrival. This registration is required for access to services and benefits.",
       "references": ["Naar Nederland Ch. 6"]
@@ -114,7 +154,9 @@
       "id": "knm-011",
       "category": "gezondheid",
       "question_nl": "Welk telefoonnummer belt u in Nederland bij een levensgevaarlijke situatie?",
+      "question_en": "Which telephone number do you call in the Netherlands in a life-threatening situation?",
       "options_nl": ["0900", "112", "113", "144"],
+      "options_en": ["0900", "112", "113", "144"],
       "correct_index": 1,
       "explanation_en": "112 is the Dutch emergency number for police, fire brigade, and ambulance services. It is free to call and operates 24 hours a day. This is the same number used across all EU member states.",
       "references": ["Naar Nederland Ch. 7"]
@@ -123,11 +165,18 @@
       "id": "knm-012",
       "category": "geschiedenis",
       "question_nl": "Wie was Willem van Oranje?",
+      "question_en": "Who was Willem van Oranje?",
       "options_nl": [
         "De eerste Nederlandse premier na de Tweede Wereldoorlog",
         "De leider van de opstand tegen Spaanse overheersing en Vader des Vaderlands",
         "De stichter van de VOC in de zeventiende eeuw",
         "De eerste koning van het Koninkrijk der Nederlanden in 1815"
+      ],
+      "options_en": [
+        "The first Dutch prime minister after the Second World War",
+        "The leader of the revolt against Spanish rule and Father of the Fatherland",
+        "The founder of the VOC in the seventeenth century",
+        "The first king of the Kingdom of the Netherlands in 1815"
       ],
       "correct_index": 1,
       "explanation_en": "Willem van Oranje (William of Orange, 1533-1584) led the Dutch revolt against Spanish rule during the Eighty Years' War. He is called 'Vader des Vaderlands' (Father of the Fatherland) and is an enduring national symbol.",
@@ -137,11 +186,18 @@
       "id": "knm-013",
       "category": "politiek",
       "question_nl": "Wat is de taak van de minister-president?",
+      "question_en": "What is the role of the minister-president?",
       "options_nl": [
         "Het staatshoofd zijn en wetten ondertekenen",
         "Het parlement voorzitten en wetten maken",
         "Leiding geven aan de regering en het kabinet coördineren",
         "Recht spreken in de hoogste rechtbank"
+      ],
+      "options_en": [
+        "To be head of state and sign laws",
+        "To chair parliament and make laws",
+        "To lead the government and coordinate the cabinet",
+        "To administer justice in the highest court"
       ],
       "correct_index": 2,
       "explanation_en": "The minister-president (prime minister) is the head of government and leads the cabinet (council of ministers). The PM coordinates government policy but does not make laws alone — legislation requires parliament.",
@@ -151,11 +207,18 @@
       "id": "knm-014",
       "category": "werk",
       "question_nl": "Wat is het minimumloon in Nederland?",
+      "question_en": "What is the minimum wage in the Netherlands?",
       "options_nl": [
         "Het loon dat iedereen in een CAO verdient",
         "Het laagste loon dat een werkgever wettelijk mag betalen",
         "Het gemiddelde loon in Nederland",
         "Het loon van ambtenaren bij de overheid"
+      ],
+      "options_en": [
+        "The wage that everyone in a CAO earns",
+        "The lowest wage an employer is legally allowed to pay",
+        "The average wage in the Netherlands",
+        "The wage of civil servants at the government"
       ],
       "correct_index": 1,
       "explanation_en": "The minimumloon (minimum wage) is the legally established lowest hourly wage an employer may pay an employee. It is set by the Dutch government and adjusted twice per year. Paying below the minimum wage is illegal.",
@@ -165,7 +228,9 @@
       "id": "knm-015",
       "category": "onderwijs",
       "question_nl": "Welk type school bereidt leerlingen voor op de universiteit?",
+      "question_en": "Which type of school prepares pupils for university?",
       "options_nl": ["VMBO", "HAVO", "VWO", "MBO"],
+      "options_en": ["VMBO", "HAVO", "VWO", "MBO"],
       "correct_index": 2,
       "explanation_en": "VWO (Voorbereidend Wetenschappelijk Onderwijs) is the highest level of secondary education in the Netherlands and directly prepares students for university (WO). It takes 6 years to complete.",
       "references": ["Naar Nederland Ch. 4"]
@@ -174,11 +239,18 @@
       "id": "knm-016",
       "category": "wonen",
       "question_nl": "Wat betekent een energielabel 'A' op een woning?",
+      "question_en": "What does an energy label 'A' on a home mean?",
       "options_nl": [
         "De woning heeft de slechtste energie-efficiëntie",
         "De woning heeft de beste energie-efficiëntie",
         "De woning gebruikt alleen aardgas",
         "De woning is goedgekeurd door de gemeente"
+      ],
+      "options_en": [
+        "The home has the worst energy efficiency",
+        "The home has the best energy efficiency",
+        "The home uses only natural gas",
+        "The home has been approved by the gemeente"
       ],
       "correct_index": 1,
       "explanation_en": "Dutch homes receive an energy label from A (best, most energy-efficient) to G (worst). An A-label means the home is well-insulated and uses little energy, resulting in lower energy bills and a smaller carbon footprint.",
@@ -188,11 +260,18 @@
       "id": "knm-017",
       "category": "gezondheid",
       "question_nl": "Is een zorgverzekering verplicht in Nederland?",
+      "question_en": "Is health insurance compulsory in the Netherlands?",
       "options_nl": [
         "Nee, het is vrijwillig voor iedereen",
         "Ja, iedereen die in Nederland woont en 18 jaar of ouder is, is verplicht verzekerd te zijn",
         "Ja, maar alleen voor mensen zonder inkomen",
         "Nee, alleen voor mensen die meer dan 3 maanden in Nederland verblijven"
+      ],
+      "options_en": [
+        "No, it is voluntary for everyone",
+        "Yes, everyone living in the Netherlands aged 18 or older is required to be insured",
+        "Yes, but only for people without income",
+        "No, only for people who stay in the Netherlands for more than 3 months"
       ],
       "correct_index": 1,
       "explanation_en": "Health insurance (zorgverzekering) is compulsory for everyone living or working in the Netherlands who is 18 years or older. Failure to obtain insurance can result in fines. People with low incomes can receive a zorgtoeslag (healthcare allowance).",
@@ -202,7 +281,9 @@
       "id": "knm-018",
       "category": "geschiedenis",
       "question_nl": "In welk jaar werd de slavernij in de Nederlandse koloniën afgeschaft?",
+      "question_en": "In which year was slavery abolished in the Dutch colonies?",
       "options_nl": ["1848", "1863", "1898", "1917"],
+      "options_en": ["1848", "1863", "1898", "1917"],
       "correct_index": 1,
       "explanation_en": "Slavery was abolished in Dutch colonies on 1 July 1863. The Netherlands was one of the last Western European countries to do so. This date is commemorated as Keti Koti ('breaking the chains') especially in Suriname and in the Netherlands.",
       "references": ["Naar Nederland Ch. 8"]
@@ -211,7 +292,9 @@
       "id": "knm-019",
       "category": "politiek",
       "question_nl": "Hoeveel leden telt de Eerste Kamer der Staten-Generaal?",
+      "question_en": "How many members does the Eerste Kamer have?",
       "options_nl": ["50", "75", "100", "150"],
+      "options_en": ["50", "75", "100", "150"],
       "correct_index": 1,
       "explanation_en": "The Eerste Kamer (Senate) has 75 members who are indirectly elected by the members of the Provinciale Staten (provincial parliaments). Unlike the Tweede Kamer, the Eerste Kamer cannot propose legislation but can approve or reject bills.",
       "references": ["Naar Nederland Ch. 2"]
@@ -220,7 +303,9 @@
       "id": "knm-020",
       "category": "werk",
       "question_nl": "Hoeveel vakantiedagen heeft een werknemer in Nederland wettelijk minimaal per jaar bij een fulltime baan?",
+      "question_en": "How many vacation days is a full-time employee in the Netherlands legally entitled to per year?",
       "options_nl": ["10 dagen", "15 dagen", "20 dagen", "25 dagen"],
+      "options_en": ["10 days", "15 days", "20 days", "25 days"],
       "correct_index": 2,
       "explanation_en": "By law, full-time employees in the Netherlands are entitled to a minimum of 20 vacation days (4 times the weekly working hours). Most collective labor agreements (CAO) grant additional days, often totaling 25 or more.",
       "references": ["Naar Nederland Ch. 5"]
@@ -229,11 +314,18 @@
       "id": "knm-021",
       "category": "onderwijs",
       "question_nl": "Wat is de Kinderopvangtoeslag?",
+      "question_en": "What is the Kinderopvangtoeslag?",
       "options_nl": [
         "Een belasting op kinderopvang",
         "Een subsidie van de overheid om de kosten van kinderopvang te helpen betalen",
         "Een gratis kinderopvangregeling voor alle kinderen",
         "Een vergoeding die werkgevers betalen voor kinderopvang"
+      ],
+      "options_en": [
+        "A tax on childcare",
+        "A government subsidy to help pay the costs of childcare",
+        "A free childcare scheme for all children",
+        "A reimbursement that employers pay for childcare"
       ],
       "correct_index": 1,
       "explanation_en": "Kinderopvangtoeslag is a government subsidy administered by the Belastingdienst (Tax Authority) to help working parents pay for childcare. The amount depends on income and the number of hours worked.",
@@ -243,11 +335,18 @@
       "id": "knm-022",
       "category": "wonen",
       "question_nl": "Wat is de huurtoeslag?",
+      "question_en": "What is the huurtoeslag?",
       "options_nl": [
         "Extra geld dat huurders aan de verhuurder betalen als borg",
         "Een financiële bijdrage van de overheid aan mensen met een laag inkomen die huren",
         "Een belasting op huurwoningen",
         "Een vergoeding die woningcorporaties ontvangen van de gemeente"
+      ],
+      "options_en": [
+        "Extra money that tenants pay the landlord as a deposit",
+        "A financial contribution from the government to low-income renters",
+        "A tax on rental homes",
+        "A payment that woningcorporaties receive from the gemeente"
       ],
       "correct_index": 1,
       "explanation_en": "Huurtoeslag is a rent subsidy provided by the Dutch government through the Belastingdienst to help people with lower incomes afford their rent. Eligibility depends on income, age, household composition, and the rent amount.",
@@ -257,11 +356,18 @@
       "id": "knm-023",
       "category": "gezondheid",
       "question_nl": "Wat is het eigen risico in de Nederlandse zorgverzekering?",
+      "question_en": "What is the eigen risico in Dutch health insurance?",
       "options_nl": [
         "Het bedrag dat de verzekering vergoedt boven uw premie",
         "Het bedrag dat u per jaar zelf betaalt voor zorgkosten voordat de verzekering bijbetaalt",
         "De maandelijkse premie van uw zorgverzekering",
         "Het percentage dat de werkgever bijdraagt aan uw zorgverzekering"
+      ],
+      "options_en": [
+        "The amount the insurer reimburses above your premium",
+        "The amount you pay yourself for healthcare costs each year before the insurer contributes",
+        "The monthly premium of your health insurance",
+        "The percentage your employer contributes to your health insurance"
       ],
       "correct_index": 1,
       "explanation_en": "The eigen risico (deductible/excess) is the amount you must pay yourself for healthcare costs each year before your insurer starts contributing. In 2024, the mandatory eigen risico is approximately €385. After reaching this amount, your insurer covers eligible costs.",
@@ -271,11 +377,18 @@
       "id": "knm-024",
       "category": "geschiedenis",
       "question_nl": "Wat was de VOC?",
+      "question_en": "What was the VOC?",
       "options_nl": [
         "Een Nederlandse politieke partij in de zeventiende eeuw",
         "De Vereenigde Oostindische Compagnie, een handelsonderneming die handel dreef met Azië",
         "Een militaire organisatie die Nederland verdedigde tegen Frankrijk",
         "Een religieuze organisatie die missies uitvoerde in Afrika"
+      ],
+      "options_en": [
+        "A Dutch political party in the seventeenth century",
+        "The Vereenigde Oostindische Compagnie, a trading company that traded with Asia",
+        "A military organisation that defended the Netherlands against France",
+        "A religious organisation that carried out missions in Africa"
       ],
       "correct_index": 1,
       "explanation_en": "The VOC (Vereenigde Oostindische Compagnie, founded 1602) was the world's first publicly traded company and played a central role in Dutch trade with Asia during the Golden Age (Gouden Eeuw). It held a monopoly on trade in the East Indies.",
@@ -285,7 +398,9 @@
       "id": "knm-025",
       "category": "politiek",
       "question_nl": "Vanaf welke leeftijd mag u in Nederland stemmen bij verkiezingen?",
+      "question_en": "From what age may you vote in elections in the Netherlands?",
       "options_nl": ["16 jaar", "18 jaar", "21 jaar", "25 jaar"],
+      "options_en": ["16 years", "18 years", "21 years", "25 years"],
       "correct_index": 1,
       "explanation_en": "In the Netherlands, the active voting right (kiesrecht) starts at age 18. Both active (voting) and passive (being elected) voting rights begin at 18 for most elections. Some municipalities have experimented with 16-year-old voting in local referendums.",
       "references": ["Naar Nederland Ch. 2"]
@@ -294,11 +409,18 @@
       "id": "knm-026",
       "category": "werk",
       "question_nl": "Wat is vakantiegeld?",
+      "question_en": "What is vakantiegeld?",
       "options_nl": [
         "Geld dat werknemers sparen voor hun vakantie",
         "Een jaarlijkse extra betaling van minimaal 8% van het jaarloon",
         "Een vergoeding van de werkgever voor vakantiekosten",
         "Het salaris dat wordt doorbetaald tijdens vakantiedagen"
+      ],
+      "options_en": [
+        "Money that employees save for their holiday",
+        "An annual bonus payment of at least 8% of the annual salary",
+        "A reimbursement from the employer for holiday expenses",
+        "The salary that continues to be paid during vacation days"
       ],
       "correct_index": 1,
       "explanation_en": "Vakantiegeld (holiday allowance) is a mandatory annual bonus of at least 8% of gross annual salary. It is typically paid in May or June and is meant to help employees cover vacation costs. It is separate from regular vacation days.",
@@ -308,7 +430,9 @@
       "id": "knm-027",
       "category": "onderwijs",
       "question_nl": "Welk schooltype sluit aan op het VMBO en leidt op voor een beroep?",
+      "question_en": "Which type of school follows VMBO and trains students for a profession?",
       "options_nl": ["HBO", "WO", "MBO", "VWO"],
+      "options_en": ["HBO", "WO", "MBO", "VWO"],
       "correct_index": 2,
       "explanation_en": "MBO (Middelbaar Beroepsonderwijs) is vocational education that follows VMBO. It has four levels and prepares students for specific professions. MBO graduates can continue to HBO (higher professional education).",
       "references": ["Naar Nederland Ch. 4"]
@@ -317,11 +441,18 @@
       "id": "knm-028",
       "category": "wonen",
       "question_nl": "Wat is een waarborgsom bij het huren van een woning?",
+      "question_en": "What is a waarborgsom when renting a home?",
       "options_nl": [
         "De eerste maand huur die u vooruit betaalt",
         "Een borg die de verhuurder kan inhouden als u schade aanricht of huur niet betaalt",
         "Een vergoeding die de woningcorporatie vraagt voor administratiekosten",
         "Een gemeentelijke heffing voor nieuwe huurders"
+      ],
+      "options_en": [
+        "The first month's rent that you pay in advance",
+        "A deposit the landlord may keep if you cause damage or fail to pay rent",
+        "A fee that the woningcorporatie charges for administration costs",
+        "A municipal levy for new tenants"
       ],
       "correct_index": 1,
       "explanation_en": "A waarborgsom (deposit) is a security deposit that landlords can require, legally capped at 2 months' rent. It protects the landlord against damage or unpaid rent. The deposit must be returned when you leave, minus any legitimate deductions.",
@@ -331,11 +462,18 @@
       "id": "knm-029",
       "category": "gezondheid",
       "question_nl": "Valt tandartszorg voor volwassenen onder de basisverzekering?",
+      "question_en": "Is dental care for adults covered by the basic health insurance?",
       "options_nl": [
         "Ja, alle tandartszorg is gratis voor iedereen",
         "Nee, tandartszorg voor volwassenen valt niet onder de basisverzekering",
         "Ja, maar alleen voor mensen ouder dan 65 jaar",
         "Ja, tot een bedrag van €500 per jaar"
+      ],
+      "options_en": [
+        "Yes, all dental care is free for everyone",
+        "No, dental care for adults is not covered by the basic insurance",
+        "Yes, but only for people older than 65",
+        "Yes, up to an amount of €500 per year"
       ],
       "correct_index": 1,
       "explanation_en": "Dental care for adults is NOT included in the basic health insurance package (basisverzekering) in the Netherlands. Adults must pay for dental care themselves or take out additional insurance (aanvullende verzekering). Children up to age 18 are covered.",
@@ -345,7 +483,9 @@
       "id": "knm-030",
       "category": "geschiedenis",
       "question_nl": "In welk jaar kregen vrouwen in Nederland het actief kiesrecht?",
+      "question_en": "In which year did women in the Netherlands gain the active right to vote?",
       "options_nl": ["1917", "1919", "1922", "1945"],
+      "options_en": ["1917", "1919", "1922", "1945"],
       "correct_index": 1,
       "explanation_en": "Dutch women gained the active right to vote (actief vrouwenkiesrecht) in 1919. Men had received universal suffrage in 1917. The Netherlands was relatively progressive compared to many other countries at the time.",
       "references": ["Naar Nederland Ch. 8"]
@@ -354,7 +494,9 @@
       "id": "knm-031",
       "category": "politiek",
       "question_nl": "Hoe heet het gemeentelijke bestuur dat wordt gekozen door inwoners?",
+      "question_en": "What is the name of the local governing body elected by residents?",
       "options_nl": ["De Provinciale Staten", "De gemeenteraad", "Het college van burgemeester en wethouders", "De Tweede Kamer"],
+      "options_en": ["The Provinciale Staten", "The gemeenteraad", "The college van burgemeester en wethouders", "The Tweede Kamer"],
       "correct_index": 1,
       "explanation_en": "The gemeenteraad (municipal council) is the directly elected legislative body at the local level. It sets local policy and budgets. The day-to-day governance is handled by the college van burgemeester en wethouders (mayor and aldermen).",
       "references": ["Naar Nederland Ch. 2"]
@@ -363,11 +505,18 @@
       "id": "knm-032",
       "category": "werk",
       "question_nl": "Wat is een contract voor bepaalde tijd?",
+      "question_en": "What is a fixed-term contract?",
       "options_nl": [
         "Een arbeidscontract dat automatisch verlengd wordt",
         "Een tijdelijk arbeidscontract met een vaste einddatum",
         "Een contract waarbij u altijd 40 uur per week werkt",
         "Een contract voor zelfstandige ondernemers"
+      ],
+      "options_en": [
+        "An employment contract that is automatically renewed",
+        "A temporary employment contract with a fixed end date",
+        "A contract under which you always work 40 hours per week",
+        "A contract for self-employed entrepreneurs"
       ],
       "correct_index": 1,
       "explanation_en": "A bepaalde tijd contract (fixed-term contract) has a predetermined end date. After a maximum of three consecutive fixed-term contracts over 3 years, Dutch law requires the employer to offer a permanent (onbepaalde tijd) contract.",
@@ -377,11 +526,18 @@
       "id": "knm-033",
       "category": "onderwijs",
       "question_nl": "Wat is de Studiefinanciering in Nederland?",
+      "question_en": "What is Studiefinanciering in the Netherlands?",
       "options_nl": [
         "Een beurs die alle studenten automatisch ontvangen",
         "Financiële ondersteuning van de overheid voor studenten in het hoger onderwijs",
         "Een lening van de bank voor studenten",
         "Geld van de universiteit voor uitstekende studenten"
+      ],
+      "options_en": [
+        "A grant that all students automatically receive",
+        "Financial support from the government for students in higher education",
+        "A loan from the bank for students",
+        "Money from the university for outstanding students"
       ],
       "correct_index": 1,
       "explanation_en": "Studiefinanciering (student financing) is a system of financial support provided by DUO (Dienst Uitvoering Onderwijs) for students in higher education (HBO and WO). Since 2015, most funding is in the form of a loan (studievoorschot) that must be repaid after graduation.",
@@ -391,11 +547,18 @@
       "id": "knm-034",
       "category": "wonen",
       "question_nl": "Wie is verantwoordelijk voor groot onderhoud van een huurwoning?",
+      "question_en": "Who is responsible for major maintenance of a rental home?",
       "options_nl": [
         "De huurder",
         "De verhuurder",
         "De gemeente",
         "De Rijksoverheid"
+      ],
+      "options_en": [
+        "The tenant",
+        "The landlord",
+        "The gemeente",
+        "The national government"
       ],
       "correct_index": 1,
       "explanation_en": "In the Netherlands, the landlord (verhuurder) is legally responsible for major maintenance (groot onderhoud) such as roof repairs, structural work, and central heating. Tenants are responsible for minor maintenance (klein onderhoud) such as replacing light bulbs and unclogging drains.",
@@ -405,11 +568,18 @@
       "id": "knm-035",
       "category": "gezondheid",
       "question_nl": "Wat doet de GGD?",
+      "question_en": "What does the GGD do?",
       "options_nl": [
         "De GGD is een ziekenhuis voor spoedeisende hulp",
         "De GGD is een gemeentelijke dienst voor publieke gezondheidszorg, inclusief vaccinaties",
         "De GGD is een verzekeraar voor de basisverzekering",
         "De GGD is een organisatie die huisartsen opleidt"
+      ],
+      "options_en": [
+        "The GGD is a hospital for emergency care",
+        "The GGD is a municipal service for public healthcare, including vaccinations",
+        "The GGD is an insurer for the basic health insurance",
+        "The GGD is an organisation that trains general practitioners"
       ],
       "correct_index": 1,
       "explanation_en": "The GGD (Gemeentelijke Gezondheidsdienst) is the Municipal Health Service, responsible for public health including vaccination programs, sexual health clinics, youth healthcare, and infectious disease control. It operates at the local and regional level.",
@@ -419,11 +589,18 @@
       "id": "knm-036",
       "category": "geschiedenis",
       "question_nl": "Wat was de Watersnoodramp?",
+      "question_en": "What was the Watersnoodramp?",
       "options_nl": [
         "Een overstroming in 1916 die leidde tot de Zuiderzeewerken",
         "Een grote vloed in 1953 waarbij grote delen van Zeeland en Zuid-Holland overstroomden",
         "Een stormramp in 1987 die veel schade veroorzaakte in Noord-Holland",
         "Een dijkdoorbraak in 1944 tijdens de Tweede Wereldoorlog"
+      ],
+      "options_en": [
+        "A flood in 1916 that led to the Zuiderzeewerken",
+        "A major flood in 1953 in which large parts of Zeeland and South Holland were inundated",
+        "A storm disaster in 1987 that caused much damage in North Holland",
+        "A dike breach in 1944 during the Second World War"
       ],
       "correct_index": 1,
       "explanation_en": "The Watersnoodramp (flood disaster) of 1 February 1953 was caused by a severe North Sea storm surge that broke through dikes in Zeeland, South Holland, and North Brabant. About 1,835 people died and over 70,000 were evacuated. It led directly to the construction of the Deltawerken.",
@@ -433,11 +610,18 @@
       "id": "knm-037",
       "category": "politiek",
       "question_nl": "Wat is een coalitieregering?",
+      "question_en": "What is a coalition government?",
       "options_nl": [
         "Een regering gevormd door één partij met een absolute meerderheid",
         "Een regering gevormd door meerdere partijen die samenwerken",
         "Een tijdelijke regering tijdens verkiezingen",
         "Een regering geleid door de koning"
+      ],
+      "options_en": [
+        "A government formed by one party with an absolute majority",
+        "A government formed by multiple parties working together",
+        "A caretaker government during elections",
+        "A government led by the king"
       ],
       "correct_index": 1,
       "explanation_en": "A coalitieregering (coalition government) is formed when multiple parties combine to achieve a majority in parliament. In the Netherlands, no single party usually wins enough seats for a majority, so coalition negotiations (formatie) are common after each election.",
@@ -447,11 +631,18 @@
       "id": "knm-038",
       "category": "werk",
       "question_nl": "Wat doet het UWV?",
+      "question_en": "What does the UWV do?",
       "options_nl": [
         "Het UWV int belastingen voor de Belastingdienst",
         "Het UWV voert werknemersverzekeringen uit en begeleidt werklozen naar werk",
         "Het UWV controleert arbeidsomstandigheden op de werkvloer",
         "Het UWV verstrekt bouwvergunningen aan bedrijven"
+      ],
+      "options_en": [
+        "The UWV collects taxes for the Belastingdienst",
+        "The UWV administers employee insurance schemes and helps unemployed people find work",
+        "The UWV inspects working conditions in the workplace",
+        "The UWV issues building permits to businesses"
       ],
       "correct_index": 1,
       "explanation_en": "The UWV (Uitvoeringsinstituut Werknemersverzekeringen) is the Employee Insurance Agency. It implements employee insurance schemes such as WW (unemployment benefits), WIA (disability insurance), and helps unemployed people find work.",
@@ -461,11 +652,18 @@
       "id": "knm-039",
       "category": "onderwijs",
       "question_nl": "Wat is speciaal onderwijs in Nederland?",
+      "question_en": "What is special education in the Netherlands?",
       "options_nl": [
         "Privéonderwijs voor kinderen van rijke ouders",
         "Onderwijs voor kinderen met een handicap of leermoeilijkheden",
         "Tweetalig onderwijs voor kinderen van expats",
         "Religieus onderwijs aan bijzondere scholen"
+      ],
+      "options_en": [
+        "Private education for children of wealthy parents",
+        "Education for children with a disability or learning difficulties",
+        "Bilingual education for children of expats",
+        "Religious education at bijzondere schools"
       ],
       "correct_index": 1,
       "explanation_en": "Speciaal onderwijs (special education) in the Netherlands is specifically designed for children with physical disabilities, learning difficulties, or behavioral disorders who cannot attend regular schools. It provides tailored support and education.",
@@ -475,11 +673,18 @@
       "id": "knm-040",
       "category": "wonen",
       "question_nl": "Wat is OZB?",
+      "question_en": "What is OZB?",
       "options_nl": [
         "Een landelijke belasting op koopwoningen",
         "Een gemeentelijke belasting op onroerende zaken (woningen en bedrijfspanden)",
         "Een heffing voor afvalverwerking door de gemeente",
         "Een verzekeringspremie voor eigenaren van woningen"
+      ],
+      "options_en": [
+        "A national tax on owner-occupied homes",
+        "A municipal tax on real estate (homes and business premises)",
+        "A levy for waste processing by the gemeente",
+        "An insurance premium for homeowners"
       ],
       "correct_index": 1,
       "explanation_en": "OZB (Onroerendezaakbelasting) is a municipal property tax levied by the gemeente on the value of real estate (homes and business premises). Homeowners pay OZB; renters usually do not pay it directly. The rate varies per municipality.",
@@ -489,11 +694,18 @@
       "id": "knm-041",
       "category": "gezondheid",
       "question_nl": "Wat is de rol van de verloskundige in Nederland?",
+      "question_en": "What is the role of the verloskundige in the Netherlands?",
       "options_nl": [
         "De verloskundige is een specialist die alleen in het ziekenhuis werkt",
         "De verloskundige begeleidt zwangerschap en bevalling, ook thuis",
         "De verloskundige is verantwoordelijk voor de kraamzorg na de bevalling",
         "De verloskundige schrijft medicijnen voor tijdens de zwangerschap"
+      ],
+      "options_en": [
+        "The verloskundige is a specialist who works only in hospital",
+        "The verloskundige supervises pregnancy and childbirth, including at home",
+        "The verloskundige is responsible for kraamzorg after the birth",
+        "The verloskundige prescribes medication during pregnancy"
       ],
       "correct_index": 1,
       "explanation_en": "A verloskundige (midwife) in the Netherlands supervises healthy pregnancies and can assist with home births or hospital births. The Netherlands has a strong tradition of home births attended by midwives, though hospital births are also common.",
@@ -503,11 +715,18 @@
       "id": "knm-042",
       "category": "geschiedenis",
       "question_nl": "Wat waren de Deltawerken?",
+      "question_en": "What were the Deltawerken?",
       "options_nl": [
         "Een reeks dammen gebouwd na de overstroming van 1916",
         "Een omvangrijk stelsel van dammen en stormvloedkeringen gebouwd na de Watersnoodramp van 1953",
         "Een project om nieuwe polders aan te leggen in de Zuiderzee",
         "Een militair verdedigingsprogramma aan de Nederlandse grens"
+      ],
+      "options_en": [
+        "A series of dams built after the 1916 flood",
+        "A large system of dams and storm surge barriers built after the 1953 Watersnoodramp",
+        "A project to create new polders in the Zuiderzee",
+        "A military defence programme along the Dutch border"
       ],
       "correct_index": 1,
       "explanation_en": "The Deltawerken (Delta Works) is a series of dams, sluices, locks, dikes, and storm surge barriers built after the 1953 flood disaster. Completed in 1997 with the Maeslantkering, it is considered one of the greatest engineering feats of the 20th century.",
@@ -517,11 +736,18 @@
       "id": "knm-043",
       "category": "politiek",
       "question_nl": "Wat is de scheiding van kerk en staat?",
+      "question_en": "What is the separation of church and state?",
       "options_nl": [
         "Kerken betalen geen belasting in Nederland",
         "De overheid en religie zijn gescheiden: de overheid bemoeit zich niet met religieuze zaken en vice versa",
         "Religieuze politieke partijen zijn verboden in Nederland",
         "Ambtenaren mogen geen religie belijden tijdens werktijd"
+      ],
+      "options_en": [
+        "Churches pay no tax in the Netherlands",
+        "The government and religion are separate: the government does not interfere in religious affairs and vice versa",
+        "Religious political parties are prohibited in the Netherlands",
+        "Civil servants may not practise religion during working hours"
       ],
       "correct_index": 1,
       "explanation_en": "The separation of church and state (scheiding van kerk en staat) means that the Dutch government and religious institutions operate independently. The government does not impose religion, and religious organizations do not govern. However, religious schools can receive public funding.",
@@ -531,11 +757,18 @@
       "id": "knm-044",
       "category": "werk",
       "question_nl": "Wat is een zzp'er?",
+      "question_en": "What is a zzp'er?",
       "options_nl": [
         "Een werknemer met een tijdelijk contract",
         "Een zelfstandige zonder personeel die als ondernemer werkt",
         "Een werknemer die thuis werkt",
         "Een uitzendkracht die via een bureau werkt"
+      ],
+      "options_en": [
+        "An employee with a temporary contract",
+        "A self-employed person without staff who works as an entrepreneur",
+        "An employee who works from home",
+        "A temporary worker placed through an agency"
       ],
       "correct_index": 1,
       "explanation_en": "A zzp'er (zelfstandige zonder personeel) is a self-employed person without employees — a freelancer or sole trader. The Netherlands has a large and growing number of zzp'ers. They are responsible for their own taxes, insurance, and pension.",
@@ -545,11 +778,18 @@
       "id": "knm-045",
       "category": "onderwijs",
       "question_nl": "Mogen ouders in Nederland hun kinderen op een religieuze school inschrijven?",
+      "question_en": "May parents in the Netherlands enroll their children in a religious school?",
       "options_nl": [
         "Nee, alle scholen in Nederland zijn openbaar en neutraal",
         "Ja, bijzondere scholen op religieuze grondslag worden door de overheid gefinancierd",
         "Ja, maar ouders moeten zelf voor de kosten opdraaien",
         "Nee, religieus onderwijs is alleen toegestaan buiten schooltijd"
+      ],
+      "options_en": [
+        "No, all schools in the Netherlands are public and neutral",
+        "Yes, bijzondere schools based on a religious foundation receive government funding",
+        "Yes, but parents must bear the costs themselves",
+        "No, religious education is only permitted outside school hours"
       ],
       "correct_index": 1,
       "explanation_en": "Under the Dutch constitution (Article 23), freedom of education means that religious (bijzondere) schools such as Catholic, Protestant, or Islamic schools receive the same government funding as public schools, as long as they meet national quality standards.",
@@ -559,11 +799,18 @@
       "id": "knm-046",
       "category": "wonen",
       "question_nl": "Hoe lang zijn wachtlijsten voor een sociale huurwoning in grote Nederlandse steden?",
+      "question_en": "How long are waiting lists for social housing in major Dutch cities?",
       "options_nl": [
         "Enkele weken tot een paar maanden",
         "Vaak meerdere jaren, soms wel 10 jaar of meer",
         "Maximaal 2 jaar door wettelijke regels",
         "Er zijn geen wachtlijsten; iedereen krijgt direct een woning"
+      ],
+      "options_en": [
+        "A few weeks to a couple of months",
+        "Often several years, sometimes 10 years or more",
+        "A maximum of 2 years due to legal rules",
+        "There are no waiting lists; everyone gets a home immediately"
       ],
       "correct_index": 1,
       "explanation_en": "Waiting lists for social housing in major Dutch cities like Amsterdam and Rotterdam can last many years — in Amsterdam, the average wait is over 12 years. This is due to high demand and limited social housing stock, pushing many people into the expensive private rental market.",
@@ -573,11 +820,18 @@
       "id": "knm-047",
       "category": "gezondheid",
       "question_nl": "Wat is de aanvullende verzekering?",
+      "question_en": "What is the aanvullende verzekering?",
       "options_nl": [
         "De verplichte basisverzekering voor iedereen",
         "Een optionele extra verzekering voor zorg die niet in het basispakket zit",
         "Een verzekering voor mensen die langdurig ziek zijn",
         "Een verzekering die de werkgever verplicht moet afsluiten"
+      ],
+      "options_en": [
+        "The compulsory basic insurance for everyone",
+        "An optional supplementary insurance for care not included in the basic package",
+        "An insurance for people who are long-term ill",
+        "An insurance the employer is required to take out"
       ],
       "correct_index": 1,
       "explanation_en": "The aanvullende verzekering (supplementary insurance) is an optional addition to the mandatory basisverzekering. It covers services not included in the basic package, such as dental care for adults, physiotherapy beyond a limited number of sessions, and glasses.",
@@ -587,11 +841,18 @@
       "id": "knm-048",
       "category": "geschiedenis",
       "question_nl": "Wanneer was de Gouden Eeuw in Nederland?",
+      "question_en": "When was the Dutch Golden Age?",
       "options_nl": [
         "De vijftiende eeuw (1400-1500)",
         "De zeventiende eeuw (1600-1700)",
         "De achttiende eeuw (1700-1800)",
         "De negentiende eeuw (1800-1900)"
+      ],
+      "options_en": [
+        "The fifteenth century (1400-1500)",
+        "The seventeenth century (1600-1700)",
+        "The eighteenth century (1700-1800)",
+        "The nineteenth century (1800-1900)"
       ],
       "correct_index": 1,
       "explanation_en": "The Dutch Golden Age (Gouden Eeuw) was the 17th century, a period of great prosperity driven by international trade (especially through the VOC), maritime power, and cultural achievement. Dutch painters like Rembrandt and Vermeer flourished during this era.",
@@ -601,11 +862,18 @@
       "id": "knm-049",
       "category": "politiek",
       "question_nl": "Welk orgaan maakt nationale wetten in Nederland?",
+      "question_en": "Which body makes national laws in the Netherlands?",
       "options_nl": [
         "De Raad van State",
         "De Staten-Generaal (Eerste en Tweede Kamer samen)",
         "De minister-president en het kabinet",
         "De burgemeester en wethouders"
+      ],
+      "options_en": [
+        "The Council of State",
+        "The Staten-Generaal (Eerste Kamer and Tweede Kamer together)",
+        "The prime minister and the cabinet",
+        "The mayor and aldermen"
       ],
       "correct_index": 1,
       "explanation_en": "The Staten-Generaal, consisting of the Tweede Kamer and the Eerste Kamer, is the national parliament that makes laws in the Netherlands. The government proposes legislation, but parliament must approve it before it becomes law.",
@@ -615,11 +883,18 @@
       "id": "knm-050",
       "category": "werk",
       "question_nl": "Wat is de WW-uitkering?",
+      "question_en": "What is the WW benefit?",
       "options_nl": [
         "Een uitkering voor mensen die arbeidsongeschikt zijn",
         "Een werkloosheidsuitkering voor mensen die hun baan hebben verloren",
         "Een toeslag voor werknemers met een laag loon",
         "Een pensioenuitkering voor mensen boven de 67"
+      ],
+      "options_en": [
+        "A benefit for people who are unable to work due to disability",
+        "An unemployment benefit for people who have lost their job",
+        "A supplement for employees with a low wage",
+        "A pension payment for people above 67"
       ],
       "correct_index": 1,
       "explanation_en": "The WW (Werkloosheidswet) is unemployment insurance that provides temporary income when someone loses their job through no fault of their own. It is administered by the UWV and its duration depends on how long you have worked.",
@@ -629,11 +904,18 @@
       "id": "knm-051",
       "category": "onderwijs",
       "question_nl": "Wat is kwalificatieplicht?",
+      "question_en": "What is kwalificatieplicht?",
       "options_nl": [
         "De verplichting voor scholen om gekwalificeerde leraren aan te stellen",
         "De verplichting voor jongeren om door te leren tot ze een startkwalificatie hebben of 18 worden",
         "De verplichting voor ouders om hun kind aan te melden bij de school",
         "De verplichting voor werkgevers om opgeleid personeel aan te nemen"
+      ],
+      "options_en": [
+        "The obligation for schools to employ qualified teachers",
+        "The obligation for young people to keep studying until they have a basic qualification or turn 18",
+        "The obligation for parents to register their child at school",
+        "The obligation for employers to hire trained staff"
       ],
       "correct_index": 1,
       "explanation_en": "Kwalificatieplicht (qualification obligation) extends compulsory education beyond age 16. Young people must continue to attend school until they obtain a 'startkwalificatie' (minimum qualification: HAVO, VWO, or MBO level 2 diploma) or reach age 18.",
@@ -643,11 +925,18 @@
       "id": "knm-052",
       "category": "wonen",
       "question_nl": "Wat is de vrije sector huur?",
+      "question_en": "What is the vrije sector huur?",
       "options_nl": [
         "Huurwoningen die eigendom zijn van de gemeente",
         "Huurwoningen boven de sociale huurgrens, verhuurd tegen marktprijzen",
         "Huurwoningen die volledig gratis zijn voor mensen met een laag inkomen",
         "Huurwoningen die worden beheerd door woningcorporaties"
+      ],
+      "options_en": [
+        "Rental homes owned by the gemeente",
+        "Rental homes above the social housing threshold, rented at market prices",
+        "Rental homes that are entirely free for people with low incomes",
+        "Rental homes managed by woningcorporaties"
       ],
       "correct_index": 1,
       "explanation_en": "Vrije sector huur (free-market rentals) are rental homes priced above the social housing threshold (liberalisatiegrens). These are usually owned by private landlords or investors and are rented at market prices, which can be significantly higher than social housing rents.",
@@ -657,11 +946,18 @@
       "id": "knm-053",
       "category": "gezondheid",
       "question_nl": "Wat is euthanasie in Nederland?",
+      "question_en": "What is the status of euthanasia in the Netherlands?",
       "options_nl": [
         "Euthanasie is verboden en strafbaar in Nederland",
         "Euthanasie is wettelijk toegestaan onder strikte voorwaarden, zoals ondraaglijk lijden",
         "Euthanasie is alleen toegestaan voor terminale kankerpatiënten",
         "Euthanasie is toegestaan zonder medische beoordeling"
+      ],
+      "options_en": [
+        "Euthanasia is prohibited and punishable in the Netherlands",
+        "Euthanasia is legally permitted under strict conditions, such as unbearable suffering",
+        "Euthanasia is only permitted for terminal cancer patients",
+        "Euthanasia is permitted without medical assessment"
       ],
       "correct_index": 1,
       "explanation_en": "The Netherlands was the first country to legalize euthanasia (2002). It is permitted under strict conditions: the patient must have unbearable and incurable suffering, make a persistent voluntary request, and the act must be performed by a physician who follows the legal protocol.",
@@ -671,11 +967,18 @@
       "id": "knm-054",
       "category": "geschiedenis",
       "question_nl": "Hoe lang duurde de Tachtigjarige Oorlog?",
+      "question_en": "How long did the Eighty Years' War last?",
       "options_nl": [
         "Van 1568 tot 1618",
         "Van 1568 tot 1648",
         "Van 1588 tot 1648",
         "Van 1600 tot 1700"
+      ],
+      "options_en": [
+        "From 1568 to 1618",
+        "From 1568 to 1648",
+        "From 1588 to 1648",
+        "From 1600 to 1700"
       ],
       "correct_index": 1,
       "explanation_en": "The Eighty Years' War (Tachtigjarige Oorlog, 1568-1648) was the Dutch revolt against Spanish rule led by Willem van Oranje. It ended with the Peace of Westphalia (Vrede van Münster) in 1648, which recognized Dutch independence.",
@@ -685,11 +988,18 @@
       "id": "knm-055",
       "category": "politiek",
       "question_nl": "Wat doet de burgemeester in een Nederlandse gemeente?",
+      "question_en": "What does the burgemeester do in a Dutch gemeente?",
       "options_nl": [
         "De burgemeester wordt gekozen door de inwoners van de gemeente",
         "De burgemeester is aangesteld door de Kroon en leidt het college van B&W",
         "De burgemeester maakt gemeentelijke wetten die gelden voor alle inwoners",
         "De burgemeester vertegenwoordigt de provincie in de gemeenteraad"
+      ],
+      "options_en": [
+        "The burgemeester is elected by the residents of the gemeente",
+        "The burgemeester is appointed by the Crown and chairs the college van B&W",
+        "The burgemeester makes municipal laws that apply to all residents",
+        "The burgemeester represents the province in the gemeenteraad"
       ],
       "correct_index": 1,
       "explanation_en": "The burgemeester (mayor) is not directly elected but is appointed by Royal Decree (Kroon), on the recommendation of the municipality. The mayor chairs the college van burgemeester en wethouders and is responsible for public order and safety.",
@@ -699,11 +1009,18 @@
       "id": "knm-056",
       "category": "werk",
       "question_nl": "Wat staat op een loonstrookje als 'nettoloon'?",
+      "question_en": "What does 'nettoloon' on a payslip mean?",
       "options_nl": [
         "Het totale loon vóór belasting en sociale premies",
         "Het loon dat u daadwerkelijk op uw rekening krijgt na aftrek van belastingen en premies",
         "Het vakantiegeld dat u per maand opbouwt",
         "Het bedrag dat de werkgever afdraagt aan de overheid"
+      ],
+      "options_en": [
+        "The total wage before tax and social premiums",
+        "The wage that actually arrives in your account after deduction of taxes and premiums",
+        "The vakantiegeld you accrue each month",
+        "The amount the employer pays over to the government"
       ],
       "correct_index": 1,
       "explanation_en": "The nettoloon is the take-home pay — the amount deposited into your bank account after deduction of loonbelasting (income tax) and sociale premies (social security contributions) from the brutoloon (gross salary).",
@@ -713,11 +1030,18 @@
       "id": "knm-057",
       "category": "onderwijs",
       "question_nl": "Wat is de BSO?",
+      "question_en": "What is BSO?",
       "options_nl": [
         "Een buitenschoolse opleiding voor volwassenen",
         "Buitenschoolse opvang voor kinderen voor en na schooltijd",
         "Een bijzondere school voor kinderen met een beperking",
         "Een beroepsopleiding voor schoolverlaters"
+      ],
+      "options_en": [
+        "An after-school training programme for adults",
+        "Out-of-school care for children before and after school hours",
+        "A special school for children with a disability",
+        "A vocational training programme for school leavers"
       ],
       "correct_index": 1,
       "explanation_en": "BSO (Buitenschoolse Opvang) is out-of-school care for children, providing supervision before and after school hours. It operates on school days and sometimes during school holidays. Like regular childcare, parents may receive kinderopvangtoeslag to help with costs.",
@@ -727,11 +1051,18 @@
       "id": "knm-058",
       "category": "wonen",
       "question_nl": "Wat is de afvalstoffenheffing?",
+      "question_en": "What is the afvalstoffenheffing?",
       "options_nl": [
         "Een boete voor illegale vuilnisstort",
         "Een gemeentelijke heffing voor de inzameling en verwerking van huishoudelijk afval",
         "Een landelijke belasting op milieuonvriendelijke producten",
         "Een vergoeding die u krijgt voor het scheiden van afval"
+      ],
+      "options_en": [
+        "A fine for illegal dumping of waste",
+        "A municipal levy for the collection and processing of household waste",
+        "A national tax on environmentally unfriendly products",
+        "A payment you receive for separating waste"
       ],
       "correct_index": 1,
       "explanation_en": "Afvalstoffenheffing is a municipal levy that covers the costs of collecting and processing household waste. All residents pay it, regardless of whether they own or rent their home. The amount varies by municipality.",
@@ -741,11 +1072,18 @@
       "id": "knm-059",
       "category": "gezondheid",
       "question_nl": "Hoe is orgaandonorschap geregeld in Nederland na de nieuwe wet van 2020?",
+      "question_en": "How is organ donation regulated in the Netherlands under the 2020 law?",
       "options_nl": [
         "Iedereen is automatisch orgaandonor, tenzij men zich heeft afgemeld",
         "U moet zich actief aanmelden als u orgaandonor wilt zijn",
         "Orgaandonatie is verboden in Nederland",
         "Alleen mensen met een Nederlandse nationaliteit kunnen donor zijn"
+      ],
+      "options_en": [
+        "Everyone is automatically an organ donor unless they have opted out",
+        "You must actively register if you want to be an organ donor",
+        "Organ donation is prohibited in the Netherlands",
+        "Only people with Dutch nationality can be donors"
       ],
       "correct_index": 0,
       "explanation_en": "Since 2020, the Netherlands uses an opt-out system (ADR - Actief DonorRegistratiesysteem). Everyone 18+ is registered as a donor unless they actively register 'No', let others decide, or designate a specific person to decide. This replaced the previous opt-in system.",
@@ -755,7 +1093,9 @@
       "id": "knm-060",
       "category": "geschiedenis",
       "question_nl": "In welk jaar werd Nederland lid van de Europese Economische Gemeenschap (EEG)?",
+      "question_en": "In which year did the Netherlands join the European Economic Community (EEG)?",
       "options_nl": ["1945", "1951", "1957", "1973"],
+      "options_en": ["1945", "1951", "1957", "1973"],
       "correct_index": 2,
       "explanation_en": "The Netherlands was a founding member of the EEG (European Economic Community, the predecessor to the EU) through the Treaty of Rome in 1957, along with Belgium, Luxembourg, France, Italy, and West Germany.",
       "references": ["Naar Nederland Ch. 8"]
@@ -764,11 +1104,18 @@
       "id": "knm-061",
       "category": "politiek",
       "question_nl": "Wat zijn de Provinciale Staten?",
+      "question_en": "What are the Provinciale Staten?",
       "options_nl": [
         "De vergadering van alle gemeenteraden in een provincie",
         "Het gekozen bestuur van een provincie",
         "De afgevaardigden van de provincies in de Eerste Kamer",
         "De adviseurs van de commissaris van de Koning"
+      ],
+      "options_en": [
+        "The assembly of all municipal councils in a province",
+        "The elected parliament of a province",
+        "The representatives of the provinces in the Eerste Kamer",
+        "The advisers of the King's Commissioner"
       ],
       "correct_index": 1,
       "explanation_en": "Provinciale Staten is the elected parliament at the provincial level in the Netherlands. It oversees provincial policy and budget, and its members indirectly elect the Eerste Kamer (Senate). Each of the 12 provinces has its own Provinciale Staten.",
@@ -778,11 +1125,18 @@
       "id": "knm-062",
       "category": "werk",
       "question_nl": "Wat is een CAO?",
+      "question_en": "What is a CAO?",
       "options_nl": [
         "Een individueel arbeidscontract tussen werkgever en werknemer",
         "Een collectieve arbeidsovereenkomst met afspraken over arbeidsvoorwaarden in een sector",
         "Een overheidsinstelling die arbeidsrecht handhaaft",
         "Een certificaat voor erkende beroepsopleidingen"
+      ],
+      "options_en": [
+        "An individual employment contract between employer and employee",
+        "A collective labour agreement setting out employment conditions for a sector",
+        "A government body that enforces labour law",
+        "A certificate for accredited vocational training programmes"
       ],
       "correct_index": 1,
       "explanation_en": "A CAO (Collectieve Arbeidsovereenkomst) is a collective labor agreement negotiated between employers' organizations and trade unions for a specific sector or company. It sets minimum standards for wages, working hours, and other employment conditions that often exceed the legal minimum.",
@@ -792,11 +1146,18 @@
       "id": "knm-063",
       "category": "onderwijs",
       "question_nl": "Wat is HAVO?",
+      "question_en": "What is HAVO?",
       "options_nl": [
         "Een type middelbaar onderwijs dat direct naar de universiteit leidt",
         "Hoger Algemeen Voortgezet Onderwijs, dat toegang geeft tot het HBO",
         "Een beroepsopleiding voor jongeren van 12-16 jaar",
         "Een speciale school voor hoogbegaafde kinderen"
+      ],
+      "options_en": [
+        "A type of secondary education that leads directly to university",
+        "Hoger Algemeen Voortgezet Onderwijs, which gives access to HBO",
+        "A vocational training programme for young people aged 12-16",
+        "A special school for gifted children"
       ],
       "correct_index": 1,
       "explanation_en": "HAVO (Hoger Algemeen Voortgezet Onderwijs) is a 5-year secondary school track that prepares students for HBO (higher professional education). Students who complete HAVO can also enter VWO via a transition program to study at university.",
@@ -806,11 +1167,18 @@
       "id": "knm-064",
       "category": "wonen",
       "question_nl": "Wie levert drinkwater aan huishoudens in Nederland?",
+      "question_en": "Who supplies drinking water to households in the Netherlands?",
       "options_nl": [
         "De gemeente",
         "Een regionaal waterbedrijf met een monopolie in het gebied",
         "Een private drinkwateronderneming naar keuze van de consument",
         "Het Rijkswaterstaat"
+      ],
+      "options_en": [
+        "The gemeente",
+        "A regional water company with a monopoly in its area",
+        "A private water company chosen by the consumer",
+        "Rijkswaterstaat"
       ],
       "correct_index": 1,
       "explanation_en": "Drinking water in the Netherlands is supplied by regional water companies (waterbedrijven) that hold a monopoly in their service area. Unlike energy, you cannot choose your water supplier. The quality of Dutch tap water is among the best in the world.",
@@ -820,11 +1188,18 @@
       "id": "knm-065",
       "category": "gezondheid",
       "question_nl": "Wat is de GGZ?",
+      "question_en": "What is GGZ?",
       "options_nl": [
         "De dienst voor gemeentelijke gezondheidszorg (vaccinaties en publieke gezondheid)",
         "Geestelijke gezondheidszorg, zoals behandeling van psychische problemen en stoornissen",
         "Een landelijke organisatie voor geriatrische zorg voor ouderen",
         "Gespecialiseerde kankerzorg in universitaire ziekenhuizen"
+      ],
+      "options_en": [
+        "The municipal healthcare service (vaccinations and public health)",
+        "Mental healthcare, such as treatment of psychological problems and disorders",
+        "A national organisation for geriatric care for the elderly",
+        "Specialised cancer care in university hospitals"
       ],
       "correct_index": 1,
       "explanation_en": "GGZ (Geestelijke Gezondheidszorg) refers to mental healthcare in the Netherlands, including treatment for psychological problems, psychiatric disorders, and addiction. A referral from the huisarts is usually needed to access GGZ treatment.",
@@ -834,7 +1209,9 @@
       "id": "knm-066",
       "category": "geschiedenis",
       "question_nl": "In welk jaar werd het Koninkrijk der Nederlanden hersteld na de Franse bezetting?",
+      "question_en": "In which year was the Kingdom of the Netherlands established after the French occupation?",
       "options_nl": ["1806", "1813", "1815", "1830"],
+      "options_en": ["1806", "1813", "1815", "1830"],
       "correct_index": 2,
       "explanation_en": "After the French occupation ended in 1813, the Kingdom of the Netherlands was formally established in 1815 with Willem I as the first king, uniting the Netherlands with what is now Belgium. Belgium then became independent in 1830.",
       "references": ["Naar Nederland Ch. 8"]
@@ -843,11 +1220,18 @@
       "id": "knm-067",
       "category": "politiek",
       "question_nl": "Is Nederland een republiek of een monarchie?",
+      "question_en": "Is the Netherlands a republic or a monarchy?",
       "options_nl": [
         "Een republiek met een gekozen president",
         "Een constitutionele monarchie met een koning als staatshoofd",
         "Een absolute monarchie waarbij de koning regeert",
         "Een federale staat zonder centraal staatshoofd"
+      ],
+      "options_en": [
+        "A republic with an elected president",
+        "A constitutional monarchy with a king as head of state",
+        "An absolute monarchy in which the king rules",
+        "A federal state with no central head of state"
       ],
       "correct_index": 1,
       "explanation_en": "The Netherlands is a constitutional monarchy (constitutionele monarchie). The monarch is the head of state but operates within the limits set by the constitution. Real governing power lies with the elected parliament and the cabinet.",
@@ -857,11 +1241,18 @@
       "id": "knm-068",
       "category": "werk",
       "question_nl": "Hoeveel dagen geboorteverlof heeft een partner bij de geboorte van een kind?",
+      "question_en": "How many days of birth leave does a partner receive when a child is born?",
       "options_nl": [
         "Geen, geboorteverlof bestaat niet in Nederland",
         "5 werkdagen, met de mogelijkheid van 5 extra weken aanvullend geboorteverlof",
         "2 weken volledig betaald verlof",
         "1 maand onbetaald verlof"
+      ],
+      "options_en": [
+        "None, birth leave does not exist in the Netherlands",
+        "5 working days, with the option of 5 additional weeks of supplementary birth leave",
+        "2 weeks of fully paid leave",
+        "1 month of unpaid leave"
       ],
       "correct_index": 1,
       "explanation_en": "Partners in the Netherlands are entitled to 5 days of paid geboorteverlof (birth leave) immediately after the birth, fully paid by the employer. Additionally, partners can take up to 5 weeks of supplementary leave in the first 6 months, paid at 70% of salary via the UWV.",
@@ -871,11 +1262,18 @@
       "id": "knm-069",
       "category": "onderwijs",
       "question_nl": "Waar moeten ouders hun kind aanmelden voor de basisschool?",
+      "question_en": "Where must parents register their child for primary school?",
       "options_nl": [
         "Bij de Belastingdienst",
         "Bij de school zelf",
         "Bij de gemeente",
         "Bij het ministerie van Onderwijs"
+      ],
+      "options_en": [
+        "At the Belastingdienst",
+        "At the school itself",
+        "At the gemeente",
+        "At the Ministry of Education"
       ],
       "correct_index": 1,
       "explanation_en": "Parents enroll their child directly at the chosen school (basisschool). Most schools accept children from age 4, but compulsory education starts at age 5. Schools may have waiting lists, particularly in large cities.",
@@ -885,11 +1283,18 @@
       "id": "knm-070",
       "category": "wonen",
       "question_nl": "Kunt u in Nederland zelf uw energieleverancier kiezen?",
+      "question_en": "Can you choose your own energy supplier in the Netherlands?",
       "options_nl": [
         "Nee, energie wordt geleverd door een regionale monopolist",
         "Ja, u kunt vrij kiezen uit verschillende energieleveranciers",
         "Ja, maar alleen als u een koopwoning heeft",
         "Nee, de gemeente bepaalt welke leverancier u gebruikt"
+      ],
+      "options_en": [
+        "No, energy is supplied by a regional monopoly",
+        "Yes, you can freely choose from various energy suppliers",
+        "Yes, but only if you own your home",
+        "No, the gemeente decides which supplier you use"
       ],
       "correct_index": 1,
       "explanation_en": "Unlike the water market, the Dutch energy market is liberalized. Consumers can freely choose their electricity and gas supplier from a range of commercial providers. Prices and conditions vary, so comparing suppliers (vergelijken) is advisable.",
@@ -899,11 +1304,18 @@
       "id": "knm-071",
       "category": "gezondheid",
       "question_nl": "Wat is de kraamzorg?",
+      "question_en": "What is kraamzorg?",
       "options_nl": [
         "Zorg voor ernstig zieke patiënten in een ziekenhuis",
         "Professionele zorg aan huis voor moeder en baby in de eerste week na de bevalling",
         "Een verloskundigepraktijk voor zwangere vrouwen",
         "Opvang voor kinderen van 0 tot 4 jaar"
+      ],
+      "options_en": [
+        "Care for seriously ill patients in a hospital",
+        "Professional home care for mother and baby in the first week after birth",
+        "A midwifery practice for pregnant women",
+        "Childcare for children aged 0 to 4"
       ],
       "correct_index": 1,
       "explanation_en": "Kraamzorg (maternity care) is a unique Dutch institution: a kraamverzorgende (maternity nurse) visits the home for several hours daily during the first week after birth to help mother and baby. Kraamzorg is covered by the basic health insurance.",
@@ -913,11 +1325,18 @@
       "id": "knm-072",
       "category": "geschiedenis",
       "question_nl": "Wat was de Belgische opstand van 1830?",
+      "question_en": "What was the Belgian revolt of 1830?",
       "options_nl": [
         "Een Belgische revolutie tegen de Franse bezetting",
         "Een opstand waarbij België zich losmaakte van het Verenigd Koninkrijk der Nederlanden",
         "Een Belgische opstand tegen de Oostenrijkse Habsburgers",
         "Een burgeroorlog tussen Nederlandse en Belgische troepen"
+      ],
+      "options_en": [
+        "A Belgian revolution against the French occupation",
+        "A revolt in which Belgium broke away from the United Kingdom of the Netherlands",
+        "A Belgian revolt against the Austrian Habsburgs",
+        "A civil war between Dutch and Belgian troops"
       ],
       "correct_index": 1,
       "explanation_en": "In 1830, the southern provinces (now Belgium) revolted against the rule of King Willem I of the Netherlands. The revolt led to Belgian independence, which was internationally recognized in 1839. This reduced the Kingdom of the Netherlands to its current borders.",
@@ -927,11 +1346,18 @@
       "id": "knm-073",
       "category": "politiek",
       "question_nl": "Wat is de rol van de commissaris van de Koning?",
+      "question_en": "What is the role of the commissaris van de Koning?",
       "options_nl": [
         "De commissaris is de gekozen leider van de provinciale staten",
         "De commissaris is de vertegenwoordiger van de Rijksoverheid in de provincie en voorzitter van het provinciebestuur",
         "De commissaris is een adviseur van de burgemeester in grote gemeenten",
         "De commissaris is de belastingontvanger van de provincie"
+      ],
+      "options_en": [
+        "The commissaris is the elected leader of the Provinciale Staten",
+        "The commissaris is the national government's representative in the province and chairs the provincial executive",
+        "The commissaris is an adviser to the burgemeester in large municipalities",
+        "The commissaris is the tax collector of the province"
       ],
       "correct_index": 1,
       "explanation_en": "The commissaris van de Koning (King's Commissioner) is appointed by the Crown and serves as the head of the provincial executive (Gedeputeerde Staten) and chairs the Provinciale Staten. They also represent the national government in the province.",
@@ -941,11 +1367,18 @@
       "id": "knm-074",
       "category": "werk",
       "question_nl": "Wat is een arbeidsvergunning (TWV) in Nederland?",
+      "question_en": "What is a work permit (TWV) in the Netherlands?",
       "options_nl": [
         "Een vergunning voor werkgevers om een bedrijf te starten",
         "Een toestemming die niet-EU-burgers soms nodig hebben om in Nederland te werken",
         "Een certificaat dat bewijst dat iemand een beroepsopleiding heeft afgerond",
         "Een vergunning voor studenten om naast hun studie te werken"
+      ],
+      "options_en": [
+        "A permit for employers to start a business",
+        "A permission that non-EU citizens sometimes need to work in the Netherlands",
+        "A certificate proving that someone has completed vocational training",
+        "A permit for students to work alongside their studies"
       ],
       "correct_index": 1,
       "explanation_en": "A TWV (Tewerkstellingsvergunning, work permit) is required for non-EU/EEA citizens to work in the Netherlands. The employer must apply for it. There are also combined permits (GVVA) that combine a residence and work permit.",
@@ -955,11 +1388,18 @@
       "id": "knm-075",
       "category": "onderwijs",
       "question_nl": "Wat is het eindexamen in het voortgezet onderwijs?",
+      "question_en": "What is the eindexamen in secondary education?",
       "options_nl": [
         "Een toets die leerlingen afleggen bij de overgang naar een hoger schooljaar",
         "Het afsluitende examen waarmee leerlingen hun middelbareschooldiploma behalen",
         "Een toets die bepaalt welk niveau van middelbaar onderwijs een kind volgt",
         "Een examen dat leerlingen afleggen voor toelating tot het HBO"
+      ],
+      "options_en": [
+        "A test pupils take when moving up to the next school year",
+        "The final examination with which pupils earn their secondary school diploma",
+        "A test that determines which level of secondary education a child follows",
+        "An examination pupils take for admission to HBO"
       ],
       "correct_index": 1,
       "explanation_en": "The eindexamen (final examination) is the national exam taken at the end of secondary education (VMBO, HAVO, or VWO). It consists of a school exam (schoolexamen) and a central exam (centraal examen). Passing the eindexamen awards the diploma for that level.",
@@ -969,11 +1409,18 @@
       "id": "knm-076",
       "category": "wonen",
       "question_nl": "Wat is de rioolheffing?",
+      "question_en": "What is the rioolheffing?",
       "options_nl": [
         "Een heffing die de provincie oplegt voor waterbeheer",
         "Een gemeentelijke heffing voor het beheer en onderhoud van het rioolstelsel",
         "Een boete voor het illegaal lozen van afvalwater",
         "Een bijdrage aan het waterschap voor dijkonderhoud"
+      ],
+      "options_en": [
+        "A levy imposed by the province for water management",
+        "A municipal levy for the management and maintenance of the sewer system",
+        "A fine for illegally discharging waste water",
+        "A contribution to the water board for dike maintenance"
       ],
       "correct_index": 1,
       "explanation_en": "Rioolheffing (sewer levy) is a municipal charge for maintaining and improving the sewer system. It is charged to property owners and sometimes to users (occupiers). The rate varies between municipalities.",
@@ -983,11 +1430,18 @@
       "id": "knm-077",
       "category": "gezondheid",
       "question_nl": "Is abortus legaal in Nederland?",
+      "question_en": "Is abortion legal in the Netherlands?",
       "options_nl": [
         "Nee, abortus is volledig verboden",
         "Ja, abortus is legaal tot 24 weken zwangerschap onder bepaalde voorwaarden",
         "Ja, maar alleen tot 12 weken zwangerschap",
         "Ja, abortus is zonder beperkingen toegestaan op elk moment"
+      ],
+      "options_en": [
+        "No, abortion is completely prohibited",
+        "Yes, abortion is legal up to 24 weeks of pregnancy under certain conditions",
+        "Yes, but only up to 12 weeks of pregnancy",
+        "Yes, abortion is permitted without restrictions at any time"
       ],
       "correct_index": 1,
       "explanation_en": "Abortion is legal in the Netherlands up to 24 weeks of pregnancy. The Netherlands has a Wet Afbreking Zwangerschap (abortion law) since 1984. A mandatory 5-day waiting period exists after the initial consultation. The procedure must be performed in a licensed clinic or hospital.",
@@ -997,7 +1451,14 @@
       "id": "knm-078",
       "category": "geschiedenis",
       "question_nl": "Wanneer vond de bezetting van Nederland door nazi-Duitsland plaats?",
+      "question_en": "When did the Nazi-German occupation of the Netherlands take place?",
       "options_nl": [
+        "1938-1942",
+        "1940-1945",
+        "1939-1944",
+        "1941-1945"
+      ],
+      "options_en": [
         "1938-1942",
         "1940-1945",
         "1939-1944",
@@ -1011,11 +1472,18 @@
       "id": "knm-079",
       "category": "politiek",
       "question_nl": "Welk grondrecht beschermt de vrijheid van meningsuiting in Nederland?",
+      "question_en": "Which fundamental right protects freedom of expression in the Netherlands?",
       "options_nl": [
         "Het recht op gelijke behandeling",
         "Het recht op vrije meningsuiting",
         "Het recht op privacy",
         "Het recht op onderwijs"
+      ],
+      "options_en": [
+        "The right to equal treatment",
+        "The right to freedom of expression",
+        "The right to privacy",
+        "The right to education"
       ],
       "correct_index": 1,
       "explanation_en": "Freedom of expression (vrijheid van meningsuiting) is a fundamental right protected by Article 7 of the Dutch Constitution (Grondwet). This right allows people to express opinions freely, though it has limits — hate speech and incitement to discrimination are prohibited by law.",
@@ -1025,11 +1493,18 @@
       "id": "knm-080",
       "category": "werk",
       "question_nl": "Hoelang betaalt de werkgever het loon door als een werknemer ziek is?",
+      "question_en": "How long does the employer continue to pay wages when an employee is ill?",
       "options_nl": [
         "Maximaal 3 maanden",
         "Tot maximaal 2 jaar (104 weken)",
         "Maximaal 1 jaar",
         "Onbeperkt, zolang de werknemer ziek is"
+      ],
+      "options_en": [
+        "Up to 3 months",
+        "Up to a maximum of 2 years (104 weeks)",
+        "Up to 1 year",
+        "Without limit, for as long as the employee is ill"
       ],
       "correct_index": 1,
       "explanation_en": "In the Netherlands, employers are legally required to continue paying at least 70% of an employee's salary for up to 2 years (104 weeks) during illness (ziekteverlof). During this period, both employer and employee must work toward reintegration. After 2 years, WIA (disability benefit) may apply.",
@@ -1039,11 +1514,18 @@
       "id": "knm-081",
       "category": "onderwijs",
       "question_nl": "Wat is het verschil tussen openbaar onderwijs en bijzonder onderwijs in Nederland?",
+      "question_en": "What is the difference between public and bijzonder education in the Netherlands?",
       "options_nl": [
         "Openbaar onderwijs is gratis; bijzonder onderwijs is betaald",
         "Openbaar onderwijs is toegankelijk voor iedereen en neutraal; bijzonder onderwijs is gebaseerd op religieuze of levensbeschouwelijke grondslag",
         "Openbaar onderwijs wordt door de gemeente georganiseerd; bijzonder onderwijs door de provincie",
         "Openbaar onderwijs is alleen voor kinderen met een Nederlandse nationaliteit"
+      ],
+      "options_en": [
+        "Public education is free; bijzonder education is paid",
+        "Public education is open to everyone and neutral; bijzonder education is based on a religious or philosophical foundation",
+        "Public education is organised by the gemeente; bijzonder education by the province",
+        "Public education is only for children with Dutch nationality"
       ],
       "correct_index": 1,
       "explanation_en": "Openbaar onderwijs (public schools) is neutral and open to all children. Bijzonder onderwijs (special/religious schools) is based on a specific religious or philosophical foundation (e.g., Catholic, Protestant, Islamic). Both types receive equal government funding under Article 23 of the Constitution.",
@@ -1053,11 +1535,18 @@
       "id": "knm-082",
       "category": "wonen",
       "question_nl": "Wat is het verschil tussen een koopwoning en een huurwoning?",
+      "question_en": "What is the difference between a koopwoning and a huurwoning?",
       "options_nl": [
         "Een koopwoning is duurder om te onderhouden dan een huurwoning",
         "Bij een koopwoning bent u eigenaar; bij een huurwoning betaalt u maandelijks huur aan de verhuurder",
         "Een koopwoning heeft altijd een energielabel A; huurwoningen hebben dat niet",
         "Een koopwoning mag u niet verbouwen zonder toestemming van de gemeente"
+      ],
+      "options_en": [
+        "A koopwoning is more expensive to maintain than a huurwoning",
+        "With a koopwoning you are the owner; with a huurwoning you pay monthly rent to the landlord",
+        "A koopwoning always has an energy label A; rental homes do not",
+        "You may not renovate a koopwoning without permission from the gemeente"
       ],
       "correct_index": 1,
       "explanation_en": "With a koopwoning (owner-occupied home) you are the legal owner and responsible for all maintenance and taxes (such as OZB). With a huurwoning (rental home) you pay monthly rent to a landlord (verhuurder) and have specific tenant rights (huurdersrechten).",
@@ -1067,11 +1556,18 @@
       "id": "knm-083",
       "category": "gezondheid",
       "question_nl": "Wat is de apotheek in Nederland?",
+      "question_en": "What is the apotheek in the Netherlands?",
       "options_nl": [
         "Een winkel waar u vrij verkrijgbare geneesmiddelen en receptplichtige medicijnen kunt kopen of ophalen",
         "Een medisch centrum waar u zonder afspraak een arts kunt bezoeken",
         "Een ziekenhuisafdeling voor ernstige patiënten",
         "Een organisatie die medisch onderzoek uitvoert"
+      ],
+      "options_en": [
+        "A shop where you can buy or collect over-the-counter and prescription medicines",
+        "A medical centre where you can see a doctor without an appointment",
+        "A hospital department for seriously ill patients",
+        "An organisation that carries out medical research"
       ],
       "correct_index": 0,
       "explanation_en": "An apotheek (pharmacy) in the Netherlands dispenses prescription medicines (on a doktersrecept) and sells over-the-counter medications. Pharmacists (apothekers) are qualified healthcare professionals who can advise on medication use and interactions.",
@@ -1081,11 +1577,18 @@
       "id": "knm-084",
       "category": "geschiedenis",
       "question_nl": "Wie was Anne Frank?",
+      "question_en": "Who was Anne Frank?",
       "options_nl": [
         "Een Nederlandse schrijfster die beroemd werd door haar romans over de Tweede Wereldoorlog",
         "Een joods meisje dat zich tijdens de bezetting schuilhield in Amsterdam en een dagboek bijhield",
         "Een verzetsstrijdster die hielp bij de bevrijding van Nederland in 1945",
         "Een joodse vluchtelinge die naar Amerika vluchtte tijdens de Tweede Wereldoorlog"
+      ],
+      "options_en": [
+        "A Dutch writer who became famous for her novels about the Second World War",
+        "A Jewish girl who hid in Amsterdam during the occupation and kept a diary",
+        "A resistance fighter who helped in the liberation of the Netherlands in 1945",
+        "A Jewish refugee who fled to America during the Second World War"
       ],
       "correct_index": 1,
       "explanation_en": "Anne Frank was a Jewish girl who hid with her family in a secret annex in Amsterdam from 1942 to 1944. Her diary (Het Achterhuis) became world-famous. She was discovered, deported, and died in Bergen-Belsen concentration camp in 1945.",
@@ -1095,11 +1598,18 @@
       "id": "knm-085",
       "category": "politiek",
       "question_nl": "Wat betekent gelijke behandeling als grondrecht?",
+      "question_en": "What does equal treatment as a fundamental right mean?",
       "options_nl": [
         "Alle mensen verdienen hetzelfde loon",
         "Mensen mogen niet worden gediscrimineerd op grond van ras, geslacht, religie of andere kenmerken",
         "Alle kinderen hebben recht op hetzelfde onderwijs",
         "Alle burgers betalen hetzelfde belastingpercentage"
+      ],
+      "options_en": [
+        "All people earn the same wage",
+        "People may not be discriminated against on grounds of race, sex, religion, or other characteristics",
+        "All children have the right to the same education",
+        "All citizens pay the same tax rate"
       ],
       "correct_index": 1,
       "explanation_en": "The right to equal treatment (gelijke behandeling) is enshrined in Article 1 of the Dutch Constitution. It prohibits discrimination based on religion, belief, political opinion, race, sex, or any other grounds. The Commissie Gelijke Behandeling enforces this right.",
@@ -1109,11 +1619,18 @@
       "id": "knm-086",
       "category": "werk",
       "question_nl": "Wat is de AOW?",
+      "question_en": "What is the AOW?",
       "options_nl": [
         "Een werkloosheidsverzekering voor zelfstandigen",
         "De staatspensioensuitkering voor mensen die de pensioenleeftijd hebben bereikt",
         "Een arbeidsongeschiktheidsuitkering voor werknemers",
         "Een regeling voor vervroegde pensionering"
+      ],
+      "options_en": [
+        "An unemployment insurance for self-employed people",
+        "The state pension payment for people who have reached retirement age",
+        "A disability benefit for employees",
+        "A scheme for early retirement"
       ],
       "correct_index": 1,
       "explanation_en": "AOW (Algemene Ouderdomswet) is the Dutch state pension, paid by the SVB to everyone who has lived or worked in the Netherlands and reached the AOW age (currently 67 years). The amount depends on how many years you have been insured in the Netherlands.",
@@ -1123,11 +1640,18 @@
       "id": "knm-087",
       "category": "onderwijs",
       "question_nl": "Wat is het Erasmusprogramma?",
+      "question_en": "What is the Erasmus programme?",
       "options_nl": [
         "Een Nederlands programma voor topstudenten aan de TU Delft",
         "Een Europees uitwisselingsprogramma waarmee studenten in het buitenland kunnen studeren",
         "Een beurs voor Nederlandse studenten die willen studeren in de VS",
         "Een programma voor inburgeraars om Nederlands te leren"
+      ],
+      "options_en": [
+        "A Dutch programme for top students at TU Delft",
+        "A European exchange programme that allows students to study abroad",
+        "A grant for Dutch students who want to study in the US",
+        "A programme for newcomers to learn Dutch"
       ],
       "correct_index": 1,
       "explanation_en": "Erasmus+ is an EU exchange program that allows students to study or do an internship in another European country for several months. Dutch students can receive a grant and academic credits from their home institution. It is named after the Dutch philosopher Erasmus of Rotterdam.",
@@ -1137,11 +1661,18 @@
       "id": "knm-088",
       "category": "wonen",
       "question_nl": "Wie kan een huurder benaderen als er een conflict is met de verhuurder over de huurprijs?",
+      "question_en": "Who can a tenant contact if there is a dispute with the landlord about the rent?",
       "options_nl": [
         "De Belastingdienst",
         "De Huurcommissie",
         "De gemeenteraad",
         "Het UWV"
+      ],
+      "options_en": [
+        "The Belastingdienst",
+        "The Huurcommissie",
+        "The gemeenteraad",
+        "The UWV"
       ],
       "correct_index": 1,
       "explanation_en": "The Huurcommissie is an independent government body that resolves disputes between tenants and landlords about rent levels, service costs, and maintenance in the social rental sector. Tenants can request a rent assessment if they believe their rent is too high.",
@@ -1151,11 +1682,18 @@
       "id": "knm-089",
       "category": "gezondheid",
       "question_nl": "Wanneer belt u de huisartsenpost in plaats van de huisarts?",
+      "question_en": "When do you call the huisartsenpost instead of the huisarts?",
       "options_nl": [
         "Als u een chronische ziekte heeft en medicijnen nodig heeft",
         "Als u buiten reguliere openingstijden (avond, nacht, weekend) dringende medische hulp nodig heeft",
         "Als u een specialist wilt spreken zonder verwijzing",
         "Als u voor een operatie wilt worden opgenomen in het ziekenhuis"
+      ],
+      "options_en": [
+        "If you have a chronic illness and need medication",
+        "If you need urgent medical help outside regular opening hours (evening, night, weekend)",
+        "If you want to speak to a specialist without a referral",
+        "If you want to be admitted to hospital for an operation"
       ],
       "correct_index": 1,
       "explanation_en": "The huisartsenpost (out-of-hours GP service) is available for urgent medical problems that cannot wait until the next working day — in the evenings, nights, and weekends. It is not for emergencies (dial 112) and not for routine consultations.",
@@ -1165,11 +1703,18 @@
       "id": "knm-090",
       "category": "geschiedenis",
       "question_nl": "Wanneer werd de euro ingevoerd in Nederland?",
+      "question_en": "When was the euro introduced in the Netherlands as cash?",
       "options_nl": [
         "1 januari 1999 als contant geld",
         "1 januari 2002 als contant geld",
         "1 januari 2004",
         "1 mei 2004"
+      ],
+      "options_en": [
+        "1 January 1999 as cash",
+        "1 January 2002 as cash",
+        "1 January 2004",
+        "1 May 2004"
       ],
       "correct_index": 1,
       "explanation_en": "Euro banknotes and coins were introduced in the Netherlands on 1 January 2002, replacing the Dutch guilder (gulden). The euro had already been used for electronic payments since 1 January 1999. The Netherlands was one of the 12 founding eurozone members.",
@@ -1179,11 +1724,18 @@
       "id": "knm-091",
       "category": "politiek",
       "question_nl": "Is Nederland lid van de Europese Unie?",
+      "question_en": "Is the Netherlands a member of the European Union?",
       "options_nl": [
         "Nee, Nederland heeft zich nooit bij de EU aangesloten",
         "Ja, Nederland is een van de oprichters van de EU en gebruikt de euro",
         "Ja, maar Nederland gebruikt de gulden, niet de euro",
         "Nee, Nederland verliet de EU na een referendum in 2016"
+      ],
+      "options_en": [
+        "No, the Netherlands has never joined the EU",
+        "Yes, the Netherlands is one of the founders of the EU and uses the euro",
+        "Yes, but the Netherlands uses the guilder, not the euro",
+        "No, the Netherlands left the EU after a referendum in 2016"
       ],
       "correct_index": 1,
       "explanation_en": "Yes, the Netherlands is a founding member of what is now the European Union and uses the euro. The EU was founded through the Maastricht Treaty in 1992, building on earlier institutions like the EEG (1957). The Netherlands is one of the strongest supporters of European integration.",
@@ -1193,11 +1745,18 @@
       "id": "knm-092",
       "category": "werk",
       "question_nl": "Wat is zwangerschapsverlof in Nederland?",
+      "question_en": "What is maternity leave in the Netherlands?",
       "options_nl": [
         "4 weken verlof vóór de bevalling",
         "Minstens 16 weken betaald verlof rondom de bevalling, inclusief 4-6 weken voor de bevalldatum",
         "3 maanden onbetaald verlof na de bevalling",
         "6 weken verlof, uitsluitend na de bevalling"
+      ],
+      "options_en": [
+        "4 weeks of leave before the birth",
+        "At least 16 weeks of paid leave around the birth, including 4-6 weeks before the due date",
+        "3 months of unpaid leave after the birth",
+        "6 weeks of leave, exclusively after the birth"
       ],
       "correct_index": 1,
       "explanation_en": "Zwangerschapsverlof (maternity leave) in the Netherlands lasts at least 16 weeks: 4-6 weeks before the due date and at least 10 weeks after birth. During this period, the employee receives at least 100% of their daily wage (up to the maximum daily wage) through the UWV.",
@@ -1207,11 +1766,18 @@
       "id": "knm-093",
       "category": "onderwijs",
       "question_nl": "Hoe worden schoolvakanties in Nederland geregeld?",
+      "question_en": "How are school holidays arranged in the Netherlands?",
       "options_nl": [
         "Alle scholen in Nederland hebben op precies dezelfde data vakantie",
         "Schoolvakanties zijn verdeeld in drie regio's om files en drukte te spreiden",
         "Iedere school bepaalt zelf wanneer de vakantie is",
         "Vakantiedagen worden vastgesteld door de gemeente"
+      ],
+      "options_en": [
+        "All schools in the Netherlands have holidays on exactly the same dates",
+        "School holidays are divided across three regions to spread traffic and crowding",
+        "Each school decides for itself when the holiday is",
+        "Holiday dates are determined by the gemeente"
       ],
       "correct_index": 1,
       "explanation_en": "School holidays in the Netherlands are divided into three regions (Noord, Midden, and Zuid) with staggered dates for the spring, autumn, and May holidays. This helps spread traffic and tourist pressure. The summer and Christmas holidays are the same nationwide.",
@@ -1221,11 +1787,18 @@
       "id": "knm-094",
       "category": "wonen",
       "question_nl": "Wat is een particuliere verhuurder?",
+      "question_en": "What is a particuliere verhuurder?",
       "options_nl": [
         "Een woningcorporatie die sociale huurwoningen verhuurt",
         "Een privépersoon of bedrijf die een woning verhuurt op de vrije markt",
         "Een gemeentelijke instelling voor noodopvang",
         "Een non-profitorganisatie die woningen beheert voor studenten"
+      ],
+      "options_en": [
+        "A woningcorporatie that rents out social housing",
+        "A private individual or company that rents out a home on the free market",
+        "A municipal institution for emergency shelter",
+        "A non-profit organisation that manages homes for students"
       ],
       "correct_index": 1,
       "explanation_en": "A particuliere verhuurder is a private landlord — an individual or company that rents out properties on the free market (vrije sector). Unlike woningcorporaties, private landlords are for-profit and set their own rents within the legal framework.",
@@ -1235,11 +1808,18 @@
       "id": "knm-095",
       "category": "gezondheid",
       "question_nl": "Wat is de zorgtoeslag?",
+      "question_en": "What is the zorgtoeslag?",
       "options_nl": [
         "Een extra vergoeding die zorgverzekeraars betalen als u veel zorg gebruikt",
         "Een financiële tegemoetkoming van de overheid voor mensen met een laag inkomen om de zorgpremie te betalen",
         "Een korting op de eigen risico voor chronisch zieken",
         "Een uitkering voor mensen die mantelzorg verlenen"
+      ],
+      "options_en": [
+        "An extra payment from insurers when you use a lot of care",
+        "A financial allowance from the government for low-income people to pay the health insurance premium",
+        "A discount on the eigen risico for the chronically ill",
+        "A benefit for people who provide informal care"
       ],
       "correct_index": 1,
       "explanation_en": "Zorgtoeslag is a government allowance administered by the Belastingdienst that helps people with lower incomes pay for their mandatory health insurance premium (zorgpremie). The amount depends on income and household composition.",
@@ -1249,11 +1829,18 @@
       "id": "knm-096",
       "category": "geschiedenis",
       "question_nl": "Wat is het Schengenakkoord?",
+      "question_en": "What is the Schengen Agreement?",
       "options_nl": [
         "Een handelsverdrag tussen Nederland en Duitsland",
         "Een Europees verdrag waarbij grenscontroles tussen deelnemende landen zijn afgeschaft",
         "Een militair defensieverdrag van NAVO-landen",
         "Een afspraak over de invoering van de euro in Europa"
+      ],
+      "options_en": [
+        "A trade treaty between the Netherlands and Germany",
+        "A European treaty that abolished border controls between participating countries",
+        "A military defence treaty of NATO countries",
+        "An agreement on the introduction of the euro in Europe"
       ],
       "correct_index": 1,
       "explanation_en": "The Schengen Agreement (1985, implemented 1995) abolished border controls between participating European countries, allowing free movement of people. The Netherlands is a founding Schengen member. Non-EU citizens need a Schengen visa to travel within the zone.",
@@ -1263,11 +1850,18 @@
       "id": "knm-097",
       "category": "politiek",
       "question_nl": "Wat doet een wethouder in de gemeente?",
+      "question_en": "What does a wethouder do in the gemeente?",
       "options_nl": [
         "De wethouder is de voorzitter van de gemeenteraad",
         "De wethouder is een lid van het college van B&W en is verantwoordelijk voor specifieke beleidsterreinen",
         "De wethouder controleert de gemeente namens de provincie",
         "De wethouder spreekt recht in gemeentelijke geschillen"
+      ],
+      "options_en": [
+        "The wethouder chairs the gemeenteraad",
+        "The wethouder is a member of the college van B&W and is responsible for specific policy areas",
+        "The wethouder oversees the gemeente on behalf of the province",
+        "The wethouder administers justice in municipal disputes"
       ],
       "correct_index": 1,
       "explanation_en": "A wethouder (alderman/selectman) is a member of the college van burgemeester en wethouders (municipal executive) and holds specific policy portfolios such as housing, education, or finance. Wethouders are appointed by the gemeenteraad based on coalition negotiations.",
@@ -1277,11 +1871,18 @@
       "id": "knm-098",
       "category": "werk",
       "question_nl": "Wat is discriminatie op de werkvloer en hoe wordt dit aangepakt?",
+      "question_en": "What is workplace discrimination and how is it addressed?",
       "options_nl": [
         "Discriminatie is toegestaan als de werkgever goede redenen heeft",
         "Discriminatie op basis van ras, geslacht, leeftijd of religie is verboden; werknemers kunnen dit melden bij het College voor de Rechten van de Mens",
         "Alleen seksediscriminatie is verboden; andere vormen zijn niet wettelijk geregeld",
         "Discriminatie is alleen verboden bij grote bedrijven met meer dan 50 werknemers"
+      ],
+      "options_en": [
+        "Discrimination is permitted if the employer has good reasons",
+        "Discrimination based on race, sex, age, or religion is prohibited; employees can report it to the College voor de Rechten van de Mens",
+        "Only sex discrimination is prohibited; other forms are not regulated by law",
+        "Discrimination is only prohibited at large companies with more than 50 employees"
       ],
       "correct_index": 1,
       "explanation_en": "Discrimination at work based on race, religion, gender, age, disability, or other grounds is illegal in the Netherlands under the Algemene wet gelijke behandeling. Employees can report discrimination to the College voor de Rechten van de Mens (Institute for Human Rights) or file a complaint with the labor court.",
@@ -1291,11 +1892,18 @@
       "id": "knm-099",
       "category": "onderwijs",
       "question_nl": "Wat is DUO?",
+      "question_en": "What is DUO?",
       "options_nl": [
         "Een onderwijsvakbond voor leraren",
         "De Dienst Uitvoering Onderwijs, die studiefinanciering en inburgeringszaken regelt",
         "Een particuliere onderwijsinstelling voor volwasseneneducatie",
         "Een organisatie die eindexamens opstelt en afneemt"
+      ],
+      "options_en": [
+        "An education trade union for teachers",
+        "The Dienst Uitvoering Onderwijs, which administers student finance and civic integration matters",
+        "A private educational institution for adult education",
+        "An organisation that sets and administers final examinations"
       ],
       "correct_index": 1,
       "explanation_en": "DUO (Dienst Uitvoering Onderwijs) is the Dutch government agency that executes education policy. It manages student finance (studiefinanciering), OV-kaart (student travel card), diploma recognition, and also oversees the inburgeringsexamen (civic integration exam).",
@@ -1305,11 +1913,18 @@
       "id": "knm-100",
       "category": "wonen",
       "question_nl": "Wat is een tussenpersoon of makelaar bij het huren van een woning?",
+      "question_en": "What is a tussenpersoon or makelaar when renting a home?",
       "options_nl": [
         "Een ambtenaar van de gemeente die huurcontracten goedkeurt",
         "Een bemiddelaar die huurder en verhuurder bij elkaar brengt, soms tegen betaling",
         "Een medewerker van de woningcorporatie die woningen toewijst",
         "Een inspecteur die de staat van een woning beoordeelt voor verhuur"
+      ],
+      "options_en": [
+        "A municipal official who approves rental contracts",
+        "An intermediary who brings tenants and landlords together, sometimes for a fee",
+        "A woningcorporatie employee who allocates homes",
+        "An inspector who assesses the condition of a home before rental"
       ],
       "correct_index": 1,
       "explanation_en": "A makelaar or tussenpersoon is a real estate agent or intermediary who helps match tenants with rental properties. Since 2023, landlords may no longer charge tenants agency fees (courtage) in most situations — the party who hires the agent pays the fee.",
