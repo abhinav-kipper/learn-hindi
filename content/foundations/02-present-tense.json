@@ -76,6 +76,37 @@
     "Hindi has no 'do/does' helper for questions — you just change intonation or add a question word. 'Tum jaate ho?' with rising tone = 'Do you go?'",
     "The present tense is used for habits, routines, and general truths — just like English simple present"
   ],
-  "skill_breakdown": [],
+  "skill_breakdown": [
+    {
+      "skill": "Habitual present (-ta hai)",
+      "explanation": "Used for things you do regularly or always do. Verb stem + '-ta'/'-ti' (agreeing with subject gender) + auxiliary (hoon/hai/hain). 'main jaati hoon' = 'I go' (regularly).",
+      "more_examples": [
+        { "hindi": "main roz chai peeti hoon", "english": "I drink chai every day" },
+        { "hindi": "wo Hindi bolta hai", "english": "he speaks Hindi" },
+        { "hindi": "hum subah jaldi uthte hain", "english": "we wake up early in the morning" },
+        { "hindi": "tum kya khaate ho?", "english": "what do you (usually) eat?" }
+      ]
+    },
+    {
+      "skill": "Present continuous (-raha hai)",
+      "explanation": "Used for ongoing actions happening right now. Verb stem + 'raha'/'rahi'/'rahe' (gender + number) + auxiliary. 'main jaa rahi hoon' = 'I am going' (right now).",
+      "more_examples": [
+        { "hindi": "main abhi khaana khaa rahi hoon", "english": "I'm eating food right now" },
+        { "hindi": "wo phone par baat kar raha hai", "english": "he's talking on the phone" },
+        { "hindi": "ham TV dekh rahe hain", "english": "we are watching TV" },
+        { "hindi": "kya tum so rahi ho?", "english": "are you sleeping?" }
+      ]
+    },
+    {
+      "skill": "Copula (hai/hain) with adjectives",
+      "explanation": "Hindi uses 'hai' (singular) and 'hain' (plural/polite) as 'is/are'. The adjective placed BEFORE the noun must agree with gender. 'yeh ladki accchi hai' (this girl is good) vs 'yeh ladka accha hai' (this boy is good).",
+      "more_examples": [
+        { "hindi": "yeh khaana bahut tasty hai", "english": "this food is very tasty" },
+        { "hindi": "wo ladki bahut samajhdaar hai", "english": "that girl is very smart" },
+        { "hindi": "mere dost bahut acche hain", "english": "my friends are very good" },
+        { "hindi": "aap kaise hain?", "english": "how are you (polite)?" }
+      ]
+    }
+  ],
   "practice_prompt": "Practice making present tense sentences. Tell me about your daily routine, ask me what I do, or describe someone's habits. I'll help you nail the -ta/-ti/-te patterns."
 }
