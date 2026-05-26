@@ -43,6 +43,8 @@ export function ChainaProvider({ children }: { children: ReactNode }) {
   const play = useCallback((key: string) => {
     const cfg = MOMENTS[key]
     if (!cfg) return
+    // Snapshot/test escape hatch — set in e2e seeds.
+    if (typeof window !== 'undefined' && localStorage.getItem('chaina-disabled') === '1') return
     clearTimers()
     const { line, idx } = pickLine(key)
     setActive({ key, line, idx, phase: 'enter' })

@@ -18,6 +18,10 @@ import {
   SHADOW,
 } from '@/components/design'
 
+const W = '#fff' // @design-allow: white literal
+const BUTTER_MOTIF = '#d4a44a' // @design-allow: butter motif palette accent
+const LAV_MOTIF = '#7a5da8' // @design-allow: lav motif palette accent
+
 const TENSES: Tense[] = ['present', 'past', 'future']
 const TENSE_LABELS: Record<Tense, string> = {
   present: 'present',
@@ -34,8 +38,8 @@ const TENSE_BG: Record<Tense, string> = {
 const VERB_PALETTES = [
   { bg: COLORS.peach2, motifBg: COLORS.orange },
   { bg: COLORS.mint2, motifBg: COLORS.teal },
-  { bg: COLORS.butter, motifBg: '#d4a44a' },
-  { bg: COLORS.lav2, motifBg: '#7a5da8' },
+  { bg: COLORS.butter, motifBg: BUTTER_MOTIF },
+  { bg: COLORS.lav2, motifBg: LAV_MOTIF },
   { bg: COLORS.peach, motifBg: COLORS.orange },
 ]
 
@@ -150,7 +154,7 @@ export default function ConjugationDrillPage() {
                 width: 40,
                 height: 40,
                 borderRadius: 99,
-                background: '#fff',
+                background: W,
                 border: BORDER.sticker,
                 boxShadow: SHADOW.chip,
                 display: 'flex',
@@ -307,7 +311,7 @@ export default function ConjugationDrillPage() {
                           justifyContent: 'center',
                           borderRight: BORDER.sticker,
                           flexShrink: 0,
-                          color: '#fff',
+                          color: W,
                           fontFamily: FONTS.display,
                           fontWeight: 800,
                           fontSize: 22,
@@ -464,7 +468,7 @@ export default function ConjugationDrillPage() {
               padding: 16,
               borderRadius: 22,
               background: COLORS.orange,
-              color: '#fff',
+              color: W,
               border: BORDER.sticker,
               boxShadow: SHADOW.sticker,
               fontFamily: FONTS.display,
@@ -486,7 +490,7 @@ export default function ConjugationDrillPage() {
               width: '100%',
               padding: 14,
               borderRadius: 22,
-              background: '#fff',
+              background: W,
               color: COLORS.ink,
               border: BORDER.sticker,
               boxShadow: SHADOW.chip,
@@ -554,7 +558,7 @@ export default function ConjugationDrillPage() {
               width: 40,
               height: 40,
               borderRadius: 99,
-              background: '#fff',
+              background: W,
               border: BORDER.sticker,
               boxShadow: SHADOW.chip,
               display: 'flex',
@@ -623,7 +627,7 @@ export default function ConjugationDrillPage() {
               height: 8,
               flex: i === cardIdx ? 2 : 1,
               borderRadius: 99,
-              background: i < cardIdx ? COLORS.green : i === cardIdx ? COLORS.orange : '#fff',
+              background: i < cardIdx ? COLORS.green : i === cardIdx ? COLORS.orange : W,
               border: BORDER.thin,
               transition: 'all 0.3s',
             }}
@@ -649,7 +653,7 @@ export default function ConjugationDrillPage() {
             transition={{ duration: 0.25 }}
           >
             {/* PROMPT STICKER */}
-            <Sticker color="#fff" radius={26} padding={22}>
+            <Sticker color={W} radius={26} padding={22}>
               <div
                 style={{
                   display: 'flex',
@@ -662,7 +666,7 @@ export default function ConjugationDrillPage() {
                     fontFamily: FONTS.tag,
                     fontSize: 10,
                     background: COLORS.orange,
-                    color: '#fff',
+                    color: W,
                     padding: '3px 9px',
                     borderRadius: 99,
                     letterSpacing: 0.6,
@@ -785,7 +789,7 @@ export default function ConjugationDrillPage() {
                           height: 22,
                           borderRadius: 99,
                           background: COLORS.green,
-                          color: '#fff',
+                          color: W,
                           display: 'inline-flex',
                           alignItems: 'center',
                           justifyContent: 'center',
@@ -803,7 +807,7 @@ export default function ConjugationDrillPage() {
                           height: 22,
                           borderRadius: 99,
                           background: COLORS.red,
-                          color: '#fff',
+                          color: W,
                           display: 'inline-flex',
                           alignItems: 'center',
                           justifyContent: 'center',
@@ -832,7 +836,7 @@ export default function ConjugationDrillPage() {
                   padding: 16,
                   borderRadius: 22,
                   background: COLORS.green,
-                  color: '#fff',
+                  color: W,
                   border: BORDER.sticker,
                   boxShadow: SHADOW.sticker,
                   fontFamily: FONTS.display,

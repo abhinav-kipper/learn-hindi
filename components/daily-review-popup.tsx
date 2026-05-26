@@ -10,6 +10,7 @@ import { getProgress, updateStreak } from '@/lib/progress'
 import { playSound } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
 import { Sticker, Tag, Cutting, COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
+const W = '#fff' // @design-allow: white literal
 
 const REVIEW_CARD_COUNT = 5
 
@@ -278,7 +279,7 @@ function PromptView({
             padding: 14,
             borderRadius: 22,
             background: COLORS.orange,
-            color: '#fff',
+            color: W,
             border: BORDER.sticker,
             boxShadow: SHADOW.sticker,
             fontFamily: FONTS.display,
@@ -348,7 +349,7 @@ function ReviewView({
           marginBottom: 12,
         }}
       >
-        <Tag bg={COLORS.orange} color="#fff" border={COLORS.ink}>
+        <Tag bg={COLORS.orange} color={W} border={COLORS.ink}>
           review · {currentIndex + 1} / {phrases.length}
         </Tag>
       </div>
@@ -360,7 +361,7 @@ function ReviewView({
             style={{
               flex: i === currentIndex ? 2 : 1,
               height: 6,
-              background: i < currentIndex ? COLORS.green : i === currentIndex ? COLORS.orange : '#fff',
+              background: i < currentIndex ? COLORS.green : i === currentIndex ? COLORS.orange : W,
               borderRadius: 99,
               border: BORDER.thin,
               transition: 'all 0.3s',
@@ -379,7 +380,7 @@ function ReviewView({
           exit="exit"
           transition={{ type: 'spring', stiffness: 300, damping: 28 }}
         >
-          <Sticker color="#fff" radius={20} padding={18} onClick={() => !revealed && onReveal()}>
+          <Sticker color={W} radius={20} padding={18} onClick={() => !revealed && onReveal()}>
             <div
               style={{
                 fontFamily: FONTS.display,
@@ -473,7 +474,7 @@ function ReviewView({
                   flex: 1,
                   padding: 12,
                   borderRadius: 18,
-                  background: '#fff',
+                  background: W,
                   color: COLORS.ink,
                   border: BORDER.sticker,
                   boxShadow: SHADOW.chip,
@@ -494,7 +495,7 @@ function ReviewView({
                   padding: 12,
                   borderRadius: 18,
                   background: COLORS.green,
-                  color: '#fff',
+                  color: W,
                   border: BORDER.sticker,
                   boxShadow: SHADOW.chip,
                   fontFamily: FONTS.display,

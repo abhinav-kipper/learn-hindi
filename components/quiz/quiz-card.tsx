@@ -6,6 +6,7 @@ import { speak } from '@/lib/speech'
 import { useLanguage } from '@/lib/language-context'
 import { playSound } from '@/lib/sounds'
 import { Sticker, Tag, COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
+const W = '#fff' // @design-allow: white literal
 
 interface QuizCardProps {
   question: QuizQuestion
@@ -53,14 +54,14 @@ export function QuizCard({
       style={{ width: '100%', maxWidth: 480, margin: '0 auto' }}
     >
       {/* Question sticker */}
-      <Sticker color="#fff" radius={26} padding={22}>
+      <Sticker color={W} radius={26} padding={22}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <span
             style={{
               fontFamily: FONTS.tag,
               fontSize: 10,
               background: COLORS.orange,
-              color: '#fff',
+              color: W,
               padding: '3px 9px',
               borderRadius: 99,
               letterSpacing: 0.6,
@@ -230,7 +231,7 @@ export function QuizCard({
                       height: 26,
                       borderRadius: 99,
                       background: COLORS.green,
-                      color: '#fff',
+                      color: W,
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -249,7 +250,7 @@ export function QuizCard({
                       height: 26,
                       borderRadius: 99,
                       background: COLORS.red,
-                      color: '#fff',
+                      color: W,
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',

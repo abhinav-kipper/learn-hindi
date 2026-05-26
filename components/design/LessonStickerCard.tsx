@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { Sticker } from './Sticker'
 import { MotifIcon } from './MotifIcon'
 import { COLORS, FONTS, BORDER, deriveLessonStyle, paletteToBg, paletteToMotifBg } from './tokens'
+const W = '#fff' // @design-allow: white literal
 import type { Lesson } from '@/types/lesson'
 import { isLessonComplete, getLessonCompletedAt } from '@/lib/progress'
 import { getLessonPercent } from '@/lib/phrase-progress'
@@ -92,12 +93,12 @@ export function LessonStickerCard({ lesson, index, routeBase = 'lessons', locked
                     fontFamily: FONTS.tag,
                     fontSize: 10,
                     background: COLORS.green,
-                    color: '#fff',
+                    color: W,
                     padding: '2px 8px',
                     borderRadius: 99,
                     letterSpacing: 0.4,
                     textTransform: 'uppercase',
-                    border: `1.5px solid ${COLORS.ink}`,
+                    border: BORDER.thin,
                   }}
                 >
                   {completedAt ? `✓ done · ${daysAgo(completedAt)}d` : '✓ done'}
@@ -141,7 +142,7 @@ export function LessonStickerCard({ lesson, index, routeBase = 'lessons', locked
                     fontWeight: 800,
                     fontSize: 10,
                     color: COLORS.ink,
-                    background: '#fff',
+                    background: W,
                     border: BORDER.thin,
                     padding: '2px 7px',
                     borderRadius: 99,
@@ -158,7 +159,7 @@ export function LessonStickerCard({ lesson, index, routeBase = 'lessons', locked
                   style={{
                     flex: 1,
                     height: 9,
-                    background: '#fff',
+                    background: W,
                     borderRadius: 99,
                     border: BORDER.thin,
                     position: 'relative',

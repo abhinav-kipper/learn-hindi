@@ -6,6 +6,7 @@ import { requestNotificationPermission, setNotificationPreference } from '@/lib/
 import { useLanguage } from '@/lib/language-context'
 import { playSound } from '@/lib/sounds'
 import { Tag, COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
+const W = '#fff' // @design-allow: white literal
 
 interface NotificationPromptProps {
   show: boolean
@@ -62,7 +63,7 @@ export function NotificationPrompt({ show, onDismiss }: NotificationPromptProps)
                 style={{
                   width: 40,
                   height: 40,
-                  background: '#fff',
+                  background: W,
                   border: BORDER.thin,
                   borderRadius: 12,
                   display: 'flex',
@@ -109,7 +110,7 @@ export function NotificationPrompt({ show, onDismiss }: NotificationPromptProps)
                   flex: 1,
                   padding: 10,
                   borderRadius: 99,
-                  background: '#fff',
+                  background: W,
                   color: COLORS.ink,
                   border: BORDER.sticker,
                   boxShadow: SHADOW.chip,
@@ -131,7 +132,7 @@ export function NotificationPrompt({ show, onDismiss }: NotificationPromptProps)
                   padding: 10,
                   borderRadius: 99,
                   background: COLORS.orange,
-                  color: '#fff',
+                  color: W,
                   border: BORDER.sticker,
                   boxShadow: SHADOW.chip,
                   fontFamily: FONTS.display,

@@ -37,12 +37,15 @@ import {
   SHADOW,
   type MotifKind,
 } from '@/components/design'
+const W = '#fff' // @design-allow: white literal
+const BUTTER_MOTIF = '#d4a44a' // @design-allow: butter motif palette accent
+const LAV_MOTIF = '#7a5da8' // @design-allow: lav motif palette accent
 
 const CATEGORY_PALETTE_BY_INDEX: Array<{ bg: string; motifBg: string; motif: MotifKind }> = [
   { bg: COLORS.peach2, motifBg: COLORS.orange, motif: 'marigold' },
   { bg: COLORS.mint2, motifBg: COLORS.teal, motif: 'chai' },
-  { bg: COLORS.butter, motifBg: '#d4a44a', motif: 'auto' },
-  { bg: COLORS.lav2, motifBg: '#7a5da8', motif: 'film' },
+  { bg: COLORS.butter, motifBg: BUTTER_MOTIF, motif: 'auto' },
+  { bg: COLORS.lav2, motifBg: LAV_MOTIF, motif: 'film' },
   { bg: COLORS.peach, motifBg: COLORS.orange, motif: 'phone' },
   { bg: COLORS.mint, motifBg: COLORS.teal, motif: 'map' },
 ]
@@ -196,7 +199,7 @@ export default function CategoryPage() {
             width: 32,
             height: 32,
             borderRadius: 99,
-            border: `3px solid ${COLORS.ink}`,
+            border: `3px solid ${COLORS.ink}`, // @design-allow: CSS spinner ring, not a sticker surface
             borderTopColor: 'transparent',
           }}
         />
@@ -256,7 +259,7 @@ export default function CategoryPage() {
               width: 40,
               height: 40,
               borderRadius: 99,
-              background: '#fff',
+              background: W,
               border: BORDER.sticker,
               boxShadow: SHADOW.chip,
               display: 'flex',
@@ -319,7 +322,7 @@ export default function CategoryPage() {
             style={{
               marginTop: 12,
               height: 12,
-              background: '#fff',
+              background: W,
               borderRadius: 99,
               border: BORDER.thin,
               overflow: 'hidden',
@@ -436,7 +439,7 @@ function SwipeableWordCard({
     speak(word.hindi, ttsLocale, () => setSpeaking(false))
   }
 
-  const bg = isFlipped ? '#fff' : isKnown ? COLORS.mint2 : isReview ? COLORS.butter : '#fff'
+  const bg = isFlipped ? W : isKnown ? COLORS.mint2 : isReview ? COLORS.butter : W
 
   return (
     <motion.div
@@ -538,8 +541,8 @@ function SwipeableWordCard({
                       width: 28,
                       height: 28,
                       borderRadius: 99,
-                      background: speaking ? COLORS.orange : '#fff',
-                      color: speaking ? '#fff' : COLORS.ink,
+                      background: speaking ? COLORS.orange : W,
+                      color: speaking ? W : COLORS.ink,
                       border: BORDER.thin,
                       cursor: 'pointer',
                       padding: 0,
@@ -601,7 +604,7 @@ function SwipeableWordCard({
                         height: 8,
                         borderRadius: 99,
                         background: COLORS.green,
-                        border: `1.4px solid ${COLORS.ink}`,
+                        border: `1.4px solid ${COLORS.ink}`, // @design-allow: status dot indicator, not a sticker surface
                       }}
                       title="known"
                     />
@@ -613,7 +616,7 @@ function SwipeableWordCard({
                         height: 8,
                         borderRadius: 99,
                         background: COLORS.orange,
-                        border: `1.4px solid ${COLORS.ink}`,
+                        border: `1.4px solid ${COLORS.ink}`, // @design-allow: status dot indicator, not a sticker surface
                       }}
                       title="needs review"
                     />

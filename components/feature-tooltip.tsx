@@ -3,6 +3,8 @@
 import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { hasSeenTooltip, markTooltipShown } from '@/lib/onboarding'
+import { COLORS } from '@/components/design'
+const W = '#fff' // @design-allow: white literal
 
 interface FeatureTooltipProps {
   id: string
@@ -80,9 +82,9 @@ export function FeatureTooltip({ id, message, position = 'bottom', children }: F
             >
               <div
                 style={{
-                  background: '#fff',
-                  border: '2.5px solid #36281e',
-                  boxShadow: '4px 4px 0 #36281e',
+                  background: W,
+                  border: `2.5px solid ${COLORS.ink}`,
+                  boxShadow: `4px 4px 0 ${COLORS.ink}`,
                   borderRadius: 18,
                   padding: 14,
                 }}
@@ -92,7 +94,7 @@ export function FeatureTooltip({ id, message, position = 'bottom', children }: F
                     fontFamily: 'var(--font-body)',
                     fontSize: 13,
                     fontWeight: 700,
-                    color: '#36281e',
+                    color: COLORS.ink,
                     lineHeight: 1.4,
                     margin: 0,
                   }}
@@ -107,10 +109,10 @@ export function FeatureTooltip({ id, message, position = 'bottom', children }: F
                     width: '100%',
                     padding: 10,
                     borderRadius: 99,
-                    background: '#f0701a',
-                    color: '#fff',
-                    border: '2.5px solid #36281e',
-                    boxShadow: '3px 3px 0 #36281e',
+                    background: COLORS.orange,
+                    color: W,
+                    border: `2.5px solid ${COLORS.ink}`,
+                    boxShadow: `3px 3px 0 ${COLORS.ink}`,
                     fontFamily: 'var(--font-bricolage), system-ui, sans-serif',
                     fontWeight: 800,
                     fontSize: 13,

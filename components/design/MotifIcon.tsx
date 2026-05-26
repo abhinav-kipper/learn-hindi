@@ -1,6 +1,7 @@
 "use client";
 
 import { COLORS } from "./tokens";
+const CHAI_LIQUID = '#a55a36' // @design-allow: chai liquid color, not a system token
 
 type MotifKind = "marigold" | "auto" | "chai" | "film" | "phone" | "map";
 
@@ -41,7 +42,7 @@ export function MotifIcon({ kind, size = 64 }: MotifIconProps) {
     case "auto":
       return (
         <svg width={size} height={size} viewBox="0 0 64 64">
-          <circle cx="32" cy="32" r="28" fill="#fff3cf" stroke={COLORS.ink} strokeWidth="2.5" />
+          <circle cx="32" cy="32" r="28" fill={COLORS.cream} stroke={COLORS.ink} strokeWidth="2.5" />
           <path d="M14 26 L20 14 L46 14 L52 26" stroke={COLORS.ink} strokeWidth="2.5" fill={COLORS.butter} strokeLinejoin="round" />
           <rect x="10" y="26" width="44" height="20" rx="5" fill={COLORS.butter} stroke={COLORS.ink} strokeWidth="2.5" />
           <rect x="26" y="28" width="14" height="14" rx="2" fill={COLORS.creamBg} stroke={COLORS.ink} strokeWidth="2" />
@@ -58,7 +59,7 @@ export function MotifIcon({ kind, size = 64 }: MotifIconProps) {
           <path d="M22 10 Q 26 16, 22 22 Q 18 28, 22 34" stroke={COLORS.ink} strokeWidth="2" fill="none" strokeLinecap="round" opacity="0.5" />
           <path d="M32 8 Q 36 14, 32 20 Q 28 26, 32 32" stroke={COLORS.ink} strokeWidth="2" fill="none" strokeLinecap="round" opacity="0.5" />
           <path d="M14 26 L 18 56 L 46 56 L 50 26 Z" fill={COLORS.creamBg} stroke={COLORS.ink} strokeWidth="2.5" strokeLinejoin="round" />
-          <path d="M16 28 L 19 50 L 45 50 L 48 28 Z" fill="#a55a36" />
+          <path d="M16 28 L 19 50 L 45 50 L 48 28 Z" fill={CHAI_LIQUID} />
         </svg>
       );
     case "film":

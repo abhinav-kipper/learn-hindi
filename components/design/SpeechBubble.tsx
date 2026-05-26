@@ -1,6 +1,7 @@
 "use client";
 
 import { COLORS, FONTS, BORDER, SHADOW, RADIUS } from "./tokens";
+const W = '#fff' // @design-allow: white literal
 
 type TailPos = "bottom-right" | "bottom-left" | "top-right" | "top-left";
 
@@ -22,7 +23,7 @@ export function SpeechBubble({
   children,
   caption,
   tail = "bottom-right",
-  bg = "#fff",
+  bg = W,
   width = 220,
   style,
 }: SpeechBubbleProps) {
@@ -81,8 +82,8 @@ function BubbleTail({ position }: { position: TailPos }) {
       style={{ position: "absolute", overflow: "visible", ...styles[position] }}
     >
       <path d="M 1 0 L 18 0 L 1 16 Z" fill={COLORS.ink} transform="translate(3 3)" />
-      <path d="M 1 0 L 18 0 L 1 16 Z" fill="#fff" stroke={COLORS.ink} strokeWidth="2.5" strokeLinejoin="round" />
-      <rect x="0" y="-2" width="20" height="3" fill="#fff" />
+      <path d="M 1 0 L 18 0 L 1 16 Z" fill={W} stroke={COLORS.ink} strokeWidth="2.5" strokeLinejoin="round" />
+      <rect x="0" y="-2" width="20" height="3" fill={W} />
     </svg>
   );
 }

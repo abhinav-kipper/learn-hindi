@@ -22,6 +22,7 @@ import {
   paletteToBg,
   paletteToMotifBg,
 } from '@/components/design'
+const W = '#fff' // @design-allow: white literal
 
 export default function FavoritesPage() {
   const router = useRouter()
@@ -106,7 +107,7 @@ export default function FavoritesPage() {
               width: 40,
               height: 40,
               borderRadius: 99,
-              background: '#fff',
+              background: W,
               border: BORDER.sticker,
               boxShadow: SHADOW.chip,
               display: 'flex',
@@ -287,8 +288,8 @@ export default function FavoritesPage() {
                               width: 32,
                               height: 32,
                               borderRadius: 99,
-                              background: isPlaying ? COLORS.orange : '#fff',
-                              color: isPlaying ? '#fff' : COLORS.ink,
+                              background: isPlaying ? COLORS.orange : W,
+                              color: isPlaying ? W : COLORS.ink,
                               border: BORDER.thin,
                               cursor: 'pointer',
                               flexShrink: 0,

@@ -8,6 +8,7 @@ import { getProgress } from '@/lib/progress'
 import { useLanguage } from '@/lib/language-context'
 import { playSound } from '@/lib/sounds'
 import { COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
+const W = '#fff' // @design-allow: white literal
 
 const tabs = [
   { href: '/', label: 'home', icon: HomeIcon, requiresLesson: false },
@@ -29,7 +30,8 @@ export function BottomNav() {
   if (
     pathname.startsWith('/lessons/') ||
     pathname.startsWith('/practice/') ||
-    pathname.startsWith('/onboarding')
+    pathname.startsWith('/onboarding') ||
+    pathname.startsWith('/_dev')
   ) {
     return null
   }
@@ -53,7 +55,7 @@ export function BottomNav() {
         style={{
           maxWidth: 480,
           margin: '0 auto',
-          background: '#fff',
+          background: W,
           border: BORDER.sticker,
           borderRadius: 99,
           boxShadow: SHADOW.sticker,

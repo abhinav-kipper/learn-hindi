@@ -43,3 +43,11 @@ package-lock.json
 .env*.local
 .claude/
 !.claude/commands/
+
+# Playwright outputs
+test-results/
+playwright-report/
+e2e/test-output/
+e2e/visual.spec.ts-snapshots/**/*-diff.png
+e2e/visual.spec.ts-snapshots/**/*-actual.png
+e2e/design-lint-report.json

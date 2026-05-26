@@ -192,7 +192,7 @@ export default function Home() {
           style={{
             position: 'relative',
             padding: '52px 20px 16px',
-            background: 'linear-gradient(180deg, #ffc9a8 0%, #ffe1cf 100%)',
+            background: `linear-gradient(180deg, ${COLORS.peach} 0%, ${COLORS.peach2} 100%)`,
             borderBottomLeftRadius: 36,
             borderBottomRightRadius: 36,
             borderBottom: BORDER.sticker,
@@ -271,7 +271,7 @@ export default function Home() {
               aria-label="Search lessons"
               style={{
                 flex: 1,
-                background: '#fff',
+                background: '#fff', // @design-allow: white literal
                 border: BORDER.sticker,
                 borderRadius: 99,
                 padding: '7px 14px',
@@ -369,7 +369,7 @@ export default function Home() {
             <div
               style={{
                 height: 18,
-                background: '#fff',
+                background: '#fff', // @design-allow: white literal
                 borderRadius: 99,
                 position: 'relative',
                 overflow: 'hidden',
@@ -383,7 +383,7 @@ export default function Home() {
                 style={{
                   height: '100%',
                   background: goalHit
-                    ? `linear-gradient(90deg, ${COLORS.green}, #2f8a55)`
+                    ? `linear-gradient(90deg, ${COLORS.green}, #2f8a55)` // @design-allow: dark green gradient stop, not a system token
                     : `linear-gradient(90deg, ${COLORS.orange2}, ${COLORS.orange})`,
                   borderRight: goalPct > 0 && goalPct < 100 ? BORDER.sticker : 'none',
                 }}

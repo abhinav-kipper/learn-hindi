@@ -22,6 +22,7 @@ import {
   BORDER,
   SHADOW,
 } from '@/components/design'
+const W = '#fff' // @design-allow: white literal
 
 export default function QuizPage() {
   const router = useRouter()
@@ -144,7 +145,7 @@ export default function QuizPage() {
             width: 32,
             height: 32,
             borderRadius: 99,
-            border: `3px solid ${COLORS.ink}`,
+            border: `3px solid ${COLORS.ink}`, // @design-allow: CSS spinner ring, not a sticker surface
             borderTopColor: 'transparent',
           }}
         />
@@ -227,7 +228,7 @@ export default function QuizPage() {
               width: 40,
               height: 40,
               borderRadius: 99,
-              background: '#fff',
+              background: W,
               border: BORDER.sticker,
               boxShadow: SHADOW.chip,
               display: 'flex',
@@ -301,7 +302,7 @@ export default function QuizPage() {
                       : COLORS.red
                     : current
                     ? COLORS.orange
-                    : '#fff',
+                    : W,
                   border: BORDER.thin,
                   transition: 'all 0.3s',
                 }}
@@ -389,7 +390,7 @@ function LockedScreen({ title, body, onGo }: { title: string; body: string; onGo
             padding: '14px 24px',
             borderRadius: 22,
             background: COLORS.orange,
-            color: '#fff',
+            color: W,
             border: BORDER.sticker,
             boxShadow: SHADOW.sticker,
             fontFamily: FONTS.display,

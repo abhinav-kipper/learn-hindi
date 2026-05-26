@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useRef, useCallback, forwardRef, useImperativeHandle } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { COLORS } from '@/components/design'
+const W = '#fff' // @design-allow: white literal
 
 interface VoiceButtonProps {
   onTranscript: (text: string) => void
@@ -181,7 +183,7 @@ export const VoiceButton = forwardRef<VoiceButtonHandle, VoiceButtonProps>(funct
 
   if (permissionDenied) {
     return (
-      <span className="text-xs px-2 self-center whitespace-nowrap" style={{ color: '#e85a5a' }}>
+      <span className="text-xs px-2 self-center whitespace-nowrap" style={{ color: COLORS.red }}>
         Mic denied
       </span>
     )
@@ -203,10 +205,10 @@ export const VoiceButton = forwardRef<VoiceButtonHandle, VoiceButtonProps>(funct
         width: 46,
         height: 46,
         borderRadius: 99,
-        background: isListening ? '#e85a5a' : '#f0701a',
-        color: '#fff',
-        border: '2.5px solid #36281e',
-        boxShadow: '3px 3px 0 #36281e',
+        background: isListening ? COLORS.red : COLORS.orange,
+        color: W,
+        border: `2.5px solid ${COLORS.ink}`,
+        boxShadow: `3px 3px 0 ${COLORS.ink}`,
         cursor: disabled && !isListening ? 'not-allowed' : 'pointer',
         opacity: disabled && !isListening ? 0.5 : 1,
         flexShrink: 0,
@@ -224,7 +226,7 @@ export const VoiceButton = forwardRef<VoiceButtonHandle, VoiceButtonProps>(funct
               position: 'absolute',
               inset: 0,
               borderRadius: 99,
-              background: '#e85a5a',
+              background: COLORS.red,
             }}
           />
         )}
