@@ -51,3 +51,10 @@ export function hasBeenSeen(id: string): boolean {
   if (set === null) return false
   return set.has(id)
 }
+
+export function unseeIds(ids: string[]): void {
+  const set = readSet()
+  if (set === null) return
+  ids.forEach((id) => set.delete(id))
+  writeSet(set)
+}
