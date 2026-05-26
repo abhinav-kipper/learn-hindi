@@ -27,4 +27,6 @@ export interface Lesson {
   skill_breakdown: SkillBreakdown[]
   practice_prompt: string
   references?: string[]
+  level?: 'A1' | 'A2' | 'B1'
+  exam_targeted?: boolean
 }
