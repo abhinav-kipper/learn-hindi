@@ -2,6 +2,7 @@
 
 import { ReactNode } from "react";
 import { COLORS, FONTS, BORDER, SHADOW } from "./tokens";
+const W = '#fff' // @design-allow: white literal
 import { Cutting } from "./Cutting";
 import { Tag } from "./Tag";
 
@@ -53,7 +54,7 @@ export function HeaderBand({
               width: 40,
               height: 40,
               borderRadius: 99,
-              background: "#fff",
+              background: W,
               border: BORDER.sticker,
               boxShadow: SHADOW.chip,
               display: "flex",

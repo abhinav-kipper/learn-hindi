@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Tag, COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
+const W = '#fff' // @design-allow: white literal
 
 export function InstallPrompt() {
   const [showPrompt, setShowPrompt] = useState(false)
@@ -71,7 +72,7 @@ export function InstallPrompt() {
             width: 26,
             height: 26,
             borderRadius: 99,
-            background: '#fff',
+            background: W,
             border: BORDER.thin,
             cursor: 'pointer',
             padding: 0,

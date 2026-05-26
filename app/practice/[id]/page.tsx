@@ -33,6 +33,7 @@ import {
   SHADOW,
 } from '@/components/design'
 import { useChaina, canFire, markFired } from '@/components/design'
+const W = '#fff' // @design-allow: white literal
 
 interface Message {
   id: string
@@ -399,7 +400,7 @@ export default function PracticePage({ params }: PracticePageProps) {
               width: 40,
               height: 40,
               borderRadius: 99,
-              background: '#fff',
+              background: W,
               border: BORDER.sticker,
               boxShadow: SHADOW.chip,
               display: 'flex',
@@ -475,8 +476,8 @@ export default function PracticePage({ params }: PracticePageProps) {
               marginLeft: 'auto',
               padding: '6px 14px',
               borderRadius: 99,
-              background: userMessageCount === 0 || isLoading ? '#fff' : COLORS.green,
-              color: userMessageCount === 0 || isLoading ? COLORS.ink60 : '#fff',
+              background: userMessageCount === 0 || isLoading ? W : COLORS.green,
+              color: userMessageCount === 0 || isLoading ? COLORS.ink60 : W,
               border: BORDER.sticker,
               boxShadow:
                 userMessageCount === 0 || isLoading ? 'none' : SHADOW.chip,
@@ -516,7 +517,7 @@ export default function PracticePage({ params }: PracticePageProps) {
                   width: 44,
                   height: 44,
                   borderRadius: 12,
-                  background: '#fff',
+                  background: W,
                   border: BORDER.thin,
                   display: 'flex',
                   alignItems: 'center',
@@ -577,7 +578,7 @@ export default function PracticePage({ params }: PracticePageProps) {
                   width: 48,
                   height: 48,
                   margin: '0 auto 12px',
-                  background: '#fff',
+                  background: W,
                   border: BORDER.sticker,
                   borderRadius: 99,
                   boxShadow: SHADOW.chip,
@@ -692,7 +693,7 @@ export default function PracticePage({ params }: PracticePageProps) {
               padding: '12px 16px',
               borderRadius: 99,
               border: BORDER.sticker,
-              background: '#fff',
+              background: W,
               color: COLORS.ink,
               fontFamily: FONTS.body,
               fontSize: 14,
@@ -712,8 +713,8 @@ export default function PracticePage({ params }: PracticePageProps) {
               height: 46,
               borderRadius: 99,
               background:
-                !input.trim() || isLoading ? '#fff' : COLORS.green,
-              color: !input.trim() || isLoading ? COLORS.ink60 : '#fff',
+                !input.trim() || isLoading ? W : COLORS.green,
+              color: !input.trim() || isLoading ? COLORS.ink60 : W,
               border: BORDER.sticker,
               boxShadow: !input.trim() || isLoading ? 'none' : SHADOW.chip,
               cursor: !input.trim() || isLoading ? 'not-allowed' : 'pointer',
@@ -777,7 +778,7 @@ export default function PracticePage({ params }: PracticePageProps) {
               <div
                 style={{
                   pointerEvents: 'auto',
-                  background: '#fff',
+                  background: W,
                   border: BORDER.sticker,
                   boxShadow: SHADOW.sticker,
                   borderRadius: 24,
@@ -843,7 +844,7 @@ export default function PracticePage({ params }: PracticePageProps) {
                       padding: 14,
                       borderRadius: 22,
                       background: COLORS.orange,
-                      color: '#fff',
+                      color: W,
                       border: BORDER.sticker,
                       fontFamily: FONTS.display,
                       fontWeight: 800,
@@ -864,7 +865,7 @@ export default function PracticePage({ params }: PracticePageProps) {
                       width: '100%',
                       padding: 12,
                       borderRadius: 22,
-                      background: '#fff',
+                      background: W,
                       color: COLORS.ink,
                       border: BORDER.sticker,
                       fontFamily: FONTS.display,
@@ -906,7 +907,7 @@ function ToolbarPill({
       style={{
         padding: '6px 12px',
         borderRadius: 99,
-        background: active ? COLORS.ink : '#fff',
+        background: active ? COLORS.ink : W,
         color: active ? COLORS.cream : COLORS.ink,
         border: BORDER.sticker,
         boxShadow: disabled ? 'none' : SHADOW.chip,

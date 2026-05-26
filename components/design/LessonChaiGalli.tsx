@@ -11,6 +11,9 @@ import { Cutting } from './Cutting'
 import { DottedBg } from './DottedBg'
 import { Confetti as ChaiConfetti } from './Confetti'
 import { COLORS, FONTS, BORDER, SHADOW, paletteToBg, deriveLessonStyle } from './tokens'
+const W = '#fff' // @design-allow: white literal
+const STAR_GOLD = '#f59e0b' // @design-allow: favourite-star gold, not a system token
+const CONTEXT_GREEN = '#3a6a4a' // @design-allow: phrase context label green, not a system token
 import { useLanguage } from '@/lib/language-context'
 import { isFavorite, toggleFavorite } from '@/lib/favorites'
 import { markPhraseViewed, computeLessonResume } from '@/lib/phrase-progress'
@@ -171,7 +174,7 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
               width: 40,
               height: 40,
               borderRadius: 99,
-              background: '#fff',
+              background: W,
               border: BORDER.sticker,
               boxShadow: SHADOW.chip,
               display: 'flex',
@@ -225,7 +228,7 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
                   fontWeight: 800,
                   fontSize: 11,
                   color: COLORS.ink,
-                  background: '#fff',
+                  background: W,
                   border: BORDER.thin,
                   padding: '3px 9px',
                   borderRadius: 99,
@@ -257,7 +260,7 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
               height: 8,
               flex: i === idx ? 2 : 1,
               borderRadius: 99,
-              background: i < idx ? COLORS.green : i === idx ? COLORS.orange : '#fff',
+              background: i < idx ? COLORS.green : i === idx ? COLORS.orange : W,
               border: BORDER.thin,
               transition: 'all 0.3s',
             }}
@@ -348,7 +351,7 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
                 padding: '18px',
                 borderRadius: 22,
                 background: COLORS.green,
-                color: '#fff',
+                color: W,
                 border: BORDER.sticker,
                 fontFamily: FONTS.display,
                 fontWeight: 800,
@@ -377,7 +380,7 @@ function NavButton({ label, disabled, onClick }: { label: string; disabled: bool
         flex: 1,
         padding: '10px',
         borderRadius: 99,
-        background: disabled ? '#fff' : COLORS.cream,
+        background: disabled ? W : COLORS.cream,
         color: COLORS.ink,
         border: BORDER.sticker,
         boxShadow: disabled ? 'none' : SHADOW.chip,
@@ -449,14 +452,14 @@ function PhraseSticker({
   }
 
   return (
-    <Sticker color="#fff" radius={26} padding={20}>
+    <Sticker color={W} radius={26} padding={20}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <span
           style={{
             fontFamily: FONTS.tag,
             fontSize: 10,
             background: COLORS.orange,
-            color: '#fff',
+            color: W,
             padding: '3px 9px',
             borderRadius: 99,
             letterSpacing: 0.6,
@@ -477,7 +480,7 @@ function PhraseSticker({
             fontSize: 26,
             transition: 'transform 0.2s',
             transform: starred ? 'scale(1.25) rotate(12deg)' : 'scale(1)',
-            color: starred ? '#f59e0b' : COLORS.ink60,
+            color: starred ? STAR_GOLD : COLORS.ink60,
           }}
         >
           {starred ? '⭐' : '☆'}
@@ -505,7 +508,7 @@ function PhraseSticker({
               borderRadius: 12,
               display: 'inline-block',
               background: COLORS.butter,
-              border: `2px solid ${COLORS.ink}`,
+              border: BORDER.thin,
               fontFamily: FONTS.body,
               fontSize: 13,
               fontWeight: 700,
@@ -560,7 +563,7 @@ function PhraseSticker({
                   fontFamily: FONTS.body,
                   fontWeight: 700,
                   fontSize: 12,
-                  color: '#3a6a4a',
+                  color: CONTEXT_GREEN,
                 }}
               >
                 ✨ {phrase.context}
@@ -601,7 +604,7 @@ function PhraseSticker({
             padding: '12px 14px',
             borderRadius: 99,
             background: COLORS.orange,
-            color: '#fff',
+            color: W,
             border: BORDER.sticker,
             fontFamily: FONTS.display,
             fontWeight: 800,
@@ -664,7 +667,7 @@ function LessonCelebration({
               width: 200,
               height: 200,
               borderRadius: '50%',
-              border: `3px solid ${COLORS.ink}`,
+              border: `3px solid ${COLORS.ink}`, // @design-allow: celebration ring animation, not a sticker surface
               opacity: 0.3,
               animation: `ring-grow 2.4s ease-out ${delay}s infinite`,
             }}
@@ -748,7 +751,7 @@ function LessonCelebration({
             padding: 18,
             borderRadius: 22,
             background: COLORS.orange,
-            color: '#fff',
+            color: W,
             border: BORDER.sticker,
             fontFamily: FONTS.display,
             fontWeight: 800,
@@ -766,7 +769,7 @@ function LessonCelebration({
             width: '100%',
             padding: 14,
             borderRadius: 22,
-            background: '#fff',
+            background: W,
             color: COLORS.ink,
             border: BORDER.sticker,
             fontFamily: FONTS.display,

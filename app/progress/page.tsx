@@ -26,6 +26,7 @@ import {
   BORDER,
   SHADOW,
 } from '@/components/design'
+const W = '#fff' // @design-allow: white literal
 
 interface Stats {
   phrasesLearned: number
@@ -142,7 +143,7 @@ export default function ProgressPage() {
             width: 32,
             height: 32,
             borderRadius: 99,
-            border: `3px solid ${COLORS.ink}`,
+            border: `3px solid ${COLORS.ink}`, // @design-allow: CSS spinner ring, not a sticker surface
             borderTopColor: 'transparent',
           }}
         />
@@ -295,12 +296,12 @@ export default function ProgressPage() {
                     height: 32,
                     borderRadius: 99,
                     background:
-                      state === 'active' ? COLORS.orange : state === 'pending' ? '#fff' : '#fff',
+                      state === 'active' ? COLORS.orange : state === 'pending' ? W : W,
                     border:
                       state === 'pending'
                         ? `2.5px dashed ${COLORS.ink}`
                         : `2px solid ${COLORS.ink}`,
-                    color: state === 'active' ? '#fff' : COLORS.ink45,
+                    color: state === 'active' ? W : COLORS.ink45,
                     fontFamily: FONTS.display,
                     fontWeight: 800,
                     fontSize: 12,
@@ -390,7 +391,7 @@ export default function ProgressPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
         >
-          <Sticker color="#fff" radius={22} padding={18}>
+          <Sticker color={W} radius={22} padding={18}>
             <LessonGroup
               title="situations"
               lessons={lessons}
@@ -425,7 +426,7 @@ export default function ProgressPage() {
             >
               recent
             </div>
-            <Sticker color="#fff" radius={18} padding={14}>
+            <Sticker color={W} radius={18} padding={14}>
               {activities.map((activity, i) => (
                 <div
                   key={i}
@@ -795,7 +796,7 @@ function LessonRow({ title, pct }: { title: string; pct: number }) {
         style={{
           width: '100%',
           height: 8,
-          background: '#fff',
+          background: W,
           borderRadius: 99,
           border: BORDER.thin,
           overflow: 'hidden',

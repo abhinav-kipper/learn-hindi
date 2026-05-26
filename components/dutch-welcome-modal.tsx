@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { playSound } from '@/lib/sounds'
 import { Tag, Cutting, Confetti as ChaiConfetti, COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
+const W = '#fff' // @design-allow: white literal
 
 const WELCOMED_KEY = 'dutch-welcomed'
 
@@ -58,7 +59,7 @@ export function DutchWelcomeModal() {
             <div
               style={{
                 pointerEvents: 'auto',
-                background: '#fff',
+                background: W,
                 border: BORDER.sticker,
                 boxShadow: SHADOW.sticker,
                 borderRadius: 24,
@@ -133,7 +134,7 @@ export function DutchWelcomeModal() {
                   padding: 14,
                   borderRadius: 22,
                   background: COLORS.orange,
-                  color: '#fff',
+                  color: W,
                   border: BORDER.sticker,
                   boxShadow: SHADOW.sticker,
                   fontFamily: FONTS.display,

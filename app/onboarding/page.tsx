@@ -17,6 +17,7 @@ import {
   SHADOW,
 } from '@/components/design'
 import { useChaina } from '@/components/design'
+const W = '#fff' // @design-allow: white literal
 
 const reasons = [
   { id: 'family', label: 'partner/family speaks Hindi', emoji: '👨‍👩‍👧' },
@@ -125,7 +126,7 @@ export default function OnboardingPage() {
               width: i === slide ? 28 : 10,
               height: 10,
               borderRadius: 99,
-              background: i === slide ? COLORS.ink : i < slide ? COLORS.orange : '#fff',
+              background: i === slide ? COLORS.ink : i < slide ? COLORS.orange : W,
               border: BORDER.thin,
               cursor: 'pointer',
               padding: 0,
@@ -205,8 +206,8 @@ function PrimaryCTA({
         marginTop: 24,
         padding: '16px 28px',
         borderRadius: 22,
-        background: disabled ? '#fff' : COLORS.orange,
-        color: disabled ? COLORS.ink60 : '#fff',
+        background: disabled ? W : COLORS.orange,
+        color: disabled ? COLORS.ink60 : W,
         border: BORDER.sticker,
         boxShadow: disabled ? 'none' : SHADOW.sticker,
         fontFamily: FONTS.display,
@@ -322,7 +323,7 @@ function SlideHowItWorks({ onNext }: { onNext: () => void }) {
                   style={{
                     width: 44,
                     height: 44,
-                    background: '#fff',
+                    background: W,
                     borderRadius: 12,
                     border: BORDER.thin,
                     display: 'flex',
@@ -425,7 +426,7 @@ function SlideAboutYou({
             padding: '12px 16px',
             borderRadius: 99,
             border: BORDER.sticker,
-            background: '#fff',
+            background: W,
             color: COLORS.ink,
             fontFamily: FONTS.body,
             fontSize: 15,
@@ -460,7 +461,7 @@ function SlideAboutYou({
           {(['female', 'male'] as const).map((g) => (
             <Sticker
               key={g}
-              color={gender === g ? COLORS.mint : '#fff'}
+              color={gender === g ? COLORS.mint : W}
               radius={16}
               padding={10}
               selected={gender === g}
@@ -512,7 +513,7 @@ function SlideAboutYou({
           {reasons.map((r) => (
             <Sticker
               key={r.id}
-              color={reason === r.id ? COLORS.mint : '#fff'}
+              color={reason === r.id ? COLORS.mint : W}
               radius={16}
               padding={10}
               selected={reason === r.id}
@@ -586,7 +587,7 @@ function SlideDailyGoal({
             transition={{ delay: 0.1 + i * 0.08, type: 'spring', stiffness: 240, damping: 22 }}
           >
             <Sticker
-              color={dailyGoal === g.minutes ? COLORS.mint : '#fff'}
+              color={dailyGoal === g.minutes ? COLORS.mint : W}
               radius={18}
               padding={14}
               selected={dailyGoal === g.minutes}
@@ -600,7 +601,7 @@ function SlideDailyGoal({
                   style={{
                     width: 44,
                     height: 44,
-                    background: '#fff',
+                    background: W,
                     borderRadius: 12,
                     border: BORDER.thin,
                     display: 'flex',

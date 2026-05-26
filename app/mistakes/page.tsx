@@ -29,6 +29,8 @@ import {
   paletteToBg,
   paletteToMotifBg,
 } from '@/components/design'
+const W = '#fff' // @design-allow: white literal
+const STRIKETHROUGH_RED = '#cc4a4a' // @design-allow: strikethrough mistake red, not a system token
 
 function SourceChip({ source }: { source: MistakeSource }) {
   const isQuiz = source === 'quiz'
@@ -115,7 +117,7 @@ export default function MistakesPage() {
               width: 40,
               height: 40,
               borderRadius: 99,
-              background: '#fff',
+              background: W,
               border: BORDER.sticker,
               boxShadow: SHADOW.chip,
               display: 'flex',
@@ -197,7 +199,7 @@ export default function MistakesPage() {
                   style={{
                     width: 52,
                     height: 52,
-                    background: '#fff',
+                    background: W,
                     borderRadius: 14,
                     border: BORDER.sticker,
                     display: 'flex',
@@ -352,7 +354,7 @@ export default function MistakesPage() {
                                 color: COLORS.ink,
                               }}
                             >
-                              <span style={{ textDecoration: 'line-through', color: '#cc4a4a' }}>
+                              <span style={{ textDecoration: 'line-through', color: STRIKETHROUGH_RED }}>
                                 {m.original}
                               </span>{' '}
                               →{' '}
@@ -380,7 +382,7 @@ export default function MistakesPage() {
                               width: 26,
                               height: 26,
                               borderRadius: 99,
-                              background: '#fff',
+                              background: W,
                               border: BORDER.thin,
                               cursor: 'pointer',
                               flexShrink: 0,
@@ -462,7 +464,7 @@ export default function MistakesPage() {
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
                 zIndex: 50,
-                background: '#fff',
+                background: W,
                 border: BORDER.sticker,
                 borderRadius: 22,
                 boxShadow: SHADOW.sticker,
@@ -503,7 +505,7 @@ export default function MistakesPage() {
                     flex: 1,
                     padding: 12,
                     borderRadius: 16,
-                    background: '#fff',
+                    background: W,
                     color: COLORS.ink,
                     border: BORDER.sticker,
                     boxShadow: SHADOW.chip,
@@ -524,7 +526,7 @@ export default function MistakesPage() {
                     padding: 12,
                     borderRadius: 16,
                     background: COLORS.red,
-                    color: '#fff',
+                    color: W,
                     border: BORDER.sticker,
                     boxShadow: SHADOW.chip,
                     fontFamily: FONTS.display,
@@ -666,7 +668,7 @@ function DrillOverlay({ mistakes, onClose }: { mistakes: Mistake[]; onClose: () 
                   padding: 14,
                   borderRadius: 22,
                   background: COLORS.orange,
-                  color: '#fff',
+                  color: W,
                   border: BORDER.sticker,
                   boxShadow: SHADOW.sticker,
                   fontFamily: FONTS.display,
@@ -689,7 +691,7 @@ function DrillOverlay({ mistakes, onClose }: { mistakes: Mistake[]; onClose: () 
                   marginBottom: 12,
                 }}
               >
-                <Tag bg={COLORS.orange} color="#fff" border={COLORS.ink}>
+                <Tag bg={COLORS.orange} color={W} border={COLORS.ink}>
                   drill · {index + 1} / {order.length}
                 </Tag>
                 <button
@@ -700,7 +702,7 @@ function DrillOverlay({ mistakes, onClose }: { mistakes: Mistake[]; onClose: () 
                     width: 28,
                     height: 28,
                     borderRadius: 99,
-                    background: '#fff',
+                    background: W,
                     border: BORDER.thin,
                     cursor: 'pointer',
                     padding: 0,
@@ -731,7 +733,7 @@ function DrillOverlay({ mistakes, onClose }: { mistakes: Mistake[]; onClose: () 
                     style={{
                       flex: i === index ? 2 : 1,
                       height: 6,
-                      background: i < index ? COLORS.green : i === index ? COLORS.orange : '#fff',
+                      background: i < index ? COLORS.green : i === index ? COLORS.orange : W,
                       borderRadius: 99,
                       border: BORDER.thin,
                       transition: 'all 0.3s',
@@ -749,7 +751,7 @@ function DrillOverlay({ mistakes, onClose }: { mistakes: Mistake[]; onClose: () 
                   transition={{ type: 'spring', stiffness: 280, damping: 26 }}
                 >
                   <Sticker
-                    color="#fff"
+                    color={W}
                     radius={20}
                     padding={18}
                     onClick={() => {
@@ -776,7 +778,7 @@ function DrillOverlay({ mistakes, onClose }: { mistakes: Mistake[]; onClose: () 
                         fontFamily: FONTS.display,
                         fontWeight: 800,
                         fontSize: 22,
-                        color: '#cc4a4a',
+                        color: STRIKETHROUGH_RED,
                         textDecoration: 'line-through',
                         lineHeight: 1.15,
                       }}
@@ -791,7 +793,7 @@ function DrillOverlay({ mistakes, onClose }: { mistakes: Mistake[]; onClose: () 
                           marginTop: 12,
                           padding: 14,
                           background: COLORS.mint2,
-                          border: `2px solid ${COLORS.ink}`,
+                          border: BORDER.thin,
                           borderRadius: 14,
                         }}
                       >
@@ -838,7 +840,7 @@ function DrillOverlay({ mistakes, onClose }: { mistakes: Mistake[]; onClose: () 
                               width: 32,
                               height: 32,
                               borderRadius: 99,
-                              background: '#fff',
+                              background: W,
                               border: BORDER.thin,
                               cursor: 'pointer',
                               padding: 0,
@@ -896,7 +898,7 @@ function DrillOverlay({ mistakes, onClose }: { mistakes: Mistake[]; onClose: () 
                           flex: 1,
                           padding: 14,
                           borderRadius: 18,
-                          background: '#fff',
+                          background: W,
                           color: COLORS.ink,
                           border: BORDER.sticker,
                           boxShadow: SHADOW.chip,
@@ -917,7 +919,7 @@ function DrillOverlay({ mistakes, onClose }: { mistakes: Mistake[]; onClose: () 
                           padding: 14,
                           borderRadius: 18,
                           background: COLORS.green,
-                          color: '#fff',
+                          color: W,
                           border: BORDER.sticker,
                           boxShadow: SHADOW.chip,
                           fontFamily: FONTS.display,

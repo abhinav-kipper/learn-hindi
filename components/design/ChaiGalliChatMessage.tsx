@@ -8,6 +8,8 @@ import { playSound } from '@/lib/sounds'
 import type { ChatReply } from '@/lib/chat-schema'
 import { Cutting } from './Cutting'
 import { COLORS, FONTS, BORDER, SHADOW } from './tokens'
+const W = '#fff' // @design-allow: white literal
+const RATE_LIMIT_BG = '#dbf2fb' // @design-allow: rate-limited message tint, not a system token
 
 interface ChatMessageProps {
   role: 'user' | 'assistant'
@@ -147,7 +149,7 @@ function CorrectionSticker({ correction }: { correction: NonNullable<ChatReply['
           fontFamily: FONTS.tag,
           fontSize: 10,
           background: COLORS.orange,
-          color: '#fff',
+          color: W,
           padding: '2px 8px',
           borderRadius: 99,
           letterSpacing: 0.6,
@@ -210,7 +212,7 @@ export function ChaiGalliChatMessage({
       >
         <div
           style={{
-            background: isRateLimited ? '#dbf2fb' : COLORS.butter,
+            background: isRateLimited ? RATE_LIMIT_BG : COLORS.butter,
             border: `1.8px solid ${COLORS.ink}`,
             borderRadius: 16,
             padding: '8px 12px',
@@ -295,7 +297,7 @@ export function ChaiGalliChatMessage({
         )}
         <div
           style={{
-            background: isUser ? COLORS.peach : '#fff',
+            background: isUser ? COLORS.peach : W,
             border: BORDER.sticker,
             borderRadius: 18,
             borderBottomRightRadius: isUser ? 6 : 18,
@@ -367,7 +369,7 @@ export function TypingDots() {
       </div>
       <div
         style={{
-          background: '#fff',
+          background: W,
           border: BORDER.sticker,
           borderRadius: 18,
           borderBottomLeftRadius: 6,

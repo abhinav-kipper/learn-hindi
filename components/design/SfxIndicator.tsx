@@ -80,7 +80,7 @@ export function SfxIndicator() {
                   ? COLORS.red
                   : it.kind === "happy"
                   ? COLORS.green
-                  : "#888",
+                  : COLORS.ink45,
             }}
           />
           {it.label}

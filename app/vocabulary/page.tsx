@@ -31,12 +31,15 @@ import {
   SHADOW,
   type MotifKind,
 } from '@/components/design'
+const W = '#fff' // @design-allow: white literal
+const BUTTER_MOTIF = '#d4a44a' // @design-allow: butter motif palette accent
+const LAV_MOTIF = '#7a5da8' // @design-allow: lav motif palette accent
 
 const CATEGORY_PALETTE: Array<{ bg: string; motifBg: string; motif: MotifKind }> = [
   { bg: COLORS.peach2, motifBg: COLORS.orange, motif: 'marigold' },
   { bg: COLORS.mint2, motifBg: COLORS.teal, motif: 'chai' },
-  { bg: COLORS.butter, motifBg: '#d4a44a', motif: 'auto' },
-  { bg: COLORS.lav2, motifBg: '#7a5da8', motif: 'film' },
+  { bg: COLORS.butter, motifBg: BUTTER_MOTIF, motif: 'auto' },
+  { bg: COLORS.lav2, motifBg: LAV_MOTIF, motif: 'film' },
   { bg: COLORS.peach, motifBg: COLORS.orange, motif: 'phone' },
   { bg: COLORS.mint, motifBg: COLORS.teal, motif: 'map' },
 ]
@@ -136,7 +139,7 @@ export default function VocabularyPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, type: 'spring', stiffness: 240, damping: 22 }}
         >
-          <Sticker color="#fff" radius={22} padding={16}>
+          <Sticker color={W} radius={22} padding={16}>
             <div
               style={{
                 display: 'flex',
@@ -172,7 +175,7 @@ export default function VocabularyPage() {
             <div
               style={{
                 height: 14,
-                background: '#fff',
+                background: W,
                 borderRadius: 99,
                 border: BORDER.sticker,
                 overflow: 'hidden',
@@ -267,7 +270,7 @@ export default function VocabularyPage() {
                       style={{
                         marginTop: 8,
                         height: 6,
-                        background: '#fff',
+                        background: W,
                         borderRadius: 99,
                         border: BORDER.thin,
                         overflow: 'hidden',

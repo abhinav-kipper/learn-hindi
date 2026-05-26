@@ -2,6 +2,7 @@
 
 import { ReactNode, useState } from "react";
 import { BORDER, SHADOW, RADIUS } from "./tokens";
+const W = '#fff' // @design-allow: white literal
 
 type StickerProps = {
   children: ReactNode;
@@ -25,7 +26,7 @@ type StickerProps = {
  */
 export function Sticker({
   children,
-  color = "#fff",
+  color = W,
   radius = RADIUS.lg,
   padding = 16,
   dashed = false,

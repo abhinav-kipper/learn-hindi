@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import confetti from 'canvas-confetti'
 import { useRouter } from 'next/navigation'
 import { Sticker, Tag, Cutting, COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
+const W = '#fff' // @design-allow: white literal
 import { useLanguage } from '@/lib/language-context'
 import { getAverageQuizScore } from '@/lib/quiz'
 import type { QuizQuestion, QuizResult } from '@/types/quiz'
@@ -103,7 +104,7 @@ export function QuizResults({
               width: 40,
               height: 40,
               borderRadius: 99,
-              background: '#fff',
+              background: W,
               border: BORDER.sticker,
               boxShadow: SHADOW.chip,
               display: 'flex',
@@ -170,7 +171,7 @@ export function QuizResults({
                   alignItems: 'center',
                   justifyContent: 'center',
                   flexShrink: 0,
-                  color: '#fff',
+                  color: W,
                   animation: 'float-y 3s ease-in-out infinite',
                 }}
               >
@@ -196,7 +197,7 @@ export function QuizResults({
                 </div>
               </div>
               <div style={{ flex: 1, minWidth: 0 }}>
-                <Tag bg={COLORS.green} color="#fff" border={COLORS.ink}>
+                <Tag bg={COLORS.green} color={W} border={COLORS.ink}>
                   {percentage}% correct
                 </Tag>
                 <div
@@ -256,7 +257,7 @@ export function QuizResults({
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 + i * 0.05 }}
                 >
-                  <Sticker color="#fff" radius={16} padding={12}>
+                  <Sticker color={W} radius={16} padding={12}>
                     <div
                       style={{
                         fontFamily: FONTS.display,
@@ -304,7 +305,7 @@ export function QuizResults({
                 flex: 1,
                 padding: '14px',
                 borderRadius: 22,
-                background: '#fff',
+                background: W,
                 color: COLORS.ink,
                 border: BORDER.sticker,
                 boxShadow: SHADOW.chip,
@@ -329,7 +330,7 @@ export function QuizResults({
               padding: '14px',
               borderRadius: 22,
               background: COLORS.orange,
-              color: '#fff',
+              color: W,
               border: BORDER.sticker,
               boxShadow: SHADOW.chip,
               fontFamily: FONTS.display,
