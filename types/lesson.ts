@@ -16,6 +16,39 @@ export interface SkillBreakdown {
   more_examples: SkillExample[]
 }
 
+export interface TheoryTable {
+  caption?: string
+  columns: string[]
+  rows: string[][]
+}
+
+export interface TheoryExample {
+  hindi: string
+  english: string
+  breakdown?: string
+}
+
+export type CalloutTone = 'tip' | 'warning' | 'note'
+
+export interface TheoryCallout {
+  tone: CalloutTone
+  body: string
+}
+
+export interface TheorySection {
+  heading: string
+  body: string  // multi-paragraph prose split on \n\n
+  table?: TheoryTable
+  examples?: TheoryExample[]
+  callout?: TheoryCallout
+}
+
+export interface Theory {
+  intro: string
+  sections: TheorySection[]
+  wrap_up?: string
+}
+
 export interface Lesson {
   id: string
   title: string
@@ -29,4 +62,5 @@ export interface Lesson {
   references?: string[]
   level?: 'A1' | 'A2' | 'B1'
   exam_targeted?: boolean
+  theory?: Theory
 }
