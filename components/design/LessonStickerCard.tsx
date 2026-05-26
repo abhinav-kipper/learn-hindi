@@ -22,6 +22,17 @@ function daysAgo(isoDate: string): number {
   return Math.max(0, Math.round((b - a) / (1000 * 60 * 60 * 24)))
 }
 
+function doneLabel(isoDate: string | null | undefined): string {
+  if (!isoDate) return '✓ done'
+  const n = daysAgo(isoDate)
+  if (n === 0) return '✓ done today'
+  if (n === 1) return '✓ yesterday'
+  if (n < 7) return `✓ ${n} days ago`
+  if (n < 14) return '✓ last week'
+  if (n < 30) return `✓ ${Math.floor(n / 7)} wks ago`
+  return '✓ done'
+}
+
 interface Props {
   lesson: Lesson
   index: number
@@ -120,7 +131,7 @@ export function LessonStickerCard({ lesson, index, routeBase = 'lessons', locked
                     border: BORDER.thin,
                   }}
                 >
-                  {completedAt ? `✓ done · ${daysAgo(completedAt)}d` : '✓ done'}
+                  {doneLabel(completedAt)}
                 </span>
               )}
             </div>

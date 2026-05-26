@@ -129,16 +129,17 @@ describe('LessonStickerCard', () => {
       mockGetLessonPercent.mockReturnValue(100)
     })
 
-    it('shows a green done badge with days-ago stamp', async () => {
+    it('shows a green done badge with human-readable days-ago label', async () => {
       render(<LessonStickerCard lesson={LESSON} index={1} />)
       await waitFor(() => {
-        expect(screen.getByText(/✓ done · \d+d/i)).toBeInTheDocument()
+        // Matches: "✓ done today" | "✓ yesterday" | "✓ N days ago" | "✓ last week" | "✓ N wks ago" | "✓ done"
+        expect(screen.getByText(/✓ (done( today)?|yesterday|\d+ days ago|last week|\d+ wks ago)/i)).toBeInTheDocument()
       })
     })
 
     it('does not show the progress bar when complete', async () => {
       render(<LessonStickerCard lesson={LESSON} index={1} />)
-      await waitFor(() => screen.getByText(/done/i))
+      await waitFor(() => screen.getByText(/✓ (done( today)?|yesterday|\d+ days ago|last week|\d+ wks ago)/i))
       expect(screen.queryByText('10/10')).not.toBeInTheDocument()
     })
 

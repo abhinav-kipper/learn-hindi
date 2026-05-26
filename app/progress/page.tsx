@@ -663,6 +663,21 @@ function LessonGroup({
 
       {active.length > 0 ? (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          {done.length > 0 && (
+            <div
+              style={{
+                fontFamily: FONTS.display,
+                fontWeight: 800,
+                fontSize: 10,
+                color: COLORS.ink45,
+                textTransform: 'uppercase',
+                letterSpacing: 0.8,
+                marginBottom: -2,
+              }}
+            >
+              still to do ({active.length})
+            </div>
+          )}
           {active.map(({ lesson, pct }) => (
             <LessonRow key={lesson.id} title={lesson.title} pct={pct} />
           ))}
@@ -766,6 +781,7 @@ function LessonGroup({
 }
 
 function LessonRow({ title, pct }: { title: string; pct: number }) {
+  const notStarted = pct === 0
   return (
     <div>
       <div
@@ -790,13 +806,15 @@ function LessonRow({ title, pct }: { title: string; pct: number }) {
         >
           {title}
         </span>
-        <span style={{ color: COLORS.ink45 }}>{pct}%</span>
+        <span style={{ color: notStarted ? COLORS.ink45 : COLORS.ink60, fontStyle: notStarted ? 'italic' : 'normal' }}>
+          {notStarted ? 'not started' : `${pct}%`}
+        </span>
       </div>
       <div
         style={{
           width: '100%',
           height: 8,
-          background: W,
+          background: notStarted ? COLORS.lav : W,
           borderRadius: 99,
           border: BORDER.thin,
           overflow: 'hidden',
