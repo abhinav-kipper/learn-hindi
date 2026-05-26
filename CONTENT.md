@@ -187,13 +187,15 @@ A1 (months 1-2) → A2 (months 3-5) → B1 (months 6-9). A2 = optional stop-out 
 ### UI language
 All UI/labels in English. Dutch only for: KNM question text, Chaina voice lines, italic Dutch-skill-name subtitles (Lezen / Luisteren / Schrijven / Spreken) for exposure-learning.
 
+**Bilingual study mode:** KNM study cards now show English under Dutch (drill stays Dutch-only for exam realism). Lezen study mode renders Dutch body + English translation toggle + bilingual MCQs; the timed mock is Dutch-only.
+
 ### Content inventory
 | Track | Status | Notes |
 |---|---|---|
 | Lessons (A1-A2) | 5 existing | supermarket, introductions, cafe, doctor, transport |
 | Foundations (A1-A2) | 7 existing | numbers, pronunciation, present, de/het, word-order, past, modals |
 | KNM | 100 questions, 6 categories | Phase 1 (shipped 2026-05-26) |
-| Lezen (Reading) | not yet | Phase 2 |
+| Lezen (Reading) | 10 texts (5 A1 + 4 A2 + 1 B1), 40 MCQs, bilingual study mode | Phase 2 (shipped 2026-05-26) |
 | Luisteren (Listening) | not yet | Phase 3 |
 | Schrijven (Writing) | not yet | Phase 4 |
 | Spreken (Speaking) | not yet | Phase 5 |
@@ -216,4 +218,6 @@ Questions written from scratch using knowledge of the Naar Nederland material �
 - `dutch-exam-target` — `'a2' | 'b1'`, default `'b1'`
 - `dutch-knm-learned` — `Set<string>` of question IDs
 - `dutch-knm-attempts` — `Array<{ts, score, total, passed}>` capped at 50
+- `dutch-lezen-studied` — `Set<string>` of text IDs
+- `dutch-lezen-mock-attempts` — `Array<{ts, score, total, passed, text_ids}>` capped at 50
 

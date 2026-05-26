@@ -20,6 +20,7 @@ import { getUniversalLessonById } from '@/lib/all-content'
 import { SearchOverlay } from '@/components/search-overlay'
 import { initBaseline, isInitialized, getUnseenIds, hasBeenSeen, unseeIds } from '@/lib/seen-lessons'
 import { getLearnedCount } from '@/lib/dutch/knm'
+import { getStudiedCount as getLezenStudiedCount } from '@/lib/dutch/lezen'
 import { getItemsByLevel, ALL_LEVELS, type Level } from '@/lib/dutch/level-map'
 
 const W = '#fff' // @design-allow: white literal
@@ -198,6 +199,11 @@ export default function Home() {
   const [dutchKnmLearned, setDutchKnmLearned] = useState(0)
   useEffect(() => {
     if (language === 'dutch') setDutchKnmLearned(getLearnedCount())
+  }, [language])
+
+  const [dutchLezenStudied, setDutchLezenStudied] = useState(0)
+  useEffect(() => {
+    if (language === 'dutch') setDutchLezenStudied(getLezenStudiedCount())
   }, [language])
 
   const dutchStageProgress = useMemo(() => {
@@ -602,7 +608,14 @@ export default function Home() {
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10 }}>
                 <SkillCard label="KNM" subtitle="Knowledge" subDutch="van NL" status={`${dutchKnmLearned}/100`} live onClick={() => router.push('/dutch/knm')} />
-                <SkillCard label="Reading"   subtitle="Lezen"     subDutch=""  status="soon" />
+                <SkillCard
+                  label="Reading"
+                  subtitle="Lezen"
+                  subDutch=""
+                  status={`${dutchLezenStudied}/10 studied`}
+                  live
+                  onClick={() => router.push('/dutch/lezen')}
+                />
                 <SkillCard label="Listening" subtitle="Luisteren" subDutch=""  status="soon" />
                 <SkillCard label="Writing"   subtitle="Schrijven" subDutch=""  status="soon" />
                 <SkillCard label="Speaking"  subtitle="Spreken"   subDutch=""  status="soon" />
