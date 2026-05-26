@@ -106,8 +106,10 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
     setLastActiveLesson(lesson.id, config.storagePrefix)
   }
 
+  const allRevealed = revealed.size >= total
   const handleMarkComplete = () => {
     if (completed) return
+    if (!allRevealed) return
     markLessonComplete(lesson.id, config.storagePrefix)
     updateStreak(config.storagePrefix)
     setCompleted(true)
@@ -314,8 +316,8 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
         <NavButton label="next →" disabled={idx === total - 1} onClick={() => go(1)} />
       </div>
 
-      {/* MARK COMPLETE — only on last phrase (or when already done, to show the success sticker) */}
-      {(completed || idx === total - 1) && (
+      {/* MARK COMPLETE — only after every phrase has been revealed (gated to ensure phrase progress is real) */}
+      {(completed || allRevealed) && (
         <div
           style={{
             padding: '16px 20px 0',
@@ -365,6 +367,25 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
               ✓ mark chapter complete
             </button>
           )}
+        </div>
+      )}
+      {/* Hint when there are still unrevealed phrases */}
+      {!completed && !allRevealed && (
+        <div
+          style={{
+            padding: '16px 20px 0',
+            maxWidth: 480,
+            margin: '0 auto',
+            position: 'relative',
+            zIndex: 2,
+            textAlign: 'center',
+            fontFamily: FONTS.body,
+            fontSize: 13,
+            fontStyle: 'italic',
+            color: COLORS.ink45,
+          }}
+        >
+          reveal every phrase ({revealed.size}/{total}) to unlock <strong>mark chapter complete</strong>
         </div>
       )}
     </div>

@@ -175,13 +175,18 @@ describe('LessonChaiGalli', () => {
 
   it('mark-complete transitions into the celebration view', async () => {
     render(<LessonChaiGalli lesson={LESSON} />)
-    // Mark-complete is only shown on the last phrase; navigate there first.
+    // Mark-complete is gated on every phrase being revealed. Phrase 0 starts pre-revealed
+    // (initial state from resume); reveal phrases 1 and 2 as we navigate through them.
     await waitFor(() => screen.getByText('next →'))
     fireEvent.click(screen.getByText('next →'))
+    await waitFor(() => screen.getByText(/tap to reveal/i))
+    fireEvent.click(screen.getByText(/tap to reveal/i))
     fireEvent.click(screen.getByText('next →'))
-    await waitFor(() => screen.getByText(/mark chapter complete/i))
+    await waitFor(() => screen.getByText(/tap to reveal/i))
+    fireEvent.click(screen.getByText(/tap to reveal/i))
+    const completeButton = await screen.findByRole('button', { name: /mark chapter complete/i })
     await act(async () => {
-      fireEvent.click(screen.getByText(/mark chapter complete/i))
+      fireEvent.click(completeButton)
     })
     expect(mockMarkLessonComplete).toHaveBeenCalledWith('auto-negotiation', 'hindi')
     expect(mockUpdateStreak).toHaveBeenCalledWith('hindi')
@@ -189,6 +194,15 @@ describe('LessonChaiGalli', () => {
       expect(screen.getByText(/shabash, dost/i)).toBeInTheDocument()
       expect(screen.getByText(/practice now/i)).toBeInTheDocument()
     })
+  })
+
+  it('hides mark-complete and shows a hint when phrases are unrevealed', async () => {
+    render(<LessonChaiGalli lesson={LESSON} />)
+    await waitFor(() => screen.getByText('next →'))
+    fireEvent.click(screen.getByText('next →'))
+    fireEvent.click(screen.getByText('next →'))
+    expect(screen.queryByRole('button', { name: /mark chapter complete/i })).not.toBeInTheDocument()
+    expect(screen.getByText(/reveal every phrase/i)).toBeInTheDocument()
   })
 
   it('shows a "chapter complete" pill instead of the green CTA when already done', async () => {
