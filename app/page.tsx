@@ -18,6 +18,7 @@ import { getLastActiveLesson } from '@/lib/last-active-lesson'
 import { getLessonPercent } from '@/lib/phrase-progress'
 import { getUniversalLessonById } from '@/lib/all-content'
 import { SearchOverlay } from '@/components/search-overlay'
+import { initBaseline, isInitialized, getUnseenIds, hasBeenSeen } from '@/lib/seen-lessons'
 
 import {
   Sticker,
@@ -160,6 +161,23 @@ export default function Home() {
     }
 
     localStorage.setItem(LAST_TS_KEY, String(now))
+
+    // New-content detection (Feature B)
+    const allHindiLessons = getAllLessons()
+    const allHindiFoundations = getAllFoundations()
+    const allIds = [
+      ...allHindiLessons.map((l) => l.id),
+      ...allHindiFoundations.map((f) => f.id),
+    ]
+    if (!isInitialized()) {
+      initBaseline(allIds)
+    } else {
+      const unseen = getUnseenIds(allIds)
+      if (unseen.length > 0 && canFire('newContent', 'once-per-session')) {
+        play('newContent')
+        markFired('newContent', 'once-per-session')
+      }
+    }
     // Run only on mount
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -625,6 +643,7 @@ export default function Home() {
                   index={index}
                   routeBase="lessons"
                   locked={isLocked}
+                  isNew={language === 'hindi' && !hasBeenSeen(lesson.id)}
                 />
               </motion.div>
             )
