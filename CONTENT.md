@@ -20,7 +20,7 @@ Conversational Hindi taught through scenarios. Each lesson: 9-10 phrases + gramm
 | `09-doctor-visit` | At the Doctor | Describing symptoms at a clinic | body parts & pain, describing symptoms, polite requests, asking about restrictions |
 | `10-phone-with-parents` | Phone Call with Parents | Weekly Sunday call with mummy & papa | sustained aap register, family terms, future plans, feminine future-tense verbs |
 
-### Foundations (`content/foundations/*.json`) — 7 lessons
+### Foundations (`content/foundations/*.json`) — 9 lessons
 Grammar core. Same schema as situations. Foundations 02-06 still have empty `skill_breakdown: []` (gap); `07-noun-gender` has full skill_breakdowns and is the template for backfilling the others.
 
 | ID | Title |
@@ -32,6 +32,8 @@ Grammar core. Same schema as situations. Foundations 02-06 still have empty `ski
 | `05-postpositions` | Postpositions |
 | `06-pronouns-verbs` | Pronouns & Verb Agreement |
 | `07-noun-gender` | Noun Gender |
+| `08-compound-verbs` | Compound Verbs (le/de/kar dena) |
+| `09-ne-rule` | The 'ne' Rule (Ergative Past) |
 
 ### Vocabulary (`content/vocabulary.json`)
 6 categories × ~15-20 words = **100 words total**: Everyday Words, Emotions & Feelings, Food & Drinks, People & Relationships, Time & Numbers, Actions.
@@ -168,7 +170,7 @@ Step-by-step for adding a new lesson:
 ## Loading
 
 - `lib/lessons.ts` — imports all 6 lesson JSONs into an array
-- `lib/foundations.ts` — imports all 6 foundation JSONs
+- `lib/foundations.ts` — imports all 9 foundation JSONs
 - `lib/vocabulary.ts` — exports categories from vocabulary.json
 - `lib/all-content.ts` — universal lookup `getUniversalLessonById(id)` across both
 - `lib/personalization.ts` — `reorderLessonsByReason()` reshuffles situations based on onboarding (family/bollywood/moving/curious)
