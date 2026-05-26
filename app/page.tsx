@@ -22,6 +22,9 @@ import { initBaseline, isInitialized, getUnseenIds, hasBeenSeen, unseeIds } from
 import { getLearnedCount } from '@/lib/dutch/knm'
 import { getStudiedCount as getLezenStudiedCount } from '@/lib/dutch/lezen'
 import { getItemsByLevel, ALL_LEVELS, type Level } from '@/lib/dutch/level-map'
+import { getAllStories } from '@/lib/stories'
+import { getStoriesReadCount } from '@/lib/stories-progress'
+import { StoryCard } from '@/components/stories/StoryCard'
 
 const W = '#fff' // @design-allow: white literal
 
@@ -79,6 +82,12 @@ export default function Home() {
   const foundations = language === 'dutch' ? getDutchFoundations() : getAllFoundations()
   const lessons =
     language === 'hindi' ? reorderLessonsByReason(rawLessons, reason) : rawLessons
+
+  const hindiStories = useMemo(() => (language === 'hindi' ? getAllStories() : []), [language])
+  const [storiesReadCount, setStoriesReadCount] = useState(0)
+  useEffect(() => {
+    if (language === 'hindi') setStoriesReadCount(getStoriesReadCount())
+  }, [language])
 
   const dutchExamLessons = useMemo(
     () => (language === 'dutch' ? lessons.filter((l) => l.exam_targeted === true) : []),
@@ -689,6 +698,60 @@ export default function Home() {
               </div>
             </div>
           </>
+        )}
+
+        {/* HINDI STORIES — illustrated motion-comics, scoped to Hindi only */}
+        {language === 'hindi' && hindiStories.length > 0 && (
+          <div
+            style={{
+              padding: '20px 20px 8px',
+              maxWidth: 480,
+              margin: '0 auto',
+              position: 'relative',
+              zIndex: 2,
+            }}
+          >
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                marginBottom: 8,
+              }}
+            >
+              <div
+                style={{
+                  fontFamily: FONTS.display,
+                  fontWeight: 800,
+                  fontSize: 14,
+                  color: COLORS.ink,
+                  textTransform: 'uppercase',
+                  letterSpacing: 1,
+                }}
+              >
+                Stories
+              </div>
+              <div
+                style={{
+                  fontFamily: FONTS.display,
+                  fontWeight: 800,
+                  fontSize: 11,
+                  color: COLORS.ink60,
+                  background: COLORS.cream,
+                  border: BORDER.thin,
+                  padding: '2px 10px',
+                  borderRadius: 999,
+                }}
+              >
+                {storiesReadCount} of {hindiStories.length} read
+              </div>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+              {hindiStories.map((story, i) => (
+                <StoryCard key={story.id} story={story} index={i} />
+              ))}
+            </div>
+          </div>
         )}
 
         {/* TABS */}

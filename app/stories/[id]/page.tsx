@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useRouter, useParams } from 'next/navigation'
 import { StoryReader } from '@/components/stories/StoryReader'
 import { getStoryById } from '@/lib/stories'
+import { FONTS, COLORS } from '@/components/design'
 import type { Story } from '@/types/story'
 
 export default function StoryPage() {
@@ -20,9 +21,9 @@ export default function StoryPage() {
   if (story === undefined) return null
   if (story === null) {
     return (
-      <div style={{ padding: 40, textAlign: 'center', fontFamily: 'system-ui' }}>
+      <div style={{ padding: 40, textAlign: 'center', fontFamily: FONTS.body, color: COLORS.ink }}>
         Story not found.{' '}
-        <button onClick={() => router.push('/')} style={{ textDecoration: 'underline' }}>
+        <button onClick={() => router.push('/')} style={{ textDecoration: 'underline', background: 'transparent', border: 'none', color: COLORS.ink, fontFamily: FONTS.body, cursor: 'pointer' }}>
           Back to home
         </button>
       </div>
