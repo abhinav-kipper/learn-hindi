@@ -76,6 +76,37 @@
     "Using 'tu' with someone who expects 'aap' is deeply offensive — like calling your boss 'dude' x100. Start with 'aap', downgrade only when invited",
     "'Apna' (one's own) is unique to Hindi/Urdu. It avoids ambiguity: 'usne apna kaam kiya' = he did HIS OWN work (not someone else's)"
   ],
-  "skill_breakdown": [],
+  "skill_breakdown": [
+    {
+      "skill": "Pronoun-verb agreement",
+      "explanation": "Each pronoun pairs with a specific auxiliary ending in present tense: main+hoon, tu+hai, tum+ho, aap+hain, wo+hai (sg) / hain (pl), ham+hain. Mismatched pairings sound jarring to native speakers.",
+      "more_examples": [
+        { "hindi": "main theek hoon", "english": "I am fine" },
+        { "hindi": "tum kahaan ho?", "english": "where are you? (friend)" },
+        { "hindi": "aap kaise hain?", "english": "how are you? (polite)" },
+        { "hindi": "wo school mein hai", "english": "he/she is in school" }
+      ]
+    },
+    {
+      "skill": "Polite forms (aap → -hain, tum → -ho, tu → -hai)",
+      "explanation": "Three levels of formality: 'aap' (respectful, strangers/elders), 'tum' (friends/peers), 'tu' (intimate/anger only). Each takes a different verb ending. Default to 'aap' when unsure.",
+      "more_examples": [
+        { "hindi": "aap kya kar rahe hain?", "english": "what are you doing? (polite)" },
+        { "hindi": "tum kya kar rahe ho?", "english": "what are you doing? (friend)" },
+        { "hindi": "tu kya kar raha hai?", "english": "what are you doing? (intimate, very informal)" },
+        { "hindi": "aap baith jaaiye", "english": "please sit (polite imperative)" }
+      ]
+    },
+    {
+      "skill": "Gender agreement in verb endings",
+      "explanation": "In past tense and continuous forms, verbs agree with subject gender: 'main aaya' (male, came) vs 'main aayi' (female). 'jaa raha hoon' (male) vs 'jaa rahi hoon' (female). Get this wrong and you sound like a tourist.",
+      "more_examples": [
+        { "hindi": "main thaka hua hoon", "english": "I am tired (male)" },
+        { "hindi": "main thaki hui hoon", "english": "I am tired (female)" },
+        { "hindi": "wo Hindi bol raha hai", "english": "he is speaking Hindi" },
+        { "hindi": "wo Hindi bol rahi hai", "english": "she is speaking Hindi" }
+      ]
+    }
+  ],
   "practice_prompt": "Practice pronouns and verb agreement. Describe your family, tell me about your friends, or ask me questions using different 'you' forms. I'll catch any agreement mismatches and explain the rules."
 }
