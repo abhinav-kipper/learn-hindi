@@ -1,0 +1,62 @@
+{
+  "id": "compound-verbs",
+  "title": "Compound Verbs (le/de/kar dena)",
+  "situation": "Hindi loves attaching a 'completion verb' to a main verb to add nuance: politeness, finality, totality. 'le lena' (take up), 'de dena' (give over), 'kar dena' (do over) — these tiny additions transform meaning.",
+  "skills": ["completion compounds", "politeness via compounding", "common patterns: le lena, de dena, kar dena, ho jaana"],
+  "phrases": [
+    { "hindi": "yeh chai pee lo", "english": "drink this chai (fully)", "context": "'pee lo' vs just 'pee' — adding 'lo' (from le lena) makes it sound completion-oriented and gently insistent.", "pronunciation": "YEH chai PEE lo" },
+    { "hindi": "main yeh kaam kar dungi", "english": "I'll get this work done", "context": "'kar dungi' (kar + dena) implies 'I'll do it for you / I'll get it over with'. More committed than just 'karungi'.", "pronunciation": "MAIN yeh KAAM kar DOON-gi" },
+    { "hindi": "yeh kitaab mujhe de dijiye", "english": "please hand me this book", "context": "'de dijiye' (de + dena polite) is more polite than just 'dijiye'. The compound softens.", "pronunciation": "YEH ki-TAAB mu-JHE DE di-JI-ye" },
+    { "hindi": "bachhe so gaye", "english": "the kids have fallen asleep", "context": "'so jaana' (sleep + jaana = go) is the standard compound for 'fall asleep'. 'gaye' is past perfective.", "pronunciation": "BACH-che SO ga-YE" },
+    { "hindi": "khaana khaa lo, theek se", "english": "eat your food properly", "context": "'khaa lo' (khaa + le) = eat (it up). Without 'lo', sounds incomplete. Mothers say this constantly.", "pronunciation": "khaa-NA KHAA lo, THEEK se" },
+    { "hindi": "darwaza band kar do", "english": "shut the door", "context": "'kar do' (kar + de) = do it (over). Standard instruction-completion compound — softer than just 'karo'.", "pronunciation": "dar-WAA-za BAND kar do" },
+    { "hindi": "main aapka number save kar leti hoon", "english": "let me save your number", "context": "'kar leti hoon' (kar + le, present) — 'I'll just take care of saving it'. The compound implies the action is small/quick.", "pronunciation": "MAIN AAP-ka NUM-ber SAVE kar LE-ti hoon" },
+    { "hindi": "wo ghar pahunch gayi", "english": "she reached home", "context": "'pahunch gayi' (reach + jaana) — completion via 'jaana'. Same as 'so gayi' for sleep. Native pattern: motion verbs commonly take jaana-compound for completion.", "pronunciation": "WO GHAR pa-HUNCH ga-YI" },
+    { "hindi": "thoda paani pila do na", "english": "give me some water, won't you", "context": "'pila do' (causative pilana + dena). 'do na' adds friendly insistence — the 'na' is a soft tag-question.", "pronunciation": "tho-DA paa-NI pi-LA do na" },
+    { "hindi": "yeh sab samjha do bachon ko", "english": "explain all this to the kids", "context": "'samjha do' (samjhana + dena) — explain (it over), 'do' marks the completion of the explaining for the listeners' benefit.", "pronunciation": "YEH sab sam-JHA do ba-CHON ko" }
+  ],
+  "grammar_notes": [
+    "Compound verbs = main verb stem + auxiliary (le/de/kar/jaa/ho). The auxiliary loses its own meaning and just adds aspect/politeness.",
+    "'le lena' (take up): the main verb's action benefits the doer. 'khaa lo' = eat (for yourself).",
+    "'de dena' (give over): the main verb's action benefits someone else. 'de do' = hand it over (to them).",
+    "'kar dena' (do over): emphasizes completion + politeness. 'kar do' is softer/more polite than bare 'karo'.",
+    "'jaa jaana' (go): used with motion or change-of-state verbs to mark completion. 'so jaana' (fall asleep), 'pahunch jaana' (arrive).",
+    "'ho jaana' (become): change-of-state. 'theek ho gaya' (got better), 'pareshaan ho gayi' (became worried)."
+  ],
+  "culture_notes": [
+    "Compound verbs are EVERYWHERE in spoken Hindi. Refusing to use them makes you sound like a foreigner reading from a textbook.",
+    "Mothers and aunties use 'kha lo / pee lo / so jaao' as their core vocabulary for caring instructions. Internalize these.",
+    "The compound choice (le/de/kar/jaa) carries social information — 'le' = for you, 'de' = for me, 'kar' = polite, 'jaa' = complete."
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "le lena (take up)",
+      "explanation": "Attached to a verb when the action benefits the doer or is self-directed. 'khaa lo' (eat — for yourself), 'pee lo' (drink up), 'samajh lo' (got it / understand for yourself).",
+      "more_examples": [
+        { "hindi": "yeh dawaai khaa lo", "english": "take this medicine" },
+        { "hindi": "araam kar lo", "english": "take some rest (for yourself)" },
+        { "hindi": "main ticket book kar leti hoon", "english": "let me book the ticket" }
+      ]
+    },
+    {
+      "skill": "de dena (give over)",
+      "explanation": "Attached when the action benefits the listener or someone other than the doer. 'de do' (hand it over), 'bata do' (tell — to them), 'kar do' (do it — for them).",
+      "more_examples": [
+        { "hindi": "phone mujhe de do", "english": "give me the phone" },
+        { "hindi": "papa ko bata dena", "english": "tell papa (do this for me)" },
+        { "hindi": "yeh kaam kal kar dena", "english": "get this work done tomorrow" }
+      ]
+    },
+    {
+      "skill": "kar dena / jaa jaana / ho jaana",
+      "explanation": "'kar dena' = do over (politeness + completion). 'jaa jaana' = go (motion / state-completion). 'ho jaana' = become (change of state). All three add a sense of 'completedness' that bare verbs lack.",
+      "more_examples": [
+        { "hindi": "khaana taiyaar ho gaya", "english": "food is ready (lit: has become ready)" },
+        { "hindi": "main thak gayi hoon", "english": "I've gotten tired" },
+        { "hindi": "kaam khatm kar do", "english": "finish the work" }
+      ]
+    }
+  ],
+  "practice_prompt": "You are a Hindi conversational tutor helping the user master compound verbs. Give them everyday situations (asking for water, telling a kid to sleep, requesting a favor) and have them respond using a compound verb. Correct gently when they use a bare verb where a compound is natural. Use 'aap' (the user is your student, polite default).",
+  "references": ["Snell & Weightman Ch. 13"]
+}
