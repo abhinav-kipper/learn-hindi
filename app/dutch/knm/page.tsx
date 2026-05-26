@@ -209,22 +209,39 @@ function StudyCard({ q, onToggle }: { q: KnmQuestion; onToggle: () => void }) {
 
   return (
     <Sticker color={W} radius={14} padding={12}>
-      <div style={{ fontFamily: FONTS.body, fontWeight: 700, color: COLORS.ink, fontSize: 14, marginBottom: 8 }}>
+      <div style={{ fontFamily: FONTS.body, fontWeight: 700, color: COLORS.ink, fontSize: 14, marginBottom: 2 }}>
         {q.question_nl}
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 4, marginBottom: 8 }}>
+      {q.question_en && (
+        <div style={{
+          fontFamily: FONTS.body, fontSize: 12, color: COLORS.ink, opacity: 0.65,
+          fontStyle: 'italic', marginBottom: 8,
+        }}>
+          {q.question_en}
+        </div>
+      )}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 6, marginBottom: 8 }}>
         {q.options_nl.map((opt, i) => (
-          <div
-            key={i}
-            style={{
-              fontFamily: FONTS.body, fontSize: 13,
-              padding: '4px 8px', borderRadius: 6,
-              background: i === q.correct_index ? COLORS.mint : 'transparent',
-              color: COLORS.ink,
-              fontWeight: i === q.correct_index ? 700 : 400,
-            }}
-          >
-            {String.fromCharCode(65 + i)}. {opt} {i === q.correct_index && '✓'}
+          <div key={i}>
+            <div
+              style={{
+                fontFamily: FONTS.body, fontSize: 13,
+                padding: '4px 8px', borderRadius: 6,
+                background: i === q.correct_index ? COLORS.mint : 'transparent',
+                color: COLORS.ink,
+                fontWeight: i === q.correct_index ? 700 : 400,
+              }}
+            >
+              {String.fromCharCode(65 + i)}. {opt} {i === q.correct_index && '✓'}
+            </div>
+            {q.options_en?.[i] && (
+              <div style={{
+                fontFamily: FONTS.body, fontSize: 11, color: COLORS.ink,
+                opacity: 0.6, fontStyle: 'italic', paddingLeft: 22, marginTop: 1,
+              }}>
+                {q.options_en[i]}
+              </div>
+            )}
           </div>
         ))}
       </div>
