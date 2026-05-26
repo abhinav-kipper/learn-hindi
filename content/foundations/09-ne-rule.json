@@ -1,0 +1,62 @@
+{
+  "id": "ne-rule",
+  "title": "The 'ne' Rule (Ergative Past)",
+  "situation": "Hindi's most-feared grammar rule: in the perfective past, TRANSITIVE verbs flip the construction. The subject gets 'ne' attached, and the verb agrees with the OBJECT, not the subject. 'maine khaaya' (I ate) — pure black magic until it clicks.",
+  "skills": ["the 'ne' marker", "object-verb agreement", "transitive vs intransitive in past"],
+  "phrases": [
+    { "hindi": "maine chai pi", "english": "I drank chai", "context": "'maine' = main + ne. 'pi' agrees with 'chai' (fem). Notice: NOT 'pee' (which would be masculine).", "pronunciation": "MAI-ne CHAI pi" },
+    { "hindi": "usne kitaab padhi", "english": "he/she read the book", "context": "'usne' = us + ne. Verb 'padhi' agrees with 'kitaab' (fem). The subject's gender is IRRELEVANT — only the object matters.", "pronunciation": "US-ne ki-TAAB pa-DHI" },
+    { "hindi": "humne movie dekhi", "english": "we watched a movie", "context": "'humne' = ham + ne. 'dekhi' agrees with 'movie' (fem in Hindi). Always check the OBJECT's gender first.", "pronunciation": "HUM-ne MO-vie de-KHI" },
+    { "hindi": "main ghar gayi", "english": "I went home", "context": "Contrast: 'jaana' is INTRANSITIVE → no 'ne'. Subject takes 'gayi' (fem, agrees with main = female speaker). Compare to the 'maine' phrases above.", "pronunciation": "MAIN GHAR ga-YI" },
+    { "hindi": "papa ne khaana banaya", "english": "papa made food", "context": "Even with named subjects, attach 'ne'. 'banaya' (M) agrees with 'khaana' (M). If it had been 'sabzi' (F), would be 'banayi'.", "pronunciation": "PA-pa ne khaa-NA ba-NA-ya" },
+    { "hindi": "tumne kya kaha?", "english": "what did you say?", "context": "Question form. 'tumne' = tum + ne. 'kaha' is a special case — fixed form, doesn't agree (because 'kya' doesn't have inherent gender).", "pronunciation": "TUM-ne KYA KA-ha?" },
+    { "hindi": "maine usse phone kiya", "english": "I called him/her", "context": "'phone kiya' — 'kiya' agrees with 'phone' (M loanword). Even English loanwords get assigned a Hindi gender; phone is M.", "pronunciation": "MAI-ne US-se PHONE ki-YA" },
+    { "hindi": "usne mujhe yeh batayi", "english": "she told me this thing (fem)", "context": "'batayi' (F) — what's the object? Implicit 'baat' (story/thing, fem). The verb agrees with whatever was told, not the speaker or listener.", "pronunciation": "US-ne mu-JHE YEH ba-TAA-yi" },
+    { "hindi": "mein roya / mein royi", "english": "I cried (M/F)", "context": "'rona' (to cry) is INTRANSITIVE — no 'ne', subject takes normal agreement. Compare with 'rulaya' (caused to cry, transitive) which would need 'ne'.", "pronunciation": "MAIN RO-ya / MAIN RO-yi" },
+    { "hindi": "humne saara kaam kar liya", "english": "we got all the work done", "context": "Compound verb 'kar liya' (kar + le, perfective) — still triggers 'ne'. 'liya' agrees with 'kaam' (M). All compounds inherit the transitivity of their main verb.", "pronunciation": "HUM-ne SAA-ra KAAM kar li-YA" }
+  ],
+  "grammar_notes": [
+    "The 'ne' rule applies ONLY in the perfective past of TRANSITIVE verbs. Present, future, habitual, continuous past — no 'ne'.",
+    "Pronoun + 'ne' forms: main→maine, tu→tune, tum→tumne, aap→aapne, wo→usne (sg) / unhone (pl), ham→humne.",
+    "Verb agreement: with 'ne', the verb agrees with the DIRECT OBJECT (gender + number). NOT with the subject.",
+    "If the object also takes 'ko' (marking specificity), the verb stays in the default masculine-singular form. 'maine usko dekha' (I saw him/her) — 'dekha' is fixed.",
+    "Intransitive verbs (aana, jaana, baithna, sona, rona) NEVER take 'ne'. They use normal subject-verb agreement.",
+    "Compound verbs (kar liya, de diya, kha liya) inherit transitivity from the main verb. 'maine kar liya' (transitive → ne). 'mein so gayi' (intransitive → no ne)."
+  ],
+  "culture_notes": [
+    "Even native Hindi speakers occasionally trip over 'ne' in fast speech, especially in casual contexts. Getting it 80% right is good enough socially.",
+    "The 'ne' rule is one of the few grammar features that Bollywood films sometimes ignore for poetic effect — don't trust song lyrics as a reference.",
+    "Learners often over-apply 'ne' (using it in present/future) — be careful. It is ONLY for perfective past of transitive verbs."
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "When to use 'ne' (transitive perfective past only)",
+      "explanation": "Two conditions must BOTH be true: (1) verb is transitive (has a direct object), (2) tense is perfective past. Anywhere else, no 'ne'.",
+      "more_examples": [
+        { "hindi": "maine kitaab padhi (✓ past + transitive)", "english": "I read the book" },
+        { "hindi": "main kitaab padhungi (✗ no ne — future)", "english": "I will read the book" },
+        { "hindi": "main ghar gayi (✗ no ne — intransitive)", "english": "I went home" }
+      ]
+    },
+    {
+      "skill": "Object-verb agreement with 'ne'",
+      "explanation": "The verb agrees with the OBJECT (its gender + number), not the subject. Always check: what's the object's gender?",
+      "more_examples": [
+        { "hindi": "maine chai (F) pi", "english": "I drank chai (verb fem to match chai)" },
+        { "hindi": "maine pani (M) piya", "english": "I drank water (verb masc to match pani)" },
+        { "hindi": "usne kitaabein (F-pl) padhi", "english": "she read the books (verb fem-plural)" }
+      ]
+    },
+    {
+      "skill": "Transitive vs intransitive trap",
+      "explanation": "Some verbs are tricky: 'bolna' (speak) — transitive in Hindi → ne. 'rona' (cry) — intransitive → no ne. 'hasna' (laugh) — intransitive. When in doubt: does the verb take a direct object?",
+      "more_examples": [
+        { "hindi": "maine bola (ne — bolna is transitive)", "english": "I said/spoke" },
+        { "hindi": "main hansi (no ne — hasna intransitive)", "english": "I laughed (fem)" },
+        { "hindi": "main rota tha (no ne)", "english": "I used to cry (also no ne in habitual, regardless)" }
+      ]
+    }
+  ],
+  "practice_prompt": "You are a Hindi grammar tutor specializing in the 'ne' rule. Give the user a short past-tense scenario and ask them to translate. They'll make mistakes — gently flag whether (a) they should/shouldn't have used 'ne', and (b) whether the verb agrees with the right gender. Use 'aap' (polite tutor).",
+  "references": ["Snell & Weightman Ch. 12", "Afroz Taj Lesson 8"]
+}
