@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { getAllLessons } from '@/lib/lessons'
@@ -19,6 +19,10 @@ import { getLessonPercent } from '@/lib/phrase-progress'
 import { getUniversalLessonById } from '@/lib/all-content'
 import { SearchOverlay } from '@/components/search-overlay'
 import { initBaseline, isInitialized, getUnseenIds, hasBeenSeen, unseeIds } from '@/lib/seen-lessons'
+import { getLearnedCount } from '@/lib/dutch/knm'
+import { getItemsByLevel, ALL_LEVELS, type Level } from '@/lib/dutch/level-map'
+
+const W = '#fff' // @design-allow: white literal
 
 import {
   Sticker,
@@ -190,6 +194,26 @@ export default function Home() {
     // Run only on mount
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  const [dutchKnmLearned, setDutchKnmLearned] = useState(0)
+  useEffect(() => {
+    if (language === 'dutch') setDutchKnmLearned(getLearnedCount())
+  }, [language])
+
+  const dutchStageProgress = useMemo(() => {
+    const empty: Record<Level, { done: number; total: number }> = {
+      A1: { done: 0, total: 0 },
+      A2: { done: 0, total: 0 },
+      B1: { done: 0, total: 0 },
+    }
+    if (language !== 'dutch') return empty
+    for (const lvl of ALL_LEVELS) {
+      const ids = getItemsByLevel(lvl)
+      empty[lvl].total = ids.length
+      empty[lvl].done = ids.filter((id) => isLessonComplete(id, config.storagePrefix)).length
+    }
+    return empty
+  }, [language, config.storagePrefix])
 
   if (!ready) {
     return (
@@ -523,6 +547,77 @@ export default function Home() {
           </motion.div>
         )}
 
+        {language === 'dutch' && (
+          <>
+            {/* Goal banner */}
+            <div style={{ padding: '8px 20px 0', maxWidth: 480, margin: '0 auto', position: 'relative', zIndex: 2 }}>
+              <Sticker color={COLORS.peach} radius={18} padding={14}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                  <span style={{ fontSize: 28 }}>🇳🇱</span>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, color: COLORS.ink, textTransform: 'uppercase', letterSpacing: 0.5 }}>
+                      Goal
+                    </div>
+                    <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 18, color: COLORS.ink, marginTop: 2 }}>
+                      Inburgeringsexamen B1 + KNM
+                    </div>
+                  </div>
+                </div>
+              </Sticker>
+            </div>
+
+            {/* Your path: 3 stages */}
+            <div style={{ padding: '14px 20px 0', maxWidth: 480, margin: '0 auto', position: 'relative', zIndex: 2 }}>
+              <Sticker color={W} radius={18} padding={16}>
+                <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, color: COLORS.ink, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 12 }}>
+                  Your path
+                </div>
+                {ALL_LEVELS.map((lvl, i) => {
+                  const p = dutchStageProgress[lvl]
+                  const pct = p.total > 0 ? Math.round((p.done / p.total) * 100) : 0
+                  return (
+                    <div key={lvl} style={{ marginBottom: i < 2 ? 12 : 0 }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', fontFamily: FONTS.body, fontWeight: 700, fontSize: 13, color: COLORS.ink, marginBottom: 4 }}>
+                        <span>{i + 1}. {lvl}</span>
+                        <span>{p.done} / {p.total}</span>
+                      </div>
+                      <div style={{ height: 8, background: COLORS.lav, borderRadius: 4, overflow: 'hidden', border: BORDER.sticker }}>
+                        <motion.div
+                          initial={{ width: 0 }}
+                          animate={{ width: `${pct}%` }}
+                          style={{ height: '100%', background: COLORS.orange }}
+                          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 + i * 0.1 }}
+                        />
+                      </div>
+                    </div>
+                  )
+                })}
+              </Sticker>
+            </div>
+
+            {/* 5 skill cards */}
+            <div style={{ padding: '14px 20px 0', maxWidth: 480, margin: '0 auto', position: 'relative', zIndex: 2 }}>
+              <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, color: COLORS.ink, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 8, padding: '0 4px' }}>
+                Exam skills
+              </div>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10 }}>
+                <SkillCard label="KNM" subtitle="Knowledge" subDutch="van NL" status={`${dutchKnmLearned}/100`} live onClick={() => router.push('/dutch/knm')} />
+                <SkillCard label="Reading"   subtitle="Lezen"     subDutch=""  status="soon" />
+                <SkillCard label="Listening" subtitle="Luisteren" subDutch=""  status="soon" />
+                <SkillCard label="Writing"   subtitle="Schrijven" subDutch=""  status="soon" />
+                <SkillCard label="Speaking"  subtitle="Spreken"   subDutch=""  status="soon" />
+              </div>
+            </div>
+
+            {/* Section separator for the existing lessons list */}
+            <div style={{ padding: '20px 20px 8px', maxWidth: 480, margin: '0 auto', position: 'relative', zIndex: 2 }}>
+              <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, color: COLORS.ink, textTransform: 'uppercase', letterSpacing: 1 }}>
+                Lessons & Grammar <span style={{ opacity: 0.5, fontStyle: 'italic', fontSize: 11, marginLeft: 6, textTransform: 'none' }}>Lessen & Grammatica</span>
+              </div>
+            </div>
+          </>
+        )}
+
         {/* TABS */}
         <div
           style={{
@@ -609,7 +704,7 @@ export default function Home() {
               }}
             >
               {language === 'dutch'
-                ? 'Start with lesson 1 — or jump to Foundations to learn the grammar core first!'
+                ? 'Lessons + grammar below build your A1-B1 foundation alongside the exam skills above.'
                 : 'Start with lesson 1 — everything builds from here'}
             </div>
           </div>
@@ -675,5 +770,36 @@ export default function Home() {
         </div>
       </div>
     </>
+  )
+}
+
+function SkillCard({
+  label, subtitle, subDutch, status, live = false, onClick,
+}: {
+  label: string
+  subtitle: string
+  subDutch: string
+  status: string
+  live?: boolean
+  onClick?: () => void
+}) {
+  return (
+    <Sticker
+      color={live ? COLORS.butter : W}
+      radius={14}
+      padding={10}
+      onClick={onClick}
+      style={{ opacity: live ? 1 : 0.55, cursor: live ? 'pointer' : 'default' }}
+    >
+      <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 13, color: COLORS.ink }}>
+        {label}
+      </div>
+      <div style={{ fontFamily: FONTS.body, fontSize: 9, color: COLORS.ink, opacity: 0.6, fontStyle: 'italic' }}>
+        {subtitle}{subDutch && ` ${subDutch}`}
+      </div>
+      <div style={{ fontFamily: FONTS.body, fontSize: 11, color: COLORS.ink, fontWeight: 700, marginTop: 4 }}>
+        {status}
+      </div>
+    </Sticker>
   )
 }
