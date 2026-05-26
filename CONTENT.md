@@ -201,6 +201,16 @@ All UI/labels in English. Dutch only for: KNM question text, Chaina voice lines,
 | Spreken (Speaking) | not yet | Phase 5 |
 | Mock exam | not yet | Phase 6 |
 
+### Exam-targeted scenarios (`content/dutch/lessons/06-11`)
+| ID | Title | Tier | Topic |
+|---|---|---|---|
+| `dutch-gemeente` | At the Gemeente | A2 | BRP-inschrijving, formal `u` register, official-document vocabulary |
+| `dutch-housing-problem` | A Problem with the House | A2 | Calling landlord, describing problems, urgency softeners |
+| `dutch-bank` | At the Bank | A2 | Opening account, complaint about charge, loonstrook |
+| `dutch-huisarts-call` | Calling the Huisarts | B1 | Formal phone register, chronic conditions, specialist referral |
+| `dutch-job-interview` | Job Interview | B1 | Self-intro, motivation, experience, strengths/weaknesses |
+| `dutch-primary-school` | At Primary School | B1 | Parent-teacher meeting, child progress, raising concerns |
+
 ### Canonical sources
 - **DUO oefenen.nl** — official practice + answer keys. Primary KNM reference.
 - **inburgeren.nl** — official 38-video KNM series ("Naar Nederland").
