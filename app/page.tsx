@@ -80,6 +80,15 @@ export default function Home() {
   const lessons =
     language === 'hindi' ? reorderLessonsByReason(rawLessons, reason) : rawLessons
 
+  const dutchExamLessons = useMemo(
+    () => (language === 'dutch' ? lessons.filter((l) => l.exam_targeted === true) : []),
+    [language, lessons],
+  )
+  const dutchCasualLessons = useMemo(
+    () => (language === 'dutch' ? lessons.filter((l) => l.exam_targeted !== true) : lessons),
+    [language, lessons],
+  )
+
   useEffect(() => {
     if (!isOnboardingComplete()) {
       router.replace('/onboarding')
@@ -229,7 +238,9 @@ export default function Home() {
     )
   }
 
-  const currentLessons = activeTab === 'situations' ? lessons : foundations
+  const currentLessons = activeTab === 'situations'
+    ? (language === 'dutch' ? dutchCasualLessons : lessons)
+    : foundations
   const goalPct = dailyGoal > 0 ? Math.min(100, Math.round((todayMinutes / dailyGoal) * 100)) : 0
   const goalHit = todayMinutes >= dailyGoal && dailyGoal > 0
 
@@ -621,6 +632,41 @@ export default function Home() {
                 <SkillCard label="Speaking"  subtitle="Spreken"   subDutch=""  status="soon" />
               </div>
             </div>
+
+            {/* Exam scenarios section */}
+            {dutchExamLessons.length > 0 && (
+              <div style={{ padding: '20px 20px 8px', maxWidth: 480, margin: '0 auto', position: 'relative', zIndex: 2 }}>
+                <div style={{
+                  fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, color: COLORS.ink,
+                  textTransform: 'uppercase', letterSpacing: 1, marginBottom: 8,
+                }}>
+                  Exam scenarios <span style={{ opacity: 0.5, fontStyle: 'italic', fontSize: 11, marginLeft: 6, textTransform: 'none' }}>A2 / B1</span>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+                  {dutchExamLessons.map((lesson, index) => {
+                    const level = lesson.level ?? 'A2'
+                    return (
+                      <div key={lesson.id} style={{ position: 'relative' }}>
+                        <LessonStickerCard
+                          lesson={lesson}
+                          index={index}
+                          routeBase="lessons"
+                        />
+                        <div style={{
+                          position: 'absolute', top: 12, right: 12,
+                          background: level === 'B1' ? COLORS.peach : COLORS.butter,
+                          border: BORDER.sticker, padding: '2px 10px', borderRadius: 999,
+                          fontFamily: FONTS.display, fontWeight: 800, fontSize: 11, color: COLORS.ink,
+                          zIndex: 3,
+                        }}>
+                          {level}
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            )}
 
             {/* Section separator for the existing lessons list */}
             <div style={{ padding: '20px 20px 8px', maxWidth: 480, margin: '0 auto', position: 'relative', zIndex: 2 }}>
