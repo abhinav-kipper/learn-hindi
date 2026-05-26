@@ -45,12 +45,29 @@ interface ActivityItem {
   date: string
 }
 
+type LessonTab = 'situations' | 'foundations'
+
 export default function ProgressPage() {
   const router = useRouter()
   const { language, config } = useLanguage()
   const [stats, setStats] = useState<Stats | null>(null)
   const [activities, setActivities] = useState<ActivityItem[]>([])
   const [streakDays, setStreakDays] = useState<Array<'active' | 'pending' | 'inactive'>>([])
+  const lessonTabStorageKey = `${config.storagePrefix}-progress-lesson-tab`
+  const [lessonTab, setLessonTab] = useState<LessonTab>('situations')
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem(lessonTabStorageKey)
+      if (stored === 'situations' || stored === 'foundations') setLessonTab(stored)
+    }
+  }, [lessonTabStorageKey])
+
+  const handleLessonTab = (next: LessonTab) => {
+    setLessonTab(next)
+    if (typeof window !== 'undefined') localStorage.setItem(lessonTabStorageKey, next)
+    playSound('tap')
+  }
 
   useEffect(() => {
     const prefix = config.storagePrefix
@@ -392,15 +409,63 @@ export default function ProgressPage() {
           transition={{ delay: 0.4 }}
         >
           <Sticker color={W} radius={22} padding={18}>
+            <div
+              style={{
+                background: COLORS.ink,
+                borderRadius: 99,
+                padding: 4,
+                display: 'flex',
+                border: BORDER.sticker,
+                boxShadow: SHADOW.chip,
+                marginBottom: 14,
+              }}
+            >
+              {(['situations', 'foundations'] as LessonTab[]).map((t) => {
+                const active = lessonTab === t
+                const count = t === 'situations' ? lessons.length : foundations.length
+                return (
+                  <button
+                    key={t}
+                    onClick={() => handleLessonTab(t)}
+                    style={{
+                      flex: 1,
+                      position: 'relative',
+                      textAlign: 'center',
+                      padding: '7px 0',
+                      borderRadius: 99,
+                      background: 'transparent',
+                      color: active ? COLORS.ink : COLORS.cream,
+                      fontFamily: FONTS.display,
+                      fontWeight: 800,
+                      fontSize: 13,
+                      cursor: 'pointer',
+                      textTransform: 'lowercase',
+                      border: 'none',
+                      transition: 'color 0.2s',
+                    }}
+                  >
+                    {active && (
+                      <motion.div
+                        layoutId="progress-lesson-tab-active"
+                        transition={{ type: 'spring', stiffness: 320, damping: 28 }}
+                        style={{
+                          position: 'absolute',
+                          inset: 0,
+                          background: COLORS.cream,
+                          borderRadius: 99,
+                        }}
+                      />
+                    )}
+                    <span style={{ position: 'relative', zIndex: 1 }}>
+                      {t} <span style={{ opacity: 0.55, fontSize: 11 }}>· {count}</span>
+                    </span>
+                  </button>
+                )
+              })}
+            </div>
             <LessonGroup
-              title="situations"
-              lessons={lessons}
-              prefix={config.storagePrefix}
-            />
-            <div style={{ height: 1, borderTop: `1px dashed ${COLORS.ink45}`, margin: '14px 0' }} />
-            <LessonGroup
-              title="foundations"
-              lessons={foundations}
+              title={lessonTab}
+              lessons={lessonTab === 'situations' ? lessons : foundations}
               prefix={config.storagePrefix}
             />
           </Sticker>
@@ -619,7 +684,6 @@ function LessonGroup({
   lessons: Lesson[]
   prefix: string
 }) {
-  const [expandDone, setExpandDone] = useState(false)
   const rows = useMemo(
     () => lessons.map((l) => ({ lesson: l, pct: getLessonPercent(l, prefix) })),
     [lessons, prefix],
@@ -661,9 +725,31 @@ function LessonGroup({
         </span>
       </div>
 
-      {active.length > 0 ? (
+      {rows.length === 0 ? (
+        <div style={{ fontFamily: FONTS.body, fontWeight: 700, fontSize: 12, color: COLORS.ink45 }}>
+          no lessons yet
+        </div>
+      ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
           {done.length > 0 && (
+            <div
+              style={{
+                fontFamily: FONTS.display,
+                fontWeight: 800,
+                fontSize: 10,
+                color: COLORS.green,
+                textTransform: 'uppercase',
+                letterSpacing: 0.8,
+                marginBottom: -2,
+              }}
+            >
+              ✓ completed ({done.length})
+            </div>
+          )}
+          {done.map(({ lesson, pct }) => (
+            <LessonRow key={lesson.id} title={lesson.title} pct={pct} />
+          ))}
+          {active.length > 0 && (
             <div
               style={{
                 fontFamily: FONTS.display,
@@ -672,6 +758,7 @@ function LessonGroup({
                 color: COLORS.ink45,
                 textTransform: 'uppercase',
                 letterSpacing: 0.8,
+                marginTop: done.length > 0 ? 6 : 0,
                 marginBottom: -2,
               }}
             >
@@ -681,99 +768,11 @@ function LessonGroup({
           {active.map(({ lesson, pct }) => (
             <LessonRow key={lesson.id} title={lesson.title} pct={pct} />
           ))}
-        </div>
-      ) : (
-        <div
-          style={{
-            fontFamily: FONTS.body,
-            fontWeight: 700,
-            fontSize: 12,
-            color: COLORS.green,
-          }}
-        >
-          all done — nice work 🎉
-        </div>
-      )}
-
-      {done.length > 0 && (
-        <div style={{ marginTop: 10 }}>
-          <button
-            onClick={() => {
-              playSound('tap')
-              setExpandDone((v) => !v)
-            }}
-            style={{
-              width: '100%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              fontFamily: FONTS.display,
-              fontWeight: 800,
-              fontSize: 12,
-              color: COLORS.ink60,
-              background: 'transparent',
-              border: 'none',
-              padding: '6px 0',
-              cursor: 'pointer',
-              textTransform: 'lowercase',
-            }}
-          >
-            <span>{done.length} completed</span>
-            <motion.span
-              animate={{ rotate: expandDone ? 180 : 0 }}
-              transition={{ duration: 0.2 }}
-              style={{ display: 'inline-block' }}
-            >
-              <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor">
-                <path
-                  fillRule="evenodd"
-                  d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </motion.span>
-          </button>
-          <AnimatePresence initial={false}>
-            {expandDone && (
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: 'auto', opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.2 }}
-                style={{ overflow: 'hidden' }}
-              >
-                <div style={{ paddingTop: 4, display: 'flex', flexDirection: 'column', gap: 6 }}>
-                  {done.map(({ lesson }) => (
-                    <div
-                      key={lesson.id}
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: 8,
-                        padding: '4px 0',
-                      }}
-                    >
-                      <span style={{ color: COLORS.green, fontWeight: 800 }}>✓</span>
-                      <span
-                        style={{
-                          fontFamily: FONTS.body,
-                          fontWeight: 700,
-                          fontSize: 12,
-                          color: COLORS.ink60,
-                          overflow: 'hidden',
-                          textOverflow: 'ellipsis',
-                          whiteSpace: 'nowrap',
-                          flex: 1,
-                        }}
-                      >
-                        {lesson.title}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          {active.length === 0 && (
+            <div style={{ fontFamily: FONTS.body, fontWeight: 700, fontSize: 12, color: COLORS.green, marginTop: 4 }}>
+              all done — nice work 🎉
+            </div>
+          )}
         </div>
       )}
     </div>
@@ -782,6 +781,8 @@ function LessonGroup({
 
 function LessonRow({ title, pct }: { title: string; pct: number }) {
   const notStarted = pct === 0
+  const done = pct === 100
+  const barColor = done ? COLORS.green : pct > 0 ? COLORS.orange : 'transparent'
   return (
     <div>
       <div
@@ -804,10 +805,17 @@ function LessonRow({ title, pct }: { title: string; pct: number }) {
             flex: 1,
           }}
         >
+          {done && <span style={{ color: COLORS.green, marginRight: 6, fontWeight: 800 }}>✓</span>}
           {title}
         </span>
-        <span style={{ color: notStarted ? COLORS.ink45 : COLORS.ink60, fontStyle: notStarted ? 'italic' : 'normal' }}>
-          {notStarted ? 'not started' : `${pct}%`}
+        <span
+          style={{
+            color: done ? COLORS.green : notStarted ? COLORS.ink45 : COLORS.ink60,
+            fontStyle: notStarted ? 'italic' : 'normal',
+            fontWeight: done ? 800 : 700,
+          }}
+        >
+          {done ? 'done' : notStarted ? 'not started' : `${pct}%`}
         </span>
       </div>
       <div
@@ -826,7 +834,7 @@ function LessonRow({ title, pct }: { title: string; pct: number }) {
           transition={{ duration: 0.7, ease: 'easeOut' }}
           style={{
             height: '100%',
-            background: pct > 0 ? COLORS.orange : 'transparent',
+            background: barColor,
             borderRight: pct > 0 && pct < 100 ? BORDER.thin : 'none',
           }}
         />
