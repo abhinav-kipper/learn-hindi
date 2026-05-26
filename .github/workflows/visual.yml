@@ -1,0 +1,45 @@
+# Visual regression — runs Playwright on every PR + push to main.
+# Fails on pixel drift > 0.5%. Uploads diff artifacts on failure for review.
+
+name: visual
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Playwright browsers
+        run: pnpm exec playwright install --with-deps chromium
+
+      - name: Run visual tests
+        run: pnpm exec playwright test --config e2e/playwright.config.ts
+
+      - name: Upload diff artifacts on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-diff
+          path: |
+            e2e/visual.spec.ts-snapshots/
+            test-results/
+            playwright-report/
