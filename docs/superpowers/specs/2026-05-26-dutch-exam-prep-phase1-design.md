@@ -25,6 +25,7 @@ After Phase 1 ships, the user can use the app to: (a) see a clear A1 → A2 → 
 | KNM mock format | 30 questions drawn randomly from the 100-pool, 80% pass threshold (mirrors real exam) |
 | First exam-skill module to ship | KNM (lowest-complexity to author, no Gemini grading needed, fixed answer keys) |
 | Sources for KNM authoring | Naar Nederland handbook (free PDF), DUO oefenen.nl, Bart de Pau YouTube, Marlou Lemmens YouTube |
+| UI language | **English** for all chrome/labels/navigation. Dutch ONLY for: (a) content being learned (KNM questions, lesson phrases), (b) Chaina's voice lines (same pattern as Hinglish-Chaina in the Hindi track), (c) the exam name as a proper noun ("Inburgeringsexamen") |
 
 ## 3. Strategic framework (the 3-stage arc)
 
@@ -132,7 +133,7 @@ None.
 
 ### Study mode (`/dutch/knm/`)
 
-- 6 category cards (one per `category` enum value).
+- 6 category cards (one per `category` enum value). Card title is English ("Politics / Work / Education / Housing / Healthcare / History"), with the Dutch term as a small subtitle ("Politiek / Werk / Onderwijs / Wonen / Gezondheid / Geschiedenis") so the user picks up the Dutch category names by exposure.
 - Tap a category → list of questions in that category as scrollable cards.
 - Each card shows: Dutch question, all 4 options, correct answer highlighted in mint, English explanation below.
 - Per-question "learned" toggle — saves to `dutch-knm-learned` localStorage Set<string> (question IDs).
@@ -156,35 +157,39 @@ Replace the current Dutch home (which mirrors Hindi situations + foundations tab
 ```
 ┌─────────────────────────────────────────────┐
 │  Hi, {name}                  [search] [🔊]  │
-│  🇳🇱 Doel: Inburgeringsexamen B1 + KNM      │  ← peach Sticker banner
+│  🇳🇱 Goal: Inburgeringsexamen B1 + KNM      │  ← peach Sticker banner
 │  [streak chip]                              │
 ├─────────────────────────────────────────────┤
 │  ┌─────────────────────────────────────┐    │
-│  │  Jouw pad                           │    │  ← 3-stage path Sticker
+│  │  Your path                          │    │  ← 3-stage path Sticker
 │  │  ① A1 ████████░░  (8/10 done)       │    │
-│  │  ② A2 ░░░░░░░░░░  (locked at A1≥80%)│    │
-│  │  ③ B1 ░░░░░░░░░░  (locked at A2≥80%)│    │
+│  │  ② A2 ░░░░░░░░░░                    │    │
+│  │  ③ B1 ░░░░░░░░░░                    │    │
 │  └─────────────────────────────────────┘    │
 ├─────────────────────────────────────────────┤
-│  Examen-vaardigheden  (Exam skills)         │
+│  Exam skills                                │
 │  ┌──────────┐ ┌──────────┐ ┌──────────┐    │
-│  │   KNM    │ │  Lezen   │ │ Luisteren│    │
-│  │ 17/100   │ │ binnenkort│ │ binnenkort│   │
+│  │   KNM    │ │ Reading  │ │ Listening│    │
+│  │ 17/100   │ │ soon     │ │ soon     │    │
+│  │ (Lezen)  │ │(Luisteren│    │
 │  └──────────┘ └──────────┘ └──────────┘    │
 │  ┌──────────┐ ┌──────────┐                  │
-│  │ Schrijven│ │  Spreken │                  │
-│  │binnenkort│ │binnenkort│                  │
+│  │ Writing  │ │ Speaking │                  │
+│  │ soon     │ │ soon     │                  │
+│  │(Schrijven│ │ (Spreken)│                  │
 │  └──────────┘ └──────────┘                  │
 ├─────────────────────────────────────────────┤
-│  Lessen & Grammatica  (kept as-is)          │
+│  Lessons & Grammar  (kept as-is)            │
 │  [existing lesson + foundation list]        │
 └─────────────────────────────────────────────┘
 ```
 
+All UI labels are English. The Dutch skill names (Lezen / Luisteren / Schrijven / Spreken) appear as small subtitles under the English labels so the user picks up the Dutch terms by exposure without needing to translate to navigate.
+
 - The Doel banner is a peach Sticker with the Dutch flag motif.
 - The "Jouw pad" card shows three stage rows with progress bars as **read-only progress indicators** (not content gates). **A1 progress** = (lessons + foundations completed in level A1) / total A1 items. Each existing lesson + foundation gets a level tag via the `lib/dutch/level-map.ts` lookup. **No hard locking** — all content remains accessible from the Lessen & Grammatica list; the stage card just visualises where you are.
-- The 5 skill cards: KNM has live progress count + "Start" CTA, the other 4 say "binnenkort" (coming soon) and are visually dimmed but tappable to show a "Coming in Phase N — voor nu, focus op KNM" message.
-- The existing Lessons & Grammar list stays below as supplementary content. The two tabs (Situations/Foundations) collapse into one "Lessen & Grammatica" section.
+- The 5 skill cards: KNM has live progress count + "Start" CTA, the other 4 say "soon" and are visually dimmed but tappable to show a "Coming in Phase N — for now, focus on KNM" message. Each card has a small Dutch-skill-name subtitle (e.g. "Reading" with "Lezen" below) so the user learns the Dutch exam-terminology by exposure.
+- The existing Lessons & Grammar list stays below as supplementary content. The two tabs (Situations/Foundations) collapse into one "Lessons & Grammar" section (English label, with "Lessen & Grammatica" as small Dutch subtitle).
 
 Hindi home page is **untouched** — this reorientation only applies when `language === 'dutch'`.
 
@@ -194,19 +199,21 @@ Current welcome modal (`components/dutch-welcome-modal.tsx`): first-time Dutch u
 
 New copy:
 
-> **Hallo! Klaar voor je inburgeringsexamen?**
+> **Hallo!** Ready for your inburgeringsexamen?
 >
 > This Dutch track is built to prep you for the **Inburgeringsexamen B1 + KNM** — the exam HSM holders take to naturalize and get a Dutch passport.
 >
 > You'll cover all 5 exam skills:
 > - **KNM** — knowledge of Dutch society (live now)
-> - **Lezen** (Reading), **Luisteren** (Listening), **Schrijven** (Writing), **Spreken** (Speaking) — *binnenkort*
+> - **Reading** (*Lezen*), **Listening** (*Luisteren*), **Writing** (*Schrijven*), **Speaking** (*Spreken*) — coming soon
 >
 > Target level: **B1** (covers both A2 + B1 exam variants — toggle in settings if you want A2-only).
 >
 > Tip: book your exam date on **inburgeren.nl** before you start. A deadline focuses the mind.
 >
 > [Start with KNM]   [Browse all]
+
+UI is English. Dutch terms appear as italic subtitles for the skill names so you learn the exam vocabulary by exposure without needing to translate to navigate.
 
 ## 10. Chaina moments (Dutch additions)
 
