@@ -38,6 +38,15 @@ Grammar core. Same schema as situations. As of 2026-05-26 all 9 foundations have
 ### Vocabulary (`content/vocabulary.json`)
 6 categories × ~15-20 words = **100 words total**: Everyday Words, Emotions & Feelings, Food & Drinks, People & Relationships, Time & Numbers, Actions.
 
+### Stories (`content/stories/*.json`) — 3 motion-comics
+Chai Galli aesthetic illustrated 5-panel stories. Pure consumption (no quiz). Each panel: scene background + character + dialogue + tap-to-reveal English + browser TTS. Hindi-only.
+
+| ID | Title | Tier | Vocab maps to |
+|---|---|---|---|
+| `chai-stall` | The Chai Stall | A1 | 01-greetings + 03-ordering-food |
+| `lost-in-bazaar` | Lost in the Bazaar | A2 | 06-giving-directions |
+| `sunday-with-nani` | Sunday with Nani | A2 | 07-home-visit + 10-phone-with-parents |
+
 ## Schema (Lesson JSON)
 
 ```ts
@@ -178,6 +187,8 @@ Hindi:
 - `lib/all-content.ts` — universal lookup `getUniversalLessonById(id)` across both Hindi + Dutch
 - `lib/personalization.ts` — `reorderLessonsByReason()` reshuffles Hindi situations based on onboarding (family/bollywood/moving/curious)
 - `lib/system-prompt.ts` — `buildSystemPrompt(lesson)` injects lesson into Gemini system prompt for `/practice/[id]`
+- `lib/stories.ts` — imports the 3 Hindi story JSONs in `content/stories/`
+- `lib/stories-progress.ts` — Hindi-stories-read tracking (`learn-hindi:hindi-stories-read`)
 
 Dutch:
 - `lib/dutch/lessons.ts` — imports all 11 Dutch lesson JSONs (5 casual + 6 exam-targeted)

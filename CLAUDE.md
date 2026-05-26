@@ -48,6 +48,7 @@ content/dutch/lessons/  → 11 Dutch lesson JSONs (5 A1 casual + 6 A2/B1 exam-ta
 content/dutch/foundations/ → 7 Dutch foundation JSONs
 content/dutch/knm.json  → 100 KNM exam questions (bilingual, 6 categories)
 content/dutch/lezen.json → 10 Lezen B1-prep reading texts (bilingual, 40 MCQs)
+content/stories/        → 3 Hindi story JSONs (Chai Galli motion-comics)
 types/                  → TypeScript interfaces
 public/                 → PWA manifest, icon.svg
 ```
@@ -155,6 +156,7 @@ shadows anywhere.
 | `/dutch/lezen` | Lezen (Reading) module home. 3 tier sections (Beginner A1 / Elementary A2 / Intermediate B1) collapsible with A1 open by default. Orange "Start timed mock" CTA (25-min, 5 texts, 20 Qs, Dutch-only). Past-mocks fold. |
 | `/dutch/lezen/[textId]` | Single Lezen text study mode. Dutch body w/ "Show English translation" toggle → mint sticker reveals `body_en`. Bilingual question cards (4 per text, types: hoofdgedachte/detail/woordbetekenis/gevolg). Mark-as-studied → Chaina `lezenStudyDone` + persist to `dutch-lezen-studied`. |
 | `/dutch/lezen/mock` | 25-min timed Lezen drill (Dutch-only). 5 random texts × 4 Qs = 20 questions. Live timer pill goes pink under 5 min. Auto-advance 1.5s after answer reveal. Pass ≥16/20 → `lezenMockPassed` + Confetti. Save to `dutch-lezen-mock-attempts`. |
+| `/stories/[id]` | Single Hindi story — tap-through 5-panel Chai Galli motion-comic. Each panel: scene background (composed SVG: ChaiStall / Bazaar / NaniHouse / NarratorCard) + character w/ idle motion (Cutting / Nani / Customer / Shopkeeper) + dialogue Sticker w/ syllable-stress pronunciation hint + 🔊 hear-it (browser TTS, hi-IN) + tap-to-reveal English (lavender → mint reveal-zone). Framer Motion slide-in panel transitions. Last panel marks story-read in `learn-hindi:hindi-stories-read` + fires Confetti + "✓ read more stories" CTA back to home. |
 
 ### Libraries (`lib/`)
 
@@ -172,6 +174,8 @@ shadows anywhere.
 | `favorites.ts` | Star phrases — `toggleFavorite`, `isFavorite`, `getFavorites`. Key `${lessonId}::${hindi}` |
 | `conjugations.ts` | 5 verbs (hona/jaana/karna/aana/bolna) × 3 tenses (present/past/future), used by `/drill/conjugation`. Romanization follows CONTENT.md style (single-vowel endings: `karta`, `karunga`, `tha`) |
 | `speech.ts` | Browser TTS / STT — ReadAloudButton + voice input |
+| `stories.ts` | Loader for the 3 Hindi story JSONs in `content/stories/`. `getAllStories()` + `getStoryById(id)`. TDD'd, 4 tests. |
+| `stories-progress.ts` | Read-state tracking for Hindi stories. Storage key `learn-hindi:hindi-stories-read` (JSON array of read story IDs). TDD'd, 7 tests. |
 | `seen-lessons.ts` | localStorage-backed Set tracking which lessons a user has seen (per-language). `initBaseline()` silent-tags existing IDs on first detection so the popup never false-fires; `getUnseenIds()`, `markAsSeen()`, `hasBeenSeen()`, `unseeIds()`. TDD'd, 9 tests. |
 | `dutch/lessons.ts`, `dutch/foundations.ts` | Parallel loaders for Dutch content (11 lessons + 7 foundations). `getDutchAllContent()` returns both combined for cross-module use (e.g. search). |
 | `dutch/knm.ts` | KNM loader + `drawDrillSet(30)` (Fisher-Yates) + `scoreAttempt()` (80% pass) + attempt history (capped at 50) + per-question studied tracking. TDD'd, 12 tests. |
@@ -259,6 +263,7 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `chaina-voice-muted` — reserved future fine-grained Chaina mute (read but not yet UI-toggled)
 - `chaina-freq-<mode>-<key>` — frequency cap state per moment
 - `chaina-a2-milestone-fired` — set to `'1'` after `a2Milestone` Chaina moment fires once. Permanent milestone, never re-fires.
+- `learn-hindi:hindi-stories-read` — JSON array of story IDs the user has finished reading. Powers the read-check sticker on each StoryCard + the "N of 3 read" pill on the Hindi home Stories section header.
 - `chaina-session-start-ts` (sessionStorage) — session start for sessionEnd 5min threshold
 
 **New-content surfacing (Hindi):**
@@ -273,6 +278,17 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-lezen-mock-attempts` — same shape as `dutch-knm-attempts`, plus `text_ids: string[]`.
 
 ### Recent feature work log
+
+**2026-05-26 wave — Hindi Stories (Chai Galli motion-comics)**
+
+- 3 short illustrated Hindi stories (5 panels each): `chai-stall` (A1 — Cutting's origin meeting a customer at the chai stall), `lost-in-bazaar` (A2 — directions comedy-of-helpfulness, 3 shopkeepers contradict each other and a child saves the day), `sunday-with-nani` (A2 — grandmother lunch, leave with a steel dabba of leftovers).
+- New content type: `Story` interface (`types/story.ts`) parallel to `Lesson`. Each panel has scene + dialogue + speaker + tap-reveal English + browser-TTS pronunciation. Cultural punchline on the last panel of each.
+- 3 new SVG character primitives in Chai Galli style: `Nani` (sari, hair bun, glasses, dabba), `Customer` (humanoid, palette-swappable shirt), `Shopkeeper` (mustache, crate prop, two palette variants). Cutting reused as chaiwala (Story 1) and as customer (Story 3).
+- 4 scene background components: `ChaiStallScene` (peach sky, chai cart, steam), `BazaarScene` (marigold strings, stall row, temple silhouette), `NaniHouseScene` (interior with window + low table + thali), `NarratorCard` (lavender dotted backdrop for narration panels). All composed inline SVG, no external assets.
+- `StoryReader` (`components/stories/StoryReader.tsx`) drives the tap-through: Framer Motion `AnimatePresence` slide-left/right panel transitions, per-panel English reveal-zone (mirrors existing lesson reveal pattern), browser TTS via `lib/speech.ts` (`'hi-IN'`), Confetti on the final panel, marks story-read.
+- New route `/stories/[id]`. New "Stories" section on Hindi home above the Situations/Foundations tab pill with 3 StoryCards (palette-rotated peach2 / butter / mint2) + "N of 3 read" pill.
+- `lib/stories.ts` (TDD'd, 4 tests) + `lib/stories-progress.ts` (TDD'd, 7 tests) persist read state to `learn-hindi:hindi-stories-read`.
+- Hindi-only for MVP. Dutch parallel can come later if engagement is positive. No quiz, no per-word translation popovers, no Chaina moment on completion (all deferred).
 
 **2026-05-26 wave — Dutch exam-prep track + Hindi content expansion + new-content surfacing**
 
