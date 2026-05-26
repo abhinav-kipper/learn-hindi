@@ -123,6 +123,17 @@ const LINES: Record<string, Line[]> = {
     { main: 'kuch naya hai!',                  caption: 'check karo 👋',     speak: 'Kuch naya hai. Check karo.' },
     { main: 'naya content unlocked',           caption: 'mazaa aayega',     speak: 'Naya content unlocked. Mazaa aayega.' },
   ],
+  knmAttemptComplete: [
+    { main: 'goed bezig!',  caption: 'oefenen blijft loon',  speak: 'Goed bezig! Oefenen blijft loon.' },
+    { main: 'niet slecht',  caption: 'volgende keer beter',  speak: 'Niet slecht. Volgende keer beter.' },
+  ],
+  knmPassed: [
+    { main: 'Geslaagd! 🎉', caption: 'goed gedaan!',         speak: 'Geslaagd! Goed gedaan!' },
+    { main: 'top!',          caption: 'examen-klaar',         speak: 'Top! Examen klaar.' },
+  ],
+  a2Milestone: [
+    { main: 'A2 bereikt!',   caption: 'door naar B1, of examen?', speak: 'A2 bereikt! Door naar B1, of examen?' },
+  ],
 };
 
 export const MOMENTS: Record<string, Moment> = {
@@ -256,6 +267,33 @@ export const MOMENTS: Record<string, Moment> = {
     mood: 'wave', moodAnim: 'wave-tilt 1.2s ease-in-out 2',
     bubbleTail: 'bottom-right', bubbleSide: 'left',
     voice: true, lines: LINES.newContent, sizePct: 0.34,
+  },
+  knmAttemptComplete: {
+    label: 'KNM attempt complete (under pass threshold)',
+    when: 'KNM drill finishes with score <80%',
+    anchor: 'bottom-right',
+    enter: 'peek-up-right', enterMs: 700, holdMs: 3400, exit: 'dismiss-down', exitMs: 600,
+    mood: 'wave', moodAnim: 'wave-tilt 1.2s ease-in-out 2',
+    bubbleTail: 'bottom-right', bubbleSide: 'left',
+    voice: true, lines: LINES.knmAttemptComplete, sizePct: 0.34,
+  },
+  knmPassed: {
+    label: 'KNM passed (>=80%)',
+    when: 'KNM drill finishes with score >=80%',
+    anchor: 'center',
+    enter: 'bubble-pop', enterMs: 700, holdMs: 3400, exit: 'dismiss-down', exitMs: 600,
+    mood: 'happy', moodAnim: 'happy-hop 0.6s ease-in-out 2',
+    bubbleTail: 'bottom-right', bubbleSide: 'left',
+    voice: true, lines: LINES.knmPassed, sizePct: 0.45,
+  },
+  a2Milestone: {
+    label: 'A2 stage complete',
+    when: 'A1 completion crosses 100% (Dutch home detection)',
+    anchor: 'center',
+    enter: 'bubble-pop', enterMs: 700, holdMs: 4200, exit: 'dismiss-down', exitMs: 600,
+    mood: 'wave', moodAnim: 'wave-tilt 1.2s ease-in-out 2',
+    bubbleTail: 'bottom-right', bubbleSide: 'left',
+    voice: true, lines: LINES.a2Milestone, sizePct: 0.45,
   },
 };
 
