@@ -2,14 +2,18 @@
 
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useRouter } from 'next/navigation'
 import { playSound } from '@/lib/sounds'
-import { Tag, Cutting, Confetti as ChaiConfetti, COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
+import { Sticker, Tag, Cutting, Confetti as ChaiConfetti, COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
+import { getExamTarget, setExamTarget, type ExamTarget } from '@/lib/dutch/exam-target'
 const W = '#fff' // @design-allow: white literal
 
 const WELCOMED_KEY = 'dutch-welcomed'
 
 export function DutchWelcomeModal() {
+  const router = useRouter()
   const [show, setShow] = useState(false)
+  const [target, setTarget] = useState<ExamTarget>('b1')
 
   useEffect(() => {
     if (!localStorage.getItem(WELCOMED_KEY)) {
@@ -17,11 +21,15 @@ export function DutchWelcomeModal() {
     }
   }, [])
 
+  useEffect(() => { setTarget(getExamTarget()) }, [])
+
   const dismiss = () => {
     localStorage.setItem(WELCOMED_KEY, '1')
     setShow(false)
     playSound('tap')
   }
+
+  const onChangeTarget = (t: ExamTarget) => { setExamTarget(t); setTarget(t) }
 
   return (
     <AnimatePresence>
@@ -74,80 +82,94 @@ export function DutchWelcomeModal() {
               <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 8 }}>
                 <Cutting size={100} mood="happy" />
               </div>
-              <div style={{ textAlign: 'center', position: 'relative', zIndex: 10 }}>
+              <div style={{ position: 'relative', zIndex: 10 }}>
                 <Tag>🇳🇱 welkom</Tag>
-                <div
-                  style={{
-                    fontFamily: FONTS.display,
-                    fontWeight: 800,
-                    fontSize: 22,
-                    color: COLORS.ink,
-                    marginTop: 8,
-                    letterSpacing: -0.4,
-                  }}
-                >
-                  Welkom bij Nederlands!
+
+                <h2 style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 22, color: COLORS.ink, margin: '8px 0 6px' }}>
+                  Hallo! Ready for your inburgeringsexamen?
+                </h2>
+                <p style={{ fontFamily: FONTS.body, fontSize: 14, color: COLORS.ink, lineHeight: 1.5, margin: '0 0 14px' }}>
+                  This Dutch track is built to prep you for the <strong>Inburgeringsexamen B1 + KNM</strong> — the exam HSM holders take to naturalize and get a Dutch passport.
+                </p>
+
+                <div style={{ marginBottom: 14 }}>
+                  <div style={{
+                    fontFamily: FONTS.display, fontWeight: 800, fontSize: 12, color: COLORS.ink,
+                    textTransform: 'uppercase', letterSpacing: 1, marginBottom: 6,
+                  }}>
+                    Exam skills
+                  </div>
+                  <ul style={{ margin: 0, padding: 0, listStyle: 'none', fontFamily: FONTS.body, fontSize: 13, color: COLORS.ink, lineHeight: 1.6 }}>
+                    <li><strong>KNM</strong> — knowledge of Dutch society <em style={{ opacity: 0.7 }}>(live now)</em></li>
+                    <li><strong>Reading</strong> <em style={{ opacity: 0.6 }}>(Lezen)</em> · <strong>Listening</strong> <em style={{ opacity: 0.6 }}>(Luisteren)</em> · <strong>Writing</strong> <em style={{ opacity: 0.6 }}>(Schrijven)</em> · <strong>Speaking</strong> <em style={{ opacity: 0.6 }}>(Spreken)</em> — <em style={{ opacity: 0.7 }}>coming soon</em></li>
+                  </ul>
                 </div>
-                <div
-                  style={{
-                    fontFamily: FONTS.body,
-                    fontWeight: 700,
-                    fontSize: 12,
-                    color: COLORS.ink60,
-                    marginTop: 4,
-                  }}
-                >
-                  welcome to Dutch mode
+
+                <div style={{ marginBottom: 14 }}>
+                  <div style={{
+                    fontFamily: FONTS.display, fontWeight: 800, fontSize: 12, color: COLORS.ink,
+                    textTransform: 'uppercase', letterSpacing: 1, marginBottom: 6,
+                  }}>
+                    Exam target
+                  </div>
+                  <div style={{ display: 'flex', gap: 8 }}>
+                    <Sticker
+                      color={target === 'a2' ? COLORS.butter : W}
+                      radius={12}
+                      padding={10}
+                      selected={target === 'a2'}
+                      onClick={() => onChangeTarget('a2')}
+                      style={{ flex: 1 }}
+                    >
+                      <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, color: COLORS.ink, textAlign: 'center' }}>A2</div>
+                      <div style={{ fontFamily: FONTS.body, fontSize: 11, color: COLORS.ink, opacity: 0.7, textAlign: 'center' }}>basic, faster</div>
+                    </Sticker>
+                    <Sticker
+                      color={target === 'b1' ? COLORS.butter : W}
+                      radius={12}
+                      padding={10}
+                      selected={target === 'b1'}
+                      onClick={() => onChangeTarget('b1')}
+                      style={{ flex: 1 }}
+                    >
+                      <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, color: COLORS.ink, textAlign: 'center' }}>B1 ✓</div>
+                      <div style={{ fontFamily: FONTS.body, fontSize: 11, color: COLORS.ink, opacity: 0.7, textAlign: 'center' }}>full coverage</div>
+                    </Sticker>
+                  </div>
+                </div>
+
+                <p style={{
+                  fontFamily: FONTS.body, fontSize: 12, color: COLORS.ink, opacity: 0.75, fontStyle: 'italic',
+                  margin: '0 0 16px',
+                }}>
+                  Tip: book your exam date on <strong>inburgeren.nl</strong> before you start. A deadline focuses the mind.
+                </p>
+
+                <div style={{ display: 'flex', gap: 10 }}>
+                  <Sticker
+                    color={COLORS.orange}
+                    radius={14}
+                    padding={12}
+                    onClick={() => { dismiss(); router.push('/dutch/knm') }}
+                    style={{ flex: 1 }}
+                  >
+                    <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, color: W, textAlign: 'center' }}>
+                      Start with KNM
+                    </div>
+                  </Sticker>
+                  <Sticker
+                    color={COLORS.butter}
+                    radius={14}
+                    padding={12}
+                    onClick={dismiss}
+                    style={{ flex: 1 }}
+                  >
+                    <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, color: COLORS.ink, textAlign: 'center' }}>
+                      Browse all
+                    </div>
+                  </Sticker>
                 </div>
               </div>
-              <div
-                style={{
-                  marginTop: 16,
-                  padding: 14,
-                  background: COLORS.creamBg,
-                  border: BORDER.thin,
-                  borderRadius: 16,
-                  fontFamily: FONTS.body,
-                  fontSize: 12,
-                  fontWeight: 600,
-                  color: COLORS.ink60,
-                  lineHeight: 1.6,
-                  position: 'relative',
-                  zIndex: 10,
-                }}
-              >
-                <div>
-                  • <strong style={{ color: COLORS.ink }}>foundations</strong> — grammar building blocks
-                </div>
-                <div>
-                  • <strong style={{ color: COLORS.ink }}>situations</strong> — real conversations
-                </div>
-                <div>• tutor-style drill, English always nearby</div>
-                <div>• your Hindi progress is untouched — switch back anytime</div>
-              </div>
-              <button
-                type="button"
-                onClick={dismiss}
-                style={{
-                  marginTop: 18,
-                  width: '100%',
-                  padding: 14,
-                  borderRadius: 22,
-                  background: COLORS.orange,
-                  color: W,
-                  border: BORDER.sticker,
-                  boxShadow: SHADOW.sticker,
-                  fontFamily: FONTS.display,
-                  fontWeight: 800,
-                  fontSize: 15,
-                  cursor: 'pointer',
-                  textTransform: 'lowercase',
-                  position: 'relative',
-                  zIndex: 10,
-                }}
-              >
-                laten we beginnen! 🚀
-              </button>
             </div>
           </motion.div>
         </>
