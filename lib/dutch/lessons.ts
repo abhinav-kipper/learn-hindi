@@ -6,6 +6,12 @@ import introductions from '@/content/dutch/lessons/02-introductions.json'
 import cafe from '@/content/dutch/lessons/03-cafe.json'
 import doctor from '@/content/dutch/lessons/04-doctor.json'
 import transport from '@/content/dutch/lessons/05-transport.json'
+import gemeente from '@/content/dutch/lessons/06-gemeente.json'
+import housingProblem from '@/content/dutch/lessons/07-housing-problem.json'
+import bank from '@/content/dutch/lessons/08-bank.json'
+import huisartsCall from '@/content/dutch/lessons/09-huisarts-call.json'
+import jobInterview from '@/content/dutch/lessons/10-job-interview.json'
+import primarySchool from '@/content/dutch/lessons/11-primary-school.json'
 
 const lessons: Lesson[] = [
   supermarket,
@@ -13,6 +19,12 @@ const lessons: Lesson[] = [
   cafe,
   doctor,
   transport,
+  gemeente,
+  housingProblem,
+  bank,
+  huisartsCall,
+  jobInterview,
+  primarySchool,
 ] as Lesson[]
 
 export function getDutchLessons(): Lesson[] {
