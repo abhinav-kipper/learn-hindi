@@ -1,0 +1,49 @@
+{
+  "id": "sunday-with-nani",
+  "title": "Sunday with Nani",
+  "description": "Lunch with grandmother.",
+  "level": "A2",
+  "skill_tags": ["family terms", "hospitality", "food"],
+  "panels": [
+    {
+      "scene": "nani-house",
+      "speaker": "cutting",
+      "speaker_position": "center",
+      "hindi": "Nani ji, namaste! Main aapse milne aaya hoon.",
+      "english": "Nani-ji, hello! I came to meet you.",
+      "pronunciation": "NA-ni ji, na-mas-TE! MAIN AAP-se MIL-ne AA-ya hoon"
+    },
+    {
+      "scene": "nani-house",
+      "speaker": "nani",
+      "speaker_position": "left",
+      "hindi": "Arrey beta! Aa gaya tu? Joote yahin utaar de. Haath dho le.",
+      "english": "Oh child! You came? Take your shoes off here. Wash your hands.",
+      "pronunciation": "a-REY BE-ta! AA ga-YA tu? JOO-te ya-HIN u-TAAR de. HAATH DHO le"
+    },
+    {
+      "scene": "nani-house",
+      "speaker": "nani",
+      "speaker_position": "left",
+      "hindi": "Tu toh bahut patla ho gaya hai. Yeh poori, yeh sabzi, aur thoda halwa bhi.",
+      "english": "You've gotten so thin. Have this poori, this sabzi, and a bit of halwa too.",
+      "pronunciation": "TU toh ba-HUT PAT-la HO ga-ya hai. YEH POO-ri, YEH SAB-zi, aur THO-da HAL-wa bhi"
+    },
+    {
+      "scene": "nani-house",
+      "speaker": "cutting",
+      "speaker_position": "right",
+      "hindi": "Nani, bas! Bahut khaa liya. Pet bhar gaya.",
+      "english": "Nani, enough! I've eaten a lot. My stomach is full.",
+      "pronunciation": "NA-ni, BAS! ba-HUT KHAA li-YA. PET BHAR ga-ya"
+    },
+    {
+      "scene": "nani-house",
+      "speaker": "nani",
+      "speaker_position": "left",
+      "hindi": "Yeh dabba le ja. Ghar pe khaayega kal.",
+      "english": "Take this tiffin. You'll eat it at home tomorrow.",
+      "pronunciation": "YEH DAB-ba LE ja. GHAR pe KHAA-ye-ga KAL"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "lost-in-bazaar",
+  "title": "Lost in the Bazaar",
+  "description": "Three shopkeepers, three different answers.",
+  "level": "A2",
+  "skill_tags": ["directions", "navigation", "polite asking"],
+  "panels": [
+    {
+      "scene": "bazaar",
+      "speaker": "narrator",
+      "speaker_position": "center",
+      "hindi": "Maya hotel Surya dhoond rahi hai. Usse koi pata nahi hai kahaan hai.",
+      "english": "Maya is looking for the Hotel Surya. She has no idea where it is.",
+      "pronunciation": "MA-ya ho-TEL SUR-ya DHOOND ra-HI hai. US-se KOI PA-ta na-HI hai ka-HAAN hai"
+    },
+    {
+      "scene": "bazaar",
+      "speaker": "shopkeeper1",
+      "speaker_position": "left",
+      "hindi": "Seedha jaao, phir left. Bilkul saamne hai.",
+      "english": "Go straight, then left. It's right in front.",
+      "pronunciation": "SEE-dha jaao, PHIR left. BIL-kul SAAM-ne hai"
+    },
+    {
+      "scene": "bazaar",
+      "speaker": "shopkeeper2",
+      "speaker_position": "right",
+      "hindi": "Arrey nahi! Right le lo. Main bhi wahaan jaata hoon.",
+      "english": "Oh no! Take a right. I go there too.",
+      "pronunciation": "a-REY na-HI! Right le LO. MAIN bhi wa-HAAN JAA-ta hoon"
+    },
+    {
+      "scene": "bazaar",
+      "speaker": "child",
+      "speaker_position": "center",
+      "hindi": "Auntie, mere papa wahaan kaam karte hain. Main le chalti hoon.",
+      "english": "Auntie, my papa works there. I'll take you.",
+      "pronunciation": "AUN-tie, ME-re PA-pa wa-HAAN KAAM KAR-te hain. MAIN le CHAL-ti hoon"
+    },
+    {
+      "scene": "bazaar",
+      "speaker": "narrator",
+      "speaker_position": "center",
+      "hindi": "Maya ab parivar ka hissa hai.",
+      "english": "Maya is now part of the family.",
+      "pronunciation": "MA-ya ab pa-ri-VAAR ka HIS-sa hai"
+    }
+  ]
+}

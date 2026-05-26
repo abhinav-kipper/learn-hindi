@@ -1,0 +1,49 @@
+{
+  "id": "chai-stall",
+  "title": "The Chai Stall",
+  "description": "First chai with Cutting.",
+  "level": "A1",
+  "skill_tags": ["greetings", "ordering food", "introductions"],
+  "panels": [
+    {
+      "scene": "chai-stall",
+      "speaker": "narrator",
+      "speaker_position": "center",
+      "hindi": "Cutting din ke pehle grahak ka intezaar kar raha hai.",
+      "english": "Cutting is waiting for the day's first customer.",
+      "pronunciation": "CUT-ting din ke PEH-le GRAH-ak ka in-te-ZAAR kar ra-HA hai"
+    },
+    {
+      "scene": "chai-stall",
+      "speaker": "customer",
+      "speaker_position": "left",
+      "hindi": "Do chai dena, bhaiya. Ek meri aur ek aapki.",
+      "english": "Two chais please. One for me and one for you.",
+      "pronunciation": "DO chai DE-na, BHAI-ya. EK ME-ri aur EK AAP-ki"
+    },
+    {
+      "scene": "chai-stall",
+      "speaker": "cutting",
+      "speaker_position": "right",
+      "hindi": "Arrey wah! Mere liye bhi? Bahut shukriya, dost!",
+      "english": "Wow! For me too? Thanks a lot, friend!",
+      "pronunciation": "a-REY WAH! ME-re li-YE bhi? ba-HUT shuk-RI-ya, DOST"
+    },
+    {
+      "scene": "chai-stall",
+      "speaker": "customer",
+      "speaker_position": "left",
+      "hindi": "Tumhara naam kya hai?",
+      "english": "What's your name?",
+      "pronunciation": "tum-HAA-ra NAAM kya hai"
+    },
+    {
+      "scene": "chai-stall",
+      "speaker": "cutting",
+      "speaker_position": "right",
+      "hindi": "Main Cutting hoon. Half-chai bechta hoon, full-friendship deta hoon.",
+      "english": "I'm Cutting. I sell half-chai, I give full-friendship.",
+      "pronunciation": "MAIN CUT-ting hoon. HAALF-chai BECH-ta hoon, FULL-friend-ship DE-ta hoon"
+    }
+  ]
+}
