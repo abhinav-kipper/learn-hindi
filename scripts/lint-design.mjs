@@ -38,8 +38,10 @@ function lintSource(file, source) {
       if (hexMatch) hits.push({ file, line: lineNo, rule: 'raw-hex', snippet: hexMatch[0] });
     }
 
-    const shadowMatch = line.match(/\bbox-?[sS]hadow:\s*['"`][^'"`]*?\b(\d+(?:\.\d+)?px)\s+(\d+(?:\.\d+)?px)\s+(\d+(?:\.\d+)?)(?:px)?\b/);
-    if (shadowMatch && shadowMatch[3] !== '0') {
+    // Match 3-value shadows where each value can be bare 0 or <num>px (negatives ok).
+    // 3rd value is blur — must be 0 (parsed) for the shadow to be Chai-Galli-compliant.
+    const shadowMatch = line.match(/\bbox-?[sS]hadow:\s*['"`][^'"`]*?(-?\d+(?:\.\d+)?(?:px)?)\s+(-?\d+(?:\.\d+)?(?:px)?)\s+(\d+(?:\.\d+)?)(?:px)?\b/);
+    if (shadowMatch && parseFloat(shadowMatch[3]) !== 0) {
       hits.push({ file, line: lineNo, rule: 'soft-shadow', snippet: shadowMatch[0] });
     }
 

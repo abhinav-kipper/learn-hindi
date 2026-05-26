@@ -22,6 +22,13 @@ describe('lintSource (block-list)', () => {
     expect(hits.map(h => h.rule)).toContain('soft-shadow')
   })
 
+  it('flags soft box-shadow with bare 0 first offset (canonical regressor pattern)', () => {
+    // This pattern broke an earlier version of the CLI regex that required <num>px on the
+    // first offset. The canonical soft-shadow a regressing dev writes uses bare `0`.
+    const hits = lintSource('components/Foo.tsx', "boxShadow: '0 4px 10px rgba(0,0,0,0.1)'")
+    expect(hits.map(h => h.rule)).toContain('soft-shadow')
+  })
+
   it('does not flag offset-only shadow (blur = 0)', () => {
     const hits = lintSource('components/Foo.tsx', "boxShadow: '4px 4px 0 #36281e'")
     expect(hits.map(h => h.rule)).not.toContain('soft-shadow')

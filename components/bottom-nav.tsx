@@ -30,7 +30,8 @@ export function BottomNav() {
   if (
     pathname.startsWith('/lessons/') ||
     pathname.startsWith('/practice/') ||
-    pathname.startsWith('/onboarding')
+    pathname.startsWith('/onboarding') ||
+    pathname.startsWith('/_dev')
   ) {
     return null
   }

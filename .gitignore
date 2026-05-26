@@ -47,6 +47,7 @@ package-lock.json
 # Playwright outputs
 test-results/
 playwright-report/
-e2e/screenshots/**/*-diff.png
-e2e/screenshots/**/*-actual.png
+e2e/test-output/
+e2e/visual.spec.ts-snapshots/**/*-diff.png
+e2e/visual.spec.ts-snapshots/**/*-actual.png
 e2e/design-lint-report.json
