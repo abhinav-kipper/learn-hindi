@@ -43,26 +43,44 @@ const LIB_LESSONS_PATH = join(repoRoot, 'lib', 'lessons.ts')
 // Keep this in sync if the canonical style guide changes.
 // ─────────────────────────────────────────────────────────────
 const STYLE_GUIDE = `
+REGISTER POLICY (Hindi has 3 forms of "you" — get this right):
+- DEFAULT: "aap" (respectful). Use for shopkeepers, auto drivers, strangers, elders, anyone you're not close with.
+- "tum": friendly/peer (chai with a mate, classmates, weekend plans).
+- "tu": intimate/playful (sibling teasing, very close friend, anger). Use sparingly.
+- Teaching exceptions: lesson IDs "01-greetings" and "06-pronouns-verbs" explicitly teach the contrast — only there can "tu" phrases appear, and they MUST be tagged "(very informal)" or "(intimate)" in the english field.
+- The practice tutor flags register-mismatches as corrections; authored content must never model those mismatches.
+
 ROMANIZATION RULES (must follow exactly):
 - ASCII romanization only — NO Devanagari script.
 - Single-vowel endings: write "karta" not "kartaa", "karunga" not "karoongaa".
-- Use "chh" for छ sound (e.g. "chhat" not "cchat" or "chat").
+- Use "chh" for छ sound (e.g. "chhat").
 - Use "dh" for ध (e.g. "dhanyavaad"), "th" for थ (e.g. "thoda").
-- Use "aa" only when ambiguity matters (e.g. "haan" vs "han").
-- Stress marks in the pronunciation field: CAPITALIZE the stressed
-  syllable, hyphen-separate. Example: "a-REY, kya HAAL hai?".
-- Register: prefer "tum" (peer/friend) by default. Use "aap" only for
-  elders/strangers. Use "tu" only for intimate friends or anger.
-- Gender agreement: verbs/adjectives MUST agree with the subject's
-  gender. E.g. "main aaya / aayi" (m/f), "wo gaya / gayi" (m/f).
+- Use "aa" only when ambiguity matters ("haan" vs "han").
+
+PRONUNCIATION FIELD:
+- SYLLABLE-stress format. Hyphens between syllables. CAPS on the stressed syllable.
+- Example: "BA-zaar ja-NA hai", "na-mas-TE AUN-ty ji".
+
+GENDER:
+- Where verb endings differ by speaker gender, show both: "main jaa raha hoon / jaa rahi hoon".
+- For single-form examples, use FEMININE ("-i", "-rahi", "-gayi") — the app defaults users to female gender.
 
 CONTENT STYLE:
-- Phrases should sound like how real people talk (colloquial), not
-  textbook Hindi. Include fillers (arey, accha, matlab, yaar, bas).
+- Phrases should sound like real conversation, not textbook Hindi. Use fillers (arrey, accha, matlab, yaar, bas, dekho, na, haan).
+- 2-3 Hindi sentences per phrase MAX. One is often best.
+- Avoid textbook connectives in phrases: "iss prakar", "isliye", "parantu", "kintu". Put those in grammar_notes only.
 - Each phrase has a "context" field explaining the social nuance.
-- Grammar notes are short and conversational.
-- Culture notes give one practical tip about social dynamics, not
-  generic facts about India.
+- Culture notes give one practical tip about social dynamics, not generic facts.
+- references[] field is REQUIRED — cite at least one specific chapter/lesson from the canonical sources below.
+`.trim()
+
+const SOURCES = `
+CANONICAL SOURCES — ground your phrases in these, not invented examples:
+- Snell & Weightman "Teach Yourself Hindi" — 22 chapters, grammar-progressive. Good for grammar accuracy and idiomatic patterns. Slightly formal in tone — soften when porting.
+- Afroz Taj "A Door Into Hindi" (UNC Chapel Hill, taj.oasis.unc.edu) — 24 video lessons with transcripts. Conversational, North Indian register. Usually drop-in usable.
+- McGregor "Outline of Hindi Grammar" — Oxford. Use ONLY for grammar disambiguation. Never lift phrases from it (too academic-formal).
+
+Always populate references[] with at least one specific chapter/lesson like "Snell & Weightman Ch. 11" or "Afroz Taj Lesson 9".
 `.trim()
 
 // ─────────────────────────────────────────────────────────────
@@ -94,7 +112,7 @@ const LessonSchema = z.object({
   culture_notes: z.array(z.string()).min(2).max(4),
   skill_breakdown: z.array(SkillBreakdownSchema).min(2).max(3),
   practice_prompt: z.string(),
-  references: z.array(z.string()).optional(),
+  references: z.array(z.string()).min(1),
 })
 
 const VocabWordSchema = z.object({
@@ -136,6 +154,8 @@ LEVEL: ${topic.level ?? 'A2'}
 ${topic.references?.length ? `REFERENCES (cite these in the lesson.references field): ${topic.references.join(', ')}` : ''}
 
 ${STYLE_GUIDE}
+
+  ${SOURCES}
 
 REFERENCE EXAMPLE (an existing lesson in the same style — do NOT copy
 phrases from it; this is purely a style template):
