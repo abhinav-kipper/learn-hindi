@@ -46,7 +46,7 @@ Grammar core. Same schema as situations. Foundations 02-06 still have empty `ski
   culture_notes: string[]
   skill_breakdown: { skill, explanation, more_examples: { hindi, english }[] }[]
   practice_prompt: string         // sent to Gemini as scenario for chat practice
-  references?: string[]           // optional: textbooks/sources consulted when authoring
+  references: string[]            // REQUIRED: textbooks/sources consulted when authoring
 }
 ```
 
@@ -61,19 +61,89 @@ When sourcing/authoring lessons we consult (without copying) these renowned refe
 
 The actual phrases/examples in our lessons are written originally in our app's voice — we draw on these for sequencing, grammar accuracy, and pedagogical structure only. Lessons store consulted sources in their `references` array.
 
-## Style Guide (in use)
+## Style Guide
 
-- **Hinglish welcome** — English words mixed in (`boring`, `twist`, `interval`, `done`, `UPI`) match how urban Indians actually speak.
-- **Romanization** — Devanagari is never used. Conventions:
-  - **Single-vowel endings, not doubled** — `karta` (not `kartaa`), `karti` (not `kartee`), `gaya` (not `gayaa`), `karunga` (not `karuungaa`), `tha`/`thi`/`the`/`theen` for past of honaa
-  - `accha` (not `achcha` or `acha`) — written this way throughout
-  - `chh` = aspirated ch (`chhe` = 6, `chhutta` = change, `chhat` = roof)
-  - `nahi` (not `nahin`)
-  - No diacritics (no `ā`, `ī`)
-  - **`lib/conjugations.ts`** is the canonical reference for verb-form romanization — 5 verbs × 3 tenses, all aligned to this convention. New verb data should match.
-- **Pronunciation field** — uses CAPS to mark stress + hyphens for syllables (e.g. `BHAI-ya, kya HAAL hai?`). Not fully consistent across files.
-- **Voice** — first-person learner, conversational, "yaar / dude" energy. Practice prompts always describe a concrete scenario the user steps into.
-- **Cultural context** — every lesson grounds phrases in Indian social reality (auto-fare norms, WhatsApp group dynamics, `dekhte hain` = polite no).
+### Register policy
+
+- **Default**: `aap` (respectful). Shopkeepers, auto drivers, strangers, elders, anyone you're not close with.
+- **Friendly/peer scenarios**: `tum` (chai with a mate, classmates, weekend plans).
+- **Intimate only**: `tu` (sibling teasing, very close friend on WhatsApp, anger). Use sparingly.
+- **Teaching exceptions**: `01-greetings` and `06-pronouns-verbs` explicitly teach the 3-way contrast; `tu` phrases in those lessons MUST be tagged "(very informal)" or "(intimate)" in the `english` field.
+- The practice tutor (`/practice/<id>`) flags register-mismatches as corrections. Authored content must never model those mismatches.
+
+### Conversational, not bookish
+
+- Use natural fillers and softeners: `arrey`, `accha`, `matlab`, `yaar`, `dekho`, `bas`, `haan`, `na`.
+- Use contractions and dropped pronouns where Hindi naturally does.
+- Avoid textbook connectives in phrases: `iss prakar`, `isliye`, `parantu`, `kintu`. Those belong in `grammar_notes` only.
+- 2-3 Hindi sentences per phrase MAX. Often one is best.
+
+### Romanization rules
+
+- ASCII only. NO Devanagari script in JSON content (the practice tutor enforces this on AI output).
+- Single-vowel endings: `karta` not `kartaa`, `karunga` not `karoongaa`.
+- `chh` for छ (`chhat` not `cchat`).
+- `dh` for ध, `th` for थ.
+- `aa` only when ambiguity matters (`haan` vs `han`).
+
+### Pronunciation field
+
+- SYLLABLE-stress format. Hyphens between syllables. CAPS on the stressed syllable.
+- Example: `BA-zaar ja-NA hai`, `na-mas-TE AUN-ty ji`.
+- Consistent across all lessons (some older lessons use a different style — fix as you encounter them).
+
+### Gender-aware examples
+
+- Where verb endings differ by speaker gender, show both: `main jaa raha hoon / jaa rahi hoon`.
+- For single-form examples (when only one gender is shown), use **feminine** (`-i`, `-rahi`, `-gayi`) since the app defaults users to female gender.
+- The practice tutor uses the stored user gender to give correct agreement; authored examples must not contradict this.
+
+### Structure & length
+
+- 8-10 phrases per lesson.
+- Each phrase has `hindi`, `english`, `context`, `pronunciation`.
+- `context`: 1-2 sentences. The conversational beat + social signal.
+- `grammar_notes`: 3-5 notes. Focus on the new rule the lesson teaches.
+- `culture_notes`: 2-4 notes. Practical social-dynamic tips, not generic facts.
+- `skill_breakdown`: 2-3 entries. Each: `skill`, `explanation` (1-2 sentences), `more_examples` (3-5 `{hindi, english}` pairs).
+- `practice_prompt`: 1-2 sentences setting the scene for the Gemini tutor.
+- `references`: REQUIRED, at least one entry like `"Snell & Weightman Ch. 11"` or `"Afroz Taj Lesson 9"`.
+
+## Canonical Sources
+
+All new content must cite at least one of these. McGregor is a grammar reference only — don't lift phrases from it.
+
+### Snell & Weightman — Teach Yourself Hindi
+22 chapters, grammar-progressive with dialogues. Free PDF on archive.org. Use for grammar accuracy, scenario inspiration, idiomatic patterns. Dialogues lean slightly formal — soften them for conversational tone.
+
+### Afroz Taj — A Door Into Hindi
+24 video lessons with transcripts at `taj.oasis.unc.edu` (UNC Chapel Hill, free). Use for conversational tone, North Indian register, scenario authenticity. Phrases are usually drop-in usable.
+
+### McGregor — Outline of Hindi Grammar
+Oxford University Press. Reference ONLY for grammar disambiguation when Snell & Weightman is unclear. Never lift phrases — McGregor is academic-formal.
+
+## Authoring Workflow
+
+Step-by-step for adding a new lesson:
+
+1. Pick a topic from `content/lesson-queue.json` (or add one with `id`, `title`, `scenario`, `skills`, `level`, `references`).
+2. Pick the source chapter(s) — at least one from Snell & Weightman or Afroz Taj.
+3. Draft the lesson JSON:
+   - **AI-assisted**: `GOOGLE_GENERATIVE_AI_API_KEY=… node scripts/generate-lesson.mjs --topic=<id>` — generates a draft using the updated `STYLE_GUIDE`.
+   - **Hand-authored**: write `content/lessons/NN-<id>.json` following the schema; use the next available `NN`.
+4. Review against the style guide above (register, conversational, pronunciation, gender, references[]).
+5. Register in `lib/lessons.ts`:
+   - Add the import at the top.
+   - Add the named export to the `lessons` array (in order).
+6. Update the Inventory table in this file (`CONTENT.md`).
+7. Pop the topic from `content/lesson-queue.json`.
+8. Validate locally:
+   ```bash
+   npx vitest run
+   npx tsc --noEmit
+   node scripts/lint-design.mjs
+   ```
+9. Commit: `content(hindi): add <topic> lesson — <source citation>`
 
 ## Known Issues (as of 2026-05-22)
 
@@ -101,9 +171,3 @@ The actual phrases/examples in our lessons are written originally in our app's v
 - `lib/personalization.ts` — `reorderLessonsByReason()` reshuffles situations based on onboarding (family/bollywood/moving/curious)
 - `lib/system-prompt.ts` — `buildSystemPrompt(lesson)` injects lesson into Gemini system prompt for `/practice/[id]`
 
-## Adding new content
-
-1. Create `content/lessons/NN-topic.json` (or `content/foundations/NN-topic.json`) following the schema above
-2. Import + push into array in `lib/lessons.ts` (or `lib/foundations.ts`)
-3. Update this file's inventory table
-4. Test locally — check the JSON renders, the practice prompt works in `/practice/[id]`
