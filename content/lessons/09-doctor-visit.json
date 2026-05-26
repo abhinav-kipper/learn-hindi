@@ -1,0 +1,62 @@
+{
+  "id": "doctor-visit",
+  "title": "At the Doctor",
+  "situation": "You've been unwell for two days — fever, headache, upset stomach. You're at a clinic explaining your symptoms to the doctor.",
+  "skills": ["body parts & pain", "describing symptoms", "polite requests", "asking about restrictions"],
+  "phrases": [
+    { "hindi": "doctor sahib, mujhe do din se bukhar hai", "english": "Doctor sahib, I've had fever for two days", "context": "'doctor sahib' is the respectful address — never use the doctor's first name. 'X se' (since X) is the standard duration pattern.", "pronunciation": "DOC-tor sa-HIB, mu-JHE DO din se bu-KHAAR hai" },
+    { "hindi": "sar mein bahut dard ho raha hai", "english": "I have a lot of pain in my head", "context": "'X mein dard hai' (pain in X) is the universal pain construction in Hindi. 'ho raha hai' (is happening) makes it ongoing.", "pronunciation": "SAR mein ba-HUT DARD ho ra-HA hai" },
+    { "hindi": "pet kharab hai, kuch khaaya nahi jaa raha", "english": "My stomach is upset, I can't really eat anything", "context": "'pet kharab' (stomach bad) = upset stomach, fixed idiom. 'khaaya nahi jaa raha' (can't be eaten) — impersonal-passive construction, very natural in Hindi.", "pronunciation": "PET kha-RAAB hai, KUCH khaa-YA na-HI jaa ra-HA" },
+    { "hindi": "raat ko neend bhi nahi aati", "english": "I'm not even sleeping at night", "context": "'neend aana' (sleep coming) — how Hindi expresses 'to sleep'. 'bhi' (also/even) emphasizes that on top of everything else, sleep is also disturbed.", "pronunciation": "RAAT ko NEEND bhi na-HI AA-ti" },
+    { "hindi": "kya aap mujhe kuch dawaai de sakte hain?", "english": "Could you give me some medicine?", "context": "'kar sakte hain' is the polite modal for asking ability/permission. Note: speaker uses '-sakte hain' (plural-polite) addressing the doctor as 'aap'.", "pronunciation": "KYA aap mu-JHE KUCH da-WAA-i DE sak-TE hain?" },
+    { "hindi": "khaane mein kuch parhej hai kya?", "english": "Are there any food restrictions?", "context": "'parhej' (restriction/avoidance) — specifically for diet/lifestyle during illness. Indian doctors usually do prescribe what to eat and what to avoid.", "pronunciation": "khaa-NE mein KUCH par-HEJ hai kya?" },
+    { "hindi": "blood test karwana padega kya?", "english": "Will I need to get a blood test?", "context": "'karwana' (causative of 'do') = to get done. 'padega' = will have to — expresses unavoidable obligation, slightly anxious.", "pronunciation": "BLOOD TEST kar-WAA-na pa-DE-ga kya?" },
+    { "hindi": "yeh dawaai kab tak leni hai?", "english": "How long do I need to take this medicine?", "context": "'kab tak' (until when) — asks for a duration. 'leni hai' (have to take, feminine) — 'leni' agrees with 'dawaai' (feminine).", "pronunciation": "YEH da-WAA-i KAB tak LE-ni hai?" },
+    { "hindi": "theek hai doctor sahib, kal phir dikhaane aaungi", "english": "Alright doctor sahib, I'll come show you again tomorrow", "context": "'dikhaane' (to show — purposive infinitive). 'aaungi' (will come, feminine). Coming back for a follow-up is normal in clinic visits.", "pronunciation": "THEEK hai DOC-tor sa-HIB, KAL phir di-KHAA-ne AAUN-gi" }
+  ],
+  "grammar_notes": [
+    "Pain construction: 'X mein dard hai' (pain in X). Always use 'mein' (in), never 'ka' (of). 'sar mein dard', 'pet mein dard', 'kamar mein dard'",
+    "Duration with 'se': 'do din se' (since two days), 'ek hafte se' (since one week). The verb stays in present tense — Hindi uses present where English uses present perfect",
+    "Impersonal passive: 'khaaya nahi jaa raha' (can't be eaten), 'soya nahi jaa raha' (can't be slept). Use when an action feels involuntary or impossible",
+    "Modal 'X kar sakte hain' (can do X) — for asking permission/ability politely. Drop 'sakte' and you get plain present",
+    "Causative 'X karwana' (get X done) — for things done TO you by someone else. 'blood test karwana' = to get a blood test (done by the lab)"
+  ],
+  "culture_notes": [
+    "Always address doctors as 'doctor sahib' (male) or 'doctor sahiba' / 'doctor madam' (female). First names are reserved for very close family doctors",
+    "Indian doctors expect detailed symptom descriptions — duration, intensity, what makes it worse, what you ate. The more you tell, the better",
+    "Prescriptions almost always include diet restrictions ('parhej') — avoiding cold drinks, sour food, oily food. Ask explicitly so you know",
+    "Follow-up visits are normal and expected. 'kal phir dikhaane aaungi' (I'll come show again tomorrow) is a standard closer"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "Body parts and pain",
+      "explanation": "The pain construction 'X mein dard hai' works with every body part. Learn the common ones: sar (head), pet (stomach), gala (throat), kamar (back/waist), seena (chest), aankh (eye), kaan (ear).",
+      "more_examples": [
+        { "hindi": "gale mein bahut dard hai", "english": "I have a lot of throat pain" },
+        { "hindi": "kamar mein dard ho raha hai", "english": "my back is hurting" },
+        { "hindi": "aankhon mein jalan hai", "english": "my eyes are burning" },
+        { "hindi": "kaan mein halki si dard hai", "english": "I have a slight earache" }
+      ]
+    },
+    {
+      "skill": "Describing duration with 'se'",
+      "explanation": "Use 'X se' (since X) plus present tense to describe how long a symptom has been going on. Hindi uses present where English uses present perfect.",
+      "more_examples": [
+        { "hindi": "teen din se bukhar hai", "english": "I've had fever for three days" },
+        { "hindi": "ek hafte se khanssi aa rahi hai", "english": "I've had a cough for a week" },
+        { "hindi": "kal raat se neend nahi aayi", "english": "I haven't slept since last night" }
+      ]
+    },
+    {
+      "skill": "Polite modal requests",
+      "explanation": "Use 'kya aap X kar sakte/sakti hain?' (could you do X?) to ask politely. The verb agrees with the doctor's gender. Drop 'kya' for a softer question.",
+      "more_examples": [
+        { "hindi": "kya aap dawaai likh sakte hain?", "english": "could you write the prescription?" },
+        { "hindi": "kya yeh fir se check kar sakti hain?", "english": "could you (female doctor) check it again?" },
+        { "hindi": "kya main yeh khaa sakti hoon?", "english": "can I eat this?" }
+      ]
+    }
+  ],
+  "practice_prompt": "You are a Hindi-speaking general physician. The patient (the user) is unwell and describing symptoms. Ask follow-up questions like a real doctor would — when did it start, what does the pain feel like, what have they eaten. Use 'aap' (doctor-patient register). Diagnose lightly and prescribe a parhej. Open with 'aaiye, baithiye — kya takleef hai?'",
+  "references": ["Snell & Weightman Ch. 14", "Afroz Taj Lesson 9"]
+}
