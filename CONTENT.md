@@ -176,3 +176,44 @@ Step-by-step for adding a new lesson:
 - `lib/personalization.ts` — `reorderLessonsByReason()` reshuffles situations based on onboarding (family/bollywood/moving/curious)
 - `lib/system-prompt.ts` — `buildSystemPrompt(lesson)` injects lesson into Gemini system prompt for `/practice/[id]`
 
+## Dutch — Exam-Prep Track (Inburgeringsexamen B1 + KNM)
+
+### Target exam
+Inburgeringsexamen B1 + KNM. HSM holders need this (or equivalent) to naturalize for the Dutch passport.
+
+### Strategic framework
+A1 (months 1-2) → A2 (months 3-5) → B1 (months 6-9). A2 = optional stop-out (settings toggle in welcome modal).
+
+### UI language
+All UI/labels in English. Dutch only for: KNM question text, Chaina voice lines, italic Dutch-skill-name subtitles (Lezen / Luisteren / Schrijven / Spreken) for exposure-learning.
+
+### Content inventory
+| Track | Status | Notes |
+|---|---|---|
+| Lessons (A1-A2) | 5 existing | supermarket, introductions, cafe, doctor, transport |
+| Foundations (A1-A2) | 7 existing | numbers, pronunciation, present, de/het, word-order, past, modals |
+| KNM | 100 questions, 6 categories | Phase 1 (shipped 2026-05-26) |
+| Lezen (Reading) | not yet | Phase 2 |
+| Luisteren (Listening) | not yet | Phase 3 |
+| Schrijven (Writing) | not yet | Phase 4 |
+| Spreken (Speaking) | not yet | Phase 5 |
+| Mock exam | not yet | Phase 6 |
+
+### Canonical sources
+- **DUO oefenen.nl** — official practice + answer keys. Primary KNM reference.
+- **inburgeren.nl** — official 38-video KNM series ("Naar Nederland").
+- **Naar Nederland handbook** (free PDF) — the inburgering spine.
+- **"Nederland en je rechten"** — KNM reference book.
+- **TaalCompleet** textbook series — A1 → B1.
+- **Bart de Pau "Learn Dutch"** YouTube — 1000-words course.
+- **Marlou Lemmens "Learn Dutch with Marlou"** — A1 → B1 videos.
+- **NedLes** YouTube — KNM-focused.
+
+### Authoring approach for KNM
+Questions written from scratch using knowledge of the Naar Nederland material — NOT copied from copyrighted DUO sources. User should spot-check against current DUO practice tests before relying on pass-logic.
+
+### Storage keys (Dutch additions)
+- `dutch-exam-target` — `'a2' | 'b1'`, default `'b1'`
+- `dutch-knm-learned` — `Set<string>` of question IDs
+- `dutch-knm-attempts` — `Array<{ts, score, total, passed}>` capped at 50
+
