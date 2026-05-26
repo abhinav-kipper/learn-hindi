@@ -76,6 +76,37 @@
     "'Dekhte hain' (let's see) is the polite Indian no. If someone says this about your plan, it probably won't happen",
     "Indians frequently use 'kal' without specifying yesterday vs tomorrow — you're expected to figure it out. If confused, ask 'beeta kal ya aane wala kal?'"
   ],
-  "skill_breakdown": [],
+  "skill_breakdown": [
+    {
+      "skill": "Simple future (-unga/-egi/-engi)",
+      "explanation": "First person feminine: '-ungi' (main jaaungi). Masculine: '-unga'. Second/third: '-egi'/'-ega', plural: '-engi'/'-enge'. Pattern: stem + gender-marker + person-marker.",
+      "more_examples": [
+        { "hindi": "main kal aaungi", "english": "I'll come tomorrow (fem)" },
+        { "hindi": "wo dilli jaayega", "english": "he'll go to Delhi" },
+        { "hindi": "ham agle saal milenge", "english": "we'll meet next year" },
+        { "hindi": "tum kya karoge?", "english": "what will you do? (masc)" }
+      ]
+    },
+    {
+      "skill": "Obligation future (-na hai / padega)",
+      "explanation": "'-na hai' = soft obligation (I have to / I need to). '-na padega' = stronger obligation (I'll have to / will be forced to). Subject takes 'ko' marker: 'mujhe', 'aapko'.",
+      "more_examples": [
+        { "hindi": "mujhe abhi jaana hai", "english": "I have to go now" },
+        { "hindi": "aapko kal aana hai", "english": "you need to come tomorrow" },
+        { "hindi": "mujhe doctor ke paas jaana padega", "english": "I'll have to go to the doctor" },
+        { "hindi": "ham sabko milkar kaam karna padega", "english": "we'll all have to work together" }
+      ]
+    },
+    {
+      "skill": "Promises with pakka / zaroor",
+      "explanation": "'pakka' (definitely / for sure) and 'zaroor' (certainly) are essential filler-words that make a future promise sound sincere. Drop them and you sound noncommittal.",
+      "more_examples": [
+        { "hindi": "zaroor aaungi, pakka", "english": "I'll definitely come, for sure" },
+        { "hindi": "kal pakka phone karungi", "english": "I'll definitely call tomorrow" },
+        { "hindi": "zaroor batayenge", "english": "we'll definitely tell (you)" },
+        { "hindi": "pakka karenge kya?", "english": "will you definitely do it?" }
+      ]
+    }
+  ],
   "practice_prompt": "Practice future tense by making plans with me. Tell me what you'll do tomorrow, ask me when I'll arrive, or make predictions. I'll help you nail the -ga/-gi/-ge endings."
 }
