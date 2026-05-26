@@ -8,6 +8,9 @@ import expressingOpinions from '@/content/lessons/04-expressing-opinions.json'
 import makingPlans from '@/content/lessons/05-making-plans.json'
 import givingDirections from '@/content/lessons/06-giving-directions.json'
 import homeVisit from '@/content/lessons/07-home-visit.json'
+import shoppingClothes from '@/content/lessons/08-shopping-clothes.json'
+import doctorVisit from '@/content/lessons/09-doctor-visit.json'
+import phoneWithParents from '@/content/lessons/10-phone-with-parents.json'
 
 const lessons: Lesson[] = [
   greetings,
@@ -17,6 +20,9 @@ const lessons: Lesson[] = [
   makingPlans,
   givingDirections,
   homeVisit,
+  shoppingClothes,
+  doctorVisit,
+  phoneWithParents,
 ] as Lesson[]
 
 export function getAllLessons(): Lesson[] {
