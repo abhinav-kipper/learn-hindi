@@ -279,6 +279,15 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 
 ### Recent feature work log
 
+**2026-05-26 wave — Foundation theory chapters (pilot: Noun Gender)**
+
+- New optional `theory` block on the `Lesson` type — turns foundations into real textbook chapters. Schema: `intro` + `sections[]` (heading + multi-paragraph body + optional `TheoryTable` + optional `TheoryExample[]` + optional `TheoryCallout`) + optional `wrap_up`.
+- New `components/lesson/TheoryView.tsx` (8 tests) renders the chapter: peach-gradient chapter header with `📖 chapter` tag + lesson title, intro paragraph, sections with display-font headings + body paragraphs + Sticker-wrapped tables (cream header row, alternating W/peach2 body rows) + butter-bg worked-example Stickers with hindi/english/breakdown lines + tone-coded callouts (tip=mint+💡, note=lav+📝, warning=peach+⚠️), wrap-up Sticker, full-width orange CTA "got it — try the phrases →".
+- `LessonChaiGalli` opens with TheoryView when `lesson.theory` exists AND the user is fresh (no resume progress, not yet completed). Returning users skip straight to the phrase carousel.
+- Pilot content: `07-noun-gender` ships with a 5-section chapter (the two genders, ending patterns, adjective agreement, verb agreement with the `ne` rule preview, gendering English loanwords) + intro + wrap-up. 2 tables, 3 worked-example blocks, 5 callouts.
+- Other 8 foundations still use the legacy phrase-only flow until they get the same treatment in a follow-up session.
+- Mark-complete is still gated on revealing every phrase (yesterday's fix unchanged). Scrolling through theory alone does not unlock completion.
+
 **2026-05-26 wave — Hindi Stories (Chai Galli motion-comics)**
 
 - 3 short illustrated Hindi stories (5 panels each): `chai-stall` (A1 — Cutting's origin meeting a customer at the chai stall), `lost-in-bazaar` (A2 — directions comedy-of-helpfulness, 3 shopkeepers contradict each other and a child saves the day), `sunday-with-nani` (A2 — grandmother lunch, leave with a steel dabba of leftovers).

@@ -23,6 +23,8 @@ Conversational Hindi taught through scenarios. Each lesson: 9-10 phrases + gramm
 ### Foundations (`content/foundations/*.json`) — 9 lessons
 Grammar core. Same schema as situations. As of 2026-05-26 all 9 foundations have full skill_breakdowns (was previously a gap for 01-06; backfilled and 2 new foundations — compound-verbs + ne-rule — added).
 
+**Textbook chapters (new 2026-05-26):** Foundations can now have an optional `theory` block — a scrollable textbook-style chapter that opens BEFORE the phrase carousel (intro paragraph + 3-5 sub-sections each with heading + body paragraphs + optional conjugation table / worked examples / tone-coded callout + wrap-up + CTA "got it — try the phrases →"). Pilot: `07-noun-gender` has the first chapter. Other 8 foundations are pending the same treatment. See the Schema section below for the `Theory` / `TheorySection` / `TheoryTable` / `TheoryExample` / `TheoryCallout` types.
+
 | ID | Title |
 |----|-------|
 | `01-numbers` | Numbers & Counting |
@@ -61,6 +63,19 @@ Chai Galli aesthetic illustrated 5-panel stories. Pure consumption (no quiz). Ea
   skill_breakdown: { skill, explanation, more_examples: { hindi, english }[] }[]
   practice_prompt: string         // sent to Gemini as scenario for chat practice
   references: string[]            // REQUIRED: textbooks/sources consulted when authoring
+  level?: 'A1' | 'A2' | 'B1'      // Dutch only — situations + foundations
+  exam_targeted?: boolean         // Dutch only — flags exam-focused scenarios
+  theory?: {                       // OPTIONAL — beefed-up foundations only (pilot: noun-gender)
+    intro: string                   // chapter-opening paragraph
+    sections: {
+      heading: string
+      body: string                  // multi-paragraph, split on \n\n
+      table?: { caption?: string; columns: string[]; rows: string[][] }
+      examples?: { hindi: string; english: string; breakdown?: string }[]
+      callout?: { tone: 'tip'|'warning'|'note'; body: string }
+    }[]
+    wrap_up?: string                // closing summary paragraph
+  }
 }
 ```
 
