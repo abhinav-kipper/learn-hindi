@@ -37,5 +37,7 @@
       ]
     }
   ],
-  "practice_prompt": "Visiting a Dutch doctor or pharmacy — describing symptoms, asking about medication, and making appointments"
+  "practice_prompt": "Visiting a Dutch doctor or pharmacy — describing symptoms, asking about medication, and making appointments",
+  "level": "A1",
+  "exam_targeted": false
 }

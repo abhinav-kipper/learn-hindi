@@ -37,5 +37,7 @@
       ]
     }
   ],
-  "practice_prompt": "Introducing yourself to new Dutch neighbors or colleagues — greetings, sharing background, and making a good first impression"
+  "practice_prompt": "Introducing yourself to new Dutch neighbors or colleagues — greetings, sharing background, and making a good first impression",
+  "level": "A1",
+  "exam_targeted": false
 }

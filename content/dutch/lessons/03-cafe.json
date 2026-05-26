@@ -37,5 +37,7 @@
       ]
     }
   ],
-  "practice_prompt": "Visiting a Dutch café — ordering coffee and food, asking about the menu, and paying the bill"
+  "practice_prompt": "Visiting a Dutch café — ordering coffee and food, asking about the menu, and paying the bill",
+  "level": "A1",
+  "exam_targeted": false
 }

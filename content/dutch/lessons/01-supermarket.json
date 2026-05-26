@@ -37,5 +37,7 @@
       ]
     }
   ],
-  "practice_prompt": "Shopping at a Dutch supermarket — finding items, asking prices, checking out, and being a polite customer"
+  "practice_prompt": "Shopping at a Dutch supermarket — finding items, asking prices, checking out, and being a polite customer",
+  "level": "A1",
+  "exam_targeted": false
 }

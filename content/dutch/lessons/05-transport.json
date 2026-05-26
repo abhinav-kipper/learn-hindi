@@ -47,5 +47,7 @@
       ]
     }
   ],
-  "practice_prompt": "Navigating Dutch public transport — trains, trams, buses, buying tickets, and using the OV-chipkaart"
+  "practice_prompt": "Navigating Dutch public transport — trains, trams, buses, buying tickets, and using the OV-chipkaart",
+  "level": "A1",
+  "exam_targeted": false
 }
