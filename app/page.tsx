@@ -205,6 +205,20 @@ export default function Home() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  useEffect(() => {
+    if (language !== 'dutch') return
+    if (typeof window === 'undefined') return
+    if (localStorage.getItem('chaina-a2-milestone-fired') === '1') return
+
+    const a1Ids = getItemsByLevel('A1')
+    if (a1Ids.length === 0) return
+    const a1Done = a1Ids.filter((id) => isLessonComplete(id, 'dutch')).length
+    if (a1Done < a1Ids.length) return
+
+    play('a2Milestone')
+    localStorage.setItem('chaina-a2-milestone-fired', '1')
+  }, [language, completedCount, play])
+
   const [dutchKnmLearned, setDutchKnmLearned] = useState(0)
   useEffect(() => {
     if (language === 'dutch') setDutchKnmLearned(getLearnedCount())
