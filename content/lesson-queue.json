@@ -2,29 +2,6 @@
   "_comment": "Topic queue for the weekly content cron. scripts/generate-lesson.mjs pops topics[0], generates a Lesson JSON for it (and ~10 themed vocab words), opens a PR. Edit/reorder freely. When this list is empty, the workflow opens an issue asking for more topics instead of improvising.",
   "topics": [
     {
-      "id": "shopping-clothes",
-      "title": "Shopping for Clothes",
-      "scenario": "You're at a clothing store haggling over price and asking for a different size or color",
-      "skills": ["sizes & colors", "polite imperatives", "haggling vocabulary", "preferences"],
-      "level": "A2",
-      "references": ["Snell & Weightman Ch. 11", "Afroz Taj Lesson 7"]
-    },
-    {
-      "id": "doctor-visit",
-      "title": "At the Doctor",
-      "scenario": "You wake up feeling unwell and need to describe symptoms to a Hindi-speaking doctor",
-      "skills": ["body parts", "expressing pain", "polite requests", "negative sentences"],
-      "level": "A2",
-      "references": ["Snell & Weightman Ch. 14", "Afroz Taj Lesson 9"]
-    },
-    {
-      "id": "phone-with-parents",
-      "title": "Phone Call with Parents",
-      "scenario": "Weekly catch-up call with parents — they ask about work, food, and when you're visiting next",
-      "skills": ["aap register", "family terms", "future plans", "promises"],
-      "level": "A2"
-    },
-    {
       "id": "at-the-chai-stall",
       "title": "At the Chai Stall",
       "scenario": "You're at a roadside chai stall ordering chai and snacks, chatting with the vendor and other regulars",

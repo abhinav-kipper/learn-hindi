@@ -4,7 +4,7 @@ Authoritative map of all learning content so future sessions don't re-read 1600 
 
 ## Inventory
 
-### Situations (`content/lessons/*.json`) — 7 lessons
+### Situations (`content/lessons/*.json`) — 10 lessons
 Conversational Hindi taught through scenarios. Each lesson: 9-10 phrases + grammar notes + culture notes + 2-3 skill breakdowns + AI practice prompt.
 
 | ID | Title | Situation | Skills |
@@ -16,6 +16,9 @@ Conversational Hindi taught through scenarios. Each lesson: 9-10 phrases + gramm
 | `05-making-plans` | Making Plans with Friends | WhatsApp group weekend plans | future tense (ga/ge/gi), conditional (agar...toh), suggestions |
 | `06-giving-directions` | Giving & Asking Directions | Stranger asks for metro | postpositions, location vocab, sequential instructions |
 | `07-home-visit` | Visiting Someone's Home | First time at a friend's parents' home in Lucknow | polite imperatives (-iye/-iyega), hospitality phrases, respectful address |
+| `08-shopping-clothes` | Shopping for Clothes | Clothing shop with bargaining | sizes & colors, polite imperatives (-iye), haggling softeners, preferences |
+| `09-doctor-visit` | At the Doctor | Describing symptoms at a clinic | body parts & pain, describing symptoms, polite requests, asking about restrictions |
+| `10-phone-with-parents` | Phone Call with Parents | Weekly Sunday call with mummy & papa | sustained aap register, family terms, future plans, feminine future-tense verbs |
 
 ### Foundations (`content/foundations/*.json`) — 7 lessons
 Grammar core. Same schema as situations. Foundations 02-06 still have empty `skill_breakdown: []` (gap); `07-noun-gender` has full skill_breakdowns and is the template for backfilling the others.
