@@ -6,7 +6,7 @@ import '@/components/design/cutting-animations.css'
 import { InstallPrompt } from '@/components/install-prompt'
 import { LayoutShell } from '@/components/layout-shell'
 import { LanguageProvider } from '@/lib/language-context'
-import { ChainaProvider } from '@/components/design'
+import { ChainaProvider, COLORS } from '@/components/design'
 
 const bricolage = Bricolage_Grotesque({
   subsets: ['latin'],
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#ebe2f6',
+  themeColor: COLORS.lav,
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
