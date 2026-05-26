@@ -118,6 +118,11 @@ const LINES: Record<string, Line[]> = {
     { main: 'got it!', speak: 'Got it.' },
     { main: 'pakka', caption: 'yaad rahega', speak: 'Pakka.' },
   ],
+  newContent: [
+    { main: 'arrey! naye lessons aaye hain', caption: 'try karke dekho ✨', speak: 'Arrey, naye lessons aaye hain. Try karke dekho.' },
+    { main: 'kuch naya hai!',                  caption: 'check karo 👋',     speak: 'Kuch naya hai. Check karo.' },
+    { main: 'naya content unlocked',           caption: 'mazaa aayega',     speak: 'Naya content unlocked. Mazaa aayega.' },
+  ],
 };
 
 export const MOMENTS: Record<string, Moment> = {
@@ -242,6 +247,15 @@ export const MOMENTS: Record<string, Moment> = {
     mood: 'happy', moodAnim: 'happy-hop 1.4s ease-in-out 1',
     bubbleTail: 'bottom-right', bubbleSide: 'left',
     voice: false, lines: LINES.drillGotIt, sizePct: 0.24,
+  },
+  newContent: {
+    label: 'New content available',
+    when: 'New lessons added since last detection',
+    anchor: 'bottom-right',
+    enter: 'peek-up-right', enterMs: 700, holdMs: 3400, exit: 'dismiss-down', exitMs: 600,
+    mood: 'wave', moodAnim: 'wave-tilt 1.2s ease-in-out 2',
+    bubbleTail: 'bottom-right', bubbleSide: 'left',
+    voice: true, lines: LINES.newContent, sizePct: 0.34,
   },
 };
 
