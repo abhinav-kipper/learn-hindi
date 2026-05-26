@@ -22,6 +22,7 @@ import { isLessonComplete, markLessonComplete, updateStreak } from '@/lib/progre
 import { playSound } from '@/lib/sounds'
 import { speak, stopSpeaking, isSpeaking } from '@/lib/speech'
 import { useChaina, canFire, markFired } from '@/components/design'
+import { TheoryView } from '@/components/lesson/TheoryView'
 
 interface Props {
   lesson: Lesson
@@ -42,6 +43,7 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
   const consecutiveRevealsRef = useRef(0)
   const [completed, setCompleted] = useState(false)
   const [celebrate, setCelebrate] = useState(false)
+  const [showPhrases, setShowPhrases] = useState(false)
 
   useEffect(() => {
     setCompleted(isLessonComplete(lesson.id, config.storagePrefix))
@@ -133,6 +135,22 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
         lesson={lesson}
         onPractice={() => router.push(`/practice/${lesson.id}`)}
         onHome={() => router.push('/')}
+      />
+    )
+  }
+
+  // Show TheoryView for fresh foundations that have a `theory` block.
+  // Returning users (mid-progress or completed) skip straight to phrases.
+  const hasResumeProgress = resume.phraseIndex > 0 || revealed.size > 1
+  if (lesson.theory && !showPhrases && !hasResumeProgress && !completed) {
+    return (
+      <TheoryView
+        theory={lesson.theory}
+        title={lesson.title}
+        onStartPhrases={() => {
+          playSound('swipe')
+          setShowPhrases(true)
+        }}
       />
     )
   }

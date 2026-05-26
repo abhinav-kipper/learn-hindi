@@ -293,7 +293,13 @@ function ExampleBlock({ example }: { example: TheoryExample }) {
 }
 
 function CalloutBlock({ callout }: { callout: TheoryCallout }) {
-  const config = CALLOUT_CONFIG[callout.tone]
+  // Lazy lookup at render time — module-load-time access to COLORS breaks tests
+  // that mock the design barrel without re-exporting tokens.
+  const config = {
+    tip: { bg: COLORS.mint, emoji: '💡', label: 'tip' },
+    note: { bg: COLORS.lav2, emoji: '📝', label: 'note' },
+    warning: { bg: COLORS.peach, emoji: '⚠️', label: 'watch out' },
+  }[callout.tone]
   return (
     <Sticker color={config.bg} radius={14} padding={12}>
       <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
@@ -325,10 +331,4 @@ function CalloutBlock({ callout }: { callout: TheoryCallout }) {
       </div>
     </Sticker>
   )
-}
-
-const CALLOUT_CONFIG: Record<TheoryCallout['tone'], { bg: string; emoji: string; label: string }> = {
-  tip: { bg: COLORS.mint, emoji: '💡', label: 'tip' },
-  note: { bg: COLORS.lav2, emoji: '📝', label: 'note' },
-  warning: { bg: COLORS.peach, emoji: '⚠️', label: 'watch out' },
 }
