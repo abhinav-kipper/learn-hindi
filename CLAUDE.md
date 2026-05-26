@@ -236,7 +236,7 @@ Fire on real beats only — accomplishments, retention nudges, character touch p
 - New content available — `play('newContent')` from home mount when `getUnseenIds()` returns >0 (once-per-session)
 - KNM mock complete (failed) — `play('knmAttemptComplete')` from `/dutch/knm/drill` (debounce-800ms). Encouraging tone, not celebratory
 - KNM mock passed — `play('knmPassed')` from `/dutch/knm/drill` on ≥80% score (debounce-800ms). Celebratory + voice
-- A2 stage milestone — `play('a2Milestone')` when A1 progress hits 100% on Dutch home (placeholder — trigger not yet wired into the home component)
+- A2 stage milestone — `play('a2Milestone')` fires from `app/page.tsx` when every `getItemsByLevel('A1')` ID is complete in Dutch progress. Gated by `chaina-a2-milestone-fired` localStorage flag (once-ever). Catches up users who passed A1 before the trigger existed.
 - Lezen text studied — `play('lezenStudyDone')` from `/dutch/lezen/[textId]` on "Mark as studied" tap (debounce-800ms)
 - Lezen mock passed — `play('lezenMockPassed')` from `/dutch/lezen/mock` on ≥80% score (debounce-800ms). Celebratory + voice
 
@@ -258,6 +258,7 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `chaina-last-session-ts` — timestamp for welcomeBack/firstOpenToday discrimination
 - `chaina-voice-muted` — reserved future fine-grained Chaina mute (read but not yet UI-toggled)
 - `chaina-freq-<mode>-<key>` — frequency cap state per moment
+- `chaina-a2-milestone-fired` — set to `'1'` after `a2Milestone` Chaina moment fires once. Permanent milestone, never re-fires.
 - `chaina-session-start-ts` (sessionStorage) — session start for sessionEnd 5min threshold
 
 **New-content surfacing (Hindi):**
@@ -318,7 +319,6 @@ Dutch exam-prep track (Inburgeringsexamen B1 + KNM):
 
 **2026-05-22 wave**
 - Time-of-day greeting tried, then removed (cluttered top bar). Replaced with `Hi, {name}`.
-- Time-of-day greeting tried, then removed (cluttered top bar). Replaced with `Hi, {name}`.
 - Top bar: search+mute now grouped in a single pill; streak chip alongside. Onboarding-reason chip removed.
 - Daily goal bar clarifies unit: `0 of 5 min today`
 - Progress page reorganized: 3-col tools grid (Mistakes/Saved/Drill), lesson sections fold completed entries behind `N completed` expander, tighter stat labels, auto-`streak` sound on visit removed
@@ -342,15 +342,21 @@ Dutch exam-prep track (Inburgeringsexamen B1 + KNM):
 Resolved 2026-05-26:
 - ~~Foundations 02-06 have empty `skill_breakdown: []`~~ — backfilled with 3 entries each, plus 2 new foundations (compound-verbs, ne-rule). All 9 Hindi foundations now have full skill_breakdowns.
 - ~~No A1/A2/B1 markers on lessons~~ — `Lesson` type now has optional `level` field. Dutch lessons all tagged; Hindi lessons untagged (no CEFR system for Hindi).
+- ~~`a2Milestone` Chaina moment registered but not triggered~~ — wired into `app/page.tsx` mount effect; fires once when every A1 Dutch item is complete, gated by `chaina-a2-milestone-fired` flag.
 
 Still open:
 - **No XP / leveling arc** — `phrasesLearned` is just a stat tile, no progression visual.
 - **No audio assets** — only browser TTS. Native recordings would matter most for Phase 3 Luisteren (Dutch listening drills).
-- **Pronunciation field formatting inconsistent across older Hindi lesson JSONs** (CAPS-stress vs hyphen-syllables). New lessons use SYLLABLE-stress consistently; old ones need a pass.
 - **Conjugation drill is verb-by-verb** — no mixed-verb sets, no spaced-repetition wiring.
 - **Dutch Phase 3-6 still pending:** Luisteren (Listening), Schrijven (Writing), Spreken (Speaking), Mock-exam. Each gets its own spec → plan → ship cycle.
-- **`a2Milestone` Chaina moment registered but not triggered:** the moment fires when A1 progress hits 100% on Dutch home, but the trigger is not yet wired into `app/page.tsx`. Author it when first Dutch user crosses A1.
 - **One-shot demo-reset block in `app/page.tsx` mount effect** unsees 5 Hindi IDs to demo the newContent popup. Remove after observed (flag: `learn-hindi:demo-reset:2026-05-26-new-content`).
+
+### Audit notes (2026-05-26)
+
+Items previously claimed as gaps but verified non-issues during the loose-end cleanup session. Documented here so future sessions don't chase the same phantoms.
+
+- **Hindi pronunciation field formatting is intentionally prosodic, not lexical.** CAPS marks sentence-level stress (where the spoken beat falls in the phrase), not the canonical lexical stress of each word in isolation. So `yaar` appears lowercase as a soft sentence-end softener but `YAAR` when it's a stressed exclamation; `kar-te` appears lowercase as a verb cluster in `mil-te kar-te` rhythm but `KAR-te` when it carries the phrase beat. The format is consistent across all 19 Hindi files (10 situations + 9 foundations) and intentional. No normalization pass needed.
+- **Phrase `context` fields align with phrase content.** Heuristic audit across 336 phrases (all 30 lessons, Hindi + Dutch) flagged 21 for keyword-overlap review; on manual inspection all are legitimate — the `context` explains the phrase's strategic or grammatical purpose without redundant lexical repetition (e.g. `chodo, doosra auto dekh leta hoon` → context "The walk-away — most effective negotiation tool" describes the move, not the words). No rewrites needed.
 
 ## Known Quirks
 - Vercel CLI spams `ECONNRESET` errors from a broken plugin — ignore them
