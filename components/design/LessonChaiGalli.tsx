@@ -139,10 +139,14 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
     )
   }
 
-  // Show TheoryView for fresh foundations that have a `theory` block.
-  // Returning users (mid-progress or completed) skip straight to phrases.
+  // Show TheoryView for foundations with a `theory` block.
+  // Skip ONLY when the user is mid-lesson (started revealing phrases but
+  // hasn't finished yet) — they want to continue from where they left off,
+  // not re-read the chapter. Completed users still open with theory; they
+  // can tap "got it" or use the prev/next buttons to drill phrases again.
+  // The phrase view also has a 📖 chapter button to revisit theory anytime.
   const hasResumeProgress = resume.phraseIndex > 0 || revealed.size > 1
-  if (lesson.theory && !showPhrases && !hasResumeProgress && !completed) {
+  if (lesson.theory && !showPhrases && !hasResumeProgress) {
     return (
       <TheoryView
         theory={lesson.theory}
@@ -184,40 +188,70 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
             margin: '0 auto',
           }}
         >
-          <button
-            onClick={() => {
-              playSound('tap')
-              router.push('/')
-            }}
-            aria-label="Back"
-            style={{
-              width: 40,
-              height: 40,
-              borderRadius: 99,
-              background: W,
-              border: BORDER.sticker,
-              boxShadow: SHADOW.chip,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              cursor: 'pointer',
-              color: COLORS.ink,
-              padding: 0,
-            }}
-          >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <button
+              onClick={() => {
+                playSound('tap')
+                router.push('/')
+              }}
+              aria-label="Back"
+              style={{
+                width: 40,
+                height: 40,
+                borderRadius: 99,
+                background: W,
+                border: BORDER.sticker,
+                boxShadow: SHADOW.chip,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                color: COLORS.ink,
+                padding: 0,
+              }}
             >
-              <path d="M19 12H5M12 19l-7-7 7-7" />
-            </svg>
-          </button>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M19 12H5M12 19l-7-7 7-7" />
+              </svg>
+            </button>
+            {lesson.theory && (
+              <button
+                onClick={() => {
+                  playSound('tap')
+                  setShowPhrases(false)
+                }}
+                aria-label="Read chapter"
+                style={{
+                  height: 40,
+                  borderRadius: 99,
+                  background: COLORS.cream,
+                  border: BORDER.sticker,
+                  boxShadow: SHADOW.chip,
+                  padding: '0 14px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  cursor: 'pointer',
+                  color: COLORS.ink,
+                  fontFamily: FONTS.display,
+                  fontWeight: 800,
+                  fontSize: 13,
+                  textTransform: 'lowercase',
+                }}
+              >
+                📖 chapter
+              </button>
+            )}
+          </div>
           <div style={{ marginRight: -6, marginTop: -6 }}>
             <Cutting size={74} />
           </div>
