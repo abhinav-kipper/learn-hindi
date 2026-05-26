@@ -1,0 +1,39 @@
+{
+  "hindi-user-profile": {
+    "name": "Test",
+    "reason": "curious",
+    "gender": "female",
+    "dailyGoal": 5,
+    "onboardingComplete": true,
+    "tooltipsShown": { "home": true, "lesson": true, "practice": true, "quiz": true, "review": true }
+  },
+  "hindi-progress": {
+    "completedLessons": ["greetings", "auto-negotiation", "ordering-food"],
+    "lessonCompletedAt": {
+      "greetings": "2026-05-22",
+      "auto-negotiation": "2026-05-23",
+      "ordering-food": "2026-05-24"
+    },
+    "currentStreak": 7,
+    "lastActiveDate": "2026-05-25",
+    "practiceSessionCount": 5,
+    "todaySessions": 2,
+    "todaySessionsDate": "2026-05-25",
+    "seenStreakMilestones": [7],
+    "todayActiveMs": 180000,
+    "todayActiveDate": "2026-05-25"
+  },
+  "hindi-phrase-progress": {
+    "greetings": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    "auto-negotiation": [0, 1, 2, 3, 4, 5, 6, 7],
+    "ordering-food": [0, 1, 2, 3, 4, 5, 6]
+  },
+  "hindi-quiz-scores": [{ "score": 8, "total": 10, "lessonIds": ["greetings"], "timestamp": "2026-05-24T10:00:00Z" }],
+  "hindi-mistakes": [
+    { "id": "x1", "original": "main jaata hain", "correction": "main jaata hoon", "reason": "First person uses 'hoon'", "lessonId": "greetings", "timestamp": "2026-05-24T09:30:00Z", "source": "practice" }
+  ],
+  "chaina-first-ever-seen": "1",
+  "chaina-disabled": "1",
+  "bolna-seekho-muted": "1",
+  "hindi-home-tab": "situations"
+}
