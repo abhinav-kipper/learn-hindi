@@ -76,6 +76,37 @@
     "Hindi has NO verb 'to have'. Possession is expressed as 'near me [thing] is': 'mere paas paise hain' = I have money (literally: near-me money is)",
     "Directions in India use landmarks, not street names: 'mandir ke saamne' (in front of the temple), 'nadi ke us paar' (across the river)"
   ],
-  "skill_breakdown": [],
+  "skill_breakdown": [
+    {
+      "skill": "Basic postpositions (ko, se, mein, par)",
+      "explanation": "Hindi uses postpositions (after the noun) instead of prepositions. 'ko' = to/for (direct/indirect object), 'se' = from/with/by, 'mein' = in/inside, 'par' = on/at.",
+      "more_examples": [
+        { "hindi": "main aapko phone karungi", "english": "I'll call you (you-to)" },
+        { "hindi": "wo dilli se aayi hai", "english": "she has come from Delhi" },
+        { "hindi": "kitab mez par hai", "english": "the book is on the table" },
+        { "hindi": "ghar mein chai hai", "english": "there's chai in the house" }
+      ]
+    },
+    {
+      "skill": "Possessive (ka/ki/ke)",
+      "explanation": "Hindi possessive agrees with the OBJECT possessed, not the owner. 'mera bhai' (my brother, masc) vs 'meri behen' (my sister, fem). 'X ka' (masc), 'X ki' (fem), 'X ke' (masc-plural / before postposition).",
+      "more_examples": [
+        { "hindi": "mummy ka phone", "english": "mummy's phone (phone is masc)" },
+        { "hindi": "papa ki gaadi", "english": "papa's car (gaadi is fem)" },
+        { "hindi": "didi ke kapde", "english": "didi's clothes (plural masc)" },
+        { "hindi": "Rahul ka ghar bahut bada hai", "english": "Rahul's house is very big" }
+      ]
+    },
+    {
+      "skill": "Compound postpositions (ke baare mein, ke saath, ke liye)",
+      "explanation": "Combine 'ke' with another word: 'ke baare mein' (about), 'ke saath' (with), 'ke liye' (for), 'ke paas' (near / in possession of), 'ke piche' (behind). Always uses oblique 'ke' regardless of gender.",
+      "more_examples": [
+        { "hindi": "aapke baare mein bata rahe the", "english": "(they) were talking about you" },
+        { "hindi": "mere saath chalo", "english": "come with me" },
+        { "hindi": "yeh tumhare liye hai", "english": "this is for you" },
+        { "hindi": "mere paas paise nahi hain", "english": "I don't have money (lit: near me money is not)" }
+      ]
+    }
+  ],
   "practice_prompt": "Practice postpositions by describing where things are, giving directions, or talking about time. Tell me where you live, how you get to work, or what's near your house. I'll help you get the word order right."
 }
