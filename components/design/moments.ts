@@ -134,6 +134,14 @@ const LINES: Record<string, Line[]> = {
   a2Milestone: [
     { main: 'A2 bereikt!',   caption: 'door naar B1, of examen?', speak: 'A2 bereikt! Door naar B1, of examen?' },
   ],
+  lezenStudyDone: [
+    { main: 'tekst gelezen!', caption: 'doorgaan',     speak: 'Tekst gelezen! Doorgaan.' },
+    { main: 'mooi gedaan',     caption: 'nog een tekst', speak: 'Mooi gedaan. Nog een tekst.' },
+  ],
+  lezenMockPassed: [
+    { main: 'lezen geslaagd!',  caption: 'lekker bezig',   speak: 'Lezen geslaagd! Lekker bezig.' },
+    { main: 'top, Lezen pass!', caption: 'B1 dichterbij',  speak: 'Top, Lezen pass. B1 dichterbij.' },
+  ],
 };
 
 export const MOMENTS: Record<string, Moment> = {
@@ -294,6 +302,24 @@ export const MOMENTS: Record<string, Moment> = {
     mood: 'wave', moodAnim: 'wave-tilt 1.2s ease-in-out 2',
     bubbleTail: 'bottom-right', bubbleSide: 'left',
     voice: true, lines: LINES.a2Milestone, sizePct: 0.45,
+  },
+  lezenStudyDone: {
+    label: 'Lezen text studied',
+    when: 'User marks a Lezen text as studied',
+    anchor: 'bottom-right',
+    enter: 'peek-up-right', enterMs: 700, holdMs: 3000, exit: 'dismiss-down', exitMs: 500,
+    mood: 'wave', moodAnim: 'wave-tilt 1.2s ease-in-out 2',
+    bubbleTail: 'bottom-right', bubbleSide: 'left',
+    voice: true, lines: LINES.lezenStudyDone, sizePct: 0.32,
+  },
+  lezenMockPassed: {
+    label: 'Lezen mock passed (>=80%)',
+    when: 'Lezen timed mock finishes with score >=80%',
+    anchor: 'center',
+    enter: 'bubble-pop', enterMs: 700, holdMs: 3400, exit: 'dismiss-down', exitMs: 600,
+    mood: 'happy', moodAnim: 'happy-hop 0.6s ease-in-out 2',
+    bubbleTail: 'bottom-right', bubbleSide: 'left',
+    voice: true, lines: LINES.lezenMockPassed, sizePct: 0.45,
   },
 };
 
