@@ -539,7 +539,7 @@ export default function PracticePage({ params }: PracticePageProps) {
                     lineHeight: 1.4,
                   }}
                 >
-                  {lesson.practice_prompt || lesson.situation}
+                  {lesson.situation || lesson.practice_prompt}
                 </div>
               </div>
             </div>
