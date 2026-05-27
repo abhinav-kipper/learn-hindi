@@ -1,14 +1,14 @@
 # Content Audit Summary — 2026-05-26
 
-**Total files audited:** 54
+**Total files audited:** 56
 
 ---
 
 ## Headline
 
-- Files audited: 54
-- Files with fixes applied: 43 (total 111 fixes)
-- Files with skipped items (need user review): 47 (total 143 skipped)
+- Files audited: 56
+- Files with fixes applied: 44 (total 111 fixes)
+- Files with skipped items (need user review): 48 (total 144 skipped)
 - Clean files (no fixes, no skips): 4
 
 ## ⚠️ Items needing user review
@@ -38,6 +38,7 @@
 - [dutch-lezen-lezen-001.md](./runs/2026-05-26/dutch-lezen-lezen-001.md) — 2 skipped items
 - [dutch-lezen-lezen-003.md](./runs/2026-05-26/dutch-lezen-lezen-003.md) — 1 skipped item
 - [dutch-lezen-lezen-005.md](./runs/2026-05-26/dutch-lezen-lezen-005.md) — 1 skipped item
+- [dutch-lezen-lezen-007.md](./runs/2026-05-26/dutch-lezen-lezen-007.md) — 1 skipped item
 - [dutch-lezen-lezen-008.md](./runs/2026-05-26/dutch-lezen-lezen-008.md) — 1 skipped item
 - [hindi-foundation-01-numbers.md](./runs/2026-05-26/hindi-foundation-01-numbers.md) — 4 skipped items
 - [hindi-foundation-02-present-tense.md](./runs/2026-05-26/hindi-foundation-02-present-tense.md) — 4 skipped items
@@ -85,8 +86,9 @@
 - [dutch-lesson-09-huisarts-call.md](./runs/2026-05-26/dutch-lesson-09-huisarts-call.md) — 2 fixes
 - [dutch-lesson-10-job-interview.md](./runs/2026-05-26/dutch-lesson-10-job-interview.md) — 3 fixes
 - [dutch-lezen-lezen-001.md](./runs/2026-05-26/dutch-lezen-lezen-001.md) — 1 fix
-- [dutch-lezen-lezen-007.md](./runs/2026-05-26/dutch-lezen-lezen-007.md) — 5 fixes
+- [dutch-lezen-lezen-002.md](./runs/2026-05-26/dutch-lezen-lezen-002.md) — 2 fixes
 - [dutch-lezen-lezen-008.md](./runs/2026-05-26/dutch-lezen-lezen-008.md) — 1 fix
+- [dutch-lezen-lezen-009.md](./runs/2026-05-26/dutch-lezen-lezen-009.md) — 3 fixes
 - [dutch-lezen-lezen-010.md](./runs/2026-05-26/dutch-lezen-lezen-010.md) — 2 fixes
 - [hindi-foundation-01-numbers.md](./runs/2026-05-26/hindi-foundation-01-numbers.md) — 1 fix
 - [hindi-foundation-02-present-tense.md](./runs/2026-05-26/hindi-foundation-02-present-tense.md) — 2 fixes
