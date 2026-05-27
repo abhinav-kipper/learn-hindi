@@ -15,7 +15,7 @@
   "grammar_notes": [
     "Modal verb structure: modal (position 2) + [rest of sentence] + infinitive (at end). 'Ik moet [morgen vroeg] opstaan' — 'opstaan' is last, and separable verbs rejoin in this position",
     "Double infinitive with perfect tense: 'Ik heb niet kunnen komen' (I was not able to come). The order is: heb + [niet] + kunnen + komen. The modal becomes an infinitive after heb.",
-    "Modal conjugations are often the same across persons: 'moeten': ik/jij/hij must all say 'moet'. Only 'willen' and 'kunnen' vary",
+    "Modal conjugations are often the same across persons: 'moeten' and 'mogen' have ik/jij/hij all the same ('moet', 'mag'). 'Willen', 'kunnen', and 'zullen' vary in the jij-form (wilt, kunt, zult — though wil/kun/zal are all heard too)",
     "Common fixed expressions: 'ik moet gaan' (I have to go), 'mag ik?' (may I?), 'kan ik helpen?' (can I help?), 'wil je thee?' (do you want tea?)"
   ],
   "culture_notes": [
@@ -26,7 +26,7 @@
   "skill_breakdown": [
     {
       "skill": "modal verb conjugation",
-      "explanation": "Dutch modals are irregular but follow patterns. Most are the same across ik/jij/hij. Key conjugations: willen (wil/wilt/wil/willen), kunnen (kan/kunt/kan/kunnen), moeten (moet/moet/moet/moeten), mogen (mag/mag/mag/mogen), zullen (zal/zal/zal/zullen), zouden (zou/zou/zou/zouden).",
+      "explanation": "Dutch modals are irregular but follow patterns. Most are the same across ik/jij/hij. Key conjugations: willen (wil/wilt/wil/willen), kunnen (kan/kunt/kan/kunnen), moeten (moet/moet/moet/moeten), mogen (mag/mag/mag/mogen), zullen (zal/zult/zal/zullen), zouden (zou/zou/zou/zouden).",
       "more_examples": [
         { "hindi": "Jullie willen weten...", "english": "You all want to know..." },
         { "hindi": "Zij kunnen goed koken.", "english": "They can cook well." },

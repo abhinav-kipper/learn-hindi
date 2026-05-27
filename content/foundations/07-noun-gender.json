@@ -64,7 +64,7 @@
       ]
     }
   ],
-  "practice_prompt": "You are a Hindi tutor drilling noun gender — agreement ripples through adjectives, verbs (especially past with `ne`), and demonstratives, so hammer it from three angles. Use `aap`. Open with `chaliye noun gender practice karte hain — pehla: 'kitaab' masculine hai ya feminine?` and mix 6-8 items across three drill modes: (a) gender-quiz — name a noun, aap bataiye m/f; (b) agreement-fix — give a wrong-agreement sentence like `meri bhai accha hai` and ask aap to correct; (c) translation — `she is good` → user supplies `woh acchhi hai` with the right match. Escalate from simple m/f calls (ladka, gaadi) to exception nouns (aadmi-m, kitaab-f, paani-m), then full agreement (mera/meri/mere, accha/acchi/acche), then preview past-tense object agreement with `ne` (`usne roti khayi` vs `usne khaana khaya`). Watch for: wrong call on exceptions, missed adjective shift (-aa→-i for f), and English-style 'is' carrying gender (Hindi `hai` never changes). Flag mistakes as `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]`. Don't switch to English unless asked. End with `acche se yaad rakhiye — har naye shabd ke saath uska gender bhi yaad karein. phir milte hain`.",
+  "practice_prompt": "You are a Hindi tutor drilling noun gender — agreement ripples through adjectives, verbs (especially past with `ne`), and demonstratives, so hammer it from three angles. Use `aap`. Open with `chaliye noun gender practice karte hain — pehla: 'kitaab' masculine hai ya feminine?` and mix 6-8 items across three drill modes: (a) gender-quiz — name a noun, aap bataiye m/f; (b) agreement-fix — give a wrong-agreement sentence like `meri bhai accha hai` and ask aap to correct; (c) translation — `she is good` → user supplies `woh acchi hai` with the right match. Escalate from simple m/f calls (ladka, gaadi) to exception nouns (aadmi-m, kitaab-f, paani-m), then full agreement (mera/meri/mere, accha/acchi/acche), then preview past-tense object agreement with `ne` (`usne roti khayi` vs `usne khaana khaya`). Watch for: wrong call on exceptions, missed adjective shift (-aa→-i for f), and English-style 'is' carrying gender (Hindi `hai` never changes). Flag mistakes as `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]`. Don't switch to English unless asked. End with `acche se yaad rakhiye — har naye shabd ke saath uska gender bhi yaad karein. phir milte hain`.",
   "references": [
     "Snell & Weightman, 'Teach Yourself Hindi' — Ch. 1-2 on noun gender and adjective agreement",
     "McGregor, 'Outline of Hindi Grammar' — Sections on gender, oblique case, and the 'ne' construction",
@@ -98,7 +98,7 @@
           "rows": [
             ["-aa or consonant", "masculine", "ladka, makaan, ghar"],
             ["-ii / -i", "feminine", "ladki, kursi, roti, gaadi"],
-            ["-a (Sanskrit-origin)", "feminine", "bhasha, seva, katha"],
+            ["-aa (Sanskrit-origin)", "feminine", "bhaasha, seva, katha"],
             ["irregular", "varies — memorize", "aadmi (m), aurat (f), haath (m), kitaab (f), raat (f), paani (m)"]
           ]
         },
@@ -161,7 +161,7 @@
             ["bus", "feminine", "gaadi (f)"],
             ["coffee", "feminine", "chai (f)"],
             ["pizza", "masculine", "khaana (m)"],
-            ["email", "masculine", "or `email aaya` (the email came-masc.)"]
+            ["email", "masculine", "no clear tracker — defaults masc (`email aaya` = the email came-masc.)"]
           ]
         },
         "callout": { "tone": "tip", "body": "When in doubt, listen to which gender locals use — and lean masculine for tech/objects, feminine for foods/vehicles. Native speakers don't always agree on edge cases, so don't stress; pick one and be consistent." },
