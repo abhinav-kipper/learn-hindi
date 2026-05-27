@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import confetti from 'canvas-confetti'
 import { useRouter } from 'next/navigation'
-import { Sticker, Tag, Cutting, COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
+import { Sticker, Tag, Mascot, COLORS, FONTS, BORDER, SHADOW, useTheme } from '@/components/design'
 const W = '#fff' // @design-allow: white literal
 import { useLanguage } from '@/lib/language-context'
 import { getAverageQuizScore } from '@/lib/quiz'
@@ -28,6 +28,7 @@ export function QuizResults({
   questions,
   results,
 }: QuizResultsProps) {
+  const theme = useTheme()
   const router = useRouter()
   const { config } = useLanguage()
   const confettiTriggered = useRef(false)
@@ -120,7 +121,7 @@ export function QuizResults({
             </svg>
           </button>
           <div style={{ marginRight: -6, marginTop: -6, animation: isGreatScore ? 'happy-hop 1.4s ease-in-out infinite' : undefined }}>
-            <Cutting size={70} mood={isGreatScore ? 'happy' : 'idle'} />
+            <Mascot size={70} mood={isGreatScore ? 'happy' : 'idle'} />
           </div>
         </div>
         <div style={{ marginTop: 10, maxWidth: 480, margin: '10px auto 0' }}>
@@ -162,7 +163,7 @@ export function QuizResults({
                 style={{
                   width: 96,
                   height: 96,
-                  background: COLORS.orange,
+                  background: theme.primary,
                   borderRadius: 22,
                   border: BORDER.sticker,
                   boxShadow: SHADOW.chip,
@@ -329,7 +330,7 @@ export function QuizResults({
               flex: 1,
               padding: '14px',
               borderRadius: 22,
-              background: COLORS.orange,
+              background: theme.primary,
               color: W,
               border: BORDER.sticker,
               boxShadow: SHADOW.chip,

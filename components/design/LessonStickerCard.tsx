@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { Sticker } from './Sticker'
 import { MotifIcon } from './MotifIcon'
 import { COLORS, FONTS, BORDER, deriveLessonStyle, paletteToBg, paletteToMotifBg } from './tokens'
+import { useTheme } from './theme'
 const W = '#fff' // @design-allow: white literal
 import type { Lesson } from '@/types/lesson'
 import { isLessonComplete } from '@/lib/progress'
@@ -24,6 +25,7 @@ interface Props {
 export function LessonStickerCard({ lesson, index, routeBase = 'lessons', locked = false, isNew = false }: Props) {
   const router = useRouter()
   const { config } = useLanguage()
+  const theme = useTheme()
   const { palette, motif } = deriveLessonStyle(lesson.id, index)
   const [done, setDone] = useState(false)
   const [percent, setPercent] = useState(0)
@@ -57,7 +59,7 @@ export function LessonStickerCard({ lesson, index, routeBase = 'lessons', locked
             width: 10,
             height: 10,
             borderRadius: '50%',
-            background: COLORS.orange,
+            background: theme.primary,
             zIndex: 2,
             boxShadow: '0 0 0 2px #fff', // @design-allow: white halo for dot contrast
           }}
@@ -177,7 +179,7 @@ export function LessonStickerCard({ lesson, index, routeBase = 'lessons', locked
                     style={{
                       width: `${percent}%`,
                       height: '100%',
-                      background: COLORS.orange,
+                      background: theme.primary,
                       borderRight: percent < 100 ? BORDER.thin : 'none',
                     }}
                   />

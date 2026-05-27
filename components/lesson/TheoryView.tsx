@@ -4,13 +4,14 @@ import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Sticker,
-  Cutting,
+  Mascot,
   Tag,
   Confetti,
   COLORS,
   FONTS,
   BORDER,
   SHADOW,
+  useTheme,
 } from '@/components/design'
 import { playSound } from '@/lib/sounds'
 import { speak, stopSpeaking, isSpeaking } from '@/lib/speech'
@@ -39,6 +40,7 @@ const SECTION_MOODS: CuttingMood[] = ['happy', 'idle', 'happy', 'wink', 'happy']
 
 export function TheoryView({ theory, title, onStartPhrases, onGoToPractice }: Props) {
   const { config } = useLanguage()
+  const theme = useTheme()
   const ttsLocale = config.ttsLocale
   const totalPages = theory.sections.length + 2 // intro + sections + wrap-up
   const [page, setPage] = useState(0)
@@ -124,7 +126,7 @@ export function TheoryView({ theory, title, onStartPhrases, onGoToPractice }: Pr
                 style={{
                   height: 8,
                   borderRadius: 99,
-                  background: active ? COLORS.orange : past ? COLORS.green : W,
+                  background: active ? theme.primary : past ? COLORS.green : W,
                   border: BORDER.thin,
                 }}
               />
@@ -259,6 +261,7 @@ function NavButton({
   primary?: boolean
   hint?: string
 }) {
+  const theme = useTheme()
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
       {hint && (
@@ -278,7 +281,7 @@ function NavButton({
         disabled={disabled}
         aria-label={ariaLabel}
         style={{
-          background: disabled ? COLORS.peach2 : primary ? COLORS.orange : W,
+          background: disabled ? COLORS.peach2 : primary ? theme.primary : W,
           color: primary && !disabled ? W : COLORS.ink,
           border: BORDER.sticker,
           boxShadow: disabled ? 'none' : SHADOW.chip,
@@ -394,6 +397,7 @@ function WrapUpPage({
   onStartPhrases: () => void
   onGoToPractice?: () => void
 }) {
+  const theme = useTheme()
   return (
     <div>
       <motion.div
@@ -410,7 +414,7 @@ function WrapUpPage({
             fontFamily: FONTS.display,
             fontWeight: 800,
             fontSize: 32,
-            color: COLORS.orange,
+            color: theme.primary,
             lineHeight: 1.1,
             marginBottom: 4,
           }}
@@ -439,7 +443,7 @@ function WrapUpPage({
                 fontFamily: FONTS.display,
                 fontWeight: 800,
                 fontSize: 11,
-                color: COLORS.orange,
+                color: theme.primary,
                 textTransform: 'uppercase',
                 letterSpacing: 1,
                 marginBottom: 8,
@@ -460,7 +464,7 @@ function WrapUpPage({
           marginTop: 18,
           padding: '18px',
           borderRadius: 22,
-          background: COLORS.orange,
+          background: theme.primary,
           color: W,
           border: BORDER.sticker,
           boxShadow: SHADOW.sticker,
@@ -512,7 +516,7 @@ function CuttingSpeech({ mood, text }: { mood: CuttingMood; text: string }) {
         transition={{ type: 'spring', stiffness: 280, damping: 22 }}
         style={{ flexShrink: 0 }}
       >
-        <Cutting size={88} mood={mood} />
+        <Mascot size={88} mood={mood} />
       </motion.div>
       <motion.div
         initial={{ opacity: 0, scale: 0.7, x: -10 }}
@@ -546,6 +550,7 @@ function QuickCheckBlock({
   passed: boolean
   onPass: () => void
 }) {
+  const theme = useTheme()
   const [wrongPicks, setWrongPicks] = useState<Set<number>>(new Set())
   const [shaking, setShaking] = useState<number | null>(null)
 
@@ -574,7 +579,7 @@ function QuickCheckBlock({
         style={{
           fontFamily: FONTS.tag,
           fontSize: 10,
-          color: COLORS.orange,
+          color: theme.primary,
           letterSpacing: 0.8,
           textTransform: 'uppercase',
           marginBottom: 6,
@@ -758,6 +763,7 @@ function TableBlock({ table }: { table: TheoryTable }) {
 }
 
 function ExampleBlock({ example, ttsLocale }: { example: TheoryExample; ttsLocale: string }) {
+  const theme = useTheme()
   const [speaking, setSpeaking] = useState(false)
 
   useEffect(() => {
@@ -811,7 +817,7 @@ function ExampleBlock({ example, ttsLocale }: { example: TheoryExample; ttsLocal
             width: 30,
             height: 30,
             borderRadius: 99,
-            background: speaking ? COLORS.orange : W,
+            background: speaking ? theme.primary : W,
             color: speaking ? W : COLORS.ink,
             border: BORDER.thin,
             cursor: 'pointer',

@@ -6,8 +6,9 @@ import { speak, stopSpeaking, isSpeaking } from '@/lib/speech'
 import { useLanguage } from '@/lib/language-context'
 import { playSound } from '@/lib/sounds'
 import type { ChatReply } from '@/lib/chat-schema'
-import { Cutting } from './Cutting'
+import { Mascot } from './Mascot'
 import { COLORS, FONTS, BORDER, SHADOW } from './tokens'
+import { useTheme } from './theme'
 const W = '#fff' // @design-allow: white literal
 const RATE_LIMIT_BG = '#dbf2fb' // @design-allow: rate-limited message tint, not a system token
 
@@ -128,6 +129,7 @@ function SpeakerButton({ text }: { text: string }) {
 }
 
 function CorrectionSticker({ correction }: { correction: NonNullable<ChatReply['correction']> }) {
+  const theme = useTheme()
   return (
     <motion.div
       initial={{ opacity: 0, y: 12, scale: 0.95 }}
@@ -148,7 +150,7 @@ function CorrectionSticker({ correction }: { correction: NonNullable<ChatReply['
           display: 'inline-block',
           fontFamily: FONTS.tag,
           fontSize: 10,
-          background: COLORS.orange,
+          background: theme.primary,
           color: W,
           padding: '2px 8px',
           borderRadius: 99,
@@ -291,7 +293,7 @@ export function ChaiGalliChatMessage({
             }}
           >
             <div style={{ transform: 'scale(0.32) translateY(-2px)', transformOrigin: 'center' }}>
-              <Cutting size={86} />
+              <Mascot size={86} />
             </div>
           </div>
         )}
@@ -364,7 +366,7 @@ export function TypingDots() {
         }}
       >
         <div style={{ transform: 'scale(0.32) translateY(-2px)', transformOrigin: 'center' }}>
-          <Cutting size={86} />
+          <Mascot size={86} />
         </div>
       </div>
       <div
