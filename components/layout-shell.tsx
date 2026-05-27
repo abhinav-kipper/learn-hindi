@@ -5,14 +5,42 @@ import { BottomNav } from '@/components/bottom-nav'
 import { NotificationPrompt } from '@/components/notification-prompt'
 import { DailyReviewPopup } from '@/components/daily-review-popup'
 import { registerServiceWorker, shouldShowNotificationPrompt, maybeShowReminderOnOpen, fireOneTimeTestNotification, maybeFireRandomNudge } from '@/lib/notifications'
-import { addTodayActiveMs } from '@/lib/progress'
+import { addTodayActiveMs, getTodayActiveMinutes } from '@/lib/progress'
+import { getUserProfile } from '@/lib/onboarding'
+import { Confetti } from '@/components/design'
+import { playSound } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
 import { useChaina, canFire, markFired } from '@/components/design'
+
+function todayStr(): string {
+  return new Date().toISOString().slice(0, 10)
+}
+
+function checkDailyGoalCrossed(prefix: string, onFire: () => void): void {
+  if (typeof window === 'undefined') return
+  const profile = getUserProfile()
+  const goal = profile?.dailyGoal ?? 0
+  if (goal <= 0) return
+  const minutes = getTodayActiveMinutes(prefix)
+  if (minutes < goal) return
+  const key = `${prefix}-daily-goal-fired:${todayStr()}`
+  if (localStorage.getItem(key)) return
+  localStorage.setItem(key, '1')
+  onFire()
+}
 
 export function LayoutShell({ children }: { children: React.ReactNode }) {
   const { config } = useLanguage()
   const { play } = useChaina()
   const [showNotificationPrompt, setShowNotificationPrompt] = useState(false)
+  const [goalBurst, setGoalBurst] = useState(false)
+
+  const fireDailyGoal = () => {
+    setGoalBurst(true)
+    playSound('levelup')
+    play('dailyGoalReached')
+    setTimeout(() => setGoalBurst(false), 4000)
+  }
 
   useEffect(() => {
     registerServiceWorker()
@@ -36,7 +64,11 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
       lastTick = now
       addTodayActiveMs(elapsed, config.storagePrefix)
       window.dispatchEvent(new CustomEvent('hindi-active-tick'))
+      checkDailyGoalCrossed(config.storagePrefix, fireDailyGoal)
     }
+    // Also check immediately on mount in case the user re-opened the app
+    // after already crossing the goal in a prior session this day.
+    checkDailyGoalCrossed(config.storagePrefix, fireDailyGoal)
     const activeTickInterval = setInterval(flushElapsed, TICK_MS)
 
     const handleVisibility = () => {
@@ -91,6 +123,18 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
         onDismiss={() => setShowNotificationPrompt(false)}
       />
       <DailyReviewPopup />
+      {goalBurst && (
+        <div
+          style={{
+            position: 'fixed',
+            inset: 0,
+            pointerEvents: 'none',
+            zIndex: 90,
+          }}
+        >
+          <Confetti active={true} />
+        </div>
+      )}
     </>
   )
 }

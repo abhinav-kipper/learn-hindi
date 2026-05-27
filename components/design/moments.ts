@@ -142,6 +142,11 @@ const LINES: Record<string, Line[]> = {
     { main: 'lezen geslaagd!',  caption: 'lekker bezig',   speak: 'Lezen geslaagd! Lekker bezig.' },
     { main: 'top, Lezen pass!', caption: 'B1 dichterbij',  speak: 'Top, Lezen pass. B1 dichterbij.' },
   ],
+  dailyGoalReached: [
+    { main: 'daily goal done! 🎯', caption: 'mehnat ki keemat',          speak: 'Daily goal done! Mehnat ki keemat.' },
+    { main: 'wah, target hit!',    caption: 'aaj ka kaam pura',          speak: 'Wah, target hit! Aaj ka kaam pura.' },
+    { main: 'kya baat hai 🔥',     caption: "today's minutes — done!", speak: 'Kya baat hai. Today minutes done.' },
+  ],
 };
 
 export const MOMENTS: Record<string, Moment> = {
@@ -320,6 +325,15 @@ export const MOMENTS: Record<string, Moment> = {
     mood: 'happy', moodAnim: 'happy-hop 0.6s ease-in-out 2',
     bubbleTail: 'bottom-right', bubbleSide: 'left',
     voice: true, lines: LINES.lezenMockPassed, sizePct: 0.45,
+  },
+  dailyGoalReached: {
+    label: 'Daily goal hit',
+    when: 'todayActiveMinutes crosses dailyGoal threshold (once per day)',
+    anchor: 'center',
+    enter: 'bubble-pop', enterMs: 700, holdMs: 3600, exit: 'dismiss-down', exitMs: 600,
+    mood: 'excited', moodAnim: 'happy-hop 0.6s ease-in-out 3',
+    bubbleTail: 'bottom-right', bubbleSide: 'left',
+    voice: true, lines: LINES.dailyGoalReached, sizePct: 0.45,
   },
 };
 

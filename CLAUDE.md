@@ -263,6 +263,7 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `chaina-voice-muted` — reserved future fine-grained Chaina mute (read but not yet UI-toggled)
 - `chaina-freq-<mode>-<key>` — frequency cap state per moment
 - `chaina-a2-milestone-fired` — set to `'1'` after `a2Milestone` Chaina moment fires once. Permanent milestone, never re-fires.
+- `${prefix}-daily-goal-fired:YYYY-MM-DD` — set to `'1'` after the daily-goal Chaina moment + Confetti burst fires for that calendar day. Once per day per language.
 - `learn-hindi:hindi-stories-read` — JSON array of story IDs the user has finished reading. Powers the read-check sticker on each StoryCard + the "N of 3 read" pill on the Hindi home Stories section header.
 - `chaina-session-start-ts` (sessionStorage) — session start for sessionEnd 5min threshold
 

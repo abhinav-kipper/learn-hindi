@@ -2,12 +2,13 @@ import { describe, it, expect, beforeEach } from 'vitest'
 import { MOMENTS, pickLine, resetPickLineHistory } from '@/components/design/moments'
 
 describe('MOMENTS registry', () => {
-  it('has all 21 moments', () => {
+  it('has all 22 moments', () => {
     const keys = Object.keys(MOMENTS).sort()
     expect(keys).toEqual([
       'a2Milestone',
       'conjugationCorrect',
       'correctAnswer',
+      'dailyGoalReached',
       'drillGotIt',
       'favoriteSaved',
       'firstEver',
