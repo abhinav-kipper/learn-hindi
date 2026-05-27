@@ -4,29 +4,29 @@
   "situation": "It's Thursday evening and you're trying to make weekend plans with your friend group chat.",
   "skills": ["future tense (ga/ge/gi)", "conditional (agar...toh)", "suggestions & invitations"],
   "phrases": [
-    { "hindi": "yaar weekend pe kuch karte hain?", "english": "Dude shall we do something this weekend?", "context": "'kuch karte hain' = let's do something — casual suggestion, no pressure", "pronunciation": "YAAR week-END pe KUCH kar-te hain?" },
+    { "hindi": "yaar weekend pe kuch karte hain?", "english": "Dude, shall we do something this weekend?", "context": "'kuch karte hain' = let's do something — casual suggestion, no pressure", "pronunciation": "YAAR week-END pe KUCH kar-te hain?" },
     { "hindi": "agar Saturday free ho toh chalein kahin?", "english": "If you're free Saturday then shall we go somewhere?", "context": "'agar...toh' = if...then — conditional structure. 'chalein' = shall we go (inclusive)", "pronunciation": "A-gar SA-tur-day FREE ho toh CHA-lein ka-HIN?" },
     { "hindi": "main toh aa jaunga, tum batao", "english": "I'm in, you guys decide", "context": "'main toh' = as for me / I at least — contrastive emphasis. 'tum batao' = you (all) say — putting the ball in their court", "pronunciation": "MAIN toh aa jaa-UN-ga, TUM ba-TAO" },
     { "hindi": "Connaught Place chalein? wahan naya restaurant khula hai", "english": "Shall we go to CP? A new restaurant opened there", "context": "'chalein' = shall we go (inclusive suggestion). 'khula hai' = has opened", "pronunciation": "con-NAUGHT place CHA-lein? wa-HAAN NA-ya RES-tau-rant KHU-la hai" },
     { "hindi": "done, 7 baje milte hain metro pe", "english": "Done, let's meet at 7 at the metro", "context": "'baje' = o'clock, 'milte hain' = let's meet. 'Done' used as-is from English.", "pronunciation": "DONE, SAAT ba-JE mil-te hain MET-ro pe" },
     { "hindi": "late mat hona, pichli baar ek ghanta wait kiya tha", "english": "Don't be late, last time I waited one hour", "context": "Friendly warning/complaint — totally normal among friends who are always late", "pronunciation": "LATE mat HO-na, pich-LI baar EK ghan-TA wait KI-ya tha" },
     { "hindi": "arre yaar, dekhte hain... confirm nahi hai abhi", "english": "Hey dude, let's see... not confirmed yet", "context": "'dekhte hain' = let's see = PROBABLY NO. This is the classic non-commitment.", "pronunciation": "ar-RE yaar, DEKH-te hain... con-FIRM na-HI hai ab-HI" },
-    { "hindi": "pakka aa rahe ho na tum? cancel mat karna", "english": "You're definitely coming right? Don't cancel", "context": "'pakka' = confirmed/for sure. Pinning someone down who says 'dekhte hain'.", "pronunciation": "PAK-ka aa ra-HE ho na TUM? CAN-cel mat kar-NA" },
+    { "hindi": "pakka aa rahe ho na tum? cancel mat karna", "english": "You're definitely coming, right? Don't cancel", "context": "'pakka' = confirmed/for sure. Pinning someone down who says 'dekhte hain'.", "pronunciation": "PAK-ka aa ra-HE ho na TUM? CAN-cel mat kar-NA" },
     { "hindi": "chal theek hai, agar mood hua toh aa jaana", "english": "Okay fine, if you feel like it then just come", "context": "'mood hua toh' = if the mood strikes. Giving someone an easy out while keeping invite open.", "pronunciation": "CHAL theek hai, A-gar MOOD hu-a toh AA jaa-NA" },
     { "hindi": "group mein daal de, sab ko pata chale", "english": "Put it in the group, so everyone knows", "context": "'group mein daal de' = drop it in the (WhatsApp) group — how all plans are coordinated", "pronunciation": "GROUP mein DAAL de, SAB ko pa-TA cha-LE" }
   ],
   "grammar_notes": [
-    "Future tense: verb root + unga/ega/ogi/enge etc. 'Main jaunga' = I will go (male). 'Main jaungi' = I will go (female)",
+    "Future tense: verb root + unga/ega/ogi/enge etc. 'Main jaunga' = I will go (male). 'Main jaungi' = I will go (female).",
     "'Chalein?' = shall we go? — the '-ein' ending makes it a suggestion for 'we'. Very useful for proposing plans.",
-    "'Baje' = o'clock. 'Saat baje' = at 7. 'Kitne baje?' = what time? 'Saadhe' = half past (saadhe saat = 7:30)",
+    "'Baje' = o'clock. 'Saat baje' = at 7. 'Kitne baje?' = what time? 'Saadhe' = half past (saadhe saat = 7:30).",
     "'Mat' before a verb = don't. 'Mat karo' = don't do. 'Mat ja' = don't go. 'Late mat hona' = don't be late.",
-    "'Dekhte hain' literally means 'let's see' but culturally means 'probably not happening' — learn to read this cue"
+    "'Dekhte hain' literally means 'let's see' but culturally means 'probably not happening' — learn to read this cue."
   ],
   "culture_notes": [
     "Plans in India are fluid — 'pakka' (confirmed) vs 'dekhte hain' (let's see = probably no). If someone says 'dekhte hain', don't count on them.",
-    "Being 15-30 min late is culturally normal among friends — but everyone complains about it anyway",
-    "WhatsApp group is where all plans happen — 'group mein daal do' is how you broadcast any plan",
-    "Indian plans often materialize last-minute — people who said no suddenly show up, and vice versa"
+    "Being 15-30 min late is culturally normal among friends — but everyone complains about it anyway.",
+    "WhatsApp group is where all plans happen — 'group mein daal do' is how you broadcast any plan.",
+    "Indian plans often materialize last-minute — people who said no suddenly show up, and vice versa."
   ],
   "skill_breakdown": [
     {

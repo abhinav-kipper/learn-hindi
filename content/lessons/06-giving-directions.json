@@ -11,7 +11,7 @@
     { "hindi": "uss building ke saamne hai, miss nahi hoga", "english": "It's in front of that building, you won't miss it", "context": "'ke saamne' = in front of. 'miss nahi hoga' = can't miss it — classic reassurance", "pronunciation": "USS buil-DING ke SAAM-ne hai, MISS na-HI ho-GA" },
     { "hindi": "idhar nahi, udhar — ulta ja rahe ho", "english": "Not this way, that way — you're going the wrong way", "context": "'idhar' = this side, 'udhar' = that side, 'ulta' = opposite/wrong direction", "pronunciation": "i-DHAR na-HI, u-DHAR — UL-ta ja ra-HE ho" },
     { "hindi": "Big Bazaar pata hai? uske bilkul peeche hai", "english": "Do you know Big Bazaar? It's right behind it", "context": "Using landmark-based directions — 'pata hai?' checks if they know the reference point", "pronunciation": "big ba-ZAAR pa-TA hai? us-KE bil-KUL PEE-che hai" },
-    { "hindi": "arey, bahut dur hai yahan se — auto le lo", "english": "Oh, it's very far from here — take an auto", "context": "When the place is too far to walk — honest redirection is appreciated", "pronunciation": "a-REY, ba-HUT DOOR hai ya-HAAN se — AU-to le LO" },
+    { "hindi": "arey, bahut door hai yahan se — auto le lo", "english": "Oh, it's very far from here — take an auto", "context": "When the place is too far to walk — honest redirection is appreciated", "pronunciation": "a-REY, ba-HUT DOOR hai ya-HAAN se — AU-to le LO" },
     { "hindi": "kisi se bhi pooch lena, sab ko pata hai", "english": "Just ask anyone, everyone knows", "context": "Common Indian ending to directions — crowdsource the remaining navigation", "pronunciation": "ki-SI se bhi POOCH le-NA, SAB ko pa-TA hai" },
     { "hindi": "Google Maps lagao na, main bhi confuse ho jaunga", "english": "Use Google Maps, even I'll get confused", "context": "Honest admission when you're not 100% sure — offer the modern solution", "pronunciation": "GOO-gle MAPS la-GAO na, MAIN bhi con-FUSE ho jaa-UN-ga" }
   ],
@@ -44,7 +44,7 @@
       "skill": "location vocabulary",
       "explanation": "seedha (straight), left/right (same in Hindi), aage (ahead), peeche (behind), yahan (here), wahan (there), idhar (this side), udhar (that side), andar (inside), bahar (outside), upar (up), neeche (down), saamne (in front), door (far), paas (near).",
       "more_examples": [
-        { "hindi": "thoda aage jaao", "english": "go a little ahead" },
+        { "hindi": "thoda aage jao", "english": "go a little ahead" },
         { "hindi": "andar aao", "english": "come inside" },
         { "hindi": "bahar khade raho", "english": "stand/wait outside" },
         { "hindi": "neeche aa jao", "english": "come downstairs" },
@@ -63,5 +63,5 @@
       ]
     }
   ],
-  "practice_prompt": "You are a hurried, slightly anxious stranger in Lajpat Nagar Central Market trying to find the metro station entry gate — train to catch in 20 minutes. The user is a local you've stopped on the footpath. Use 'aap' throughout — polite but rushed — and speak only Hindi. Open with exactly: 'excuse me ji, aap mujhe bata sakte hain — Lajpat Nagar metro station kahaan hai?' Then run a 6-8 turn conversation: after their first directions, get genuinely confused at ONE point (an unfamiliar landmark, or which side to turn after the signal) and ask a clarifier like 'matlab Haldiram ke saamne se left, ya uske baad?'. If they suggest Google Maps, say your signal is weak — 'main mobile nahin chala raha abhi'. Use postpositions ('ke saamne', 'ke baad'), sequence markers ('phir', 'uske baad'), and distance phrases ('paanch minute', 'kitna dur') naturally. When the user errs (wrong postposition, missing oblique form, English-style sequencing), flag it inline as [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] and continue. End with 'thik hai, bahut shukriya ji — chalta hoon' and a wave."
+  "practice_prompt": "You are a hurried, slightly anxious stranger in Lajpat Nagar Central Market trying to find the metro station entry gate — train to catch in 20 minutes. The user is a local you've stopped on the footpath. Use 'aap' throughout — polite but rushed — and speak only Hindi. Open with exactly: 'excuse me ji, aap mujhe bata sakte hain — Lajpat Nagar metro station kahan hai?' Then run a 6-8 turn conversation: after their first directions, get genuinely confused at ONE point (an unfamiliar landmark, or which side to turn after the signal) and ask a clarifier like 'matlab Haldiram ke saamne se left, ya uske baad?'. If they suggest Google Maps, say your signal is weak — 'main mobile nahi chala raha abhi'. Use postpositions ('ke saamne', 'ke baad'), sequence markers ('phir', 'uske baad'), and distance phrases ('paanch minute', 'kitna dur') naturally. When the user errs (wrong postposition, missing oblique form, English-style sequencing), flag it inline as [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] and continue. End with 'thik hai, bahut shukriya ji — chalta hoon' and a wave."
 }
