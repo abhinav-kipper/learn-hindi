@@ -11,10 +11,10 @@
       "pronunciation": "MAIN ka-RUN-ga / MAIN ka-RUN-gi"
     },
     {
-      "hindi": "tu karega / tu karegi",
-      "english": "You will do (intimate-male) / You will do (intimate-female)",
+      "hindi": "tu padhega / tu padhegi",
+      "english": "You will study (intimate-male) / You will study (intimate-female)",
       "context": "With 'tu': verb root + ega/egi. 'tu' is VERY informal — close-friends/playful only, sounds rude otherwise. Default to 'aap' or 'tum'. The ga/gi gender split applies throughout.",
-      "pronunciation": "TU ka-RE-ga / TU ka-RE-gi"
+      "pronunciation": "TU padh-E-ga / TU padh-E-gi"
     },
     {
       "hindi": "tum karoge / tum karogi",
@@ -35,10 +35,10 @@
       "pronunciation": "HUM ka-REN-ge / HUM ka-REN-gi"
     },
     {
-      "hindi": "main kal aaunga / main kal aaungi",
-      "english": "I'll come tomorrow (male) / I'll come tomorrow (female)",
-      "context": "'aana' (to come) → 'aaunga/aaungi'. 'kal' = tomorrow (or yesterday — context decides!)",
-      "pronunciation": "MAIN KAL aa-UN-ga / MAIN KAL aa-UN-gi"
+      "hindi": "main kal jaaunga / main kal jaaungi",
+      "english": "I'll go tomorrow (male) / I'll go tomorrow (female)",
+      "context": "'jaana' (to go) → 'jaaunga/jaaungi'. 'kal' = tomorrow (or yesterday — context decides!)",
+      "pronunciation": "MAIN KAL jaa-UN-ga / MAIN KAL jaa-UN-gi"
     },
     {
       "hindi": "tum kab aaoge?",

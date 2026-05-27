@@ -5,10 +5,10 @@
   "skills": ["location postpositions", "time postpositions", "relationship postpositions"],
   "phrases": [
     {
-      "hindi": "ghar mein / office mein",
-      "english": "in the house / in the office",
+      "hindi": "kitchen mein / bathroom mein",
+      "english": "in the kitchen / in the bathroom",
       "context": "'mein' = in/inside. THE most common postposition. Comes AFTER the noun, unlike English prepositions",
-      "pronunciation": "GHAR mein / OFFICE mein"
+      "pronunciation": "KITCHEN mein / BATH-room mein"
     },
     {
       "hindi": "table pe / chhat pe",
@@ -17,22 +17,22 @@
       "pronunciation": "TABLE pe / CHHAT pe"
     },
     {
-      "hindi": "mere paas phone hai",
-      "english": "I have a phone (near me / in my possession)",
-      "context": "'ke paas' = near/with/having. Hindi has NO verb 'to have' — you say 'near me [thing] is'. Mind-bending but essential",
-      "pronunciation": "ME-re PAAS phone hai"
+      "hindi": "uske paas car nahi hai",
+      "english": "he/she doesn't have a car",
+      "context": "'ke paas' = near/with/having. Hindi has NO verb 'to have' — you say 'near him/her car is not'. Mind-bending but essential",
+      "pronunciation": "US-ke PAAS car na-HI hai"
     },
     {
-      "hindi": "store ke saamne / ghar ke peeche",
-      "english": "in front of the store / behind the house",
+      "hindi": "mandir ke saamne / park ke peeche",
+      "english": "in front of the temple / behind the park",
       "context": "'ke saamne' = in front of, 'ke peeche' = behind. Two-word postpositions always use 'ke' as connector",
-      "pronunciation": "STORE ke SAAM-ne / GHAR ke PEE-chhe"
+      "pronunciation": "MAN-dir ke SAAM-ne / PARK ke PEE-chhe"
     },
     {
-      "hindi": "do baje ke baad / khaane se pehle",
-      "english": "after 2 o'clock / before eating",
+      "hindi": "meeting ke baad / class se pehle",
+      "english": "after the meeting / before class",
       "context": "'ke baad' = after, 'se pehle' = before. Note: 'before' uses 'se' not 'ke'. Time expressions need these",
-      "pronunciation": "DO ba-JE ke BAAD / KHA-ne se PEH-le"
+      "pronunciation": "MEE-ting ke BAAD / CLASS se PEH-le"
     },
     {
       "hindi": "yahan se wahan tak",
@@ -41,10 +41,10 @@
       "pronunciation": "ya-HAAN se wa-HAAN TAK"
     },
     {
-      "hindi": "chai ke liye / tumhare liye",
-      "english": "for tea / for you",
+      "hindi": "bachhon ke liye / mere liye",
+      "english": "for the children / for me",
       "context": "'ke liye' = for (purpose/benefit). With pronouns: 'mere liye' (for me), 'uske liye' (for him/her)",
-      "pronunciation": "CHAI ke LI-ye / tum-HA-re LI-ye"
+      "pronunciation": "BACH-chon ke LI-ye / ME-re LI-ye"
     },
     {
       "hindi": "bus mein / auto se / paidal",
@@ -53,10 +53,10 @@
       "pronunciation": "BUS mein / AUTO se / pai-DAL"
     },
     {
-      "hindi": "uske baare mein baat karo",
-      "english": "Talk about him/her/that",
+      "hindi": "is kaam ke baare mein socho",
+      "english": "Think about this work/matter",
       "context": "'ke baare mein' = about (topic). Literally 'in the matter of'. Very common in conversation",
-      "pronunciation": "US-ke BAA-re mein BAAT ka-RO"
+      "pronunciation": "IS kaam ke BAA-re mein SOO-cho"
     },
     {
       "hindi": "mere bina / tere saath",

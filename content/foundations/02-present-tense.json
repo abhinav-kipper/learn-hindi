@@ -5,34 +5,34 @@
   "skills": ["present habitual", "present continuous", "pronoun-verb agreement"],
   "phrases": [
     {
-      "hindi": "main karta hoon / main karti hoon",
-      "english": "I do (male) / I do (female)",
-      "context": "Base form: main + verb-ta/ti + hoon. Male speakers use '-ta', female use '-ti'. 'hoon' = am",
-      "pronunciation": "MAIN kar-TA hoon / MAIN kar-TI hoon"
+      "hindi": "main roz akhbaar padhta hoon / main roz akhbaar padhti hoon",
+      "english": "I read the newspaper daily (male) / I read the newspaper daily (female)",
+      "context": "Base form: main + verb-ta/ti + hoon. Male speakers use '-ta', female use '-ti'. 'hoon' = am. 'roz' = daily",
+      "pronunciation": "MAIN roz akh-BAAR padh-TA hoon / MAIN roz akh-BAAR padh-TI hoon"
     },
     {
-      "hindi": "tu karta hai / tu karti hai",
-      "english": "You do (intimate-male) / You do (intimate-female)",
+      "hindi": "tu roz school jaata hai / tu roz school jaati hai",
+      "english": "You go to school daily (intimate-male) / You go to school daily (intimate-female)",
       "context": "'tu' = intimate you — VERY informal, used only with very close friends, kids, or in playful contexts. Sounds rude with anyone else. Default to 'aap' or 'tum' instead. Helper verb is 'hai' (same as 'woh').",
-      "pronunciation": "TU kar-TA hai / TU kar-TI hai"
+      "pronunciation": "TU roz school jaa-TA hai / TU roz school jaa-TI hai"
     },
     {
-      "hindi": "tum karte ho / tum karti ho",
-      "english": "You do (casual-male) / You do (casual-female)",
-      "context": "'tum' = casual you. Note: '-te' for male plural/casual, '-ti' stays same for female. 'ho' = are",
-      "pronunciation": "TUM kar-TE ho / TUM kar-TI ho"
+      "hindi": "tum subah kya khaate ho / tum subah kya khaati ho",
+      "english": "What do you eat in the morning (casual-male) / What do you eat in the morning (casual-female)",
+      "context": "'tum' = casual you. Note: '-te' for male plural/casual, '-ti' stays same for female. 'ho' = are. 'subah' = morning",
+      "pronunciation": "TUM su-BAH kya KHAA-te ho / TUM su-BAH kya KHAA-ti ho"
     },
     {
-      "hindi": "woh karta hai / woh karti hai",
-      "english": "He does / She does",
-      "context": "'woh' = he/she/that. Same 'hai' as 'tu'. Gender of the SUBJECT decides -ta/-ti",
-      "pronunciation": "WOH kar-TA hai / WOH kar-TI hai"
+      "hindi": "woh roz doodh peeta hai / woh roz doodh peeti hai",
+      "english": "He drinks milk daily / She drinks milk daily",
+      "context": "'woh' = he/she/that. Same 'hai' as 'tu'. Gender of the SUBJECT decides -ta/-ti. 'doodh' = milk",
+      "pronunciation": "WOH roz DOODH PEE-ta hai / WOH roz DOODH PEE-ti hai"
     },
     {
-      "hindi": "hum karte hain / hum karti hain",
-      "english": "We do (male) / We do (female)",
-      "context": "'hum' = we. 'hain' = are (plural). '-te' for male speakers, '-ti' for female group",
-      "pronunciation": "HUM kar-TE hain / HUM kar-TI hain"
+      "hindi": "hum saath khaana khaate hain / hum saath khaana khaati hain",
+      "english": "We eat together (male) / We eat together (female)",
+      "context": "'hum' = we. 'hain' = are (plural). '-te' for male speakers, '-ti' for female group. 'saath' = together",
+      "pronunciation": "HUM saath KHAA-na KHAA-te hain / HUM saath KHAA-na KHAA-ti hain"
     },
     {
       "hindi": "main jaata hoon / main jaati hoon",
@@ -41,10 +41,10 @@
       "pronunciation": "MAIN jaa-TA hoon / MAIN jaa-TI hoon"
     },
     {
-      "hindi": "tum kya karte ho?",
-      "english": "What do you do?",
-      "context": "Question word 'kya' (what) + normal sentence. Word order is flexible in Hindi questions",
-      "pronunciation": "TUM kya KAR-te ho?"
+      "hindi": "aap subah kya peete hain?",
+      "english": "What do you drink in the morning?",
+      "context": "Question word 'kya' (what) slots into normal sentence order. Word order is flexible in Hindi questions. 'aap' (respectful) takes plural form '-te + hain'",
+      "pronunciation": "AAP su-BAH kya PEE-te hain?"
     },
     {
       "hindi": "woh kaam karti hai",

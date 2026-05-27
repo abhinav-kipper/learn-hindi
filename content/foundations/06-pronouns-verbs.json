@@ -11,10 +11,10 @@
       "pronunciation": "MAIN / TU / TUM / AAP / WOH / HUM"
     },
     {
-      "hindi": "main karta hoon, tu karta hai, tum karte ho, aap karte hain",
-      "english": "I do, you(int) do, you(cas) do, you(formal) do",
-      "context": "Same verb 'karna' changes helper: hoon/hai/ho/hain. The verb ending (-ta/-te) also shifts for tum/aap",
-      "pronunciation": "MAIN kar-TA hoon, TU kar-TA hai, TUM kar-TE ho, AAP kar-TE hain"
+      "hindi": "main jaata hoon, tu jaata hai, tum jaate ho, aap jaate hain",
+      "english": "I go, you(int) go, you(cas) go, you(formal) go",
+      "context": "Same verb 'jaana' changes helper: hoon/hai/ho/hain. The verb ending (-ta/-te) also shifts for tum/aap",
+      "pronunciation": "MAIN jaa-TA hoon, TU jaa-TA hai, TUM jaa-TE ho, AAP jaa-TE hain"
     },
     {
       "hindi": "mujhe / tujhe / tumhe / aapko / usko / humko",
