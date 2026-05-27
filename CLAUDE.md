@@ -169,6 +169,7 @@ shadows anywhere.
 | `review.ts` | **Full SM-2 lite SRS** (interval, easeFactor, nextReviewAt). Powers daily review popup |
 | `mistakes.ts` | `[[CORRECTION:]]` extraction, capped at 200, source = 'practice' \| 'quiz' |
 | `vocab-review.ts` | Separate known/review sets for vocab swipe UI |
+| `vocab-archive.ts` | Per-language archived-vocab set. `getArchived/addArchived/removeArchived/isArchived/migrateLegacyKnown`. TDD'd, 15 tests. Powers swipe-right-archive on `/vocabulary/[category]`. |
 | `personalization.ts` | Onboarding reason reorders Hindi lessons (family/bollywood/moving/curious) |
 | `sounds.ts` | 8 generative Web Audio sounds (tap/correct/wrong/complete/swipe/streak/levelup/pop). **Cute Duolingo-style palette** — sine+triangle waves, major-interval chimes, pitch glides via `playGlide` helper. Vibration patterns paired per sound. Mute toggle persisted in `bolna-seekho-muted` |
 | `last-active-lesson.ts` | Powers Continue CTA on home |
@@ -256,6 +257,7 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `${prefix}-quiz-scores`
 - `${prefix}-review-sessions`
 - `${prefix}-vocab-learned`
+- `${prefix}-vocab-archived` — JSON array of romanized Hindi headwords the user has archived from the vocab category pages. Migrated additively from the legacy global `vocab-known` on first read.
 - `${prefix}-last-active-lesson`
 - `${prefix}-home-tab` — restores Situations vs Foundations
 - `bolna-seekho-muted` (global, not prefixed) — sound mute toggle
@@ -283,6 +285,14 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-lezen-mock-attempts` — same shape as `dutch-knm-attempts`, plus `text_ids: string[]`.
 
 ### Recent feature work log
+
+**2026-05-27 wave — Vocab archive with replacement**
+
+- New per-language archive primitive (`lib/vocab-archive.ts`, 15 tests). Right-swipe on a vocab card on `/vocabulary/[category]` now archives instead of just sorting to the bottom — the card collapse-fades out and the next unarchived word from the category pool slides in (visible list capped at 10).
+- Header gains a `🃏 N fresh · N archived` deck-health pill. Below the deck, a collapsed-by-default archived fold with tap-to-restore. When a category fully archives, the deck swaps for a celebration empty state with "show archived" + "other categories" CTAs.
+- `/vocabulary` grid shows a mint `✓ K` archive-count chip beside each category's word count.
+- One-shot `scripts/generate-vocab.mjs` (modeled on `scripts/generate-lesson.mjs`) drafts ~35 new words per category via Gemini, writes to `content/vocabulary-draft.json` for user review. Run per category, merge approved entries into `vocabulary.json`. Target: ~300 total words once all 6 categories are expanded.
+- Legacy global `vocab-known` is preserved read-only; migration runs additively on every category page mount (idempotent).
 
 **2026-05-26 wave — Content quality audit + improver tool**
 

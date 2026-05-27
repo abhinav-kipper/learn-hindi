@@ -16,13 +16,16 @@ import {
   isDutchWordLearned,
 } from '@/lib/dutch/vocabulary'
 import {
-  getVocabKnown,
   getVocabReview,
-  addVocabKnown,
   addVocabReview,
-  removeVocabKnown,
   removeVocabReview,
 } from '@/lib/vocab-review'
+import {
+  addArchived,
+  removeArchived,
+  getArchived,
+  migrateLegacyKnown,
+} from '@/lib/vocab-archive'
 import { speak, stopSpeaking, isSpeaking } from '@/lib/speech'
 import { playSound } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
@@ -40,6 +43,7 @@ import {
 const W = '#fff' // @design-allow: white literal
 const BUTTER_MOTIF = '#d4a44a' // @design-allow: butter motif palette accent
 const LAV_MOTIF = '#7a5da8' // @design-allow: lav motif palette accent
+const VISIBLE_CAP = 10
 
 const CATEGORY_PALETTE_BY_INDEX: Array<{ bg: string; motifBg: string; motif: MotifKind }> = [
   { bg: COLORS.peach2, motifBg: COLORS.orange, motif: 'marigold' },
@@ -59,9 +63,10 @@ export default function CategoryPage() {
   const [category, setCategory] = useState<VocabCategory | null>(null)
   const [categoryIdx, setCategoryIdx] = useState(0)
   const [learnedSet, setLearnedSet] = useState<Set<string>>(new Set())
-  const [knownSet, setKnownSet] = useState<Set<string>>(new Set())
+  const [archivedSet, setArchivedSet] = useState<Set<string>>(new Set())
   const [reviewSet, setReviewSet] = useState<Set<string>>(new Set())
   const [flippedCard, setFlippedCard] = useState<string | null>(null)
+  const [archivedFoldOpen, setArchivedFoldOpen] = useState(false)
 
   const isDutch = language === 'dutch'
 
@@ -92,9 +97,10 @@ export default function CategoryPage() {
     })
     setLearnedSet(learned)
 
-    setKnownSet(new Set(getVocabKnown()))
+    migrateLegacyKnown(config.storagePrefix)
+    setArchivedSet(new Set(getArchived(config.storagePrefix)))
     setReviewSet(new Set(getVocabReview()))
-  }, [categoryId, router, isDutch])
+  }, [categoryId, router, isDutch, config.storagePrefix])
 
   const scrollKey = `${config.storagePrefix}-vocab-scroll-${categoryId}`
   useEffect(() => {
@@ -135,9 +141,9 @@ export default function CategoryPage() {
   const handleSwipeRight = useCallback(
     (word: VocabWord) => {
       playSound('correct')
-      addVocabKnown(word.hindi)
+      addArchived(config.storagePrefix, word.hindi)
       removeVocabReview(word.hindi)
-      setKnownSet((prev) => new Set([...prev, word.hindi]))
+      setArchivedSet((prev) => new Set([...prev, word.hindi]))
       setReviewSet((prev) => {
         const next = new Set(prev)
         next.delete(word.hindi)
@@ -149,16 +155,16 @@ export default function CategoryPage() {
         setLearnedSet((prev) => new Set([...prev, word.hindi]))
       }
     },
-    [categoryId, learnedSet, isDutch],
+    [categoryId, learnedSet, isDutch, config.storagePrefix],
   )
 
   const handleSwipeLeft = useCallback(
     (word: VocabWord) => {
       playSound('swipe')
       addVocabReview(word.hindi)
-      removeVocabKnown(word.hindi)
+      removeArchived(config.storagePrefix, word.hindi)
       setReviewSet((prev) => new Set([...prev, word.hindi]))
-      setKnownSet((prev) => {
+      setArchivedSet((prev) => {
         const next = new Set(prev)
         next.delete(word.hindi)
         return next
@@ -169,17 +175,32 @@ export default function CategoryPage() {
         setLearnedSet((prev) => new Set([...prev, word.hindi]))
       }
     },
-    [categoryId, learnedSet, isDutch],
+    [categoryId, learnedSet, isDutch, config.storagePrefix],
   )
 
-  const sortedWords = useMemo(() => {
+  const handleRestore = useCallback(
+    (word: VocabWord) => {
+      playSound('pop')
+      removeArchived(config.storagePrefix, word.hindi)
+      setArchivedSet((prev) => {
+        const next = new Set(prev)
+        next.delete(word.hindi)
+        return next
+      })
+    },
+    [config.storagePrefix],
+  )
+
+  const visibleWords = useMemo(() => {
     if (!category) return []
-    return [...category.words].sort((a, b) => {
-      const aKnown = knownSet.has(a.hindi) ? 1 : 0
-      const bKnown = knownSet.has(b.hindi) ? 1 : 0
-      return aKnown - bKnown
-    })
-  }, [category, knownSet])
+    const fresh = category.words.filter((w) => !archivedSet.has(w.hindi))
+    return fresh.slice(0, VISIBLE_CAP)
+  }, [category, archivedSet])
+
+  const archivedWords = useMemo(() => {
+    if (!category) return []
+    return category.words.filter((w) => archivedSet.has(w.hindi))
+  }, [category, archivedSet])
 
   if (!category) {
     return (
@@ -210,6 +231,8 @@ export default function CategoryPage() {
   const learnedCount = learnedSet.size
   const totalCount = category.words.length
   const learnedPct = totalCount > 0 ? Math.round((learnedCount / totalCount) * 100) : 0
+  const archivedCount = archivedWords.length
+  const freshCount = totalCount - archivedCount
   const palette = CATEGORY_PALETTE_BY_INDEX[categoryIdx % CATEGORY_PALETTE_BY_INDEX.length]
 
   return (
@@ -307,6 +330,28 @@ export default function CategoryPage() {
           </Tag>
           <div
             style={{
+              marginTop: 8,
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 6,
+              padding: '5px 12px',
+              borderRadius: 99,
+              background: W,
+              border: BORDER.sticker,
+              boxShadow: SHADOW.chip,
+              fontFamily: FONTS.display,
+              fontWeight: 800,
+              fontSize: 12,
+              color: COLORS.ink,
+              letterSpacing: 0.2,
+            }}
+          >
+            🃏 <span style={{ color: COLORS.orange }}>{freshCount}</span> fresh
+            <span style={{ color: COLORS.ink45, marginInline: 4 }}>·</span>
+            <span style={{ color: COLORS.green }}>{archivedCount}</span> archived
+          </div>
+          <div
+            style={{
               fontFamily: FONTS.display,
               fontWeight: 800,
               fontSize: 28,
@@ -360,25 +405,204 @@ export default function CategoryPage() {
             textAlign: 'center',
           }}
         >
-          tap to flip · swipe → known · swipe ← review
+          tap to flip · swipe → archive · swipe ← review
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-          {sortedWords.map((word, index) => (
-            <SwipeableWordCard
-              key={word.hindi}
-              word={word}
-              index={index}
-              isFlipped={flippedCard === word.hindi}
-              isKnown={knownSet.has(word.hindi)}
-              isReview={reviewSet.has(word.hindi)}
-              onTap={handleCardTap}
-              onSwipeRight={handleSwipeRight}
-              onSwipeLeft={handleSwipeLeft}
-              ttsLocale={config.ttsLocale}
-            />
-          ))}
-        </div>
+        {visibleWords.length === 0 ? (
+          <Sticker color={COLORS.mint2} radius={22} padding={24}>
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: 42 }}>🎉</div>
+              <div
+                style={{
+                  fontFamily: FONTS.display,
+                  fontWeight: 800,
+                  fontSize: 22,
+                  color: COLORS.ink,
+                  marginTop: 8,
+                  letterSpacing: -0.4,
+                }}
+              >
+                all done in this category!
+              </div>
+              <div
+                style={{
+                  fontFamily: FONTS.body,
+                  fontWeight: 700,
+                  fontSize: 13,
+                  color: COLORS.ink60,
+                  marginTop: 6,
+                }}
+              >
+                {archivedCount} {archivedCount === 1 ? 'word' : 'words'} archived — nice work
+              </div>
+              <div style={{ display: 'flex', gap: 8, marginTop: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+                {archivedWords.length > 0 && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setArchivedFoldOpen(true)
+                      playSound('tap')
+                    }}
+                    style={{
+                      padding: '10px 16px',
+                      background: W,
+                      color: COLORS.ink,
+                      border: BORDER.sticker,
+                      boxShadow: SHADOW.chip,
+                      borderRadius: 99,
+                      fontFamily: FONTS.display,
+                      fontWeight: 800,
+                      fontSize: 12,
+                      cursor: 'pointer',
+                      textTransform: 'lowercase',
+                    }}
+                  >
+                    show archived ▾
+                  </button>
+                )}
+                <button
+                  type="button"
+                  onClick={() => {
+                    playSound('tap')
+                    router.push('/vocabulary')
+                  }}
+                  style={{
+                    padding: '10px 16px',
+                    background: COLORS.orange,
+                    color: W,
+                    border: BORDER.sticker,
+                    boxShadow: SHADOW.chip,
+                    borderRadius: 99,
+                    fontFamily: FONTS.display,
+                    fontWeight: 800,
+                    fontSize: 12,
+                    cursor: 'pointer',
+                    textTransform: 'lowercase',
+                  }}
+                >
+                  other categories →
+                </button>
+              </div>
+            </div>
+          </Sticker>
+        ) : (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            <AnimatePresence initial={false}>
+              {visibleWords.map((word, index) => (
+                <SwipeableWordCard
+                  key={word.hindi}
+                  word={word}
+                  index={index}
+                  isFlipped={flippedCard === word.hindi}
+                  isReview={reviewSet.has(word.hindi)}
+                  onTap={handleCardTap}
+                  onSwipeRight={handleSwipeRight}
+                  onSwipeLeft={handleSwipeLeft}
+                  ttsLocale={config.ttsLocale}
+                />
+              ))}
+            </AnimatePresence>
+          </div>
+        )}
+
+        {archivedWords.length > 0 && (
+          <div style={{ marginTop: 18 }}>
+            <button
+              type="button"
+              onClick={() => {
+                setArchivedFoldOpen((v) => !v)
+                playSound('tap')
+              }}
+              style={{
+                width: '100%',
+                padding: '12px 16px',
+                background: W,
+                color: COLORS.ink,
+                border: BORDER.sticker,
+                boxShadow: SHADOW.chip,
+                borderRadius: 99,
+                fontFamily: FONTS.display,
+                fontWeight: 800,
+                fontSize: 13,
+                cursor: 'pointer',
+                textTransform: 'lowercase',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+              }}
+              aria-expanded={archivedFoldOpen}
+            >
+              <span>✓ {archivedWords.length} archived</span>
+              <span style={{ color: COLORS.ink60 }}>{archivedFoldOpen ? 'hide ▴' : 'show ▾'}</span>
+            </button>
+
+            <AnimatePresence initial={false}>
+              {archivedFoldOpen && (
+                <motion.div
+                  key="archived-fold"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.25 }}
+                  style={{ overflow: 'hidden' }}
+                >
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: 10 }}>
+                    {archivedWords.map((word) => (
+                      <Sticker key={word.hindi} color={COLORS.creamBg} radius={14} padding={12}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 10, opacity: 0.78 }}>
+                          <div style={{ flex: 1, minWidth: 0 }}>
+                            <div
+                              style={{
+                                fontFamily: FONTS.display,
+                                fontWeight: 800,
+                                fontSize: 15,
+                                color: COLORS.ink,
+                                letterSpacing: -0.2,
+                              }}
+                            >
+                              {word.hindi}
+                            </div>
+                            <div
+                              style={{
+                                marginTop: 2,
+                                fontFamily: FONTS.body,
+                                fontWeight: 700,
+                                fontSize: 12,
+                                color: COLORS.ink60,
+                              }}
+                            >
+                              {word.english}
+                            </div>
+                          </div>
+                          <button
+                            type="button"
+                            onClick={() => handleRestore(word)}
+                            aria-label={`Restore ${word.hindi}`}
+                            style={{
+                              padding: '6px 12px',
+                              background: W,
+                              color: COLORS.ink,
+                              border: BORDER.thin,
+                              borderRadius: 99,
+                              fontFamily: FONTS.display,
+                              fontWeight: 800,
+                              fontSize: 11,
+                              cursor: 'pointer',
+                              textTransform: 'lowercase',
+                              flexShrink: 0,
+                            }}
+                          >
+                            ↺ restore
+                          </button>
+                        </div>
+                      </Sticker>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        )}
       </div>
     </div>
   )
@@ -388,7 +612,6 @@ function SwipeableWordCard({
   word,
   index,
   isFlipped,
-  isKnown,
   isReview,
   onTap,
   onSwipeRight,
@@ -398,7 +621,6 @@ function SwipeableWordCard({
   word: VocabWord
   index: number
   isFlipped: boolean
-  isKnown: boolean
   isReview: boolean
   onTap: (word: VocabWord) => void
   onSwipeRight: (word: VocabWord) => void
@@ -439,14 +661,16 @@ function SwipeableWordCard({
     speak(word.hindi, ttsLocale, () => setSpeaking(false))
   }
 
-  const bg = isFlipped ? W : isKnown ? COLORS.mint2 : isReview ? COLORS.butter : W
+  const bg = isFlipped ? W : isReview ? COLORS.butter : W
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: Math.min(index * 0.025, 0.3) }}
-      style={{ position: 'relative' }}
+      exit={{ opacity: 0, height: 0, marginTop: 0, marginBottom: 0, transition: { duration: 0.22 } }}
+      transition={{ delay: Math.min(index * 0.02, 0.18), type: 'spring', stiffness: 380, damping: 28 }}
+      style={{ position: 'relative', overflow: 'hidden' }}
+      layout
     >
       {/* Swipe-indicator overlays (behind the card) */}
       <motion.div
@@ -469,7 +693,7 @@ function SwipeableWordCard({
           letterSpacing: 0.5,
         }}
       >
-        ✓ KNOWN
+        ✓ ARCHIVE
       </motion.div>
       <motion.div
         style={{
@@ -597,18 +821,6 @@ function SwipeableWordCard({
                   {word.type}
                 </Tag>
                 <div style={{ display: 'flex', gap: 4 }}>
-                  {isKnown && (
-                    <div
-                      style={{
-                        width: 8,
-                        height: 8,
-                        borderRadius: 99,
-                        background: COLORS.green,
-                        border: `1.4px solid ${COLORS.ink}`, // @design-allow: status dot indicator, not a sticker surface
-                      }}
-                      title="known"
-                    />
-                  )}
                   {isReview && (
                     <div
                       style={{

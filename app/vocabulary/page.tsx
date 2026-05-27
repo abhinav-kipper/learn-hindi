@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { getArchived } from '@/lib/vocab-archive'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -46,11 +47,12 @@ const CATEGORY_PALETTE: Array<{ bg: string; motifBg: string; motif: MotifKind }>
 
 export default function VocabularyPage() {
   const router = useRouter()
-  const { language } = useLanguage()
+  const { language, config } = useLanguage()
   const [categories, setCategories] = useState<VocabCategory[]>([])
   const [totalLearned, setTotalLearned] = useState(0)
   const [totalWords, setTotalWords] = useState(0)
   const [categoryProgress, setCategoryProgress] = useState<Record<string, number>>({})
+  const [archivedByCategory, setArchivedByCategory] = useState<Record<string, number>>({})
 
   useEffect(() => {
     const cats = language === 'dutch' ? getDutchAllCategories() : getAllCategories()
@@ -66,7 +68,17 @@ export default function VocabularyPage() {
           : getLearnedCountForCategory(cat.id)
     })
     setCategoryProgress(progress)
-  }, [language])
+
+    const archived = new Set(getArchived(config.storagePrefix))
+    const archCounts: Record<string, number> = {}
+    cats.forEach((cat) => {
+      archCounts[cat.id] = cat.words.reduce(
+        (sum, w) => (archived.has(w.hindi) ? sum + 1 : sum),
+        0,
+      )
+    })
+    setArchivedByCategory(archCounts)
+  }, [language, config.storagePrefix])
 
   const totalPct = totalWords > 0 ? Math.round((totalLearned / totalWords) * 100) : 0
 
@@ -258,13 +270,36 @@ export default function VocabularyPage() {
                     <div
                       style={{
                         marginTop: 4,
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: 6,
+                        flexWrap: 'wrap',
                         fontFamily: FONTS.body,
                         fontWeight: 700,
                         fontSize: 11,
                         color: COLORS.ink60,
                       }}
                     >
-                      {learned}/{total} words
+                      <span>{learned}/{total} words</span>
+                      {(archivedByCategory[category.id] ?? 0) > 0 && (
+                        <span
+                          style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            padding: '1px 7px',
+                            borderRadius: 99,
+                            background: COLORS.mint2,
+                            border: BORDER.thin,
+                            fontFamily: FONTS.display,
+                            fontWeight: 800,
+                            fontSize: 10,
+                            color: COLORS.ink,
+                            letterSpacing: 0.2,
+                          }}
+                        >
+                          ✓ {archivedByCategory[category.id]}
+                        </span>
+                      )}
                     </div>
                     <div
                       style={{
