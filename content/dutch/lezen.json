@@ -68,7 +68,7 @@
           "explanation_en": "The text describes the writer's daily routine from morning to night — a typical day in their life."
         },
         {
-          "type": "hoofdgedachte",
+          "type": "detail",
           "question_nl": "Wat doet de schrijver 's avonds?",
           "question_en": "What does the writer do in the evening?",
           "options_nl": [
@@ -99,7 +99,7 @@
       "title_nl": "In de supermarkt",
       "title_en": "At the supermarket",
       "body_nl": "Vandaag ga ik naar de supermarkt. Ik heb een lijst. Ik koop brood, melk, kaas, groente en fruit. De appels zijn in de aanbieding. Dat is goedkoop. Ik zoek ook yoghurt. Die is bij de melk. Ik heb een bonuskaart. Daarmee krijg ik korting. Aan het einde ga ik naar de kassa. Ik betaal met mijn pinpas. De kassamedewerker is vriendelijk. Ik ga naar huis met mijn boodschappen.",
-      "body_en": "Today I am going to the supermarket. I have a list. I buy bread, milk, cheese, vegetables and fruit. The apples are on offer. That is cheap. I am also looking for yoghurt. That is near the milk. I have a bonus card. With it I get a discount. At the end I go to the checkout. I pay with my debit card. The checkout assistant is friendly. I go home with my shopping.",
+      "body_en": "Today I am going to the supermarket. I have a list. I buy bread, milk, cheese, vegetables and fruit. The apples are on offer. That is cheap. I am also looking for yoghurt. It is next to the milk. I have a bonus card. With it I get a discount. At the end I go to the checkout. I pay with my debit card. The checkout assistant is friendly. I go home with my shopping.",
       "word_count": 68,
       "questions": [
         {
@@ -160,7 +160,7 @@
           "explanation_en": "The text describes a shopping trip from start to finish — arriving with a list, buying items and paying at the checkout."
         },
         {
-          "type": "hoofdgedachte",
+          "type": "detail",
           "question_nl": "Waarom is de bonuskaart handig?",
           "question_en": "Why is the bonus card useful?",
           "options_nl": [
@@ -170,7 +170,7 @@
             "Je krijgt er gratis boodschappen mee"
           ],
           "options_en": [
-            "You can pay with it",
+            "You can pay by debit card with it",
             "You get a discount with it",
             "You can skip the checkout with it",
             "You get free groceries with it"
@@ -555,15 +555,15 @@
       "id": "lezen-007",
       "tier": "A2",
       "topic": "ov-chipkaart",
-      "title_nl": "Een ov-chipkaart kopen",
+      "title_nl": "Een OV-chipkaart kopen",
       "title_en": "Buying an OV-chipkaart",
-      "body_nl": "In Nederland reist iedereen met het openbaar vervoer met een ov-chipkaart. Je kunt de kaart kopen bij een automaat op het NS-station of bij een servicebalie. Er zijn twee soorten kaarten. Een anonieme ov-chipkaart kun je meteen gebruiken. Een persoonlijke ov-chipkaart heeft jouw naam en foto erop. Als je de persoonlijke kaart verliest, kun je het saldo terugkrijgen. Je moet de kaart opladen met geld, het zogeheten saldo. Dat kan bij de automaat, online of bij een servicepunt. Voordat je in de trein, bus, tram of metro stapt, moet je inchecken door de kaart tegen de lezer te houden. Als je uitstapt, moet je uitchecken. Als je vergeet uit te checken, wordt er een boete van het saldo afgeschreven. De ov-chipkaart is geldig voor alle vormen van openbaar vervoer in Nederland.",
+      "body_nl": "In Nederland reist iedereen in het openbaar vervoer met een OV-chipkaart. Je kunt de kaart kopen bij een automaat op het NS-station of bij een servicebalie. Er zijn twee soorten kaarten. Een anonieme OV-chipkaart kun je meteen gebruiken. Een persoonlijke OV-chipkaart heeft jouw naam en foto erop. Als je de persoonlijke kaart verliest, kun je het saldo terugkrijgen. Je moet de kaart opladen met geld, het zogeheten saldo. Dat kan bij de automaat, online of bij een servicepunt. Voordat je in de trein, bus, tram of metro stapt, moet je inchecken door de kaart tegen de lezer te houden. Als je uitstapt, moet je uitchecken. Als je vergeet uit te checken, wordt er een boete van het saldo afgeschreven. De OV-chipkaart is geldig voor alle vormen van openbaar vervoer in Nederland.",
       "body_en": "In the Netherlands, everyone travelling by public transport uses an OV-chipkaart. You can buy the card at a machine at the NS station or at a service desk. There are two types of cards. An anonymous OV-chipkaart can be used immediately. A personal OV-chipkaart has your name and photo on it. If you lose the personal card, you can get the balance back. You must top up the card with money, known as the saldo. This can be done at the machine, online or at a service point. Before you board the train, bus, tram or metro, you must check in by holding the card against the reader. When you get off, you must check out. If you forget to check out, a fine is deducted from the balance. The OV-chipkaart is valid for all forms of public transport in the Netherlands.",
       "word_count": 131,
       "questions": [
         {
           "type": "detail",
-          "question_nl": "Wat is een voordeel van een persoonlijke ov-chipkaart boven een anonieme?",
+          "question_nl": "Wat is een voordeel van een persoonlijke OV-chipkaart boven een anonieme?",
           "question_en": "What is an advantage of a personal OV-chipkaart over an anonymous one?",
           "options_nl": [
             "Je kunt er gratis mee reizen",
@@ -586,7 +586,7 @@
           "question_en": "What is the text mainly about?",
           "options_nl": [
             "Reizen met de auto in Nederland",
-            "Hoe de ov-chipkaart werkt in Nederland",
+            "Hoe de OV-chipkaart werkt in Nederland",
             "De prijzen van treinkaartjes",
             "Hoe je een NS-abonnement koopt"
           ],
@@ -717,7 +717,7 @@
           "question_en": "What is a 'balie' in the text?",
           "options_nl": [
             "Een wachtruimte in een ziekenhuis",
-            "Een loket of receptie waar je iemand te woord staat",
+            "Een loket of receptie waar je geholpen wordt",
             "Een website van de gemeente",
             "Een formulier dat je moet invullen"
           ],
@@ -834,7 +834,7 @@
       "topic": "bsn-digid",
       "title_nl": "Een BSN en DigiD aanvragen",
       "title_en": "Getting a BSN and DigiD",
-      "body_nl": "Als u zich in Nederland vestigt, heeft u een burgerservicenummer (BSN) nodig. Het BSN is een uniek persoonlijk nummer dat door de overheid wordt gebruikt om uw gegevens te beheren. U heeft het nodig voor uw zorgverzekering, voor uw belastingaangifte en voor het openen van een bankrekening. Zonder BSN kunt u deze essentiële diensten niet gebruiken en is het moeilijk om normaal te functioneren in de Nederlandse samenleving.\n\nHet BSN krijgt u automatisch wanneer u zich inschrijft in de Basisregistratie Personen (BRP) bij uw gemeente. U moet daarvoor persoonlijk naar het gemeentehuis gaan en een geldig paspoort of identiteitsbewijs meenemen. In sommige gemeenten is een afspraak verplicht, dus het is verstandig om dit vooraf te controleren op de website van uw gemeente. Na de inschrijving ontvangt u een brief met uw BSN. Bewaar dit nummer goed, want u heeft het regelmatig nodig.\n\nNaast het BSN heeft u ook een DigiD nodig. DigiD is uw persoonlijke digitale identiteit waarmee u kunt inloggen op websites van de overheid, zoals die van de Belastingdienst, het UWV en uw gemeente. U vraagt DigiD aan via de website digid.nl. U vult uw BSN en persoonlijke gegevens in en maakt een gebruikersnaam en wachtwoord aan. Nadat u uw aanvraag heeft ingediend, wordt er een activatiecode per post verstuurd naar uw woonadres. Die code ontvangt u doorgaans binnen vijf werkdagen. Met die code activeert u uw DigiD account.\n\nMet uw DigiD kunt u onder andere uw belastingaangifte doen, huurtoeslag of zorgtoeslag aanvragen en uw gemeentelijke zaken online regelen. Ook kunt u uw medische gegevens inzien via het patiëntenportaal. Het is belangrijk dat u uw DigiD-inloggegevens geheimhoudt en nooit met anderen deelt. De overheid vraagt nooit per telefoon of e-mail om uw DigiD-gegevens. Als u vermoedt dat iemand anders toegang heeft tot uw DigiD, moet u dit onmiddellijk melden en uw wachtwoord wijzigen via de website digid.nl.",
+      "body_nl": "Als u zich in Nederland vestigt, heeft u een burgerservicenummer (BSN) nodig. Het BSN is een uniek persoonlijk nummer dat door de overheid wordt gebruikt om uw gegevens te beheren. U heeft het nodig voor uw zorgverzekering, voor uw belastingaangifte en voor het openen van een bankrekening. Zonder BSN kunt u deze essentiële diensten niet gebruiken en is het moeilijk om normaal te functioneren in de Nederlandse samenleving.\n\nHet BSN krijgt u automatisch wanneer u zich inschrijft in de Basisregistratie Personen (BRP) bij uw gemeente. U moet daarvoor persoonlijk naar het gemeentehuis gaan en een geldig paspoort of identiteitsbewijs meenemen. In sommige gemeenten is een afspraak verplicht, dus het is verstandig om dit vooraf te controleren op de website van uw gemeente. Na de inschrijving ontvangt u een brief met uw BSN. Bewaar dit nummer goed, want u heeft het regelmatig nodig.\n\nNaast het BSN heeft u ook een DigiD nodig. DigiD is uw persoonlijke digitale identiteit waarmee u kunt inloggen op websites van de overheid, zoals die van de Belastingdienst, het UWV en uw gemeente. U vraagt DigiD aan via de website digid.nl. U vult uw BSN en persoonlijke gegevens in en maakt een gebruikersnaam en wachtwoord aan. Nadat u uw aanvraag heeft ingediend, wordt er een activatiecode per post verstuurd naar uw woonadres. Die code ontvangt u doorgaans binnen vijf werkdagen. Met die code activeert u uw DigiD-account.\n\nMet uw DigiD kunt u onder andere uw belastingaangifte doen, huurtoeslag of zorgtoeslag aanvragen en uw gemeentelijke zaken online regelen. Ook kunt u uw medische gegevens inzien via het patiëntenportaal. Het is belangrijk dat u uw DigiD-inloggegevens geheimhoudt en nooit met anderen deelt. De overheid vraagt nooit per telefoon of e-mail om uw DigiD-gegevens. Als u vermoedt dat iemand anders toegang heeft tot uw DigiD, moet u dit onmiddellijk melden en uw wachtwoord wijzigen via de website digid.nl.",
       "body_en": "When you settle in the Netherlands, you need a burgerservicenummer (BSN). The BSN is a unique personal number used by the government to manage your data. You need it for your health insurance, for your tax declaration and for opening a bank account. Without a BSN you cannot use these essential services and it is difficult to function normally in Dutch society.\n\nYou receive the BSN automatically when you register in the Basisregistratie Personen (BRP) at your gemeente. To do this you must go to the town hall in person and bring a valid passport or identity document. In some gemeenten an appointment is mandatory, so it is wise to check this in advance on your gemeente's website. After registration you receive a letter with your BSN. Keep this number safe, as you will need it regularly.\n\nIn addition to the BSN, you also need a DigiD. DigiD is your personal digital identity with which you can log in to government websites, such as those of the Belastingdienst, the UWV and your gemeente. You apply for DigiD via the website digid.nl. You fill in your BSN and personal details and create a username and password. After you have submitted your application, an activation code is sent by post to your home address. You typically receive that code within five working days. With that code you activate your DigiD account.\n\nWith your DigiD you can, among other things, file your tax return, apply for huurtoeslag or zorgtoeslag, and arrange your municipal affairs online. You can also view your medical data via the patient portal. It is important that you keep your DigiD login details secret and never share them with others. The government never asks for your DigiD details by phone or email. If you suspect that someone else has access to your DigiD, you must report this immediately and change your password via the website digid.nl.",
       "word_count": 309,
       "questions": [
@@ -912,7 +912,7 @@
             "You receive a fine from the gemeente"
           ],
           "correct_index": 1,
-          "explanation_en": "The text states 'Zonder BSN kunt u deze diensten niet gebruiken' — without a BSN you cannot use these services, referring to health insurance, tax declarations and banking."
+          "explanation_en": "The text states 'Zonder BSN kunt u deze essentiële diensten niet gebruiken' — without a BSN you cannot use these essential services, referring to health insurance, tax declarations and banking."
         }
       ],
       "references": [

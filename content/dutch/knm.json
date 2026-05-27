@@ -136,7 +136,7 @@
       "options_nl": ["Het eindexamen", "De CITO-toets", "Het staatsexamen", "De toelatingstest"],
       "options_en": ["The eindexamen", "The CITO-toets", "The staatsexamen", "The entrance test"],
       "correct_index": 1,
-      "explanation_en": "At the end of primary school (groep 8), pupils take the CITO-toets (a national standardized test). The results, combined with the teacher's advice, determine which level of secondary school the child attends.",
+      "explanation_en": "At the end of primary school (groep 8), pupils take a national standardized test — historically the CITO-toets, renamed the Doorstroomtoets in 2023-2024 (schools can now choose from several approved providers, of which CITO is still the best known). The results, combined with the teacher's advice, determine which level of secondary school the child attends.",
       "references": ["Naar Nederland Ch. 4"]
     },
     {
@@ -370,7 +370,7 @@
         "The percentage your employer contributes to your health insurance"
       ],
       "correct_index": 1,
-      "explanation_en": "The eigen risico (deductible/excess) is the amount you must pay yourself for healthcare costs each year before your insurer starts contributing. In 2024, the mandatory eigen risico is approximately €385. After reaching this amount, your insurer covers eligible costs.",
+      "explanation_en": "The eigen risico (deductible/excess) is the amount you must pay yourself for healthcare costs each year before your insurer starts contributing. The mandatory eigen risico is €385 per year. After reaching this amount, your insurer covers eligible costs.",
       "references": ["Naar Nederland Ch. 7"]
     },
     {
@@ -540,7 +540,7 @@
         "Money from the university for outstanding students"
       ],
       "correct_index": 1,
-      "explanation_en": "Studiefinanciering (student financing) is a system of financial support provided by DUO (Dienst Uitvoering Onderwijs) for students in higher education (HBO and WO). Since 2015, most funding is in the form of a loan (studievoorschot) that must be repaid after graduation.",
+      "explanation_en": "Studiefinanciering (student financing) is a system of financial support provided by DUO (Dienst Uitvoering Onderwijs) for students in higher education (HBO and WO). It includes a basisbeurs (basic grant — reinstated for new students from the 2023-2024 academic year after the 2015-2023 leenstelsel/loan-only period), an optional supplementary grant (aanvullende beurs) for lower incomes, an OV travel product, and an optional loan.",
       "references": ["Naar Nederland Ch. 4"]
     },
     {
@@ -1444,7 +1444,7 @@
         "Yes, abortion is permitted without restrictions at any time"
       ],
       "correct_index": 1,
-      "explanation_en": "Abortion is legal in the Netherlands up to 24 weeks of pregnancy. The Netherlands has a Wet Afbreking Zwangerschap (abortion law) since 1984. A mandatory 5-day waiting period exists after the initial consultation. The procedure must be performed in a licensed clinic or hospital.",
+      "explanation_en": "Abortion is legal in the Netherlands up to 24 weeks of pregnancy. The Netherlands has a Wet Afbreking Zwangerschap (abortion law) since 1984. The previously mandatory 5-day waiting period (beraadtermijn) was abolished on 1 January 2023; the reflection period is now determined together with the doctor based on the patient's situation. The procedure must be performed in a licensed clinic or hospital.",
       "references": ["Naar Nederland Ch. 7"]
     },
     {
@@ -1812,7 +1812,7 @@
       "options_nl": [
         "Een extra vergoeding die zorgverzekeraars betalen als u veel zorg gebruikt",
         "Een financiële tegemoetkoming van de overheid voor mensen met een laag inkomen om de zorgpremie te betalen",
-        "Een korting op de eigen risico voor chronisch zieken",
+        "Een korting op het eigen risico voor chronisch zieken",
         "Een uitkering voor mensen die mantelzorg verlenen"
       ],
       "options_en": [
@@ -1906,7 +1906,7 @@
         "An organisation that sets and administers final examinations"
       ],
       "correct_index": 1,
-      "explanation_en": "DUO (Dienst Uitvoering Onderwijs) is the Dutch government agency that executes education policy. It manages student finance (studiefinanciering), OV-kaart (student travel card), diploma recognition, and also oversees the inburgeringsexamen (civic integration exam).",
+      "explanation_en": "DUO (Dienst Uitvoering Onderwijs) is the Dutch government agency that executes education policy. It manages student finance (studiefinanciering), the student travel product (studentenreisproduct, loaded on the OV-chipkaart), diploma recognition, and also oversees the inburgeringsexamen (civic integration exam).",
       "references": ["Naar Nederland Ch. 4"]
     },
     {
