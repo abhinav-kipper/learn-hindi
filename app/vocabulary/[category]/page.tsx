@@ -231,6 +231,8 @@ export default function CategoryPage() {
   const learnedCount = learnedSet.size
   const totalCount = category.words.length
   const learnedPct = totalCount > 0 ? Math.round((learnedCount / totalCount) * 100) : 0
+  const archivedCount = archivedWords.length
+  const freshCount = totalCount - archivedCount
   const palette = CATEGORY_PALETTE_BY_INDEX[categoryIdx % CATEGORY_PALETTE_BY_INDEX.length]
 
   return (
@@ -326,6 +328,28 @@ export default function CategoryPage() {
           <Tag>
             vocab · {learnedCount} / {totalCount} explored
           </Tag>
+          <div
+            style={{
+              marginTop: 8,
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 6,
+              padding: '5px 12px',
+              borderRadius: 99,
+              background: W,
+              border: BORDER.sticker,
+              boxShadow: SHADOW.chip,
+              fontFamily: FONTS.display,
+              fontWeight: 800,
+              fontSize: 12,
+              color: COLORS.ink,
+              letterSpacing: 0.2,
+            }}
+          >
+            🃏 <span style={{ color: COLORS.orange }}>{freshCount}</span> fresh
+            <span style={{ color: COLORS.ink45, marginInline: 4 }}>·</span>
+            <span style={{ color: COLORS.green }}>{archivedCount}</span> archived
+          </div>
           <div
             style={{
               fontFamily: FONTS.display,
