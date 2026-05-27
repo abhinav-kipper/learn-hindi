@@ -341,6 +341,7 @@ export default function QuizPage() {
 }
 
 function LockedScreen({ title, body, onGo }: { title: string; body: string; onGo: () => void }) {
+  const theme = useTheme()
   return (
     <div
       style={{
