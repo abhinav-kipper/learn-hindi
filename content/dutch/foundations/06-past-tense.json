@@ -45,5 +45,111 @@
       ]
     }
   ],
-  "practice_prompt": "Dutch perfect tense — forming it, choosing hebben vs zijn, and regular vs irregular past participles"
+  "practice_prompt": "Dutch perfect tense — forming it, choosing hebben vs zijn, and regular vs irregular past participles",
+  "theory": {
+    "intro": "Dutch past tense surprises English speakers because the simple past — what you'd reflexively use in English — is rare in Dutch conversation. The everyday past is the PERFECT tense, built with an auxiliary (`hebben` or `zijn`) plus a past participle. This chapter covers how to form past participles (mostly predictable), how to choose between hebben and zijn (most verbs hebben, motion + change-of-state zijn), and how to fit everything into Dutch's V2 word order.",
+    "sections": [
+      {
+        "heading": "Why Dutch uses perfect, not simple past, for everyday speech",
+        "body": "In English, \"I ate breakfast\" is simple past — one of the most common forms in casual conversation. The Dutch equivalent in speech is `Ik heb ontbijt gegeten` — literally \"I have eaten breakfast,\" the PERFECT tense. This isn't a stylistic preference: Dutch speakers default to perfect for completed past actions in conversation, almost every time.\n\nDutch's simple past (`Ik at ontbijt`) exists and is fully grammatical, but it feels literary or narrative — the tense of novels, news anchors, and bedtime stories. If you reach for it in conversation, you'll be understood, but you'll sound like you stepped out of a book. Train yourself to reach for the perfect first.",
+        "examples": [
+          { "hindi": "Ik heb gisteren naar Amsterdam gegaan.", "english": "I went to Amsterdam yesterday.", "breakdown": "English instinct = simple past. Dutch reflex = perfect (heb + gegaan)." },
+          { "hindi": "Ik heb je e-mail gelezen.", "english": "I read your email.", "breakdown": "Perfect: heb + gelezen. Simple past `Ik las je e-mail` would sound oddly formal." },
+          { "hindi": "Wij hebben pizza gegeten.", "english": "We ate pizza.", "breakdown": "Casual conversation = perfect every time." }
+        ],
+        "callout": { "tone": "note", "body": "Your English instinct will reach for simple past every time. Train yourself to reach for PERFECT first — that's what Dutch speakers actually say in conversation." },
+        "cutting_intro": "Hoi! First thing to unlearn: in Dutch, you don't say \"I ate.\" You say \"I have eaten.\" Every time. Let me show you why.",
+        "quick_check": {
+          "question": "How would a Dutch speaker most naturally say \"I worked yesterday\" in conversation?",
+          "options": ["Ik werkte gisteren.", "Ik heb gisteren gewerkt.", "Ik ben gisteren werken."],
+          "correct_index": 1,
+          "explanation": "Right — perfect tense (`heb` + `gewerkt`) is the conversational default. `Ik werkte` exists but sounds literary."
+        }
+      },
+      {
+        "heading": "Forming the past participle: ge- + stem + -t / -d / -en",
+        "body": "Past participles in Dutch come in three flavors. The first two are REGULAR (weak verbs) and follow a spelling rule. The third is IRREGULAR (strong verbs) and must be memorized.\n\nFor weak verbs, the question is whether to end the participle in `-t` or `-d`. The classic Dutch mnemonic is `'t kofschip` — \"the kofschip ship.\" If the verb's stem ends in one of the letters t, k, f, s, ch, or p, add `-t`. Otherwise, add `-d`. So `werken` (stem `werk`, ending in k) → `gewerkt`. `leren` (stem `leer`, ending in r — not in kofschip) → `geleerd`.\n\nStrong verbs change the stem vowel and end in `-en`. There's no rule — you memorize them the way English speakers memorize \"sing → sang → sung.\"",
+        "table": {
+          "caption": "Past participle patterns",
+          "columns": ["type", "rule", "examples"],
+          "rows": [
+            ["weak, kofschip ending", "ge- + stem + -t", "werken → gewerkt, koken → gekookt, stoppen → gestopt"],
+            ["weak, non-kofschip ending", "ge- + stem + -d", "leren → geleerd, spelen → gespeeld, wonen → gewoond"],
+            ["strong (irregular)", "ge- + (vowel change) + -en", "lezen → gelezen, eten → gegeten, geven → gegeven, schrijven → geschreven"]
+          ]
+        },
+        "callout": { "tone": "tip", "body": "Memorize `'t kofschip` (t, k, f, s, ch, p) and you'll never guess wrong on weak-verb endings again. Strong verbs are a separate memorization project — keep a running list as you meet them." },
+        "cutting_intro": "Now — how do you actually build a past participle? Three patterns. Two are regular. The third you just memorize.",
+        "quick_check": {
+          "question": "Which past participle is correct for `werken` (to work)?",
+          "options": ["gewerkd", "gewerkt", "werkte"],
+          "correct_index": 1,
+          "explanation": "Yes — `werk` ends in `k`, which is in `'t kofschip`, so you add `-t`. `gewerkt`."
+        }
+      },
+      {
+        "heading": "Hebben vs zijn — which auxiliary?",
+        "body": "Most Dutch verbs use `hebben` (to have) as the perfect-tense auxiliary, just like English uses \"have.\" `Ik heb gewerkt`, `Ik heb gegeten`, `Ik heb gelezen`. If you're not sure, default to hebben — you'll be right more than half the time.\n\nBut a specific group of verbs uses `zijn` (to be) instead. These are verbs of MOTION with a destination (`gaan` go, `komen` come, `lopen` walk, `vallen` fall, `zwemmen` swim) and verbs of CHANGE OF STATE (`worden` become, `sterven` die, `opstaan` get up, `blijven` stay). So `Ik ben naar huis gegaan` (I went home — gaan, zijn), `Ik ben gevallen` (I fell — vallen, zijn), `Het is koud geworden` (it has become cold — worden, zijn).\n\nGerman speakers will find this familiar (German does the same thing). English speakers find it counterintuitive — we say \"I have gone home,\" never \"I am gone home.\" The fix is just to memorize the zijn-list; it's shorter than the hebben-list.",
+        "table": {
+          "caption": "Common verbs and their auxiliary",
+          "columns": ["verb", "auxiliary", "example"],
+          "rows": [
+            ["werken (work)", "hebben", "Ik heb gewerkt."],
+            ["eten (eat)", "hebben", "Ik heb gegeten."],
+            ["lezen (read)", "hebben", "Ik heb gelezen."],
+            ["gaan (go)", "zijn", "Ik ben gegaan."],
+            ["komen (come)", "zijn", "Ik ben gekomen."],
+            ["vallen (fall)", "zijn", "Ik ben gevallen."],
+            ["worden (become)", "zijn", "Het is koud geworden."],
+            ["blijven (stay)", "zijn", "Zij is thuis gebleven."]
+          ]
+        },
+        "callout": { "tone": "warning", "body": "`Ik heb gegaan` is a classic English-speaker mistake — and it's WRONG. Motion verbs with a destination always take zijn: `Ik ben gegaan`. Memorize the zijn-list and you'll avoid 90% of past-tense errors." },
+        "cutting_intro": "Here's the part that trips people up. Most verbs use `hebben` for the past. But some — motion verbs, change-of-state verbs — use `zijn` instead. Let's sort them.",
+        "quick_check": {
+          "question": "Which auxiliary does `gaan` (to go) take in the perfect tense?",
+          "options": ["hebben — `Ik heb gegaan`", "zijn — `Ik ben gegaan`", "either works"],
+          "correct_index": 1,
+          "explanation": "Correct! `gaan` is a motion verb, so it takes `zijn`. `Ik ben gegaan` = I went / I have gone."
+        }
+      },
+      {
+        "heading": "Word order in perfect sentences",
+        "body": "Dutch is a V2 language — the conjugated verb sits in second position in main clauses. In perfect-tense sentences, the AUXILIARY (`heb`, `hebt`, `heeft`, `hebben`, `ben`, `bent`, `is`, `zijn`) is the V2 element. The past participle gets shoved to the very END of the clause.\n\nSo `Ik heb gisteren een boek gelezen` — `heb` in slot 2, `gelezen` at the end, everything else (gisteren, een boek) sandwiched in between. In questions, the auxiliary moves to slot 1 via inversion: `Heb je het boek gelezen?` — but the participle still anchors the end.\n\nSeparable verbs add one twist: the `ge-` slides between the prefix and the stem. `opbellen` (to call up) → past participle `opgebeld`. `aankomen` (to arrive) → `aangekomen`. The whole compound participle still goes at the end: `Ik heb hem gisteren opgebeld` (I called him up yesterday).",
+        "examples": [
+          { "hindi": "Ik heb gisteren een boek gelezen.", "english": "I read a book yesterday.", "breakdown": "`heb` = V2; `gelezen` = end-of-clause. Sandwich in between." },
+          { "hindi": "Wij zijn vorige week naar Amsterdam gegaan.", "english": "We went to Amsterdam last week.", "breakdown": "`zijn` = V2; `gegaan` = end. Subject + V2 + middle + participle." },
+          { "hindi": "Heb je het boek gelezen?", "english": "Have you read the book?", "breakdown": "Question = inversion. Auxiliary first, participle still at the end." },
+          { "hindi": "Ik heb hem gisteren opgebeld.", "english": "I called him up yesterday.", "breakdown": "Separable verb `opbellen` → `opgebeld`. `ge-` slides between prefix and stem." }
+        ],
+        "callout": { "tone": "note", "body": "Same V2 + verb-cluster-at-the-end rule from the word-order chapter. In perfect tense, the auxiliary is the V2 element and the participle is the end-of-clause element." },
+        "cutting_intro": "Word order time. The auxiliary goes in slot 2. The participle goes to the very end of the sentence. Always.",
+        "quick_check": {
+          "question": "Where does the past participle `gelezen` go in `Ik heb gisteren een boek ___`?",
+          "options": ["right after `heb`", "right before `een boek`", "at the very end of the clause"],
+          "correct_index": 2,
+          "explanation": "Yes — the past participle always anchors the end. `Ik heb gisteren een boek gelezen.`"
+        }
+      },
+      {
+        "heading": "Simple past — when you DO use it",
+        "body": "Dutch's simple past (`imperfectum`) isn't dead — it's just specialized. You'll see and hear it in: storytelling and written narratives, descriptions of repeated or habitual past actions (`elke ochtend dronk ik koffie` — every morning I drank coffee), and a small set of common verbs where simple past is heard often in speech — `was/waren` (was/were), `had/hadden` (had), `zei/zeiden` (said), `wist/wisten` (knew).\n\nFormation: weak verbs add `-te/-ten` or `-de/-den` to the stem (same kofschip rule as for participles). `werken` → `ik werkte`. `wonen` → `ik woonde`. Strong verbs change the stem vowel: `lopen` → `ik liep` (I walked), `zien` → `ik zag` (I saw), `geven` → `ik gaf` (I gave). The same vowel-change list you memorize for participles serves double duty here.",
+        "examples": [
+          { "hindi": "Hij was er niet.", "english": "He wasn't there.", "breakdown": "`zijn` simple past — heard constantly. `Hij is er niet geweest` (perfect) exists but the simple past is more natural here." },
+          { "hindi": "Ik wist het niet.", "english": "I didn't know.", "breakdown": "`weten` simple past. With `weten`, `kennen`, `hebben`, `zijn`, simple past is the norm even in speech." },
+          { "hindi": "Het regende de hele dag.", "english": "It rained all day.", "breakdown": "Habitual / extended past — natural use of simple past in describing weather and ongoing past states." },
+          { "hindi": "Toen ik klein was, woonde ik in Rotterdam.", "english": "When I was little, I lived in Rotterdam.", "breakdown": "Storytelling + habitual — simple past fits the register perfectly." }
+        ],
+        "callout": { "tone": "tip", "body": "In everyday speech, default to perfect. Use simple past for `was/had/zei/wist`, for habitual past actions, and when you're telling a story. The rest of the time, perfect is the right reflex." },
+        "cutting_intro": "Last piece — when DO you reach for simple past? Storytelling, habits, and a handful of common verbs. Let me show you the shortlist.",
+        "quick_check": {
+          "question": "Which is more natural in casual Dutch conversation?",
+          "options": ["`Ik at gisteren pizza.` (simple past)", "`Ik heb gisteren pizza gegeten.` (perfect)", "Both equally common"],
+          "correct_index": 1,
+          "explanation": "Perfect is the conversational default. The simple past `Ik at pizza` is grammatical but sounds literary — save it for writing or storytelling."
+        }
+      }
+    ],
+    "wrap_up": "Dutch perfect tense is your everyday past — use it for almost every \"I did X\" sentence in conversation. Memorize the past-participle formation (`ge-` + stem + `-t/-d/-en`), drill the hebben-vs-zijn auxiliary choice, and remember the word order (auxiliary in slot 2, participle at the end). Save simple past for storytelling and the common irregulars (`was`, `had`, `wist`, `zei`). The phrases below mix perfect and simple-past forms so you build the contrast — watch which auxiliary each motion verb takes, and notice how the participle always anchors the end of the clause."
+  }
 }
