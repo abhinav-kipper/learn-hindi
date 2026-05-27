@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { BottomNav } from '@/components/bottom-nav'
 import { NotificationPrompt } from '@/components/notification-prompt'
 import { DailyReviewPopup } from '@/components/daily-review-popup'
@@ -10,13 +10,16 @@ import { getUserProfile } from '@/lib/onboarding'
 import { Confetti } from '@/components/design'
 import { playSound } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
-import { useChaina, canFire, markFired } from '@/components/design'
+import { useChaina, canFire, markFired, Cutting, Sticker, COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
+import { motion, AnimatePresence } from 'framer-motion'
+
+const W = '#fff' // @design-allow: white literal
 
 function todayStr(): string {
   return new Date().toISOString().slice(0, 10)
 }
 
-function checkDailyGoalCrossed(prefix: string, onFire: () => void): void {
+function checkDailyGoalCrossed(prefix: string, onFire: (goalMinutes: number) => void): void {
   if (typeof window === 'undefined') return
   const profile = getUserProfile()
   const goal = profile?.dailyGoal ?? 0
@@ -26,21 +29,43 @@ function checkDailyGoalCrossed(prefix: string, onFire: () => void): void {
   const key = `${prefix}-daily-goal-fired:${todayStr()}`
   if (localStorage.getItem(key)) return
   localStorage.setItem(key, '1')
-  onFire()
+  onFire(goal)
 }
 
 export function LayoutShell({ children }: { children: React.ReactNode }) {
   const { config } = useLanguage()
   const { play } = useChaina()
   const [showNotificationPrompt, setShowNotificationPrompt] = useState(false)
-  const [goalBurst, setGoalBurst] = useState(false)
+  const [goalBurst, setGoalBurst] = useState<number | null>(null)
+  const goalBurstTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
-  const fireDailyGoal = () => {
-    setGoalBurst(true)
+  const dismissGoalBurst = () => {
+    if (goalBurstTimerRef.current) {
+      clearTimeout(goalBurstTimerRef.current)
+      goalBurstTimerRef.current = null
+    }
+    setGoalBurst(null)
+  }
+
+  const fireDailyGoal = (goalMinutes: number) => {
+    setGoalBurst(goalMinutes)
     playSound('levelup')
     play('dailyGoalReached')
-    setTimeout(() => setGoalBurst(false), 4000)
+    goalBurstTimerRef.current = setTimeout(() => {
+      goalBurstTimerRef.current = null
+      setGoalBurst(null)
+    }, 5000)
   }
+
+  // Escape key dismisses the goal-burst card when it's showing
+  useEffect(() => {
+    if (goalBurst === null) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') dismissGoalBurst()
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [goalBurst])
 
   useEffect(() => {
     registerServiceWorker()
@@ -123,18 +148,116 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
         onDismiss={() => setShowNotificationPrompt(false)}
       />
       <DailyReviewPopup />
-      {goalBurst && (
-        <div
-          style={{
-            position: 'fixed',
-            inset: 0,
-            pointerEvents: 'none',
-            zIndex: 90,
-          }}
-        >
-          <Confetti active={true} />
-        </div>
-      )}
+      <AnimatePresence>
+        {goalBurst !== null && (
+          <>
+            <div
+              style={{
+                position: 'fixed',
+                inset: 0,
+                pointerEvents: 'none',
+                zIndex: 90,
+              }}
+            >
+              <Confetti active={true} />
+            </div>
+            <motion.div
+              key="daily-goal-card"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              onClick={dismissGoalBurst}
+              style={{
+                position: 'fixed',
+                inset: 0,
+                background: `${COLORS.ink}73`,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: 20,
+                zIndex: 91,
+                cursor: 'pointer',
+              }}
+              role="dialog"
+              aria-modal="true"
+              aria-label="Daily goal reached"
+            >
+              <motion.div
+                initial={{ scale: 0.7, y: 20 }}
+                animate={{ scale: 1, y: 0 }}
+                exit={{ scale: 0.85, opacity: 0 }}
+                transition={{ type: 'spring', stiffness: 280, damping: 20 }}
+                onClick={(e) => e.stopPropagation()}
+                style={{ maxWidth: 360, width: '100%' }}
+              >
+                <Sticker color={COLORS.butter} radius={28} padding={22}>
+                  <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
+                    <Cutting size={120} mood="excited" />
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: FONTS.display,
+                      fontWeight: 800,
+                      fontSize: 30,
+                      color: COLORS.orange,
+                      textAlign: 'center',
+                      lineHeight: 1.1,
+                      marginBottom: 6,
+                    }}
+                  >
+                    🎉 Daily Goal Done!
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: FONTS.display,
+                      fontWeight: 800,
+                      fontSize: 16,
+                      color: COLORS.ink,
+                      textAlign: 'center',
+                      marginBottom: 4,
+                      textTransform: 'lowercase',
+                    }}
+                  >
+                    wah, shabash dost!
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: FONTS.body,
+                      fontSize: 14,
+                      color: COLORS.ink60,
+                      textAlign: 'center',
+                      lineHeight: 1.5,
+                      marginBottom: 16,
+                    }}
+                  >
+                    you hit today&apos;s {goalBurst}-minute goal. mehnat ki keemat — streak strong, aage badho.
+                  </div>
+                  <button
+                    onClick={dismissGoalBurst}
+                    style={{
+                      width: '100%',
+                      padding: '12px',
+                      borderRadius: 18,
+                      background: COLORS.orange,
+                      color: W,
+                      border: BORDER.sticker,
+                      boxShadow: SHADOW.chip,
+                      fontFamily: FONTS.display,
+                      fontWeight: 800,
+                      fontSize: 15,
+                      cursor: 'pointer',
+                      textTransform: 'lowercase',
+                    }}
+                  >
+                    keep going →
+                  </button>
+                </Sticker>
+              </motion.div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </>
   )
 }
