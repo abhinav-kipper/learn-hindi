@@ -49,6 +49,8 @@ content/dutch/foundations/ → 7 Dutch foundation JSONs
 content/dutch/knm.json  → 100 KNM exam questions (bilingual, 6 categories)
 content/dutch/lezen.json → 10 Lezen B1-prep reading texts (bilingual, 40 MCQs)
 content/stories/        → 3 Hindi story JSONs (Chai Galli motion-comics)
+docs/audits/             → Content audit rubric + per-run reports + master summaries
+scripts/audit-content.mjs → Audit dispatcher (lists 57 units, builds per-unit prompts, aggregates reports)
 types/                  → TypeScript interfaces
 public/                 → PWA manifest, icon.svg
 ```
@@ -211,7 +213,7 @@ from these. Always import via the barrel `@/components/design`.
 | File | What it does |
 |------|--------------|
 | `bottom-nav.tsx` | Floating white sticker pill at the bottom of all non-fullscreen pages. Active-tab cream pill slides via Framer `layoutId`. Hidden on `/lessons/*`, `/practice/*`, `/onboarding`. |
-| `design/MomentStage.tsx` | **Chaina moments system.** `ChainaProvider` mounts once in `app/layout.tsx`. `useChaina()` returns `{ play(key), stop() }`. **21 moments** registered in `moments.ts` (welcomeBack/correctAnswer/lessonComplete/streakMilestone/newContent/knmAttemptComplete/knmPassed/lezenStudyDone/lezenMockPassed/a2Milestone/etc). Each moment fires `<Cutting>` + `<SpeechBubble>` w/ animations, plus voice via `chainaVoice.play()` (MP3 → speechSynthesis fallback). Frequency caps in `chainaFrequency.ts`. |
+| `design/MomentStage.tsx` | **Chaina moments system.** `ChainaProvider` mounts once in `app/layout.tsx`. `useChaina()` returns `{ play(key), stop() }`. **22 moments** registered in `moments.ts` (welcomeBack/correctAnswer/lessonComplete/streakMilestone/newContent/knmAttemptComplete/knmPassed/lezenStudyDone/lezenMockPassed/a2Milestone/dailyGoalReached/etc). Each moment fires `<Cutting>` + `<SpeechBubble>` w/ animations, plus voice via `chainaVoice.play()` (MP3 → speechSynthesis fallback). Frequency caps in `chainaFrequency.ts`. |
 | `search-overlay.tsx` | Full-screen search modal triggered from the home magnifying-glass. Language-aware index. Locks body scroll, restores focus on close, Esc to dismiss |
 | `daily-review-popup.tsx` | Butter bottom-sheet w/ Cutting, fires every 24h after first lesson complete. Mixes vocab + lesson phrases through SRS |
 | `feature-tooltip.tsx` | One-time tooltips (Chai Galli white sticker + orange CTA + cream halo spotlight), dismissed via localStorage |
@@ -265,6 +267,8 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `chaina-a2-milestone-fired` — set to `'1'` after `a2Milestone` Chaina moment fires once. Permanent milestone, never re-fires.
 - `${prefix}-daily-goal-fired:YYYY-MM-DD` — set to `'1'` after the daily-goal Chaina moment + Confetti burst fires for that calendar day. Once per day per language.
 - `learn-hindi:hindi-stories-read` — JSON array of story IDs the user has finished reading. Powers the read-check sticker on each StoryCard + the "N of 3 read" pill on the Hindi home Stories section header.
+- `${prefix}-daily-goal-fired:YYYY-MM-DD` — set to `'1'` after the daily-goal celebration card + Confetti + Chaina moment fires for that calendar day. Once per day per language. New day = new celebration.
+- `${prefix}-progress-lesson-tab` — `'situations' | 'foundations'` for the Progress page tab pill (was added when the page got its single-section toggle).
 - `chaina-session-start-ts` (sessionStorage) — session start for sessionEnd 5min threshold
 
 **New-content surfacing (Hindi):**
@@ -279,6 +283,40 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-lezen-mock-attempts` — same shape as `dutch-knm-attempts`, plus `text_ids: string[]`.
 
 ### Recent feature work log
+
+**2026-05-26 wave — Content quality audit + improver tool**
+
+- New reusable audit tool: `docs/audits/CONTENT_RUBRIC.md` (the rubric — accuracy axes for Hindi/Dutch grammar + romanization + pedagogical correctness + cultural facts; style axes for de-AI-ing, tightening, voice match; auto-apply vs report policy), `scripts/audit-content.mjs` (dispatcher — lists 57 audit units, builds per-unit subagent prompts, aggregates reports into a master summary), `docs/audits/COMMAND.md` (slash-command spec for re-runs).
+- Ran the inaugural audit on all 57 content units (10 Hindi situations + 11 Dutch lessons + 9 Hindi foundations + 7 Dutch foundations + 3 Hindi stories + 6 KNM category batches + 10 Lezen texts + 1 Hindi vocab) via parallel Opus subagents in batches of ~8-10.
+- Outcome: 111 auto-applied fixes across 44 files; 143 items flagged for user review across 47 files; 4 truly clean files. Master summary at `docs/audits/2026-05-26-audit-summary.md`; per-file reports under `docs/audits/runs/2026-05-26/`.
+- Critical accuracy bugs caught + fixed: outdated Dutch civic law (KNM healthcare 5-day abortion waiting period — abolished Jan 2023), `zijn` meant "their" instead of "his" in Dutch present-tense culture_notes, demonstratives taught backwards in Dutch de/het lesson, `zullen` conjugation listed as zal/zal/zal (correct: zal/zult/zal), `Europa` mis-transcribed as `ay-ROH-pa` (Dutch `eu` is /øː/) on the very row teaching the eu sound, separable verb `bellen` mis-labeled (should be `opbellen`), Hindi `ke pehle` taught for "before" (Hindi uses `se pehle`), Hindi story used wrong case `usse` (ablative) instead of `use` (dative), Hindi ordinal rule said `chautha` formed by `-vaan` (it's irregular).
+- Style fixes throughout: AI cliché openers stripped, romanization normalized across files (`acchhi`→`acchi`, `dusra`→`doosra`, `kartaa`→`karta`, `wo`→`woh`, `ham`→`hum`).
+
+**2026-05-26 wave — Foundation theory chapters (now all 16 foundations)**
+
+- v1 shipped Noun Gender as the pilot. v2 added: paged-deck navigation (one section per page, swipe transitions via Framer Motion AnimatePresence, top progress dots, fixed bottom prev/next nav), Cutting narration in a speech bubble at the top of each section page (1-sentence `cutting_intro` field per section), and quick-check micro-quizzes gating the `next →` button per section (new `quick_check` field with `question` + `options[]` + `correct_index` + optional `explanation`).
+- All 16 foundations now have theory chapters: 9 Hindi (numbers, present tense, past tense, future tense, postpositions, pronouns+verbs, noun gender, compound verbs, ne-rule) + 7 Dutch (numbers, pronunciation, present tense, de/het, word order, past tense, modals). 16 chapters × 5 sections = 80 textbook-style sections with intros + bodies + tables/examples/callouts + cutting_intros + quick_checks + wrap-ups.
+- Authored via 8 + 7 parallel Opus subagents (~15 chapter authoring runs in two batches).
+- UX additions: scroll-to-top on page transition; wrap-up page now offers DUAL CTAs (`try the phrases →` + `or — chat with me to practice 💬` to skip directly to AI practice); celebratory "🎉 shabash!" headline + full-screen Confetti burst on reaching wrap-up; `📖 chapter` button in the phrase-view header lets users revisit the chapter from any phrase.
+- Behavior matrix: fresh open → theory; mid-lesson resume → phrases (continue); completed → theory (re-read); manual chapter button → theory from anywhere.
+- Schema: `Theory { intro, sections, wrap_up? }`, `TheorySection { heading, body, cutting_intro?, quick_check?, table?, examples?, callout? }`, `QuickCheck { question, options, correct_index, explanation? }`. All optional — lessons without theory keep the legacy phrase-only flow.
+
+**2026-05-26 wave — Practice prompt upgrade (29 lessons)**
+
+- All 10 Hindi situations + 9 Hindi foundations + 5 Dutch casual lessons + 7 Dutch foundations + a refinement pass on the 6 newer Dutch exam-targeted lessons + 2 newer Hindi foundations got their `practice_prompt` upgraded via 29 parallel Opus subagents.
+- Old prompts were 30-100 char one-liners (scene descriptions). New prompts are full ~150-200 word tutor/character configs with: explicit AI persona ("You are [role] at [setting]..."), register choice (aap/tum/tu for Hindi; u/je for Dutch) with rationale, verbatim opening line in target language, behavioral guidance grounded in the lesson's actual phrases + grammar, explicit `[[CORRECTION: original="..." correct="..." reason="..."]]` tag format for the practice page's mistake parser, 6-8 turn arc with a natural ending.
+- Hindi foundations use a TUTOR persona (drill 1 task at a time, score, give next); Hindi situations + Dutch lessons use CHARACTER personas (auto driver, chaiwala, mother, GP, NS ticket counter, bank teller, etc.).
+
+**2026-05-26 wave — Daily goal celebration + UX fixes**
+
+- Daily goal celebration: when today's active-minutes cross the user's `dailyGoal` (default 5 min), wherever they are in the app: full-screen Confetti + levelup sound + Cutting Chaina moment + a big centered modal card (Cutting 120px excited + "🎉 Daily Goal Done!" 30px orange headline + "wah, shabash dost!" + body interpolating the user's actual goal + "keep going →" orange CTA). Auto-dismiss after 5s; tap backdrop / press Escape / tap CTA all dismiss. Gated once-per-day via `${prefix}-daily-goal-fired:YYYY-MM-DD` localStorage flag. Detection lives in LayoutShell's existing 30s active-tick.
+- Bug fixes:
+  - Practice page "your scene" card was rendering the raw `practice_prompt` (AI system config visible to users) — swapped to `lesson.situation` (user-facing scene).
+  - "chapter complete — practice it now" green sticker was a non-interactive display element — now navigates to `/practice/[id]` on tap.
+  - Mark-complete now gated on every phrase being revealed (was tappable on the last phrase even if user skipped through).
+  - "DONE · 4D" cryptic badges → readable "✓ done today" / "✓ yesterday" / "✓ 4 days ago" / "✓ last week" / "✓ N wks ago".
+  - Progress page: completed lessons render inline with 100% GREEN bars (no longer collapsed), labeled "✓ COMPLETED (N)" + "STILL TO DO (N)" section headers; 0% rows show "not started" italic instead of "0%"; new tab pill toggles between Situations + Foundations to halve the page height.
+  - Theory pages: scroll-to-top on page transition (quick-check was at the bottom, leaving users mid-page on the new section).
 
 **2026-05-26 wave — Foundation theory chapters (pilot: Noun Gender)**
 
@@ -369,13 +407,19 @@ Resolved 2026-05-26:
 - ~~Foundations 02-06 have empty `skill_breakdown: []`~~ — backfilled with 3 entries each, plus 2 new foundations (compound-verbs, ne-rule). All 9 Hindi foundations now have full skill_breakdowns.
 - ~~No A1/A2/B1 markers on lessons~~ — `Lesson` type now has optional `level` field. Dutch lessons all tagged; Hindi lessons untagged (no CEFR system for Hindi).
 - ~~`a2Milestone` Chaina moment registered but not triggered~~ — wired into `app/page.tsx` mount effect; fires once when every A1 Dutch item is complete, gated by `chaina-a2-milestone-fired` flag.
+- ~~Theory chapters only on 1 foundation (Noun Gender pilot)~~ — all 16 foundations now have textbook chapters with Cutting narration + quick-checks.
+- ~~practice_prompt fields are weak one-liners on most lessons~~ — 29 lessons upgraded to full ~150-200 word AI tutor configs with persona, register, opening line, lesson-vocab integration, and correction tag format.
+- ~~No automated content quality check~~ — `/audit-content` tool + rubric + dispatcher shipped (see docs/audits/COMMAND.md). Inaugural run audited all 57 content units, applied 111 fixes, flagged 143 items for review.
 
 Still open:
+- **143 audit items flagged for user review** — see `docs/audits/2026-05-26-audit-summary.md`. Mostly pedagogical-meaning calls the subagents declined to make unilaterally (e.g., should "habitual past" example use `theen` or `thi` for fem-plural? Should KNM question simplify constitutional fact for exam-prep purposes?). Triage at user's pace.
 - **No XP / leveling arc** — `phrasesLearned` is just a stat tile, no progression visual.
 - **No audio assets** — only browser TTS. Native recordings would matter most for Phase 3 Luisteren (Dutch listening drills).
 - **Conjugation drill is verb-by-verb** — no mixed-verb sets, no spaced-repetition wiring.
 - **Dutch Phase 3-6 still pending:** Luisteren (Listening), Schrijven (Writing), Spreken (Speaking), Mock-exam. Each gets its own spec → plan → ship cycle.
 - **One-shot demo-reset block in `app/page.tsx` mount effect** unsees 5 Hindi IDs to demo the newContent popup. Remove after observed (flag: `learn-hindi:demo-reset:2026-05-26-new-content`).
+- **OV-chipkaart references in Lezen text 007** — system is being phased out in favor of OVpay (2023-2025). Naar Nederland A2 still uses this material so the audit flagged but didn't auto-rewrite.
+- **KNM date-anchored facts** ("AOW age 67 in 2026", "eigen risico €385", etc.) drift out of date annually. Worth a scheduled re-audit.
 
 ### Audit notes (2026-05-26)
 

@@ -139,14 +139,11 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
     )
   }
 
-  // Show TheoryView for foundations with a `theory` block.
-  // Skip ONLY when the user is mid-lesson (started revealing phrases but
-  // hasn't finished yet) — they want to continue from where they left off,
-  // not re-read the chapter. Completed users still open with theory; they
-  // can tap "got it" or use the prev/next buttons to drill phrases again.
-  // The phrase view also has a 📖 chapter button to revisit theory anytime.
-  const hasResumeProgress = resume.phraseIndex > 0 || revealed.size > 1
-  if (lesson.theory && !showPhrases && !hasResumeProgress) {
+  // Show TheoryView for any foundation with a `theory` block — chapter
+  // first, phrases as drill. The phrase view has a 📖 chapter button to
+  // re-open theory at any time, and the chapter's CTA enters phrases —
+  // so navigation between the two modes is always available.
+  if (lesson.theory && !showPhrases) {
     return (
       <TheoryView
         theory={lesson.theory}
