@@ -7,31 +7,11 @@ import { MotifIcon } from './MotifIcon'
 import { COLORS, FONTS, BORDER, deriveLessonStyle, paletteToBg, paletteToMotifBg } from './tokens'
 const W = '#fff' // @design-allow: white literal
 import type { Lesson } from '@/types/lesson'
-import { isLessonComplete, getLessonCompletedAt } from '@/lib/progress'
+import { isLessonComplete } from '@/lib/progress'
 import { getLessonPercent } from '@/lib/phrase-progress'
 import { useLanguage } from '@/lib/language-context'
 import { playSound } from '@/lib/sounds'
 import { markAsSeen } from '@/lib/seen-lessons'
-
-function daysAgo(isoDate: string): number {
-  const todayStr = new Date().toISOString().split('T')[0]
-  if (isoDate === todayStr) return 0
-  const a = Date.parse(isoDate + 'T00:00:00Z')
-  const b = Date.parse(todayStr + 'T00:00:00Z')
-  if (isNaN(a) || isNaN(b)) return 0
-  return Math.max(0, Math.round((b - a) / (1000 * 60 * 60 * 24)))
-}
-
-function doneLabel(isoDate: string | null | undefined): string {
-  if (!isoDate) return '✓ done'
-  const n = daysAgo(isoDate)
-  if (n === 0) return '✓ done today'
-  if (n === 1) return '✓ yesterday'
-  if (n < 7) return `✓ ${n} days ago`
-  if (n < 14) return '✓ last week'
-  if (n < 30) return `✓ ${Math.floor(n / 7)} wks ago`
-  return '✓ done'
-}
 
 interface Props {
   lesson: Lesson
@@ -46,13 +26,10 @@ export function LessonStickerCard({ lesson, index, routeBase = 'lessons', locked
   const { config } = useLanguage()
   const { palette, motif } = deriveLessonStyle(lesson.id, index)
   const [done, setDone] = useState(false)
-  const [completedAt, setCompletedAt] = useState<string | null>(null)
   const [percent, setPercent] = useState(0)
 
   useEffect(() => {
-    const isDone = isLessonComplete(lesson.id, config.storagePrefix)
-    setDone(isDone)
-    setCompletedAt(isDone ? getLessonCompletedAt(lesson.id, config.storagePrefix) : null)
+    setDone(isLessonComplete(lesson.id, config.storagePrefix))
     setPercent(getLessonPercent(lesson, config.storagePrefix))
   }, [lesson, config.storagePrefix])
 
@@ -131,7 +108,7 @@ export function LessonStickerCard({ lesson, index, routeBase = 'lessons', locked
                     border: BORDER.thin,
                   }}
                 >
-                  {doneLabel(completedAt)}
+                  ✓ done
                 </span>
               )}
             </div>
