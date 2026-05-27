@@ -108,5 +108,114 @@
       ]
     }
   ],
-  "practice_prompt": "Practice making present tense sentences. Tell me about your daily routine, ask me what I do, or describe someone's habits. I'll help you nail the -ta/-ti/-te patterns."
+  "practice_prompt": "Practice making present tense sentences. Tell me about your daily routine, ask me what I do, or describe someone's habits. I'll help you nail the -ta/-ti/-te patterns.",
+  "theory": {
+    "intro": "Hindi has two present tenses, and which one you use carries meaning. The habitual (`I drink chai`) and the continuous (`I'm drinking chai right now`) translate to different Hindi verb forms — and using one when you mean the other will confuse listeners. Both forms agree with the subject's gender, which adds another layer. Once you've got both shapes, present-tense Hindi is mostly mechanical.",
+    "sections": [
+      {
+        "heading": "The two presents",
+        "body": "English splits present into two tenses too — `I drink chai` (every day, a habit) vs `I am drinking chai` (right now, in progress). Hindi makes the same split, but the structure is different. Each meaning gets its own dedicated verb shape.\n\nThe HABITUAL is for things you do regularly, facts about yourself, general truths. The CONTINUOUS is for actions happening at this exact moment. Picking the wrong one doesn't break the sentence, but it shifts the meaning — say `main chai pi raha hoon` when you mean `I drink chai` and you've just told someone you're sipping a cup right now.",
+        "examples": [
+          { "hindi": "main chai pita hoon", "english": "I drink chai (habitually)", "breakdown": "habitual: verb root + -ta + hoon. Used for daily habits, general truths." },
+          { "hindi": "main chai pi raha hoon", "english": "I am drinking chai (right now)", "breakdown": "continuous: verb root + raha + hoon. Used for ongoing actions." }
+        ],
+        "callout": { "tone": "note", "body": "The English `I drink chai` is ambiguous out of context — it could mean habitually or in-progress. Hindi forces you to pick one. That's a feature, not a bug." },
+        "cutting_intro": "Hi! Hindi splits present tense into two flavors — habit vs happening-now. Let's see them side by side.",
+        "quick_check": {
+          "question": "You want to say `I'm drinking chai right now`. Which form?",
+          "options": ["main chai pita hoon (habitual)", "main chai pi raha hoon (continuous)", "Either works"],
+          "correct_index": 1,
+          "explanation": "Continuous — `pi raha hoon`. The habitual form `pita hoon` would mean `I drink chai (as a habit)`, not in-the-moment."
+        }
+      },
+      {
+        "heading": "Forming the habitual",
+        "body": "The recipe is: verb root + -ta/-ti/-te + auxiliary (hoon/hai/ho/hain). The suffix shifts with the subject's gender and number; the auxiliary shifts with the person.\n\nTake `karna` (to do). The root is `kar`. Add -ta for masculine singular, -ti for feminine singular, -te for masculine plural or with `tum`/`aap`. Then attach the right auxiliary for the pronoun.",
+        "table": {
+          "caption": "Habitual present of `karna` (to do)",
+          "columns": ["pronoun", "masculine", "feminine"],
+          "rows": [
+            ["main (I)", "karta hoon", "karti hoon"],
+            ["tu (you, intimate)", "karta hai", "karti hai"],
+            ["tum (you, casual)", "karte ho", "karti ho"],
+            ["woh (he/she)", "karta hai", "karti hai"],
+            ["hum (we)", "karte hain", "karti hain"],
+            ["aap (you, respectful)", "karte hain", "karti hain"]
+          ]
+        },
+        "callout": { "tone": "tip", "body": "Three suffixes to memorize: -ta (masc sg), -ti (fem), -te (masc pl or with tum/aap). The auxiliary is a separate piece — pick it from the pronoun." },
+        "cutting_intro": "The habitual is the workhorse — you'll use it constantly. Recipe: root + -ta/-ti/-te + auxiliary.",
+        "quick_check": {
+          "question": "A male speaker saying `I work` (as a habit) is...",
+          "options": ["main kaam karta hoon", "main kaam karti hoon", "main kaam kar raha hoon"],
+          "correct_index": 0,
+          "explanation": "Right — `karta hoon`. Masculine singular = -ta, paired with `hoon` for `main`."
+        }
+      },
+      {
+        "heading": "Forming the continuous",
+        "body": "Same auxiliary system, different middle piece. The continuous uses: verb root + raha/rahi/rahe + auxiliary. `raha` is a separate word, not a suffix — it sits between the verb and the auxiliary.\n\n`raha` = masculine singular, `rahi` = feminine, `rahe` = masculine plural or with tum/aap. The auxiliary (hoon/hai/ho/hain) still tracks the pronoun, just like in the habitual.",
+        "table": {
+          "caption": "Continuous present of `karna` (to do)",
+          "columns": ["pronoun", "masculine", "feminine"],
+          "rows": [
+            ["main (I)", "kar raha hoon", "kar rahi hoon"],
+            ["tu (you, intimate)", "kar raha hai", "kar rahi hai"],
+            ["tum (you, casual)", "kar rahe ho", "kar rahi ho"],
+            ["woh (he/she)", "kar raha hai", "kar rahi hai"],
+            ["hum (we)", "kar rahe hain", "kar rahi hain"],
+            ["aap (you, respectful)", "kar rahe hain", "kar rahi hain"]
+          ]
+        },
+        "examples": [
+          { "hindi": "kya kar rahe ho?", "english": "What are you doing (right now)?", "breakdown": "continuous — asking about this moment" },
+          { "hindi": "kya karte ho?", "english": "What do you do (for a living / habitually)?", "breakdown": "habitual — asking about job or routine" }
+        ],
+        "callout": { "tone": "note", "body": "Tiny change, huge meaning shift. `kar rahe ho` asks what's happening now; `karte ho` asks about routine. Mix them up and you'll get strange answers back." },
+        "cutting_intro": "Now the continuous — same pattern, but `raha` slots in for ongoing actions. Watch how `karte ho` vs `kar rahe ho` flip meaning.",
+        "quick_check": {
+          "question": "Someone says `main khaana khaa rahi hoon`. What's happening?",
+          "options": ["She eats food regularly", "She is eating food right now", "She cooks food for a living"],
+          "correct_index": 1,
+          "explanation": "Continuous form — `khaa rahi hoon` means `I am eating right now`. The `-i` ending on `rahi` tells you the speaker is female."
+        }
+      },
+      {
+        "heading": "Gender + number agreement",
+        "body": "Both forms agree with the SUBJECT's gender and number, not the object's. This is different from past tense with `ne`, which agrees with the object — but that's a different lesson. In the present, it's always the subject.\n\nMasculine singular subject → -ta or raha. Feminine singular → -ti or rahi. Masculine plural → -te or rahe. There's one historical irregularity: feminine plural subjects keep the singular feminine form (-ti / rahi), they don't take a separate plural ending. Just memorize that one.",
+        "examples": [
+          { "hindi": "ladka khel raha hai", "english": "The boy is playing", "breakdown": "ladka (m sg) → raha + hai" },
+          { "hindi": "ladki khel rahi hai", "english": "The girl is playing", "breakdown": "ladki (f sg) → rahi + hai" },
+          { "hindi": "bachhe khel rahe hain", "english": "The children are playing (mixed/masc)", "breakdown": "bachhe (m pl) → rahe + hain" },
+          { "hindi": "ladkiyaan khel rahi hain", "english": "The girls are playing", "breakdown": "ladkiyaan (f pl) → rahi (NOT rahe) + hain — feminine stays singular form" }
+        ],
+        "callout": { "tone": "warning", "body": "Feminine plural is a trap: the verb stays in the singular feminine form (-ti / rahi), but the auxiliary goes plural (`hain`). `ladkiyaan khel rahi hain`, never `rahe hain`. Memorize this — there's no logical rule, it's just historical." },
+        "cutting_intro": "Here's where most beginners slip — the verb has to match the subject's gender AND number. One weird exception with feminine plurals, then it's mechanical.",
+        "quick_check": {
+          "question": "`The girls are studying` — which is correct?",
+          "options": ["ladkiyaan padh rahe hain", "ladkiyaan padh rahi hain", "ladkiyaan padh raha hain"],
+          "correct_index": 1,
+          "explanation": "Feminine plural keeps the singular feminine form `rahi` — even though `ladkiyaan` is plural. The auxiliary `hain` is plural, but the verb piece stays `rahi`."
+        }
+      },
+      {
+        "heading": "Common pitfalls + register",
+        "body": "English speakers reach for the continuous reflexively — `I'm working at a startup`, `I'm living in Mumbai`. In Hindi, those are habitual: `main startup mein kaam karta hoon`, `main Mumbai mein rehta hoon`. Use continuous only when the action is happening at the exact moment of speaking.\n\nThe other slip is with `aap`. Even though it refers to one person, `aap` always takes plural verb forms. `Aap kya karte hain?` (NOT `karta hai`). This is parallel to French `vous` or Spanish `usted` taking plural-ish forms — it's a respect marker, not a count.",
+        "examples": [
+          { "hindi": "main Mumbai mein rehta hoon", "english": "I live in Mumbai", "breakdown": "habitual — it's a fact, not happening-right-now" },
+          { "hindi": "aap kahan rehte hain?", "english": "Where do you (respectful) live?", "breakdown": "aap takes plural -te + hain, even for one person" },
+          { "hindi": "main abhi khaa raha hoon", "english": "I'm eating right now", "breakdown": "continuous — `abhi` (right now) is the tell" }
+        ],
+        "callout": { "tone": "tip", "body": "Litmus test: ask yourself `is this happening right this second?`. Yes → continuous (`raha/rahi/rahe`). No → habitual (`-ta/-ti/-te`). For facts about your life, your job, where you live — almost always habitual." },
+        "cutting_intro": "Last bit — two things English speakers always get wrong. Continuous overuse, and forgetting `aap` is plural-shaped.",
+        "quick_check": {
+          "question": "`I work at Google` (it's your job) — which Hindi form?",
+          "options": ["main Google mein kaam karta hoon (habitual)", "main Google mein kaam kar raha hoon (continuous)"],
+          "correct_index": 0,
+          "explanation": "Habitual — it's a fact about your life, not something you're doing this second. The continuous would suggest you're literally working at this very moment."
+        }
+      }
+    ],
+    "wrap_up": "Master the habitual first — it's more common for everyday statements and you'll use it constantly. Continuous comes naturally once habitual is automatic. Gender + number agreement on the verb is the biggest area for slipping; pay attention to your conjugation choice and double-check feminine plurals. The phrases below mix both forms to drill the difference — notice which one is being used and why."
+  }
 }
