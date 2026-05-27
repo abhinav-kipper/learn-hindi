@@ -526,7 +526,7 @@ function CompleteView({ gotItCount, total }: { gotItCount: number; total: number
     >
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 8 }}>
         <div style={{ animation: 'happy-hop 1.4s ease-in-out infinite' }}>
-          <Cutting size={90} mood="happy" />
+          <Mascot size={90} mood="happy" />
         </div>
       </div>
       <Tag>review done</Tag>
