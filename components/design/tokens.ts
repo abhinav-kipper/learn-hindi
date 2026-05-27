@@ -17,6 +17,9 @@ export const COLORS = {
   orange: '#f0701a',
   orange2: '#ff9b5a',
 
+  pink: '#d63f8b',
+  pink2: '#f37bb1',
+
   mint: '#b8e0c8',
   mint2: '#d6efde',
   teal: '#2f7d7d',
