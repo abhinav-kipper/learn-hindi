@@ -48,6 +48,19 @@ export function TheoryView({ theory, title, onStartPhrases, onGoToPractice }: Pr
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [page])
 
+  // Big celebration burst when the user reaches the wrap-up page (they passed
+  // every quick-check to get here).
+  const [wrapBurst, setWrapBurst] = useState(false)
+  const isWrapPage = page === totalPages - 1
+  useEffect(() => {
+    if (isWrapPage) {
+      setWrapBurst(true)
+      playSound('levelup')
+      const t = setTimeout(() => setWrapBurst(false), 3500)
+      return () => clearTimeout(t)
+    }
+  }, [isWrapPage])
+
   const sectionIdx = page - 1 // section index when page is a section page
   const isIntro = page === 0
   const isWrap = page === totalPages - 1
@@ -127,6 +140,20 @@ export function TheoryView({ theory, title, onStartPhrases, onGoToPractice }: Pr
           {page + 1} / {totalPages}
         </div>
       </div>
+
+      {/* Wrap-up celebration overlay */}
+      {wrapBurst && (
+        <div
+          style={{
+            position: 'fixed',
+            inset: 0,
+            pointerEvents: 'none',
+            zIndex: 5,
+          }}
+        >
+          <Confetti active={true} />
+        </div>
+      )}
 
       {/* Page content */}
       <div style={{ maxWidth: 480, margin: '0 auto', padding: '0 16px' }}>
@@ -362,6 +389,37 @@ function WrapUpPage({
 }) {
   return (
     <div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.85 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ type: 'spring', stiffness: 280, damping: 18 }}
+        style={{
+          textAlign: 'center',
+          padding: '8px 0 18px',
+        }}
+      >
+        <div
+          style={{
+            fontFamily: FONTS.display,
+            fontWeight: 800,
+            fontSize: 32,
+            color: COLORS.orange,
+            lineHeight: 1.1,
+            marginBottom: 4,
+          }}
+        >
+          🎉 shabash!
+        </div>
+        <div
+          style={{
+            fontFamily: FONTS.body,
+            fontSize: 14,
+            color: COLORS.ink60,
+          }}
+        >
+          chapter conquered. every quick-check passed.
+        </div>
+      </motion.div>
       <CuttingSpeech
         mood="excited"
         text="You made it through the chapter! Pick how you want to practice — drill phrases for vocab, or chat with me for live practice."

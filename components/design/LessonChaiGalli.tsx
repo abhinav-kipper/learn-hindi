@@ -381,7 +381,15 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
           }}
         >
           {completed ? (
-            <Sticker color={COLORS.mint2} radius={22} padding="18px">
+            <Sticker
+              color={COLORS.mint2}
+              radius={22}
+              padding="18px"
+              onClick={() => {
+                playSound('tap')
+                router.push(`/practice/${lesson.id}`)
+              }}
+            >
               <div
                 style={{
                   display: 'flex',
@@ -395,7 +403,7 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
                   textTransform: 'lowercase',
                 }}
               >
-                ✓ chapter complete — practice it now
+                ✓ chapter complete — practice it now →
               </div>
             </Sticker>
           ) : (
