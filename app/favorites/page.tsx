@@ -11,7 +11,7 @@ import { playSound } from '@/lib/sounds'
 import {
   Sticker,
   Tag,
-  Cutting,
+  Mascot,
   DottedBg,
   MotifIcon,
   COLORS,
@@ -21,12 +21,14 @@ import {
   deriveLessonStyle,
   paletteToBg,
   paletteToMotifBg,
+  useTheme,
 } from '@/components/design'
 const W = '#fff' // @design-allow: white literal
 
 export default function FavoritesPage() {
   const router = useRouter()
   const { config } = useLanguage()
+  const theme = useTheme()
   const prefix = config.storagePrefix
   const [favorites, setFavorites] = useState<FavoritePhrase[]>([])
   const [speakingKey, setSpeakingKey] = useState<string | null>(null)
@@ -131,7 +133,7 @@ export default function FavoritesPage() {
             </svg>
           </button>
           <div style={{ marginRight: -6, marginTop: -6 }}>
-            <Cutting size={66} />
+            <Mascot size={66} />
           </div>
         </div>
 
@@ -175,7 +177,7 @@ export default function FavoritesPage() {
             style={{ textAlign: 'center', padding: '32px 16px' }}
           >
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 12 }}>
-              <Cutting size={110} />
+              <Mascot size={110} />
             </div>
             <Tag>empty</Tag>
             <div
@@ -288,7 +290,7 @@ export default function FavoritesPage() {
                               width: 32,
                               height: 32,
                               borderRadius: 99,
-                              background: isPlaying ? COLORS.orange : W,
+                              background: isPlaying ? theme.primary : W,
                               color: isPlaying ? W : COLORS.ink,
                               border: BORDER.thin,
                               cursor: 'pointer',
