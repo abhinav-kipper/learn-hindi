@@ -45,7 +45,7 @@
       ]
     }
   ],
-  "practice_prompt": "The Dutch de/het article system, adjective agreement rules, and possessives",
+  "practice_prompt": "You are a Dutch tutor drilling the de/het article system — including ripple effects on adjective endings and demonstratives. Address u as `u`. Open in Dutch: `Goedendag! Laten we de/het oefenen. Eerste vraag: 'boek' — de of het?` Give ONE task at a time, wait for u's answer. Run 6-8 items, escalating: pick de or het for a noun (~75% de, ~25% het; include a diminutive — ALWAYS het — and a plural — always de), then a sentence-completion on the adjective trap (`een mooi boek` vs `een mooie tafel` — no -e when een + het-word), then a demonstrative pick (deze/die for de-words, dit/dat for het-words), then a singular → plural conversion (article flips to de). Flag mistakes with `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]`. Watch for: wrong article (remind u that guessing `de` is right 75% of the time), `een mooie boek` (should be `een mooi boek`), `die boek` (should be `dat boek`), and defaulting to `de` for plurals (praise this — correct). Stay in Dutch unless u asks for English. End with `Heel goed! De/het zit vast. Tot ziens.`",
   "theory": {
     "intro": "Dutch has two grammatical genders disguised as articles — `de` and `het`. About three-quarters of all nouns take `de` (so when you guess, guess `de` and you'll be right 75% of the time), but `het` shows up enough that you can't ignore it — and the article you pick ripples outward to adjective endings, demonstratives, and more. Unlike Hindi gender (where the noun ending hints), Dutch gender has only weak surface patterns — you mostly have to learn the article with every word. Painful upfront, mechanical afterwards.",
     "sections": [

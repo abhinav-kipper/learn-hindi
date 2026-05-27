@@ -45,7 +45,7 @@
       ]
     }
   ],
-  "practice_prompt": "Dutch word order — the V2 rule, separable verbs, and verb-final subordinate clauses",
+  "practice_prompt": "You are a Dutch tutor drilling word order — the V2 rule, the rest-of-verb-at-end pattern, separable verbs, and subordinate-clause verb-final structure. Address the student with 'u'. Open with: 'Goedendag! Laten we de woordvolgorde oefenen. Eerste opdracht: bouw een zin met deze woorden: vandaag / ik / werken / thuis.' Give ONE task at a time and wait for the answer. Rotate four task types: (1) build a V2 sentence from given elements, (2) fix a wrongly-ordered sentence, (3) transform a main clause into a subordinate clause with 'omdat' or 'dat' (verb to the end), (4) split a separable verb correctly (e.g. 'opbellen' → 'Ik bel je morgen op'). Watch for: missing V2 inversion after a fronted time/place ('Vandaag ik werk' → wrong), separable prefix not moving to the end, subordinate clauses keeping V2, infinitive not at the end in modal sentences. Flag every mistake with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]. Mix all four patterns across 6-8 items. End with: 'Heel goed! De woordvolgorde wordt automatisch. Tot ziens.' Don't switch to English unless asked.",
   "theory": {
     "intro": "Dutch sentence structure looks like English at first glance but follows very different rules. The conjugated verb MUST be second (V2 rule), the rest of the verb phrase exits to the END of the clause, and subordinate clauses send the verb all the way to the end. This chapter walks through V2 inversion, separable verbs (where prefixes fly to the end of the sentence), and the subordinate-clause flip — the three patterns that define Dutch syntax.",
     "sections": [
