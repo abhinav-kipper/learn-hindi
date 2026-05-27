@@ -286,6 +286,14 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 
 ### Recent feature work log
 
+**2026-05-27 wave — Per-language theme + mascot split**
+
+- New `useTheme()` hook + `<Mascot>` wrapper component (`components/design/theme.ts`, `components/design/Mascot.tsx`). Resolves brand identity from the active language: Hindi → Holi pink (`#d63f8b` / `#f37bb1`) + Cutting; Dutch → orange (national color) + Mr. Stroopwafels.
+- New `MrStroopwafel.tsx` mascot: caramel-bronze waffle disc with 4×4 ink-grid crosshatch, cream face panel, round black sunglasses (cream sparkle dots inside), thick ink handlebar mustache, and a thin darker-caramel filling sliver peeking out the bottom edge. Same 7 mood set as Cutting (`idle/happy/wave/sympathy/wink/excited/sleepy`). Sleepy mood gets a floating `Zz` glyph; excited gets lens-starbursts; wink lifts one sunglass to reveal an eye underneath.
+- ~40 brand-primary call sites flipped from hardcoded `COLORS.orange*` to `theme.primary*` across home / progress / vocab / quiz / practice / mistakes / drill / settings / favorites / daily-review / voice-button / notification-prompt / layout-shell / feature-tooltip / bottom-nav / story-reader / MomentStage / LessonStickerCard / LessonChaiGalli / TheoryView / quiz-card / quiz-results / ChaiGalliChatMessage / StreakChip.
+- Lesson palette tiles, motif backgrounds (rickshaw/marigold/chai/etc.), status semantics (green = correct/done, red = wrong, butter = review), Nani/NaniHouseScene/Cutting illustrations, and the onboarding flow (intentionally Hindi-coded) are unchanged.
+- Cutting unchanged; existing imports of `Cutting` swapped to `Mascot` everywhere except `/_dev/components` (which shows both), `onboarding/page.tsx` (intentionally always Cutting), and Hindi story characters (`Cutting` plays the chaiwala — it's a story character, not a brand mascot).
+
 **2026-05-27 wave — Vocab archive with replacement**
 
 - New per-language archive primitive (`lib/vocab-archive.ts`, 15 tests). Right-swipe on a vocab card on `/vocabulary/[category]` now archives instead of just sorting to the bottom — the card collapse-fades out and the next unarchived word from the category pool slides in (visible list capped at 10).
