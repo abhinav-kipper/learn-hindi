@@ -2,22 +2,27 @@
 
 **File:** content/foundations/07-noun-gender.json
 **Audit date:** 2026-05-27
-**Total fixes applied:** 2
+**Total fixes applied:** 3
 **Items not applied:** 5
 
 ## Fixes applied
 
-### Accuracy (2 items)
+### Accuracy (3 items)
 
-1. **Where:** field `practice_prompt` (translation drill example)
+1. **Where:** field `practice_prompt` (translation drill example) — applied in prior 2026-05-27 run
    **Was:** `user supplies \`woh acchhi hai\` with the right match`
    **Now:** `user supplies \`woh acchi hai\` with the right match`
    **Why:** Typo — every other occurrence in this file and across the codebase romanizes अच्छी as `acchi` (`mera bhai accha hai, meri behen acchi hai`, table row `accha → acchi → acche`, lesson 04, etc.). The lone `acchhi` in the practice prompt would teach the tutor model an inconsistent form, undermining the very agreement drill it's meant to power.
 
-2. **Where:** field `theory.sections[1].table.rows[2]` ("Spot the pattern from the ending" — Sanskrit-origin row)
+2. **Where:** field `theory.sections[1].table.rows[2]` ("Spot the pattern from the ending" — Sanskrit-origin row) — applied in prior 2026-05-27 run
    **Was:** `["-a (Sanskrit-origin)", "feminine", "bhasha, seva, katha"]`
    **Now:** `["-aa (Sanskrit-origin)", "feminine", "bhasha, seva, katha"]`
    **Why:** The Sanskrit-origin feminine class (भाषा, सेवा, कथा) ends in long ā, not short a — same Devanagari ending as `ladka` (लड़का, masc) in row 1. Labeling them `-a` collapses the contrast the chart is built to teach: that two visually-identical `-aa` endings split between masc (row 1, native) and fem (row 3, Sanskrit). The design spec (`docs/superpowers/specs/2026-05-26-foundation-theory-chapters-design.md`) explicitly uses `-aa from Sanskrit` for this row. Examples kept in the file's existing single-final-vowel romanization (`bhasha`, not `bhaasha`) to stay consistent with `ladka`/`kamra`/`samosa` in row 1.
+
+3. **Where:** field `phrases[9].hindi` — adjective spelling
+   **Was:** `achche dost milte hain mushkil se`
+   **Now:** `acche dost milte hain mushkil se`
+   **Why:** Romanization consistency. Every other occurrence of अच्छे/अच्छा/अच्छी in this file uses the `acch-` stem (`accha`, `acchi`, `acche` — see grammar_notes[3], theory.sections[2].body, theory.sections[0].examples, the quick_check options, and phrases[1]). The lone `achche` here breaks the convention and contradicts the file's own pronunciation field (`ac-CHE DOST...`), which clearly maps to `acche`, not `achche`. No pedagogical-meaning change; pure typo fix.
 
 ## Items not applied (5)
 

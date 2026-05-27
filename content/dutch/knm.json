@@ -133,7 +133,7 @@
       "category": "onderwijs",
       "question_nl": "Welke toets doen leerlingen aan het einde van groep 8 van de basisschool?",
       "question_en": "Which test do pupils take at the end of primary school (groep 8)?",
-      "options_nl": ["Het eindexamen", "De CITO-toets", "De staatsexamen", "De toelatingstest"],
+      "options_nl": ["Het eindexamen", "De CITO-toets", "Het staatsexamen", "De toelatingstest"],
       "options_en": ["The eindexamen", "The CITO-toets", "The staatsexamen", "The entrance test"],
       "correct_index": 1,
       "explanation_en": "At the end of primary school (groep 8), pupils take the CITO-toets (a national standardized test). The results, combined with the teacher's advice, determine which level of secondary school the child attends.",
@@ -1612,7 +1612,7 @@
         "All citizens pay the same tax rate"
       ],
       "correct_index": 1,
-      "explanation_en": "The right to equal treatment (gelijke behandeling) is enshrined in Article 1 of the Dutch Constitution. It prohibits discrimination based on religion, belief, political opinion, race, sex, or any other grounds. The Commissie Gelijke Behandeling enforces this right.",
+      "explanation_en": "The right to equal treatment (gelijke behandeling) is enshrined in Article 1 of the Dutch Constitution. It prohibits discrimination based on religion, belief, political opinion, race, sex, or any other grounds. The College voor de Rechten van de Mens (Netherlands Institute for Human Rights, which replaced the former Commissie Gelijke Behandeling in 2012) enforces this right.",
       "references": ["Naar Nederland Ch. 2"]
     },
     {
@@ -1748,7 +1748,7 @@
       "question_en": "What is maternity leave in the Netherlands?",
       "options_nl": [
         "4 weken verlof vóór de bevalling",
-        "Minstens 16 weken betaald verlof rondom de bevalling, inclusief 4-6 weken voor de bevalldatum",
+        "Minstens 16 weken betaald verlof rondom de bevalling, inclusief 4-6 weken voor de bevaldatum",
         "3 maanden onbetaald verlof na de bevalling",
         "6 weken verlof, uitsluitend na de bevalling"
       ],

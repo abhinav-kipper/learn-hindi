@@ -13,7 +13,7 @@
     { "hindi": "Hindi mushkil hai par interesting hai", "english": "Hindi is hard but interesting", "context": "Hindi (the language) is feminine. 'Mushkil' is invariable — adjectives ending in non-aa don't change. So 'Hindi mushkil hai' (no change to mushkil).", "pronunciation": "HIN-di mush-KIL hai par IN-te-res-ting hai" },
     { "hindi": "yeh aurat doctor hai, woh aadmi engineer hai", "english": "This woman is a doctor, that man is an engineer", "context": "Aurat (woman) is feminine, aadmi (man) is masculine despite ending in -ii. Profession words (doctor, engineer, teacher) typically don't show gender in modern usage.", "pronunciation": "YEH au-RAT DOC-tor hai, WOH aad-MI EN-gi-neer hai" },
     { "hindi": "meri gaadi nayi hai, mera scooter purana hai", "english": "My car is new, my scooter is old", "context": "Gaadi (vehicle/car) is feminine — typical -ii ending. Scooter is masculine (English loanword defaulting to masc). Pattern: native words mostly follow -aa/-ii rule, loanwords mostly masc.", "pronunciation": "ME-ri GAA-di na-YI hai, ME-ra SCOO-ter pu-RAA-na hai" },
-    { "hindi": "achche dost milte hain mushkil se", "english": "Good friends are hard to come by", "context": "Plural masc: accha → acche, dost (friend) stays same. 'milte hain' = are found. Watch all three masculine markers: acche, dost (with plural verb), milte.", "pronunciation": "ac-CHE DOST mil-TE hain mush-KIL se" }
+    { "hindi": "acche dost milte hain mushkil se", "english": "Good friends are hard to come by", "context": "Plural masc: accha → acche, dost (friend) stays same. 'milte hain' = are found. Watch all three masculine markers: acche, dost (with plural verb), milte.", "pronunciation": "ac-CHE DOST mil-TE hain mush-KIL se" }
   ],
   "grammar_notes": [
     "Hindi has TWO genders — masculine (pulling) and feminine (stri-ling). There is no neuter. Every single noun has a gender — including abstract ideas (pyaar = love, masc; khushi = happiness, fem)",
@@ -98,7 +98,7 @@
           "rows": [
             ["-aa or consonant", "masculine", "ladka, makaan, ghar"],
             ["-ii / -i", "feminine", "ladki, kursi, roti, gaadi"],
-            ["-aa (Sanskrit-origin)", "feminine", "bhaasha, seva, katha"],
+            ["-aa (Sanskrit-origin)", "feminine", "bhasha, seva, katha"],
             ["irregular", "varies — memorize", "aadmi (m), aurat (f), haath (m), kitaab (f), raat (f), paani (m)"]
           ]
         },

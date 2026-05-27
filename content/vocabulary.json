@@ -8,7 +8,7 @@
       "words": [
         {
           "hindi": "accha",
-          "pronunciation": "ach-CHAA",
+          "pronunciation": "ach-CHA",
           "english": "good / okay / I see",
           "example": "accha, theek hai — okay, fine then",
           "type": "adjective"
@@ -190,8 +190,8 @@
           "type": "noun"
         },
         {
-          "hindi": "mazaa",
-          "pronunciation": "ma-ZAA",
+          "hindi": "maza",
+          "pronunciation": "ma-ZA",
           "english": "fun / enjoyment / good time",
           "example": "bahut mazaa aaya — had a lot of fun",
           "type": "noun"
@@ -275,10 +275,10 @@
           "type": "noun"
         },
         {
-          "hindi": "pani",
+          "hindi": "paani",
           "pronunciation": "PAA-ni",
           "english": "water",
-          "example": "thoda pani dena — give me some water",
+          "example": "thoda paani dena — give me some water",
           "type": "noun"
         },
         {
@@ -473,7 +473,7 @@
         },
         {
           "hindi": "budha",
-          "pronunciation": "BUD-dha",
+          "pronunciation": "BU-dha",
           "english": "old man / elderly (informal)",
           "example": "woh budhe uncle bahut achhe hain — that old uncle is very nice",
           "type": "noun"
