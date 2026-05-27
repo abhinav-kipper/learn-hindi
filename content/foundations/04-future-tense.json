@@ -67,7 +67,7 @@
   ],
   "grammar_notes": [
     "Future tense endings by person: main = -unga/-ungi, tu/woh = -ega/-egi, tum = -oge/-ogi, hum/aap/woh(plural) = -enge/-engi",
-    "Pattern: take verb root + the suffix. 'jaana'→root 'jaa': jaunga, jayega, jaoge, jayenge. 'khaana'→root 'kha': khaunga, khayega, khaoge, khayenge",
+    "Pattern: take verb root + the suffix. 'jaana'→root 'jaa': jaaunga, jaayega, jaaoge, jaayenge. 'khaana'→root 'khaa': khaaunga, khaayega, khaaoge, khaayenge",
     "The gender split is always -ga (male) vs -gi (female) at the end. This is the one consistent rule across all persons",
     "'hona' (to be) in future: hoga (he/it-masc will be), hogi (she/it-fem will be), honge (they/we will be), houngi (I-fem will be)",
     "Shortcut: Present tense + 'abhi/ab' often replaces future for immediate plans. 'Main abhi aata hoon' (I'm coming now) instead of 'main aaunga'"
@@ -82,8 +82,8 @@
       "explanation": "First person feminine: '-ungi' (main jaaungi). Masculine: '-unga'. Second/third: '-egi'/'-ega', plural: '-engi'/'-enge'. Pattern: stem + gender-marker + person-marker.",
       "more_examples": [
         { "hindi": "main kal aaungi", "english": "I'll come tomorrow (fem)" },
-        { "hindi": "wo dilli jaayega", "english": "he'll go to Delhi" },
-        { "hindi": "ham agle saal milenge", "english": "we'll meet next year" },
+        { "hindi": "woh dilli jaayega", "english": "he'll go to Delhi" },
+        { "hindi": "hum agle saal milenge", "english": "we'll meet next year" },
         { "hindi": "tum kya karoge?", "english": "what will you do? (masc)" }
       ]
     },
@@ -94,7 +94,7 @@
         { "hindi": "mujhe abhi jaana hai", "english": "I have to go now" },
         { "hindi": "aapko kal aana hai", "english": "you need to come tomorrow" },
         { "hindi": "mujhe doctor ke paas jaana padega", "english": "I'll have to go to the doctor" },
-        { "hindi": "ham sabko milkar kaam karna padega", "english": "we'll all have to work together" }
+        { "hindi": "hum sabko milkar kaam karna padega", "english": "we'll all have to work together" }
       ]
     },
     {

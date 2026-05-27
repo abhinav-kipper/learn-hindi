@@ -99,7 +99,7 @@
     },
     {
       "skill": "Compound postpositions (ke baare mein, ke saath, ke liye)",
-      "explanation": "Combine 'ke' with another word: 'ke baare mein' (about), 'ke saath' (with), 'ke liye' (for), 'ke paas' (near / in possession of), 'ke piche' (behind). Always uses oblique 'ke' regardless of gender.",
+      "explanation": "Combine 'ke' with another word: 'ke baare mein' (about), 'ke saath' (with), 'ke liye' (for), 'ke paas' (near / in possession of), 'ke peeche' (behind). Always uses oblique 'ke' regardless of gender.",
       "more_examples": [
         { "hindi": "aapke baare mein bata rahe the", "english": "(they) were talking about you" },
         { "hindi": "mere saath chalo", "english": "come with me" },
@@ -189,7 +189,7 @@
             ["ke saath", "with (accompanying)", "Ram ke saath (with Ram)"],
             ["ke liye", "for / on behalf of", "tumhare liye (for you)"],
             ["ke baad", "after", "khaane ke baad (after eating)"],
-            ["ke pehle", "before", "subah ke pehle (before morning)"],
+            ["se pehle", "before", "khaane se pehle (before eating)"],
             ["ke paas", "near / in possession of", "ghar ke paas (near the house)"],
             ["ke baare mein", "about / on the topic of", "uske baare mein (about him/her)"],
             ["ke saamne", "in front of", "store ke saamne (in front of the store)"],

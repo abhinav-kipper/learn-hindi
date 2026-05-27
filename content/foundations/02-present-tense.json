@@ -93,13 +93,13 @@
       "more_examples": [
         { "hindi": "main abhi khaana khaa rahi hoon", "english": "I'm eating food right now" },
         { "hindi": "wo phone par baat kar raha hai", "english": "he's talking on the phone" },
-        { "hindi": "ham TV dekh rahe hain", "english": "we are watching TV" },
+        { "hindi": "hum TV dekh rahe hain", "english": "we are watching TV" },
         { "hindi": "kya tum so rahi ho?", "english": "are you sleeping?" }
       ]
     },
     {
       "skill": "Copula (hai/hain) with adjectives",
-      "explanation": "Hindi uses 'hai' (singular) and 'hain' (plural/polite) as 'is/are'. The adjective placed BEFORE the noun must agree with gender. 'yeh ladki accchi hai' (this girl is good) vs 'yeh ladka accha hai' (this boy is good).",
+      "explanation": "Hindi uses 'hai' (singular) and 'hain' (plural/polite) as 'is/are'. The adjective placed BEFORE the noun must agree with gender. 'yeh ladki acchi hai' (this girl is good) vs 'yeh ladka accha hai' (this boy is good).",
       "more_examples": [
         { "hindi": "yeh khaana bahut tasty hai", "english": "this food is very tasty" },
         { "hindi": "wo ladki bahut samajhdaar hai", "english": "that girl is very smart" },

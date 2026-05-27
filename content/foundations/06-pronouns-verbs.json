@@ -144,7 +144,7 @@
             ["yeh", "this / he / she (nearby)", "the person/thing close by"],
             ["woh", "that / he / she (far)", "the person/thing further away"],
             ["ye", "these / they (nearby)", "plural of yeh"],
-            ["we", "those / they (far)", "plural of woh"]
+            ["ve", "those / they (far)", "plural of woh"]
           ]
         },
         "callout": { "tone": "note", "body": "`hum` is grammatically plural ('we') but in many North Indian dialects (especially eastern UP, Bihar) it's used as a respectful 'I'. Context disambiguates — if someone introduces themselves with `hum`, they probably mean 'I'." },
@@ -170,7 +170,7 @@
             ["yeh", "karta / karti", "hai"],
             ["woh", "karta / karti", "hai"],
             ["hum", "karte / karti", "hain"],
-            ["ye / we", "karte / karti", "hain"]
+            ["ye / ve", "karte / karti", "hain"]
           ]
         },
         "examples": [
@@ -185,7 +185,7 @@
           "question": "Which auxiliary goes with `tum`?",
           "options": ["hoon", "hai", "ho", "hain"],
           "correct_index": 2,
-          "explanation": "Right — `tum` always takes `ho`. The full set: main→hoon, tu/yeh/woh→hai, tum→ho, aap/hum/ye/we→hain."
+          "explanation": "Right — `tum` always takes `ho`. The full set: main→hoon, tu/yeh/woh→hai, tum→ho, aap/hum/ye/ve→hain."
         }
       },
       {

@@ -24,7 +24,7 @@
     },
     {
       "hindi": "maine kaha tha / maine kahi thi",
-      "english": "I had said (to a male topic) / I had said (to a female topic)",
+      "english": "I had said it (masc. object) / I had said it (fem. object)",
       "context": "'tha/thi' after past verb = past perfect (had done). Gender matches OBJECT with transitive verbs!",
       "pronunciation": "MAIN-ne KA-ha tha / MAIN-ne KA-hi thi"
     },
@@ -32,7 +32,7 @@
       "hindi": "tum kahan the? / tum kahan thi?",
       "english": "Where were you? (to male) / Where were you? (to female)",
       "context": "'tha/thi/the' alone = was/were. 'the' for male plural/tum-male, 'thi' for female. Very useful!",
-      "pronunciation": "TUM ka-HAAN THE? / TUM ka-HAAN THI?"
+      "pronunciation": "TUM ka-HAN THE? / TUM ka-HAN THI?"
     },
     {
       "hindi": "usne mujhe phone kiya",
@@ -47,10 +47,10 @@
       "pronunciation": "KAL MAIN office na-HI ga-YA"
     },
     {
-      "hindi": "bachhpan mein hum roz khelke aate the",
+      "hindi": "bachpan mein hum roz khelke aate the",
       "english": "In childhood, we used to come back after playing daily",
       "context": "Past habitual: verb + te/ti + the/thi/tha. 'aate the' = used to come. Expresses old habits",
-      "pronunciation": "BACH-pan mein HUM ROZ khel-TE aa-TE THE"
+      "pronunciation": "BACH-pan mein HUM ROZ khel-KE aa-TE THE"
     },
     {
       "hindi": "kya hua? sab theek hai?",
@@ -114,7 +114,7 @@
     "sections": [
       {
         "heading": "Three pasts, three uses",
-        "body": "Hindi splits English's single past tense into at least three distinct verb shapes. Past habitual covers repeated or ongoing-in-the-past actions — what English does with \"used to\" or a bare past + frequency word (\"I drank chai every morning\"). Simple past covers one-time completed actions — \"I drank a chai\". Perfect/completive emphasizes that the action was finished or carried through to its end — \"I drank it all up\" or \"I'm done drinking\".\n\nEnglish leans on tense + adverbs to mark these distinctions (\"used to drink\" vs \"drank\" vs \"have drunk\"). Hindi changes the verb shape itself. Same verb root, three different forms — and you pick based on whether the action was a habit, a one-off event, or a completed/emphasized finish.",
+        "body": "Hindi splits English's single past tense into at least three distinct verb shapes. Past habitual covers repeated or customary past actions — what English does with \"used to\" or a bare past + frequency word (\"I drank chai every morning\"). Simple past covers one-time completed actions — \"I drank a chai\". Perfect/completive emphasizes that the action was finished or carried through to its end — \"I drank it all up\" or \"I'm done drinking\".\n\nEnglish leans on tense + adverbs to mark these distinctions (\"used to drink\" vs \"drank\" vs \"have drunk\"). Hindi changes the verb shape itself. Same verb root, three different forms — and you pick based on whether the action was a habit, a one-off event, or a completed/emphasized finish.",
         "examples": [
           { "hindi": "main pita tha", "english": "I used to drink (masc. speaker)", "breakdown": "past habitual — pina (to drink) + ta + tha = repeated action" },
           { "hindi": "maine piya", "english": "I drank", "breakdown": "simple past — pina → piya, with `ne` because pina is transitive; one-time event" },
@@ -126,7 +126,7 @@
           "question": "Which form would you use for \"I used to play cricket as a kid\"?",
           "options": ["Simple past — maine khela", "Past habitual — main khelta tha", "Perfect — maine khel liya"],
           "correct_index": 1,
-          "explanation": "Past habitual — the action was repeated/ongoing in the past. `main khelta tha` = I used to play. Simple past is for one-time events; perfect is for emphasized completion."
+          "explanation": "Past habitual — the action was repeated/customary in the past. `main khelta tha` = I used to play. Simple past is for one-time events; perfect is for emphasized completion."
         }
       },
       {
@@ -183,7 +183,7 @@
       },
       {
         "heading": "Perfect/completive: V + le/de/jaa + auxiliary",
-        "body": "Hindi has a productive way to emphasize that an action was completed or carried all the way through: stick an auxiliary verb (`lena`, `dena`, `jaana`) onto the main verb. The main verb takes a participle-like form, and the auxiliary carries the tense and agreement. The auxiliary also tints the meaning:\n\n- `lena` (to take) — done FOR ONESELF or FOR ONE'S OWN BENEFIT. `Maine kha liya` = I ate it (for me, and I'm done).\n- `dena` (to give) — done FOR SOMEONE ELSE. `Maine kar diya` = I did it (for you / handed off).\n- `jaana` (to go) — done with FINALITY, sometimes with motion. `Woh so gaya` = he fell asleep (went to sleep, completed). `Maine pee gaya` = I drank it down.",
+        "body": "Hindi has a productive way to emphasize that an action was completed or carried all the way through: stick an auxiliary verb (`lena`, `dena`, `jaana`) onto the main verb. The main verb takes a participle-like form, and the auxiliary carries the tense and agreement. The auxiliary also tints the meaning:\n\n- `lena` (to take) — done FOR ONESELF or FOR ONE'S OWN BENEFIT. `Maine kha liya` = I ate it (for me, and I'm done).\n- `dena` (to give) — done FOR SOMEONE ELSE. `Maine kar diya` = I did it (for you / handed off).\n- `jaana` (to go) — done with FINALITY, sometimes with motion. `Woh so gaya` = he fell asleep (went to sleep, completed). `Main pee gaya` = I drank it down (note: `jaana` as auxiliary overrides the `ne` rule — subject stays plain).",
         "examples": [
           { "hindi": "maine kar liya", "english": "I've done it / I'm done", "breakdown": "karna + liya — completed, for self. Common as a finished-status announcement." },
           { "hindi": "usne mujhe paisa de diya", "english": "he gave me the money (handed it off)", "breakdown": "dena + diya — completion + benefit to someone else (me)" },
@@ -201,7 +201,7 @@
       },
       {
         "heading": "Common pitfalls",
-        "body": "The single biggest mistake English speakers make is defaulting to simple past for everything. In English we say \"I drank chai every morning\" with simple past — but in Hindi that's HABITUAL territory: `main har subah chai pita tha`. If you say `maine har subah chai pi` it sounds like you drank chai exactly once, every morning, as a one-shot event — grammatically odd.\n\nThe second big trap is the `ne` rule. Simple past + transitive verb = subject takes `ne`, and the verb agrees with the OBJECT's gender, not the subject's. `Maine roti khayi` (fem. object → khayi), `maine khaana khaya` (masc. object → khaya). Get this wrong and the sentence still parses, but every native speaker will hear the error. The `ne` rule has its own dedicated foundation chapter — drill it there.\n\nThird trap: don't confuse the past-habitual `tha/thi/the` (which pairs with `-ta/-ti/-te`) with the plain `was/were` `tha/thi/the` (which stands alone). `Main thaktha tha` = I used to get tired. `Main thaka tha` = I was tired (a state, not a habit). Tiny difference, big meaning change.",
+        "body": "The single biggest mistake English speakers make is defaulting to simple past for everything. In English we say \"I drank chai every morning\" with simple past — but in Hindi that's HABITUAL territory: `main har subah chai pita tha`. If you say `maine har subah chai pi` it sounds like you drank chai exactly once, every morning, as a one-shot event — grammatically odd.\n\nThe second big trap is the `ne` rule. Simple past + transitive verb = subject takes `ne`, and the verb agrees with the OBJECT's gender, not the subject's. `Maine roti khayi` (fem. object → khayi), `maine khaana khaya` (masc. object → khaya). Get this wrong and the sentence still parses, but every native speaker will hear the error. The `ne` rule has its own dedicated foundation chapter — drill it there.\n\nThird trap: don't confuse the past-habitual `tha/thi/the` (which pairs with `-ta/-ti/-te`) with the plain `was/were` `tha/thi/the` (which stands alone). `Main thakta tha` = I used to get tired. `Main thaka tha` = I was tired (a state, not a habit). Tiny difference, big meaning change.",
         "callout": { "tone": "tip", "body": "When in doubt, ask: \"Was this a one-time event or a repeated habit?\" → habitual for repeated, simple past for one-time. THEN, if it's one-time AND transitive (has an object you're acting on), add `ne` to the subject and agree the verb with the object. Two decisions, in order." },
         "cutting_intro": "One more thing — the traps. English speakers stumble on the same spots every time. Watch for these.",
         "quick_check": {

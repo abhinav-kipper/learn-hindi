@@ -100,7 +100,7 @@
     },
     {
       "skill": "Ordinals (pehla/dusra/tisra)",
-      "explanation": "Ordinals agree with the gender of the noun they modify: pehla/pehli (first M/F), dusra/dusri (second), tisra/tisri (third). After third, just attach '-vaan' to the cardinal: chauthaa (fourth), paanchvaan (fifth).",
+      "explanation": "Ordinals agree with the gender of the noun they modify: pehla/pehli (first M/F), dusra/dusri (second), tisra/tisri (third). After third, just attach '-vaan' to the cardinal: chautha (fourth), paanchvaan (fifth).",
       "more_examples": [
         { "hindi": "pehla din", "english": "the first day" },
         { "hindi": "dusri baar", "english": "the second time (feminine)" },
