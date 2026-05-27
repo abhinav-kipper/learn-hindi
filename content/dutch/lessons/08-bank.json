@@ -16,7 +16,7 @@
     { "hindi": "Bedankt voor uw hulp. Ik wacht op mijn pinpas.", "english": "Thank you for your help. I'll wait for my debit card.", "context": "Standard closing after the account is set up. Confirming 'ik wacht op mijn pinpas' (I'll wait for my debit card) summarises the key action item. The card arrives by post; activation happens via the app or ATM.", "pronunciation": "be-DANKT voor uw HULP. ik WACHT op mayn PIN-pas" }
   ],
   "grammar_notes": [
-    "Separable verbs split in main clauses: 'openen' → 'Ik open een rekening'; 'blokkeren' → 'Kunt u die blokkeren?'; 'uitleggen' → 'Kunt u dit uitleggen?'. The prefix attaches only in infinitive form",
+    "Separable verbs split in main clauses: 'uitleggen' → 'Ik leg het uit'; 'instellen' → 'Ik stel de app in'; 'afschrijven' → 'De bank schrijft het bedrag af'. The prefix detaches and goes to the end of the clause, but stays attached after a modal ('Kunt u dit uitleggen?') and in te-infinitives ('om dit uit te leggen')",
     "Present perfect for past transactions affecting the present: 'Ik heb een afschrijving gezien' (I've seen a charge). Use this rather than simple past when the event still matters now",
     "Modal 'zou' for extra politeness: 'Zou u mij kunnen helpen?' (Would you be able to help me?) is softer than 'kunt u'. Use it when you want to be especially deferential",
     "Conjunction 'omdat' (because) triggers end-verb order: 'Ik bel omdat ik een afschrijving niet herken' — 'herken' goes to the end of the subordinate clause",
@@ -36,7 +36,7 @@
         { "hindi": "Ik wil ook een spaarrekening openen.", "english": "I'd also like to open a savings account." },
         { "hindi": "Wat is mijn rekeningnummer?", "english": "What is my account number?" },
         { "hindi": "Kunt u mijn IBAN opschrijven?", "english": "Could you write down my IBAN?" },
-        { "hindi": "Is er een maandelijkse kosten voor deze rekening?", "english": "Is there a monthly fee for this account?" }
+        { "hindi": "Zijn er maandelijkse kosten voor deze rekening?", "english": "Are there monthly fees for this account?" }
       ]
     },
     {
