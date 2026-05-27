@@ -146,7 +146,8 @@ shadows anywhere.
 | `/lessons/[id]` | Single-page lesson view: palette-matched header w/ chapter tag + title + 3 skill chips, segmented per-phrase progress, phrase Sticker w/ ⭐ star, hindi headline, butter pronunciation pill, lavender→mint reveal-zone, "hear it" TTS, prev/next, "mark chapter complete". On complete → full celebration screen w/ confetti + expanding rings + happy-hop Cutting + 3-up stat stickers + practice CTA |
 | `/practice/[id]` | AI chat. Butter header w/ happy Cutting + hands-free/reset/finish toolbar pills. Mint scenario sticker w/ chai motif. AI bubbles = white stickers w/ teal Cutting avatar; user bubbles = peach stickers; correction stickers = butter w/ dashed border. Bottom input bar: orange mic pill + white text input pill + green send. Tutor reply tagged `[[CORRECTION: original="…" correct="…" reason="…"]]` saved as mistake |
 | `/quiz` | Mint header, per-question segmented progress, question sticker (orange "question N of N" tag + "what does this mean?" + Hindi headline + butter 📢 hear-it on translate-to-english questions), 4 colored option stickers with ink letter columns (A/B/C/D). Picked-wrong shakes + filled red w/ ✕; correct fills mint w/ ✓; unpicked-wrong fades to 0.55. Auto-advance after 1.2s. |
-| `/progress` | Lavender header. Streak hero: float-y orange tile + flame-flicker 🔥 + count-up day number + 7-day calendar w/ active(orange ✓)/pending(dashed)/inactive. 2×2 stat tiles (phrases/practice/quiz-avg/lessons), 3-col tools (mistakes/saved/drill), lesson groups w/ animated progress bars + "N completed" fold, recent-activity sticker |
+| `/progress` | Lavender header. Streak hero: float-y orange tile + flame-flicker 🔥 + count-up day number + 7-day calendar w/ active(orange ✓)/pending(dashed)/inactive. 2×2 stat tiles (phrases/practice/quiz-avg/lessons), 3-col tools (mistakes/saved/drill), lesson groups w/ animated progress bars + "N completed" fold, recent-activity sticker. Gear icon in the header top-right → `/settings` |
+| `/settings` | Cream header w/ back button + ⚙ tag + "tinker, tweak" title. White-sticker sections for: daily goal (5/10/15 chips + custom number input), name (text input), gender (2-chip grid), reason (4-chip grid), sound mute (toggle slider), language (hindi/dutch pill). Red "danger zone" sticker w/ 2-step reset-progress confirm (wipes `${prefix}-*` keys for the current language, keeps profile) |
 | `/mistakes` | Red-bg header. Drill-all orange CTA w/ wobble 🎯, mistake groups (palette+motif derived per lesson) w/ source chip (quiz/practice), strikethrough → green correct, delete buttons. Drill bottom-sheet: butter bg w/ drag handle, sliding cards, mint correct-answer card w/ TTS + reason, still-learning/got-it pair |
 | `/favorites` | Butter header. Grouped sticker lists w/ inline TTS play/stop button per row (orange when speaking), ⭐ remove |
 | `/vocabulary` | Mint header. Overall progress sticker w/ animated fill, 2-col category grid w/ motif tile + animated progress bar |
@@ -285,6 +286,26 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-lezen-mock-attempts` — same shape as `dutch-knm-attempts`, plus `text_ids: string[]`.
 
 ### Recent feature work log
+
+**2026-05-27 wave — Themed home header band**
+
+- Extended `useTheme()` with `bandFrom` / `bandTo` colors. Home page header gradient was previously hardcoded `peach → peach2` for both languages. Now: Hindi → soft `rose (#f6b6c0) → cream (#fff3cf)` (matches Holi pink brand); Dutch → `peach → peach2` (unchanged, fits Dutch orange).
+- Only `app/page.tsx` consumes the band tokens — other routes have their own per-page colors (progress=lav, vocab=mint, quiz=mint, lessons=palette-derived) which stay constant across languages.
+- Onboarding's peach→butter gradient is unchanged (intentionally Hindi-coded pre-language-pick).
+
+**2026-05-27 wave — Theory recitation + phrase↔theory de-dup audit (16 foundations)**
+
+- TTS "hear it" button added to every theory `ExampleBlock` in `components/lesson/TheoryView.tsx`. Locale-aware via `useLanguage().config.ttsLocale`; uses the existing `lib/speech.ts` (Google `/api/tts` → browser `speechSynthesis` fallback). Applies to all 16 foundations automatically.
+- Parallel Sonnet subagent audit across all 16 foundations: each compared `phrases[*].hindi` (Dutch field is also `hindi` for legacy reasons) against every `theory.sections[*].examples[*].hindi`, flagged near-identical pairs, rewrote the **phrase** (not the theory example) for ~25 redundancies total across Hindi 01-numbers, 02-present-tense, 04-future-tense, 05-postpositions, 06-pronouns-verbs, 08-compound-verbs + Dutch 01-numbers, 06-past-tense, 07-modals. Hindi 03-past-tense and others were clean. Each rewrite kept the original pedagogical purpose.
+
+**2026-05-27 wave — Uniform DONE badge on lesson cards**
+
+- `components/design/LessonStickerCard.tsx` previously showed relative-time labels on completed lessons (`✓ done today`, `✓ yesterday`, `✓ 2 days ago`, `✓ last week`, `✓ N wks ago`) — but they made some completed lessons look "stale" next to others. Collapsed to a single `✓ DONE` badge. The completion timestamp is still stored in `progress.lessonCompletedAt`; only the card label is simplified. Recent-activity dates (timeline events on `/progress`) and KNM/Lezen attempt dates kept their relative-time formatting (timeline ≠ completion-state).
+
+**2026-05-27 wave — Settings page + long-press daily-goal shortcut**
+
+- New `/settings` route (`app/settings/page.tsx`) reachable from a gear icon on the `/progress` header. Editable controls: daily goal (5/10/15 preset chips + custom number), name, gender, reason (4-chip grid), sound mute toggle (slider switch), language toggle (hindi/dutch pill), and a 2-step red "reset progress" danger zone that wipes the current language's `${prefix}-*` localStorage keys (preserves the user profile).
+- Long-press (500ms) on the home daily-goal pill opens a butter bottom-sheet quick-edit with the 3 presets + a `more settings →` link. Vibration nudge on trigger, Esc/backdrop dismiss.
 
 **2026-05-27 wave — Per-language theme + mascot split**
 

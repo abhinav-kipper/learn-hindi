@@ -174,13 +174,14 @@ Step-by-step for adding a new lesson:
    ```
 9. Commit: `content(hindi): add <topic> lesson — <source citation>`
 
-## Known Issues (as of 2026-05-26)
+## Known Issues (as of 2026-05-27)
 
 ### Bugs (fixed)
 - ~~Typo `chahat pe` → `chhat pe` in `05-postpositions.json`~~ ✓
 - ~~Wrong "you" register `tere paas` → `tumhare paas` in `01-greetings.json` phrase 7~~ ✓
 - ~~Hindi situation lessons mixed `tum`-default with `aap`-default registers~~ — new lessons (08-10) all use aap-default per the practice tutor's policy; generator's STYLE_GUIDE flipped to enforce.
 - ~~`lib/dutch/level-map.ts` used bare IDs that never matched lesson JSONs~~ — fixed to use `dutch-` prefixed keys; 3-stage progress bars on Dutch home now compute correctly.
+- ~~Phrases in some foundations duplicated their theory-section examples (e.g. `main karta hoon` in both theory and phrase, `mez par kitab`, `ghar mein`)~~ — RESOLVED 2026-05-27 by parallel Sonnet subagent audit across all 16 foundations. ~25 phrases rewritten to teach the same skill with different vocabulary. Hindi 03-past-tense came back clean. See commits e33f6aa, 14f2888, 338a6d3.
 
 ### Romanization & style inconsistency (not yet addressed)
 - Mixed stress system in older Hindi lesson JSONs: sometimes CAPS-on-stressed-syllable (`BHAI-ya`), sometimes just hyphens for syllables (`KIT-ne`). New lessons (08-10 + foundations 08-09) use SYLLABLE-stress consistently. Older lessons need a pass.
@@ -190,8 +191,9 @@ Step-by-step for adding a new lesson:
 ### Structural gaps
 - ~~**Foundations have empty `skill_breakdown: []`**~~ — RESOLVED 2026-05-26. All 9 Hindi foundations now have 3 skill_breakdowns each.
 - ~~**No level markers** — no A1/A2/B1 progression~~ — RESOLVED for Dutch (Lesson type has `level?` field; all Dutch lessons tagged via JSON + `lib/dutch/level-map.ts`). Hindi has no CEFR system intentionally.
-- **No audio assets** — TTS via `lib/speech.ts` works, but no native recordings. Most relevant for Dutch Phase 3 Luisteren when it ships.
-- **Scope is still growing** — Hindi: 10 situations + 9 foundations + 100 vocab. Dutch: 11 lessons + 7 foundations + 100 KNM + 10 Lezen texts. The grow-vs-polish balance is currently leaning grow.
+- ~~**Theory examples had no TTS playback**~~ — RESOLVED 2026-05-27. Every `ExampleBlock` in `components/lesson/TheoryView.tsx` now has a hear-it play button, locale-aware via `useLanguage().config.ttsLocale`. Applies to all 16 foundations.
+- **No audio assets** — TTS via `lib/speech.ts` works (Google `/api/tts` → browser `speechSynthesis` fallback), but no native recordings. Most relevant for Dutch Phase 3 Luisteren when it ships.
+- **Scope is still growing** — Hindi: 10 situations + 9 foundations + 100 vocab + 3 stories. Dutch: 11 lessons + 7 foundations + 100 KNM + 10 Lezen texts. Vocab expansion planned to ~300 via `scripts/generate-vocab.mjs` (Gemini-drafted, user-reviewed). The grow-vs-polish balance is currently leaning grow.
 
 ## Loading
 
