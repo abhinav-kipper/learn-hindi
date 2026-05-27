@@ -8,7 +8,7 @@
     { "hindi": "sar mein bahut dard ho raha hai", "english": "I have a lot of pain in my head", "context": "'X mein dard hai' (pain in X) is the universal pain construction in Hindi. 'ho raha hai' (is happening) makes it ongoing.", "pronunciation": "SAR mein ba-HUT DARD ho ra-HA hai" },
     { "hindi": "pet kharab hai, kuch khaaya nahi jaa raha", "english": "My stomach is upset, I can't really eat anything", "context": "'pet kharab' (stomach bad) = upset stomach, fixed idiom. 'khaaya nahi jaa raha' (can't be eaten) — impersonal-passive construction, very natural in Hindi.", "pronunciation": "PET kha-RAAB hai, KUCH khaa-YA na-HI jaa ra-HA" },
     { "hindi": "raat ko neend bhi nahi aati", "english": "I'm not even sleeping at night", "context": "'neend aana' (sleep coming) — how Hindi expresses 'to sleep'. 'bhi' (also/even) emphasizes that on top of everything else, sleep is also disturbed.", "pronunciation": "RAAT ko NEEND bhi na-HI AA-ti" },
-    { "hindi": "kya aap mujhe kuch dawaai de sakte hain?", "english": "Could you give me some medicine?", "context": "'kar sakte hain' is the polite modal for asking ability/permission. Note: speaker uses '-sakte hain' (plural-polite) addressing the doctor as 'aap'.", "pronunciation": "KYA aap mu-JHE KUCH da-WAA-i DE sak-TE hain?" },
+    { "hindi": "kya aap mujhe kuch dawaai de sakte hain?", "english": "Could you give me some medicine?", "context": "'de sakte hain' (can give) — 'X sakte hain' is the polite modal for asking ability/permission. Speaker uses '-sakte hain' (plural-polite) addressing the doctor as 'aap'.", "pronunciation": "KYA aap mu-JHE KUCH da-WAA-i DE sak-TE hain?" },
     { "hindi": "khaane mein kuch parhej hai kya?", "english": "Are there any food restrictions?", "context": "'parhej' (restriction/avoidance) — specifically for diet/lifestyle during illness. Indian doctors usually do prescribe what to eat and what to avoid.", "pronunciation": "khaa-NE mein KUCH par-HEJ hai kya?" },
     { "hindi": "blood test karwana padega kya?", "english": "Will I need to get a blood test?", "context": "'karwana' (causative of 'do') = to get done. 'padega' = will have to — expresses unavoidable obligation, slightly anxious.", "pronunciation": "BLOOD TEST kar-WAA-na pa-DE-ga kya?" },
     { "hindi": "yeh dawaai kab tak leni hai?", "english": "How long do I need to take this medicine?", "context": "'kab tak' (until when) — asks for a duration. 'leni hai' (have to take, feminine) — 'leni' agrees with 'dawaai' (feminine).", "pronunciation": "YEH da-WAA-i KAB tak LE-ni hai?" },
@@ -35,7 +35,7 @@
         { "hindi": "gale mein bahut dard hai", "english": "I have a lot of throat pain" },
         { "hindi": "kamar mein dard ho raha hai", "english": "my back is hurting" },
         { "hindi": "aankhon mein jalan hai", "english": "my eyes are burning" },
-        { "hindi": "kaan mein halki si dard hai", "english": "I have a slight earache" }
+        { "hindi": "kaan mein halka sa dard hai", "english": "I have a slight earache" }
       ]
     },
     {
@@ -43,7 +43,7 @@
       "explanation": "Use 'X se' (since X) plus present tense to describe how long a symptom has been going on. Hindi uses present where English uses present perfect.",
       "more_examples": [
         { "hindi": "teen din se bukhar hai", "english": "I've had fever for three days" },
-        { "hindi": "ek hafte se khanssi aa rahi hai", "english": "I've had a cough for a week" },
+        { "hindi": "ek hafte se khaansi aa rahi hai", "english": "I've had a cough for a week" },
         { "hindi": "kal raat se neend nahi aayi", "english": "I haven't slept since last night" }
       ]
     },
@@ -57,6 +57,6 @@
       ]
     }
   ],
-  "practice_prompt": "You are a Hindi-speaking general physician (GP) in a small neighbourhood clinic. The patient (the user) walks in unwell. Use 'aap' throughout — doctor-patient register, never 'tum'. Open with 'aaiye, baithiye — kya takleef hai?' then a warm 'chaliye dekhein'. Ask follow-ups like a real Indian GP would, one at a time: 'kab se ho raha hai?', 'dard kaisa hai? jhanjhanaahat ya tezz?', 'kuch khaaya tha kal raat?', 'bhukhar?', 'ulti hui?'. Surface body-part vocabulary naturally — 'pet mein dard?', 'sar?', 'gala?'. Diagnose lightly (likely viral / acidity / throat infection) but DO NOT name specific drugs — suggest a parhej ('thanda paani mat lijiye', 'tel-masala kam') and 'aaraam karein'. Flag mistakes inline with [[CORRECTION: original=\"…\" correct=\"…\" reason=\"…\"]] — watch for wrong oblique with 'dard' (pet ka dard → pet mein dard), missing 'mein' for location, and English 'since when' instead of 'X se'. Keep it to 6-8 turns; close with 'parhej kijiye, do din mein theek ho jaayega — phir milte hain. chalo, theek hai — aaraam kariye.' Don't switch to English unless asked.",
+  "practice_prompt": "You are a Hindi-speaking general physician (GP) in a small neighbourhood clinic. The patient (the user) walks in unwell. Use 'aap' throughout — doctor-patient register, never 'tum'. Open with 'aaiye, baithiye — kya takleef hai?' then a warm 'chaliye dekhein'. Ask follow-ups like a real Indian GP would, one at a time: 'kab se ho raha hai?', 'dard kaisa hai? jhanjhanaahat ya tez?', 'kuch khaaya tha kal raat?', 'bukhar?', 'ulti hui?'. Surface body-part vocabulary naturally — 'pet mein dard?', 'sar?', 'gala?'. Diagnose lightly (likely viral / acidity / throat infection) but DO NOT name specific drugs — suggest a parhej ('thanda paani mat lijiye', 'tel-masala kam') and 'aaraam karein'. Flag mistakes inline with [[CORRECTION: original=\"…\" correct=\"…\" reason=\"…\"]] — watch for wrong oblique with 'dard' (pet ka dard → pet mein dard), missing 'mein' for location, and English 'since when' instead of 'X se'. Keep it to 6-8 turns; close with 'parhej kijiye, do din mein theek ho jaayega — phir milte hain. chalo, theek hai — aaraam kariye.' Don't switch to English unless asked.",
   "references": ["Snell & Weightman Ch. 14", "Afroz Taj Lesson 9"]
 }

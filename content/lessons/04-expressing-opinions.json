@@ -12,21 +12,21 @@
     { "hindi": "tum batao, tumhe kaisa laga honestly?", "english": "You tell, how did you honestly find it?", "context": "'tum batao' = you tell (friendly, peer-level). Asking someone for their take directly.", "pronunciation": "TUM ba-TAA-o, tum-HE KAI-sa LA-ga honestly?" },
     { "hindi": "haan sahi baat hai, woh scene toh next level tha", "english": "Yeah that's true, that scene was next level", "context": "'sahi baat hai' = that's right/true — conceding a point. 'next level' used as-is in Hindi.", "pronunciation": "HAAN sa-HI baat hai, woh SCENE toh next LE-vel tha" },
     { "hindi": "mujhe toh neend aa rahi thi beech mein", "english": "I was falling asleep in the middle", "context": "'neend aa rahi thi' = sleep was coming (how Hindi says 'getting sleepy') — brutally honest opinion", "pronunciation": "muj-HE toh NEEND aa ra-HI thi BEECH mein" },
-    { "hindi": "accha woh chhodo, interval ke baad kya hua?", "english": "Forget that, what happened after interval?", "context": "'chhodo' = leave it/forget it. 'interval' = intermission (all Indian movies have one)", "pronunciation": "ac-CHA woh CHHO-do, IN-ter-val ke BAAD kya HU-a?" },
+    { "hindi": "accha woh chhodo, interval ke baad kya hua?", "english": "Forget that, what happened after the interval?", "context": "'chhodo' = leave it/forget it. 'interval' = intermission (all Indian movies have one)", "pronunciation": "ac-CHA woh CHHO-do, IN-ter-val ke BAAD kya HU-a?" },
     { "hindi": "overall theek thi, ek baar dekh sakte ho", "english": "Overall it was fine, you can watch it once", "context": "Lukewarm recommendation — 'ek baar dekh sakte ho' = worth one watch (not great, not terrible)", "pronunciation": "OVER-all THEEK thi, EK baar dekh SAK-te ho" }
   ],
   "grammar_notes": [
     "Past tense uses 'tha/thi/the': masculine singular = tha, feminine singular = thi, plural = the. Matches the SUBJECT gender, not the speaker.",
-    "'Mujhe lagta hai' = I think/feel (present). 'Mujhe laga' = I felt (past, masc). 'Mujhe lagi' = I felt (past, fem noun).",
+    "'Mujhe lagta hai' = I think/feel (present). 'Mujhe laga' = I felt (past, masc subject). 'Mujhe lagi' = I felt (past, fem subject).",
     "'toh' adds emphasis — 'woh toh accha tha' = that WAS good (stressing the point). It's not translatable, it's a vibe.",
     "'ki' connects clauses like 'that' in English: 'mujhe lagta hai KI yeh acchi hai' = I think THAT this is good",
     "Mixing English freely is not just okay, it's expected in urban Hindi. 'Boring', 'twist', 'acting', 'next level' — all used as-is."
   ],
   "culture_notes": [
     "Indians are very expressive about movies — strong opinions are expected and part of the fun. Hold nothing back.",
-    "Using English words mixed in ('boring', 'twist', 'acting') is totally normal in Hindi conversation — it's called Hinglish",
-    "Every Bollywood movie has an intermission ('interval') — comparing first half vs second half is a standard discussion format",
-    "Rating movies as 'ek baar dekh lo' (watch once) vs 'must watch' vs 'mat dekho' (don't watch) is the standard scale"
+    "Using English words mixed in ('boring', 'twist', 'acting') is totally normal in Hindi conversation — it's called Hinglish.",
+    "Every Bollywood movie has an intermission ('interval') — comparing first half vs second half is a standard discussion format.",
+    "Rating movies as 'ek baar dekh lo' (watch once) vs 'must watch' vs 'mat dekho' (don't watch) is the standard scale."
   ],
   "skill_breakdown": [
     {
@@ -63,5 +63,5 @@
       ]
     }
   ],
-  "practice_prompt": "You are the user's close friend chatting on a Sunday afternoon about Jawan, which you both finally watched. You loved it — SRK's double role, action set-pieces, the social-issue twist, Anirudh's score. The user has mixed feelings (too long, second half drags, story over-the-top). Use 'tum' throughout — casual, slangy, peer. Code-mix English freely (first half, twist, vibe, climax). Open with 'yaar, woh Jawan dekh li na? mujhe toh bahut pasand aayi — tumhe kaisi lagi?' Share opinions using 'mujhe accha laga / nahin laga' and 'lagta hai'; frame past beats with 'tha/thi/the' (acting kamaal thi, climax mast tha, gaane achhe the). Push back warmly — 'nahin yaar', 'haan but...', 'bilkul nahin', 'honestly' — and concede where you agree ('haan woh toh sahi hai'). Ask the user back every couple of turns. If they slip (wrong gender on tha/thi, missing 'lagta hai' framing, English word-order in opinions), flag inline with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] and keep going. Stay in Hindi unless asked. Keep it 6-8 turns and wrap with a jokey 'chalo yaar, apni apni opinion.'"
+  "practice_prompt": "You are the user's close friend chatting on a Sunday afternoon about Jawan, which you both finally watched. You loved it — SRK's double role, action set-pieces, the social-issue twist, Anirudh's score. The user has mixed feelings (too long, second half drags, story over-the-top). Use 'tum' throughout — casual, slangy, peer. Code-mix English freely (first half, twist, vibe, climax). Open with 'yaar, woh Jawan dekh li na? mujhe toh bahut pasand aayi — tumhe kaisi lagi?' Share opinions using 'mujhe accha laga / nahi laga' and 'lagta hai'; frame past beats with 'tha/thi/the' (acting kamaal thi, climax mast tha, gaane acche the). Push back warmly — 'nahi yaar', 'haan but...', 'bilkul nahi', 'honestly' — and concede where you agree ('haan woh toh sahi hai'). Ask the user back every couple of turns. If they slip (wrong gender on tha/thi, missing 'lagta hai' framing, English word-order in opinions), flag inline with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] and keep going. Stay in Hindi unless asked. Keep it 6-8 turns and wrap with a jokey 'chalo yaar, apni apni opinion.'"
 }

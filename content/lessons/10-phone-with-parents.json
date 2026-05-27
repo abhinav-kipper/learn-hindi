@@ -17,7 +17,7 @@
   ],
   "grammar_notes": [
     "Sustained 'aap' register: parents are always 'aap' in respectful families. Verb agreement is plural-polite throughout: 'kaisi hain' (not 'kaisi ho'), 'kar rahe hain' (not 'kar rahe ho')",
-    "Feminine future tense for first person: '-ungi/-ungi' (main aaungi = I will come). Masculine is '-unga'. Verbs in this lesson use feminine throughout",
+    "Feminine future tense for first person: '-ungi' (main aaungi = I will come). Masculine is '-unga'. Verbs in this lesson use feminine throughout",
     "Compound verb 'le lena' (take up) attaches to a main verb to express completion/finality: 'sambhal lungi' (I'll fully manage), 'rakh leti hoon' (I'm putting it down/hanging up)",
     "'rakhna' (to keep/put) is the idiomatic verb for hanging up a phone — 'rakhti hoon' = I'm hanging up. Also 'phone rakh dena' (put the phone down)",
     "'ki recipe se' / 'ke saath' / 'ke baare mein' — postpositions follow nouns and agree with gender: 'ki' for feminine, 'ka' for masculine, 'ke' for masculine plural"
@@ -33,7 +33,7 @@
       "skill": "Sustained aap register",
       "explanation": "With parents, every verb takes the plural-polite form. 'aap' is always paired with '-hain' (not '-ho'), and imperatives use '-iye' / '-kijiye' (not '-o').",
       "more_examples": [
-        { "hindi": "aap khaana khaaye?", "english": "did you eat?" },
+        { "hindi": "aap ne khaana khaaya?", "english": "did you eat?" },
         { "hindi": "aap kab aa rahe hain?", "english": "when are you coming?" },
         { "hindi": "aap thoda araam kijiye", "english": "please rest a bit" },
         { "hindi": "aap chinta mat kijiye", "english": "please don't worry" }

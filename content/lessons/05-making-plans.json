@@ -6,7 +6,7 @@
   "phrases": [
     { "hindi": "yaar weekend pe kuch karte hain?", "english": "Dude shall we do something this weekend?", "context": "'kuch karte hain' = let's do something — casual suggestion, no pressure", "pronunciation": "YAAR week-END pe KUCH kar-te hain?" },
     { "hindi": "agar Saturday free ho toh chalein kahin?", "english": "If you're free Saturday then shall we go somewhere?", "context": "'agar...toh' = if...then — conditional structure. 'chalein' = shall we go (inclusive)", "pronunciation": "A-gar SA-tur-day FREE ho toh CHA-lein ka-HIN?" },
-    { "hindi": "main toh aa jaunga, tum batao", "english": "I'll definitely come, you guys say", "context": "'toh' here = definitely/for sure. 'tum batao' = you decide — putting ball in their court", "pronunciation": "MAIN toh aa jaa-UN-ga, TUM ba-TAO" },
+    { "hindi": "main toh aa jaunga, tum batao", "english": "I'm in, you guys decide", "context": "'main toh' = as for me / I at least — contrastive emphasis. 'tum batao' = you (all) say — putting the ball in their court", "pronunciation": "MAIN toh aa jaa-UN-ga, TUM ba-TAO" },
     { "hindi": "Connaught Place chalein? wahan naya restaurant khula hai", "english": "Shall we go to CP? A new restaurant opened there", "context": "'chalein' = shall we go (inclusive suggestion). 'khula hai' = has opened", "pronunciation": "con-NAUGHT place CHA-lein? wa-HAAN NA-ya RES-tau-rant KHU-la hai" },
     { "hindi": "done, 7 baje milte hain metro pe", "english": "Done, let's meet at 7 at the metro", "context": "'baje' = o'clock, 'milte hain' = let's meet. 'Done' used as-is from English.", "pronunciation": "DONE, SAAT ba-JE mil-te hain MET-ro pe" },
     { "hindi": "late mat hona, pichli baar ek ghanta wait kiya tha", "english": "Don't be late, last time I waited one hour", "context": "Friendly warning/complaint — totally normal among friends who are always late", "pronunciation": "LATE mat HO-na, pich-LI baar EK ghan-TA wait KI-ya tha" },
@@ -31,7 +31,7 @@
   "skill_breakdown": [
     {
       "skill": "future tense (ga/ge/gi)",
-      "explanation": "Verb root + suffixes based on gender/person. Male 'I': -unga (jaunga). Female 'I': -ungi (jaungi). 'You/He': -ega (jayega). 'She': -egi (jayegi). 'We/They/Respect': -enge (jayenge). Add 'hi' for emphasis: 'aa hi jaunga' = will DEFINITELY come.",
+      "explanation": "Verb root + suffixes based on gender/person. 'Main' (I, M): -unga (jaunga). 'Main' (I, F): -ungi (jaungi). 'Tu/woh' (he, M): -ega (jayega). 'Tu/woh' (she, F): -egi (jayegi). 'Tum' (you, M): -oge (jaoge). 'Tum' (you, F): -ogi (jaogi). 'Hum/aap/woh-plural': -enge (jayenge). Add 'hi' for emphasis: 'aa hi jaunga' = will DEFINITELY come.",
       "more_examples": [
         { "hindi": "kal main call karunga", "english": "I'll call tomorrow (male)" },
         { "hindi": "woh aayegi kya?", "english": "will she come?" },
