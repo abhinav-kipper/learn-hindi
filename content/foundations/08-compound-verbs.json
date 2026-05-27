@@ -20,7 +20,7 @@
     "'le lena' (take up): the main verb's action benefits the doer. 'khaa lo' = eat (for yourself).",
     "'de dena' (give over): the main verb's action benefits someone else. 'de do' = hand it over (to them).",
     "'kar dena' (do over): emphasizes completion + politeness. 'kar do' is softer/more polite than bare 'karo'.",
-    "'jaa jaana' (go): used with motion or change-of-state verbs to mark completion. 'so jaana' (fall asleep), 'pahunch jaana' (arrive).",
+    "'jaana' (go) as auxiliary: used with motion or change-of-state verbs to mark completion. 'so jaana' (fall asleep), 'pahunch jaana' (arrive).",
     "'ho jaana' (become): change-of-state. 'theek ho gaya' (got better), 'pareshaan ho gayi' (became worried)."
   ],
   "culture_notes": [
@@ -48,8 +48,8 @@
       ]
     },
     {
-      "skill": "kar dena / jaa jaana / ho jaana",
-      "explanation": "'kar dena' = do over (politeness + completion). 'jaa jaana' = go (motion / state-completion). 'ho jaana' = become (change of state). All three add a sense of 'completedness' that bare verbs lack.",
+      "skill": "kar dena / jaana (as aux) / ho jaana",
+      "explanation": "'kar dena' = do over (politeness + completion). 'jaana' (as auxiliary) = motion / state-completion. 'ho jaana' = become (change of state). All three add a sense of 'completedness' that bare verbs lack.",
       "more_examples": [
         { "hindi": "khaana taiyaar ho gaya", "english": "food is ready (lit: has become ready)" },
         { "hindi": "main thak gayi hoon", "english": "I've gotten tired" },

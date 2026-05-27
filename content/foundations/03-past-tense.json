@@ -82,7 +82,7 @@
       "explanation": "For intransitive verbs (go, come, sit, sleep): verb stem + '-a' (M) or '-i' (F) — agrees with subject gender. 'main aaya' = I came (male), 'main aayi' = I came (female).",
       "more_examples": [
         { "hindi": "main kal aayi", "english": "I came yesterday (female speaker)" },
-        { "hindi": "wo subah uthi", "english": "she got up in the morning" },
+        { "hindi": "woh subah uthi", "english": "she got up in the morning" },
         { "hindi": "ham raat ko soye", "english": "we slept at night" },
         { "hindi": "tum kab gaye?", "english": "when did you go? (masc)" }
       ]
@@ -92,7 +92,7 @@
       "explanation": "Used for habits or repeated actions in the past — 'used to'. Verb stem + '-ta'/'-ti' + 'tha'/'thi'/'the'. 'main school jaati thi' = I used to go to school.",
       "more_examples": [
         { "hindi": "bachpan mein main bahut khelta tha", "english": "as a child, I used to play a lot (male)" },
-        { "hindi": "wo har Sunday chai peeti thi", "english": "she used to drink chai every Sunday" },
+        { "hindi": "woh har Sunday chai peeti thi", "english": "she used to drink chai every Sunday" },
         { "hindi": "hum saath padhte the", "english": "we used to study together" },
         { "hindi": "papa roz shaam ko ghar aate the", "english": "papa used to come home every evening" }
       ]
@@ -102,9 +102,9 @@
       "explanation": "Used for ongoing action in the past. Verb stem + 'raha'/'rahi'/'rahe' + 'tha'/'thi'/'the'. 'main jaa rahi thi' = I was going. Think of it as the past form of '-raha hai'.",
       "more_examples": [
         { "hindi": "jab aap aaye, main khaana banaa rahi thi", "english": "when you came, I was making food" },
-        { "hindi": "wo phone par baat kar raha tha", "english": "he was talking on the phone" },
+        { "hindi": "woh phone par baat kar raha tha", "english": "he was talking on the phone" },
         { "hindi": "hum movie dekh rahe the", "english": "we were watching a movie" },
-        { "hindi": "tum kahaan jaa rahi thi?", "english": "where were you going? (fem)" }
+        { "hindi": "tum kahan jaa rahi thi?", "english": "where were you going? (fem)" }
       ]
     }
   ],
@@ -147,7 +147,7 @@
         "examples": [
           { "hindi": "woh Mumbai mein rehta tha", "english": "he used to live in Mumbai", "breakdown": "rehna (to live) + ta + tha — habitual past, masc. subject" },
           { "hindi": "main har subah chai pita tha", "english": "I used to drink chai every morning", "breakdown": "pina + ta + tha — repeated action, masc. speaker" },
-          { "hindi": "wo school paidal jaati thi", "english": "she used to walk to school", "breakdown": "jaana + ti + thi — habitual, fem. subject" }
+          { "hindi": "woh school paidal jaati thi", "english": "she used to walk to school", "breakdown": "jaana + ti + thi — habitual, fem. subject" }
         ],
         "cutting_intro": "Start with this one. Past habitual is just present habitual with `tha/thi/the` instead of `hoon/hai`. No `ne`, no object tricks.",
         "quick_check": {

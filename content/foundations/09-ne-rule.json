@@ -11,8 +11,8 @@
     { "hindi": "papa ne khaana banaya", "english": "papa made food", "context": "Even with named subjects, attach 'ne'. 'banaya' (M) agrees with 'khaana' (M). If it had been 'sabzi' (F), would be 'banayi'.", "pronunciation": "PA-pa ne khaa-NA ba-NA-ya" },
     { "hindi": "tumne kya kaha?", "english": "what did you say?", "context": "Question form. 'tumne' = tum + ne. 'kaha' is a special case — fixed form, doesn't agree (because 'kya' doesn't have inherent gender).", "pronunciation": "TUM-ne KYA KA-ha?" },
     { "hindi": "maine usse phone kiya", "english": "I called him/her", "context": "'phone kiya' — 'kiya' agrees with 'phone' (M loanword). Even English loanwords get assigned a Hindi gender; phone is M.", "pronunciation": "MAI-ne US-se PHONE ki-YA" },
-    { "hindi": "usne mujhe yeh batayi", "english": "she told me this thing (fem)", "context": "'batayi' (F) — what's the object? Implicit 'baat' (story/thing, fem). The verb agrees with whatever was told, not the speaker or listener.", "pronunciation": "US-ne mu-JHE YEH ba-TAA-yi" },
-    { "hindi": "mein roya / mein royi", "english": "I cried (M/F)", "context": "'rona' (to cry) is INTRANSITIVE — no 'ne', subject takes normal agreement. Compare with 'rulaya' (caused to cry, transitive) which would need 'ne'.", "pronunciation": "MAIN RO-ya / MAIN RO-yi" },
+    { "hindi": "usne mujhe yeh batayi", "english": "she told me this thing (fem)", "context": "'batayi' (F) — what's the object? Implicit 'baat' (story/thing, fem). The verb agrees with whatever was told, not the speaker or listener.", "pronunciation": "US-ne mu-JHE YEH ba-TA-yi" },
+    { "hindi": "main roya / main royi", "english": "I cried (M/F)", "context": "'rona' (to cry) is INTRANSITIVE — no 'ne', subject takes normal agreement. Compare with 'rulaya' (caused to cry, transitive) which would need 'ne'.", "pronunciation": "MAIN RO-ya / MAIN RO-yi" },
     { "hindi": "humne saara kaam kar liya", "english": "we got all the work done", "context": "Compound verb 'kar liya' (kar + le, perfective) — still triggers 'ne'. 'liya' agrees with 'kaam' (M). All compounds inherit the transitivity of their main verb.", "pronunciation": "HUM-ne SAA-ra KAAM kar li-YA" }
   ],
   "grammar_notes": [
@@ -60,7 +60,7 @@
   "practice_prompt": "You are a Hindi grammar tutor specializing in the 'ne' rule. Give the user a short past-tense scenario and ask them to translate. They'll make mistakes — gently flag whether (a) they should/shouldn't have used 'ne', and (b) whether the verb agrees with the right gender. Use 'aap' (polite tutor).",
   "references": ["Snell & Weightman Ch. 12", "Afroz Taj Lesson 8"],
   "theory": {
-    "intro": "Welcome to the chapter Hindi learners fear most. The `ne` rule is the construction that makes English speakers say 'Hindi doesn't make sense' — but it actually does, you just have to flip your instincts. In past tense, for transitive verbs (verbs that take an object), the subject takes the postposition `ne` and the verb agrees with the OBJECT's gender, not the subject's. So `maine roti khaayi` ('I ate roti') uses the feminine verb ending because `roti` is feminine — even if the speaker is masculine. This is the single most distinctive feature of Hindi grammar; once you've drilled it, the rest of past tense locks into place.",
+    "intro": "This is the chapter Hindi learners fear most. The `ne` rule is the construction that makes English speakers say 'Hindi doesn't make sense' — but it actually does, you just have to flip your instincts. In past tense, for transitive verbs (verbs that take an object), the subject takes the postposition `ne` and the verb agrees with the OBJECT's gender, not the subject's. So `maine roti khaayi` ('I ate roti') uses the feminine verb ending because `roti` is feminine — even if the speaker is masculine. This is the single most distinctive feature of Hindi grammar; once you've drilled it, the rest of past tense locks into place.",
     "sections": [
       {
         "heading": "What `ne` is and when it appears",
@@ -138,7 +138,7 @@
             ["aap", "aapne", "you (formal/polite)"],
             ["yeh / wo (sg.)", "isne / usne", "he/she/it (near/far)"],
             ["ham", "hamne", "we"],
-            ["ye / we (pl.)", "inhone / unhone", "they (near/far)"]
+            ["ye / wo (pl.)", "inhone / unhone", "they (near/far)"]
           ]
         },
         "examples": [
@@ -147,7 +147,7 @@
           { "hindi": "aapne khaana khaaya?", "english": "did you eat (formal)?", "breakdown": "aap + ne → aapne" },
           { "hindi": "usne chai pi", "english": "he/she drank chai", "breakdown": "wo + ne → usne (the pronoun shifts to oblique form before `ne`)" },
           { "hindi": "hamne movie dekhi", "english": "we watched a movie", "breakdown": "ham + ne → hamne" },
-          { "hindi": "unhone gaana gaaya", "english": "they sang a song", "breakdown": "we + ne → unhone (plural, oblique form)" }
+          { "hindi": "unhone gaana gaaya", "english": "they sang a song", "breakdown": "wo + ne → unhone (plural, oblique form)" }
         ],
         "callout": { "tone": "note", "body": "Even though it looks like the pronoun itself transformed, remember: it's just pronoun + `ne` merged into one word. The 'shift' from `wo` → `us-` and `we` → `un-` is the same oblique form you see before any postposition (`usko`, `unke saath`, etc.)." },
         "cutting_intro": "`ne` doesn't sit separately after the pronoun — it fuses in. Learn these eight forms once and you've got every subject covered.",

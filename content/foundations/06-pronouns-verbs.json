@@ -79,12 +79,12 @@
   "skill_breakdown": [
     {
       "skill": "Pronoun-verb agreement",
-      "explanation": "Each pronoun pairs with a specific auxiliary ending in present tense: main+hoon, tu+hai, tum+ho, aap+hain, wo+hai (sg) / hain (pl), ham+hain. Mismatched pairings sound jarring to native speakers.",
+      "explanation": "Each pronoun pairs with a specific auxiliary ending in present tense: main+hoon, tu+hai, tum+ho, aap+hain, woh+hai (sg) / hain (pl), hum+hain. Mismatched pairings sound jarring to native speakers.",
       "more_examples": [
         { "hindi": "main theek hoon", "english": "I am fine" },
         { "hindi": "tum kahaan ho?", "english": "where are you? (friend)" },
         { "hindi": "aap kaise hain?", "english": "how are you? (polite)" },
-        { "hindi": "wo school mein hai", "english": "he/she is in school" }
+        { "hindi": "woh school mein hai", "english": "he/she is in school" }
       ]
     },
     {
@@ -103,8 +103,8 @@
       "more_examples": [
         { "hindi": "main thaka hua hoon", "english": "I am tired (male)" },
         { "hindi": "main thaki hui hoon", "english": "I am tired (female)" },
-        { "hindi": "wo Hindi bol raha hai", "english": "he is speaking Hindi" },
-        { "hindi": "wo Hindi bol rahi hai", "english": "she is speaking Hindi" }
+        { "hindi": "woh Hindi bol raha hai", "english": "he is speaking Hindi" },
+        { "hindi": "woh Hindi bol rahi hai", "english": "she is speaking Hindi" }
       ]
     }
   ],
