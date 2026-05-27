@@ -10,7 +10,7 @@ import { getUserProfile } from '@/lib/onboarding'
 import { Confetti } from '@/components/design'
 import { playSound } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
-import { useChaina, canFire, markFired, Cutting, Sticker, COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
+import { useChaina, canFire, markFired, Mascot, Sticker, COLORS, FONTS, BORDER, SHADOW, useTheme } from '@/components/design'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const W = '#fff' // @design-allow: white literal
@@ -35,6 +35,7 @@ function checkDailyGoalCrossed(prefix: string, onFire: (goalMinutes: number) => 
 export function LayoutShell({ children }: { children: React.ReactNode }) {
   const { config } = useLanguage()
   const { play } = useChaina()
+  const theme = useTheme()
   const [showNotificationPrompt, setShowNotificationPrompt] = useState(false)
   const [goalBurst, setGoalBurst] = useState<number | null>(null)
   const goalBurstTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -193,14 +194,14 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
               >
                 <Sticker color={COLORS.butter} radius={28} padding={22}>
                   <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
-                    <Cutting size={120} mood="excited" />
+                    <Mascot size={120} mood="excited" />
                   </div>
                   <div
                     style={{
                       fontFamily: FONTS.display,
                       fontWeight: 800,
                       fontSize: 30,
-                      color: COLORS.orange,
+                      color: theme.primary,
                       textAlign: 'center',
                       lineHeight: 1.1,
                       marginBottom: 6,
@@ -239,7 +240,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
                       width: '100%',
                       padding: '12px',
                       borderRadius: 18,
-                      background: COLORS.orange,
+                      background: theme.primary,
                       color: W,
                       border: BORDER.sticker,
                       boxShadow: SHADOW.chip,

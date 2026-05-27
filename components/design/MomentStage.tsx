@@ -10,7 +10,7 @@ import React, {
   useState,
   type ReactNode,
 } from 'react'
-import { Cutting } from './Cutting'
+import { Mascot } from './Mascot'
 import { SpeechBubble } from './SpeechBubble'
 import { MOMENTS, pickLine, type Moment, type Line } from './moments'
 import { chainaVoice } from '@/lib/chaina-voice'
@@ -200,7 +200,7 @@ function MomentRender({
                 transformOrigin: 'center bottom',
               }}
             >
-              <Cutting size={cuttingSize} mood={cfg.mood} blink={cfg.mood !== 'sleepy'} />
+              <Mascot size={cuttingSize} mood={cfg.mood} blink={cfg.mood !== 'sleepy'} />
             </div>
           </div>
         </div>
@@ -214,7 +214,7 @@ function MomentRender({
               transformOrigin: 'center bottom',
             }}
           >
-            <Cutting size={cuttingSize} mood={cfg.mood} blink={cfg.mood !== 'sleepy'} />
+            <Mascot size={cuttingSize} mood={cfg.mood} blink={cfg.mood !== 'sleepy'} />
           </div>
           {walkAnchor && phase !== 'exit' && (
             <div

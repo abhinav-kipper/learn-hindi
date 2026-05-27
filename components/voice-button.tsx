@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback, forwardRef, useImperativeHandle } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { COLORS } from '@/components/design'
+import { COLORS, useTheme } from '@/components/design'
 const W = '#fff' // @design-allow: white literal
 
 interface VoiceButtonProps {
@@ -77,6 +77,7 @@ export const VoiceButton = forwardRef<VoiceButtonHandle, VoiceButtonProps>(funct
   { onTranscript, disabled = false, locale = 'hi-IN', listenLabel = 'Speak' },
   ref,
 ) {
+  const theme = useTheme()
   const [state, setState] = useState<ListenState>('idle')
   const [supported, setSupported] = useState(false)
   const [permissionDenied, setPermissionDenied] = useState(false)
@@ -205,7 +206,7 @@ export const VoiceButton = forwardRef<VoiceButtonHandle, VoiceButtonProps>(funct
         width: 46,
         height: 46,
         borderRadius: 99,
-        background: isListening ? COLORS.red : COLORS.orange,
+        background: isListening ? COLORS.red : theme.primary,
         color: W,
         border: `2.5px solid ${COLORS.ink}`,
         boxShadow: `3px 3px 0 ${COLORS.ink}`,

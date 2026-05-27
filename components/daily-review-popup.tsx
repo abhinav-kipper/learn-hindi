@@ -9,7 +9,7 @@ import { getDutchAllCategories } from '@/lib/dutch/vocabulary'
 import { getProgress, updateStreak } from '@/lib/progress'
 import { playSound } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
-import { Sticker, Tag, Cutting, COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
+import { Sticker, Tag, Mascot, COLORS, FONTS, BORDER, SHADOW, useTheme } from '@/components/design'
 const W = '#fff' // @design-allow: white literal
 
 const REVIEW_CARD_COUNT = 5
@@ -236,6 +236,7 @@ function PromptView({
   onDismiss: () => void
   languageName: string
 }) {
+  const theme = useTheme()
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
@@ -243,7 +244,7 @@ function PromptView({
       style={{ textAlign: 'center' }}
     >
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 8 }}>
-        <Cutting size={88} />
+        <Mascot size={88} />
       </div>
       <Tag>daily review</Tag>
       <div
@@ -278,7 +279,7 @@ function PromptView({
             width: '100%',
             padding: 14,
             borderRadius: 22,
-            background: COLORS.orange,
+            background: theme.primary,
             color: W,
             border: BORDER.sticker,
             boxShadow: SHADOW.sticker,
@@ -331,6 +332,7 @@ function ReviewView({
   onGotIt: () => void
   onStillLearning: () => void
 }) {
+  const theme = useTheme()
   const currentPhrase = phrases[currentIndex]
 
   const variants = {
@@ -349,7 +351,7 @@ function ReviewView({
           marginBottom: 12,
         }}
       >
-        <Tag bg={COLORS.orange} color={W} border={COLORS.ink}>
+        <Tag bg={theme.primary} color={W} border={COLORS.ink}>
           review · {currentIndex + 1} / {phrases.length}
         </Tag>
       </div>
@@ -361,7 +363,7 @@ function ReviewView({
             style={{
               flex: i === currentIndex ? 2 : 1,
               height: 6,
-              background: i < currentIndex ? COLORS.green : i === currentIndex ? COLORS.orange : W,
+              background: i < currentIndex ? COLORS.green : i === currentIndex ? theme.primary : W,
               borderRadius: 99,
               border: BORDER.thin,
               transition: 'all 0.3s',

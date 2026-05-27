@@ -11,6 +11,7 @@ import {
   FONTS,
   BORDER,
   SHADOW,
+  useTheme,
 } from '@/components/design'
 import { SCENES } from './scenes'
 import { Nani } from './characters/Nani'
@@ -26,6 +27,7 @@ const W = '#fff' // @design-allow: white literal
 type StoryReaderProps = { story: Story }
 
 export function StoryReader({ story }: StoryReaderProps) {
+  const theme = useTheme()
   const router = useRouter()
   const [index, setIndex] = useState(0)
   const [englishRevealed, setEnglishRevealed] = useState(false)
@@ -205,7 +207,7 @@ export function StoryReader({ story }: StoryReaderProps) {
                   disabled={speaking}
                   aria-label="Hear it"
                   style={{
-                    background: speaking ? COLORS.orange : COLORS.butter,
+                    background: speaking ? theme.primary : COLORS.butter,
                     border: BORDER.sticker,
                     boxShadow: SHADOW.chip,
                     borderRadius: 999,
@@ -326,7 +328,7 @@ export function StoryReader({ story }: StoryReaderProps) {
             onClick={next}
             aria-label={isLast ? 'Finish story' : 'Next panel'}
             style={{
-              background: isLast ? COLORS.mint : COLORS.orange,
+              background: isLast ? COLORS.mint : theme.primary,
               border: BORDER.sticker,
               boxShadow: SHADOW.chip,
               borderRadius: 999,

@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 import { getProgress } from '@/lib/progress'
 import { useLanguage } from '@/lib/language-context'
 import { playSound } from '@/lib/sounds'
-import { COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
+import { COLORS, FONTS, BORDER, SHADOW, useTheme } from '@/components/design'
 const W = '#fff' // @design-allow: white literal
 
 const tabs = [
@@ -217,8 +217,9 @@ function LockIcon() {
 }
 
 function HomeIcon({ active }: { active: boolean }) {
+  const theme = useTheme()
   const stroke = active ? COLORS.ink : COLORS.ink60
-  const fill = active ? COLORS.orange : 'none'
+  const fill = active ? theme.primary : 'none'
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
       <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
