@@ -425,6 +425,105 @@ export default function CategoryPage() {
             ))}
           </AnimatePresence>
         </div>
+
+        {archivedWords.length > 0 && (
+          <div style={{ marginTop: 18 }}>
+            <button
+              type="button"
+              onClick={() => {
+                setArchivedFoldOpen((v) => !v)
+                playSound('tap')
+              }}
+              style={{
+                width: '100%',
+                padding: '12px 16px',
+                background: W,
+                color: COLORS.ink,
+                border: BORDER.sticker,
+                boxShadow: SHADOW.chip,
+                borderRadius: 99,
+                fontFamily: FONTS.display,
+                fontWeight: 800,
+                fontSize: 13,
+                cursor: 'pointer',
+                textTransform: 'lowercase',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+              }}
+              aria-expanded={archivedFoldOpen}
+            >
+              <span>✓ {archivedWords.length} archived</span>
+              <span style={{ color: COLORS.ink60 }}>{archivedFoldOpen ? 'hide ▴' : 'show ▾'}</span>
+            </button>
+
+            <AnimatePresence initial={false}>
+              {archivedFoldOpen && (
+                <motion.div
+                  key="archived-fold"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.25 }}
+                  style={{ overflow: 'hidden' }}
+                >
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: 10 }}>
+                    {archivedWords.map((word) => (
+                      <Sticker key={word.hindi} color={COLORS.creamBg} radius={14} padding={12}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 10, opacity: 0.78 }}>
+                          <div style={{ flex: 1, minWidth: 0 }}>
+                            <div
+                              style={{
+                                fontFamily: FONTS.display,
+                                fontWeight: 800,
+                                fontSize: 15,
+                                color: COLORS.ink,
+                                letterSpacing: -0.2,
+                              }}
+                            >
+                              {word.hindi}
+                            </div>
+                            <div
+                              style={{
+                                marginTop: 2,
+                                fontFamily: FONTS.body,
+                                fontWeight: 700,
+                                fontSize: 12,
+                                color: COLORS.ink60,
+                              }}
+                            >
+                              {word.english}
+                            </div>
+                          </div>
+                          <button
+                            type="button"
+                            onClick={() => handleRestore(word)}
+                            aria-label={`Restore ${word.hindi}`}
+                            style={{
+                              padding: '6px 12px',
+                              background: W,
+                              color: COLORS.ink,
+                              border: BORDER.thin,
+                              borderRadius: 99,
+                              fontFamily: FONTS.display,
+                              fontWeight: 800,
+                              fontSize: 11,
+                              cursor: 'pointer',
+                              textTransform: 'lowercase',
+                              flexShrink: 0,
+                            }}
+                          >
+                            ↺ restore
+                          </button>
+                        </div>
+                      </Sticker>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        )}
       </div>
     </div>
   )
