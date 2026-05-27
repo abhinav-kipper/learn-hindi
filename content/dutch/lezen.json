@@ -743,7 +743,7 @@
       "title_nl": "In de bibliotheek",
       "title_en": "At the library",
       "body_nl": "De bibliotheek is een fijne plek in Nederland. Je kunt er boeken, tijdschriften en dvd's lenen. Om gebruik te maken van de bibliotheek, moet je je eerst inschrijven. Dat doe je aan de balie met een geldig identiteitsbewijs. Je betaalt een kleine jaarlijkse bijdrage. Als lid mag je boeken drie weken lenen. Als je meer tijd nodig hebt, kun je de uitleentermijn verlengen. Dat kan online via de website of via de bibliotheekapp. Als iemand anders het boek heeft gereserveerd, kun je het niet verlengen. Als je te laat terugkomt, moet je een boete betalen. De bibliotheek biedt ook gratis workshops en activiteiten aan, zoals leeskringen en taalcursussen. Kinderen kunnen er ook boeken lenen. De bibliotheek wil graag dat iedereen kan lezen en leren.",
-      "body_en": "The library is a wonderful place in the Netherlands. You can borrow books, magazines and DVDs there. To make use of the library, you must first register. You do this at the balie with a valid identity document. You pay a small annual contribution. As a member you may borrow books for three weeks. If you need more time, you can extend the loan period. This can be done online via the website or through the library app. If someone else has reserved the book, you cannot extend it. If you return it too late, you have to pay a fine. The library also offers free workshops and activities, such as reading groups and language courses. Children can also borrow books there. The library wants everyone to be able to read and learn.",
+      "body_en": "The library is a wonderful place in the Netherlands. You can borrow books, magazines and DVDs there. To make use of the library, you must first register. You do this at the service desk with a valid identity document. You pay a small annual contribution. As a member you may borrow books for three weeks. If you need more time, you can extend the loan period. This can be done online via the website or through the library app. If someone else has reserved the book, you cannot extend it. If you return it too late, you have to pay a fine. The library also offers free workshops and activities, such as reading groups and language courses. Children can also borrow books there. The library wants everyone to be able to read and learn.",
       "word_count": 124,
       "questions": [
         {
@@ -791,17 +791,17 @@
           "options_nl": [
             "Een boek teruggeven aan de bibliotheek",
             "Een boek langer houden dan de uitleentermijn toestaat",
-            "De uitleentermijn met extra tijd verlengen",
+            "De uitleenperiode officieel langer maken",
             "Een boek reserveren voor later"
           ],
           "options_en": [
             "To return a book to the library",
             "To keep a book longer than the loan period allows",
-            "To extend the loan period with extra time",
+            "To officially make the loan period longer",
             "To reserve a book for later"
           ],
           "correct_index": 2,
-          "explanation_en": "'Verlengen' means to extend — the text says you can extend the loan period (uitleentermijn verlengen) if you need more time."
+          "explanation_en": "'Verlengen' means to make longer — the text says you can extend the loan period (uitleentermijn verlengen) if you need more time."
         },
         {
           "type": "woordbetekenis",
@@ -811,13 +811,13 @@
             "Een cadeau voor het inleveren van een boek",
             "Een geldbedrag dat je betaalt als straf voor te laat terugbrengen",
             "Een speciale lidmaatschapskaart",
-            "Een herinnering dat je boek bijna op tijd moet zijn"
+            "Een herinnering dat je boek bijna ingeleverd moet worden"
           ],
           "options_en": [
             "A gift for returning a book",
             "A sum of money you pay as a penalty for returning late",
             "A special membership card",
-            "A reminder that your book is almost due"
+            "A reminder that your book is almost due to be returned"
           ],
           "correct_index": 1,
           "explanation_en": "'Boete' means a fine — a financial penalty you must pay if you return a borrowed item too late."

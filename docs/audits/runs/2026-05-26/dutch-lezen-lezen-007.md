@@ -2,44 +2,50 @@
 
 **File:** content/dutch/lezen.json
 **Audit date:** 2026-05-27
-**Total fixes applied:** 5
-**Items not applied:** 0
+**Total fixes applied:** 0
+**Items not applied:** 1
 
-## Fixes applied
+## Clean re-audit
 
-### Accuracy (5 items)
+This text was previously audited on 2026-05-26 (5 capitalisation + collocation fixes applied — see git history of this report). On re-audit today, the current state of `lezen-007` is clean against the rubric. No new accuracy or style fixes were required.
 
-1. **Where:** `texts[6].title_nl`
-   **Was:** `Een ov-chipkaart kopen`
-   **Now:** `Een OV-chipkaart kopen`
-   **Why:** Per rubric 1.5, `OV-chipkaart` is the official term and should be capitalised. Aligns with `title_en` and the English body, which already use the capitalised form.
+### Verification pass
 
-2. **Where:** `texts[6].body_nl` (4 instances of `ov-chipkaart` capitalised)
-   **Was:** `...met een ov-chipkaart...anonieme ov-chipkaart...persoonlijke ov-chipkaart...De ov-chipkaart is geldig...`
-   **Now:** `...met een OV-chipkaart...anonieme OV-chipkaart...persoonlijke OV-chipkaart...De OV-chipkaart is geldig...`
-   **Why:** Same as above — consistent use of the official term throughout the text. The English body already uses `OV-chipkaart` in every reference; the Dutch body is now aligned.
+**Dutch grammar (1.2):**
+- V2 respected in every main clause (`reist iedereen...`, `kun je`, `heeft jouw naam`, `moet je inchecken`, `wordt er een boete...afgeschreven`).
+- Subordinate clauses with `als` / `voordat` correctly verb-final (`Als je de persoonlijke kaart verliest`, `Voordat je in de trein...stapt`, `Als je vergeet uit te checken`).
+- de/het articles correct throughout: `het openbaar vervoer`, `het saldo`, `de kaart`, `de lezer`, `de trein/bus/tram/metro`, `een boete` (de-word).
+- Impersonal passive `wordt er een boete...afgeschreven` is idiomatic.
+- Separable verb `afschrijven` correctly split (`wordt...afgeschreven`); `inchecken` and `uitchecken` correctly inflected.
+- Adjective endings: `een anonieme OV-chipkaart`, `een persoonlijke OV-chipkaart`, `de persoonlijke kaart` — `-e` ending on `de`-words and after `een` + de-word, correct.
+- `het zogeheten saldo` — correct neuter past-participle adjective form.
 
-3. **Where:** `texts[6].body_nl` first sentence
-   **Was:** `In Nederland reist iedereen met het openbaar vervoer met een ov-chipkaart.`
-   **Now:** `In Nederland reist iedereen in het openbaar vervoer met een OV-chipkaart.`
-   **Why:** The original chained two `met` prepositional phrases (`reist...met het openbaar vervoer met een ov-chipkaart`), which is awkward in Dutch. Standard collocation is `reizen in het openbaar vervoer` for the mode of travel; `met een OV-chipkaart` then specifies the means of payment. Matches the recast in the English version ("everyone travelling by public transport uses an OV-chipkaart").
+**Cultural / factual (1.5):**
+- `OV-chipkaart`, `NS-station`, `servicebalie`, `servicepunt`, `saldo`, `inchecken`/`uitchecken` are the official terms used by NS / Translink and `ov-chipkaart.nl`.
+- Currency reference is implicit (saldo in euros) — no Dutch/Hindi cross-contamination.
 
-4. **Where:** `texts[6].questions[0].question_nl`
-   **Was:** `Wat is een voordeel van een persoonlijke ov-chipkaart boven een anonieme?`
-   **Now:** `Wat is een voordeel van een persoonlijke OV-chipkaart boven een anonieme?`
-   **Why:** Consistent capitalisation of the official term.
+**Schema / structural (1.6):**
+- JSON parses cleanly (verified — 10 texts, lezen-007 present).
+- All required fields present (id, tier, topic, title_nl, title_en, body_nl, body_en, word_count, questions, references).
+- 4 questions, each with type / question_nl / question_en / 4 options_nl / 4 options_en / correct_index / explanation_en.
 
-5. **Where:** `texts[6].questions[1].options_nl[1]`
-   **Was:** `Hoe de ov-chipkaart werkt in Nederland`
-   **Now:** `Hoe de OV-chipkaart werkt in Nederland`
-   **Why:** Consistent capitalisation of the official term.
+**Pedagogical accuracy (1.4):**
+All four MCQ `correct_index` values verified against the body text:
+- Q1 (detail, index 1 — `Je kunt het saldo terugkrijgen als je de kaart verliest`): body says `Als je de persoonlijke kaart verliest, kun je het saldo terugkrijgen`. Match.
+- Q2 (hoofdgedachte, index 1 — `Hoe de OV-chipkaart werkt in Nederland`): body is a complete how-it-works overview. Match.
+- Q3 (woordbetekenis 'saldo', index 1 — `Het geldbedrag op de kaart`): body defines it as `opladen met geld, het zogeheten saldo`. Match.
+- Q4 (woordbetekenis 'inchecken', index 2 — `Je kaart tegen de lezer houden bij het instappen`): body says `moet je inchecken door de kaart tegen de lezer te houden`. Match.
 
-## Items not applied (0)
+**Style (section 2):**
+- No AI clichés ("Let's dive in", "It's important to note", "Get ready to...") present.
+- Prose is tight; no throat-clearing or comma-spliced run-ons.
+- Voice is neutral instructional, appropriate for an A2 Lezen text.
 
-None — no pedagogical-meaning fixes required flagging. All four MCQ `correct_index` values verified against the body text:
-- Q1 (detail, index 1): body confirms `Als je de persoonlijke kaart verliest, kun je het saldo terugkrijgen`.
-- Q2 (hoofdgedachte, index 1): body is indeed a general explanation of how the OV-chipkaart works.
-- Q3 (woordbetekenis 'saldo', index 1): body defines it as `opladen met geld, het zogeheten saldo`.
-- Q4 (woordbetekenis 'inchecken', index 2): body defines it as `de kaart tegen de lezer te houden`.
+## Items not applied (1)
 
-JSON re-parsed cleanly after edits (verified via `require('./content/dutch/lezen.json')`).
+1. **Where:** `texts[6].body_nl` (whole text) and `references[]`
+   **Issue:** The OV-chipkaart is being phased out in the Netherlands. Anonymous OV-chipkaarten were withdrawn from sale in 2023 and the personal OV-chipkaart is being retired in favour of OVpay (contactless bank/credit card or mobile-wallet check-in) and a new personal OV-pas, with full migration completing through 2025. By 2026 the text describes a system that is officially deprecated, although many travellers still hold valid cards during the transition.
+   **Suggested fix:** Either (a) rewrite to centre OVpay and add a one-line note that legacy OV-chipkaarten are being phased out, or (b) explicitly mark the text as "Stand 2023" content so learners know it reflects the older system referenced in Naar Nederland A2.
+   **Why not applied:** Pedagogical-meaning change of the whole text; the "Naar Nederland A2" reference is the official inburgering A2 source and still uses this material. Flagging for the maintainer to decide whether to refresh the topic for B1 inburgering 2026 or keep it aligned with the textbook.
+
+JSON re-parsed cleanly after no edits (verified — 10 texts, lezen-007 present, valid JSON).
