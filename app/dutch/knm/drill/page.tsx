@@ -4,9 +4,9 @@ import { useState, useEffect, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import {
-  Sticker, Tag, Cutting, Confetti,
+  Sticker, Tag, Mascot, Confetti,
   COLORS, FONTS, BORDER,
-  useChaina, canFire, markFired,
+  useChaina, canFire, markFired, useTheme,
 } from '@/components/design'
 import {
   drawDrillSet,
@@ -25,6 +25,7 @@ const ROSE_LIGHT = '#f4c5c5' // @design-allow: wrong-answer highlight (rose fami
 
 export default function KnmDrillPage() {
   const router = useRouter()
+  const theme = useTheme()
   const drill = useMemo<KnmQuestion[]>(() => drawDrillSet(), [])
   const [currentIdx, setCurrentIdx] = useState(0)
   const [answers, setAnswers] = useState<Array<0 | 1 | 2 | 3 | null>>(
@@ -76,7 +77,7 @@ export default function KnmDrillPage() {
         position: 'relative', overflow: 'hidden',
       }}>
         {result.passed && <Confetti active />}
-        <Cutting size={120} mood={result.passed ? 'happy' : 'idle'} />
+        <Mascot size={120} mood={result.passed ? 'happy' : 'idle'} />
         <h1 style={{
           fontFamily: FONTS.display, fontWeight: 800, fontSize: 32, color: COLORS.ink, margin: '16px 0 4px',
         }}>
@@ -96,7 +97,7 @@ export default function KnmDrillPage() {
             : `Need ${Math.ceil(DRILL_SIZE * PASS_THRESHOLD)} / ${DRILL_SIZE} to pass`}
         </div>
         <div style={{ display: 'flex', gap: 12, marginTop: 28 }}>
-          <Sticker color={COLORS.orange} radius={16} padding={12} onClick={() => router.push('/dutch/knm')}>
+          <Sticker color={theme.primary} radius={16} padding={12} onClick={() => router.push('/dutch/knm')}>
             <div style={{ fontFamily: FONTS.display, fontWeight: 800, color: W, padding: '0 8px' }}>Back to KNM</div>
           </Sticker>
           <Sticker color={COLORS.butter} radius={16} padding={12} onClick={() => location.reload()}>
@@ -132,7 +133,7 @@ export default function KnmDrillPage() {
           <motion.div
             initial={false}
             animate={{ width: `${((currentIdx + (revealed ? 1 : 0)) / DRILL_SIZE) * 100}%` }}
-            style={{ height: '100%', background: COLORS.orange }}
+            style={{ height: '100%', background: theme.primary }}
             transition={{ type: 'spring', stiffness: 220, damping: 24 }}
           />
         </div>

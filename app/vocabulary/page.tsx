@@ -23,13 +23,14 @@ import { playSound } from '@/lib/sounds'
 import {
   Sticker,
   Tag,
-  Cutting,
+  Mascot,
   DottedBg,
   MotifIcon,
   COLORS,
   FONTS,
   BORDER,
   SHADOW,
+  useTheme,
   type MotifKind,
 } from '@/components/design'
 const W = '#fff' // @design-allow: white literal
@@ -48,6 +49,7 @@ const CATEGORY_PALETTE: Array<{ bg: string; motifBg: string; motif: MotifKind }>
 export default function VocabularyPage() {
   const router = useRouter()
   const { language, config } = useLanguage()
+  const theme = useTheme()
   const [categories, setCategories] = useState<VocabCategory[]>([])
   const [totalLearned, setTotalLearned] = useState(0)
   const [totalWords, setTotalWords] = useState(0)
@@ -128,7 +130,7 @@ export default function VocabularyPage() {
             </div>
           </div>
           <div style={{ marginRight: -6, marginTop: -6 }}>
-            <Cutting size={66} />
+            <Mascot size={66} />
           </div>
         </div>
       </motion.div>
@@ -180,7 +182,7 @@ export default function VocabularyPage() {
                   color: COLORS.ink,
                 }}
               >
-                <span style={{ color: COLORS.orange }}>{totalLearned}</span> / {totalWords}{' '}
+                <span style={{ color: theme.primary }}>{totalLearned}</span> / {totalWords}{' '}
                 <span style={{ color: COLORS.ink60, fontSize: 12, fontWeight: 700 }}>· {totalPct}%</span>
               </div>
             </div>
@@ -199,7 +201,7 @@ export default function VocabularyPage() {
                 transition={{ delay: 0.3, duration: 0.9, ease: 'easeOut' }}
                 style={{
                   height: '100%',
-                  background: `linear-gradient(90deg, ${COLORS.orange2}, ${COLORS.orange})`,
+                  background: `linear-gradient(90deg, ${theme.primary2}, ${theme.primary})`,
                   borderRight: totalPct > 0 && totalPct < 100 ? BORDER.sticker : 'none',
                 }}
               />
@@ -317,7 +319,7 @@ export default function VocabularyPage() {
                         transition={{ delay: 0.35 + index * 0.05, duration: 0.7, ease: 'easeOut' }}
                         style={{
                           height: '100%',
-                          background: progressPct === 100 ? COLORS.green : COLORS.orange,
+                          background: progressPct === 100 ? COLORS.green : theme.primary,
                         }}
                       />
                     </div>

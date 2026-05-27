@@ -9,13 +9,14 @@ import { useChaina } from '@/components/design'
 import {
   Sticker,
   Tag,
-  Cutting,
+  Mascot,
   DottedBg,
   Confetti as ChaiConfetti,
   COLORS,
   FONTS,
   BORDER,
   SHADOW,
+  useTheme,
 } from '@/components/design'
 
 const W = '#fff' // @design-allow: white literal
@@ -63,6 +64,7 @@ function buildDeck(verb: Verb, tense: Tense): DrillCard[] {
 export default function ConjugationDrillPage() {
   const router = useRouter()
   const { play } = useChaina()
+  const theme = useTheme()
   const [selectedVerb, setSelectedVerb] = useState<Verb | null>(null)
   const [selectedTense, setSelectedTense] = useState<Tense>('present')
   const [deck, setDeck] = useState<DrillCard[]>([])
@@ -178,7 +180,7 @@ export default function ConjugationDrillPage() {
               </svg>
             </button>
             <div style={{ marginRight: -6, marginTop: -6 }}>
-              <Cutting size={66} />
+              <Mascot size={66} />
             </div>
           </div>
           <div style={{ marginTop: 10, maxWidth: 480, margin: '10px auto 0' }}>
@@ -413,7 +415,7 @@ export default function ConjugationDrillPage() {
           transition={{ type: 'spring', stiffness: 220, damping: 14 }}
           style={{ animation: isGood ? 'happy-hop 1.4s ease-in-out infinite' : undefined }}
         >
-          <Cutting size={150} mood={isGood ? 'happy' : 'idle'} />
+          <Mascot size={150} mood={isGood ? 'happy' : 'idle'} />
         </motion.div>
         <div style={{ marginTop: 16, textAlign: 'center', position: 'relative', zIndex: 10 }}>
           <Tag>drill done</Tag>
@@ -467,7 +469,7 @@ export default function ConjugationDrillPage() {
               width: '100%',
               padding: 16,
               borderRadius: 22,
-              background: COLORS.orange,
+              background: theme.primary,
               color: W,
               border: BORDER.sticker,
               boxShadow: SHADOW.sticker,
@@ -582,7 +584,7 @@ export default function ConjugationDrillPage() {
             </svg>
           </button>
           <div style={{ marginRight: -6, marginTop: -6 }}>
-            <Cutting
+            <Mascot
               size={66}
               mood={chosen && chosen === card.correct ? 'happy' : 'idle'}
             />
@@ -627,7 +629,7 @@ export default function ConjugationDrillPage() {
               height: 8,
               flex: i === cardIdx ? 2 : 1,
               borderRadius: 99,
-              background: i < cardIdx ? COLORS.green : i === cardIdx ? COLORS.orange : W,
+              background: i < cardIdx ? COLORS.green : i === cardIdx ? theme.primary : W,
               border: BORDER.thin,
               transition: 'all 0.3s',
             }}
@@ -665,7 +667,7 @@ export default function ConjugationDrillPage() {
                   style={{
                     fontFamily: FONTS.tag,
                     fontSize: 10,
-                    background: COLORS.orange,
+                    background: theme.primary,
                     color: W,
                     padding: '3px 9px',
                     borderRadius: 99,

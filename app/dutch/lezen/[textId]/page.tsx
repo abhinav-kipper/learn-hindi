@@ -3,9 +3,9 @@
 import { useState, useEffect, use } from 'react'
 import { useRouter } from 'next/navigation'
 import {
-  Sticker, Tag, Cutting,
+  Sticker, Tag, Mascot,
   COLORS, FONTS, BORDER,
-  useChaina, canFire, markFired,
+  useChaina, canFire, markFired, useTheme,
 } from '@/components/design'
 import {
   getTextById,
@@ -25,6 +25,7 @@ export default function LezenStudyPage({ params }: { params: Promise<{ textId: s
   const [showEn, setShowEn] = useState(false)
   const [alreadyStudied, setAlreadyStudied] = useState(false)
   const { play } = useChaina()
+  const theme = useTheme()
 
   useEffect(() => { setAlreadyStudied(isStudied(textId)) }, [textId])
 
@@ -126,7 +127,7 @@ export default function LezenStudyPage({ params }: { params: Promise<{ textId: s
           disabled={alreadyStudied}
           style={{
             marginTop: 18,
-            background: alreadyStudied ? COLORS.mint : COLORS.orange,
+            background: alreadyStudied ? COLORS.mint : theme.primary,
             border: BORDER.sticker, padding: '12px 18px',
             borderRadius: 14, fontFamily: FONTS.display, fontWeight: 800, fontSize: 15,
             color: alreadyStudied ? COLORS.ink : W,

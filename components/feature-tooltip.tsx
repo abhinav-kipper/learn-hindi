@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { hasSeenTooltip, markTooltipShown } from '@/lib/onboarding'
-import { COLORS } from '@/components/design'
+import { COLORS, useTheme } from '@/components/design'
 const W = '#fff' // @design-allow: white literal
 
 interface FeatureTooltipProps {
@@ -14,6 +14,7 @@ interface FeatureTooltipProps {
 }
 
 export function FeatureTooltip({ id, message, position = 'bottom', children }: FeatureTooltipProps) {
+  const theme = useTheme()
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -109,7 +110,7 @@ export function FeatureTooltip({ id, message, position = 'bottom', children }: F
                     width: '100%',
                     padding: 10,
                     borderRadius: 99,
-                    background: COLORS.orange,
+                    background: theme.primary,
                     color: W,
                     border: `2.5px solid ${COLORS.ink}`,
                     boxShadow: `3px 3px 0 ${COLORS.ink}`,

@@ -15,12 +15,13 @@ import { useLanguage } from '@/lib/language-context'
 import { useChaina, canFire, markFired } from '@/components/design'
 import {
   Tag,
-  Cutting,
+  Mascot,
   DottedBg,
   COLORS,
   FONTS,
   BORDER,
   SHADOW,
+  useTheme,
 } from '@/components/design'
 const W = '#fff' // @design-allow: white literal
 
@@ -28,6 +29,7 @@ export default function QuizPage() {
   const router = useRouter()
   const { language, config } = useLanguage()
   const { play } = useChaina()
+  const theme = useTheme()
   const [questions, setQuestions] = useState<QuizQuestion[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [selectedAnswerId, setSelectedAnswerId] = useState<string | null>(null)
@@ -244,7 +246,7 @@ export default function QuizPage() {
             </svg>
           </button>
           <div style={{ marginRight: -6, marginTop: -6 }}>
-            <Cutting
+            <Mascot
               size={66}
               mood={showResult && results[results.length - 1]?.isCorrect ? 'happy' : 'idle'}
             />
@@ -301,7 +303,7 @@ export default function QuizPage() {
                       ? COLORS.green
                       : COLORS.red
                     : current
-                    ? COLORS.orange
+                    ? theme.primary
                     : W,
                   border: BORDER.thin,
                   transition: 'all 0.3s',
@@ -339,6 +341,7 @@ export default function QuizPage() {
 }
 
 function LockedScreen({ title, body, onGo }: { title: string; body: string; onGo: () => void }) {
+  const theme = useTheme()
   return (
     <div
       style={{
@@ -355,7 +358,7 @@ function LockedScreen({ title, body, onGo }: { title: string; body: string; onGo
       <DottedBg />
       <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', maxWidth: 320 }}>
         <div style={{ marginBottom: 12, display: 'flex', justifyContent: 'center' }}>
-          <Cutting size={120} />
+          <Mascot size={120} />
         </div>
         <Tag>locked</Tag>
         <div
@@ -389,7 +392,7 @@ function LockedScreen({ title, body, onGo }: { title: string; body: string; onGo
             marginTop: 20,
             padding: '14px 24px',
             borderRadius: 22,
-            background: COLORS.orange,
+            background: theme.primary,
             color: W,
             border: BORDER.sticker,
             boxShadow: SHADOW.sticker,

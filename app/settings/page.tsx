@@ -9,7 +9,7 @@ import { useLanguage } from '@/lib/language-context'
 import {
   Sticker,
   Tag,
-  Cutting,
+  Mascot,
   DottedBg,
   COLORS,
   FONTS,
@@ -198,7 +198,7 @@ export default function SettingsPage() {
             </div>
           </div>
           <div style={{ marginRight: -6, marginTop: -6 }}>
-            <Cutting size={62} />
+            <Mascot size={62} />
           </div>
         </div>
       </motion.div>

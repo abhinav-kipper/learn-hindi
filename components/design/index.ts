@@ -19,6 +19,10 @@ export type { Moment, MomentKey, MomentAnchor, BubbleTail, BubbleSide, Line } fr
 export { canFire, markFired } from './chainaFrequency'
 export type { FreqMode } from './chainaFrequency'
 export type { CuttingMood, CuttingProps } from './Cutting'
+export { Mascot } from './Mascot'
+export { MrStroopwafel } from './MrStroopwafel'
+export { useTheme } from './theme'
+export type { Theme, MascotProps, MascotMood } from './theme'
 
 export {
   COLORS,

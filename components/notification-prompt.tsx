@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { requestNotificationPermission, setNotificationPreference } from '@/lib/notifications'
 import { useLanguage } from '@/lib/language-context'
 import { playSound } from '@/lib/sounds'
-import { Tag, COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
+import { Tag, COLORS, FONTS, BORDER, SHADOW, useTheme } from '@/components/design'
 const W = '#fff' // @design-allow: white literal
 
 interface NotificationPromptProps {
@@ -15,6 +15,7 @@ interface NotificationPromptProps {
 
 export function NotificationPrompt({ show, onDismiss }: NotificationPromptProps) {
   const { config } = useLanguage()
+  const theme = useTheme()
   const [requesting, setRequesting] = useState(false)
 
   const handleEnable = async () => {
@@ -131,7 +132,7 @@ export function NotificationPrompt({ show, onDismiss }: NotificationPromptProps)
                   flex: 1,
                   padding: 10,
                   borderRadius: 99,
-                  background: COLORS.orange,
+                  background: theme.primary,
                   color: W,
                   border: BORDER.sticker,
                   boxShadow: SHADOW.chip,

@@ -5,7 +5,7 @@ import { QuizQuestion } from '@/types/quiz'
 import { speak } from '@/lib/speech'
 import { useLanguage } from '@/lib/language-context'
 import { playSound } from '@/lib/sounds'
-import { Sticker, Tag, COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
+import { Sticker, Tag, COLORS, FONTS, BORDER, SHADOW, useTheme } from '@/components/design'
 const W = '#fff' // @design-allow: white literal
 
 interface QuizCardProps {
@@ -36,6 +36,7 @@ export function QuizCard({
   total,
 }: QuizCardProps) {
   const { config } = useLanguage()
+  const theme = useTheme()
 
   const isHindiPrompt = question.type === 'translate-to-english'
 
@@ -60,7 +61,7 @@ export function QuizCard({
             style={{
               fontFamily: FONTS.tag,
               fontSize: 10,
-              background: COLORS.orange,
+              background: theme.primary,
               color: W,
               padding: '3px 9px',
               borderRadius: 99,

@@ -4,9 +4,9 @@ import { useState, useEffect, useMemo, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import {
-  Sticker, Tag, Cutting, Confetti,
+  Sticker, Tag, Mascot, Confetti,
   COLORS, FONTS, BORDER,
-  useChaina, canFire, markFired,
+  useChaina, canFire, markFired, useTheme,
 } from '@/components/design'
 import {
   drawMockSet,
@@ -29,6 +29,7 @@ const TOTAL_Q = MOCK_SIZE * QUESTIONS_PER_TEXT // 20
 
 export default function LezenMockPage() {
   const router = useRouter()
+  const theme = useTheme()
   const texts = useMemo<LezenText[]>(() => drawMockSet(), [])
   const [textIdx, setTextIdx] = useState(0)
   const [qIdx, setQIdx] = useState(0)
@@ -119,7 +120,7 @@ export default function LezenMockPage() {
         position: 'relative', overflow: 'hidden',
       }}>
         {result.passed && <Confetti active />}
-        <Cutting size={120} mood={result.passed ? 'happy' : 'idle'} />
+        <Mascot size={120} mood={result.passed ? 'happy' : 'idle'} />
         <h1 style={{
           fontFamily: FONTS.display, fontWeight: 800, fontSize: 32, color: COLORS.ink, margin: '16px 0 4px',
         }}>
@@ -139,7 +140,7 @@ export default function LezenMockPage() {
             : `Need ${Math.ceil(TOTAL_Q * PASS_THRESHOLD)} / ${TOTAL_Q} to pass`}
         </div>
         <div style={{ display: 'flex', gap: 12, marginTop: 28 }}>
-          <Sticker color={COLORS.orange} radius={16} padding={12} onClick={() => router.push('/dutch/lezen')}>
+          <Sticker color={theme.primary} radius={16} padding={12} onClick={() => router.push('/dutch/lezen')}>
             <div style={{ fontFamily: FONTS.display, fontWeight: 800, color: W, padding: '0 8px' }}>Back to Lezen</div>
           </Sticker>
           <Sticker color={COLORS.butter} radius={16} padding={12} onClick={() => location.reload()}>
@@ -185,7 +186,7 @@ export default function LezenMockPage() {
           <motion.div
             initial={false}
             animate={{ width: `${((flatIndex + (revealed ? 1 : 0)) / TOTAL_Q) * 100}%` }}
-            style={{ height: '100%', background: COLORS.orange }}
+            style={{ height: '100%', background: theme.primary }}
             transition={{ type: 'spring', stiffness: 220, damping: 24 }}
           />
         </div>

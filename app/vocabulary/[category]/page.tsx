@@ -38,6 +38,7 @@ import {
   FONTS,
   BORDER,
   SHADOW,
+  useTheme,
   type MotifKind,
 } from '@/components/design'
 const W = '#fff' // @design-allow: white literal
@@ -58,6 +59,7 @@ export default function CategoryPage() {
   const params = useParams()
   const router = useRouter()
   const { language, config } = useLanguage()
+  const theme = useTheme()
   const categoryId = params.category as string
 
   const [category, setCategory] = useState<VocabCategory | null>(null)
@@ -346,7 +348,7 @@ export default function CategoryPage() {
               letterSpacing: 0.2,
             }}
           >
-            🃏 <span style={{ color: COLORS.orange }}>{freshCount}</span> fresh
+            🃏 <span style={{ color: theme.primary }}>{freshCount}</span> fresh
             <span style={{ color: COLORS.ink45, marginInline: 4 }}>·</span>
             <span style={{ color: COLORS.green }}>{archivedCount}</span> archived
           </div>
@@ -379,7 +381,7 @@ export default function CategoryPage() {
               transition={{ delay: 0.25, duration: 0.8, ease: 'easeOut' }}
               style={{
                 height: '100%',
-                background: learnedPct === 100 ? COLORS.green : COLORS.orange,
+                background: learnedPct === 100 ? COLORS.green : theme.primary,
               }}
             />
           </div>
@@ -468,7 +470,7 @@ export default function CategoryPage() {
                   }}
                   style={{
                     padding: '10px 16px',
-                    background: COLORS.orange,
+                    background: theme.primary,
                     color: W,
                     border: BORDER.sticker,
                     boxShadow: SHADOW.chip,
@@ -627,6 +629,7 @@ function SwipeableWordCard({
   onSwipeLeft: (word: VocabWord) => void
   ttsLocale: string
 }) {
+  const theme = useTheme()
   const x = useMotionValue(0)
   const rightOpacity = useTransform(x, [0, 100], [0, 1])
   const leftOpacity = useTransform(x, [-100, 0], [1, 0])
@@ -765,7 +768,7 @@ function SwipeableWordCard({
                       width: 28,
                       height: 28,
                       borderRadius: 99,
-                      background: speaking ? COLORS.orange : W,
+                      background: speaking ? theme.primary : W,
                       color: speaking ? W : COLORS.ink,
                       border: BORDER.thin,
                       cursor: 'pointer',

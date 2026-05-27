@@ -5,10 +5,11 @@ import { useRouter } from 'next/navigation'
 import {
   Sticker,
   Tag,
-  Cutting,
+  Mascot,
   COLORS,
   FONTS,
   BORDER,
+  useTheme,
 } from '@/components/design'
 import {
   getKnmQuestions,
@@ -37,6 +38,7 @@ const CATEGORIES: Array<{ key: Category; en: string; nl: string; motif: string }
 
 export default function KnmModulePage() {
   const router = useRouter()
+  const theme = useTheme()
   const [activeCategory, setActiveCategory] = useState<Category | null>(null)
   const [learnedCount, setLearnedCount] = useState(0)
   const [attempts, setAttempts] = useState<ReturnType<typeof getAttemptHistory>>([])
@@ -80,9 +82,9 @@ export default function KnmModulePage() {
           </p>
         </div>
 
-        <Sticker color={COLORS.orange} radius={22} padding={16} onClick={onStartDrill} style={{ marginBottom: 22 }}>
+        <Sticker color={theme.primary} radius={22} padding={16} onClick={onStartDrill} style={{ marginBottom: 22 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-            <Cutting size={56} mood="happy" />
+            <Mascot size={56} mood="happy" />
             <div style={{ flex: 1 }}>
               <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 18, color: W }}>
                 Start drill (30 questions)

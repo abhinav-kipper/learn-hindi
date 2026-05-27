@@ -19,12 +19,13 @@ import type { Lesson } from '@/types/lesson'
 import {
   Sticker,
   Tag,
-  Cutting,
+  Mascot,
   DottedBg,
   COLORS,
   FONTS,
   BORDER,
   SHADOW,
+  useTheme,
 } from '@/components/design'
 const W = '#fff' // @design-allow: white literal
 
@@ -50,6 +51,7 @@ type LessonTab = 'situations' | 'foundations'
 export default function ProgressPage() {
   const router = useRouter()
   const { language, config } = useLanguage()
+  const theme = useTheme()
   const [stats, setStats] = useState<Stats | null>(null)
   const [activities, setActivities] = useState<ActivityItem[]>([])
   const [streakDays, setStreakDays] = useState<Array<'active' | 'pending' | 'inactive'>>([])
@@ -251,7 +253,7 @@ export default function ProgressPage() {
                 <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
               </svg>
             </button>
-            <Cutting size={62} />
+            <Mascot size={62} />
           </div>
         </div>
       </motion.div>
@@ -274,13 +276,13 @@ export default function ProgressPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, type: 'spring', stiffness: 240, damping: 22 }}
         >
-          <Sticker color={COLORS.orange2} radius={26} padding={20}>
+          <Sticker color={theme.primary2} radius={26} padding={20}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
               <div
                 style={{
                   width: 80,
                   height: 80,
-                  background: COLORS.orange,
+                  background: theme.primary,
                   borderRadius: 18,
                   border: BORDER.sticker,
                   boxShadow: SHADOW.chip,
@@ -340,7 +342,7 @@ export default function ProgressPage() {
                     height: 32,
                     borderRadius: 99,
                     background:
-                      state === 'active' ? COLORS.orange : state === 'pending' ? W : W,
+                      state === 'active' ? theme.primary : state === 'pending' ? W : W,
                     border:
                       state === 'pending'
                         ? `2.5px dashed ${COLORS.ink}`
@@ -807,9 +809,10 @@ function LessonGroup({
 }
 
 function LessonRow({ title, pct }: { title: string; pct: number }) {
+  const theme = useTheme()
   const notStarted = pct === 0
   const done = pct === 100
-  const barColor = done ? COLORS.green : pct > 0 ? COLORS.orange : 'transparent'
+  const barColor = done ? COLORS.green : pct > 0 ? theme.primary : 'transparent'
   return (
     <div>
       <div

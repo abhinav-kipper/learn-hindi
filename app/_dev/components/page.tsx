@@ -7,6 +7,7 @@ import {
   Tag,
   HeaderBand,
   Cutting,
+  MrStroopwafel,
   MotifIcon,
   MarigoldStrip,
   StreakChip,
@@ -166,6 +167,21 @@ export default function GalleryPage() {
           </div>
           <div style={{ marginTop: 12 }}>
             <Cutting size={170} mood="happy" blink={false} />
+            <div style={{ fontFamily: FONTS.tag, fontSize: 10, color: COLORS.ink60, textAlign: 'center' }}>HAPPY @ 170 (celebration scale)</div>
+          </div>
+        </Section>
+
+        <Section id="stroopwafel" title="Mr. Stroopwafels (Dutch mascot, all 7 moods)">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8 }}>
+            {MOODS.map((mood) => (
+              <div key={mood} style={{ textAlign: 'center', fontFamily: FONTS.tag, fontSize: 10, color: COLORS.ink60 }}>
+                <MrStroopwafel size={68} mood={mood} />
+                <div style={{ marginTop: 4 }}>{mood.toUpperCase()}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ marginTop: 12 }}>
+            <MrStroopwafel size={170} mood="happy" />
             <div style={{ fontFamily: FONTS.tag, fontSize: 10, color: COLORS.ink60, textAlign: 'center' }}>HAPPY @ 170 (celebration scale)</div>
           </div>
         </Section>

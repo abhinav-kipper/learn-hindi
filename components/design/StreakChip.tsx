@@ -1,6 +1,7 @@
 "use client";
 
 import { COLORS, FONTS } from "./tokens";
+import { useTheme } from "./theme";
 
 type StreakChipProps = {
   count: number;
@@ -14,6 +15,7 @@ type StreakChipProps = {
  * `streak()` sound from lib/sounds.ts for tactile feedback.
  */
 export function StreakChip({ count, onClick }: StreakChipProps) {
+  const theme = useTheme()
   return (
     <button
       onClick={onClick}
@@ -21,7 +23,7 @@ export function StreakChip({ count, onClick }: StreakChipProps) {
         display: "inline-flex",
         alignItems: "center",
         gap: 5,
-        background: COLORS.orange2,
+        background: theme.primary2,
         border: `2.5px solid ${COLORS.ink}`,
         borderRadius: 99,
         padding: "5px 12px 5px 8px",

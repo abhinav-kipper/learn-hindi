@@ -31,7 +31,7 @@ const W = '#fff' // @design-allow: white literal
 import {
   Sticker,
   Tag,
-  Cutting,
+  Mascot,
   MotifIcon,
   MarigoldStrip,
   StreakChip,
@@ -42,6 +42,7 @@ import {
   BORDER,
   SHADOW,
   useChaina,
+  useTheme,
   canFire,
   markFired,
 } from '@/components/design'
@@ -52,6 +53,7 @@ export default function Home() {
   const router = useRouter()
   const { language, config } = useLanguage()
   const { play } = useChaina()
+  const theme = useTheme()
   const [ready, setReady] = useState(false)
   const [userName, setUserName] = useState('')
   const [dailyGoal, setDailyGoal] = useState(5)
@@ -344,7 +346,7 @@ export default function Home() {
                 style={{ background: 'transparent', border: 0, padding: 0, cursor: 'pointer' }}
                 aria-label="Chaina says hi"
               >
-                <Cutting size={92} />
+                <Mascot size={92} />
               </button>
             </div>
           </div>
@@ -498,7 +500,7 @@ export default function Home() {
                   color: COLORS.ink,
                 }}
               >
-                <span style={{ color: COLORS.orange }}>{todayMinutes}</span> / {dailyGoal} min
+                <span style={{ color: theme.primary }}>{todayMinutes}</span> / {dailyGoal} min
               </div>
             </div>
             <div
@@ -519,7 +521,7 @@ export default function Home() {
                   height: '100%',
                   background: goalHit
                     ? `linear-gradient(90deg, ${COLORS.green}, #2f8a55)` // @design-allow: dark green gradient stop, not a system token
-                    : `linear-gradient(90deg, ${COLORS.orange2}, ${COLORS.orange})`,
+                    : `linear-gradient(90deg, ${theme.primary2}, ${theme.primary})`,
                   borderRight: goalPct > 0 && goalPct < 100 ? BORDER.sticker : 'none',
                 }}
               />
@@ -669,7 +671,7 @@ export default function Home() {
                         <motion.div
                           initial={{ width: 0 }}
                           animate={{ width: `${pct}%` }}
-                          style={{ height: '100%', background: COLORS.orange }}
+                          style={{ height: '100%', background: theme.primary }}
                           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 + i * 0.1 }}
                         />
                       </div>
