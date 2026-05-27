@@ -155,6 +155,7 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
           playSound('swipe')
           setShowPhrases(true)
         }}
+        onGoToPractice={() => router.push(`/practice/${lesson.id}`)}
       />
     )
   }

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Sticker,
@@ -28,17 +28,25 @@ type Props = {
   theory: Theory
   title: string
   onStartPhrases: () => void
+  onGoToPractice?: () => void
 }
 
 type CuttingMood = 'idle' | 'happy' | 'wave' | 'excited' | 'wink'
 
 const SECTION_MOODS: CuttingMood[] = ['happy', 'idle', 'happy', 'wink', 'happy']
 
-export function TheoryView({ theory, title, onStartPhrases }: Props) {
+export function TheoryView({ theory, title, onStartPhrases, onGoToPractice }: Props) {
   const totalPages = theory.sections.length + 2 // intro + sections + wrap-up
   const [page, setPage] = useState(0)
   const [direction, setDirection] = useState<1 | -1>(1)
   const [passed, setPassed] = useState<Record<number, boolean>>({})
+
+  // Scroll to the top of the next page on transition — quick-checks sit at the
+  // bottom of section pages, so the user would otherwise land mid-page.
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [page])
 
   const sectionIdx = page - 1 // section index when page is a section page
   const isIntro = page === 0
@@ -147,6 +155,14 @@ export function TheoryView({ theory, title, onStartPhrases }: Props) {
                   playSound('levelup')
                   onStartPhrases()
                 }}
+                onGoToPractice={
+                  onGoToPractice
+                    ? () => {
+                        playSound('levelup')
+                        onGoToPractice()
+                      }
+                    : undefined
+                }
               />
             )}
           </motion.div>
@@ -338,15 +354,17 @@ function SectionPage({
 function WrapUpPage({
   wrapUp,
   onStartPhrases,
+  onGoToPractice,
 }: {
   wrapUp?: string
   onStartPhrases: () => void
+  onGoToPractice?: () => void
 }) {
   return (
     <div>
       <CuttingSpeech
         mood="excited"
-        text="You made it through the chapter! Now let's put it into practice with the phrases."
+        text="You made it through the chapter! Pick how you want to practice — drill phrases for vocab, or chat with me for live practice."
       />
       {wrapUp && (
         <div style={{ marginTop: 18 }}>
@@ -389,8 +407,33 @@ function WrapUpPage({
           textTransform: 'lowercase',
         }}
       >
-        got it — try the phrases →
+        try the phrases →
       </motion.button>
+      {onGoToPractice && (
+        <motion.button
+          onClick={onGoToPractice}
+          whileTap={{ scale: 0.97 }}
+          aria-label="Go to AI practice"
+          style={{
+            width: '100%',
+            marginTop: 10,
+            padding: '16px',
+            borderRadius: 22,
+            background: COLORS.mint2,
+            color: COLORS.ink,
+            border: BORDER.sticker,
+            boxShadow: SHADOW.chip,
+            fontFamily: FONTS.display,
+            fontWeight: 800,
+            fontSize: 15,
+            cursor: 'pointer',
+            letterSpacing: 0.2,
+            textTransform: 'lowercase',
+          }}
+        >
+          or — chat with me to practice 💬
+        </motion.button>
+      )}
     </div>
   )
 }
