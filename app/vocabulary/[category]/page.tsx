@@ -463,10 +463,12 @@ function SwipeableWordCard({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: Math.min(index * 0.025, 0.3) }}
-      style={{ position: 'relative' }}
+      exit={{ opacity: 0, height: 0, marginTop: 0, marginBottom: 0, transition: { duration: 0.22 } }}
+      transition={{ delay: Math.min(index * 0.02, 0.18), type: 'spring', stiffness: 380, damping: 28 }}
+      style={{ position: 'relative', overflow: 'hidden' }}
+      layout
     >
       {/* Swipe-indicator overlays (behind the card) */}
       <motion.div
