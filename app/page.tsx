@@ -1,15 +1,15 @@
 'use client'
 
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { getAllLessons } from '@/lib/lessons'
 import { getAllFoundations } from '@/lib/foundations'
 import { getDutchLessons } from '@/lib/dutch/lessons'
 import { getDutchFoundations } from '@/lib/dutch/foundations'
 import { getProgress, getTodayActiveMinutes, isLessonComplete } from '@/lib/progress'
 import { FeatureTooltip } from '@/components/feature-tooltip'
-import { isOnboardingComplete, getUserProfile } from '@/lib/onboarding'
+import { isOnboardingComplete, getUserProfile, saveUserProfile } from '@/lib/onboarding'
 import { playSound, isMuted, toggleMute } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
 import { DutchWelcomeModal } from '@/components/dutch-welcome-modal'
@@ -61,6 +61,8 @@ export default function Home() {
   const [streak, setStreak] = useState(0)
   const [muted, setMuted] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
+  const [goalSheetOpen, setGoalSheetOpen] = useState(false)
+  const longPressTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const tabStorageKey = `${config.storagePrefix}-home-tab`
   const [activeTab, setActiveTab] = useState<Tab>('situations')
   const [continueInfo, setContinueInfo] = useState<{
@@ -271,6 +273,20 @@ export default function Home() {
     <>
       {language === 'dutch' && <DutchWelcomeModal />}
       <SearchOverlay open={searchOpen} onClose={handleCloseSearch} />
+      <GoalQuickEditSheet
+        open={goalSheetOpen}
+        currentGoal={dailyGoal}
+        onClose={() => setGoalSheetOpen(false)}
+        onChange={(g) => {
+          setDailyGoal(g)
+          saveUserProfile({ dailyGoal: g })
+          playSound('pop')
+        }}
+        onOpenSettings={() => {
+          setGoalSheetOpen(false)
+          router.push('/settings')
+        }}
+      />
 
       <div style={{ position: 'relative', minHeight: '100dvh', background: COLORS.lav }}>
         <DottedBg />
@@ -424,8 +440,36 @@ export default function Home() {
             <StreakChip count={streak} onClick={() => playSound('streak')} />
           </div>
 
-          {/* daily goal — pill bar */}
-          <div style={{ marginTop: 14, maxWidth: 480, marginLeft: 'auto', marginRight: 'auto' }}>
+          {/* daily goal — pill bar (long-press to edit) */}
+          <div
+            style={{ marginTop: 14, maxWidth: 480, marginLeft: 'auto', marginRight: 'auto', userSelect: 'none', WebkitUserSelect: 'none', touchAction: 'manipulation' }}
+            onPointerDown={() => {
+              if (longPressTimer.current) clearTimeout(longPressTimer.current)
+              longPressTimer.current = setTimeout(() => {
+                playSound('pop')
+                if (typeof navigator !== 'undefined' && 'vibrate' in navigator) {
+                  try { navigator.vibrate(15) } catch {}
+                }
+                setGoalSheetOpen(true)
+              }, 500)
+            }}
+            onPointerUp={() => {
+              if (longPressTimer.current) {
+                clearTimeout(longPressTimer.current)
+                longPressTimer.current = null
+              }
+            }}
+            onPointerLeave={() => {
+              if (longPressTimer.current) {
+                clearTimeout(longPressTimer.current)
+                longPressTimer.current = null
+              }
+            }}
+            onContextMenu={(e) => e.preventDefault()}
+            role="button"
+            tabIndex={0}
+            aria-label="Daily goal — hold to edit"
+          >
             <div
               style={{
                 display: 'flex',
@@ -906,6 +950,179 @@ export default function Home() {
         </div>
       </div>
     </>
+  )
+}
+
+function GoalQuickEditSheet({
+  open,
+  currentGoal,
+  onClose,
+  onChange,
+  onOpenSettings,
+}: {
+  open: boolean
+  currentGoal: number
+  onClose: () => void
+  onChange: (g: number) => void
+  onOpenSettings: () => void
+}) {
+  useEffect(() => {
+    if (!open) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose()
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [open, onClose])
+
+  return (
+    <AnimatePresence>
+      {open && (
+        <>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={onClose}
+            style={{
+              position: 'fixed',
+              inset: 0,
+              background: 'rgba(54, 40, 30, 0.45)', // @design-allow: scrim
+              zIndex: 50,
+            }}
+          />
+          <motion.div
+            initial={{ y: '100%' }}
+            animate={{ y: 0 }}
+            exit={{ y: '100%' }}
+            transition={{ type: 'spring', stiffness: 320, damping: 32 }}
+            style={{
+              position: 'fixed',
+              bottom: 0,
+              left: 0,
+              right: 0,
+              zIndex: 51,
+              background: COLORS.butter,
+              borderTopLeftRadius: 36,
+              borderTopRightRadius: 36,
+              borderTop: BORDER.sticker,
+              borderLeft: BORDER.sticker,
+              borderRight: BORDER.sticker,
+              boxShadow: SHADOW.sheet,
+              padding: '14px 20px calc(28px + env(safe-area-inset-bottom, 0px))',
+              maxWidth: 480,
+              margin: '0 auto',
+            }}
+          >
+            <div
+              style={{
+                width: 56,
+                height: 5,
+                borderRadius: 99,
+                background: COLORS.ink,
+                opacity: 0.25,
+                margin: '0 auto 14px',
+              }}
+            />
+            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 4 }}>
+              <div
+                style={{
+                  fontFamily: FONTS.display,
+                  fontWeight: 800,
+                  fontSize: 20,
+                  color: COLORS.ink,
+                  letterSpacing: -0.4,
+                }}
+              >
+                edit daily goal
+              </div>
+              <div
+                style={{
+                  fontFamily: FONTS.body,
+                  fontWeight: 700,
+                  fontSize: 12,
+                  color: COLORS.ink60,
+                }}
+              >
+                now: {currentGoal} min
+              </div>
+            </div>
+            <div
+              style={{
+                fontFamily: FONTS.body,
+                fontWeight: 700,
+                fontSize: 13,
+                color: COLORS.ink60,
+                marginBottom: 14,
+              }}
+            >
+              pick a quick preset
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8 }}>
+              {[5, 10, 15].map((g) => (
+                <Sticker
+                  key={g}
+                  color={currentGoal === g ? COLORS.mint : W}
+                  radius={16}
+                  padding={14}
+                  selected={currentGoal === g}
+                  onClick={() => {
+                    onChange(g)
+                    onClose()
+                  }}
+                >
+                  <div style={{ textAlign: 'center' }}>
+                    <div
+                      style={{
+                        fontFamily: FONTS.display,
+                        fontWeight: 800,
+                        fontSize: 24,
+                        color: COLORS.ink,
+                        lineHeight: 1,
+                      }}
+                    >
+                      {g}
+                    </div>
+                    <div
+                      style={{
+                        fontFamily: FONTS.body,
+                        fontWeight: 700,
+                        fontSize: 11,
+                        color: COLORS.ink60,
+                        marginTop: 4,
+                      }}
+                    >
+                      min
+                    </div>
+                  </div>
+                </Sticker>
+              ))}
+            </div>
+            <button
+              type="button"
+              onClick={onOpenSettings}
+              style={{
+                marginTop: 14,
+                width: '100%',
+                padding: '12px 18px',
+                background: W,
+                color: COLORS.ink,
+                border: BORDER.sticker,
+                boxShadow: SHADOW.chip,
+                borderRadius: 99,
+                fontFamily: FONTS.display,
+                fontWeight: 800,
+                fontSize: 14,
+                cursor: 'pointer',
+                textTransform: 'lowercase',
+              }}
+            >
+              more settings →
+            </button>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
   )
 }
 
