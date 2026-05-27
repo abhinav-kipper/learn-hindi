@@ -18,7 +18,7 @@ import { useChaina } from '@/components/design'
 import {
   Sticker,
   Tag,
-  Cutting,
+  Mascot,
   DottedBg,
   MotifIcon,
   COLORS,
@@ -28,6 +28,7 @@ import {
   deriveLessonStyle,
   paletteToBg,
   paletteToMotifBg,
+  useTheme,
 } from '@/components/design'
 const W = '#fff' // @design-allow: white literal
 const STRIKETHROUGH_RED = '#cc4a4a' // @design-allow: strikethrough mistake red, not a system token
@@ -43,6 +44,7 @@ function SourceChip({ source }: { source: MistakeSource }) {
 
 export default function MistakesPage() {
   const router = useRouter()
+  const theme = useTheme()
   const { config } = useLanguage()
   const prefix = config.storagePrefix
   const [mistakes, setMistakes] = useState<Mistake[]>([])
@@ -141,7 +143,7 @@ export default function MistakesPage() {
             </svg>
           </button>
           <div style={{ marginRight: -6, marginTop: -6 }}>
-            <Cutting size={66} />
+            <Mascot size={66} />
           </div>
         </div>
 
@@ -186,7 +188,7 @@ export default function MistakesPage() {
             transition={{ delay: 0.1, type: 'spring', stiffness: 240, damping: 22 }}
           >
             <Sticker
-              color={COLORS.orange}
+              color={theme.primary}
               radius={22}
               padding={16}
               onClick={() => {
@@ -242,7 +244,7 @@ export default function MistakesPage() {
             style={{ textAlign: 'center', padding: '32px 16px' }}
           >
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 12 }}>
-              <Cutting size={110} mood="happy" />
+              <Mascot size={110} mood="happy" />
             </div>
             <Tag>spotless</Tag>
             <div
@@ -554,6 +556,7 @@ export default function MistakesPage() {
 }
 
 function DrillOverlay({ mistakes, onClose }: { mistakes: Mistake[]; onClose: () => void }) {
+  const theme = useTheme()
   const { config } = useLanguage()
   const [order] = useState(() => [...mistakes].sort(() => Math.random() - 0.5))
   const [index, setIndex] = useState(0)
@@ -643,7 +646,7 @@ function DrillOverlay({ mistakes, onClose }: { mistakes: Mistake[]; onClose: () 
             >
               <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 8 }}>
                 <div style={{ animation: 'happy-hop 1.4s ease-in-out infinite' }}>
-                  <Cutting size={90} mood="happy" />
+                  <Mascot size={90} mood="happy" />
                 </div>
               </div>
               <Tag>drill complete</Tag>
@@ -667,7 +670,7 @@ function DrillOverlay({ mistakes, onClose }: { mistakes: Mistake[]; onClose: () 
                   width: '100%',
                   padding: 14,
                   borderRadius: 22,
-                  background: COLORS.orange,
+                  background: theme.primary,
                   color: W,
                   border: BORDER.sticker,
                   boxShadow: SHADOW.sticker,
@@ -691,7 +694,7 @@ function DrillOverlay({ mistakes, onClose }: { mistakes: Mistake[]; onClose: () 
                   marginBottom: 12,
                 }}
               >
-                <Tag bg={COLORS.orange} color={W} border={COLORS.ink}>
+                <Tag bg={theme.primary} color={W} border={COLORS.ink}>
                   drill · {index + 1} / {order.length}
                 </Tag>
                 <button
@@ -733,7 +736,7 @@ function DrillOverlay({ mistakes, onClose }: { mistakes: Mistake[]; onClose: () 
                     style={{
                       flex: i === index ? 2 : 1,
                       height: 6,
-                      background: i < index ? COLORS.green : i === index ? COLORS.orange : W,
+                      background: i < index ? COLORS.green : i === index ? theme.primary : W,
                       borderRadius: 99,
                       border: BORDER.thin,
                       transition: 'all 0.3s',
