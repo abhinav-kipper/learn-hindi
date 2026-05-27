@@ -18,18 +18,34 @@ export interface MascotProps {
 export interface Theme {
   primary: string
   primary2: string
+  /** Top color of the home header band gradient. */
+  bandFrom: string
+  /** Bottom color of the home header band gradient. */
+  bandTo: string
   Mascot: ComponentType<MascotProps>
 }
 
 /**
  * Resolve the active visual theme from the current language.
- * Hindi → Holi pink + Cutting (chai-cup mascot).
- * Dutch → orange (national color) + Mr. Stroopwafels (waffle-cookie mascot).
+ * Hindi → Holi pink + Cutting (chai-cup mascot) + soft rose-cream home band.
+ * Dutch → orange (national color) + Mr. Stroopwafels (waffle-cookie mascot) + peach home band.
  */
 export function useTheme(): Theme {
   const { language } = useLanguage()
   if (language === 'dutch') {
-    return { primary: COLORS.orange, primary2: COLORS.orange2, Mascot: MrStroopwafel }
+    return {
+      primary: COLORS.orange,
+      primary2: COLORS.orange2,
+      bandFrom: COLORS.peach,
+      bandTo: COLORS.peach2,
+      Mascot: MrStroopwafel,
+    }
   }
-  return { primary: COLORS.pink, primary2: COLORS.pink2, Mascot: Cutting }
+  return {
+    primary: COLORS.pink,
+    primary2: COLORS.pink2,
+    bandFrom: COLORS.rose,
+    bandTo: COLORS.cream,
+    Mascot: Cutting,
+  }
 }

@@ -301,7 +301,7 @@ export default function Home() {
           style={{
             position: 'relative',
             padding: '52px 20px 16px',
-            background: `linear-gradient(180deg, ${COLORS.peach} 0%, ${COLORS.peach2} 100%)`,
+            background: `linear-gradient(180deg, ${theme.bandFrom} 0%, ${theme.bandTo} 100%)`,
             borderBottomLeftRadius: 36,
             borderBottomRightRadius: 36,
             borderBottom: BORDER.sticker,
