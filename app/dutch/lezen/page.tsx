@@ -5,10 +5,11 @@ import { useRouter } from 'next/navigation'
 import {
   Sticker,
   Tag,
-  Cutting,
+  Mascot,
   COLORS,
   FONTS,
   BORDER,
+  useTheme,
 } from '@/components/design'
 import {
   getLezenTexts,
@@ -33,6 +34,7 @@ const TIERS: Array<{ key: Tier; label: string; subtitle: string; color: string }
 
 export default function LezenModulePage() {
   const router = useRouter()
+  const theme = useTheme()
   const [studiedCount, setStudiedCount] = useState(0)
   const [attempts, setAttempts] = useState<ReturnType<typeof getMockHistory>>([])
   const [openTiers, setOpenTiers] = useState<Set<Tier>>(new Set<Tier>(['A1']))
@@ -86,9 +88,9 @@ export default function LezenModulePage() {
           </p>
         </div>
 
-        <Sticker color={COLORS.orange} radius={22} padding={16} onClick={onStartMock} style={{ marginBottom: 22 }}>
+        <Sticker color={theme.primary} radius={22} padding={16} onClick={onStartMock} style={{ marginBottom: 22 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-            <Cutting size={56} mood="happy" />
+            <Mascot size={56} mood="happy" />
             <div style={{ flex: 1 }}>
               <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 18, color: W }}>
                 Start timed mock
