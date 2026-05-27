@@ -21,7 +21,7 @@ import { setLastActiveLesson, clearLastActiveLesson } from '@/lib/last-active-le
 import {
   Sticker,
   Tag,
-  Cutting,
+  Mascot,
   DottedBg,
   MotifIcon,
   Confetti as ChaiConfetti,
@@ -31,6 +31,7 @@ import {
   FONTS,
   BORDER,
   SHADOW,
+  useTheme,
 } from '@/components/design'
 import { useChaina, canFire, markFired } from '@/components/design'
 const W = '#fff' // @design-allow: white literal
@@ -192,6 +193,7 @@ export default function PracticePage({ params }: PracticePageProps) {
   const router = useRouter()
   const { language, config } = useLanguage()
   const { play } = useChaina()
+  const theme = useTheme()
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const voiceRef = useRef<VoiceButtonHandle>(null)
   const spokenIdsRef = useRef<Set<string>>(new Set())
@@ -425,7 +427,7 @@ export default function PracticePage({ params }: PracticePageProps) {
             </svg>
           </button>
           <div style={{ marginRight: -6, marginTop: -6 }}>
-            <Cutting size={66} mood="happy" />
+            <Mascot size={66} mood="happy" />
           </div>
         </div>
 
@@ -793,7 +795,7 @@ export default function PracticePage({ params }: PracticePageProps) {
                 <ChaiConfetti active count={28} />
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 8 }}>
                   <div style={{ animation: 'happy-hop 1.4s ease-in-out infinite' }}>
-                    <Cutting size={100} mood="happy" />
+                    <Mascot size={100} mood="happy" />
                   </div>
                 </div>
                 <Tag>session complete</Tag>
@@ -843,7 +845,7 @@ export default function PracticePage({ params }: PracticePageProps) {
                       width: '100%',
                       padding: 14,
                       borderRadius: 22,
-                      background: COLORS.orange,
+                      background: theme.primary,
                       color: W,
                       border: BORDER.sticker,
                       fontFamily: FONTS.display,

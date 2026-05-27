@@ -7,7 +7,8 @@ import confetti from 'canvas-confetti'
 import type { Lesson, Phrase } from '@/types/lesson'
 import { Sticker } from './Sticker'
 import { Tag } from './Tag'
-import { Cutting } from './Cutting'
+import { Mascot } from './Mascot'
+import { useTheme } from './theme'
 import { DottedBg } from './DottedBg'
 import { Confetti as ChaiConfetti } from './Confetti'
 import { COLORS, FONTS, BORDER, SHADOW, paletteToBg, deriveLessonStyle } from './tokens'
@@ -34,6 +35,7 @@ interface Props {
 
 export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: Props) {
   const router = useRouter()
+  const theme = useTheme()
   const { config } = useLanguage()
 
   const resume = useMemo(() => computeLessonResume(lesson, config.storagePrefix), [lesson, config.storagePrefix])
@@ -251,7 +253,7 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
             )}
           </div>
           <div style={{ marginRight: -6, marginTop: -6 }}>
-            <Cutting size={74} />
+            <Mascot size={74} />
           </div>
         </div>
         <div style={{ marginTop: 10, maxWidth: 480, margin: '10px auto 0' }}>
@@ -312,7 +314,7 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
               height: 8,
               flex: i === idx ? 2 : 1,
               borderRadius: 99,
-              background: i < idx ? COLORS.green : i === idx ? COLORS.orange : W,
+              background: i < idx ? COLORS.green : i === idx ? theme.primary : W,
               border: BORDER.thin,
               transition: 'all 0.3s',
             }}
@@ -493,6 +495,7 @@ function PhraseSticker({
 }) {
   const { config } = useLanguage()
   const { play } = useChaina()
+  const theme = useTheme()
   const [starred, setStarred] = useState(false)
   const [speaking, setSpeaking] = useState(false)
 
@@ -537,7 +540,7 @@ function PhraseSticker({
           style={{
             fontFamily: FONTS.tag,
             fontSize: 10,
-            background: COLORS.orange,
+            background: theme.primary,
             color: W,
             padding: '3px 9px',
             borderRadius: 99,
@@ -682,7 +685,7 @@ function PhraseSticker({
             flex: 1,
             padding: '12px 14px',
             borderRadius: 99,
-            background: COLORS.orange,
+            background: theme.primary,
             color: W,
             border: BORDER.sticker,
             fontFamily: FONTS.display,
@@ -716,6 +719,7 @@ function LessonCelebration({
   onPractice: () => void
   onHome: () => void
 }) {
+  const theme = useTheme()
   return (
     <div
       style={{
@@ -762,7 +766,7 @@ function LessonCelebration({
           marginTop: 16,
         }}
       >
-        <Cutting size={170} mood="happy" />
+        <Mascot size={170} mood="happy" />
       </div>
 
       <div style={{ marginTop: 18, textAlign: 'center', maxWidth: 480, position: 'relative', zIndex: 10 }}>
@@ -829,7 +833,7 @@ function LessonCelebration({
             width: '100%',
             padding: 18,
             borderRadius: 22,
-            background: COLORS.orange,
+            background: theme.primary,
             color: W,
             border: BORDER.sticker,
             fontFamily: FONTS.display,
