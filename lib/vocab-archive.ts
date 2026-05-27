@@ -40,3 +40,21 @@ export function removeArchived(prefix: string, hindi: string): void {
 export function isArchived(prefix: string, hindi: string): boolean {
   return read(prefix).includes(hindi)
 }
+
+const LEGACY_KNOWN_KEY = 'vocab-known'
+
+export function migrateLegacyKnown(prefix: string): void {
+  if (typeof window === 'undefined') return
+  const raw = localStorage.getItem(LEGACY_KNOWN_KEY)
+  if (raw === null) return
+  let legacy: string[] = []
+  try {
+    const parsed = JSON.parse(raw)
+    legacy = Array.isArray(parsed) ? (parsed as string[]) : []
+  } catch {
+    return
+  }
+  for (const word of legacy) {
+    addArchived(prefix, word)
+  }
+}

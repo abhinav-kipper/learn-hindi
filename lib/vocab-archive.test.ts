@@ -64,3 +64,50 @@ describe('vocab-archive', () => {
     expect(getArchived('hindi')).toEqual([])
   })
 })
+
+import { migrateLegacyKnown } from './vocab-archive'
+
+describe('vocab-archive: legacy migration', () => {
+  beforeEach(() => {
+    localStorage.clear()
+  })
+
+  it('copies legacy vocab-known entries into per-language archived', () => {
+    localStorage.setItem('vocab-known', JSON.stringify(['namaste', 'chai']))
+    migrateLegacyKnown('hindi')
+    expect(getArchived('hindi').sort()).toEqual(['chai', 'namaste'])
+  })
+
+  it('preserves words that were already archived', () => {
+    addArchived('hindi', 'pre-existing')
+    localStorage.setItem('vocab-known', JSON.stringify(['namaste']))
+    migrateLegacyKnown('hindi')
+    expect(getArchived('hindi').sort()).toEqual(['namaste', 'pre-existing'])
+  })
+
+  it('does not wipe the legacy vocab-known key', () => {
+    localStorage.setItem('vocab-known', JSON.stringify(['namaste']))
+    migrateLegacyKnown('hindi')
+    expect(JSON.parse(localStorage.getItem('vocab-known') ?? '[]')).toEqual([
+      'namaste',
+    ])
+  })
+
+  it('is idempotent — running twice does not duplicate', () => {
+    localStorage.setItem('vocab-known', JSON.stringify(['namaste']))
+    migrateLegacyKnown('hindi')
+    migrateLegacyKnown('hindi')
+    expect(getArchived('hindi')).toEqual(['namaste'])
+  })
+
+  it('is a no-op when legacy vocab-known is absent', () => {
+    migrateLegacyKnown('hindi')
+    expect(getArchived('hindi')).toEqual([])
+  })
+
+  it('handles corrupt legacy JSON gracefully', () => {
+    localStorage.setItem('vocab-known', 'broken{')
+    migrateLegacyKnown('hindi')
+    expect(getArchived('hindi')).toEqual([])
+  })
+})
