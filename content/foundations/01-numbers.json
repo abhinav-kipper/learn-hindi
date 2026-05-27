@@ -35,22 +35,22 @@
       "pronunciation": "TEES, CHAA-lees, PA-chaas, SAATH, AS-si, NAB-be, SAU"
     },
     {
-      "hindi": "do chai dena",
-      "english": "Give me two teas",
+      "hindi": "chaar samose dena",
+      "english": "Give me four samosas",
       "context": "Number + item + 'dena' (give) — the basic ordering formula. No 'please' needed, it's natural",
-      "pronunciation": "DO chai DE-na"
+      "pronunciation": "CHAAR sa-MO-se DE-na"
     },
     {
-      "hindi": "kitne ka hai? — paanch sau rupaye",
-      "english": "How much is it? — 500 rupees",
-      "context": "'kitne ka' = how much for. 'paanch sau' = five hundred. Combine numbers: 5 x 100",
-      "pronunciation": "KIT-ne ka hai? — PAANCH sau ru-PA-ye"
+      "hindi": "kitne ka hai? — ek hazaar rupaye",
+      "english": "How much is it? — 1,000 rupees",
+      "context": "'kitne ka' = how much for. 'ek hazaar' = one thousand. Common price for a decent kurta or a short rickshaw fare",
+      "pronunciation": "KIT-ne ka hai? — EK ha-ZAAR ru-PA-ye"
     },
     {
-      "hindi": "teen baje milte hain",
-      "english": "Let's meet at 3 o'clock",
-      "context": "'baje' = o'clock. Number + 'baje' for telling time. 'milte hain' = let's meet",
-      "pronunciation": "TEEN ba-JE MIL-te hain"
+      "hindi": "saadhe saat baje milte hain",
+      "english": "Let's meet at 7:30",
+      "context": "'saadhe' = half past. 'saadhe saat baje' = 7:30. Use saadhe + next hour for any half-past time",
+      "pronunciation": "SAAD-he SAAT ba-JE MIL-te hain"
     },
     {
       "hindi": "ek ghanta mein aa jaunga",

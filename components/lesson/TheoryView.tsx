@@ -13,6 +13,8 @@ import {
   SHADOW,
 } from '@/components/design'
 import { playSound } from '@/lib/sounds'
+import { speak, stopSpeaking, isSpeaking } from '@/lib/speech'
+import { useLanguage } from '@/lib/language-context'
 import type {
   Theory,
   TheorySection,
@@ -36,6 +38,8 @@ type CuttingMood = 'idle' | 'happy' | 'wave' | 'excited' | 'wink'
 const SECTION_MOODS: CuttingMood[] = ['happy', 'idle', 'happy', 'wink', 'happy']
 
 export function TheoryView({ theory, title, onStartPhrases, onGoToPractice }: Props) {
+  const { config } = useLanguage()
+  const ttsLocale = config.ttsLocale
   const totalPages = theory.sections.length + 2 // intro + sections + wrap-up
   const [page, setPage] = useState(0)
   const [direction, setDirection] = useState<1 | -1>(1)
@@ -173,6 +177,7 @@ export function TheoryView({ theory, title, onStartPhrases, onGoToPractice }: Pr
                 mood={SECTION_MOODS[sectionIdx % SECTION_MOODS.length]}
                 quickCheckPassed={!!passed[page]}
                 onPassQuickCheck={() => setPassed((p) => ({ ...p, [page]: true }))}
+                ttsLocale={ttsLocale}
               />
             )}
             {isWrap && (
@@ -328,11 +333,13 @@ function SectionPage({
   mood,
   quickCheckPassed,
   onPassQuickCheck,
+  ttsLocale,
 }: {
   section: TheorySection
   mood: CuttingMood
   quickCheckPassed: boolean
   onPassQuickCheck: () => void
+  ttsLocale: string
 }) {
   const intro =
     section.cutting_intro ?? `Now let's look at: ${section.heading.toLowerCase()}.`
@@ -356,7 +363,7 @@ function SectionPage({
       {section.examples && section.examples.length > 0 && (
         <div style={{ marginTop: 12, display: 'flex', flexDirection: 'column', gap: 8 }}>
           {section.examples.map((ex, i) => (
-            <ExampleBlock key={i} example={ex} />
+            <ExampleBlock key={i} example={ex} ttsLocale={ttsLocale} />
           ))}
         </div>
       )}
@@ -750,20 +757,79 @@ function TableBlock({ table }: { table: TheoryTable }) {
   )
 }
 
-function ExampleBlock({ example }: { example: TheoryExample }) {
+function ExampleBlock({ example, ttsLocale }: { example: TheoryExample; ttsLocale: string }) {
+  const [speaking, setSpeaking] = useState(false)
+
+  useEffect(() => {
+    if (!speaking) return
+    const interval = setInterval(() => {
+      if (!isSpeaking()) setSpeaking(false)
+    }, 300)
+    return () => clearInterval(interval)
+  }, [speaking])
+
+  const handlePlay = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    if (speaking) {
+      stopSpeaking()
+      setSpeaking(false)
+      return
+    }
+    playSound('pop')
+    setSpeaking(true)
+    speak(example.hindi, ttsLocale, () => setSpeaking(false))
+  }
+
   return (
     <Sticker color={COLORS.butter} radius={14} padding={12}>
       <div
         style={{
-          fontFamily: FONTS.display,
-          fontWeight: 700,
-          fontSize: 17,
-          color: COLORS.ink,
-          lineHeight: 1.3,
+          display: 'flex',
+          alignItems: 'flex-start',
+          gap: 8,
           marginBottom: 4,
         }}
       >
-        {example.hindi}
+        <div
+          style={{
+            flex: 1,
+            minWidth: 0,
+            fontFamily: FONTS.display,
+            fontWeight: 700,
+            fontSize: 17,
+            color: COLORS.ink,
+            lineHeight: 1.3,
+          }}
+        >
+          {example.hindi}
+        </div>
+        <button
+          type="button"
+          onClick={handlePlay}
+          aria-label={speaking ? 'Stop' : 'Hear it'}
+          style={{
+            width: 30,
+            height: 30,
+            borderRadius: 99,
+            background: speaking ? COLORS.orange : W,
+            color: speaking ? W : COLORS.ink,
+            border: BORDER.thin,
+            cursor: 'pointer',
+            padding: 0,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexShrink: 0,
+          }}
+        >
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+            {speaking ? (
+              <rect x="6" y="6" width="12" height="12" rx="2" />
+            ) : (
+              <path d="M8 5v14l11-7z" />
+            )}
+          </svg>
+        </button>
       </div>
       <div
         style={{
