@@ -408,23 +408,102 @@ export default function CategoryPage() {
           tap to flip · swipe → archive · swipe ← review
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-          <AnimatePresence initial={false}>
-            {visibleWords.map((word, index) => (
-              <SwipeableWordCard
-                key={word.hindi}
-                word={word}
-                index={index}
-                isFlipped={flippedCard === word.hindi}
-                isReview={reviewSet.has(word.hindi)}
-                onTap={handleCardTap}
-                onSwipeRight={handleSwipeRight}
-                onSwipeLeft={handleSwipeLeft}
-                ttsLocale={config.ttsLocale}
-              />
-            ))}
-          </AnimatePresence>
-        </div>
+        {visibleWords.length === 0 ? (
+          <Sticker color={COLORS.mint2} radius={22} padding={24}>
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: 42 }}>🎉</div>
+              <div
+                style={{
+                  fontFamily: FONTS.display,
+                  fontWeight: 800,
+                  fontSize: 22,
+                  color: COLORS.ink,
+                  marginTop: 8,
+                  letterSpacing: -0.4,
+                }}
+              >
+                all done in this category!
+              </div>
+              <div
+                style={{
+                  fontFamily: FONTS.body,
+                  fontWeight: 700,
+                  fontSize: 13,
+                  color: COLORS.ink60,
+                  marginTop: 6,
+                }}
+              >
+                {archivedCount} {archivedCount === 1 ? 'word' : 'words'} archived — nice work
+              </div>
+              <div style={{ display: 'flex', gap: 8, marginTop: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+                {archivedWords.length > 0 && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setArchivedFoldOpen(true)
+                      playSound('tap')
+                    }}
+                    style={{
+                      padding: '10px 16px',
+                      background: W,
+                      color: COLORS.ink,
+                      border: BORDER.sticker,
+                      boxShadow: SHADOW.chip,
+                      borderRadius: 99,
+                      fontFamily: FONTS.display,
+                      fontWeight: 800,
+                      fontSize: 12,
+                      cursor: 'pointer',
+                      textTransform: 'lowercase',
+                    }}
+                  >
+                    show archived ▾
+                  </button>
+                )}
+                <button
+                  type="button"
+                  onClick={() => {
+                    playSound('tap')
+                    router.push('/vocabulary')
+                  }}
+                  style={{
+                    padding: '10px 16px',
+                    background: COLORS.orange,
+                    color: W,
+                    border: BORDER.sticker,
+                    boxShadow: SHADOW.chip,
+                    borderRadius: 99,
+                    fontFamily: FONTS.display,
+                    fontWeight: 800,
+                    fontSize: 12,
+                    cursor: 'pointer',
+                    textTransform: 'lowercase',
+                  }}
+                >
+                  other categories →
+                </button>
+              </div>
+            </div>
+          </Sticker>
+        ) : (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            <AnimatePresence initial={false}>
+              {visibleWords.map((word, index) => (
+                <SwipeableWordCard
+                  key={word.hindi}
+                  word={word}
+                  index={index}
+                  isFlipped={flippedCard === word.hindi}
+                  isReview={reviewSet.has(word.hindi)}
+                  onTap={handleCardTap}
+                  onSwipeRight={handleSwipeRight}
+                  onSwipeLeft={handleSwipeLeft}
+                  ttsLocale={config.ttsLocale}
+                />
+              ))}
+            </AnimatePresence>
+          </div>
+        )}
 
         {archivedWords.length > 0 && (
           <div style={{ marginTop: 18 }}>
