@@ -2,18 +2,72 @@
   "id": "ne-rule",
   "title": "The 'ne' Rule (Ergative Past)",
   "situation": "Hindi's most-feared grammar rule: in the perfective past, TRANSITIVE verbs flip the construction. The subject gets 'ne' attached, and the verb agrees with the OBJECT, not the subject. 'maine khaaya' (I ate) — pure black magic until it clicks.",
-  "skills": ["the 'ne' marker", "object-verb agreement", "transitive vs intransitive in past"],
+  "skills": [
+    "the 'ne' marker",
+    "object-verb agreement",
+    "transitive vs intransitive in past"
+  ],
   "phrases": [
-    { "hindi": "maine chitthi likhi", "english": "I wrote a letter", "context": "'maine' = main + ne. 'likhi' agrees with 'chitthi' (fem). Same rule: the verb's ending is set by the OBJECT's gender, not the speaker's.", "pronunciation": "MAI-ne CHIT-thi LI-khi" },
-    { "hindi": "usne dawa khaai", "english": "he/she took the medicine", "context": "'usne' = us + ne. Verb 'khaai' agrees with 'dawa' (fem). The subject's gender is IRRELEVANT — only the object matters.", "pronunciation": "US-ne DA-wa KHAA-i" },
-    { "hindi": "humne gaadi chalaayi", "english": "we drove the car", "context": "'humne' = ham + ne. 'chalaayi' agrees with 'gaadi' (fem). Always check the OBJECT's gender first.", "pronunciation": "HUM-ne GAA-di cha-LAA-yi" },
-    { "hindi": "main chair par baithi", "english": "I sat down on the chair (fem speaker)", "context": "Contrast: 'baithna' is INTRANSITIVE → no 'ne'. Subject takes 'baithi' (fem, agrees with main = female speaker). Compare to the 'maine' phrases above.", "pronunciation": "MAIN CHAIR par BAIT-hi" },
-    { "hindi": "papa ne khaana banaya", "english": "papa made food", "context": "Even with named subjects, attach 'ne'. 'banaya' (M) agrees with 'khaana' (M). If it had been 'sabzi' (F), would be 'banayi'.", "pronunciation": "PA-pa ne khaa-NA ba-NA-ya" },
-    { "hindi": "tumne yeh gaana kab suna?", "english": "when did you hear this song?", "context": "Question form. 'tumne' = tum + ne. 'suna' (M) agrees with 'gaana' (masc). Swap the object to a fem noun and the ending changes — 'tumne yeh baat kab suni?'", "pronunciation": "TUM-ne YEH GAA-na KAB SU-na?" },
-    { "hindi": "maine usse phone kiya", "english": "I called him/her", "context": "'phone kiya' — 'kiya' agrees with 'phone' (M loanword). Even English loanwords get assigned a Hindi gender; phone is M.", "pronunciation": "MAI-ne US-se PHONE ki-YA" },
-    { "hindi": "usne mujhe yeh batayi", "english": "she told me this thing (fem)", "context": "'batayi' (F) — what's the object? Implicit 'baat' (story/thing, fem). The verb agrees with whatever was told, not the speaker or listener.", "pronunciation": "US-ne mu-JHE YEH ba-TA-yi" },
-    { "hindi": "main roya / main royi", "english": "I cried (M/F)", "context": "'rona' (to cry) is INTRANSITIVE — no 'ne', subject takes normal agreement. Compare with 'rulaya' (caused to cry, transitive) which would need 'ne'.", "pronunciation": "MAIN RO-ya / MAIN RO-yi" },
-    { "hindi": "humne saara kaam kar liya", "english": "we got all the work done", "context": "Compound verb 'kar liya' (kar + le, perfective) — still triggers 'ne'. 'liya' agrees with 'kaam' (M). All compounds inherit the transitivity of their main verb.", "pronunciation": "HUM-ne SAA-ra KAAM kar li-YA" }
+    {
+      "hindi": "maine chitthi likhi",
+      "english": "I wrote a letter",
+      "context": "'maine' = main + ne. 'likhi' agrees with 'chitthi' (fem). Same rule: the verb's ending is set by the OBJECT's gender, not the speaker's.",
+      "pronunciation": "MAI-ne CHIT-thi LI-khi"
+    },
+    {
+      "hindi": "usne dawa khaai",
+      "english": "he/she took the medicine",
+      "context": "'usne' = us + ne. Verb 'khaai' agrees with 'dawa' (fem). The subject's gender is IRRELEVANT — only the object matters.",
+      "pronunciation": "US-ne DA-wa KHAA-i"
+    },
+    {
+      "hindi": "humne gaadi chalaayi",
+      "english": "we drove the car",
+      "context": "'humne' = ham + ne. 'chalaayi' agrees with 'gaadi' (fem). Always check the OBJECT's gender first.",
+      "pronunciation": "HUM-ne GAA-di cha-LAA-yi"
+    },
+    {
+      "hindi": "main chair par baithi",
+      "english": "I sat down on the chair (fem speaker)",
+      "context": "Contrast: 'baithna' is INTRANSITIVE → no 'ne'. Subject takes 'baithi' (fem, agrees with main = female speaker). Compare to the 'maine' phrases above.",
+      "pronunciation": "MAIN CHAIR par BAIT-hi"
+    },
+    {
+      "hindi": "papa ne khaana banaya",
+      "english": "papa made food",
+      "context": "Even with named subjects, attach 'ne'. 'banaya' (M) agrees with 'khaana' (M). If it had been 'sabzi' (F), would be 'banayi'.",
+      "pronunciation": "PA-pa ne khaa-NA ba-NA-ya"
+    },
+    {
+      "hindi": "tumne yeh gaana kab suna?",
+      "english": "when did you hear this song?",
+      "context": "Question form. 'tumne' = tum + ne. 'suna' (M) agrees with 'gaana' (masc). Swap the object to a fem noun and the ending changes — 'tumne yeh baat kab suni?'",
+      "pronunciation": "TUM-ne YEH GAA-na KAB SU-na?"
+    },
+    {
+      "hindi": "maine usse phone kiya",
+      "english": "I called him/her",
+      "context": "'phone kiya' — 'kiya' agrees with 'phone' (M loanword). Even English loanwords get assigned a Hindi gender; phone is M.",
+      "pronunciation": "MAI-ne US-se PHONE ki-YA"
+    },
+    {
+      "hindi": "usne mujhe yeh batayi",
+      "english": "she told me this thing (fem)",
+      "context": "'batayi' (F) — what's the object? Implicit 'baat' (story/thing, fem). The verb agrees with whatever was told, not the speaker or listener.",
+      "pronunciation": "US-ne mu-JHE YEH ba-TA-yi"
+    },
+    {
+      "hindi": "main roya / main royi",
+      "english": "I cried (M/F)",
+      "context": "'rona' (to cry) is INTRANSITIVE — no 'ne', subject takes normal agreement. Compare with 'rulaya' (caused to cry, transitive) which would need 'ne'.",
+      "pronunciation": "MAIN RO-ya / MAIN RO-yi"
+    },
+    {
+      "hindi": "humne saara kaam kar liya",
+      "english": "we got all the work done",
+      "context": "Compound verb 'kar liya' (kar + le, perfective) — still triggers 'ne'. 'liya' agrees with 'kaam' (M). All compounds inherit the transitivity of their main verb.",
+      "pronunciation": "HUM-ne SAA-ra KAAM kar li-YA"
+    }
   ],
   "grammar_notes": [
     "The 'ne' rule applies ONLY in the perfective past of TRANSITIVE verbs. Present, future, habitual, continuous past — no 'ne'.",
@@ -33,145 +87,363 @@
       "skill": "When to use 'ne' (transitive perfective past only)",
       "explanation": "Two conditions must BOTH be true: (1) verb is transitive (has a direct object), (2) tense is perfective past. Anywhere else, no 'ne'.",
       "more_examples": [
-        { "hindi": "maine kitaab padhi (✓ past + transitive)", "english": "I read the book" },
-        { "hindi": "main kitaab padhungi (✗ no ne — future)", "english": "I will read the book" },
-        { "hindi": "main ghar gayi (✗ no ne — intransitive)", "english": "I went home" }
+        {
+          "hindi": "maine kitaab padhi (✓ past + transitive)",
+          "english": "I read the book"
+        },
+        {
+          "hindi": "main kitaab padhungi (✗ no ne — future)",
+          "english": "I will read the book"
+        },
+        {
+          "hindi": "main ghar gayi (✗ no ne — intransitive)",
+          "english": "I went home"
+        }
       ]
     },
     {
       "skill": "Object-verb agreement with 'ne'",
       "explanation": "The verb agrees with the OBJECT (its gender + number), not the subject. Always check: what's the object's gender?",
       "more_examples": [
-        { "hindi": "maine chai (F) pi", "english": "I drank chai (verb fem to match chai)" },
-        { "hindi": "maine pani (M) piya", "english": "I drank water (verb masc to match pani)" },
-        { "hindi": "usne kitaabein (F-pl) padhi", "english": "she read the books (verb fem-plural)" }
+        {
+          "hindi": "maine chai (F) pi",
+          "english": "I drank chai (verb fem to match chai)"
+        },
+        {
+          "hindi": "maine pani (M) piya",
+          "english": "I drank water (verb masc to match pani)"
+        },
+        {
+          "hindi": "usne kitaabein (F-pl) padhi",
+          "english": "she read the books (verb fem-plural)"
+        }
       ]
     },
     {
       "skill": "Transitive vs intransitive trap",
       "explanation": "Some verbs are tricky: 'bolna' (speak) — transitive in Hindi → ne. 'rona' (cry) — intransitive → no ne. 'hasna' (laugh) — intransitive. When in doubt: does the verb take a direct object?",
       "more_examples": [
-        { "hindi": "maine bola (ne — bolna is transitive)", "english": "I said/spoke" },
-        { "hindi": "main hansi (no ne — hasna intransitive)", "english": "I laughed (fem)" },
-        { "hindi": "main rota tha (no ne)", "english": "I used to cry (also no ne in habitual, regardless)" }
+        {
+          "hindi": "maine bola (ne — bolna is transitive)",
+          "english": "I said/spoke"
+        },
+        {
+          "hindi": "main hansi (no ne — hasna intransitive)",
+          "english": "I laughed (fem)"
+        },
+        {
+          "hindi": "main rota tha (no ne)",
+          "english": "I used to cry (also no ne in habitual, regardless)"
+        }
       ]
     }
   ],
   "practice_prompt": "You are a Hindi grammar tutor specializing in the 'ne' rule. Give the user a short past-tense scenario and ask them to translate. They'll make mistakes — gently flag whether (a) they should/shouldn't have used 'ne', and (b) whether the verb agrees with the right gender. Use 'aap' (polite tutor).",
-  "references": ["Snell & Weightman Ch. 12", "Afroz Taj Lesson 8"],
+  "references": [
+    "Snell & Weightman Ch. 12",
+    "Afroz Taj Lesson 8"
+  ],
   "theory": {
     "intro": "This is the chapter Hindi learners fear most. The `ne` rule is the construction that makes English speakers say 'Hindi doesn't make sense' — but it actually does, you just have to flip your instincts. In past tense, for transitive verbs (verbs that take an object), the subject takes the postposition `ne` and the verb agrees with the OBJECT's gender, not the subject's. So `maine roti khaayi` ('I ate roti') uses the feminine verb ending because `roti` is feminine — even if the speaker is masculine. This is the single most distinctive feature of Hindi grammar; once you've drilled it, the rest of past tense locks into place.",
     "sections": [
       {
         "heading": "What `ne` is and when it appears",
-        "body": "`ne` is a marker (postposition) that attaches to the subject — but only when **two conditions are both true**: the verb is transitive, and the tense is simple past. Miss either condition and `ne` doesn't appear.\n\nThink of `ne` as a flag meaning \"a completed action acted on something.\" English hides this flag; Hindi puts it right on the subject.\n\nThe three cases side by side:\n\n- `main khaata hoon` — present tense → no `ne`\n- `main soya` — simple past, but `sona` is intransitive → no `ne`\n- `maine sandwich khaaya` — simple past + transitive → `ne` required\n\nThe trigger is always the same: **simple past + transitive verb**.",
+        "body": "`ne` is a marker (postposition) that attaches to the subject, but only when **two conditions are both true**: the verb is transitive, and the tense is simple past. Miss either condition and `ne` doesn't appear.\n\nThink of `ne` as a flag that means 'a completed action acted on something.' English hides this flag. Hindi puts it right on the subject.\n\nThe three cases side by side:\n\n- `main khaata hoon`: present tense → no `ne`\n- `main soya`: simple past, but `sona` is intransitive → no `ne`\n- `maine sandwich khaaya`: simple past + transitive → `ne` required\n\nThe trigger is always the same: **simple past + transitive verb**.",
         "examples": [
-          { "hindi": "main jaata hoon", "english": "I go (habitual present)", "breakdown": "present tense → no `ne` regardless of verb type" },
-          { "hindi": "main soya", "english": "I slept", "breakdown": "past tense BUT intransitive (sona = sleep) → no `ne`" },
-          { "hindi": "maine khaana khaaya", "english": "I ate the food", "breakdown": "past + transitive (khaana = eat takes an object) → `ne` required" },
-          { "hindi": "maine kitaab padhi", "english": "I read the book", "breakdown": "past + transitive (padhna = read) → `ne` required" }
+          {
+            "hindi": "main jaata hoon",
+            "english": "I go (habitual present)",
+            "breakdown": "present tense → no `ne` regardless of verb type"
+          },
+          {
+            "hindi": "main soya",
+            "english": "I slept",
+            "breakdown": "past tense BUT intransitive (sona = sleep) → no `ne`"
+          },
+          {
+            "hindi": "maine khaana khaaya",
+            "english": "I ate the food",
+            "breakdown": "past + transitive (khaana = eat takes an object) → `ne` required"
+          },
+          {
+            "hindi": "maine kitaab padhi",
+            "english": "I read the book",
+            "breakdown": "past + transitive (padhna = read) → `ne` required"
+          }
         ],
-        "callout": { "tone": "note", "body": "The two conditions must BOTH be true. Past alone isn't enough; transitive alone isn't enough. Only past + transitive together triggers `ne`." },
+        "callout": {
+          "tone": "note",
+          "body": "The two conditions must BOTH be true. Past alone isn't enough; transitive alone isn't enough. Only past + transitive together triggers `ne`."
+        },
         "cutting_intro": "Okay — deep breath. The `ne` rule has a reputation, but it's mechanical. Let's start with the trigger: when does `ne` even show up?",
         "quick_check": {
           "question": "Which sentence requires `ne`?",
-          "options": ["main ghar jaata hoon (present, intransitive)", "main soya (past, intransitive)", "maine paani piya (past, transitive)"],
+          "options": [
+            "main ghar jaata hoon (present, intransitive)",
+            "main soya (past, intransitive)",
+            "maine paani piya (past, transitive)"
+          ],
           "correct_index": 2,
           "explanation": "Yes — `peena` (to drink) is transitive and the tense is past, so the subject gets `ne` (main → maine). The other two miss at least one of the two conditions."
         }
       },
       {
         "heading": "Why this matters: the verb agrees with the OBJECT",
-        "body": "Once `ne` shows up on the subject, the verb stops agreeing with the subject and starts agreeing with the **direct object** instead.\n\nSame subject, different object — completely different verb ending:\n\n- `maine roti khaayi` — `roti` is feminine → verb ends in `-i`\n- `maine khaana khaaya` — `khaana` is masculine → verb ends in `-a`\n\nThe speaker's own gender is irrelevant. A female speaker says `maine paani piya` because `paani` is masculine (ending `-a`). A male speaker says `maine chai pi` because `chai` is feminine (ending `-i`). The verb is **locked to the object**, not the speaker.",
+        "body": "Once `ne` shows up on the subject, the verb stops agreeing with the subject and starts agreeing with the **direct object** instead.\n\nSame subject, different object, completely different verb ending:\n\n- `maine roti khaayi`: `roti` is feminine → verb ends in `-i`\n- `maine khaana khaaya`: `khaana` is masculine → verb ends in `-a`\n\nThe speaker's own gender is irrelevant. A female speaker says `maine paani piya` because `paani` is masculine (ending `-a`). A male speaker says `maine chai pi` because `chai` is feminine (ending `-i`). The verb is **locked to the object**, not the speaker.",
         "examples": [
-          { "hindi": "maine roti khaayi", "english": "I ate roti", "breakdown": "object = roti (f) → verb ends in -i, regardless of speaker gender" },
-          { "hindi": "maine khaana khaaya", "english": "I ate the meal", "breakdown": "object = khaana (m) → verb ends in -a" },
-          { "hindi": "maine paani piya", "english": "I drank water", "breakdown": "object = paani (m) → verb ends in -a, even if speaker is female" },
-          { "hindi": "maine chai pi", "english": "I drank tea", "breakdown": "object = chai (f) → verb ends in -i, even if speaker is male" },
-          { "hindi": "maine kitaabein padhi", "english": "I read the books", "breakdown": "object = kitaabein (f. pl.) → verb ends in -i (historical irregularity — not -in)" }
+          {
+            "hindi": "maine roti khaayi",
+            "english": "I ate roti",
+            "breakdown": "object = roti (f) → verb ends in -i, regardless of speaker gender"
+          },
+          {
+            "hindi": "maine khaana khaaya",
+            "english": "I ate the meal",
+            "breakdown": "object = khaana (m) → verb ends in -a"
+          },
+          {
+            "hindi": "maine paani piya",
+            "english": "I drank water",
+            "breakdown": "object = paani (m) → verb ends in -a, even if speaker is female"
+          },
+          {
+            "hindi": "maine chai pi",
+            "english": "I drank tea",
+            "breakdown": "object = chai (f) → verb ends in -i, even if speaker is male"
+          },
+          {
+            "hindi": "maine kitaabein padhi",
+            "english": "I read the books",
+            "breakdown": "object = kitaabein (f. pl.) → verb ends in -i (historical irregularity — not -in)"
+          }
         ],
-        "callout": { "tone": "warning", "body": "THIS is the rule English speakers forget. Your instinct will scream 'agree with the subject' because that's what English does. In a `ne` sentence, ignore the subject's gender entirely and track the OBJECT's gender. Re-train this reflex by drilling pairs aloud." },
+        "callout": {
+          "tone": "warning",
+          "body": "THIS is the rule English speakers forget. Your instinct will scream 'agree with the subject' because that's what English does. In a `ne` sentence, ignore the subject's gender entirely and track the OBJECT's gender. Re-train this reflex by drilling pairs aloud."
+        },
         "cutting_intro": "Here's the part everyone forgets. When `ne` shows up, the verb stops caring about the subject. It tracks the OBJECT instead.",
         "quick_check": {
           "question": "A female speaker says `maine paani _____ ` (drank). Which form is correct?",
-          "options": ["pi (feminine ending)", "piya (masculine ending)", "depends on the speaker's gender"],
+          "options": [
+            "pi (feminine ending)",
+            "piya (masculine ending)",
+            "depends on the speaker's gender"
+          ],
           "correct_index": 1,
           "explanation": "Correct — `piya` (masculine). The verb agrees with `paani` (which is masculine), NOT with the speaker. Speaker gender is irrelevant in `ne` constructions."
         }
       },
       {
         "heading": "Transitive vs intransitive — how to spot which",
-        "body": "Since `ne` only attaches to **transitive** verbs, you need to spot the difference reliably.\n\nA transitive verb acts ON something — it takes a direct object. Ask: \"eat *what*? read *what*? see *who*?\" If there's a \"what,\" the verb is transitive.\n\nAn intransitive verb has no \"what\" — sleep, go, come, sit, cry.\n\nSome verbs sit in the middle: `bolna` (to speak) can go either way depending on whether you name what was said. For most everyday verbs the category is clear — memorize the table below and your instinct sharpens fast.",
+        "body": "Since `ne` only attaches to **transitive** verbs, you need to spot the difference reliably.\n\nA transitive verb acts on something. It takes a direct object. Ask 'eat *what*? read *what*? see *who*?' If there's a 'what', the verb is transitive.\n\nAn intransitive verb has no 'what': sleep, go, come, sit, cry.\n\nSome verbs sit in the middle. `bolna` (to speak) can go either way, depending on whether you name what was said. For most everyday verbs the category is clear. Memorize the table below and your instinct sharpens fast.",
         "table": {
           "caption": "Common transitive (need `ne` in past) vs intransitive (never take `ne`)",
-          "columns": ["transitive (with `ne`)", "meaning", "intransitive (no `ne`)", "meaning"],
+          "columns": [
+            "transitive (with `ne`)",
+            "meaning",
+            "intransitive (no `ne`)",
+            "meaning"
+          ],
           "rows": [
-            ["khaana", "to eat", "jaana", "to go"],
-            ["peena", "to drink", "aana", "to come"],
-            ["padhna", "to read", "sona", "to sleep"],
-            ["likhna", "to write", "rona", "to cry"],
-            ["dekhna", "to see / watch", "hansna", "to laugh"],
-            ["sunna", "to hear / listen", "baithna", "to sit"],
-            ["karna", "to do", "uthna", "to get up"],
-            ["banaana", "to make", "girna", "to fall"]
+            [
+              "khaana",
+              "to eat",
+              "jaana",
+              "to go"
+            ],
+            [
+              "peena",
+              "to drink",
+              "aana",
+              "to come"
+            ],
+            [
+              "padhna",
+              "to read",
+              "sona",
+              "to sleep"
+            ],
+            [
+              "likhna",
+              "to write",
+              "rona",
+              "to cry"
+            ],
+            [
+              "dekhna",
+              "to see / watch",
+              "hansna",
+              "to laugh"
+            ],
+            [
+              "sunna",
+              "to hear / listen",
+              "baithna",
+              "to sit"
+            ],
+            [
+              "karna",
+              "to do",
+              "uthna",
+              "to get up"
+            ],
+            [
+              "banaana",
+              "to make",
+              "girna",
+              "to fall"
+            ]
           ]
         },
-        "callout": { "tone": "tip", "body": "Quick test when in doubt: ask 'did the action act ON something?' If yes → transitive → `ne` required in past. If no → intransitive → never `ne`. Works 95% of the time." },
+        "callout": {
+          "tone": "tip",
+          "body": "Quick test when in doubt: ask 'did the action act ON something?' If yes → transitive → `ne` required in past. If no → intransitive → never `ne`. Works 95% of the time."
+        },
         "cutting_intro": "Now — the trickiest piece. How do you know if a verb is transitive? Here's the cheat sheet.",
         "quick_check": {
           "question": "Which of these verbs is intransitive (never takes `ne`)?",
-          "options": ["khaana (to eat)", "sona (to sleep)", "likhna (to write)"],
+          "options": [
+            "khaana (to eat)",
+            "sona (to sleep)",
+            "likhna (to write)"
+          ],
           "correct_index": 1,
           "explanation": "Yes — `sona` (to sleep) is intransitive. You don't sleep 'something'. Past tense: `main soya` / `main soyi`, no `ne` ever. The other two are transitive (you eat something, you write something)."
         }
       },
       {
         "heading": "The fused pronoun forms: maine / tune / usne / hamne",
-        "body": "When `ne` attaches to a pronoun, the two fuse into a single word. It looks like the pronoun itself changed — it hasn't. It's always just pronoun + `ne` written as one.\n\nThe table below has every subject pronoun's fused form. Memorize these eight; you'll use all of them constantly.\n\nOne detail worth noting: `woh` shifts to its oblique form before any postposition — so `woh + ne` → `usne`, and `woh` (plural) → `unhone`. This is the same shift you see in `usko`, `unke saath`, etc. It's not a `ne` quirk; it's just oblique pronouns doing their usual job.",
+        "body": "When `ne` attaches to a pronoun, the two fuse into a single word. It looks like the pronoun itself changed. It hasn't. It's always just pronoun + `ne`, written as one.\n\nThe table below has every subject pronoun's fused form. Memorize these eight. You'll use all of them constantly.\n\nOne detail worth noting: `woh` shifts to its oblique form before any postposition, so `woh + ne` → `usne`, and `woh` (plural) → `unhone`. It's the same shift you see in `usko`, `unke saath`, and so on. It's not a `ne` quirk. It's just oblique pronouns doing their usual job.",
         "table": {
           "caption": "Pronoun + `ne` fused forms",
-          "columns": ["pronoun", "with `ne`", "meaning"],
+          "columns": [
+            "pronoun",
+            "with `ne`",
+            "meaning"
+          ],
           "rows": [
-            ["main", "maine", "I"],
-            ["tu", "tune", "you (intimate sg.)"],
-            ["tum", "tumne", "you (informal sg./pl.)"],
-            ["aap", "aapne", "you (formal/polite)"],
-            ["yeh / wo (sg.)", "isne / usne", "he/she/it (near/far)"],
-            ["ham", "hamne", "we"],
-            ["ye / wo (pl.)", "inhone / unhone", "they (near/far)"]
+            [
+              "main",
+              "maine",
+              "I"
+            ],
+            [
+              "tu",
+              "tune",
+              "you (intimate sg.)"
+            ],
+            [
+              "tum",
+              "tumne",
+              "you (informal sg./pl.)"
+            ],
+            [
+              "aap",
+              "aapne",
+              "you (formal/polite)"
+            ],
+            [
+              "yeh / wo (sg.)",
+              "isne / usne",
+              "he/she/it (near/far)"
+            ],
+            [
+              "ham",
+              "hamne",
+              "we"
+            ],
+            [
+              "ye / wo (pl.)",
+              "inhone / unhone",
+              "they (near/far)"
+            ]
           ]
         },
         "examples": [
-          { "hindi": "maine kitaab padhi", "english": "I read the book", "breakdown": "main + ne → maine" },
-          { "hindi": "tumne kya kaha?", "english": "what did you say?", "breakdown": "tum + ne → tumne" },
-          { "hindi": "aapne khaana khaaya?", "english": "did you eat (formal)?", "breakdown": "aap + ne → aapne" },
-          { "hindi": "usne chai pi", "english": "he/she drank chai", "breakdown": "wo + ne → usne (the pronoun shifts to oblique form before `ne`)" },
-          { "hindi": "hamne movie dekhi", "english": "we watched a movie", "breakdown": "ham + ne → hamne" },
-          { "hindi": "unhone gaana gaaya", "english": "they sang a song", "breakdown": "wo + ne → unhone (plural, oblique form)" }
+          {
+            "hindi": "maine kitaab padhi",
+            "english": "I read the book",
+            "breakdown": "main + ne → maine"
+          },
+          {
+            "hindi": "tumne kya kaha?",
+            "english": "what did you say?",
+            "breakdown": "tum + ne → tumne"
+          },
+          {
+            "hindi": "aapne khaana khaaya?",
+            "english": "did you eat (formal)?",
+            "breakdown": "aap + ne → aapne"
+          },
+          {
+            "hindi": "usne chai pi",
+            "english": "he/she drank chai",
+            "breakdown": "wo + ne → usne (the pronoun shifts to oblique form before `ne`)"
+          },
+          {
+            "hindi": "hamne movie dekhi",
+            "english": "we watched a movie",
+            "breakdown": "ham + ne → hamne"
+          },
+          {
+            "hindi": "unhone gaana gaaya",
+            "english": "they sang a song",
+            "breakdown": "wo + ne → unhone (plural, oblique form)"
+          }
         ],
-        "callout": { "tone": "note", "body": "Even though it looks like the pronoun itself transformed, remember: it's just pronoun + `ne` merged into one word. The 'shift' from `wo` → `us-` and `we` → `un-` is the same oblique form you see before any postposition (`usko`, `unke saath`, etc.)." },
+        "callout": {
+          "tone": "note",
+          "body": "Even though it looks like the pronoun itself transformed, remember: it's just pronoun + `ne` merged into one word. The 'shift' from `wo` → `us-` and `we` → `un-` is the same oblique form you see before any postposition (`usko`, `unke saath`, etc.)."
+        },
         "cutting_intro": "`ne` doesn't sit separately after the pronoun — it fuses in. Learn these eight forms once and you've got every subject covered.",
         "quick_check": {
           "question": "How would you say 'we ate the food' using `ne`?",
-          "options": ["ham khaana khaaya", "hamne khaana khaaya", "humne khaana khaayi"],
+          "options": [
+            "ham khaana khaaya",
+            "hamne khaana khaaya",
+            "humne khaana khaayi"
+          ],
           "correct_index": 1,
           "explanation": "Yes — `hamne khaana khaaya`. `ham + ne → hamne`. Verb is `khaaya` (masc.) because `khaana` (food) is masculine. The third option fails on the verb-agreement front."
         }
       },
       {
         "heading": "The top mistakes English speakers make",
-        "body": "Four classic traps. Drill each pair — wrong form then right form — out loud until the wrong shape sounds off.\n\n- **Mistake 1 — forgetting `ne` entirely.** You'll default to subject-only because that's English. `✗ main khaaya` → `✓ maine khaaya`.\n- **Mistake 2 — adding `ne` to an intransitive verb.** `sona` (to sleep) takes no object; it never gets `ne`. `✗ main-ne soya` → `✓ main soya`.\n- **Mistake 3 — agreeing the verb with the subject instead of the object.** `roti` is feminine; the ending must be `-i`. `✗ maine roti khaaya` → `✓ maine roti khaayi`.\n- **Mistake 4 — using `ne` outside simple past.** `ne` is only for simple past. Present, future, continuous past — none of them. `✗ main-ne khaata hoon` → `✓ main khaata hoon`.",
+        "body": "Four classic traps. Drill each pair, wrong form then right form, out loud until the wrong shape sounds off.\n\n- **Mistake 1: forgetting `ne` entirely.** You'll default to subject-only, because that's English. `✗ main khaaya` → `✓ maine khaaya`.\n- **Mistake 2: adding `ne` to an intransitive verb.** `sona` (to sleep) takes no object, so it never gets `ne`. `✗ main-ne soya` → `✓ main soya`.\n- **Mistake 3: agreeing the verb with the subject instead of the object.** `roti` is feminine, so the ending must be `-i`. `✗ maine roti khaaya` → `✓ maine roti khaayi`.\n- **Mistake 4: using `ne` outside simple past.** `ne` is only for simple past. Not present, not future, not continuous past. `✗ main-ne khaata hoon` → `✓ main khaata hoon`.",
         "examples": [
-          { "hindi": "✗ main khaaya / ✓ maine khaaya", "english": "I ate", "breakdown": "Mistake 1: forgot `ne`. Past + transitive needs `ne` on the subject." },
-          { "hindi": "✗ main-ne soya / ✓ main soya", "english": "I slept", "breakdown": "Mistake 2: added `ne` to intransitive `sona`. Sleep doesn't take an object — no `ne`." },
-          { "hindi": "✗ maine roti khaaya / ✓ maine roti khaayi", "english": "I ate roti", "breakdown": "Mistake 3: verb agreed with the wrong noun. Object = roti (f), so ending is -i, not -a." },
-          { "hindi": "✗ main-ne khaata hoon / ✓ main khaata hoon", "english": "I eat", "breakdown": "Mistake 4: `ne` in present tense. `ne` is only for simple past. Present always uses bare subject." }
+          {
+            "hindi": "✗ main khaaya / ✓ maine khaaya",
+            "english": "I ate",
+            "breakdown": "Mistake 1: forgot `ne`. Past + transitive needs `ne` on the subject."
+          },
+          {
+            "hindi": "✗ main-ne soya / ✓ main soya",
+            "english": "I slept",
+            "breakdown": "Mistake 2: added `ne` to intransitive `sona`. Sleep doesn't take an object — no `ne`."
+          },
+          {
+            "hindi": "✗ maine roti khaaya / ✓ maine roti khaayi",
+            "english": "I ate roti",
+            "breakdown": "Mistake 3: verb agreed with the wrong noun. Object = roti (f), so ending is -i, not -a."
+          },
+          {
+            "hindi": "✗ main-ne khaata hoon / ✓ main khaata hoon",
+            "english": "I eat",
+            "breakdown": "Mistake 4: `ne` in present tense. `ne` is only for simple past. Present always uses bare subject."
+          }
         ],
-        "callout": { "tone": "tip", "body": "Drill in pairs. Say a past intransitive (`main soya`) followed by a past transitive (`maine khaana khaaya`) out loud, back to back. Your ear will start flagging the wrong shape automatically — that's the goal." },
+        "callout": {
+          "tone": "tip",
+          "body": "Drill in pairs. Say a past intransitive (`main soya`) followed by a past transitive (`maine khaana khaaya`) out loud, back to back. Your ear will start flagging the wrong shape automatically — that's the goal."
+        },
         "cutting_intro": "Last stop — let's look at the four mistakes English speakers make over and over. Spot them now, save yourself months of corrections.",
         "quick_check": {
           "question": "Which sentence is CORRECT?",
-          "options": ["main-ne ghar gaya (`ne` + intransitive)", "maine roti khaaya (masc. verb + fem. object)", "maine kitaab padhi (past + transitive + object-agreement)"],
+          "options": [
+            "main-ne ghar gaya (`ne` + intransitive)",
+            "maine roti khaaya (masc. verb + fem. object)",
+            "maine kitaab padhi (past + transitive + object-agreement)"
+          ],
           "correct_index": 2,
           "explanation": "Yes — only the third is correct. `padhna` is transitive and we're in past tense, so `ne` is required (`main → maine`). `kitaab` is feminine, so verb ends in `-i`. The first wrongly adds `ne` to intransitive `jaana`; the second has masc. verb on a fem. object."
         }

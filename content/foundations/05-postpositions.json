@@ -2,7 +2,11 @@
   "id": "postpositions",
   "title": "Postpositions",
   "situation": "Navigate space, time, and relationships — Hindi's version of prepositions (but they come AFTER)",
-  "skills": ["location postpositions", "time postpositions", "relationship postpositions"],
+  "skills": [
+    "location postpositions",
+    "time postpositions",
+    "relationship postpositions"
+  ],
   "phrases": [
     {
       "hindi": "kitchen mein / bathroom mein",
@@ -81,30 +85,66 @@
       "skill": "Basic postpositions (ko, se, mein, par)",
       "explanation": "Hindi uses postpositions (after the noun) instead of prepositions. 'ko' = to/for (direct/indirect object), 'se' = from/with/by, 'mein' = in/inside, 'par' = on/at.",
       "more_examples": [
-        { "hindi": "main aapko phone karungi", "english": "I'll call you (you-to)" },
-        { "hindi": "wo dilli se aayi hai", "english": "she has come from Delhi" },
-        { "hindi": "kitab mez par hai", "english": "the book is on the table" },
-        { "hindi": "ghar mein chai hai", "english": "there's chai in the house" }
+        {
+          "hindi": "main aapko phone karungi",
+          "english": "I'll call you (you-to)"
+        },
+        {
+          "hindi": "wo dilli se aayi hai",
+          "english": "she has come from Delhi"
+        },
+        {
+          "hindi": "kitab mez par hai",
+          "english": "the book is on the table"
+        },
+        {
+          "hindi": "ghar mein chai hai",
+          "english": "there's chai in the house"
+        }
       ]
     },
     {
       "skill": "Possessive (ka/ki/ke)",
       "explanation": "Hindi possessive agrees with the OBJECT possessed, not the owner. 'mera bhai' (my brother, masc) vs 'meri behen' (my sister, fem). 'X ka' (masc), 'X ki' (fem), 'X ke' (masc-plural / before postposition).",
       "more_examples": [
-        { "hindi": "mummy ka phone", "english": "mummy's phone (phone is masc)" },
-        { "hindi": "papa ki gaadi", "english": "papa's car (gaadi is fem)" },
-        { "hindi": "didi ke kapde", "english": "didi's clothes (plural masc)" },
-        { "hindi": "Rahul ka ghar bahut bada hai", "english": "Rahul's house is very big" }
+        {
+          "hindi": "mummy ka phone",
+          "english": "mummy's phone (phone is masc)"
+        },
+        {
+          "hindi": "papa ki gaadi",
+          "english": "papa's car (gaadi is fem)"
+        },
+        {
+          "hindi": "didi ke kapde",
+          "english": "didi's clothes (plural masc)"
+        },
+        {
+          "hindi": "Rahul ka ghar bahut bada hai",
+          "english": "Rahul's house is very big"
+        }
       ]
     },
     {
       "skill": "Compound postpositions (ke baare mein, ke saath, ke liye)",
       "explanation": "Combine 'ke' with another word: 'ke baare mein' (about), 'ke saath' (with), 'ke liye' (for), 'ke paas' (near / in possession of), 'ke peeche' (behind). Always uses oblique 'ke' regardless of gender.",
       "more_examples": [
-        { "hindi": "aapke baare mein bata rahe the", "english": "(they) were talking about you" },
-        { "hindi": "mere saath chalo", "english": "come with me" },
-        { "hindi": "yeh tumhare liye hai", "english": "this is for you" },
-        { "hindi": "mere paas paise nahi hain", "english": "I don't have money (lit: near me money is not)" }
+        {
+          "hindi": "aapke baare mein bata rahe the",
+          "english": "(they) were talking about you"
+        },
+        {
+          "hindi": "mere saath chalo",
+          "english": "come with me"
+        },
+        {
+          "hindi": "yeh tumhare liye hai",
+          "english": "this is for you"
+        },
+        {
+          "hindi": "mere paas paise nahi hain",
+          "english": "I don't have money (lit: near me money is not)"
+        }
       ]
     }
   ],
@@ -114,117 +154,285 @@
     "sections": [
       {
         "heading": "What's a postposition (and why 'post')",
-        "body": "English puts relationship words **before** the noun: `in the house`, `on the table`, `with Ram`. Hindi puts them **after**. The noun comes first, then the relationship word.\n\n- `in the house` → `ghar mein` (house-in)\n- `on the table` → `mez par` (table-on)\n- `with Ram` → `Ram ke saath` (Ram-with)\n\nThe job is identical to an English preposition (a word marking location, direction, time, or accompaniment). Only the position flips. Because these words come after the noun rather than before, grammarians call them **postpositions**.",
+        "body": "English puts relationship words **before** the noun: `in the house`, `on the table`, `with Ram`. Hindi puts them **after**. The noun comes first, then the relationship word.\n\n- `in the house` → `ghar mein` (house-in)\n- `on the table` → `mez par` (table-on)\n- `with Ram` → `Ram ke saath` (Ram-with)\n\nThe job is identical to an English preposition: a word that marks location, direction, time, or company. Only the position flips. Because these words land after the noun instead of before it, grammarians call them **postpositions**.",
         "examples": [
-          { "hindi": "ghar mein", "english": "in the house", "breakdown": "ghar (house) + mein (in) — English would say 'in house', Hindi flips it" },
-          { "hindi": "mez par", "english": "on the table", "breakdown": "mez (table) + par (on) — postposition AFTER" },
-          { "hindi": "Ram ke saath", "english": "with Ram", "breakdown": "Ram + ke saath (with) — Ram comes first, the 'with' attaches after" },
-          { "hindi": "Delhi se", "english": "from Delhi", "breakdown": "Delhi + se (from) — the 'from' lives at the end" }
+          {
+            "hindi": "ghar mein",
+            "english": "in the house",
+            "breakdown": "ghar (house) + mein (in) — English would say 'in house', Hindi flips it"
+          },
+          {
+            "hindi": "mez par",
+            "english": "on the table",
+            "breakdown": "mez (table) + par (on) — postposition AFTER"
+          },
+          {
+            "hindi": "Ram ke saath",
+            "english": "with Ram",
+            "breakdown": "Ram + ke saath (with) — Ram comes first, the 'with' attaches after"
+          },
+          {
+            "hindi": "Delhi se",
+            "english": "from Delhi",
+            "breakdown": "Delhi + se (from) — the 'from' lives at the end"
+          }
         ],
-        "callout": { "tone": "note", "body": "A 'postposition' is just 'a preposition that comes after the noun'. Same job (marking location, direction, possession, etc.), opposite location in the sentence. English speakers' instinct to put it first is the #1 thing to retrain." },
+        "callout": {
+          "tone": "note",
+          "body": "A 'postposition' is just 'a preposition that comes after the noun'. Same job (marking location, direction, possession, etc.), opposite location in the sentence. English speakers' instinct to put it first is the #1 thing to retrain."
+        },
         "cutting_intro": "Hi! Let's start with the big switch. In Hindi, the little words like 'in', 'on', 'with' come AFTER the noun, not before. Watch.",
         "quick_check": {
           "question": "How would Hindi say `on the table`?",
-          "options": ["par mez", "mez par", "mez ke par"],
+          "options": [
+            "par mez",
+            "mez par",
+            "mez ke par"
+          ],
           "correct_index": 1,
           "explanation": "Correct! `mez par` — noun first, then the postposition. English `on the table` flips to Hindi `mez par` (table-on)."
         }
       },
       {
         "heading": "The simple four: mein / par / se / ko",
-        "body": "These four are **single-word postpositions** — attach them after the noun and you're done. No agreement, no shape change on the postposition itself.\n\n- `mein` → in / inside\n- `par` → on / at\n- `se` → from / by / with-instrument\n- `ko` → to / for (marks the indirect object)\n\nThe one to watch is `se`. It's the busiest postposition in Hindi, covering the work of English `from`, `by` (means or instrument), and `since` (for time). Don't translate it as a single English word — learn each use as its own pattern.",
+        "body": "These four are **single-word postpositions**. Attach one after the noun and you're done. No agreement, no shape change on the postposition itself.\n\n- `mein`: in / inside\n- `par`: on / at\n- `se`: from / by / with (instrument)\n- `ko`: to / for (marks the indirect object)\n\nThe one to watch is `se`. It's the busiest postposition in Hindi, doing the work of English `from`, `by` (means or instrument), and `since` (time). Don't translate it as one English word. Learn each use as its own pattern.",
         "table": {
           "caption": "The four core simple postpositions",
-          "columns": ["postposition", "main meanings", "example"],
+          "columns": [
+            "postposition",
+            "main meanings",
+            "example"
+          ],
           "rows": [
-            ["mein", "in / inside", "ghar mein (in the house)"],
-            ["par", "on / at", "mez par (on the table)"],
-            ["se", "from / by / with (instrument)", "Delhi se (from Delhi), chammach se (with a spoon)"],
-            ["ko", "to / for (indirect object)", "Ram ko (to/for Ram)"]
+            [
+              "mein",
+              "in / inside",
+              "ghar mein (in the house)"
+            ],
+            [
+              "par",
+              "on / at",
+              "mez par (on the table)"
+            ],
+            [
+              "se",
+              "from / by / with (instrument)",
+              "Delhi se (from Delhi), chammach se (with a spoon)"
+            ],
+            [
+              "ko",
+              "to / for (indirect object)",
+              "Ram ko (to/for Ram)"
+            ]
           ]
         },
-        "callout": { "tone": "tip", "body": "`se` is the most overloaded postposition. It marks the source (`Delhi se` = from Delhi), the instrument (`chammach se khaao` = eat with a spoon), the means of transport (`bus se` = by bus), and 'since' in time (`kal se` = since yesterday). Whenever you'd say `from`, `by`, or `with-using` in English, Hindi probably wants `se`." },
+        "callout": {
+          "tone": "tip",
+          "body": "`se` is the most overloaded postposition. It marks the source (`Delhi se` = from Delhi), the instrument (`chammach se khaao` = eat with a spoon), the means of transport (`bus se` = by bus), and 'since' in time (`kal se` = since yesterday). Whenever you'd say `from`, `by`, or `with-using` in English, Hindi probably wants `se`."
+        },
         "cutting_intro": "Four postpositions cover most of daily Hindi. Memorize these and you can already say where things are and where they're going.",
         "quick_check": {
           "question": "Which postposition would you use for `by bus` (means of transport)?",
-          "options": ["mein", "par", "se", "ko"],
+          "options": [
+            "mein",
+            "par",
+            "se",
+            "ko"
+          ],
           "correct_index": 2,
           "explanation": "Yes — `bus se` = by bus. `se` covers from, by, and with-instrument. `bus mein` would mean inside the bus (location), which is a different idea."
         }
       },
       {
         "heading": "The possessive cluster: ka / ki / ke",
-        "body": "The **possessive postposition** `ka` means `of` or apostrophe-s — but it changes form to agree with the thing owned, not the owner.\n\n- `ka` → masculine singular noun: `Ram ka kutta` (Ram's dog — `kutta` is masculine)\n- `ki` → feminine noun: `Ram ki billi` (Ram's cat — `billi` is feminine)\n- `ke` → masculine plural noun: `Ram ke bachhe` (Ram's children — `bachhe` is masculine plural)\n\nThis is the same agreement pattern as `-aa` adjectives from the noun-gender chapter. The form tracks the gender and number of the noun on its right. `Ram` (the owner) is irrelevant — `ka/ki/ke` only cares about what comes after it.",
+        "body": "The **possessive postposition** `ka` means `of`, or apostrophe-s. But it changes form to agree with the thing owned, not the owner.\n\n- `ka`: masculine singular noun. `Ram ka kutta` (Ram's dog; `kutta` is masculine).\n- `ki`: feminine noun. `Ram ki billi` (Ram's cat; `billi` is feminine).\n- `ke`: masculine plural noun. `Ram ke bachhe` (Ram's children; `bachhe` is masculine plural).\n\nThis is the same agreement pattern as the `-aa` adjectives from the noun-gender chapter. The form tracks the gender and number of the noun on its right. `Ram`, the owner, is irrelevant. `ka/ki/ke` only cares about what comes after it.",
         "table": {
           "caption": "ka / ki / ke — which form goes with what",
-          "columns": ["form", "used with", "example"],
+          "columns": [
+            "form",
+            "used with",
+            "example"
+          ],
           "rows": [
-            ["ka", "masculine singular noun", "Ram ka kutta (Ram's dog)"],
-            ["ki", "feminine noun (singular or plural)", "Ram ki billi (Ram's cat)"],
-            ["ke", "masculine plural noun", "Ram ke bachhe (Ram's children)"],
-            ["ke", "before another postposition (oblique)", "Ram ke saath (with Ram)"]
+            [
+              "ka",
+              "masculine singular noun",
+              "Ram ka kutta (Ram's dog)"
+            ],
+            [
+              "ki",
+              "feminine noun (singular or plural)",
+              "Ram ki billi (Ram's cat)"
+            ],
+            [
+              "ke",
+              "masculine plural noun",
+              "Ram ke bachhe (Ram's children)"
+            ],
+            [
+              "ke",
+              "before another postposition (oblique)",
+              "Ram ke saath (with Ram)"
+            ]
           ]
         },
         "examples": [
-          { "hindi": "mummy ka phone", "english": "mummy's phone", "breakdown": "phone is masculine → ka" },
-          { "hindi": "papa ki gaadi", "english": "papa's car", "breakdown": "gaadi is feminine → ki" },
-          { "hindi": "didi ke kapde", "english": "didi's clothes", "breakdown": "kapde is masculine plural → ke" }
+          {
+            "hindi": "mummy ka phone",
+            "english": "mummy's phone",
+            "breakdown": "phone is masculine → ka"
+          },
+          {
+            "hindi": "papa ki gaadi",
+            "english": "papa's car",
+            "breakdown": "gaadi is feminine → ki"
+          },
+          {
+            "hindi": "didi ke kapde",
+            "english": "didi's clothes",
+            "breakdown": "kapde is masculine plural → ke"
+          }
         ],
-        "callout": { "tone": "tip", "body": "Quick mnemonic: ka/ki/ke follows the same -aa/-i/-e shape as accha/acchi/acche. If you can do adjective agreement, you can do possessive agreement — it's the same machinery." },
+        "callout": {
+          "tone": "tip",
+          "body": "Quick mnemonic: ka/ki/ke follows the same -aa/-i/-e shape as accha/acchi/acche. If you can do adjective agreement, you can do possessive agreement — it's the same machinery."
+        },
         "cutting_intro": "Now the possessive. `Ka` means `of`, but it shifts form to agree with the thing being possessed. Same trick as adjectives.",
         "quick_check": {
           "question": "How would you say `papa's car` (gaadi is feminine)?",
-          "options": ["papa ka gaadi", "papa ki gaadi", "papa ke gaadi"],
+          "options": [
+            "papa ka gaadi",
+            "papa ki gaadi",
+            "papa ke gaadi"
+          ],
           "correct_index": 1,
           "explanation": "Correct! Gaadi is feminine, so the possessive shifts to `ki`. The form tracks the thing owned, not the owner."
         }
       },
       {
         "heading": "Compound postpositions: ke + word",
-        "body": "Beyond the simple four, Hindi builds more specific relationships by combining `ke` with another word. These are called **compound postpositions**.\n\n- `ke saath` → with (accompanying)\n- `ke liye` → for / on behalf of\n- `ke baad` → after\n- `se pehle` → before\n- `ke paas` → near / in possession of\n\nThe `ke` at the front is the oblique form of `ka`. It stays as `ke` regardless of the noun's gender for almost all compounds. (A few use `ki` instead — `ki taraf` = toward — but `ke` is the default.) The whole two-word unit goes after the noun.",
+        "body": "Beyond the simple four, Hindi builds more specific relationships by combining `ke` with another word. These are **compound postpositions**.\n\n- `ke saath`: with (accompanying)\n- `ke liye`: for / on behalf of\n- `ke baad`: after\n- `se pehle`: before\n- `ke paas`: near / in possession of\n\nThe `ke` at the front is the oblique form of `ka`. It stays as `ke` no matter the noun's gender for almost every compound. (A few use `ki` instead, like `ki taraf` = toward, but `ke` is the default.) The whole two-word unit goes after the noun.",
         "table": {
           "caption": "Common compound postpositions",
-          "columns": ["compound", "meaning", "example"],
+          "columns": [
+            "compound",
+            "meaning",
+            "example"
+          ],
           "rows": [
-            ["ke saath", "with (accompanying)", "Ram ke saath (with Ram)"],
-            ["ke liye", "for / on behalf of", "tumhare liye (for you)"],
-            ["ke baad", "after", "khaane ke baad (after eating)"],
-            ["se pehle", "before", "khaane se pehle (before eating)"],
-            ["ke paas", "near / in possession of", "ghar ke paas (near the house)"],
-            ["ke baare mein", "about / on the topic of", "uske baare mein (about him/her)"],
-            ["ke saamne", "in front of", "store ke saamne (in front of the store)"],
-            ["ke peeche", "behind", "ghar ke peeche (behind the house)"]
+            [
+              "ke saath",
+              "with (accompanying)",
+              "Ram ke saath (with Ram)"
+            ],
+            [
+              "ke liye",
+              "for / on behalf of",
+              "tumhare liye (for you)"
+            ],
+            [
+              "ke baad",
+              "after",
+              "khaane ke baad (after eating)"
+            ],
+            [
+              "se pehle",
+              "before",
+              "khaane se pehle (before eating)"
+            ],
+            [
+              "ke paas",
+              "near / in possession of",
+              "ghar ke paas (near the house)"
+            ],
+            [
+              "ke baare mein",
+              "about / on the topic of",
+              "uske baare mein (about him/her)"
+            ],
+            [
+              "ke saamne",
+              "in front of",
+              "store ke saamne (in front of the store)"
+            ],
+            [
+              "ke peeche",
+              "behind",
+              "ghar ke peeche (behind the house)"
+            ]
           ]
         },
-        "callout": { "tone": "tip", "body": "`ke paas` does double duty as `have`. Hindi has no verb `to have` — instead you say `near me [thing] is`: `mere paas paisa hai` literally = `near-me money is`, but translates as `I have money`. Same for everyone: `uske paas time nahi hai` = `he/she doesn't have time`." },
+        "callout": {
+          "tone": "tip",
+          "body": "`ke paas` does double duty as `have`. Hindi has no verb `to have` — instead you say `near me [thing] is`: `mere paas paisa hai` literally = `near-me money is`, but translates as `I have money`. Same for everyone: `uske paas time nahi hai` = `he/she doesn't have time`."
+        },
         "cutting_intro": "Beyond the simple four, Hindi builds whole new postpositions by combining `ke` with another word. This is how you say `with`, `for`, `after`, `about`.",
         "quick_check": {
           "question": "Which compound would you use for `after eating`?",
-          "options": ["khaane ke saath", "khaane ke liye", "khaane ke baad"],
+          "options": [
+            "khaane ke saath",
+            "khaane ke liye",
+            "khaane ke baad"
+          ],
           "correct_index": 2,
           "explanation": "Yes — `khaane ke baad` = after eating. `ke saath` = with, `ke liye` = for, `ke baad` = after."
         }
       },
       {
         "heading": "The oblique case: -aa nouns shift before a postposition",
-        "body": "When you attach any postposition to a noun ending in `-aa`, that ending changes to `-e`. This shape change is called the **oblique case**.\n\n- `ladka` (boy) → `ladke ko` (to the boy)\n- `kamra` (room) → `kamre mein` (in the room)\n- `bachcha` (child) → `bachche ke saath` (with the child)\n\nThe oblique only affects `-aa`-ending masculine nouns. Nouns ending in other vowels or consonants don't change shape — `ghar mein` (not `ghare mein`), `kursi par` (not `kursie par`).\n\nPronouns shift too: `main` → `mujhe` / `mere`, `tu` → `tujhe` / `tere`, `woh` → `use` / `uske`.",
+        "body": "Attach any postposition to a noun ending in `-aa`, and that ending changes to `-e`. This shape change is the **oblique case**.\n\n- `ladka` (boy) → `ladke ko` (to the boy)\n- `kamra` (room) → `kamre mein` (in the room)\n- `bachcha` (child) → `bachche ke saath` (with the child)\n\nThe oblique only touches `-aa`-ending masculine nouns. Nouns ending in other vowels or consonants don't change shape: `ghar mein` (not `ghare mein`), `kursi par` (not `kursie par`).\n\nPronouns shift too: `main` → `mujhe` / `mere`, `tu` → `tujhe` / `tere`, `woh` → `use` / `uske`.",
         "table": {
           "caption": "Direct form vs oblique form (before any postposition)",
-          "columns": ["direct", "oblique", "example"],
+          "columns": [
+            "direct",
+            "oblique",
+            "example"
+          ],
           "rows": [
-            ["ladka (boy)", "ladke", "ladke ko bulao (call the boy)"],
-            ["kamra (room)", "kamre", "kamre mein (in the room)"],
-            ["bachcha (child)", "bachche", "bachche ke saath (with the child)"],
-            ["raasta (road)", "raaste", "raaste par (on the road)"],
-            ["ghar (house, consonant)", "ghar (no change)", "ghar mein (in the house)"],
-            ["kursi (chair, -i)", "kursi (no change)", "kursi par (on the chair)"]
+            [
+              "ladka (boy)",
+              "ladke",
+              "ladke ko bulao (call the boy)"
+            ],
+            [
+              "kamra (room)",
+              "kamre",
+              "kamre mein (in the room)"
+            ],
+            [
+              "bachcha (child)",
+              "bachche",
+              "bachche ke saath (with the child)"
+            ],
+            [
+              "raasta (road)",
+              "raaste",
+              "raaste par (on the road)"
+            ],
+            [
+              "ghar (house, consonant)",
+              "ghar (no change)",
+              "ghar mein (in the house)"
+            ],
+            [
+              "kursi (chair, -i)",
+              "kursi (no change)",
+              "kursi par (on the chair)"
+            ]
           ]
         },
-        "callout": { "tone": "warning", "body": "Forgetting the oblique shift is the single most common postposition error English speakers make. `ladka ko` is wrong — it has to be `ladke ko`. Drill the shift `-aa → -e` until it's automatic. Other endings are safe; only `-aa` masculines flip." },
+        "callout": {
+          "tone": "warning",
+          "body": "Forgetting the oblique shift is the single most common postposition error English speakers make. `ladka ko` is wrong — it has to be `ladke ko`. Drill the shift `-aa → -e` until it's automatic. Other endings are safe; only `-aa` masculines flip."
+        },
         "cutting_intro": "One last twist — the catch that trips up everyone. When a postposition latches onto an `-aa`-ending noun, the noun itself changes shape. Listen up.",
         "quick_check": {
           "question": "Which is correct: `in the room` (kamra = room)?",
-          "options": ["kamra mein", "kamre mein", "kamri mein"],
+          "options": [
+            "kamra mein",
+            "kamre mein",
+            "kamri mein"
+          ],
           "correct_index": 1,
           "explanation": "Correct! `kamra` ends in `-aa`, so it shifts to `kamre` before the postposition. The oblique case in action."
         }

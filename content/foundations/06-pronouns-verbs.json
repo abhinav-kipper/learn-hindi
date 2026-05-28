@@ -2,7 +2,11 @@
   "id": "pronouns-verbs",
   "title": "Pronouns & Verb Agreement",
   "situation": "Master who does what — how pronouns control verb forms in Hindi",
-  "skills": ["pronoun forms", "verb agreement", "oblique pronouns"],
+  "skills": [
+    "pronoun forms",
+    "verb agreement",
+    "oblique pronouns"
+  ],
   "phrases": [
     {
       "hindi": "main / tu / tum / aap / woh / hum",
@@ -81,30 +85,66 @@
       "skill": "Pronoun-verb agreement",
       "explanation": "Each pronoun pairs with a specific auxiliary ending in present tense: main+hoon, tu+hai, tum+ho, aap+hain, woh+hai (sg) / hain (pl), hum+hain. Mismatched pairings sound jarring to native speakers.",
       "more_examples": [
-        { "hindi": "main theek hoon", "english": "I am fine" },
-        { "hindi": "tum kahaan ho?", "english": "where are you? (friend)" },
-        { "hindi": "aap kaise hain?", "english": "how are you? (polite)" },
-        { "hindi": "woh school mein hai", "english": "he/she is in school" }
+        {
+          "hindi": "main theek hoon",
+          "english": "I am fine"
+        },
+        {
+          "hindi": "tum kahaan ho?",
+          "english": "where are you? (friend)"
+        },
+        {
+          "hindi": "aap kaise hain?",
+          "english": "how are you? (polite)"
+        },
+        {
+          "hindi": "woh school mein hai",
+          "english": "he/she is in school"
+        }
       ]
     },
     {
       "skill": "Polite forms (aap → -hain, tum → -ho, tu → -hai)",
       "explanation": "Three levels of formality: 'aap' (respectful, strangers/elders), 'tum' (friends/peers), 'tu' (intimate/anger only). Each takes a different verb ending. Default to 'aap' when unsure.",
       "more_examples": [
-        { "hindi": "aap kya kar rahe hain?", "english": "what are you doing? (polite)" },
-        { "hindi": "tum kya kar rahe ho?", "english": "what are you doing? (friend)" },
-        { "hindi": "tu kya kar raha hai?", "english": "what are you doing? (intimate, very informal)" },
-        { "hindi": "aap baith jaaiye", "english": "please sit (polite imperative)" }
+        {
+          "hindi": "aap kya kar rahe hain?",
+          "english": "what are you doing? (polite)"
+        },
+        {
+          "hindi": "tum kya kar rahe ho?",
+          "english": "what are you doing? (friend)"
+        },
+        {
+          "hindi": "tu kya kar raha hai?",
+          "english": "what are you doing? (intimate, very informal)"
+        },
+        {
+          "hindi": "aap baith jaaiye",
+          "english": "please sit (polite imperative)"
+        }
       ]
     },
     {
       "skill": "Gender agreement in verb endings",
       "explanation": "In past tense and continuous forms, verbs agree with subject gender: 'main aaya' (male, came) vs 'main aayi' (female). 'jaa raha hoon' (male) vs 'jaa rahi hoon' (female). Get this wrong and you sound like a tourist.",
       "more_examples": [
-        { "hindi": "main thaka hua hoon", "english": "I am tired (male)" },
-        { "hindi": "main thaki hui hoon", "english": "I am tired (female)" },
-        { "hindi": "woh Hindi bol raha hai", "english": "he is speaking Hindi" },
-        { "hindi": "woh Hindi bol rahi hai", "english": "she is speaking Hindi" }
+        {
+          "hindi": "main thaka hua hoon",
+          "english": "I am tired (male)"
+        },
+        {
+          "hindi": "main thaki hui hoon",
+          "english": "I am tired (female)"
+        },
+        {
+          "hindi": "woh Hindi bol raha hai",
+          "english": "he is speaking Hindi"
+        },
+        {
+          "hindi": "woh Hindi bol rahi hai",
+          "english": "she is speaking Hindi"
+        }
       ]
     }
   ],
@@ -114,110 +154,274 @@
     "sections": [
       {
         "heading": "The three you's — tu / tum / aap",
-        "body": "Hindi has three words for 'you', and they aren't synonyms — they're three **social registers**. Picking one tells the listener exactly how you see the relationship.\n\n- `tu` — **intimate.** Siblings, very close friends, moments of anger, deity. With the wrong person it lands as rude; with the right person it's warm and unguarded.\n- `tum` — **friendly middle.** Peers, friends, juniors, people you've shaken hands with.\n- `aap` — **respectful.** Elders, strangers, shopkeepers, anyone in a service role, anyone higher-status. Also the safe default for any adult you don't know.\n\nThere's no neutral 'you' that lets you dodge the choice — you have to pick. A stranger addressed as `tu` hears it as a slap. An elder addressed as `tum` feels disrespected.",
+        "body": "Hindi has three words for 'you', and they aren't synonyms. They're three **social registers**. The one you pick tells the listener exactly how you see the relationship.\n\n- `tu`: **intimate.** Siblings, very close friends, moments of anger, a deity. With the wrong person it lands as rude. With the right person it's warm and unguarded.\n- `tum`: **friendly middle.** Peers, friends, juniors, people you've shaken hands with.\n- `aap`: **respectful.** Elders, strangers, shopkeepers, anyone in a service role, anyone higher-status. Also the safe default for any adult you don't know.\n\nThere's no neutral 'you' to hide behind. You have to pick. A stranger addressed as `tu` hears a slap. An elder addressed as `tum` feels disrespected.",
         "examples": [
-          { "hindi": "tu kya kar raha hai?", "english": "what are you doing? (intimate — sibling, lover, close friend, or anger)", "breakdown": "tu + masc. verb + hai. Very informal; context decides if it's affectionate or hostile" },
-          { "hindi": "tum kya kar rahe ho?", "english": "what are you doing? (friendly — peer, friend, junior)", "breakdown": "tum + -e ending + ho. Casual but not rude" },
-          { "hindi": "aap kya kar rahe hain?", "english": "what are you doing? (polite — elder, stranger, shopkeeper)", "breakdown": "aap + -e ending + hain. The safe default for adults" }
+          {
+            "hindi": "tu kya kar raha hai?",
+            "english": "what are you doing? (intimate — sibling, lover, close friend, or anger)",
+            "breakdown": "tu + masc. verb + hai. Very informal; context decides if it's affectionate or hostile"
+          },
+          {
+            "hindi": "tum kya kar rahe ho?",
+            "english": "what are you doing? (friendly — peer, friend, junior)",
+            "breakdown": "tum + -e ending + ho. Casual but not rude"
+          },
+          {
+            "hindi": "aap kya kar rahe hain?",
+            "english": "what are you doing? (polite — elder, stranger, shopkeeper)",
+            "breakdown": "aap + -e ending + hain. The safe default for adults"
+          }
         ],
-        "callout": { "tone": "warning", "body": "When in doubt, use `aap`. Over-formality is forgiven and even appreciated; under-formality is not. New adults you've just met = `aap` until they signal otherwise." },
+        "callout": {
+          "tone": "warning",
+          "body": "When in doubt, use `aap`. Over-formality is forgiven and even appreciated; under-formality is not. New adults you've just met = `aap` until they signal otherwise."
+        },
         "cutting_intro": "Hi! Hindi has three different 'you's — `tu`, `tum`, `aap`. They're not synonyms. Pick wrong and the person you're talking to will hear it.",
         "quick_check": {
           "question": "You've just met a shopkeeper for the first time. Which 'you' should you use?",
-          "options": ["tu", "tum", "aap"],
+          "options": [
+            "tu",
+            "tum",
+            "aap"
+          ],
           "correct_index": 2,
           "explanation": "Correct! `aap` is the safe default for any stranger or service worker. `tum` would be too casual; `tu` would be rude."
         }
       },
       {
         "heading": "Subject pronoun grid",
-        "body": "Every Hindi sentence starts with one of these nine **subject pronouns** (the 'doer' of the sentence). Hindi compresses what English spreads across many words: `woh` alone covers he, she, that, and they; `yeh` covers he, she, this, and they-nearby. Memorize the grid.",
+        "body": "Every Hindi sentence starts with one of these nine **subject pronouns** (the 'doer' of the sentence). Hindi compresses what English spreads across many words. `woh` alone covers he, she, that, and they. `yeh` covers he, she, this, and they-nearby. Memorize the grid.",
         "table": {
           "caption": "Subject pronouns by person",
-          "columns": ["pronoun", "meaning", "notes"],
+          "columns": [
+            "pronoun",
+            "meaning",
+            "notes"
+          ],
           "rows": [
-            ["main", "I", "first person singular — invariable"],
-            ["tu", "you (intimate)", "siblings, lovers, deity, anger"],
-            ["tum", "you (casual)", "friends, peers, juniors"],
-            ["aap", "you (respectful)", "elders, strangers, default"],
-            ["hum", "we / I (respectful)", "technically plural; some dialects use it for 'I'"],
-            ["yeh", "this / he / she (nearby)", "the person/thing close by"],
-            ["woh", "that / he / she (far)", "the person/thing further away"],
-            ["ye", "these / they (nearby)", "plural of yeh"],
-            ["ve", "those / they (far)", "plural of woh"]
+            [
+              "main",
+              "I",
+              "first person singular — invariable"
+            ],
+            [
+              "tu",
+              "you (intimate)",
+              "siblings, lovers, deity, anger"
+            ],
+            [
+              "tum",
+              "you (casual)",
+              "friends, peers, juniors"
+            ],
+            [
+              "aap",
+              "you (respectful)",
+              "elders, strangers, default"
+            ],
+            [
+              "hum",
+              "we / I (respectful)",
+              "technically plural; some dialects use it for 'I'"
+            ],
+            [
+              "yeh",
+              "this / he / she (nearby)",
+              "the person/thing close by"
+            ],
+            [
+              "woh",
+              "that / he / she (far)",
+              "the person/thing further away"
+            ],
+            [
+              "ye",
+              "these / they (nearby)",
+              "plural of yeh"
+            ],
+            [
+              "ve",
+              "those / they (far)",
+              "plural of woh"
+            ]
           ]
         },
-        "callout": { "tone": "note", "body": "`hum` is grammatically plural ('we') but in many North Indian dialects (especially eastern UP, Bihar) it's used as a respectful 'I'. Context disambiguates — if someone introduces themselves with `hum`, they probably mean 'I'." },
+        "callout": {
+          "tone": "note",
+          "body": "`hum` is grammatically plural ('we') but in many North Indian dialects (especially eastern UP, Bihar) it's used as a respectful 'I'. Context disambiguates — if someone introduces themselves with `hum`, they probably mean 'I'."
+        },
         "cutting_intro": "Now meet the full crew. Nine pronouns cover everything — and some of them work harder than their English counterparts.",
         "quick_check": {
           "question": "Which pronoun would you use for 'he/she' standing close by?",
-          "options": ["woh", "yeh", "aap"],
+          "options": [
+            "woh",
+            "yeh",
+            "aap"
+          ],
           "correct_index": 1,
           "explanation": "Yes! `yeh` = this / he-she-nearby. `woh` is for someone further away. Hindi doesn't distinguish he/she in third person — only proximity."
         }
       },
       {
         "heading": "Verb endings tied to each pronoun",
-        "body": "Each pronoun locks to a specific **helper word** (auxiliary). Get the auxiliary wrong and the sentence sounds broken to a native speaker. A second piece — the **verb ending** (`-ta` / `-te` / `-ti`) — tracks the subject's gender and number on top of that.\n\nThe four auxiliaries:\n- `main` → `hoon`\n- `tu`, `yeh`, `woh` (singular) → `hai`\n- `tum` → `ho`\n- `aap`, `hum`, `ye`, `ve` → `hain`\n\nThe table below shows the full present-habitual pattern for `karna` (to do). Masculine form first, feminine second — pick whichever matches the subject.",
+        "body": "Each pronoun locks to a specific **helper word** (auxiliary). Get the auxiliary wrong and the sentence sounds broken to a native speaker. A second piece, the **verb ending** (`-ta` / `-te` / `-ti`), tracks the subject's gender and number on top of that.\n\nThe four auxiliaries:\n- `main` → `hoon`\n- `tu`, `yeh`, `woh` (singular) → `hai`\n- `tum` → `ho`\n- `aap`, `hum`, `ye`, `ve` → `hain`\n\nThe table below shows the full present-habitual pattern for `karna` (to do). Masculine form first, feminine second. Pick whichever matches the subject.",
         "table": {
           "caption": "Present-habitual: karna (to do) across all pronouns",
-          "columns": ["pronoun", "verb form", "auxiliary"],
+          "columns": [
+            "pronoun",
+            "verb form",
+            "auxiliary"
+          ],
           "rows": [
-            ["main", "karta / karti", "hoon"],
-            ["tu", "karta / karti", "hai"],
-            ["tum", "karte / karti", "ho"],
-            ["aap", "karte / karti", "hain"],
-            ["yeh", "karta / karti", "hai"],
-            ["woh", "karta / karti", "hai"],
-            ["hum", "karte / karti", "hain"],
-            ["ye / ve", "karte / karti", "hain"]
+            [
+              "main",
+              "karta / karti",
+              "hoon"
+            ],
+            [
+              "tu",
+              "karta / karti",
+              "hai"
+            ],
+            [
+              "tum",
+              "karte / karti",
+              "ho"
+            ],
+            [
+              "aap",
+              "karte / karti",
+              "hain"
+            ],
+            [
+              "yeh",
+              "karta / karti",
+              "hai"
+            ],
+            [
+              "woh",
+              "karta / karti",
+              "hai"
+            ],
+            [
+              "hum",
+              "karte / karti",
+              "hain"
+            ],
+            [
+              "ye / ve",
+              "karte / karti",
+              "hain"
+            ]
           ]
         },
         "examples": [
-          { "hindi": "main Hindi seekh raha hoon", "english": "I'm learning Hindi (masc. speaker)", "breakdown": "main → -raha + hoon. Present continuous, same auxiliary pattern" },
-          { "hindi": "tum kahaan rehte ho?", "english": "where do you live? (casual)", "breakdown": "tum → -te + ho" },
-          { "hindi": "aap kya pasand karte hain?", "english": "what do you like? (polite)", "breakdown": "aap → -te + hain" },
-          { "hindi": "woh chai peeti hai", "english": "she drinks tea", "breakdown": "woh → -ti + hai (feminine subject)" }
+          {
+            "hindi": "main Hindi seekh raha hoon",
+            "english": "I'm learning Hindi (masc. speaker)",
+            "breakdown": "main → -raha + hoon. Present continuous, same auxiliary pattern"
+          },
+          {
+            "hindi": "tum kahaan rehte ho?",
+            "english": "where do you live? (casual)",
+            "breakdown": "tum → -te + ho"
+          },
+          {
+            "hindi": "aap kya pasand karte hain?",
+            "english": "what do you like? (polite)",
+            "breakdown": "aap → -te + hain"
+          },
+          {
+            "hindi": "woh chai peeti hai",
+            "english": "she drinks tea",
+            "breakdown": "woh → -ti + hai (feminine subject)"
+          }
         ],
-        "callout": { "tone": "tip", "body": "The four-auxiliary pattern `hoon / hai / ho / hain` is the single most useful thing in this chapter. Drill it until you can produce it without thinking — every present-tense Hindi sentence you build sits on top of it." },
+        "callout": {
+          "tone": "tip",
+          "body": "The four-auxiliary pattern `hoon / hai / ho / hain` is the single most useful thing in this chapter. Drill it until you can produce it without thinking — every present-tense Hindi sentence you build sits on top of it."
+        },
         "cutting_intro": "Here's the mechanical part — and the most useful part. Each pronoun has its own auxiliary. Lock these in and Hindi opens up.",
         "quick_check": {
           "question": "Which auxiliary goes with `tum`?",
-          "options": ["hoon", "hai", "ho", "hain"],
+          "options": [
+            "hoon",
+            "hai",
+            "ho",
+            "hain"
+          ],
           "correct_index": 2,
           "explanation": "Right — `tum` always takes `ho`. The full set: main→hoon, tu/yeh/woh→hai, tum→ho, aap/hum/ye/ve→hain."
         }
       },
       {
         "heading": "Register slippage and how to recover",
-        "body": "Once you pick a register, hold it — for the whole sentence and the whole conversation. Mixing registers mid-sentence sounds like calling someone 'sir' and then 'dude' in the same breath.\n\nThe two common beginner slips:\n- Starting with `aap` but finishing with `ho` (`aap kahaan rehte ho?`). `aap` always wants `hain`, never `ho`.\n- Over-correcting mid-thought when nervous.\n\nThe **recovery move**: restart the sentence with a softener — `arrey, sorry —` — then rebuild it in the right register. Native listeners forgive visible self-correction.",
+        "body": "Once you pick a register, hold it for the whole sentence and the whole conversation. Mixing registers mid-sentence sounds like calling someone 'sir' and then 'dude' in the same breath.\n\nThe two common beginner slips:\n- Starting with `aap` but finishing with `ho` (`aap kahaan rehte ho?`). `aap` always wants `hain`, never `ho`.\n- Over-correcting mid-thought when nervous.\n\nThe **recovery move**: restart the sentence with a softener like `arrey, sorry`, then rebuild it in the right register. Native listeners forgive visible self-correction.",
         "examples": [
-          { "hindi": "aap kahaan rehte hain?", "english": "where do you live? (consistent — aap + hain)", "breakdown": "correct — aap pairs with hain, not ho" },
-          { "hindi": "aap kahaan rehte ho?", "english": "(broken register — aap + ho mismatch)", "breakdown": "wrong — aap demands hain. This sounds jarring to native ears" },
-          { "hindi": "arrey, sorry — aap kahaan rehte hain?", "english": "oh sorry — where do you live? (recovery after a slip)", "breakdown": "the `arrey, sorry` resets the register; finish with the correct auxiliary" }
+          {
+            "hindi": "aap kahaan rehte hain?",
+            "english": "where do you live? (consistent — aap + hain)",
+            "breakdown": "correct — aap pairs with hain, not ho"
+          },
+          {
+            "hindi": "aap kahaan rehte ho?",
+            "english": "(broken register — aap + ho mismatch)",
+            "breakdown": "wrong — aap demands hain. This sounds jarring to native ears"
+          },
+          {
+            "hindi": "arrey, sorry — aap kahaan rehte hain?",
+            "english": "oh sorry — where do you live? (recovery after a slip)",
+            "breakdown": "the `arrey, sorry` resets the register; finish with the correct auxiliary"
+          }
         ],
-        "callout": { "tone": "tip", "body": "With strangers, your first sentence sets the register for the whole conversation. Choose `aap` on the first line and the rest of the chat stays on rails. Downgrade only if they explicitly invite you to." },
+        "callout": {
+          "tone": "tip",
+          "body": "With strangers, your first sentence sets the register for the whole conversation. Choose `aap` on the first line and the rest of the chat stays on rails. Downgrade only if they explicitly invite you to."
+        },
         "cutting_intro": "Watch out for this. Once you pick a register, you have to stay there. Mid-sentence switching is a beginner's slip.",
         "quick_check": {
           "question": "You accidentally said `aap kya kar rahe ho?` (aap + ho mismatch). What's the best recovery?",
-          "options": ["Just keep going — nobody will notice", "Restart with a softener: `arrey, sorry — aap kya kar rahe hain?`", "Switch the rest of the conversation to tum to match"],
+          "options": [
+            "Just keep going — nobody will notice",
+            "Restart with a softener: `arrey, sorry — aap kya kar rahe hain?`",
+            "Switch the rest of the conversation to tum to match"
+          ],
           "correct_index": 1,
           "explanation": "Yes — restart with `arrey, sorry —` and the correct auxiliary `hain`. Native listeners forgive visible self-correction; ignoring the slip or downgrading the whole conversation makes it worse."
         }
       },
       {
         "heading": "Special cases — when the norm shifts",
-        "body": "The `aap`-default has exceptions.\n\n- **Children** — `tum` is normal regardless of how recently you met them. `aap` for a five-year-old sounds oddly formal.\n- **Service workers** — regional norms vary. In Delhi, `aap` is the polite middle-class default. In older or more hierarchical settings, `tum` is common. Bargaining banter sometimes uses `tum` deliberately to project warmth.\n- **Explicit invitations** — if someone says `tum bolo` ('say `tum`'), that's an invitation to drop a register. Take it. Refusing reads as cold.\n- **Deities** — `tu` is used for gods (`Hey Ram, tu hi sahara hai`). It's intimate-divine, not rude.\n- **Texting and WhatsApp** — peers often default to `tum` regardless of age, because typed chat is informal by nature.",
+        "body": "The `aap`-default has exceptions.\n\n- **Children:** `tum` is normal no matter how recently you met them. `aap` for a five-year-old sounds oddly formal.\n- **Service workers:** regional norms vary. In Delhi, `aap` is the polite middle-class default. In older or more hierarchical settings, `tum` is common. Bargaining banter sometimes uses `tum` on purpose to project warmth.\n- **Explicit invitations:** if someone says `tum bolo` ('say `tum`'), that's an invitation to drop a register. Take it. Refusing reads as cold.\n- **Deities:** `tu` is used for gods (`Hey Ram, tu hi sahara hai`). It's intimate-divine, not rude.\n- **Texting and WhatsApp:** peers often default to `tum` regardless of age, because typed chat is informal by nature.",
         "examples": [
-          { "hindi": "beta, tum kahaan ja rahe ho?", "english": "kid, where are you going? (adult to child — tum is normal)", "breakdown": "tum + ho. Aap for children would sound oddly formal" },
-          { "hindi": "tum bolo, aap mat bolo", "english": "say `tum`, don't say `aap` (explicit invitation to relax)", "breakdown": "take this invitation — refusing makes you seem distant" },
-          { "hindi": "Hey Bhagwan, tu hi sahara hai", "english": "O God, you alone are my shelter (intimate-divine)", "breakdown": "tu for deity = closeness to the divine, not rudeness" }
+          {
+            "hindi": "beta, tum kahaan ja rahe ho?",
+            "english": "kid, where are you going? (adult to child — tum is normal)",
+            "breakdown": "tum + ho. Aap for children would sound oddly formal"
+          },
+          {
+            "hindi": "tum bolo, aap mat bolo",
+            "english": "say `tum`, don't say `aap` (explicit invitation to relax)",
+            "breakdown": "take this invitation — refusing makes you seem distant"
+          },
+          {
+            "hindi": "Hey Bhagwan, tu hi sahara hai",
+            "english": "O God, you alone are my shelter (intimate-divine)",
+            "breakdown": "tu for deity = closeness to the divine, not rudeness"
+          }
         ],
-        "callout": { "tone": "note", "body": "Safe default for any new adult you meet: `aap`. Hold it until they explicitly invite you to drop down. Indian social norms reward conservatism here — you'll rarely be punished for being too polite." },
+        "callout": {
+          "tone": "note",
+          "body": "Safe default for any new adult you meet: `aap`. Hold it until they explicitly invite you to drop down. Indian social norms reward conservatism here — you'll rarely be punished for being too polite."
+        },
         "cutting_intro": "Last thing — the rules bend in some places. Kids, deities, bargaining, texting — each has its own rhythm.",
         "quick_check": {
           "question": "An Indian friend says `arrey, tum bolo na, aap kyun?` What does this mean?",
-          "options": ["They're telling you to stop using tum", "They're inviting you to use tum instead of aap", "They're correcting your grammar"],
+          "options": [
+            "They're telling you to stop using tum",
+            "They're inviting you to use tum instead of aap",
+            "They're correcting your grammar"
+          ],
           "correct_index": 1,
           "explanation": "Yes — `tum bolo` = 'say tum'. They're explicitly inviting you to relax from aap to tum. Take it; refusing reads as cold."
         }

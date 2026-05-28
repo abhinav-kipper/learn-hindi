@@ -154,7 +154,7 @@
     "sections": [
       {
         "heading": "The two presents",
-        "body": "English has two presents too: `I drink chai` (a habit) and `I am drinking chai` (right now). Hindi makes the same split — and each meaning gets its **own verb shape**.\n\n- **habitual** — things you do regularly: routines, facts about yourself, general truths\n- **continuous** — an action happening at this exact moment\n\nPicking the wrong one won't break the sentence, but it changes the meaning. Say `main chai pi raha hoon` when you meant *I drink chai*, and you've just told someone you're sipping a cup right now.",
+        "body": "English has two presents too: `I drink chai` (a habit) and `I am drinking chai` (right now). Hindi splits it the same way. Each meaning gets its **own verb shape**.\n\n- **habitual**: things you do regularly. Routines, facts about yourself, general truths.\n- **continuous**: an action happening at this exact moment.\n\nPicking the wrong one won't break the sentence, but it changes the meaning. Say `main chai pi raha hoon` when you meant *I drink chai*, and you've just told someone you're sipping a cup right now.",
         "examples": [
           {
             "hindi": "main chai pita hoon",
@@ -185,7 +185,7 @@
       },
       {
         "heading": "Forming the habitual",
-        "body": "The recipe is **verb root + ending + helper word**. Two pieces move:\n\n- the ending (suffix) — `-ta` / `-ti` / `-te` — changes with **gender + number**\n- the helper word (auxiliary) — `hoon` / `hai` / `ho` / `hain` — changes with the **pronoun**\n\nTake `karna` (to do). The root is `kar`. Now pick the ending:\n- `-ta` → masculine singular\n- `-ti` → feminine singular\n- `-te` → masculine plural, or with `tum` / `aap`\n\nThen attach the helper word that matches the pronoun.",
+        "body": "The recipe is **verb root + ending + helper word**. Two pieces move.\n\n- the ending (suffix), `-ta` / `-ti` / `-te`, changes with **gender + number**\n- the helper word (auxiliary), `hoon` / `hai` / `ho` / `hain`, changes with the **pronoun**\n\nTake `karna` (to do). The root is `kar`. Now pick the ending:\n- `-ta` → masculine singular\n- `-ti` → feminine singular\n- `-te` → masculine plural, or with `tum` / `aap`\n\nThen attach the helper word that matches the pronoun.",
         "table": {
           "caption": "Habitual present of `karna` (to do)",
           "columns": [
@@ -244,7 +244,7 @@
       },
       {
         "heading": "Forming the continuous",
-        "body": "Same helper words, different middle piece. The recipe is **verb root + `raha`/`rahi`/`rahe` + helper word**. Note: `raha` is a separate word, not an ending — it sits between the verb and the helper.\n\n- `raha` → masculine singular\n- `rahi` → feminine\n- `rahe` → masculine plural, or with `tum` / `aap`\n\nThe helper word (`hoon`/`hai`/`ho`/`hain`) still tracks the pronoun, exactly like the habitual.",
+        "body": "Same helper words, different middle piece. The recipe is **verb root + `raha`/`rahi`/`rahe` + helper word**. Note that `raha` is a separate word, not an ending. It sits between the verb and the helper.\n\n- `raha` → masculine singular\n- `rahi` → feminine\n- `rahe` → masculine plural, or with `tum` / `aap`\n\nThe helper word (`hoon`/`hai`/`ho`/`hain`) still tracks the pronoun, exactly like the habitual.",
         "table": {
           "caption": "Continuous present of `karna` (to do)",
           "columns": [
@@ -315,7 +315,7 @@
       },
       {
         "heading": "Gender + number agreement",
-        "body": "Both forms agree with the **subject's** gender and number — never the object's. (Past tense with `ne` agrees with the object instead, but that's a later lesson. In the present, it's always the subject.)\n\n- masculine singular → `-ta` or `raha`\n- feminine singular → `-ti` or `rahi`\n- masculine plural → `-te` or `rahe`\n\nOne historical quirk: a **feminine plural** subject keeps the *singular* feminine form (`-ti` / `rahi`) — it doesn't take a separate plural ending. Just memorize that one.",
+        "body": "Both forms agree with the **subject's** gender and number, never the object's. (Past tense with `ne` agrees with the object instead, but that's a later lesson. In the present, it's always the subject.)\n\n- masculine singular → `-ta` or `raha`\n- feminine singular → `-ti` or `rahi`\n- masculine plural → `-te` or `rahe`\n\nOne historical quirk: a **feminine plural** subject keeps the *singular* feminine form (`-ti` / `rahi`). It doesn't take a separate plural ending. Just memorize that one.",
         "examples": [
           {
             "hindi": "ladka khel raha hai",
@@ -356,7 +356,7 @@
       },
       {
         "heading": "Common pitfalls + register",
-        "body": "English speakers reach for the continuous by reflex — *I'm working at a startup*, *I'm living in Mumbai*. In Hindi those are **habitual**: `main startup mein kaam karta hoon`, `main Mumbai mein rehta hoon`. Use the continuous only when the action is happening at the moment you're speaking.\n\nThe other slip is `aap`. Even though it means one person, `aap` **always takes plural verb forms**: `aap kya karte hain?` (not `karta hai`). It's like French `vous` or Spanish `usted` — a respect marker, not a head-count.",
+        "body": "English speakers reach for the continuous by reflex: *I'm working at a startup*, *I'm living in Mumbai*. In Hindi those are **habitual**: `main startup mein kaam karta hoon`, `main Mumbai mein rehta hoon`. Use the continuous only when the action is happening at the moment you're speaking.\n\nThe other slip is `aap`. Even though it means one person, `aap` **always takes plural verb forms**: `aap kya karte hain?` (not `karta hai`). It works like French `vous` or Spanish `usted`: a respect marker, not a head-count.",
         "examples": [
           {
             "hindi": "main Mumbai mein rehta hoon",
