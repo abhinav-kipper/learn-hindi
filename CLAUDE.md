@@ -159,6 +159,9 @@ shadows anywhere.
 | `/dutch/lezen` | Lezen (Reading) module home. 3 tier sections (Beginner A1 / Elementary A2 / Intermediate B1) collapsible with A1 open by default. Orange "Start timed mock" CTA (25-min, 5 texts, 20 Qs, Dutch-only). Past-mocks fold. |
 | `/dutch/lezen/[textId]` | Single Lezen text study mode. Dutch body w/ "Show English translation" toggle → mint sticker reveals `body_en`. Bilingual question cards (4 per text, types: hoofdgedachte/detail/woordbetekenis/gevolg). Mark-as-studied → Chaina `lezenStudyDone` + persist to `dutch-lezen-studied`. |
 | `/dutch/lezen/mock` | 25-min timed Lezen drill (Dutch-only). 5 random texts × 4 Qs = 20 questions. Live timer pill goes pink under 5 min. Auto-advance 1.5s after answer reveal. Pass ≥16/20 → `lezenMockPassed` + Confetti. Save to `dutch-lezen-mock-attempts`. |
+| `/dutch/luisteren` | Luisteren (Listening) module home. 3 tier folds (A1/A2/B1), "Start timed mock" CTA, past-mocks fold. Clip cards: 🔊 + English title + monologue/dialogue label + studied chip. Audio is device TTS reading a Dutch transcript (no native recordings). |
+| `/dutch/luisteren/[clipId]` | Single clip study mode. TTS audio player (play/stop/replay, no scrubbing) via `speak(buildAudioScript(clip), 'nl')`. Transcript hidden by default; "show transcript + translation" reveals lines w/ speaker labels + greyed English. 4 bilingual question cards (tap-to-reveal + explanation). Mark-as-studied → `luisterStudyDone` + persist to `dutch-luisteren-studied`. |
+| `/dutch/luisteren/mock` | 25-min timed Listening drill (audio-only, no transcript). 5 random clips × 4 Qs = 20 questions. Live timer pill pink under 5 min. Auto-advance 1.5s. Pass ≥16/20 → `luisterMockPassed` + Confetti. Save to `dutch-luisteren-mock-attempts`. |
 | `/stories/[id]` | Single Hindi story — tap-through 5-panel Chai Galli motion-comic. Each panel: scene background (composed SVG: ChaiStall / Bazaar / NaniHouse / NarratorCard) + character w/ idle motion (Cutting / Nani / Customer / Shopkeeper) + dialogue Sticker w/ syllable-stress pronunciation hint + 🔊 hear-it (browser TTS, hi-IN) + tap-to-reveal English (lavender → mint reveal-zone). Framer Motion slide-in panel transitions. Last panel marks story-read in `learn-hindi:hindi-stories-read` + fires Confetti + "✓ read more stories" CTA back to home. |
 
 ### Libraries (`lib/`)
@@ -283,8 +286,17 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-knm-attempts` — JSON array of `{ts, score, total, passed}` capped at 50, most-recent-first.
 - `dutch-lezen-studied` — JSON array of Lezen text IDs.
 - `dutch-lezen-mock-attempts` — same shape as `dutch-knm-attempts`, plus `text_ids: string[]`.
+- `dutch-luisteren-studied` — JSON array of Luisteren clip IDs marked studied.
+- `dutch-luisteren-mock-attempts` — same shape as the Lezen attempts, plus `clip_ids: string[]`.
 
 ### Recent feature work log
+
+**2026-05-27 wave — Dutch Luisteren (Listening) module**
+
+- New exam-track module at full Lezen parity: `lib/dutch/luisteren.ts` (loader + `buildAudioScript` + `drawMockSet(5)` + 80%-pass scoring + studied/attempt tracking; TDD'd, 14 tests), `content/dutch/luisteren.json` (10 clips: 4 A1 / 4 A2 / 2 B1, mix of monologues + short dialogues, each with `lines[]` + 4 bilingual MCQs).
+- 3 routes: `/dutch/luisteren` (tiered module home), `/dutch/luisteren/[clipId]` (study mode — TTS player + hidden transcript with "show transcript + translation" reveal + question cards + mark-studied), `/dutch/luisteren/mock` (25-min timed, 5 clips audio-only, 20 Qs, ≥80% pass).
+- **Audio = TTS** (no native recordings): `speak(buildAudioScript(clip), 'nl')` via `lib/speech.ts`. Play/stop/replay only (no scrubbing). Transcript hidden by default (exam-realistic); revealed transcript labels dialogue speakers + shows greyed English per line.
+- 2 new Chaina moments (`luisterStudyDone`, `luisterMockPassed`, Dutch lines). Home "Listening / Luisteren" SkillCard flipped from `soon` to live with a `${studied}/10 studied` count. Storage keys `dutch-luisteren-studied` + `dutch-luisteren-mock-attempts`.
 
 **2026-05-27 wave — Dutch foundation theory upgrade (parity with Hindi)**
 
@@ -465,7 +477,7 @@ Still open:
 - **No XP / leveling arc** — `phrasesLearned` is just a stat tile, no progression visual.
 - **No audio assets** — only browser TTS. Native recordings would matter most for Phase 3 Luisteren (Dutch listening drills).
 - **Conjugation drill is verb-by-verb** — no mixed-verb sets, no spaced-repetition wiring.
-- **Dutch Phase 3-6 still pending:** Luisteren (Listening), Schrijven (Writing), Spreken (Speaking), Mock-exam. Each gets its own spec → plan → ship cycle.
+- **Dutch Phase 3-6 still pending:** ~~Luisteren (Listening)~~ shipped 2026-05-27 (TTS-based, full Lezen parity). Schrijven (Writing), Spreken (Speaking), Mock-exam still pending — each gets its own spec → plan → ship cycle.
 - **OV-chipkaart references in Lezen text 007** — system is being phased out in favor of OVpay (2023-2025). Naar Nederland A2 still uses this material so the audit flagged but didn't auto-rewrite.
 - **KNM date-anchored facts** ("AOW age 67 in 2026", "eigen risico €385", etc.) drift out of date annually. Worth a scheduled re-audit.
 

@@ -21,6 +21,7 @@ import { SearchOverlay } from '@/components/search-overlay'
 import { initBaseline, isInitialized, getUnseenIds, hasBeenSeen } from '@/lib/seen-lessons'
 import { getLearnedCount } from '@/lib/dutch/knm'
 import { getStudiedCount as getLezenStudiedCount } from '@/lib/dutch/lezen'
+import { getStudiedCount as getLuisterStudiedCount } from '@/lib/dutch/luisteren'
 import { getItemsByLevel, ALL_LEVELS, type Level } from '@/lib/dutch/level-map'
 import { getAllStories } from '@/lib/stories'
 import { getStoriesReadCount } from '@/lib/stories-progress'
@@ -231,6 +232,11 @@ export default function Home() {
   const [dutchLezenStudied, setDutchLezenStudied] = useState(0)
   useEffect(() => {
     if (language === 'dutch') setDutchLezenStudied(getLezenStudiedCount())
+  }, [language])
+
+  const [dutchLuisterStudied, setDutchLuisterStudied] = useState(0)
+  useEffect(() => {
+    if (language === 'dutch') setDutchLuisterStudied(getLuisterStudiedCount())
   }, [language])
 
   const dutchStageProgress = useMemo(() => {
@@ -687,7 +693,14 @@ export default function Home() {
                   live
                   onClick={() => router.push('/dutch/lezen')}
                 />
-                <SkillCard label="Listening" subtitle="Luisteren" subDutch=""  status="soon" />
+                <SkillCard
+                  label="Listening"
+                  subtitle="Luisteren"
+                  subDutch=""
+                  status={`${dutchLuisterStudied}/10 studied`}
+                  live
+                  onClick={() => router.push('/dutch/luisteren')}
+                />
                 <SkillCard label="Writing"   subtitle="Schrijven" subDutch=""  status="soon" />
                 <SkillCard label="Speaking"  subtitle="Spreken"   subDutch=""  status="soon" />
               </div>

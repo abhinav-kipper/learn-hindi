@@ -2,7 +2,7 @@ import { describe, it, expect, beforeEach } from 'vitest'
 import { MOMENTS, pickLine, resetPickLineHistory } from '@/components/design/moments'
 
 describe('MOMENTS registry', () => {
-  it('has all 22 moments', () => {
+  it('has all 24 moments', () => {
     const keys = Object.keys(MOMENTS).sort()
     expect(keys).toEqual([
       'a2Milestone',
@@ -20,6 +20,8 @@ describe('MOMENTS registry', () => {
       'lessonComplete',
       'lezenMockPassed',
       'lezenStudyDone',
+      'luisterMockPassed',
+      'luisterStudyDone',
       'newContent',
       'phraseStreak',
       'sessionEnd',

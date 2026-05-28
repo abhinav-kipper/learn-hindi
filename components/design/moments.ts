@@ -142,6 +142,14 @@ const LINES: Record<string, Line[]> = {
     { main: 'lezen geslaagd!',  caption: 'lekker bezig',   speak: 'Lezen geslaagd! Lekker bezig.' },
     { main: 'top, Lezen pass!', caption: 'B1 dichterbij',  speak: 'Top, Lezen pass. B1 dichterbij.' },
   ],
+  luisterStudyDone: [
+    { main: 'goed geluisterd!', caption: 'doorgaan',        speak: 'Goed geluisterd! Doorgaan.' },
+    { main: 'mooi, oren open',  caption: 'nog een fragment', speak: 'Mooi, oren open. Nog een fragment.' },
+  ],
+  luisterMockPassed: [
+    { main: 'luisteren geslaagd!', caption: 'lekker bezig',  speak: 'Luisteren geslaagd! Lekker bezig.' },
+    { main: 'top, Luisteren pass!', caption: 'B1 dichterbij', speak: 'Top, Luisteren pass. B1 dichterbij.' },
+  ],
   dailyGoalReached: [
     { main: 'daily goal done! 🎯', caption: 'mehnat ki keemat',          speak: 'Daily goal done! Mehnat ki keemat.' },
     { main: 'wah, target hit!',    caption: 'aaj ka kaam pura',          speak: 'Wah, target hit! Aaj ka kaam pura.' },
@@ -325,6 +333,24 @@ export const MOMENTS: Record<string, Moment> = {
     mood: 'happy', moodAnim: 'happy-hop 0.6s ease-in-out 2',
     bubbleTail: 'bottom-right', bubbleSide: 'left',
     voice: true, lines: LINES.lezenMockPassed, sizePct: 0.45,
+  },
+  luisterStudyDone: {
+    label: 'Luisteren clip studied',
+    when: 'User marks a Luisteren clip as studied',
+    anchor: 'bottom-right',
+    enter: 'peek-up-right', enterMs: 700, holdMs: 3000, exit: 'dismiss-down', exitMs: 500,
+    mood: 'wave', moodAnim: 'wave-tilt 1.2s ease-in-out 2',
+    bubbleTail: 'bottom-right', bubbleSide: 'left',
+    voice: true, lines: LINES.luisterStudyDone, sizePct: 0.32,
+  },
+  luisterMockPassed: {
+    label: 'Luisteren mock passed (>=80%)',
+    when: 'Luisteren timed mock finishes with score >=80%',
+    anchor: 'center',
+    enter: 'bubble-pop', enterMs: 700, holdMs: 3400, exit: 'dismiss-down', exitMs: 600,
+    mood: 'happy', moodAnim: 'happy-hop 0.6s ease-in-out 2',
+    bubbleTail: 'bottom-right', bubbleSide: 'left',
+    voice: true, lines: LINES.luisterMockPassed, sizePct: 0.45,
   },
   dailyGoalReached: {
     label: 'Daily goal hit',
