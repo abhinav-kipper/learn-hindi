@@ -1,0 +1,49 @@
+{
+  "id": "diwali-night",
+  "title": "Diwali Night",
+  "description": "Lighting diyas on the rooftop.",
+  "level": "A2",
+  "skill_tags": ["festival greetings", "family terms", "gifting"],
+  "panels": [
+    {
+      "scene": "diwali-rooftop",
+      "speaker": "cutting",
+      "speaker_position": "center",
+      "hindi": "Aaj Diwali hai! Chalo, chhat pe diye jalaate hain.",
+      "english": "Today is Diwali! Come on, let's light the lamps on the roof.",
+      "pronunciation": "AAJ di-WA-li hai! CHA-lo, CHHAT pe DI-ye ja-LAA-te hain"
+    },
+    {
+      "scene": "diwali-rooftop",
+      "speaker": "nani",
+      "speaker_position": "left",
+      "hindi": "Pehle Lakshmi maa ko diya dikhao, beta. Phir baaki sab.",
+      "english": "First show a lamp to Goddess Lakshmi, child. Then all the rest.",
+      "pronunciation": "PEH-le LAK-shmi maa ko DI-ya di-KHAO, BE-ta. PHIR BAA-ki sab"
+    },
+    {
+      "scene": "diwali-rooftop",
+      "speaker": "customer",
+      "speaker_position": "right",
+      "hindi": "Maine saari mithai laayi hai. Gulab jamun aur barfi!",
+      "english": "I brought all the sweets. Gulab jamun and barfi!",
+      "pronunciation": "MAIN-ne SAA-ri mi-THAI LAA-yi hai. gu-LAB ja-MUN aur BAR-fi"
+    },
+    {
+      "scene": "diwali-rooftop",
+      "speaker": "cutting",
+      "speaker_position": "center",
+      "hindi": "Shubh Diwali, Nani ji! Yeh aapke liye chhota sa gift hai.",
+      "english": "Happy Diwali, Nani-ji! This is a small gift for you.",
+      "pronunciation": "SHUBH di-WA-li, NA-ni ji! YEH AAP-ke LI-ye CHHO-ta sa gift hai"
+    },
+    {
+      "scene": "diwali-rooftop",
+      "speaker": "nani",
+      "speaker_position": "left",
+      "hindi": "Khush raho, beta. Ghar roshan, dil roshan.",
+      "english": "Stay happy, child. A bright home, a bright heart.",
+      "pronunciation": "KHUSH ra-HO, BE-ta. GHAR RO-shan, DIL RO-shan"
+    }
+  ]
+}

@@ -1,4 +1,10 @@
-export type SceneId = 'chai-stall' | 'bazaar' | 'nani-house' | 'narrator-card'
+export type SceneId =
+  | 'chai-stall'
+  | 'bazaar'
+  | 'nani-house'
+  | 'narrator-card'
+  | 'diwali-rooftop'
+  | 'clinic'
 
 export type SpeakerPosition = 'left' | 'right' | 'center'
 

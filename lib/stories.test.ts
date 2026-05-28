@@ -2,13 +2,15 @@ import { describe, it, expect } from 'vitest'
 import { getAllStories, getStoryById } from './stories'
 
 describe('lib/stories', () => {
-  it('loads all 3 stories', () => {
+  it('loads all 5 stories', () => {
     const stories = getAllStories()
-    expect(stories).toHaveLength(3)
+    expect(stories).toHaveLength(5)
     expect(stories.map(s => s.id)).toEqual([
       'chai-stall',
       'lost-in-bazaar',
       'sunday-with-nani',
+      'diwali-night',
+      'at-the-doctor',
     ])
   })
 

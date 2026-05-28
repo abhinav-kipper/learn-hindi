@@ -24,7 +24,7 @@ import { getStudiedCount as getLezenStudiedCount } from '@/lib/dutch/lezen'
 import { getStudiedCount as getLuisterStudiedCount } from '@/lib/dutch/luisteren'
 import { getItemsByLevel, ALL_LEVELS, type Level } from '@/lib/dutch/level-map'
 import { getAllStories } from '@/lib/stories'
-import { getStoriesReadCount } from '@/lib/stories-progress'
+import { getStoriesReadCount, getStoriesRead } from '@/lib/stories-progress'
 import { StoryCard } from '@/components/stories/StoryCard'
 
 const W = '#fff' // @design-allow: white literal
@@ -90,8 +90,13 @@ export default function Home() {
 
   const hindiStories = useMemo(() => (language === 'hindi' ? getAllStories() : []), [language])
   const [storiesReadCount, setStoriesReadCount] = useState(0)
+  const [readStoryIds, setReadStoryIds] = useState<Set<string>>(new Set())
+  const [storiesFoldOpen, setStoriesFoldOpen] = useState(false)
   useEffect(() => {
-    if (language === 'hindi') setStoriesReadCount(getStoriesReadCount())
+    if (language === 'hindi') {
+      setStoriesReadCount(getStoriesReadCount())
+      setReadStoryIds(new Set(getStoriesRead()))
+    }
   }, [language])
 
   const dutchExamLessons = useMemo(
@@ -796,11 +801,61 @@ export default function Home() {
                 {storiesReadCount} of {hindiStories.length} read
               </div>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-              {hindiStories.map((story, i) => (
-                <StoryCard key={story.id} story={story} index={i} />
-              ))}
-            </div>
+            {(() => {
+              const indexed = hindiStories.map((s, i) => ({ s, i }))
+              const unread = indexed.filter(({ s }) => !readStoryIds.has(s.id))
+              const read = indexed.filter(({ s }) => readStoryIds.has(s.id))
+              return (
+                <>
+                  {unread.length > 0 && (
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                      {unread.map(({ s, i }) => (
+                        <StoryCard key={s.id} story={s} index={i} />
+                      ))}
+                    </div>
+                  )}
+                  {read.length > 0 && (
+                    <div style={{ marginTop: unread.length > 0 ? 12 : 0 }}>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setStoriesFoldOpen((v) => !v)
+                          playSound('tap')
+                        }}
+                        aria-expanded={storiesFoldOpen}
+                        style={{
+                          width: '100%',
+                          padding: '10px 14px',
+                          background: '#fff', // @design-allow: white literal
+                          color: COLORS.ink,
+                          border: BORDER.sticker,
+                          boxShadow: SHADOW.chip,
+                          borderRadius: 99,
+                          fontFamily: FONTS.display,
+                          fontWeight: 800,
+                          fontSize: 12,
+                          cursor: 'pointer',
+                          textTransform: 'lowercase',
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                        }}
+                      >
+                        <span>✓ {read.length} read</span>
+                        <span style={{ color: COLORS.ink60 }}>{storiesFoldOpen ? 'hide ▴' : 'show ▾'}</span>
+                      </button>
+                      {storiesFoldOpen && (
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 10 }}>
+                          {read.map(({ s, i }) => (
+                            <StoryCard key={s.id} story={s} index={i} />
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </>
+              )
+            })()}
           </div>
         )}
 

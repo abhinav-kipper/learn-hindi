@@ -48,7 +48,7 @@ content/dutch/lessons/  → 11 Dutch lesson JSONs (5 A1 casual + 6 A2/B1 exam-ta
 content/dutch/foundations/ → 7 Dutch foundation JSONs
 content/dutch/knm.json  → 100 KNM exam questions (bilingual, 6 categories)
 content/dutch/lezen.json → 10 Lezen B1-prep reading texts (bilingual, 40 MCQs)
-content/stories/        → 3 Hindi story JSONs (Chai Galli motion-comics)
+content/stories/        → 5 Hindi story JSONs (Chai Galli motion-comics)
 docs/audits/             → Content audit rubric + per-run reports + master summaries
 scripts/audit-content.mjs → Audit dispatcher (lists 57 units, builds per-unit prompts, aggregates reports)
 types/                  → TypeScript interfaces
@@ -181,7 +181,7 @@ shadows anywhere.
 | `favorites.ts` | Star phrases — `toggleFavorite`, `isFavorite`, `getFavorites`. Key `${lessonId}::${hindi}` |
 | `conjugations.ts` | 5 verbs (hona/jaana/karna/aana/bolna) × 3 tenses (present/past/future), used by `/drill/conjugation`. Romanization follows CONTENT.md style (single-vowel endings: `karta`, `karunga`, `tha`) |
 | `speech.ts` | Browser TTS / STT — ReadAloudButton + voice input |
-| `stories.ts` | Loader for the 3 Hindi story JSONs in `content/stories/`. `getAllStories()` + `getStoryById(id)`. TDD'd, 4 tests. |
+| `stories.ts` | Loader for the 5 Hindi story JSONs in `content/stories/`. `getAllStories()` + `getStoryById(id)`. TDD'd. |
 | `stories-progress.ts` | Read-state tracking for Hindi stories. Storage key `learn-hindi:hindi-stories-read` (JSON array of read story IDs). TDD'd, 7 tests. |
 | `seen-lessons.ts` | localStorage-backed Set tracking which lessons a user has seen (per-language). `initBaseline()` silent-tags existing IDs on first detection so the popup never false-fires; `getUnseenIds()`, `markAsSeen()`, `hasBeenSeen()`, `unseeIds()`. TDD'd, 9 tests. |
 | `dutch/lessons.ts`, `dutch/foundations.ts` | Parallel loaders for Dutch content (11 lessons + 7 foundations). `getDutchAllContent()` returns both combined for cross-module use (e.g. search). |

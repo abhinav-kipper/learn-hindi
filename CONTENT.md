@@ -40,14 +40,16 @@ Grammar core. Same schema as situations. As of 2026-05-26 all 9 foundations have
 ### Vocabulary (`content/vocabulary.json`)
 6 categories × ~15-20 words = **100 words total**: Everyday Words, Emotions & Feelings, Food & Drinks, People & Relationships, Time & Numbers, Actions.
 
-### Stories (`content/stories/*.json`) — 3 motion-comics
-Chai Galli aesthetic illustrated 5-panel stories. Pure consumption (no quiz). Each panel: scene background + character + dialogue + tap-to-reveal English + browser TTS. Hindi-only.
+### Stories (`content/stories/*.json`) — 5 motion-comics
+Chai Galli aesthetic illustrated 5-panel stories. Pure consumption (no quiz). Each panel: scene background + character + dialogue + tap-to-reveal English + browser TTS. Hindi-only. On the home, read stories collapse behind a `✓ N read` fold; unread stay visible.
 
 | ID | Title | Tier | Vocab maps to |
 |---|---|---|---|
 | `chai-stall` | The Chai Stall | A1 | 01-greetings + 03-ordering-food |
 | `lost-in-bazaar` | Lost in the Bazaar | A2 | 06-giving-directions |
 | `sunday-with-nani` | Sunday with Nani | A2 | 07-home-visit + 10-phone-with-parents |
+| `diwali-night` | Diwali Night | A2 | festival greetings, family, gifting (scene: diwali-rooftop) |
+| `at-the-doctor` | At the Doctor | A2 | health, symptoms, polite requests (scene: clinic; reinforces 09-doctor-visit) |
 
 ## Schema (Lesson JSON)
 
@@ -193,7 +195,7 @@ Step-by-step for adding a new lesson:
 - ~~**No level markers** — no A1/A2/B1 progression~~ — RESOLVED for Dutch (Lesson type has `level?` field; all Dutch lessons tagged via JSON + `lib/dutch/level-map.ts`). Hindi has no CEFR system intentionally.
 - ~~**Theory examples had no TTS playback**~~ — RESOLVED 2026-05-27. Every `ExampleBlock` in `components/lesson/TheoryView.tsx` now has a hear-it play button, locale-aware via `useLanguage().config.ttsLocale`. Applies to all 16 foundations.
 - **No audio assets** — TTS via `lib/speech.ts` works (Google `/api/tts` → browser `speechSynthesis` fallback), but no native recordings. Most relevant for Dutch Phase 3 Luisteren when it ships.
-- **Scope is still growing** — Hindi: 10 situations + 9 foundations + 100 vocab + 3 stories. Dutch: 11 lessons + 7 foundations + 100 KNM + 10 Lezen texts. Vocab expansion planned to ~300 via `scripts/generate-vocab.mjs` (Gemini-drafted, user-reviewed). The grow-vs-polish balance is currently leaning grow.
+- **Scope is still growing** — Hindi: 10 situations + 9 foundations + 100 vocab + 5 stories. Dutch: 11 lessons + 7 foundations + 100 KNM + 10 Lezen texts. Vocab expansion planned to ~300 via `scripts/generate-vocab.mjs` (Gemini-drafted, user-reviewed). The grow-vs-polish balance is currently leaning grow.
 
 ## Loading
 
@@ -204,7 +206,7 @@ Hindi:
 - `lib/all-content.ts` — universal lookup `getUniversalLessonById(id)` across both Hindi + Dutch
 - `lib/personalization.ts` — `reorderLessonsByReason()` reshuffles Hindi situations based on onboarding (family/bollywood/moving/curious)
 - `lib/system-prompt.ts` — `buildSystemPrompt(lesson)` injects lesson into Gemini system prompt for `/practice/[id]`
-- `lib/stories.ts` — imports the 3 Hindi story JSONs in `content/stories/`
+- `lib/stories.ts` — imports the 5 Hindi story JSONs in `content/stories/`
 - `lib/stories-progress.ts` — Hindi-stories-read tracking (`learn-hindi:hindi-stories-read`)
 
 Dutch:
