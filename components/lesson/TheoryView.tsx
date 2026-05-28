@@ -668,24 +668,117 @@ function QuickCheckBlock({
   )
 }
 
-function Paragraph({ text, emphasis = false }: { text: string; emphasis?: boolean }) {
-  const paragraphs = text.split('\n\n').filter((p) => p.trim().length > 0)
-  return (
-    <>
-      {paragraphs.map((p, i) => (
-        <p
-          key={i}
+// Inline markdown subset for theory body text:
+//   `token`   → butter-bg Hindi-token chip
+//   **bold**  → bold key term
+function renderInline(text: string, keyPrefix: string): React.ReactNode[] {
+  const nodes: React.ReactNode[] = []
+  const re = /`([^`]+)`|\*\*([^*]+)\*\*/g
+  let last = 0
+  let m: RegExpExecArray | null
+  let i = 0
+  while ((m = re.exec(text)) !== null) {
+    if (m.index > last) nodes.push(text.slice(last, m.index))
+    if (m[1] !== undefined) {
+      nodes.push(
+        <span
+          key={`${keyPrefix}-c${i}`}
           style={{
-            fontFamily: FONTS.body,
-            fontSize: emphasis ? 16 : 15,
-            lineHeight: 1.55,
-            color: emphasis ? COLORS.ink : COLORS.ink60,
-            margin: i === 0 ? '0 0 12px' : '12px 0',
+            background: COLORS.butter,
+            border: BORDER.thin,
+            borderRadius: 6,
+            padding: '0 5px',
+            fontSize: '0.92em',
+            fontWeight: 700,
+            color: COLORS.ink,
+            whiteSpace: 'nowrap',
           }}
         >
-          {p}
-        </p>
-      ))}
+          {m[1]}
+        </span>,
+      )
+    } else if (m[2] !== undefined) {
+      nodes.push(
+        <strong key={`${keyPrefix}-b${i}`} style={{ fontWeight: 800, color: COLORS.ink }}>
+          {m[2]}
+        </strong>,
+      )
+    }
+    last = re.lastIndex
+    i++
+  }
+  if (last < text.length) nodes.push(text.slice(last))
+  return nodes
+}
+
+function Paragraph({ text, emphasis = false }: { text: string; emphasis?: boolean }) {
+  const lines = text.split('\n')
+  const blocks: Array<{ type: 'p' | 'ul'; lines: string[] }> = []
+  let para: string[] = []
+  let bullets: string[] = []
+  const flushPara = () => {
+    if (para.length) {
+      blocks.push({ type: 'p', lines: [para.join(' ')] })
+      para = []
+    }
+  }
+  const flushBullets = () => {
+    if (bullets.length) {
+      blocks.push({ type: 'ul', lines: bullets })
+      bullets = []
+    }
+  }
+  for (const raw of lines) {
+    const line = raw.trimEnd()
+    if (line.trim().length === 0) {
+      flushPara()
+      flushBullets()
+    } else if (/^\s*-\s+/.test(line)) {
+      flushPara()
+      bullets.push(line.replace(/^\s*-\s+/, ''))
+    } else {
+      flushBullets()
+      para.push(line.trim())
+    }
+  }
+  flushPara()
+  flushBullets()
+
+  const pStyle: React.CSSProperties = {
+    fontFamily: FONTS.body,
+    fontSize: emphasis ? 16 : 15,
+    lineHeight: 1.55,
+    color: emphasis ? COLORS.ink : COLORS.ink60,
+    margin: '0 0 12px',
+  }
+
+  return (
+    <>
+      {blocks.map((b, i) =>
+        b.type === 'ul' ? (
+          <ul
+            key={i}
+            style={{
+              ...pStyle,
+              paddingLeft: 20,
+              margin: '0 0 12px',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 6,
+            }}
+          >
+            {b.lines.map((li, j) => (
+              <li key={j} style={{ lineHeight: 1.5 }}>
+                {renderInline(li, `${i}-${j}`)}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p key={i} style={pStyle}>
+            {renderInline(b.lines[0], String(i))}
+          </p>
+        ),
+      )}
     </>
   )
 }
