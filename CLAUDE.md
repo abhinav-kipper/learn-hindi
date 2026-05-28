@@ -276,7 +276,6 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 
 **New-content surfacing (Hindi):**
 - `learn-hindi:seen-lesson-ids:hindi` — JSON array of lesson/foundation IDs the user has seen. Silent baseline on first detection (no false-positive popup). Powers the `newContent` Chaina moment + per-card NEW dot via `lib/seen-lessons.ts`.
-- `learn-hindi:demo-reset:2026-05-26-new-content` — one-shot flag (set to `'1'`) so the manual demo reset (which unsees the 5 newest Hindi additions) runs once per device, not on every load. Safe to remove after the demo has fired.
 
 **Dutch exam-prep keys:**
 - `dutch-exam-target` — `'a2' | 'b1'`, default `'b1'`. Toggle in Dutch welcome modal.
@@ -467,7 +466,6 @@ Still open:
 - **No audio assets** — only browser TTS. Native recordings would matter most for Phase 3 Luisteren (Dutch listening drills).
 - **Conjugation drill is verb-by-verb** — no mixed-verb sets, no spaced-repetition wiring.
 - **Dutch Phase 3-6 still pending:** Luisteren (Listening), Schrijven (Writing), Spreken (Speaking), Mock-exam. Each gets its own spec → plan → ship cycle.
-- **One-shot demo-reset block in `app/page.tsx` mount effect** unsees 5 Hindi IDs to demo the newContent popup. Remove after observed (flag: `learn-hindi:demo-reset:2026-05-26-new-content`).
 - **OV-chipkaart references in Lezen text 007** — system is being phased out in favor of OVpay (2023-2025). Naar Nederland A2 still uses this material so the audit flagged but didn't auto-rewrite.
 - **KNM date-anchored facts** ("AOW age 67 in 2026", "eigen risico €385", etc.) drift out of date annually. Worth a scheduled re-audit.
 

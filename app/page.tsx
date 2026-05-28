@@ -18,7 +18,7 @@ import { getLastActiveLesson } from '@/lib/last-active-lesson'
 import { getLessonPercent } from '@/lib/phrase-progress'
 import { getUniversalLessonById } from '@/lib/all-content'
 import { SearchOverlay } from '@/components/search-overlay'
-import { initBaseline, isInitialized, getUnseenIds, hasBeenSeen, unseeIds } from '@/lib/seen-lessons'
+import { initBaseline, isInitialized, getUnseenIds, hasBeenSeen } from '@/lib/seen-lessons'
 import { getLearnedCount } from '@/lib/dutch/knm'
 import { getStudiedCount as getLezenStudiedCount } from '@/lib/dutch/lezen'
 import { getItemsByLevel, ALL_LEVELS, type Level } from '@/lib/dutch/level-map'
@@ -188,15 +188,6 @@ export default function Home() {
     }
 
     localStorage.setItem(LAST_TS_KEY, String(now))
-
-    // One-shot demo: unmark the 5 most recent additions so the new-content
-    // popup fires once for users whose baseline already included them.
-    // Remove this block after the demo has been seen.
-    const DEMO_KEY = 'learn-hindi:demo-reset:2026-05-26-new-content'
-    if (!localStorage.getItem(DEMO_KEY)) {
-      unseeIds(['shopping-clothes', 'doctor-visit', 'phone-with-parents', 'compound-verbs', 'ne-rule'])
-      localStorage.setItem(DEMO_KEY, '1')
-    }
 
     // New-content detection (Feature B)
     const allHindiLessons = getAllLessons()
