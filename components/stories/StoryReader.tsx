@@ -17,6 +17,7 @@ import { SCENES } from './scenes'
 import { Nani } from './characters/Nani'
 import { Customer } from './characters/Customer'
 import { Shopkeeper } from './characters/Shopkeeper'
+import { Doctor } from './characters/Doctor'
 import { markStoryRead } from '@/lib/stories-progress'
 import { speak } from '@/lib/speech'
 import { playSound } from '@/lib/sounds'
@@ -367,5 +368,6 @@ function CharacterFor({ speaker, storyId }: { speaker?: string; storyId: string 
   if (speaker === 'shopkeeper1') return <Shopkeeper size={size} shirtColor={COLORS.peach} accentColor={COLORS.mint} />
   if (speaker === 'shopkeeper2') return <Shopkeeper size={size} shirtColor={COLORS.butter} accentColor={COLORS.lav} />
   if (speaker === 'child') return <Customer size={Math.round(size * 0.78)} shirtColor={COLORS.butter} />
+  if (speaker === 'doctor') return <Doctor size={size} />
   return null
 }

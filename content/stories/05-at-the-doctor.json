@@ -1,0 +1,49 @@
+{
+  "id": "at-the-doctor",
+  "title": "At the Doctor",
+  "description": "A fever and some good advice.",
+  "level": "A2",
+  "skill_tags": ["health", "symptoms", "polite requests"],
+  "panels": [
+    {
+      "scene": "clinic",
+      "speaker": "doctor",
+      "speaker_position": "right",
+      "hindi": "Aaiye, baithiye. Kahiye, kya takleef hai?",
+      "english": "Come in, sit down. Tell me, what's the trouble?",
+      "pronunciation": "AA-i-ye, BAI-thi-ye. KA-hi-ye, kya tak-LEEF hai?"
+    },
+    {
+      "scene": "clinic",
+      "speaker": "cutting",
+      "speaker_position": "left",
+      "hindi": "Doctor sahab, do din se bukhar hai aur gala kharab hai.",
+      "english": "Doctor, I've had a fever for two days and a sore throat.",
+      "pronunciation": "DOC-tor SA-hab, DO din se bu-KHAR hai aur GA-la kha-RAB hai"
+    },
+    {
+      "scene": "clinic",
+      "speaker": "doctor",
+      "speaker_position": "right",
+      "hindi": "Aapko aaram chahiye. Khoob paani piyiye aur garam haldi-doodh lijiye.",
+      "english": "You need rest. Drink plenty of water and have warm turmeric milk.",
+      "pronunciation": "AAP-ko aa-RAM cha-HI-ye. KHOOB PAA-ni PI-yi-ye aur ga-RAM HAL-di-doodh LI-ji-ye"
+    },
+    {
+      "scene": "clinic",
+      "speaker": "cutting",
+      "speaker_position": "left",
+      "hindi": "Theek hai, doctor sahab. Kya koi dawa bhi leni hogi?",
+      "english": "Okay, doctor. Will I need to take any medicine too?",
+      "pronunciation": "THEEK hai, DOC-tor SA-hab. kya KO-i DA-wa bhi LE-ni HO-gi?"
+    },
+    {
+      "scene": "clinic",
+      "speaker": "doctor",
+      "speaker_position": "right",
+      "hindi": "Abhi nahi. Aaram sabse achhi dawa hai.",
+      "english": "Not yet. Rest is the best medicine.",
+      "pronunciation": "a-BHI na-HEE. aa-RAM SAB-se ACH-chi DA-wa hai"
+    }
+  ]
+}
