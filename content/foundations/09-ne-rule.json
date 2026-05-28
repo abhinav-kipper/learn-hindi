@@ -144,7 +144,7 @@
     "Afroz Taj Lesson 8"
   ],
   "theory": {
-    "intro": "This is the chapter Hindi learners fear most. The `ne` rule is the construction that makes English speakers say 'Hindi doesn't make sense' — but it actually does, you just have to flip your instincts. In past tense, for transitive verbs (verbs that take an object), the subject takes the postposition `ne` and the verb agrees with the OBJECT's gender, not the subject's. So `maine roti khaayi` ('I ate roti') uses the feminine verb ending because `roti` is feminine — even if the speaker is masculine. This is the single most distinctive feature of Hindi grammar; once you've drilled it, the rest of past tense locks into place.",
+    "intro": "This is the chapter Hindi learners fear most. The `ne` rule is the construction that makes English speakers say 'Hindi doesn't make sense'. It actually does, once you flip your instincts. In the past tense, for transitive verbs (verbs that take an object), the subject takes the postposition `ne`, and the verb agrees with the object's gender, not the subject's. So `maine roti khaayi` ('I ate roti') uses the feminine verb ending because `roti` is feminine, even if the speaker is male. This is the single most distinctive feature of Hindi grammar. Drill it, and the rest of the past tense locks into place.",
     "sections": [
       {
         "heading": "What `ne` is and when it appears",
@@ -175,7 +175,7 @@
           "tone": "note",
           "body": "The two conditions must BOTH be true. Past alone isn't enough; transitive alone isn't enough. Only past + transitive together triggers `ne`."
         },
-        "cutting_intro": "Okay — deep breath. The `ne` rule has a reputation, but it's mechanical. Let's start with the trigger: when does `ne` even show up?",
+        "cutting_intro": "Okay, deep breath. The `ne` rule has a reputation, but it's mechanical. Let's start with the trigger: when does `ne` even show up?",
         "quick_check": {
           "question": "Which sentence requires `ne`?",
           "options": [
@@ -221,7 +221,7 @@
           "tone": "warning",
           "body": "THIS is the rule English speakers forget. Your instinct will scream 'agree with the subject' because that's what English does. In a `ne` sentence, ignore the subject's gender entirely and track the OBJECT's gender. Re-train this reflex by drilling pairs aloud."
         },
-        "cutting_intro": "Here's the part everyone forgets. When `ne` shows up, the verb stops caring about the subject. It tracks the OBJECT instead.",
+        "cutting_intro": "Here's the part everyone forgets. When `ne` shows up, the verb stops caring about the subject. It tracks the object instead.",
         "quick_check": {
           "question": "A female speaker says `maine paani _____ ` (drank). Which form is correct?",
           "options": [
@@ -299,7 +299,7 @@
           "tone": "tip",
           "body": "Quick test when in doubt: ask 'did the action act ON something?' If yes → transitive → `ne` required in past. If no → intransitive → never `ne`. Works 95% of the time."
         },
-        "cutting_intro": "Now — the trickiest piece. How do you know if a verb is transitive? Here's the cheat sheet.",
+        "cutting_intro": "Now the trickiest piece: how do you know if a verb is transitive? Here's the cheat sheet.",
         "quick_check": {
           "question": "Which of these verbs is intransitive (never takes `ne`)?",
           "options": [
@@ -395,7 +395,7 @@
           "tone": "note",
           "body": "Even though it looks like the pronoun itself transformed, remember: it's just pronoun + `ne` merged into one word. The 'shift' from `wo` → `us-` and `we` → `un-` is the same oblique form you see before any postposition (`usko`, `unke saath`, etc.)."
         },
-        "cutting_intro": "`ne` doesn't sit separately after the pronoun — it fuses in. Learn these eight forms once and you've got every subject covered.",
+        "cutting_intro": "`ne` doesn't sit separately after the pronoun. It fuses in. Learn these eight forms once and you've got every subject covered.",
         "quick_check": {
           "question": "How would you say 'we ate the food' using `ne`?",
           "options": [
@@ -436,7 +436,7 @@
           "tone": "tip",
           "body": "Drill in pairs. Say a past intransitive (`main soya`) followed by a past transitive (`maine khaana khaaya`) out loud, back to back. Your ear will start flagging the wrong shape automatically — that's the goal."
         },
-        "cutting_intro": "Last stop — let's look at the four mistakes English speakers make over and over. Spot them now, save yourself months of corrections.",
+        "cutting_intro": "Last stop: the four mistakes English speakers make over and over. Spot them now and save yourself months of corrections.",
         "quick_check": {
           "question": "Which sentence is CORRECT?",
           "options": [
@@ -449,6 +449,6 @@
         }
       }
     ],
-    "wrap_up": "The `ne` rule is hard, but it's mechanical once internalized: SIMPLE PAST + TRANSITIVE = subject takes `ne` and verb agrees with the object. Master the trigger first ('am I in past tense with a transitive verb?'), then the fused pronoun forms (`maine`, `tune`, `usne`...), then practice the verb agreement with the OBJECT. Get past this one and you're past the hardest grammar wall in Hindi. The phrases below give pair-drill practice across transitive and intransitive past sentences — say them aloud, back to back, until the right shape feels automatic."
+    "wrap_up": "The `ne` rule is hard, but it's mechanical once it sinks in: simple past + transitive means the subject takes `ne` and the verb agrees with the object. Master the trigger first ('am I in the past tense with a transitive verb?'), then the fused pronoun forms (`maine`, `tune`, `usne`...), then the verb agreement with the object. Get past this one and you're past the hardest grammar wall in Hindi. The phrases below give pair-drill practice across transitive and intransitive past sentences. Say them aloud, back to back, until the right shape feels automatic."
   }
 }

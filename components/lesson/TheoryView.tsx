@@ -322,7 +322,7 @@ function IntroPage({ title, intro }: { title: string; intro: string }) {
       </h1>
       <CuttingSpeech
         mood="wave"
-        text="Welcome! I'll walk you through this chapter. Swipe or tap next to continue — and I'll quiz you at each step so it sticks. Let's go!"
+        text="Welcome! I'll walk you through this chapter. Swipe or tap next to keep going. I'll quiz you at each step so it sticks. Let's go!"
       />
       <div style={{ marginTop: 18 }}>
         <Paragraph text={intro} emphasis />

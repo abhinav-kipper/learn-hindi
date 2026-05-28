@@ -150,7 +150,7 @@
   ],
   "practice_prompt": "You are a Hindi tutor drilling postpositions — `mein`, `par`, `se`, `ko`, the `ka/ki/ke` possessive cluster, and compound postpositions like `ke saath`, `ke liye`, `ke baad`, `ke paas`. Use `aap` throughout. Open with `chaliye postposition practice karte hain — bataaiye Hindi mein: 'The book is on the table' — aapka jawab?` Then run 6-8 mixed items: some are English sentences for the user to translate (`'I went to the market with Ram'`, `'Papa's car is in front of the house'`); some are noun-plus-relationship fill-ins (`Ram + at home → Ram __ ghar __`); some test oblique shifts on `-aa` nouns (`ladka` → `ladke ko`, `kamra` → `kamre mein`). Mix simple postpositions, the `ka/ki/ke` agreement with the possessed noun, and compounds. Watch closely for PRE-positioning (English habit of putting the postposition first), missing oblique case on `-aa` nouns, wrong gender agreement on `ka/ki/ke`, and `mein` vs `par` confusion. Flag every mistake with `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]`. Don't switch to English unless asked. End with `bahut khoob, aapne acche se kiya — phir milte hain`.",
   "theory": {
-    "intro": "In Hindi, what English calls a 'preposition' comes AFTER the noun and is called a 'postposition'. Same idea, opposite order. There's a small set of simple postpositions (in, on, from, to) and a larger set of compounds (with, for, after, about) built on top of them. The trickier part: the possessive postposition `ka/ki/ke` shifts form to agree with the possessed thing, and nouns ending in `-aa` change shape (the 'oblique case') whenever any postposition is attached. Once those mechanics click, postpositions become predictable.",
+    "intro": "In Hindi, what English calls a 'preposition' comes after the noun, and is called a 'postposition'. Same idea, opposite order. There's a small set of simple postpositions (in, on, from, to) and a larger set of compounds (with, for, after, about) built on top of them. The trickier part: the possessive `ka/ki/ke` shifts form to agree with the thing possessed, and nouns ending in `-aa` change shape (the 'oblique case') whenever you attach a postposition. Once those mechanics click, postpositions become predictable.",
     "sections": [
       {
         "heading": "What's a postposition (and why 'post')",
@@ -181,7 +181,7 @@
           "tone": "note",
           "body": "A 'postposition' is just 'a preposition that comes after the noun'. Same job (marking location, direction, possession, etc.), opposite location in the sentence. English speakers' instinct to put it first is the #1 thing to retrain."
         },
-        "cutting_intro": "Hi! Let's start with the big switch. In Hindi, the little words like 'in', 'on', 'with' come AFTER the noun, not before. Watch.",
+        "cutting_intro": "Hi! Let's start with the big switch. In Hindi, little words like 'in', 'on', and 'with' come after the noun, not before. Watch.",
         "quick_check": {
           "question": "How would Hindi say `on the table`?",
           "options": [
@@ -366,7 +366,7 @@
           "tone": "tip",
           "body": "`ke paas` does double duty as `have`. Hindi has no verb `to have` — instead you say `near me [thing] is`: `mere paas paisa hai` literally = `near-me money is`, but translates as `I have money`. Same for everyone: `uske paas time nahi hai` = `he/she doesn't have time`."
         },
-        "cutting_intro": "Beyond the simple four, Hindi builds whole new postpositions by combining `ke` with another word. This is how you say `with`, `for`, `after`, `about`.",
+        "cutting_intro": "Beyond the simple four, Hindi builds whole new postpositions by combining `ke` with another word. This is how you say `with`, `for`, `after`, and `about`.",
         "quick_check": {
           "question": "Which compound would you use for `after eating`?",
           "options": [
@@ -425,7 +425,7 @@
           "tone": "warning",
           "body": "Forgetting the oblique shift is the single most common postposition error English speakers make. `ladka ko` is wrong — it has to be `ladke ko`. Drill the shift `-aa → -e` until it's automatic. Other endings are safe; only `-aa` masculines flip."
         },
-        "cutting_intro": "One last twist — the catch that trips up everyone. When a postposition latches onto an `-aa`-ending noun, the noun itself changes shape. Listen up.",
+        "cutting_intro": "One last twist, and it trips up everyone. When a postposition latches onto an `-aa`-ending noun, the noun itself changes shape. Listen up.",
         "quick_check": {
           "question": "Which is correct: `in the room` (kamra = room)?",
           "options": [
@@ -438,6 +438,6 @@
         }
       }
     ],
-    "wrap_up": "Postpositions are everywhere in Hindi sentences, and English speakers' instinct to put them BEFORE the noun is the first thing to unlearn. Master the simple four (`mein`/`par`/`se`/`ko`), then the possessive cluster (`ka/ki/ke` with its agreement), then the compounds (`ke saath`, `ke liye`, etc.). The oblique case on `-aa`-ending nouns is the trap to watch for — `ladka` becomes `ladke`, `kamra` becomes `kamre`, every time. The phrases below give practice in all of these."
+    "wrap_up": "Postpositions are everywhere in Hindi, and the instinct to put them before the noun is the first thing to unlearn. Master the simple four (`mein`/`par`/`se`/`ko`), then the possessive cluster (`ka/ki/ke` with its agreement), then the compounds (`ke saath`, `ke liye`, and so on). The oblique case on `-aa`-ending nouns is the trap to watch: `ladka` becomes `ladke`, `kamra` becomes `kamre`, every time. The phrases below practice all of these."
   }
 }

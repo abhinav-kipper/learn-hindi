@@ -150,7 +150,7 @@
   ],
   "practice_prompt": "You are a Hindi tutor drilling present tense — both habitual (`karta hoon`) and continuous (`kar raha hoon`). Use `aap` (polite tutor register). Open with: `chaliye, ek exercise se shuru karte hain — bataaiye Hindi mein: 'Main har subah chai pita hoon' — kya yeh sahi hai?` Then give ONE prompt at a time — translate a sentence, conjugate a verb for a given pronoun, or describe a scene — and wait for the student's answer before scoring. Mix habitual and continuous across 6-8 escalating drill items: start with simple `main/woh + habit`, then layer in `tum/aap/hum`, then continuous (`kar raha/rahi/rahe hain`), then trip them with the feminine-plural irregularity (`ladkiyaan padh rahi hain`, never `rahe`). Watch for: wrong gender on `-ta/-ti`, mixing habitual with continuous, wrong auxiliary (`hoon/hai/ho/hain`), and English-style present-progressive overuse (`I'm living in Mumbai` → habitual in Hindi). Flag every mistake with `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]`. Stay in Hinglish unless the student asks for English. End with `bahut khoob, aapne theek se kar liya — phir milte hain`.",
   "theory": {
-    "intro": "Hindi has two present tenses, and which one you use carries meaning. The habitual (`I drink chai`) and the continuous (`I'm drinking chai right now`) translate to different Hindi verb forms — and using one when you mean the other will confuse listeners. Both forms agree with the subject's gender, which adds another layer. Once you've got both shapes, present-tense Hindi is mostly mechanical.",
+    "intro": "Hindi has two present tenses, and the one you pick carries meaning. The habitual (`I drink chai`) and the continuous (`I'm drinking chai right now`) use different Hindi verb forms. Use one when you mean the other and you'll confuse the listener. Both forms also agree with the subject's gender, which adds a layer. Once you have both shapes down, present-tense Hindi is mostly mechanical.",
     "sections": [
       {
         "heading": "The two presents",
@@ -171,7 +171,7 @@
           "tone": "note",
           "body": "The English `I drink chai` is ambiguous out of context — it could mean habitually or in-progress. Hindi forces you to pick one. That's a feature, not a bug."
         },
-        "cutting_intro": "Hi! Hindi splits present tense into two flavors — habit vs happening-now. Let's see them side by side.",
+        "cutting_intro": "Hi! Hindi splits the present tense into two flavors: habit, and happening-now. Let's see them side by side.",
         "quick_check": {
           "question": "You want to say `I'm drinking chai right now`. Which form?",
           "options": [
@@ -230,7 +230,7 @@
           "tone": "tip",
           "body": "Three suffixes to memorize: -ta (masc sg), -ti (fem), -te (masc pl or with tum/aap). The auxiliary is a separate piece — pick it from the pronoun."
         },
-        "cutting_intro": "The habitual is the workhorse — you'll use it constantly. Recipe: root + -ta/-ti/-te + auxiliary.",
+        "cutting_intro": "The habitual is the one you'll use most. Recipe: root + -ta/-ti/-te + auxiliary.",
         "quick_check": {
           "question": "A male speaker saying `I work` (as a habit) is...",
           "options": [
@@ -301,7 +301,7 @@
           "tone": "note",
           "body": "Tiny change, huge meaning shift. `kar rahe ho` asks what's happening now; `karte ho` asks about routine. Mix them up and you'll get strange answers back."
         },
-        "cutting_intro": "Now the continuous — same pattern, but `raha` slots in for ongoing actions. Watch how `karte ho` vs `kar rahe ho` flip meaning.",
+        "cutting_intro": "Now the continuous. Same pattern, but `raha` slots in for ongoing actions. Watch how `karte ho` and `kar rahe ho` flip the meaning.",
         "quick_check": {
           "question": "Someone says `main khaana khaa rahi hoon`. What's happening?",
           "options": [
@@ -342,7 +342,7 @@
           "tone": "warning",
           "body": "Feminine plural is a trap: the verb stays in the singular feminine form (-ti / rahi), but the auxiliary goes plural (`hain`). `ladkiyaan khel rahi hain`, never `rahe hain`. Memorize this — there's no logical rule, it's just historical."
         },
-        "cutting_intro": "Here's where most beginners slip — the verb has to match the subject's gender AND number. One weird exception with feminine plurals, then it's mechanical.",
+        "cutting_intro": "Here's where beginners slip. The verb has to match the subject's gender and number. One odd exception with feminine plurals, then it's mechanical.",
         "quick_check": {
           "question": "`The girls are studying` — which is correct?",
           "options": [
@@ -378,7 +378,7 @@
           "tone": "tip",
           "body": "Litmus test: ask yourself `is this happening right this second?`. Yes → continuous (`raha/rahi/rahe`). No → habitual (`-ta/-ti/-te`). For facts about your life, your job, where you live — almost always habitual."
         },
-        "cutting_intro": "Last bit — two things English speakers always get wrong. Continuous overuse, and forgetting `aap` is plural-shaped.",
+        "cutting_intro": "Last bit: two things English speakers always get wrong. Overusing the continuous, and forgetting that `aap` is plural-shaped.",
         "quick_check": {
           "question": "`I work at Google` (it's your job) — which Hindi form?",
           "options": [
@@ -390,6 +390,6 @@
         }
       }
     ],
-    "wrap_up": "Master the habitual first — it's more common for everyday statements and you'll use it constantly. Continuous comes naturally once habitual is automatic. Gender + number agreement on the verb is the biggest area for slipping; pay attention to your conjugation choice and double-check feminine plurals. The phrases below mix both forms to drill the difference — notice which one is being used and why."
+    "wrap_up": "Master the habitual first. It's more common for everyday statements, and you'll lean on it constantly. The continuous comes naturally once the habitual is automatic. Gender and number agreement on the verb is where people slip most, so double-check your conjugation, especially feminine plurals. The phrases below mix both forms to drill the difference. Notice which one is used, and why."
   }
 }

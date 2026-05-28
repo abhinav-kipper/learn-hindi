@@ -150,7 +150,7 @@
   ],
   "practice_prompt": "You are a Hindi tutor drilling future tense — the `-ga/-gi/-ge` endings, gender agreement, and `agar...toh` conditionals. Use `aap` throughout. Open with: `chaliye future tense practice karte hain — bataaiye Hindi mein: 'I will come tomorrow' — aapka jawab kya hoga?` Then drill one task at a time: translate an English sentence, conjugate a given verb for a specific pronoun, transform a present-tense sentence into future, or build a conditional `agar...toh` sentence. Mix 6-8 items of increasing difficulty and include at least one `agar...toh` conditional and one polite soft-future request (e.g. `aap chai piyenge?`). Focus on `-ga` (m sg) / `-gi` (f sg or f pl) / `-ge` (m pl or aap) endings, subject-gender agreement, conditional structures, and polite future framing. When the user slips, flag it with `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]` — watch especially for wrong gender on the ending (the most common error), `agar` clauses missing `toh`, and English-style `will + verb` ordering. Don't switch to English unless asked. End with `aapne kaafi achi practice ki — phir milte hain`.",
   "theory": {
-    "intro": "Hindi future tense is built into the verb itself — there's no separate `will` word. You take the verb stem and add `-ga` (masculine), `-gi` (feminine), or `-ge` (plural / respect). The trick is making the ending agree with the subject's gender, which English speakers consistently get wrong at first. Once the endings click, future tense is the most regular of the three tenses you've learned.",
+    "intro": "Hindi builds the future tense into the verb itself. There's no separate `will` word. You take the verb stem and add `-ga` (masculine), `-gi` (feminine), or `-ge` (plural or respect). The trick is making the ending agree with the subject's gender, which English speakers consistently miss at first. Once the endings click, the future is the most regular of the three tenses you've learned.",
     "sections": [
       {
         "heading": "The simple future shape",
@@ -207,7 +207,7 @@
             "breakdown": "stem `aa` + `-ungi` (1st person fem)"
           }
         ],
-        "cutting_intro": "Hi! Future tense is the easiest of the three. No `will` word — just stem plus ending. Let's see the shape.",
+        "cutting_intro": "Hi! The future is the easiest of the three tenses. No `will` word, just stem plus ending. Let's see the shape.",
         "quick_check": {
           "question": "What ending does a female speaker use for `main` (I) in the future tense?",
           "options": [
@@ -248,7 +248,7 @@
           "tone": "note",
           "body": "Feminine plural still uses `-gi`, not `-gain` or any pluralized variant. So `ladki jaayegi` (one girl will go) and `ladkiyaan jaayengi` (girls will go) both end in `-gi`. It's a historical irregularity — feminine never pluralizes the future ending itself. Just trust it."
         },
-        "cutting_intro": "Now — the ending has to match the subject's gender. Get it right and you sound natural; get it wrong and locals will gently correct you.",
+        "cutting_intro": "Now the ending has to match the subject's gender. Get it right and you sound natural. Get it wrong and locals will gently correct you.",
         "quick_check": {
           "question": "Which future form does Hindi use with `aap` (formal you)?",
           "options": [
@@ -297,7 +297,7 @@
           "tone": "tip",
           "body": "When in doubt, frame it as a future question. `Aap chai piyenge?` (will you drink chai?) is the warm, hospitable Indian offer — not the imperative `chai piyiye`. The future form gives the listener agency."
         },
-        "cutting_intro": "Here's a real-world trick. Future tense is also Hindi's polite-request register. Listen for it everywhere.",
+        "cutting_intro": "Here's a real-world trick. The future tense is also Hindi's polite-request register. You'll hear it everywhere.",
         "quick_check": {
           "question": "Which form sounds more polite when offering chai?",
           "options": [
@@ -333,7 +333,7 @@
           "tone": "tip",
           "body": "In casual speech, `to` is often dropped. `Agar tum aaoge, main bhi aaunga` is perfectly natural — the comma carries the `then`. Listen for this; native speakers skip `to` constantly in fast speech."
         },
-        "cutting_intro": "Here's the most useful pattern of all. `Agar...to...` — if...then. Practice this and you'll have half of conversational future tense covered.",
+        "cutting_intro": "Here's the most useful pattern of all: `agar...to...`, if...then. Practice this and you've got half of conversational future covered.",
         "quick_check": {
           "question": "In `agar baarish hogi, to hum nahin jaayenge`, what tense is `hogi`?",
           "options": [
@@ -369,7 +369,7 @@
           "tone": "warning",
           "body": "Pronoun and ending must match. `Main` → `-unga`/`-ungi`. `Tu`/`woh` → `-ega`/`-egi`. `Tum` → `-oge`/`-ogi`. `Hum`/`aap`/`woh (pl)` → `-enge`/`-engi`. Mix these up and the sentence becomes ungrammatical — not just awkward, but wrong. Drill the pronoun-ending pairs until they're automatic."
         },
-        "cutting_intro": "Heads up — these are the slips I see learners make every day. Watch out for them.",
+        "cutting_intro": "Heads up: these are the slips I see learners make every day. Watch out for them.",
         "quick_check": {
           "question": "What's wrong with `main khaayega` (intended: I will eat)?",
           "options": [
@@ -382,6 +382,6 @@
         }
       }
     ],
-    "wrap_up": "Future tense in Hindi is mechanical once you internalize the endings — verb stem + the right `-ga`/`-gi`/`-ge` based on subject. Drill the endings until they're automatic, then practice with `agar...to` conditionals for the most common real-world use. The phrases below cover plans, predictions, and polite requests — pay attention to which pronoun pairs with which ending as you read them."
+    "wrap_up": "The future is mechanical once you internalize the endings: verb stem plus the right `-ga`/`-gi`/`-ge` for the subject. Drill the endings until they're automatic, then practice `agar...to` conditionals for the most common real-world use. The phrases below cover plans, predictions, and polite requests. Notice which pronoun pairs with which ending as you read them."
   }
 }

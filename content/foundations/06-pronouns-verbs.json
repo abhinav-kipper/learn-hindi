@@ -150,7 +150,7 @@
   ],
   "practice_prompt": "You are a Hindi tutor drilling pronouns + verb agreement — especially the tu/tum/aap register split. Address the user as `aap` throughout. Open with: `chaliye pronouns aur verb agreement practice karte hain — bataaiye, agar aap apne boss se baat kar rahe hain, toh 'kya kar rahe hain?' / 'kya kar rahe ho?' / 'kya kar raha hai?' — kaunsa form sahi hai?` Run 6-8 tight items, cycling through all three 'you's plus 3rd-person (yeh/woh/hum). Mix scenarios: register-judgment (`shopkeeper se 'aapka naam kya hai?' — sahi form?`), switch-the-sentence (`'tum kahaan jaa rahe ho' ko aap-form mein badliye`), and gap-fills tracking auxiliary (`hoon/hai/ho/hain`) + gender on the verb. Flag every mistake as `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]` — watch for `tu` to strangers, mismatched auxiliary (`aap...ho`), missing gender agreement (`main aayi` vs `aaya`), pronoun-switching mid-sentence. Escalate to register-judgment scenarios near the end. Stay in Hinglish unless aap explicitly ask for English. Close with `aapne bahut accha kiya — phir milte hain`.",
   "theory": {
-    "intro": "Hindi pronouns aren't just about 'who' — they carry social information that English barely codes. The choice between `tu`, `tum`, and `aap` for 'you' signals intimacy, equality, or respect, and each one takes its own verb form. Pick wrong and the listener notices. The good news: the verb endings are systematic — once you know which auxiliary goes with which pronoun (`hoon` for `main`, `ho` for `tum`, `hain` for `aap`), the pattern is mechanical. This chapter walks through all three 'you's, when to use each, and the verb endings that come with them.",
+    "intro": "Hindi pronouns aren't just about 'who'. They carry social information that English barely codes. The choice between `tu`, `tum`, and `aap` for 'you' signals intimacy, equality, or respect, and each one takes its own verb form. Pick wrong and the listener notices. The good news: the verb endings are systematic. Once you know which auxiliary goes with which pronoun (`hoon` for `main`, `ho` for `tum`, `hain` for `aap`), the pattern is mechanical. This chapter walks through all three 'you's, when to use each, and the verb endings that come with them.",
     "sections": [
       {
         "heading": "The three you's — tu / tum / aap",
@@ -176,7 +176,7 @@
           "tone": "warning",
           "body": "When in doubt, use `aap`. Over-formality is forgiven and even appreciated; under-formality is not. New adults you've just met = `aap` until they signal otherwise."
         },
-        "cutting_intro": "Hi! Hindi has three different 'you's — `tu`, `tum`, `aap`. They're not synonyms. Pick wrong and the person you're talking to will hear it.",
+        "cutting_intro": "Hi! Hindi has three different 'you's: `tu`, `tum`, and `aap`. They're not synonyms. Pick wrong and the person you're talking to will hear it.",
         "quick_check": {
           "question": "You've just met a shopkeeper for the first time. Which 'you' should you use?",
           "options": [
@@ -250,7 +250,7 @@
           "tone": "note",
           "body": "`hum` is grammatically plural ('we') but in many North Indian dialects (especially eastern UP, Bihar) it's used as a respectful 'I'. Context disambiguates — if someone introduces themselves with `hum`, they probably mean 'I'."
         },
-        "cutting_intro": "Now meet the full crew. Nine pronouns cover everything — and some of them work harder than their English counterparts.",
+        "cutting_intro": "Now meet the full crew. Nine pronouns cover everything, and some of them work harder than their English counterparts.",
         "quick_check": {
           "question": "Which pronoun would you use for 'he/she' standing close by?",
           "options": [
@@ -341,7 +341,7 @@
           "tone": "tip",
           "body": "The four-auxiliary pattern `hoon / hai / ho / hain` is the single most useful thing in this chapter. Drill it until you can produce it without thinking — every present-tense Hindi sentence you build sits on top of it."
         },
-        "cutting_intro": "Here's the mechanical part — and the most useful part. Each pronoun has its own auxiliary. Lock these in and Hindi opens up.",
+        "cutting_intro": "Here's the mechanical part, and the most useful. Each pronoun has its own auxiliary. Lock these in and Hindi opens up.",
         "quick_check": {
           "question": "Which auxiliary goes with `tum`?",
           "options": [
@@ -378,7 +378,7 @@
           "tone": "tip",
           "body": "With strangers, your first sentence sets the register for the whole conversation. Choose `aap` on the first line and the rest of the chat stays on rails. Downgrade only if they explicitly invite you to."
         },
-        "cutting_intro": "Watch out for this. Once you pick a register, you have to stay there. Mid-sentence switching is a beginner's slip.",
+        "cutting_intro": "Watch out for this. Once you pick a register, you have to stay there. Switching mid-sentence is a beginner's slip.",
         "quick_check": {
           "question": "You accidentally said `aap kya kar rahe ho?` (aap + ho mismatch). What's the best recovery?",
           "options": [
@@ -414,7 +414,7 @@
           "tone": "note",
           "body": "Safe default for any new adult you meet: `aap`. Hold it until they explicitly invite you to drop down. Indian social norms reward conservatism here — you'll rarely be punished for being too polite."
         },
-        "cutting_intro": "Last thing — the rules bend in some places. Kids, deities, bargaining, texting — each has its own rhythm.",
+        "cutting_intro": "Last thing: the rules bend in some places. Kids, deities, bargaining, texting. Each has its own rhythm.",
         "quick_check": {
           "question": "An Indian friend says `arrey, tum bolo na, aap kyun?` What does this mean?",
           "options": [
@@ -427,6 +427,6 @@
         }
       }
     ],
-    "wrap_up": "The pronoun you pick carries social meaning more than information — it's a constant background signal about how you see the relationship. Master the verb-ending grid for each one (`hoon / hai / ho / hain` is the single most useful pattern in present-tense Hindi), drill `aap` first since it's the safest default, and learn to stay consistent within a conversation. The phrases below give practice in spotting and selecting the right register — pay attention to which auxiliary pairs with which pronoun."
+    "wrap_up": "The pronoun you pick carries social meaning more than information. It's a constant background signal about how you see the relationship. Master the verb-ending grid for each one (`hoon / hai / ho / hain` is the single most useful pattern in present-tense Hindi), drill `aap` first since it's the safest default, and stay consistent within a conversation. The phrases below practice spotting and choosing the right register. Notice which auxiliary pairs with which pronoun."
   }
 }

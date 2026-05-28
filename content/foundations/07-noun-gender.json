@@ -170,7 +170,7 @@
     "Afroz Taj, 'A Door Into Hindi' (UNC) — Lesson 2 introduces gender systematically with audio examples"
   ],
   "theory": {
-    "intro": "Hindi has two genders — masculine and feminine — and every single noun has one. Get the gender wrong and the whole sentence breaks: adjectives, verbs, even some postpositions change to match the noun's gender. There's no neuter and no 'just memorize the article' shortcut — gender lives inside the word itself and ripples outward to everything connected to it. Master this and a huge amount of Hindi clicks into place.",
+    "intro": "Hindi has two genders, masculine and feminine, and every noun has one. Get the gender wrong and the whole sentence breaks: adjectives, verbs, and even some postpositions change to match it. There's no neuter, and no 'just memorize the article' shortcut. Gender lives inside the word itself and ripples out to everything connected to it. Master this and a huge amount of Hindi clicks into place.",
     "sections": [
       {
         "heading": "The two genders",
@@ -191,7 +191,7 @@
           "tone": "note",
           "body": "Notice that the verb `hai` stays the same — it's only the adjective that shifts. We'll see when verbs shift too in the section below."
         },
-        "cutting_intro": "Hi! Let's start simple. Every Hindi noun has a gender — and it changes everything else in the sentence. Watch.",
+        "cutting_intro": "Hi! Let's start simple. Every Hindi noun has a gender, and it changes everything else in the sentence. Watch.",
         "quick_check": {
           "question": "How many grammatical genders does Hindi have?",
           "options": [
@@ -240,7 +240,7 @@
           "tone": "warning",
           "body": "Pattern is a guide, not a rule. Common everyday nouns break it — `aadmi` (man) ends in `-i` but is masculine; `kitaab` (book) ends in a consonant but is feminine. Always learn the gender alongside the word."
         },
-        "cutting_intro": "Now — most nouns hint at their gender through their ending. Pattern works about 75% of the time. Let's see it.",
+        "cutting_intro": "Now, most nouns hint at their gender through their ending. The pattern works about 75% of the time. Let's see it.",
         "quick_check": {
           "question": "A noun ending in `-i` like `ladki` or `kursi` is usually...",
           "options": [
@@ -286,7 +286,7 @@
           "tone": "tip",
           "body": "Hard rule: -aa adjectives always shift to match the noun. The shift is mechanical: -aa → -i for feminine, -aa → -e for masculine plural. Memorize this transform; you'll use it constantly."
         },
-        "cutting_intro": "Here's where it ripples outward. Adjectives ending in -aa change to match the noun's gender. Like clothes, the adjective dresses up to match.",
+        "cutting_intro": "Here's where it ripples out. Adjectives ending in -aa change to match the noun's gender. The adjective dresses up to match, like clothes.",
         "quick_check": {
           "question": "Which adjective form goes with `chai` (feminine)?",
           "options": [
@@ -327,7 +327,7 @@
           "tone": "note",
           "body": "The `ne` rule has its own foundation lesson. For now just notice: past-tense verbs with `ne` track the OBJECT's gender. Drill this; it's one of the top three things English speakers get wrong in Hindi."
         },
-        "cutting_intro": "Heads up — this one trips up every English speaker. In some past-tense constructions, the VERB tracks the OBJECT's gender, not the subject's.",
+        "cutting_intro": "Heads up: this one trips up every English speaker. In some past-tense constructions, the verb tracks the object's gender, not the subject's.",
         "quick_check": {
           "question": "`Maine roti khayi.` Why does the verb end in `-i`?",
           "options": [
@@ -391,7 +391,7 @@
           "tone": "tip",
           "body": "When in doubt, listen to which gender locals use — and lean masculine for tech/objects, feminine for foods/vehicles. Native speakers don't always agree on edge cases, so don't stress; pick one and be consistent."
         },
-        "cutting_intro": "Real-life Hindi mixes English words all the time. Speakers assign gender on instinct, tracking a similar Hindi noun.",
+        "cutting_intro": "Real-life Hindi mixes in English words all the time. Speakers assign gender on instinct, tracking a similar Hindi noun.",
         "quick_check": {
           "question": "What gender does Hindi typically assign to the English word `car`?",
           "options": [
@@ -403,6 +403,6 @@
         }
       }
     ],
-    "wrap_up": "Gender isn't optional in Hindi — it's structural. The single most useful habit is to learn the gender WITH the noun, every time you encounter a new word. Write it like a flashcard: `kitaab (f) — book`, `aadmi (m) — man`. The phrases below give you practice spotting and applying gender in real conversations. Pay attention to adjective endings as you read them."
+    "wrap_up": "Gender isn't optional in Hindi. It's structural. The single most useful habit is to learn the gender with the noun, every time you meet a new word. Write it like a flashcard: `kitaab (f), book`, `aadmi (m), man`. The phrases below practice spotting and applying gender in real conversations. Pay attention to the adjective endings as you read."
   }
 }
