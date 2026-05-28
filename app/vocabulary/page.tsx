@@ -210,7 +210,7 @@ export default function VocabularyPage() {
         </motion.div>
 
         {/* CATEGORY GRID */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridAutoRows: '1fr', gap: 10 }}>
           {categories.map((category, index) => {
             const learned = categoryProgress[category.id] || 0
             const total = category.words.length
@@ -228,12 +228,14 @@ export default function VocabularyPage() {
                   stiffness: 240,
                   damping: 22,
                 }}
+                style={{ height: '100%' }}
               >
-                <Link href={`/vocabulary/${category.id}`} style={{ display: 'block' }}>
+                <Link href={`/vocabulary/${category.id}`} style={{ display: 'block', height: '100%' }}>
                   <Sticker
                     color={palette.bg}
                     radius={20}
                     padding={14}
+                    style={{ height: '100%', display: 'flex', flexDirection: 'column' }}
                     onClick={() => {
                       playSound('pop')
                       router.push(`/vocabulary/${category.id}`)
@@ -305,7 +307,7 @@ export default function VocabularyPage() {
                     </div>
                     <div
                       style={{
-                        marginTop: 8,
+                        marginTop: 'auto',
                         height: 6,
                         background: W,
                         borderRadius: 99,

@@ -528,6 +528,18 @@ export default function Home() {
                 }}
               />
             </div>
+            <div
+              style={{
+                marginTop: 9,
+                fontFamily: FONTS.body,
+                fontSize: 11.5,
+                fontWeight: 700,
+                color: COLORS.ink60,
+                lineHeight: 1.45,
+              }}
+            >
+              🔥 keep your streak: hit your daily goal <em>or</em> finish a lesson, quiz, or practice each day.
+            </div>
           </div>
         </motion.div>
 

@@ -111,7 +111,7 @@ export default function QuizPage() {
         const finalScore = allResults.filter((r) => r.isCorrect).length
         const progress = getProgress(config.storagePrefix)
         saveQuizScore(finalScore, questions.length, progress.completedLessons, config.storagePrefix)
-        updateStreak(config.storagePrefix)
+        const counted = updateStreak(config.storagePrefix)
         const newStreak = getStreak(config.storagePrefix)
         const milestones = [7, 14, 30, 50, 100]
         if (
@@ -120,6 +120,8 @@ export default function QuizPage() {
         ) {
           play('streakMilestone')
           markStreakMilestoneSeen(newStreak, config.storagePrefix)
+        } else if (counted) {
+          play('streakKept')
         }
         setQuizComplete(true)
         if (finalScore >= questions.length / 2) {
