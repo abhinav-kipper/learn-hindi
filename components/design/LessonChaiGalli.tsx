@@ -15,6 +15,8 @@ import { COLORS, FONTS, BORDER, SHADOW, paletteToBg, deriveLessonStyle } from '.
 const W = '#fff' // @design-allow: white literal
 const STAR_GOLD = '#f59e0b' // @design-allow: favourite-star gold, not a system token
 const CONTEXT_GREEN = '#3a6a4a' // @design-allow: phrase context label green, not a system token
+const SWIPE_DIST = 60 // px of horizontal drag that commits a page turn
+const SWIPE_VEL = 350 // px/s flick velocity that commits a page turn
 import { useLanguage } from '@/lib/language-context'
 import { isFavorite, toggleFavorite } from '@/lib/favorites'
 import { markPhraseViewed, computeLessonResume } from '@/lib/phrase-progress'
@@ -41,6 +43,7 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
   const resume = useMemo(() => computeLessonResume(lesson, config.storagePrefix), [lesson, config.storagePrefix])
   const { play } = useChaina()
   const [idx, setIdx] = useState(resume.phraseIndex)
+  const [dir, setDir] = useState<1 | -1>(1)
   const [revealed, setRevealed] = useState<Set<number>>(new Set([resume.phraseIndex]))
   const consecutiveRevealsRef = useRef(0)
   const [completed, setCompleted] = useState(false)
@@ -100,9 +103,10 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
     }
   }
 
-  const go = (dir: -1 | 1) => {
-    const next = idx + dir
+  const go = (d: -1 | 1) => {
+    const next = idx + d
     if (next < 0 || next >= total) return
+    setDir(d)
     setIdx(next)
     consecutiveRevealsRef.current = 0
     playSound('swipe')
@@ -332,13 +336,27 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
           margin: '0 auto',
         }}
       >
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait" custom={dir}>
           <motion.div
             key={idx}
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -30 }}
-            transition={{ duration: 0.2 }}
+            custom={dir}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.2}
+            onDragEnd={(_, info) => {
+              if (info.offset.x < -SWIPE_DIST || info.velocity.x < -SWIPE_VEL) go(1)
+              else if (info.offset.x > SWIPE_DIST || info.velocity.x > SWIPE_VEL) go(-1)
+            }}
+            initial={{ opacity: 0, rotateY: dir > 0 ? 28 : -28, x: dir * 50 }}
+            animate={{ opacity: 1, rotateY: 0, x: 0 }}
+            exit={{ opacity: 0, rotateY: dir > 0 ? -22 : 22, x: dir * -50 }}
+            transition={{ duration: 0.3, ease: [0.22, 0.61, 0.36, 1] }}
+            style={{
+              transformPerspective: 1000,
+              transformOrigin: dir > 0 ? 'left center' : 'right center',
+              touchAction: 'pan-y',
+              cursor: 'grab',
+            }}
           >
             <PhraseSticker
               phrase={phrase}

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Sticker,
@@ -26,6 +26,8 @@ import type {
 } from '@/types/lesson'
 
 const W = '#fff' // @design-allow: white literal
+const SWIPE_DIST = 60 // px of horizontal drag that commits a page turn
+const SWIPE_VEL = 350 // px/s flick velocity that commits a page turn
 
 type Props = {
   theory: Theory
@@ -89,6 +91,33 @@ export function TheoryView({ theory, title, onStartPhrases, onGoToPractice }: Pr
     setDirection(-1)
     setPage(page - 1)
     playSound('swipe')
+  }
+
+  // Swipe-forward when the quick-check still gates this page: snap back, nudge
+  // the user toward the check instead of advancing.
+  const [gateHint, setGateHint] = useState(false)
+  const [gateNudge, setGateNudge] = useState(0)
+  const gateTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const flashGate = () => {
+    setGateHint(true)
+    setGateNudge((n) => n + 1)
+    playSound('tap')
+    if (typeof document !== 'undefined') {
+      document
+        .getElementById('theory-quick-check')
+        ?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+    if (gateTimer.current) clearTimeout(gateTimer.current)
+    gateTimer.current = setTimeout(() => setGateHint(false), 2200)
+  }
+  useEffect(() => () => { if (gateTimer.current) clearTimeout(gateTimer.current) }, [])
+
+  const tryNext = () => {
+    if (canNext) goNext()
+    else if (needsQuickCheck && !cleared) flashGate()
+  }
+  const tryPrev = () => {
+    if (canPrev) goPrev()
   }
 
   return (
@@ -167,10 +196,22 @@ export function TheoryView({ theory, title, onStartPhrases, onGoToPractice }: Pr
           <motion.div
             key={page}
             custom={direction}
-            initial={{ opacity: 0, x: direction * 60 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: direction * -60 }}
-            transition={{ duration: 0.28, ease: 'easeOut' }}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.18}
+            onDragEnd={(_, info) => {
+              if (info.offset.x < -SWIPE_DIST || info.velocity.x < -SWIPE_VEL) tryNext()
+              else if (info.offset.x > SWIPE_DIST || info.velocity.x > SWIPE_VEL) tryPrev()
+            }}
+            initial={{ opacity: 0, rotateY: direction > 0 ? 28 : -28, x: direction * 50 }}
+            animate={{ opacity: 1, rotateY: 0, x: 0 }}
+            exit={{ opacity: 0, rotateY: direction > 0 ? -22 : 22, x: direction * -50 }}
+            transition={{ duration: 0.32, ease: [0.22, 0.61, 0.36, 1] }}
+            style={{
+              transformPerspective: 1000,
+              transformOrigin: direction > 0 ? 'left center' : 'right center',
+              touchAction: 'pan-y',
+            }}
           >
             {isIntro && <IntroPage title={title} intro={theory.intro} />}
             {currentSection && (
@@ -179,6 +220,7 @@ export function TheoryView({ theory, title, onStartPhrases, onGoToPractice }: Pr
                 mood={SECTION_MOODS[sectionIdx % SECTION_MOODS.length]}
                 quickCheckPassed={!!passed[page]}
                 onPassQuickCheck={() => setPassed((p) => ({ ...p, [page]: true }))}
+                gateNudge={gateNudge}
                 ttsLocale={ttsLocale}
               />
             )}
@@ -202,6 +244,45 @@ export function TheoryView({ theory, title, onStartPhrases, onGoToPractice }: Pr
           </motion.div>
         </AnimatePresence>
       </div>
+
+      {/* Swipe-blocked nudge — quick-check still gates this page */}
+      <AnimatePresence>
+        {gateHint && (
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 12 }}
+            transition={{ type: 'spring', stiffness: 320, damping: 24 }}
+            style={{
+              position: 'fixed',
+              left: 0,
+              right: 0,
+              bottom: 88,
+              zIndex: 6,
+              display: 'flex',
+              justifyContent: 'center',
+              pointerEvents: 'none',
+            }}
+          >
+            <div
+              style={{
+                background: COLORS.ink,
+                color: COLORS.cream,
+                fontFamily: FONTS.display,
+                fontWeight: 800,
+                fontSize: 13,
+                padding: '9px 16px',
+                borderRadius: 999,
+                border: BORDER.sticker,
+                boxShadow: SHADOW.chip,
+                textTransform: 'lowercase',
+              }}
+            >
+              👆 answer the quick check to continue
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Bottom nav */}
       <div
@@ -336,16 +417,29 @@ function SectionPage({
   mood,
   quickCheckPassed,
   onPassQuickCheck,
+  gateNudge,
   ttsLocale,
 }: {
   section: TheorySection
   mood: CuttingMood
   quickCheckPassed: boolean
   onPassQuickCheck: () => void
+  gateNudge: number
   ttsLocale: string
 }) {
   const intro =
     section.cutting_intro ?? `Now let's look at: ${section.heading.toLowerCase()}.`
+  // Shake the quick-check when a forward swipe is blocked. Seed the ref with
+  // the current nudge so freshly-mounted pages never shake on arrival.
+  const prevNudge = useRef(gateNudge)
+  const [shake, setShake] = useState(false)
+  useEffect(() => {
+    if (gateNudge === prevNudge.current) return
+    prevNudge.current = gateNudge
+    setShake(true)
+    const t = setTimeout(() => setShake(false), 420)
+    return () => clearTimeout(t)
+  }, [gateNudge])
   return (
     <div>
       <CuttingSpeech mood={mood} text={intro} />
@@ -376,13 +470,18 @@ function SectionPage({
         </div>
       )}
       {section.quick_check && (
-        <div style={{ marginTop: 18 }}>
+        <motion.div
+          id="theory-quick-check"
+          animate={shake ? { x: [-8, 8, -6, 6, 0] } : { x: 0 }}
+          transition={{ duration: 0.42 }}
+          style={{ marginTop: 18 }}
+        >
           <QuickCheckBlock
             quickCheck={section.quick_check}
             passed={quickCheckPassed}
             onPass={onPassQuickCheck}
           />
-        </div>
+        </motion.div>
       )}
     </div>
   )
