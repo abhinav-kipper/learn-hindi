@@ -287,6 +287,11 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 
 ### Recent feature work log
 
+**2026-05-27 wave — Theory prose readability**
+
+- `Paragraph` in `components/lesson/TheoryView.tsx` now parses an inline markdown subset via a pure `renderInline()` helper: `` `token` `` → butter-bg Hindi-token chip (fixes the long-standing literal-backtick bug across all 16 chapters), `**bold**` → bold key term, lines starting with `- ` → grouped bullet list. No schema change — the markup lives in the existing `body` string. Both languages benefit immediately.
+- Plain-language rewrite of all 9 Hindi foundation theory bodies (01-numbers … 09-ne-rule): plain-words-first jargon ("the ending (suffix)", "the helper word (auxiliary)"), one idea per sentence, dense "A does X; B does Y" sentences split into bullet lists, every Hindi token chipped, key English terms bolded. `02-present-tense` hand-written as the style exemplar; the other 8 via parallel Sonnet subagents following it. **All grammar preserved** — clarity/delivery pass only, no rule simplified or dropped (ne ergative edge cases, fem-plural irregularity, compound-verb auxiliaries, aap-plural all intact). Only `theory.sections[*].body` touched; cutting_intros, tables, examples, callouts, quick-checks unchanged. The 7 Dutch foundations are deferred to a later pass.
+
 **2026-05-27 wave — Themed home header band**
 
 - Extended `useTheme()` with `bandFrom` / `bandTo` colors. Home page header gradient was previously hardcoded `peach → peach2` for both languages. Now: Hindi → soft `rose (#f6b6c0) → cream (#fff3cf)` (matches Holi pink brand); Dutch → `peach → peach2` (unchanged, fits Dutch orange).

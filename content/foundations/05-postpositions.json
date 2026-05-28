@@ -114,7 +114,7 @@
     "sections": [
       {
         "heading": "What's a postposition (and why 'post')",
-        "body": "English puts its little relationship words BEFORE the noun: `in the house`, `with Ram`, `on the table`. Hindi puts them AFTER. The noun comes first, then the relationship word. `In the house` becomes `ghar mein` — literally `house in`. `With Ram` becomes `Ram ke saath` — literally `Ram of-with`.\n\nThe job is identical to an English preposition: marking location, direction, time, possession, accompaniment. Only the word order flips. Because they come AFTER the noun rather than BEFORE, grammarians call them postpositions. Same tool, opposite end of the noun.",
+        "body": "English puts relationship words **before** the noun: `in the house`, `on the table`, `with Ram`. Hindi puts them **after**. The noun comes first, then the relationship word.\n\n- `in the house` → `ghar mein` (house-in)\n- `on the table` → `mez par` (table-on)\n- `with Ram` → `Ram ke saath` (Ram-with)\n\nThe job is identical to an English preposition (a word marking location, direction, time, or accompaniment). Only the position flips. Because these words come after the noun rather than before, grammarians call them **postpositions**.",
         "examples": [
           { "hindi": "ghar mein", "english": "in the house", "breakdown": "ghar (house) + mein (in) — English would say 'in house', Hindi flips it" },
           { "hindi": "mez par", "english": "on the table", "breakdown": "mez (table) + par (on) — postposition AFTER" },
@@ -132,7 +132,7 @@
       },
       {
         "heading": "The simple four: mein / par / se / ko",
-        "body": "Start with these four — they cover most of what English does with `in / on / from / to`. They're single-word postpositions: just attach them after the noun and you're done. No agreement, no shape change for these four themselves.\n\nThe one to watch is `se`. It's the busiest postposition in Hindi — it does the work of English `from`, `by` (means/instrument), `with` (in some idioms), and `since` (for time). Don't try to translate it as one English word; learn each use as a pattern.",
+        "body": "These four are **single-word postpositions** — attach them after the noun and you're done. No agreement, no shape change on the postposition itself.\n\n- `mein` → in / inside\n- `par` → on / at\n- `se` → from / by / with-instrument\n- `ko` → to / for (marks the indirect object)\n\nThe one to watch is `se`. It's the busiest postposition in Hindi, covering the work of English `from`, `by` (means or instrument), and `since` (for time). Don't translate it as a single English word — learn each use as its own pattern.",
         "table": {
           "caption": "The four core simple postpositions",
           "columns": ["postposition", "main meanings", "example"],
@@ -154,7 +154,7 @@
       },
       {
         "heading": "The possessive cluster: ka / ki / ke",
-        "body": "The possessive postposition `ka` means `of` or apostrophe-s — but it changes form to agree with the THING possessed, not the owner. `Ram ka kutta` (Ram's dog) uses `ka` because `kutta` (dog) is masculine. `Ram ki billi` (Ram's cat) shifts to `ki` because `billi` (cat) is feminine. `Ram ke bachhe` (Ram's children) shifts to `ke` because `bachhe` is plural masculine.\n\nThis is the exact same agreement pattern as -aa adjectives from the noun-gender chapter. The form depends on what comes AFTER, not before. `Ram` (the owner) doesn't care — `ka/ki/ke` is tracking the gender and number of the noun on its right.",
+        "body": "The **possessive postposition** `ka` means `of` or apostrophe-s — but it changes form to agree with the thing owned, not the owner.\n\n- `ka` → masculine singular noun: `Ram ka kutta` (Ram's dog — `kutta` is masculine)\n- `ki` → feminine noun: `Ram ki billi` (Ram's cat — `billi` is feminine)\n- `ke` → masculine plural noun: `Ram ke bachhe` (Ram's children — `bachhe` is masculine plural)\n\nThis is the same agreement pattern as `-aa` adjectives from the noun-gender chapter. The form tracks the gender and number of the noun on its right. `Ram` (the owner) is irrelevant — `ka/ki/ke` only cares about what comes after it.",
         "table": {
           "caption": "ka / ki / ke — which form goes with what",
           "columns": ["form", "used with", "example"],
@@ -181,7 +181,7 @@
       },
       {
         "heading": "Compound postpositions: ke + word",
-        "body": "Beyond the simple four, Hindi builds a whole library of more specific relationships by combining `ke` with another word. `ke saath` = with (accompanying). `ke liye` = for. `ke baad` = after. These are called compound postpositions and they're how Hindi expresses everything English does with `with`, `for`, `near`, `about`, `before`, `after`.\n\nThe `ke` at the front is the oblique form of `ka` and stays as `ke` regardless of gender for these compounds. (A few use `ki` instead — like `ki taraf` = toward — but `ke` is the default.) The whole two-word unit goes AFTER the noun.",
+        "body": "Beyond the simple four, Hindi builds more specific relationships by combining `ke` with another word. These are called **compound postpositions**.\n\n- `ke saath` → with (accompanying)\n- `ke liye` → for / on behalf of\n- `ke baad` → after\n- `se pehle` → before\n- `ke paas` → near / in possession of\n\nThe `ke` at the front is the oblique form of `ka`. It stays as `ke` regardless of the noun's gender for almost all compounds. (A few use `ki` instead — `ki taraf` = toward — but `ke` is the default.) The whole two-word unit goes after the noun.",
         "table": {
           "caption": "Common compound postpositions",
           "columns": ["compound", "meaning", "example"],
@@ -207,7 +207,7 @@
       },
       {
         "heading": "The oblique case: -aa nouns shift before a postposition",
-        "body": "Here's the trap. When you attach ANY postposition to a noun ending in `-aa`, that `-aa` changes to `-e`. `ladka` (boy) becomes `ladke ko` (to the boy). `kamra` (room) becomes `kamre mein` (in the room). `bachcha` (child) becomes `bachche ke saath` (with the child). This shape change is called the oblique case.\n\nIt only happens to `-aa`-ending masculine nouns (and pronouns — `main` becomes `mujhe/mere`, `tu` becomes `tujhe/tere`, etc.). Nouns ending in other vowels (`-i`, `-u`) or consonants don't change shape: `ghar mein` (not `ghare mein`), `kitaab par` (not `kitaabe par`). The oblique only bites `-aa` nouns.",
+        "body": "When you attach any postposition to a noun ending in `-aa`, that ending changes to `-e`. This shape change is called the **oblique case**.\n\n- `ladka` (boy) → `ladke ko` (to the boy)\n- `kamra` (room) → `kamre mein` (in the room)\n- `bachcha` (child) → `bachche ke saath` (with the child)\n\nThe oblique only affects `-aa`-ending masculine nouns. Nouns ending in other vowels or consonants don't change shape — `ghar mein` (not `ghare mein`), `kursi par` (not `kursie par`).\n\nPronouns shift too: `main` → `mujhe` / `mere`, `tu` → `tujhe` / `tere`, `woh` → `use` / `uske`.",
         "table": {
           "caption": "Direct form vs oblique form (before any postposition)",
           "columns": ["direct", "oblique", "example"],

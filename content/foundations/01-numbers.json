@@ -115,7 +115,7 @@
     "sections": [
       {
         "heading": "Counting 1-10",
-        "body": "These ten numbers are your foundation. Every other number in Hindi reuses them as building blocks — `do sau` (200), `paanch hazaar` (5,000), `teen baje` (3 o'clock), `chhe ladke` (six boys). Drill them until they're automatic; everything downstream depends on it.\n\nNote that `do` (two) doesn't change for gender — unlike adjectives, Hindi numbers are invariable. You say `do ladke` (two boys) and `do ladkiyaan` (two girls) — the `do` stays the same in both.",
+        "body": "These ten numbers are your foundation. Every other number in Hindi reuses them as building blocks.\n\n- `do sau` — 200\n- `paanch hazaar` — 5,000\n- `teen baje` — 3 o'clock\n- `chhe ladke` — six boys\n\nDrill them until they're automatic. Everything downstream depends on them.\n\nOne useful fact: **Hindi numbers don't change for gender**. You say `do ladke` (two boys) and `do ladkiyaan` (two girls) — the `do` stays the same in both. Unlike adjectives, numbers are invariable. One less thing to conjugate.",
         "table": {
           "caption": "Hindi numbers 1 to 10",
           "columns": ["digit", "hindi", "pronunciation"],
@@ -143,7 +143,7 @@
       },
       {
         "heading": "The teens (11-19) — irregular and unavoidable",
-        "body": "Each teen is loosely `X-rah` (a fossilized echo of `+10`), but the bases are mangled — `gyaarah` (11) isn't `ek-rah`, `baarah` (12) isn't `do-rah`. The pattern is too unreliable to lean on.\n\nThe honest path is memorization. Drill them in order, then drill them shuffled. They show up constantly — prices end in teens, ages, dates, minutes (`pandrah minute` = 15 minutes is the most-heard duration in Hindi).",
+        "body": "Each teen loosely ends in `-rah` — a fossilized echo of `+10` — but the number roots are too mangled to trust. `gyaarah` (11) is nothing like `ek`, and `baarah` (12) is nothing like `do`. The pattern is there, but it's too unreliable to use as a shortcut.\n\n**The honest path is memorization.** Drill them in order, then drill them shuffled. They come up constantly — prices, ages, dates, minutes. `pandrah minute` (15 minutes) is the single most-heard duration in Hindi.",
         "table": {
           "caption": "Hindi teens 11-19",
           "columns": ["digit", "hindi", "pronunciation"],
@@ -170,7 +170,7 @@
       },
       {
         "heading": "20-99 — learn the decades, then everything in between",
-        "body": "Each decade has its own form: `bees` (20), `tees` (30), `chaalees` (40), `pachaas` (50), `saath` (60), `sattar` (70), `assi` (80), `nabbe` (90). Memorize these eight first — they anchor everything.\n\nThe numbers BETWEEN decades are the irregular mass. They roughly follow `[unit]+[decade]` but the unit gets mangled: 21 = `ikkees`, 22 = `baees`, 25 = `pachees`, 55 = `pachpan`, 99 = `ninyaanave`. There's no clean rule. Native speakers don't `compute` them — they recall each one as a unit.\n\nLearner strategy: lock in the eight decade-words first; learn `21, 25, 50, 75, 100` as a price-haggling starter pack; then add others as you encounter them. Don't try to memorize all 80 at once.",
+        "body": "Each decade is its own word. Memorize these eight first — they anchor everything:\n\n- `bees` — 20\n- `tees` — 30\n- `chaalees` — 40\n- `pachaas` — 50\n- `saath` — 60\n- `sattar` — 70\n- `assi` — 80\n- `nabbe` — 90\n\nThe numbers **between** decades are the irregular mass. They roughly follow `[unit]+[decade]` fused together, but the unit gets mangled: 21 = `ikkees`, 22 = `baees`, 25 = `pachees`, 55 = `pachpan`, 99 = `ninyaanave`. There is no clean rule. Native speakers don't compute them — they recall each one as its own unit.\n\nLearner strategy: lock in the eight decade-words first. Then learn a price-haggling starter pack — `ikkees` (21), `pachees` (25), `pachaas` (50), `pachhattar` (75) — and add others as you encounter them. Don't try to memorize all 80 at once.",
         "examples": [
           { "hindi": "bees rupaye", "english": "20 rupees", "breakdown": "bees = 20, a common chai/snack price" },
           { "hindi": "pachees ka", "english": "for 25 (rupees)", "breakdown": "pachees = 25; `ka` = `worth/for`" },
@@ -189,7 +189,7 @@
       },
       {
         "heading": "The Indian system: sau, hazaar, lakh, crore",
-        "body": "Past 99, Hindi uses a different grouping than English. English groups in thousands (1,000 / 1,000,000 / 1,000,000,000). Hindi — and Indian English — groups using `sau` (100), `hazaar` (1,000), `lakh` (100,000), `crore` (10,000,000). Numbers are even written with commas in the Indian style: 1,00,000 (one lakh) instead of 100,000.\n\nThis matters because every price, salary, news headline, and apartment listing uses lakh and crore. `Yeh ghar ek crore ka hai` = `This house costs one crore` = ten million rupees. A salary of `bees lakh` is 20 lakh = 20,00,000 = two million rupees per year. You can't function in everyday Hindi without these two units.\n\nCombining is straightforward: `[number] + [unit]`. `Do sau` = 200. `Paanch hazaar` = 5,000. `Saath lakh` = 60 lakh = 6,000,000.",
+        "body": "Past 99, **Hindi uses a different grouping than English**. English clusters in thousands (1,000 → 1,000,000 → 1,000,000,000). Hindi — and Indian English — uses four units:\n\n- `sau` — 100\n- `hazaar` — 1,000\n- `lakh` — 100,000 (written 1,00,000 in India)\n- `crore` — 10,000,000 (written 1,00,00,000 in India)\n\nThis matters because every price, salary, news headline, and apartment listing uses `lakh` and `crore`. `Yeh ghar ek crore ka hai` means this house costs one crore — ten million rupees. A salary of `bees lakh` is 20,00,000 — two million rupees per year. You can't function in everyday Hindi without these two units.\n\nCombining is straightforward: number + unit. `Do sau` = 200. `Paanch hazaar` = 5,000. `Saath lakh` = 6,000,000.",
         "table": {
           "caption": "The Indian magnitudes",
           "columns": ["unit", "value", "indian notation", "western equivalent"],
@@ -217,7 +217,7 @@
       },
       {
         "heading": "Putting it to work: prices, time, ordering",
-        "body": "Numbers in real conversation cluster around three patterns. Prices: `kitne ka hai?` (how much is it?) → answer with `[number] rupaye` or `[number] ka`. Time: `kitne baje?` (what time?) → answer with `[number] baje`. Counting things: just put the number before the noun — `do chai`, `teen samosa`, `paanch kitaab`.\n\nFor prices and round amounts, native speakers often say the big magnitude first and let context fill in the rest — `paanch sau` (500) is understood as 500 rupees in any shop without saying `rupaye`. Same for `ek hazaar` (1,000), `bees` (20), `pachaas` (50). Drop `rupaye` when context is obvious; it sounds more natural.\n\nFor time, `baje` means `o'clock`. `Teen baje` = 3 o'clock. `Saadhe teen` = 3:30. `Sava teen` = 3:15. `Paune chaar` = 3:45 (literally `a quarter less than four`).",
+        "body": "Numbers in real conversation cluster around three patterns.\n\n- **Prices** — `kitne ka hai?` (how much is it?) → answer with `[number] rupaye` or just the number alone\n- **Time** — `kitne baje?` (what time?) → answer with `[number] baje`\n- **Counting things** — number before the noun: `do chai`, `teen samosa`, `paanch kitaab`\n\nFor prices, native speakers often drop `rupaye` when context is obvious. In any shop, `paanch sau` is understood as 500 rupees without saying the word. `Ek hazaar`, `bees`, `pachaas` — context carries it. Dropping `rupaye` sounds more natural, not lazy.\n\nFor time, `baje` means o'clock. The three half/quarter words are worth memorizing cold:\n\n- `sava [X]` — quarter past X (`sava teen` = 3:15)\n- `saadhe [X]` — half past X (`saadhe teen` = 3:30)\n- `paune [X+1]` — quarter to X+1 (`paune chaar` = 3:45, literally a quarter less than four)",
         "examples": [
           { "hindi": "yeh kitne ka hai? — sau rupaye", "english": "how much is this? — 100 rupees", "breakdown": "kitne ka = how much for; sau = 100. Standard shop exchange." },
           { "hindi": "do chai dena", "english": "give me two teas", "breakdown": "do (2) + chai + dena (give). Number sits before the noun — no plural marker needed." },
