@@ -76,4 +76,19 @@ describe('pickLine', () => {
     expect(r1.idx).toBe(0)
     expect(r2.idx).toBe(0)
   })
+
+  it('serves Dutch lines on the Dutch track for generic moments', () => {
+    // Hindi (default) firstEver introduces Chaina; Dutch introduces Mr. Stroopwafel.
+    expect(pickLine('firstEver').line.speak).toMatch(/Chai/)
+    expect(pickLine('firstEver', 'dutch').line.speak).toMatch(/Stroopwafel/)
+  })
+
+  it('never speaks "Chaina" or "namaste" on the Dutch track', () => {
+    for (const key of ['firstEver', 'firstOpenToday', 'welcomeBack', 'tap', 'correctAnswer', 'lessonComplete']) {
+      for (let i = 0; i < 30; i++) {
+        const { line } = pickLine(key, 'dutch')
+        expect(line.speak ?? '').not.toMatch(/Chaina|namaste/i)
+      }
+    }
+  })
 })

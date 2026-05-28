@@ -14,6 +14,7 @@ import { Mascot } from './Mascot'
 import { SpeechBubble } from './SpeechBubble'
 import { MOMENTS, pickLine, type Moment, type Line } from './moments'
 import { chainaVoice } from '@/lib/chaina-voice'
+import { useLanguage } from '@/lib/language-context'
 
 type ActiveState = {
   key: string
@@ -32,6 +33,12 @@ const Ctx = createContext<ChainaAPI | null>(null)
 export function ChainaProvider({ children }: { children: ReactNode }) {
   const [active, setActive] = useState<ActiveState | null>(null)
   const timersRef = useRef<ReturnType<typeof setTimeout>[]>([])
+  // Track language without re-creating the stable `play` callback.
+  const { language, config } = useLanguage()
+  const langRef = useRef(language)
+  const localeRef = useRef(config.ttsLocale)
+  langRef.current = language
+  localeRef.current = config.ttsLocale
 
   const clearTimers = () => {
     timersRef.current.forEach(clearTimeout)
@@ -46,12 +53,12 @@ export function ChainaProvider({ children }: { children: ReactNode }) {
     // Snapshot/test escape hatch — set in e2e seeds.
     if (typeof window !== 'undefined' && localStorage.getItem('chaina-disabled') === '1') return
     clearTimers()
-    const { line, idx } = pickLine(key)
+    const { line, idx } = pickLine(key, langRef.current)
     setActive({ key, line, idx, phase: 'enter' })
 
     if (cfg.voice && line.speak) {
       timersRef.current.push(
-        setTimeout(() => chainaVoice.play(key, idx, line.speak), 200)
+        setTimeout(() => chainaVoice.play(key, idx, line.speak, localeRef.current), 200)
       )
     }
 

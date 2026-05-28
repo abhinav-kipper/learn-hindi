@@ -316,7 +316,7 @@ export default function Home() {
             }}
           >
             <div>
-              <Tag>☼ namaste, dost</Tag>
+              <Tag>{theme.greetingTag}</Tag>
               <div
                 style={{
                   fontFamily: FONTS.display,

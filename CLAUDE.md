@@ -291,6 +291,13 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 
 ### Recent feature work log
 
+**2026-05-27 wave — Per-language mascot voice + greeting (bug-fix)**
+
+- **Chaina voice now uses Google TTS.** `lib/chaina-voice.ts` previously fell back to raw browser `speechSynthesis` (basic robotic voice). Its fallback now routes through the app's Google `/api/tts` proxy (same pipeline as `lib/speech.ts`), with browser synth only as a last resort. New `speakGoogle(text, locale)` + a `locale` param on `play()`.
+- **Mascot lines are language-aware.** All generic moment lines were Hinglish and fired on both tracks, so Mr. Stroopwafel spoke Chaina's lines ("I am Chaina", "namaste dost", "shabash") on the Dutch track. Added a `LINES_NL` Dutch variant set for the 17 generic moments; `pickLine(key, lang)` serves Dutch lines when `lang === 'dutch'`. Dutch-only moments (knm/lezen/luister/a2) keep their single Dutch `LINES`. `MomentStage` passes the active language + `config.ttsLocale` through (via refs, so the stable `play` callback isn't recreated).
+- **"Chaina" pronunciation fix:** spoken strings spell it `Chai na` (display stays `Chaina`) so TTS says "chai-na" not "china".
+- **Home greeting tag is themed:** `useTheme()` gained `greetingTag` — Hindi `☼ namaste, dost`, Dutch `☼ hoi, alles goed?`. The home header tag was hardcoded Hindi for both languages.
+
 **2026-05-27 wave — Dutch Luisteren (Listening) module**
 
 - New exam-track module at full Lezen parity: `lib/dutch/luisteren.ts` (loader + `buildAudioScript` + `drawMockSet(5)` + 80%-pass scoring + studied/attempt tracking; TDD'd, 14 tests), `content/dutch/luisteren.json` (10 clips: 4 A1 / 4 A2 / 2 B1, mix of monologues + short dialogues, each with `lines[]` + 4 bilingual MCQs).

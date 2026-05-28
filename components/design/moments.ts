@@ -52,7 +52,7 @@ export interface Moment {
 
 const LINES: Record<string, Line[]> = {
   firstEver: [
-    { main: 'Hi, I’m Chaina!', caption: 'your chai-buddy', speak: 'Hi, I am Chaina, your chai buddy.' },
+    { main: 'Hi, I’m Chaina!', caption: 'your chai-buddy', speak: 'Hi, I am Chai na, your chai buddy.' },
   ],
   welcomeBack: [
     { main: 'arrey! kahan the?', caption: 'missed you, dost', speak: 'Arrey, kahan the? Missed you, dost.' },
@@ -104,7 +104,7 @@ const LINES: Record<string, Line[]> = {
     { main: 'oye!', speak: 'Oye!' },
     { main: 'chai garam hai ☕', speak: 'Chai garam hai.' },
     { main: 'bolo, dost', speak: 'Bolo, dost.' },
-    { main: 'I’m Chaina!', caption: 'nice to meet you', speak: 'I am Chaina. Nice to meet you.' },
+    { main: 'I’m Chaina!', caption: 'nice to meet you', speak: 'I am Chai na. Nice to meet you.' },
   ],
   favoriteSaved: [
     { main: 'saved ⭐', caption: 'yaad rahega', speak: 'Saved.' },
@@ -154,6 +154,88 @@ const LINES: Record<string, Line[]> = {
     { main: 'daily goal done! 🎯', caption: 'mehnat ki keemat',          speak: 'Daily goal done! Mehnat ki keemat.' },
     { main: 'wah, target hit!',    caption: 'aaj ka kaam pura',          speak: 'Wah, target hit! Aaj ka kaam pura.' },
     { main: 'kya baat hai 🔥',     caption: "today's minutes — done!", speak: 'Kya baat hai. Today minutes done.' },
+  ],
+};
+
+// Dutch variants for the generic moments. On the Dutch track the mascot is
+// Mr. Stroopwafels, so these replace the Hinglish lines. The Dutch-only
+// moments (knm/lezen/luister/a2) keep their single Dutch `LINES` set and need
+// no entry here. pickLine() falls back to LINES when a key is absent here.
+const LINES_NL: Record<string, Line[]> = {
+  firstEver: [
+    { main: 'Hoi, ik ben meneer Stroopwafel!', caption: 'jouw maatje', speak: 'Hoi, ik ben meneer Stroopwafel, jouw maatje.' },
+  ],
+  welcomeBack: [
+    { main: 'hé, daar ben je weer!', caption: 'gemist, hoor', speak: 'Hé, daar ben je weer! Gemist, hoor.' },
+    { main: 'welkom terug!', caption: 'waar was je?', speak: 'Welkom terug! Waar was je?' },
+    { main: 'fijn dat je er bent', speak: 'Fijn dat je er bent.' },
+  ],
+  firstOpenToday: [
+    { main: 'goedendag!', speak: 'Goedendag!' },
+    { main: 'hoi, alles goed?', caption: 'zullen we beginnen?', speak: 'Hoi, alles goed? Zullen we beginnen?' },
+    { main: 'wat leren we vandaag?', speak: 'Wat leren we vandaag?' },
+  ],
+  phraseStreak: [
+    { main: 'goed bezig!', speak: 'Goed bezig!' },
+    { main: 'lekker zo!', caption: 'doorgaan', speak: 'Lekker zo!' },
+    { main: 'helemaal goed', speak: 'Helemaal goed.' },
+  ],
+  correctAnswer: [
+    { main: 'precies!', speak: 'Precies!' },
+    { main: 'helemaal goed', speak: 'Helemaal goed.' },
+    { main: 'goed zo!', caption: 'zo doorgaan', speak: 'Goed zo!' },
+  ],
+  wrongAnswer: [
+    { main: 'geeft niet', caption: 'volgende keer', speak: 'Geeft niet.' },
+    { main: 'bijna!', caption: 'probeer nog eens', speak: 'Bijna! Probeer nog eens.' },
+    { main: 'geen zorgen', speak: 'Geen zorgen.' },
+  ],
+  lessonComplete: [
+    { main: 'goed gedaan! ✨', caption: 'hoofdstuk klaar', speak: 'Goed gedaan! Hoofdstuk klaar.' },
+    { main: 'top!', caption: 'ga zo door', speak: 'Top! Ga zo door.' },
+  ],
+  streakMilestone: [
+    { main: '🔥 streak!', caption: 'mooi volgehouden', speak: 'Streak! Mooi volgehouden.' },
+    { main: 'sterke streak!', caption: 'ga zo door', speak: 'Sterke streak! Ga zo door.' },
+  ],
+  idleNudge: [
+    { main: 'waar denk je aan?', caption: 'nog een zin?', speak: 'Waar denk je aan?' },
+    { main: 'even focussen', speak: 'Even focussen.' },
+    { main: 'ik ben er nog', caption: 'als je klaar bent', speak: 'Ik ben er nog.' },
+  ],
+  firstMistake: [
+    { main: 'opgeslagen', caption: 'later oefenen', speak: 'Opgeslagen. Later oefenen.' },
+  ],
+  sessionEnd: [
+    { main: 'tot ziens!', caption: 'tot morgen', speak: 'Tot ziens!' },
+    { main: 'doei! ✌', caption: 'vergeet morgen niet', speak: 'Doei!' },
+  ],
+  tap: [
+    { main: 'ja? wat is er?', speak: 'Ja, wat is er?' },
+    { main: 'hé!', speak: 'Hé!' },
+    { main: 'lekker stroopwafel ☕', speak: 'Lekker een stroopwafel erbij.' },
+    { main: 'zeg het maar', speak: 'Zeg het maar.' },
+    { main: 'ik ben meneer Stroopwafel!', caption: 'aangenaam', speak: 'Ik ben meneer Stroopwafel. Aangenaam.' },
+  ],
+  favoriteSaved: [
+    { main: 'opgeslagen ⭐', caption: 'onthouden', speak: 'Opgeslagen.' },
+    { main: 'ster erbij', speak: 'Ster erbij.' },
+  ],
+  conjugationCorrect: [
+    { main: 'goed!', speak: 'Goed.' },
+    { main: 'helemaal juist', speak: 'Helemaal juist.' },
+  ],
+  drillGotIt: [
+    { main: 'top!', speak: 'Top.' },
+    { main: 'zit erin', caption: 'onthouden', speak: 'Zit erin.' },
+  ],
+  newContent: [
+    { main: 'nieuwe lessen!', caption: 'kijk maar ✨', speak: 'Nieuwe lessen! Kijk maar.' },
+    { main: 'er is iets nieuws', caption: 'kijk eens', speak: 'Er is iets nieuws. Kijk eens.' },
+  ],
+  dailyGoalReached: [
+    { main: 'dagdoel gehaald! 🎯', caption: 'goed bezig', speak: 'Dagdoel gehaald! Goed bezig.' },
+    { main: 'top, doel gehaald!', caption: 'tijd van vandaag — klaar', speak: 'Top, doel gehaald!' },
   ],
 };
 
@@ -369,10 +451,10 @@ export function resetPickLineHistory(): void {
   for (const k of Object.keys(_lastLine)) delete _lastLine[k];
 }
 
-export function pickLine(momentKey: string): { line: Line; idx: number } {
+export function pickLine(momentKey: string, lang?: string): { line: Line; idx: number } {
   const cfg = MOMENTS[momentKey];
   if (!cfg) throw new Error(`Unknown moment: ${momentKey}`);
-  const lines = cfg.lines;
+  const lines = (lang === 'dutch' && LINES_NL[momentKey]) ? LINES_NL[momentKey] : cfg.lines;
   if (lines.length === 1) return { line: lines[0], idx: 0 };
   let i = Math.floor(Math.random() * lines.length);
   if (i === _lastLine[momentKey]) {

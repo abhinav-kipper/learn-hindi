@@ -88,7 +88,7 @@ class ChainaVoice {
     }
   }
 
-  play(momentKey: string, idx: number, fallbackText?: string): void {
+  play(momentKey: string, idx: number, fallbackText?: string, locale: string = 'hi'): void {
     this.ensureInit();
     if (typeof window === 'undefined') return;
     if (this.isMutedNow()) return;
@@ -96,9 +96,15 @@ class ChainaVoice {
     if ('speechSynthesis' in window) {
       try { window.speechSynthesis.cancel(); } catch {}
     }
+    // Pre-recorded WAVs (if ever shipped) are keyed to the default Hindi lines.
+    // For any other locale, go straight to Google TTS.
+    if (locale !== 'hi') {
+      this.speakGoogle(fallbackText, locale);
+      return;
+    }
     const url = `${this.clipBase}/${momentKey}-${idx}.wav`;
     if (this.missing.has(url)) {
-      if (fallbackText) this.speak(fallbackText);
+      this.speakGoogle(fallbackText, locale);
       return;
     }
     let audio: HTMLAudioElement;
@@ -106,7 +112,7 @@ class ChainaVoice {
       audio = new Audio(url);
     } catch {
       this.missing.add(url);
-      if (fallbackText) this.speak(fallbackText);
+      this.speakGoogle(fallbackText, locale);
       return;
     }
     audio.volume = 0.95;
@@ -114,13 +120,41 @@ class ChainaVoice {
       if (this.audio !== audio) return;  // stale handler, ignore
       if (this.missing.has(url)) return; // already handled by .catch()
       this.missing.add(url);
-      if (fallbackText) this.speak(fallbackText);
+      this.speakGoogle(fallbackText, locale);
     };
     audio.play().catch(() => {
       if (this.audio !== audio) return;  // stale handler, ignore
       if (this.missing.has(url)) return; // already handled by onerror
       this.missing.add(url);
-      if (fallbackText) this.speak(fallbackText);
+      this.speakGoogle(fallbackText, locale);
+    });
+    this.audio = audio;
+  }
+
+  /**
+   * Speak via the app's Google Translate TTS proxy (`/api/tts`), the same
+   * pipeline lib/speech.ts uses everywhere else. Falls back to the browser
+   * speechSynthesis voice only if the proxy is unreachable.
+   */
+  private speakGoogle(text: string | undefined, locale: string): void {
+    if (!text || this.isMutedNow()) return;
+    const bcp47 = locale === 'nl' ? 'nl-NL' : 'hi-IN';
+    const url = `/api/tts?text=${encodeURIComponent(text.slice(0, 200))}&lang=${locale}`;
+    let audio: HTMLAudioElement;
+    try {
+      audio = new Audio(url);
+    } catch {
+      this.speak(text, { lang: bcp47 });
+      return;
+    }
+    audio.volume = 0.95;
+    audio.onerror = () => {
+      if (this.audio !== audio) return;
+      this.speak(text, { lang: bcp47 });
+    };
+    audio.play().catch(() => {
+      if (this.audio !== audio) return;
+      this.speak(text, { lang: bcp47 });
     });
     this.audio = audio;
   }

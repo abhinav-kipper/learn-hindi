@@ -22,6 +22,8 @@ export interface Theme {
   bandFrom: string
   /** Bottom color of the home header band gradient. */
   bandTo: string
+  /** Home header greeting tag, language-appropriate. */
+  greetingTag: string
   Mascot: ComponentType<MascotProps>
 }
 
@@ -38,6 +40,7 @@ export function useTheme(): Theme {
       primary2: COLORS.orange2,
       bandFrom: COLORS.peach,
       bandTo: COLORS.peach2,
+      greetingTag: '☼ hoi, alles goed?',
       Mascot: MrStroopwafel,
     }
   }
@@ -46,6 +49,7 @@ export function useTheme(): Theme {
     primary2: COLORS.pink2,
     bandFrom: COLORS.rose,
     bandTo: COLORS.cream,
+    greetingTag: '☼ namaste, dost',
     Mascot: Cutting,
   }
 }
