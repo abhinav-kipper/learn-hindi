@@ -212,6 +212,7 @@ Dutch:
 - `lib/dutch/foundations.ts` — imports 7 Dutch grammar foundations
 - `lib/dutch/knm.ts` — KNM loader + drill draw + scoring + attempt history (TDD'd, 12 tests)
 - `lib/dutch/lezen.ts` — Lezen loader + tier filter + 5-text mock draw + scoring (TDD'd, 12 tests)
+- `lib/dutch/luisteren.ts` — Luisteren (Listening) loader + `buildAudioScript` (TTS) + tier filter + 5-clip mock draw + scoring (TDD'd, 14 tests). Content: `content/dutch/luisteren.json` — 10 clips (4 A1 / 4 A2 / 2 B1), monologues + dialogues, each `lines[]` + 4 bilingual MCQs. Audio is device TTS (no native recordings).
 - `lib/dutch/exam-target.ts` — A2/B1 preference (default B1)
 - `lib/dutch/level-map.ts` — ID → CEFR level lookup for the 3-stage progress bars
 

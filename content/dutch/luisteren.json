@@ -1,0 +1,202 @@
+{
+  "clips": [
+    {
+      "id": "luister-001",
+      "tier": "A1",
+      "topic": "station-announcement",
+      "format": "monologue",
+      "title_nl": "Omroep op het station",
+      "title_en": "Station announcement",
+      "lines": [
+        { "nl": "Dames en heren, de trein naar Utrecht Centraal van tien uur vijftien heeft een vertraging van tien minuten.", "en": "Ladies and gentlemen, the 10:15 train to Utrecht Centraal has a delay of ten minutes." },
+        { "nl": "De trein vertrekt nu om tien uur vijfentwintig van spoor vijf.", "en": "The train now departs at 10:25 from platform five." },
+        { "nl": "Onze excuses voor het ongemak.", "en": "Our apologies for the inconvenience." }
+      ],
+      "questions": [
+        { "type": "hoofdgedachte", "question_nl": "Waar gaat deze omroep over?", "question_en": "What is this announcement about?", "options_nl": ["een vertraging", "een nieuw perron", "een goedkoop kaartje", "een verloren tas"], "options_en": ["a delay", "a new platform", "a cheap ticket", "a lost bag"], "correct_index": 0, "explanation_en": "The announcement is about a ten-minute train delay." },
+        { "type": "detail", "question_nl": "Hoeveel minuten vertraging is er?", "question_en": "How many minutes is the delay?", "options_nl": ["vijf", "tien", "vijftien", "vijfentwintig"], "options_en": ["five", "ten", "fifteen", "twenty-five"], "correct_index": 1, "explanation_en": "Ten minutes — 'een vertraging van tien minuten'." },
+        { "type": "detail", "question_nl": "Van welk spoor vertrekt de trein?", "question_en": "Which platform does the train leave from?", "options_nl": ["spoor twee", "spoor vijf", "spoor tien", "spoor vijftien"], "options_en": ["platform two", "platform five", "platform ten", "platform fifteen"], "correct_index": 1, "explanation_en": "Platform five — 'van spoor vijf'." },
+        { "type": "gevolg", "question_nl": "Hoe laat vertrekt de trein nu?", "question_en": "What time does the train leave now?", "options_nl": ["tien uur vijftien", "tien uur twintig", "tien uur vijfentwintig", "tien uur vijfendertig"], "options_en": ["10:15", "10:20", "10:25", "10:35"], "correct_index": 2, "explanation_en": "10:25 — the original 10:15 plus the ten-minute delay." }
+      ]
+    },
+    {
+      "id": "luister-002",
+      "tier": "A1",
+      "topic": "voicemail-dentist",
+      "format": "monologue",
+      "title_nl": "Voicemail van de tandarts",
+      "title_en": "Voicemail from the dentist",
+      "lines": [
+        { "nl": "Goedemiddag, u spreekt met de praktijk van tandarts De Vries.", "en": "Good afternoon, this is the practice of dentist De Vries." },
+        { "nl": "U heeft een afspraak op donderdag om half drie.", "en": "You have an appointment on Thursday at half past two." },
+        { "nl": "Kunt u niet komen? Bel ons dan vandaag nog terug op nul, dertig, twaalf, vierenvijftig.", "en": "Can't make it? Then please call us back today on 030 12 54." }
+      ],
+      "questions": [
+        { "type": "hoofdgedachte", "question_nl": "Wie belt er?", "question_en": "Who is calling?", "options_nl": ["de huisarts", "de tandarts", "de apotheek", "de gemeente"], "options_en": ["the doctor", "the dentist", "the pharmacy", "the town hall"], "correct_index": 1, "explanation_en": "The dentist's practice ('tandarts De Vries')." },
+        { "type": "detail", "question_nl": "Op welke dag is de afspraak?", "question_en": "What day is the appointment?", "options_nl": ["woensdag", "donderdag", "vrijdag", "zaterdag"], "options_en": ["Wednesday", "Thursday", "Friday", "Saturday"], "correct_index": 1, "explanation_en": "Thursday ('donderdag')." },
+        { "type": "detail", "question_nl": "Hoe laat is de afspraak?", "question_en": "What time is the appointment?", "options_nl": ["14:30", "15:30", "13:30", "02:30"], "options_en": ["2:30 pm", "3:30 pm", "1:30 pm", "2:30 am"], "correct_index": 0, "explanation_en": "'half drie' = halfway to three = 2:30 (14:30)." },
+        { "type": "gevolg", "question_nl": "Wat moet u doen als u niet kunt komen?", "question_en": "What should you do if you can't come?", "options_nl": ["niets doen", "vandaag terugbellen", "een e-mail sturen", "morgen langskomen"], "options_en": ["do nothing", "call back today", "send an email", "drop by tomorrow"], "correct_index": 1, "explanation_en": "Call back today ('Bel ons dan vandaag nog terug')." }
+      ]
+    },
+    {
+      "id": "luister-003",
+      "tier": "A1",
+      "topic": "bakery",
+      "format": "dialogue",
+      "title_nl": "Bij de bakker",
+      "title_en": "At the bakery",
+      "lines": [
+        { "speaker": "Bakker", "nl": "Goedemorgen! Wie is er aan de beurt?", "en": "Good morning! Who's next?" },
+        { "speaker": "Klant", "nl": "Ik graag. Mag ik een bruin brood, alstublieft?", "en": "Me, please. Can I have a brown loaf, please?" },
+        { "speaker": "Bakker", "nl": "Zeker. Gesneden of heel?", "en": "Certainly. Sliced or whole?" },
+        { "speaker": "Klant", "nl": "Gesneden, graag. En twee croissants.", "en": "Sliced, please. And two croissants." },
+        { "speaker": "Bakker", "nl": "Dat is samen vier euro twintig.", "en": "That's four euros twenty altogether." }
+      ],
+      "questions": [
+        { "type": "hoofdgedachte", "question_nl": "Wat doet de klant?", "question_en": "What is the customer doing?", "options_nl": ["brood kopen", "koffie bestellen", "een taart afhalen", "klagen"], "options_en": ["buying bread", "ordering coffee", "picking up a cake", "complaining"], "correct_index": 0, "explanation_en": "The customer is buying bread (and croissants) at the bakery." },
+        { "type": "detail", "question_nl": "Welk brood wil de klant?", "question_en": "Which bread does the customer want?", "options_nl": ["wit brood", "bruin brood", "een stokbrood", "een krentenbol"], "options_en": ["white bread", "brown bread", "a baguette", "a raisin bun"], "correct_index": 1, "explanation_en": "A brown loaf ('een bruin brood')." },
+        { "type": "detail", "question_nl": "Hoeveel croissants koopt de klant?", "question_en": "How many croissants does the customer buy?", "options_nl": ["een", "twee", "drie", "vier"], "options_en": ["one", "two", "three", "four"], "correct_index": 1, "explanation_en": "Two croissants ('twee croissants')." },
+        { "type": "detail", "question_nl": "Wat kost het samen?", "question_en": "What is the total cost?", "options_nl": ["2,20 euro", "4,20 euro", "4,12 euro", "14,20 euro"], "options_en": ["€2.20", "€4.20", "€4.12", "€14.20"], "correct_index": 1, "explanation_en": "Four euros twenty ('vier euro twintig')." }
+      ]
+    },
+    {
+      "id": "luister-004",
+      "tier": "A1",
+      "topic": "supermarket-closing",
+      "format": "monologue",
+      "title_nl": "De winkel gaat sluiten",
+      "title_en": "The shop is closing",
+      "lines": [
+        { "nl": "Beste klanten, over tien minuten sluit de winkel.", "en": "Dear customers, the shop closes in ten minutes." },
+        { "nl": "Wilt u alstublieft naar de kassa gaan?", "en": "Would you please go to the checkout?" },
+        { "nl": "Morgen zijn wij weer open vanaf acht uur. Fijne avond!", "en": "Tomorrow we are open again from eight o'clock. Have a nice evening!" }
+      ],
+      "questions": [
+        { "type": "hoofdgedachte", "question_nl": "Wat is de boodschap?", "question_en": "What is the message?", "options_nl": ["de winkel gaat bijna sluiten", "er is een aanbieding", "de kassa is kapot", "er is een nieuwe winkel"], "options_en": ["the shop is about to close", "there is a special offer", "the checkout is broken", "there is a new shop"], "correct_index": 0, "explanation_en": "The shop closes in ten minutes." },
+        { "type": "detail", "question_nl": "Wanneer sluit de winkel?", "question_en": "When does the shop close?", "options_nl": ["over vijf minuten", "over tien minuten", "over een uur", "nu meteen"], "options_en": ["in five minutes", "in ten minutes", "in an hour", "right now"], "correct_index": 1, "explanation_en": "In ten minutes ('over tien minuten')." },
+        { "type": "detail", "question_nl": "Hoe laat opent de winkel morgen?", "question_en": "What time does the shop open tomorrow?", "options_nl": ["om zeven uur", "om acht uur", "om negen uur", "om tien uur"], "options_en": ["at seven", "at eight", "at nine", "at ten"], "correct_index": 1, "explanation_en": "From eight o'clock ('vanaf acht uur')." },
+        { "type": "gevolg", "question_nl": "Wat moeten de klanten nu doen?", "question_en": "What should the customers do now?", "options_nl": ["naar de kassa gaan", "naar huis bellen", "meer kopen", "buiten wachten"], "options_en": ["go to the checkout", "phone home", "buy more", "wait outside"], "correct_index": 0, "explanation_en": "Go to the checkout ('naar de kassa gaan')." }
+      ]
+    },
+    {
+      "id": "luister-005",
+      "tier": "A2",
+      "topic": "doctor-reception",
+      "format": "dialogue",
+      "title_nl": "Een afspraak bij de huisarts",
+      "title_en": "An appointment at the doctor's",
+      "lines": [
+        { "speaker": "Assistente", "nl": "Huisartsenpraktijk Molenweg, goedemorgen.", "en": "Molenweg doctor's practice, good morning." },
+        { "speaker": "Patiënt", "nl": "Goedemorgen, ik wil graag een afspraak maken. Ik heb al drie dagen keelpijn en koorts.", "en": "Good morning, I'd like to make an appointment. I've had a sore throat and a fever for three days." },
+        { "speaker": "Assistente", "nl": "Dat klinkt vervelend. Kunt u vanmiddag om kwart over vier komen?", "en": "That sounds unpleasant. Can you come this afternoon at a quarter past four?" },
+        { "speaker": "Patiënt", "nl": "Vanmiddag is lastig, ik werk tot vijf uur. Heeft u iets later?", "en": "This afternoon is difficult, I work until five. Do you have anything later?" },
+        { "speaker": "Assistente", "nl": "Dan kan het morgenochtend om negen uur. Op naam van?", "en": "Then tomorrow morning at nine is possible. Under what name?" }
+      ],
+      "questions": [
+        { "type": "hoofdgedachte", "question_nl": "Waarom belt de patiënt?", "question_en": "Why is the patient calling?", "options_nl": ["om een afspraak te maken", "om een recept op te halen", "om te klagen", "om de uitslag te horen"], "options_en": ["to make an appointment", "to pick up a prescription", "to complain", "to hear test results"], "correct_index": 0, "explanation_en": "The patient wants to make an appointment." },
+        { "type": "detail", "question_nl": "Welke klachten heeft de patiënt?", "question_en": "What symptoms does the patient have?", "options_nl": ["hoofdpijn en moeheid", "keelpijn en koorts", "buikpijn", "rugpijn"], "options_en": ["headache and tiredness", "sore throat and fever", "stomach ache", "back pain"], "correct_index": 1, "explanation_en": "Sore throat and fever ('keelpijn en koorts')." },
+        { "type": "gevolg", "question_nl": "Waarom kan de patiënt vanmiddag niet?", "question_en": "Why can't the patient come this afternoon?", "options_nl": ["hij is te ziek", "hij werkt tot vijf uur", "hij heeft geen vervoer", "de praktijk is dicht"], "options_en": ["he is too ill", "he works until five", "he has no transport", "the practice is closed"], "correct_index": 1, "explanation_en": "He works until five ('ik werk tot vijf uur')." },
+        { "type": "detail", "question_nl": "Welke afspraak wordt uiteindelijk voorgesteld?", "question_en": "Which appointment is finally proposed?", "options_nl": ["vanmiddag 16:15", "morgenochtend 09:00", "vanavond 17:00", "morgenmiddag 14:00"], "options_en": ["this afternoon 4:15", "tomorrow morning 9:00", "this evening 5:00", "tomorrow afternoon 2:00"], "correct_index": 1, "explanation_en": "Tomorrow morning at nine ('morgenochtend om negen uur')." }
+      ]
+    },
+    {
+      "id": "luister-006",
+      "tier": "A2",
+      "topic": "weather-forecast",
+      "format": "monologue",
+      "title_nl": "Het weerbericht",
+      "title_en": "The weather forecast",
+      "lines": [
+        { "nl": "En dan nu het weer. Vanochtend begint het bewolkt en koud, met kans op regen in het westen.", "en": "And now the weather. This morning starts cloudy and cold, with a chance of rain in the west." },
+        { "nl": "Vanmiddag klaart het op en wordt het zonnig. De temperatuur loopt op tot vijftien graden.", "en": "This afternoon it clears up and turns sunny. The temperature rises to fifteen degrees." },
+        { "nl": "Morgen wordt het warmer, maar neem wel een paraplu mee voor de zekerheid.", "en": "Tomorrow gets warmer, but do bring an umbrella just in case." }
+      ],
+      "questions": [
+        { "type": "hoofdgedachte", "question_nl": "Wat voor tekst is dit?", "question_en": "What kind of text is this?", "options_nl": ["een weerbericht", "een nieuwsbericht", "een reclame", "een verkeersbericht"], "options_en": ["a weather forecast", "a news report", "an advertisement", "a traffic report"], "correct_index": 0, "explanation_en": "It's the weather forecast ('het weer')." },
+        { "type": "detail", "question_nl": "Hoe is het vanochtend?", "question_en": "What is it like this morning?", "options_nl": ["zonnig en warm", "bewolkt en koud", "mistig", "stormachtig"], "options_en": ["sunny and warm", "cloudy and cold", "foggy", "stormy"], "correct_index": 1, "explanation_en": "Cloudy and cold ('bewolkt en koud')." },
+        { "type": "detail", "question_nl": "Tot hoeveel graden loopt de temperatuur op?", "question_en": "How high does the temperature rise?", "options_nl": ["vijf graden", "tien graden", "vijftien graden", "twintig graden"], "options_en": ["five degrees", "ten degrees", "fifteen degrees", "twenty degrees"], "correct_index": 2, "explanation_en": "Up to fifteen degrees ('tot vijftien graden')." },
+        { "type": "gevolg", "question_nl": "Wat is het advies voor morgen?", "question_en": "What is the advice for tomorrow?", "options_nl": ["neem een paraplu mee", "blijf binnen", "trek een dikke jas aan", "rij niet met de auto"], "options_en": ["bring an umbrella", "stay inside", "wear a thick coat", "don't drive"], "correct_index": 0, "explanation_en": "Bring an umbrella just in case ('neem wel een paraplu mee')." }
+      ]
+    },
+    {
+      "id": "luister-007",
+      "tier": "A2",
+      "topic": "gemeente",
+      "format": "dialogue",
+      "title_nl": "Aan de balie van de gemeente",
+      "title_en": "At the town hall counter",
+      "lines": [
+        { "speaker": "Medewerker", "nl": "Goedemiddag, waarmee kan ik u helpen?", "en": "Good afternoon, how can I help you?" },
+        { "speaker": "Bezoeker", "nl": "Ik ben net verhuisd en ik wil mijn nieuwe adres doorgeven.", "en": "I've just moved and I want to register my new address." },
+        { "speaker": "Medewerker", "nl": "Dat kan. Heeft u een afspraak gemaakt?", "en": "That's possible. Did you make an appointment?" },
+        { "speaker": "Bezoeker", "nl": "Nee, dat wist ik niet. Moet dat?", "en": "No, I didn't know that. Is it required?" },
+        { "speaker": "Medewerker", "nl": "Ja, voor het doorgeven van een verhuizing maakt u online een afspraak. Neem uw paspoort en huurcontract mee.", "en": "Yes, to register a move you make an appointment online. Bring your passport and rental contract." }
+      ],
+      "questions": [
+        { "type": "hoofdgedachte", "question_nl": "Wat wil de bezoeker doen?", "question_en": "What does the visitor want to do?", "options_nl": ["een paspoort aanvragen", "een verhuizing doorgeven", "belasting betalen", "een klacht indienen"], "options_en": ["apply for a passport", "register a move", "pay taxes", "file a complaint"], "correct_index": 1, "explanation_en": "Register a new address after moving ('mijn nieuwe adres doorgeven')." },
+        { "type": "detail", "question_nl": "Heeft de bezoeker een afspraak?", "question_en": "Does the visitor have an appointment?", "options_nl": ["ja", "nee", "dat zegt hij niet", "hij annuleert er een"], "options_en": ["yes", "no", "he doesn't say", "he cancels one"], "correct_index": 1, "explanation_en": "No — he didn't know one was needed ('Nee, dat wist ik niet')." },
+        { "type": "gevolg", "question_nl": "Wat moet de bezoeker nu eerst doen?", "question_en": "What must the visitor do first now?", "options_nl": ["online een afspraak maken", "meteen betalen", "een formulier posten", "terugkomen na vijf uur"], "options_en": ["make an appointment online", "pay immediately", "post a form", "come back after five"], "correct_index": 0, "explanation_en": "Make an appointment online ('online een afspraak')." },
+        { "type": "detail", "question_nl": "Wat moet hij meenemen?", "question_en": "What must he bring?", "options_nl": ["paspoort en huurcontract", "alleen een pasfoto", "zijn bankpas", "een doktersverklaring"], "options_en": ["passport and rental contract", "just a passport photo", "his bank card", "a doctor's note"], "correct_index": 0, "explanation_en": "Passport and rental contract ('paspoort en huurcontract')." }
+      ]
+    },
+    {
+      "id": "luister-008",
+      "tier": "A2",
+      "topic": "school-voicemail",
+      "format": "monologue",
+      "title_nl": "Bericht van de school",
+      "title_en": "Message from the school",
+      "lines": [
+        { "nl": "Beste ouders, dit is een bericht van basisschool De Regenboog.", "en": "Dear parents, this is a message from De Regenboog primary school." },
+        { "nl": "Volgende week dinsdag is er een ouderavond over de nieuwe schooltijden.", "en": "Next week Tuesday there is a parents' evening about the new school hours." },
+        { "nl": "De avond begint om half acht in de aula. Komt u ook? Laat het ons even weten via de app.", "en": "The evening starts at half past seven in the hall. Are you coming too? Please let us know via the app." }
+      ],
+      "questions": [
+        { "type": "hoofdgedachte", "question_nl": "Waar gaat het bericht over?", "question_en": "What is the message about?", "options_nl": ["een ouderavond", "een schoolreisje", "een ziekmelding", "een staking"], "options_en": ["a parents' evening", "a school trip", "a sick note", "a strike"], "correct_index": 0, "explanation_en": "A parents' evening ('een ouderavond')." },
+        { "type": "detail", "question_nl": "Wanneer is de ouderavond?", "question_en": "When is the parents' evening?", "options_nl": ["maandag", "dinsdag", "woensdag", "donderdag"], "options_en": ["Monday", "Tuesday", "Wednesday", "Thursday"], "correct_index": 1, "explanation_en": "Next Tuesday ('dinsdag')." },
+        { "type": "detail", "question_nl": "Hoe laat begint de avond?", "question_en": "What time does the evening start?", "options_nl": ["19:30", "20:30", "18:30", "17:30"], "options_en": ["7:30 pm", "8:30 pm", "6:30 pm", "5:30 pm"], "correct_index": 0, "explanation_en": "'half acht' = halfway to eight = 7:30 (19:30)." },
+        { "type": "gevolg", "question_nl": "Wat vraagt de school aan de ouders?", "question_en": "What does the school ask the parents?", "options_nl": ["laat weten of je komt", "betaal een bijdrage", "breng eten mee", "bel de juf"], "options_en": ["let them know if you're coming", "pay a contribution", "bring food", "call the teacher"], "correct_index": 0, "explanation_en": "Let them know via the app ('Laat het ons even weten via de app')." }
+      ]
+    },
+    {
+      "id": "luister-009",
+      "tier": "B1",
+      "topic": "job-interview",
+      "format": "dialogue",
+      "title_nl": "Een sollicitatiegesprek",
+      "title_en": "A job interview",
+      "lines": [
+        { "speaker": "Werkgever", "nl": "Fijn dat u er bent. Kunt u kort vertellen waarom u bij ons wilt werken?", "en": "Glad you're here. Can you briefly tell us why you want to work with us?" },
+        { "speaker": "Kandidaat", "nl": "Zeker. Ik werk nu drie jaar in de zorg, maar ik wil graag doorgroeien naar een coördinerende rol.", "en": "Certainly. I've worked in healthcare for three years now, but I'd like to grow into a coordinating role." },
+        { "speaker": "Werkgever", "nl": "Deze functie is voor vierentwintig uur per week. Past dat bij u?", "en": "This position is for twenty-four hours a week. Does that suit you?" },
+        { "speaker": "Kandidaat", "nl": "Dat past prima. Ik zoek juist een baan in deeltijd, zodat ik ook kan studeren.", "en": "That suits me fine. I'm specifically looking for a part-time job, so that I can also study." },
+        { "speaker": "Werkgever", "nl": "Mooi. We laten uiterlijk volgende week weten of u wordt uitgenodigd voor een tweede gesprek.", "en": "Great. We'll let you know by next week at the latest whether you're invited for a second interview." }
+      ],
+      "questions": [
+        { "type": "hoofdgedachte", "question_nl": "Wat is de situatie?", "question_en": "What is the situation?", "options_nl": ["een sollicitatiegesprek", "een functioneringsgesprek", "een ontslaggesprek", "een teamvergadering"], "options_en": ["a job interview", "a performance review", "a dismissal meeting", "a team meeting"], "correct_index": 0, "explanation_en": "It's a job interview ('sollicitatiegesprek')." },
+        { "type": "detail", "question_nl": "Waarom wil de kandidaat van baan veranderen?", "question_en": "Why does the candidate want to change jobs?", "options_nl": ["meer salaris", "doorgroeien naar een coördinerende rol", "dichter bij huis werken", "minder stress"], "options_en": ["more salary", "to grow into a coordinating role", "to work closer to home", "less stress"], "correct_index": 1, "explanation_en": "To grow into a coordinating role ('doorgroeien naar een coördinerende rol')." },
+        { "type": "detail", "question_nl": "Hoeveel uur per week is de functie?", "question_en": "How many hours a week is the position?", "options_nl": ["zestien uur", "twintig uur", "vierentwintig uur", "achtentwintig uur"], "options_en": ["sixteen hours", "twenty hours", "twenty-four hours", "twenty-eight hours"], "correct_index": 2, "explanation_en": "Twenty-four hours ('vierentwintig uur')." },
+        { "type": "gevolg", "question_nl": "Wat gebeurt er na dit gesprek?", "question_en": "What happens after this conversation?", "options_nl": ["de kandidaat begint meteen", "er volgt mogelijk een tweede gesprek", "de baan is afgewezen", "er komt een proefdag"], "options_en": ["the candidate starts immediately", "a second interview may follow", "the job was rejected", "there will be a trial day"], "correct_index": 1, "explanation_en": "They'll say by next week whether a second interview follows." }
+      ]
+    },
+    {
+      "id": "luister-010",
+      "tier": "B1",
+      "topic": "radio-news-housing",
+      "format": "monologue",
+      "title_nl": "Nieuws op de radio",
+      "title_en": "News on the radio",
+      "lines": [
+        { "nl": "Dan het binnenlands nieuws. De gemeente Amsterdam maakt vandaag bekend dat er de komende vijf jaar tienduizend nieuwe huurwoningen bij komen.", "en": "Now the domestic news. The municipality of Amsterdam announced today that ten thousand new rental homes will be added over the next five years." },
+        { "nl": "Vooral starters en mensen met een middeninkomen hebben moeite om een betaalbare woning te vinden.", "en": "First-time buyers and people on a middle income in particular struggle to find an affordable home." },
+        { "nl": "Volgens de wethouder moet een derde van de nieuwe woningen sociale huur worden.", "en": "According to the alderman, a third of the new homes must become social housing." }
+      ],
+      "questions": [
+        { "type": "hoofdgedachte", "question_nl": "Wat is het belangrijkste nieuws?", "question_en": "What is the main news?", "options_nl": ["er komen nieuwe huurwoningen bij", "de huren gaan omlaag", "een nieuwe wethouder is gekozen", "een wijk wordt gesloopt"], "options_en": ["new rental homes will be built", "rents are going down", "a new alderman was chosen", "a neighbourhood is being demolished"], "correct_index": 0, "explanation_en": "Ten thousand new rental homes over five years." },
+        { "type": "detail", "question_nl": "Hoeveel nieuwe woningen komen er?", "question_en": "How many new homes will there be?", "options_nl": ["duizend", "vijfduizend", "tienduizend", "honderdduizend"], "options_en": ["a thousand", "five thousand", "ten thousand", "a hundred thousand"], "correct_index": 2, "explanation_en": "Ten thousand ('tienduizend')." },
+        { "type": "woordbetekenis", "question_nl": "Wie heeft vooral moeite om een woning te vinden?", "question_en": "Who in particular struggles to find a home?", "options_nl": ["toeristen", "starters en middeninkomens", "gepensioneerden", "studenten uit het buitenland"], "options_en": ["tourists", "first-timers and middle incomes", "pensioners", "foreign students"], "correct_index": 1, "explanation_en": "Starters and middle-income people ('starters en mensen met een middeninkomen')." },
+        { "type": "gevolg", "question_nl": "Welk deel wordt sociale huur?", "question_en": "What share will be social housing?", "options_nl": ["de helft", "een derde", "een kwart", "alles"], "options_en": ["half", "a third", "a quarter", "all of it"], "correct_index": 1, "explanation_en": "A third ('een derde') must become social housing." }
+      ]
+    }
+  ]
+}
