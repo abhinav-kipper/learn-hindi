@@ -5,6 +5,7 @@ import {
   isLessonComplete,
   updateStreak,
   getStreak,
+  toLocalISO,
 } from '@/lib/progress'
 
 const localStorageMock = (() => {
@@ -83,7 +84,7 @@ describe('progress', () => {
       localStorage.setItem('hindi-progress', JSON.stringify({
         completedLessons: [],
         currentStreak: 3,
-        lastActiveDate: yesterday.toISOString().split('T')[0],
+        lastActiveDate: toLocalISO(yesterday),
         practiceSessionCount: 0,
       }))
       updateStreak()
@@ -96,7 +97,7 @@ describe('progress', () => {
       localStorage.setItem('hindi-progress', JSON.stringify({
         completedLessons: [],
         currentStreak: 5,
-        lastActiveDate: threeDaysAgo.toISOString().split('T')[0],
+        lastActiveDate: toLocalISO(threeDaysAgo),
         practiceSessionCount: 0,
       }))
       updateStreak()
@@ -104,7 +105,7 @@ describe('progress', () => {
     })
 
     it('does not increment if already active today', () => {
-      const today = new Date().toISOString().split('T')[0]
+      const today = toLocalISO(new Date())
       localStorage.setItem('hindi-progress', JSON.stringify({
         completedLessons: [],
         currentStreak: 3,
@@ -113,6 +114,21 @@ describe('progress', () => {
       }))
       updateStreak()
       expect(getStreak()).toBe(3)
+    })
+
+    it('persists the streak across reads (permanence)', () => {
+      const yesterday = new Date()
+      yesterday.setDate(yesterday.getDate() - 1)
+      localStorage.setItem('hindi-progress', JSON.stringify({
+        completedLessons: [],
+        currentStreak: 6,
+        lastActiveDate: toLocalISO(yesterday),
+        practiceSessionCount: 0,
+      }))
+      updateStreak()
+      // re-read from storage proves the bumped value was saved, not just in-memory
+      expect(getProgress().currentStreak).toBe(7)
+      expect(getProgress().lastActiveDate).toBe(toLocalISO(new Date()))
     })
   })
 })

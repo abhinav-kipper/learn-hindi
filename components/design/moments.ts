@@ -87,6 +87,11 @@ const LINES: Record<string, Line[]> = {
     { main: '🔥 streak!', caption: 'mehnat rang laayi', speak: 'Streak! Mehnat rang laayi.' },
     { main: 'streak strong, dost', caption: 'aise hi chalte raho', speak: 'Streak strong, dost. Aise hi chalte raho.' },
   ],
+  streakKept: [
+    { main: '🔥 streak saved!', caption: "today's done, dost", speak: 'Streak saved! Today is done, dost.' },
+    { main: 'aaj ka kaam pura', caption: 'streak alive 🔥', speak: 'Aaj ka kaam pura. Streak alive.' },
+    { main: 'shabash, counted!', caption: 'kal phir milte hain', speak: 'Shabash, counted! Kal phir milte hain.' },
+  ],
   idleNudge: [
     { main: 'kya soch rahe ho?', caption: 'chalo, ek aur phrase', speak: 'Kya soch rahe ho?' },
     { main: 'thoda focus, dost', speak: 'Thoda focus, dost.' },
@@ -179,6 +184,11 @@ const LINES_NL: Record<string, Line[]> = {
     { main: 'goed bezig!', speak: 'Goed bezig!' },
     { main: 'lekker zo!', caption: 'doorgaan', speak: 'Lekker zo!' },
     { main: 'helemaal goed', speak: 'Helemaal goed.' },
+  ],
+  streakKept: [
+    { main: '🔥 streak gered!', caption: 'vandaag gehaald',  speak: 'Streak gered! Vandaag gehaald.' },
+    { main: 'klaar voor vandaag', caption: 'streak blijft 🔥', speak: 'Klaar voor vandaag. Streak blijft.' },
+    { main: 'top, telt mee!',     caption: 'tot morgen',       speak: 'Top, telt mee! Tot morgen.' },
   ],
   correctAnswer: [
     { main: 'precies!', speak: 'Precies!' },
@@ -305,6 +315,14 @@ export const MOMENTS: Record<string, Moment> = {
     mood: 'excited', moodAnim: 'wobble-z 1.0s ease-in-out infinite',
     bubbleTail: 'bottom-left', bubbleSide: 'right',
     voice: true, lines: LINES.streakMilestone, sizePct: 0.32,
+  },
+  streakKept: {
+    label: 'Streak secured', when: 'First lesson/quiz/practice/goal of the day counts the streak',
+    anchor: 'center',
+    enter: 'bubble-pop', enterMs: 600, holdMs: 2000, exit: 'dismiss-down', exitMs: 600,
+    mood: 'happy', moodAnim: 'happy-hop 1.4s ease-in-out infinite',
+    bubbleTail: 'bottom-right', bubbleSide: 'left',
+    voice: true, lines: LINES.streakKept, sizePct: 0.5,
   },
   idleNudge: {
     label: 'Idle nudge', when: '25s no input on lesson/practice',

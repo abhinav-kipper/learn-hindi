@@ -314,7 +314,7 @@ export default function PracticePage({ params }: PracticePageProps) {
   const handleFinish = () => {
     if (userMessageCount === 0) return
     markLessonComplete(id, config.storagePrefix)
-    updateStreak(config.storagePrefix)
+    const counted = updateStreak(config.storagePrefix)
     const newStreak = getStreak(config.storagePrefix)
     const milestones = [7, 14, 30, 50, 100]
     if (
@@ -323,6 +323,8 @@ export default function PracticePage({ params }: PracticePageProps) {
     ) {
       play('streakMilestone')
       markStreakMilestoneSeen(newStreak, config.storagePrefix)
+    } else if (counted) {
+      play('streakKept')
     }
     incrementPracticeCount(config.storagePrefix)
     clearChatHistory(id, config.storagePrefix)

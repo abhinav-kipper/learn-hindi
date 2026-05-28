@@ -17,8 +17,22 @@ function storageKey(prefix: string): string {
   return `${prefix}-progress`
 }
 
-function todayISO(): string {
-  return new Date().toISOString().split('T')[0]
+/** A Date's LOCAL calendar date as YYYY-MM-DD (not its UTC date). */
+export function toLocalISO(d: Date): string {
+  const y = d.getFullYear()
+  const m = String(d.getMonth() + 1).padStart(2, '0')
+  const day = String(d.getDate()).padStart(2, '0')
+  return `${y}-${m}-${day}`
+}
+
+/**
+ * Today's date as YYYY-MM-DD, using the user's LOCAL timezone — so streaks and
+ * the daily-goal meter roll over at the user's own midnight, not UTC midnight.
+ * (Was UTC-based, which silently reset streaks / suppressed the daily-goal card
+ * for users whose evening usage straddled UTC midnight.)
+ */
+export function todayISO(): string {
+  return toLocalISO(new Date())
 }
 
 function defaultProgress(): Progress {
@@ -128,11 +142,16 @@ export function getTodayActiveMinutes(prefix = 'hindi'): number {
   return Math.floor((progress.todayActiveMs ?? 0) / 60_000)
 }
 
-export function updateStreak(prefix = 'hindi'): void {
+/**
+ * Records today as an active day and advances the streak. Returns true when
+ * this call is the one that counted today (so the caller can fire a one-per-day
+ * "streak secured" celebration); false if today was already counted.
+ */
+export function updateStreak(prefix = 'hindi'): boolean {
   const progress = getProgress(prefix)
   const today = todayISO()
 
-  if (progress.lastActiveDate === today) return
+  if (progress.lastActiveDate === today) return false
 
   if (progress.lastActiveDate) {
     const lastActive = Date.parse(progress.lastActiveDate + 'T00:00:00Z')
@@ -152,6 +171,7 @@ export function updateStreak(prefix = 'hindi'): void {
 
   progress.lastActiveDate = today
   saveProgress(progress, prefix)
+  return true
 }
 
 export function getStreak(prefix = 'hindi'): number {

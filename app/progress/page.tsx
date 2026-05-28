@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/navigation'
-import { getProgress } from '@/lib/progress'
+import { getProgress, toLocalISO } from '@/lib/progress'
 import { getQuizScores, getAverageQuizScore } from '@/lib/quiz'
 import { getReviewSessions } from '@/lib/review'
 import { getAllLessons, getAllContent } from '@/lib/lessons'
@@ -110,15 +110,15 @@ export default function ProgressPage() {
     recentActivities.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     setActivities(recentActivities.slice(0, 5))
 
-    // 7-day streak calendar — DST-safe via YYYY-MM-DD comparison
-    const todayStr = new Date().toISOString().split('T')[0]
+    // 7-day streak calendar — local-day comparison (matches streak rollover)
+    const todayStr = toLocalISO(new Date())
     const activeSet = new Set<string>()
     if (progress.lastActiveDate && progress.currentStreak > 0) {
-      const last = new Date(progress.lastActiveDate)
+      const last = new Date(progress.lastActiveDate + 'T00:00:00')
       for (let i = 0; i < progress.currentStreak; i++) {
         const d = new Date(last)
         d.setDate(d.getDate() - i)
-        activeSet.add(d.toISOString().split('T')[0])
+        activeSet.add(toLocalISO(d))
       }
     }
 
@@ -127,7 +127,7 @@ export default function ProgressPage() {
     for (let i = 6; i >= 0; i--) {
       const d = new Date(todayDate)
       d.setDate(d.getDate() - i)
-      const dateStr = d.toISOString().split('T')[0]
+      const dateStr = toLocalISO(d)
       if (activeSet.has(dateStr)) dayStates.push('active')
       else if (dateStr === todayStr && progress.currentStreak > 0) dayStates.push('pending')
       else dayStates.push('inactive')
@@ -361,6 +361,19 @@ export default function ProgressPage() {
                 </div>
               ))}
             </div>
+            <div
+              style={{
+                marginTop: 14,
+                fontFamily: FONTS.body,
+                fontSize: 12,
+                fontWeight: 700,
+                color: COLORS.ink60,
+                lineHeight: 1.45,
+                textAlign: 'center',
+              }}
+            >
+              🔥 a day counts when you hit your daily goal — or finish a lesson, quiz, or practice.
+            </div>
           </Sticker>
         </motion.div>
 
@@ -584,8 +597,8 @@ export default function ProgressPage() {
 }
 
 function relativeDate(iso: string): string {
-  const today = new Date().toISOString().split('T')[0]
-  const date = new Date(iso).toISOString().split('T')[0]
+  const today = toLocalISO(new Date())
+  const date = toLocalISO(new Date(iso))
   if (date === today) return 'today'
   const a = Date.parse(date + 'T00:00:00Z')
   const b = Date.parse(today + 'T00:00:00Z')

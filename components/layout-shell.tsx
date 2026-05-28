@@ -5,7 +5,7 @@ import { BottomNav } from '@/components/bottom-nav'
 import { NotificationPrompt } from '@/components/notification-prompt'
 import { DailyReviewPopup } from '@/components/daily-review-popup'
 import { registerServiceWorker, shouldShowNotificationPrompt, maybeShowReminderOnOpen, fireOneTimeTestNotification, maybeFireRandomNudge } from '@/lib/notifications'
-import { addTodayActiveMs, getTodayActiveMinutes } from '@/lib/progress'
+import { addTodayActiveMs, getTodayActiveMinutes, todayISO, updateStreak } from '@/lib/progress'
 import { getUserProfile } from '@/lib/onboarding'
 import { Confetti } from '@/components/design'
 import { playSound } from '@/lib/sounds'
@@ -15,10 +15,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const W = '#fff' // @design-allow: white literal
 
-function todayStr(): string {
-  return new Date().toISOString().slice(0, 10)
-}
-
 function checkDailyGoalCrossed(prefix: string, onFire: (goalMinutes: number) => void): void {
   if (typeof window === 'undefined') return
   const profile = getUserProfile()
@@ -26,9 +22,12 @@ function checkDailyGoalCrossed(prefix: string, onFire: (goalMinutes: number) => 
   if (goal <= 0) return
   const minutes = getTodayActiveMinutes(prefix)
   if (minutes < goal) return
-  const key = `${prefix}-daily-goal-fired:${todayStr()}`
+  const key = `${prefix}-daily-goal-fired:${todayISO()}`
   if (localStorage.getItem(key)) return
   localStorage.setItem(key, '1')
+  // Reaching the daily goal counts as a streak day (Duolingo-style), so the
+  // streak holds even on days with no lesson/quiz/practice completion.
+  updateStreak(prefix)
   onFire(goal)
 }
 
