@@ -287,6 +287,12 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 
 ### Recent feature work log
 
+**2026-05-27 wave — Dutch foundation theory upgrade (parity with Hindi)**
+
+- Applied the full Hindi treatment to all 7 Dutch foundations (01-numbers, 02-pronunciation, 03-present-tense, 04-de-het, 05-word-order, 06-past-tense, 07-modals): plain-words-first jargon ("the helper verb (auxiliary)", "the diminutive (the little/cute `-je` form)", "verb-second"), one idea per sentence, dense sentences split into bullet lists, Dutch tokens chipped, key terms bolded, **zero em-dashes**, de-clichéd, varied rhythm. Covered all theory text surfaces: 7 intros + 35 section bodies + 35 cutting_intro bubbles + 7 wrap-ups (84 strings).
+- All Dutch grammar + example tokens preserved verbatim (only the English explanatory prose changed): kofschip rule, hebben-vs-zijn, V2 inversion + dropped-`-t`, de/het diminutive rule, half-hour-backwards time, the 21-99 inversion all intact.
+- Done directly in-session (no subagents) via one data file + apply script; validated all headings/indices matched, all JSON re-parsed, zero em-dashes. The 16 foundations (9 Hindi + 7 Dutch) now share one readable, de-AI'd voice.
+
 **2026-05-27 wave — Theory prose readability**
 
 - `Paragraph` in `components/lesson/TheoryView.tsx` now parses an inline markdown subset via a pure `renderInline()` helper: `` `token` `` → butter-bg Hindi-token chip (fixes the long-standing literal-backtick bug across all 16 chapters), `**bold**` → bold key term, lines starting with `- ` → grouped bullet list. No schema change — the markup lives in the existing `body` string. Both languages benefit immediately.

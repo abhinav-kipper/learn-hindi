@@ -2,15 +2,55 @@
   "id": "dutch-present-tense",
   "title": "Present Tense Conjugation",
   "situation": "Foundation: conjugating regular verbs plus the essential hebben and zijn",
-  "skills": ["regular verb conjugation", "hebben (to have)", "zijn (to be)", "stem extraction"],
+  "skills": [
+    "regular verb conjugation",
+    "hebben (to have)",
+    "zijn (to be)",
+    "stem extraction"
+  ],
   "phrases": [
-    { "hindi": "werken: ik werk, jij werkt, hij/zij werkt, wij werken, jullie werken, zij werken", "english": "to work: I work, you work, he/she works, we work, you (pl) work, they work", "context": "The pattern: find the stem (infinitive minus -en), then add nothing for ik, -t for jij/hij/zij, and -en stays for plural. 'Werken' stem = 'werk'", "pronunciation": "WER-ken: ik WERK, yay WERKT, hay/zay WERKT, way WER-ken, yul-YE WER-ken, zay WER-ken" },
-    { "hindi": "leven: ik leef, jij leeft, wij leven — spreken: ik spreek, jij spreekt, wij spreken", "english": "to live: I live, you live, we live — to speak: I speak, you speak, we speak", "context": "When the stem ends in 'v' or 'z', it reverts to 'f' or 's' for ik/jij/hij: 'leven' stem = 'leev' → 'leef'. 'Reizen' stem = 'reiz' → 'reis'", "pronunciation": "LAY-ven: ik LAYF, yay LAYFT, way LAY-ven — SPRAY-ken: ik SPRAYK, yay SPRAYKT, way SPRAY-ken" },
-    { "hindi": "hebben: ik heb, jij hebt, hij heeft, wij hebben, jullie hebben, zij hebben", "english": "to have: I have, you have, he has, we have, you (pl) have, they have", "context": "ESSENTIAL verb — used for the perfect tense ('ik heb gewerkt' = I worked), for possession, and in many expressions. Note: 'hij HEEFT' — irregular third person.", "pronunciation": "HEB-ben: ik HEB, yay HEPT, hay HAYFT, way HEB-ben, yul-YE HEB-ben, zay HEB-ben" },
-    { "hindi": "zijn: ik ben, jij bent, hij/zij is, wij zijn, jullie zijn, zij zijn", "english": "to be: I am, you are, he/she is, we are, you (pl) are, they are", "context": "The most irregular verb. 'Zijn' is BOTH the infinitive (to be) AND the plural/wij form. 'Ik ben' but 'wij zijn'. Used for identity, states, and some perfect tenses.", "pronunciation": "zayn: ik BEN, yay BENT, hay/zay IS, way ZAYN, yul-YE ZAYN, zay ZAYN" },
-    { "hindi": "Ik ben leraar. Jij bent nieuw hier. Zij is ziek. Wij zijn klaar.", "english": "I am a teacher. You are new here. She is ill. We are ready.", "context": "Basic sentences with zijn. No article needed with professions: 'ik ben leraar' (not 'een leraar'). 'Ziek' = ill and 'klaar' = ready/done — both extremely common.", "pronunciation": "ik ben lay-RAAR. yay BENT neeuw HEER. zay IS zeek. way ZAYN klaar." },
-    { "hindi": "Ik heb dorst. Heb jij een pen? Hij heeft koorts. Wij hebben haast.", "english": "I am thirsty (lit. have thirst). Do you have a pen? He has a fever. We are in a hurry (lit. have haste).", "context": "Key: Dutch says 'hebben dorst/haast/koorts' where English says 'to be thirsty/in a hurry/have a fever'. Parallel to 'hebben honger' — the body-state pattern.", "pronunciation": "ik HEB DORST. hep YAY ayn PEN? hay HAYFT KOORTS. way HEB-ben HAAST." },
-    { "hindi": "Hoe gaat het? Het gaat goed, dank je. En met jou?", "english": "How are you? I'm fine, thank you. And you?", "context": "The standard greeting formula. 'Gaan' = to go, but 'het gaat' means 'it goes' = things are going (well/badly). 'Dank je' = informal thank you. 'Dank u' = formal.", "pronunciation": "hoo CHAAT het? het CHAAT CHOOT, dank ye. en met yow?" }
+    {
+      "hindi": "werken: ik werk, jij werkt, hij/zij werkt, wij werken, jullie werken, zij werken",
+      "english": "to work: I work, you work, he/she works, we work, you (pl) work, they work",
+      "context": "The pattern: find the stem (infinitive minus -en), then add nothing for ik, -t for jij/hij/zij, and -en stays for plural. 'Werken' stem = 'werk'",
+      "pronunciation": "WER-ken: ik WERK, yay WERKT, hay/zay WERKT, way WER-ken, yul-YE WER-ken, zay WER-ken"
+    },
+    {
+      "hindi": "leven: ik leef, jij leeft, wij leven — spreken: ik spreek, jij spreekt, wij spreken",
+      "english": "to live: I live, you live, we live — to speak: I speak, you speak, we speak",
+      "context": "When the stem ends in 'v' or 'z', it reverts to 'f' or 's' for ik/jij/hij: 'leven' stem = 'leev' → 'leef'. 'Reizen' stem = 'reiz' → 'reis'",
+      "pronunciation": "LAY-ven: ik LAYF, yay LAYFT, way LAY-ven — SPRAY-ken: ik SPRAYK, yay SPRAYKT, way SPRAY-ken"
+    },
+    {
+      "hindi": "hebben: ik heb, jij hebt, hij heeft, wij hebben, jullie hebben, zij hebben",
+      "english": "to have: I have, you have, he has, we have, you (pl) have, they have",
+      "context": "ESSENTIAL verb — used for the perfect tense ('ik heb gewerkt' = I worked), for possession, and in many expressions. Note: 'hij HEEFT' — irregular third person.",
+      "pronunciation": "HEB-ben: ik HEB, yay HEPT, hay HAYFT, way HEB-ben, yul-YE HEB-ben, zay HEB-ben"
+    },
+    {
+      "hindi": "zijn: ik ben, jij bent, hij/zij is, wij zijn, jullie zijn, zij zijn",
+      "english": "to be: I am, you are, he/she is, we are, you (pl) are, they are",
+      "context": "The most irregular verb. 'Zijn' is BOTH the infinitive (to be) AND the plural/wij form. 'Ik ben' but 'wij zijn'. Used for identity, states, and some perfect tenses.",
+      "pronunciation": "zayn: ik BEN, yay BENT, hay/zay IS, way ZAYN, yul-YE ZAYN, zay ZAYN"
+    },
+    {
+      "hindi": "Ik ben leraar. Jij bent nieuw hier. Zij is ziek. Wij zijn klaar.",
+      "english": "I am a teacher. You are new here. She is ill. We are ready.",
+      "context": "Basic sentences with zijn. No article needed with professions: 'ik ben leraar' (not 'een leraar'). 'Ziek' = ill and 'klaar' = ready/done — both extremely common.",
+      "pronunciation": "ik ben lay-RAAR. yay BENT neeuw HEER. zay IS zeek. way ZAYN klaar."
+    },
+    {
+      "hindi": "Ik heb dorst. Heb jij een pen? Hij heeft koorts. Wij hebben haast.",
+      "english": "I am thirsty (lit. have thirst). Do you have a pen? He has a fever. We are in a hurry (lit. have haste).",
+      "context": "Key: Dutch says 'hebben dorst/haast/koorts' where English says 'to be thirsty/in a hurry/have a fever'. Parallel to 'hebben honger' — the body-state pattern.",
+      "pronunciation": "ik HEB DORST. hep YAY ayn PEN? hay HAYFT KOORTS. way HEB-ben HAAST."
+    },
+    {
+      "hindi": "Hoe gaat het? Het gaat goed, dank je. En met jou?",
+      "english": "How are you? I'm fine, thank you. And you?",
+      "context": "The standard greeting formula. 'Gaan' = to go, but 'het gaat' means 'it goes' = things are going (well/badly). 'Dank je' = informal thank you. 'Dank u' = formal.",
+      "pronunciation": "hoo CHAAT het? het CHAAT CHOOT, dank ye. en met yow?"
+    }
   ],
   "grammar_notes": [
     "Stem extraction: take the infinitive (e.g. 'werken'), remove '-en', you get the stem ('werk'). All conjugation builds from the stem",
@@ -28,146 +68,361 @@
       "skill": "regular verb conjugation",
       "explanation": "Dutch verbs: ik [stem], jij/hij/zij [stem+t], wij/jullie/zij [infinitive]. Three forms to learn. The stem = infinitive minus -en. If the stem ends in t already, don't add another t. 'Zetten' stem = 'zet' — 'hij zet' not 'hij zett'.",
       "more_examples": [
-        { "hindi": "lopen: ik loop, jij loopt, wij lopen", "english": "to walk: I walk, you walk, we walk" },
-        { "hindi": "kopen: ik koop, jij koopt, wij kopen", "english": "to buy: I buy, you buy, we buy" },
-        { "hindi": "eten: ik eet, jij eet, wij eten", "english": "to eat: I eat, you eat, we eat (stem=eet, jij eet not eet+t because stem already ends in t)" },
-        { "hindi": "heten: ik heet, jij heet, wij heten", "english": "to be called: I am called, you are called, we are called" }
+        {
+          "hindi": "lopen: ik loop, jij loopt, wij lopen",
+          "english": "to walk: I walk, you walk, we walk"
+        },
+        {
+          "hindi": "kopen: ik koop, jij koopt, wij kopen",
+          "english": "to buy: I buy, you buy, we buy"
+        },
+        {
+          "hindi": "eten: ik eet, jij eet, wij eten",
+          "english": "to eat: I eat, you eat, we eat (stem=eet, jij eet not eet+t because stem already ends in t)"
+        },
+        {
+          "hindi": "heten: ik heet, jij heet, wij heten",
+          "english": "to be called: I am called, you are called, we are called"
+        }
       ]
     }
   ],
   "practice_prompt": "You are a Dutch tutor drilling present-tense conjugation — stem-finding, the -, -t, -en endings, V2 inversion, and irregulars (zijn/hebben/gaan/doen). Address the user as 'u'. Open with: 'Goedendag! Laten we de tegenwoordige tijd oefenen. Eerste opdracht: geef de stam van \\'werken\\' en de vorm voor \\'jij\\'.' Give one task at a time: conjugate a verb for a given pronoun, find the stem of an infinitive, transform a statement into a yes/no question (forcing V2 inversion plus the jij-t drop), or fix a wrongly-conjugated sentence. Escalate across 6-8 items — start with a clean regular (werken/maken), then a spelling-shift verb (lopen/leven/lezen), then V2 inversion with jij, then irregulars. Watch for: missing -t on jij/hij/zij, NOT dropping -t in jij-question inversion ('werkt jij?' instead of 'werk jij?'), wrong stem (forgetting vowel doubling or v→f / z→s devoicing), and wrong irregular forms (hij hebt instead of hij heeft, ik bent instead of ik ben). Flag mistakes with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] and briefly cite the rule. Stay in Dutch unless asked otherwise. After 6-8 items end with 'Heel goed gedaan! Tot ziens.'",
   "theory": {
-    "intro": "Dutch present tense is more regular than English, but it has its own rules — the V2 inversion (\"the verb is always second\"), the dropped `-t` in inverted `jij`-questions, and the spelling shifts that protect vowel length. Master the stem-finding rule, internalize the V2 pattern, and Dutch's verb system becomes almost mechanical.",
+    "intro": "Dutch present tense is more regular than English, but it has its own rules: the verb-second order (the conjugated verb is always second), the dropped `-t` in inverted `jij`-questions, and the spelling shifts that protect vowel length. Learn how to find the stem, internalize the verb-second pattern, and the Dutch verb system becomes almost mechanical.",
     "sections": [
       {
         "heading": "Find the stem first",
-        "body": "Every Dutch verb in the dictionary ends in `-en`: `werken` (to work), `lopen` (to walk), `eten` (to eat), `fietsen` (to cycle). Conjugation always starts the same way — chop off the `-en` and what's left is the STEM. Once you have the stem, you add personal endings to it.\n\nThe stem is the building block of every present-tense form. `werken` → `werk`. `eten` → `eet`. `fietsen` → `fiets`. Get good at this one move and the rest of the system unlocks.",
+        "body": "Every Dutch verb in the dictionary ends in `-en`: `werken` (to work), `lopen` (to walk), `eten` (to eat), `fietsen` (to cycle). Conjugation always starts the same way. Chop off the `-en`, and what's left is the **stem**. Then you add personal endings to it.\n\nThe stem is the building block of every present-tense form.\n\n- `werken` → `werk`\n- `eten` → `eet`\n- `fietsen` → `fiets`\n\nGet good at this one move and the rest of the system unlocks.",
         "table": {
           "caption": "Infinitive → stem for common verbs",
-          "columns": ["infinitive", "meaning", "stem"],
+          "columns": [
+            "infinitive",
+            "meaning",
+            "stem"
+          ],
           "rows": [
-            ["werken", "to work", "werk"],
-            ["fietsen", "to cycle", "fiets"],
-            ["eten", "to eat", "eet"],
-            ["lopen", "to walk", "loop"],
-            ["wonen", "to live (reside)", "woon"],
-            ["maken", "to make", "maak"]
+            [
+              "werken",
+              "to work",
+              "werk"
+            ],
+            [
+              "fietsen",
+              "to cycle",
+              "fiets"
+            ],
+            [
+              "eten",
+              "to eat",
+              "eet"
+            ],
+            [
+              "lopen",
+              "to walk",
+              "loop"
+            ],
+            [
+              "wonen",
+              "to live (reside)",
+              "woon"
+            ],
+            [
+              "maken",
+              "to make",
+              "maak"
+            ]
           ]
         },
-        "callout": { "tone": "warning", "body": "Some verbs shift spelling when you drop -en. `lopen` becomes `loop`, not `lop` — the long `o` has to stay long, so it doubles. Same for `wonen` → `woon`, `maken` → `maak`. We'll cover why in the spelling-shifts section." },
-        "cutting_intro": "Hi! Dutch verbs are mostly tidy machines. Step one is always: drop the `-en` and grab the stem. Watch.",
+        "callout": {
+          "tone": "warning",
+          "body": "Some verbs shift spelling when you drop -en. `lopen` becomes `loop`, not `lop` — the long `o` has to stay long, so it doubles. Same for `wonen` → `woon`, `maken` → `maak`. We'll cover why in the spelling-shifts section."
+        },
+        "cutting_intro": "Hi! Dutch verbs are mostly tidy machines. Step one is always the same: drop the `-en` and grab the stem. Watch.",
         "quick_check": {
           "question": "What's the stem of the verb `fietsen` (to cycle)?",
-          "options": ["fiets", "fietse", "fietsen"],
+          "options": [
+            "fiets",
+            "fietse",
+            "fietsen"
+          ],
           "correct_index": 0,
           "explanation": "Yes — drop `-en` from `fietsen` and you get `fiets`. That's the stem you'll build every present-tense form from."
         }
       },
       {
         "heading": "The personal endings: -, -t, -en",
-        "body": "Once you have the stem, present-tense conjugation has only THREE distinct forms: stem alone, stem + `-t`, and stem + `-en`. That's it. The pattern is the same for every regular verb.\n\n`ik` gets the bare stem (no ending). `jij`, `u`, and `hij/zij/het` all add `-t`. The three plurals — `wij`, `jullie`, `zij` — all add `-en` (which usually just rebuilds the infinitive). Six people, three endings.",
+        "body": "Once you have the stem, present-tense conjugation has only **three** forms: stem alone, stem + `-t`, and stem + `-en`. That's the whole pattern, and it's the same for every regular verb.\n\n- `ik` takes the bare stem (no ending)\n- `jij`, `u`, and `hij/zij/het` all add `-t`\n- the three plurals (`wij`, `jullie`, `zij`) all add `-en`, which usually just rebuilds the infinitive\n\nSix people, three endings.",
         "table": {
           "caption": "`werken` (to work) conjugated",
-          "columns": ["subject", "form", "ending"],
+          "columns": [
+            "subject",
+            "form",
+            "ending"
+          ],
           "rows": [
-            ["ik", "werk", "stem only"],
-            ["jij / u", "werkt", "stem + t"],
-            ["hij / zij / het", "werkt", "stem + t"],
-            ["wij", "werken", "stem + en"],
-            ["jullie", "werken", "stem + en"],
-            ["zij (they)", "werken", "stem + en"]
+            [
+              "ik",
+              "werk",
+              "stem only"
+            ],
+            [
+              "jij / u",
+              "werkt",
+              "stem + t"
+            ],
+            [
+              "hij / zij / het",
+              "werkt",
+              "stem + t"
+            ],
+            [
+              "wij",
+              "werken",
+              "stem + en"
+            ],
+            [
+              "jullie",
+              "werken",
+              "stem + en"
+            ],
+            [
+              "zij (they)",
+              "werken",
+              "stem + en"
+            ]
           ]
         },
         "examples": [
-          { "hindi": "ik eet een appel", "english": "I eat / am eating an apple", "breakdown": "eten → stem `eet` → ik eet (no ending)" },
-          { "hindi": "jij maakt koffie", "english": "you make coffee", "breakdown": "maken → stem `maak` → jij maakt (stem + t)" },
-          { "hindi": "hij fietst naar werk", "english": "he cycles to work", "breakdown": "fietsen → stem `fiets` → hij fietst (stem + t)" },
-          { "hindi": "wij wonen in Amsterdam", "english": "we live in Amsterdam", "breakdown": "wonen → wij wonen (stem + en, rebuilds the infinitive)" }
+          {
+            "hindi": "ik eet een appel",
+            "english": "I eat / am eating an apple",
+            "breakdown": "eten → stem `eet` → ik eet (no ending)"
+          },
+          {
+            "hindi": "jij maakt koffie",
+            "english": "you make coffee",
+            "breakdown": "maken → stem `maak` → jij maakt (stem + t)"
+          },
+          {
+            "hindi": "hij fietst naar werk",
+            "english": "he cycles to work",
+            "breakdown": "fietsen → stem `fiets` → hij fietst (stem + t)"
+          },
+          {
+            "hindi": "wij wonen in Amsterdam",
+            "english": "we live in Amsterdam",
+            "breakdown": "wonen → wij wonen (stem + en, rebuilds the infinitive)"
+          }
         ],
-        "callout": { "tone": "tip", "body": "Only `ik` is bare. Every other singular gets `-t`; every plural gets `-en`. If you can sing the rhythm `-, -t, -t, -en, -en, -en`, you've nailed 80% of Dutch verbs." },
-        "cutting_intro": "Now the magic. Three endings — that's the whole pattern. Listen to the rhythm: nothing, t, t, en, en, en.",
+        "callout": {
+          "tone": "tip",
+          "body": "Only `ik` is bare. Every other singular gets `-t`; every plural gets `-en`. If you can sing the rhythm `-, -t, -t, -en, -en, -en`, you've nailed 80% of Dutch verbs."
+        },
+        "cutting_intro": "Now the magic. Three endings, and that's the whole pattern. Listen to the rhythm: nothing, t, t, en, en, en.",
         "quick_check": {
           "question": "Which ending does `hij` (he) take in the present tense?",
-          "options": ["no ending (bare stem)", "stem + t", "stem + en"],
+          "options": [
+            "no ending (bare stem)",
+            "stem + t",
+            "stem + en"
+          ],
           "correct_index": 1,
           "explanation": "Right — `hij`, `zij`, and `het` all take stem + t. So `hij werkt`, `hij eet`, `hij fietst`. Only `ik` is bare."
         }
       },
       {
         "heading": "The V2 inversion rule",
-        "body": "Dutch is what linguists call a \"verb-second\" (V2) language. In a main clause, the conjugated verb is ALWAYS the second element. In `Ik werk in Amsterdam`, the subject `ik` is first and the verb `werk` is second — feels just like English.\n\nBut the moment anything else comes first, the verb still has to be second — which means the subject gets bumped behind the verb. `Vandaag werk ik in Amsterdam` (Today I work in Amsterdam) — `vandaag` is first, `werk` is second, `ik` slots in third. The verb didn't move; the subject did. Same thing happens in yes/no questions: the verb hops to position one and the subject follows. `Werk ik in Amsterdam?` (Do I work in Amsterdam?)\n\nOne quirk you'll hit immediately: when `jij` follows the verb (questions or inverted sentences), the `-t` ending DROPS. `Jij werkt` becomes `Werk jij?` — not `werkt jij`. This applies only to `jij` (and `je`), not to `hij`/`zij`/`u`.",
+        "body": "Dutch is what linguists call a **verb-second** language: in a main clause, the conjugated verb is always the second element. In `Ik werk in Amsterdam`, the subject `ik` is first and the verb `werk` is second. That feels just like English.\n\nThe difference shows the moment something else comes first. The verb still has to be second, so the subject gets bumped behind it. `Vandaag werk ik in Amsterdam` (Today I work in Amsterdam): `vandaag` is first, `werk` is second, `ik` slots in third. The verb didn't move. The subject did.\n\nThe same thing happens in yes/no questions. The verb hops to the front and the subject follows: `Werk ik in Amsterdam?` (Do I work in Amsterdam?).\n\nOne quirk you'll hit right away: when `jij` follows the verb (in questions or inverted sentences), the `-t` ending **drops**. `Jij werkt` becomes `Werk jij?`, not `werkt jij`. This applies only to `jij` (and `je`), never to `hij`, `zij`, or `u`.",
         "examples": [
-          { "hindi": "Ik werk in Amsterdam.", "english": "I work in Amsterdam.", "breakdown": "Statement: subject (1) + verb (2). Standard order." },
-          { "hindi": "Werk ik in Amsterdam?", "english": "Do I work in Amsterdam?", "breakdown": "Question: verb (1) + subject (2). Verb moves to the front." },
-          { "hindi": "Vandaag werk ik in Amsterdam.", "english": "Today I work in Amsterdam.", "breakdown": "Fronted adverb (1) + verb (2) + subject (3). Verb stays in position 2." },
-          { "hindi": "Werk jij in Amsterdam?", "english": "Do you work in Amsterdam?", "breakdown": "Note the dropped `-t` — `jij werkt` → `werk jij` when inverted." }
+          {
+            "hindi": "Ik werk in Amsterdam.",
+            "english": "I work in Amsterdam.",
+            "breakdown": "Statement: subject (1) + verb (2). Standard order."
+          },
+          {
+            "hindi": "Werk ik in Amsterdam?",
+            "english": "Do I work in Amsterdam?",
+            "breakdown": "Question: verb (1) + subject (2). Verb moves to the front."
+          },
+          {
+            "hindi": "Vandaag werk ik in Amsterdam.",
+            "english": "Today I work in Amsterdam.",
+            "breakdown": "Fronted adverb (1) + verb (2) + subject (3). Verb stays in position 2."
+          },
+          {
+            "hindi": "Werk jij in Amsterdam?",
+            "english": "Do you work in Amsterdam?",
+            "breakdown": "Note the dropped `-t` — `jij werkt` → `werk jij` when inverted."
+          }
         ],
-        "callout": { "tone": "warning", "body": "The dropped `-t` in inverted `jij`-questions catches every learner. `Jij werkt` is correct as a statement, but the question is `Werk jij?` — the `-t` vanishes. Only happens with `jij`/`je`, never with `hij` or `u`." },
-        "cutting_intro": "Heads up — this one's distinctively Dutch. The conjugated verb is ALWAYS the second thing in the sentence. Doesn't matter what's first. Watch how it works.",
+        "callout": {
+          "tone": "warning",
+          "body": "The dropped `-t` in inverted `jij`-questions catches every learner. `Jij werkt` is correct as a statement, but the question is `Werk jij?` — the `-t` vanishes. Only happens with `jij`/`je`, never with `hij` or `u`."
+        },
+        "cutting_intro": "Heads up, this one's distinctively Dutch. The conjugated verb is always the second thing in the sentence, whatever comes first. Watch how it works.",
         "quick_check": {
           "question": "How do you ask `Do you work in Amsterdam?` informally?",
-          "options": ["Werkt jij in Amsterdam?", "Werk jij in Amsterdam?", "Jij werkt in Amsterdam?"],
+          "options": [
+            "Werkt jij in Amsterdam?",
+            "Werk jij in Amsterdam?",
+            "Jij werkt in Amsterdam?"
+          ],
           "correct_index": 1,
           "explanation": "Correct! When `jij` follows the verb, the `-t` drops. `Werk jij?` — never `werkt jij`. This is the single most common mistake learners make with Dutch questions."
         }
       },
       {
         "heading": "Spelling shifts that protect the sound",
-        "body": "Dutch spelling has a tight relationship with vowel length, and the conjugation system has to honor it. Three patterns will catch you:\n\nFirst, LONG VOWELS double in closed syllables. `lopen` (LOH-pen) has a long `o`. When you make the stem one syllable (`loop`), you must double the `o` to keep it long: stem = `loop`, not `lop`. Same for `maken` → `maak`, `wonen` → `woon`, `horen` → `hoor`.\n\nSecond, DOUBLED CONSONANTS drop one at the end of a word. `zitten` (to sit) has a short `i` protected by the double `tt`. When the stem stands alone, one `t` is enough: stem = `zit`. `vallen` → `val`. `kennen` → `ken`.\n\nThird, FINAL `v` and `z` devoice to `f` and `s`. Dutch doesn't allow `v` or `z` at the end of a word, so `leven` (to live) → stem `leef`; `verhuizen` (to move house) → stem `verhuis`; `lezen` (to read) → stem `lees`. The plural forms `wij leven`, `wij verhuizen`, `wij lezen` keep the original letters — but ik/jij/hij forms use the devoiced version.",
+        "body": "Dutch spelling has a tight relationship with vowel length, and conjugation has to honor it. Three patterns will catch you.\n\n**Long vowels double in closed syllables.** `lopen` (LOH-pen) has a long `o`. When you shrink it to a one-syllable stem, you double the `o` to keep it long: stem = `loop`, not `lop`. Same with `maken` → `maak`, `wonen` → `woon`, `horen` → `hoor`.\n\n**Doubled consonants drop one at the end of a word.** `zitten` (to sit) has a short `i` protected by the double `tt`. When the stem stands alone, one `t` is enough: stem = `zit`. Likewise `vallen` → `val`, `kennen` → `ken`.\n\n**Final `v` and `z` turn into `f` and `s`.** Dutch doesn't allow `v` or `z` at the end of a word. So `leven` (to live) → stem `leef`, `verhuizen` (to move house) → stem `verhuis`, `lezen` (to read) → stem `lees`. The plural forms (`wij leven`, `wij verhuizen`, `wij lezen`) keep the original letters, but the ik/jij/hij forms use the changed version.",
         "table": {
           "caption": "Three spelling shifts in action",
-          "columns": ["infinitive", "stem", "shift type"],
+          "columns": [
+            "infinitive",
+            "stem",
+            "shift type"
+          ],
           "rows": [
-            ["lopen", "loop", "long vowel doubled (o → oo)"],
-            ["wonen", "woon", "long vowel doubled"],
-            ["maken", "maak", "long vowel doubled (a → aa)"],
-            ["zitten", "zit", "double consonant reduced"],
-            ["vallen", "val", "double consonant reduced"],
-            ["leven", "leef", "v → f devoicing"],
-            ["lezen", "lees", "z → s devoicing"],
-            ["verhuizen", "verhuis", "z → s devoicing"]
+            [
+              "lopen",
+              "loop",
+              "long vowel doubled (o → oo)"
+            ],
+            [
+              "wonen",
+              "woon",
+              "long vowel doubled"
+            ],
+            [
+              "maken",
+              "maak",
+              "long vowel doubled (a → aa)"
+            ],
+            [
+              "zitten",
+              "zit",
+              "double consonant reduced"
+            ],
+            [
+              "vallen",
+              "val",
+              "double consonant reduced"
+            ],
+            [
+              "leven",
+              "leef",
+              "v → f devoicing"
+            ],
+            [
+              "lezen",
+              "lees",
+              "z → s devoicing"
+            ],
+            [
+              "verhuizen",
+              "verhuis",
+              "z → s devoicing"
+            ]
           ]
         },
-        "callout": { "tone": "note", "body": "These aren't random — they're consistent rules protecting pronunciation. Long vowels stay long (double them), short vowels stay short (one consonant is enough at the end), and `v`/`z` can't end a word so they become `f`/`s`. Internalize the rules; don't memorize each verb." },
-        "cutting_intro": "Dutch spelling cares deeply about vowel length. Watch what happens when we make the stem — letters shift to keep the sound right.",
+        "callout": {
+          "tone": "note",
+          "body": "These aren't random — they're consistent rules protecting pronunciation. Long vowels stay long (double them), short vowels stay short (one consonant is enough at the end), and `v`/`z` can't end a word so they become `f`/`s`. Internalize the rules; don't memorize each verb."
+        },
+        "cutting_intro": "Dutch spelling cares deeply about vowel length. Watch what happens when we build the stem: letters shift to keep the sound right.",
         "quick_check": {
           "question": "What's the stem of `leven` (to live)?",
-          "options": ["lev", "leef", "leven"],
+          "options": [
+            "lev",
+            "leef",
+            "leven"
+          ],
           "correct_index": 1,
           "explanation": "`leef` — the final `v` devoices to `f` because Dutch words can't end in `v`. So `ik leef`, `jij leeft`, but `wij leven` (the `v` is fine in the middle of the word)."
         }
       },
       {
         "heading": "The irregular essentials: zijn, hebben, gaan, doen",
-        "body": "A handful of the most common Dutch verbs are stubbornly irregular — they won't follow the stem-plus-ending machine. The good news is there are only a few of them, and they're so common you'll memorize them fast just by hearing them.\n\n`zijn` (to be) and `hebben` (to have) are the absolute backbones — used everywhere, including building the perfect tense. `gaan` (to go), `doen` (to do), `staan` (to stand), and `weten` (to know) round out the irregulars you need first.",
+        "body": "A handful of the most common Dutch verbs are stubbornly irregular. They won't follow the stem-plus-ending machine. The good news: there are only a few, and they're so common you'll memorize them fast just from hearing them.\n\n- `zijn` (to be) and `hebben` (to have) are the backbones. You'll use them everywhere, including to build the perfect tense.\n- `gaan` (to go), `doen` (to do), `staan` (to stand), and `weten` (to know) round out the ones you need first.",
         "table": {
           "caption": "`zijn` (to be) and `hebben` (to have)",
-          "columns": ["subject", "zijn", "hebben"],
+          "columns": [
+            "subject",
+            "zijn",
+            "hebben"
+          ],
           "rows": [
-            ["ik", "ben", "heb"],
-            ["jij / u", "bent", "hebt"],
-            ["hij / zij / het", "is", "heeft"],
-            ["wij", "zijn", "hebben"],
-            ["jullie", "zijn", "hebben"],
-            ["zij (they)", "zijn", "hebben"]
+            [
+              "ik",
+              "ben",
+              "heb"
+            ],
+            [
+              "jij / u",
+              "bent",
+              "hebt"
+            ],
+            [
+              "hij / zij / het",
+              "is",
+              "heeft"
+            ],
+            [
+              "wij",
+              "zijn",
+              "hebben"
+            ],
+            [
+              "jullie",
+              "zijn",
+              "hebben"
+            ],
+            [
+              "zij (they)",
+              "zijn",
+              "hebben"
+            ]
           ]
         },
         "examples": [
-          { "hindi": "Ik ben moe. Hij is Nederlands.", "english": "I am tired. He is Dutch.", "breakdown": "zijn — ik ben / hij is. Both irregular; memorize as a pair." },
-          { "hindi": "Ik heb honger. Hij heeft een vraag.", "english": "I am hungry (lit. have hunger). He has a question.", "breakdown": "hebben — note `heeft` for hij/zij/het, not `hebt`." },
-          { "hindi": "Ik ga naar huis. Jij gaat morgen.", "english": "I'm going home. You're going tomorrow.", "breakdown": "gaan — ik ga, jij gaat, hij gaat, wij gaan. The stem is just `ga`." },
-          { "hindi": "Wat doe jij? Hij doet niets.", "english": "What are you doing? He is doing nothing.", "breakdown": "doen — ik doe, jij doet, hij doet, wij doen. Stem `doe`." }
+          {
+            "hindi": "Ik ben moe. Hij is Nederlands.",
+            "english": "I am tired. He is Dutch.",
+            "breakdown": "zijn — ik ben / hij is. Both irregular; memorize as a pair."
+          },
+          {
+            "hindi": "Ik heb honger. Hij heeft een vraag.",
+            "english": "I am hungry (lit. have hunger). He has a question.",
+            "breakdown": "hebben — note `heeft` for hij/zij/het, not `hebt`."
+          },
+          {
+            "hindi": "Ik ga naar huis. Jij gaat morgen.",
+            "english": "I'm going home. You're going tomorrow.",
+            "breakdown": "gaan — ik ga, jij gaat, hij gaat, wij gaan. The stem is just `ga`."
+          },
+          {
+            "hindi": "Wat doe jij? Hij doet niets.",
+            "english": "What are you doing? He is doing nothing.",
+            "breakdown": "doen — ik doe, jij doet, hij doet, wij doen. Stem `doe`."
+          }
         ],
-        "callout": { "tone": "tip", "body": "Memorize `zijn` and `hebben` first — they appear in almost every conversation and they build the perfect tense (`ik heb gewerkt`, `ik ben geweest`). Once these are automatic, the rest of Dutch flows much faster." },
-        "cutting_intro": "Last piece. A handful of verbs refuse to play by the rules — and they're the ones you'll use most. Drill these like flashcards.",
+        "callout": {
+          "tone": "tip",
+          "body": "Memorize `zijn` and `hebben` first — they appear in almost every conversation and they build the perfect tense (`ik heb gewerkt`, `ik ben geweest`). Once these are automatic, the rest of Dutch flows much faster."
+        },
+        "cutting_intro": "Last piece. A handful of verbs refuse to play by the rules, and they're the ones you'll use most. Drill these like flashcards.",
         "quick_check": {
           "question": "What's the `hij` form of `hebben` (to have)?",
-          "options": ["hij hebt", "hij heeft", "hij hebben"],
+          "options": [
+            "hij hebt",
+            "hij heeft",
+            "hij hebben"
+          ],
           "correct_index": 1,
           "explanation": "`hij heeft` — irregular. Where a regular verb would give you stem + t (`hij hebt`), `hebben` flips to `heeft`. Memorize it; you'll say it constantly."
         }
       }
     ],
-    "wrap_up": "Master the stem-finding rule plus the three-form ending pattern (`-, -t, -en`), and 80% of Dutch verbs conjugate themselves. Then drill the V2 inversion until questions flow naturally — this is the most distinctive feature of Dutch sentence structure, and the dropped `-t` in inverted `jij`-questions is the most common mistake. Finally, memorize the irregulars (`zijn`, `hebben`, `gaan`, `doen`) — they're the backbone of every conversation. The phrases below give you mixed practice across all three layers."
+    "wrap_up": "Learn the stem-finding rule plus the three-form ending pattern (`-`, `-t`, `-en`), and 80% of Dutch verbs conjugate themselves. Then drill the verb-second inversion until questions flow naturally. It's the most distinctive feature of Dutch sentence structure, and the dropped `-t` in inverted `jij`-questions is the most common mistake. Finally, memorize the irregulars (`zijn`, `hebben`, `gaan`, `doen`), the backbone of every conversation. The phrases below give you mixed practice across all three layers."
   }
 }
