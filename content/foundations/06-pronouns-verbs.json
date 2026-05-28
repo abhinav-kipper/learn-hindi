@@ -114,7 +114,7 @@
     "sections": [
       {
         "heading": "The three you's — tu / tum / aap",
-        "body": "Hindi has three different words for 'you', and they aren't synonyms — they're three social registers. Picking one tells the listener exactly how you see your relationship with them.\n\n`tu` is intimate — used between siblings, very close friends, in moments of anger, or when speaking to a deity. With the wrong person it lands as rude or aggressive; with the right person it's warm and unguarded. `tum` is the friendly middle — peers, friends, juniors, people you've already shaken hands with. `aap` is respectful — elders, strangers, shopkeepers, anyone in a service role, anyone older or higher-status. It's also the safe default for any adult you don't know.\n\nUsing the wrong one is socially loud. A stranger addressed as `tu` will hear it as a slap; an elder addressed as `tum` will feel disrespected. There's no neutral 'you' in Hindi that lets you dodge the choice — you have to pick.",
+        "body": "Hindi has three words for 'you', and they aren't synonyms — they're three **social registers**. Picking one tells the listener exactly how you see the relationship.\n\n- `tu` — **intimate.** Siblings, very close friends, moments of anger, deity. With the wrong person it lands as rude; with the right person it's warm and unguarded.\n- `tum` — **friendly middle.** Peers, friends, juniors, people you've shaken hands with.\n- `aap` — **respectful.** Elders, strangers, shopkeepers, anyone in a service role, anyone higher-status. Also the safe default for any adult you don't know.\n\nThere's no neutral 'you' that lets you dodge the choice — you have to pick. A stranger addressed as `tu` hears it as a slap. An elder addressed as `tum` feels disrespected.",
         "examples": [
           { "hindi": "tu kya kar raha hai?", "english": "what are you doing? (intimate — sibling, lover, close friend, or anger)", "breakdown": "tu + masc. verb + hai. Very informal; context decides if it's affectionate or hostile" },
           { "hindi": "tum kya kar rahe ho?", "english": "what are you doing? (friendly — peer, friend, junior)", "breakdown": "tum + -e ending + ho. Casual but not rude" },
@@ -131,7 +131,7 @@
       },
       {
         "heading": "Subject pronoun grid",
-        "body": "Here's the full set of subject pronouns. Memorize the grid — every Hindi sentence you ever build starts with one of these. Notice how Hindi compresses information English spreads out: a single `woh` covers he, she, that, and (sometimes) they; a single `yeh` covers he, she, this, and (sometimes) they-nearby.",
+        "body": "Every Hindi sentence starts with one of these nine **subject pronouns** (the 'doer' of the sentence). Hindi compresses what English spreads across many words: `woh` alone covers he, she, that, and they; `yeh` covers he, she, this, and they-nearby. Memorize the grid.",
         "table": {
           "caption": "Subject pronouns by person",
           "columns": ["pronoun", "meaning", "notes"],
@@ -158,7 +158,7 @@
       },
       {
         "heading": "Verb endings tied to each pronoun",
-        "body": "Each pronoun pairs with a specific auxiliary verb and verb ending. The auxiliary (`hoon`/`hai`/`ho`/`hain`) tracks the pronoun strictly — get this wrong and the sentence sounds broken. The verb ending (-ta / -te / -ti) tracks gender and number on top.\n\nHere's the present-habitual pattern for `karna` (to do). The masculine form is shown first, feminine second — pick whichever matches the speaker or subject.",
+        "body": "Each pronoun locks to a specific **helper word** (auxiliary). Get the auxiliary wrong and the sentence sounds broken to a native speaker. A second piece — the **verb ending** (`-ta` / `-te` / `-ti`) — tracks the subject's gender and number on top of that.\n\nThe four auxiliaries:\n- `main` → `hoon`\n- `tu`, `yeh`, `woh` (singular) → `hai`\n- `tum` → `ho`\n- `aap`, `hum`, `ye`, `ve` → `hain`\n\nThe table below shows the full present-habitual pattern for `karna` (to do). Masculine form first, feminine second — pick whichever matches the subject.",
         "table": {
           "caption": "Present-habitual: karna (to do) across all pronouns",
           "columns": ["pronoun", "verb form", "auxiliary"],
@@ -190,7 +190,7 @@
       },
       {
         "heading": "Register slippage and how to recover",
-        "body": "Once you've picked a register, you have to hold it. Starting a sentence with `aap` and finishing it with `tum` reads as either rude or confused — like calling someone 'sir' and then 'dude' in the same breath. The same goes across the whole conversation, not just one sentence.\n\nMost beginners slip in one of two ways: they start polite, then relax mid-sentence (`aap kahaan rehte ho?` — `aap` wants `hain`, not `ho`), or they get nervous and over-correct mid-thought. The recovery move is simple: restart the sentence with a softener like `arrey, sorry —` and rebuild it in the right register. Native listeners will forgive the slip if you visibly correct it.",
+        "body": "Once you pick a register, hold it — for the whole sentence and the whole conversation. Mixing registers mid-sentence sounds like calling someone 'sir' and then 'dude' in the same breath.\n\nThe two common beginner slips:\n- Starting with `aap` but finishing with `ho` (`aap kahaan rehte ho?`). `aap` always wants `hain`, never `ho`.\n- Over-correcting mid-thought when nervous.\n\nThe **recovery move**: restart the sentence with a softener — `arrey, sorry —` — then rebuild it in the right register. Native listeners forgive visible self-correction.",
         "examples": [
           { "hindi": "aap kahaan rehte hain?", "english": "where do you live? (consistent — aap + hain)", "breakdown": "correct — aap pairs with hain, not ho" },
           { "hindi": "aap kahaan rehte ho?", "english": "(broken register — aap + ho mismatch)", "breakdown": "wrong — aap demands hain. This sounds jarring to native ears" },
@@ -207,7 +207,7 @@
       },
       {
         "heading": "Special cases — when the norm shifts",
-        "body": "The `aap`-default rule has edge cases. With children, `tum` is normal regardless of how recently you met them — no Indian parent expects you to `aap` their five-year-old. With service workers (auto drivers, shopkeepers, waiters), regional norms vary: in Delhi `aap` is increasingly the polite middle-class default; in older or more hierarchical settings `tum` is common. Bargaining banter sometimes uses `tum` deliberately to project warmth.\n\nSome adults will tell you `tum bolo` ('say `tum`') — that's an explicit invitation to drop down a register, and you should take it. Refusing to relax after the invitation reads as cold. In religious contexts, `tu` is used for deities — `Hey Ram, tu hi sahara hai` — and it's intimate-divine, not disrespectful. Modern WhatsApp and texting between peers often defaults to `tum` regardless of age, because typing is informal by nature.",
+        "body": "The `aap`-default has exceptions.\n\n- **Children** — `tum` is normal regardless of how recently you met them. `aap` for a five-year-old sounds oddly formal.\n- **Service workers** — regional norms vary. In Delhi, `aap` is the polite middle-class default. In older or more hierarchical settings, `tum` is common. Bargaining banter sometimes uses `tum` deliberately to project warmth.\n- **Explicit invitations** — if someone says `tum bolo` ('say `tum`'), that's an invitation to drop a register. Take it. Refusing reads as cold.\n- **Deities** — `tu` is used for gods (`Hey Ram, tu hi sahara hai`). It's intimate-divine, not rude.\n- **Texting and WhatsApp** — peers often default to `tum` regardless of age, because typed chat is informal by nature.",
         "examples": [
           { "hindi": "beta, tum kahaan ja rahe ho?", "english": "kid, where are you going? (adult to child — tum is normal)", "breakdown": "tum + ho. Aap for children would sound oddly formal" },
           { "hindi": "tum bolo, aap mat bolo", "english": "say `tum`, don't say `aap` (explicit invitation to relax)", "breakdown": "take this invitation — refusing makes you seem distant" },

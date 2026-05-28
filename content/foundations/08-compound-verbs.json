@@ -64,7 +64,7 @@
     "sections": [
       {
         "heading": "What's a compound verb",
-        "body": "A Hindi compound verb is two verbs glued into one concept. V1 (the main verb) is in stem form — no ending. V2 (the auxiliary, also called the 'vector') carries the conjugation — tense, person, gender. Together they express something neither word can on its own.\n\nThe most common auxiliaries are `lena` (take), `dena` (give), `jaana` (go), `aana` (come), `daalna` (throw/dump), and `lagna` (begin/start). Each one shades the action differently — who it's for, whether it's sudden, whether it's complete, whether it's just beginning.",
+        "body": "A Hindi **compound verb** is two verbs joined into one idea. V1 (the main verb) stays in stem form — no ending. V2 (the auxiliary, also called the 'vector') carries the conjugation: tense, person, gender.\n\nThe six common auxiliaries, each shading the action differently:\n\n- `lena` (take) — action benefits the doer\n- `dena` (give) — action benefits someone else\n- `jaana` (go) — marks completion or change of state\n- `aana` (come) — arrival or result\n- `daalna` (throw/dump) — force or finality\n- `lagna` (begin/attach) — marks the start of an action",
         "examples": [
           { "hindi": "woh khaata hai", "english": "he eats / he is eating", "breakdown": "bare verb — neutral, habitual or in-progress, no completion implied" },
           { "hindi": "usne khaa liya", "english": "he ate it up (for himself)", "breakdown": "khaa (V1 stem) + liya (V2 lena, past) — eating is finished, action benefits the doer" },
@@ -81,7 +81,7 @@
       },
       {
         "heading": "Lena vs dena: the for-self / for-other axis",
-        "body": "The two most common auxiliaries — `lena` (take) and `dena` (give) — split actions along a single axis: who benefits?\n\n`-lena` means the action is for the subject themselves — they take it, they get it done, they consume it. `Maine paani pee liya` = I drank water (for myself, done with it).\n\n`-dena` means the action is for or affects someone else — given over, handed off, performed on their behalf. `Maine usse paani pila diya` = I gave them water (for them, done to/for them). This single distinction will let you sound natural in a huge fraction of everyday speech.",
+        "body": "`lena` and `dena` split actions along a single axis: **who benefits?**\n\n- **`-lena`** — the action is for the subject. They take it, consume it, get it done for themselves. `Maine paani pee liya` = I drank the water (done, for me).\n- **`-dena`** — the action is for or affects someone else. Handed off, performed on their behalf. `Maine usse paani pila diya` = I gave them water (done for them).\n\nThis one distinction covers a huge fraction of everyday spoken Hindi.",
         "table": {
           "caption": "Common verb + lena / dena pairs",
           "columns": ["base verb", "+ lena (for self)", "+ dena (for other)"],
@@ -104,7 +104,7 @@
       },
       {
         "heading": "Jaana, daalna, lagna — completion, force, beginning",
-        "body": "Beyond the for-self / for-other split, Hindi has a small set of auxiliaries that shade HOW the action happens — its energy, its suddenness, its arc.\n\n`-jaana` (go) marks completion through a transition. The action runs all the way to its endpoint. `Woh ro gayi` = she broke down crying (sudden onset that fully arrived). `Bachhe so gaye` = the kids fell asleep (the sleeping completed).\n\n`-daalna` (throw, dump) adds force or finality, often with a slightly negative or emphatic edge. `Maine khaa daala` = I devoured it / I knocked it back. Use it when the action was forceful or impatient.\n\n`-lagna` (begin, attach) marks the START of an action, not its completion. `Baarish hone lagi` = it started raining. `Woh rone lagi` = she started crying.",
+        "body": "Three more auxiliaries shade **how** the action happens — its arc, its energy, its direction.\n\n- **`-jaana`** (go) — completion through a transition. The action runs all the way to its endpoint. `Woh ro gayi` = she broke down crying. `Bachhe so gaye` = the kids fell asleep.\n- **`-daalna`** (throw/dump) — force or finality, often with an emphatic or impatient edge. `Maine khaa daala` = I devoured the whole thing.\n- **`-lagna`** (begin/attach) — marks the **start** of an action, not its completion. `Baarish hone lagi` = it started raining. `Woh rone lagi` = she started crying.",
         "examples": [
           { "hindi": "main thak gayi hoon", "english": "I've gotten tired (state-completion)", "breakdown": "thak (V1) + gayi (jaana, fem.) — the tiredness has arrived fully" },
           { "hindi": "usne sab kuch khaa daala", "english": "he devoured the whole thing", "breakdown": "khaa (V1) + daala (daalna, past) — emphatic, forceful eating" },
@@ -121,7 +121,7 @@
       },
       {
         "heading": "Kar dena vs kar lena vs kar daalna: precise differences",
-        "body": "Three close-cousin constructions show up constantly with `karna` (do). Each picks a different angle on the same action — and they're not interchangeable.\n\n`Kar dena` (do + give) = do it for someone, often as a favor or service. `Mera homework kar do` = do my homework for me. The beneficiary is the listener.\n\n`Kar lena` (do + take) = do it for yourself, get it taken care of. `Apna homework kar lo` = do your own homework (it's on you). The beneficiary is the doer.\n\n`Kar daalna` (do + dump) = do it forcefully, knock it out, finish it off with energy. `Yeh kaam kar daalo` = knock this work out. The energy is emphatic, almost impatient.",
+        "body": "The same V1 (`kar`, from `karna`) takes three different auxiliaries — each a distinct meaning. They are **not** interchangeable.\n\n- **`kar dena`** (do + give) — do it for someone else, as a favor or service. Beneficiary: the listener. `Mera homework kar do` = do my homework for me.\n- **`kar lena`** (do + take) — do it for yourself, get it taken care of. Beneficiary: the doer. `Apna homework kar lo` = do your own homework (it's on you).\n- **`kar daalna`** (do + dump) — do it forcefully, knock it out. Energy: emphatic, almost impatient. `Yeh kaam kar daalo` = just knock this work out.",
         "examples": [
           { "hindi": "mera homework kar do", "english": "do my homework for me (favor)", "breakdown": "kar (V1) + do (dena imperative) — listener benefits the speaker" },
           { "hindi": "apna homework kar lo", "english": "do your own homework", "breakdown": "kar (V1) + lo (lena imperative) — listener is the beneficiary themselves" },
@@ -138,7 +138,7 @@
       },
       {
         "heading": "Common compound patterns + how to recognize them",
-        "body": "Once you know the auxiliaries, you'll start spotting compounds everywhere. Look for V1 (in stem form) followed immediately by a conjugated form of `lena`, `dena`, `jaana`, `aana`, `daalna`, or `lagna`. That's almost always a compound.\n\nMany compounds have become so fixed that they feel like single words — `so jaana` (fall asleep), `aa jaana` (arrive), `bhool jaana` (forget). You'll learn these as units, the way English learners learn 'give up' or 'put off' as phrasal verbs.",
+        "body": "**Spotting pattern:** look for V1 (in stem form) followed immediately by a conjugated form of `lena`, `dena`, `jaana`, `aana`, `daalna`, or `lagna`. That's almost always a compound.\n\nSome compounds have become so fixed they feel like single words — `so jaana` (fall asleep), `aa jaana` (arrive), `bhool jaana` (forget). Learn these as units, the way English learners learn 'give up' or 'put off'.",
         "table": {
           "caption": "High-frequency Hindi compound verbs",
           "columns": ["compound", "literal", "actual meaning"],

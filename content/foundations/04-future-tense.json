@@ -114,7 +114,7 @@
     "sections": [
       {
         "heading": "The simple future shape",
-        "body": "Hindi future = verb stem + a person-and-gender ending. There's no separate helper word like English `will`. The stem is what's left of the verb after stripping `-na` from the infinitive — so `karna` (to do) has stem `kar`, `aana` (to come) has stem `aa`, `khaana` (to eat) has stem `khaa`.\n\nThe ending changes by person AND gender. Memorize this table — every future sentence you'll ever say uses one of these six endings.",
+        "body": "Hindi future = **verb stem** + a person-and-gender ending (suffix). There is no separate `will` word.\n\nThe stem is what remains after stripping `-na` from the infinitive:\n\n- `karna` (to do) → stem `kar`\n- `aana` (to come) → stem `aa`\n- `khaana` (to eat) → stem `khaa`\n\nThe ending (suffix) changes by both **person** and **gender**. Every future sentence uses one of the six endings in the table below.",
         "table": {
           "caption": "Future endings for `karna` (to do)",
           "columns": ["pronoun", "masculine", "feminine"],
@@ -141,7 +141,7 @@
       },
       {
         "heading": "Gender + number agreement",
-        "body": "Like past and present tense, future agrees with the subject's gender. `Main khaaunga` if I'm male, `main khaaungi` if I'm female. The verb form alone tells the listener your gender — there's no escaping it.\n\nFor `aap` (formal you), always use the plural `-enge`/`-engi` form regardless of how many people you're addressing. One person you respect = `aap kya karenge?` (what will you do, formal sg) — same form you'd use for a group. This is the politeness-as-plurality pattern that runs through all of Hindi.",
+        "body": "Like present and past, the future ending agrees with the **subject's gender**. The verb alone tells the listener whether the speaker is male or female.\n\nPick the ending from these three shapes:\n\n- masculine singular → `-ga` (e.g. `karunga`, `karega`)\n- feminine → `-gi` (e.g. `karungi`, `karegi`, `karengi`)\n- masculine plural → `-ge` (e.g. `karenge`, `karoge`)\n\n`Aap` (formal you) **always** takes the plural `-enge`/`-engi` form, even when you are addressing one person. This is the politeness-as-plurality pattern that runs through all of Hindi.",
         "examples": [
           { "hindi": "main khaaunga", "english": "I will eat (masc)", "breakdown": "1st person masc" },
           { "hindi": "main khaaungi", "english": "I will eat (fem)", "breakdown": "1st person fem" },
@@ -159,7 +159,7 @@
       },
       {
         "heading": "Polite requests + suggestions",
-        "body": "Future tense often softens what would otherwise feel like a command. Asking `aap kal aayenge?` (will you come tomorrow?) is markedly more polite than the imperative `aaiye` (come). The future-question framing leaves the person room to decline gracefully.\n\nSimilarly, `hum chalein?` (shall we go?) uses subjunctive but functions as a soft future suggestion. This pattern — phrasing a request as a future-tense question — is everywhere in real Hindi. It's how you propose plans, invite, or politely nudge without giving orders.",
+        "body": "A future-tense question is Hindi's everyday **polite request**. `Aap kal aayenge?` (will you come tomorrow?) is noticeably softer than the command form `aaiye` (come). The question framing gives the person room to decline gracefully.\n\nThis works for offers too. `Aap chai piyenge?` (will you drink chai?) is how a host offers tea — never the imperative `chai piyiye`. Framing it as a future question gives the guest agency.\n\nNote: `hum chalein?` (shall we go?) uses the subjunctive (a separate form), but it functions in conversation just like a soft future suggestion.",
         "table": {
           "caption": "Imperative vs future-as-request",
           "columns": ["imperative (direct)", "future (polite)", "meaning"],
@@ -181,7 +181,7 @@
       },
       {
         "heading": "The conditional: agar...to...",
-        "body": "The most common real-world use of future tense is in conditional sentences. `Agar` introduces the condition (`if`), `to` introduces the result (`then`). Both clauses use future tense in Hindi, even when English would use a present tense in the `if` clause.\n\nSo `if it rains, we won't go` becomes `agar baarish hogi, to hum nahin jaayenge` — `hogi` is future, not present. This is one of the structural differences from English that takes practice to internalize.",
+        "body": "The most common real-world use of future tense is in **conditional** sentences. `Agar` introduces the condition (if) and `to` introduces the result (then).\n\nThe key difference from English: **both** clauses use future tense in Hindi, even when English uses present in the `if` clause. So `if it rains, we won't go` becomes `agar baarish hogi, to hum nahin jaayenge` — `hogi` is future, not present.",
         "examples": [
           { "hindi": "agar baarish hogi, to hum nahin jaayenge", "english": "if it rains, we won't go", "breakdown": "both clauses future: `hogi` (will be) + `jaayenge` (will go)" },
           { "hindi": "agar tum aaoge, to main bhi aaunga", "english": "if you come, then I'll come too", "breakdown": "tum future `aaoge` + main future `aaunga`" },
@@ -198,7 +198,7 @@
       },
       {
         "heading": "Common pitfalls",
-        "body": "English speakers carry over the `will + base verb` pattern and try to construct `main will khaata` — but Hindi has no `will` word. The future-ness lives inside the verb ending itself. `I will eat` = `main khaaunga` (one word does all the work).\n\nThe second big trap: getting the `-ga` / `-gi` / `-ge` ending wrong. This is the #1 grammatical slip when learning future tense. The endings track gender (and number), and your pronoun choice locks in the first half of the ending — so `main` always uses `-unga`/`-ungi`, never `-ega` or `-enge`. Mix and match the wrong way and the sentence sounds jumbled to a native ear.",
+        "body": "**Trap 1 — the phantom `will`.** English speakers try `main will khaata` — but Hindi has no `will` word. The future meaning lives inside the ending itself. `I will eat` = `main khaaunga` (one word does all the work).\n\n**Trap 2 — wrong ending for the pronoun.** Each pronoun locks in a specific ending shape. Using the wrong one makes the sentence ungrammatical, not just awkward:\n\n- `main` → always `-unga` / `-ungi`\n- `tu` / `woh` → always `-ega` / `-egi`\n- `tum` → always `-oge` / `-ogi`\n- `hum` / `aap` / `woh` (plural) → always `-enge` / `-engi`\n\nThe examples below show the correct form next to the common mistake.",
         "examples": [
           { "hindi": "main khaaunga (NOT main khaayega)", "english": "I will eat (masc)", "breakdown": "`main` always takes `-unga`/`-ungi`; `-ega` is for tu/woh" },
           { "hindi": "tu karega (NOT tu karunga)", "english": "you will do (intimate masc)", "breakdown": "`tu` takes `-ega`/`-egi`; `-unga` is reserved for `main`" },

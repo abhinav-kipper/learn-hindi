@@ -64,7 +64,7 @@
     "sections": [
       {
         "heading": "What `ne` is and when it appears",
-        "body": "`ne` is a tiny postposition that attaches to the SUBJECT of a sentence — but only in one very specific situation: when the verb is TRANSITIVE and the tense is SIMPLE PAST. Outside that combination, `ne` simply doesn't appear.\n\nThink of `ne` as a flag that says 'a completed action acted on something'. In English you don't see this flag because the language hides it. In Hindi it's right there on the subject, in plain sight.\n\nSo: `main khaata hoon` (I eat — present, no `ne`), `main soya` (I slept — past, but intransitive, so no `ne`), `maine sandwich khaaya` (I ate a sandwich — past + transitive, so `ne` is required). The trigger is always the same: past tense + transitive verb.",
+        "body": "`ne` is a marker (postposition) that attaches to the subject — but only when **two conditions are both true**: the verb is transitive, and the tense is simple past. Miss either condition and `ne` doesn't appear.\n\nThink of `ne` as a flag meaning \"a completed action acted on something.\" English hides this flag; Hindi puts it right on the subject.\n\nThe three cases side by side:\n\n- `main khaata hoon` — present tense → no `ne`\n- `main soya` — simple past, but `sona` is intransitive → no `ne`\n- `maine sandwich khaaya` — simple past + transitive → `ne` required\n\nThe trigger is always the same: **simple past + transitive verb**.",
         "examples": [
           { "hindi": "main jaata hoon", "english": "I go (habitual present)", "breakdown": "present tense → no `ne` regardless of verb type" },
           { "hindi": "main soya", "english": "I slept", "breakdown": "past tense BUT intransitive (sona = sleep) → no `ne`" },
@@ -82,7 +82,7 @@
       },
       {
         "heading": "Why this matters: the verb agrees with the OBJECT",
-        "body": "Here's the headline consequence of `ne`, and the bit English speakers consistently miss: once `ne` shows up on the subject, the verb stops agreeing with the subject and starts agreeing with the OBJECT instead.\n\n`maine roti khaayi` — `roti` is feminine, so the verb ends in `-i` (`khaayi`). `maine khaana khaaya` — `khaana` is masculine, so the verb ends in `-a` (`khaaya`). Same subject (`main` → `maine`), different object, completely different verb ending.\n\nAnd crucially: the speaker's own gender doesn't matter. A female speaker says `maine paani piya` (paani is masculine, so `-a`), and a male speaker says `maine chai pi` (chai is feminine, so `-i`). The verb is locked to the object, not the speaker.",
+        "body": "Once `ne` shows up on the subject, the verb stops agreeing with the subject and starts agreeing with the **direct object** instead.\n\nSame subject, different object — completely different verb ending:\n\n- `maine roti khaayi` — `roti` is feminine → verb ends in `-i`\n- `maine khaana khaaya` — `khaana` is masculine → verb ends in `-a`\n\nThe speaker's own gender is irrelevant. A female speaker says `maine paani piya` because `paani` is masculine (ending `-a`). A male speaker says `maine chai pi` because `chai` is feminine (ending `-i`). The verb is **locked to the object**, not the speaker.",
         "examples": [
           { "hindi": "maine roti khaayi", "english": "I ate roti", "breakdown": "object = roti (f) → verb ends in -i, regardless of speaker gender" },
           { "hindi": "maine khaana khaaya", "english": "I ate the meal", "breakdown": "object = khaana (m) → verb ends in -a" },
@@ -101,7 +101,7 @@
       },
       {
         "heading": "Transitive vs intransitive — how to spot which",
-        "body": "Since `ne` only attaches to transitive verbs, you need a reliable way to spot the difference. A transitive verb takes a direct object — the action acts ON something. Eat what? Read what? See who? Intransitive verbs don't — sleep, go, come, sit, cry. The action doesn't have a 'what'.\n\nSome verbs sit in the middle. `bolna` (to speak) can lean either way depending on whether you specify what was said. Most everyday verbs are clearly one or the other — memorize the common transitive list below and the common intransitive list, and your instinct will sharpen fast.",
+        "body": "Since `ne` only attaches to **transitive** verbs, you need to spot the difference reliably.\n\nA transitive verb acts ON something — it takes a direct object. Ask: \"eat *what*? read *what*? see *who*?\" If there's a \"what,\" the verb is transitive.\n\nAn intransitive verb has no \"what\" — sleep, go, come, sit, cry.\n\nSome verbs sit in the middle: `bolna` (to speak) can go either way depending on whether you name what was said. For most everyday verbs the category is clear — memorize the table below and your instinct sharpens fast.",
         "table": {
           "caption": "Common transitive (need `ne` in past) vs intransitive (never take `ne`)",
           "columns": ["transitive (with `ne`)", "meaning", "intransitive (no `ne`)", "meaning"],
@@ -127,7 +127,7 @@
       },
       {
         "heading": "The fused pronoun forms: maine / tune / usne / hamne",
-        "body": "When `ne` attaches to a pronoun, the two don't stay separate — they fuse into a single word. So `main + ne` becomes `maine`, `tu + ne` becomes `tune`, `wo + ne` becomes `usne`, and so on. Even though it looks like the pronoun itself changed, it's really just pronoun + `ne` written as one word.\n\nMemorize this table. These eight fused forms cover every subject pronoun in Hindi, and you'll use all of them constantly once you're past the basics.",
+        "body": "When `ne` attaches to a pronoun, the two fuse into a single word. It looks like the pronoun itself changed — it hasn't. It's always just pronoun + `ne` written as one.\n\nThe table below has every subject pronoun's fused form. Memorize these eight; you'll use all of them constantly.\n\nOne detail worth noting: `woh` shifts to its oblique form before any postposition — so `woh + ne` → `usne`, and `woh` (plural) → `unhone`. This is the same shift you see in `usko`, `unke saath`, etc. It's not a `ne` quirk; it's just oblique pronouns doing their usual job.",
         "table": {
           "caption": "Pronoun + `ne` fused forms",
           "columns": ["pronoun", "with `ne`", "meaning"],
@@ -160,7 +160,7 @@
       },
       {
         "heading": "The top mistakes English speakers make",
-        "body": "Four classic traps. Drilling these in pairs — wrong form vs corrected form — is the fastest way to install the right reflex.\n\n**Mistake 1: Forgetting `ne` entirely.** You'll default to subject-only because that's English. Wrong: `*main khaaya`. Right: `maine khaaya`.\n\n**Mistake 2: Adding `ne` to intransitive verbs.** Wrong: `*main-ne soya` (sona is intransitive). Right: `main soya`.\n\n**Mistake 3: Subject-agreement when object-agreement is required.** Wrong: `*maine roti khaaya` (masculine ending on a feminine object). Right: `maine roti khaayi`.\n\n**Mistake 4: Using `ne` outside the simple past.** `ne` does NOT appear in present, future, or imperfective past. Wrong: `*main-ne khaata hoon`. Right: `main khaata hoon`.",
+        "body": "Four classic traps. Drill each pair — wrong form then right form — out loud until the wrong shape sounds off.\n\n- **Mistake 1 — forgetting `ne` entirely.** You'll default to subject-only because that's English. `✗ main khaaya` → `✓ maine khaaya`.\n- **Mistake 2 — adding `ne` to an intransitive verb.** `sona` (to sleep) takes no object; it never gets `ne`. `✗ main-ne soya` → `✓ main soya`.\n- **Mistake 3 — agreeing the verb with the subject instead of the object.** `roti` is feminine; the ending must be `-i`. `✗ maine roti khaaya` → `✓ maine roti khaayi`.\n- **Mistake 4 — using `ne` outside simple past.** `ne` is only for simple past. Present, future, continuous past — none of them. `✗ main-ne khaata hoon` → `✓ main khaata hoon`.",
         "examples": [
           { "hindi": "✗ main khaaya / ✓ maine khaaya", "english": "I ate", "breakdown": "Mistake 1: forgot `ne`. Past + transitive needs `ne` on the subject." },
           { "hindi": "✗ main-ne soya / ✓ main soya", "english": "I slept", "breakdown": "Mistake 2: added `ne` to intransitive `sona`. Sleep doesn't take an object — no `ne`." },
