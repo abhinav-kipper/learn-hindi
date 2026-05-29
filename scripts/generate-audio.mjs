@@ -145,6 +145,55 @@ async function generateSounds() {
 
 // ─── 2 + 3. Mascot moment lines ──────────────────────────────────────────────
 
+// Moments that only ever fire on the Dutch track (Mr. Stroopwafel speaks them,
+// never Chaina). Their default LINES are Dutch, so we skip them for the Chaina
+// (Hindi) voice — those clips would be a Hindi voice reading Dutch and are
+// never played (locale 'nl' → /stroopwafel/, not /chaina/).
+const DUTCH_ONLY_MOMENTS = new Set([
+  'knmAttemptComplete', 'knmPassed', 'a2Milestone',
+  'lezenStudyDone', 'lezenMockPassed',
+  'luisterStudyDone', 'luisterMockPassed', 'pronStageDone',
+])
+
+// ElevenLabs pronounces by script: romanized Hindi (Latin) gets anglicized.
+// For Chaina we feed Devanagari for the Hindi words so the accent is correct;
+// English words (perfect, Chapter done, Try…) stay Latin so they read English.
+// Keyed by the exact romanized `speak` string in moments.ts; lines absent here
+// (pure English greetings) are generated as-is.
+const HI_DEVANAGARI = {
+  'Arrey, kahan the? Missed you, dost.': 'अरे, कहाँ थे? Missed you, दोस्त।',
+  'Chai is getting cold. Kab aaoge?': 'Chai is getting cold. कब आओगे?',
+  'Namaste, dost.': 'नमस्ते, दोस्त।',
+  'Shubh prabhat. Chalo, shuru karein?': 'शुभ प्रभात। चलो, शुरू करें?',
+  'Aaj kya seekhenge?': 'आज क्या सीखेंगे?',
+  'Bilkul sahi!': 'बिल्कुल सही!',
+  'Ekdum perfect.': 'एकदम perfect।',
+  'Kya baat hai!': 'क्या बात है!',
+  'Koi baat nahin.': 'कोई बात नहीं।',
+  'Arrey, almost! Thoda aur try karo.': 'अरे, almost! थोड़ा और try करो।',
+  'No worries, dost.': 'No worries, दोस्त।',
+  'Wah, shabash! Chapter done.': 'वाह, शाबाश! Chapter done।',
+  'Kya baat hai. Aage badho.': 'क्या बात है। आगे बढ़ो।',
+  'Streak! Mehnat rang laayi.': 'Streak! मेहनत रंग लाई।',
+  'Streak strong, dost. Aise hi chalte raho.': 'Streak strong, दोस्त। ऐसे ही चलते रहो।',
+  'Streak saved! Today is done, dost.': 'Streak saved! Today is done, दोस्त।',
+  'Aaj ka kaam pura. Streak alive.': 'आज का काम पूरा। Streak alive।',
+  'Shabash, counted! Kal phir milte hain.': 'शाबाश, counted! कल फिर मिलते हैं।',
+  'Saved for later. Drill karenge baad mein.': 'Saved for later. Drill करेंगे बाद में।',
+  'Phir milte hain!': 'फिर मिलते हैं!',
+  'Tata, dost.': 'टाटा, दोस्त।',
+  'Haan, kya hua?': 'हाँ, क्या हुआ?',
+  'Oye!': 'ओए!',
+  'Chai garam hai.': 'चाय गरम है।',
+  'Bolo, dost.': 'बोलो, दोस्त।',
+  'Arrey, naye lessons aaye hain. Try karke dekho.': 'अरे, नए lessons आए हैं। Try करके देखो।',
+  'Kuch naya hai. Check karo.': 'कुछ नया है। Check करो।',
+  'Naya content unlocked. Mazaa aayega.': 'नया content unlocked। मज़ा आएगा।',
+  'Daily goal done! Mehnat ki keemat.': 'Daily goal done! मेहनत की कीमत।',
+  'Wah, target hit! Aaj ka kaam pura.': 'वाह, target hit! आज का काम पूरा।',
+  'Kya baat hai. Today minutes done.': 'क्या बात है। Today minutes done।',
+}
+
 /**
  * Parse components/design/moments.ts for the spoken lines, mirroring the
  * runtime selection in pickLine(): each moment's default lines come from
@@ -181,18 +230,20 @@ function loadMoments() {
  * Render one mascot voice set to its own dir, keyed <momentKey>-<idx>.mp3.
  * `linesFor(key, defaultLines)` resolves the line array the runtime will read.
  */
-async function generateMascot(label, dir, voiceId, linesFor) {
+async function generateMascot(label, dir, voiceId, linesFor, opts = {}) {
+  const { textMap = {}, skipMoments = new Set() } = opts
   const { MOMENTS, LINES_NL } = loadMoments()
   mkdirSync(dir, { recursive: true })
   let made = 0
   let skipped = 0
-  console.log(`\n${label}: voice ${voiceId}, model ${MODEL}.`)
+  console.log(`\n${label}: voice ${voiceId}, model ${MODEL}, speed ${SPEED}.`)
   for (const [key, cfg] of Object.entries(MOMENTS)) {
-    if (!cfg.voice) continue
+    if (!cfg.voice || skipMoments.has(key)) continue
     const lines = linesFor(key, cfg.lines, LINES_NL)
     for (let idx = 0; idx < lines.length; idx++) {
-      const text = lines[idx]?.speak
-      if (!text) continue
+      const raw = lines[idx]?.speak
+      if (!raw) continue
+      const text = textMap[raw] ?? raw // Devanagari for Chaina's Hindi lines
       const outPath = join(dir, `${key}-${idx}.mp3`)
       if (!FORCE && existsSync(outPath)) {
         skipped++
@@ -217,8 +268,12 @@ async function generateMascot(label, dir, voiceId, linesFor) {
 async function main() {
   if (VOICE_NL) await generateSounds()
   if (VOICE_HI) {
-    // Chaina speaks the default (Hindi/Hinglish) lines.
-    await generateMascot('Chaina (hi)', CHAINA_DIR, VOICE_HI, (_key, defaultLines) => defaultLines)
+    // Chaina speaks the default (Hindi/Hinglish) lines, rendered from Devanagari
+    // for a correct accent; the Dutch-only moments are skipped (never played).
+    await generateMascot('Chaina (hi)', CHAINA_DIR, VOICE_HI, (_key, defaultLines) => defaultLines, {
+      textMap: HI_DEVANAGARI,
+      skipMoments: DUTCH_ONLY_MOMENTS,
+    })
   }
   if (VOICE_NL_MASCOT) {
     // Mr. Stroopwafel speaks the Dutch variant where present, else the default.
