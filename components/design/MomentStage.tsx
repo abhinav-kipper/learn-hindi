@@ -37,8 +37,12 @@ export function ChainaProvider({ children }: { children: ReactNode }) {
   const { language, config } = useLanguage()
   const langRef = useRef(language)
   const localeRef = useRef(config.ttsLocale)
-  langRef.current = language
-  localeRef.current = config.ttsLocale
+  // Sync after render (writing refs during render trips react-hooks). The
+  // `play` callback reads these at call time, so post-render sync is fine.
+  useEffect(() => {
+    langRef.current = language
+    localeRef.current = config.ttsLocale
+  }, [language, config.ttsLocale])
 
   const clearTimers = () => {
     timersRef.current.forEach(clearTimeout)
