@@ -1,0 +1,143 @@
+{
+  "stages": [
+    {
+      "id": "vowels",
+      "order": 0,
+      "title": "Vowels — the a / aa secret",
+      "subtitle": "swar",
+      "goal": "Hear the difference between a short 'a' and a long 'aa' — the single most important Hindi sound.",
+      "intro": "Namaste! Let's start with vowels. Hindi has a short 'a' (like the 'u' in 'cut') and a long 'aa' (like 'father'). Mixing them up changes the word — so tap each one, listen, and copy me.",
+      "cards": [
+        { "id": "v-a", "grapheme": "a", "dev": "अ", "hint": "short 'a', like the 'u' in 'cut'", "anchor": { "word": "kal", "dev": "कल", "en": "yesterday / tomorrow" }, "kind": "vowel" },
+        { "id": "v-aa", "grapheme": "aa", "dev": "आ", "hint": "long 'aa', like 'father'", "anchor": { "word": "aam", "dev": "आम", "en": "mango" }, "kind": "vowel" },
+        { "id": "v-i", "grapheme": "i", "dev": "इ", "hint": "short 'i', like 'sit'", "anchor": { "word": "idhar", "dev": "इधर", "en": "over here" }, "kind": "vowel" },
+        { "id": "v-ii", "grapheme": "ii", "dev": "ई", "hint": "long 'ee', like 'see'", "anchor": { "word": "didi", "dev": "दीदी", "en": "big sister" }, "kind": "vowel" },
+        { "id": "v-u", "grapheme": "u", "dev": "उ", "hint": "short 'u', like 'put'", "anchor": { "word": "tum", "dev": "तुम", "en": "you" }, "kind": "vowel" },
+        { "id": "v-uu", "grapheme": "uu", "dev": "ऊ", "hint": "long 'oo', like 'boot'", "anchor": { "word": "doodh", "dev": "दूध", "en": "milk" }, "kind": "vowel" },
+        { "id": "v-e", "grapheme": "e", "dev": "ए", "hint": "'ay', like 'play'", "anchor": { "word": "ek", "dev": "एक", "en": "one" }, "kind": "vowel" },
+        { "id": "v-o", "grapheme": "o", "dev": "ओ", "hint": "'o', like 'go'", "anchor": { "word": "do", "dev": "दो", "en": "two" }, "kind": "vowel" },
+        { "id": "v-ai", "grapheme": "ai", "dev": "ऐ", "hint": "open 'ai', like the 'a' in 'cat'", "anchor": { "word": "hai", "dev": "है", "en": "is" }, "kind": "vowel" },
+        { "id": "v-au", "grapheme": "au", "dev": "औ", "hint": "'au', like 'caught'", "anchor": { "word": "aur", "dev": "और", "en": "and / more" }, "kind": "vowel" }
+      ],
+      "earQuiz": {
+        "prompt": "Which word did you hear?",
+        "items": [
+          { "say": "kal", "dev": "कल", "options": ["kal", "aam", "doodh"], "correctIndex": 0 },
+          { "say": "aam", "dev": "आम", "options": ["ek", "aam", "tum"], "correctIndex": 1 },
+          { "say": "doodh", "dev": "दूध", "options": ["didi", "do", "doodh"], "correctIndex": 2 },
+          { "say": "ek", "dev": "एक", "options": ["ek", "aur", "idhar"], "correctIndex": 0 }
+        ]
+      }
+    },
+    {
+      "id": "easy-consonants",
+      "order": 1,
+      "title": "Friendly consonants",
+      "subtitle": "aasaan vyanjan",
+      "goal": "Build confidence with the consonants that sound almost exactly like English.",
+      "intro": "Good news — many Hindi consonants are basically English. Each letter carries a built-in 'a', so 'k' is said 'ka'. Tap to hear the sound, then the word.",
+      "cards": [
+        { "id": "c-k", "grapheme": "k", "dev": "क", "hint": "like 'k' in 'skip' (no puff of air)", "anchor": { "word": "kaam", "dev": "काम", "en": "work" }, "kind": "consonant" },
+        { "id": "c-g", "grapheme": "g", "dev": "ग", "hint": "like 'g' in 'go'", "anchor": { "word": "ghar", "dev": "घर", "en": "home" }, "kind": "consonant" },
+        { "id": "c-j", "grapheme": "j", "dev": "ज", "hint": "like 'j' in 'jam'", "anchor": { "word": "jaana", "dev": "जाना", "en": "to go" }, "kind": "consonant" },
+        { "id": "c-m", "grapheme": "m", "dev": "म", "hint": "like 'm' in 'man'", "anchor": { "word": "maa", "dev": "माँ", "en": "mother" }, "kind": "consonant" },
+        { "id": "c-n", "grapheme": "n", "dev": "न", "hint": "like 'n' in 'no'", "anchor": { "word": "naam", "dev": "नाम", "en": "name" }, "kind": "consonant" },
+        { "id": "c-l", "grapheme": "l", "dev": "ल", "hint": "like 'l' in 'love'", "anchor": { "word": "laal", "dev": "लाल", "en": "red" }, "kind": "consonant" },
+        { "id": "c-s", "grapheme": "s", "dev": "स", "hint": "like 's' in 'sun'", "anchor": { "word": "sab", "dev": "सब", "en": "all / everyone" }, "kind": "consonant" },
+        { "id": "c-h", "grapheme": "h", "dev": "ह", "hint": "like 'h' in 'hat'", "anchor": { "word": "haan", "dev": "हाँ", "en": "yes" }, "kind": "consonant" },
+        { "id": "c-b", "grapheme": "b", "dev": "ब", "hint": "like 'b' in 'bat'", "anchor": { "word": "baat", "dev": "बात", "en": "talk / matter" }, "kind": "consonant" },
+        { "id": "c-r", "grapheme": "r", "dev": "र", "hint": "a light tapped 'r', tip of the tongue", "anchor": { "word": "raat", "dev": "रात", "en": "night" }, "kind": "consonant" }
+      ]
+    },
+    {
+      "id": "aspiration",
+      "order": 2,
+      "title": "The puff of air (kh, gh, th…)",
+      "subtitle": "mahaapraan",
+      "goal": "Learn the aspirated sounds — the same letter, but with a strong puff of breath.",
+      "intro": "Here's a sound English doesn't track: the puff of air. 'k' has no puff, but 'kh' bursts with breath. Hold your hand to your mouth — you should feel air on the 'h' ones. These change the word completely.",
+      "cards": [
+        { "id": "a-k", "grapheme": "k → kh", "say": "k, kh", "dev": "क, ख", "hint": "k (no air) vs kh (big puff)", "anchor": { "word": "khaana", "dev": "खाना", "en": "food / to eat" }, "kind": "consonant" },
+        { "id": "a-g", "grapheme": "g → gh", "say": "g, gh", "dev": "ग, घ", "hint": "g vs gh (breathy g)", "anchor": { "word": "ghar", "dev": "घर", "en": "home" }, "kind": "consonant" },
+        { "id": "a-c", "grapheme": "ch → chh", "say": "ch, chh", "dev": "च, छ", "hint": "ch vs chh (puffed ch)", "anchor": { "word": "chhata", "dev": "छाता", "en": "umbrella" }, "kind": "consonant" },
+        { "id": "a-p", "grapheme": "p → ph", "say": "p, ph", "dev": "प, फ", "hint": "p vs ph (puff, NOT 'f')", "anchor": { "word": "phal", "dev": "फल", "en": "fruit" }, "kind": "consonant" },
+        { "id": "a-b", "grapheme": "b → bh", "say": "b, bh", "dev": "ब, भ", "hint": "b vs bh (breathy b)", "anchor": { "word": "bhai", "dev": "भाई", "en": "brother" }, "kind": "consonant" },
+        { "id": "a-d", "grapheme": "d → dh", "say": "d, dh", "dev": "द, ध", "hint": "soft d vs dh (breathy d)", "anchor": { "word": "dhood", "dev": "धूप", "en": "sunshine" }, "kind": "consonant" }
+      ],
+      "earQuiz": {
+        "prompt": "Puff or no puff — which did you hear?",
+        "items": [
+          { "say": "phal", "dev": "फल", "options": ["pal", "phal"], "correctIndex": 1 },
+          { "say": "khaana", "dev": "खाना", "options": ["kaana", "khaana"], "correctIndex": 1 },
+          { "say": "bhai", "dev": "भाई", "options": ["bhai", "bai"], "correctIndex": 0 },
+          { "say": "chhata", "dev": "छाता", "options": ["chata", "chhata"], "correctIndex": 1 }
+        ]
+      }
+    },
+    {
+      "id": "retroflex",
+      "order": 3,
+      "title": "Curl your tongue (T, D)",
+      "subtitle": "moordhanya",
+      "goal": "Master the retroflex T and D — tongue curled back — versus the soft dental t and d.",
+      "intro": "Hindi has TWO t's and two d's. The soft ones (t, d) touch your teeth, like Spanish. The hard ones (T, D) curl your tongue back to the roof of your mouth — that's the typical 'Indian accent' sound. Listen for where the tongue goes.",
+      "cards": [
+        { "id": "r-t-soft", "grapheme": "t", "dev": "त", "hint": "soft 't' — tongue on the teeth", "anchor": { "word": "teen", "dev": "तीन", "en": "three" }, "kind": "consonant" },
+        { "id": "r-t-hard", "grapheme": "T", "say": "ट", "dev": "ट", "hint": "hard 'T' — tongue curled back", "anchor": { "word": "Tamaatar", "dev": "टमाटर", "en": "tomato" }, "kind": "consonant" },
+        { "id": "r-d-soft", "grapheme": "d", "dev": "द", "hint": "soft 'd' — tongue on the teeth", "anchor": { "word": "din", "dev": "दिन", "en": "day" }, "kind": "consonant" },
+        { "id": "r-d-hard", "grapheme": "D", "say": "ड", "dev": "ड", "hint": "hard 'D' — tongue curled back", "anchor": { "word": "Daak", "dev": "डाक", "en": "post / mail" }, "kind": "consonant" },
+        { "id": "r-n-hard", "grapheme": "N", "say": "ण", "dev": "ण", "hint": "retroflex 'N' — tongue curled", "anchor": { "word": "praaN", "dev": "प्राण", "en": "life-breath" }, "kind": "consonant" }
+      ],
+      "earQuiz": {
+        "prompt": "Soft (teeth) or hard (curled) — which did you hear?",
+        "items": [
+          { "say": "Tamaatar", "dev": "टमाटर", "options": ["tamaatar", "Tamaatar"], "correctIndex": 1 },
+          { "say": "din", "dev": "दिन", "options": ["din", "Din"], "correctIndex": 0 },
+          { "say": "Daak", "dev": "डाक", "options": ["daak", "Daak"], "correctIndex": 1 },
+          { "say": "teen", "dev": "तीन", "options": ["teen", "Teen"], "correctIndex": 0 }
+        ]
+      }
+    },
+    {
+      "id": "special-sounds",
+      "order": 4,
+      "title": "Special sounds (ṛ, sh, nasal)",
+      "subtitle": "vishesh dhwani",
+      "goal": "Pick up the flap ṛ, the 'sh' sounds, and Hindi's nasal hum.",
+      "intro": "A few last sounds with no clean English match. The flap 'ṛ' is a quick flick of the tongue. The nasal hum 'ñ' (written ं or ँ) sends the sound through your nose. Listen and feel where each one buzzes.",
+      "cards": [
+        { "id": "s-rr", "grapheme": "ṛ", "say": "ड़", "dev": "ड़", "hint": "a quick flap — flick the tongue down", "anchor": { "word": "laṛka", "dev": "लड़का", "en": "boy" }, "kind": "consonant" },
+        { "id": "s-sh", "grapheme": "sh", "say": "श", "dev": "श", "hint": "like 'sh' in 'ship'", "anchor": { "word": "shaam", "dev": "शाम", "en": "evening" }, "kind": "consonant" },
+        { "id": "s-nasal", "grapheme": "~ (nasal)", "say": "हाँ", "dev": "हाँ", "hint": "hum the vowel through your nose", "anchor": { "word": "nahin", "dev": "नहीं", "en": "no" }, "kind": "vowel", "note": "the little ँ / ं means 'send it through the nose'" },
+        { "id": "s-ng", "grapheme": "ng", "say": "रंग", "dev": "रंग", "hint": "nasal 'ng', like 'sing'", "anchor": { "word": "rang", "dev": "रंग", "en": "colour" }, "kind": "consonant" },
+        { "id": "s-y", "grapheme": "y", "dev": "य", "hint": "like 'y' in 'yes'", "anchor": { "word": "yaar", "dev": "यार", "en": "buddy" }, "kind": "consonant" }
+      ],
+      "earQuiz": {
+        "prompt": "Which word did you hear?",
+        "items": [
+          { "say": "laṛka", "dev": "लड़का", "options": ["laṛka", "shaam", "rang"], "correctIndex": 0 },
+          { "say": "shaam", "dev": "शाम", "options": ["yaar", "shaam", "nahin"], "correctIndex": 1 },
+          { "say": "nahin", "dev": "नहीं", "options": ["rang", "yaar", "nahin"], "correctIndex": 2 }
+        ]
+      }
+    },
+    {
+      "id": "blending",
+      "order": 5,
+      "title": "Building words & the dropped 'a'",
+      "subtitle": "shabd banaana",
+      "goal": "Snap sounds together into real words — and learn why 'ghar' isn't 'gha-ra'.",
+      "intro": "Now let's build words sound by sound. One Hindi habit: the built-in 'a' at the END of a word goes silent. So घ-र is 'ghar', not 'gha-ra'. Tap each piece, then the whole word.",
+      "cards": [],
+      "blend": {
+        "words": [
+          { "parts": [{ "text": "n", "dev": "न" }, { "text": "aa", "dev": "ना" }, { "text": "m", "dev": "म" }], "whole": "naam", "whole_dev": "नाम", "en": "name" },
+          { "parts": [{ "text": "gh", "dev": "घ" }, { "text": "a", "dev": "" }, { "text": "r", "dev": "र" }], "whole": "ghar", "whole_dev": "घर", "en": "home" },
+          { "parts": [{ "text": "ch", "dev": "च" }, { "text": "aa", "dev": "ा" }, { "text": "y", "dev": "य" }], "whole": "chai", "whole_dev": "चाय", "en": "tea" },
+          { "parts": [{ "text": "p", "dev": "प" }, { "text": "aa", "dev": "ा" }, { "text": "n", "dev": "नी" }], "whole": "paani", "whole_dev": "पानी", "en": "water" },
+          { "parts": [{ "text": "d", "dev": "द" }, { "text": "o", "dev": "ो" }, { "text": "st", "dev": "स्त" }], "whole": "dost", "whole_dev": "दोस्त", "en": "friend" }
+        ]
+      }
+    }
+  ]
+}
