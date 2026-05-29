@@ -102,29 +102,37 @@ function GlossPopover({ active, onClose }: { active: NonNullable<Active>; onClos
     <>
       {/* invisible catcher: any tap elsewhere closes it */}
       <div onPointerDown={onClose} style={{ position: 'fixed', inset: 0, zIndex: 80 }} aria-hidden />
+      {/* Outer = placement (static transform). Inner = pop-in scale. Keeping the
+          positioning transform off the animated element stops the bubble from
+          first rendering on the word and then snapping above it. */}
       <div
-        role="tooltip"
         style={{
           position: 'fixed',
           left: x,
           top: y,
           transform: below ? 'translate(-50%, 0)' : 'translate(-50%, -100%)',
           zIndex: 81,
-          maxWidth: 220,
-          background: '#fff', // @design-allow: white literal
-          border: BORDER.sticker,
-          boxShadow: SHADOW.sticker,
-          borderRadius: 13,
-          padding: '7px 12px',
-          textAlign: 'center',
-          animation: 'pop-in 160ms cubic-bezier(.34,1.56,.64,1)',
-          transformOrigin: below ? 'top center' : 'bottom center',
           pointerEvents: 'none',
         }}
       >
-        <span style={{ fontFamily: FONTS.body, fontWeight: 700, fontSize: 14.5, color: COLORS.ink, lineHeight: 1.3 }}>
-          {token.t}
-        </span>
+        <div
+          role="tooltip"
+          style={{
+            maxWidth: 220,
+            background: '#fff', // @design-allow: white literal
+            border: BORDER.sticker,
+            boxShadow: SHADOW.sticker,
+            borderRadius: 13,
+            padding: '7px 12px',
+            textAlign: 'center',
+            animation: 'pop-in 160ms cubic-bezier(.34,1.56,.64,1)',
+            transformOrigin: below ? 'top center' : 'bottom center',
+          }}
+        >
+          <span style={{ fontFamily: FONTS.body, fontWeight: 700, fontSize: 14.5, color: COLORS.ink, lineHeight: 1.3 }}>
+            {token.t}
+          </span>
+        </div>
       </div>
     </>,
     document.body,
