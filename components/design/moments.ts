@@ -156,9 +156,9 @@ const LINES: Record<string, Line[]> = {
     { main: 'top, Luisteren pass!', caption: 'B1 dichterbij', speak: 'Top, Luisteren pass. B1 dichterbij.' },
   ],
   pronStageDone: [
-    { main: 'klank gehaald! 🔊', caption: 'goed uitgesproken',  speak: 'Klank gehaald! Goed uitgesproken.' },
-    { main: 'mooi uitgesproken!', caption: 'volgende klank',     speak: 'Mooi uitgesproken! Volgende klank.' },
-    { main: 'top, dat klinkt al Nederlands', caption: 'doorgaan', speak: 'Top, dat klinkt al Nederlands. Doorgaan.' },
+    { main: 'wah! sahi bola 🔊', caption: 'sun ke bolo',        speak: 'वाह! सही बोला।' },
+    { main: 'kya baat — saaf uchchaaran', caption: 'agli dhwani', speak: 'क्या बात, साफ़ उच्चारण! अगली ध्वनि।' },
+    { main: 'badhiya, bilkul sahi sound', caption: 'aage chalo',  speak: 'बढ़िया! बिल्कुल सही sound. आगे चलो।' },
   ],
   dailyGoalReached: [
     { main: 'daily goal done! 🎯', caption: 'mehnat ki keemat',          speak: 'Daily goal done! Mehnat ki keemat.' },
@@ -251,6 +251,11 @@ const LINES_NL: Record<string, Line[]> = {
   dailyGoalReached: [
     { main: 'dagdoel gehaald! 🎯', caption: 'goed bezig', speak: 'Dagdoel gehaald! Goed bezig.' },
     { main: 'top, doel gehaald!', caption: 'tijd van vandaag — klaar', speak: 'Top, doel gehaald!' },
+  ],
+  pronStageDone: [
+    { main: 'klank gehaald! 🔊', caption: 'goed uitgesproken',  speak: 'Klank gehaald! Goed uitgesproken.' },
+    { main: 'mooi uitgesproken!', caption: 'volgende klank',     speak: 'Mooi uitgesproken! Volgende klank.' },
+    { main: 'top, dat klinkt al Nederlands', caption: 'doorgaan', speak: 'Top, dat klinkt al Nederlands. Doorgaan.' },
   ],
 };
 

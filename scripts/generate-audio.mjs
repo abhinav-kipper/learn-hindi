@@ -52,6 +52,9 @@ const STROOPWAFEL_DIR = resolve(ROOT, 'public/stroopwafel')
 const HI_LESSONS_DIR = resolve(ROOT, 'public/audio/hi')
 const HI_TRANSLIT = resolve(ROOT, 'content/hi-translit.json')
 const HI_MANIFEST = resolve(ROOT, 'content/hi-audio.json')
+const HI_SOUNDS_COURSE = resolve(ROOT, 'content/hindi/pronunciation-course.json')
+const HI_SOUNDS_DIR = resolve(ROOT, 'public/audio/hi-sounds')
+const HI_SOUNDS_MANIFEST = resolve(ROOT, 'content/hindi/sounds-audio.json')
 
 const API_KEY = process.env.ELEVENLABS_API_KEY
 const VOICE_NL = process.env.ELEVEN_VOICE_NL
@@ -194,6 +197,71 @@ async function generateHindiLessons() {
   console.log(`Hindi lessons done. ${made} generated, ${skipped} already current.`)
 }
 
+// ─── 1c. Hindi "Sounds" pronunciation module ─────────────────────────────────
+
+// The Hindi Sounds course is romanized for display, but every spoken string
+// carries a Devanagari `dev` form. We feed the Devanagari to ElevenLabs (correct
+// accent) and key the manifest by the ROMANIZED string the page passes to
+// speak(), so lib/hindi/sounds-audio.ts can look it up. Same Anika voice as the
+// lessons (ELEVEN_VOICE_HI).
+function collectHindiSounds() {
+  if (!existsSync(HI_SOUNDS_COURSE)) return []
+  const course = JSON.parse(readFileSync(HI_SOUNDS_COURSE, 'utf8'))
+  const map = new Map() // romanized -> devanagari (first non-empty wins)
+  const add = (rom, dev) => {
+    if (!rom || !dev) return
+    const k = String(rom).trim()
+    if (!k) return
+    if (!map.has(k)) map.set(k, String(dev).trim())
+  }
+  for (const stage of course.stages ?? []) {
+    for (const c of stage.cards ?? []) {
+      add(c.say ?? c.grapheme, c.dev)
+      add(c.anchor?.word, c.anchor?.dev)
+    }
+    for (const item of stage.earQuiz?.items ?? []) add(item.say, item.dev)
+    for (const w of stage.blend?.words ?? []) {
+      for (const p of w.parts ?? []) add(p.text, p.dev)
+      add(w.whole, w.whole_dev)
+    }
+  }
+  return [...map.entries()]
+}
+
+async function generateHindiSounds() {
+  const pairs = collectHindiSounds()
+  if (pairs.length === 0) {
+    console.log('\nHindi Sounds: no course strings, skipping.')
+    return
+  }
+  mkdirSync(HI_SOUNDS_DIR, { recursive: true })
+  const manifest = existsSync(HI_SOUNDS_MANIFEST) ? JSON.parse(readFileSync(HI_SOUNDS_MANIFEST, 'utf8')) : {}
+  console.log(`\nHindi Sounds: ${pairs.length} strings (voice ${VOICE_HI}, model ${MODEL}, speed ${SPEED}).`)
+  let made = 0
+  let skipped = 0
+  for (const [rom, dev] of pairs) {
+    const file = fileFor(rom)
+    const onDisk = existsSync(resolve(HI_SOUNDS_DIR, file))
+    if (!FORCE && manifest[rom] === file && onDisk) {
+      skipped++
+      continue
+    }
+    try {
+      const buf = await tts(dev, VOICE_HI) // Devanagari in → correct Hindi accent
+      writeFileSync(resolve(HI_SOUNDS_DIR, file), buf)
+      manifest[rom] = file
+      made++
+      console.log(`  ✓ ${rom}  (${dev})  →  ${file}`)
+      await sleep(250)
+    } catch (e) {
+      console.error(`  ✗ ${rom}  →  ${e.message}`)
+    }
+  }
+  const sorted = Object.fromEntries(Object.entries(manifest).sort(([a], [b]) => a.localeCompare(b)))
+  writeFileSync(HI_SOUNDS_MANIFEST, JSON.stringify(sorted, null, 2) + '\n')
+  console.log(`Hindi Sounds done. ${made} generated, ${skipped} already current.`)
+}
+
 // ─── 2 + 3. Mascot moment lines ──────────────────────────────────────────────
 
 // Moments that only ever fire on the Dutch track (Mr. Stroopwafel speaks them,
@@ -203,7 +271,9 @@ async function generateHindiLessons() {
 const DUTCH_ONLY_MOMENTS = new Set([
   'knmAttemptComplete', 'knmPassed', 'a2Milestone',
   'lezenStudyDone', 'lezenMockPassed',
-  'luisterStudyDone', 'luisterMockPassed', 'pronStageDone',
+  'luisterStudyDone', 'luisterMockPassed',
+  // NOTE: pronStageDone is bilingual now — Chaina (Hindi Sounds) + Stroopwafel
+  // (Dutch Sounds) — so it is generated for both voices.
 ])
 
 // ElevenLabs pronounces by script: romanized Hindi (Latin) gets anglicized.
@@ -327,6 +397,8 @@ async function main() {
     })
     // Hindi lesson "hear it" phrases share the Chaina voice.
     await generateHindiLessons()
+    // Hindi "Sounds" pronunciation module — same voice, Devanagari-fed.
+    await generateHindiSounds()
   }
   if (VOICE_NL_MASCOT) {
     // Mr. Stroopwafel speaks the Dutch variant where present, else the default.

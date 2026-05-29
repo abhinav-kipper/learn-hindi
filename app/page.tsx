@@ -23,6 +23,7 @@ import { getLearnedCount } from '@/lib/dutch/knm'
 import { getStudiedCount as getLezenStudiedCount } from '@/lib/dutch/lezen'
 import { getStudiedCount as getLuisterStudiedCount } from '@/lib/dutch/luisteren'
 import { getCourseProgress as getSoundsCourseProgress } from '@/lib/dutch/pronunciation'
+import { getCourseProgress as getHindiSoundsCourseProgress } from '@/lib/hindi/pronunciation'
 import { getItemsByLevel, ALL_LEVELS, type Level } from '@/lib/dutch/level-map'
 import { getAllStories } from '@/lib/stories'
 import { getStoriesReadCount, getStoriesRead } from '@/lib/stories-progress'
@@ -252,6 +253,16 @@ export default function Home() {
       const p = getSoundsCourseProgress()
       setDutchSoundsDone(p.completed)
       setDutchSoundsTotal(p.total)
+    }
+  }, [language])
+
+  const [hindiSoundsDone, setHindiSoundsDone] = useState(0)
+  const [hindiSoundsTotal, setHindiSoundsTotal] = useState(6)
+  useEffect(() => {
+    if (language === 'hindi') {
+      const p = getHindiSoundsCourseProgress()
+      setHindiSoundsDone(p.completed)
+      setHindiSoundsTotal(p.total)
     }
   }, [language])
 
@@ -794,6 +805,26 @@ export default function Home() {
               </div>
             </div>
           </>
+        )}
+
+        {/* HINDI SOUNDS — from-zero pronunciation on-ramp */}
+        {language === 'hindi' && (
+          <div style={{ padding: '14px 20px 0', maxWidth: 480, margin: '0 auto', position: 'relative', zIndex: 2 }}>
+            <Sticker color={theme.primary} radius={18} padding={14} onClick={() => { playSound('pop'); router.push('/sounds') }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                <span style={{ fontSize: 30 }}>🔊</span>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 17, color: W }}>
+                    Sounds — learn to speak from zero
+                  </div>
+                  <div style={{ fontFamily: FONTS.body, fontSize: 12.5, color: W, opacity: 0.92, marginTop: 2 }}>
+                    <em>uchchaaran</em> · vowels → sounds → words · {hindiSoundsDone}/{hindiSoundsTotal} stages
+                  </div>
+                </div>
+                <span style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 20, color: W }}>→</span>
+              </div>
+            </Sticker>
+          </div>
         )}
 
         {/* HINDI STORIES — illustrated motion-comics, scoped to Hindi only */}
