@@ -47,6 +47,22 @@ export function ChainaProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => () => clearTimers(), [])
 
+  // Unlock HTML audio on the first user gesture so mascot voices (which fire
+  // from timers / on mount, outside a gesture) aren't blocked by the browser
+  // autoplay policy — most impactful on iOS Safari / the installed PWA.
+  useEffect(() => {
+    const onGesture = () => chainaVoice.prime()
+    const opts: AddEventListenerOptions = { passive: true }
+    window.addEventListener('pointerdown', onGesture, opts)
+    window.addEventListener('touchend', onGesture, opts)
+    window.addEventListener('keydown', onGesture)
+    return () => {
+      window.removeEventListener('pointerdown', onGesture)
+      window.removeEventListener('touchend', onGesture)
+      window.removeEventListener('keydown', onGesture)
+    }
+  }, [])
+
   const play = useCallback((key: string) => {
     const cfg = MOMENTS[key]
     if (!cfg) return

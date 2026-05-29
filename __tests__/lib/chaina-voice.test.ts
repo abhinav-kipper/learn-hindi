@@ -70,6 +70,23 @@ describe('chainaVoice', () => {
     expect(chainaVoice.isMuted()).toBe(true)
   })
 
+  it('prime() plays a silent clip once to unlock audio, then is a no-op', async () => {
+    const playSpy = vi.fn().mockResolvedValue(undefined)
+    const ctor = vi.fn(function (this: Record<string, unknown>) {
+      this.play = playSpy
+      this.pause = vi.fn()
+      this.volume = 1
+    })
+    global.Audio = ctor as unknown as typeof Audio
+
+    const { chainaVoice } = await import('@/lib/chaina-voice')
+    chainaVoice.prime()
+    chainaVoice.prime()
+    chainaVoice.prime()
+    expect(ctor).toHaveBeenCalledTimes(1)
+    expect(playSpy).toHaveBeenCalledTimes(1)
+  })
+
   it('is a no-op when window is undefined (SSR-safe)', async () => {
     const mod = await import('@/lib/chaina-voice')
     expect(mod.chainaVoice).toBeDefined()

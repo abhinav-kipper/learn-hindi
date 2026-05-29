@@ -301,23 +301,38 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 
 **Problem:** All app audio uses the free Google Translate TTS scrape (`/api/tts`) — robotic, and weakest on the isolated letters/sounds the Dutch "Sounds" module needs most. Goal: replace with natural **ElevenLabs** voices, **pre-generated once** into static mp3s (no runtime cost/latency, offline-capable, full control), with live Google TTS as the automatic fallback.
 
-**Already built + pushed** (branch `claude/settings-daily-goals-3UPgI`, commit `5db058d`; everything before it is merged to `main`):
-- `scripts/generate-audio.mjs` — renders every spoken string in the Sounds module (letter sounds, anchor words, ear-quiz words, blend parts/wholes) to `public/audio/sounds/<hash>.mp3` and writes the manifest `content/dutch/sounds-audio.json` (text→file). Reads `ELEVENLABS_API_KEY` + `ELEVEN_VOICE_NL`. Idempotent (skips existing), `--force` to regenerate.
-- `lib/dutch/sounds-audio.ts` `getSoundsAudioUrl(text)` + `lib/speech.ts` `speakUrl(url, onEnd, onError)`. The Sounds stage (`app/dutch/sounds/[stageId]/page.tsx` `sayIt`) already **prefers a clip, falls back to live TTS**. The manifest ships **empty**, so there is no behavior change until the generator is run.
+**Code: all built + merged to `main`.** The whole pipeline is in place; only the actual clip *generation* (which needs a key + voice ids) is left.
+- `scripts/generate-audio.mjs` — renders all 3 voice sets, each gated on its own voice-id env var (run any subset):
+  - `ELEVEN_VOICE_NL` → the Sounds module: every spoken string in `content/dutch/pronunciation-course.json` (letter sounds, anchor words, ear-quiz words, blend parts/wholes) → `public/audio/sounds/<hash>.mp3`, recorded in the manifest `content/dutch/sounds-audio.json` (text→file).
+  - `ELEVEN_VOICE_HI` → Chaina mascot: every voice-enabled line in `components/design/moments.ts` (default/Hindi lines) → `public/chaina/<momentKey>-<idx>.mp3` (50 clips).
+  - `ELEVEN_VOICE_NL_MASCOT` → Mr. Stroopwafel mascot: the `LINES_NL` Dutch variant where present, else the default line → `public/stroopwafel/<momentKey>-<idx>.mp3` (48 clips).
+  - Idempotent (skips existing), `--force` to regenerate. Parses `moments.ts` by regex (no `export` needed). Verified the parse against the live file: 21 voice moments → 50 Chaina + 48 Stroopwafel clips.
+- `lib/dutch/sounds-audio.ts` `getSoundsAudioUrl(text)` + `lib/speech.ts` `speakUrl(url, onEnd, onError)`. The Sounds stage (`app/dutch/sounds/[stageId]/page.tsx` `sayIt`) **prefers a clip, falls back to live TTS**.
+- `lib/chaina-voice.ts` `play(key, idx, fallbackText, locale)` now prefers a clip per locale: `hi` → `/chaina/<key>-<idx>.mp3`, `nl` → `/stroopwafel/<key>-<idx>.mp3`; any other locale or a missing clip falls through Google TTS → speechSynthesis. (Was `.wav`, `hi`-only.) 5/5 chaina-voice tests pass; tsc clean.
+- All manifests/dirs ship **empty** (manifest `{}`, `public/chaina` + `public/stroopwafel` have only `.gitkeep`), so there is **zero behavior change** until the generator is run.
 
-**Blocker:** `api.elevenlabs.io` is `"Host not in allowlist"`. The user opened the environment's Network access to a more permissive level, BUT that **only applies to new sessions** — so generation must run in a **fresh session** (the session where this was built stays blocked).
+**Blocker (network): cleared.** `api.elevenlabs.io` is now reachable from fresh sessions (HTTP 200).
+
+**Blocker (account): NEW — free tier can't generate through the sandbox proxy.** Running the generator here (2026-05-29, with a valid free-tier key) returned `401 detected_unusual_activity — "Free Tier usage disabled… If you are using a proxy/VPN you might need to purchase a Paid Plan"` on **every** call. The sandbox routes outbound traffic through a proxy, which trips ElevenLabs' abuse detector; free-tier keys are refused. Zero clips written. Two ways forward:
+1. **Upgrade the ElevenLabs account to any paid tier** (Starter is cheapest) — paid keys aren't proxy-restricted — then re-run the one-liner below in a session.
+2. **Generate on a local (non-proxied) machine:** clone, `npm i`, run the same one-liner with the key + 3 voice ids, then commit `public/audio/sounds/*.mp3` + `content/dutch/sounds-audio.json` + `public/chaina/*.mp3` + `public/stroopwafel/*.mp3` and push. No app code changes needed — the playback wiring is already merged.
+
+Voice ids in use: Sounds + Dutch content = `ELEVEN_VOICE_NL`; Chaina + Hindi = `ELEVEN_VOICE_HI`; Mr. Stroopwafel = `ELEVEN_VOICE_NL_MASCOT`.
 
 **Voice plan (3 voices, model `eleven_multilingual_v2`):**
-1. **Dutch pronunciation — the Sounds module** → **female** Dutch voice. Env `ELEVEN_VOICE_NL` (already wired in the generator).
-2. **Mr. Stroopwafel mascot** (Dutch moment lines, `locale = nl`) → **male** Dutch voice. Planned env `ELEVEN_VOICE_NL_MASCOT`.
-3. **Chaina mascot + Hindi** (Hindi/Hinglish moment lines, `locale = hi`) → **female** Hindi voice. Planned env `ELEVEN_VOICE_HI`.
+1. **Dutch pronunciation — the Sounds module** → **female** Dutch voice. Env `ELEVEN_VOICE_NL`.
+2. **Mr. Stroopwafel mascot** (Dutch moment lines, `locale = nl`) → **male** Dutch voice. Env `ELEVEN_VOICE_NL_MASCOT`.
+3. **Chaina mascot + Hindi** (Hindi/Hinglish moment lines, `locale = hi`) → **female** Hindi voice. Env `ELEVEN_VOICE_HI`.
 
-**Next steps (DO IN A NEW SESSION):**
-1. Get the 3 voice IDs from the user + a **fresh** API key (the one pasted earlier is in the transcript — it must be rotated).
-2. Run the Sounds generator: `ELEVENLABS_API_KEY=… ELEVEN_VOICE_NL=<dutch-female-id> node scripts/generate-audio.mjs`. Listen-check a few clips, then commit `public/audio/sounds/*.mp3` + the populated manifest.
-3. **Extend `scripts/generate-audio.mjs`** to also render mascot moment lines. Source: `components/design/moments.ts` — Hindi/default lines via `MOMENTS[key].lines[idx].speak`; Dutch variants live in `LINES_NL` (may need `export`). Write Chaina (hi, female) clips to `public/chaina/<momentKey>-<idx>.mp3` and Stroopwafel (nl, male) clips to `public/stroopwafel/<momentKey>-<idx>.mp3`.
-4. **Extend `lib/chaina-voice.ts`:** today it tries `/chaina/<key>-<idx>.wav` for `locale==='hi'` only and sends every other locale straight to Google TTS. Change to: prefer `.mp3`; add a clip lookup for the `nl` (Stroopwafel) path (`/stroopwafel/<key>-<idx>.mp3`); keep Google TTS → speechSynthesis as the fallback chain.
-5. Verify in-app, commit, merge to `main`.
+**Only remaining step — generate + commit the clips:**
+1. Paste the 3 voice IDs + a **fresh** API key (rotate the one pasted in the earlier transcript).
+2. One run does everything:
+   ```
+   ELEVENLABS_API_KEY=… ELEVEN_VOICE_NL=<dutch-female> ELEVEN_VOICE_HI=<hindi-female> \
+   ELEVEN_VOICE_NL_MASCOT=<dutch-male> node scripts/generate-audio.mjs
+   ```
+   (or run any subset — each voice set is independent.)
+3. Listen-check a few clips, then commit `public/audio/sounds/*.mp3` + the populated `content/dutch/sounds-audio.json` + `public/chaina/*.mp3` + `public/stroopwafel/*.mp3`. Verify in-app, merge to `main`.
 
 **Security:** the ElevenLabs key is used only at generation time — never committed, never shipped (the clips are static). Rotate the pasted key.
 
