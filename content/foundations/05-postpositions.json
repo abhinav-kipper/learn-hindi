@@ -1,7 +1,7 @@
 {
   "id": "postpositions",
   "title": "Postpositions",
-  "situation": "Navigate space, time, and relationships — Hindi's version of prepositions (but they come AFTER)",
+  "situation": "Navigate space, time, and relationships, Hindi's version of prepositions (but they come AFTER)",
   "skills": [
     "location postpositions",
     "time postpositions",
@@ -23,7 +23,7 @@
     {
       "hindi": "uske paas car nahi hai",
       "english": "he/she doesn't have a car",
-      "context": "'ke paas' = near/with/having. Hindi has NO verb 'to have' — you say 'near him/her car is not'. Mind-bending but essential",
+      "context": "'ke paas' = near/with/having. Hindi has NO verb 'to have', you say 'near him/her car is not'. Mind-bending but essential",
       "pronunciation": "US-ke PAAS car na-HI hai"
     },
     {
@@ -41,7 +41,7 @@
     {
       "hindi": "yahan se wahan tak",
       "english": "from here to there",
-      "context": "'se' = from, 'tak' = until/to. Together they create from→to. 'ghar se office tak' = from home to office",
+      "context": "'se' = from, 'tak' = until/to. Together they create from / to. 'ghar se office tak' = from home to office",
       "pronunciation": "ya-HAAN se wa-HAAN TAK"
     },
     {
@@ -74,7 +74,7 @@
     "Simple postpositions: mein (in), pe/par (on/at), se (from/by/with), tak (until/to), ko (to/object marker)",
     "Compound postpositions use 'ke/ki' as connector: ke paas (near), ke saamne (in front), ke peeche (behind), ke upar (above), ke neeche (below), ke baad (after), ke liye (for)",
     "The connector changes with gender: 'ke' (masculine), 'ki' (feminine). 'Ghar ke saamne' but 'dukaan ki taraf' (toward the shop-feminine)",
-    "Pronouns change form before postpositions: main→mere/mujh, tu→tere/tujh, woh→uske/us, hum→hamare/hum. This is called the oblique case"
+    "Pronouns change form before postpositions: main / mere/mujh, tu / tere/tujh, woh / uske/us, hum / hamare/hum. This is called the oblique case"
   ],
   "culture_notes": [
     "Hindi has NO verb 'to have'. Possession is expressed as 'near me [thing] is': 'mere paas paise hain' = I have money (literally: near-me money is)",
@@ -148,33 +148,33 @@
       ]
     }
   ],
-  "practice_prompt": "You are a Hindi tutor drilling postpositions — `mein`, `par`, `se`, `ko`, the `ka/ki/ke` possessive cluster, and compound postpositions like `ke saath`, `ke liye`, `ke baad`, `ke paas`. Use `aap` throughout. Open with `chaliye postposition practice karte hain — bataaiye Hindi mein: 'The book is on the table' — aapka jawab?` Then run 6-8 mixed items: some are English sentences for the user to translate (`'I went to the market with Ram'`, `'Papa's car is in front of the house'`); some are noun-plus-relationship fill-ins (`Ram + at home → Ram __ ghar __`); some test oblique shifts on `-aa` nouns (`ladka` → `ladke ko`, `kamra` → `kamre mein`). Mix simple postpositions, the `ka/ki/ke` agreement with the possessed noun, and compounds. Watch closely for PRE-positioning (English habit of putting the postposition first), missing oblique case on `-aa` nouns, wrong gender agreement on `ka/ki/ke`, and `mein` vs `par` confusion. Flag every mistake with `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]`. Don't switch to English unless asked. End with `bahut khoob, aapne acche se kiya — phir milte hain`.",
+  "practice_prompt": "You are a Hindi tutor drilling postpositions, `mein`, `par`, `se`, `ko`, the `ka/ki/ke` possessive cluster, and compound postpositions like `ke saath`, `ke liye`, `ke baad`, `ke paas`. Use `aap` throughout. Open with `chaliye postposition practice karte hain, bataaiye Hindi mein: 'The book is on the table', aapka jawab?` Then run 6-8 mixed items: some are English sentences for the user to translate (`'I went to the market with Ram'`, `'Papa's car is in front of the house'`); some are noun-plus-relationship fill-ins (`Ram + at home / Ram __ ghar __`); some test oblique shifts on `-aa` nouns (`ladka` / `ladke ko`, `kamra` / `kamre mein`). Mix simple postpositions, the `ka/ki/ke` agreement with the possessed noun, and compounds. Watch closely for PRE-positioning (English habit of putting the postposition first), missing oblique case on `-aa` nouns, wrong gender agreement on `ka/ki/ke`, and `mein` vs `par` confusion. Flag every mistake with `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]`. Don't switch to English unless asked. End with `bahut khoob, aapne acche se kiya, phir milte hain`.",
   "theory": {
     "intro": "In Hindi, what English calls a 'preposition' comes after the noun, and is called a 'postposition'. Same idea, opposite order. There's a small set of simple postpositions (in, on, from, to) and a larger set of compounds (with, for, after, about) built on top of them. The trickier part: the possessive `ka/ki/ke` shifts form to agree with the thing possessed, and nouns ending in `-aa` change shape (the 'oblique case') whenever you attach a postposition. Once those mechanics click, postpositions become predictable.",
     "sections": [
       {
         "heading": "What's a postposition (and why 'post')",
-        "body": "English puts relationship words **before** the noun: `in the house`, `on the table`, `with Ram`. Hindi puts them **after**. The noun comes first, then the relationship word.\n\n- `in the house` → `ghar mein` (house-in)\n- `on the table` → `mez par` (table-on)\n- `with Ram` → `Ram ke saath` (Ram-with)\n\nThe job is identical to an English preposition: a word that marks location, direction, time, or company. Only the position flips. Because these words land after the noun instead of before it, grammarians call them **postpositions**.",
+        "body": "English puts relationship words **before** the noun: `in the house`, `on the table`, `with Ram`. Hindi puts them **after**. The noun comes first, then the relationship word. - `in the house` / `ghar mein` (house-in)\n- `on the table` / `mez par` (table-on)\n- `with Ram` / `Ram ke saath` (Ram-with) The job is identical to an English preposition: a word that marks location, direction, time, or company. Only the position flips. Because these words land after the noun instead of before it, grammarians call them **postpositions**.",
         "examples": [
           {
             "hindi": "ghar mein",
             "english": "in the house",
-            "breakdown": "ghar (house) + mein (in) — English would say 'in house', Hindi flips it"
+            "breakdown": "ghar (house) + mein (in), English would say 'in house', Hindi flips it"
           },
           {
             "hindi": "mez par",
             "english": "on the table",
-            "breakdown": "mez (table) + par (on) — postposition AFTER"
+            "breakdown": "mez (table) + par (on), postposition AFTER"
           },
           {
             "hindi": "Ram ke saath",
             "english": "with Ram",
-            "breakdown": "Ram + ke saath (with) — Ram comes first, the 'with' attaches after"
+            "breakdown": "Ram + ke saath (with), Ram comes first, the 'with' attaches after"
           },
           {
             "hindi": "Delhi se",
             "english": "from Delhi",
-            "breakdown": "Delhi + se (from) — the 'from' lives at the end"
+            "breakdown": "Delhi + se (from), the 'from' lives at the end"
           }
         ],
         "callout": {
@@ -190,7 +190,7 @@
             "mez ke par"
           ],
           "correct_index": 1,
-          "explanation": "Correct! `mez par` — noun first, then the postposition. English `on the table` flips to Hindi `mez par` (table-on)."
+          "explanation": "Correct! `mez par`, noun first, then the postposition. English `on the table` flips to Hindi `mez par` (table-on)."
         }
       },
       {
@@ -240,14 +240,14 @@
             "ko"
           ],
           "correct_index": 2,
-          "explanation": "Yes — `bus se` = by bus. `se` covers from, by, and with-instrument. `bus mein` would mean inside the bus (location), which is a different idea."
+          "explanation": "Yes, `bus se` = by bus. `se` covers from, by, and with-instrument. `bus mein` would mean inside the bus (location), which is a different idea."
         }
       },
       {
         "heading": "The possessive cluster: ka / ki / ke",
         "body": "The **possessive postposition** `ka` means `of`, or apostrophe-s. But it changes form to agree with the thing owned, not the owner.\n\n- `ka`: masculine singular noun. `Ram ka kutta` (Ram's dog; `kutta` is masculine).\n- `ki`: feminine noun. `Ram ki billi` (Ram's cat; `billi` is feminine).\n- `ke`: masculine plural noun. `Ram ke bachhe` (Ram's children; `bachhe` is masculine plural).\n\nThis is the same agreement pattern as the `-aa` adjectives from the noun-gender chapter. The form tracks the gender and number of the noun on its right. `Ram`, the owner, is irrelevant. `ka/ki/ke` only cares about what comes after it.",
         "table": {
-          "caption": "ka / ki / ke — which form goes with what",
+          "caption": "ka / ki / ke, which form goes with what",
           "columns": [
             "form",
             "used with",
@@ -280,22 +280,22 @@
           {
             "hindi": "mummy ka phone",
             "english": "mummy's phone",
-            "breakdown": "phone is masculine → ka"
+            "breakdown": "phone is masculine / ka"
           },
           {
             "hindi": "papa ki gaadi",
             "english": "papa's car",
-            "breakdown": "gaadi is feminine → ki"
+            "breakdown": "gaadi is feminine / ki"
           },
           {
             "hindi": "didi ke kapde",
             "english": "didi's clothes",
-            "breakdown": "kapde is masculine plural → ke"
+            "breakdown": "kapde is masculine plural / ke"
           }
         ],
         "callout": {
           "tone": "tip",
-          "body": "Quick mnemonic: ka/ki/ke follows the same -aa/-i/-e shape as accha/acchi/acche. If you can do adjective agreement, you can do possessive agreement — it's the same machinery."
+          "body": "Quick mnemonic: ka/ki/ke follows the same -aa/-i/-e shape as accha/acchi/acche. If you can do adjective agreement, you can do possessive agreement, it's the same machinery."
         },
         "cutting_intro": "Now the possessive. `Ka` means `of`, but it shifts form to agree with the thing being possessed. Same trick as adjectives.",
         "quick_check": {
@@ -364,7 +364,7 @@
         },
         "callout": {
           "tone": "tip",
-          "body": "`ke paas` does double duty as `have`. Hindi has no verb `to have` — instead you say `near me [thing] is`: `mere paas paisa hai` literally = `near-me money is`, but translates as `I have money`. Same for everyone: `uske paas time nahi hai` = `he/she doesn't have time`."
+          "body": "`ke paas` does double duty as `have`. Hindi has no verb `to have`, instead you say `near me [thing] is`: `mere paas paisa hai` literally = `near-me money is`, but translates as `I have money`. Same for everyone: `uske paas time nahi hai` = `he/she doesn't have time`."
         },
         "cutting_intro": "Beyond the simple four, Hindi builds whole new postpositions by combining `ke` with another word. This is how you say `with`, `for`, `after`, and `about`.",
         "quick_check": {
@@ -375,12 +375,12 @@
             "khaane ke baad"
           ],
           "correct_index": 2,
-          "explanation": "Yes — `khaane ke baad` = after eating. `ke saath` = with, `ke liye` = for, `ke baad` = after."
+          "explanation": "Yes, `khaane ke baad` = after eating. `ke saath` = with, `ke liye` = for, `ke baad` = after."
         }
       },
       {
         "heading": "The oblique case: -aa nouns shift before a postposition",
-        "body": "Attach any postposition to a noun ending in `-aa`, and that ending changes to `-e`. This shape change is the **oblique case**.\n\n- `ladka` (boy) → `ladke ko` (to the boy)\n- `kamra` (room) → `kamre mein` (in the room)\n- `bachcha` (child) → `bachche ke saath` (with the child)\n\nThe oblique only touches `-aa`-ending masculine nouns. Nouns ending in other vowels or consonants don't change shape: `ghar mein` (not `ghare mein`), `kursi par` (not `kursie par`).\n\nPronouns shift too: `main` → `mujhe` / `mere`, `tu` → `tujhe` / `tere`, `woh` → `use` / `uske`.",
+        "body": "Attach any postposition to a noun ending in `-aa`, and that ending changes to `-e`. This shape change is the **oblique case**. - `ladka` (boy) / `ladke ko` (to the boy)\n- `kamra` (room) / `kamre mein` (in the room)\n- `bachcha` (child) / `bachche ke saath` (with the child) The oblique only touches `-aa`-ending masculine nouns. Nouns ending in other vowels or consonants don't change shape: `ghar mein` (not `ghare mein`), `kursi par` (not `kursie par`). Pronouns shift too: `main` / `mujhe` / `mere`, `tu` / `tujhe` / `tere`, `woh` / `use` / `uske`.",
         "table": {
           "caption": "Direct form vs oblique form (before any postposition)",
           "columns": [
@@ -423,7 +423,7 @@
         },
         "callout": {
           "tone": "warning",
-          "body": "Forgetting the oblique shift is the single most common postposition error English speakers make. `ladka ko` is wrong — it has to be `ladke ko`. Drill the shift `-aa → -e` until it's automatic. Other endings are safe; only `-aa` masculines flip."
+          "body": "Forgetting the oblique shift is the single most common postposition error English speakers make. `ladka ko` is wrong, it has to be `ladke ko`. Drill the shift `-aa / -e` until it's automatic. Other endings are safe; only `-aa` masculines flip."
         },
         "cutting_intro": "One last twist, and it trips up everyone. When a postposition latches onto an `-aa`-ending noun, the noun itself changes shape. Listen up.",
         "quick_check": {

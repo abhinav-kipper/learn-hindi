@@ -2,25 +2,80 @@
   "id": "dutch-housing-problem",
   "title": "A Problem with the House",
   "situation": "The heating in your apartment stopped working two days ago. It's November and freezing. You call your landlord (or housing corporation) to report the problem and ask for urgent repair.",
-  "skills": ["describing a problem", "expressing urgency", "asking for action", "scheduling a visit"],
+  "skills": [
+    "describing a problem",
+    "expressing urgency",
+    "asking for action",
+    "scheduling a visit"
+  ],
   "phrases": [
-    { "hindi": "Goedendag, u spreekt met Aisha Patel, huurder op de Beukenlaan 12.", "english": "Good afternoon, you're speaking with Aisha Patel, tenant at Beukenlaan 12.", "context": "Always open a formal call by identifying yourself and your address. 'huurder' = tenant. The address immediately tells the housing corp which property you're calling about.", "pronunciation": "CHOO-den-DACH, u SPRAYKT met AY-sha pa-TEL, HEUR-der op de BUH-ken-laan TWAALF" },
-    { "hindi": "De verwarming doet het al twee dagen niet meer.", "english": "The heating hasn't been working for two days now.", "context": "'De verwarming doet het niet' = the heating doesn't work. Adding 'al twee dagen' = for two days already. 'Niet meer' = no longer / anymore. This construction is direct and clear.", "pronunciation": "de ver-WAR-ming doot het al TWAY DAA-chen NEET meer" },
-    { "hindi": "Het is kapot gegaan gisternacht — plotseling stopte het gewoon.", "english": "It broke down last night — it just suddenly stopped.", "context": "'Kapot gaan' (separable) = to break down. In perfect tense: 'kapot gegaan'. 'Plotseling' = suddenly. 'Gisternacht' = last night. Explaining how it broke helps the technician diagnose the fault.", "pronunciation": "het is KA-pot che-CHAAN CHIS-ter-nacht — PLOT-se-ling STOP-te het che-WOON" },
-    { "hindi": "Het is dringend — het vriest bijna buiten en wij hebben kleine kinderen.", "english": "It's urgent — it's almost freezing outside and we have small children.", "context": "'Dringend' = urgent. Mentioning children (kleine kinderen) or elderly residents can accelerate the response. Dutch housing corporations have legal obligations for urgent repairs.", "pronunciation": "het is DRIN-chent — het VREEST BAY-na BUY-ten en vay HEB-ben KLAY-ne KIN-der-en" },
-    { "hindi": "Kunt u zo snel mogelijk iemand sturen om dit te repareren?", "english": "Could you send someone to repair this as soon as possible?", "context": "'Zo snel mogelijk' = as soon as possible (ASAP). 'Iemand sturen' = send someone. 'Repareren' = to repair. This is the core action-request. Using 'kunt u' is polite but firm.", "pronunciation": "KUNT u ZOH SNEL MO-che-lik EE-mant STEW-ren om dit te re-pa-RAY-ren" },
-    { "hindi": "Wanneer komt de monteur precies — 's ochtends of 's middags?", "english": "When exactly is the technician coming — in the morning or afternoon?", "context": "'Monteur' = technician / repair person. Confirming the time slot is important. 'Precies' = exactly. In NL, technicians give morning (8–12) or afternoon (12–17) windows — ask so you can plan.", "pronunciation": "wan-NEER komt de mon-TUR pre-SEES — SOCH-tens of SMID-dachs" },
-    { "hindi": "Mijn adres is Beukenlaan 12, tweede verdieping, flat B.", "english": "My address is Beukenlaan 12, second floor, flat B.", "context": "'Tweede verdieping' = second floor (Dutch counts from the first floor above ground as 'eerste verdieping'). Always confirm full address with floor + flat number so the technician doesn't get lost.", "pronunciation": "mayn a-DRES is BUH-ken-laan TWAALF, TWAY-de ver-DEE-ping, flat BAY" },
-    { "hindi": "Kunt u dit ook per e-mail bevestigen met een tijdstip?", "english": "Could you also confirm this by email with a time slot?", "context": "Always ask for written confirmation. 'Bevestigen' = to confirm. 'Tijdstip' = time slot. If the landlord doesn't respond in the agreed time, this email becomes evidence for the Huurcommissie.", "pronunciation": "KUNT u dit ook per EE-mayl be-VES-ti-chen met uhn TAYT-stip" },
-    { "hindi": "Als de monteur niet komt, moet ik contact opnemen met de Huurcommissie.", "english": "If the technician doesn't come, I'll have to contact the Rent Tribunal.", "context": "'Huurcommissie' = the Dutch rent tribunal — an official body tenants can escalate maintenance complaints to. Mentioning it signals you know your rights and usually prompts faster action.", "pronunciation": "als de mon-TUR neet KOMT, moet ik KON-takt OP-nay-men met de HEUR-ko-mi-see" },
-    { "hindi": "Dank u wel. Ik zie uw monteur dan op dinsdag.", "english": "Thank you. I'll see your technician on Tuesday then.", "context": "Close the call by confirming what was agreed. Stating the day back ('op dinsdag') prevents miscommunication. Polite but firm closing shows you take the appointment seriously.", "pronunciation": "DANK u vel. ik ZEE uw mon-TUR dan op DINS-dach" }
+    {
+      "hindi": "Goedendag, u spreekt met Aisha Patel, huurder op de Beukenlaan 12.",
+      "english": "Good afternoon, you're speaking with Aisha Patel, tenant at Beukenlaan 12.",
+      "context": "Always open a formal call by identifying yourself and your address. 'huurder' = tenant. The address immediately tells the housing corp which property you're calling about.",
+      "pronunciation": "CHOO-den-DACH, u SPRAYKT met AY-sha pa-TEL, HEUR-der op de BUH-ken-laan TWAALF"
+    },
+    {
+      "hindi": "De verwarming doet het al twee dagen niet meer.",
+      "english": "The heating hasn't been working for two days now.",
+      "context": "'De verwarming doet het niet' = the heating doesn't work. Adding 'al twee dagen' = for two days already. 'Niet meer' = no longer / anymore. This construction is direct and clear.",
+      "pronunciation": "de ver-WAR-ming doot het al TWAY DAA-chen NEET meer"
+    },
+    {
+      "hindi": "Het is kapot gegaan gisternacht, plotseling stopte het gewoon.",
+      "english": "It broke down last night, it just suddenly stopped.",
+      "context": "'Kapot gaan' (separable) = to break down. In perfect tense: 'kapot gegaan'. 'Plotseling' = suddenly. 'Gisternacht' = last night. Explaining how it broke helps the technician diagnose the fault.",
+      "pronunciation": "het is KA-pot che-CHAAN CHIS-ter-nacht, PLOT-se-ling STOP-te het che-WOON"
+    },
+    {
+      "hindi": "Het is dringend, het vriest bijna buiten en wij hebben kleine kinderen.",
+      "english": "It's urgent, it's almost freezing outside and we have small children.",
+      "context": "'Dringend' = urgent. Mentioning children (kleine kinderen) or elderly residents can accelerate the response. Dutch housing corporations have legal obligations for urgent repairs.",
+      "pronunciation": "het is DRIN-chent, het VREEST BAY-na BUY-ten en vay HEB-ben KLAY-ne KIN-der-en"
+    },
+    {
+      "hindi": "Kunt u zo snel mogelijk iemand sturen om dit te repareren?",
+      "english": "Could you send someone to repair this as soon as possible?",
+      "context": "'Zo snel mogelijk' = as soon as possible (ASAP). 'Iemand sturen' = send someone. 'Repareren' = to repair. This is the core action-request. Using 'kunt u' is polite but firm.",
+      "pronunciation": "KUNT u ZOH SNEL MO-che-lik EE-mant STEW-ren om dit te re-pa-RAY-ren"
+    },
+    {
+      "hindi": "Wanneer komt de monteur precies, 's ochtends of 's middags?",
+      "english": "When exactly is the technician coming, in the morning or afternoon?",
+      "context": "'Monteur' = technician / repair person. Confirming the time slot is important. 'Precies' = exactly. In NL, technicians give morning (8–12) or afternoon (12–17) windows, ask so you can plan.",
+      "pronunciation": "wan-NEER komt de mon-TUR pre-SEES, SOCH-tens of SMID-dachs"
+    },
+    {
+      "hindi": "Mijn adres is Beukenlaan 12, tweede verdieping, flat B.",
+      "english": "My address is Beukenlaan 12, second floor, flat B.",
+      "context": "'Tweede verdieping' = second floor (Dutch counts from the first floor above ground as 'eerste verdieping'). Always confirm full address with floor + flat number so the technician doesn't get lost.",
+      "pronunciation": "mayn a-DRES is BUH-ken-laan TWAALF, TWAY-de ver-DEE-ping, flat BAY"
+    },
+    {
+      "hindi": "Kunt u dit ook per e-mail bevestigen met een tijdstip?",
+      "english": "Could you also confirm this by email with a time slot?",
+      "context": "Always ask for written confirmation. 'Bevestigen' = to confirm. 'Tijdstip' = time slot. If the landlord doesn't respond in the agreed time, this email becomes evidence for the Huurcommissie.",
+      "pronunciation": "KUNT u dit ook per EE-mayl be-VES-ti-chen met uhn TAYT-stip"
+    },
+    {
+      "hindi": "Als de monteur niet komt, moet ik contact opnemen met de Huurcommissie.",
+      "english": "If the technician doesn't come, I'll have to contact the Rent Tribunal.",
+      "context": "'Huurcommissie' = the Dutch rent tribunal, an official body tenants can escalate maintenance complaints to. Mentioning it signals you know your rights and usually prompts faster action.",
+      "pronunciation": "als de mon-TUR neet KOMT, moet ik KON-takt OP-nay-men met de HEUR-ko-mi-see"
+    },
+    {
+      "hindi": "Dank u wel. Ik zie uw monteur dan op dinsdag.",
+      "english": "Thank you. I'll see your technician on Tuesday then.",
+      "context": "Close the call by confirming what was agreed. Stating the day back ('op dinsdag') prevents miscommunication. Polite but firm closing shows you take the appointment seriously.",
+      "pronunciation": "DANK u vel. ik ZEE uw mon-TUR dan op DINS-dach"
+    }
   ],
   "grammar_notes": [
     "Separable verb 'kapot gaan' splits in main clauses: 'Het gaat kapot' (it breaks). In perfect tense: 'Het is kapot gegaan'. Prefix 'kapot-' moves to the end in simple tenses",
     "Present perfect for recent events with ongoing impact: 'Het is kapot gegaan' (it has broken = and is still broken). Use perfect, not simple past, when the result still matters now",
-    "'Zo snel mogelijk' is the go-to urgency adverb. Stronger alternatives: 'onmiddellijk' (immediately), 'met spoed' (with urgency — more formal). Softer: 'wanneer u even kunt' (when you have a moment)",
+    "'Zo snel mogelijk' is the go-to urgency adverb. Stronger alternatives: 'onmiddellijk' (immediately), 'met spoed' (with urgency, more formal). Softer: 'wanneer u even kunt' (when you have a moment)",
     "Possessive pronouns: 'mijn adres' (my address), 'uw monteur' (your technician, formal), 'zijn/haar telefoonnummer' (his/her number). Use 'uw' for formal 'u' contexts throughout",
-    "Conditional 'als': 'Als de monteur niet komt, moet ik...' — the 'als' clause sends its verb ('komt') to the end (subordinate clause rule); the main clause that follows keeps V2 with the verb ('moet') right after the comma. 'Als' + present tense = real future condition"
+    "Conditional 'als': 'Als de monteur niet komt, moet ik...', the 'als' clause sends its verb ('komt') to the end (subordinate clause rule); the main clause that follows keeps V2 with the verb ('moet') right after the comma. 'Als' + present tense = real future condition"
   ],
   "culture_notes": [
     "Dutch law requires landlords to respond to urgent repairs (heating, water, gas) within 24 hours. Non-urgent repairs have a 6-week window. Know the difference: 'dringend' vs 'gewoon onderhoud'",
@@ -33,37 +88,82 @@
       "skill": "describing a problem",
       "explanation": "Start with the item + 'doet het niet' (doesn't work) or 'is kapot' (is broken). Add duration with 'al + time + lang' or 'al twee dagen'. Be specific about what stopped working and when.",
       "more_examples": [
-        { "hindi": "De boiler doet het niet meer.", "english": "The boiler isn't working anymore." },
-        { "hindi": "Het raam is kapot — het sluit niet goed.", "english": "The window is broken — it doesn't close properly." },
-        { "hindi": "Er is al drie dagen geen warm water.", "english": "There's been no hot water for three days." },
-        { "hindi": "De cv-ketel maakt een vreemd geluid.", "english": "The central heating boiler is making a strange noise." },
-        { "hindi": "Er loopt water onder de keukenvloer door.", "english": "Water is leaking under the kitchen floor." }
+        {
+          "hindi": "De boiler doet het niet meer.",
+          "english": "The boiler isn't working anymore."
+        },
+        {
+          "hindi": "Het raam is kapot, het sluit niet goed.",
+          "english": "The window is broken, it doesn't close properly."
+        },
+        {
+          "hindi": "Er is al drie dagen geen warm water.",
+          "english": "There's been no hot water for three days."
+        },
+        {
+          "hindi": "De cv-ketel maakt een vreemd geluid.",
+          "english": "The central heating boiler is making a strange noise."
+        },
+        {
+          "hindi": "Er loopt water onder de keukenvloer door.",
+          "english": "Water is leaking under the kitchen floor."
+        }
       ]
     },
     {
       "skill": "expressing urgency politely",
-      "explanation": "Use 'dringend' (urgent), 'met spoed' (with urgency), or 'zo snel mogelijk' (ASAP). Explaining why it's urgent (children, health, safety) is normal and effective in Dutch culture — it's informing, not whining.",
+      "explanation": "Use 'dringend' (urgent), 'met spoed' (with urgency), or 'zo snel mogelijk' (ASAP). Explaining why it's urgent (children, health, safety) is normal and effective in Dutch culture, it's informing, not whining.",
       "more_examples": [
-        { "hindi": "Dit is dringend — mijn kind is ziek.", "english": "This is urgent — my child is ill." },
-        { "hindi": "Kunt u dit met spoed oppakken?", "english": "Can you handle this urgently?" },
-        { "hindi": "We kunnen echt niet wachten tot volgende week.", "english": "We really can't wait until next week." },
-        { "hindi": "Ik zou het zeer op prijs stellen als u vandaag nog iemand kunt sturen.", "english": "I would greatly appreciate it if you could send someone today." }
+        {
+          "hindi": "Dit is dringend, mijn kind is ziek.",
+          "english": "This is urgent, my child is ill."
+        },
+        {
+          "hindi": "Kunt u dit met spoed oppakken?",
+          "english": "Can you handle this urgently?"
+        },
+        {
+          "hindi": "We kunnen echt niet wachten tot volgende week.",
+          "english": "We really can't wait until next week."
+        },
+        {
+          "hindi": "Ik zou het zeer op prijs stellen als u vandaag nog iemand kunt sturen.",
+          "english": "I would greatly appreciate it if you could send someone today."
+        }
       ]
     },
     {
       "skill": "asking for and confirming follow-up action",
       "explanation": "After stating the problem, always name the action you want: 'iemand sturen' (send someone), 'terugbellen' (call back), 'bevestigen per mail' (confirm by email). Then repeat the agreed action at the end to close the loop.",
       "more_examples": [
-        { "hindi": "Kunt u mij terugbellen met een datum?", "english": "Could you call me back with a date?" },
-        { "hindi": "Mag ik een bevestiging per mail ontvangen?", "english": "May I receive a confirmation by email?" },
-        { "hindi": "Ik neem aan dat dit dinsdag wordt opgelost.", "english": "I assume this will be resolved on Tuesday." },
-        { "hindi": "Als ik niets hoor, bel ik morgen opnieuw.", "english": "If I don't hear anything, I'll call again tomorrow." },
-        { "hindi": "Kunt u het referentienummer van mijn melding doorgeven?", "english": "Could you give me the reference number for my report?" }
+        {
+          "hindi": "Kunt u mij terugbellen met een datum?",
+          "english": "Could you call me back with a date?"
+        },
+        {
+          "hindi": "Mag ik een bevestiging per mail ontvangen?",
+          "english": "May I receive a confirmation by email?"
+        },
+        {
+          "hindi": "Ik neem aan dat dit dinsdag wordt opgelost.",
+          "english": "I assume this will be resolved on Tuesday."
+        },
+        {
+          "hindi": "Als ik niets hoor, bel ik morgen opnieuw.",
+          "english": "If I don't hear anything, I'll call again tomorrow."
+        },
+        {
+          "hindi": "Kunt u het referentienummer van mijn melding doorgeven?",
+          "english": "Could you give me the reference number for my report?"
+        }
       ]
     }
   ],
   "practice_prompt": "You are a housing corporation (woningcorporatie) service desk employee. The user is calling to report a broken heating system. Use formal 'u' throughout. Ask diagnostic questions: when did it break, which floor/flat, is there hot water, are there other residents affected. Then schedule a monteur visit and give a reference number. Open with: 'Met de servicebalie van de woningcorporatie, met wie spreek ik?'",
-  "references": ["rijksoverheid.nl style", "Naar Nederland Ch. 4"],
+  "references": [
+    "rijksoverheid.nl style",
+    "Naar Nederland Ch. 4"
+  ],
   "level": "A2",
   "exam_targeted": true
 }

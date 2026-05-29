@@ -2,42 +2,99 @@
   "id": "dutch-supermarket",
   "title": "Supermarket & Daily Errands",
   "situation": "You're doing your weekly shopping at the Albert Heijn. You need help finding items and need to pay.",
-  "skills": ["asking for location", "asking price", "making requests politely", "paying and checkout"],
+  "skills": [
+    "asking for location",
+    "asking price",
+    "making requests politely",
+    "paying and checkout"
+  ],
   "phrases": [
-    { "hindi": "Waar vind ik de tomaten?", "english": "Where do I find the tomatoes?", "context": "Most useful supermarket question. 'Waar vind ik...' = where do I find... Alternatives: 'Waar zijn de tomaten?' (where are the tomatoes?)", "pronunciation": "WAAR VINT ik de toh-MAA-ten?" },
-    { "hindi": "Heeft u ook biologische melk?", "english": "Do you also have organic milk?", "context": "'Heeft u ook...' = do you also have...? Polite (u) question for asking about availability. 'Biologisch' = organic — very important word in Dutch supermarkets", "pronunciation": "HAYFT u ook byo-LOH-gi-se MELK?" },
-    { "hindi": "Hoeveel kost dit? Wat is de prijs?", "english": "How much does this cost? What is the price?", "context": "'Hoeveel kost dit?' is most natural. 'Hoeveel' = how much. Also useful: 'Is dit in de aanbieding?' (Is this on offer/sale?)", "pronunciation": "HOO-feel KOST dit? wat is de PRAYS?" },
-    { "hindi": "Mag ik een tasje? Heeft u plastic zakken?", "english": "May I have a bag? Do you have plastic bags?", "context": "In NL you pay for bags. 'Tasje' = small bag. 'Zak' = bag/sack. Supermarkets often have reusable bags ('herbruikbare tassen'). Dutch people usually bring their own bag ('tas' or 'boodschappentas')", "pronunciation": "MACH ik uhn TAS-ye? HAYFT u PLAS-tik ZAK-ken?" },
-    { "hindi": "Dat is alles, dank u. Kan ik pinnen?", "english": "That's all, thank you. Can I pay by card?", "context": "'Pinnen' = paying by debit card (the standard Dutch term). Cash is 'contant'. 'Dat is alles' = that's all. Say this at the checkout when done.", "pronunciation": "dat is AL-les, DANK u. KAN ik PIN-nen?" },
-    { "hindi": "Heeft u een bonuskaart? Heeft u een AH-kaart?", "english": "Do you have a loyalty card? Do you have an Albert Heijn card?", "context": "Every major Dutch supermarket has a loyalty card. 'AH' = Albert Heijn (biggest supermarket chain). The 'Bonuskaart' gives discounts. Cashiers will always ask this.", "pronunciation": "HAYFT u uhn BOH-nus-kaart? HAYFT u uhn ah-HAA-kaart?" },
-    { "hindi": "Excuseer, ik zoek de... afdeling. Kunt u mij helpen?", "english": "Excuse me, I'm looking for the... section. Can you help me?", "context": "'Excuseer' or 'Pardon' = excuse me. 'Ik zoek' = I'm looking for. 'Afdeling' = department/section. 'Kunt u mij helpen?' = can you help me?", "pronunciation": "eks-kuu-ZAYR, ik ZOOK de... AF-day-ling. KUNT u may HEL-pen?" },
-    { "hindi": "Hier is uw wisselgeld. Fijne dag verder!", "english": "Here is your change. Have a nice rest of the day!", "context": "What cashiers say. 'Wisselgeld' = change (money). 'Fijne dag verder' = have a nice rest of your day — a very Dutch farewell. Respond with 'dank u, u ook!'", "pronunciation": "heer is uw WIS-sel-chelt. FAY-ne DACH VER-der!" }
+    {
+      "hindi": "Waar vind ik de tomaten?",
+      "english": "Where do I find the tomatoes?",
+      "context": "Most useful supermarket question. 'Waar vind ik...' = where do I find... Alternatives: 'Waar zijn de tomaten?' (where are the tomatoes?)",
+      "pronunciation": "WAAR VINT ik de toh-MAA-ten?"
+    },
+    {
+      "hindi": "Heeft u ook biologische melk?",
+      "english": "Do you also have organic milk?",
+      "context": "'Heeft u ook...' = do you also have...? Polite (u) question for asking about availability. 'Biologisch' = organic, very important word in Dutch supermarkets",
+      "pronunciation": "HAYFT u ook byo-LOH-gi-se MELK?"
+    },
+    {
+      "hindi": "Hoeveel kost dit? Wat is de prijs?",
+      "english": "How much does this cost? What is the price?",
+      "context": "'Hoeveel kost dit?' is most natural. 'Hoeveel' = how much. Also useful: 'Is dit in de aanbieding?' (Is this on offer/sale?)",
+      "pronunciation": "HOO-feel KOST dit? wat is de PRAYS?"
+    },
+    {
+      "hindi": "Mag ik een tasje? Heeft u plastic zakken?",
+      "english": "May I have a bag? Do you have plastic bags?",
+      "context": "In NL you pay for bags. 'Tasje' = small bag. 'Zak' = bag/sack. Supermarkets often have reusable bags ('herbruikbare tassen'). Dutch people usually bring their own bag ('tas' or 'boodschappentas')",
+      "pronunciation": "MACH ik uhn TAS-ye? HAYFT u PLAS-tik ZAK-ken?"
+    },
+    {
+      "hindi": "Dat is alles, dank u. Kan ik pinnen?",
+      "english": "That's all, thank you. Can I pay by card?",
+      "context": "'Pinnen' = paying by debit card (the standard Dutch term). Cash is 'contant'. 'Dat is alles' = that's all. Say this at the checkout when done.",
+      "pronunciation": "dat is AL-les, DANK u. KAN ik PIN-nen?"
+    },
+    {
+      "hindi": "Heeft u een bonuskaart? Heeft u een AH-kaart?",
+      "english": "Do you have a loyalty card? Do you have an Albert Heijn card?",
+      "context": "Every major Dutch supermarket has a loyalty card. 'AH' = Albert Heijn (biggest supermarket chain). The 'Bonuskaart' gives discounts. Cashiers will always ask this.",
+      "pronunciation": "HAYFT u uhn BOH-nus-kaart? HAYFT u uhn ah-HAA-kaart?"
+    },
+    {
+      "hindi": "Excuseer, ik zoek de... afdeling. Kunt u mij helpen?",
+      "english": "Excuse me, I'm looking for the... section. Can you help me?",
+      "context": "'Excuseer' or 'Pardon' = excuse me. 'Ik zoek' = I'm looking for. 'Afdeling' = department/section. 'Kunt u mij helpen?' = can you help me?",
+      "pronunciation": "eks-kuu-ZAYR, ik ZOOK de... AF-day-ling. KUNT u may HEL-pen?"
+    },
+    {
+      "hindi": "Hier is uw wisselgeld. Fijne dag verder!",
+      "english": "Here is your change. Have a nice rest of the day!",
+      "context": "What cashiers say. 'Wisselgeld' = change (money). 'Fijne dag verder' = have a nice rest of your day, a very Dutch farewell. Respond with 'dank u, u ook!'",
+      "pronunciation": "heer is uw WIS-sel-chelt. FAY-ne DACH VER-der!"
+    }
   ],
   "grammar_notes": [
-    "'Kunt u...?' vs 'Kun jij...?' — use 'u' form in shops/formal settings with strangers, 'jij/je' form with friends and people your age",
+    "'Kunt u...?' vs 'Kun jij...?', use 'u' form in shops/formal settings with strangers, 'jij/je' form with friends and people your age",
     "'Heeft u...?' = do you have (formal). 'Heb jij...?' = do you have (informal)",
-    "Prices in Dutch: 'drie euro vijftig' (€3.50) — say euro amount then cent amount",
-    "'Mag ik...?' = may I have/do... — one of the most useful polite request patterns in everyday Dutch"
+    "Prices in Dutch: 'drie euro vijftig' (€3.50), say euro amount then cent amount",
+    "'Mag ik...?' = may I have/do..., one of the most useful polite request patterns in everyday Dutch"
   ],
   "culture_notes": [
     "Albert Heijn (AH) is the biggest supermarket chain. Others: Jumbo, Lidl, Aldi, Plus. AH is seen as slightly more upscale",
-    "The Dutch recycle almost everything — look for 'statiegeld' (deposit) bottles that you return for money",
+    "The Dutch recycle almost everything, look for 'statiegeld' (deposit) bottles that you return for money",
     "Self-checkout ('zelfkassa') is everywhere. Staff will often point you there. Bring your own bag!",
-    "Dutch supermarkets close earlier than you'd expect — many close at 20:00 or 21:00"
+    "Dutch supermarkets close earlier than you'd expect, many close at 20:00 or 21:00"
   ],
   "skill_breakdown": [
     {
       "skill": "asking for location",
-      "explanation": "'Waar vind ik...?' and 'Waar is/zijn...?' are your two location question templates. Add the item you need. Dutch shop staff are usually efficient and direct — they'll point or walk you there.",
+      "explanation": "'Waar vind ik...?' and 'Waar is/zijn...?' are your two location question templates. Add the item you need. Dutch shop staff are usually efficient and direct, they'll point or walk you there.",
       "more_examples": [
-        { "hindi": "Waar is de kassa?", "english": "Where is the checkout?" },
-        { "hindi": "Waar vind ik het brood?", "english": "Where do I find the bread?" },
-        { "hindi": "Zijn er nog groenten?", "english": "Are there still vegetables?" },
-        { "hindi": "Waar is de ingang?", "english": "Where is the entrance?" }
+        {
+          "hindi": "Waar is de kassa?",
+          "english": "Where is the checkout?"
+        },
+        {
+          "hindi": "Waar vind ik het brood?",
+          "english": "Where do I find the bread?"
+        },
+        {
+          "hindi": "Zijn er nog groenten?",
+          "english": "Are there still vegetables?"
+        },
+        {
+          "hindi": "Waar is de ingang?",
+          "english": "Where is the entrance?"
+        }
       ]
     }
   ],
-  "practice_prompt": "You are a friendly Albert Heijn medewerker (supermarket employee) working the checkout. The user is a customer doing their weekly shopping. Use formal 'u' throughout — Dutch shop register expects it. Open with: 'Goedemiddag, kan ik u helpen?' First help them locate items they ask about ('Waar vind ik...?' → point to an afdeling, e.g. 'afdeling 3, naast de groenten'). Mention statiegeld on bottles if they bring any, and offer the zelfkassa if it's quiet. When they come to ring up, ask 'Heeft u een bonuskaart?' and 'Heeft u een tas nodig?' (tasjes cost €0,25). Total the order with 'Dat is dan ... euro ... cent', ask 'Pinnen of contant?', then close with 'Fijne dag verder!'. Run a natural 6-8 turn arc: finding items → bonuskaart → tas → payment → goodbye. If the user slips into informal 'je/jij' with you (a stranger clerk), or uses English-style 'do you have' instead of 'heeft u', or muddles inverted-question word order, flag it with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]. Stay in Dutch unless they explicitly ask for English.",
+  "practice_prompt": "You are a friendly Albert Heijn medewerker (supermarket employee) working the checkout. The user is a customer doing their weekly shopping. Use formal 'u' throughout, Dutch shop register expects it. Open with: 'Goedemiddag, kan ik u helpen?' First help them locate items they ask about ('Waar vind ik...?' / point to an afdeling, e.g. 'afdeling 3, naast de groenten'). Mention statiegeld on bottles if they bring any, and offer the zelfkassa if it's quiet. When they come to ring up, ask 'Heeft u een bonuskaart?' and 'Heeft u een tas nodig?' (tasjes cost €0,25). Total the order with 'Dat is dan ... euro ... cent', ask 'Pinnen of contant?', then close with 'Fijne dag verder!'. Run a natural 6-8 turn arc: finding items / bonuskaart / tas / payment / goodbye. If the user slips into informal 'je/jij' with you (a stranger clerk), or uses English-style 'do you have' instead of 'heeft u', or muddles inverted-question word order, flag it with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]. Stay in Dutch unless they explicitly ask for English.",
   "level": "A1",
   "exam_targeted": false
 }

@@ -27,7 +27,7 @@
             "At eleven o'clock"
           ],
           "correct_index": 1,
-          "explanation_en": "The text says 'Ik sta elke dag om zeven uur op' — every day at seven."
+          "explanation_en": "The text says 'Ik sta elke dag om zeven uur op', every day at seven."
         },
         {
           "type": "detail",
@@ -46,7 +46,7 @@
             "At home"
           ],
           "correct_index": 2,
-          "explanation_en": "The text says 'Ik werk op een kantoor in Utrecht' — I work in an office in Utrecht."
+          "explanation_en": "The text says 'Ik werk op een kantoor in Utrecht', I work in an office in Utrecht."
         },
         {
           "type": "hoofdgedachte",
@@ -65,7 +65,7 @@
             "Food and drink in the Netherlands"
           ],
           "correct_index": 1,
-          "explanation_en": "The text describes the writer's daily routine from morning to night — a typical day in their life."
+          "explanation_en": "The text describes the writer's daily routine from morning to night, a typical day in their life."
         },
         {
           "type": "detail",
@@ -84,7 +84,7 @@
             "Drinks coffee"
           ],
           "correct_index": 2,
-          "explanation_en": "The text says 'Ik kook eten en kijk soms televisie' — I cook food and sometimes watch television."
+          "explanation_en": "The text says 'Ik kook eten en kijk soms televisie', I cook food and sometimes watch television."
         }
       ],
       "references": [
@@ -119,7 +119,7 @@
             "Fruit"
           ],
           "correct_index": 2,
-          "explanation_en": "The text lists bread, milk, cheese, vegetables, fruit and yoghurt — meat is not mentioned."
+          "explanation_en": "The text lists bread, milk, cheese, vegetables, fruit and yoghurt, meat is not mentioned."
         },
         {
           "type": "detail",
@@ -138,7 +138,7 @@
             "With a bonus card"
           ],
           "correct_index": 2,
-          "explanation_en": "The text says 'Ik betaal met mijn pinpas' — I pay with my debit card."
+          "explanation_en": "The text says 'Ik betaal met mijn pinpas', I pay with my debit card."
         },
         {
           "type": "hoofdgedachte",
@@ -157,7 +157,7 @@
             "Healthy eating in the Netherlands"
           ],
           "correct_index": 1,
-          "explanation_en": "The text describes a shopping trip from start to finish — arriving with a list, buying items and paying at the checkout."
+          "explanation_en": "The text describes a shopping trip from start to finish, arriving with a list, buying items and paying at the checkout."
         },
         {
           "type": "detail",
@@ -176,7 +176,7 @@
             "You get free groceries with it"
           ],
           "correct_index": 1,
-          "explanation_en": "The text says 'Daarmee krijg ik korting' — with it I get a discount."
+          "explanation_en": "The text says 'Daarmee krijg ik korting', with it I get a discount."
         }
       ],
       "references": [
@@ -211,7 +211,7 @@
             "Twenty degrees"
           ],
           "correct_index": 1,
-          "explanation_en": "The text says 'De temperatuur is tien graden' — the temperature is ten degrees."
+          "explanation_en": "The text says 'De temperatuur is tien graden', the temperature is ten degrees."
         },
         {
           "type": "detail",
@@ -230,7 +230,7 @@
             "A raincoat and boots"
           ],
           "correct_index": 1,
-          "explanation_en": "The text says 'Ik neem mijn paraplu mee. Ik draag ook een jas en een sjaal' — umbrella, coat and scarf."
+          "explanation_en": "The text says 'Ik neem mijn paraplu mee. Ik draag ook een jas en een sjaal', umbrella, coat and scarf."
         },
         {
           "type": "hoofdgedachte",
@@ -249,7 +249,7 @@
             "Walking in the rain"
           ],
           "correct_index": 1,
-          "explanation_en": "The text describes a full day of typical Dutch weather — sun in the morning and rain in the afternoon — and the writer's reaction to it."
+          "explanation_en": "The text describes a full day of typical Dutch weather, sun in the morning and rain in the afternoon, and the writer's reaction to it."
         },
         {
           "type": "hoofdgedachte",
@@ -268,7 +268,7 @@
             "It is always nice"
           ],
           "correct_index": 2,
-          "explanation_en": "The text ends with 'Maar ik vind het niet erg' — but I don't mind, showing acceptance of the rainy weather."
+          "explanation_en": "The text ends with 'Maar ik vind het niet erg', but I don't mind, showing acceptance of the rainy weather."
         }
       ],
       "references": [
@@ -322,7 +322,7 @@
             "On Sunday"
           ],
           "correct_index": 3,
-          "explanation_en": "The text says 'Op zondag eten we soms een groot ontbijt' — on Sunday we sometimes have a big breakfast."
+          "explanation_en": "The text says 'Op zondag eten we soms een groot ontbijt', on Sunday we sometimes have a big breakfast."
         },
         {
           "type": "hoofdgedachte",
@@ -360,7 +360,7 @@
             "A biscuit"
           ],
           "correct_index": 1,
-          "explanation_en": "The text mentions 'Soms eet ik een stroopwafel als tussendoortje' — a stroopwafel as a snack, a well-known Dutch treat."
+          "explanation_en": "The text mentions 'Soms eet ik een stroopwafel als tussendoortje', a stroopwafel as a snack, a well-known Dutch treat."
         }
       ],
       "references": [
@@ -395,7 +395,7 @@
             "Office worker"
           ],
           "correct_index": 1,
-          "explanation_en": "The text says 'Mijn vader heet Jan en hij is leraar' — my father is called Jan and he is a teacher."
+          "explanation_en": "The text says 'Mijn vader heet Jan en hij is leraar', my father is called Jan and he is a teacher."
         },
         {
           "type": "detail",
@@ -414,7 +414,7 @@
             "Seventy years old"
           ],
           "correct_index": 1,
-          "explanation_en": "The text says 'Mijn zus Lisa is veertien' — my sister Lisa is fourteen."
+          "explanation_en": "The text says 'Mijn zus Lisa is veertien', my sister Lisa is fourteen."
         },
         {
           "type": "hoofdgedachte",
@@ -433,7 +433,7 @@
             "School in the Netherlands"
           ],
           "correct_index": 1,
-          "explanation_en": "The text introduces the writer's whole family — father, mother, brother, sister and grandmother — giving their names, ages and jobs."
+          "explanation_en": "The text introduces the writer's whole family, father, mother, brother, sister and grandmother, giving their names, ages and jobs."
         },
         {
           "type": "hoofdgedachte",
@@ -452,7 +452,7 @@
             "On Saturday afternoon"
           ],
           "correct_index": 1,
-          "explanation_en": "The text says 'We eten elke zondag samen. Dan zijn we met de hele familie' — every Sunday they eat together as a whole family."
+          "explanation_en": "The text says 'We eten elke zondag samen. Dan zijn we met de hele familie', every Sunday they eat together as a whole family."
         }
       ],
       "references": [
@@ -486,7 +486,7 @@
             "Back pain and fatigue"
           ],
           "correct_index": 1,
-          "explanation_en": "The text says 'Ik had hoofdpijn en koorts' — I had a headache and a fever."
+          "explanation_en": "The text says 'Ik had hoofdpijn en koorts', I had a headache and a fever."
         },
         {
           "type": "hoofdgedachte",
@@ -505,7 +505,7 @@
             "How to take out health insurance"
           ],
           "correct_index": 1,
-          "explanation_en": "The text follows the writer from feeling ill, through calling for an appointment, visiting the huisarts and collecting medication — a complete GP visit."
+          "explanation_en": "The text follows the writer from feeling ill, through calling for an appointment, visiting the huisarts and collecting medication, a complete GP visit."
         },
         {
           "type": "woordbetekenis",
@@ -524,7 +524,7 @@
             "A list of questions"
           ],
           "correct_index": 1,
-          "explanation_en": "In a medical context, 'klachten' means symptoms or health complaints — the things that are bothering you physically."
+          "explanation_en": "In a medical context, 'klachten' means symptoms or health complaints, the things that are bothering you physically."
         },
         {
           "type": "woordbetekenis",
@@ -543,7 +543,7 @@
             "An appointment card from the practice"
           ],
           "correct_index": 2,
-          "explanation_en": "In this context 'recept' is a medical prescription — a document written by the huisarts that allows you to collect medication from the apotheek."
+          "explanation_en": "In this context 'recept' is a medical prescription, a document written by the huisarts that allows you to collect medication from the apotheek."
         }
       ],
       "references": [
@@ -578,7 +578,7 @@
             "You do not have to check in"
           ],
           "correct_index": 1,
-          "explanation_en": "The text says 'Als je de persoonlijke kaart verliest, kun je het saldo terugkrijgen' — if you lose the personal card, you can get the balance back."
+          "explanation_en": "The text says 'Als je de persoonlijke kaart verliest, kun je het saldo terugkrijgen', if you lose the personal card, you can get the balance back."
         },
         {
           "type": "hoofdgedachte",
@@ -597,7 +597,7 @@
             "How to buy an NS subscription"
           ],
           "correct_index": 1,
-          "explanation_en": "The text explains what the OV-chipkaart is, the types available, how to top it up, and how to check in and out — a complete overview of how it works."
+          "explanation_en": "The text explains what the OV-chipkaart is, the types available, how to top it up, and how to check in and out, a complete overview of how it works."
         },
         {
           "type": "woordbetekenis",
@@ -616,7 +616,7 @@
             "The validity of the card"
           ],
           "correct_index": 1,
-          "explanation_en": "The text explains 'Je moet de kaart opladen met geld, het zogeheten saldo' — saldo is the amount of money loaded onto the card."
+          "explanation_en": "The text explains 'Je moet de kaart opladen met geld, het zogeheten saldo', saldo is the amount of money loaded onto the card."
         },
         {
           "type": "woordbetekenis",
@@ -635,7 +635,7 @@
             "Showing your card to the conductor"
           ],
           "correct_index": 2,
-          "explanation_en": "The text says 'moet je inchecken door de kaart tegen de lezer te houden' — you check in by holding the card against the reader."
+          "explanation_en": "The text says 'moet je inchecken door de kaart tegen de lezer te houden', you check in by holding the card against the reader."
         }
       ],
       "references": [
@@ -671,7 +671,7 @@
             "One week in advance"
           ],
           "correct_index": 1,
-          "explanation_en": "The text says 'moet je die ten minste vierentwintig uur van tevoren afzeggen' — you must cancel at least twenty-four hours in advance."
+          "explanation_en": "The text says 'moet je die ten minste vierentwintig uur van tevoren afzeggen', you must cancel at least twenty-four hours in advance."
         },
         {
           "type": "hoofdgedachte",
@@ -690,7 +690,7 @@
             "Online appointments are better than calling by phone"
           ],
           "correct_index": 1,
-          "explanation_en": "The text explains how to make appointments at various institutions and stresses the importance of cancelling at least 24 hours in advance — planning ahead is the main theme."
+          "explanation_en": "The text explains how to make appointments at various institutions and stresses the importance of cancelling at least 24 hours in advance, planning ahead is the main theme."
         },
         {
           "type": "woordbetekenis",
@@ -709,7 +709,7 @@
             "To reschedule an appointment"
           ],
           "correct_index": 1,
-          "explanation_en": "In context, 'afzeggen' means to cancel — the text contrasts 'nakomen' (keeping an appointment) with 'afzeggen' (cancelling it)."
+          "explanation_en": "In context, 'afzeggen' means to cancel, the text contrasts 'nakomen' (keeping an appointment) with 'afzeggen' (cancelling it)."
         },
         {
           "type": "woordbetekenis",
@@ -728,7 +728,7 @@
             "A form you have to fill in"
           ],
           "correct_index": 1,
-          "explanation_en": "'Balie' is a service counter or reception desk — the text says you cannot just walk in at the balie without an appointment."
+          "explanation_en": "'Balie' is a service counter or reception desk, the text says you cannot just walk in at the balie without an appointment."
         }
       ],
       "references": [
@@ -763,7 +763,7 @@
             "One month"
           ],
           "correct_index": 2,
-          "explanation_en": "The text says 'Als lid mag je boeken drie weken lenen' — as a member you may borrow books for three weeks."
+          "explanation_en": "The text says 'Als lid mag je boeken drie weken lenen', as a member you may borrow books for three weeks."
         },
         {
           "type": "hoofdgedachte",
@@ -782,7 +782,7 @@
             "How to reserve a book"
           ],
           "correct_index": 1,
-          "explanation_en": "The text explains how to join the library, borrow and extend loans, and what activities are available — a general overview of how the Dutch library works."
+          "explanation_en": "The text explains how to join the library, borrow and extend loans, and what activities are available, a general overview of how the Dutch library works."
         },
         {
           "type": "woordbetekenis",
@@ -801,7 +801,7 @@
             "To reserve a book for later"
           ],
           "correct_index": 2,
-          "explanation_en": "'Verlengen' means to make longer — the text says you can extend the loan period (uitleentermijn verlengen) if you need more time."
+          "explanation_en": "'Verlengen' means to make longer, the text says you can extend the loan period (uitleentermijn verlengen) if you need more time."
         },
         {
           "type": "woordbetekenis",
@@ -820,7 +820,7 @@
             "A reminder that your book is almost due to be returned"
           ],
           "correct_index": 1,
-          "explanation_en": "'Boete' means a fine — a financial penalty you must pay if you return a borrowed item too late."
+          "explanation_en": "'Boete' means a fine, a financial penalty you must pay if you return a borrowed item too late."
         }
       ],
       "references": [
@@ -855,7 +855,7 @@
             "Within two weeks"
           ],
           "correct_index": 2,
-          "explanation_en": "The text says 'Die code ontvangt u doorgaans binnen vijf werkdagen' — you typically receive that code within five working days."
+          "explanation_en": "The text says 'Die code ontvangt u doorgaans binnen vijf werkdagen', you typically receive that code within five working days."
         },
         {
           "type": "hoofdgedachte",
@@ -874,7 +874,7 @@
             "Which documents you need to work in the Netherlands"
           ],
           "correct_index": 1,
-          "explanation_en": "The text explains what the BSN and DigiD are, how to obtain them and what you can do with them — a practical guide to two essential registration numbers for newcomers."
+          "explanation_en": "The text explains what the BSN and DigiD are, how to obtain them and what you can do with them, a practical guide to two essential registration numbers for newcomers."
         },
         {
           "type": "woordbetekenis",
@@ -893,7 +893,7 @@
             "A confirmation code from the gemeente"
           ],
           "correct_index": 1,
-          "explanation_en": "The text explains 'wordt er een activatiecode per post verstuurd' — an activation code is sent by post, which you use to complete the DigiD registration."
+          "explanation_en": "The text explains 'wordt er een activatiecode per post verstuurd', an activation code is sent by post, which you use to complete the DigiD registration."
         },
         {
           "type": "gevolg",
@@ -912,7 +912,7 @@
             "You receive a fine from the gemeente"
           ],
           "correct_index": 1,
-          "explanation_en": "The text states 'Zonder BSN kunt u deze essentiële diensten niet gebruiken' — without a BSN you cannot use these essential services, referring to health insurance, tax declarations and banking."
+          "explanation_en": "The text states 'Zonder BSN kunt u deze essentiële diensten niet gebruiken', without a BSN you cannot use these essential services, referring to health insurance, tax declarations and banking."
         }
       ],
       "references": [

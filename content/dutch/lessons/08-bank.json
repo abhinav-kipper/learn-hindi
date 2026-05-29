@@ -2,29 +2,84 @@
   "id": "dutch-bank",
   "title": "At the Bank",
   "situation": "You walk into an ING branch. You want to open a betaalrekening (current account), get a pinpas, and ask about a charge on your statement you don't recognize.",
-  "skills": ["opening an account", "asking about charges", "understanding payslip and statements", "polite complaining"],
+  "skills": [
+    "opening an account",
+    "asking about charges",
+    "understanding payslip and statements",
+    "polite complaining"
+  ],
   "phrases": [
-    { "hindi": "Ik wil graag een betaalrekening openen.", "english": "I'd like to open a current account.", "context": "'Betaalrekening' = current/payment account (the standard Dutch bank account for daily transactions). 'Openen' = to open. This is the most common reason newcomers visit a bank branch. You'll need your paspoort and BSN.", "pronunciation": "ik wil CHRAACH uhn be-TAAL-ray-ke-ning OH-pen-en" },
-    { "hindi": "Ik heb mijn paspoort en mijn BSN bij me.", "english": "I have my passport and my BSN with me.", "context": "These two documents are the minimum required to open a Dutch bank account. BSN (burgerservicenummer) links your bank account to the tax authority. 'Bij me hebben' = to have with you.", "pronunciation": "ik hep mayn PAS-poort en mayn BAY-es-EN bay me" },
-    { "hindi": "Hoe lang duurt het voordat ik de pinpas krijg?", "english": "How long will it take before I receive my debit card?", "context": "'Pinpas' = debit card used for 'pinnen' (paying by card). In the Netherlands, virtually all shops accept pinnen; many are cash-free. The card typically arrives by post within 5 working days.", "pronunciation": "hoo LANCH DEURT het VOOR-dat ik de PIN-pas KRAYCH" },
-    { "hindi": "Kunt u mij helpen de ING-app in te stellen?", "english": "Could you help me set up the ING app?", "context": "Dutch banks have excellent apps; the ING-app handles transfers, balance checks, and card management. 'Instellen' = to set up / configure. Staff will help you with the first-time activation using your pinpas.", "pronunciation": "KUNT u may HEL-pen de ING-ap IN te STEL-len" },
-    { "hindi": "Ik zie hier een afschrijving die ik niet herken.", "english": "I see a debit here that I don't recognise.", "context": "'Afschrijving' = debit/charge taken from your account. 'Herkennen' = to recognise. If you don't recognise a charge, report it immediately. Banks are required to investigate disputed transactions under EU Payment Services Directive.", "pronunciation": "ik ZEE heer uhn AF-skray-ving dee ik neet her-KEN" },
-    { "hindi": "Kunt u mij uitleggen wat dit bedrag inhoudt?", "english": "Could you explain what this amount means?", "context": "'Uitleggen' = to explain (separable verb). 'Bedrag' = amount/sum. 'Inhouden' = to contain / mean. Politely asking for an explanation before lodging a formal complaint is best practice in Dutch banking interactions.", "pronunciation": "KUNT u may UYT-ley-chen wat dit be-DRACH IN-howt" },
-    { "hindi": "Ik wil hier bezwaar tegen maken — dit bedrag ken ik niet.", "english": "I'd like to dispute this — I don't recognise this amount.", "context": "'Bezwaar maken tegen' = to object to / dispute formally. This triggers a bank investigation. For amounts under €2,500, banks typically resolve disputes within 5 business days under SEPA rules.", "pronunciation": "ik wil heer be-ZWAAR TAY-chen MAA-ken — dit be-DRACH ken ik neet" },
-    { "hindi": "Mijn pinpas is kwijt — kunt u die meteen blokkeren?", "english": "My debit card is lost — could you block it immediately?", "context": "'Kwijt zijn' = to have lost (something). 'Blokkeren' = to block. Always report a lost or stolen pinpas immediately. You can also call the 24h card hotline (0800-0240) or block it via the ING-app yourself.", "pronunciation": "mayn PIN-pas is KWAYT — KUNT u dee me-TEEN BLOK-ker-en" },
-    { "hindi": "Wat zijn de kosten voor een automatische incasso?", "english": "What are the costs for a direct debit?", "context": "'Automatische incasso' = direct debit (a company pulls money from your account automatically). Very common in NL for rent, utilities, insurance. Important to know which incassos are active so you aren't surprised.", "pronunciation": "wat zayn de KOS-ten voor uhn ow-to-MA-tee-se in-KAS-so" },
-    { "hindi": "Bedankt voor uw hulp. Ik wacht op mijn pinpas.", "english": "Thank you for your help. I'll wait for my debit card.", "context": "Standard closing after the account is set up. Confirming 'ik wacht op mijn pinpas' (I'll wait for my debit card) summarises the key action item. The card arrives by post; activation happens via the app or ATM.", "pronunciation": "be-DANKT voor uw HULP. ik WACHT op mayn PIN-pas" }
+    {
+      "hindi": "Ik wil graag een betaalrekening openen.",
+      "english": "I'd like to open a current account.",
+      "context": "'Betaalrekening' = current/payment account (the standard Dutch bank account for daily transactions). 'Openen' = to open. This is the most common reason newcomers visit a bank branch. You'll need your paspoort and BSN.",
+      "pronunciation": "ik wil CHRAACH uhn be-TAAL-ray-ke-ning OH-pen-en"
+    },
+    {
+      "hindi": "Ik heb mijn paspoort en mijn BSN bij me.",
+      "english": "I have my passport and my BSN with me.",
+      "context": "These two documents are the minimum required to open a Dutch bank account. BSN (burgerservicenummer) links your bank account to the tax authority. 'Bij me hebben' = to have with you.",
+      "pronunciation": "ik hep mayn PAS-poort en mayn BAY-es-EN bay me"
+    },
+    {
+      "hindi": "Hoe lang duurt het voordat ik de pinpas krijg?",
+      "english": "How long will it take before I receive my debit card?",
+      "context": "'Pinpas' = debit card used for 'pinnen' (paying by card). In the Netherlands, virtually all shops accept pinnen; many are cash-free. The card typically arrives by post within 5 working days.",
+      "pronunciation": "hoo LANCH DEURT het VOOR-dat ik de PIN-pas KRAYCH"
+    },
+    {
+      "hindi": "Kunt u mij helpen de ING-app in te stellen?",
+      "english": "Could you help me set up the ING app?",
+      "context": "Dutch banks have excellent apps; the ING-app handles transfers, balance checks, and card management. 'Instellen' = to set up / configure. Staff will help you with the first-time activation using your pinpas.",
+      "pronunciation": "KUNT u may HEL-pen de ING-ap IN te STEL-len"
+    },
+    {
+      "hindi": "Ik zie hier een afschrijving die ik niet herken.",
+      "english": "I see a debit here that I don't recognise.",
+      "context": "'Afschrijving' = debit/charge taken from your account. 'Herkennen' = to recognise. If you don't recognise a charge, report it immediately. Banks are required to investigate disputed transactions under EU Payment Services Directive.",
+      "pronunciation": "ik ZEE heer uhn AF-skray-ving dee ik neet her-KEN"
+    },
+    {
+      "hindi": "Kunt u mij uitleggen wat dit bedrag inhoudt?",
+      "english": "Could you explain what this amount means?",
+      "context": "'Uitleggen' = to explain (separable verb). 'Bedrag' = amount/sum. 'Inhouden' = to contain / mean. Politely asking for an explanation before lodging a formal complaint is best practice in Dutch banking interactions.",
+      "pronunciation": "KUNT u may UYT-ley-chen wat dit be-DRACH IN-howt"
+    },
+    {
+      "hindi": "Ik wil hier bezwaar tegen maken, dit bedrag ken ik niet.",
+      "english": "I'd like to dispute this, I don't recognise this amount.",
+      "context": "'Bezwaar maken tegen' = to object to / dispute formally. This triggers a bank investigation. For amounts under €2,500, banks typically resolve disputes within 5 business days under SEPA rules.",
+      "pronunciation": "ik wil heer be-ZWAAR TAY-chen MAA-ken, dit be-DRACH ken ik neet"
+    },
+    {
+      "hindi": "Mijn pinpas is kwijt, kunt u die meteen blokkeren?",
+      "english": "My debit card is lost, could you block it immediately?",
+      "context": "'Kwijt zijn' = to have lost (something). 'Blokkeren' = to block. Always report a lost or stolen pinpas immediately. You can also call the 24h card hotline (0800-0240) or block it via the ING-app yourself.",
+      "pronunciation": "mayn PIN-pas is KWAYT, KUNT u dee me-TEEN BLOK-ker-en"
+    },
+    {
+      "hindi": "Wat zijn de kosten voor een automatische incasso?",
+      "english": "What are the costs for a direct debit?",
+      "context": "'Automatische incasso' = direct debit (a company pulls money from your account automatically). Very common in NL for rent, utilities, insurance. Important to know which incassos are active so you aren't surprised.",
+      "pronunciation": "wat zayn de KOS-ten voor uhn ow-to-MA-tee-se in-KAS-so"
+    },
+    {
+      "hindi": "Bedankt voor uw hulp. Ik wacht op mijn pinpas.",
+      "english": "Thank you for your help. I'll wait for my debit card.",
+      "context": "Standard closing after the account is set up. Confirming 'ik wacht op mijn pinpas' (I'll wait for my debit card) summarises the key action item. The card arrives by post; activation happens via the app or ATM.",
+      "pronunciation": "be-DANKT voor uw HULP. ik WACHT op mayn PIN-pas"
+    }
   ],
   "grammar_notes": [
-    "Separable verbs split in main clauses: 'uitleggen' → 'Ik leg het uit'; 'instellen' → 'Ik stel de app in'; 'afschrijven' → 'De bank schrijft het bedrag af'. The prefix detaches and goes to the end of the clause, but stays attached after a modal ('Kunt u dit uitleggen?') and in te-infinitives ('om dit uit te leggen')",
+    "Separable verbs split in main clauses: 'uitleggen' / 'Ik leg het uit'; 'instellen' / 'Ik stel de app in'; 'afschrijven' / 'De bank schrijft het bedrag af'. The prefix detaches and goes to the end of the clause, but stays attached after a modal ('Kunt u dit uitleggen?') and in te-infinitives ('om dit uit te leggen')",
     "Present perfect for past transactions affecting the present: 'Ik heb een afschrijving gezien' (I've seen a charge). Use this rather than simple past when the event still matters now",
     "Modal 'zou' for extra politeness: 'Zou u mij kunnen helpen?' (Would you be able to help me?) is softer than 'kunt u'. Use it when you want to be especially deferential",
-    "Conjunction 'omdat' (because) triggers end-verb order: 'Ik bel omdat ik een afschrijving niet herken' — 'herken' goes to the end of the subordinate clause",
+    "Conjunction 'omdat' (because) triggers end-verb order: 'Ik bel omdat ik een afschrijving niet herken', 'herken' goes to the end of the subordinate clause",
     "Possessives: 'mijn' (my) vs 'uw' (your, formal). In bank contexts always use formal 'uw' when referring to the customer's items: 'Uw rekening', 'Uw pinpas'"
   ],
   "culture_notes": [
     "Cash is declining rapidly in the Netherlands. Many shops and even some restaurants are 'pinnen only' (card only). Having a Dutch pinpas is effectively a necessity, not a luxury",
-    "Automatische incasso is the default payment method for most Dutch bills (rent, energy, insurance, subscriptions). You give permission once and the company debits automatically — always monitor your statement",
+    "Automatische incasso is the default payment method for most Dutch bills (rent, energy, insurance, subscriptions). You give permission once and the company debits automatically, always monitor your statement",
     "The loonstrook (payslip) shows bruto (gross) and netto (net) salary, as well as deductions for belasting (tax), ZVW-premie (health insurance levy), and pensioen (pension). Banks may ask for recent loonstroken when you apply for credit",
     "If your bank does not resolve a complaint, you can escalate to the Kifid (Klachteninstituut Financiële Dienstverlening), the Dutch financial ombudsman, at no cost to you"
   ],
@@ -33,36 +88,78 @@
       "skill": "opening an account vocabulary",
       "explanation": "Key terms: betaalrekening (current account), spaarrekening (savings account), pinpas (debit card), BSN, rekeningnummer (account number), IBAN. You'll hear these on your first visit and need to recognise them quickly.",
       "more_examples": [
-        { "hindi": "Ik wil ook een spaarrekening openen.", "english": "I'd also like to open a savings account." },
-        { "hindi": "Wat is mijn rekeningnummer?", "english": "What is my account number?" },
-        { "hindi": "Kunt u mijn IBAN opschrijven?", "english": "Could you write down my IBAN?" },
-        { "hindi": "Zijn er maandelijkse kosten voor deze rekening?", "english": "Are there monthly fees for this account?" }
+        {
+          "hindi": "Ik wil ook een spaarrekening openen.",
+          "english": "I'd also like to open a savings account."
+        },
+        {
+          "hindi": "Wat is mijn rekeningnummer?",
+          "english": "What is my account number?"
+        },
+        {
+          "hindi": "Kunt u mijn IBAN opschrijven?",
+          "english": "Could you write down my IBAN?"
+        },
+        {
+          "hindi": "Zijn er maandelijkse kosten voor deze rekening?",
+          "english": "Are there monthly fees for this account?"
+        }
       ]
     },
     {
       "skill": "describing money problems",
       "explanation": "Use 'afschrijving' (debit), 'bijschrijving' (credit), 'saldo' (balance), 'rood staan' (being overdrawn). Describing problems clearly gets faster resolution from bank staff.",
       "more_examples": [
-        { "hindi": "Ik sta rood — hoe los ik dat op?", "english": "I'm overdrawn — how do I fix that?" },
-        { "hindi": "Er is een dubbele afschrijving gedaan.", "english": "There has been a double charge." },
-        { "hindi": "Mijn saldo klopt niet.", "english": "My balance doesn't add up." },
-        { "hindi": "Ik heb geld overgemaakt maar het is niet aangekomen.", "english": "I transferred money but it hasn't arrived." },
-        { "hindi": "Kunt u de transactie terugdraaien?", "english": "Can you reverse the transaction?" }
+        {
+          "hindi": "Ik sta rood, hoe los ik dat op?",
+          "english": "I'm overdrawn, how do I fix that?"
+        },
+        {
+          "hindi": "Er is een dubbele afschrijving gedaan.",
+          "english": "There has been a double charge."
+        },
+        {
+          "hindi": "Mijn saldo klopt niet.",
+          "english": "My balance doesn't add up."
+        },
+        {
+          "hindi": "Ik heb geld overgemaakt maar het is niet aangekomen.",
+          "english": "I transferred money but it hasn't arrived."
+        },
+        {
+          "hindi": "Kunt u de transactie terugdraaien?",
+          "english": "Can you reverse the transaction?"
+        }
       ]
     },
     {
       "skill": "polite-complaint phrasing",
-      "explanation": "Dutch complaints are direct but not aggressive. Use 'ik wil bezwaar maken' (I want to dispute), 'dat klopt niet' (that's not right), 'ik snap dit niet' (I don't understand this). Avoid emotional language — stick to facts and amounts.",
+      "explanation": "Dutch complaints are direct but not aggressive. Use 'ik wil bezwaar maken' (I want to dispute), 'dat klopt niet' (that's not right), 'ik snap dit niet' (I don't understand this). Avoid emotional language, stick to facts and amounts.",
       "more_examples": [
-        { "hindi": "Ik snap niet waarom dit bedrag is afgeschreven.", "english": "I don't understand why this amount was debited." },
-        { "hindi": "Dat klopt niet met mijn administratie.", "english": "That doesn't match my records." },
-        { "hindi": "Ik wil een schriftelijke bevestiging van dit gesprek.", "english": "I'd like written confirmation of this conversation." },
-        { "hindi": "Wanneer kan ik een antwoord verwachten?", "english": "When can I expect a response?" }
+        {
+          "hindi": "Ik snap niet waarom dit bedrag is afgeschreven.",
+          "english": "I don't understand why this amount was debited."
+        },
+        {
+          "hindi": "Dat klopt niet met mijn administratie.",
+          "english": "That doesn't match my records."
+        },
+        {
+          "hindi": "Ik wil een schriftelijke bevestiging van dit gesprek.",
+          "english": "I'd like written confirmation of this conversation."
+        },
+        {
+          "hindi": "Wanneer kan ik een antwoord verwachten?",
+          "english": "When can I expect a response?"
+        }
       ]
     }
   ],
-  "practice_prompt": "You are an ING bank teller. The user wants to open a betaalrekening. Use formal 'u' throughout. Ask for their paspoort and BSN, explain the pinpas delivery time, and walk them through the ING-app setup. Midway through the conversation, the user will mention an unrecognised charge — treat it seriously, ask for the date and amount, and explain the dispute process. If the user makes errors (wrong word order, missing article, wrong verb form), gently correct with the right version. Open with: 'Goedemiddag, waarmee kan ik u helpen?'",
-  "references": ["rijksoverheid.nl style", "Naar Nederland Ch. 5"],
+  "practice_prompt": "You are an ING bank teller. The user wants to open a betaalrekening. Use formal 'u' throughout. Ask for their paspoort and BSN, explain the pinpas delivery time, and walk them through the ING-app setup. Midway through the conversation, the user will mention an unrecognised charge, treat it seriously, ask for the date and amount, and explain the dispute process. If the user makes errors (wrong word order, missing article, wrong verb form), gently correct with the right version. Open with: 'Goedemiddag, waarmee kan ik u helpen?'",
+  "references": [
+    "rijksoverheid.nl style",
+    "Naar Nederland Ch. 5"
+  ],
   "level": "A2",
   "exam_targeted": true
 }

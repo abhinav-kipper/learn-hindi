@@ -2,66 +2,165 @@
   "id": "making-plans",
   "title": "Making Plans with Friends",
   "situation": "It's Thursday evening and you're trying to make weekend plans with your friend group chat.",
-  "skills": ["future tense (ga/ge/gi)", "conditional (agar...toh)", "suggestions & invitations"],
+  "skills": [
+    "future tense (ga/ge/gi)",
+    "conditional (agar...toh)",
+    "suggestions & invitations"
+  ],
   "phrases": [
-    { "hindi": "yaar weekend pe kuch karte hain?", "english": "Dude, shall we do something this weekend?", "context": "'kuch karte hain' = let's do something — casual suggestion, no pressure", "pronunciation": "YAAR week-END pe KUCH kar-te hain?" },
-    { "hindi": "agar Saturday free ho toh chalein kahin?", "english": "If you're free Saturday then shall we go somewhere?", "context": "'agar...toh' = if...then — conditional structure. 'chalein' = shall we go (inclusive)", "pronunciation": "A-gar SA-tur-day FREE ho toh CHA-lein ka-HIN?" },
-    { "hindi": "main toh aa jaunga, tum batao", "english": "I'm in, you guys decide", "context": "'main toh' = as for me / I at least — contrastive emphasis. 'tum batao' = you (all) say — putting the ball in their court", "pronunciation": "MAIN toh aa jaa-UN-ga, TUM ba-TAO" },
-    { "hindi": "Connaught Place chalein? wahan naya restaurant khula hai", "english": "Shall we go to CP? A new restaurant opened there", "context": "'chalein' = shall we go (inclusive suggestion). 'khula hai' = has opened", "pronunciation": "con-NAUGHT place CHA-lein? wa-HAAN NA-ya RES-tau-rant KHU-la hai" },
-    { "hindi": "done, 7 baje milte hain metro pe", "english": "Done, let's meet at 7 at the metro", "context": "'baje' = o'clock, 'milte hain' = let's meet. 'Done' used as-is from English.", "pronunciation": "DONE, SAAT ba-JE mil-te hain MET-ro pe" },
-    { "hindi": "late mat hona, pichli baar ek ghanta wait kiya tha", "english": "Don't be late, last time I waited one hour", "context": "Friendly warning/complaint — totally normal among friends who are always late", "pronunciation": "LATE mat HO-na, pich-LI baar EK ghan-TA wait KI-ya tha" },
-    { "hindi": "arre yaar, dekhte hain... confirm nahi hai abhi", "english": "Hey dude, let's see... not confirmed yet", "context": "'dekhte hain' = let's see = PROBABLY NO. This is the classic non-commitment.", "pronunciation": "ar-RE yaar, DEKH-te hain... con-FIRM na-HI hai ab-HI" },
-    { "hindi": "pakka aa rahe ho na tum? cancel mat karna", "english": "You're definitely coming, right? Don't cancel", "context": "'pakka' = confirmed/for sure. Pinning someone down who says 'dekhte hain'.", "pronunciation": "PAK-ka aa ra-HE ho na TUM? CAN-cel mat kar-NA" },
-    { "hindi": "chal theek hai, agar mood hua toh aa jaana", "english": "Okay fine, if you feel like it then just come", "context": "'mood hua toh' = if the mood strikes. Giving someone an easy out while keeping invite open.", "pronunciation": "CHAL theek hai, A-gar MOOD hu-a toh AA jaa-NA" },
-    { "hindi": "group mein daal de, sab ko pata chale", "english": "Put it in the group, so everyone knows", "context": "'group mein daal de' = drop it in the (WhatsApp) group — how all plans are coordinated", "pronunciation": "GROUP mein DAAL de, SAB ko pa-TA cha-LE" }
+    {
+      "hindi": "yaar weekend pe kuch karte hain?",
+      "english": "Dude, shall we do something this weekend?",
+      "context": "'kuch karte hain' = let's do something, casual suggestion, no pressure",
+      "pronunciation": "YAAR week-END pe KUCH kar-te hain?"
+    },
+    {
+      "hindi": "agar Saturday free ho toh chalein kahin?",
+      "english": "If you're free Saturday then shall we go somewhere?",
+      "context": "'agar...toh' = if...then, conditional structure. 'chalein' = shall we go (inclusive)",
+      "pronunciation": "A-gar SA-tur-day FREE ho toh CHA-lein ka-HIN?"
+    },
+    {
+      "hindi": "main toh aa jaunga, tum batao",
+      "english": "I'm in, you guys decide",
+      "context": "'main toh' = as for me / I at least, contrastive emphasis. 'tum batao' = you (all) say, putting the ball in their court",
+      "pronunciation": "MAIN toh aa jaa-UN-ga, TUM ba-TAO"
+    },
+    {
+      "hindi": "Connaught Place chalein? wahan naya restaurant khula hai",
+      "english": "Shall we go to CP? A new restaurant opened there",
+      "context": "'chalein' = shall we go (inclusive suggestion). 'khula hai' = has opened",
+      "pronunciation": "con-NAUGHT place CHA-lein? wa-HAAN NA-ya RES-tau-rant KHU-la hai"
+    },
+    {
+      "hindi": "done, 7 baje milte hain metro pe",
+      "english": "Done, let's meet at 7 at the metro",
+      "context": "'baje' = o'clock, 'milte hain' = let's meet. 'Done' used as-is from English.",
+      "pronunciation": "DONE, SAAT ba-JE mil-te hain MET-ro pe"
+    },
+    {
+      "hindi": "late mat hona, pichli baar ek ghanta wait kiya tha",
+      "english": "Don't be late, last time I waited one hour",
+      "context": "Friendly warning/complaint, totally normal among friends who are always late",
+      "pronunciation": "LATE mat HO-na, pich-LI baar EK ghan-TA wait KI-ya tha"
+    },
+    {
+      "hindi": "arre yaar, dekhte hain... confirm nahi hai abhi",
+      "english": "Hey dude, let's see... not confirmed yet",
+      "context": "'dekhte hain' = let's see = PROBABLY NO. This is the classic non-commitment.",
+      "pronunciation": "ar-RE yaar, DEKH-te hain... con-FIRM na-HI hai ab-HI"
+    },
+    {
+      "hindi": "pakka aa rahe ho na tum? cancel mat karna",
+      "english": "You're definitely coming, right? Don't cancel",
+      "context": "'pakka' = confirmed/for sure. Pinning someone down who says 'dekhte hain'.",
+      "pronunciation": "PAK-ka aa ra-HE ho na TUM? CAN-cel mat kar-NA"
+    },
+    {
+      "hindi": "chal theek hai, agar mood hua toh aa jaana",
+      "english": "Okay fine, if you feel like it then just come",
+      "context": "'mood hua toh' = if the mood strikes. Giving someone an easy out while keeping invite open.",
+      "pronunciation": "CHAL theek hai, A-gar MOOD hu-a toh AA jaa-NA"
+    },
+    {
+      "hindi": "group mein daal de, sab ko pata chale",
+      "english": "Put it in the group, so everyone knows",
+      "context": "'group mein daal de' = drop it in the (WhatsApp) group, how all plans are coordinated",
+      "pronunciation": "GROUP mein DAAL de, SAB ko pa-TA cha-LE"
+    }
   ],
   "grammar_notes": [
     "Future tense: verb root + unga/ega/ogi/enge etc. 'Main jaunga' = I will go (male). 'Main jaungi' = I will go (female).",
-    "'Chalein?' = shall we go? — the '-ein' ending makes it a suggestion for 'we'. Very useful for proposing plans.",
+    "'Chalein?' = shall we go?, the '-ein' ending makes it a suggestion for 'we'. Very useful for proposing plans.",
     "'Baje' = o'clock. 'Saat baje' = at 7. 'Kitne baje?' = what time? 'Saadhe' = half past (saadhe saat = 7:30).",
     "'Mat' before a verb = don't. 'Mat karo' = don't do. 'Mat ja' = don't go. 'Late mat hona' = don't be late.",
-    "'Dekhte hain' literally means 'let's see' but culturally means 'probably not happening' — learn to read this cue."
+    "'Dekhte hain' literally means 'let's see' but culturally means 'probably not happening', learn to read this cue."
   ],
   "culture_notes": [
-    "Plans in India are fluid — 'pakka' (confirmed) vs 'dekhte hain' (let's see = probably no). If someone says 'dekhte hain', don't count on them.",
-    "Being 15-30 min late is culturally normal among friends — but everyone complains about it anyway.",
-    "WhatsApp group is where all plans happen — 'group mein daal do' is how you broadcast any plan.",
-    "Indian plans often materialize last-minute — people who said no suddenly show up, and vice versa."
+    "Plans in India are fluid, 'pakka' (confirmed) vs 'dekhte hain' (let's see = probably no). If someone says 'dekhte hain', don't count on them.",
+    "Being 15-30 min late is culturally normal among friends, but everyone complains about it anyway.",
+    "WhatsApp group is where all plans happen, 'group mein daal do' is how you broadcast any plan.",
+    "Indian plans often materialize last-minute, people who said no suddenly show up, and vice versa."
   ],
   "skill_breakdown": [
     {
       "skill": "future tense (ga/ge/gi)",
       "explanation": "Verb root + suffixes based on gender/person. 'Main' (I, M): -unga (jaunga). 'Main' (I, F): -ungi (jaungi). 'Tu/woh' (he, M): -ega (jayega). 'Tu/woh' (she, F): -egi (jayegi). 'Tum' (you, M): -oge (jaoge). 'Tum' (you, F): -ogi (jaogi). 'Hum/aap/woh-plural': -enge (jayenge). Add 'hi' for emphasis: 'aa hi jaunga' = will DEFINITELY come.",
       "more_examples": [
-        { "hindi": "kal main call karunga", "english": "I'll call tomorrow (male)" },
-        { "hindi": "woh aayegi kya?", "english": "will she come?" },
-        { "hindi": "hum sab chalenge", "english": "we'll all go" },
-        { "hindi": "tum kab aaoge?", "english": "when will you come?" },
-        { "hindi": "main late ho jaunga shayad", "english": "I might get late" }
+        {
+          "hindi": "kal main call karunga",
+          "english": "I'll call tomorrow (male)"
+        },
+        {
+          "hindi": "woh aayegi kya?",
+          "english": "will she come?"
+        },
+        {
+          "hindi": "hum sab chalenge",
+          "english": "we'll all go"
+        },
+        {
+          "hindi": "tum kab aaoge?",
+          "english": "when will you come?"
+        },
+        {
+          "hindi": "main late ho jaunga shayad",
+          "english": "I might get late"
+        }
       ]
     },
     {
       "skill": "conditional (agar...toh)",
       "explanation": "'Agar' = if, 'toh' = then. Structure: agar + condition + toh + result. 'Toh' is often dropped in casual speech. You can also skip 'agar' and just use 'toh': 'time ho toh bata dena' = if you have time, tell me.",
       "more_examples": [
-        { "hindi": "agar baarish hui toh cancel", "english": "if it rains then cancelled" },
-        { "hindi": "time ho toh bata dena", "english": "if you have time then let me know" },
-        { "hindi": "mood ho toh aa jaana", "english": "if you feel like it then come over" },
-        { "hindi": "agar woh nahi aaya toh hum bhi nahi jayenge", "english": "if he doesn't come then we won't go either" },
-        { "hindi": "paisa ho toh treat de de", "english": "if you have money then give a treat" }
+        {
+          "hindi": "agar baarish hui toh cancel",
+          "english": "if it rains then cancelled"
+        },
+        {
+          "hindi": "time ho toh bata dena",
+          "english": "if you have time then let me know"
+        },
+        {
+          "hindi": "mood ho toh aa jaana",
+          "english": "if you feel like it then come over"
+        },
+        {
+          "hindi": "agar woh nahi aaya toh hum bhi nahi jayenge",
+          "english": "if he doesn't come then we won't go either"
+        },
+        {
+          "hindi": "paisa ho toh treat de de",
+          "english": "if you have money then give a treat"
+        }
       ]
     },
     {
       "skill": "suggestions & invitations",
-      "explanation": "'Chalein?' (shall we go?), 'karte hain' (let's do it), 'aa jao' (come over), 'chalo' (let's go/come on). These are the building blocks of all plans. 'Aa jao na' is the warmest invitation — casual, insistent, friendly.",
+      "explanation": "'Chalein?' (shall we go?), 'karte hain' (let's do it), 'aa jao' (come over), 'chalo' (let's go/come on). These are the building blocks of all plans. 'Aa jao na' is the warmest invitation, casual, insistent, friendly.",
       "more_examples": [
-        { "hindi": "movie dekhein?", "english": "shall we watch a movie?" },
-        { "hindi": "ghar pe aao, kuch khate hain", "english": "come home, let's eat something" },
-        { "hindi": "chalo yaar, ho jayega", "english": "come on dude, it'll work out" },
-        { "hindi": "plan bana lete hain pakka wala", "english": "let's make a confirmed plan" },
-        { "hindi": "tum bhi chalo na, maza aayega", "english": "you come too, it'll be fun" }
+        {
+          "hindi": "movie dekhein?",
+          "english": "shall we watch a movie?"
+        },
+        {
+          "hindi": "ghar pe aao, kuch khate hain",
+          "english": "come home, let's eat something"
+        },
+        {
+          "hindi": "chalo yaar, ho jayega",
+          "english": "come on dude, it'll work out"
+        },
+        {
+          "hindi": "plan bana lete hain pakka wala",
+          "english": "let's make a confirmed plan"
+        },
+        {
+          "hindi": "tum bhi chalo na, maza aayega",
+          "english": "you come too, it'll be fun"
+        }
       ]
     }
   ],
-  "practice_prompt": "You are the user's friend in a WhatsApp-style chat. It's Friday evening. You're making weekend plans together but slightly non-committal at first — the user has to push to lock in something concrete. Use 'tum' (close friend register), code-mix English naturally ('plan', 'mood', 'group', 'cancel'), keep messages short and chat-like. Open with 'yaar weekend pe kya plan hai? kuch karte hain Saturday ko?'. For 2-3 turns stay vague — 'pata nahin yaar', 'dekhte hain', 'mood pe depend karta hai'. When the user proposes something concrete (cafe / movie / park), warm up — get curious ('kaunsa cafe?'), counter with 'agar...toh' ('agar baarish hui toh cancel haan?'), propose times in future tense ('main 7 baje aa jaunga'). Over 6-8 turns build to a locked plan with a meeting point + time, end with 'pakka? deal!' and a final detail like 'group mein daal deta hoon'. Flag user mistakes inline with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] — watch for wrong gender on -ga/-gi/-ge, 'agar' clauses missing 'toh', and English word order. Stay in Hindi unless the user switches first."
+  "practice_prompt": "You are the user's friend in a WhatsApp-style chat. It's Friday evening. You're making weekend plans together but slightly non-committal at first, the user has to push to lock in something concrete. Use 'tum' (close friend register), code-mix English naturally ('plan', 'mood', 'group', 'cancel'), keep messages short and chat-like. Open with 'yaar weekend pe kya plan hai? kuch karte hain Saturday ko?'. For 2-3 turns stay vague, 'pata nahin yaar', 'dekhte hain', 'mood pe depend karta hai'. When the user proposes something concrete (cafe / movie / park), warm up, get curious ('kaunsa cafe?'), counter with 'agar...toh' ('agar baarish hui toh cancel haan?'), propose times in future tense ('main 7 baje aa jaunga'). Over 6-8 turns build to a locked plan with a meeting point + time, end with 'pakka? deal!' and a final detail like 'group mein daal deta hoon'. Flag user mistakes inline with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]], watch for wrong gender on -ga/-gi/-ge, 'agar' clauses missing 'toh', and English word order. Stay in Hindi unless the user switches first."
 }

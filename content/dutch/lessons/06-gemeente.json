@@ -2,22 +2,77 @@
   "id": "dutch-gemeente",
   "title": "At the Gemeente",
   "situation": "You've recently moved to a new city in the Netherlands and need to register your address (BRP-inschrijving) at the gemeente. You arrive at the loket with your paspoort, huurcontract, and a printout of your appointment confirmation.",
-  "skills": ["formal 'u' register", "scheduling and rescheduling appointments", "official-document vocabulary", "explaining your reason for visiting"],
+  "skills": [
+    "formal 'u' register",
+    "scheduling and rescheduling appointments",
+    "official-document vocabulary",
+    "explaining your reason for visiting"
+  ],
   "phrases": [
-    { "hindi": "Goedemorgen, ik heb een afspraak om half tien.", "english": "Good morning, I have an appointment at half past nine.", "context": "Standard opening at any gemeente loket. 'half tien' = 9:30 (Dutch time runs one step ahead: 'half tien' literally means halfway TO ten). Always state your appointment time so the officer can find your slot.", "pronunciation": "HOO-de-MOR-chen, ik hep uhn AF-spraak om HALF teen" },
-    { "hindi": "Ik kom mij inschrijven op een nieuw adres.", "english": "I'm here to register at a new address.", "context": "Most common reason newcomers visit the gemeente. 'inschrijven' = to register (yourself, reflexive: 'mij inschrijven'). The BRP (Basisregistratie Personen) is where your official address lives.", "pronunciation": "ik kom may IN-skray-ven op uhn NYOOW a-DRES" },
-    { "hindi": "Hier zijn mijn paspoort en mijn huurcontract.", "english": "Here are my passport and my rental contract.", "context": "You'll need both. The gemeente wants proof of identity AND proof you actually live at the address. 'huurcontract' = rental contract. If you own, bring 'koopakte'.", "pronunciation": "heer zayn mayn PAS-poort en mayn HEUR-kon-trakt" },
-    { "hindi": "Kunt u mij vertellen wat ik nog meer nodig heb?", "english": "Could you tell me what else I need?", "context": "Polite way to ask about additional documents. 'wat ik nog meer nodig heb' = literally 'what I still more need have' — Dutch word order in subordinate clauses puts the verb at the end. Useful B1 grammar.", "pronunciation": "KUNT u may ver-TEL-len wat ik noch meer NO-dich hep" },
-    { "hindi": "Mijn BSN heb ik nog niet gekregen — kan ik die hier aanvragen?", "english": "I haven't received my BSN yet — can I apply for one here?", "context": "Common situation. BSN (burgerservicenummer) is issued AFTER inschrijving for non-EU residents. The gemeente issues it on the spot once you're registered. 'aanvragen' = to apply for.", "pronunciation": "mayn bay-es-EN hep ik noch neet che-KRAY-chen — kan ik dee heer AAN-vraa-chen" },
-    { "hindi": "Hoeveel weken duurt het voordat ik mijn pasje krijg?", "english": "How many weeks until I receive my card?", "context": "Many gemeente services issue cards by post: BSN-brief, DigiD-activatiecode, rijbewijs. 'voordat' = before (subordinating conjunction; sends the verb to the end). Useful to know processing time so you can plan.", "pronunciation": "hoo-FEEL WAY-ken DEURT het VOOR-dat ik mayn PASH-ye KRAYCH" },
-    { "hindi": "Sorry, ik begrijp u niet helemaal. Kunt u dat herhalen?", "english": "Sorry, I don't quite understand. Could you repeat that?", "context": "Essential phrase for any formal Dutch interaction. 'Ik begrijp u niet helemaal' = I don't fully understand you. 'herhalen' = to repeat. Never pretend to understand — gemeente officers will rephrase happily.", "pronunciation": "SOR-ry, ik be-CHRAYP u neet HAY-le-maal. KUNT u dat her-HAA-len" },
-    { "hindi": "Wat kost het om mijn adres door te geven?", "english": "What does it cost to update my address?", "context": "Address changes are typically free at the gemeente; some other services have fees. 'doorgeven' = to pass on / forward. Asking the price up front is normal.", "pronunciation": "wat KOST het om mayn a-DRES DOOR te CHAY-ven" },
-    { "hindi": "Ik wil mijn afspraak verzetten naar volgende week.", "english": "I'd like to reschedule my appointment to next week.", "context": "'verzetten' = to move/reschedule. You can do this at the desk, by phone, or online. 'volgende week' = next week. The gemeente is flexible if you give advance notice.", "pronunciation": "ik wil mayn AF-spraak ver-ZET-ten naar VOL-chen-de WAYK" },
-    { "hindi": "Bedankt voor uw hulp. Een fijne dag verder.", "english": "Thanks for your help. Have a nice rest of the day.", "context": "Standard closing. 'fijne dag verder' = nice rest of your day — the universal Dutch sign-off in any service interaction. Officer typically replies 'u ook' (you too).", "pronunciation": "be-DANKT voor uw HULP. uhn FAY-ne DACH VER-der" }
+    {
+      "hindi": "Goedemorgen, ik heb een afspraak om half tien.",
+      "english": "Good morning, I have an appointment at half past nine.",
+      "context": "Standard opening at any gemeente loket. 'half tien' = 9:30 (Dutch time runs one step ahead: 'half tien' literally means halfway TO ten). Always state your appointment time so the officer can find your slot.",
+      "pronunciation": "HOO-de-MOR-chen, ik hep uhn AF-spraak om HALF teen"
+    },
+    {
+      "hindi": "Ik kom mij inschrijven op een nieuw adres.",
+      "english": "I'm here to register at a new address.",
+      "context": "Most common reason newcomers visit the gemeente. 'inschrijven' = to register (yourself, reflexive: 'mij inschrijven'). The BRP (Basisregistratie Personen) is where your official address lives.",
+      "pronunciation": "ik kom may IN-skray-ven op uhn NYOOW a-DRES"
+    },
+    {
+      "hindi": "Hier zijn mijn paspoort en mijn huurcontract.",
+      "english": "Here are my passport and my rental contract.",
+      "context": "You'll need both. The gemeente wants proof of identity AND proof you actually live at the address. 'huurcontract' = rental contract. If you own, bring 'koopakte'.",
+      "pronunciation": "heer zayn mayn PAS-poort en mayn HEUR-kon-trakt"
+    },
+    {
+      "hindi": "Kunt u mij vertellen wat ik nog meer nodig heb?",
+      "english": "Could you tell me what else I need?",
+      "context": "Polite way to ask about additional documents. 'wat ik nog meer nodig heb' = literally 'what I still more need have', Dutch word order in subordinate clauses puts the verb at the end. Useful B1 grammar.",
+      "pronunciation": "KUNT u may ver-TEL-len wat ik noch meer NO-dich hep"
+    },
+    {
+      "hindi": "Mijn BSN heb ik nog niet gekregen, kan ik die hier aanvragen?",
+      "english": "I haven't received my BSN yet, can I apply for one here?",
+      "context": "Common situation. BSN (burgerservicenummer) is issued AFTER inschrijving for non-EU residents. The gemeente issues it on the spot once you're registered. 'aanvragen' = to apply for.",
+      "pronunciation": "mayn bay-es-EN hep ik noch neet che-KRAY-chen, kan ik dee heer AAN-vraa-chen"
+    },
+    {
+      "hindi": "Hoeveel weken duurt het voordat ik mijn pasje krijg?",
+      "english": "How many weeks until I receive my card?",
+      "context": "Many gemeente services issue cards by post: BSN-brief, DigiD-activatiecode, rijbewijs. 'voordat' = before (subordinating conjunction; sends the verb to the end). Useful to know processing time so you can plan.",
+      "pronunciation": "hoo-FEEL WAY-ken DEURT het VOOR-dat ik mayn PASH-ye KRAYCH"
+    },
+    {
+      "hindi": "Sorry, ik begrijp u niet helemaal. Kunt u dat herhalen?",
+      "english": "Sorry, I don't quite understand. Could you repeat that?",
+      "context": "Essential phrase for any formal Dutch interaction. 'Ik begrijp u niet helemaal' = I don't fully understand you. 'herhalen' = to repeat. Never pretend to understand, gemeente officers will rephrase happily.",
+      "pronunciation": "SOR-ry, ik be-CHRAYP u neet HAY-le-maal. KUNT u dat her-HAA-len"
+    },
+    {
+      "hindi": "Wat kost het om mijn adres door te geven?",
+      "english": "What does it cost to update my address?",
+      "context": "Address changes are typically free at the gemeente; some other services have fees. 'doorgeven' = to pass on / forward. Asking the price up front is normal.",
+      "pronunciation": "wat KOST het om mayn a-DRES DOOR te CHAY-ven"
+    },
+    {
+      "hindi": "Ik wil mijn afspraak verzetten naar volgende week.",
+      "english": "I'd like to reschedule my appointment to next week.",
+      "context": "'verzetten' = to move/reschedule. You can do this at the desk, by phone, or online. 'volgende week' = next week. The gemeente is flexible if you give advance notice.",
+      "pronunciation": "ik wil mayn AF-spraak ver-ZET-ten naar VOL-chen-de WAYK"
+    },
+    {
+      "hindi": "Bedankt voor uw hulp. Een fijne dag verder.",
+      "english": "Thanks for your help. Have a nice rest of the day.",
+      "context": "Standard closing. 'fijne dag verder' = nice rest of your day, the universal Dutch sign-off in any service interaction. Officer typically replies 'u ook' (you too).",
+      "pronunciation": "be-DANKT voor uw HULP. uhn FAY-ne DACH VER-der"
+    }
   ],
   "grammar_notes": [
     "Formal 'u' register is mandatory in all gemeente interactions. 'Kunt u...?' (could you), 'Heeft u...?' (do you have), 'Wilt u...?' (do you want)",
-    "Reflexive verbs for self-actions: 'mij inschrijven' (register myself), 'mij aanmelden' (sign myself up). Reflexive pronoun matches subject — 'mij' / 'zich' / 'u zich'",
+    "Reflexive verbs for self-actions: 'mij inschrijven' (register myself), 'mij aanmelden' (sign myself up). Reflexive pronoun matches subject, 'mij' / 'zich' / 'u zich'",
     "Subordinate-clause word order: in clauses starting with 'dat', 'wat', 'als', 'omdat', the verb moves to the END. 'wat ik nog meer nodig heb' (lit: what I still more need have)",
     "Modal `kunnen` for polite requests: 'Kunt u dat herhalen?' is more polite than 'Herhaal alstublieft' (which is an imperative)",
     "Time-telling oddity: Dutch counts half hours backwards. 'half tien' = 9:30, 'half elf' = 10:30, etc. Always one hour earlier than English instinct"
@@ -25,41 +80,74 @@
   "culture_notes": [
     "Almost all gemeente services require an online appointment booked in advance. Walking in without one usually means being sent away. Use the gemeente website (e.g. amsterdam.nl) to book",
     "Bring originals AND copies of your documents. Some loketten will keep a copy; others just check. Either way, having copies saves trips",
-    "Dutch officials are direct and efficient — small talk is brief. Get to the point quickly with 'Ik kom voor...'. They appreciate clarity, not chatty preamble",
+    "Dutch officials are direct and efficient, small talk is brief. Get to the point quickly with 'Ik kom voor...'. They appreciate clarity, not chatty preamble",
     "If your Dutch isn't strong yet, most gemeente officers will switch to English when asked politely. But starting in Dutch wins goodwill"
   ],
   "skill_breakdown": [
     {
       "skill": "formal 'u' register",
-      "explanation": "All gemeente interactions use 'u'. The verbs match 'u' (kunt, heeft, wilt — same as 'hij/zij' form). Mixing in 'jij/je' here sounds disrespectful or naive.",
+      "explanation": "All gemeente interactions use 'u'. The verbs match 'u' (kunt, heeft, wilt, same as 'hij/zij' form). Mixing in 'jij/je' here sounds disrespectful or naive.",
       "more_examples": [
-        { "hindi": "Kunt u mij helpen?", "english": "Could you help me?" },
-        { "hindi": "Heeft u mijn paspoort gezien?", "english": "Have you seen my passport?" },
-        { "hindi": "Wilt u dit formulier invullen?", "english": "Would you fill out this form?" },
-        { "hindi": "Mag ik even uw legitimatiebewijs zien?", "english": "May I see your ID for a moment?" }
+        {
+          "hindi": "Kunt u mij helpen?",
+          "english": "Could you help me?"
+        },
+        {
+          "hindi": "Heeft u mijn paspoort gezien?",
+          "english": "Have you seen my passport?"
+        },
+        {
+          "hindi": "Wilt u dit formulier invullen?",
+          "english": "Would you fill out this form?"
+        },
+        {
+          "hindi": "Mag ik even uw legitimatiebewijs zien?",
+          "english": "May I see your ID for a moment?"
+        }
       ]
     },
     {
       "skill": "scheduling and rescheduling appointments",
       "explanation": "Use 'afspraak maken' (make an appointment), 'verzetten' (reschedule), 'afzeggen' (cancel). The gemeente prefers online booking but will accept rescheduling at the desk.",
       "more_examples": [
-        { "hindi": "Ik wil een afspraak maken voor volgende week.", "english": "I'd like to make an appointment for next week." },
-        { "hindi": "Kan ik mijn afspraak verzetten?", "english": "Can I reschedule my appointment?" },
-        { "hindi": "Ik moet helaas afzeggen.", "english": "Unfortunately I have to cancel." }
+        {
+          "hindi": "Ik wil een afspraak maken voor volgende week.",
+          "english": "I'd like to make an appointment for next week."
+        },
+        {
+          "hindi": "Kan ik mijn afspraak verzetten?",
+          "english": "Can I reschedule my appointment?"
+        },
+        {
+          "hindi": "Ik moet helaas afzeggen.",
+          "english": "Unfortunately I have to cancel."
+        }
       ]
     },
     {
       "skill": "official-document vocabulary",
       "explanation": "Key terms you'll hear repeatedly: paspoort, identiteitskaart (ID), rijbewijs (driver's licence), huurcontract, BSN, DigiD, BRP-uittreksel, verklaring.",
       "more_examples": [
-        { "hindi": "Heeft u een geldig legitimatiebewijs bij u?", "english": "Do you have a valid ID with you?" },
-        { "hindi": "Ik heb een BRP-uittreksel nodig voor mijn werk.", "english": "I need a BRP-extract for my work." },
-        { "hindi": "Kunt u een verklaring afgeven dat ik hier woon?", "english": "Can you issue a statement that I live here?" }
+        {
+          "hindi": "Heeft u een geldig legitimatiebewijs bij u?",
+          "english": "Do you have a valid ID with you?"
+        },
+        {
+          "hindi": "Ik heb een BRP-uittreksel nodig voor mijn werk.",
+          "english": "I need a BRP-extract for my work."
+        },
+        {
+          "hindi": "Kunt u een verklaring afgeven dat ik hier woon?",
+          "english": "Can you issue a statement that I live here?"
+        }
       ]
     }
   ],
   "practice_prompt": "You are a Dutch gemeente officer at the loket. The user has just walked in for an appointment. Use formal 'u' register throughout. Ask why they're there, then ask for the documents they should have brought (paspoort, huurcontract). Correct gently if the user slips into informal 'je'. If the user makes a B1-level grammar mistake (wrong word order in a subordinate clause, missing article, wrong verb form), point it out kindly with the correction. Open with: 'Goedemorgen, waar kan ik u mee helpen?'",
-  "references": ["rijksoverheid.nl style", "Naar Nederland Ch. 3"],
+  "references": [
+    "rijksoverheid.nl style",
+    "Naar Nederland Ch. 3"
+  ],
   "level": "A2",
   "exam_targeted": true
 }

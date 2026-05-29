@@ -2,72 +2,171 @@
   "id": "home-visit",
   "title": "Visiting Someone's Home",
   "situation": "You're visiting your friend's parents in Lucknow for the first time. They've invited you for tea and snacks.",
-  "skills": ["polite imperatives (-iye/-iyega)", "hospitality phrases", "respectful address (aap, ji)"],
+  "skills": [
+    "polite imperatives (-iye/-iyega)",
+    "hospitality phrases",
+    "respectful address (aap, ji)"
+  ],
   "phrases": [
-    { "hindi": "namaste aunty ji, kaise hain aap?", "english": "Namaste aunty, how are you?", "context": "'aunty/uncle' + 'ji' is how you address friends' parents — never use first names. 'ji' adds respect to any name or title.", "pronunciation": "na-mas-TE AUN-ty ji, KAI-se hain AAP?" },
-    { "hindi": "yeh chhota sa gift hai, aapke liye laaya hoon", "english": "Here's a small gift, I brought it for you", "context": "Always bring something — sweets, fruit, or flowers. 'chhota sa' (just a small thing) downplays the gift, a polite Indian convention.", "pronunciation": "YEH chho-TA sa GIFT hai, AAP-ke li-YE LAA-ya hoon" },
-    { "hindi": "joote yahin utaar dun?", "english": "Should I take off my shoes here?", "context": "Asking shows you know the custom. Shoes always come off before entering — outside the door or in a small entry area.", "pronunciation": "JOO-te ya-HIN u-TAAR doon?" },
-    { "hindi": "aaiye, baithiye — chai chadha rahi hoon", "english": "Come, sit — I'm putting the tea on", "context": "What the host says. 'chai chadhaana' literally = put tea up — to start brewing. Refusing chai is almost rude.", "pronunciation": "AA-iye, BAI-thi-ye — CHAI cha-DHA ra-HI hoon" },
-    { "hindi": "bas paani chalega, takleef mat kijiye", "english": "Just water is fine, please don't go to any trouble", "context": "Standard polite-refusal opener — you'll be ignored, but it's the courteous move. 'takleef' = trouble/inconvenience.", "pronunciation": "BAS paa-NI cha-LE-ga, tak-LEEF mat KI-ji-ye" },
-    { "hindi": "arre, thoda thoda toh lijiye, khaas aapke liye banaaya hai", "english": "Oh come on, have a little at least, I made it specially for you", "context": "The host's insistence move — guaranteed to happen. 'thoda thoda' (just a little) makes refusal harder. You should give in.", "pronunciation": "AR-re, tho-DA tho-DA toh LI-ji-ye, KHAAS AAP-ke li-YE ba-NAA-ya hai" },
-    { "hindi": "bahut tasty hai, aapke haath mein toh jaadu hai", "english": "It's so tasty, you've got magic in your hands", "context": "'haath mein jaadu' (magic in your hands) is the highest compliment to a cook. Always compliment — host fishes for it.", "pronunciation": "ba-HUT TASTY hai, AAP-ke HAATH mein toh JAA-du hai" },
-    { "hindi": "bas ji, ab nahi — pet bhar gaya sach mein", "english": "That's enough, no more — I'm actually full", "context": "'bas ji' = enough please. 'sach mein' (truly) — you need to swear you're full, otherwise they'll keep loading your plate.", "pronunciation": "BAS ji, AB na-HI — PET bhar GA-ya SACH mein" },
-    { "hindi": "ab chalta hoon, der ho rahi hai", "english": "I'll head off now, it's getting late", "context": "Polite exit. 'chalta/chalti hoon' literally = I'm walking. Standard Indian goodbye when leaving someone's home.", "pronunciation": "AB chal-TA hoon, DER ho ra-HI hai" },
-    { "hindi": "zaroor aaiyega phir se, ghar apna hi samjhiye", "english": "Definitely come again, treat this home as your own", "context": "What the host says on goodbye. 'ghar apna hi samjhiye' = consider this house yours — the warmest Indian goodbye.", "pronunciation": "za-ROOR aa-IYE-ga PHIR se, GHAR AP-na hi sam-JHI-ye" }
+    {
+      "hindi": "namaste aunty ji, kaise hain aap?",
+      "english": "Namaste aunty, how are you?",
+      "context": "'aunty/uncle' + 'ji' is how you address friends' parents, never use first names. 'ji' adds respect to any name or title.",
+      "pronunciation": "na-mas-TE AUN-ty ji, KAI-se hain AAP?"
+    },
+    {
+      "hindi": "yeh chhota sa gift hai, aapke liye laaya hoon",
+      "english": "Here's a small gift, I brought it for you",
+      "context": "Always bring something, sweets, fruit, or flowers. 'chhota sa' (just a small thing) downplays the gift, a polite Indian convention.",
+      "pronunciation": "YEH chho-TA sa GIFT hai, AAP-ke li-YE LAA-ya hoon"
+    },
+    {
+      "hindi": "joote yahin utaar dun?",
+      "english": "Should I take off my shoes here?",
+      "context": "Asking shows you know the custom. Shoes always come off before entering, outside the door or in a small entry area.",
+      "pronunciation": "JOO-te ya-HIN u-TAAR doon?"
+    },
+    {
+      "hindi": "aaiye, baithiye, chai chadha rahi hoon",
+      "english": "Come, sit, I'm putting the tea on",
+      "context": "What the host says. 'chai chadhaana' literally = put tea up, to start brewing. Refusing chai is almost rude.",
+      "pronunciation": "AA-iye, BAI-thi-ye, CHAI cha-DHA ra-HI hoon"
+    },
+    {
+      "hindi": "bas paani chalega, takleef mat kijiye",
+      "english": "Just water is fine, please don't go to any trouble",
+      "context": "Standard polite-refusal opener, you'll be ignored, but it's the courteous move. 'takleef' = trouble/inconvenience.",
+      "pronunciation": "BAS paa-NI cha-LE-ga, tak-LEEF mat KI-ji-ye"
+    },
+    {
+      "hindi": "arre, thoda thoda toh lijiye, khaas aapke liye banaaya hai",
+      "english": "Oh come on, have a little at least, I made it specially for you",
+      "context": "The host's insistence move, guaranteed to happen. 'thoda thoda' (just a little) makes refusal harder. You should give in.",
+      "pronunciation": "AR-re, tho-DA tho-DA toh LI-ji-ye, KHAAS AAP-ke li-YE ba-NAA-ya hai"
+    },
+    {
+      "hindi": "bahut tasty hai, aapke haath mein toh jaadu hai",
+      "english": "It's so tasty, you've got magic in your hands",
+      "context": "'haath mein jaadu' (magic in your hands) is the highest compliment to a cook. Always compliment, host fishes for it.",
+      "pronunciation": "ba-HUT TASTY hai, AAP-ke HAATH mein toh JAA-du hai"
+    },
+    {
+      "hindi": "bas ji, ab nahi, pet bhar gaya sach mein",
+      "english": "That's enough, no more, I'm actually full",
+      "context": "'bas ji' = enough please. 'sach mein' (truly), you need to swear you're full, otherwise they'll keep loading your plate.",
+      "pronunciation": "BAS ji, AB na-HI, PET bhar GA-ya SACH mein"
+    },
+    {
+      "hindi": "ab chalta hoon, der ho rahi hai",
+      "english": "I'll head off now, it's getting late",
+      "context": "Polite exit. 'chalta/chalti hoon' literally = I'm walking. Standard Indian goodbye when leaving someone's home.",
+      "pronunciation": "AB chal-TA hoon, DER ho ra-HI hai"
+    },
+    {
+      "hindi": "zaroor aaiyega phir se, ghar apna hi samjhiye",
+      "english": "Definitely come again, treat this home as your own",
+      "context": "What the host says on goodbye. 'ghar apna hi samjhiye' = consider this house yours, the warmest Indian goodbye.",
+      "pronunciation": "za-ROOR aa-IYE-ga PHIR se, GHAR AP-na hi sam-JHI-ye"
+    }
   ],
   "grammar_notes": [
-    "Polite imperative '-iye' (e.g., baithiye = please sit, lijiye = please take) is the 'aap' form of commands — always use with elders and friends' parents",
+    "Polite imperative '-iye' (e.g., baithiye = please sit, lijiye = please take) is the 'aap' form of commands, always use with elders and friends' parents",
     "'-iyega' adds even more politeness/futurity: 'aaiyega' = please do come (future polite). Use it when inviting someone back",
-    "'ji' is a universal respect marker — attach to anyone's name or title (uncle ji, Sharma ji, didi ji). Never optional with elders",
+    "'ji' is a universal respect marker, attach to anyone's name or title (uncle ji, Sharma ji, didi ji). Never optional with elders",
     "Compound verbs of completion: 'utaar dena' (take off completely), 'kha lena' (eat up), 'pi lena' (drink up). The second verb adds finality/politeness",
-    "Reduplication softens commands: 'thoda thoda lijiye' (have just a little) is gentler than 'lijiye' (take it). Same with 'jaldi jaldi' (quickly) — the doubled form is friendlier"
+    "Reduplication softens commands: 'thoda thoda lijiye' (have just a little) is gentler than 'lijiye' (take it). Same with 'jaldi jaldi' (quickly), the doubled form is friendlier"
   ],
   "culture_notes": [
-    "Always bring something — mithai (sweets), fruit, or flowers. Showing up empty-handed signals you don't know the etiquette",
-    "Touching the feet (charan-sparsh) of older relatives or very senior elders is traditional. They'll bless you with 'jeete raho' (live long). Skip with strangers' parents — namaste is fine",
-    "Refusing food/drink the first time is the polite default — the host will insist, then you accept. Refusing completely can offend",
+    "Always bring something, mithai (sweets), fruit, or flowers. Showing up empty-handed signals you don't know the etiquette",
+    "Touching the feet (charan-sparsh) of older relatives or very senior elders is traditional. They'll bless you with 'jeete raho' (live long). Skip with strangers' parents, namaste is fine",
+    "Refusing food/drink the first time is the polite default, the host will insist, then you accept. Refusing completely can offend",
     "Praising the cook explicitly is expected, not optional. 'Aunty ji, kya banaya hai!' (what a dish you've made!) lands well",
     "When you say 'ab chalta hoon' (I'll leave now), expect 15-30 more minutes of conversation before you actually leave"
   ],
   "skill_breakdown": [
     {
       "skill": "polite imperatives (-iye/-iyega)",
-      "explanation": "The 'aap' form of commands. Take any verb stem and add '-iye' for polite present command or '-iyega' for polite future/invitation. Use with elders, strangers, or anyone you'd call 'aap'. Irregular: lena→lijiye, dena→dijiye, peena→pijiye, karna→kijiye.",
+      "explanation": "The 'aap' form of commands. Take any verb stem and add '-iye' for polite present command or '-iyega' for polite future/invitation. Use with elders, strangers, or anyone you'd call 'aap'. Irregular: lena / lijiye, dena / dijiye, peena / pijiye, karna / kijiye.",
       "more_examples": [
-        { "hindi": "andar aaiye", "english": "please come inside" },
-        { "hindi": "thoda intezaar kijiye", "english": "please wait a moment" },
-        { "hindi": "mujhe ek glass paani dijiye", "english": "please give me a glass of water" },
-        { "hindi": "phir milte hain, dhyaan rakhiyega", "english": "see you again, please take care" },
-        { "hindi": "khaana khaa ke jaiyega", "english": "please eat before you leave" }
+        {
+          "hindi": "andar aaiye",
+          "english": "please come inside"
+        },
+        {
+          "hindi": "thoda intezaar kijiye",
+          "english": "please wait a moment"
+        },
+        {
+          "hindi": "mujhe ek glass paani dijiye",
+          "english": "please give me a glass of water"
+        },
+        {
+          "hindi": "phir milte hain, dhyaan rakhiyega",
+          "english": "see you again, please take care"
+        },
+        {
+          "hindi": "khaana khaa ke jaiyega",
+          "english": "please eat before you leave"
+        }
       ]
     },
     {
       "skill": "hospitality phrases",
-      "explanation": "Hindi hospitality follows a script: greeting → seating → offering → insisting → praising → leaving. Master these phrases and you can navigate any home visit with grace.",
+      "explanation": "Hindi hospitality follows a script: greeting / seating / offering / insisting / praising / leaving. Master these phrases and you can navigate any home visit with grace.",
       "more_examples": [
-        { "hindi": "tashreef rakhiye", "english": "please be seated (formal/Urdu-flavored)" },
-        { "hindi": "kuch lenge aap? chai ya coffee?", "english": "will you have something? tea or coffee?" },
-        { "hindi": "bilkul ghar jaisa lag raha hai", "english": "it feels just like home (compliment to host)" },
-        { "hindi": "aap ne toh poori dawat kar di", "english": "you've laid out a whole feast" },
-        { "hindi": "kabhi humare ghar bhi aaiye", "english": "do come to our home sometime too" }
+        {
+          "hindi": "tashreef rakhiye",
+          "english": "please be seated (formal/Urdu-flavored)"
+        },
+        {
+          "hindi": "kuch lenge aap? chai ya coffee?",
+          "english": "will you have something? tea or coffee?"
+        },
+        {
+          "hindi": "bilkul ghar jaisa lag raha hai",
+          "english": "it feels just like home (compliment to host)"
+        },
+        {
+          "hindi": "aap ne toh poori dawat kar di",
+          "english": "you've laid out a whole feast"
+        },
+        {
+          "hindi": "kabhi humare ghar bhi aaiye",
+          "english": "do come to our home sometime too"
+        }
       ]
     },
     {
       "skill": "respectful address (aap, ji)",
-      "explanation": "'Aap' is the formal/respectful 'you' — always use with friends' parents, anyone older, or strangers. 'Ji' is a respect particle: attach to names (Sharma ji), titles (uncle ji), or use alone (ji haan = yes-respectful, ji nahi = no-respectful). When in doubt, default to aap + ji.",
+      "explanation": "'Aap' is the formal/respectful 'you', always use with friends' parents, anyone older, or strangers. 'Ji' is a respect particle: attach to names (Sharma ji), titles (uncle ji), or use alone (ji haan = yes-respectful, ji nahi = no-respectful). When in doubt, default to aap + ji.",
       "more_examples": [
-        { "hindi": "ji haan, bilkul", "english": "yes, absolutely (respectful)" },
-        { "hindi": "Sharma ji, aap kaise hain?", "english": "Mr/Mrs Sharma, how are you?" },
-        { "hindi": "aapka naam kya hai?", "english": "what is your name? (respectful)" },
-        { "hindi": "ji, main samjha", "english": "yes, I understood (respectful)" },
-        { "hindi": "uncle ji, yeh aapke liye", "english": "uncle, this is for you" }
+        {
+          "hindi": "ji haan, bilkul",
+          "english": "yes, absolutely (respectful)"
+        },
+        {
+          "hindi": "Sharma ji, aap kaise hain?",
+          "english": "Mr/Mrs Sharma, how are you?"
+        },
+        {
+          "hindi": "aapka naam kya hai?",
+          "english": "what is your name? (respectful)"
+        },
+        {
+          "hindi": "ji, main samjha",
+          "english": "yes, I understood (respectful)"
+        },
+        {
+          "hindi": "uncle ji, yeh aapke liye",
+          "english": "uncle, this is for you"
+        }
       ]
     }
   ],
-  "practice_prompt": "You are Rohan's mother, an elderly Lucknow auntie hosting the user at home for the first time — warm, persistent, unstoppably hospitable. Use 'tum' with the user; they must address you as 'aunty ji' and use 'aap' throughout — that register contrast is the lesson. Open with 'aaiye beta, baithiye! pehli baar aaye ho na? main abhi chai banati hoon'. Push chai, samosas, mithai, dinner repeatedly when refused — 'khaa lo na', 'bas thoda sa', 'main bana ke layi hoon'. Ask about their parents ('aapke mummy papa kaise hain?'), studies, job, marriage plans. Deflect compliments ('arre, kuch khaas nahi'); insist on packing leftovers in a dabba. Surface lesson grammar naturally: polite imperatives ('baithiye / lijiye / khaa lijiye'), perfective gender agreement ('chai banaayi hai'), 'ji' respect markers. When the user slips — uses 'karo' for 'kijiye', drops 'ji' on names, accepts food first-try without ritual refusal — flag with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]. Keep it 6-8 turns; walk them to the door with 'phir aana zaroor' and press a dabba into their hand. Stay in Hindi unless asked.",
+  "practice_prompt": "You are Rohan's mother, an elderly Lucknow auntie hosting the user at home for the first time, warm, persistent, unstoppably hospitable. Use 'tum' with the user; they must address you as 'aunty ji' and use 'aap' throughout, that register contrast is the lesson. Open with 'aaiye beta, baithiye! pehli baar aaye ho na? main abhi chai banati hoon'. Push chai, samosas, mithai, dinner repeatedly when refused, 'khaa lo na', 'bas thoda sa', 'main bana ke layi hoon'. Ask about their parents ('aapke mummy papa kaise hain?'), studies, job, marriage plans. Deflect compliments ('arre, kuch khaas nahi'); insist on packing leftovers in a dabba. Surface lesson grammar naturally: polite imperatives ('baithiye / lijiye / khaa lijiye'), perfective gender agreement ('chai banaayi hai'), 'ji' respect markers. When the user slips, uses 'karo' for 'kijiye', drops 'ji' on names, accepts food first-try without ritual refusal, flag with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]. Keep it 6-8 turns; walk them to the door with 'phir aana zaroor' and press a dabba into their hand. Stay in Hindi unless asked.",
   "references": [
-    "Snell & Weightman, 'Teach Yourself Hindi' — Ch. on polite imperatives and the 'aap' register",
-    "Afroz Taj, 'A Door Into Hindi' (UNC) — Module on hospitality and home visits",
-    "McGregor, 'Outline of Hindi Grammar' — Compound verb usage for politeness"
+    "Snell & Weightman, 'Teach Yourself Hindi', Ch. on polite imperatives and the 'aap' register",
+    "Afroz Taj, 'A Door Into Hindi' (UNC), Module on hospitality and home visits",
+    "McGregor, 'Outline of Hindi Grammar', Compound verb usage for politeness"
   ]
 }

@@ -17,7 +17,7 @@
     {
       "hindi": "tu roz school jaata hai / tu roz school jaati hai",
       "english": "You go to school daily (intimate-male) / You go to school daily (intimate-female)",
-      "context": "'tu' = intimate you — VERY informal, used only with very close friends, kids, or in playful contexts. Sounds rude with anyone else. Default to 'aap' or 'tum' instead. Helper verb is 'hai' (same as 'woh').",
+      "context": "'tu' = intimate you, VERY informal, used only with very close friends, kids, or in playful contexts. Sounds rude with anyone else. Default to 'aap' or 'tum' instead. Helper verb is 'hai' (same as 'woh').",
       "pronunciation": "TU roz school jaa-TA hai / TU roz school jaa-TI hai"
     },
     {
@@ -65,7 +65,7 @@
     {
       "hindi": "aap kahan jaate hain subah?",
       "english": "Where do you go in the morning?",
-      "context": "'kahan' = where, 'subah' = morning. Question words don't change the verb form at all. Using 'aap' (respectful) here — the safest default.",
+      "context": "'kahan' = where, 'subah' = morning. Question words don't change the verb form at all. Using 'aap' (respectful) here, the safest default.",
       "pronunciation": "AAP ka-HAAN jaa-TE hain su-BAH?"
     }
   ],
@@ -74,11 +74,11 @@
     "Gender agreement: -ta (male singular), -ti (female singular/plural), -te (male plural or with 'tum/aap'). The gender matches the SUBJECT, not the object",
     "Helper verbs: hoon (I am), hai (he/she/you-tu is), ho (you-tum are), hain (we/they/you-aap are)",
     "Many verbs are compound: noun + karna. 'kaam karna'=work, 'baat karna'=talk, 'pyaar karna'=love, 'intezaar karna'=wait",
-    "For questions: add kya (what), kahan (where), kab (when), kyun (why) — verb form stays the same"
+    "For questions: add kya (what), kahan (where), kab (when), kyun (why), verb form stays the same"
   ],
   "culture_notes": [
-    "Hindi has no 'do/does' helper for questions — you just change intonation or add a question word. 'Tum jaate ho?' with rising tone = 'Do you go?'",
-    "The present tense is used for habits, routines, and general truths — just like English simple present"
+    "Hindi has no 'do/does' helper for questions, you just change intonation or add a question word. 'Tum jaate ho?' with rising tone = 'Do you go?'",
+    "The present tense is used for habits, routines, and general truths, just like English simple present"
   ],
   "skill_breakdown": [
     {
@@ -148,7 +148,7 @@
       ]
     }
   ],
-  "practice_prompt": "You are a Hindi tutor drilling present tense — both habitual (`karta hoon`) and continuous (`kar raha hoon`). Use `aap` (polite tutor register). Open with: `chaliye, ek exercise se shuru karte hain — bataaiye Hindi mein: 'Main har subah chai pita hoon' — kya yeh sahi hai?` Then give ONE prompt at a time — translate a sentence, conjugate a verb for a given pronoun, or describe a scene — and wait for the student's answer before scoring. Mix habitual and continuous across 6-8 escalating drill items: start with simple `main/woh + habit`, then layer in `tum/aap/hum`, then continuous (`kar raha/rahi/rahe hain`), then trip them with the feminine-plural irregularity (`ladkiyaan padh rahi hain`, never `rahe`). Watch for: wrong gender on `-ta/-ti`, mixing habitual with continuous, wrong auxiliary (`hoon/hai/ho/hain`), and English-style present-progressive overuse (`I'm living in Mumbai` → habitual in Hindi). Flag every mistake with `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]`. Stay in Hinglish unless the student asks for English. End with `bahut khoob, aapne theek se kar liya — phir milte hain`.",
+  "practice_prompt": "You are a Hindi tutor drilling present tense, both habitual (`karta hoon`) and continuous (`kar raha hoon`). Use `aap` (polite tutor register). Open with: `chaliye, ek exercise se shuru karte hain, bataaiye Hindi mein: 'Main har subah chai pita hoon', kya yeh sahi hai?` Then give ONE prompt at a time, translate a sentence, conjugate a verb for a given pronoun, or describe a scene, and wait for the student's answer before scoring. Mix habitual and continuous across 6-8 escalating drill items: start with simple `main/woh + habit`, then layer in `tum/aap/hum`, then continuous (`kar raha/rahi/rahe hain`), then trip them with the feminine-plural irregularity (`ladkiyaan padh rahi hain`, never `rahe`). Watch for: wrong gender on `-ta/-ti`, mixing habitual with continuous, wrong auxiliary (`hoon/hai/ho/hain`), and English-style present-progressive overuse (`I'm living in Mumbai` / habitual in Hindi). Flag every mistake with `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]`. Stay in Hinglish unless the student asks for English. End with `bahut khoob, aapne theek se kar liya, phir milte hain`.",
   "theory": {
     "intro": "Hindi has two present tenses, and the one you pick carries meaning. The habitual (`I drink chai`) and the continuous (`I'm drinking chai right now`) use different Hindi verb forms. Use one when you mean the other and you'll confuse the listener. Both forms also agree with the subject's gender, which adds a layer. Once you have both shapes down, present-tense Hindi is mostly mechanical.",
     "sections": [
@@ -169,7 +169,7 @@
         ],
         "callout": {
           "tone": "note",
-          "body": "The English `I drink chai` is ambiguous out of context — it could mean habitually or in-progress. Hindi forces you to pick one. That's a feature, not a bug."
+          "body": "The English `I drink chai` is ambiguous out of context, it could mean habitually or in-progress. Hindi forces you to pick one. That's a feature, not a bug."
         },
         "cutting_intro": "Hi! Hindi splits the present tense into two flavors: habit, and happening-now. Let's see them side by side.",
         "quick_check": {
@@ -180,12 +180,12 @@
             "Either works"
           ],
           "correct_index": 1,
-          "explanation": "Continuous — `pi raha hoon`. The habitual form `pita hoon` would mean `I drink chai (as a habit)`, not in-the-moment."
+          "explanation": "Continuous, `pi raha hoon`. The habitual form `pita hoon` would mean `I drink chai (as a habit)`, not in-the-moment."
         }
       },
       {
         "heading": "Forming the habitual",
-        "body": "The recipe is **verb root + ending + helper word**. Two pieces move.\n\n- the ending (suffix), `-ta` / `-ti` / `-te`, changes with **gender + number**\n- the helper word (auxiliary), `hoon` / `hai` / `ho` / `hain`, changes with the **pronoun**\n\nTake `karna` (to do). The root is `kar`. Now pick the ending:\n- `-ta` → masculine singular\n- `-ti` → feminine singular\n- `-te` → masculine plural, or with `tum` / `aap`\n\nThen attach the helper word that matches the pronoun.",
+        "body": "The recipe is **verb root + ending + helper word**. Two pieces move. - the ending (suffix), `-ta` / `-ti` / `-te`, changes with **gender + number**\n- the helper word (auxiliary), `hoon` / `hai` / `ho` / `hain`, changes with the **pronoun** Take `karna` (to do). The root is `kar`. Now pick the ending:\n- `-ta` / masculine singular\n- `-ti` / feminine singular\n- `-te` / masculine plural, or with `tum` / `aap` Then attach the helper word that matches the pronoun.",
         "table": {
           "caption": "Habitual present of `karna` (to do)",
           "columns": [
@@ -228,7 +228,7 @@
         },
         "callout": {
           "tone": "tip",
-          "body": "Three suffixes to memorize: -ta (masc sg), -ti (fem), -te (masc pl or with tum/aap). The auxiliary is a separate piece — pick it from the pronoun."
+          "body": "Three suffixes to memorize: -ta (masc sg), -ti (fem), -te (masc pl or with tum/aap). The auxiliary is a separate piece, pick it from the pronoun."
         },
         "cutting_intro": "The habitual is the one you'll use most. Recipe: root + -ta/-ti/-te + auxiliary.",
         "quick_check": {
@@ -239,12 +239,12 @@
             "main kaam kar raha hoon"
           ],
           "correct_index": 0,
-          "explanation": "Right — `karta hoon`. Masculine singular = -ta, paired with `hoon` for `main`."
+          "explanation": "Right, `karta hoon`. Masculine singular = -ta, paired with `hoon` for `main`."
         }
       },
       {
         "heading": "Forming the continuous",
-        "body": "Same helper words, different middle piece. The recipe is **verb root + `raha`/`rahi`/`rahe` + helper word**. Note that `raha` is a separate word, not an ending. It sits between the verb and the helper.\n\n- `raha` → masculine singular\n- `rahi` → feminine\n- `rahe` → masculine plural, or with `tum` / `aap`\n\nThe helper word (`hoon`/`hai`/`ho`/`hain`) still tracks the pronoun, exactly like the habitual.",
+        "body": "Same helper words, different middle piece. The recipe is **verb root + `raha`/`rahi`/`rahe` + helper word**. Note that `raha` is a separate word, not an ending. It sits between the verb and the helper. - `raha` / masculine singular\n- `rahi` / feminine\n- `rahe` / masculine plural, or with `tum` / `aap` The helper word (`hoon`/`hai`/`ho`/`hain`) still tracks the pronoun, exactly like the habitual.",
         "table": {
           "caption": "Continuous present of `karna` (to do)",
           "columns": [
@@ -289,12 +289,12 @@
           {
             "hindi": "kya kar rahe ho?",
             "english": "What are you doing (right now)?",
-            "breakdown": "continuous — asking about this moment"
+            "breakdown": "continuous, asking about this moment"
           },
           {
             "hindi": "kya karte ho?",
             "english": "What do you do (for a living / habitually)?",
-            "breakdown": "habitual — asking about job or routine"
+            "breakdown": "habitual, asking about job or routine"
           }
         ],
         "callout": {
@@ -310,48 +310,48 @@
             "She cooks food for a living"
           ],
           "correct_index": 1,
-          "explanation": "Continuous form — `khaa rahi hoon` means `I am eating right now`. The `-i` ending on `rahi` tells you the speaker is female."
+          "explanation": "Continuous form, `khaa rahi hoon` means `I am eating right now`. The `-i` ending on `rahi` tells you the speaker is female."
         }
       },
       {
         "heading": "Gender + number agreement",
-        "body": "Both forms agree with the **subject's** gender and number, never the object's. (Past tense with `ne` agrees with the object instead, but that's a later lesson. In the present, it's always the subject.)\n\n- masculine singular → `-ta` or `raha`\n- feminine singular → `-ti` or `rahi`\n- masculine plural → `-te` or `rahe`\n\nOne historical quirk: a **feminine plural** subject keeps the *singular* feminine form (`-ti` / `rahi`). It doesn't take a separate plural ending. Just memorize that one.",
+        "body": "Both forms agree with the **subject's** gender and number, never the object's. (Past tense with `ne` agrees with the object instead, but that's a later lesson. In the present, it's always the subject.) - masculine singular / `-ta` or `raha`\n- feminine singular / `-ti` or `rahi`\n- masculine plural / `-te` or `rahe` One historical quirk: a **feminine plural** subject keeps the *singular* feminine form (`-ti` / `rahi`). It doesn't take a separate plural ending. Just memorize that one.",
         "examples": [
           {
             "hindi": "ladka khel raha hai",
             "english": "The boy is playing",
-            "breakdown": "ladka (m sg) → raha + hai"
+            "breakdown": "ladka (m sg) / raha + hai"
           },
           {
             "hindi": "ladki khel rahi hai",
             "english": "The girl is playing",
-            "breakdown": "ladki (f sg) → rahi + hai"
+            "breakdown": "ladki (f sg) / rahi + hai"
           },
           {
             "hindi": "bachhe khel rahe hain",
             "english": "The children are playing (mixed/masc)",
-            "breakdown": "bachhe (m pl) → rahe + hain"
+            "breakdown": "bachhe (m pl) / rahe + hain"
           },
           {
             "hindi": "ladkiyaan khel rahi hain",
             "english": "The girls are playing",
-            "breakdown": "ladkiyaan (f pl) → rahi (NOT rahe) + hain — feminine stays singular form"
+            "breakdown": "ladkiyaan (f pl) / rahi (NOT rahe) + hain, feminine stays singular form"
           }
         ],
         "callout": {
           "tone": "warning",
-          "body": "Feminine plural is a trap: the verb stays in the singular feminine form (-ti / rahi), but the auxiliary goes plural (`hain`). `ladkiyaan khel rahi hain`, never `rahe hain`. Memorize this — there's no logical rule, it's just historical."
+          "body": "Feminine plural is a trap: the verb stays in the singular feminine form (-ti / rahi), but the auxiliary goes plural (`hain`). `ladkiyaan khel rahi hain`, never `rahe hain`. Memorize this, there's no logical rule, it's just historical."
         },
         "cutting_intro": "Here's where beginners slip. The verb has to match the subject's gender and number. One odd exception with feminine plurals, then it's mechanical.",
         "quick_check": {
-          "question": "`The girls are studying` — which is correct?",
+          "question": "`The girls are studying`, which is correct?",
           "options": [
             "ladkiyaan padh rahe hain",
             "ladkiyaan padh rahi hain",
             "ladkiyaan padh raha hain"
           ],
           "correct_index": 1,
-          "explanation": "Feminine plural keeps the singular feminine form `rahi` — even though `ladkiyaan` is plural. The auxiliary `hain` is plural, but the verb piece stays `rahi`."
+          "explanation": "Feminine plural keeps the singular feminine form `rahi`, even though `ladkiyaan` is plural. The auxiliary `hain` is plural, but the verb piece stays `rahi`."
         }
       },
       {
@@ -361,7 +361,7 @@
           {
             "hindi": "main Mumbai mein rehta hoon",
             "english": "I live in Mumbai",
-            "breakdown": "habitual — it's a fact, not happening-right-now"
+            "breakdown": "habitual, it's a fact, not happening-right-now"
           },
           {
             "hindi": "aap kahan rehte hain?",
@@ -371,22 +371,22 @@
           {
             "hindi": "main abhi khaa raha hoon",
             "english": "I'm eating right now",
-            "breakdown": "continuous — `abhi` (right now) is the tell"
+            "breakdown": "continuous, `abhi` (right now) is the tell"
           }
         ],
         "callout": {
           "tone": "tip",
-          "body": "Litmus test: ask yourself `is this happening right this second?`. Yes → continuous (`raha/rahi/rahe`). No → habitual (`-ta/-ti/-te`). For facts about your life, your job, where you live — almost always habitual."
+          "body": "Litmus test: ask yourself `is this happening right this second?`. Yes / continuous (`raha/rahi/rahe`). No / habitual (`-ta/-ti/-te`). For facts about your life, your job, where you live, almost always habitual."
         },
         "cutting_intro": "Last bit: two things English speakers always get wrong. Overusing the continuous, and forgetting that `aap` is plural-shaped.",
         "quick_check": {
-          "question": "`I work at Google` (it's your job) — which Hindi form?",
+          "question": "`I work at Google` (it's your job), which Hindi form?",
           "options": [
             "main Google mein kaam karta hoon (habitual)",
             "main Google mein kaam kar raha hoon (continuous)"
           ],
           "correct_index": 0,
-          "explanation": "Habitual — it's a fact about your life, not something you're doing this second. The continuous would suggest you're literally working at this very moment."
+          "explanation": "Habitual, it's a fact about your life, not something you're doing this second. The continuous would suggest you're literally working at this very moment."
         }
       }
     ],

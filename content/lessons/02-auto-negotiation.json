@@ -2,66 +2,165 @@
   "id": "auto-negotiation",
   "title": "Arguing with an Auto Driver",
   "situation": "You're outside a metro station and need to get to Hauz Khas. The auto driver wants 200 rupees for a 50-rupee ride.",
-  "skills": ["present continuous tense", "imperative mood", "negotiation softeners"],
+  "skills": [
+    "present continuous tense",
+    "imperative mood",
+    "negotiation softeners"
+  ],
   "phrases": [
-    { "hindi": "bhaiya, Hauz Khas chaloge?", "english": "Brother, will you go to Hauz Khas?", "context": "'bhaiya' (brother) is how you address auto/taxi drivers — respectful but casual", "pronunciation": "BHAI-ya, hauz KHAS cha-LO-ge?" },
-    { "hindi": "arey, do sau? itna zyada kyun?", "english": "Come on, 200? Why so much?", "context": "Show disbelief at the price — standard opening move in any negotiation", "pronunciation": "a-REY, do SAU? it-NA zya-DA KYUN?" },
-    { "hindi": "meter se chalo na bhaiya", "english": "Go by meter please, brother", "context": "'na' at end = please/softener. Makes demands polite without being weak", "pronunciation": "ME-ter se CHA-lo NA bhai-YA" },
-    { "hindi": "sau mein chalo, zyada nahi dunga", "english": "Go for 100, I won't give more", "context": "Final offer stance — firm but not rude. 'dunga' = will give (male speaker)", "pronunciation": "SAU mein CHA-lo, zya-DA na-HI dun-GA" },
-    { "hindi": "bhaiya, Google Maps pe dekho — sirf 3 km hai", "english": "Brother, look on Google Maps — it's only 3 km", "context": "Using technology as leverage — auto drivers respect this move", "pronunciation": "BHAI-ya, GOO-gle maps pe DE-kho — sirf TEEN ki-lo-ME-ter hai" },
-    { "hindi": "arey yaar, roz jaata hoon, pata hai mujhe rate", "english": "Come on man, I go daily, I know the rate", "context": "Establishing you're not a tourist/outsider — very effective", "pronunciation": "a-REY yaar, ROZ jaa-ta HOON, PA-ta hai muj-HE rate" },
-    { "hindi": "chodo, doosra auto dekh leta hoon", "english": "Forget it, I'll find another auto", "context": "The walk-away — most effective negotiation tool. Start walking away slowly.", "pronunciation": "CHO-do, DOO-sra AU-to dekh LE-ta hoon" },
-    { "hindi": "theek hai bhai, pachattar final", "english": "Okay brother, 75 final", "context": "'pachattar' = 75. Using 'final' shows you won't budge — English word used in Hindi naturally", "pronunciation": "THEEK hai bhai, pa-CHAT-tar FI-nal" },
-    { "hindi": "theek hai, chal baith ja", "english": "Fine, come on, sit down", "context": "What the driver says when he agrees — you won! 'baith ja' = sit (casual command), 'chal' = come on/alright (filler)", "pronunciation": "THEEK hai, CHAL BAITH ja" },
-    { "hindi": "bhaiya, AC chalega na? bahut garmi hai", "english": "Brother, AC will be on right? It's very hot", "context": "Negotiating extras after price is agreed — push your luck a little", "pronunciation": "BHAI-ya, AC cha-LE-ga NA? ba-HUT gar-MI hai" }
+    {
+      "hindi": "bhaiya, Hauz Khas chaloge?",
+      "english": "Brother, will you go to Hauz Khas?",
+      "context": "'bhaiya' (brother) is how you address auto/taxi drivers, respectful but casual",
+      "pronunciation": "BHAI-ya, hauz KHAS cha-LO-ge?"
+    },
+    {
+      "hindi": "arey, do sau? itna zyada kyun?",
+      "english": "Come on, 200? Why so much?",
+      "context": "Show disbelief at the price, standard opening move in any negotiation",
+      "pronunciation": "a-REY, do SAU? it-NA zya-DA KYUN?"
+    },
+    {
+      "hindi": "meter se chalo na bhaiya",
+      "english": "Go by meter please, brother",
+      "context": "'na' at end = please/softener. Makes demands polite without being weak",
+      "pronunciation": "ME-ter se CHA-lo NA bhai-YA"
+    },
+    {
+      "hindi": "sau mein chalo, zyada nahi dunga",
+      "english": "Go for 100, I won't give more",
+      "context": "Final offer stance, firm but not rude. 'dunga' = will give (male speaker)",
+      "pronunciation": "SAU mein CHA-lo, zya-DA na-HI dun-GA"
+    },
+    {
+      "hindi": "bhaiya, Google Maps pe dekho, sirf 3 km hai",
+      "english": "Brother, look on Google Maps, it's only 3 km",
+      "context": "Using technology as leverage, auto drivers respect this move",
+      "pronunciation": "BHAI-ya, GOO-gle maps pe DE-kho, sirf TEEN ki-lo-ME-ter hai"
+    },
+    {
+      "hindi": "arey yaar, roz jaata hoon, pata hai mujhe rate",
+      "english": "Come on man, I go daily, I know the rate",
+      "context": "Establishing you're not a tourist/outsider, very effective",
+      "pronunciation": "a-REY yaar, ROZ jaa-ta HOON, PA-ta hai muj-HE rate"
+    },
+    {
+      "hindi": "chodo, doosra auto dekh leta hoon",
+      "english": "Forget it, I'll find another auto",
+      "context": "The walk-away, most effective negotiation tool. Start walking away slowly.",
+      "pronunciation": "CHO-do, DOO-sra AU-to dekh LE-ta hoon"
+    },
+    {
+      "hindi": "theek hai bhai, pachattar final",
+      "english": "Okay brother, 75 final",
+      "context": "'pachattar' = 75. Using 'final' shows you won't budge, English word used in Hindi naturally",
+      "pronunciation": "THEEK hai bhai, pa-CHAT-tar FI-nal"
+    },
+    {
+      "hindi": "theek hai, chal baith ja",
+      "english": "Fine, come on, sit down",
+      "context": "What the driver says when he agrees, you won! 'baith ja' = sit (casual command), 'chal' = come on/alright (filler)",
+      "pronunciation": "THEEK hai, CHAL BAITH ja"
+    },
+    {
+      "hindi": "bhaiya, AC chalega na? bahut garmi hai",
+      "english": "Brother, AC will be on right? It's very hot",
+      "context": "Negotiating extras after price is agreed, push your luck a little",
+      "pronunciation": "BHAI-ya, AC cha-LE-ga NA? ba-HUT gar-MI hai"
+    }
   ],
   "grammar_notes": [
-    "'na' at the end of any sentence softens it — 'chalo' (go!) vs 'chalo na' (please go) — master this one word and you'll never sound rude",
+    "'na' at the end of any sentence softens it, 'chalo' (go!) vs 'chalo na' (please go), master this one word and you'll never sound rude",
     "'dunga/dungi' = I will give (male/female speaker). 'doge/dogi' = you will give",
-    "'chaloge?' = will you go? — future tense with polite '-ge' ending shows respect even while negotiating",
-    "'dekh leta/leti hoon' = let me check/find (male/female) — the polite walk-away uses this to not directly refuse",
-    "'roz' = daily/everyday — drop it in any negotiation to show you're a regular, not a one-time customer"
+    "'chaloge?' = will you go?, future tense with polite '-ge' ending shows respect even while negotiating",
+    "'dekh leta/leti hoon' = let me check/find (male/female), the polite walk-away uses this to not directly refuse",
+    "'roz' = daily/everyday, drop it in any negotiation to show you're a regular, not a one-time customer"
   ],
   "culture_notes": [
-    "Always negotiate BEFORE sitting in the auto — once you're in, you've lost all leverage",
-    "Saying 'meter se chalo' is your legal right but most drivers refuse — so negotiate a fair price you both accept",
-    "Walking away is the strongest move — they'll often call you back within 5 seconds",
-    "In Delhi, auto drivers form queues outside metros — skip the first 2-3 who always quote high, the ones at the back are more reasonable"
+    "Always negotiate BEFORE sitting in the auto, once you're in, you've lost all leverage",
+    "Saying 'meter se chalo' is your legal right but most drivers refuse, so negotiate a fair price you both accept",
+    "Walking away is the strongest move, they'll often call you back within 5 seconds",
+    "In Delhi, auto drivers form queues outside metros, skip the first 2-3 who always quote high, the ones at the back are more reasonable"
   ],
   "skill_breakdown": [
     {
       "skill": "present continuous tense",
       "explanation": "Structure: verb root + raha/rahe/rahi + hoon/hai/ho/hain. Gender matters: male = raha, female = rahi, plural/respectful = rahe. This is how you describe ongoing actions.",
       "more_examples": [
-        { "hindi": "main ja raha hoon", "english": "I am going (male speaker)" },
-        { "hindi": "tum kya kar rahe ho?", "english": "what are you doing?" },
-        { "hindi": "woh bol rahi hai", "english": "she is saying" },
-        { "hindi": "meter nahi chal raha", "english": "the meter isn't running" },
-        { "hindi": "main wait kar raha tha", "english": "I was waiting (past continuous)" }
+        {
+          "hindi": "main ja raha hoon",
+          "english": "I am going (male speaker)"
+        },
+        {
+          "hindi": "tum kya kar rahe ho?",
+          "english": "what are you doing?"
+        },
+        {
+          "hindi": "woh bol rahi hai",
+          "english": "she is saying"
+        },
+        {
+          "hindi": "meter nahi chal raha",
+          "english": "the meter isn't running"
+        },
+        {
+          "hindi": "main wait kar raha tha",
+          "english": "I was waiting (past continuous)"
+        }
       ]
     },
     {
       "skill": "imperative mood",
       "explanation": "Giving commands/requests. 'Tu' form: verb root (ja!). 'Tum' form: root + o (jao). 'Aap' form: root + iye (jaiye). Add 'na' to soften any of them. Stack softeners for extra politeness.",
       "more_examples": [
-        { "hindi": "idhar aao", "english": "come here (to a peer)" },
-        { "hindi": "zara suno na", "english": "listen for a sec, please" },
-        { "hindi": "baitho baitho", "english": "sit sit (casual, welcoming)" },
-        { "hindi": "jaldi chalo bhaiya", "english": "go fast, brother" },
-        { "hindi": "yahan rok do", "english": "stop here (to a driver)" }
+        {
+          "hindi": "idhar aao",
+          "english": "come here (to a peer)"
+        },
+        {
+          "hindi": "zara suno na",
+          "english": "listen for a sec, please"
+        },
+        {
+          "hindi": "baitho baitho",
+          "english": "sit sit (casual, welcoming)"
+        },
+        {
+          "hindi": "jaldi chalo bhaiya",
+          "english": "go fast, brother"
+        },
+        {
+          "hindi": "yahan rok do",
+          "english": "stop here (to a driver)"
+        }
       ]
     },
     {
       "skill": "negotiation softeners",
       "explanation": "Hindi has many ways to be firm but polite: 'na' (please), 'yaar' (dude/friend), 'bhaiya/didi' (brother/sister), 'zara' (just/a little). Stack them to sound natural. The art is being firm without being aggressive.",
       "more_examples": [
-        { "hindi": "thoda kam karo na yaar", "english": "reduce it a bit please dude" },
-        { "hindi": "bhaiya, itna toh mat bolo", "english": "brother, don't ask that much at least" },
-        { "hindi": "zara dekhiye na", "english": "just look at it please (polite)" },
-        { "hindi": "sahi rate lagao na bhaiya", "english": "quote the right rate, brother" },
-        { "hindi": "chodo bhai, rehne do", "english": "leave it man, forget it" }
+        {
+          "hindi": "thoda kam karo na yaar",
+          "english": "reduce it a bit please dude"
+        },
+        {
+          "hindi": "bhaiya, itna toh mat bolo",
+          "english": "brother, don't ask that much at least"
+        },
+        {
+          "hindi": "zara dekhiye na",
+          "english": "just look at it please (polite)"
+        },
+        {
+          "hindi": "sahi rate lagao na bhaiya",
+          "english": "quote the right rate, brother"
+        },
+        {
+          "hindi": "chodo bhai, rehne do",
+          "english": "leave it man, forget it"
+        }
       ]
     }
   ],
-  "practice_prompt": "You are a Delhi auto-rickshaw driver parked outside Hauz Khas metro station. The user is a passenger trying to get to Saket (about 4 km). Use 'aap' with the stranger-passenger but drop into 'bhaiya' direct address when the haggle warms up; the contrast matters. Open with a high quote: 'haan boliye, kahaan jaana hai? Saket? do sau lagega, AC chalega.' Quote 180-200 initially. Do NOT cave on the first push — grumble about petrol, traffic, no return fare. Come down reluctantly in 20-rupee steps only when the user pushes hard with 'meter se chalo na', 'roz jaata hoon', or 'Google Maps pe dekho'. React authentically to walk-away threats ('chodo, doosra auto dekh leta hoon') — call them back with a better price. Settle around 70-80 only after 4-5 turns of resistance. If the user says wrong register (e.g. 'tu' to a stranger), missing 'na' softeners, or English-grammar-literal translation, flag with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]. End in 6-8 turns with 'chalo, baith ja' or 'theek hai, AC bhi chala dunga'. Stay in role unless the user explicitly asks for English help."
+  "practice_prompt": "You are a Delhi auto-rickshaw driver parked outside Hauz Khas metro station. The user is a passenger trying to get to Saket (about 4 km). Use 'aap' with the stranger-passenger but drop into 'bhaiya' direct address when the haggle warms up; the contrast matters. Open with a high quote: 'haan boliye, kahaan jaana hai? Saket? do sau lagega, AC chalega.' Quote 180-200 initially. Do NOT cave on the first push, grumble about petrol, traffic, no return fare. Come down reluctantly in 20-rupee steps only when the user pushes hard with 'meter se chalo na', 'roz jaata hoon', or 'Google Maps pe dekho'. React authentically to walk-away threats ('chodo, doosra auto dekh leta hoon'), call them back with a better price. Settle around 70-80 only after 4-5 turns of resistance. If the user says wrong register (e.g. 'tu' to a stranger), missing 'na' softeners, or English-grammar-literal translation, flag with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]. End in 6-8 turns with 'chalo, baith ja' or 'theek hai, AC bhi chala dunga'. Stay in role unless the user explicitly asks for English help."
 }

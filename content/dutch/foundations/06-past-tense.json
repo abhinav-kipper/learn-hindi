@@ -1,6 +1,6 @@
 {
   "id": "dutch-past-tense",
-  "title": "Past Tense — Perfect with Hebben & Zijn",
+  "title": "Past Tense, Perfect with Hebben & Zijn",
   "situation": "Foundation: forming the perfect tense, choosing hebben vs zijn, and irregular past participles",
   "skills": [
     "perfect tense formation",
@@ -12,56 +12,56 @@
     {
       "hindi": "Ik heb gekookt. Jij hebt gebeld. Hij heeft gewacht. Wij hebben geluisterd.",
       "english": "I cooked. You called. He waited. We listened.",
-      "context": "Perfect tense = hebben/zijn + past participle. Regular past participle: 'ge-' + stem + '-t' or '-d'. Rule for -t vs -d: use the 't kofschip' trick — if the stem's last letter is in 't kofschip', add -t, otherwise -d. Here: koken (k → -t), bellen (l → -d), wachten (t → -t), luisteren (r → -d).",
+      "context": "Perfect tense = hebben/zijn + past participle. Regular past participle: 'ge-' + stem + '-t' or '-d'. Rule for -t vs -d: use the 't kofschip' trick, if the stem's last letter is in 't kofschip', add -t, otherwise -d. Here: koken (k / -t), bellen (l / -d), wachten (t / -t), luisteren (r / -d).",
       "pronunciation": "ik hep ge-KOKT. yay hept ge-BELT. hay heft ge-WACHT. way HEB-ben ge-LOOS-terd."
     },
     {
-      "hindi": "'t kofschip: t, k, f, s, ch, p — gebruik -t. Andere letters — gebruik -d.",
+      "hindi": "'t kofschip: t, k, f, s, ch, p, gebruik -t. Andere letters, gebruik -d.",
       "english": "The letters t, k, f, s, ch, p use -t. All other letters use -d.",
-      "context": "Memory trick for -t vs -d in past participles: 't kofschip' contains the letters after which you add -t. 'Werken' stem = 'werk' → last letter 'k' is in 't kofschip' → 'gewerkt'. Watch out for verbs with v/z in the infinitive: 'leven' → underlying stem ends in 'v' (NOT in kofschip) → 'geleefd' (spelled with -d, even though the stem surfaces as 'leef'). Use the consonant in the infinitive, not the devoiced spelling.",
+      "context": "Memory trick for -t vs -d in past participles: 't kofschip' contains the letters after which you add -t. 'Werken' stem = 'werk' / last letter 'k' is in 't kofschip' / 'gewerkt'. Watch out for verbs with v/z in the infinitive: 'leven' / underlying stem ends in 'v' (NOT in kofschip) / 'geleefd' (spelled with -d, even though the stem surfaces as 'leef'). Use the consonant in the infinitive, not the devoiced spelling.",
       "pronunciation": "t KOF-ship: tay, kaa, ef, es, CHAY, pay"
     },
     {
       "hindi": "zijn + beweging/verandering: ik ben gereden, ik ben opgestaan, ik ben gevlogen, ik ben gezwommen",
       "english": "zijn + movement/change: I rode/drove, I got up, I flew, I swam",
-      "context": "CRITICAL: use 'zijn' (not 'hebben') for verbs of movement or state change: gaan (go), komen (come), worden (become), rijden (ride/drive), vallen (fall), sterven (die), opstaan (get up), vliegen (fly), zwemmen (swim). Note 'opgestaan' — separable verb 'opstaan': ge- goes between prefix and stem (op+ge+staan).",
+      "context": "CRITICAL: use 'zijn' (not 'hebben') for verbs of movement or state change: gaan (go), komen (come), worden (become), rijden (ride/drive), vallen (fall), sterven (die), opstaan (get up), vliegen (fly), zwemmen (swim). Note 'opgestaan', separable verb 'opstaan': ge- goes between prefix and stem (op+ge+staan).",
       "pronunciation": "zayn + bay-WAY-ching: ik ben ge-RAY-den, ik ben OP-ge-staan, ik ben ge-VLOH-chen, ik ben ge-ZWOM-men"
     },
     {
       "hindi": "Ik ben vroeg opgestaan. Hij is naar Utrecht gereden. Zij is snel gegroeid.",
       "english": "I got up early. He drove to Utrecht. She grew quickly.",
-      "context": "Full sentences with zijn-perfect. Notice separable verb 'opstaan' → past participle 'opgestaan' (prefix + ge + stem). The 'ge-' goes BETWEEN the prefix and the main part. 'Rijden' (motion verb) and 'groeien' (change of state) both take zijn.",
+      "context": "Full sentences with zijn-perfect. Notice separable verb 'opstaan' / past participle 'opgestaan' (prefix + ge + stem). The 'ge-' goes BETWEEN the prefix and the main part. 'Rijden' (motion verb) and 'groeien' (change of state) both take zijn.",
       "pronunciation": "ik ben VROEG OP-ge-staan. hay is naar OO-trecht ge-RAY-den. zay is SNEL ge-CHROYD."
     },
     {
       "hindi": "Irregular: ik heb gezien (zien), ik heb gedaan (doen), ik heb gehad (hebben), ik ben geweest (zijn)",
       "english": "Irregular: I have seen (see), I have done (do), I have had (have), I have been (be)",
-      "context": "Common irregular past participles must be memorized. Key ones: zien→gezien, doen→gedaan, hebben→gehad, zijn→geweest, gaan→gegaan, komen→gekomen, schrijven→geschreven, rijden→gereden, kopen→gekocht",
+      "context": "Common irregular past participles must be memorized. Key ones: zien / gezien, doen / gedaan, hebben / gehad, zijn / geweest, gaan / gegaan, komen / gekomen, schrijven / geschreven, rijden / gereden, kopen / gekocht",
       "pronunciation": "ik hep ge-ZEEN, ik hep ge-DAAN, ik hep ge-HAT, ik ben ge-WAYST"
     },
     {
       "hindi": "Wat heb jij gisteren gedaan? Ik heb gekookt en daarna heb ik televisie gekeken.",
       "english": "What did you do yesterday? I cooked and afterwards I watched television.",
-      "context": "Conversation practice. 'Daarna' = afterwards/then. Notice: two main clauses joined by 'en' — each has normal V2 word order, with the past participle at the very end of each clause.",
+      "context": "Conversation practice. 'Daarna' = afterwards/then. Notice: two main clauses joined by 'en', each has normal V2 word order, with the past participle at the very end of each clause.",
       "pronunciation": "wat hep YAY CHIS-ter-en ge-DAAN? ik hep ge-KOKT en DAAR-na hep ik tay-lay-VEE-zee ge-KAY-ken."
     },
     {
       "hindi": "Ik heb nooit Nederlands geleerd. Heb jij ooit in Amsterdam gewoond?",
       "english": "I have never learned Dutch. Have you ever lived in Amsterdam?",
-      "context": "'Nooit' = never, 'ooit' = ever, 'al' = already, 'nog niet' = not yet — all go before the past participle. 'Heb jij ooit...' = inversion for question, participle last.",
+      "context": "'Nooit' = never, 'ooit' = ever, 'al' = already, 'nog niet' = not yet, all go before the past participle. 'Heb jij ooit...' = inversion for question, participle last.",
       "pronunciation": "ik hep NOHT NAY-der-lants ge-LAYRD. hep YAY OHT in am-ster-DAM ge-WOHND?"
     }
   ],
   "grammar_notes": [
-    "Past participle pattern: ge- + stem + -t/-d for regular verbs. Use 't kofschip' (t,k,f,s,ch,p) to decide: if the ORIGINAL last consonant of the infinitive stem is in kofschip → -t, otherwise → -d",
-    "Zijn-verbs rule of thumb: intransitive verbs of movement with a destination (gaan, komen, rijden, lopen) AND state change (worden, sterven, vallen) take zijn. Two key exceptions also take zijn: blijven (stay) and zijn itself (geweest). If in doubt, use hebben — you're more likely right",
+    "Past participle pattern: ge- + stem + -t/-d for regular verbs. Use 't kofschip' (t,k,f,s,ch,p) to decide: if the ORIGINAL last consonant of the infinitive stem is in kofschip / -t, otherwise / -d",
+    "Zijn-verbs rule of thumb: intransitive verbs of movement with a destination (gaan, komen, rijden, lopen) AND state change (worden, sterven, vallen) take zijn. Two key exceptions also take zijn: blijven (stay) and zijn itself (geweest). If in doubt, use hebben, you're more likely right",
     "In subordinate clauses, the auxiliary (heb/is) comes before the past participle, both at the end: 'omdat ik heb gewerkt'",
-    "Separable verbs: ge- goes between prefix and root. 'op-staan' → 'opgestaan'. 'aan-komen' → 'aangekomen'. Verbs with inseparable prefixes (be-, ver-, ont-, her-) get no ge-: 'begrijpen' → 'begrepen' (not 'gebegrepen')"
+    "Separable verbs: ge- goes between prefix and root. 'op-staan' / 'opgestaan'. 'aan-komen' / 'aangekomen'. Verbs with inseparable prefixes (be-, ver-, ont-, her-) get no ge-: 'begrijpen' / 'begrepen' (not 'gebegrepen')"
   ],
   "culture_notes": [
-    "Dutch spoken language uses the perfect tense for almost all past events — the simple past ('ik werkte', 'ik ging') exists but is mainly in writing and formal speech",
+    "Dutch spoken language uses the perfect tense for almost all past events, the simple past ('ik werkte', 'ik ging') exists but is mainly in writing and formal speech",
     "In everyday conversation, use the perfect tense ('ik heb gewerkt') not the simple past ('ik werkte')",
-    "Common mistake by English speakers: using 'hebben' for motion verbs. 'Ik heb gegaan' is wrong — always 'ik ben gegaan'"
+    "Common mistake by English speakers: using 'hebben' for motion verbs. 'Ik heb gegaan' is wrong, always 'ik ben gegaan'"
   ],
   "skill_breakdown": [
     {
@@ -70,25 +70,25 @@
       "more_examples": [
         {
           "hindi": "Ik heb een brief geschreven.",
-          "english": "I wrote a letter. (schrijven → geschreven, irregular)"
+          "english": "I wrote a letter. (schrijven / geschreven, irregular)"
         },
         {
           "hindi": "Wij hebben dat boek gekocht.",
-          "english": "We bought that book. (kopen → gekocht, irregular)"
+          "english": "We bought that book. (kopen / gekocht, irregular)"
         },
         {
           "hindi": "Zij heeft hard gestudeerd.",
-          "english": "She studied hard. (studeren → gestudeerd)"
+          "english": "She studied hard. (studeren / gestudeerd)"
         },
         {
           "hindi": "Hij heeft de deur geopend.",
-          "english": "He opened the door. (openen → geopend)"
+          "english": "He opened the door. (openen / geopend)"
         }
       ]
     },
     {
       "skill": "hebben vs zijn selection",
-      "explanation": "Use zijn for: (1) movement verbs with a destination — gaan, komen, rijden, lopen, vliegen, zwemmen. (2) state change — worden, vallen, groeien, sterven. Plus two key exceptions that also take zijn: blijven (stay) and zijn itself (geweest). Use hebben for everything else.",
+      "explanation": "Use zijn for: (1) movement verbs with a destination, gaan, komen, rijden, lopen, vliegen, zwemmen. (2) state change, worden, vallen, groeien, sterven. Plus two key exceptions that also take zijn: blijven (stay) and zijn itself (geweest). Use hebben for everything else.",
       "more_examples": [
         {
           "hindi": "Ik ben naar huis gelopen.",
@@ -109,7 +109,7 @@
       ]
     }
   ],
-  "practice_prompt": "You are a Dutch tutor drilling the perfect tense — past-participle formation, the hebben-vs-zijn auxiliary choice, and word order. Address the learner as 'u'. Open with: 'Goedendag! Laten we de voltooide tijd oefenen. Eerste vraag: wat is het voltooid deelwoord van \"werken\"?' Give one task at a time and wait for the answer. Cycle through four task types over 6-8 items: (1) form the past participle of a verb — mix weak verbs (kofschip rule for -t/-d) and strong verbs like lezen → gelezen, eten → gegeten, schrijven → geschreven; (2) pick the right auxiliary (hebben or zijn) for a given verb; (3) build a full perfect-tense sentence with V2 word order and participle at the end; (4) explain when a verb takes zijn (motion + change of state: gaan, komen, lopen, vallen, worden, sterven). Flag mistakes with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] — watch for hebben on motion verbs, participle stuck in V2 instead of clause-end, kofschip misapplied, and strong verbs wrongly regularized. End with 'Heel goed gedaan! Tot ziens.' Stay in Dutch unless the learner asks for English.",
+  "practice_prompt": "You are a Dutch tutor drilling the perfect tense, past-participle formation, the hebben-vs-zijn auxiliary choice, and word order. Address the learner as 'u'. Open with: 'Goedendag! Laten we de voltooide tijd oefenen. Eerste vraag: wat is het voltooid deelwoord van \"werken\"?' Give one task at a time and wait for the answer. Cycle through four task types over 6-8 items: (1) form the past participle of a verb, mix weak verbs (kofschip rule for -t/-d) and strong verbs like lezen / gelezen, eten / gegeten, schrijven / geschreven; (2) pick the right auxiliary (hebben or zijn) for a given verb; (3) build a full perfect-tense sentence with V2 word order and participle at the end; (4) explain when a verb takes zijn (motion + change of state: gaan, komen, lopen, vallen, worden, sterven). Flag mistakes with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]], watch for hebben on motion verbs, participle stuck in V2 instead of clause-end, kofschip misapplied, and strong verbs wrongly regularized. End with 'Heel goed gedaan! Tot ziens.' Stay in Dutch unless the learner asks for English.",
   "theory": {
     "intro": "Dutch past tense surprises English speakers because the simple past, the form you'd reflexively reach for in English, is rare in Dutch conversation. The everyday past is the **perfect tense**, built from a helper verb (`hebben` or `zijn`) plus a past participle. This chapter covers how to form past participles (mostly predictable), how to choose between `hebben` and `zijn` (most verbs take `hebben`; motion and change-of-state verbs take `zijn`), and how it all fits into Dutch's verb-second word order.",
     "sections": [
@@ -120,7 +120,7 @@
           {
             "hindi": "Ik ben gisteren naar Amsterdam gegaan.",
             "english": "I went to Amsterdam yesterday.",
-            "breakdown": "English instinct = simple past. Dutch reflex = perfect — and `gaan` takes `zijn`, not `hebben`, because it's a motion verb (ben + gegaan)."
+            "breakdown": "English instinct = simple past. Dutch reflex = perfect, and `gaan` takes `zijn`, not `hebben`, because it's a motion verb (ben + gegaan)."
           },
           {
             "hindi": "Ik heb je e-mail gelezen.",
@@ -135,7 +135,7 @@
         ],
         "callout": {
           "tone": "note",
-          "body": "Your English instinct will reach for simple past every time. Train yourself to reach for PERFECT first — that's what Dutch speakers actually say in conversation."
+          "body": "Your English instinct will reach for simple past every time. Train yourself to reach for PERFECT first, that's what Dutch speakers actually say in conversation."
         },
         "cutting_intro": "Hoi! First thing to unlearn: in Dutch, you don't say `I ate`. You say `I have eaten`. Every time. Let me show you why.",
         "quick_check": {
@@ -146,12 +146,12 @@
             "Ik ben gisteren werken."
           ],
           "correct_index": 1,
-          "explanation": "Right — perfect tense (`heb` + `gewerkt`) is the conversational default. `Ik werkte` exists but sounds literary."
+          "explanation": "Right, perfect tense (`heb` + `gewerkt`) is the conversational default. `Ik werkte` exists but sounds literary."
         }
       },
       {
         "heading": "Forming the past participle: ge- + stem + -t / -d / -en",
-        "body": "Past participles come in three flavors. The first two are **regular** (weak verbs) and follow a spelling rule. The third is **irregular** (strong verbs) and has to be memorized.\n\nFor regular verbs, the question is whether the participle ends in `-t` or `-d`. The classic Dutch mnemonic is `'t kofschip`. If the verb's stem ends in `t`, `k`, `f`, `s`, `ch`, or `p`, add `-t`. Otherwise add `-d`.\n\n- `werken` (stem `werk`, ends in `k`) → `gewerkt`\n- `leren` (stem `leer`, ends in `r`, not in kofschip) → `geleerd`\n\nStrong verbs change the stem vowel and end in `-en`. There's no rule. You memorize them the way English speakers memorize `sing → sang → sung`.",
+        "body": "Past participles come in three flavors. The first two are **regular** (weak verbs) and follow a spelling rule. The third is **irregular** (strong verbs) and has to be memorized. For regular verbs, the question is whether the participle ends in `-t` or `-d`. The classic Dutch mnemonic is `'t kofschip`. If the verb's stem ends in `t`, `k`, `f`, `s`, `ch`, or `p`, add `-t`. Otherwise add `-d`. - `werken` (stem `werk`, ends in `k`) / `gewerkt`\n- `leren` (stem `leer`, ends in `r`, not in kofschip) / `geleerd` Strong verbs change the stem vowel and end in `-en`. There's no rule. You memorize them the way English speakers memorize `sing / sang / sung`.",
         "table": {
           "caption": "Past participle patterns",
           "columns": [
@@ -163,23 +163,23 @@
             [
               "weak, kofschip ending",
               "ge- + stem + -t",
-              "werken → gewerkt, koken → gekookt, stoppen → gestopt"
+              "werken / gewerkt, koken / gekookt, stoppen / gestopt"
             ],
             [
               "weak, non-kofschip ending",
               "ge- + stem + -d",
-              "leren → geleerd, spelen → gespeeld, wonen → gewoond"
+              "leren / geleerd, spelen / gespeeld, wonen / gewoond"
             ],
             [
               "strong (irregular)",
               "ge- + (vowel change) + -en",
-              "lezen → gelezen, eten → gegeten, geven → gegeven, schrijven → geschreven"
+              "lezen / gelezen, eten / gegeten, geven / gegeven, schrijven / geschreven"
             ]
           ]
         },
         "callout": {
           "tone": "tip",
-          "body": "Memorize `'t kofschip` (t, k, f, s, ch, p) and you'll never guess wrong on weak-verb endings again. Strong verbs are a separate memorization project — keep a running list as you meet them."
+          "body": "Memorize `'t kofschip` (t, k, f, s, ch, p) and you'll never guess wrong on weak-verb endings again. Strong verbs are a separate memorization project, keep a running list as you meet them."
         },
         "cutting_intro": "Now, how do you actually build a past participle? Three patterns. Two are regular. The third you just memorize.",
         "quick_check": {
@@ -190,11 +190,11 @@
             "werkte"
           ],
           "correct_index": 1,
-          "explanation": "Yes — `werk` ends in `k`, which is in `'t kofschip`, so you add `-t`. `gewerkt`."
+          "explanation": "Yes, `werk` ends in `k`, which is in `'t kofschip`, so you add `-t`. `gewerkt`."
         }
       },
       {
-        "heading": "Hebben vs zijn — which auxiliary?",
+        "heading": "Hebben vs zijn, which auxiliary?",
         "body": "Most Dutch verbs use `hebben` (to have) as the perfect-tense helper, just as English uses `have`: `Ik heb gewerkt`, `Ik heb gegeten`, `Ik heb gelezen`. If you're unsure, default to `hebben`. You'll be right more than half the time.\n\nA specific group uses `zijn` (to be) instead:\n- verbs of **motion with a destination**: `gaan` (go), `komen` (come), `lopen` (walk), `zwemmen` (swim)\n- verbs of **change of state**: `worden` (become), `sterven` (die), `vallen` (fall), `opstaan` (get up)\n- two key exceptions: `blijven` (stay) and `zijn` itself (`geweest`)\n\nSo `Ik ben naar huis gegaan` (I went home), `Ik ben gevallen` (I fell), `Het is koud geworden` (it has become cold).\n\nGerman speakers will find this familiar; German does the same thing. English speakers find it odd, since we say `I have gone home`, never `I am gone home`. Just memorize the `zijn`-list. It's shorter than the `hebben`-list.",
         "table": {
           "caption": "Common verbs and their auxiliary",
@@ -248,14 +248,14 @@
         },
         "callout": {
           "tone": "warning",
-          "body": "`Ik heb gegaan` is a classic English-speaker mistake — and it's WRONG. Motion verbs with a destination always take zijn: `Ik ben gegaan`. Memorize the zijn-list and you'll avoid 90% of past-tense errors."
+          "body": "`Ik heb gegaan` is a classic English-speaker mistake, and it's WRONG. Motion verbs with a destination always take zijn: `Ik ben gegaan`. Memorize the zijn-list and you'll avoid 90% of past-tense errors."
         },
         "cutting_intro": "Here's the part that trips people up. Most verbs use `hebben` for the past. But some (motion verbs, change-of-state verbs) use `zijn` instead. Let's sort them.",
         "quick_check": {
           "question": "Which auxiliary does `gaan` (to go) take in the perfect tense?",
           "options": [
-            "hebben — `Ik heb gegaan`",
-            "zijn — `Ik ben gegaan`",
+            "hebben, `Ik heb gegaan`",
+            "zijn, `Ik ben gegaan`",
             "either works"
           ],
           "correct_index": 1,
@@ -264,7 +264,7 @@
       },
       {
         "heading": "Word order in perfect sentences",
-        "body": "Dutch is a verb-second language: the conjugated verb sits in second position in a main clause. In a perfect-tense sentence, the **helper verb** (`heb`, `hebt`, `heeft`, `hebben`, `ben`, `bent`, `is`, `zijn`) is that second element. The past participle gets pushed to the very **end** of the clause.\n\nSo `Ik heb gisteren een boek gelezen`: `heb` in slot two, `gelezen` at the end, everything else (`gisteren`, `een boek`) sandwiched between. In questions, the helper moves to slot one by inversion: `Heb je het boek gelezen?`, but the participle still anchors the end.\n\nSeparable verbs add one twist: the `ge-` slides between the prefix and the stem. `opbellen` (to call up) → `opgebeld`. `aankomen` (to arrive) → `aangekomen`. The whole compound participle still goes at the end: `Ik heb hem gisteren opgebeld` (I called him up yesterday).",
+        "body": "Dutch is a verb-second language: the conjugated verb sits in second position in a main clause. In a perfect-tense sentence, the **helper verb** (`heb`, `hebt`, `heeft`, `hebben`, `ben`, `bent`, `is`, `zijn`) is that second element. The past participle gets pushed to the very **end** of the clause. So `Ik heb gisteren een boek gelezen`: `heb` in slot two, `gelezen` at the end, everything else (`gisteren`, `een boek`) sandwiched between. In questions, the helper moves to slot one by inversion: `Heb je het boek gelezen?`, but the participle still anchors the end. Separable verbs add one twist: the `ge-` slides between the prefix and the stem. `opbellen` (to call up) / `opgebeld`. `aankomen` (to arrive) / `aangekomen`. The whole compound participle still goes at the end: `Ik heb hem gisteren opgebeld` (I called him up yesterday).",
         "examples": [
           {
             "hindi": "Ik heb gisteren een boek gelezen.",
@@ -284,7 +284,7 @@
           {
             "hindi": "Ik heb hem gisteren opgebeld.",
             "english": "I called him up yesterday.",
-            "breakdown": "Separable verb `opbellen` → `opgebeld`. `ge-` slides between prefix and stem."
+            "breakdown": "Separable verb `opbellen` / `opgebeld`. `ge-` slides between prefix and stem."
           }
         ],
         "callout": {
@@ -300,17 +300,17 @@
             "at the very end of the clause"
           ],
           "correct_index": 2,
-          "explanation": "Yes — the past participle always anchors the end. `Ik heb gisteren een boek gelezen.`"
+          "explanation": "Yes, the past participle always anchors the end. `Ik heb gisteren een boek gelezen.`"
         }
       },
       {
-        "heading": "Simple past — when you DO use it",
-        "body": "Dutch's simple past (the `imperfectum`) isn't dead. It's just specialized. You'll see and hear it in three places:\n- storytelling and written narratives\n- repeated or habitual past actions (`elke ochtend dronk ik koffie`, every morning I drank coffee)\n- a small set of common verbs where the simple past is normal in speech: `was`/`waren` (was/were), `had`/`hadden` (had), `zei`/`zeiden` (said), `wist`/`wisten` (knew)\n\nFormation: regular verbs add `-te`/`-ten` or `-de`/`-den` to the stem (same kofschip rule as for participles). `werken` → `ik werkte`. `wonen` → `ik woonde`. Strong verbs change the stem vowel: `lopen` → `ik liep` (I walked), `zien` → `ik zag` (I saw), `geven` → `ik gaf` (I gave). The same vowel-change list you memorize for participles does double duty here.",
+        "heading": "Simple past, when you DO use it",
+        "body": "Dutch's simple past (the `imperfectum`) isn't dead. It's just specialized. You'll see and hear it in three places:\n- storytelling and written narratives\n- repeated or habitual past actions (`elke ochtend dronk ik koffie`, every morning I drank coffee)\n- a small set of common verbs where the simple past is normal in speech: `was`/`waren` (was/were), `had`/`hadden` (had), `zei`/`zeiden` (said), `wist`/`wisten` (knew) Formation: regular verbs add `-te`/`-ten` or `-de`/`-den` to the stem (same kofschip rule as for participles). `werken` / `ik werkte`. `wonen` / `ik woonde`. Strong verbs change the stem vowel: `lopen` / `ik liep` (I walked), `zien` / `ik zag` (I saw), `geven` / `ik gaf` (I gave). The same vowel-change list you memorize for participles does double duty here.",
         "examples": [
           {
             "hindi": "Hij was er niet.",
             "english": "He wasn't there.",
-            "breakdown": "`zijn` simple past — heard constantly. `Hij is er niet geweest` (perfect) exists but the simple past is more natural here."
+            "breakdown": "`zijn` simple past, heard constantly. `Hij is er niet geweest` (perfect) exists but the simple past is more natural here."
           },
           {
             "hindi": "Ik wist het niet.",
@@ -320,12 +320,12 @@
           {
             "hindi": "Het regende de hele dag.",
             "english": "It rained all day.",
-            "breakdown": "Habitual / extended past — natural use of simple past in describing weather and ongoing past states."
+            "breakdown": "Habitual / extended past, natural use of simple past in describing weather and ongoing past states."
           },
           {
             "hindi": "Toen ik klein was, woonde ik in Rotterdam.",
             "english": "When I was little, I lived in Rotterdam.",
-            "breakdown": "Storytelling + habitual — simple past fits the register perfectly."
+            "breakdown": "Storytelling + habitual, simple past fits the register perfectly."
           }
         ],
         "callout": {
@@ -341,7 +341,7 @@
             "Both equally common"
           ],
           "correct_index": 1,
-          "explanation": "Perfect is the conversational default. The simple past `Ik at pizza` is grammatical but sounds literary — save it for writing or storytelling."
+          "explanation": "Perfect is the conversational default. The simple past `Ik at pizza` is grammatical but sounds literary, save it for writing or storytelling."
         }
       }
     ],

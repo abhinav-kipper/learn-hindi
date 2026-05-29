@@ -5,189 +5,324 @@
       "id": "at-the-chai-stall",
       "title": "At the Chai Stall",
       "scenario": "You're at a roadside chai stall ordering chai and snacks, chatting with the vendor and other regulars",
-      "skills": ["ordering", "small talk", "casual yaar register", "compliments"],
+      "skills": [
+        "ordering",
+        "small talk",
+        "casual yaar register",
+        "compliments"
+      ],
       "level": "A1"
     },
     {
       "id": "train-travel",
       "title": "Train Travel",
       "scenario": "Booking a train ticket and asking about platform numbers, seat availability, and arrival times",
-      "skills": ["numbers", "time expressions", "asking for help", "directions"],
+      "skills": [
+        "numbers",
+        "time expressions",
+        "asking for help",
+        "directions"
+      ],
       "level": "A2"
     },
     {
       "id": "complaining-about-food",
       "title": "Complaining About Food",
-      "scenario": "The food at a restaurant is cold or wrong — you need to send it back politely",
-      "skills": ["polite complaints", "describing problems", "requests for fixes", "tone management"],
+      "scenario": "The food at a restaurant is cold or wrong, you need to send it back politely",
+      "skills": [
+        "polite complaints",
+        "describing problems",
+        "requests for fixes",
+        "tone management"
+      ],
       "level": "B1"
     },
     {
       "id": "bollywood-recap",
       "title": "Discussing a Bollywood Film",
-      "scenario": "Talking with a friend about the Bollywood movie you both just watched — likes, dislikes, favorite scenes",
-      "skills": ["opinions", "describing plot", "expressing emotions", "comparing"],
+      "scenario": "Talking with a friend about the Bollywood movie you both just watched, likes, dislikes, favorite scenes",
+      "skills": [
+        "opinions",
+        "describing plot",
+        "expressing emotions",
+        "comparing"
+      ],
       "level": "B1"
     },
     {
       "id": "job-interview",
       "title": "First-Round Job Interview",
-      "scenario": "An informal first-round interview in Hindi — introducing yourself, talking about experience and motivation",
-      "skills": ["formal register", "talking about work", "describing skills", "future tense"],
+      "scenario": "An informal first-round interview in Hindi, introducing yourself, talking about experience and motivation",
+      "skills": [
+        "formal register",
+        "talking about work",
+        "describing skills",
+        "future tense"
+      ],
       "level": "B1"
     },
     {
       "id": "wedding-small-talk",
       "title": "Wedding Small Talk",
-      "scenario": "You're a guest at an Indian wedding — making small talk with relatives you've never met, complimenting the food and decor",
-      "skills": ["polite greetings", "compliments", "family relations", "small talk"],
+      "scenario": "You're a guest at an Indian wedding, making small talk with relatives you've never met, complimenting the food and decor",
+      "skills": [
+        "polite greetings",
+        "compliments",
+        "family relations",
+        "small talk"
+      ],
       "level": "B1"
     },
     {
       "id": "lost-wallet",
       "title": "Lost Wallet",
-      "scenario": "You realize your wallet is missing — describe where you last saw it, ask shopkeepers if anyone turned it in, report it to a guard",
-      "skills": ["past tense", "describing objects", "asking for help", "urgency"],
+      "scenario": "You realize your wallet is missing, describe where you last saw it, ask shopkeepers if anyone turned it in, report it to a guard",
+      "skills": [
+        "past tense",
+        "describing objects",
+        "asking for help",
+        "urgency"
+      ],
       "level": "A2"
     },
     {
       "id": "borrowing-money",
       "title": "Borrowing Money from a Friend",
-      "scenario": "Asking a close friend to lend you some cash until next week — explaining why, promising to return it",
-      "skills": ["informal register", "explaining reasons", "promises", "gratitude"],
+      "scenario": "Asking a close friend to lend you some cash until next week, explaining why, promising to return it",
+      "skills": [
+        "informal register",
+        "explaining reasons",
+        "promises",
+        "gratitude"
+      ],
       "level": "A2"
     },
     {
       "id": "wifi-not-working",
       "title": "Wifi Not Working",
-      "scenario": "The wifi is down at home — you're calling the ISP support number trying to get it fixed in Hindi",
-      "skills": ["describing technical problems", "tech vocabulary", "patience phrases", "polite requests"],
+      "scenario": "The wifi is down at home, you're calling the ISP support number trying to get it fixed in Hindi",
+      "skills": [
+        "describing technical problems",
+        "tech vocabulary",
+        "patience phrases",
+        "polite requests"
+      ],
       "level": "B1"
     },
     {
       "id": "pharmacy",
       "title": "At the Pharmacy",
-      "scenario": "Buying over-the-counter medicine — describing symptoms, asking about side effects and dosage",
-      "skills": ["body parts", "time expressions", "asking questions", "medicine vocabulary"],
+      "scenario": "Buying over-the-counter medicine, describing symptoms, asking about side effects and dosage",
+      "skills": [
+        "body parts",
+        "time expressions",
+        "asking questions",
+        "medicine vocabulary"
+      ],
       "level": "A2"
     },
     {
       "id": "flirting-cautiously",
       "title": "Flirting Cautiously",
-      "scenario": "A coffee shop chat with someone you're interested in — feeling out the vibe, dropping hints, asking for their number",
-      "skills": ["compliments", "soft questions", "casual yaar register", "exit lines"],
+      "scenario": "A coffee shop chat with someone you're interested in, feeling out the vibe, dropping hints, asking for their number",
+      "skills": [
+        "compliments",
+        "soft questions",
+        "casual yaar register",
+        "exit lines"
+      ],
       "level": "B1"
     },
     {
       "id": "talking-to-elder-uncle",
       "title": "Chatting with an Uncle",
       "scenario": "You're at a family gathering and an older uncle wants to discuss your life plans, marriage, and career",
-      "skills": ["aap register", "respectful deflection", "explaining choices", "diplomatic phrases"],
+      "skills": [
+        "aap register",
+        "respectful deflection",
+        "explaining choices",
+        "diplomatic phrases"
+      ],
       "level": "B1"
     },
     {
       "id": "sabzi-market",
       "title": "At the Sabzi Market",
-      "scenario": "Buying vegetables at a local sabzi market — bargaining, asking what's fresh, choosing quantities",
-      "skills": ["vegetable names", "weights & quantities", "bargaining", "describing freshness"],
+      "scenario": "Buying vegetables at a local sabzi market, bargaining, asking what's fresh, choosing quantities",
+      "skills": [
+        "vegetable names",
+        "weights & quantities",
+        "bargaining",
+        "describing freshness"
+      ],
       "level": "A2"
     },
     {
       "id": "apologizing-late",
       "title": "Apologizing for Being Late",
-      "scenario": "You're 30 minutes late to meet a friend — apologize, explain (honestly or not), make it up to them",
-      "skills": ["apologies", "past tense", "promises", "excuses"],
+      "scenario": "You're 30 minutes late to meet a friend, apologize, explain (honestly or not), make it up to them",
+      "skills": [
+        "apologies",
+        "past tense",
+        "promises",
+        "excuses"
+      ],
       "level": "A2"
     },
     {
       "id": "hostel-checkin",
       "title": "Hostel Check-in",
-      "scenario": "Checking into a hostel — asking about room availability, prices, amenities, check-out time",
-      "skills": ["numbers", "time expressions", "asking questions", "polite requests"],
+      "scenario": "Checking into a hostel, asking about room availability, prices, amenities, check-out time",
+      "skills": [
+        "numbers",
+        "time expressions",
+        "asking questions",
+        "polite requests"
+      ],
       "level": "A2"
     },
     {
       "id": "discussing-weather",
       "title": "Discussing the Weather",
-      "scenario": "Stuck waiting for a delayed bus — small talk with a stranger about the heat, the rains, the season",
-      "skills": ["weather vocabulary", "small talk", "comparing", "complaining lightly"],
+      "scenario": "Stuck waiting for a delayed bus, small talk with a stranger about the heat, the rains, the season",
+      "skills": [
+        "weather vocabulary",
+        "small talk",
+        "comparing",
+        "complaining lightly"
+      ],
       "level": "A2"
     },
     {
       "id": "temple-visit",
       "title": "Temple Visit",
-      "scenario": "First-time visit to a temple — asking about etiquette, what to do, what not to do",
-      "skills": ["polite questions", "etiquette phrases", "respectful register", "describing actions"],
+      "scenario": "First-time visit to a temple, asking about etiquette, what to do, what not to do",
+      "skills": [
+        "polite questions",
+        "etiquette phrases",
+        "respectful register",
+        "describing actions"
+      ],
       "level": "B1"
     },
     {
       "id": "office-banter",
       "title": "Office Banter",
-      "scenario": "Lunch break chat with coworkers — gossip, joking, weekend plans, complaints about meetings",
-      "skills": ["casual register", "jokes", "complaints", "weekend vocabulary"],
+      "scenario": "Lunch break chat with coworkers, gossip, joking, weekend plans, complaints about meetings",
+      "skills": [
+        "casual register",
+        "jokes",
+        "complaints",
+        "weekend vocabulary"
+      ],
       "level": "B1"
     },
     {
       "id": "kids-talk",
       "title": "Talking to a Child",
-      "scenario": "Babysitting or playing with a friend's child — simple instructions, encouragement, settling small fights",
-      "skills": ["simplified Hindi", "encouragement", "imperatives", "diminutives"],
+      "scenario": "Babysitting or playing with a friend's child, simple instructions, encouragement, settling small fights",
+      "skills": [
+        "simplified Hindi",
+        "encouragement",
+        "imperatives",
+        "diminutives"
+      ],
       "level": "A2"
     },
     {
       "id": "saying-no-politely",
       "title": "Saying No Politely",
-      "scenario": "Declining invitations, requests, or offers without offending — the Indian art of soft refusals",
-      "skills": ["polite refusals", "diplomatic phrases", "soft excuses", "expressing regret"],
+      "scenario": "Declining invitations, requests, or offers without offending, the Indian art of soft refusals",
+      "skills": [
+        "polite refusals",
+        "diplomatic phrases",
+        "soft excuses",
+        "expressing regret"
+      ],
       "level": "B1"
     },
     {
       "id": "gym-talk",
       "title": "Chatting at the Gym",
-      "scenario": "Casual chat between sets at a gym — asking about machines, sharing tips, complimenting workouts",
-      "skills": ["body parts", "exercise vocabulary", "compliments", "casual register"],
+      "scenario": "Casual chat between sets at a gym, asking about machines, sharing tips, complimenting workouts",
+      "skills": [
+        "body parts",
+        "exercise vocabulary",
+        "compliments",
+        "casual register"
+      ],
       "level": "B1"
     },
     {
       "id": "cab-conversation",
       "title": "Cab Conversation",
-      "scenario": "Long Uber/Ola ride — small talk with a chatty driver about politics, cricket, family, the route",
-      "skills": ["small talk", "asking questions", "expressing opinions", "agreement/disagreement"],
+      "scenario": "Long Uber/Ola ride, small talk with a chatty driver about politics, cricket, family, the route",
+      "skills": [
+        "small talk",
+        "asking questions",
+        "expressing opinions",
+        "agreement/disagreement"
+      ],
       "level": "B1"
     },
     {
       "id": "tech-support",
       "title": "Tech Support Call",
-      "scenario": "Calling a Hindi-speaking tech support agent — describing a problem, following instructions over the phone",
-      "skills": ["describing problems", "following instructions", "patience phrases", "tech vocabulary"],
+      "scenario": "Calling a Hindi-speaking tech support agent, describing a problem, following instructions over the phone",
+      "skills": [
+        "describing problems",
+        "following instructions",
+        "patience phrases",
+        "tech vocabulary"
+      ],
       "level": "B1"
     },
     {
       "id": "holi-festival",
       "title": "Playing Holi",
-      "scenario": "Out on the streets during Holi — exchanging greetings, dodging color, accepting bhang or sweets",
-      "skills": ["festival greetings", "playful refusals", "describing actions", "warnings"],
+      "scenario": "Out on the streets during Holi, exchanging greetings, dodging color, accepting bhang or sweets",
+      "skills": [
+        "festival greetings",
+        "playful refusals",
+        "describing actions",
+        "warnings"
+      ],
       "level": "B1"
     },
     {
       "id": "diwali-greetings",
       "title": "Diwali Visits",
-      "scenario": "Visiting relatives during Diwali — exchanging greetings, accepting sweets, complimenting decorations and clothes",
-      "skills": ["festival greetings", "polite acceptance", "compliments", "small talk"],
+      "scenario": "Visiting relatives during Diwali, exchanging greetings, accepting sweets, complimenting decorations and clothes",
+      "skills": [
+        "festival greetings",
+        "polite acceptance",
+        "compliments",
+        "small talk"
+      ],
       "level": "A2"
     },
     {
       "id": "cricket-talk",
       "title": "Cricket Match Banter",
-      "scenario": "Watching an IPL match with friends — celebrating shots, criticizing the bowling, debating who's the best player",
-      "skills": ["cricket vocabulary", "exclamations", "comparisons", "opinions"],
+      "scenario": "Watching an IPL match with friends, celebrating shots, criticizing the bowling, debating who's the best player",
+      "skills": [
+        "cricket vocabulary",
+        "exclamations",
+        "comparisons",
+        "opinions"
+      ],
       "level": "B1"
     },
     {
       "id": "salon-haircut",
       "title": "Getting a Haircut",
-      "scenario": "At a salon describing the haircut you want — length, style, what to avoid, reacting to the result",
-      "skills": ["describing styles", "length measurements", "polite requests", "reacting"],
+      "scenario": "At a salon describing the haircut you want, length, style, what to avoid, reacting to the result",
+      "skills": [
+        "describing styles",
+        "length measurements",
+        "polite requests",
+        "reacting"
+      ],
       "level": "A2"
     }
   ]

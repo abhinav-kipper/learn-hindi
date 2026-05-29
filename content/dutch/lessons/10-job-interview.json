@@ -2,67 +2,164 @@
   "id": "dutch-job-interview",
   "title": "Job Interview",
   "situation": "You're interviewing for an office position in a Dutch company. The interviewer asks the standard questions: tell me about yourself, why this company, what's your experience, what are your strengths and weaknesses, and what are your salary expectations.",
-  "skills": ["introducing yourself professionally", "describing past experience (perfect tense)", "explaining motivation (omdat / want)", "asking thoughtful questions"],
+  "skills": [
+    "introducing yourself professionally",
+    "describing past experience (perfect tense)",
+    "explaining motivation (omdat / want)",
+    "asking thoughtful questions"
+  ],
   "phrases": [
-    { "hindi": "Aangenaam, ik ben Arjun Mehta — fijn u te ontmoeten.", "english": "Pleased to meet you, I'm Arjun Mehta — nice to meet you.", "context": "'Aangenaam' = pleased (to meet you) — the standard professional greeting in a formal Dutch introduction. Follow it immediately with your full name. 'Fijn u te ontmoeten' adds warmth. A firm handshake and eye contact are expected.", "pronunciation": "AAN-che-naam, ik ben AR-yun MAY-ta — FAYN u te ont-MOO-ten" },
-    { "hindi": "Ik heb vijf jaar gewerkt als projectcoördinator bij een IT-bedrijf.", "english": "I worked for five years as a project coordinator at an IT company.", "context": "Use perfect tense ('heb gewerkt') for past experience you're describing in an interview — it sounds more dynamic than simple past. 'Als + function' = as + job title. Stating years and sector in one sentence is the efficient Dutch style.", "pronunciation": "ik hep VAYF YAAR che-WERKT als pro-YEKT-ko-or-di-NA-tor bay uhn IT-be-DRAYF" },
-    { "hindi": "Ik solliciteer omdat ik graag wil bijdragen aan duurzame innovatie.", "english": "I'm applying because I want to contribute to sustainable innovation.", "context": "'Solliciteren' = to apply for a job. 'Omdat' triggers end-verb order: 'ik graag wil bijdragen' — verb goes last. 'Bijdragen aan' = to contribute to. Linking your motivation to the company's mission shows you've done research — very valued in Dutch interviews.", "pronunciation": "ik sol-li-si-TEER om-DAT ik CHRAACH wil BAY-draa-chen aan DUUR-za-me in-no-VA-tsee" },
-    { "hindi": "Ik werk graag in een team en ik communiceer open en direct.", "english": "I enjoy working in a team and I communicate openly and directly.", "context": "Dutch workplaces prize direct communication ('directheid'). Naming it as a strength resonates with interviewers. 'Graag' softens the statement. Avoid vague corporate clichés — Dutch interviewers prefer concrete examples.", "pronunciation": "ik WERK chraach in uhn TEAM en ik ko-mu-ni-SEER OH-pen en di-REKT" },
-    { "hindi": "Soms wil ik te perfectionistisch zijn — ik werk eraan.", "english": "Sometimes I tend to be too perfectionist — I'm working on it.", "context": "Dutch interviewers ask for a real weakness, not a hidden strength. Acknowledging perfectionism and adding 'ik werk eraan' (I'm working on it) shows self-awareness without being evasive. Be genuine — Dutch interviewers spot performance.", "pronunciation": "SOMS wil ik te per-FEK-tsyo-NIS-tees ZAYN — ik WERK er-AAN" },
-    { "hindi": "Bij mijn vorige werkgever heb ik geleerd hoe ik met deadlines om moet gaan.", "english": "At my previous employer I learned how to handle deadlines.", "context": "'Vorige werkgever' = previous employer. 'Heb geleerd' = have learned (perfect tense). 'Omgaan met' = to deal with / handle (separable verb). Citing a specific learning from past work is stronger than abstract claims.", "pronunciation": "bay mayn VOR-ri-che WERK-che-ver hep ik che-LAYRT hoo ik met DEAD-lains om MOET chaan" },
-    { "hindi": "Wat zijn de salarisverwachtingen voor deze functie?", "english": "What are the salary expectations for this position?", "context": "'Salarisverwachtingen' = salary expectations. In Dutch culture it's normal to ask about salary — but typically in the second interview or when the interviewer raises it. Asking first in a first interview can seem premature. Better to let them bring it up.", "pronunciation": "wat zayn de sa-LA-ris-ver-WACH-ting-en voor DAY-ze FUNK-tsee" },
-    { "hindi": "Als ik word aangenomen, wanneer zou ik dan kunnen beginnen?", "english": "If I'm hired, when would I be able to start?", "context": "'Als ik word aangenomen' = if I am accepted/hired (conditional). 'Aangenomen worden' = to be hired (passive). Asking this shows genuine interest and helps both sides plan. In NL, notice periods are typically 1–3 months.", "pronunciation": "als ik WORT AAN-che-NO-men, WAN-neer zow ik dan KUN-nen be-CHIN-nen" },
-    { "hindi": "Hoe ziet een typische werkdag eruit in deze rol?", "english": "What does a typical working day look like in this role?", "context": "'Eruit zien' = to look like (separable). 'Typische werkdag' = typical working day. This is an excellent question to ask the interviewer — it signals genuine curiosity, not just politeness. Listen carefully for clues about culture, hours, and flexibility.", "pronunciation": "hoo ZEET uhn TYP-ee-se WERK-dach ER-uyt in DAY-ze ROL" },
-    { "hindi": "Bedankt voor uw tijd. Ik zie uw reactie graag tegemoet.", "english": "Thank you for your time. I look forward to your response.", "context": "'Uw reactie tegemoet zien' = to look forward to your response (formal and professional). Stronger than a simple 'bedankt' at the end. A firm handshake and brief eye contact when leaving are the expected closing in Dutch professional settings.", "pronunciation": "be-DANKT voor uw TAYT. ik ZEE uw re-AK-tsee CHRAACH te-che-MOET" }
+    {
+      "hindi": "Aangenaam, ik ben Arjun Mehta, fijn u te ontmoeten.",
+      "english": "Pleased to meet you, I'm Arjun Mehta, nice to meet you.",
+      "context": "'Aangenaam' = pleased (to meet you), the standard professional greeting in a formal Dutch introduction. Follow it immediately with your full name. 'Fijn u te ontmoeten' adds warmth. A firm handshake and eye contact are expected.",
+      "pronunciation": "AAN-che-naam, ik ben AR-yun MAY-ta, FAYN u te ont-MOO-ten"
+    },
+    {
+      "hindi": "Ik heb vijf jaar gewerkt als projectcoördinator bij een IT-bedrijf.",
+      "english": "I worked for five years as a project coordinator at an IT company.",
+      "context": "Use perfect tense ('heb gewerkt') for past experience you're describing in an interview, it sounds more dynamic than simple past. 'Als + function' = as + job title. Stating years and sector in one sentence is the efficient Dutch style.",
+      "pronunciation": "ik hep VAYF YAAR che-WERKT als pro-YEKT-ko-or-di-NA-tor bay uhn IT-be-DRAYF"
+    },
+    {
+      "hindi": "Ik solliciteer omdat ik graag wil bijdragen aan duurzame innovatie.",
+      "english": "I'm applying because I want to contribute to sustainable innovation.",
+      "context": "'Solliciteren' = to apply for a job. 'Omdat' triggers end-verb order: 'ik graag wil bijdragen', verb goes last. 'Bijdragen aan' = to contribute to. Linking your motivation to the company's mission shows you've done research, very valued in Dutch interviews.",
+      "pronunciation": "ik sol-li-si-TEER om-DAT ik CHRAACH wil BAY-draa-chen aan DUUR-za-me in-no-VA-tsee"
+    },
+    {
+      "hindi": "Ik werk graag in een team en ik communiceer open en direct.",
+      "english": "I enjoy working in a team and I communicate openly and directly.",
+      "context": "Dutch workplaces prize direct communication ('directheid'). Naming it as a strength resonates with interviewers. 'Graag' softens the statement. Avoid vague corporate clichés, Dutch interviewers prefer concrete examples.",
+      "pronunciation": "ik WERK chraach in uhn TEAM en ik ko-mu-ni-SEER OH-pen en di-REKT"
+    },
+    {
+      "hindi": "Soms wil ik te perfectionistisch zijn, ik werk eraan.",
+      "english": "Sometimes I tend to be too perfectionist, I'm working on it.",
+      "context": "Dutch interviewers ask for a real weakness, not a hidden strength. Acknowledging perfectionism and adding 'ik werk eraan' (I'm working on it) shows self-awareness without being evasive. Be genuine, Dutch interviewers spot performance.",
+      "pronunciation": "SOMS wil ik te per-FEK-tsyo-NIS-tees ZAYN, ik WERK er-AAN"
+    },
+    {
+      "hindi": "Bij mijn vorige werkgever heb ik geleerd hoe ik met deadlines om moet gaan.",
+      "english": "At my previous employer I learned how to handle deadlines.",
+      "context": "'Vorige werkgever' = previous employer. 'Heb geleerd' = have learned (perfect tense). 'Omgaan met' = to deal with / handle (separable verb). Citing a specific learning from past work is stronger than abstract claims.",
+      "pronunciation": "bay mayn VOR-ri-che WERK-che-ver hep ik che-LAYRT hoo ik met DEAD-lains om MOET chaan"
+    },
+    {
+      "hindi": "Wat zijn de salarisverwachtingen voor deze functie?",
+      "english": "What are the salary expectations for this position?",
+      "context": "'Salarisverwachtingen' = salary expectations. In Dutch culture it's normal to ask about salary, but typically in the second interview or when the interviewer raises it. Asking first in a first interview can seem premature. Better to let them bring it up.",
+      "pronunciation": "wat zayn de sa-LA-ris-ver-WACH-ting-en voor DAY-ze FUNK-tsee"
+    },
+    {
+      "hindi": "Als ik word aangenomen, wanneer zou ik dan kunnen beginnen?",
+      "english": "If I'm hired, when would I be able to start?",
+      "context": "'Als ik word aangenomen' = if I am accepted/hired (conditional). 'Aangenomen worden' = to be hired (passive). Asking this shows genuine interest and helps both sides plan. In NL, notice periods are typically 1–3 months.",
+      "pronunciation": "als ik WORT AAN-che-NO-men, WAN-neer zow ik dan KUN-nen be-CHIN-nen"
+    },
+    {
+      "hindi": "Hoe ziet een typische werkdag eruit in deze rol?",
+      "english": "What does a typical working day look like in this role?",
+      "context": "'Eruit zien' = to look like (separable). 'Typische werkdag' = typical working day. This is an excellent question to ask the interviewer, it signals genuine curiosity, not just politeness. Listen carefully for clues about culture, hours, and flexibility.",
+      "pronunciation": "hoo ZEET uhn TYP-ee-se WERK-dach ER-uyt in DAY-ze ROL"
+    },
+    {
+      "hindi": "Bedankt voor uw tijd. Ik zie uw reactie graag tegemoet.",
+      "english": "Thank you for your time. I look forward to your response.",
+      "context": "'Uw reactie tegemoet zien' = to look forward to your response (formal and professional). Stronger than a simple 'bedankt' at the end. A firm handshake and brief eye contact when leaving are the expected closing in Dutch professional settings.",
+      "pronunciation": "be-DANKT voor uw TAYT. ik ZEE uw re-AK-tsee CHRAACH te-che-MOET"
+    }
   ],
   "grammar_notes": [
     "Perfect tense for past experience: 'Ik heb vijf jaar gewerkt' (I worked / I have worked). In interviews, use the perfect tense for completed past actions because the results are still relevant to the present conversation",
-    "Subordinate clauses with 'omdat' and 'want': both mean 'because' but differ in word order. 'Omdat' triggers end-verb order ('ik dit graag wil doen'); 'want' does NOT — it's a coordinating conjunction and keeps normal order ('want ik wil dit graag doen')",
+    "Subordinate clauses with 'omdat' and 'want': both mean 'because' but differ in word order. 'Omdat' triggers end-verb order ('ik dit graag wil doen'); 'want' does NOT, it's a coordinating conjunction and keeps normal order ('want ik wil dit graag doen')",
     "Conditional with 'als': 'Als ik word aangenomen, zou ik in september kunnen beginnen'. The main clause typically uses 'zou + infinitive' for a polite hypothetical. This construction appears on the Inburgeringsexamen",
     "Modal 'willen' in first person: 'Ik wil graag...' (I would like to). In interviews, 'ik zou graag' is even softer and more professional. The difference: 'wil' = want (direct); 'zou willen' = would like (deferential)",
-    "Comparatives for self-description: 'Ik werk beter in een team dan alleen' (I work better in a team than alone). Comparatives formed by adding '-er': snel → sneller, goed → beter (irregular), veel → meer (irregular)"
+    "Comparatives for self-description: 'Ik werk beter in een team dan alleen' (I work better in a team than alone). Comparatives formed by adding '-er': snel / sneller, goed / beter (irregular), veel / meer (irregular)"
   ],
   "culture_notes": [
-    "Dutch directness applies in interviews too. It is acceptable — expected, even — to say 'Dat weet ik niet, maar ik zou het graag uitzoeken' (I don't know, but I'd like to find out). Pretending to know something you don't is a red flag to Dutch interviewers",
-    "Punctuality is not optional. Arrive 10 minutes early, no more. Arriving 20+ minutes early can put the interviewer in an awkward position. If you'll be late, always call — never just text",
+    "Dutch directness applies in interviews too. It is acceptable, expected, even, to say 'Dat weet ik niet, maar ik zou het graag uitzoeken' (I don't know, but I'd like to find out). Pretending to know something you don't is a red flag to Dutch interviewers",
+    "Punctuality is not optional. Arrive 10 minutes early, no more. Arriving 20+ minutes early can put the interviewer in an awkward position. If you'll be late, always call, never just text",
     "Salary is typically discussed in the second interview in the Netherlands. Saying 'Ik bespreek dat graag in een later gesprek' (I'd prefer to discuss that in a later conversation) is perfectly acceptable in a first interview",
-    "Dress code varies by sector. A startup may welcome smart-casual; a bank or law firm expects formeel. When in doubt, err formal — it's easier to dress down than to recover from being underdressed at a Dutch interview"
+    "Dress code varies by sector. A startup may welcome smart-casual; a bank or law firm expects formeel. When in doubt, err formal, it's easier to dress down than to recover from being underdressed at a Dutch interview"
   ],
   "skill_breakdown": [
     {
       "skill": "professional self-introduction",
-      "explanation": "The standard Dutch job-interview opening follows: name → current/most recent role → years of experience → key strength. Keep it under 90 seconds. Do not include marital status, age, or religion — these are irrelevant in NL and may make interviewers uncomfortable.",
+      "explanation": "The standard Dutch job-interview opening follows: name / current/most recent role / years of experience / key strength. Keep it under 90 seconds. Do not include marital status, age, or religion, these are irrelevant in NL and may make interviewers uncomfortable.",
       "more_examples": [
-        { "hindi": "Ik ben Sophie Bakker en ik heb drie jaar ervaring in de zorgsector.", "english": "I'm Sophie Bakker and I have three years of experience in the healthcare sector." },
-        { "hindi": "Mijn achtergrond is in marketing en communicatie.", "english": "My background is in marketing and communications." },
-        { "hindi": "Ik woon in Amsterdam en ben beschikbaar per direct.", "english": "I live in Amsterdam and am available immediately." },
-        { "hindi": "Ik spreek Nederlands, Engels en een beetje Frans.", "english": "I speak Dutch, English, and a little French." }
+        {
+          "hindi": "Ik ben Sophie Bakker en ik heb drie jaar ervaring in de zorgsector.",
+          "english": "I'm Sophie Bakker and I have three years of experience in the healthcare sector."
+        },
+        {
+          "hindi": "Mijn achtergrond is in marketing en communicatie.",
+          "english": "My background is in marketing and communications."
+        },
+        {
+          "hindi": "Ik woon in Amsterdam en ben beschikbaar per direct.",
+          "english": "I live in Amsterdam and am available immediately."
+        },
+        {
+          "hindi": "Ik spreek Nederlands, Engels en een beetje Frans.",
+          "english": "I speak Dutch, English, and a little French."
+        }
       ]
     },
     {
       "skill": "describing experience and accomplishments",
       "explanation": "Use the STAR pattern loosely: situation, what you did, result. Always use perfect tense for past accomplishments. Numbers and specifics ('20% minder kosten', 'een team van 5') are valued by Dutch interviewers over vague adjectives.",
       "more_examples": [
-        { "hindi": "Ik heb een team van acht mensen geleid.", "english": "I led a team of eight people." },
-        { "hindi": "We hebben de kosten met twintig procent verlaagd.", "english": "We reduced costs by twenty percent." },
-        { "hindi": "Ik heb een nieuw systeem geïmplementeerd dat tijd bespaarde.", "english": "I implemented a new system that saved time." },
-        { "hindi": "Bij mijn vorige werkgever was ik verantwoordelijk voor de klantenservice.", "english": "At my previous employer I was responsible for customer service." },
-        { "hindi": "Ik heb mijn collega's getraind in de nieuwe software.", "english": "I trained my colleagues in the new software." }
+        {
+          "hindi": "Ik heb een team van acht mensen geleid.",
+          "english": "I led a team of eight people."
+        },
+        {
+          "hindi": "We hebben de kosten met twintig procent verlaagd.",
+          "english": "We reduced costs by twenty percent."
+        },
+        {
+          "hindi": "Ik heb een nieuw systeem geïmplementeerd dat tijd bespaarde.",
+          "english": "I implemented a new system that saved time."
+        },
+        {
+          "hindi": "Bij mijn vorige werkgever was ik verantwoordelijk voor de klantenservice.",
+          "english": "At my previous employer I was responsible for customer service."
+        },
+        {
+          "hindi": "Ik heb mijn collega's getraind in de nieuwe software.",
+          "english": "I trained my colleagues in the new software."
+        }
       ]
     },
     {
       "skill": "asking thoughtful questions",
-      "explanation": "End the interview with 2–3 prepared questions. Good ones show you've researched the company and care about the role. Avoid 'Hoe lang is de vakantie?' (How long is the holiday?) as your first question — it signals priorities employers dislike.",
+      "explanation": "End the interview with 2–3 prepared questions. Good ones show you've researched the company and care about the role. Avoid 'Hoe lang is de vakantie?' (How long is the holiday?) as your first question, it signals priorities employers dislike.",
       "more_examples": [
-        { "hindi": "Hoe omschrijft u de bedrijfscultuur hier?", "english": "How would you describe the company culture here?" },
-        { "hindi": "Welke kansen zijn er voor verdere ontwikkeling?", "english": "What opportunities are there for further development?" },
-        { "hindi": "Wat zijn de grootste uitdagingen in deze rol?", "english": "What are the biggest challenges in this role?" },
-        { "hindi": "Hoe groot is het team waarmee ik ga samenwerken?", "english": "How big is the team I'll be working with?" }
+        {
+          "hindi": "Hoe omschrijft u de bedrijfscultuur hier?",
+          "english": "How would you describe the company culture here?"
+        },
+        {
+          "hindi": "Welke kansen zijn er voor verdere ontwikkeling?",
+          "english": "What opportunities are there for further development?"
+        },
+        {
+          "hindi": "Wat zijn de grootste uitdagingen in deze rol?",
+          "english": "What are the biggest challenges in this role?"
+        },
+        {
+          "hindi": "Hoe groot is het team waarmee ik ga samenwerken?",
+          "english": "How big is the team I'll be working with?"
+        }
       ]
     }
   ],
-  "practice_prompt": "You are an HR manager at a Dutch mid-sized company interviewing for an office coordinator role. Use formal 'u' throughout. Ask the standard Dutch interview questions in order: self-introduction, experience, motivation (waarom dit bedrijf?), strengths and weaknesses, salary expectations, and invite the candidate's questions. React authentically to answers — follow up with 'kunt u een voorbeeld geven?' (can you give an example?) when answers are vague. Correct grammar errors kindly. Open with: 'Welkom, fijn dat u kon komen. Kunt u uzelf even kort voorstellen?'",
-  "references": ["Naar Nederland Ch. 5", "Dutch business culture norms"],
+  "practice_prompt": "You are an HR manager at a Dutch mid-sized company interviewing for an office coordinator role. Use formal 'u' throughout. Ask the standard Dutch interview questions in order: self-introduction, experience, motivation (waarom dit bedrijf?), strengths and weaknesses, salary expectations, and invite the candidate's questions. React authentically to answers, follow up with 'kunt u een voorbeeld geven?' (can you give an example?) when answers are vague. Correct grammar errors kindly. Open with: 'Welkom, fijn dat u kon komen. Kunt u uzelf even kort voorstellen?'",
+  "references": [
+    "Naar Nederland Ch. 5",
+    "Dutch business culture norms"
+  ],
   "level": "B1",
   "exam_targeted": true
 }

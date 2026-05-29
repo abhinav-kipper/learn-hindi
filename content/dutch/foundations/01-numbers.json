@@ -12,19 +12,19 @@
     {
       "hindi": "een, twee, drie, vier, vijf, zes, zeven, acht, negen, tien",
       "english": "one, two, three, four, five, six, seven, eight, nine, ten",
-      "context": "The core numbers — drill these until they're automatic. 'Twee' rhymes with 'way', 'vijf' sounds like 'vayf'",
+      "context": "The core numbers, drill these until they're automatic. 'Twee' rhymes with 'way', 'vijf' sounds like 'vayf'",
       "pronunciation": "AYN, tway, DREE, feer, VAYF, zes, ZAY-ven, acht, NAY-gen, teen"
     },
     {
       "hindi": "twintig, dertig, veertig, vijftig, zestig, zeventig, tachtig, negentig, honderd, duizend",
       "english": "twenty, thirty, forty, fifty, sixty, seventy, eighty, ninety, hundred, thousand",
-      "context": "'Tachtig' (80) is irregular — from 'acht'. 'Duizend' = thousand. Compound numbers: 'eenentwintig' = 21 (one-and-twenty)",
+      "context": "'Tachtig' (80) is irregular, from 'acht'. 'Duizend' = thousand. Compound numbers: 'eenentwintig' = 21 (one-and-twenty)",
       "pronunciation": "TWIN-tich, DER-tich, VEER-tich, VAYF-tich, ZES-tich, ZAY-ven-tich, TACH-tich, NAY-gen-tich, HON-derd, DOW-zend"
     },
     {
       "hindi": "maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag",
       "english": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday",
-      "context": "Dutch week starts Monday. 'Woensdag' (Wednesday) is tricky — the 'oe' sounds like English 'oo', so it's WOONS-dach. Abbreviated: ma, di, wo, do, vr, za, zo",
+      "context": "Dutch week starts Monday. 'Woensdag' (Wednesday) is tricky, the 'oe' sounds like English 'oo', so it's WOONS-dach. Abbreviated: ma, di, wo, do, vr, za, zo",
       "pronunciation": "MAAN-dach, DINS-dach, WOONS-dach, DON-der-dach, VRAY-dach, ZAA-ter-dach, ZON-dach"
     },
     {
@@ -42,13 +42,13 @@
     {
       "hindi": "Wanneer is de afspraak? Morgen, op woensdag. Gisteren was het dinsdag. Overmorgen is het donderdag.",
       "english": "When is the appointment? Tomorrow, on Wednesday. Yesterday was Tuesday. The day after tomorrow is Thursday.",
-      "context": "'Morgen' (tomorrow), 'gisteren' (yesterday), 'overmorgen' (day after tomorrow) — the time anchors you use every time you schedule anything.",
+      "context": "'Morgen' (tomorrow), 'gisteren' (yesterday), 'overmorgen' (day after tomorrow), the time anchors you use every time you schedule anything.",
       "pronunciation": "WAN-neer is de af-SPRAAK? MOR-gen, op WOONS-dach. CHIS-ter-en was het DINS-dach. OH-ver-MOR-gen is het DON-der-dach."
     },
     {
       "hindi": "In welk jaar? In tweeduizend drieëntwintig. Welke datum? De vijfde mei.",
       "english": "In which year? In 2023. What date? The fifth of May.",
-      "context": "Dates: 'de vijfde mei' (the fifth of May). For years: 'tweeduizend drieëntwintig' — say each part separately. Current year: 'tweeduizend zesentwintig'",
+      "context": "Dates: 'de vijfde mei' (the fifth of May). For years: 'tweeduizend drieëntwintig', say each part separately. Current year: 'tweeduizend zesentwintig'",
       "pronunciation": "in welk yaar? in tway-DOW-zend DREE-en-twin-tich. WEL-ke DAA-tum? de VAYF-de may."
     }
   ],
@@ -59,7 +59,7 @@
     "Days and months are always lowercase in Dutch, unlike English"
   ],
   "culture_notes": [
-    "Dutch people are precise about time — being on time is important. 'Stipt op tijd' = exactly on time",
+    "Dutch people are precise about time, being on time is important. 'Stipt op tijd' = exactly on time",
     "The 24-hour clock is commonly used in official contexts (trains, appointments): 'Het is veertien uur dertig' = 14:30",
     "When making appointments, Dutch people often check 'de agenda' (diary/calendar) before committing"
   ],
@@ -109,7 +109,7 @@
       ]
     }
   ],
-  "practice_prompt": "You are a Dutch tutor drilling numbers, dates, prices, and time-telling with a beginner. Use 'u' throughout (polite tutor register). Run a tight 6-8 item drill, one task at a time: say a number aloud, read a price in euros, give a time, read a date, and back-convert. Open with: 'Goedendag! Laten we beginnen met cijfers. Eerste oefening: zeg in het Nederlands het getal 47.' Wait for the student's response, score it briefly, then escalate to the next item. Focus the grammar specifically on (a) the 21+ backwards inversion — `zevenenveertig`, NOT `veertigenzeven`, with the `en` connector intact — (b) half-hour times running backwards (`half drie` = 2:30, not 3:30), (c) day-month-year date order, and (d) lowercase days and months. When the student errs, flag it inline with `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]`. Watch for: non-inversion (English-order `veertigzeven`), wrong half-hour (`half drie` meaning 3:30), capitalized day/month names, and dropping the `en` connector (`zeven veertig`). Stay in Dutch unless the student explicitly asks for English. After 6-8 items, close with: 'Heel goed! Tot ziens.'",
+  "practice_prompt": "You are a Dutch tutor drilling numbers, dates, prices, and time-telling with a beginner. Use 'u' throughout (polite tutor register). Run a tight 6-8 item drill, one task at a time: say a number aloud, read a price in euros, give a time, read a date, and back-convert. Open with: 'Goedendag! Laten we beginnen met cijfers. Eerste oefening: zeg in het Nederlands het getal 47.' Wait for the student's response, score it briefly, then escalate to the next item. Focus the grammar specifically on (a) the 21+ backwards inversion, `zevenenveertig`, NOT `veertigenzeven`, with the `en` connector intact, (b) half-hour times running backwards (`half drie` = 2:30, not 3:30), (c) day-month-year date order, and (d) lowercase days and months. When the student errs, flag it inline with `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]`. Watch for: non-inversion (English-order `veertigzeven`), wrong half-hour (`half drie` meaning 3:30), capitalized day/month names, and dropping the `en` connector (`zeven veertig`). Stay in Dutch unless the student explicitly asks for English. After 6-8 items, close with: 'Heel goed! Tot ziens.'",
   "theory": {
     "intro": "Dutch numbers look tame until you hit 21. At that point the order flips, and it stays flipped all the way to 99. Add in `half past` running backwards (`half drie` = 2:30, halfway *to* three), and this is the foundation where English instincts hurt most. Drill the inversion and the time logic, and the rest (dates, days, prices) is mechanical.",
     "sections": [
@@ -223,7 +223,7 @@
         },
         "callout": {
           "tone": "note",
-          "body": "`Elf` (11) and `twaalf` (12) are unique — there's no shortcut pattern. Memorize them as two-word flashcards and you're past the irregular hump."
+          "body": "`Elf` (11) and `twaalf` (12) are unique, there's no shortcut pattern. Memorize them as two-word flashcards and you're past the irregular hump."
         },
         "cutting_intro": "Let's start at the start. Dutch one-through-ten is close enough to English that you'll feel cocky. Enjoy the easy stretch, because 21 is where it gets weird.",
         "quick_check": {
@@ -234,7 +234,7 @@
             "tien and twintig"
           ],
           "correct_index": 1,
-          "explanation": "Correct — `elf` (11) and `twaalf` (12) don't follow the `-tien` pattern that starts at 13. Memorize them on their own."
+          "explanation": "Correct, `elf` (11) and `twaalf` (12) don't follow the `-tien` pattern that starts at 13. Memorize them on their own."
         }
       },
       {
@@ -282,7 +282,7 @@
         },
         "callout": {
           "tone": "warning",
-          "body": "This catches EVERY English speaker. Your brain wants to say `vijfentwintig` as `twenty-five`, but you must train the flip — small number first, then `en`, then big number. Phone numbers, prices, addresses — they all use this. There's no avoiding it."
+          "body": "This catches EVERY English speaker. Your brain wants to say `vijfentwintig` as `twenty-five`, but you must train the flip, small number first, then `en`, then big number. Phone numbers, prices, addresses, they all use this. There's no avoiding it."
         },
         "cutting_intro": "Here it comes. From 21 on, Dutch flips the order: small number first, then the tens. Your instincts will fight you. Train through it.",
         "quick_check": {
@@ -293,7 +293,7 @@
             "tweevijf (two-five)"
           ],
           "correct_index": 1,
-          "explanation": "Yes — `vijfentwintig`. Small number (`vijf`) + `en` + tens (`twintig`). The English instinct to lead with `twenty` is wrong here."
+          "explanation": "Yes, `vijfentwintig`. Small number (`vijf`) + `en` + tens (`twintig`). The English instinct to lead with `twenty` is wrong here."
         }
       },
       {
@@ -313,12 +313,12 @@
           {
             "hindi": "vijftienhonderd",
             "english": "fifteen hundred (1500)",
-            "breakdown": "vijftien (15) + honderd — Dutch often uses this form up to 1900"
+            "breakdown": "vijftien (15) + honderd, Dutch often uses this form up to 1900"
           },
           {
             "hindi": "tweeduizend zesentwintig",
             "english": "two thousand twenty-six (2026)",
-            "breakdown": "tweeduizend (2000) + zes-en-twintig (26) — inversion still kicks in on the under-100 part"
+            "breakdown": "tweeduizend (2000) + zes-en-twintig (26), inversion still kicks in on the under-100 part"
           },
           {
             "hindi": "drie miljoen",
@@ -339,7 +339,7 @@
             "negentien-acht-vijf"
           ],
           "correct_index": 1,
-          "explanation": "Right — `negentienhonderd vijfentachtig` (nineteen-hundred + five-and-eighty). For years between 1100 and 1999, the hundred-form is the default in everyday speech."
+          "explanation": "Right, `negentienhonderd vijfentachtig` (nineteen-hundred + five-and-eighty). For years between 1100 and 1999, the hundred-form is the default in everyday speech."
         }
       },
       {
@@ -376,7 +376,7 @@
             [
               "9:30",
               "half tien",
-              "half (to) ten — 9:30!"
+              "half (to) ten, 9:30!"
             ],
             [
               "9:35",
@@ -428,7 +428,7 @@
           {
             "hindi": "mijn afspraak is op 15 maart",
             "english": "my appointment is on March 15",
-            "breakdown": "day first, then month — opposite of American format"
+            "breakdown": "day first, then month, opposite of American format"
           },
           {
             "hindi": "ik ben geboren op 3 januari 1990",
@@ -443,7 +443,7 @@
         ],
         "callout": {
           "tone": "tip",
-          "body": "Dutch dates always go day-month-year — `15-03-2026`, never `03-15-2026`. When filling in forms (gemeente paperwork, lease agreements, doctor's intake) this is what you'll see. Year-month-day (`2026-03-15`) also appears on official digital records, but never month-first."
+          "body": "Dutch dates always go day-month-year, `15-03-2026`, never `03-15-2026`. When filling in forms (gemeente paperwork, lease agreements, doctor's intake) this is what you'll see. Year-month-day (`2026-03-15`) also appears on official digital records, but never month-first."
         },
         "cutting_intro": "Days, months, and dates. The home stretch. The patterns are gentle, but watch the order on dates: the day always comes before the month here.",
         "quick_check": {
@@ -454,7 +454,7 @@
             "December 8, 2025"
           ],
           "correct_index": 1,
-          "explanation": "Right — `8/12/2025` (day-month-year). Dutch and most of Europe lead with the day. The American month-first format would look genuinely confusing on a Dutch form."
+          "explanation": "Right, `8/12/2025` (day-month-year). Dutch and most of Europe lead with the day. The American month-first format would look genuinely confusing on a Dutch form."
         }
       }
     ],

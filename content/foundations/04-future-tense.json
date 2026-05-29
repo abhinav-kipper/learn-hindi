@@ -1,7 +1,7 @@
 {
   "id": "future-tense",
   "title": "Future Tense",
-  "situation": "Make plans, promises, and predictions — talk about what's going to happen",
+  "situation": "Make plans, promises, and predictions, talk about what's going to happen",
   "skills": [
     "simple future",
     "immediate future",
@@ -17,7 +17,7 @@
     {
       "hindi": "tu padhega / tu padhegi",
       "english": "You will study (intimate-male) / You will study (intimate-female)",
-      "context": "With 'tu': verb root + ega/egi. 'tu' is VERY informal — close-friends/playful only, sounds rude otherwise. Default to 'aap' or 'tum'. The ga/gi gender split applies throughout.",
+      "context": "With 'tu': verb root + ega/egi. 'tu' is VERY informal, close-friends/playful only, sounds rude otherwise. Default to 'aap' or 'tum'. The ga/gi gender split applies throughout.",
       "pronunciation": "TU padh-E-ga / TU padh-E-gi"
     },
     {
@@ -41,13 +41,13 @@
     {
       "hindi": "main kal jaaunga / main kal jaaungi",
       "english": "I'll go tomorrow (male) / I'll go tomorrow (female)",
-      "context": "'jaana' (to go) → 'jaaunga/jaaungi'. 'kal' = tomorrow (or yesterday — context decides!)",
+      "context": "'jaana' (to go) / 'jaaunga/jaaungi'. 'kal' = tomorrow (or yesterday, context decides!)",
       "pronunciation": "MAIN KAL jaa-UN-ga / MAIN KAL jaa-UN-gi"
     },
     {
       "hindi": "tum kab aaoge?",
       "english": "When will you come?",
-      "context": "'kab' = when. Just add question word — verb form doesn't change. Rising intonation optional",
+      "context": "'kab' = when. Just add question word, verb form doesn't change. Rising intonation optional",
       "pronunciation": "TUM KAB aa-O-ge?"
     },
     {
@@ -59,7 +59,7 @@
     {
       "hindi": "kal baarish hogi",
       "english": "It will rain tomorrow",
-      "context": "'hogi' = will be/will happen (feminine, because 'baarish' is feminine). 'hona' → hoga/hogi/honge",
+      "context": "'hogi' = will be/will happen (feminine, because 'baarish' is feminine). 'hona' / hoga/hogi/honge",
       "pronunciation": "KAL BAA-rish HO-gi"
     },
     {
@@ -71,14 +71,14 @@
   ],
   "grammar_notes": [
     "Future tense endings by person: main = -unga/-ungi, tu/woh = -ega/-egi, tum = -oge/-ogi, hum/aap/woh(plural) = -enge/-engi",
-    "Pattern: take verb root + the suffix. 'jaana'→root 'jaa': jaaunga, jaayega, jaaoge, jaayenge. 'khaana'→root 'khaa': khaaunga, khaayega, khaaoge, khaayenge",
+    "Pattern: take verb root + the suffix. 'jaana' / root 'jaa': jaaunga, jaayega, jaaoge, jaayenge. 'khaana' / root 'khaa': khaaunga, khaayega, khaaoge, khaayenge",
     "The gender split is always -ga (male) vs -gi (female) at the end. This is the one consistent rule across all persons",
     "'hona' (to be) in future: hoga (he/it-masc will be), hogi (she/it-fem will be), honge (they/we will be), houngi (I-fem will be)",
     "Shortcut: Present tense + 'abhi/ab' often replaces future for immediate plans. 'Main abhi aata hoon' (I'm coming now) instead of 'main aaunga'"
   ],
   "culture_notes": [
     "'Dekhte hain' (let's see) is the polite Indian no. If someone says this about your plan, it probably won't happen",
-    "Indians frequently use 'kal' without specifying yesterday vs tomorrow — you're expected to figure it out. If confused, ask 'beeta kal ya aane wala kal?'"
+    "Indians frequently use 'kal' without specifying yesterday vs tomorrow, you're expected to figure it out. If confused, ask 'beeta kal ya aane wala kal?'"
   ],
   "skill_breakdown": [
     {
@@ -148,13 +148,13 @@
       ]
     }
   ],
-  "practice_prompt": "You are a Hindi tutor drilling future tense — the `-ga/-gi/-ge` endings, gender agreement, and `agar...toh` conditionals. Use `aap` throughout. Open with: `chaliye future tense practice karte hain — bataaiye Hindi mein: 'I will come tomorrow' — aapka jawab kya hoga?` Then drill one task at a time: translate an English sentence, conjugate a given verb for a specific pronoun, transform a present-tense sentence into future, or build a conditional `agar...toh` sentence. Mix 6-8 items of increasing difficulty and include at least one `agar...toh` conditional and one polite soft-future request (e.g. `aap chai piyenge?`). Focus on `-ga` (m sg) / `-gi` (f sg or f pl) / `-ge` (m pl or aap) endings, subject-gender agreement, conditional structures, and polite future framing. When the user slips, flag it with `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]` — watch especially for wrong gender on the ending (the most common error), `agar` clauses missing `toh`, and English-style `will + verb` ordering. Don't switch to English unless asked. End with `aapne kaafi achi practice ki — phir milte hain`.",
+  "practice_prompt": "You are a Hindi tutor drilling future tense, the `-ga/-gi/-ge` endings, gender agreement, and `agar...toh` conditionals. Use `aap` throughout. Open with: `chaliye future tense practice karte hain, bataaiye Hindi mein: 'I will come tomorrow', aapka jawab kya hoga?` Then drill one task at a time: translate an English sentence, conjugate a given verb for a specific pronoun, transform a present-tense sentence into future, or build a conditional `agar...toh` sentence. Mix 6-8 items of increasing difficulty and include at least one `agar...toh` conditional and one polite soft-future request (e.g. `aap chai piyenge?`). Focus on `-ga` (m sg) / `-gi` (f sg or f pl) / `-ge` (m pl or aap) endings, subject-gender agreement, conditional structures, and polite future framing. When the user slips, flag it with `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]`, watch especially for wrong gender on the ending (the most common error), `agar` clauses missing `toh`, and English-style `will + verb` ordering. Don't switch to English unless asked. End with `aapne kaafi achi practice ki, phir milte hain`.",
   "theory": {
     "intro": "Hindi builds the future tense into the verb itself. There's no separate `will` word. You take the verb stem and add `-ga` (masculine), `-gi` (feminine), or `-ge` (plural or respect). The trick is making the ending agree with the subject's gender, which English speakers consistently miss at first. Once the endings click, the future is the most regular of the three tenses you've learned.",
     "sections": [
       {
         "heading": "The simple future shape",
-        "body": "Hindi future = **verb stem** + a person-and-gender ending (suffix). There's no separate `will` word.\n\nThe stem is what's left after you strip `-na` from the infinitive:\n\n- `karna` (to do) → stem `kar`\n- `aana` (to come) → stem `aa`\n- `khaana` (to eat) → stem `khaa`\n\nThe ending changes by both **person** and **gender**. Every future sentence uses one of the six endings in the table below.",
+        "body": "Hindi future = **verb stem** + a person-and-gender ending (suffix). There's no separate `will` word. The stem is what's left after you strip `-na` from the infinitive: - `karna` (to do) / stem `kar`\n- `aana` (to come) / stem `aa`\n- `khaana` (to eat) / stem `khaa` The ending changes by both **person** and **gender**. Every future sentence uses one of the six endings in the table below.",
         "table": {
           "caption": "Future endings for `karna` (to do)",
           "columns": [
@@ -216,12 +216,12 @@
             "-enge"
           ],
           "correct_index": 1,
-          "explanation": "Right — `-ungi` for 1st-person feminine. A male speaker would say `karunga`; a female speaker says `karungi`. The `-ng-` is the 1st-person marker, the final `-a` vs `-i` is the gender flip."
+          "explanation": "Right, `-ungi` for 1st-person feminine. A male speaker would say `karunga`; a female speaker says `karungi`. The `-ng-` is the 1st-person marker, the final `-a` vs `-i` is the gender flip."
         }
       },
       {
         "heading": "Gender + number agreement",
-        "body": "Like the present and past, the future ending agrees with the **subject's gender**. The verb alone tells the listener whether the speaker is male or female.\n\nPick the ending from these three shapes:\n\n- masculine singular → `-ga` (`karunga`, `karega`)\n- feminine → `-gi` (`karungi`, `karegi`, `karengi`)\n- masculine plural → `-ge` (`karenge`, `karoge`)\n\n`Aap` (formal you) **always** takes the plural `-enge`/`-engi` form, even for one person. It's the same politeness-as-plurality pattern that runs through all of Hindi.",
+        "body": "Like the present and past, the future ending agrees with the **subject's gender**. The verb alone tells the listener whether the speaker is male or female. Pick the ending from these three shapes: - masculine singular / `-ga` (`karunga`, `karega`)\n- feminine / `-gi` (`karungi`, `karegi`, `karengi`)\n- masculine plural / `-ge` (`karenge`, `karoge`) `Aap` (formal you) **always** takes the plural `-enge`/`-engi` form, even for one person. It's the same politeness-as-plurality pattern that runs through all of Hindi.",
         "examples": [
           {
             "hindi": "main khaaunga",
@@ -241,12 +241,12 @@
           {
             "hindi": "ladkiyaan jaayengi",
             "english": "the girls will go",
-            "breakdown": "feminine plural — still ends in `-i` (not `-ain`)"
+            "breakdown": "feminine plural, still ends in `-i` (not `-ain`)"
           }
         ],
         "callout": {
           "tone": "note",
-          "body": "Feminine plural still uses `-gi`, not `-gain` or any pluralized variant. So `ladki jaayegi` (one girl will go) and `ladkiyaan jaayengi` (girls will go) both end in `-gi`. It's a historical irregularity — feminine never pluralizes the future ending itself. Just trust it."
+          "body": "Feminine plural still uses `-gi`, not `-gain` or any pluralized variant. So `ladki jaayegi` (one girl will go) and `ladkiyaan jaayengi` (girls will go) both end in `-gi`. It's a historical irregularity, feminine never pluralizes the future ending itself. Just trust it."
         },
         "cutting_intro": "Now the ending has to match the subject's gender. Get it right and you sound natural. Get it wrong and locals will gently correct you.",
         "quick_check": {
@@ -257,7 +257,7 @@
             "depends on how many people"
           ],
           "correct_index": 1,
-          "explanation": "Always plural. `Aap` takes `-enge`/`-engi` even when addressing one person — politeness uses the plural form. Same pattern across present and past tense too."
+          "explanation": "Always plural. `Aap` takes `-enge`/`-engi` even when addressing one person, politeness uses the plural form. Same pattern across present and past tense too."
         }
       },
       {
@@ -295,7 +295,7 @@
         },
         "callout": {
           "tone": "tip",
-          "body": "When in doubt, frame it as a future question. `Aap chai piyenge?` (will you drink chai?) is the warm, hospitable Indian offer — not the imperative `chai piyiye`. The future form gives the listener agency."
+          "body": "When in doubt, frame it as a future question. `Aap chai piyenge?` (will you drink chai?) is the warm, hospitable Indian offer, not the imperative `chai piyiye`. The future form gives the listener agency."
         },
         "cutting_intro": "Here's a real-world trick. The future tense is also Hindi's polite-request register. You'll hear it everywhere.",
         "quick_check": {
@@ -331,7 +331,7 @@
         ],
         "callout": {
           "tone": "tip",
-          "body": "In casual speech, `to` is often dropped. `Agar tum aaoge, main bhi aaunga` is perfectly natural — the comma carries the `then`. Listen for this; native speakers skip `to` constantly in fast speech."
+          "body": "In casual speech, `to` is often dropped. `Agar tum aaoge, main bhi aaunga` is perfectly natural, the comma carries the `then`. Listen for this; native speakers skip `to` constantly in fast speech."
         },
         "cutting_intro": "Here's the most useful pattern of all: `agar...to...`, if...then. Practice this and you've got half of conversational future covered.",
         "quick_check": {
@@ -347,7 +347,7 @@
       },
       {
         "heading": "Common pitfalls",
-        "body": "**Trap 1: the phantom `will`.** English speakers try `main will khaata`. But Hindi has no `will` word. The future meaning lives inside the ending. `I will eat` = `main khaaunga`, one word doing all the work.\n\n**Trap 2: wrong ending for the pronoun.** Each pronoun locks in a specific ending shape. The wrong one makes the sentence ungrammatical, not just awkward.\n\n- `main` → always `-unga` / `-ungi`\n- `tu` / `woh` → always `-ega` / `-egi`\n- `tum` → always `-oge` / `-ogi`\n- `hum` / `aap` / `woh` (plural) → always `-enge` / `-engi`\n\nThe examples below show the correct form next to the common mistake.",
+        "body": "**Trap 1: the phantom `will`.** English speakers try `main will khaata`. But Hindi has no `will` word. The future meaning lives inside the ending. `I will eat` = `main khaaunga`, one word doing all the work. **Trap 2: wrong ending for the pronoun.** Each pronoun locks in a specific ending shape. The wrong one makes the sentence ungrammatical, not just awkward. - `main` / always `-unga` / `-ungi`\n- `tu` / `woh` / always `-ega` / `-egi`\n- `tum` / always `-oge` / `-ogi`\n- `hum` / `aap` / `woh` (plural) / always `-enge` / `-engi` The examples below show the correct form next to the common mistake.",
         "examples": [
           {
             "hindi": "main khaaunga (NOT main khaayega)",
@@ -367,18 +367,18 @@
         ],
         "callout": {
           "tone": "warning",
-          "body": "Pronoun and ending must match. `Main` → `-unga`/`-ungi`. `Tu`/`woh` → `-ega`/`-egi`. `Tum` → `-oge`/`-ogi`. `Hum`/`aap`/`woh (pl)` → `-enge`/`-engi`. Mix these up and the sentence becomes ungrammatical — not just awkward, but wrong. Drill the pronoun-ending pairs until they're automatic."
+          "body": "Pronoun and ending must match. `Main` / `-unga`/`-ungi`. `Tu`/`woh` / `-ega`/`-egi`. `Tum` / `-oge`/`-ogi`. `Hum`/`aap`/`woh (pl)` / `-enge`/`-engi`. Mix these up and the sentence becomes ungrammatical, not just awkward, but wrong. Drill the pronoun-ending pairs until they're automatic."
         },
         "cutting_intro": "Heads up: these are the slips I see learners make every day. Watch out for them.",
         "quick_check": {
           "question": "What's wrong with `main khaayega` (intended: I will eat)?",
           "options": [
-            "nothing — it's correct",
-            "wrong ending — `main` should take `-unga`, not `-ega`",
+            "nothing, it's correct",
+            "wrong ending, `main` should take `-unga`, not `-ega`",
             "wrong verb stem"
           ],
           "correct_index": 1,
-          "explanation": "Right — `-ega` is for `tu`/`woh`, not `main`. The correct form is `main khaaunga` (masc) or `main khaaungi` (fem). Pronoun and ending have to match."
+          "explanation": "Right, `-ega` is for `tu`/`woh`, not `main`. The correct form is `main khaaunga` (masc) or `main khaaungi` (fem). Pronoun and ending have to match."
         }
       }
     ],

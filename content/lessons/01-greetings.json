@@ -2,53 +2,132 @@
   "id": "greetings",
   "title": "Greetings & Fillers",
   "situation": "You're meeting your friend's Indian roommate for the first time at a house party",
-  "skills": ["interjections & fillers", "informal pronouns (tu/tum/aap)", "casual greetings"],
+  "skills": [
+    "interjections & fillers",
+    "informal pronouns (tu/tum/aap)",
+    "casual greetings"
+  ],
   "phrases": [
-    { "hindi": "arey, kya haal hai?", "english": "Hey, how's it going?", "context": "'arey' is a casual attention-getter, like 'hey' or 'oh' — used with everyone you're friendly with", "pronunciation": "a-REY, kya HAAL hai?" },
-    { "hindi": "sab badhiya? tum kya karte ho?", "english": "All good? What do you do?", "context": "'tum' is informal 'you' — use with peers/friends, never elders", "pronunciation": "sab ba-DHI-ya? TUM kya KAR-te ho?" },
-    { "hindi": "accha accha, matlab tum yahan naye ho?", "english": "Oh I see, so you're new here?", "context": "'accha' repeated = processing info, buying time. 'matlab' = 'so/meaning'", "pronunciation": "ac-CHA ac-CHA, MAT-lab tum ya-HAAN NA-ye ho?" },
-    { "hindi": "haan yaar, chal milte hain phir", "english": "Yeah dude, let's catch up again", "context": "'yaar' = friend/dude. 'phir' = again/later — classic exit line", "pronunciation": "HAAN yaar, CHAL mil-te hain PHIR" },
-    { "hindi": "koi baat nahi, hota hai", "english": "No worries, it happens", "context": "Universal reassurance phrase — use it everywhere, from spilled chai to missed calls", "pronunciation": "KOI baat na-HI, HO-ta hai" },
-    { "hindi": "waise tum kahin se jaane pehchaane lag rahe ho", "english": "By the way, you look familiar from somewhere", "context": "'waise' = by the way/incidentally — great conversation starter. 'jaane pehchaane' = known/familiar", "pronunciation": "WAI-se tum ka-HIN se jaa-ne peh-CHAA-ne lag ra-HE ho" },
-    { "hindi": "hmm, accha sun, tumhare paas number hai? save kar le", "english": "Hmm, hey listen, do you have a number? Save it", "context": "'sun' = listen (informal command). 'tumhare' = your (casual, friendly — right level for someone you just met)", "pronunciation": "hmm, ac-CHA SUN, tum-HA-re paas NUM-ber hai? SAVE kar le" },
-    { "hindi": "chal yaar, baad mein baat karte hain", "english": "Alright dude, we'll talk later", "context": "'baad mein' = later. Casual sign-off that keeps the door open", "pronunciation": "CHAL yaar, BAAD mein BAAT kar-te hain" },
-    { "hindi": "arey haan, main bhool gaya — mera naam Rahul hai", "english": "Oh yeah, I forgot — my name is Rahul", "context": "'bhool gaya' = forgot. Natural way to circle back to introductions mid-conversation", "pronunciation": "a-REY HAAN, main BHOOL ga-ya — ME-ra naam ra-HUL hai" }
+    {
+      "hindi": "arey, kya haal hai?",
+      "english": "Hey, how's it going?",
+      "context": "'arey' is a casual attention-getter, like 'hey' or 'oh', used with everyone you're friendly with",
+      "pronunciation": "a-REY, kya HAAL hai?"
+    },
+    {
+      "hindi": "sab badhiya? tum kya karte ho?",
+      "english": "All good? What do you do?",
+      "context": "'tum' is informal 'you', use with peers/friends, never elders",
+      "pronunciation": "sab ba-DHI-ya? TUM kya KAR-te ho?"
+    },
+    {
+      "hindi": "accha accha, matlab tum yahan naye ho?",
+      "english": "Oh I see, so you're new here?",
+      "context": "'accha' repeated = processing info, buying time. 'matlab' = 'so/meaning'",
+      "pronunciation": "ac-CHA ac-CHA, MAT-lab tum ya-HAAN NA-ye ho?"
+    },
+    {
+      "hindi": "haan yaar, chal milte hain phir",
+      "english": "Yeah dude, let's catch up again",
+      "context": "'yaar' = friend/dude. 'phir' = again/later, classic exit line",
+      "pronunciation": "HAAN yaar, CHAL mil-te hain PHIR"
+    },
+    {
+      "hindi": "koi baat nahi, hota hai",
+      "english": "No worries, it happens",
+      "context": "Universal reassurance phrase, use it everywhere, from spilled chai to missed calls",
+      "pronunciation": "KOI baat na-HI, HO-ta hai"
+    },
+    {
+      "hindi": "waise tum kahin se jaane pehchaane lag rahe ho",
+      "english": "By the way, you look familiar from somewhere",
+      "context": "'waise' = by the way/incidentally, great conversation starter. 'jaane pehchaane' = known/familiar",
+      "pronunciation": "WAI-se tum ka-HIN se jaa-ne peh-CHAA-ne lag ra-HE ho"
+    },
+    {
+      "hindi": "hmm, accha sun, tumhare paas number hai? save kar le",
+      "english": "Hmm, hey listen, do you have a number? Save it",
+      "context": "'sun' = listen (informal command). 'tumhare' = your (casual, friendly, right level for someone you just met)",
+      "pronunciation": "hmm, ac-CHA SUN, tum-HA-re paas NUM-ber hai? SAVE kar le"
+    },
+    {
+      "hindi": "chal yaar, baad mein baat karte hain",
+      "english": "Alright dude, we'll talk later",
+      "context": "'baad mein' = later. Casual sign-off that keeps the door open",
+      "pronunciation": "CHAL yaar, BAAD mein BAAT kar-te hain"
+    },
+    {
+      "hindi": "arey haan, main bhool gaya, mera naam Rahul hai",
+      "english": "Oh yeah, I forgot, my name is Rahul",
+      "context": "'bhool gaya' = forgot. Natural way to circle back to introductions mid-conversation",
+      "pronunciation": "a-REY HAAN, main BHOOL ga-ya, ME-ra naam ra-HUL hai"
+    }
   ],
   "grammar_notes": [
-    "'arey' can express surprise, frustration, or just get attention depending on tone — rising tone = surprise, flat = getting attention, sharp = frustration",
-    "'accha' alone means 'good' but repeated or with rising tone means 'oh really/I see?' — it's your all-purpose reaction word",
-    "'matlab' is a filler that means 'meaning/like/basically' — overuse it to sound natural, like 'like' in English",
-    "'waise' at the start of a sentence means 'by the way' or 'actually' — use it to change topics smoothly",
-    "'chal' literally means 'walk/go' but as a filler means 'okay then/alright' — one of the most versatile words in Hindi"
+    "'arey' can express surprise, frustration, or just get attention depending on tone, rising tone = surprise, flat = getting attention, sharp = frustration",
+    "'accha' alone means 'good' but repeated or with rising tone means 'oh really/I see?', it's your all-purpose reaction word",
+    "'matlab' is a filler that means 'meaning/like/basically', overuse it to sound natural, like 'like' in English",
+    "'waise' at the start of a sentence means 'by the way' or 'actually', use it to change topics smoothly",
+    "'chal' literally means 'walk/go' but as a filler means 'okay then/alright', one of the most versatile words in Hindi"
   ],
   "culture_notes": [
-    "Indians often ask personal questions quickly (job, marriage, salary) — it's friendly, not rude. Deflect with 'yaar, boring story hai'",
+    "Indians often ask personal questions quickly (job, marriage, salary), it's friendly, not rude. Deflect with 'yaar, boring story hai'",
     "'Tum' vs 'Aap': Use 'aap' for elders/strangers, 'tum' for friends/peers, 'tu' only for very close friends or when angry",
-    "At parties, people often stick to one group — joining a new circle requires someone to introduce you or a bold 'arey, kya chal raha hai?'"
+    "At parties, people often stick to one group, joining a new circle requires someone to introduce you or a bold 'arey, kya chal raha hai?'"
   ],
   "skill_breakdown": [
     {
       "skill": "interjections & fillers",
       "explanation": "Hindi conversations are full of fillers: 'arey' (hey/oh), 'accha' (I see/okay), 'matlab' (meaning/like), 'bas' (that's it), 'yaar' (dude), 'waise' (by the way). They make you sound natural and buy you thinking time.",
       "more_examples": [
-        { "hindi": "arey wah!", "english": "oh wow!" },
-        { "hindi": "bas bas, samajh gaya", "english": "okay okay, I got it" },
-        { "hindi": "matlab, kaise bolu...", "english": "like, how do I say this..." },
-        { "hindi": "hmm, accha theek hai", "english": "hmm, okay alright" },
-        { "hindi": "haan haan, bol bol", "english": "yeah yeah, go on, say it" }
+        {
+          "hindi": "arey wah!",
+          "english": "oh wow!"
+        },
+        {
+          "hindi": "bas bas, samajh gaya",
+          "english": "okay okay, I got it"
+        },
+        {
+          "hindi": "matlab, kaise bolu...",
+          "english": "like, how do I say this..."
+        },
+        {
+          "hindi": "hmm, accha theek hai",
+          "english": "hmm, okay alright"
+        },
+        {
+          "hindi": "haan haan, bol bol",
+          "english": "yeah yeah, go on, say it"
+        }
       ]
     },
     {
       "skill": "informal pronouns (tu/tum/aap)",
-      "explanation": "'Tu' = very intimate/rude, 'Tum' = friendly/casual, 'Aap' = respectful/formal. Verb changes with each: tu karta hai, tum karte ho, aap karte hain. Messing up the level is a social signal — going too formal feels cold, too informal feels rude.",
+      "explanation": "'Tu' = very intimate/rude, 'Tum' = friendly/casual, 'Aap' = respectful/formal. Verb changes with each: tu karta hai, tum karte ho, aap karte hain. Messing up the level is a social signal, going too formal feels cold, too informal feels rude.",
       "more_examples": [
-        { "hindi": "tum kahan se ho?", "english": "where are you from? (friendly)" },
-        { "hindi": "aap kaise hain?", "english": "how are you? (respectful)" },
-        { "hindi": "tu pagal hai kya?", "english": "are you crazy? (very informal/rude)" },
-        { "hindi": "aap yahan kab se hain?", "english": "how long have you been here? (polite)" },
-        { "hindi": "tum bhi aa jao na", "english": "you come too, na? (friendly invite)" }
+        {
+          "hindi": "tum kahan se ho?",
+          "english": "where are you from? (friendly)"
+        },
+        {
+          "hindi": "aap kaise hain?",
+          "english": "how are you? (respectful)"
+        },
+        {
+          "hindi": "tu pagal hai kya?",
+          "english": "are you crazy? (very informal/rude)"
+        },
+        {
+          "hindi": "aap yahan kab se hain?",
+          "english": "how long have you been here? (polite)"
+        },
+        {
+          "hindi": "tum bhi aa jao na",
+          "english": "you come too, na? (friendly invite)"
+        }
       ]
     }
   ],
-  "practice_prompt": "You are Rahul, the user's mutual friend's roommate, hanging out on the couch at a casual Mumbai house party. You're meeting the user for the first time and you're both around the same age, so use 'tum' the whole way through (never 'aap' — too cold; never 'tu' — too intimate for a first meet). Open with 'arey, kya haal hai? main Rahul hoon, host ka flatmate' (Hey, how's it going? I'm Rahul, the host's flatmate). Be warm, curious, slightly chatty — lean on interjections ('arey', 'accha accha', 'haan yaar') and fillers ('matlab', 'waise', 'bas') so the user picks up the rhythm. Ask what they do, where they're from, how they know the host; share a bit back about yourself. If the user goes formal with 'aap', gently mirror 'tum' back. Flag mistakes inline with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] — wrong pronoun level, missing gender agreement, English where Hindi works. Keep it to 6-8 turns, stay in Hindi unless they switch, and wrap by asking for their number and signing off with 'chalo phir baat hoti hai'."
+  "practice_prompt": "You are Rahul, the user's mutual friend's roommate, hanging out on the couch at a casual Mumbai house party. You're meeting the user for the first time and you're both around the same age, so use 'tum' the whole way through (never 'aap', too cold; never 'tu', too intimate for a first meet). Open with 'arey, kya haal hai? main Rahul hoon, host ka flatmate' (Hey, how's it going? I'm Rahul, the host's flatmate). Be warm, curious, slightly chatty, lean on interjections ('arey', 'accha accha', 'haan yaar') and fillers ('matlab', 'waise', 'bas') so the user picks up the rhythm. Ask what they do, where they're from, how they know the host; share a bit back about yourself. If the user goes formal with 'aap', gently mirror 'tum' back. Flag mistakes inline with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]], wrong pronoun level, missing gender agreement, English where Hindi works. Keep it to 6-8 turns, stay in Hindi unless they switch, and wrap by asking for their number and signing off with 'chalo phir baat hoti hai'."
 }

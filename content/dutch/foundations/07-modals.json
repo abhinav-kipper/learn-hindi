@@ -10,28 +10,28 @@
   ],
   "phrases": [
     {
-      "hindi": "willen: ik wil, jij wilt/wil, hij wil, wij willen — Ik wil een huis huren. Wil jij ook meekomen?",
-      "english": "to want: I want, you want, he wants, we want — I want to rent a house. Do you want to come along too?",
-      "context": "Modal + infinitive: the infinitive goes to the END of the clause. 'Ik wil een huis huren' — 'huren' is last. 'Willen' = strong want/wish. Informal: 'ik wil' and 'jij wil' (dropping -t) is common.",
-      "pronunciation": "WIL-len: ik WIL, yay WILT, hay WIL, way WIL-len — ik WIL uhn HOYS HUU-ren."
+      "hindi": "willen: ik wil, jij wilt/wil, hij wil, wij willen, Ik wil een huis huren. Wil jij ook meekomen?",
+      "english": "to want: I want, you want, he wants, we want, I want to rent a house. Do you want to come along too?",
+      "context": "Modal + infinitive: the infinitive goes to the END of the clause. 'Ik wil een huis huren', 'huren' is last. 'Willen' = strong want/wish. Informal: 'ik wil' and 'jij wil' (dropping -t) is common.",
+      "pronunciation": "WIL-len: ik WIL, yay WILT, hay WIL, way WIL-len, ik WIL uhn HOYS HUU-ren."
     },
     {
-      "hindi": "kunnen: ik kan, jij kunt/kan, hij kan, wij kunnen — Ik kan morgen komen. Kun jij dit formulier invullen?",
-      "english": "to be able to/can: I can, you can, he can, we can — I can come tomorrow. Can you fill in this form?",
-      "context": "'Kunnen' = ability. 'Kun jij...' is one of the most useful question patterns. Note: 'kunt' and 'kan' are both used for 'jij' — 'kan jij?' is very common in speech.",
-      "pronunciation": "KUN-nen: ik KAN, yay KUNT, hay KAN, way KUN-nen — ik KAN MOR-gen KOH-men."
+      "hindi": "kunnen: ik kan, jij kunt/kan, hij kan, wij kunnen, Ik kan morgen komen. Kun jij dit formulier invullen?",
+      "english": "to be able to/can: I can, you can, he can, we can, I can come tomorrow. Can you fill in this form?",
+      "context": "'Kunnen' = ability. 'Kun jij...' is one of the most useful question patterns. Note: 'kunt' and 'kan' are both used for 'jij', 'kan jij?' is very common in speech.",
+      "pronunciation": "KUN-nen: ik KAN, yay KUNT, hay KAN, way KUN-nen, ik KAN MOR-gen KOH-men."
     },
     {
-      "hindi": "moeten: ik moet, jij moet, hij moet, wij moeten — Ik moet werken. Moet jij morgen vroeg op?",
-      "english": "must/have to: I must, you must, he must, we must — I have to work. Do you have to get up early tomorrow?",
+      "hindi": "moeten: ik moet, jij moet, hij moet, wij moeten, Ik moet werken. Moet jij morgen vroeg op?",
+      "english": "must/have to: I must, you must, he must, we must, I have to work. Do you have to get up early tomorrow?",
       "context": "'Moeten' = obligation/necessity. Stronger than 'willen'. 'Ik moet weg' = I have to go (common exit phrase). 'Moet je...' = do you need to...?",
-      "pronunciation": "MOO-ten: ik MOOT, yay MOOT, hay MOOT, way MOO-ten — ik MOOT WER-ken."
+      "pronunciation": "MOO-ten: ik MOOT, yay MOOT, hay MOOT, way MOO-ten, ik MOOT WER-ken."
     },
     {
-      "hindi": "mogen: ik mag, jij mag, hij mag, wij mogen — Mag ik binnenkomen? Hier mag je niet roken.",
-      "english": "to be allowed to/may: I may, you may, he may, we may — May I come in? You may not smoke here.",
-      "context": "'Mogen' = permission. 'Mag ik...?' = May I...? — very polite question pattern. 'Niet mogen' = not allowed. Essential for asking permission in shops, offices, etc.",
-      "pronunciation": "MOH-chen: ik MACH, yay MACH, hay MACH, way MOH-chen — MACH ik BIN-nen-KOH-men?"
+      "hindi": "mogen: ik mag, jij mag, hij mag, wij mogen, Mag ik binnenkomen? Hier mag je niet roken.",
+      "english": "to be allowed to/may: I may, you may, he may, we may, May I come in? You may not smoke here.",
+      "context": "'Mogen' = permission. 'Mag ik...?' = May I...?, very polite question pattern. 'Niet mogen' = not allowed. Essential for asking permission in shops, offices, etc.",
+      "pronunciation": "MOH-chen: ik MACH, yay MACH, hay MACH, way MOH-chen, MACH ik BIN-nen-KOH-men?"
     },
     {
       "hindi": "gaan + infinitive (future): Ik ga morgen werken. Wij gaan vanavond eten. Ga jij ook mee?",
@@ -42,25 +42,25 @@
     {
       "hindi": "Ik wil dit niet kopen. Hij kan de deur niet openen. Je mag hier niet parkeren. Ik wil geen suiker.",
       "english": "I don't want to buy this. He can't open the door. You're not allowed to park here. I don't want any sugar.",
-      "context": "Negation with modals: 'niet' goes before the infinitive at the end. 'Ik wil dit niet kopen' — object 'dit' first, then 'niet', then 'kopen'. 'Geen' replaces 'een' for indefinite nouns — never say 'niet een'.",
+      "context": "Negation with modals: 'niet' goes before the infinitive at the end. 'Ik wil dit niet kopen', object 'dit' first, then 'niet', then 'kopen'. 'Geen' replaces 'een' for indefinite nouns, never say 'niet een'.",
       "pronunciation": "ik WIL dit NEET KOH-pen. hay KAN duh DUR NEET OH-pen-en. ye MACH HIER NEET PAR-KAY-ren. ik WIL CHAYN SUY-ker."
     },
     {
       "hindi": "Zou u even kunnen wachten? Zou ik uw paspoort mogen zien? Ik zou graag een formulier willen hebben.",
       "english": "Could you wait a moment? May I see your passport? I would like to have a form.",
-      "context": "'Zouden' = would/could — the conditional/polite form. 'Zou u kunnen...?' = could you...? (formal, using 'u'). 'Ik zou graag... willen' = I would like... — the polite way to make requests at the gemeente or bank.",
+      "context": "'Zouden' = would/could, the conditional/polite form. 'Zou u kunnen...?' = could you...? (formal, using 'u'). 'Ik zou graag... willen' = I would like..., the polite way to make requests at the gemeente or bank.",
       "pronunciation": "ZOW uu AY-ven KUN-nen WACH-ten? ZOW ik uw PAS-port MOH-chen ZEEN? ik ZOW CHAACH uhn for-MOO-lier WIL-len HEB-ben."
     }
   ],
   "grammar_notes": [
-    "Modal verb structure: modal (position 2) + [rest of sentence] + infinitive (at end). 'Ik moet [morgen vroeg] opstaan' — 'opstaan' is last, and separable verbs rejoin in this position",
+    "Modal verb structure: modal (position 2) + [rest of sentence] + infinitive (at end). 'Ik moet [morgen vroeg] opstaan', 'opstaan' is last, and separable verbs rejoin in this position",
     "Double infinitive with perfect tense: 'Ik heb niet kunnen komen' (I was not able to come). The order is: heb + [niet] + kunnen + komen. The modal becomes an infinitive after heb.",
-    "Modal conjugations are often the same across persons: 'moeten' and 'mogen' have ik/jij/hij all the same ('moet', 'mag'). 'Willen', 'kunnen', and 'zullen' vary in the jij-form (wilt, kunt, zult — though wil/kun/zal are all heard too)",
+    "Modal conjugations are often the same across persons: 'moeten' and 'mogen' have ik/jij/hij all the same ('moet', 'mag'). 'Willen', 'kunnen', and 'zullen' vary in the jij-form (wilt, kunt, zult, though wil/kun/zal are all heard too)",
     "Common fixed expressions: 'ik moet gaan' (I have to go), 'mag ik?' (may I?), 'kan ik helpen?' (can I help?), 'wil je thee?' (do you want tea?)"
   ],
   "culture_notes": [
-    "Dutch directness: Dutch people often say 'ik wil...' where English speakers would say 'could I possibly...' — it's not rude, just direct",
-    "'Zouden' + modal makes requests very polite — useful in formal settings like government offices, banks, or when writing emails",
+    "Dutch directness: Dutch people often say 'ik wil...' where English speakers would say 'could I possibly...', it's not rude, just direct",
+    "'Zouden' + modal makes requests very polite, useful in formal settings like government offices, banks, or when writing emails",
     "Cycling culture: 'fietsen' (to cycle) is so ingrained that 'kun jij fietsen?' is a genuine question people ask about life skills"
   ],
   "skill_breakdown": [
@@ -109,7 +109,7 @@
       ]
     }
   ],
-  "practice_prompt": "You are a Dutch tutor drilling modal verbs — kunnen, moeten, mogen, willen, zullen — plus their irregular singulars and infinitive-at-end structure. Address the student with `u` throughout. Give 6-8 short tasks, one at a time: conjugate a modal for a given pronoun (especially singulars like `kan/kun`, `wil/wilt`, `mag`, `moet`, `zal/zult`), build a modal + infinitive sentence with the infinitive at the clause end, transform an English prompt like `I want to eat` into Dutch, place `niet` correctly (before infinitive, after object), and contrast `geen` vs `niet` for indefinite negation. Open with: `Goedendag! Laten we modale werkwoorden oefenen. Eerste opdracht: hoe zeg je 'I can speak Dutch' in het Nederlands?` Mix all five modals and slot a polite `zou u kunnen / zou u willen` request near the end. Flag mistakes using `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]` — watch for infinitive next to modal (`Ik kan spreken Nederlands`), wrong singular (`kunt jij` not `kun jij`), misplaced `niet`, and `geen`/`niet` confusion. Stay in Dutch unless asked to switch. End with `Heel goed! Tot ziens.`",
+  "practice_prompt": "You are a Dutch tutor drilling modal verbs, kunnen, moeten, mogen, willen, zullen, plus their irregular singulars and infinitive-at-end structure. Address the student with `u` throughout. Give 6-8 short tasks, one at a time: conjugate a modal for a given pronoun (especially singulars like `kan/kun`, `wil/wilt`, `mag`, `moet`, `zal/zult`), build a modal + infinitive sentence with the infinitive at the clause end, transform an English prompt like `I want to eat` into Dutch, place `niet` correctly (before infinitive, after object), and contrast `geen` vs `niet` for indefinite negation. Open with: `Goedendag! Laten we modale werkwoorden oefenen. Eerste opdracht: hoe zeg je 'I can speak Dutch' in het Nederlands?` Mix all five modals and slot a polite `zou u kunnen / zou u willen` request near the end. Flag mistakes using `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]`, watch for infinitive next to modal (`Ik kan spreken Nederlands`), wrong singular (`kunt jij` not `kun jij`), misplaced `niet`, and `geen`/`niet` confusion. Stay in Dutch unless asked to switch. End with `Heel goed! Tot ziens.`",
   "theory": {
     "intro": "Dutch modal verbs (`kunnen`, `moeten`, `mogen`, `willen`, `zullen`) are some of the highest-frequency verbs you'll use. They follow Dutch's signature structure: the modal conjugates and sits in second position, while the main verb's infinitive flies to the end of the clause. This chapter walks through each modal's meaning, the conjugation pattern, polite requests with `zou`, and where to put `niet` for negation.",
     "sections": [
@@ -159,7 +159,7 @@
         },
         "callout": {
           "tone": "note",
-          "body": "English uses these same verbs but treats `could`, `would`, `should`, `might` as frozen forms. Dutch doesn't — it actually conjugates `zou`, `kon`, `mocht`, `wilde` as real verb forms. That's good news: once you know the present, the past and conditional are just more conjugations of the same verb."
+          "body": "English uses these same verbs but treats `could`, `would`, `should`, `might` as frozen forms. Dutch doesn't, it actually conjugates `zou`, `kon`, `mocht`, `wilde` as real verb forms. That's good news: once you know the present, the past and conditional are just more conjugations of the same verb."
         },
         "cutting_intro": "Hi! Let's meet the five modals. They're irregular, but they all behave the same way, and you'll use them in almost every sentence.",
         "quick_check": {
@@ -170,7 +170,7 @@
             "kunnen"
           ],
           "correct_index": 1,
-          "explanation": "`Mogen` is permission — `Mag ik...?` means May I...? Don't confuse with `kunnen` (ability) or `moeten` (obligation)."
+          "explanation": "`Mogen` is permission, `Mag ik...?` means May I...? Don't confuse with `kunnen` (ability) or `moeten` (obligation)."
         }
       },
       {
@@ -195,7 +195,7 @@
         ],
         "callout": {
           "tone": "warning",
-          "body": "English speakers instinctively want to put the infinitive right after the modal: `Ik kan spreken Nederlands.` This is WRONG in Dutch. The infinitive must go to the END. Push it back: `Ik kan Nederlands spreken.` Drill this until it feels automatic — it's the single most common modal mistake."
+          "body": "English speakers instinctively want to put the infinitive right after the modal: `Ik kan spreken Nederlands.` This is WRONG in Dutch. The infinitive must go to the END. Push it back: `Ik kan Nederlands spreken.` Drill this until it feels automatic, it's the single most common modal mistake."
         },
         "cutting_intro": "Here's the golden rule. The modal stays in second position, and the main verb runs to the end of the sentence. Like bookends.",
         "quick_check": {
@@ -257,7 +257,7 @@
           {
             "hindi": "Kun jij me helpen?",
             "english": "Can you help me?",
-            "breakdown": "Inverted question — `kunt` drops to `kun`. Note `helpen` at end."
+            "breakdown": "Inverted question, `kunt` drops to `kun`. Note `helpen` at end."
           },
           {
             "hindi": "Wil je een kopje thee?",
@@ -272,7 +272,7 @@
         ],
         "callout": {
           "tone": "tip",
-          "body": "In inverted `jij`-questions, `kunnen` becomes `kun` (not `kunt`) and `willen` becomes `wil` (not `wilt`). So `kun jij?` and `wil jij?` — irregular drops of the -t. Native speakers do this automatically. Memorize it."
+          "body": "In inverted `jij`-questions, `kunnen` becomes `kun` (not `kunt`) and `willen` becomes `wil` (not `wilt`). So `kun jij?` and `wil jij?`, irregular drops of the -t. Native speakers do this automatically. Memorize it."
         },
         "cutting_intro": "Time for the tables. These three are your everyday modals. Watch the irregular singulars and the sneaky dropped `-t` in inverted questions.",
         "quick_check": {
@@ -283,7 +283,7 @@
             "Kanst jij fietsen?"
           ],
           "correct_index": 1,
-          "explanation": "`Kun jij?` — the -t drops in inverted `jij` questions. `Kunt jij?` is technically tolerated but `kun jij` is what natives actually say."
+          "explanation": "`Kun jij?`, the -t drops in inverted `jij` questions. `Kunt jij?` is technically tolerated but `kun jij` is what natives actually say."
         }
       },
       {
@@ -328,12 +328,12 @@
           {
             "hindi": "Ik zou graag een afspraak willen maken.",
             "english": "I would like to make an appointment.",
-            "breakdown": "`Ik zou graag ... willen` = I would like — the standard polite formula."
+            "breakdown": "`Ik zou graag ... willen` = I would like, the standard polite formula."
           },
           {
             "hindi": "Mag ik even storen?",
             "english": "May I interrupt for a moment?",
-            "breakdown": "`Mag ik...?` is already polite — no `zou` needed for short permission requests."
+            "breakdown": "`Mag ik...?` is already polite, no `zou` needed for short permission requests."
           }
         ],
         "callout": {
@@ -349,7 +349,7 @@
             "Zou je me kunnen helpen?"
           ],
           "correct_index": 2,
-          "explanation": "`Zou je me kunnen helpen?` — `zou` + `kunnen` is the most polite stack. Literally `would you be able to help me`. Use it at the gemeente, bank, or with strangers."
+          "explanation": "`Zou je me kunnen helpen?`, `zou` + `kunnen` is the most polite stack. Literally `would you be able to help me`. Use it at the gemeente, bank, or with strangers."
         }
       },
       {
@@ -364,7 +364,7 @@
           {
             "hindi": "Hij wil niet gaan.",
             "english": "He doesn't want to go.",
-            "breakdown": "No object — `niet` sits directly before the infinitive `gaan`."
+            "breakdown": "No object, `niet` sits directly before the infinitive `gaan`."
           },
           {
             "hindi": "Je mag dat hier niet doen.",
@@ -374,7 +374,7 @@
           {
             "hindi": "Ik wil geen koffie.",
             "english": "I don't want any coffee.",
-            "breakdown": "Indefinite noun — use `geen`, not `niet een`."
+            "breakdown": "Indefinite noun, use `geen`, not `niet een`."
           },
           {
             "hindi": "We hebben geen tijd om te gaan.",
@@ -384,7 +384,7 @@
         ],
         "callout": {
           "tone": "warning",
-          "body": "Placing `niet` in the wrong spot is one of the most common Dutch errors. Default rule: put `niet` as close to the END as possible, but always BEFORE the final infinitive. And remember — for `not a` / `no`, use `geen`, not `niet een`. Never mix them."
+          "body": "Placing `niet` in the wrong spot is one of the most common Dutch errors. Default rule: put `niet` as close to the END as possible, but always BEFORE the final infinitive. And remember, for `not a` / `no`, use `geen`, not `niet een`. Never mix them."
         },
         "cutting_intro": "Last thing: negation. `Niet` has a specific home, just before the infinitive at the end. And `geen` replaces `een` for indefinite negation.",
         "quick_check": {

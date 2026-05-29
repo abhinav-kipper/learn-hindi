@@ -2,66 +2,165 @@
   "id": "ordering-food",
   "title": "Ordering Chai & Street Food",
   "situation": "You're at a roadside chai stall with a friend. You want chai and some snacks.",
-  "skills": ["quantities & numbers", "wala constructions", "polite requests"],
+  "skills": [
+    "quantities & numbers",
+    "wala constructions",
+    "polite requests"
+  ],
   "phrases": [
-    { "hindi": "bhaiya, do chai dena", "english": "Brother, give two teas", "context": "'dena' = give — the basic way to order anything at any stall in India", "pronunciation": "BHAI-ya, DO chai DE-na" },
-    { "hindi": "elaichi wali chai milegi?", "english": "Will I get cardamom tea?", "context": "'wali' = the one with — incredibly versatile. 'milegi' because chai is feminine", "pronunciation": "e-LAI-chi WAA-li chai mi-LE-gi?" },
-    { "hindi": "ek plate momos bhi laga do", "english": "Put one plate of momos too", "context": "'laga do' = serve/put up — super common at food stalls, more natural than 'dena'", "pronunciation": "EK plate MO-mos bhi la-GA do" },
-    { "hindi": "cheeni kam rakhna, adrak zyada", "english": "Keep less sugar, more ginger", "context": "'kam' = less, 'zyada' = more — customize any order with these two words", "pronunciation": "CHEE-ni KAM rakh-NA, ad-RAK zya-DA" },
-    { "hindi": "bhaiya, yeh thanda hai, garam karke dena", "english": "Brother, this is cold, heat it up and give it", "context": "'karke' = having done/after doing — chain actions: heat it THEN give it", "pronunciation": "BHAI-ya, yeh THAN-da hai, ga-RAM kar-KE DE-na" },
-    { "hindi": "aur ek cutting dena", "english": "Give one more cutting (half-tea)", "context": "'cutting chai' = half cup, Mumbai special — when you want a quick small chai", "pronunciation": "AUR ek CUT-ting DE-na" },
-    { "hindi": "yeh kya hai? taste karke dekh sakta hoon?", "english": "What's this? Can I taste-test it?", "context": "Pointing at unfamiliar items and asking to try — totally acceptable at street stalls", "pronunciation": "yeh KYA hai? taste KAR-ke dekh SAK-ta hoon?" },
-    { "hindi": "kitne hue bhaiya? total bata do", "english": "How much total, brother? Tell me the total", "context": "'kitne hue' = how much did it come to. Ask when done ordering.", "pronunciation": "KIT-ne HU-e bhai-YA? TO-tal ba-TA do" },
-    { "hindi": "chhutta nahi hai, UPI se le lo", "english": "I don't have change, take it via UPI", "context": "UPI (Google Pay/PhonePe) has solved the eternal change problem — even chai wallahs accept it now", "pronunciation": "chhut-TA na-HI hai, U-P-I se LE lo" },
-    { "hindi": "bhaiya, mast chai banate ho yaar, roz aaunga", "english": "Brother, you make amazing tea dude, I'll come daily", "context": "Complimenting the stall owner — builds rapport, might get you extra next time", "pronunciation": "BHAI-ya, MAST chai ba-NA-te ho yaar, ROZ aa-UN-ga" }
+    {
+      "hindi": "bhaiya, do chai dena",
+      "english": "Brother, give two teas",
+      "context": "'dena' = give, the basic way to order anything at any stall in India",
+      "pronunciation": "BHAI-ya, DO chai DE-na"
+    },
+    {
+      "hindi": "elaichi wali chai milegi?",
+      "english": "Will I get cardamom tea?",
+      "context": "'wali' = the one with, incredibly versatile. 'milegi' because chai is feminine",
+      "pronunciation": "e-LAI-chi WAA-li chai mi-LE-gi?"
+    },
+    {
+      "hindi": "ek plate momos bhi laga do",
+      "english": "Put one plate of momos too",
+      "context": "'laga do' = serve/put up, super common at food stalls, more natural than 'dena'",
+      "pronunciation": "EK plate MO-mos bhi la-GA do"
+    },
+    {
+      "hindi": "cheeni kam rakhna, adrak zyada",
+      "english": "Keep less sugar, more ginger",
+      "context": "'kam' = less, 'zyada' = more, customize any order with these two words",
+      "pronunciation": "CHEE-ni KAM rakh-NA, ad-RAK zya-DA"
+    },
+    {
+      "hindi": "bhaiya, yeh thanda hai, garam karke dena",
+      "english": "Brother, this is cold, heat it up and give it",
+      "context": "'karke' = having done/after doing, chain actions: heat it THEN give it",
+      "pronunciation": "BHAI-ya, yeh THAN-da hai, ga-RAM kar-KE DE-na"
+    },
+    {
+      "hindi": "aur ek cutting dena",
+      "english": "Give one more cutting (half-tea)",
+      "context": "'cutting chai' = half cup, Mumbai special, when you want a quick small chai",
+      "pronunciation": "AUR ek CUT-ting DE-na"
+    },
+    {
+      "hindi": "yeh kya hai? taste karke dekh sakta hoon?",
+      "english": "What's this? Can I taste-test it?",
+      "context": "Pointing at unfamiliar items and asking to try, totally acceptable at street stalls",
+      "pronunciation": "yeh KYA hai? taste KAR-ke dekh SAK-ta hoon?"
+    },
+    {
+      "hindi": "kitne hue bhaiya? total bata do",
+      "english": "How much total, brother? Tell me the total",
+      "context": "'kitne hue' = how much did it come to. Ask when done ordering.",
+      "pronunciation": "KIT-ne HU-e bhai-YA? TO-tal ba-TA do"
+    },
+    {
+      "hindi": "chhutta nahi hai, UPI se le lo",
+      "english": "I don't have change, take it via UPI",
+      "context": "UPI (Google Pay/PhonePe) has solved the eternal change problem, even chai wallahs accept it now",
+      "pronunciation": "chhut-TA na-HI hai, U-P-I se LE lo"
+    },
+    {
+      "hindi": "bhaiya, mast chai banate ho yaar, roz aaunga",
+      "english": "Brother, you make amazing tea dude, I'll come daily",
+      "context": "Complimenting the stall owner, builds rapport, might get you extra next time",
+      "pronunciation": "BHAI-ya, MAST chai ba-NA-te ho yaar, ROZ aa-UN-ga"
+    }
   ],
   "grammar_notes": [
-    "'dena' (give) is the universal ordering verb at food stalls — works for everything from chai to biryani",
-    "'milega/milegi?' = will I get? (male/female noun) — polite way to ask availability without assuming they have it",
+    "'dena' (give) is the universal ordering verb at food stalls, works for everything from chai to biryani",
+    "'milega/milegi?' = will I get? (male/female noun), polite way to ask availability without assuming they have it",
     "Numbers: ek (1), do (2), teen (3), chaar (4), paanch (5), chhe (6), saat (7), aath (8), nau (9), das (10), bees (20), pachaas (50), sau (100)",
     "'karke' chains two actions: garam karke dena = heat it then give. Pack karke dena = pack it then give.",
     "'laga do' vs 'dena': 'laga do' is more casual/street-food, 'dena' is universal. At a dhaba, always 'laga do'."
   ],
   "culture_notes": [
-    "At street stalls, you don't wait to be served — just call out your order from wherever you're standing",
-    "Chai is always shared — offering chai = offering friendship. Refusing chai is almost rude.",
+    "At street stalls, you don't wait to be served, just call out your order from wherever you're standing",
+    "Chai is always shared, offering chai = offering friendship. Refusing chai is almost rude.",
     "'Cutting chai' in Mumbai = half cup, perfect for a quick break. In Delhi, it's always full cups.",
-    "Never hand money with your left hand — use right hand or both hands for large notes"
+    "Never hand money with your left hand, use right hand or both hands for large notes"
   ],
   "skill_breakdown": [
     {
       "skill": "quantities & numbers",
       "explanation": "Basic numbers: ek(1), do(2), teen(3), chaar(4), paanch(5), chhe(6), saat(7), aath(8), nau(9), das(10). For ordering: number + item + dena. For prices: number itself (sau = 100, do sau = 200).",
       "more_examples": [
-        { "hindi": "teen samose dena", "english": "give three samosas" },
-        { "hindi": "do plate laga do", "english": "serve two plates" },
-        { "hindi": "ek aur dena", "english": "give one more" },
-        { "hindi": "paanch wali chai dena", "english": "give the 5-rupee tea" },
-        { "hindi": "das rupaye ki pepsi", "english": "the 10-rupee pepsi" }
+        {
+          "hindi": "teen samose dena",
+          "english": "give three samosas"
+        },
+        {
+          "hindi": "do plate laga do",
+          "english": "serve two plates"
+        },
+        {
+          "hindi": "ek aur dena",
+          "english": "give one more"
+        },
+        {
+          "hindi": "paanch wali chai dena",
+          "english": "give the 5-rupee tea"
+        },
+        {
+          "hindi": "das rupaye ki pepsi",
+          "english": "the 10-rupee pepsi"
+        }
       ]
     },
     {
       "skill": "wala constructions",
-      "explanation": "'Wala/wali/wale' = the one who/which/with. Gender must match: wala (masc), wali (fem), wale (plural). Attach to anything — it's like a universal adjective-maker.",
+      "explanation": "'Wala/wali/wale' = the one who/which/with. Gender must match: wala (masc), wali (fem), wale (plural). Attach to anything, it's like a universal adjective-maker.",
       "more_examples": [
-        { "hindi": "paneer wala burger", "english": "the paneer burger (the one with paneer)" },
-        { "hindi": "woh red wali building", "english": "that red building" },
-        { "hindi": "chai wala", "english": "the tea seller/maker" },
-        { "hindi": "bahar wala counter", "english": "the outside counter" },
-        { "hindi": "kal wali jagah", "english": "yesterday's place (the place from yesterday)" }
+        {
+          "hindi": "paneer wala burger",
+          "english": "the paneer burger (the one with paneer)"
+        },
+        {
+          "hindi": "woh red wali building",
+          "english": "that red building"
+        },
+        {
+          "hindi": "chai wala",
+          "english": "the tea seller/maker"
+        },
+        {
+          "hindi": "bahar wala counter",
+          "english": "the outside counter"
+        },
+        {
+          "hindi": "kal wali jagah",
+          "english": "yesterday's place (the place from yesterday)"
+        }
       ]
     },
     {
       "skill": "polite requests",
-      "explanation": "'Dena' (give), 'rakhna' (keep), 'banana' (make), 'laga do' (serve/put) — use these verb roots + what you want. Add 'zara' (just/please) for extra politeness. 'Mat' before verb = don't.",
+      "explanation": "'Dena' (give), 'rakhna' (keep), 'banana' (make), 'laga do' (serve/put), use these verb roots + what you want. Add 'zara' (just/please) for extra politeness. 'Mat' before verb = don't.",
       "more_examples": [
-        { "hindi": "zara pani dena", "english": "give some water please" },
-        { "hindi": "mirchi mat rakhna", "english": "don't put chili" },
-        { "hindi": "thoda aur garam karo", "english": "heat it up a bit more" },
-        { "hindi": "parcel kar do bhaiya", "english": "pack it up, brother" },
-        { "hindi": "jaldi banana yaar, bhookh lagi hai", "english": "make it fast dude, I'm hungry" }
+        {
+          "hindi": "zara pani dena",
+          "english": "give some water please"
+        },
+        {
+          "hindi": "mirchi mat rakhna",
+          "english": "don't put chili"
+        },
+        {
+          "hindi": "thoda aur garam karo",
+          "english": "heat it up a bit more"
+        },
+        {
+          "hindi": "parcel kar do bhaiya",
+          "english": "pack it up, brother"
+        },
+        {
+          "hindi": "jaldi banana yaar, bhookh lagi hai",
+          "english": "make it fast dude, I'm hungry"
+        }
       ]
     }
   ],
-  "practice_prompt": "You are a friendly Delhi chaiwala running a roadside chai stall near a busy office complex. The user is a customer walking up to order. Open with 'haan bhaiya, kya lenge?' Use 'aap' at first, but drop into 'bhaiya' or 'yaar' once they chat warmly. The user will address you as 'bhaiya'. Take the order naturally — ask clarifying questions like 'elaichi wali ya normal?', 'cheeni kam karoon?', 'cutting ya full?'. Surface the lesson's vocabulary organically: 'do chai dena', 'elaichi wali', 'aur kuch?', and the 'wala' construction. Push bread pakora or samosa once ('garam samose hain, ek laga doon?'). If the user compliments you ('mast banaye ho'), respond warmly. When payment comes, hit them with 'chhutta nahin hai bhaiya, UPI chalega?' or similar. Flag mistakes with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] — watch for wrong register, missing softeners, or English-literal phrasing. Keep it to 6-8 turns. End with the sale completed and a warm 'aate rehna bhaiya'. Stay in Hindi unless asked otherwise."
+  "practice_prompt": "You are a friendly Delhi chaiwala running a roadside chai stall near a busy office complex. The user is a customer walking up to order. Open with 'haan bhaiya, kya lenge?' Use 'aap' at first, but drop into 'bhaiya' or 'yaar' once they chat warmly. The user will address you as 'bhaiya'. Take the order naturally, ask clarifying questions like 'elaichi wali ya normal?', 'cheeni kam karoon?', 'cutting ya full?'. Surface the lesson's vocabulary organically: 'do chai dena', 'elaichi wali', 'aur kuch?', and the 'wala' construction. Push bread pakora or samosa once ('garam samose hain, ek laga doon?'). If the user compliments you ('mast banaye ho'), respond warmly. When payment comes, hit them with 'chhutta nahin hai bhaiya, UPI chalega?' or similar. Flag mistakes with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]], watch for wrong register, missing softeners, or English-literal phrasing. Keep it to 6-8 turns. End with the sale completed and a warm 'aate rehna bhaiya'. Stay in Hindi unless asked otherwise."
 }

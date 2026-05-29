@@ -1,7 +1,7 @@
 {
   "id": "past-tense",
   "title": "Past Tense",
-  "situation": "Talk about what happened — yesterday, last week, your whole life story",
+  "situation": "Talk about what happened, yesterday, last week, your whole life story",
   "skills": [
     "simple past",
     "past habitual",
@@ -23,7 +23,7 @@
     {
       "hindi": "humne khana khaya",
       "english": "We ate food",
-      "context": "When the verb is transitive (has an object), subject gets 'ne': hum→humne, main→maine, usne (he/she)",
+      "context": "When the verb is transitive (has an object), subject gets 'ne': hum / humne, main / maine, usne (he/she)",
       "pronunciation": "HUM-ne KHA-na KHA-ya"
     },
     {
@@ -71,19 +71,19 @@
   ],
   "grammar_notes": [
     "Simple past: verb root + a (male sg), i (female sg), e (male plural). Example: kha-ya (ate-male), kha-yi (ate-female), kha-ye (ate-plural male)",
-    "The 'ne' rule: With transitive verbs (verbs that have an object), the subject takes 'ne' — maine, tune, usne, humne, unhone. The verb then agrees with the OBJECT's gender, not the subject!",
+    "The 'ne' rule: With transitive verbs (verbs that have an object), the subject takes 'ne', maine, tune, usne, humne, unhone. The verb then agrees with the OBJECT's gender, not the subject!",
     "Was/were: tha (male sg), thi (female sg), the (male plural/tum), theen (female plural). 'Main tha' = I was (male), 'Main thi' = I was (female)",
     "Past habitual (used to): verb-ta/ti/te + tha/thi/the. 'Main jaata tha' = I used to go. Same as present tense form but with tha/thi/the instead of hoon/hai/ho",
-    "Common irregular past forms: jaana→gaya, aana→aaya, karna→kiya, dena→diya, lena→liya, hona→hua"
+    "Common irregular past forms: jaana / gaya, aana / aaya, karna / kiya, dena / diya, lena / liya, hona / hua"
   ],
   "culture_notes": [
-    "'Kal' means both yesterday AND tomorrow — you figure out which from context. If ambiguous, add 'beeta kal' (past yesterday) or 'aane wala kal' (coming tomorrow)",
+    "'Kal' means both yesterday AND tomorrow, you figure out which from context. If ambiguous, add 'beeta kal' (past yesterday) or 'aane wala kal' (coming tomorrow)",
     "Indians often use past tense to be polite: 'maine socha ki...' (I thought that...) instead of directly stating what you want"
   ],
   "skill_breakdown": [
     {
       "skill": "Simple past with -a/-i agreement",
-      "explanation": "For intransitive verbs (go, come, sit, sleep): verb stem + '-a' (M) or '-i' (F) — agrees with subject gender. 'main aaya' = I came (male), 'main aayi' = I came (female).",
+      "explanation": "For intransitive verbs (go, come, sit, sleep): verb stem + '-a' (M) or '-i' (F), agrees with subject gender. 'main aaya' = I came (male), 'main aayi' = I came (female).",
       "more_examples": [
         {
           "hindi": "main kal aayi",
@@ -105,7 +105,7 @@
     },
     {
       "skill": "Past habitual (-ta tha)",
-      "explanation": "Used for habits or repeated actions in the past — 'used to'. Verb stem + '-ta'/'-ti' + 'tha'/'thi'/'the'. 'main school jaati thi' = I used to go to school.",
+      "explanation": "Used for habits or repeated actions in the past, 'used to'. Verb stem + '-ta'/'-ti' + 'tha'/'thi'/'the'. 'main school jaati thi' = I used to go to school.",
       "more_examples": [
         {
           "hindi": "bachpan mein main bahut khelta tha",
@@ -148,7 +148,7 @@
       ]
     }
   ],
-  "practice_prompt": "You are a Hindi tutor drilling past tense — past habitual (`karta tha`), simple past (`gaya/gayi`), and perfect (`kar liya`). Address the user as `aap` and stay in Hindi/Hinglish unless they ask for English. Open with: `chaliye past tense practice karte hain — bataaiye Hindi mein: 'I used to drink chai every morning'`. Give one task at a time and mix the three past types: translate-this prompts, pick-the-right-past-form (habitual vs simple vs perfect), and conjugate-this with a given subject. Focus on the three forms' distinct uses, gender agreement (`gaya/gayi/gaye` matching the subject), and perfective auxiliary choice (`liya` for self, `diya` for other, `gaya` for finality). Briefly note that transitive simple past needs `ne` — but that has its own foundation, so don't drill it here. Flag mistakes with `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]`. Watch for: confusing habitual (`pita tha`) with simple past (`piya`), wrong gender (`gaya` vs `gayi`), mistakenly inserting `ne`, and wrong perfective auxiliary. Run 6-8 items, escalating from translation to free conjugation. End with `kaafi acche se kiya aapne — phir milte hain`.",
+  "practice_prompt": "You are a Hindi tutor drilling past tense, past habitual (`karta tha`), simple past (`gaya/gayi`), and perfect (`kar liya`). Address the user as `aap` and stay in Hindi/Hinglish unless they ask for English. Open with: `chaliye past tense practice karte hain, bataaiye Hindi mein: 'I used to drink chai every morning'`. Give one task at a time and mix the three past types: translate-this prompts, pick-the-right-past-form (habitual vs simple vs perfect), and conjugate-this with a given subject. Focus on the three forms' distinct uses, gender agreement (`gaya/gayi/gaye` matching the subject), and perfective auxiliary choice (`liya` for self, `diya` for other, `gaya` for finality). Briefly note that transitive simple past needs `ne`, but that has its own foundation, so don't drill it here. Flag mistakes with `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]`. Watch for: confusing habitual (`pita tha`) with simple past (`piya`), wrong gender (`gaya` vs `gayi`), mistakenly inserting `ne`, and wrong perfective auxiliary. Run 6-8 items, escalating from translation to free conjugation. End with `kaafi acche se kiya aapne, phir milte hain`.",
   "theory": {
     "intro": "English speakers expect one past tense. Hindi has at least three, and the one you pick changes the meaning. Past habitual is for repeated actions ('I used to...'). Simple past is for one-time completed actions ('I did...'). Perfect/completive stresses that something finished ('I'm done...'). On top of that, the verb agrees with gender. And for transitive verbs in the simple past, the gender that matters is the object's, not the subject's. This is where Hindi diverges most from English.",
     "sections": [
@@ -159,17 +159,17 @@
           {
             "hindi": "main pita tha",
             "english": "I used to drink (masc. speaker)",
-            "breakdown": "past habitual — pina (to drink) + ta + tha = repeated action"
+            "breakdown": "past habitual, pina (to drink) + ta + tha = repeated action"
           },
           {
             "hindi": "maine piya",
             "english": "I drank",
-            "breakdown": "simple past — pina → piya, with `ne` because pina is transitive; one-time event"
+            "breakdown": "simple past, pina / piya, with `ne` because pina is transitive; one-time event"
           },
           {
             "hindi": "maine pee liya",
             "english": "I drank it (all) up / I'm done drinking",
-            "breakdown": "perfect — pee + liya (auxiliary `lena`) = completed/emphasized finish"
+            "breakdown": "perfect, pee + liya (auxiliary `lena`) = completed/emphasized finish"
           }
         ],
         "callout": {
@@ -180,17 +180,17 @@
         "quick_check": {
           "question": "Which form would you use for \"I used to play cricket as a kid\"?",
           "options": [
-            "Simple past — maine khela",
-            "Past habitual — main khelta tha",
-            "Perfect — maine khel liya"
+            "Simple past, maine khela",
+            "Past habitual, main khelta tha",
+            "Perfect, maine khel liya"
           ],
           "correct_index": 1,
-          "explanation": "Past habitual — the action was repeated/customary in the past. `main khelta tha` = I used to play. Simple past is for one-time events; perfect is for emphasized completion."
+          "explanation": "Past habitual, the action was repeated/customary in the past. `main khelta tha` = I used to play. Simple past is for one-time events; perfect is for emphasized completion."
         }
       },
       {
         "heading": "Past habitual: verb-stem + -ta/-ti/-te + tha/thi/the",
-        "body": "The recipe is **verb root + `-ta`/`-ti`/`-te` + `tha`/`thi`/`the`**. There's no `ne` rule here, which makes this the safest past tense to start with.\n\nYou build it exactly like the present habitual, then swap the helper word (auxiliary):\n\n- present habitual `main karta hoon` → past habitual `main karta tha`\n- feminine `main karti hoon` → `main karti thi`\n- plural or formal `aap karte hain` → `aap karte the`\n\nBoth halves (`-ta/-ti/-te` and `tha/thi/the`) agree with the **subject's** gender and number. They flip together.",
+        "body": "The recipe is **verb root + `-ta`/`-ti`/`-te` + `tha`/`thi`/`the`**. There's no `ne` rule here, which makes this the safest past tense to start with. You build it exactly like the present habitual, then swap the helper word (auxiliary): - present habitual `main karta hoon` / past habitual `main karta tha`\n- feminine `main karti hoon` / `main karti thi`\n- plural or formal `aap karte hain` / `aap karte the` Both halves (`-ta/-ti/-te` and `tha/thi/the`) agree with the **subject's** gender and number. They flip together.",
         "table": {
           "caption": "Past habitual of `karna` (to do)",
           "columns": [
@@ -235,17 +235,17 @@
           {
             "hindi": "woh Mumbai mein rehta tha",
             "english": "he used to live in Mumbai",
-            "breakdown": "rehna (to live) + ta + tha — habitual past, masc. subject"
+            "breakdown": "rehna (to live) + ta + tha, habitual past, masc. subject"
           },
           {
             "hindi": "main har subah chai pita tha",
             "english": "I used to drink chai every morning",
-            "breakdown": "pina + ta + tha — repeated action, masc. speaker"
+            "breakdown": "pina + ta + tha, repeated action, masc. speaker"
           },
           {
             "hindi": "woh school paidal jaati thi",
             "english": "she used to walk to school",
-            "breakdown": "jaana + ti + thi — habitual, fem. subject"
+            "breakdown": "jaana + ti + thi, habitual, fem. subject"
           }
         ],
         "cutting_intro": "Start here. Past habitual is just present habitual with `tha/thi/the` instead of `hoon/hai`. No `ne`, no object tricks.",
@@ -257,12 +257,12 @@
             "usne padha"
           ],
           "correct_index": 0,
-          "explanation": "`woh padhti thi` — feminine subject takes `-ti` + `thi`. The masculine form would be `padhta tha`; the simple past with `ne` would be `usne padha`."
+          "explanation": "`woh padhti thi`, feminine subject takes `-ti` + `thi`. The masculine form would be `padhta tha`; the simple past with `ne` would be `usne padha`."
         }
       },
       {
         "heading": "Simple past: verb root + -a / -i / -e (intransitive)",
-        "body": "For **intransitive** verbs (no direct object: go, come, sleep, sit, fall), the recipe is **verb root + `-a` / `-i` / `-e`**, agreeing with the subject's gender.\n\n- `-a` → masculine singular\n- `-i` → feminine singular\n- `-e` → masculine plural, or with `aap`\n\nA handful of common verbs are irregular. Memorize them as a short list. Everything else follows the regular pattern.\n\n- `jaana` → `gaya` / `gayi` / `gaye` (not `jaaya`)\n- `hona` → `hua` / `hui` / `hue`\n- `lena` → `liya` / `li` / `liye`\n- `dena` → `diya` / `di` / `diye`",
+        "body": "For **intransitive** verbs (no direct object: go, come, sleep, sit, fall), the recipe is **verb root + `-a` / `-i` / `-e`**, agreeing with the subject's gender. - `-a` / masculine singular\n- `-i` / feminine singular\n- `-e` / masculine plural, or with `aap` A handful of common verbs are irregular. Memorize them as a short list. Everything else follows the regular pattern. - `jaana` / `gaya` / `gayi` / `gaye` (not `jaaya`)\n- `hona` / `hua` / `hui` / `hue`\n- `lena` / `liya` / `li` / `liye`\n- `dena` / `diya` / `di` / `diye`",
         "table": {
           "caption": "Common intransitive verbs in the simple past",
           "columns": [
@@ -312,7 +312,7 @@
         },
         "callout": {
           "tone": "warning",
-          "body": "For TRANSITIVE verbs (verbs with an object — eat, read, do, drink), simple past uses the `ne` construction and the verb agrees with the OBJECT's gender, not the subject's. That's a whole other rule — see the noun-gender chapter and the dedicated `ne` rule lesson. For now, just remember: intransitive simple past = subject-agreement, no `ne`."
+          "body": "For TRANSITIVE verbs (verbs with an object, eat, read, do, drink), simple past uses the `ne` construction and the verb agrees with the OBJECT's gender, not the subject's. That's a whole other rule, see the noun-gender chapter and the dedicated `ne` rule lesson. For now, just remember: intransitive simple past = subject-agreement, no `ne`."
         },
         "cutting_intro": "Next: one-time events with intransitive verbs. Subject gender controls the ending. Clean and simple.",
         "quick_check": {
@@ -323,7 +323,7 @@
             "usne aaya"
           ],
           "correct_index": 1,
-          "explanation": "`woh aayi` — aana is intransitive, so the verb agrees with the subject's gender. Feminine subject → `-i` ending. `usne aaya` is wrong on two counts: no `ne` with intransitives, and the gender wouldn't match either way."
+          "explanation": "`woh aayi`, aana is intransitive, so the verb agrees with the subject's gender. Feminine subject / `-i` ending. `usne aaya` is wrong on two counts: no `ne` with intransitives, and the gender wouldn't match either way."
         }
       },
       {
@@ -333,46 +333,46 @@
           {
             "hindi": "maine kar liya",
             "english": "I've done it / I'm done",
-            "breakdown": "karna + liya — completed, for self. Common as a finished-status announcement."
+            "breakdown": "karna + liya, completed, for self. Common as a finished-status announcement."
           },
           {
             "hindi": "usne mujhe paisa de diya",
             "english": "he gave me the money (handed it off)",
-            "breakdown": "dena + diya — completion + benefit to someone else (me)"
+            "breakdown": "dena + diya, completion + benefit to someone else (me)"
           },
           {
             "hindi": "woh thak ke so gaya",
             "english": "he was tired and fell asleep",
-            "breakdown": "sona + gaya — completion with finality; `jaana` marks the going-to-sleep as a done event"
+            "breakdown": "sona + gaya, completion with finality; `jaana` marks the going-to-sleep as a done event"
           },
           {
             "hindi": "maine khaana kha liya",
             "english": "I ate the food (all of it / I'm done)",
-            "breakdown": "khaana + liya — completed action, for self. Note `ne` because khaana is transitive."
+            "breakdown": "khaana + liya, completed action, for self. Note `ne` because khaana is transitive."
           }
         ],
         "callout": {
           "tone": "tip",
-          "body": "Default to `lena` when in doubt — it's the most common compound-past auxiliary in casual speech. `Kar liya`, `kha liya`, `pee liya`, `bol diya` are everywhere in conversation. There's a full foundation chapter on compound verbs later — this is just the past-tense flavor."
+          "body": "Default to `lena` when in doubt, it's the most common compound-past auxiliary in casual speech. `Kar liya`, `kha liya`, `pee liya`, `bol diya` are everywhere in conversation. There's a full foundation chapter on compound verbs later, this is just the past-tense flavor."
         },
         "cutting_intro": "Now the tricky one: compound past. You stack a helper verb to mark completion, and the helper colors the meaning.",
         "quick_check": {
           "question": "What's the nuance difference between `maine kiya` and `maine kar liya`?",
           "options": [
-            "No difference — both mean \"I did it\"",
+            "No difference, both mean \"I did it\"",
             "`kar liya` emphasizes completion / \"I'm done with it\"",
             "`kar liya` is past habitual, `kiya` is simple past"
           ],
           "correct_index": 1,
-          "explanation": "`maine kiya` = I did it (plain simple past). `maine kar liya` adds emphasis on completion — \"I've done it, it's finished, I'm done.\" The `liya` auxiliary marks the finish."
+          "explanation": "`maine kiya` = I did it (plain simple past). `maine kar liya` adds emphasis on completion, \"I've done it, it's finished, I'm done.\" The `liya` auxiliary marks the finish."
         }
       },
       {
         "heading": "Common pitfalls",
-        "body": "**Trap 1: habitual vs simple past.** English uses the same simple-past form for both habits and one-off events. Hindi doesn't. `I drank chai every morning` is **habitual** in Hindi: `main har subah chai pita tha`. Using `maine chai pi` instead sounds like a single odd event, even with `every morning` sitting there. It reads as grammatically off.\n\n**Trap 2: the `ne` rule.** Simple past plus a transitive verb (a verb with a direct object) means the subject takes `ne`, and the verb agrees with the **object's** gender, not the subject's.\n\n- `maine roti khayi`: feminine object (`roti`) → `-i` ending\n- `maine khaana khaya`: masculine object (`khaana`) → `-a` ending\n\nThe `ne` rule has its own foundation chapter. Drill it there.\n\n**Trap 3: `tha`/`thi`/`the` alone vs paired.** The same words do two different jobs depending on what comes before them.\n\n- paired with `-ta/-ti/-te` → past habitual: `main thakta tha` = I used to get tired\n- standing alone → plain was/were: `main thaka tha` = I was tired (a state, not a habit)\n\nSame words, different structures, different meanings.",
+        "body": "**Trap 1: habitual vs simple past.** English uses the same simple-past form for both habits and one-off events. Hindi doesn't. `I drank chai every morning` is **habitual** in Hindi: `main har subah chai pita tha`. Using `maine chai pi` instead sounds like a single odd event, even with `every morning` sitting there. It reads as grammatically off. **Trap 2: the `ne` rule.** Simple past plus a transitive verb (a verb with a direct object) means the subject takes `ne`, and the verb agrees with the **object's** gender, not the subject's. - `maine roti khayi`: feminine object (`roti`) / `-i` ending\n- `maine khaana khaya`: masculine object (`khaana`) / `-a` ending The `ne` rule has its own foundation chapter. Drill it there. **Trap 3: `tha`/`thi`/`the` alone vs paired.** The same words do two different jobs depending on what comes before them. - paired with `-ta/-ti/-te` / past habitual: `main thakta tha` = I used to get tired\n- standing alone / plain was/were: `main thaka tha` = I was tired (a state, not a habit) Same words, different structures, different meanings.",
         "callout": {
           "tone": "tip",
-          "body": "When in doubt, ask: \"Was this a one-time event or a repeated habit?\" → habitual for repeated, simple past for one-time. THEN, if it's one-time AND transitive (has an object you're acting on), add `ne` to the subject and agree the verb with the object. Two decisions, in order."
+          "body": "When in doubt, ask: \"Was this a one-time event or a repeated habit?\" / habitual for repeated, simple past for one-time. THEN, if it's one-time AND transitive (has an object you're acting on), add `ne` to the subject and agree the verb with the object. Two decisions, in order."
         },
         "cutting_intro": "One more thing: the traps. English speakers stumble on the same spots every time. Watch for these.",
         "quick_check": {
@@ -383,7 +383,7 @@
             "maine har subah chai stall pe chai pee li"
           ],
           "correct_index": 1,
-          "explanation": "Habitual — the phrase \"every morning\" signals a repeated action. `main ... chai pita tha` = I used to drink chai. The simple-past version sounds like a one-off event despite the \"every morning\", which is grammatically odd."
+          "explanation": "Habitual, the phrase \"every morning\" signals a repeated action. `main ... chai pita tha` = I used to drink chai. The simple-past version sounds like a one-off event despite the \"every morning\", which is grammatically odd."
         }
       }
     ],

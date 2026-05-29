@@ -2,67 +2,164 @@
   "id": "dutch-primary-school",
   "title": "At Primary School",
   "situation": "You arrive for an oudergesprek (parent-teacher meeting) about your 8-year-old at a Dutch basisschool. The juf (female teacher) discusses your child's progress in reading, math, and social behaviour. You raise a concern about bullying.",
-  "skills": ["introducing yourself as parent", "discussing progress (comparatives)", "raising sensitive concerns", "asking about homework and support"],
+  "skills": [
+    "introducing yourself as parent",
+    "discussing progress (comparatives)",
+    "raising sensitive concerns",
+    "asking about homework and support"
+  ],
   "phrases": [
-    { "hindi": "Goedemiddag, ik ben de moeder van Sander — Priya Sharma.", "english": "Good afternoon, I'm Sander's mother — Priya Sharma.", "context": "Introduce yourself as 'de moeder/vader van [child's name]' — this is how teachers immediately know which pupil is yours. Adding your own name is polite. A handshake is appropriate at a formal oudergesprek.", "pronunciation": "CHOO-de-MID-dach, ik ben de MOO-der van SAN-der — PREE-ya SHAR-ma" },
-    { "hindi": "Hoe gaat het met hem op school in het algemeen?", "english": "How is he doing at school in general?", "context": "Start with the open question before specifics. 'In het algemeen' = in general. This gives the teacher space to lead with positives first, which is standard Dutch pedagogy. The teacher will then move to areas for improvement.", "pronunciation": "hoo CHAAT het met hem op SCHOOL in het al-che-MAYN" },
-    { "hindi": "Dat is fijn om te horen — hij is veel beter geworden in rekenen.", "english": "That's nice to hear — he's become much better at maths.", "context": "'Beter geworden in' = has become better at. This is a natural response to positive feedback. 'Rekenen' = arithmetic/maths. Dutch basisschool report cards (rapporten) use a 1–10 scale, so progress is easy to track numerically.", "pronunciation": "dat is FAYN om te HOO-ren — hay is VEEL BAY-ter che-WOR-den in RAY-ke-nen" },
-    { "hindi": "Hij vindt taal nog steeds lastig — hoe kunnen wij hem thuis helpen?", "english": "He still finds language/reading difficult — how can we help him at home?", "context": "'Nog steeds' = still. 'Lastig vinden' = to find something difficult. 'Thuis' = at home. Asking how parents can help signals involvement and collaboration, which Dutch teachers value highly. They may suggest specific reading apps or daily reading routines.", "pronunciation": "hay VINT TAAL noch STAYTS LAS-tich — hoo KUN-nen way hem THWIS HEL-pen" },
-    { "hindi": "Hij heeft me verteld dat er gepest wordt op het schoolplein.", "english": "He's told me that he's being bullied on the playground.", "context": "'Gepest worden' = to be bullied (passive construction). 'Schoolplein' = playground. This is a sensitive topic — Dutch schools take pestgedrag very seriously. Reporting it formally (rather than just mentioning it casually) triggers the school's anti-pestprotocol.", "pronunciation": "hay HAYFT me ver-TELT dat er che-PEST WORT op het SCHOOL-playn" },
-    { "hindi": "Wat doet de school hieraan — is er een antipestprotocol?", "english": "What is the school doing about this — is there an anti-bullying protocol?", "context": "Every Dutch school is legally required to have an antipestprotocol. Naming it shows you're informed and takes the conversation from personal to procedural. The teacher will explain the school's approach and usually involve the internal counsellor (intern begeleider).", "pronunciation": "wat DOOT de SCHOOL HEER-aan — is er uhn AN-ti-pest-pro-to-KOL" },
-    { "hindi": "Hoeveel huiswerk krijgt hij per week en wat wordt er verwacht?", "english": "How much homework does he get per week and what's expected?", "context": "Dutch primary school (basisschool, ages 4–12) gives relatively little homework until group 7–8. 'Verwacht worden' = to be expected. Ask about expectations so you're not over- or under-helping — both extremes are noted in oudergesprekken.", "pronunciation": "HOO-veel HUIS-werk KRAYCHT hay per WAYK en wat WORT er ver-WACHT" },
-    { "hindi": "Zijn er extra lessen of begeleiding beschikbaar voor taalondersteuning?", "english": "Are there extra lessons or support available for language learning?", "context": "'Begeleiding' = guidance/support. 'Taalondersteuning' = language support. Many schools offer NT2-ondersteuning (Dutch as a second language) for children of newcomer families. Knowing what's available helps you advocate for your child.", "pronunciation": "zayn er EK-stra LES-sen of be-CHAY-li-ding be-SCHIK-baar voor TAAL-on-der-stu-ning" },
-    { "hindi": "Wanneer is het volgende oudergesprek en hoe kan ik tussentijds contact opnemen?", "english": "When is the next parent-teacher meeting and how can I reach you in the meantime?", "context": "'Tussentijds' = in the meantime / between now and then. 'Contact opnemen' = to make contact. Dutch teachers prefer email for non-urgent matters; the school's app (like Parro or Social Schools) is often the main communication channel.", "pronunciation": "WAN-neer is het VOL-chen-de OW-der-che-SPREK en hoo kan ik TUS-sen-tayts KON-takt OP-nay-men" },
-    { "hindi": "Bedankt voor uw tijd en de duidelijke uitleg.", "english": "Thank you for your time and the clear explanation.", "context": "'Duidelijke uitleg' = clear explanation. Closing with a compliment on clarity is culturally appropriate and genuinely appreciated — Dutch teachers work hard to communicate progress constructively. It ends the conversation on a positive note.", "pronunciation": "be-DANKT voor uw TAYT en de DUY-de-li-ke UYT-lech" }
+    {
+      "hindi": "Goedemiddag, ik ben de moeder van Sander, Priya Sharma.",
+      "english": "Good afternoon, I'm Sander's mother, Priya Sharma.",
+      "context": "Introduce yourself as 'de moeder/vader van [child's name]', this is how teachers immediately know which pupil is yours. Adding your own name is polite. A handshake is appropriate at a formal oudergesprek.",
+      "pronunciation": "CHOO-de-MID-dach, ik ben de MOO-der van SAN-der, PREE-ya SHAR-ma"
+    },
+    {
+      "hindi": "Hoe gaat het met hem op school in het algemeen?",
+      "english": "How is he doing at school in general?",
+      "context": "Start with the open question before specifics. 'In het algemeen' = in general. This gives the teacher space to lead with positives first, which is standard Dutch pedagogy. The teacher will then move to areas for improvement.",
+      "pronunciation": "hoo CHAAT het met hem op SCHOOL in het al-che-MAYN"
+    },
+    {
+      "hindi": "Dat is fijn om te horen, hij is veel beter geworden in rekenen.",
+      "english": "That's nice to hear, he's become much better at maths.",
+      "context": "'Beter geworden in' = has become better at. This is a natural response to positive feedback. 'Rekenen' = arithmetic/maths. Dutch basisschool report cards (rapporten) use a 1–10 scale, so progress is easy to track numerically.",
+      "pronunciation": "dat is FAYN om te HOO-ren, hay is VEEL BAY-ter che-WOR-den in RAY-ke-nen"
+    },
+    {
+      "hindi": "Hij vindt taal nog steeds lastig, hoe kunnen wij hem thuis helpen?",
+      "english": "He still finds language/reading difficult, how can we help him at home?",
+      "context": "'Nog steeds' = still. 'Lastig vinden' = to find something difficult. 'Thuis' = at home. Asking how parents can help signals involvement and collaboration, which Dutch teachers value highly. They may suggest specific reading apps or daily reading routines.",
+      "pronunciation": "hay VINT TAAL noch STAYTS LAS-tich, hoo KUN-nen way hem THWIS HEL-pen"
+    },
+    {
+      "hindi": "Hij heeft me verteld dat er gepest wordt op het schoolplein.",
+      "english": "He's told me that he's being bullied on the playground.",
+      "context": "'Gepest worden' = to be bullied (passive construction). 'Schoolplein' = playground. This is a sensitive topic, Dutch schools take pestgedrag very seriously. Reporting it formally (rather than just mentioning it casually) triggers the school's anti-pestprotocol.",
+      "pronunciation": "hay HAYFT me ver-TELT dat er che-PEST WORT op het SCHOOL-playn"
+    },
+    {
+      "hindi": "Wat doet de school hieraan, is er een antipestprotocol?",
+      "english": "What is the school doing about this, is there an anti-bullying protocol?",
+      "context": "Every Dutch school is legally required to have an antipestprotocol. Naming it shows you're informed and takes the conversation from personal to procedural. The teacher will explain the school's approach and usually involve the internal counsellor (intern begeleider).",
+      "pronunciation": "wat DOOT de SCHOOL HEER-aan, is er uhn AN-ti-pest-pro-to-KOL"
+    },
+    {
+      "hindi": "Hoeveel huiswerk krijgt hij per week en wat wordt er verwacht?",
+      "english": "How much homework does he get per week and what's expected?",
+      "context": "Dutch primary school (basisschool, ages 4–12) gives relatively little homework until group 7–8. 'Verwacht worden' = to be expected. Ask about expectations so you're not over- or under-helping, both extremes are noted in oudergesprekken.",
+      "pronunciation": "HOO-veel HUIS-werk KRAYCHT hay per WAYK en wat WORT er ver-WACHT"
+    },
+    {
+      "hindi": "Zijn er extra lessen of begeleiding beschikbaar voor taalondersteuning?",
+      "english": "Are there extra lessons or support available for language learning?",
+      "context": "'Begeleiding' = guidance/support. 'Taalondersteuning' = language support. Many schools offer NT2-ondersteuning (Dutch as a second language) for children of newcomer families. Knowing what's available helps you advocate for your child.",
+      "pronunciation": "zayn er EK-stra LES-sen of be-CHAY-li-ding be-SCHIK-baar voor TAAL-on-der-stu-ning"
+    },
+    {
+      "hindi": "Wanneer is het volgende oudergesprek en hoe kan ik tussentijds contact opnemen?",
+      "english": "When is the next parent-teacher meeting and how can I reach you in the meantime?",
+      "context": "'Tussentijds' = in the meantime / between now and then. 'Contact opnemen' = to make contact. Dutch teachers prefer email for non-urgent matters; the school's app (like Parro or Social Schools) is often the main communication channel.",
+      "pronunciation": "WAN-neer is het VOL-chen-de OW-der-che-SPREK en hoo kan ik TUS-sen-tayts KON-takt OP-nay-men"
+    },
+    {
+      "hindi": "Bedankt voor uw tijd en de duidelijke uitleg.",
+      "english": "Thank you for your time and the clear explanation.",
+      "context": "'Duidelijke uitleg' = clear explanation. Closing with a compliment on clarity is culturally appropriate and genuinely appreciated, Dutch teachers work hard to communicate progress constructively. It ends the conversation on a positive note.",
+      "pronunciation": "be-DANKT voor uw TAYT en de DUY-de-li-ke UYT-lech"
+    }
   ],
   "grammar_notes": [
-    "Comparatives: add '-er' to most adjectives: goed → beter (irregular), slecht → slechter, snel → sneller. 'Beter worden in iets' = to improve at something. Superlatives add '-st': 'het beste' (the best), 'het slechtste' (the worst)",
+    "Comparatives: add '-er' to most adjectives: goed / beter (irregular), slecht / slechter, snel / sneller. 'Beter worden in iets' = to improve at something. Superlatives add '-st': 'het beste' (the best), 'het slechtste' (the worst)",
     "Indirect questions with 'of' (whether) and 'hoe': 'Ik vroeg me af of hij wordt gepest' (I wondered whether he is being bullied). The subordinate clause introduced by 'of' pushes the verb to the end",
     "Reflexive verbs for behaviour: 'zich gedragen' (to behave oneself), 'zich concentreren' (to concentrate), 'zich aanpassen' (to adapt). In third person: 'Hij gedraagt zich goed' (He behaves well)",
     "Perfect tense for reporting what someone told you: 'Hij heeft me verteld dat...' (He told me that...). The subordinate clause starting with 'dat' takes end-verb word order: 'dat er gepest wordt'",
     "Passive voice for impersonal situations: 'Er wordt gepest' = bullying is happening (lit: there is bullied). Dutch uses 'er wordt + past participle' for passive descriptions of events without identifying an agent"
   ],
   "culture_notes": [
-    "The oudergesprek is typically held 2–3 times per year (start of year, mid-year, end of year). It is a structured 10–15 minute slot. Come prepared with specific questions — teachers keep to time, and a list ensures you cover everything",
-    "The Cito-toets (now called the Doorstroomtoets) in group 8 (age 11–12) determines school-type advice (vmbo, havo, vwo). Parents of children in groups 7–8 should ask about the school's preparation and advice process — it shapes secondary school options significantly",
+    "The oudergesprek is typically held 2–3 times per year (start of year, mid-year, end of year). It is a structured 10–15 minute slot. Come prepared with specific questions, teachers keep to time, and a list ensures you cover everything",
+    "The Cito-toets (now called the Doorstroomtoets) in group 8 (age 11–12) determines school-type advice (vmbo, havo, vwo). Parents of children in groups 7–8 should ask about the school's preparation and advice process, it shapes secondary school options significantly",
     "Dutch schools communicate increasingly via apps such as Parro, Social Schools, or ParentApp. Download the school's app immediately at enrolment. Teachers post updates, homework, and event reminders there rather than by paper letter",
-    "The schoolmaatschappelijk werker (school social worker) is available at most Dutch primary schools. If your child is struggling socially or at home, you can ask the teacher to refer you — it's free and non-stigmatising in Dutch culture"
+    "The schoolmaatschappelijk werker (school social worker) is available at most Dutch primary schools. If your child is struggling socially or at home, you can ask the teacher to refer you, it's free and non-stigmatising in Dutch culture"
   ],
   "skill_breakdown": [
     {
       "skill": "parent-teacher meeting opening",
       "explanation": "Identify yourself as the parent of a named child, then let the teacher lead. The structure is: teacher reviews progress (positief first, then aandachtspunten), parent asks questions, teacher advises next steps. Don't interrupt the teacher's prepared structure.",
       "more_examples": [
-        { "hindi": "Ik ben de vader van Emma — Lars Johansson.", "english": "I'm Emma's father — Lars Johansson." },
-        { "hindi": "Ik heb een paar vragen voorbereid, als dat mag.", "english": "I've prepared a few questions, if that's okay." },
-        { "hindi": "Kunt u mij het rapport uitleggen?", "english": "Could you explain the report card to me?" },
-        { "hindi": "Wat zijn de aandachtspunten voor dit kwartaal?", "english": "What are the focus points for this quarter?" }
+        {
+          "hindi": "Ik ben de vader van Emma, Lars Johansson.",
+          "english": "I'm Emma's father, Lars Johansson."
+        },
+        {
+          "hindi": "Ik heb een paar vragen voorbereid, als dat mag.",
+          "english": "I've prepared a few questions, if that's okay."
+        },
+        {
+          "hindi": "Kunt u mij het rapport uitleggen?",
+          "english": "Could you explain the report card to me?"
+        },
+        {
+          "hindi": "Wat zijn de aandachtspunten voor dit kwartaal?",
+          "english": "What are the focus points for this quarter?"
+        }
       ]
     },
     {
       "skill": "discussing progress with comparatives",
       "explanation": "Use comparatives to track change over time: 'beter dan vorig jaar' (better than last year), 'nog steeds lastig' (still difficult), 'vooruitgang geboekt' (progress made). Dutch teachers respond well when parents show they've tracked their child's development.",
       "more_examples": [
-        { "hindi": "Is hij beter geworden in lezen dan vorig kwartaal?", "english": "Has he improved in reading compared to last quarter?" },
-        { "hindi": "Zijn rekenprestaties zijn beter dan zijn taalvaardigheid.", "english": "His maths performance is better than his language ability." },
-        { "hindi": "Hij leest langzamer dan zijn klasgenoten.", "english": "He reads more slowly than his classmates." },
-        { "hindi": "Welk vak vindt hij het leukst?", "english": "Which subject does he enjoy the most?" },
-        { "hindi": "Is er zichtbare vooruitgang geboekt?", "english": "Has visible progress been made?" }
+        {
+          "hindi": "Is hij beter geworden in lezen dan vorig kwartaal?",
+          "english": "Has he improved in reading compared to last quarter?"
+        },
+        {
+          "hindi": "Zijn rekenprestaties zijn beter dan zijn taalvaardigheid.",
+          "english": "His maths performance is better than his language ability."
+        },
+        {
+          "hindi": "Hij leest langzamer dan zijn klasgenoten.",
+          "english": "He reads more slowly than his classmates."
+        },
+        {
+          "hindi": "Welk vak vindt hij het leukst?",
+          "english": "Which subject does he enjoy the most?"
+        },
+        {
+          "hindi": "Is er zichtbare vooruitgang geboekt?",
+          "english": "Has visible progress been made?"
+        }
       ]
     },
     {
       "skill": "raising and following up on concerns",
-      "explanation": "Raise concerns calmly and factually: 'Mijn kind heeft me verteld dat...' (My child told me that...). Always ask what the school's protocol is. Follow up in writing after the meeting — a brief email summarising what was discussed creates a record.",
+      "explanation": "Raise concerns calmly and factually: 'Mijn kind heeft me verteld dat...' (My child told me that...). Always ask what the school's protocol is. Follow up in writing after the meeting, a brief email summarising what was discussed creates a record.",
       "more_examples": [
-        { "hindi": "Hij voelt zich niet altijd veilig op het schoolplein.", "english": "He doesn't always feel safe on the playground." },
-        { "hindi": "Ik maak me zorgen over zijn concentratie in de klas.", "english": "I'm worried about his concentration in class." },
-        { "hindi": "Wat zijn de volgende stappen die de school neemt?", "english": "What are the next steps the school will take?" },
-        { "hindi": "Kunt u mij op de hoogte houden van de ontwikkelingen?", "english": "Could you keep me updated on developments?" }
+        {
+          "hindi": "Hij voelt zich niet altijd veilig op het schoolplein.",
+          "english": "He doesn't always feel safe on the playground."
+        },
+        {
+          "hindi": "Ik maak me zorgen over zijn concentratie in de klas.",
+          "english": "I'm worried about his concentration in class."
+        },
+        {
+          "hindi": "Wat zijn de volgende stappen die de school neemt?",
+          "english": "What are the next steps the school will take?"
+        },
+        {
+          "hindi": "Kunt u mij op de hoogte houden van de ontwikkelingen?",
+          "english": "Could you keep me updated on developments?"
+        }
       ]
     }
   ],
   "practice_prompt": "You are a juf (female primary school teacher) at a Dutch basisschool conducting an oudergesprek. Use formal 'u' throughout. Start with positive observations about the child's progress in maths, then raise a concern about reading (taal). When the parent brings up bullying, take it seriously: explain the school's antipestprotocol, say you'll involve the intern begeleider, and promise a follow-up email within two days. Answer questions about homework expectations and extra taalondersteuning. Correct the parent's Dutch grammar gently when errors occur. Open with: 'Welkom, fijn dat u er bent. Laten we het over uw zoon hebben.'",
-  "references": ["Naar Nederland Ch. 6", "Dutch school system norms"],
+  "references": [
+    "Naar Nederland Ch. 6",
+    "Dutch school system norms"
+  ],
   "level": "B1",
   "exam_targeted": true
 }

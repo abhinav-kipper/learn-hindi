@@ -19,29 +19,55 @@
       ],
       "correct_index": 1,
       "explanation_en": "The Netherlands is a constitutional monarchy. The King (currently King Willem-Alexander) is the head of state, while the prime minister leads the government.",
-      "references": ["Naar Nederland Ch. 2"]
+      "references": [
+        "Naar Nederland Ch. 2"
+      ]
     },
     {
       "id": "knm-002",
       "category": "werk",
       "question_nl": "Hoeveel uur per week is een fulltime baan in Nederland meestal?",
       "question_en": "How many hours per week is a full-time job in the Netherlands?",
-      "options_nl": ["32 uur", "36-40 uur", "45 uur", "50 uur"],
-      "options_en": ["32 hours", "36-40 hours", "45 hours", "50 hours"],
+      "options_nl": [
+        "32 uur",
+        "36-40 uur",
+        "45 uur",
+        "50 uur"
+      ],
+      "options_en": [
+        "32 hours",
+        "36-40 hours",
+        "45 hours",
+        "50 hours"
+      ],
       "correct_index": 1,
       "explanation_en": "A full-time job in the Netherlands is typically 36-40 hours per week. Many Dutch people also work part-time (32 hours or less).",
-      "references": ["Naar Nederland Ch. 5"]
+      "references": [
+        "Naar Nederland Ch. 5"
+      ]
     },
     {
       "id": "knm-003",
       "category": "onderwijs",
       "question_nl": "Tot welke leeftijd zijn kinderen in Nederland leerplichtig?",
       "question_en": "Up to what age are children in the Netherlands subject to compulsory education?",
-      "options_nl": ["14 jaar", "16 jaar", "18 jaar", "21 jaar"],
-      "options_en": ["14 years", "16 years", "18 years", "21 years"],
+      "options_nl": [
+        "14 jaar",
+        "16 jaar",
+        "18 jaar",
+        "21 jaar"
+      ],
+      "options_en": [
+        "14 years",
+        "16 years",
+        "18 years",
+        "21 years"
+      ],
       "correct_index": 1,
       "explanation_en": "In the Netherlands, children are subject to compulsory education (leerplicht) from age 5 to 16. After 16, a qualification obligation (kwalificatieplicht) applies until age 18 or until a basic qualification is obtained.",
-      "references": ["Naar Nederland Ch. 4"]
+      "references": [
+        "Naar Nederland Ch. 4"
+      ]
     },
     {
       "id": "knm-004",
@@ -62,7 +88,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "A woningcorporatie (housing corporation) is a non-profit organization that manages and rents out social housing (sociale huurwoningen) to people with lower incomes. They are regulated by the government.",
-      "references": ["Naar Nederland Ch. 6"]
+      "references": [
+        "Naar Nederland Ch. 6"
+      ]
     },
     {
       "id": "knm-005",
@@ -83,29 +111,55 @@
       ],
       "correct_index": 1,
       "explanation_en": "In the Dutch healthcare system, the huisarts (general practitioner) acts as a gatekeeper. You need a referral from your GP before you can see a specialist, unless it is an emergency.",
-      "references": ["Naar Nederland Ch. 7"]
+      "references": [
+        "Naar Nederland Ch. 7"
+      ]
     },
     {
       "id": "knm-006",
       "category": "geschiedenis",
       "question_nl": "Op welke datum werd Nederland in 1945 bevrijd van de Duitse bezetting?",
       "question_en": "On which date was the Netherlands liberated from German occupation in 1945?",
-      "options_nl": ["1 mei", "5 mei", "8 mei", "15 augustus"],
-      "options_en": ["1 May", "5 May", "8 May", "15 August"],
+      "options_nl": [
+        "1 mei",
+        "5 mei",
+        "8 mei",
+        "15 augustus"
+      ],
+      "options_en": [
+        "1 May",
+        "5 May",
+        "8 May",
+        "15 August"
+      ],
       "correct_index": 1,
       "explanation_en": "The Netherlands was liberated on 5 May 1945, when Germany signed the capitulation. This date is commemorated annually as Bevrijdingsdag (Liberation Day), preceded by Dodenherdenking (Remembrance Day) on 4 May.",
-      "references": ["Naar Nederland Ch. 8"]
+      "references": [
+        "Naar Nederland Ch. 8"
+      ]
     },
     {
       "id": "knm-007",
       "category": "politiek",
       "question_nl": "Hoeveel leden telt de Tweede Kamer der Staten-Generaal?",
       "question_en": "How many members does the Tweede Kamer have?",
-      "options_nl": ["75", "100", "150", "200"],
-      "options_en": ["75", "100", "150", "200"],
+      "options_nl": [
+        "75",
+        "100",
+        "150",
+        "200"
+      ],
+      "options_en": [
+        "75",
+        "100",
+        "150",
+        "200"
+      ],
       "correct_index": 2,
       "explanation_en": "The Tweede Kamer (House of Representatives) has 150 members who are directly elected by Dutch citizens. Together with the Eerste Kamer (Senate, 75 members), it forms the Staten-Generaal (parliament).",
-      "references": ["Naar Nederland Ch. 2"]
+      "references": [
+        "Naar Nederland Ch. 2"
+      ]
     },
     {
       "id": "knm-008",
@@ -126,40 +180,78 @@
       ],
       "correct_index": 1,
       "explanation_en": "The Burgerservicenummer (BSN) is a unique personal identification number used by the Dutch government to identify citizens in administrative processes such as tax, healthcare, and social services.",
-      "references": ["Naar Nederland Ch. 5"]
+      "references": [
+        "Naar Nederland Ch. 5"
+      ]
     },
     {
       "id": "knm-009",
       "category": "onderwijs",
       "question_nl": "Welke toets doen leerlingen aan het einde van groep 8 van de basisschool?",
       "question_en": "Which test do pupils take at the end of primary school (groep 8)?",
-      "options_nl": ["Het eindexamen", "De CITO-toets", "Het staatsexamen", "De toelatingstest"],
-      "options_en": ["The eindexamen", "The CITO-toets", "The staatsexamen", "The entrance test"],
+      "options_nl": [
+        "Het eindexamen",
+        "De CITO-toets",
+        "Het staatsexamen",
+        "De toelatingstest"
+      ],
+      "options_en": [
+        "The eindexamen",
+        "The CITO-toets",
+        "The staatsexamen",
+        "The entrance test"
+      ],
       "correct_index": 1,
-      "explanation_en": "At the end of primary school (groep 8), pupils take a national standardized test — historically the CITO-toets, renamed the Doorstroomtoets in 2023-2024 (schools can now choose from several approved providers, of which CITO is still the best known). The results, combined with the teacher's advice, determine which level of secondary school the child attends.",
-      "references": ["Naar Nederland Ch. 4"]
+      "explanation_en": "At the end of primary school (groep 8), pupils take a national standardized test, historically the CITO-toets, renamed the Doorstroomtoets in 2023-2024 (schools can now choose from several approved providers, of which CITO is still the best known). The results, combined with the teacher's advice, determine which level of secondary school the child attends.",
+      "references": [
+        "Naar Nederland Ch. 4"
+      ]
     },
     {
       "id": "knm-010",
       "category": "wonen",
       "question_nl": "Binnen hoeveel dagen moet u zich inschrijven bij de gemeente nadat u naar Nederland bent verhuisd?",
       "question_en": "Within how many days must you register with the gemeente after moving to the Netherlands?",
-      "options_nl": ["Binnen 3 dagen", "Binnen 5 dagen", "Binnen 14 dagen", "Binnen 30 dagen"],
-      "options_en": ["Within 3 days", "Within 5 days", "Within 14 days", "Within 30 days"],
+      "options_nl": [
+        "Binnen 3 dagen",
+        "Binnen 5 dagen",
+        "Binnen 14 dagen",
+        "Binnen 30 dagen"
+      ],
+      "options_en": [
+        "Within 3 days",
+        "Within 5 days",
+        "Within 14 days",
+        "Within 30 days"
+      ],
       "correct_index": 1,
       "explanation_en": "Anyone who moves to the Netherlands must register with the municipality (gemeente) in the Basisregistratie Personen (BRP) within 5 days of arrival. This registration is required for access to services and benefits.",
-      "references": ["Naar Nederland Ch. 6"]
+      "references": [
+        "Naar Nederland Ch. 6"
+      ]
     },
     {
       "id": "knm-011",
       "category": "gezondheid",
       "question_nl": "Welk telefoonnummer belt u in Nederland bij een levensgevaarlijke situatie?",
       "question_en": "Which telephone number do you call in the Netherlands in a life-threatening situation?",
-      "options_nl": ["0900", "112", "113", "144"],
-      "options_en": ["0900", "112", "113", "144"],
+      "options_nl": [
+        "0900",
+        "112",
+        "113",
+        "144"
+      ],
+      "options_en": [
+        "0900",
+        "112",
+        "113",
+        "144"
+      ],
       "correct_index": 1,
       "explanation_en": "112 is the Dutch emergency number for police, fire brigade, and ambulance services. It is free to call and operates 24 hours a day. This is the same number used across all EU member states.",
-      "references": ["Naar Nederland Ch. 7"]
+      "references": [
+        "Naar Nederland Ch. 7"
+      ]
     },
     {
       "id": "knm-012",
@@ -180,7 +272,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Willem van Oranje (William of Orange, 1533-1584) led the Dutch revolt against Spanish rule during the Eighty Years' War. He is called 'Vader des Vaderlands' (Father of the Fatherland) and is an enduring national symbol.",
-      "references": ["Naar Nederland Ch. 8"]
+      "references": [
+        "Naar Nederland Ch. 8"
+      ]
     },
     {
       "id": "knm-013",
@@ -200,8 +294,10 @@
         "To administer justice in the highest court"
       ],
       "correct_index": 2,
-      "explanation_en": "The minister-president (prime minister) is the head of government and leads the cabinet (council of ministers). The PM coordinates government policy but does not make laws alone — legislation requires parliament.",
-      "references": ["Naar Nederland Ch. 2"]
+      "explanation_en": "The minister-president (prime minister) is the head of government and leads the cabinet (council of ministers). The PM coordinates government policy but does not make laws alone, legislation requires parliament.",
+      "references": [
+        "Naar Nederland Ch. 2"
+      ]
     },
     {
       "id": "knm-014",
@@ -222,18 +318,32 @@
       ],
       "correct_index": 1,
       "explanation_en": "The minimumloon (minimum wage) is the legally established lowest hourly wage an employer may pay an employee. It is set by the Dutch government and adjusted twice per year. Paying below the minimum wage is illegal.",
-      "references": ["Naar Nederland Ch. 5"]
+      "references": [
+        "Naar Nederland Ch. 5"
+      ]
     },
     {
       "id": "knm-015",
       "category": "onderwijs",
       "question_nl": "Welk type school bereidt leerlingen voor op de universiteit?",
       "question_en": "Which type of school prepares pupils for university?",
-      "options_nl": ["VMBO", "HAVO", "VWO", "MBO"],
-      "options_en": ["VMBO", "HAVO", "VWO", "MBO"],
+      "options_nl": [
+        "VMBO",
+        "HAVO",
+        "VWO",
+        "MBO"
+      ],
+      "options_en": [
+        "VMBO",
+        "HAVO",
+        "VWO",
+        "MBO"
+      ],
       "correct_index": 2,
       "explanation_en": "VWO (Voorbereidend Wetenschappelijk Onderwijs) is the highest level of secondary education in the Netherlands and directly prepares students for university (WO). It takes 6 years to complete.",
-      "references": ["Naar Nederland Ch. 4"]
+      "references": [
+        "Naar Nederland Ch. 4"
+      ]
     },
     {
       "id": "knm-016",
@@ -254,7 +364,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Dutch homes receive an energy label from A (best, most energy-efficient) to G (worst). An A-label means the home is well-insulated and uses little energy, resulting in lower energy bills and a smaller carbon footprint.",
-      "references": ["Naar Nederland Ch. 6"]
+      "references": [
+        "Naar Nederland Ch. 6"
+      ]
     },
     {
       "id": "knm-017",
@@ -275,40 +387,78 @@
       ],
       "correct_index": 1,
       "explanation_en": "Health insurance (zorgverzekering) is compulsory for everyone living or working in the Netherlands who is 18 years or older. Failure to obtain insurance can result in fines. People with low incomes can receive a zorgtoeslag (healthcare allowance).",
-      "references": ["Naar Nederland Ch. 7"]
+      "references": [
+        "Naar Nederland Ch. 7"
+      ]
     },
     {
       "id": "knm-018",
       "category": "geschiedenis",
       "question_nl": "In welk jaar werd de slavernij in de Nederlandse koloniën afgeschaft?",
       "question_en": "In which year was slavery abolished in the Dutch colonies?",
-      "options_nl": ["1848", "1863", "1898", "1917"],
-      "options_en": ["1848", "1863", "1898", "1917"],
+      "options_nl": [
+        "1848",
+        "1863",
+        "1898",
+        "1917"
+      ],
+      "options_en": [
+        "1848",
+        "1863",
+        "1898",
+        "1917"
+      ],
       "correct_index": 1,
       "explanation_en": "Slavery was abolished in Dutch colonies on 1 July 1863. The Netherlands was one of the last Western European countries to do so. This date is commemorated as Keti Koti ('breaking the chains') especially in Suriname and in the Netherlands.",
-      "references": ["Naar Nederland Ch. 8"]
+      "references": [
+        "Naar Nederland Ch. 8"
+      ]
     },
     {
       "id": "knm-019",
       "category": "politiek",
       "question_nl": "Hoeveel leden telt de Eerste Kamer der Staten-Generaal?",
       "question_en": "How many members does the Eerste Kamer have?",
-      "options_nl": ["50", "75", "100", "150"],
-      "options_en": ["50", "75", "100", "150"],
+      "options_nl": [
+        "50",
+        "75",
+        "100",
+        "150"
+      ],
+      "options_en": [
+        "50",
+        "75",
+        "100",
+        "150"
+      ],
       "correct_index": 1,
       "explanation_en": "The Eerste Kamer (Senate) has 75 members who are indirectly elected by the members of the Provinciale Staten (provincial parliaments). Unlike the Tweede Kamer, the Eerste Kamer cannot propose legislation but can approve or reject bills.",
-      "references": ["Naar Nederland Ch. 2"]
+      "references": [
+        "Naar Nederland Ch. 2"
+      ]
     },
     {
       "id": "knm-020",
       "category": "werk",
       "question_nl": "Hoeveel vakantiedagen heeft een werknemer in Nederland wettelijk minimaal per jaar bij een fulltime baan?",
       "question_en": "How many vacation days is a full-time employee in the Netherlands legally entitled to per year?",
-      "options_nl": ["10 dagen", "15 dagen", "20 dagen", "25 dagen"],
-      "options_en": ["10 days", "15 days", "20 days", "25 days"],
+      "options_nl": [
+        "10 dagen",
+        "15 dagen",
+        "20 dagen",
+        "25 dagen"
+      ],
+      "options_en": [
+        "10 days",
+        "15 days",
+        "20 days",
+        "25 days"
+      ],
       "correct_index": 2,
       "explanation_en": "By law, full-time employees in the Netherlands are entitled to a minimum of 20 vacation days (4 times the weekly working hours). Most collective labor agreements (CAO) grant additional days, often totaling 25 or more.",
-      "references": ["Naar Nederland Ch. 5"]
+      "references": [
+        "Naar Nederland Ch. 5"
+      ]
     },
     {
       "id": "knm-021",
@@ -329,7 +479,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Kinderopvangtoeslag is a government subsidy administered by the Belastingdienst (Tax Authority) to help working parents pay for childcare. The amount depends on income and the number of hours worked.",
-      "references": ["Naar Nederland Ch. 4"]
+      "references": [
+        "Naar Nederland Ch. 4"
+      ]
     },
     {
       "id": "knm-022",
@@ -350,7 +502,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Huurtoeslag is a rent subsidy provided by the Dutch government through the Belastingdienst to help people with lower incomes afford their rent. Eligibility depends on income, age, household composition, and the rent amount.",
-      "references": ["Naar Nederland Ch. 6"]
+      "references": [
+        "Naar Nederland Ch. 6"
+      ]
     },
     {
       "id": "knm-023",
@@ -371,7 +525,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "The eigen risico (deductible/excess) is the amount you must pay yourself for healthcare costs each year before your insurer starts contributing. The mandatory eigen risico is €385 per year. After reaching this amount, your insurer covers eligible costs.",
-      "references": ["Naar Nederland Ch. 7"]
+      "references": [
+        "Naar Nederland Ch. 7"
+      ]
     },
     {
       "id": "knm-024",
@@ -392,18 +548,32 @@
       ],
       "correct_index": 1,
       "explanation_en": "The VOC (Vereenigde Oostindische Compagnie, founded 1602) was the world's first publicly traded company and played a central role in Dutch trade with Asia during the Golden Age (Gouden Eeuw). It held a monopoly on trade in the East Indies.",
-      "references": ["Naar Nederland Ch. 8"]
+      "references": [
+        "Naar Nederland Ch. 8"
+      ]
     },
     {
       "id": "knm-025",
       "category": "politiek",
       "question_nl": "Vanaf welke leeftijd mag u in Nederland stemmen bij verkiezingen?",
       "question_en": "From what age may you vote in elections in the Netherlands?",
-      "options_nl": ["16 jaar", "18 jaar", "21 jaar", "25 jaar"],
-      "options_en": ["16 years", "18 years", "21 years", "25 years"],
+      "options_nl": [
+        "16 jaar",
+        "18 jaar",
+        "21 jaar",
+        "25 jaar"
+      ],
+      "options_en": [
+        "16 years",
+        "18 years",
+        "21 years",
+        "25 years"
+      ],
       "correct_index": 1,
       "explanation_en": "In the Netherlands, the active voting right (kiesrecht) starts at age 18. Both active (voting) and passive (being elected) voting rights begin at 18 for most elections. Some municipalities have experimented with 16-year-old voting in local referendums.",
-      "references": ["Naar Nederland Ch. 2"]
+      "references": [
+        "Naar Nederland Ch. 2"
+      ]
     },
     {
       "id": "knm-026",
@@ -424,18 +594,32 @@
       ],
       "correct_index": 1,
       "explanation_en": "Vakantiegeld (holiday allowance) is a mandatory annual bonus of at least 8% of gross annual salary. It is typically paid in May or June and is meant to help employees cover vacation costs. It is separate from regular vacation days.",
-      "references": ["Naar Nederland Ch. 5"]
+      "references": [
+        "Naar Nederland Ch. 5"
+      ]
     },
     {
       "id": "knm-027",
       "category": "onderwijs",
       "question_nl": "Welk schooltype sluit aan op het VMBO en leidt op voor een beroep?",
       "question_en": "Which type of school follows VMBO and trains students for a profession?",
-      "options_nl": ["HBO", "WO", "MBO", "VWO"],
-      "options_en": ["HBO", "WO", "MBO", "VWO"],
+      "options_nl": [
+        "HBO",
+        "WO",
+        "MBO",
+        "VWO"
+      ],
+      "options_en": [
+        "HBO",
+        "WO",
+        "MBO",
+        "VWO"
+      ],
       "correct_index": 2,
       "explanation_en": "MBO (Middelbaar Beroepsonderwijs) is vocational education that follows VMBO. It has four levels and prepares students for specific professions. MBO graduates can continue to HBO (higher professional education).",
-      "references": ["Naar Nederland Ch. 4"]
+      "references": [
+        "Naar Nederland Ch. 4"
+      ]
     },
     {
       "id": "knm-028",
@@ -456,7 +640,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "A waarborgsom (deposit) is a security deposit that landlords can require, legally capped at 2 months' rent. It protects the landlord against damage or unpaid rent. The deposit must be returned when you leave, minus any legitimate deductions.",
-      "references": ["Naar Nederland Ch. 6"]
+      "references": [
+        "Naar Nederland Ch. 6"
+      ]
     },
     {
       "id": "knm-029",
@@ -477,29 +663,55 @@
       ],
       "correct_index": 1,
       "explanation_en": "Dental care for adults is NOT included in the basic health insurance package (basisverzekering) in the Netherlands. Adults must pay for dental care themselves or take out additional insurance (aanvullende verzekering). Children up to age 18 are covered.",
-      "references": ["Naar Nederland Ch. 7"]
+      "references": [
+        "Naar Nederland Ch. 7"
+      ]
     },
     {
       "id": "knm-030",
       "category": "geschiedenis",
       "question_nl": "In welk jaar kregen vrouwen in Nederland het actief kiesrecht?",
       "question_en": "In which year did women in the Netherlands gain the active right to vote?",
-      "options_nl": ["1917", "1919", "1922", "1945"],
-      "options_en": ["1917", "1919", "1922", "1945"],
+      "options_nl": [
+        "1917",
+        "1919",
+        "1922",
+        "1945"
+      ],
+      "options_en": [
+        "1917",
+        "1919",
+        "1922",
+        "1945"
+      ],
       "correct_index": 1,
       "explanation_en": "Dutch women gained the active right to vote (actief vrouwenkiesrecht) in 1919. Men had received universal suffrage in 1917. The Netherlands was relatively progressive compared to many other countries at the time.",
-      "references": ["Naar Nederland Ch. 8"]
+      "references": [
+        "Naar Nederland Ch. 8"
+      ]
     },
     {
       "id": "knm-031",
       "category": "politiek",
       "question_nl": "Hoe heet het gemeentelijke bestuur dat wordt gekozen door inwoners?",
       "question_en": "What is the name of the local governing body elected by residents?",
-      "options_nl": ["De Provinciale Staten", "De gemeenteraad", "Het college van burgemeester en wethouders", "De Tweede Kamer"],
-      "options_en": ["The Provinciale Staten", "The gemeenteraad", "The college van burgemeester en wethouders", "The Tweede Kamer"],
+      "options_nl": [
+        "De Provinciale Staten",
+        "De gemeenteraad",
+        "Het college van burgemeester en wethouders",
+        "De Tweede Kamer"
+      ],
+      "options_en": [
+        "The Provinciale Staten",
+        "The gemeenteraad",
+        "The college van burgemeester en wethouders",
+        "The Tweede Kamer"
+      ],
       "correct_index": 1,
       "explanation_en": "The gemeenteraad (municipal council) is the directly elected legislative body at the local level. It sets local policy and budgets. The day-to-day governance is handled by the college van burgemeester en wethouders (mayor and aldermen).",
-      "references": ["Naar Nederland Ch. 2"]
+      "references": [
+        "Naar Nederland Ch. 2"
+      ]
     },
     {
       "id": "knm-032",
@@ -520,7 +732,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "A bepaalde tijd contract (fixed-term contract) has a predetermined end date. After a maximum of three consecutive fixed-term contracts over 3 years, Dutch law requires the employer to offer a permanent (onbepaalde tijd) contract.",
-      "references": ["Naar Nederland Ch. 5"]
+      "references": [
+        "Naar Nederland Ch. 5"
+      ]
     },
     {
       "id": "knm-033",
@@ -540,8 +754,10 @@
         "Money from the university for outstanding students"
       ],
       "correct_index": 1,
-      "explanation_en": "Studiefinanciering (student financing) is a system of financial support provided by DUO (Dienst Uitvoering Onderwijs) for students in higher education (HBO and WO). It includes a basisbeurs (basic grant — reinstated for new students from the 2023-2024 academic year after the 2015-2023 leenstelsel/loan-only period), an optional supplementary grant (aanvullende beurs) for lower incomes, an OV travel product, and an optional loan.",
-      "references": ["Naar Nederland Ch. 4"]
+      "explanation_en": "Studiefinanciering (student financing) is a system of financial support provided by DUO (Dienst Uitvoering Onderwijs) for students in higher education (HBO and WO). It includes a basisbeurs (basic grant, reinstated for new students from the 2023-2024 academic year after the 2015-2023 leenstelsel/loan-only period), an optional supplementary grant (aanvullende beurs) for lower incomes, an OV travel product, and an optional loan.",
+      "references": [
+        "Naar Nederland Ch. 4"
+      ]
     },
     {
       "id": "knm-034",
@@ -562,7 +778,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "In the Netherlands, the landlord (verhuurder) is legally responsible for major maintenance (groot onderhoud) such as roof repairs, structural work, and central heating. Tenants are responsible for minor maintenance (klein onderhoud) such as replacing light bulbs and unclogging drains.",
-      "references": ["Naar Nederland Ch. 6"]
+      "references": [
+        "Naar Nederland Ch. 6"
+      ]
     },
     {
       "id": "knm-035",
@@ -583,7 +801,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "The GGD (Gemeentelijke Gezondheidsdienst) is the Municipal Health Service, responsible for public health including vaccination programs, sexual health clinics, youth healthcare, and infectious disease control. It operates at the local and regional level.",
-      "references": ["Naar Nederland Ch. 7"]
+      "references": [
+        "Naar Nederland Ch. 7"
+      ]
     },
     {
       "id": "knm-036",
@@ -604,7 +824,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "The Watersnoodramp (flood disaster) of 1 February 1953 was caused by a severe North Sea storm surge that broke through dikes in Zeeland, South Holland, and North Brabant. About 1,835 people died and over 70,000 were evacuated. It led directly to the construction of the Deltawerken.",
-      "references": ["Naar Nederland Ch. 8"]
+      "references": [
+        "Naar Nederland Ch. 8"
+      ]
     },
     {
       "id": "knm-037",
@@ -625,7 +847,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "A coalitieregering (coalition government) is formed when multiple parties combine to achieve a majority in parliament. In the Netherlands, no single party usually wins enough seats for a majority, so coalition negotiations (formatie) are common after each election.",
-      "references": ["Naar Nederland Ch. 2"]
+      "references": [
+        "Naar Nederland Ch. 2"
+      ]
     },
     {
       "id": "knm-038",
@@ -646,7 +870,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "The UWV (Uitvoeringsinstituut Werknemersverzekeringen) is the Employee Insurance Agency. It implements employee insurance schemes such as WW (unemployment benefits), WIA (disability insurance), and helps unemployed people find work.",
-      "references": ["Naar Nederland Ch. 5"]
+      "references": [
+        "Naar Nederland Ch. 5"
+      ]
     },
     {
       "id": "knm-039",
@@ -667,7 +893,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Speciaal onderwijs (special education) in the Netherlands is specifically designed for children with physical disabilities, learning difficulties, or behavioral disorders who cannot attend regular schools. It provides tailored support and education.",
-      "references": ["Naar Nederland Ch. 4"]
+      "references": [
+        "Naar Nederland Ch. 4"
+      ]
     },
     {
       "id": "knm-040",
@@ -688,7 +916,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "OZB (Onroerendezaakbelasting) is a municipal property tax levied by the gemeente on the value of real estate (homes and business premises). Homeowners pay OZB; renters usually do not pay it directly. The rate varies per municipality.",
-      "references": ["Naar Nederland Ch. 6"]
+      "references": [
+        "Naar Nederland Ch. 6"
+      ]
     },
     {
       "id": "knm-041",
@@ -709,7 +939,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "A verloskundige (midwife) in the Netherlands supervises healthy pregnancies and can assist with home births or hospital births. The Netherlands has a strong tradition of home births attended by midwives, though hospital births are also common.",
-      "references": ["Naar Nederland Ch. 7"]
+      "references": [
+        "Naar Nederland Ch. 7"
+      ]
     },
     {
       "id": "knm-042",
@@ -730,7 +962,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "The Deltawerken (Delta Works) is a series of dams, sluices, locks, dikes, and storm surge barriers built after the 1953 flood disaster. Completed in 1997 with the Maeslantkering, it is considered one of the greatest engineering feats of the 20th century.",
-      "references": ["Naar Nederland Ch. 8"]
+      "references": [
+        "Naar Nederland Ch. 8"
+      ]
     },
     {
       "id": "knm-043",
@@ -751,7 +985,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "The separation of church and state (scheiding van kerk en staat) means that the Dutch government and religious institutions operate independently. The government does not impose religion, and religious organizations do not govern. However, religious schools can receive public funding.",
-      "references": ["Naar Nederland Ch. 2"]
+      "references": [
+        "Naar Nederland Ch. 2"
+      ]
     },
     {
       "id": "knm-044",
@@ -771,8 +1007,10 @@
         "A temporary worker placed through an agency"
       ],
       "correct_index": 1,
-      "explanation_en": "A zzp'er (zelfstandige zonder personeel) is a self-employed person without employees — a freelancer or sole trader. The Netherlands has a large and growing number of zzp'ers. They are responsible for their own taxes, insurance, and pension.",
-      "references": ["Naar Nederland Ch. 5"]
+      "explanation_en": "A zzp'er (zelfstandige zonder personeel) is a self-employed person without employees, a freelancer or sole trader. The Netherlands has a large and growing number of zzp'ers. They are responsible for their own taxes, insurance, and pension.",
+      "references": [
+        "Naar Nederland Ch. 5"
+      ]
     },
     {
       "id": "knm-045",
@@ -793,7 +1031,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Under the Dutch constitution (Article 23), freedom of education means that religious (bijzondere) schools such as Catholic, Protestant, or Islamic schools receive the same government funding as public schools, as long as they meet national quality standards.",
-      "references": ["Naar Nederland Ch. 4"]
+      "references": [
+        "Naar Nederland Ch. 4"
+      ]
     },
     {
       "id": "knm-046",
@@ -813,8 +1053,10 @@
         "There are no waiting lists; everyone gets a home immediately"
       ],
       "correct_index": 1,
-      "explanation_en": "Waiting lists for social housing in major Dutch cities like Amsterdam and Rotterdam can last many years — in Amsterdam, the average wait is over 12 years. This is due to high demand and limited social housing stock, pushing many people into the expensive private rental market.",
-      "references": ["Naar Nederland Ch. 6"]
+      "explanation_en": "Waiting lists for social housing in major Dutch cities like Amsterdam and Rotterdam can last many years, in Amsterdam, the average wait is over 12 years. This is due to high demand and limited social housing stock, pushing many people into the expensive private rental market.",
+      "references": [
+        "Naar Nederland Ch. 6"
+      ]
     },
     {
       "id": "knm-047",
@@ -835,7 +1077,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "The aanvullende verzekering (supplementary insurance) is an optional addition to the mandatory basisverzekering. It covers services not included in the basic package, such as dental care for adults, physiotherapy beyond a limited number of sessions, and glasses.",
-      "references": ["Naar Nederland Ch. 7"]
+      "references": [
+        "Naar Nederland Ch. 7"
+      ]
     },
     {
       "id": "knm-048",
@@ -856,7 +1100,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "The Dutch Golden Age (Gouden Eeuw) was the 17th century, a period of great prosperity driven by international trade (especially through the VOC), maritime power, and cultural achievement. Dutch painters like Rembrandt and Vermeer flourished during this era.",
-      "references": ["Naar Nederland Ch. 8"]
+      "references": [
+        "Naar Nederland Ch. 8"
+      ]
     },
     {
       "id": "knm-049",
@@ -877,7 +1123,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "The Staten-Generaal, consisting of the Tweede Kamer and the Eerste Kamer, is the national parliament that makes laws in the Netherlands. The government proposes legislation, but parliament must approve it before it becomes law.",
-      "references": ["Naar Nederland Ch. 2"]
+      "references": [
+        "Naar Nederland Ch. 2"
+      ]
     },
     {
       "id": "knm-050",
@@ -898,7 +1146,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "The WW (Werkloosheidswet) is unemployment insurance that provides temporary income when someone loses their job through no fault of their own. It is administered by the UWV and its duration depends on how long you have worked.",
-      "references": ["Naar Nederland Ch. 5"]
+      "references": [
+        "Naar Nederland Ch. 5"
+      ]
     },
     {
       "id": "knm-051",
@@ -919,7 +1169,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Kwalificatieplicht (qualification obligation) extends compulsory education beyond age 16. Young people must continue to attend school until they obtain a 'startkwalificatie' (minimum qualification: HAVO, VWO, or MBO level 2 diploma) or reach age 18.",
-      "references": ["Naar Nederland Ch. 4"]
+      "references": [
+        "Naar Nederland Ch. 4"
+      ]
     },
     {
       "id": "knm-052",
@@ -940,7 +1192,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Vrije sector huur (free-market rentals) are rental homes priced above the social housing threshold (liberalisatiegrens). These are usually owned by private landlords or investors and are rented at market prices, which can be significantly higher than social housing rents.",
-      "references": ["Naar Nederland Ch. 6"]
+      "references": [
+        "Naar Nederland Ch. 6"
+      ]
     },
     {
       "id": "knm-053",
@@ -961,7 +1215,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "The Netherlands was the first country to legalize euthanasia (2002). It is permitted under strict conditions: the patient must have unbearable and incurable suffering, make a persistent voluntary request, and the act must be performed by a physician who follows the legal protocol.",
-      "references": ["Naar Nederland Ch. 7"]
+      "references": [
+        "Naar Nederland Ch. 7"
+      ]
     },
     {
       "id": "knm-054",
@@ -982,7 +1238,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "The Eighty Years' War (Tachtigjarige Oorlog, 1568-1648) was the Dutch revolt against Spanish rule led by Willem van Oranje. It ended with the Peace of Westphalia (Vrede van Münster) in 1648, which recognized Dutch independence.",
-      "references": ["Naar Nederland Ch. 8"]
+      "references": [
+        "Naar Nederland Ch. 8"
+      ]
     },
     {
       "id": "knm-055",
@@ -1003,7 +1261,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "The burgemeester (mayor) is not directly elected but is appointed by Royal Decree (Kroon), on the recommendation of the municipality. The mayor chairs the college van burgemeester en wethouders and is responsible for public order and safety.",
-      "references": ["Naar Nederland Ch. 2"]
+      "references": [
+        "Naar Nederland Ch. 2"
+      ]
     },
     {
       "id": "knm-056",
@@ -1023,8 +1283,10 @@
         "The amount the employer pays over to the government"
       ],
       "correct_index": 1,
-      "explanation_en": "The nettoloon is the take-home pay — the amount deposited into your bank account after deduction of loonbelasting (income tax) and sociale premies (social security contributions) from the brutoloon (gross salary).",
-      "references": ["Naar Nederland Ch. 5"]
+      "explanation_en": "The nettoloon is the take-home pay, the amount deposited into your bank account after deduction of loonbelasting (income tax) and sociale premies (social security contributions) from the brutoloon (gross salary).",
+      "references": [
+        "Naar Nederland Ch. 5"
+      ]
     },
     {
       "id": "knm-057",
@@ -1045,7 +1307,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "BSO (Buitenschoolse Opvang) is out-of-school care for children, providing supervision before and after school hours. It operates on school days and sometimes during school holidays. Like regular childcare, parents may receive kinderopvangtoeslag to help with costs.",
-      "references": ["Naar Nederland Ch. 4"]
+      "references": [
+        "Naar Nederland Ch. 4"
+      ]
     },
     {
       "id": "knm-058",
@@ -1066,7 +1330,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Afvalstoffenheffing is a municipal levy that covers the costs of collecting and processing household waste. All residents pay it, regardless of whether they own or rent their home. The amount varies by municipality.",
-      "references": ["Naar Nederland Ch. 6"]
+      "references": [
+        "Naar Nederland Ch. 6"
+      ]
     },
     {
       "id": "knm-059",
@@ -1087,18 +1353,32 @@
       ],
       "correct_index": 0,
       "explanation_en": "Since 2020, the Netherlands uses an opt-out system (ADR - Actief DonorRegistratiesysteem). Everyone 18+ is registered as a donor unless they actively register 'No', let others decide, or designate a specific person to decide. This replaced the previous opt-in system.",
-      "references": ["Naar Nederland Ch. 7"]
+      "references": [
+        "Naar Nederland Ch. 7"
+      ]
     },
     {
       "id": "knm-060",
       "category": "geschiedenis",
       "question_nl": "In welk jaar werd Nederland lid van de Europese Economische Gemeenschap (EEG)?",
       "question_en": "In which year did the Netherlands join the European Economic Community (EEG)?",
-      "options_nl": ["1945", "1951", "1957", "1973"],
-      "options_en": ["1945", "1951", "1957", "1973"],
+      "options_nl": [
+        "1945",
+        "1951",
+        "1957",
+        "1973"
+      ],
+      "options_en": [
+        "1945",
+        "1951",
+        "1957",
+        "1973"
+      ],
       "correct_index": 2,
       "explanation_en": "The Netherlands was a founding member of the EEG (European Economic Community, the predecessor to the EU) through the Treaty of Rome in 1957, along with Belgium, Luxembourg, France, Italy, and West Germany.",
-      "references": ["Naar Nederland Ch. 8"]
+      "references": [
+        "Naar Nederland Ch. 8"
+      ]
     },
     {
       "id": "knm-061",
@@ -1119,7 +1399,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Provinciale Staten is the elected parliament at the provincial level in the Netherlands. It oversees provincial policy and budget, and its members indirectly elect the Eerste Kamer (Senate). Each of the 12 provinces has its own Provinciale Staten.",
-      "references": ["Naar Nederland Ch. 2"]
+      "references": [
+        "Naar Nederland Ch. 2"
+      ]
     },
     {
       "id": "knm-062",
@@ -1140,7 +1422,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "A CAO (Collectieve Arbeidsovereenkomst) is a collective labor agreement negotiated between employers' organizations and trade unions for a specific sector or company. It sets minimum standards for wages, working hours, and other employment conditions that often exceed the legal minimum.",
-      "references": ["Naar Nederland Ch. 5"]
+      "references": [
+        "Naar Nederland Ch. 5"
+      ]
     },
     {
       "id": "knm-063",
@@ -1161,7 +1445,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "HAVO (Hoger Algemeen Voortgezet Onderwijs) is a 5-year secondary school track that prepares students for HBO (higher professional education). Students who complete HAVO can also enter VWO via a transition program to study at university.",
-      "references": ["Naar Nederland Ch. 4"]
+      "references": [
+        "Naar Nederland Ch. 4"
+      ]
     },
     {
       "id": "knm-064",
@@ -1182,7 +1468,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Drinking water in the Netherlands is supplied by regional water companies (waterbedrijven) that hold a monopoly in their service area. Unlike energy, you cannot choose your water supplier. The quality of Dutch tap water is among the best in the world.",
-      "references": ["Naar Nederland Ch. 6"]
+      "references": [
+        "Naar Nederland Ch. 6"
+      ]
     },
     {
       "id": "knm-065",
@@ -1203,18 +1491,32 @@
       ],
       "correct_index": 1,
       "explanation_en": "GGZ (Geestelijke Gezondheidszorg) refers to mental healthcare in the Netherlands, including treatment for psychological problems, psychiatric disorders, and addiction. A referral from the huisarts is usually needed to access GGZ treatment.",
-      "references": ["Naar Nederland Ch. 7"]
+      "references": [
+        "Naar Nederland Ch. 7"
+      ]
     },
     {
       "id": "knm-066",
       "category": "geschiedenis",
       "question_nl": "In welk jaar werd het Koninkrijk der Nederlanden hersteld na de Franse bezetting?",
       "question_en": "In which year was the Kingdom of the Netherlands established after the French occupation?",
-      "options_nl": ["1806", "1813", "1815", "1830"],
-      "options_en": ["1806", "1813", "1815", "1830"],
+      "options_nl": [
+        "1806",
+        "1813",
+        "1815",
+        "1830"
+      ],
+      "options_en": [
+        "1806",
+        "1813",
+        "1815",
+        "1830"
+      ],
       "correct_index": 2,
       "explanation_en": "After the French occupation ended in 1813, the Kingdom of the Netherlands was formally established in 1815 with Willem I as the first king, uniting the Netherlands with what is now Belgium. Belgium then became independent in 1830.",
-      "references": ["Naar Nederland Ch. 8"]
+      "references": [
+        "Naar Nederland Ch. 8"
+      ]
     },
     {
       "id": "knm-067",
@@ -1235,7 +1537,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "The Netherlands is a constitutional monarchy (constitutionele monarchie). The monarch is the head of state but operates within the limits set by the constitution. Real governing power lies with the elected parliament and the cabinet.",
-      "references": ["Naar Nederland Ch. 2"]
+      "references": [
+        "Naar Nederland Ch. 2"
+      ]
     },
     {
       "id": "knm-068",
@@ -1256,7 +1560,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Partners in the Netherlands are entitled to 5 days of paid geboorteverlof (birth leave) immediately after the birth, fully paid by the employer. Additionally, partners can take up to 5 weeks of supplementary leave in the first 6 months, paid at 70% of salary via the UWV.",
-      "references": ["Naar Nederland Ch. 5"]
+      "references": [
+        "Naar Nederland Ch. 5"
+      ]
     },
     {
       "id": "knm-069",
@@ -1277,7 +1583,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Parents enroll their child directly at the chosen school (basisschool). Most schools accept children from age 4, but compulsory education starts at age 5. Schools may have waiting lists, particularly in large cities.",
-      "references": ["Naar Nederland Ch. 4"]
+      "references": [
+        "Naar Nederland Ch. 4"
+      ]
     },
     {
       "id": "knm-070",
@@ -1298,7 +1606,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Unlike the water market, the Dutch energy market is liberalized. Consumers can freely choose their electricity and gas supplier from a range of commercial providers. Prices and conditions vary, so comparing suppliers (vergelijken) is advisable.",
-      "references": ["Naar Nederland Ch. 6"]
+      "references": [
+        "Naar Nederland Ch. 6"
+      ]
     },
     {
       "id": "knm-071",
@@ -1319,7 +1629,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Kraamzorg (maternity care) is a unique Dutch institution: a kraamverzorgende (maternity nurse) visits the home for several hours daily during the first week after birth to help mother and baby. Kraamzorg is covered by the basic health insurance.",
-      "references": ["Naar Nederland Ch. 7"]
+      "references": [
+        "Naar Nederland Ch. 7"
+      ]
     },
     {
       "id": "knm-072",
@@ -1340,7 +1652,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "In 1830, the southern provinces (now Belgium) revolted against the rule of King Willem I of the Netherlands. The revolt led to Belgian independence, which was internationally recognized in 1839. This reduced the Kingdom of the Netherlands to its current borders.",
-      "references": ["Naar Nederland Ch. 8"]
+      "references": [
+        "Naar Nederland Ch. 8"
+      ]
     },
     {
       "id": "knm-073",
@@ -1361,7 +1675,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "The commissaris van de Koning (King's Commissioner) is appointed by the Crown and serves as the head of the provincial executive (Gedeputeerde Staten) and chairs the Provinciale Staten. They also represent the national government in the province.",
-      "references": ["Naar Nederland Ch. 2"]
+      "references": [
+        "Naar Nederland Ch. 2"
+      ]
     },
     {
       "id": "knm-074",
@@ -1382,7 +1698,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "A TWV (Tewerkstellingsvergunning, work permit) is required for non-EU/EEA citizens to work in the Netherlands. The employer must apply for it. There are also combined permits (GVVA) that combine a residence and work permit.",
-      "references": ["Naar Nederland Ch. 5"]
+      "references": [
+        "Naar Nederland Ch. 5"
+      ]
     },
     {
       "id": "knm-075",
@@ -1403,7 +1721,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "The eindexamen (final examination) is the national exam taken at the end of secondary education (VMBO, HAVO, or VWO). It consists of a school exam (schoolexamen) and a central exam (centraal examen). Passing the eindexamen awards the diploma for that level.",
-      "references": ["Naar Nederland Ch. 4"]
+      "references": [
+        "Naar Nederland Ch. 4"
+      ]
     },
     {
       "id": "knm-076",
@@ -1424,7 +1744,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Rioolheffing (sewer levy) is a municipal charge for maintaining and improving the sewer system. It is charged to property owners and sometimes to users (occupiers). The rate varies between municipalities.",
-      "references": ["Naar Nederland Ch. 6"]
+      "references": [
+        "Naar Nederland Ch. 6"
+      ]
     },
     {
       "id": "knm-077",
@@ -1445,7 +1767,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Abortion is legal in the Netherlands up to 24 weeks of pregnancy. The Netherlands has a Wet Afbreking Zwangerschap (abortion law) since 1984. The previously mandatory 5-day waiting period (beraadtermijn) was abolished on 1 January 2023; the reflection period is now determined together with the doctor based on the patient's situation. The procedure must be performed in a licensed clinic or hospital.",
-      "references": ["Naar Nederland Ch. 7"]
+      "references": [
+        "Naar Nederland Ch. 7"
+      ]
     },
     {
       "id": "knm-078",
@@ -1466,7 +1790,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Germany invaded and occupied the Netherlands from May 1940 (the invasion began on 10 May 1940) until liberation in May 1945. This 5-year occupation was marked by hardship, persecution of Jews, and resistance movements.",
-      "references": ["Naar Nederland Ch. 8"]
+      "references": [
+        "Naar Nederland Ch. 8"
+      ]
     },
     {
       "id": "knm-079",
@@ -1486,8 +1812,10 @@
         "The right to education"
       ],
       "correct_index": 1,
-      "explanation_en": "Freedom of expression (vrijheid van meningsuiting) is a fundamental right protected by Article 7 of the Dutch Constitution (Grondwet). This right allows people to express opinions freely, though it has limits — hate speech and incitement to discrimination are prohibited by law.",
-      "references": ["Naar Nederland Ch. 2"]
+      "explanation_en": "Freedom of expression (vrijheid van meningsuiting) is a fundamental right protected by Article 7 of the Dutch Constitution (Grondwet). This right allows people to express opinions freely, though it has limits, hate speech and incitement to discrimination are prohibited by law.",
+      "references": [
+        "Naar Nederland Ch. 2"
+      ]
     },
     {
       "id": "knm-080",
@@ -1508,7 +1836,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "In the Netherlands, employers are legally required to continue paying at least 70% of an employee's salary for up to 2 years (104 weeks) during illness (ziekteverlof). During this period, both employer and employee must work toward reintegration. After 2 years, WIA (disability benefit) may apply.",
-      "references": ["Naar Nederland Ch. 5"]
+      "references": [
+        "Naar Nederland Ch. 5"
+      ]
     },
     {
       "id": "knm-081",
@@ -1529,7 +1859,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Openbaar onderwijs (public schools) is neutral and open to all children. Bijzonder onderwijs (special/religious schools) is based on a specific religious or philosophical foundation (e.g., Catholic, Protestant, Islamic). Both types receive equal government funding under Article 23 of the Constitution.",
-      "references": ["Naar Nederland Ch. 4"]
+      "references": [
+        "Naar Nederland Ch. 4"
+      ]
     },
     {
       "id": "knm-082",
@@ -1550,7 +1882,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "With a koopwoning (owner-occupied home) you are the legal owner and responsible for all maintenance and taxes (such as OZB). With a huurwoning (rental home) you pay monthly rent to a landlord (verhuurder) and have specific tenant rights (huurdersrechten).",
-      "references": ["Naar Nederland Ch. 6"]
+      "references": [
+        "Naar Nederland Ch. 6"
+      ]
     },
     {
       "id": "knm-083",
@@ -1571,7 +1905,9 @@
       ],
       "correct_index": 0,
       "explanation_en": "An apotheek (pharmacy) in the Netherlands dispenses prescription medicines (on a doktersrecept) and sells over-the-counter medications. Pharmacists (apothekers) are qualified healthcare professionals who can advise on medication use and interactions.",
-      "references": ["Naar Nederland Ch. 7"]
+      "references": [
+        "Naar Nederland Ch. 7"
+      ]
     },
     {
       "id": "knm-084",
@@ -1592,7 +1928,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Anne Frank was a Jewish girl who hid with her family in a secret annex in Amsterdam from 1942 to 1944. Her diary (Het Achterhuis) became world-famous. She was discovered, deported, and died in Bergen-Belsen concentration camp in 1945.",
-      "references": ["Naar Nederland Ch. 8"]
+      "references": [
+        "Naar Nederland Ch. 8"
+      ]
     },
     {
       "id": "knm-085",
@@ -1613,7 +1951,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "The right to equal treatment (gelijke behandeling) is enshrined in Article 1 of the Dutch Constitution. It prohibits discrimination based on religion, belief, political opinion, race, sex, or any other grounds. The College voor de Rechten van de Mens (Netherlands Institute for Human Rights, which replaced the former Commissie Gelijke Behandeling in 2012) enforces this right.",
-      "references": ["Naar Nederland Ch. 2"]
+      "references": [
+        "Naar Nederland Ch. 2"
+      ]
     },
     {
       "id": "knm-086",
@@ -1634,7 +1974,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "AOW (Algemene Ouderdomswet) is the Dutch state pension, paid by the SVB to everyone who has lived or worked in the Netherlands and reached the AOW age (currently 67 years). The amount depends on how many years you have been insured in the Netherlands.",
-      "references": ["Naar Nederland Ch. 5"]
+      "references": [
+        "Naar Nederland Ch. 5"
+      ]
     },
     {
       "id": "knm-087",
@@ -1655,7 +1997,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Erasmus+ is an EU exchange program that allows students to study or do an internship in another European country for several months. Dutch students can receive a grant and academic credits from their home institution. It is named after the Dutch philosopher Erasmus of Rotterdam.",
-      "references": ["Naar Nederland Ch. 4"]
+      "references": [
+        "Naar Nederland Ch. 4"
+      ]
     },
     {
       "id": "knm-088",
@@ -1676,7 +2020,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "The Huurcommissie is an independent government body that resolves disputes between tenants and landlords about rent levels, service costs, and maintenance in the social rental sector. Tenants can request a rent assessment if they believe their rent is too high.",
-      "references": ["Naar Nederland Ch. 6"]
+      "references": [
+        "Naar Nederland Ch. 6"
+      ]
     },
     {
       "id": "knm-089",
@@ -1696,8 +2042,10 @@
         "If you want to be admitted to hospital for an operation"
       ],
       "correct_index": 1,
-      "explanation_en": "The huisartsenpost (out-of-hours GP service) is available for urgent medical problems that cannot wait until the next working day — in the evenings, nights, and weekends. It is not for emergencies (dial 112) and not for routine consultations.",
-      "references": ["Naar Nederland Ch. 7"]
+      "explanation_en": "The huisartsenpost (out-of-hours GP service) is available for urgent medical problems that cannot wait until the next working day, in the evenings, nights, and weekends. It is not for emergencies (dial 112) and not for routine consultations.",
+      "references": [
+        "Naar Nederland Ch. 7"
+      ]
     },
     {
       "id": "knm-090",
@@ -1718,7 +2066,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Euro banknotes and coins were introduced in the Netherlands on 1 January 2002, replacing the Dutch guilder (gulden). The euro had already been used for electronic payments since 1 January 1999. The Netherlands was one of the 12 founding eurozone members.",
-      "references": ["Naar Nederland Ch. 8"]
+      "references": [
+        "Naar Nederland Ch. 8"
+      ]
     },
     {
       "id": "knm-091",
@@ -1739,7 +2089,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Yes, the Netherlands is a founding member of what is now the European Union and uses the euro. The EU was founded through the Maastricht Treaty in 1992, building on earlier institutions like the EEG (1957). The Netherlands is one of the strongest supporters of European integration.",
-      "references": ["Naar Nederland Ch. 2"]
+      "references": [
+        "Naar Nederland Ch. 2"
+      ]
     },
     {
       "id": "knm-092",
@@ -1760,7 +2112,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Zwangerschapsverlof (maternity leave) in the Netherlands lasts at least 16 weeks: 4-6 weeks before the due date and at least 10 weeks after birth. During this period, the employee receives at least 100% of their daily wage (up to the maximum daily wage) through the UWV.",
-      "references": ["Naar Nederland Ch. 5"]
+      "references": [
+        "Naar Nederland Ch. 5"
+      ]
     },
     {
       "id": "knm-093",
@@ -1781,7 +2135,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "School holidays in the Netherlands are divided into three regions (Noord, Midden, and Zuid) with staggered dates for the spring, autumn, and May holidays. This helps spread traffic and tourist pressure. The summer and Christmas holidays are the same nationwide.",
-      "references": ["Naar Nederland Ch. 4"]
+      "references": [
+        "Naar Nederland Ch. 4"
+      ]
     },
     {
       "id": "knm-094",
@@ -1801,8 +2157,10 @@
         "A non-profit organisation that manages homes for students"
       ],
       "correct_index": 1,
-      "explanation_en": "A particuliere verhuurder is a private landlord — an individual or company that rents out properties on the free market (vrije sector). Unlike woningcorporaties, private landlords are for-profit and set their own rents within the legal framework.",
-      "references": ["Naar Nederland Ch. 6"]
+      "explanation_en": "A particuliere verhuurder is a private landlord, an individual or company that rents out properties on the free market (vrije sector). Unlike woningcorporaties, private landlords are for-profit and set their own rents within the legal framework.",
+      "references": [
+        "Naar Nederland Ch. 6"
+      ]
     },
     {
       "id": "knm-095",
@@ -1823,7 +2181,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Zorgtoeslag is a government allowance administered by the Belastingdienst that helps people with lower incomes pay for their mandatory health insurance premium (zorgpremie). The amount depends on income and household composition.",
-      "references": ["Naar Nederland Ch. 7"]
+      "references": [
+        "Naar Nederland Ch. 7"
+      ]
     },
     {
       "id": "knm-096",
@@ -1844,7 +2204,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "The Schengen Agreement (1985, implemented 1995) abolished border controls between participating European countries, allowing free movement of people. The Netherlands is a founding Schengen member. Non-EU citizens need a Schengen visa to travel within the zone.",
-      "references": ["Naar Nederland Ch. 8"]
+      "references": [
+        "Naar Nederland Ch. 8"
+      ]
     },
     {
       "id": "knm-097",
@@ -1865,7 +2227,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "A wethouder (alderman/selectman) is a member of the college van burgemeester en wethouders (municipal executive) and holds specific policy portfolios such as housing, education, or finance. Wethouders are appointed by the gemeenteraad based on coalition negotiations.",
-      "references": ["Naar Nederland Ch. 2"]
+      "references": [
+        "Naar Nederland Ch. 2"
+      ]
     },
     {
       "id": "knm-098",
@@ -1886,7 +2250,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "Discrimination at work based on race, religion, gender, age, disability, or other grounds is illegal in the Netherlands under the Algemene wet gelijke behandeling. Employees can report discrimination to the College voor de Rechten van de Mens (Institute for Human Rights) or file a complaint with the labor court.",
-      "references": ["Naar Nederland Ch. 5"]
+      "references": [
+        "Naar Nederland Ch. 5"
+      ]
     },
     {
       "id": "knm-099",
@@ -1907,7 +2273,9 @@
       ],
       "correct_index": 1,
       "explanation_en": "DUO (Dienst Uitvoering Onderwijs) is the Dutch government agency that executes education policy. It manages student finance (studiefinanciering), the student travel product (studentenreisproduct, loaded on the OV-chipkaart), diploma recognition, and also oversees the inburgeringsexamen (civic integration exam).",
-      "references": ["Naar Nederland Ch. 4"]
+      "references": [
+        "Naar Nederland Ch. 4"
+      ]
     },
     {
       "id": "knm-100",
@@ -1927,8 +2295,10 @@
         "An inspector who assesses the condition of a home before rental"
       ],
       "correct_index": 1,
-      "explanation_en": "A makelaar or tussenpersoon is a real estate agent or intermediary who helps match tenants with rental properties. Since 2023, landlords may no longer charge tenants agency fees (courtage) in most situations — the party who hires the agent pays the fee.",
-      "references": ["Naar Nederland Ch. 6"]
+      "explanation_en": "A makelaar or tussenpersoon is a real estate agent or intermediary who helps match tenants with rental properties. Since 2023, landlords may no longer charge tenants agency fees (courtage) in most situations, the party who hires the agent pays the fee.",
+      "references": [
+        "Naar Nederland Ch. 6"
+      ]
     }
   ]
 }

@@ -2,66 +2,165 @@
   "id": "giving-directions",
   "title": "Giving & Asking Directions",
   "situation": "A lost person stops you near a market and asks how to get to the nearest metro station.",
-  "skills": ["postpositions (mein/pe/ke paas)", "location vocabulary", "sequential instructions"],
+  "skills": [
+    "postpositions (mein/pe/ke paas)",
+    "location vocabulary",
+    "sequential instructions"
+  ],
   "phrases": [
-    { "hindi": "bhaiya, metro station kidhar hai?", "english": "Brother, where's the metro station?", "context": "'kidhar' = where (direction). More casual and common than 'kahan' for asking directions.", "pronunciation": "BHAI-ya, MET-ro STA-tion ki-DHAR hai?" },
-    { "hindi": "seedha jaiye, phir left le lena", "english": "Go straight, then take a left", "context": "'seedha' = straight, 'le lena' = take (for directions). 'jaiye' is polite form of 'go'.", "pronunciation": "SEE-dha jaa-I-ye, PHIR LEFT le LE-na" },
-    { "hindi": "woh red light ke baad, right side mein hai", "english": "It's after the red light, on the right side", "context": "'ke baad' = after. 'Red light' = traffic signal (everyone calls it red light even when it's green)", "pronunciation": "woh RED light ke BAAD, RIGHT side mein hai" },
-    { "hindi": "yahan se paanch minute mein pahunch jaoge", "english": "You'll reach in 5 minutes from here", "context": "'pahunch jaoge' = you'll reach — gives reassurance about distance/time", "pronunciation": "ya-HAAN se PAANCH mi-NUTE mein pa-HUNCH jaa-O-ge" },
-    { "hindi": "uss building ke saamne hai, miss nahi hoga", "english": "It's in front of that building, you won't miss it", "context": "'ke saamne' = in front of. 'miss nahi hoga' = can't miss it — classic reassurance", "pronunciation": "USS buil-DING ke SAAM-ne hai, MISS na-HI ho-GA" },
-    { "hindi": "idhar nahi, udhar — ulta ja rahe ho", "english": "Not this way, that way — you're going the wrong way", "context": "'idhar' = this side, 'udhar' = that side, 'ulta' = opposite/wrong direction", "pronunciation": "i-DHAR na-HI, u-DHAR — UL-ta ja ra-HE ho" },
-    { "hindi": "Big Bazaar pata hai? uske bilkul peeche hai", "english": "Do you know Big Bazaar? It's right behind it", "context": "Using landmark-based directions — 'pata hai?' checks if they know the reference point", "pronunciation": "big ba-ZAAR pa-TA hai? us-KE bil-KUL PEE-che hai" },
-    { "hindi": "arey, bahut door hai yahan se — auto le lo", "english": "Oh, it's very far from here — take an auto", "context": "When the place is too far to walk — honest redirection is appreciated", "pronunciation": "a-REY, ba-HUT DOOR hai ya-HAAN se — AU-to le LO" },
-    { "hindi": "kisi se bhi pooch lena, sab ko pata hai", "english": "Just ask anyone, everyone knows", "context": "Common Indian ending to directions — crowdsource the remaining navigation", "pronunciation": "ki-SI se bhi POOCH le-NA, SAB ko pa-TA hai" },
-    { "hindi": "Google Maps lagao na, main bhi confuse ho jaunga", "english": "Use Google Maps, even I'll get confused", "context": "Honest admission when you're not 100% sure — offer the modern solution", "pronunciation": "GOO-gle MAPS la-GAO na, MAIN bhi con-FUSE ho jaa-UN-ga" }
+    {
+      "hindi": "bhaiya, metro station kidhar hai?",
+      "english": "Brother, where's the metro station?",
+      "context": "'kidhar' = where (direction). More casual and common than 'kahan' for asking directions.",
+      "pronunciation": "BHAI-ya, MET-ro STA-tion ki-DHAR hai?"
+    },
+    {
+      "hindi": "seedha jaiye, phir left le lena",
+      "english": "Go straight, then take a left",
+      "context": "'seedha' = straight, 'le lena' = take (for directions). 'jaiye' is polite form of 'go'.",
+      "pronunciation": "SEE-dha jaa-I-ye, PHIR LEFT le LE-na"
+    },
+    {
+      "hindi": "woh red light ke baad, right side mein hai",
+      "english": "It's after the red light, on the right side",
+      "context": "'ke baad' = after. 'Red light' = traffic signal (everyone calls it red light even when it's green)",
+      "pronunciation": "woh RED light ke BAAD, RIGHT side mein hai"
+    },
+    {
+      "hindi": "yahan se paanch minute mein pahunch jaoge",
+      "english": "You'll reach in 5 minutes from here",
+      "context": "'pahunch jaoge' = you'll reach, gives reassurance about distance/time",
+      "pronunciation": "ya-HAAN se PAANCH mi-NUTE mein pa-HUNCH jaa-O-ge"
+    },
+    {
+      "hindi": "uss building ke saamne hai, miss nahi hoga",
+      "english": "It's in front of that building, you won't miss it",
+      "context": "'ke saamne' = in front of. 'miss nahi hoga' = can't miss it, classic reassurance",
+      "pronunciation": "USS buil-DING ke SAAM-ne hai, MISS na-HI ho-GA"
+    },
+    {
+      "hindi": "idhar nahi, udhar, ulta ja rahe ho",
+      "english": "Not this way, that way, you're going the wrong way",
+      "context": "'idhar' = this side, 'udhar' = that side, 'ulta' = opposite/wrong direction",
+      "pronunciation": "i-DHAR na-HI, u-DHAR, UL-ta ja ra-HE ho"
+    },
+    {
+      "hindi": "Big Bazaar pata hai? uske bilkul peeche hai",
+      "english": "Do you know Big Bazaar? It's right behind it",
+      "context": "Using landmark-based directions, 'pata hai?' checks if they know the reference point",
+      "pronunciation": "big ba-ZAAR pa-TA hai? us-KE bil-KUL PEE-che hai"
+    },
+    {
+      "hindi": "arey, bahut door hai yahan se, auto le lo",
+      "english": "Oh, it's very far from here, take an auto",
+      "context": "When the place is too far to walk, honest redirection is appreciated",
+      "pronunciation": "a-REY, ba-HUT DOOR hai ya-HAAN se, AU-to le LO"
+    },
+    {
+      "hindi": "kisi se bhi pooch lena, sab ko pata hai",
+      "english": "Just ask anyone, everyone knows",
+      "context": "Common Indian ending to directions, crowdsource the remaining navigation",
+      "pronunciation": "ki-SI se bhi POOCH le-NA, SAB ko pa-TA hai"
+    },
+    {
+      "hindi": "Google Maps lagao na, main bhi confuse ho jaunga",
+      "english": "Use Google Maps, even I'll get confused",
+      "context": "Honest admission when you're not 100% sure, offer the modern solution",
+      "pronunciation": "GOO-gle MAPS la-GAO na, MAIN bhi con-FUSE ho jaa-UN-ga"
+    }
   ],
   "grammar_notes": [
     "Hindi uses postpositions (come AFTER the noun): 'ghar mein' = in the house, 'station ke paas' = near the station, 'market ke saamne' = in front of the market",
     "'ke' connects nouns to postpositions: 'market KE saamne' = in front of market. The noun before 'ke' changes form: 'ghar' stays same, but 'mera' becomes 'mere'.",
-    "'le lena' (take), 'mud jaana' (turn), 'pahunch jaana' (arrive) — compound verbs for directions add a sense of completion",
-    "'jaiye' (go-polite) vs 'jao' (go-friendly) vs 'ja' (go-very casual) — use 'jaiye' with strangers asking directions",
-    "'pata hai?' = do you know? — use this before giving a landmark reference to check if they'll understand"
+    "'le lena' (take), 'mud jaana' (turn), 'pahunch jaana' (arrive), compound verbs for directions add a sense of completion",
+    "'jaiye' (go-polite) vs 'jao' (go-friendly) vs 'ja' (go-very casual), use 'jaiye' with strangers asking directions",
+    "'pata hai?' = do you know?, use this before giving a landmark reference to check if they'll understand"
   ],
   "culture_notes": [
     "Indians give directions using landmarks, not street names: 'gol chakkar ke baad' (after the roundabout), 'mandir ke saamne' (in front of the temple)",
-    "Everyone will help with directions — sometimes even if they don't know the way. They'll guess confidently.",
-    "'Thoda aage' (a little ahead) can mean anywhere from 100m to 2km — always ask 'kitna dur?' (how far?)",
-    "If someone points with their chin/head instead of hand, that's normal — not rude, just efficient"
+    "Everyone will help with directions, sometimes even if they don't know the way. They'll guess confidently.",
+    "'Thoda aage' (a little ahead) can mean anywhere from 100m to 2km, always ask 'kitna dur?' (how far?)",
+    "If someone points with their chin/head instead of hand, that's normal, not rude, just efficient"
   ],
   "skill_breakdown": [
     {
       "skill": "postpositions (mein/pe/ke paas)",
       "explanation": "Unlike English prepositions (in, on, at) that come BEFORE nouns, Hindi postpositions come AFTER. Key ones: mein (in/inside), pe/par (on/at), ke paas (near), ke saamne (in front of), ke peeche (behind), ke upar (above), ke neeche (below), ke beech mein (in between).",
       "more_examples": [
-        { "hindi": "bag mein rakh do", "english": "put it in the bag" },
-        { "hindi": "table pe hai", "english": "it's on the table" },
-        { "hindi": "mere ghar ke paas ek park hai", "english": "there's a park near my house" },
-        { "hindi": "bank ke peeche parking hai", "english": "parking is behind the bank" },
-        { "hindi": "dono buildings ke beech mein gali hai", "english": "there's a lane between both buildings" }
+        {
+          "hindi": "bag mein rakh do",
+          "english": "put it in the bag"
+        },
+        {
+          "hindi": "table pe hai",
+          "english": "it's on the table"
+        },
+        {
+          "hindi": "mere ghar ke paas ek park hai",
+          "english": "there's a park near my house"
+        },
+        {
+          "hindi": "bank ke peeche parking hai",
+          "english": "parking is behind the bank"
+        },
+        {
+          "hindi": "dono buildings ke beech mein gali hai",
+          "english": "there's a lane between both buildings"
+        }
       ]
     },
     {
       "skill": "location vocabulary",
       "explanation": "seedha (straight), left/right (same in Hindi), aage (ahead), peeche (behind), yahan (here), wahan (there), idhar (this side), udhar (that side), andar (inside), bahar (outside), upar (up), neeche (down), saamne (in front), door (far), paas (near).",
       "more_examples": [
-        { "hindi": "thoda aage jao", "english": "go a little ahead" },
-        { "hindi": "andar aao", "english": "come inside" },
-        { "hindi": "bahar khade raho", "english": "stand/wait outside" },
-        { "hindi": "neeche aa jao", "english": "come downstairs" },
-        { "hindi": "saamne dekho, woh raha", "english": "look in front, there it is" }
+        {
+          "hindi": "thoda aage jao",
+          "english": "go a little ahead"
+        },
+        {
+          "hindi": "andar aao",
+          "english": "come inside"
+        },
+        {
+          "hindi": "bahar khade raho",
+          "english": "stand/wait outside"
+        },
+        {
+          "hindi": "neeche aa jao",
+          "english": "come downstairs"
+        },
+        {
+          "hindi": "saamne dekho, woh raha",
+          "english": "look in front, there it is"
+        }
       ]
     },
     {
       "skill": "sequential instructions",
       "explanation": "'Pehle' (first), 'phir' (then), 'uske baad' (after that), 'last mein' (finally). Chain these to give step-by-step instructions. Each step: direction + landmark. Keep sentences short and visual.",
       "more_examples": [
-        { "hindi": "pehle seedha jao, phir signal pe left", "english": "first go straight, then left at the signal" },
-        { "hindi": "uske baad ek chemist dikhega, wahan se right", "english": "after that you'll see a chemist, turn right from there" },
-        { "hindi": "phir thoda aur aage, left side pe hai", "english": "then a bit further ahead, it's on the left side" },
-        { "hindi": "bas, pahunch gaye", "english": "that's it, you've arrived" },
-        { "hindi": "agar Domino's dikh jaye toh zyada aage nikal gaye", "english": "if you see Domino's you've gone too far" }
+        {
+          "hindi": "pehle seedha jao, phir signal pe left",
+          "english": "first go straight, then left at the signal"
+        },
+        {
+          "hindi": "uske baad ek chemist dikhega, wahan se right",
+          "english": "after that you'll see a chemist, turn right from there"
+        },
+        {
+          "hindi": "phir thoda aur aage, left side pe hai",
+          "english": "then a bit further ahead, it's on the left side"
+        },
+        {
+          "hindi": "bas, pahunch gaye",
+          "english": "that's it, you've arrived"
+        },
+        {
+          "hindi": "agar Domino's dikh jaye toh zyada aage nikal gaye",
+          "english": "if you see Domino's you've gone too far"
+        }
       ]
     }
   ],
-  "practice_prompt": "You are a hurried, slightly anxious stranger in Lajpat Nagar Central Market trying to find the metro station entry gate — train to catch in 20 minutes. The user is a local you've stopped on the footpath. Use 'aap' throughout — polite but rushed — and speak only Hindi. Open with exactly: 'excuse me ji, aap mujhe bata sakte hain — Lajpat Nagar metro station kahan hai?' Then run a 6-8 turn conversation: after their first directions, get genuinely confused at ONE point (an unfamiliar landmark, or which side to turn after the signal) and ask a clarifier like 'matlab Haldiram ke saamne se left, ya uske baad?'. If they suggest Google Maps, say your signal is weak — 'main mobile nahi chala raha abhi'. Use postpositions ('ke saamne', 'ke baad'), sequence markers ('phir', 'uske baad'), and distance phrases ('paanch minute', 'kitna dur') naturally. When the user errs (wrong postposition, missing oblique form, English-style sequencing), flag it inline as [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] and continue. End with 'thik hai, bahut shukriya ji — chalta hoon' and a wave."
+  "practice_prompt": "You are a hurried, slightly anxious stranger in Lajpat Nagar Central Market trying to find the metro station entry gate, train to catch in 20 minutes. The user is a local you've stopped on the footpath. Use 'aap' throughout, polite but rushed, and speak only Hindi. Open with exactly: 'excuse me ji, aap mujhe bata sakte hain, Lajpat Nagar metro station kahan hai?' Then run a 6-8 turn conversation: after their first directions, get genuinely confused at ONE point (an unfamiliar landmark, or which side to turn after the signal) and ask a clarifier like 'matlab Haldiram ke saamne se left, ya uske baad?'. If they suggest Google Maps, say your signal is weak, 'main mobile nahi chala raha abhi'. Use postpositions ('ke saamne', 'ke baad'), sequence markers ('phir', 'uske baad'), and distance phrases ('paanch minute', 'kitna dur') naturally. When the user errs (wrong postposition, missing oblique form, English-style sequencing), flag it inline as [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] and continue. End with 'thik hai, bahut shukriya ji, chalta hoon' and a wave."
 }

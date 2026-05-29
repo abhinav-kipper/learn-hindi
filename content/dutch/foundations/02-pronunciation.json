@@ -1,7 +1,7 @@
 {
   "id": "dutch-pronunciation",
   "title": "Pronunciation Guide",
-  "situation": "Foundation: mastering Dutch sounds — the g/ch, tricky vowels, and linking",
+  "situation": "Foundation: mastering Dutch sounds, the g/ch, tricky vowels, and linking",
   "skills": [
     "the Dutch g/ch sound",
     "diphthongs: ui, ij, ou",
@@ -12,37 +12,37 @@
     {
       "hindi": "glas, geld, groen, groot, gaan, grijs, gelukkig",
       "english": "glass, money, green, big, go, grey, happy",
-      "context": "The Dutch 'g' is guttural — made at the back of the throat like clearing it gently. Not the English hard 'g'. In southern NL/Belgium it's softer. Practice: start with a gentle throat clearing, then add the vowel.",
+      "context": "The Dutch 'g' is guttural, made at the back of the throat like clearing it gently. Not the English hard 'g'. In southern NL/Belgium it's softer. Practice: start with a gentle throat clearing, then add the vowel.",
       "pronunciation": "CHLAS, CHELT, CHROON, CHROHT, CHAAN, CHRAYS, chuh-LUK-kich"
     },
     {
       "hindi": "huis, buiten, uit, Zuid, buit, duin",
       "english": "house, outside, out, south, loot/booty, dune",
-      "context": "The 'ui' sound: purse your lips like you're about to say 'oo', but say 'uh' — it's a rounded front vowel unique to Dutch. Your lips should stay rounded throughout. Practice with 'huis' — HOWS but with rounded lips.",
+      "context": "The 'ui' sound: purse your lips like you're about to say 'oo', but say 'uh', it's a rounded front vowel unique to Dutch. Your lips should stay rounded throughout. Practice with 'huis', HOWS but with rounded lips.",
       "pronunciation": "hows (rounded), BOW-tun (rounded), owt (rounded), zowt (rounded), bowt (rounded), down (rounded)"
     },
     {
       "hindi": "ijs, klein, mijn, zijn, rijden, tijd, wijn",
       "english": "ice, small, my, his/to be, to drive, time, wine",
-      "context": "The 'ij' and 'ei' sounds are identical — both sound like the English 'ay' in 'say'. 'Mijn' = 'mayn'. This is one of the most common vowel combos in Dutch.",
+      "context": "The 'ij' and 'ei' sounds are identical, both sound like the English 'ay' in 'say'. 'Mijn' = 'mayn'. This is one of the most common vowel combos in Dutch.",
       "pronunciation": "ays, klayn, mayn, zayn, RAY-dun, tayt, vayn"
     },
     {
       "hindi": "oud, blauw, brood, ook, oog, rood",
       "english": "old, blue, bread, also, eye, red",
-      "context": "'Ou' and 'au' both sound like English 'ow' in 'how'. 'Brood' and 'rood' have the long 'oo' (like English 'road'). 'Oog' — the double-o makes a long sound, and the final 'g' is guttural.",
+      "context": "'Ou' and 'au' both sound like English 'ow' in 'how'. 'Brood' and 'rood' have the long 'oo' (like English 'road'). 'Oog', the double-o makes a long sound, and the final 'g' is guttural.",
       "pronunciation": "owt, BLOW, broht, ohk, ohch, roht"
     },
     {
       "hindi": "een appel, de auto, het is, wij eten, ik open",
       "english": "an apple, the car, it is, we eat, I open",
-      "context": "Linking: when a word ends in a consonant and the next starts with a vowel, they link together as one. 'Een appel' sounds like 'ay-NAP-el'. 'Het is' → 'het-IS'. This makes Dutch speakers sound fast!",
+      "context": "Linking: when a word ends in a consonant and the next starts with a vowel, they link together as one. 'Een appel' sounds like 'ay-NAP-el'. 'Het is' / 'het-IS'. This makes Dutch speakers sound fast!",
       "pronunciation": "ayn-AP-el, duh-OW-toh, ut-IS, way-AY-tun, ik-OH-pun"
     },
     {
       "hindi": "deur, neus, Europa, deuren, neuzen",
       "english": "door, nose, Europe, doors, noses",
-      "context": "The 'eu' sound: like the French 'eu' — round your lips as if saying 'o' but say 'e'. It's in between. No equivalent in English. Practice: 'deur' — round lips tightly, say 'der'.",
+      "context": "The 'eu' sound: like the French 'eu', round your lips as if saying 'o' but say 'e'. It's in between. No equivalent in English. Practice: 'deur', round lips tightly, say 'der'.",
       "pronunciation": "dur (rounded lips), nus (rounded), uh-ROH-pa (rounded eu-), DUR-run (rounded), NUH-zun (rounded)"
     },
     {
@@ -53,42 +53,42 @@
     }
   ],
   "grammar_notes": [
-    "The Dutch 'g' and 'ch' are the same sound — a voiced velar fricative. Think of the Scottish 'loch'. It varies by region: harder in the north, softer in the south and Belgium",
-    "Long vowels vs short vowels: 'man' (short a) vs 'maan' (long aa). Double vowels = long. Single vowel in open syllable = also long: 'ik ga' (I go) — the 'a' in 'ga' is long",
+    "The Dutch 'g' and 'ch' are the same sound, a voiced velar fricative. Think of the Scottish 'loch'. It varies by region: harder in the north, softer in the south and Belgium",
+    "Long vowels vs short vowels: 'man' (short a) vs 'maan' (long aa). Double vowels = long. Single vowel in open syllable = also long: 'ik ga' (I go), the 'a' in 'ga' is long",
     "Final devoicing: at the end of a word, voiced consonants become voiceless. 'Hond' (dog) is pronounced 'hont'. 'Bad' (bath) is pronounced 'bat'",
     "'V' at the start of words often sounds like 'f': 'voor' sounds like 'fohr'. 'Z' at start often sounds like 's': 'zee' sounds like 'say'"
   ],
   "culture_notes": [
-    "Don't worry about getting the 'g' perfect immediately — Dutch people will understand you. But making the effort shows respect for the language",
+    "Don't worry about getting the 'g' perfect immediately, Dutch people will understand you. But making the effort shows respect for the language",
     "Regional accents vary a lot. Amsterdam has a distinctive accent; The Hague sounds more 'posh'; southern provinces are softer",
-    "The Dutch laugh at their own language being difficult — they appreciate any foreigner trying"
+    "The Dutch laugh at their own language being difficult, they appreciate any foreigner trying"
   ],
   "skill_breakdown": [
     {
       "skill": "the Dutch g/ch sound",
-      "explanation": "Made at the back of the throat — imagine fogging up a mirror with a 'khhh' sound, then soften it slightly. It appears as 'g', 'ch', and 'sch' in spelling. In Belgian Dutch it's much softer, almost like a light 'h'.",
+      "explanation": "Made at the back of the throat, imagine fogging up a mirror with a 'khhh' sound, then soften it slightly. It appears as 'g', 'ch', and 'sch' in spelling. In Belgian Dutch it's much softer, almost like a light 'h'.",
       "more_examples": [
         {
           "hindi": "lachen (laughing)",
-          "english": "la-CHEN — ch is guttural"
+          "english": "la-CHEN, ch is guttural"
         },
         {
           "hindi": "nacht (night)",
-          "english": "NACHT — final ch is guttural"
+          "english": "NACHT, final ch is guttural"
         },
         {
           "hindi": "achter (behind)",
-          "english": "ACH-ter — ch in middle"
+          "english": "ACH-ter, ch in middle"
         },
         {
           "hindi": "gezellig (cozy/nice)",
-          "english": "ge-ZEL-lich — g at start AND end"
+          "english": "ge-ZEL-lich, g at start AND end"
         }
       ]
     },
     {
       "skill": "diphthongs: ui, ij, ou",
-      "explanation": "'Ui' is unique to Dutch — rounded front vowel, no English equivalent. 'Ij/ei' = simple 'ay' sound. 'Ou/au' = English 'ow'. These three cover most Dutch diphthongs you'll encounter.",
+      "explanation": "'Ui' is unique to Dutch, rounded front vowel, no English equivalent. 'Ij/ei' = simple 'ay' sound. 'Ou/au' = English 'ow'. These three cover most Dutch diphthongs you'll encounter.",
       "more_examples": [
         {
           "hindi": "ruim (spacious)",
@@ -96,11 +96,11 @@
         },
         {
           "hindi": "trein (train)",
-          "english": "trayn — ij/ei = ay"
+          "english": "trayn, ij/ei = ay"
         },
         {
           "hindi": "goud (gold)",
-          "english": "chowt — ou = ow"
+          "english": "chowt, ou = ow"
         },
         {
           "hindi": "buik (belly)",
@@ -109,7 +109,7 @@
       ]
     }
   ],
-  "practice_prompt": "You are a Dutch pronunciation coach drilling the trickiest sounds for English speakers — the guttural g/ch, the unique compound vowels (ui, eu, ij/ei), long-vs-short doubling, the unstressed schwa, and first-syllable stress. Always address the user as 'u' (polite tutor register). Open with: 'Goedendag! Laten we de uitspraak oefenen. Eerste woord: \"goed\". Hoe klinkt de \"g\"?' Drill 6-8 items, mixing two modes: (a) hand them a Dutch word and ask them to break down each sound, or (b) ask them to pronounce a word and describe their likely error. Use minimal pairs (man/maan, huis/huizen, kop/koop, bom/boom) to expose the doubling rule. Coach explicitly — name the throat-clearing rasp, the rounded-lip shape of ui, the schwa collapse in -en endings. Watch for: soft English g instead of guttural, ui as 'oy', over-pronouncing unstressed e instead of schwa, wrong stress on loanwords. Flag every mistake with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]. Don't switch topics unless asked. End with: 'Heel mooi! De uitspraak komt langzaam vanzelf. Tot ziens.'",
+  "practice_prompt": "You are a Dutch pronunciation coach drilling the trickiest sounds for English speakers, the guttural g/ch, the unique compound vowels (ui, eu, ij/ei), long-vs-short doubling, the unstressed schwa, and first-syllable stress. Always address the user as 'u' (polite tutor register). Open with: 'Goedendag! Laten we de uitspraak oefenen. Eerste woord: \"goed\". Hoe klinkt de \"g\"?' Drill 6-8 items, mixing two modes: (a) hand them a Dutch word and ask them to break down each sound, or (b) ask them to pronounce a word and describe their likely error. Use minimal pairs (man/maan, huis/huizen, kop/koop, bom/boom) to expose the doubling rule. Coach explicitly, name the throat-clearing rasp, the rounded-lip shape of ui, the schwa collapse in -en endings. Watch for: soft English g instead of guttural, ui as 'oy', over-pronouncing unstressed e instead of schwa, wrong stress on loanwords. Flag every mistake with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]. Don't switch topics unless asked. End with: 'Heel mooi! De uitspraak komt langzaam vanzelf. Tot ziens.'",
   "theory": {
     "intro": "Dutch sounds harder than it looks. The spelling shows lots of vowels, but pronouncing them is where English speakers give themselves away, especially `ui`, `eu`, `g`, and the all-important unstressed schwa. This chapter walks through the sounds English doesn't have, plus the patterns that make a learner's Dutch suddenly sound less foreign.",
     "sections": [
@@ -120,17 +120,17 @@
           {
             "hindi": "goed",
             "english": "good",
-            "breakdown": "starts with the throat-clearing g — like CHOOT (with rough ch)"
+            "breakdown": "starts with the throat-clearing g, like CHOOT (with rough ch)"
           },
           {
             "hindi": "gezellig",
             "english": "cozy / convivial",
-            "breakdown": "guttural g at the START and END — chuh-ZEL-lich"
+            "breakdown": "guttural g at the START and END, chuh-ZEL-lich"
           },
           {
             "hindi": "lachen",
             "english": "to laugh",
-            "breakdown": "ch in the middle is the same throat sound — LA-chun"
+            "breakdown": "ch in the middle is the same throat sound, LA-chun"
           },
           {
             "hindi": "Scheveningen",
@@ -140,7 +140,7 @@
         ],
         "callout": {
           "tone": "warning",
-          "body": "If you say the Dutch `g` like an English `g` (gate, garden), Dutch listeners will hear your accent immediately. The throat-clearing rasp is the single most marked feature of the language — drill it until your throat is comfortable with it."
+          "body": "If you say the Dutch `g` like an English `g` (gate, garden), Dutch listeners will hear your accent immediately. The throat-clearing rasp is the single most marked feature of the language, drill it until your throat is comfortable with it."
         },
         "cutting_intro": "Welcome! Let's start with the most famous Dutch sound: the rasping g. It comes from the back of your throat, like you're clearing it gently. Try it.",
         "quick_check": {
@@ -151,7 +151,7 @@
             "At the back of the throat, like clearing it"
           ],
           "correct_index": 2,
-          "explanation": "Yes — the Dutch `g` and `ch` are both made at the back of the throat. It's a harsh fricative, very different from any English `g`."
+          "explanation": "Yes, the Dutch `g` and `ch` are both made at the back of the throat. It's a harsh fricative, very different from any English `g`."
         }
       },
       {
@@ -200,23 +200,23 @@
         },
         "callout": {
           "tone": "tip",
-          "body": "The `ui` is the hardest sound in Dutch for English speakers — there's truly nothing close in English. Listen to native speakers say `huis` and `tuin` many, many times before trying to mimic. Your mouth has to learn a new shape."
+          "body": "The `ui` is the hardest sound in Dutch for English speakers, there's truly nothing close in English. Listen to native speakers say `huis` and `tuin` many, many times before trying to mimic. Your mouth has to learn a new shape."
         },
         "cutting_intro": "Dutch has lots of vowels written as two letters together. Each pair is one sound, not two. Let's go through them.",
         "quick_check": {
           "question": "How do you pronounce the `ij` in `mijn` (mine) and the `ei` in `klein` (small)?",
           "options": [
-            "Differently — `ij` is `ee`, `ei` is `ay`",
-            "Identically — both like English `eye` / `ay`",
+            "Differently, `ij` is `ee`, `ei` is `ay`",
+            "Identically, both like English `eye` / `ay`",
             "Like `oy` in `boy`"
           ],
           "correct_index": 1,
-          "explanation": "Correct! `ij` and `ei` sound exactly the same in modern Dutch — both like English `ay` in `say`. Spelling is the only difference."
+          "explanation": "Correct! `ij` and `ei` sound exactly the same in modern Dutch, both like English `ay` in `say`. Spelling is the only difference."
         }
       },
       {
-        "heading": "Long vs short vowels — the doubling rule",
-        "body": "Dutch vowels come in two lengths: short (a quick beat) and long (held about twice as long). The length changes meaning.\n\n- `man` (mahn, man) vs `maan` (mahhhn, moon)\n- `kop` (cup) vs `koop` (purchase)\n\nThe spelling tells you which is which. A vowel is **long** when it's written doubled (`aa`, `ee`, `oo`, `uu`) or sits in an open syllable (with one consonant or none after it). It's **short** when it's a single letter closed off by a consonant.\n\nThis matters when you add endings. A short-vowel word doubles its consonant to keep the vowel short (`man` → `mannen`, men). A long-vowel word stays clean (`maan` → `manen`, moons).",
+        "heading": "Long vs short vowels, the doubling rule",
+        "body": "Dutch vowels come in two lengths: short (a quick beat) and long (held about twice as long). The length changes meaning. - `man` (mahn, man) vs `maan` (mahhhn, moon)\n- `kop` (cup) vs `koop` (purchase) The spelling tells you which is which. A vowel is **long** when it's written doubled (`aa`, `ee`, `oo`, `uu`) or sits in an open syllable (with one consonant or none after it). It's **short** when it's a single letter closed off by a consonant. This matters when you add endings. A short-vowel word doubles its consonant to keep the vowel short (`man` / `mannen`, men). A long-vowel word stays clean (`maan` / `manen`, moons).",
         "table": {
           "caption": "Short vs long vowel pairs",
           "columns": [
@@ -260,7 +260,7 @@
         },
         "callout": {
           "tone": "note",
-          "body": "You don't need to produce a perfect length distinction on day one — most Dutch listeners can tell from context. But you DO need to learn the spelling rule, because doubling consonants vs vowels is how Dutch writes plurals and verb forms correctly."
+          "body": "You don't need to produce a perfect length distinction on day one, most Dutch listeners can tell from context. But you DO need to learn the spelling rule, because doubling consonants vs vowels is how Dutch writes plurals and verb forms correctly."
         },
         "cutting_intro": "Dutch vowels are either short or long, and the length actually changes the word. Look at these pairs.",
         "quick_check": {
@@ -268,20 +268,20 @@
           "options": [
             "Because `maan` has a doubled `aa`; single vowel closed by a consonant is short",
             "Because `maan` is a noun and `man` is a verb",
-            "Random — Dutch length is unpredictable"
+            "Random, Dutch length is unpredictable"
           ],
           "correct_index": 0,
-          "explanation": "Yes — written doubling (aa, ee, oo, uu) marks a long vowel. A single vowel followed by a consonant stays short. This rule is the foundation of Dutch spelling."
+          "explanation": "Yes, written doubling (aa, ee, oo, uu) marks a long vowel. A single vowel followed by a consonant stays short. This rule is the foundation of Dutch spelling."
         }
       },
       {
-        "heading": "Word stress — usually on the first syllable",
+        "heading": "Word stress, usually on the first syllable",
         "body": "Dutch overwhelmingly stresses the first syllable of native words: `WA-ter` (water), `LE-ven` (life), `MOR-gen` (morning), `WERK-en` (to work). When in doubt, throw the beat onto the first syllable and you'll be right about 80% of the time.\n\nCompound words put the main stress on the first part: `SCHOOL-bord` (blackboard), `STAD-huis` (city hall), `BOEK-en-kast` (bookcase).\n\nTwo groups break the first-syllable habit:\n- Loanwords from Latin, Greek, or French keep their original stress: `te-le-FOON`, `mu-ZIEK`, `re-stau-RANT`.\n- Verbs with an unstressed prefix (`be-`, `ge-`, `ver-`, `ont-`, `her-`) put the stress *after* the prefix: `be-GIN-nen` (to begin), `ver-GE-ten` (to forget), `ont-MOE-ten` (to meet).",
         "examples": [
           {
             "hindi": "WA-ter",
             "english": "water",
-            "breakdown": "first-syllable stress — the default Dutch pattern"
+            "breakdown": "first-syllable stress, the default Dutch pattern"
           },
           {
             "hindi": "LE-ven",
@@ -301,12 +301,12 @@
           {
             "hindi": "STAD-huis",
             "english": "city hall",
-            "breakdown": "compound — stress on the first part"
+            "breakdown": "compound, stress on the first part"
           }
         ],
         "callout": {
           "tone": "tip",
-          "body": "When you encounter a new Dutch word and don't know where to stress it, lean toward the first syllable. You'll be right far more often than wrong — and even when wrong, a misplaced stress is much less marked than a wrong vowel."
+          "body": "When you encounter a new Dutch word and don't know where to stress it, lean toward the first syllable. You'll be right far more often than wrong, and even when wrong, a misplaced stress is much less marked than a wrong vowel."
         },
         "cutting_intro": "Where does the beat fall in a Dutch word? Almost always the first syllable. Listen for it.",
         "quick_check": {
@@ -317,7 +317,7 @@
             "Both syllables equally"
           ],
           "correct_index": 1,
-          "explanation": "First syllable — WA-ter. That's the Dutch default for native words, and you'll be right ~80% of the time if you guess first-syllable."
+          "explanation": "First syllable, WA-ter. That's the Dutch default for native words, and you'll be right ~80% of the time if you guess first-syllable."
         }
       },
       {
@@ -327,32 +327,32 @@
           {
             "hindi": "de",
             "english": "the (common gender)",
-            "breakdown": "pronounced `duh` — pure schwa"
+            "breakdown": "pronounced `duh`, pure schwa"
           },
           {
             "hindi": "het",
             "english": "the (neuter) / it",
-            "breakdown": "pronounced `ut` — schwa with a faint h"
+            "breakdown": "pronounced `ut`, schwa with a faint h"
           },
           {
             "hindi": "lopen",
             "english": "to walk",
-            "breakdown": "LOH-pun — the -en collapses to schwa+n"
+            "breakdown": "LOH-pun, the -en collapses to schwa+n"
           },
           {
             "hindi": "gemaakt",
             "english": "made",
-            "breakdown": "guh-MAAKT — unstressed ge- is schwa, stress on MAAKT"
+            "breakdown": "guh-MAAKT, unstressed ge- is schwa, stress on MAAKT"
           },
           {
             "hindi": "gisteren",
             "english": "yesterday",
-            "breakdown": "GIS-tuh-run — middle and final syllables both schwa"
+            "breakdown": "GIS-tuh-run, middle and final syllables both schwa"
           }
         ],
         "callout": {
           "tone": "tip",
-          "body": "If you pronounce every Dutch `e` as a full `eh`, you sound like a careful textbook learner. Native speakers blur unstressed vowels into schwas — copy them and your Dutch will instantly sound more natural. This single habit is the fastest accent upgrade you can make."
+          "body": "If you pronounce every Dutch `e` as a full `eh`, you sound like a careful textbook learner. Native speakers blur unstressed vowels into schwas, copy them and your Dutch will instantly sound more natural. This single habit is the fastest accent upgrade you can make."
         },
         "cutting_intro": "Here's the secret to sounding Dutch: the unstressed e. It almost always softens to a tiny `uh`. Listen.",
         "quick_check": {
@@ -363,7 +363,7 @@
             "LOH-peen, with a long `ee`"
           ],
           "correct_index": 1,
-          "explanation": "Yes — unstressed `-en` is just `-un` with a schwa. Native speakers don't pronounce the `e` fully. Mimic this and you'll instantly sound more Dutch."
+          "explanation": "Yes, unstressed `-en` is just `-un` with a schwa. Native speakers don't pronounce the `e` fully. Mimic this and you'll instantly sound more Dutch."
         }
       }
     ],

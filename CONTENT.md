@@ -140,6 +140,25 @@ The actual phrases/examples in our lessons are written originally in our app's v
 - `practice_prompt`: 1-2 sentences setting the scene for the Gemini tutor.
 - `references`: REQUIRED, at least one entry like `"Snell & Weightman Ch. 11"` or `"Afroz Taj Lesson 9"`.
 
+### Copy style (CI-enforced)
+
+A deterministic "copy lint" keeps all content consistent and non-AI. It runs in
+CI (`.github/workflows/ci.yml`) and locally via `npm run lint:content`
+(`scripts/lint-content.mjs`), scanning every string in `content/**/*.json` for:
+
+- **em-dashes (`—`)** and spaced en-dashes used as em-dashes → use commas / periods
+- **arrows in prose (`→`, `->`)** → use words or a slash (`k / kh`, not `k → kh`)
+- a tight list of **AI clichés** (delve, tapestry, testament to, unleash, plethora, furthermore, …)
+
+A red build means content slipped one of these in. Auto-fix the mechanical ones
+with `node scripts/lint-content.mjs --fix` (em-dashes + arrows; clichés need a
+human rewrite). NOTE: if a fix touches a romanized phrase (`hindi`) that has a
+pre-rendered clip / gloss, re-key the manifests (`hi-translit`, `hi-audio`,
+`nl-audio`, `gloss-hi`, `gloss-nl`) so audio + word-glosses stay aligned.
+
+Functional UI arrows (CTA "next →", the Sounds blend-builder connector) live in
+components, not content, and are the app's intentional convention.
+
 ## Canonical Sources
 
 All new content must cite at least one of these. McGregor is a grammar reference only — don't lift phrases from it.

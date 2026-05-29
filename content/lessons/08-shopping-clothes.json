@@ -2,29 +2,79 @@
   "id": "shopping-clothes",
   "title": "Shopping for Clothes",
   "situation": "You're at a clothing shop in a busy market, picking out a kameez. You want a different color, the size doesn't fit, and the asking price is too high.",
-  "skills": ["sizes & colors", "polite imperatives (-iye)", "haggling softeners", "preferences"],
+  "skills": [
+    "sizes & colors",
+    "polite imperatives (-iye)",
+    "haggling softeners",
+    "preferences"
+  ],
   "phrases": [
-    { "hindi": "bhaiya, ek baar yeh wali kameez dikhaiye", "english": "Bhaiya, please show me this kameez", "context": "'bhaiya' (brother) for a younger shopkeeper — universal market address. 'ek baar' (one time) is a softener that means 'just / please'. 'dikhaiye' is the polite-imperative 'show'.", "pronunciation": "BHAI-ya, EK baar YEH wa-LI ka-MEEZ di-KHAI-ye" },
-    { "hindi": "iska kya rate hai aapke yahaan?", "english": "What's the price at your shop?", "context": "'kya rate hai' is the natural haggling-opener for shopkeepers. 'aapke yahaan' (at your place) hints you're comparing with other shops.", "pronunciation": "IS-ka kya RATE hai AAP-ke ya-HAAN?" },
-    { "hindi": "neela waala dikhaiye, gulabi nahi chahiye", "english": "Show me the blue one, I don't want pink", "context": "'waala' attached to a color = 'the X one'. 'neela waala' = the blue one. 'chahiye' (need/want) is the standard preference verb.", "pronunciation": "NEE-la WAA-la di-KHAI-ye, gu-LAA-bi na-HI cha-HI-ye" },
-    { "hindi": "size medium mein hai? large thoda bada lagega", "english": "Do you have it in medium? Large will be a bit big", "context": "'mein hai?' (in X is?) = 'do you have in X'. 'lagega' (will seem/feel) — natural way to express anticipated fit.", "pronunciation": "SIZE me-DI-um mein hai? LARGE tho-DA ba-DA la-GE-ga" },
-    { "hindi": "yeh chhota hai mujhe, ek size bada dikhaiye", "english": "This is small for me, show one size bigger", "context": "'chhota' (small) — gender-agrees with kameez (feminine) → 'chhoti'. Here speaker uses masculine because 'yeh' refers to the size, not the garment. Both work in casual speech.", "pronunciation": "YEH chho-TA hai mu-JHE, EK size ba-DA di-KHAI-ye" },
-    { "hindi": "arrey itna mehnga? thoda kam karenge na?", "english": "Oh that's expensive — you'll bring it down a bit, won't you?", "context": "'arrey' is the haggling-shock filler. 'thoda kam karenge na' (won't you make it a little less) — 'na' tag-question makes it almost a friendly ask, not a demand.", "pronunciation": "AR-rey IT-na meh-NGA? tho-DA KAM ka-RE-nge na?" },
-    { "hindi": "main aapko paanch sau dungi, isse zyaada nahi", "english": "I'll give you five hundred, not more than that", "context": "'paanch sau' = 500. 'dungi' (feminine future of 'give'). 'isse zyaada nahi' (not more than this) is the standard counter-offer closer.", "pronunciation": "MAIN AAP-ko PAANCH sau DOON-gi, IS-se zyaa-DA na-HI" },
-    { "hindi": "theek hai, le leti hoon — pack kar dijiye", "english": "Okay, I'll take it — please pack it up", "context": "'le leti hoon' (I'll take, feminine) — 'le lena' is the completion-compound 'take up'. 'pack kar dijiye' = please pack — borrowing English 'pack' is normal in modern shopping Hindi.", "pronunciation": "THEEK hai, LE le-TI hoon — PACK kar DI-ji-ye" },
-    { "hindi": "bill bhi de dijiye, please", "english": "Please give the bill too", "context": "'bill' borrowed from English — universal in Indian shopping. 'de dijiye' (please give) — compound 'de dena' (give over) is more polite than just 'dijiye'.", "pronunciation": "BILL bhi DE di-JI-ye, PLEASE" }
+    {
+      "hindi": "bhaiya, ek baar yeh wali kameez dikhaiye",
+      "english": "Bhaiya, please show me this kameez",
+      "context": "'bhaiya' (brother) for a younger shopkeeper, universal market address. 'ek baar' (one time) is a softener that means 'just / please'. 'dikhaiye' is the polite-imperative 'show'.",
+      "pronunciation": "BHAI-ya, EK baar YEH wa-LI ka-MEEZ di-KHAI-ye"
+    },
+    {
+      "hindi": "iska kya rate hai aapke yahaan?",
+      "english": "What's the price at your shop?",
+      "context": "'kya rate hai' is the natural haggling-opener for shopkeepers. 'aapke yahaan' (at your place) hints you're comparing with other shops.",
+      "pronunciation": "IS-ka kya RATE hai AAP-ke ya-HAAN?"
+    },
+    {
+      "hindi": "neela waala dikhaiye, gulabi nahi chahiye",
+      "english": "Show me the blue one, I don't want pink",
+      "context": "'waala' attached to a color = 'the X one'. 'neela waala' = the blue one. 'chahiye' (need/want) is the standard preference verb.",
+      "pronunciation": "NEE-la WAA-la di-KHAI-ye, gu-LAA-bi na-HI cha-HI-ye"
+    },
+    {
+      "hindi": "size medium mein hai? large thoda bada lagega",
+      "english": "Do you have it in medium? Large will be a bit big",
+      "context": "'mein hai?' (in X is?) = 'do you have in X'. 'lagega' (will seem/feel), natural way to express anticipated fit.",
+      "pronunciation": "SIZE me-DI-um mein hai? LARGE tho-DA ba-DA la-GE-ga"
+    },
+    {
+      "hindi": "yeh chhota hai mujhe, ek size bada dikhaiye",
+      "english": "This is small for me, show one size bigger",
+      "context": "'chhota' (small), gender-agrees with kameez (feminine) / 'chhoti'. Here speaker uses masculine because 'yeh' refers to the size, not the garment. Both work in casual speech.",
+      "pronunciation": "YEH chho-TA hai mu-JHE, EK size ba-DA di-KHAI-ye"
+    },
+    {
+      "hindi": "arrey itna mehnga? thoda kam karenge na?",
+      "english": "Oh that's expensive, you'll bring it down a bit, won't you?",
+      "context": "'arrey' is the haggling-shock filler. 'thoda kam karenge na' (won't you make it a little less), 'na' tag-question makes it almost a friendly ask, not a demand.",
+      "pronunciation": "AR-rey IT-na meh-NGA? tho-DA KAM ka-RE-nge na?"
+    },
+    {
+      "hindi": "main aapko paanch sau dungi, isse zyaada nahi",
+      "english": "I'll give you five hundred, not more than that",
+      "context": "'paanch sau' = 500. 'dungi' (feminine future of 'give'). 'isse zyaada nahi' (not more than this) is the standard counter-offer closer.",
+      "pronunciation": "MAIN AAP-ko PAANCH sau DOON-gi, IS-se zyaa-DA na-HI"
+    },
+    {
+      "hindi": "theek hai, le leti hoon, pack kar dijiye",
+      "english": "Okay, I'll take it, please pack it up",
+      "context": "'le leti hoon' (I'll take, feminine), 'le lena' is the completion-compound 'take up'. 'pack kar dijiye' = please pack, borrowing English 'pack' is normal in modern shopping Hindi.",
+      "pronunciation": "THEEK hai, LE le-TI hoon, PACK kar DI-ji-ye"
+    },
+    {
+      "hindi": "bill bhi de dijiye, please",
+      "english": "Please give the bill too",
+      "context": "'bill' borrowed from English, universal in Indian shopping. 'de dijiye' (please give), compound 'de dena' (give over) is more polite than just 'dijiye'.",
+      "pronunciation": "BILL bhi DE di-JI-ye, PLEASE"
+    }
   ],
   "grammar_notes": [
-    "Polite imperative '-iye' (dikhaiye, lijiye, kijiye) is the 'aap' form of commands — always use with shopkeepers and strangers",
+    "Polite imperative '-iye' (dikhaiye, lijiye, kijiye) is the 'aap' form of commands, always use with shopkeepers and strangers",
     "Compound verbs of completion: 'le lena' (take, with finality), 'de dena' (give, hand over), 'kar dena' (do, get it done). The second verb adds politeness/finality",
-    "'waala' attaches to nouns/colors to mean 'the X one' — 'neela waala', 'chhota waala', 'kal waala' (the one from yesterday)",
+    "'waala' attaches to nouns/colors to mean 'the X one', 'neela waala', 'chhota waala', 'kal waala' (the one from yesterday)",
     "Future tense feminine: '-ungi/-egi/-engi' for first/second/third person. 'main dungi' = I'll give (female speaker)",
     "Tag-question 'na' at the end softens any request: 'kar dijiye na' (please do it, won't you) is friendlier than just 'kar dijiye'"
   ],
   "culture_notes": [
-    "Haggling is expected in markets and small shops — never in branded stores or malls. Starting bid: 40-50% of asked price",
+    "Haggling is expected in markets and small shops, never in branded stores or malls. Starting bid: 40-50% of asked price",
     "Address shopkeepers as 'bhaiya' (younger) or 'uncle ji' (older). 'Sir' works in upscale shops; never use the shopkeeper's first name",
-    "Refusing the first counter-offer and walking a few steps away is a standard move — the shopkeeper will often call you back with a better price",
+    "Refusing the first counter-offer and walking a few steps away is a standard move, the shopkeeper will often call you back with a better price",
     "It's fine (expected, even) to mix English shopping vocab into Hindi: 'size', 'pack', 'bill', 'rate' are universal"
   ],
   "skill_breakdown": [
@@ -32,32 +82,68 @@
       "skill": "Sizes and colors",
       "explanation": "Most clothing words are borrowed from English (size, large, medium) and used as-is. Hindi color names take 'waala' to mean 'the X one'.",
       "more_examples": [
-        { "hindi": "kala kurta dikhaiye", "english": "show me a black kurta" },
-        { "hindi": "small size mein hai kya?", "english": "do you have it in small?" },
-        { "hindi": "yeh safed waala kitne ka hai?", "english": "how much is this white one?" },
-        { "hindi": "laal waala chahiye, neela nahi", "english": "I want the red one, not blue" }
+        {
+          "hindi": "kala kurta dikhaiye",
+          "english": "show me a black kurta"
+        },
+        {
+          "hindi": "small size mein hai kya?",
+          "english": "do you have it in small?"
+        },
+        {
+          "hindi": "yeh safed waala kitne ka hai?",
+          "english": "how much is this white one?"
+        },
+        {
+          "hindi": "laal waala chahiye, neela nahi",
+          "english": "I want the red one, not blue"
+        }
       ]
     },
     {
       "skill": "Polite imperative -iye",
       "explanation": "The 'aap' form of commands. Drop the infinitive 'na' and add '-iye'. Use with shopkeepers, strangers, anyone you're not close with.",
       "more_examples": [
-        { "hindi": "ek minute rukiye", "english": "please wait a minute" },
-        { "hindi": "yeh dekhiye", "english": "please see this" },
-        { "hindi": "thoda aage dikhaiye", "english": "please show further" },
-        { "hindi": "naya stock laaiye kal", "english": "please bring new stock tomorrow" }
+        {
+          "hindi": "ek minute rukiye",
+          "english": "please wait a minute"
+        },
+        {
+          "hindi": "yeh dekhiye",
+          "english": "please see this"
+        },
+        {
+          "hindi": "thoda aage dikhaiye",
+          "english": "please show further"
+        },
+        {
+          "hindi": "naya stock laaiye kal",
+          "english": "please bring new stock tomorrow"
+        }
       ]
     },
     {
       "skill": "Haggling softeners",
       "explanation": "Hindi haggling relies on softening particles ('thoda', 'na', 'arrey') rather than blunt counter-offers. The friendlier you sound, the more the shopkeeper drops the price.",
       "more_examples": [
-        { "hindi": "thoda toh kam kijiye", "english": "at least bring it down a little" },
-        { "hindi": "itna mehnga kyun hai bhaiya?", "english": "why is it so expensive, bhaiya?" },
-        { "hindi": "aakhri price kya hai?", "english": "what's your final price?" }
+        {
+          "hindi": "thoda toh kam kijiye",
+          "english": "at least bring it down a little"
+        },
+        {
+          "hindi": "itna mehnga kyun hai bhaiya?",
+          "english": "why is it so expensive, bhaiya?"
+        },
+        {
+          "hindi": "aakhri price kya hai?",
+          "english": "what's your final price?"
+        }
       ]
     }
   ],
-  "practice_prompt": "You are a shopkeeper at a busy market clothing stall selling kurtas and kameez. Use 'aap' throughout — the customer is a stranger. Open verbatim with 'aaiye aaiye, kya dikhaaun?' and naturally surface phrases like 'ye dekhiye', 'medium hai aapke liye?', 'aap kya rate dengi?', 'aap regular customer banengi' across the conversation. Offer specific colors (neela, laal, gulabi, safed, kala) and sizes when asked. Quote 20-40% above a fair price; hold firm on the first pushback, drop only after the second or third. When pressed hard, dramatize 'arrey, mera commission khatam ho jaayega!' before yielding. Reply only in romanized Hindi — do not switch to English unless the user explicitly asks. If the user says something ungrammatical or unnatural, append a correction on its own line in exactly this format: [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]. Wrap up in 6-8 turns: either close the sale at a mid-point price or let them walk away with 'koi nahin ji, phir aaiye'.",
-  "references": ["Snell & Weightman Ch. 11", "Afroz Taj Lesson 7"]
+  "practice_prompt": "You are a shopkeeper at a busy market clothing stall selling kurtas and kameez. Use 'aap' throughout, the customer is a stranger. Open verbatim with 'aaiye aaiye, kya dikhaaun?' and naturally surface phrases like 'ye dekhiye', 'medium hai aapke liye?', 'aap kya rate dengi?', 'aap regular customer banengi' across the conversation. Offer specific colors (neela, laal, gulabi, safed, kala) and sizes when asked. Quote 20-40% above a fair price; hold firm on the first pushback, drop only after the second or third. When pressed hard, dramatize 'arrey, mera commission khatam ho jaayega!' before yielding. Reply only in romanized Hindi, do not switch to English unless the user explicitly asks. If the user says something ungrammatical or unnatural, append a correction on its own line in exactly this format: [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]. Wrap up in 6-8 turns: either close the sale at a mid-point price or let them walk away with 'koi nahin ji, phir aaiye'.",
+  "references": [
+    "Snell & Weightman Ch. 11",
+    "Afroz Taj Lesson 7"
+  ]
 }
