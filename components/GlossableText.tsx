@@ -1,13 +1,14 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
 import { useLanguage } from '@/lib/language-context'
 import { tokenize, getGloss, type GlossToken } from '@/lib/gloss'
 
 const LONG_PRESS_MS = 380
 
-type Active = { token: GlossToken; x: number; y: number } | null
+type Active = { token: GlossToken; x: number; y: number; below: boolean } | null
 
 /**
  * Renders a phrase inline; long-pressing any word pops a small Chai Galli
@@ -57,8 +58,10 @@ export default function GlossableText({
 
   const openFor = (token: GlossToken, el: HTMLElement) => {
     const r = el.getBoundingClientRect()
-    const x = Math.min(Math.max(r.left + r.width / 2, 130), window.innerWidth - 130)
-    setActive({ token, x, y: r.top })
+    const x = Math.min(Math.max(r.left + r.width / 2, 96), window.innerWidth - 96)
+    // Sit just above the word; flip below if too close to the top edge.
+    const above = r.top > 86
+    setActive({ token, x, y: above ? r.top - 8 : r.bottom + 8, below: !above })
   }
 
   return (
@@ -102,47 +105,39 @@ export default function GlossableText({
 }
 
 function GlossPopover({ active, onClose }: { active: NonNullable<Active>; onClose: () => void }) {
-  const { token, x, y } = active
-  return (
+  if (typeof document === 'undefined') return null
+  const { token, x, y, below } = active
+  // Portal to <body> so an ancestor's CSS transform (Framer animations) doesn't
+  // become the containing block for our fixed positioning — keeps it on the word.
+  return createPortal(
     <>
       {/* invisible catcher: any tap elsewhere closes it */}
-      <span
-        onPointerDown={onClose}
-        style={{ position: 'fixed', inset: 0, zIndex: 80 }}
-        aria-hidden
-      />
-      <span
+      <div onPointerDown={onClose} style={{ position: 'fixed', inset: 0, zIndex: 80 }} aria-hidden />
+      <div
         role="tooltip"
         style={{
           position: 'fixed',
           left: x,
-          top: Math.max(y - 12, 8),
-          transform: 'translate(-50%, -100%)',
+          top: y,
+          transform: below ? 'translate(-50%, 0)' : 'translate(-50%, -100%)',
           zIndex: 81,
-          maxWidth: 240,
+          maxWidth: 220,
           background: '#fff', // @design-allow: white literal
           border: BORDER.sticker,
           boxShadow: SHADOW.sticker,
-          borderRadius: 14,
-          padding: '9px 12px',
+          borderRadius: 13,
+          padding: '7px 12px',
           textAlign: 'center',
-          animation: 'pop-in 180ms cubic-bezier(.34,1.56,.64,1)',
+          animation: 'pop-in 160ms cubic-bezier(.34,1.56,.64,1)',
+          transformOrigin: below ? 'top center' : 'bottom center',
           pointerEvents: 'none',
-          display: 'block',
         }}
       >
-        <span style={{ display: 'block', fontFamily: FONTS.display, fontWeight: 800, fontSize: 15, color: COLORS.ink }}>
-          {token.w}
-        </span>
-        <span style={{ display: 'block', fontFamily: FONTS.body, fontSize: 14, color: COLORS.ink, marginTop: 1 }}>
+        <span style={{ fontFamily: FONTS.body, fontWeight: 700, fontSize: 14.5, color: COLORS.ink, lineHeight: 1.3 }}>
           {token.t}
         </span>
-        {token.note && (
-          <span style={{ display: 'block', fontFamily: FONTS.body, fontStyle: 'italic', fontSize: 11.5, color: COLORS.ink60, marginTop: 3, lineHeight: 1.35 }}>
-            {token.note}
-          </span>
-        )}
-      </span>
-    </>
+      </div>
+    </>,
+    document.body,
   )
 }
