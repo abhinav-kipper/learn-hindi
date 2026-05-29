@@ -155,6 +155,11 @@ const LINES: Record<string, Line[]> = {
     { main: 'luisteren geslaagd!', caption: 'lekker bezig',  speak: 'Luisteren geslaagd! Lekker bezig.' },
     { main: 'top, Luisteren pass!', caption: 'B1 dichterbij', speak: 'Top, Luisteren pass. B1 dichterbij.' },
   ],
+  pronStageDone: [
+    { main: 'klank gehaald! 🔊', caption: 'goed uitgesproken',  speak: 'Klank gehaald! Goed uitgesproken.' },
+    { main: 'mooi uitgesproken!', caption: 'volgende klank',     speak: 'Mooi uitgesproken! Volgende klank.' },
+    { main: 'top, dat klinkt al Nederlands', caption: 'doorgaan', speak: 'Top, dat klinkt al Nederlands. Doorgaan.' },
+  ],
   dailyGoalReached: [
     { main: 'daily goal done! 🎯', caption: 'mehnat ki keemat',          speak: 'Daily goal done! Mehnat ki keemat.' },
     { main: 'wah, target hit!',    caption: 'aaj ka kaam pura',          speak: 'Wah, target hit! Aaj ka kaam pura.' },
@@ -451,6 +456,15 @@ export const MOMENTS: Record<string, Moment> = {
     mood: 'happy', moodAnim: 'happy-hop 0.6s ease-in-out 2',
     bubbleTail: 'bottom-right', bubbleSide: 'left',
     voice: true, lines: LINES.luisterMockPassed, sizePct: 0.45,
+  },
+  pronStageDone: {
+    label: 'Pronunciation stage complete',
+    when: 'A "Sounds" pronunciation stage is completed',
+    anchor: 'center',
+    enter: 'bubble-pop', enterMs: 600, holdMs: 2400, exit: 'dismiss-down', exitMs: 600,
+    mood: 'excited', moodAnim: 'happy-hop 1.4s ease-in-out infinite',
+    bubbleTail: 'bottom-right', bubbleSide: 'left',
+    voice: true, lines: LINES.pronStageDone, sizePct: 0.5,
   },
   dailyGoalReached: {
     label: 'Daily goal hit',

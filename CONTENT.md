@@ -195,7 +195,7 @@ Step-by-step for adding a new lesson:
 - ~~**No level markers** — no A1/A2/B1 progression~~ — RESOLVED for Dutch (Lesson type has `level?` field; all Dutch lessons tagged via JSON + `lib/dutch/level-map.ts`). Hindi has no CEFR system intentionally.
 - ~~**Theory examples had no TTS playback**~~ — RESOLVED 2026-05-27. Every `ExampleBlock` in `components/lesson/TheoryView.tsx` now has a hear-it play button, locale-aware via `useLanguage().config.ttsLocale`. Applies to all 16 foundations.
 - **No audio assets** — TTS via `lib/speech.ts` works (Google `/api/tts` → browser `speechSynthesis` fallback), but no native recordings. Most relevant for Dutch Phase 3 Luisteren when it ships.
-- **Scope is still growing** — Hindi: 10 situations + 9 foundations + 100 vocab + 5 stories. Dutch: 11 lessons + 7 foundations + 100 KNM + 10 Lezen texts. Vocab expansion planned to ~300 via `scripts/generate-vocab.mjs` (Gemini-drafted, user-reviewed). The grow-vs-polish balance is currently leaning grow.
+- **Scope is still growing** — Hindi: 10 situations + 9 foundations + 100 vocab + 5 stories. Dutch: 11 lessons + 7 foundations + 100 KNM + 10 Lezen texts + 10 Luisteren clips + an 8-stage from-zero "Sounds" pronunciation course (`content/dutch/pronunciation-course.json`, loader `lib/dutch/pronunciation.ts`). Vocab expansion planned to ~300 via `scripts/generate-vocab.mjs` (Gemini-drafted, user-reviewed). The grow-vs-polish balance is currently leaning grow.
 
 ## Loading
 

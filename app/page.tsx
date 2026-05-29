@@ -22,6 +22,7 @@ import { initBaseline, isInitialized, getUnseenIds, hasBeenSeen } from '@/lib/se
 import { getLearnedCount } from '@/lib/dutch/knm'
 import { getStudiedCount as getLezenStudiedCount } from '@/lib/dutch/lezen'
 import { getStudiedCount as getLuisterStudiedCount } from '@/lib/dutch/luisteren'
+import { getCourseProgress as getSoundsCourseProgress } from '@/lib/dutch/pronunciation'
 import { getItemsByLevel, ALL_LEVELS, type Level } from '@/lib/dutch/level-map'
 import { getAllStories } from '@/lib/stories'
 import { getStoriesReadCount, getStoriesRead } from '@/lib/stories-progress'
@@ -242,6 +243,16 @@ export default function Home() {
   const [dutchLuisterStudied, setDutchLuisterStudied] = useState(0)
   useEffect(() => {
     if (language === 'dutch') setDutchLuisterStudied(getLuisterStudiedCount())
+  }, [language])
+
+  const [dutchSoundsDone, setDutchSoundsDone] = useState(0)
+  const [dutchSoundsTotal, setDutchSoundsTotal] = useState(8)
+  useEffect(() => {
+    if (language === 'dutch') {
+      const p = getSoundsCourseProgress()
+      setDutchSoundsDone(p.completed)
+      setDutchSoundsTotal(p.total)
+    }
   }, [language])
 
   const dutchStageProgress = useMemo(() => {
@@ -662,6 +673,24 @@ export default function Home() {
                       Inburgeringsexamen B1 + KNM
                     </div>
                   </div>
+                </div>
+              </Sticker>
+            </div>
+
+            {/* Sounds — from-zero pronunciation on-ramp (pre-A1) */}
+            <div style={{ padding: '14px 20px 0', maxWidth: 480, margin: '0 auto', position: 'relative', zIndex: 2 }}>
+              <Sticker color={theme.primary} radius={18} padding={14} onClick={() => { playSound('pop'); router.push('/dutch/sounds') }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                  <span style={{ fontSize: 30 }}>🔊</span>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 17, color: W }}>
+                      Sounds — learn to speak from zero
+                    </div>
+                    <div style={{ fontFamily: FONTS.body, fontSize: 12.5, color: W, opacity: 0.92, marginTop: 2 }}>
+                      <em>uitspraak</em> · letters → words → flow · {dutchSoundsDone}/{dutchSoundsTotal} stages
+                    </div>
+                  </div>
+                  <span style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 20, color: W }}>→</span>
                 </div>
               </Sticker>
             </div>
