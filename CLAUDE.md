@@ -297,6 +297,30 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 
 ### Recent feature work log
 
+**2026-05-29 — 🚧 IN PROGRESS: ElevenLabs natural voices (HANDOFF — read first)**
+
+**Problem:** All app audio uses the free Google Translate TTS scrape (`/api/tts`) — robotic, and weakest on the isolated letters/sounds the Dutch "Sounds" module needs most. Goal: replace with natural **ElevenLabs** voices, **pre-generated once** into static mp3s (no runtime cost/latency, offline-capable, full control), with live Google TTS as the automatic fallback.
+
+**Already built + pushed** (branch `claude/settings-daily-goals-3UPgI`, commit `5db058d`; everything before it is merged to `main`):
+- `scripts/generate-audio.mjs` — renders every spoken string in the Sounds module (letter sounds, anchor words, ear-quiz words, blend parts/wholes) to `public/audio/sounds/<hash>.mp3` and writes the manifest `content/dutch/sounds-audio.json` (text→file). Reads `ELEVENLABS_API_KEY` + `ELEVEN_VOICE_NL`. Idempotent (skips existing), `--force` to regenerate.
+- `lib/dutch/sounds-audio.ts` `getSoundsAudioUrl(text)` + `lib/speech.ts` `speakUrl(url, onEnd, onError)`. The Sounds stage (`app/dutch/sounds/[stageId]/page.tsx` `sayIt`) already **prefers a clip, falls back to live TTS**. The manifest ships **empty**, so there is no behavior change until the generator is run.
+
+**Blocker:** `api.elevenlabs.io` is `"Host not in allowlist"`. The user opened the environment's Network access to a more permissive level, BUT that **only applies to new sessions** — so generation must run in a **fresh session** (the session where this was built stays blocked).
+
+**Voice plan (3 voices, model `eleven_multilingual_v2`):**
+1. **Dutch pronunciation — the Sounds module** → **female** Dutch voice. Env `ELEVEN_VOICE_NL` (already wired in the generator).
+2. **Mr. Stroopwafel mascot** (Dutch moment lines, `locale = nl`) → **male** Dutch voice. Planned env `ELEVEN_VOICE_NL_MASCOT`.
+3. **Chaina mascot + Hindi** (Hindi/Hinglish moment lines, `locale = hi`) → **female** Hindi voice. Planned env `ELEVEN_VOICE_HI`.
+
+**Next steps (DO IN A NEW SESSION):**
+1. Get the 3 voice IDs from the user + a **fresh** API key (the one pasted earlier is in the transcript — it must be rotated).
+2. Run the Sounds generator: `ELEVENLABS_API_KEY=… ELEVEN_VOICE_NL=<dutch-female-id> node scripts/generate-audio.mjs`. Listen-check a few clips, then commit `public/audio/sounds/*.mp3` + the populated manifest.
+3. **Extend `scripts/generate-audio.mjs`** to also render mascot moment lines. Source: `components/design/moments.ts` — Hindi/default lines via `MOMENTS[key].lines[idx].speak`; Dutch variants live in `LINES_NL` (may need `export`). Write Chaina (hi, female) clips to `public/chaina/<momentKey>-<idx>.mp3` and Stroopwafel (nl, male) clips to `public/stroopwafel/<momentKey>-<idx>.mp3`.
+4. **Extend `lib/chaina-voice.ts`:** today it tries `/chaina/<key>-<idx>.wav` for `locale==='hi'` only and sends every other locale straight to Google TTS. Change to: prefer `.mp3`; add a clip lookup for the `nl` (Stroopwafel) path (`/stroopwafel/<key>-<idx>.mp3`); keep Google TTS → speechSynthesis as the fallback chain.
+5. Verify in-app, commit, merge to `main`.
+
+**Security:** the ElevenLabs key is used only at generation time — never committed, never shipped (the clips are static). Rotate the pasted key.
+
 **2026-05-29 wave — Dutch "Sounds" from-zero pronunciation module**
 
 - New standalone Dutch module teaching pronunciation from absolute zero: an 8-stage ladder (alphabet → short vowels → long vowels/doubling → consonants+twists → guttural g/ch/sch → compound vowels → blending → linking). Spec at `docs/superpowers/specs/2026-05-29-dutch-sounds-pronunciation-design.md`.
