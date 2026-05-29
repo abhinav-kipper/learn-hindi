@@ -4,10 +4,13 @@
  *
  * Architecture:
  *   1. Each line in moments.ts has a stable key + idx + speak string.
- *   2. Optionally pre-generate one WAV per line via Gemini TTS into
- *      /public/chaina/<momentKey>-<idx>.wav (script in scripts/).
- *   3. chainaVoice.play(momentKey, idx, fallbackText) tries the WAV first.
- *      If it 404s (or no clips shipped), falls back to speechSynthesis.
+ *   2. Optionally pre-generate one mp3 per line via scripts/generate-audio.mjs
+ *      (ElevenLabs) into:
+ *        /public/chaina/<momentKey>-<idx>.mp3      ← Chaina, locale 'hi'
+ *        /public/stroopwafel/<momentKey>-<idx>.mp3 ← Mr. Stroopwafel, locale 'nl'
+ *   3. chainaVoice.play(momentKey, idx, fallbackText, locale) tries the clip
+ *      first. If it 404s (or no clips shipped) it falls back to Google TTS,
+ *      then to speechSynthesis.
  *
  * Mute keys:
  *   bolna-seekho-muted  ← existing global SFX mute (also silences voice)
@@ -33,6 +36,7 @@ class ChainaVoice {
   private picked: SpeechSynthesisVoice | null = null;
   private muted = false;
   private clipBase = '/chaina';
+  private stroopwafelBase = '/stroopwafel';
   private audio: HTMLAudioElement | null = null;
   private missing = new Set<string>();
   private initialized = false;
@@ -96,13 +100,15 @@ class ChainaVoice {
     if ('speechSynthesis' in window) {
       try { window.speechSynthesis.cancel(); } catch {}
     }
-    // Pre-recorded WAVs (if ever shipped) are keyed to the default Hindi lines.
-    // For any other locale, go straight to Google TTS.
-    if (locale !== 'hi') {
+    // Pre-rendered clips: Chaina (hi) under /chaina, Mr. Stroopwafel (nl) under
+    // /stroopwafel, both keyed <momentKey>-<idx>.mp3. Any other locale, or a
+    // missing clip, falls through to Google TTS.
+    const base = locale === 'hi' ? this.clipBase : locale === 'nl' ? this.stroopwafelBase : null;
+    if (!base) {
       this.speakGoogle(fallbackText, locale);
       return;
     }
-    const url = `${this.clipBase}/${momentKey}-${idx}.wav`;
+    const url = `${base}/${momentKey}-${idx}.mp3`;
     if (this.missing.has(url)) {
       this.speakGoogle(fallbackText, locale);
       return;
