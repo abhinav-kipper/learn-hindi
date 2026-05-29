@@ -14,6 +14,10 @@ export interface PronCard {
   anchor: { word: string; en: string }
   kind: CardKind
   note?: string
+  /** What the "hear the sound" button speaks. Defaults to `grapheme`; set this
+   *  when the grapheme has display formatting that wouldn't read cleanly
+   *  (e.g. "d→t", "ij / ei", "WA-ter"). */
+  say?: string
 }
 
 export interface EarQuizItem {

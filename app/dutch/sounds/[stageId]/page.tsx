@@ -174,9 +174,11 @@ export default function SoundsStagePage({ params }: { params: Promise<{ stageId:
                 key={card.id}
                 card={card}
                 done={done.has(card.id)}
-                speaking={speakingId === card.id}
+                speakingSound={speakingId === `${card.id}:sound`}
+                speakingWord={speakingId === card.id}
                 primary={theme.primary}
-                onPlay={() => sayIt(card.anchor.word, card.id)}
+                onPlaySound={() => sayIt(card.say ?? card.grapheme, `${card.id}:sound`)}
+                onPlayWord={() => sayIt(card.anchor.word, card.id)}
                 onGotIt={() => markDone(card.id)}
               />
             ))}
@@ -267,30 +269,49 @@ function PlayButton({ speaking, primary, onClick }: { speaking: boolean; primary
 function SoundCardItem({
   card,
   done,
-  speaking,
+  speakingSound,
+  speakingWord,
   primary,
-  onPlay,
+  onPlaySound,
+  onPlayWord,
   onGotIt,
 }: {
   card: PronCard
   done: boolean
-  speaking: boolean
+  speakingSound: boolean
+  speakingWord: boolean
   primary: string
-  onPlay: () => void
+  onPlaySound: () => void
+  onPlayWord: () => void
   onGotIt: () => void
 }) {
   return (
     <Sticker color={done ? COLORS.mint2 : W} radius={16} padding={14}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-        <div
+        {/* Grapheme tile = tap to hear the SOUND/letter itself */}
+        <button
+          onClick={onPlaySound}
+          aria-label={`Hear the sound ${card.grapheme}`}
           style={{
-            minWidth: 56, height: 48, padding: '0 10px', flexShrink: 0, borderRadius: 12,
-            background: COLORS.butter, border: BORDER.thin, display: 'flex', alignItems: 'center',
-            justifyContent: 'center', fontFamily: FONTS.display, fontWeight: 800, fontSize: 22, color: COLORS.ink,
+            position: 'relative', minWidth: 56, height: 52, padding: '0 10px', flexShrink: 0, borderRadius: 12,
+            background: speakingSound ? primary : COLORS.butter, border: BORDER.sticker, cursor: 'pointer',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            fontFamily: FONTS.display, fontWeight: 800, fontSize: 22, color: speakingSound ? W : COLORS.ink,
           }}
         >
           {card.grapheme}
-        </div>
+          <span
+            aria-hidden
+            style={{
+              position: 'absolute', right: -5, bottom: -5, width: 20, height: 20, borderRadius: 999,
+              background: W, border: BORDER.thin, display: 'flex', alignItems: 'center', justifyContent: 'center',
+            }}
+          >
+            <svg width="9" height="9" viewBox="0 0 24 24" fill={COLORS.ink}>
+              {speakingSound ? <rect x="6" y="6" width="12" height="12" rx="2" /> : <path d="M8 5v14l11-7z" />}
+            </svg>
+          </span>
+        </button>
         <div style={{ flex: 1, minWidth: 0 }}>
           <div style={{ fontFamily: FONTS.body, fontSize: 13, color: COLORS.ink, lineHeight: 1.35 }}>{card.hint}</div>
           <div style={{ marginTop: 3, fontFamily: FONTS.display, fontWeight: 800, fontSize: 15, color: COLORS.ink }}>
@@ -301,7 +322,11 @@ function SoundCardItem({
             <div style={{ marginTop: 2, fontFamily: FONTS.body, fontSize: 11, fontStyle: 'italic', color: COLORS.ink45 }}>{card.note}</div>
           )}
         </div>
-        <PlayButton speaking={speaking} primary={primary} onClick={onPlay} />
+        {/* Word playback, labelled so it's distinct from the sound tile */}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2, flexShrink: 0 }}>
+          <PlayButton speaking={speakingWord} primary={primary} onClick={onPlayWord} />
+          <span style={{ fontFamily: FONTS.body, fontSize: 9, fontWeight: 800, color: COLORS.ink60, textTransform: 'uppercase', letterSpacing: 0.4 }}>word</span>
+        </div>
         <button
           onClick={onGotIt}
           disabled={done}
