@@ -1,0 +1,10 @@
+{
+  "complete": "complete.mp3",
+  "correct": "correct.mp3",
+  "levelup": "levelup.mp3",
+  "pop": "pop.mp3",
+  "streak": "streak.mp3",
+  "swipe": "swipe.mp3",
+  "tap": "tap.mp3",
+  "wrong": "wrong.mp3"
+}

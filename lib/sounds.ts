@@ -1,10 +1,37 @@
-// Sound effects — Web Audio API, no asset files. Tuned to feel cute and
-// friendly (Duolingo-ish): sine + triangle waves, major intervals, rising
-// pitch glides for positive feedback, soft minor steps for negative.
+// Sound effects — designed ElevenLabs clips when available (content/sfx-audio.json
+// → public/audio/sfx/), with a Web-Audio synth fallback (no asset files) tuned to
+// feel cute and friendly (Duolingo-ish). Empty manifest = pure synth (unchanged).
+
+import sfxManifest from '@/content/sfx-audio.json'
 
 export type SoundType = 'tap' | 'correct' | 'wrong' | 'complete' | 'swipe' | 'streak' | 'levelup' | 'pop'
 
 const MUTE_KEY = 'bolna-seekho-muted'
+
+// type → pre-rendered clip filename. Reused HTMLAudio elements keep latency low.
+const sfxFiles = sfxManifest as Partial<Record<SoundType, string>>
+const sfxCache: Partial<Record<SoundType, HTMLAudioElement>> = {}
+
+/** Play the designed clip for a sound, if one is shipped. Returns false to let
+ *  the caller fall back to the synth voice. */
+function playClip(type: SoundType): boolean {
+  const file = sfxFiles[type]
+  if (!file || typeof window === 'undefined') return false
+  try {
+    let a = sfxCache[type]
+    if (!a) {
+      a = new Audio(`/audio/sfx/${file}`)
+      a.volume = 0.55
+      sfxCache[type] = a
+    }
+    a.currentTime = 0
+    const p = a.play()
+    if (p && typeof p.then === 'function') p.catch(() => {})
+    return true
+  } catch {
+    return false
+  }
+}
 
 let audioContext: AudioContext | null = null
 
@@ -330,6 +357,10 @@ export function playSound(type: SoundType): void {
   if (isMuted()) return
 
   vibrate(haptics[type])
+
+  // Prefer the designed clip; fall back to the synth voice if none is shipped
+  // (or it can't play).
+  if (playClip(type)) return
 
   try {
     soundFunctions[type]()
