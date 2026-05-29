@@ -14,6 +14,21 @@ const FeedbackSchema = z.object({
   close: z.boolean().describe('true if it was good enough to move on'),
 })
 
+/** True if the error is a transient Gemini overload / unavailability, possibly
+ *  wrapped in the AI SDK's retry-error envelope. */
+function isBusy(err: unknown): boolean {
+  const msgs: string[] = []
+  const collect = (e: unknown) => {
+    const a = e as { message?: string; errors?: unknown[]; lastError?: unknown; statusCode?: number }
+    if (a?.message) msgs.push(a.message)
+    if (typeof a?.statusCode === 'number') msgs.push(String(a.statusCode))
+    if (Array.isArray(a?.errors)) a.errors.forEach(collect)
+    if (a?.lastError) collect(a.lastError)
+  }
+  collect(err)
+  return /high demand|overloaded|unavailable|503|temporarily|try again later/i.test(msgs.join(' '))
+}
+
 export async function POST(req: Request) {
   try {
     const { audioBase64, mimeType, target, reference, language = 'hindi' } = await req.json()
@@ -33,26 +48,38 @@ export async function POST(req: Request) {
 
     // Pass raw bytes (a base64 *string* can be misread as a URL by the SDK).
     const bytes = Uint8Array.from(Buffer.from(audioBase64, 'base64'))
+    const content = [
+      { type: 'text' as const, text: prompt },
+      { type: 'file' as const, data: bytes, mediaType: mimeType || 'audio/wav' },
+    ]
 
-    const { object } = await generateObject({
-      model: google('gemini-2.5-flash'),
-      schema: FeedbackSchema,
-      maxRetries: 1,
-      temperature: 0.3,
-      messages: [
-        {
-          role: 'user',
-          content: [
-            { type: 'text', text: prompt },
-            { type: 'file', data: bytes, mediaType: mimeType || 'audio/wav' },
-          ],
-        },
-      ],
-    })
+    const run = async (modelId: string) => {
+      const { object } = await generateObject({
+        model: google(modelId),
+        schema: FeedbackSchema,
+        maxRetries: 2,
+        temperature: 0.3,
+        messages: [{ role: 'user', content }],
+      })
+      return object
+    }
+
+    // gemini-2.5-flash gets overloaded ("high demand"); on that, fall back to
+    // 2.0-flash (also multimodal) before giving up.
+    let object
+    try {
+      object = await run('gemini-2.5-flash')
+    } catch (e) {
+      if (isBusy(e)) object = await run('gemini-2.0-flash')
+      else throw e
+    }
 
     return Response.json(object)
   } catch (error) {
     const msg = error instanceof Error ? error.message : String(error)
+    if (isBusy(error)) {
+      return Response.json({ error: 'busy' }, { status: 503 })
+    }
     if (/quota|rate.?limit|429|too many requests/i.test(msg)) {
       return Response.json({ error: 'rate_limited' }, { status: 429 })
     }

@@ -142,7 +142,7 @@ export default function PronounceButton({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ audioBase64, mimeType: 'audio/wav', target, reference, language }),
       })
-      if (res.status === 429) { setErr('one sec, try again in a moment'); setPhase('error'); return }
+      if (res.status === 429 || res.status === 503) { setErr('coach is busy, try again in a moment'); setPhase('error'); return }
       if (!res.ok) {
         const j = await res.json().catch(() => ({}))
         setErr(j.detail ? `err: ${j.detail}` : 'could not check, try again')
