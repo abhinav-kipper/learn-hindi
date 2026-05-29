@@ -24,6 +24,44 @@ const blobToBase64 = (blob: Blob): Promise<string> =>
     r.readAsDataURL(blob)
   })
 
+/** Decode the recorded blob (webm/mp4 — formats Gemini won't accept) and
+ *  re-encode to 16 kHz mono 16-bit WAV, which the Gemini audio API does accept. */
+async function blobToWav(blob: Blob): Promise<Blob> {
+  const AC = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext
+  const ctx = new AC()
+  try {
+    const audio = await ctx.decodeAudioData(await blob.arrayBuffer())
+    const sr = audio.sampleRate
+    const ch0 = audio.getChannelData(0)
+    let mono = ch0
+    if (audio.numberOfChannels > 1) {
+      const ch1 = audio.getChannelData(1)
+      mono = new Float32Array(ch0.length)
+      for (let i = 0; i < ch0.length; i++) mono[i] = (ch0[i] + ch1[i]) / 2
+    }
+    const target = 16000
+    const ratio = Math.max(1, sr / target)
+    const outLen = Math.floor(mono.length / ratio)
+    const dataSize = outLen * 2
+    const buf = new ArrayBuffer(44 + dataSize)
+    const dv = new DataView(buf)
+    const w = (o: number, s: string) => { for (let i = 0; i < s.length; i++) dv.setUint8(o + i, s.charCodeAt(i)) }
+    w(0, 'RIFF'); dv.setUint32(4, 36 + dataSize, true); w(8, 'WAVE'); w(12, 'fmt ')
+    dv.setUint32(16, 16, true); dv.setUint16(20, 1, true); dv.setUint16(22, 1, true)
+    dv.setUint32(24, target, true); dv.setUint32(28, target * 2, true); dv.setUint16(32, 2, true); dv.setUint16(34, 16, true)
+    w(36, 'data'); dv.setUint32(40, dataSize, true)
+    let off = 44
+    for (let i = 0; i < outLen; i++) {
+      const s = Math.max(-1, Math.min(1, mono[Math.floor(i * ratio)]))
+      dv.setInt16(off, s < 0 ? s * 0x8000 : s * 0x7fff, true)
+      off += 2
+    }
+    return new Blob([buf], { type: 'audio/wav' })
+  } finally {
+    try { await ctx.close() } catch {}
+  }
+}
+
 /** 🎙 record-and-compare: the learner says a word, Gemini coaches them. */
 export default function PronounceButton({
   target,
@@ -93,13 +131,16 @@ export default function PronounceButton({
     setPhase('scoring')
     streamRef.current?.getTracks().forEach((t) => t.stop())
     try {
-      const blob = new Blob(chunksRef.current, { type: mimeType || 'audio/webm' })
-      if (blob.size < 800) { setErr("didn't catch that — try again"); setPhase('error'); return }
-      const audioBase64 = await blobToBase64(blob)
+      const raw = new Blob(chunksRef.current, { type: mimeType || 'audio/webm' })
+      if (raw.size < 800) { setErr("didn't catch that — try again"); setPhase('error'); return }
+      // Gemini accepts wav/mp3/ogg/flac/aac — not the webm/mp4 MediaRecorder
+      // gives us — so transcode to WAV client-side first.
+      const wav = await blobToWav(raw)
+      const audioBase64 = await blobToBase64(wav)
       const res = await fetch('/api/pronounce', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ audioBase64, mimeType: mimeType || 'audio/webm', target, reference, language }),
+        body: JSON.stringify({ audioBase64, mimeType: 'audio/wav', target, reference, language }),
       })
       if (res.status === 429) { setErr('one sec — try again in a moment'); setPhase('error'); return }
       if (!res.ok) throw new Error('bad response')
