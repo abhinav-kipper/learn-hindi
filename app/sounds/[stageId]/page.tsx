@@ -32,6 +32,7 @@ import {
 import { speak, speakUrl, stopSpeaking } from '@/lib/speech'
 import { getHindiSoundsAudioUrl } from '@/lib/hindi/sounds-audio'
 import { playSound } from '@/lib/sounds'
+import PronounceButton from '@/components/PronounceButton'
 
 const W = '#fff' // @design-allow: white literal
 
@@ -347,6 +348,7 @@ function SoundCardItem({
           {done ? '✓ got it' : 'got it'}
         </button>
       </div>
+      <PronounceButton target={card.anchor.word} reference={card.anchor.dev} language="hindi" />
     </Sticker>
   )
 }
