@@ -330,21 +330,21 @@ async function generateHindiSounds() {
 // public/audio/sfx/<type>.mp3; the app prefers them and falls back to synth.
 // Cute / friendly Duolingo-ish character — short, soft, never harsh.
 const SFX = {
-  tap:      { prompt: 'soft short cute UI button tap, gentle pop, clean, minimal', seconds: 0.5 },
-  pop:      { prompt: 'playful little bubble pop, soft and cute', seconds: 0.5 },
-  swipe:    { prompt: 'light soft paper page-turn whoosh, gentle, quick', seconds: 0.5 },
-  correct:  { prompt: 'bright cheerful correct-answer chime, two quick ascending bells, happy, clean', seconds: 0.8 },
-  wrong:    { prompt: 'soft gentle friendly wrong-answer thunk, low and warm, not harsh, short', seconds: 0.6 },
-  complete: { prompt: 'happy lesson-complete success jingle, short ascending sparkly arpeggio, warm', seconds: 1.3 },
-  streak:   { prompt: 'magical twinkling fairy-dust sparkle cascade, light bells, short', seconds: 1.1 },
-  levelup:  { prompt: 'triumphant celebratory level-up fanfare with sparkle, short, joyful', seconds: 1.5 },
+  tap:      { prompt: 'juicy playful mobile-game UI tap: soft tactile bubble click with a tiny bouncy boing, candy-like and satisfying', seconds: 0.5 },
+  pop:      { prompt: 'satisfying juicy bubble pop with a springy cartoon boing, candy-crush style, playful', seconds: 0.5 },
+  swipe:    { prompt: 'snappy playful card-swipe whoosh with a soft sparkle tail, clean mobile game UI', seconds: 0.5 },
+  correct:  { prompt: 'happy bright correct-answer reward: cheerful marimba and glockenspiel two-note ding-DING up, with a little sparkle, juicy and satisfying mobile game', seconds: 0.9 },
+  wrong:    { prompt: 'playful gentle wrong-answer boing: soft springy cartoon descending wobble, friendly and funny, warm, not harsh', seconds: 0.7 },
+  complete: { prompt: 'joyful lesson-complete victory jingle: bright ascending marimba and glockenspiel arpeggio with bells and a warm sparkle swell, cute kids mobile game, celebratory and rewarding', seconds: 1.6 },
+  streak:   { prompt: 'magical sparkly streak reward: shimmering glockenspiel and chime cascade with rising twinkle and a soft whoosh, fairy-dust, exciting and rewarding', seconds: 1.3 },
+  levelup:  { prompt: 'epic triumphant level-up power-up fanfare: bright synth-and-brass rising swell with sparkle shimmer and a satisfying chime hit at the end, celebratory arcade win, joyful', seconds: 1.8 },
 }
 
 async function sfxGen(text, seconds) {
   const res = await fetch('https://api.elevenlabs.io/v1/sound-generation', {
     method: 'POST',
     headers: { 'xi-api-key': API_KEY, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ text, duration_seconds: seconds, prompt_influence: 0.5, output_format: 'mp3_44100_128' }),
+    body: JSON.stringify({ text, duration_seconds: seconds, prompt_influence: 0.65, output_format: 'mp3_44100_128' }),
   })
   if (!res.ok) throw new Error(`${res.status} ${await res.text().catch(() => '')}`)
   return Buffer.from(await res.arrayBuffer())
