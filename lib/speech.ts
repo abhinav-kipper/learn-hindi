@@ -4,6 +4,7 @@
 // speechSynthesis if that fails too.
 
 import hiAudioJson from '@/content/hi-audio.json'
+import nlAudioJson from '@/content/nl-audio.json'
 
 let currentAudio: HTMLAudioElement | null = null
 
@@ -14,6 +15,14 @@ const hiAudio = hiAudioJson as Record<string, string>
 function hiClipUrl(text: string): string | null {
   const file = hiAudio[text.trim()]
   return file ? `/audio/hi/${file}` : null
+}
+
+// Dutch phrase → pre-rendered clip filename (public/audio/nl/<file>).
+const nlAudio = nlAudioJson as Record<string, string>
+
+function nlClipUrl(text: string): string | null {
+  const file = nlAudio[text.trim()]
+  return file ? `/audio/nl/${file}` : null
 }
 
 /** Strip content in parentheses (typically English translations) */
@@ -65,10 +74,10 @@ export function speak(text: string, ttsLocale = 'hi', onEnd?: () => void): void 
     return
   }
 
-  // Prefer a pre-rendered ElevenLabs clip (Hindi lesson phrases). On any
+  // Prefer a pre-rendered ElevenLabs clip (Hindi / Dutch phrases). On any
   // playback error, fall through to live Google TTS.
-  if (ttsLocale === 'hi') {
-    const clip = hiClipUrl(cleaned)
+  if (ttsLocale === 'hi' || ttsLocale === 'nl') {
+    const clip = ttsLocale === 'hi' ? hiClipUrl(cleaned) : nlClipUrl(cleaned)
     if (clip) {
       speakUrl(clip, onEnd, () => playChunks(splitText(cleaned), 0, ttsLocale, onEnd))
       return

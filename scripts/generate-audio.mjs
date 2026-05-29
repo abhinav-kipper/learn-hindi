@@ -37,7 +37,7 @@
 //   --force   regenerate even if a clip already exists
 
 import { createHash } from 'node:crypto'
-import { mkdirSync, writeFileSync, existsSync, readFileSync } from 'node:fs'
+import { mkdirSync, writeFileSync, existsSync, readFileSync, readdirSync } from 'node:fs'
 import { resolve, dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -55,6 +55,8 @@ const HI_MANIFEST = resolve(ROOT, 'content/hi-audio.json')
 const HI_SOUNDS_COURSE = resolve(ROOT, 'content/hindi/pronunciation-course.json')
 const HI_SOUNDS_DIR = resolve(ROOT, 'public/audio/hi-sounds')
 const HI_SOUNDS_MANIFEST = resolve(ROOT, 'content/hindi/sounds-audio.json')
+const NL_LESSONS_DIR = resolve(ROOT, 'public/audio/nl')
+const NL_MANIFEST = resolve(ROOT, 'content/nl-audio.json')
 
 const API_KEY = process.env.ELEVENLABS_API_KEY
 const VOICE_NL = process.env.ELEVEN_VOICE_NL
@@ -195,6 +197,62 @@ async function generateHindiLessons() {
   const sorted = Object.fromEntries(Object.entries(manifest).sort(([a], [b]) => a.localeCompare(b)))
   writeFileSync(HI_MANIFEST, JSON.stringify(sorted, null, 2) + '\n')
   console.log(`Hindi lessons done. ${made} generated, ${skipped} already current.`)
+}
+
+// ─── 1bb. Dutch lesson + foundation phrases ──────────────────────────────────
+
+// Dutch "hear it" for lesson/foundation phrases + theory examples. Dutch is
+// natively Latin, so the text is fed to ElevenLabs as-is (no transliteration).
+// Keyed by the parenthetical-stripped string speak() looks up. Uses the Dutch
+// female voice (ELEVEN_VOICE_NL), same as the Sounds module.
+const stripParen = (s) => s.replace(/\s*\([^)]*\)/g, '').trim()
+
+function collectDutchTexts() {
+  const out = new Set()
+  for (const d of ['content/dutch/lessons', 'content/dutch/foundations']) {
+    const dir = resolve(ROOT, d)
+    if (!existsSync(dir)) continue
+    for (const f of readdirSync(dir).filter((x) => x.endsWith('.json'))) {
+      const l = JSON.parse(readFileSync(resolve(dir, f), 'utf8'))
+      for (const p of l.phrases ?? []) if (p.hindi) out.add(stripParen(p.hindi))
+      for (const sec of l.theory?.sections ?? []) for (const e of sec.examples ?? []) if (e.hindi) out.add(stripParen(e.hindi))
+    }
+  }
+  return [...out].filter(Boolean)
+}
+
+async function generateDutchLessons() {
+  const texts = collectDutchTexts()
+  if (texts.length === 0) {
+    console.log('\nDutch lessons: no strings, skipping.')
+    return
+  }
+  mkdirSync(NL_LESSONS_DIR, { recursive: true })
+  const manifest = existsSync(NL_MANIFEST) ? JSON.parse(readFileSync(NL_MANIFEST, 'utf8')) : {}
+  console.log(`\nDutch lessons: ${texts.length} phrases (voice ${VOICE_NL}, model ${MODEL}, speed ${SPEED}).`)
+  let made = 0
+  let skipped = 0
+  for (const text of texts) {
+    const file = fileFor(text)
+    const onDisk = existsSync(resolve(NL_LESSONS_DIR, file))
+    if (!FORCE && manifest[text] === file && onDisk) {
+      skipped++
+      continue
+    }
+    try {
+      const buf = await tts(text, VOICE_NL)
+      writeFileSync(resolve(NL_LESSONS_DIR, file), buf)
+      manifest[text] = file
+      made++
+      console.log(`  ✓ ${text}  →  ${file}`)
+      await sleep(250)
+    } catch (e) {
+      console.error(`  ✗ ${text}  →  ${e.message}`)
+    }
+  }
+  const sorted = Object.fromEntries(Object.entries(manifest).sort(([a], [b]) => a.localeCompare(b)))
+  writeFileSync(NL_MANIFEST, JSON.stringify(sorted, null, 2) + '\n')
+  console.log(`Dutch lessons done. ${made} generated, ${skipped} already current.`)
 }
 
 // ─── 1c. Hindi "Sounds" pronunciation module ─────────────────────────────────
@@ -387,7 +445,11 @@ async function generateMascot(label, dir, voiceId, linesFor, opts = {}) {
 // ─── run ─────────────────────────────────────────────────────────────────────
 
 async function main() {
-  if (VOICE_NL) await generateSounds()
+  if (VOICE_NL) {
+    await generateSounds()
+    // Dutch lesson + foundation "hear it" phrases share the Dutch voice.
+    await generateDutchLessons()
+  }
   if (VOICE_HI) {
     // Chaina speaks the default (Hindi/Hinglish) lines, rendered from Devanagari
     // for a correct accent; the Dutch-only moments are skipped (never played).
