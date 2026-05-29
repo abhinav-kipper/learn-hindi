@@ -4,10 +4,13 @@ import { TheoryView } from '@/components/lesson/TheoryView'
 import type { Theory } from '@/types/lesson'
 
 vi.mock('framer-motion', () => ({
-  motion: new Proxy({}, { get: () => (props: any) => <div {...props} /> }),
+  motion: new Proxy({}, { get: () => (props: React.ComponentProps<'div'>) => <div {...props} /> }),
   AnimatePresence: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }))
 vi.mock('@/lib/sounds', () => ({ playSound: vi.fn() }))
+vi.mock('@/lib/language-context', () => ({
+  useLanguage: () => ({ language: 'hindi', config: { storagePrefix: 'hindi', ttsLocale: 'hi' } }),
+}))
 
 const THEORY: Theory = {
   intro: 'Hindi has two genders.',

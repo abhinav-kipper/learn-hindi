@@ -58,6 +58,24 @@ export default function SoundsStagePage({ params }: { params: Promise<{ stageId:
 
   useEffect(() => () => stopSpeaking(), [])
 
+  // Stage completion, derived null-safe so the celebration effect below stays
+  // an unconditional hook (no early-return-then-hook rules-of-hooks break).
+  const cardsAllDone = !!stage && stage.cards.every((c) => done.has(c.id))
+  const blendAllDone = !stage?.blend || stage.blend.words.every((w) => done.has(blendWordId(w.whole)))
+  const quizOk = !stage?.earQuiz || quizPassed
+  const complete = !!stage && cardsAllDone && blendAllDone && quizOk
+
+  useEffect(() => {
+    if (complete && !celebrated) {
+      setCelebrated(true)
+      playSound('levelup')
+      if (canFire('pronStageDone', 'debounce-800ms')) {
+        play('pronStageDone')
+        markFired('pronStageDone', 'debounce-800ms')
+      }
+    }
+  }, [complete, celebrated, play])
+
   if (!stage) {
     return (
       <div style={{ minHeight: '100vh', background: COLORS.lav, padding: 24 }}>
@@ -100,23 +118,6 @@ export default function SoundsStagePage({ params }: { params: Promise<{ stageId:
     markEarQuizPassed(stage.id)
     setQuizPassed(true)
   }
-
-  // Stage completion derived from local state
-  const cardsAllDone = stage.cards.every((c) => done.has(c.id))
-  const blendAllDone = !stage.blend || stage.blend.words.every((w) => done.has(blendWordId(w.whole)))
-  const quizOk = !stage.earQuiz || quizPassed
-  const complete = cardsAllDone && blendAllDone && quizOk
-
-  useEffect(() => {
-    if (complete && !celebrated) {
-      setCelebrated(true)
-      playSound('levelup')
-      if (canFire('pronStageDone', 'debounce-800ms')) {
-        play('pronStageDone')
-        markFired('pronStageDone', 'debounce-800ms')
-      }
-    }
-  }, [complete, celebrated, play])
 
   const allStages = getStages()
   const next = allStages.find((s) => s.order === stage.order + 1)

@@ -2,6 +2,10 @@ import { render, screen, act } from '@testing-library/react'
 import { describe, it, expect, vi } from 'vitest'
 import { ChainaProvider, useChaina } from '@/components/design/MomentStage'
 
+vi.mock('@/lib/language-context', () => ({
+  useLanguage: () => ({ language: 'hindi', config: { storagePrefix: 'hindi', ttsLocale: 'hi' } }),
+}))
+
 function Trigger({ momentKey }: { momentKey: string }) {
   const { play } = useChaina()
   return <button onClick={() => play(momentKey)}>fire</button>
