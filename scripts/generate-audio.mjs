@@ -49,6 +49,9 @@ const SOUNDS_DIR = resolve(ROOT, 'public/audio/sounds')
 const MANIFEST = resolve(ROOT, 'content/dutch/sounds-audio.json')
 const CHAINA_DIR = resolve(ROOT, 'public/chaina')
 const STROOPWAFEL_DIR = resolve(ROOT, 'public/stroopwafel')
+const HI_LESSONS_DIR = resolve(ROOT, 'public/audio/hi')
+const HI_TRANSLIT = resolve(ROOT, 'content/hi-translit.json')
+const HI_MANIFEST = resolve(ROOT, 'content/hi-audio.json')
 
 const API_KEY = process.env.ELEVENLABS_API_KEY
 const VOICE_NL = process.env.ELEVEN_VOICE_NL
@@ -141,6 +144,54 @@ async function generateSounds() {
   const sorted = Object.fromEntries(Object.entries(manifest).sort(([a], [b]) => a.localeCompare(b)))
   writeFileSync(MANIFEST, JSON.stringify(sorted, null, 2) + '\n')
   console.log(`Sounds done. ${made} generated, ${skipped} already current.`)
+}
+
+// ─── 1b. Hindi lesson phrases ────────────────────────────────────────────────
+
+// Hindi content is romanized, but ElevenLabs reads Latin text with an English
+// accent. content/hi-translit.json maps each romanized phrase (the exact string
+// the app passes to speak()) → Devanagari, which we feed to ElevenLabs for a
+// correct Hindi accent. Output is keyed by the ROMANIZED string so lib/speech.ts
+// can look it up. Uses the same Hindi voice as Chaina (ELEVEN_VOICE_HI).
+async function generateHindiLessons() {
+  if (!existsSync(HI_TRANSLIT)) {
+    console.log('\nHindi lessons: no content/hi-translit.json, skipping.')
+    return
+  }
+  const translit = JSON.parse(readFileSync(HI_TRANSLIT, 'utf8'))
+  const entries = Object.entries(translit)
+  if (entries.length === 0) {
+    console.log('\nHindi lessons: hi-translit.json is empty, skipping.')
+    return
+  }
+  mkdirSync(HI_LESSONS_DIR, { recursive: true })
+  const manifest = existsSync(HI_MANIFEST) ? JSON.parse(readFileSync(HI_MANIFEST, 'utf8')) : {}
+  console.log(`\nHindi lessons: ${entries.length} phrases (voice ${VOICE_HI}, model ${MODEL}, speed ${SPEED}).`)
+
+  let made = 0
+  let skipped = 0
+  for (const [rom, dev] of entries) {
+    const key = rom.trim()
+    const file = fileFor(key)
+    const onDisk = existsSync(resolve(HI_LESSONS_DIR, file))
+    if (!FORCE && manifest[key] === file && onDisk) {
+      skipped++
+      continue
+    }
+    try {
+      const buf = await tts(dev, VOICE_HI) // Devanagari in → correct Hindi accent
+      writeFileSync(resolve(HI_LESSONS_DIR, file), buf)
+      manifest[key] = file
+      made++
+      console.log(`  ✓ ${rom}  →  ${file}`)
+      await sleep(250)
+    } catch (e) {
+      console.error(`  ✗ ${rom}  →  ${e.message}`)
+    }
+  }
+  const sorted = Object.fromEntries(Object.entries(manifest).sort(([a], [b]) => a.localeCompare(b)))
+  writeFileSync(HI_MANIFEST, JSON.stringify(sorted, null, 2) + '\n')
+  console.log(`Hindi lessons done. ${made} generated, ${skipped} already current.`)
 }
 
 // ─── 2 + 3. Mascot moment lines ──────────────────────────────────────────────
@@ -274,6 +325,8 @@ async function main() {
       textMap: HI_DEVANAGARI,
       skipMoments: DUTCH_ONLY_MOMENTS,
     })
+    // Hindi lesson "hear it" phrases share the Chaina voice.
+    await generateHindiLessons()
   }
   if (VOICE_NL_MASCOT) {
     // Mr. Stroopwafel speaks the Dutch variant where present, else the default.
