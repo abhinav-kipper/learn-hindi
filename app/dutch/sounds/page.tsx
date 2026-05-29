@@ -67,7 +67,7 @@ export default function SoundsModulePage() {
                 learn to speak from zero
               </h1>
               <p style={{ fontFamily: FONTS.body, fontSize: 13, color: W, opacity: 0.92, margin: 0 }}>
-                <em>uitspraak</em> · letters → words → flow · {course.completed} / {course.total} stages
+                <em>uitspraak</em> · letters, words, flow · {course.completed} / {course.total} stages
               </p>
             </div>
             <div style={{ marginRight: -4, marginTop: -2 }}>

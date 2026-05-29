@@ -132,7 +132,7 @@ export default function PronounceButton({
     streamRef.current?.getTracks().forEach((t) => t.stop())
     try {
       const raw = new Blob(chunksRef.current, { type: mimeType || 'audio/webm' })
-      if (raw.size < 800) { setErr("didn't catch that — try again"); setPhase('error'); return }
+      if (raw.size < 800) { setErr("didn't catch that, try again"); setPhase('error'); return }
       // Gemini accepts wav/mp3/ogg/flac/aac — not the webm/mp4 MediaRecorder
       // gives us — so transcode to WAV client-side first.
       const wav = await blobToWav(raw)
@@ -142,14 +142,19 @@ export default function PronounceButton({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ audioBase64, mimeType: 'audio/wav', target, reference, language }),
       })
-      if (res.status === 429) { setErr('one sec — try again in a moment'); setPhase('error'); return }
-      if (!res.ok) throw new Error('bad response')
+      if (res.status === 429) { setErr('one sec, try again in a moment'); setPhase('error'); return }
+      if (!res.ok) {
+        const j = await res.json().catch(() => ({}))
+        setErr(j.detail ? `err: ${j.detail}` : 'could not check, try again')
+        setPhase('error')
+        return
+      }
       const data = (await res.json()) as Feedback
       setFb(data)
       setPhase('result')
       playSound(data.close ? 'correct' : 'pop')
     } catch {
-      setErr('could not check — try again'); setPhase('error')
+      setErr('could not check, try again'); setPhase('error')
     }
   }
 
@@ -209,7 +214,7 @@ export default function PronounceButton({
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, color: COLORS.ink }}>{fb.verdict}</div>
                 {fb.good && <div style={{ fontFamily: FONTS.body, fontSize: 12.5, color: COLORS.ink, marginTop: 2 }}>✓ {fb.good}</div>}
-                {fb.fix && <div style={{ fontFamily: FONTS.body, fontSize: 12.5, color: COLORS.ink60, marginTop: 2 }}>→ {fb.fix}</div>}
+                {fb.fix && <div style={{ fontFamily: FONTS.body, fontSize: 12.5, color: COLORS.ink60, marginTop: 2 }}>{fb.fix}</div>}
               </div>
             </div>
           </Sticker>

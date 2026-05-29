@@ -695,10 +695,10 @@ export default function Home() {
                   <span style={{ fontSize: 30 }}>🔊</span>
                   <div style={{ flex: 1 }}>
                     <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 17, color: W }}>
-                      Sounds — learn to speak from zero
+                      Sounds: learn to speak from zero
                     </div>
                     <div style={{ fontFamily: FONTS.body, fontSize: 12.5, color: W, opacity: 0.92, marginTop: 2 }}>
-                      <em>uitspraak</em> · letters → words → flow · {dutchSoundsDone}/{dutchSoundsTotal} stages
+                      <em>uitspraak</em> · letters, words, flow · {dutchSoundsDone}/{dutchSoundsTotal} stages
                     </div>
                   </div>
                   <span style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 20, color: W }}>→</span>
@@ -815,10 +815,10 @@ export default function Home() {
                 <span style={{ fontSize: 30 }}>🔊</span>
                 <div style={{ flex: 1 }}>
                   <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 17, color: W }}>
-                    Sounds — learn to speak from zero
+                    Sounds: learn to speak from zero
                   </div>
                   <div style={{ fontFamily: FONTS.body, fontSize: 12.5, color: W, opacity: 0.92, marginTop: 2 }}>
-                    <em>uchchaaran</em> · vowels → sounds → words · {hindiSoundsDone}/{hindiSoundsTotal} stages
+                    <em>uchchaaran</em> · vowels, sounds, words · {hindiSoundsDone}/{hindiSoundsTotal} stages
                   </div>
                 </div>
                 <span style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 20, color: W }}>→</span>

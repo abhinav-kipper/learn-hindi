@@ -67,7 +67,7 @@ export default function HindiSoundsModulePage() {
                 learn to speak from zero
               </h1>
               <p style={{ fontFamily: FONTS.body, fontSize: 13, color: W, opacity: 0.92, margin: 0 }}>
-                <em>uchchaaran</em> · vowels → sounds → words · {course.completed} / {course.total} stages
+                <em>uchchaaran</em> · vowels, sounds, words · {course.completed} / {course.total} stages
               </p>
             </div>
             <div style={{ marginRight: -4, marginTop: -2 }}>

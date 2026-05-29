@@ -224,7 +224,7 @@ export default function HindiSoundsStagePage({ params }: { params: Promise<{ sta
                 ✓ stage complete!
               </div>
               <div style={{ textAlign: 'center', fontFamily: FONTS.body, fontSize: 13, color: COLORS.ink60, marginTop: 4 }}>
-                {next ? 'the next stages are unlocked.' : 'you finished the whole course — wah!'}
+                {next ? 'the next stages are unlocked.' : 'you finished the whole course. wah!'}
               </div>
             </Sticker>
             {next ? (

@@ -29,7 +29,10 @@ export async function POST(req: Request) {
       `Be kind and specific. Use plain, everyday words — NO phonetics jargon (don't say "retroflex", "aspirated", "schwa"). ` +
       `Describe sounds the way a friendly tutor would ("the 'd' should curl your tongue back a bit", "give the 'kh' a puff of air"). ` +
       `If the audio is silent, unclear, or not speech, give score 0, verdict "didn't catch that", and ask them to try again in 'fix'. ` +
-      `Keep every field short.`
+      `Keep every field short. Write naturally with simple punctuation. Do NOT use em-dashes or arrows.`
+
+    // Pass raw bytes (a base64 *string* can be misread as a URL by the SDK).
+    const bytes = Uint8Array.from(Buffer.from(audioBase64, 'base64'))
 
     const { object } = await generateObject({
       model: google('gemini-2.5-flash'),
@@ -41,7 +44,7 @@ export async function POST(req: Request) {
           role: 'user',
           content: [
             { type: 'text', text: prompt },
-            { type: 'file', data: audioBase64, mediaType: mimeType || 'audio/webm' },
+            { type: 'file', data: bytes, mediaType: mimeType || 'audio/wav' },
           ],
         },
       ],
@@ -54,6 +57,6 @@ export async function POST(req: Request) {
       return Response.json({ error: 'rate_limited' }, { status: 429 })
     }
     console.error('Pronounce API error:', msg)
-    return Response.json({ error: 'Failed to assess' }, { status: 500 })
+    return Response.json({ error: 'Failed to assess', detail: msg.slice(0, 300) }, { status: 500 })
   }
 }
