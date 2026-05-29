@@ -57,6 +57,30 @@ export function speak(text: string, ttsLocale = 'hi', onEnd?: () => void): void 
   playChunks(chunks, 0, ttsLocale, onEnd)
 }
 
+/**
+ * Play a pre-rendered audio file (e.g. an ElevenLabs clip). Calls `onError`
+ * (or `onEnd` if none) if the file can't be played, so callers can fall back
+ * to live TTS. Shares `currentAudio`, so `stopSpeaking()` cancels it too.
+ */
+export function speakUrl(url: string, onEnd?: () => void, onError?: () => void): void {
+  if (typeof window === 'undefined') return
+  stopSpeaking()
+  const audio = new Audio(url)
+  const fail = () => {
+    if (currentAudio !== audio) return
+    currentAudio = null
+    if (onError) onError()
+    else onEnd?.()
+  }
+  audio.onended = () => {
+    if (currentAudio === audio) currentAudio = null
+    onEnd?.()
+  }
+  audio.onerror = fail
+  currentAudio = audio
+  audio.play().catch(fail)
+}
+
 function playChunks(chunks: string[], index: number, ttsLocale = 'hi', onEnd?: () => void): void {
   if (index >= chunks.length) {
     currentAudio = null
