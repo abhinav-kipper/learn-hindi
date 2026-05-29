@@ -16,6 +16,7 @@ import {
 import { playSound } from '@/lib/sounds'
 import { speak, stopSpeaking, isSpeaking } from '@/lib/speech'
 import { useLanguage } from '@/lib/language-context'
+import GlossableText from '@/components/GlossableText'
 import type {
   Theory,
   TheorySection,
@@ -999,7 +1000,7 @@ function ExampleBlock({ example, ttsLocale }: { example: TheoryExample; ttsLocal
             lineHeight: 1.3,
           }}
         >
-          {example.hindi}
+          <GlossableText phrase={example.hindi} language={ttsLocale === 'nl' ? 'dutch' : 'hindi'} />
         </div>
         <button
           type="button"

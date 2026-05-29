@@ -1,0 +1,8687 @@
+{
+ "arey, kya haal hai?": [
+  {
+   "w": "arey",
+   "t": "hey",
+   "note": "casual attention-getter"
+  },
+  {
+   "w": "kya",
+   "t": "what"
+  },
+  {
+   "w": "haal",
+   "t": "condition/state"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "sab badhiya? tum kya karte ho?": [
+  {
+   "w": "sab",
+   "t": "all/everything"
+  },
+  {
+   "w": "badhiya",
+   "t": "great/fine"
+  },
+  {
+   "w": "tum",
+   "t": "you",
+   "note": "informal 'you', for peers"
+  },
+  {
+   "w": "kya",
+   "t": "what"
+  },
+  {
+   "w": "karte",
+   "t": "do"
+  },
+  {
+   "w": "ho",
+   "t": "are"
+  }
+ ],
+ "accha accha, matlab tum yahan naye ho?": [
+  {
+   "w": "accha",
+   "t": "okay/I see"
+  },
+  {
+   "w": "accha",
+   "t": "okay/I see",
+   "note": "repeated = processing info"
+  },
+  {
+   "w": "matlab",
+   "t": "so/meaning"
+  },
+  {
+   "w": "tum",
+   "t": "you"
+  },
+  {
+   "w": "yahan",
+   "t": "here"
+  },
+  {
+   "w": "naye",
+   "t": "new"
+  },
+  {
+   "w": "ho",
+   "t": "are"
+  }
+ ],
+ "haan yaar, chal milte hain phir": [
+  {
+   "w": "haan",
+   "t": "yeah"
+  },
+  {
+   "w": "yaar",
+   "t": "dude/friend"
+  },
+  {
+   "w": "chal",
+   "t": "come on",
+   "note": "filler/encourager"
+  },
+  {
+   "w": "milte",
+   "t": "meet"
+  },
+  {
+   "w": "hain",
+   "t": "(we) will/do",
+   "note": "'milte hain' = let's meet"
+  },
+  {
+   "w": "phir",
+   "t": "again/later"
+  }
+ ],
+ "koi baat nahi, hota hai": [
+  {
+   "w": "koi",
+   "t": "any"
+  },
+  {
+   "w": "baat",
+   "t": "matter/thing"
+  },
+  {
+   "w": "nahi",
+   "t": "no/not",
+   "note": "'koi baat nahi' = no worries"
+  },
+  {
+   "w": "hota",
+   "t": "happens"
+  },
+  {
+   "w": "hai",
+   "t": "(it) is/does"
+  }
+ ],
+ "waise tum kahin se jaane pehchaane lag rahe ho": [
+  {
+   "w": "waise",
+   "t": "by the way"
+  },
+  {
+   "w": "tum",
+   "t": "you"
+  },
+  {
+   "w": "kahin",
+   "t": "somewhere"
+  },
+  {
+   "w": "se",
+   "t": "from"
+  },
+  {
+   "w": "jaane",
+   "t": "known"
+  },
+  {
+   "w": "pehchaane",
+   "t": "familiar",
+   "note": "'jaane pehchaane' = known/familiar"
+  },
+  {
+   "w": "lag",
+   "t": "seem/look"
+  },
+  {
+   "w": "rahe",
+   "t": "-ing",
+   "note": "continuous marker"
+  },
+  {
+   "w": "ho",
+   "t": "are"
+  }
+ ],
+ "hmm, accha sun, tumhare paas number hai? save kar le": [
+  {
+   "w": "hmm",
+   "t": "hmm"
+  },
+  {
+   "w": "accha",
+   "t": "okay/hey"
+  },
+  {
+   "w": "sun",
+   "t": "listen",
+   "note": "informal command"
+  },
+  {
+   "w": "tumhare",
+   "t": "your",
+   "note": "casual, friendly"
+  },
+  {
+   "w": "paas",
+   "t": "with/near",
+   "note": "'tumhare paas' = do you have"
+  },
+  {
+   "w": "number",
+   "t": "number"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "save",
+   "t": "save"
+  },
+  {
+   "w": "kar",
+   "t": "do",
+   "note": "'save kar le' = save it"
+  },
+  {
+   "w": "le",
+   "t": "(for yourself)",
+   "note": "completive marker"
+  }
+ ],
+ "chal yaar, baad mein baat karte hain": [
+  {
+   "w": "chal",
+   "t": "alright/come on"
+  },
+  {
+   "w": "yaar",
+   "t": "dude"
+  },
+  {
+   "w": "baad",
+   "t": "after/later"
+  },
+  {
+   "w": "mein",
+   "t": "in",
+   "note": "'baad mein' = later"
+  },
+  {
+   "w": "baat",
+   "t": "talk"
+  },
+  {
+   "w": "karte",
+   "t": "do"
+  },
+  {
+   "w": "hain",
+   "t": "(we) will",
+   "note": "'baat karte hain' = let's talk"
+  }
+ ],
+ "arey haan, main bhool gaya — mera naam Rahul hai": [
+  {
+   "w": "arey",
+   "t": "oh"
+  },
+  {
+   "w": "haan",
+   "t": "yeah"
+  },
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "bhool",
+   "t": "forget"
+  },
+  {
+   "w": "gaya",
+   "t": "did",
+   "note": "'bhool gaya' = forgot (male)"
+  },
+  {
+   "w": "mera",
+   "t": "my"
+  },
+  {
+   "w": "naam",
+   "t": "name"
+  },
+  {
+   "w": "rahul",
+   "t": "Rahul"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "bhaiya, Hauz Khas chaloge?": [
+  {
+   "w": "bhaiya",
+   "t": "brother",
+   "note": "respectful address for drivers"
+  },
+  {
+   "w": "hauz",
+   "t": "Hauz",
+   "note": "place name (Hauz Khas)"
+  },
+  {
+   "w": "khas",
+   "t": "Khas"
+  },
+  {
+   "w": "chaloge",
+   "t": "will you go"
+  }
+ ],
+ "arey, do sau? itna zyada kyun?": [
+  {
+   "w": "arey",
+   "t": "come on"
+  },
+  {
+   "w": "do",
+   "t": "two"
+  },
+  {
+   "w": "sau",
+   "t": "hundred",
+   "note": "'do sau' = two hundred"
+  },
+  {
+   "w": "itna",
+   "t": "this much/so"
+  },
+  {
+   "w": "zyada",
+   "t": "much/more"
+  },
+  {
+   "w": "kyun",
+   "t": "why"
+  }
+ ],
+ "meter se chalo na bhaiya": [
+  {
+   "w": "meter",
+   "t": "meter"
+  },
+  {
+   "w": "se",
+   "t": "by"
+  },
+  {
+   "w": "chalo",
+   "t": "go/run it"
+  },
+  {
+   "w": "na",
+   "t": "please",
+   "note": "softener at end"
+  },
+  {
+   "w": "bhaiya",
+   "t": "brother"
+  }
+ ],
+ "sau mein chalo, zyada nahi dunga": [
+  {
+   "w": "sau",
+   "t": "hundred"
+  },
+  {
+   "w": "mein",
+   "t": "for/in"
+  },
+  {
+   "w": "chalo",
+   "t": "go"
+  },
+  {
+   "w": "zyada",
+   "t": "more"
+  },
+  {
+   "w": "nahi",
+   "t": "not"
+  },
+  {
+   "w": "dunga",
+   "t": "will give",
+   "note": "male speaker"
+  }
+ ],
+ "bhaiya, Google Maps pe dekho — sirf 3 km hai": [
+  {
+   "w": "bhaiya",
+   "t": "brother"
+  },
+  {
+   "w": "google",
+   "t": "Google"
+  },
+  {
+   "w": "maps",
+   "t": "Maps"
+  },
+  {
+   "w": "pe",
+   "t": "on"
+  },
+  {
+   "w": "dekho",
+   "t": "look"
+  },
+  {
+   "w": "sirf",
+   "t": "only"
+  },
+  {
+   "w": "3",
+   "t": "3"
+  },
+  {
+   "w": "km",
+   "t": "km"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "arey yaar, roz jaata hoon, pata hai mujhe rate": [
+  {
+   "w": "arey",
+   "t": "come on"
+  },
+  {
+   "w": "yaar",
+   "t": "man"
+  },
+  {
+   "w": "roz",
+   "t": "daily"
+  },
+  {
+   "w": "jaata",
+   "t": "go"
+  },
+  {
+   "w": "hoon",
+   "t": "(I) do",
+   "note": "'jaata hoon' = I go"
+  },
+  {
+   "w": "pata",
+   "t": "know/aware"
+  },
+  {
+   "w": "hai",
+   "t": "is",
+   "note": "'pata hai' = (I) know"
+  },
+  {
+   "w": "mujhe",
+   "t": "to me/I"
+  },
+  {
+   "w": "rate",
+   "t": "rate/price"
+  }
+ ],
+ "chodo, doosra auto dekh leta hoon": [
+  {
+   "w": "chodo",
+   "t": "forget it/leave it"
+  },
+  {
+   "w": "doosra",
+   "t": "another/second"
+  },
+  {
+   "w": "auto",
+   "t": "auto-rickshaw"
+  },
+  {
+   "w": "dekh",
+   "t": "look/find"
+  },
+  {
+   "w": "leta",
+   "t": "will (for myself)",
+   "note": "completive"
+  },
+  {
+   "w": "hoon",
+   "t": "(I) am/do"
+  }
+ ],
+ "theek hai bhai, pachattar final": [
+  {
+   "w": "theek",
+   "t": "okay/fine"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "bhai",
+   "t": "brother"
+  },
+  {
+   "w": "pachattar",
+   "t": "seventy-five"
+  },
+  {
+   "w": "final",
+   "t": "final"
+  }
+ ],
+ "theek hai, chal baith ja": [
+  {
+   "w": "theek",
+   "t": "fine"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "chal",
+   "t": "come on",
+   "note": "filler"
+  },
+  {
+   "w": "baith",
+   "t": "sit"
+  },
+  {
+   "w": "ja",
+   "t": "(go) ahead",
+   "note": "'baith ja' = sit down (casual command)"
+  }
+ ],
+ "bhaiya, AC chalega na? bahut garmi hai": [
+  {
+   "w": "bhaiya",
+   "t": "brother"
+  },
+  {
+   "w": "ac",
+   "t": "AC"
+  },
+  {
+   "w": "chalega",
+   "t": "will be on/work"
+  },
+  {
+   "w": "na",
+   "t": "right?",
+   "note": "seeking confirmation"
+  },
+  {
+   "w": "bahut",
+   "t": "very"
+  },
+  {
+   "w": "garmi",
+   "t": "heat"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "bhaiya, do chai dena": [
+  {
+   "w": "bhaiya",
+   "t": "brother"
+  },
+  {
+   "w": "do",
+   "t": "two"
+  },
+  {
+   "w": "chai",
+   "t": "tea"
+  },
+  {
+   "w": "dena",
+   "t": "give",
+   "note": "polite way to order"
+  }
+ ],
+ "elaichi wali chai milegi?": [
+  {
+   "w": "elaichi",
+   "t": "cardamom"
+  },
+  {
+   "w": "wali",
+   "t": "the one with"
+  },
+  {
+   "w": "chai",
+   "t": "tea"
+  },
+  {
+   "w": "milegi",
+   "t": "will I get",
+   "note": "feminine, agrees with chai"
+  }
+ ],
+ "ek plate momos bhi laga do": [
+  {
+   "w": "ek",
+   "t": "one"
+  },
+  {
+   "w": "plate",
+   "t": "plate"
+  },
+  {
+   "w": "momos",
+   "t": "momos"
+  },
+  {
+   "w": "bhi",
+   "t": "also/too"
+  },
+  {
+   "w": "laga",
+   "t": "serve/put up"
+  },
+  {
+   "w": "do",
+   "t": "give",
+   "note": "'laga do' = serve it up"
+  }
+ ],
+ "cheeni kam rakhna, adrak zyada": [
+  {
+   "w": "cheeni",
+   "t": "sugar"
+  },
+  {
+   "w": "kam",
+   "t": "less"
+  },
+  {
+   "w": "rakhna",
+   "t": "keep"
+  },
+  {
+   "w": "adrak",
+   "t": "ginger"
+  },
+  {
+   "w": "zyada",
+   "t": "more"
+  }
+ ],
+ "bhaiya, yeh thanda hai, garam karke dena": [
+  {
+   "w": "bhaiya",
+   "t": "brother"
+  },
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "thanda",
+   "t": "cold"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "garam",
+   "t": "hot/warm"
+  },
+  {
+   "w": "karke",
+   "t": "having done",
+   "note": "'garam karke' = after heating"
+  },
+  {
+   "w": "dena",
+   "t": "give"
+  }
+ ],
+ "aur ek cutting dena": [
+  {
+   "w": "aur",
+   "t": "more/another"
+  },
+  {
+   "w": "ek",
+   "t": "one"
+  },
+  {
+   "w": "cutting",
+   "t": "half-tea",
+   "note": "Mumbai half-cup chai"
+  },
+  {
+   "w": "dena",
+   "t": "give"
+  }
+ ],
+ "yeh kya hai? taste karke dekh sakta hoon?": [
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "kya",
+   "t": "what"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "taste",
+   "t": "taste"
+  },
+  {
+   "w": "karke",
+   "t": "doing",
+   "note": "'taste karke' = by tasting"
+  },
+  {
+   "w": "dekh",
+   "t": "see/try"
+  },
+  {
+   "w": "sakta",
+   "t": "can",
+   "note": "'dekh sakta hoon' = can I try"
+  },
+  {
+   "w": "hoon",
+   "t": "(I) am"
+  }
+ ],
+ "kitne hue bhaiya? total bata do": [
+  {
+   "w": "kitne",
+   "t": "how much/many"
+  },
+  {
+   "w": "hue",
+   "t": "came to",
+   "note": "'kitne hue' = how much total"
+  },
+  {
+   "w": "bhaiya",
+   "t": "brother"
+  },
+  {
+   "w": "total",
+   "t": "total"
+  },
+  {
+   "w": "bata",
+   "t": "tell"
+  },
+  {
+   "w": "do",
+   "t": "(do) tell",
+   "note": "'bata do' = tell me"
+  }
+ ],
+ "chhutta nahi hai, UPI se le lo": [
+  {
+   "w": "chhutta",
+   "t": "change",
+   "note": "loose change/coins"
+  },
+  {
+   "w": "nahi",
+   "t": "not"
+  },
+  {
+   "w": "hai",
+   "t": "is",
+   "note": "'chhutta nahi hai' = no change"
+  },
+  {
+   "w": "upi",
+   "t": "UPI",
+   "note": "digital payment"
+  },
+  {
+   "w": "se",
+   "t": "via/by"
+  },
+  {
+   "w": "le",
+   "t": "take"
+  },
+  {
+   "w": "lo",
+   "t": "(take it)",
+   "note": "'le lo' = take it"
+  }
+ ],
+ "bhaiya, mast chai banate ho yaar, roz aaunga": [
+  {
+   "w": "bhaiya",
+   "t": "brother"
+  },
+  {
+   "w": "mast",
+   "t": "amazing/great",
+   "note": "slang"
+  },
+  {
+   "w": "chai",
+   "t": "tea"
+  },
+  {
+   "w": "banate",
+   "t": "make"
+  },
+  {
+   "w": "ho",
+   "t": "(you) do",
+   "note": "'banate ho' = you make"
+  },
+  {
+   "w": "yaar",
+   "t": "dude"
+  },
+  {
+   "w": "roz",
+   "t": "daily"
+  },
+  {
+   "w": "aaunga",
+   "t": "will come",
+   "note": "male speaker"
+  }
+ ],
+ "mujhe toh acchi lagi": [
+  {
+   "w": "mujhe",
+   "t": "to me/I"
+  },
+  {
+   "w": "toh",
+   "t": "at least/though",
+   "note": "contrastive emphasis"
+  },
+  {
+   "w": "acchi",
+   "t": "good/nice",
+   "note": "feminine"
+  },
+  {
+   "w": "lagi",
+   "t": "felt/seemed",
+   "note": "'mujhe acchi lagi' = I liked it"
+  }
+ ],
+ "yaar, first half boring tha na?": [
+  {
+   "w": "yaar",
+   "t": "dude"
+  },
+  {
+   "w": "first",
+   "t": "first"
+  },
+  {
+   "w": "half",
+   "t": "half"
+  },
+  {
+   "w": "boring",
+   "t": "boring"
+  },
+  {
+   "w": "tha",
+   "t": "was",
+   "note": "masculine"
+  },
+  {
+   "w": "na",
+   "t": "right?",
+   "note": "seeking agreement"
+  }
+ ],
+ "haan but end mein twist tha, woh mast tha": [
+  {
+   "w": "haan",
+   "t": "yeah"
+  },
+  {
+   "w": "but",
+   "t": "but"
+  },
+  {
+   "w": "end",
+   "t": "end"
+  },
+  {
+   "w": "mein",
+   "t": "at/in"
+  },
+  {
+   "w": "twist",
+   "t": "twist"
+  },
+  {
+   "w": "tha",
+   "t": "was"
+  },
+  {
+   "w": "woh",
+   "t": "that"
+  },
+  {
+   "w": "mast",
+   "t": "cool/awesome"
+  },
+  {
+   "w": "tha",
+   "t": "was"
+  }
+ ],
+ "mujhe nahi lagta ki itni acchi thi": [
+  {
+   "w": "mujhe",
+   "t": "to me/I"
+  },
+  {
+   "w": "nahi",
+   "t": "not"
+  },
+  {
+   "w": "lagta",
+   "t": "think/feel",
+   "note": "'mujhe nahi lagta' = I don't think"
+  },
+  {
+   "w": "ki",
+   "t": "that"
+  },
+  {
+   "w": "itni",
+   "t": "that/so",
+   "note": "feminine"
+  },
+  {
+   "w": "acchi",
+   "t": "good",
+   "note": "feminine"
+  },
+  {
+   "w": "thi",
+   "t": "was",
+   "note": "feminine"
+  }
+ ],
+ "acting toh kamaal thi lekin story weak thi": [
+  {
+   "w": "acting",
+   "t": "acting"
+  },
+  {
+   "w": "toh",
+   "t": "indeed",
+   "note": "emphasizes preceding word"
+  },
+  {
+   "w": "kamaal",
+   "t": "amazing"
+  },
+  {
+   "w": "thi",
+   "t": "was",
+   "note": "feminine"
+  },
+  {
+   "w": "lekin",
+   "t": "but"
+  },
+  {
+   "w": "story",
+   "t": "story"
+  },
+  {
+   "w": "weak",
+   "t": "weak"
+  },
+  {
+   "w": "thi",
+   "t": "was",
+   "note": "feminine"
+  }
+ ],
+ "tum batao, tumhe kaisa laga honestly?": [
+  {
+   "w": "tum",
+   "t": "you"
+  },
+  {
+   "w": "batao",
+   "t": "tell",
+   "note": "'tum batao' = you tell"
+  },
+  {
+   "w": "tumhe",
+   "t": "to you"
+  },
+  {
+   "w": "kaisa",
+   "t": "how/what like"
+  },
+  {
+   "w": "laga",
+   "t": "felt/found",
+   "note": "'tumhe kaisa laga' = how did you find it"
+  },
+  {
+   "w": "honestly",
+   "t": "honestly"
+  }
+ ],
+ "haan sahi baat hai, woh scene toh next level tha": [
+  {
+   "w": "haan",
+   "t": "yeah"
+  },
+  {
+   "w": "sahi",
+   "t": "right/true"
+  },
+  {
+   "w": "baat",
+   "t": "thing/point"
+  },
+  {
+   "w": "hai",
+   "t": "is",
+   "note": "'sahi baat hai' = that's true"
+  },
+  {
+   "w": "woh",
+   "t": "that"
+  },
+  {
+   "w": "scene",
+   "t": "scene"
+  },
+  {
+   "w": "toh",
+   "t": "indeed",
+   "note": "emphasis"
+  },
+  {
+   "w": "next",
+   "t": "next"
+  },
+  {
+   "w": "level",
+   "t": "level",
+   "note": "'next level' = outstanding"
+  },
+  {
+   "w": "tha",
+   "t": "was"
+  }
+ ],
+ "mujhe toh neend aa rahi thi beech mein": [
+  {
+   "w": "mujhe",
+   "t": "to me/I"
+  },
+  {
+   "w": "toh",
+   "t": "honestly",
+   "note": "emphasis"
+  },
+  {
+   "w": "neend",
+   "t": "sleep"
+  },
+  {
+   "w": "aa",
+   "t": "coming"
+  },
+  {
+   "w": "rahi",
+   "t": "was",
+   "note": "continuous, feminine"
+  },
+  {
+   "w": "thi",
+   "t": "was",
+   "note": "'neend aa rahi thi' = getting sleepy"
+  },
+  {
+   "w": "beech",
+   "t": "middle"
+  },
+  {
+   "w": "mein",
+   "t": "in",
+   "note": "'beech mein' = in the middle"
+  }
+ ],
+ "accha woh chhodo, interval ke baad kya hua?": [
+  {
+   "w": "accha",
+   "t": "okay"
+  },
+  {
+   "w": "woh",
+   "t": "that"
+  },
+  {
+   "w": "chhodo",
+   "t": "forget/leave it",
+   "note": "'woh chhodo' = forget that"
+  },
+  {
+   "w": "interval",
+   "t": "intermission"
+  },
+  {
+   "w": "ke",
+   "t": "of/after"
+  },
+  {
+   "w": "baad",
+   "t": "after",
+   "note": "'ke baad' = after"
+  },
+  {
+   "w": "kya",
+   "t": "what"
+  },
+  {
+   "w": "hua",
+   "t": "happened"
+  }
+ ],
+ "overall theek thi, ek baar dekh sakte ho": [
+  {
+   "w": "overall",
+   "t": "overall"
+  },
+  {
+   "w": "theek",
+   "t": "fine/okay"
+  },
+  {
+   "w": "thi",
+   "t": "was",
+   "note": "feminine"
+  },
+  {
+   "w": "ek",
+   "t": "one"
+  },
+  {
+   "w": "baar",
+   "t": "time",
+   "note": "'ek baar' = once"
+  },
+  {
+   "w": "dekh",
+   "t": "watch"
+  },
+  {
+   "w": "sakte",
+   "t": "can"
+  },
+  {
+   "w": "ho",
+   "t": "(you) can",
+   "note": "'dekh sakte ho' = you can watch"
+  }
+ ],
+ "yaar weekend pe kuch karte hain?": [
+  {
+   "w": "yaar",
+   "t": "dude"
+  },
+  {
+   "w": "weekend",
+   "t": "weekend"
+  },
+  {
+   "w": "pe",
+   "t": "on"
+  },
+  {
+   "w": "kuch",
+   "t": "something"
+  },
+  {
+   "w": "karte",
+   "t": "do"
+  },
+  {
+   "w": "hain",
+   "t": "(shall we)",
+   "note": "'kuch karte hain' = let's do something"
+  }
+ ],
+ "agar Saturday free ho toh chalein kahin?": [
+  {
+   "w": "agar",
+   "t": "if"
+  },
+  {
+   "w": "saturday",
+   "t": "Saturday"
+  },
+  {
+   "w": "free",
+   "t": "free"
+  },
+  {
+   "w": "ho",
+   "t": "are"
+  },
+  {
+   "w": "toh",
+   "t": "then",
+   "note": "'agar...toh' = if...then"
+  },
+  {
+   "w": "chalein",
+   "t": "shall we go"
+  },
+  {
+   "w": "kahin",
+   "t": "somewhere"
+  }
+ ],
+ "main toh aa jaunga, tum batao": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "toh",
+   "t": "at least/as for me",
+   "note": "contrastive emphasis"
+  },
+  {
+   "w": "aa",
+   "t": "come"
+  },
+  {
+   "w": "jaunga",
+   "t": "will",
+   "note": "'aa jaunga' = I'll come (male)"
+  },
+  {
+   "w": "tum",
+   "t": "you (all)"
+  },
+  {
+   "w": "batao",
+   "t": "tell/decide",
+   "note": "putting it to them"
+  }
+ ],
+ "Connaught Place chalein? wahan naya restaurant khula hai": [
+  {
+   "w": "connaught",
+   "t": "Connaught"
+  },
+  {
+   "w": "place",
+   "t": "Place",
+   "note": "place name (CP, Delhi)"
+  },
+  {
+   "w": "chalein",
+   "t": "shall we go"
+  },
+  {
+   "w": "wahan",
+   "t": "there"
+  },
+  {
+   "w": "naya",
+   "t": "new"
+  },
+  {
+   "w": "restaurant",
+   "t": "restaurant"
+  },
+  {
+   "w": "khula",
+   "t": "opened"
+  },
+  {
+   "w": "hai",
+   "t": "has",
+   "note": "'khula hai' = has opened"
+  }
+ ],
+ "done, 7 baje milte hain metro pe": [
+  {
+   "w": "done",
+   "t": "done"
+  },
+  {
+   "w": "7",
+   "t": "7"
+  },
+  {
+   "w": "baje",
+   "t": "o'clock"
+  },
+  {
+   "w": "milte",
+   "t": "meet"
+  },
+  {
+   "w": "hain",
+   "t": "(let's)",
+   "note": "'milte hain' = let's meet"
+  },
+  {
+   "w": "metro",
+   "t": "metro"
+  },
+  {
+   "w": "pe",
+   "t": "at"
+  }
+ ],
+ "late mat hona, pichli baar ek ghanta wait kiya tha": [
+  {
+   "w": "late",
+   "t": "late"
+  },
+  {
+   "w": "mat",
+   "t": "don't",
+   "note": "negative command"
+  },
+  {
+   "w": "hona",
+   "t": "be",
+   "note": "'mat hona' = don't be"
+  },
+  {
+   "w": "pichli",
+   "t": "last",
+   "note": "feminine"
+  },
+  {
+   "w": "baar",
+   "t": "time",
+   "note": "'pichli baar' = last time"
+  },
+  {
+   "w": "ek",
+   "t": "one"
+  },
+  {
+   "w": "ghanta",
+   "t": "hour"
+  },
+  {
+   "w": "wait",
+   "t": "wait"
+  },
+  {
+   "w": "kiya",
+   "t": "did",
+   "note": "'wait kiya' = waited"
+  },
+  {
+   "w": "tha",
+   "t": "had"
+  }
+ ],
+ "arre yaar, dekhte hain... confirm nahi hai abhi": [
+  {
+   "w": "arre",
+   "t": "hey"
+  },
+  {
+   "w": "yaar",
+   "t": "dude"
+  },
+  {
+   "w": "dekhte",
+   "t": "see"
+  },
+  {
+   "w": "hain",
+   "t": "(let's)",
+   "note": "'dekhte hain' = we'll see (usually a soft no)"
+  },
+  {
+   "w": "confirm",
+   "t": "confirmed"
+  },
+  {
+   "w": "nahi",
+   "t": "not"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "abhi",
+   "t": "yet/now"
+  }
+ ],
+ "pakka aa rahe ho na tum? cancel mat karna": [
+  {
+   "w": "pakka",
+   "t": "for sure",
+   "note": "definitely/confirmed"
+  },
+  {
+   "w": "aa",
+   "t": "come",
+   "note": "verb stem of aana (to come)"
+  },
+  {
+   "w": "rahe",
+   "t": "-ing",
+   "note": "progressive marker, here 'are coming'"
+  },
+  {
+   "w": "ho",
+   "t": "are",
+   "note": "'you (tum) are'"
+  },
+  {
+   "w": "na",
+   "t": "right?",
+   "note": "tag seeking confirmation"
+  },
+  {
+   "w": "tum",
+   "t": "you",
+   "note": "casual 'you'"
+  },
+  {
+   "w": "cancel",
+   "t": "cancel"
+  },
+  {
+   "w": "mat",
+   "t": "don't",
+   "note": "negative imperative"
+  },
+  {
+   "w": "karna",
+   "t": "do",
+   "note": "'mat karna' = don't do (it)"
+  }
+ ],
+ "chal theek hai, agar mood hua toh aa jaana": [
+  {
+   "w": "chal",
+   "t": "okay then",
+   "note": "casual 'come on/alright'"
+  },
+  {
+   "w": "theek",
+   "t": "fine"
+  },
+  {
+   "w": "hai",
+   "t": "is",
+   "note": "'theek hai' = it's fine"
+  },
+  {
+   "w": "agar",
+   "t": "if"
+  },
+  {
+   "w": "mood",
+   "t": "mood"
+  },
+  {
+   "w": "hua",
+   "t": "happens",
+   "note": "'mood hua' = if you feel like it"
+  },
+  {
+   "w": "toh",
+   "t": "then"
+  },
+  {
+   "w": "aa",
+   "t": "come",
+   "note": "stem of aana"
+  },
+  {
+   "w": "jaana",
+   "t": "just come",
+   "note": "'aa jaana' = come over (compound)"
+  }
+ ],
+ "group mein daal de, sab ko pata chale": [
+  {
+   "w": "group",
+   "t": "group",
+   "note": "WhatsApp group"
+  },
+  {
+   "w": "mein",
+   "t": "in"
+  },
+  {
+   "w": "daal",
+   "t": "put",
+   "note": "stem of daalna (to put/drop)"
+  },
+  {
+   "w": "de",
+   "t": "go ahead and",
+   "note": "'daal de' = drop it in (compound)"
+  },
+  {
+   "w": "sab",
+   "t": "everyone"
+  },
+  {
+   "w": "ko",
+   "t": "to",
+   "note": "marks 'everyone' as recipient"
+  },
+  {
+   "w": "pata",
+   "t": "knowledge",
+   "note": "'pata chale' = so it's known"
+  },
+  {
+   "w": "chale",
+   "t": "comes to know",
+   "note": "subjunctive: so everyone finds out"
+  }
+ ],
+ "bhaiya, metro station kidhar hai?": [
+  {
+   "w": "bhaiya",
+   "t": "brother",
+   "note": "polite address to a man"
+  },
+  {
+   "w": "metro",
+   "t": "metro"
+  },
+  {
+   "w": "station",
+   "t": "station"
+  },
+  {
+   "w": "kidhar",
+   "t": "which way",
+   "note": "casual 'where' (direction)"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "seedha jaiye, phir left le lena": [
+  {
+   "w": "seedha",
+   "t": "straight"
+  },
+  {
+   "w": "jaiye",
+   "t": "go",
+   "note": "polite imperative of jaana"
+  },
+  {
+   "w": "phir",
+   "t": "then"
+  },
+  {
+   "w": "left",
+   "t": "left"
+  },
+  {
+   "w": "le",
+   "t": "take",
+   "note": "stem of lena"
+  },
+  {
+   "w": "lena",
+   "t": "take",
+   "note": "'le lena' = take (a turn)"
+  }
+ ],
+ "woh red light ke baad, right side mein hai": [
+  {
+   "w": "woh",
+   "t": "it/that"
+  },
+  {
+   "w": "red",
+   "t": "red"
+  },
+  {
+   "w": "light",
+   "t": "light",
+   "note": "traffic signal"
+  },
+  {
+   "w": "ke",
+   "t": "of",
+   "note": "part of 'ke baad' = after"
+  },
+  {
+   "w": "baad",
+   "t": "after"
+  },
+  {
+   "w": "right",
+   "t": "right"
+  },
+  {
+   "w": "side",
+   "t": "side"
+  },
+  {
+   "w": "mein",
+   "t": "on"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "yahan se paanch minute mein pahunch jaoge": [
+  {
+   "w": "yahan",
+   "t": "here"
+  },
+  {
+   "w": "se",
+   "t": "from"
+  },
+  {
+   "w": "paanch",
+   "t": "five"
+  },
+  {
+   "w": "minute",
+   "t": "minutes"
+  },
+  {
+   "w": "mein",
+   "t": "in"
+  },
+  {
+   "w": "pahunch",
+   "t": "reach",
+   "note": "stem of pahunchna"
+  },
+  {
+   "w": "jaoge",
+   "t": "you'll",
+   "note": "'pahunch jaoge' = you'll reach"
+  }
+ ],
+ "uss building ke saamne hai, miss nahi hoga": [
+  {
+   "w": "uss",
+   "t": "that"
+  },
+  {
+   "w": "building",
+   "t": "building"
+  },
+  {
+   "w": "ke",
+   "t": "of",
+   "note": "part of 'ke saamne' = in front of"
+  },
+  {
+   "w": "saamne",
+   "t": "in front"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "miss",
+   "t": "miss"
+  },
+  {
+   "w": "nahi",
+   "t": "not"
+  },
+  {
+   "w": "hoga",
+   "t": "will be",
+   "note": "'miss nahi hoga' = you won't miss it"
+  }
+ ],
+ "idhar nahi, udhar — ulta ja rahe ho": [
+  {
+   "w": "idhar",
+   "t": "this way"
+  },
+  {
+   "w": "nahi",
+   "t": "not"
+  },
+  {
+   "w": "udhar",
+   "t": "that way"
+  },
+  {
+   "w": "ulta",
+   "t": "wrong way",
+   "note": "opposite direction"
+  },
+  {
+   "w": "ja",
+   "t": "go",
+   "note": "stem of jaana"
+  },
+  {
+   "w": "rahe",
+   "t": "-ing",
+   "note": "progressive marker"
+  },
+  {
+   "w": "ho",
+   "t": "are",
+   "note": "'ja rahe ho' = you are going"
+  }
+ ],
+ "Big Bazaar pata hai? uske bilkul peeche hai": [
+  {
+   "w": "big",
+   "t": "Big",
+   "note": "store name Big Bazaar"
+  },
+  {
+   "w": "bazaar",
+   "t": "Bazaar",
+   "note": "store name"
+  },
+  {
+   "w": "pata",
+   "t": "know",
+   "note": "'pata hai?' = do you know?"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "uske",
+   "t": "its"
+  },
+  {
+   "w": "bilkul",
+   "t": "right",
+   "note": "'bilkul peeche' = right behind"
+  },
+  {
+   "w": "peeche",
+   "t": "behind"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "arey, bahut door hai yahan se — auto le lo": [
+  {
+   "w": "arey",
+   "t": "oh",
+   "note": "exclamation"
+  },
+  {
+   "w": "bahut",
+   "t": "very"
+  },
+  {
+   "w": "door",
+   "t": "far"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "yahan",
+   "t": "here"
+  },
+  {
+   "w": "se",
+   "t": "from"
+  },
+  {
+   "w": "auto",
+   "t": "auto",
+   "note": "auto-rickshaw"
+  },
+  {
+   "w": "le",
+   "t": "take",
+   "note": "stem of lena"
+  },
+  {
+   "w": "lo",
+   "t": "take",
+   "note": "'le lo' = take one (casual imperative)"
+  }
+ ],
+ "kisi se bhi pooch lena, sab ko pata hai": [
+  {
+   "w": "kisi",
+   "t": "anyone"
+  },
+  {
+   "w": "se",
+   "t": "from",
+   "note": "'kisi se' = from anyone"
+  },
+  {
+   "w": "bhi",
+   "t": "just/any",
+   "note": "'kisi se bhi' = anyone at all"
+  },
+  {
+   "w": "pooch",
+   "t": "ask",
+   "note": "stem of poochna"
+  },
+  {
+   "w": "lena",
+   "t": "go ahead",
+   "note": "'pooch lena' = just ask"
+  },
+  {
+   "w": "sab",
+   "t": "everyone"
+  },
+  {
+   "w": "ko",
+   "t": "to",
+   "note": "marks recipient"
+  },
+  {
+   "w": "pata",
+   "t": "knows",
+   "note": "'pata hai' = knows"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "Google Maps lagao na, main bhi confuse ho jaunga": [
+  {
+   "w": "google",
+   "t": "Google"
+  },
+  {
+   "w": "maps",
+   "t": "Maps"
+  },
+  {
+   "w": "lagao",
+   "t": "put on",
+   "note": "'lagao' = open/use it"
+  },
+  {
+   "w": "na",
+   "t": "why don't you",
+   "note": "softening suggestion"
+  },
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "bhi",
+   "t": "even/too"
+  },
+  {
+   "w": "confuse",
+   "t": "confused"
+  },
+  {
+   "w": "ho",
+   "t": "become",
+   "note": "stem with hona"
+  },
+  {
+   "w": "jaunga",
+   "t": "will get",
+   "note": "'ho jaunga' = I'll get (confused)"
+  }
+ ],
+ "namaste aunty ji, kaise hain aap?": [
+  {
+   "w": "namaste",
+   "t": "hello"
+  },
+  {
+   "w": "aunty",
+   "t": "aunty",
+   "note": "friend's mother"
+  },
+  {
+   "w": "ji",
+   "t": "(respect)",
+   "note": "respectful suffix"
+  },
+  {
+   "w": "kaise",
+   "t": "how"
+  },
+  {
+   "w": "hain",
+   "t": "are",
+   "note": "polite plural"
+  },
+  {
+   "w": "aap",
+   "t": "you",
+   "note": "polite 'you'"
+  }
+ ],
+ "yeh chhota sa gift hai, aapke liye laaya hoon": [
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "chhota",
+   "t": "small"
+  },
+  {
+   "w": "sa",
+   "t": "little",
+   "note": "'chhota sa' = just a small (modest)"
+  },
+  {
+   "w": "gift",
+   "t": "gift"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "aapke",
+   "t": "your",
+   "note": "part of 'aapke liye' = for you"
+  },
+  {
+   "w": "liye",
+   "t": "for"
+  },
+  {
+   "w": "laaya",
+   "t": "brought",
+   "note": "masculine past of laana"
+  },
+  {
+   "w": "hoon",
+   "t": "have",
+   "note": "'laaya hoon' = I have brought"
+  }
+ ],
+ "joote yahin utaar dun?": [
+  {
+   "w": "joote",
+   "t": "shoes"
+  },
+  {
+   "w": "yahin",
+   "t": "right here"
+  },
+  {
+   "w": "utaar",
+   "t": "take off",
+   "note": "stem of utaarna"
+  },
+  {
+   "w": "dun",
+   "t": "should I",
+   "note": "'utaar dun?' = should I take off?"
+  }
+ ],
+ "aaiye, baithiye — chai chadha rahi hoon": [
+  {
+   "w": "aaiye",
+   "t": "come",
+   "note": "polite imperative"
+  },
+  {
+   "w": "baithiye",
+   "t": "sit",
+   "note": "polite imperative"
+  },
+  {
+   "w": "chai",
+   "t": "tea"
+  },
+  {
+   "w": "chadha",
+   "t": "putting on",
+   "note": "stem of chadhaana (to brew)"
+  },
+  {
+   "w": "rahi",
+   "t": "-ing",
+   "note": "feminine progressive"
+  },
+  {
+   "w": "hoon",
+   "t": "am",
+   "note": "'chadha rahi hoon' = I'm making (tea)"
+  }
+ ],
+ "bas paani chalega, takleef mat kijiye": [
+  {
+   "w": "bas",
+   "t": "just"
+  },
+  {
+   "w": "paani",
+   "t": "water"
+  },
+  {
+   "w": "chalega",
+   "t": "will do",
+   "note": "'paani chalega' = water is fine"
+  },
+  {
+   "w": "takleef",
+   "t": "trouble"
+  },
+  {
+   "w": "mat",
+   "t": "don't"
+  },
+  {
+   "w": "kijiye",
+   "t": "do",
+   "note": "polite; 'takleef mat kijiye' = don't bother"
+  }
+ ],
+ "arre, thoda thoda toh lijiye, khaas aapke liye banaaya hai": [
+  {
+   "w": "arre",
+   "t": "oh come on"
+  },
+  {
+   "w": "thoda",
+   "t": "a little"
+  },
+  {
+   "w": "thoda",
+   "t": "a little",
+   "note": "'thoda thoda' = just a little bit"
+  },
+  {
+   "w": "toh",
+   "t": "at least"
+  },
+  {
+   "w": "lijiye",
+   "t": "have some",
+   "note": "polite imperative of lena"
+  },
+  {
+   "w": "khaas",
+   "t": "specially"
+  },
+  {
+   "w": "aapke",
+   "t": "your",
+   "note": "part of 'aapke liye' = for you"
+  },
+  {
+   "w": "liye",
+   "t": "for"
+  },
+  {
+   "w": "banaaya",
+   "t": "made",
+   "note": "masculine past of banaana"
+  },
+  {
+   "w": "hai",
+   "t": "have",
+   "note": "'banaaya hai' = (I) made it"
+  }
+ ],
+ "bahut tasty hai, aapke haath mein toh jaadu hai": [
+  {
+   "w": "bahut",
+   "t": "very"
+  },
+  {
+   "w": "tasty",
+   "t": "tasty"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "aapke",
+   "t": "your"
+  },
+  {
+   "w": "haath",
+   "t": "hands",
+   "note": "'haath mein jaadu' = magic in your hands"
+  },
+  {
+   "w": "mein",
+   "t": "in"
+  },
+  {
+   "w": "toh",
+   "t": "really",
+   "note": "emphasis particle"
+  },
+  {
+   "w": "jaadu",
+   "t": "magic"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "bas ji, ab nahi — pet bhar gaya sach mein": [
+  {
+   "w": "bas",
+   "t": "enough"
+  },
+  {
+   "w": "ji",
+   "t": "please",
+   "note": "polite particle"
+  },
+  {
+   "w": "ab",
+   "t": "now"
+  },
+  {
+   "w": "nahi",
+   "t": "no more"
+  },
+  {
+   "w": "pet",
+   "t": "stomach"
+  },
+  {
+   "w": "bhar",
+   "t": "filled",
+   "note": "stem of bharna"
+  },
+  {
+   "w": "gaya",
+   "t": "got",
+   "note": "'pet bhar gaya' = I'm full"
+  },
+  {
+   "w": "sach",
+   "t": "truly",
+   "note": "'sach mein' = really/honestly"
+  },
+  {
+   "w": "mein",
+   "t": "in"
+  }
+ ],
+ "ab chalta hoon, der ho rahi hai": [
+  {
+   "w": "ab",
+   "t": "now"
+  },
+  {
+   "w": "chalta",
+   "t": "heading off",
+   "note": "lit. 'I walk'; masculine; standard goodbye"
+  },
+  {
+   "w": "hoon",
+   "t": "am",
+   "note": "'chalta hoon' = I'll be off"
+  },
+  {
+   "w": "der",
+   "t": "late"
+  },
+  {
+   "w": "ho",
+   "t": "getting",
+   "note": "stem with hona"
+  },
+  {
+   "w": "rahi",
+   "t": "-ing",
+   "note": "feminine progressive"
+  },
+  {
+   "w": "hai",
+   "t": "is",
+   "note": "'der ho rahi hai' = it's getting late"
+  }
+ ],
+ "zaroor aaiyega phir se, ghar apna hi samjhiye": [
+  {
+   "w": "zaroor",
+   "t": "definitely"
+  },
+  {
+   "w": "aaiyega",
+   "t": "do come",
+   "note": "very polite future imperative"
+  },
+  {
+   "w": "phir",
+   "t": "again",
+   "note": "part of 'phir se' = again"
+  },
+  {
+   "w": "se",
+   "t": "again"
+  },
+  {
+   "w": "ghar",
+   "t": "home"
+  },
+  {
+   "w": "apna",
+   "t": "your own"
+  },
+  {
+   "w": "hi",
+   "t": "(emphasis)",
+   "note": "'apna hi' = your very own"
+  },
+  {
+   "w": "samjhiye",
+   "t": "consider",
+   "note": "polite; 'consider it your own home'"
+  }
+ ],
+ "bhaiya, ek baar yeh wali kameez dikhaiye": [
+  {
+   "w": "bhaiya",
+   "t": "brother",
+   "note": "address to shopkeeper"
+  },
+  {
+   "w": "ek",
+   "t": "one",
+   "note": "part of 'ek baar' = just/please"
+  },
+  {
+   "w": "baar",
+   "t": "time",
+   "note": "'ek baar' softener = please"
+  },
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "wali",
+   "t": "the one",
+   "note": "'yeh wali' = this one (feminine)"
+  },
+  {
+   "w": "kameez",
+   "t": "shirt",
+   "note": "kameez/tunic (feminine)"
+  },
+  {
+   "w": "dikhaiye",
+   "t": "show",
+   "note": "polite imperative"
+  }
+ ],
+ "iska kya rate hai aapke yahaan?": [
+  {
+   "w": "iska",
+   "t": "its",
+   "note": "'iska rate' = its price"
+  },
+  {
+   "w": "kya",
+   "t": "what"
+  },
+  {
+   "w": "rate",
+   "t": "price"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "aapke",
+   "t": "your",
+   "note": "part of 'aapke yahaan' = at your shop"
+  },
+  {
+   "w": "yahaan",
+   "t": "place"
+  }
+ ],
+ "neela waala dikhaiye, gulabi nahi chahiye": [
+  {
+   "w": "neela",
+   "t": "blue"
+  },
+  {
+   "w": "waala",
+   "t": "the one",
+   "note": "'neela waala' = the blue one"
+  },
+  {
+   "w": "dikhaiye",
+   "t": "show",
+   "note": "polite imperative"
+  },
+  {
+   "w": "gulabi",
+   "t": "pink"
+  },
+  {
+   "w": "nahi",
+   "t": "not"
+  },
+  {
+   "w": "chahiye",
+   "t": "want",
+   "note": "'nahi chahiye' = don't want"
+  }
+ ],
+ "size medium mein hai? large thoda bada lagega": [
+  {
+   "w": "size",
+   "t": "size"
+  },
+  {
+   "w": "medium",
+   "t": "medium"
+  },
+  {
+   "w": "mein",
+   "t": "in",
+   "note": "'medium mein hai?' = do you have in medium?"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "large",
+   "t": "large"
+  },
+  {
+   "w": "thoda",
+   "t": "a bit"
+  },
+  {
+   "w": "bada",
+   "t": "big"
+  },
+  {
+   "w": "lagega",
+   "t": "will feel",
+   "note": "'bada lagega' = will be too big"
+  }
+ ],
+ "yeh chhota hai mujhe, ek size bada dikhaiye": [
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "chhota",
+   "t": "small"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "mujhe",
+   "t": "for me"
+  },
+  {
+   "w": "ek",
+   "t": "one"
+  },
+  {
+   "w": "size",
+   "t": "size",
+   "note": "'ek size bada' = one size bigger"
+  },
+  {
+   "w": "bada",
+   "t": "bigger"
+  },
+  {
+   "w": "dikhaiye",
+   "t": "show",
+   "note": "polite imperative"
+  }
+ ],
+ "arrey itna mehnga? thoda kam karenge na?": [
+  {
+   "w": "arrey",
+   "t": "oh",
+   "note": "shock filler when haggling"
+  },
+  {
+   "w": "itna",
+   "t": "so",
+   "note": "'itna mehnga' = this expensive"
+  },
+  {
+   "w": "mehnga",
+   "t": "expensive"
+  },
+  {
+   "w": "thoda",
+   "t": "a little"
+  },
+  {
+   "w": "kam",
+   "t": "less",
+   "note": "'kam karenge' = will reduce"
+  },
+  {
+   "w": "karenge",
+   "t": "will do",
+   "note": "'kam karenge' = you'll lower it"
+  },
+  {
+   "w": "na",
+   "t": "won't you?",
+   "note": "friendly tag"
+  }
+ ],
+ "main aapko paanch sau dungi, isse zyaada nahi": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "aapko",
+   "t": "you",
+   "note": "to you"
+  },
+  {
+   "w": "paanch",
+   "t": "five",
+   "note": "'paanch sau' = five hundred"
+  },
+  {
+   "w": "sau",
+   "t": "hundred"
+  },
+  {
+   "w": "dungi",
+   "t": "will give",
+   "note": "feminine future of dena"
+  },
+  {
+   "w": "isse",
+   "t": "than this"
+  },
+  {
+   "w": "zyaada",
+   "t": "more",
+   "note": "'isse zyaada nahi' = not more than this"
+  },
+  {
+   "w": "nahi",
+   "t": "not"
+  }
+ ],
+ "theek hai, le leti hoon — pack kar dijiye": [
+  {
+   "w": "theek",
+   "t": "okay"
+  },
+  {
+   "w": "hai",
+   "t": "is",
+   "note": "'theek hai' = alright"
+  },
+  {
+   "w": "le",
+   "t": "take",
+   "note": "stem of lena"
+  },
+  {
+   "w": "leti",
+   "t": "I'll take",
+   "note": "feminine; 'le leti hoon' = I'll take it"
+  },
+  {
+   "w": "hoon",
+   "t": "am"
+  },
+  {
+   "w": "pack",
+   "t": "pack"
+  },
+  {
+   "w": "kar",
+   "t": "do",
+   "note": "'pack kar' = pack it"
+  },
+  {
+   "w": "dijiye",
+   "t": "please",
+   "note": "'kar dijiye' = please do it"
+  }
+ ],
+ "bill bhi de dijiye, please": [
+  {
+   "w": "bill",
+   "t": "bill",
+   "note": "receipt"
+  },
+  {
+   "w": "bhi",
+   "t": "too/also"
+  },
+  {
+   "w": "de",
+   "t": "give",
+   "note": "stem of dena"
+  },
+  {
+   "w": "dijiye",
+   "t": "please give",
+   "note": "'de dijiye' = please hand over"
+  },
+  {
+   "w": "please",
+   "t": "please"
+  }
+ ],
+ "doctor sahib, mujhe do din se bukhar hai": [
+  {
+   "w": "doctor",
+   "t": "doctor"
+  },
+  {
+   "w": "sahib",
+   "t": "sir",
+   "note": "respectful address"
+  },
+  {
+   "w": "mujhe",
+   "t": "I have",
+   "note": "lit. 'to me'"
+  },
+  {
+   "w": "do",
+   "t": "two"
+  },
+  {
+   "w": "din",
+   "t": "days"
+  },
+  {
+   "w": "se",
+   "t": "for/since",
+   "note": "'do din se' = for two days"
+  },
+  {
+   "w": "bukhar",
+   "t": "fever"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "sar mein bahut dard ho raha hai": [
+  {
+   "w": "sar",
+   "t": "head"
+  },
+  {
+   "w": "mein",
+   "t": "in",
+   "note": "'sar mein dard' = pain in the head"
+  },
+  {
+   "w": "bahut",
+   "t": "a lot of"
+  },
+  {
+   "w": "dard",
+   "t": "pain"
+  },
+  {
+   "w": "ho",
+   "t": "happening",
+   "note": "stem with hona"
+  },
+  {
+   "w": "raha",
+   "t": "-ing",
+   "note": "masculine progressive"
+  },
+  {
+   "w": "hai",
+   "t": "is",
+   "note": "'ho raha hai' = is occurring"
+  }
+ ],
+ "pet kharab hai, kuch khaaya nahi jaa raha": [
+  {
+   "w": "pet",
+   "t": "stomach"
+  },
+  {
+   "w": "kharab",
+   "t": "upset",
+   "note": "'pet kharab' = upset stomach"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "kuch",
+   "t": "anything"
+  },
+  {
+   "w": "khaaya",
+   "t": "eaten",
+   "note": "past participle in passive"
+  },
+  {
+   "w": "nahi",
+   "t": "can't"
+  },
+  {
+   "w": "jaa",
+   "t": "(passive)",
+   "note": "part of 'khaaya nahi jaa raha' = can't eat"
+  },
+  {
+   "w": "raha",
+   "t": "being",
+   "note": "'nahi jaa raha' = isn't able to be (eaten)"
+  }
+ ],
+ "raat ko neend bhi nahi aati": [
+  {
+   "w": "raat",
+   "t": "night"
+  },
+  {
+   "w": "ko",
+   "t": "at",
+   "note": "'raat ko' = at night"
+  },
+  {
+   "w": "neend",
+   "t": "sleep",
+   "note": "'neend aana' = to fall asleep"
+  },
+  {
+   "w": "bhi",
+   "t": "even"
+  },
+  {
+   "w": "nahi",
+   "t": "not"
+  },
+  {
+   "w": "aati",
+   "t": "comes",
+   "note": "'neend nahi aati' = can't sleep"
+  }
+ ],
+ "kya aap mujhe kuch dawaai de sakte hain?": [
+  {
+   "w": "kya",
+   "t": "(question)",
+   "note": "yes/no question marker"
+  },
+  {
+   "w": "aap",
+   "t": "you",
+   "note": "polite"
+  },
+  {
+   "w": "mujhe",
+   "t": "me",
+   "note": "to me"
+  },
+  {
+   "w": "kuch",
+   "t": "some"
+  },
+  {
+   "w": "dawaai",
+   "t": "medicine"
+  },
+  {
+   "w": "de",
+   "t": "give",
+   "note": "stem of dena"
+  },
+  {
+   "w": "sakte",
+   "t": "can",
+   "note": "'de sakte hain' = can give"
+  },
+  {
+   "w": "hain",
+   "t": "(polite)",
+   "note": "agrees with aap"
+  }
+ ],
+ "khaane mein kuch parhej hai kya?": [
+  {
+   "w": "khaane",
+   "t": "food",
+   "note": "'khaane mein' = in food/diet"
+  },
+  {
+   "w": "mein",
+   "t": "in"
+  },
+  {
+   "w": "kuch",
+   "t": "any"
+  },
+  {
+   "w": "parhej",
+   "t": "restriction",
+   "note": "dietary avoidance during illness"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "kya",
+   "t": "(question)",
+   "note": "yes/no marker"
+  }
+ ],
+ "blood test karwana padega kya?": [
+  {
+   "w": "blood",
+   "t": "blood"
+  },
+  {
+   "w": "test",
+   "t": "test"
+  },
+  {
+   "w": "karwana",
+   "t": "get done",
+   "note": "causative of karna"
+  },
+  {
+   "w": "padega",
+   "t": "will have to",
+   "note": "expresses obligation"
+  },
+  {
+   "w": "kya",
+   "t": "(question)",
+   "note": "yes/no marker"
+  }
+ ],
+ "yeh dawaai kab tak leni hai?": [
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "dawaai",
+   "t": "medicine"
+  },
+  {
+   "w": "kab",
+   "t": "when",
+   "note": "part of 'kab tak' = until when"
+  },
+  {
+   "w": "tak",
+   "t": "until",
+   "note": "'kab tak' = how long"
+  },
+  {
+   "w": "leni",
+   "t": "to take",
+   "note": "feminine; agrees with dawaai"
+  },
+  {
+   "w": "hai",
+   "t": "have to",
+   "note": "'leni hai' = need to take"
+  }
+ ],
+ "theek hai doctor sahib, kal phir dikhaane aaungi": [
+  {
+   "w": "theek",
+   "t": "alright"
+  },
+  {
+   "w": "hai",
+   "t": "is",
+   "note": "'theek hai' = okay"
+  },
+  {
+   "w": "doctor",
+   "t": "doctor"
+  },
+  {
+   "w": "sahib",
+   "t": "sir",
+   "note": "respectful address"
+  },
+  {
+   "w": "kal",
+   "t": "tomorrow"
+  },
+  {
+   "w": "phir",
+   "t": "again"
+  },
+  {
+   "w": "dikhaane",
+   "t": "to show",
+   "note": "purposive infinitive; for a check-up"
+  },
+  {
+   "w": "aaungi",
+   "t": "I'll come",
+   "note": "feminine future of aana"
+  }
+ ],
+ "namaste mummy, kaisi hain aap?": [
+  {
+   "w": "namaste",
+   "t": "hello"
+  },
+  {
+   "w": "mummy",
+   "t": "mom"
+  },
+  {
+   "w": "kaisi",
+   "t": "how",
+   "note": "feminine, agrees with mummy"
+  },
+  {
+   "w": "hain",
+   "t": "are",
+   "note": "polite plural"
+  },
+  {
+   "w": "aap",
+   "t": "you",
+   "note": "polite (used for parents)"
+  }
+ ],
+ "papa kahaan hain? unhe bhi phone de dijiye": [
+  {
+   "w": "papa",
+   "t": "dad"
+  },
+  {
+   "w": "kahaan",
+   "t": "where"
+  },
+  {
+   "w": "hain",
+   "t": "is",
+   "note": "polite plural"
+  },
+  {
+   "w": "unhe",
+   "t": "to him",
+   "note": "honorific 'him'"
+  },
+  {
+   "w": "bhi",
+   "t": "too"
+  },
+  {
+   "w": "phone",
+   "t": "phone"
+  },
+  {
+   "w": "de",
+   "t": "give",
+   "note": "stem of dena"
+  },
+  {
+   "w": "dijiye",
+   "t": "please give",
+   "note": "'de dijiye' = please pass over"
+  }
+ ],
+ "main bilkul theek hoon, aap chinta mat kijiye": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "bilkul",
+   "t": "absolutely"
+  },
+  {
+   "w": "theek",
+   "t": "fine"
+  },
+  {
+   "w": "hoon",
+   "t": "am"
+  },
+  {
+   "w": "aap",
+   "t": "you",
+   "note": "polite"
+  },
+  {
+   "w": "chinta",
+   "t": "worry"
+  },
+  {
+   "w": "mat",
+   "t": "don't"
+  },
+  {
+   "w": "kijiye",
+   "t": "do",
+   "note": "'chinta mat kijiye' = please don't worry"
+  }
+ ],
+ "aap dono kaise hain? khaana time pe khaa rahe hain?": [
+  {
+   "w": "aap",
+   "t": "you",
+   "note": "polite"
+  },
+  {
+   "w": "dono",
+   "t": "both"
+  },
+  {
+   "w": "kaise",
+   "t": "how"
+  },
+  {
+   "w": "hain",
+   "t": "are",
+   "note": "polite plural"
+  },
+  {
+   "w": "khaana",
+   "t": "food/meals"
+  },
+  {
+   "w": "time",
+   "t": "time",
+   "note": "'time pe' = on time"
+  },
+  {
+   "w": "pe",
+   "t": "on"
+  },
+  {
+   "w": "khaa",
+   "t": "eat",
+   "note": "stem of khaana"
+  },
+  {
+   "w": "rahe",
+   "t": "-ing",
+   "note": "progressive marker"
+  },
+  {
+   "w": "hain",
+   "t": "are",
+   "note": "'khaa rahe hain' = are you eating"
+  }
+ ],
+ "kaam thoda zyaada hai is hafte, par sambhal lungi": [
+  {
+   "w": "kaam",
+   "t": "work"
+  },
+  {
+   "w": "thoda",
+   "t": "a bit"
+  },
+  {
+   "w": "zyaada",
+   "t": "much/more",
+   "note": "'thoda zyaada' = a bit much"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "is",
+   "t": "this"
+  },
+  {
+   "w": "hafte",
+   "t": "week",
+   "note": "'is hafte' = this week"
+  },
+  {
+   "w": "par",
+   "t": "but"
+  },
+  {
+   "w": "sambhal",
+   "t": "manage",
+   "note": "stem of sambhalna"
+  },
+  {
+   "w": "lungi",
+   "t": "I'll",
+   "note": "feminine; 'sambhal lungi' = I'll manage"
+  }
+ ],
+ "agle hafte zaroor aaungi, pakka": [
+  {
+   "w": "agle",
+   "t": "next"
+  },
+  {
+   "w": "hafte",
+   "t": "week"
+  },
+  {
+   "w": "zaroor",
+   "t": "definitely"
+  },
+  {
+   "w": "aaungi",
+   "t": "will come",
+   "note": "feminine future of aana"
+  },
+  {
+   "w": "pakka",
+   "t": "for sure"
+  }
+ ],
+ "haan, sabzi banaai thi kal — papa ki recipe se": [
+  {
+   "w": "haan",
+   "t": "yes"
+  },
+  {
+   "w": "sabzi",
+   "t": "vegetable dish"
+  },
+  {
+   "w": "banaai",
+   "t": "made",
+   "note": "feminine, agrees with sabzi"
+  },
+  {
+   "w": "thi",
+   "t": "had (was)",
+   "note": "past auxiliary forming 'had made'"
+  },
+  {
+   "w": "kal",
+   "t": "yesterday"
+  },
+  {
+   "w": "papa",
+   "t": "dad"
+  },
+  {
+   "w": "ki",
+   "t": "'s (of)",
+   "note": "possessive marker"
+  },
+  {
+   "w": "recipe",
+   "t": "recipe"
+  },
+  {
+   "w": "se",
+   "t": "using (with)"
+  }
+ ],
+ "ek baat batani thi aapko, baad mein phone karungi": [
+  {
+   "w": "ek",
+   "t": "one (a)"
+  },
+  {
+   "w": "baat",
+   "t": "thing to say"
+  },
+  {
+   "w": "batani",
+   "t": "to tell",
+   "note": "feminine obligation form"
+  },
+  {
+   "w": "thi",
+   "t": "wanted to (was)",
+   "note": "with batani = wanted to tell"
+  },
+  {
+   "w": "aapko",
+   "t": "to you",
+   "note": "respectful you"
+  },
+  {
+   "w": "baad",
+   "t": "later"
+  },
+  {
+   "w": "mein",
+   "t": "in"
+  },
+  {
+   "w": "phone",
+   "t": "phone"
+  },
+  {
+   "w": "karungi",
+   "t": "will call",
+   "note": "feminine future"
+  }
+ ],
+ "achchha mummy, ab rakhti hoon — kal phir baat karenge": [
+  {
+   "w": "achchha",
+   "t": "alright"
+  },
+  {
+   "w": "mummy",
+   "t": "mom"
+  },
+  {
+   "w": "ab",
+   "t": "now"
+  },
+  {
+   "w": "rakhti",
+   "t": "hanging up",
+   "note": "lit. 'putting down', idiom for ending a call"
+  },
+  {
+   "w": "hoon",
+   "t": "am"
+  },
+  {
+   "w": "kal",
+   "t": "tomorrow"
+  },
+  {
+   "w": "phir",
+   "t": "again"
+  },
+  {
+   "w": "baat",
+   "t": "talk"
+  },
+  {
+   "w": "karenge",
+   "t": "will do (talk)",
+   "note": "with baat = we'll talk"
+  }
+ ],
+ "aap apna khayaal rakhna, papa ko bhi pyaar de dena": [
+  {
+   "w": "aap",
+   "t": "you",
+   "note": "respectful"
+  },
+  {
+   "w": "apna",
+   "t": "your own"
+  },
+  {
+   "w": "khayaal",
+   "t": "care"
+  },
+  {
+   "w": "rakhna",
+   "t": "take (keep)",
+   "note": "khayaal rakhna = take care"
+  },
+  {
+   "w": "papa",
+   "t": "dad"
+  },
+  {
+   "w": "ko",
+   "t": "to"
+  },
+  {
+   "w": "bhi",
+   "t": "too"
+  },
+  {
+   "w": "pyaar",
+   "t": "love"
+  },
+  {
+   "w": "de",
+   "t": "give"
+  },
+  {
+   "w": "dena",
+   "t": "give (over)",
+   "note": "de dena = pass it on"
+  }
+ ],
+ "ek, do, teen, chaar, paanch": [
+  {
+   "w": "ek",
+   "t": "one"
+  },
+  {
+   "w": "do",
+   "t": "two"
+  },
+  {
+   "w": "teen",
+   "t": "three"
+  },
+  {
+   "w": "chaar",
+   "t": "four"
+  },
+  {
+   "w": "paanch",
+   "t": "five"
+  }
+ ],
+ "chhe, saat, aath, nau, das": [
+  {
+   "w": "chhe",
+   "t": "six"
+  },
+  {
+   "w": "saat",
+   "t": "seven"
+  },
+  {
+   "w": "aath",
+   "t": "eight"
+  },
+  {
+   "w": "nau",
+   "t": "nine"
+  },
+  {
+   "w": "das",
+   "t": "ten"
+  }
+ ],
+ "gyarah, baarah, terah, chaudah, pandrah": [
+  {
+   "w": "gyarah",
+   "t": "eleven"
+  },
+  {
+   "w": "baarah",
+   "t": "twelve"
+  },
+  {
+   "w": "terah",
+   "t": "thirteen"
+  },
+  {
+   "w": "chaudah",
+   "t": "fourteen"
+  },
+  {
+   "w": "pandrah",
+   "t": "fifteen"
+  }
+ ],
+ "solah, satrah, atharah, unnis, bees": [
+  {
+   "w": "solah",
+   "t": "sixteen"
+  },
+  {
+   "w": "satrah",
+   "t": "seventeen"
+  },
+  {
+   "w": "atharah",
+   "t": "eighteen"
+  },
+  {
+   "w": "unnis",
+   "t": "nineteen"
+  },
+  {
+   "w": "bees",
+   "t": "twenty"
+  }
+ ],
+ "tees, chaalees, pachaas, saath, assi, nabbe, sau": [
+  {
+   "w": "tees",
+   "t": "thirty"
+  },
+  {
+   "w": "chaalees",
+   "t": "forty"
+  },
+  {
+   "w": "pachaas",
+   "t": "fifty"
+  },
+  {
+   "w": "saath",
+   "t": "sixty"
+  },
+  {
+   "w": "assi",
+   "t": "eighty"
+  },
+  {
+   "w": "nabbe",
+   "t": "ninety"
+  },
+  {
+   "w": "sau",
+   "t": "hundred"
+  }
+ ],
+ "chaar samose dena": [
+  {
+   "w": "chaar",
+   "t": "four"
+  },
+  {
+   "w": "samose",
+   "t": "samosas"
+  },
+  {
+   "w": "dena",
+   "t": "give",
+   "note": "casual ordering 'give me'"
+  }
+ ],
+ "kitne ka hai? — ek hazaar rupaye": [
+  {
+   "w": "kitne",
+   "t": "how much"
+  },
+  {
+   "w": "ka",
+   "t": "for (of)"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "ek",
+   "t": "one"
+  },
+  {
+   "w": "hazaar",
+   "t": "thousand"
+  },
+  {
+   "w": "rupaye",
+   "t": "rupees"
+  }
+ ],
+ "saadhe saat baje milte hain": [
+  {
+   "w": "saadhe",
+   "t": "half past"
+  },
+  {
+   "w": "saat",
+   "t": "seven"
+  },
+  {
+   "w": "baje",
+   "t": "o'clock"
+  },
+  {
+   "w": "milte",
+   "t": "meet"
+  },
+  {
+   "w": "hain",
+   "t": "(let's)",
+   "note": "milte hain = let's meet"
+  }
+ ],
+ "ek ghanta mein aa jaunga": [
+  {
+   "w": "ek",
+   "t": "one"
+  },
+  {
+   "w": "ghanta",
+   "t": "hour"
+  },
+  {
+   "w": "mein",
+   "t": "in"
+  },
+  {
+   "w": "aa",
+   "t": "come"
+  },
+  {
+   "w": "jaunga",
+   "t": "will (come)",
+   "note": "aa jaunga = I'll come, masculine"
+  }
+ ],
+ "paanch minute ruko": [
+  {
+   "w": "paanch",
+   "t": "five"
+  },
+  {
+   "w": "minute",
+   "t": "minutes"
+  },
+  {
+   "w": "ruko",
+   "t": "wait",
+   "note": "informal command"
+  }
+ ],
+ "bees rupaye": [
+  {
+   "w": "bees",
+   "t": "twenty"
+  },
+  {
+   "w": "rupaye",
+   "t": "rupees"
+  }
+ ],
+ "pachees ka": [
+  {
+   "w": "pachees",
+   "t": "twenty-five"
+  },
+  {
+   "w": "ka",
+   "t": "for (worth)"
+  }
+ ],
+ "pachaas saal ka": [
+  {
+   "w": "pachaas",
+   "t": "fifty"
+  },
+  {
+   "w": "saal",
+   "t": "years"
+  },
+  {
+   "w": "ka",
+   "t": "of (old)",
+   "note": "masculine; saal ka = years old"
+  }
+ ],
+ "pachpan number ki bus": [
+  {
+   "w": "pachpan",
+   "t": "fifty-five"
+  },
+  {
+   "w": "number",
+   "t": "number"
+  },
+  {
+   "w": "ki",
+   "t": "of (the)"
+  },
+  {
+   "w": "bus",
+   "t": "bus"
+  }
+ ],
+ "ninyaanave rupaye": [
+  {
+   "w": "ninyaanave",
+   "t": "ninety-nine"
+  },
+  {
+   "w": "rupaye",
+   "t": "rupees"
+  }
+ ],
+ "paanch sau rupaye": [
+  {
+   "w": "paanch",
+   "t": "five"
+  },
+  {
+   "w": "sau",
+   "t": "hundred"
+  },
+  {
+   "w": "rupaye",
+   "t": "rupees"
+  }
+ ],
+ "do hazaar bees": [
+  {
+   "w": "do",
+   "t": "two"
+  },
+  {
+   "w": "hazaar",
+   "t": "thousand"
+  },
+  {
+   "w": "bees",
+   "t": "twenty",
+   "note": "do hazaar bees = year 2020"
+  }
+ ],
+ "saath lakh ka hai": [
+  {
+   "w": "saath",
+   "t": "sixty"
+  },
+  {
+   "w": "lakh",
+   "t": "hundred thousand"
+  },
+  {
+   "w": "ka",
+   "t": "of (worth)"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "do crore ka package": [
+  {
+   "w": "do",
+   "t": "two"
+  },
+  {
+   "w": "crore",
+   "t": "ten million"
+  },
+  {
+   "w": "ka",
+   "t": "of (worth)"
+  },
+  {
+   "w": "package",
+   "t": "salary package"
+  }
+ ],
+ "yeh kitne ka hai? — sau rupaye": [
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "kitne",
+   "t": "how much"
+  },
+  {
+   "w": "ka",
+   "t": "for (of)"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "sau",
+   "t": "hundred"
+  },
+  {
+   "w": "rupaye",
+   "t": "rupees"
+  }
+ ],
+ "do chai dena": [
+  {
+   "w": "do",
+   "t": "two"
+  },
+  {
+   "w": "chai",
+   "t": "teas"
+  },
+  {
+   "w": "dena",
+   "t": "give",
+   "note": "casual ordering 'give me'"
+  }
+ ],
+ "paanch baje milte hain": [
+  {
+   "w": "paanch",
+   "t": "five"
+  },
+  {
+   "w": "baje",
+   "t": "o'clock"
+  },
+  {
+   "w": "milte",
+   "t": "meet"
+  },
+  {
+   "w": "hain",
+   "t": "(let's)",
+   "note": "milte hain = let's meet"
+  }
+ ],
+ "saadhe aath baje": [
+  {
+   "w": "saadhe",
+   "t": "half past"
+  },
+  {
+   "w": "aath",
+   "t": "eight"
+  },
+  {
+   "w": "baje",
+   "t": "o'clock"
+  }
+ ],
+ "ek lakh tak ka budget hai": [
+  {
+   "w": "ek",
+   "t": "one"
+  },
+  {
+   "w": "lakh",
+   "t": "hundred thousand"
+  },
+  {
+   "w": "tak",
+   "t": "up to"
+  },
+  {
+   "w": "ka",
+   "t": "of"
+  },
+  {
+   "w": "budget",
+   "t": "budget"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "main roz akhbaar padhta hoon / main roz akhbaar padhti hoon": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "roz",
+   "t": "daily"
+  },
+  {
+   "w": "akhbaar",
+   "t": "newspaper"
+  },
+  {
+   "w": "padhta",
+   "t": "read",
+   "note": "masculine habitual"
+  },
+  {
+   "w": "hoon",
+   "t": "am"
+  },
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "roz",
+   "t": "daily"
+  },
+  {
+   "w": "akhbaar",
+   "t": "newspaper"
+  },
+  {
+   "w": "padhti",
+   "t": "read",
+   "note": "feminine habitual"
+  },
+  {
+   "w": "hoon",
+   "t": "am"
+  }
+ ],
+ "tu roz school jaata hai / tu roz school jaati hai": [
+  {
+   "w": "tu",
+   "t": "you",
+   "note": "intimate, very informal"
+  },
+  {
+   "w": "roz",
+   "t": "daily"
+  },
+  {
+   "w": "school",
+   "t": "school"
+  },
+  {
+   "w": "jaata",
+   "t": "go",
+   "note": "masculine habitual"
+  },
+  {
+   "w": "hai",
+   "t": "are (is)"
+  },
+  {
+   "w": "tu",
+   "t": "you",
+   "note": "intimate, very informal"
+  },
+  {
+   "w": "roz",
+   "t": "daily"
+  },
+  {
+   "w": "school",
+   "t": "school"
+  },
+  {
+   "w": "jaati",
+   "t": "go",
+   "note": "feminine habitual"
+  },
+  {
+   "w": "hai",
+   "t": "are (is)"
+  }
+ ],
+ "tum subah kya khaate ho / tum subah kya khaati ho": [
+  {
+   "w": "tum",
+   "t": "you",
+   "note": "casual"
+  },
+  {
+   "w": "subah",
+   "t": "morning"
+  },
+  {
+   "w": "kya",
+   "t": "what"
+  },
+  {
+   "w": "khaate",
+   "t": "eat",
+   "note": "masculine casual"
+  },
+  {
+   "w": "ho",
+   "t": "are"
+  },
+  {
+   "w": "tum",
+   "t": "you",
+   "note": "casual"
+  },
+  {
+   "w": "subah",
+   "t": "morning"
+  },
+  {
+   "w": "kya",
+   "t": "what"
+  },
+  {
+   "w": "khaati",
+   "t": "eat",
+   "note": "feminine casual"
+  },
+  {
+   "w": "ho",
+   "t": "are"
+  }
+ ],
+ "woh roz doodh peeta hai / woh roz doodh peeti hai": [
+  {
+   "w": "woh",
+   "t": "he"
+  },
+  {
+   "w": "roz",
+   "t": "daily"
+  },
+  {
+   "w": "doodh",
+   "t": "milk"
+  },
+  {
+   "w": "peeta",
+   "t": "drinks",
+   "note": "masculine habitual"
+  },
+  {
+   "w": "hai",
+   "t": "is (does)"
+  },
+  {
+   "w": "woh",
+   "t": "she"
+  },
+  {
+   "w": "roz",
+   "t": "daily"
+  },
+  {
+   "w": "doodh",
+   "t": "milk"
+  },
+  {
+   "w": "peeti",
+   "t": "drinks",
+   "note": "feminine habitual"
+  },
+  {
+   "w": "hai",
+   "t": "is (does)"
+  }
+ ],
+ "hum saath khaana khaate hain / hum saath khaana khaati hain": [
+  {
+   "w": "hum",
+   "t": "we"
+  },
+  {
+   "w": "saath",
+   "t": "together"
+  },
+  {
+   "w": "khaana",
+   "t": "food (meal)"
+  },
+  {
+   "w": "khaate",
+   "t": "eat",
+   "note": "masculine plural"
+  },
+  {
+   "w": "hain",
+   "t": "are"
+  },
+  {
+   "w": "hum",
+   "t": "we"
+  },
+  {
+   "w": "saath",
+   "t": "together"
+  },
+  {
+   "w": "khaana",
+   "t": "food (meal)"
+  },
+  {
+   "w": "khaati",
+   "t": "eat",
+   "note": "feminine group"
+  },
+  {
+   "w": "hain",
+   "t": "are"
+  }
+ ],
+ "main jaata hoon / main jaati hoon": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "jaata",
+   "t": "go",
+   "note": "masculine habitual"
+  },
+  {
+   "w": "hoon",
+   "t": "am"
+  },
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "jaati",
+   "t": "go",
+   "note": "feminine habitual"
+  },
+  {
+   "w": "hoon",
+   "t": "am"
+  }
+ ],
+ "aap subah kya peete hain?": [
+  {
+   "w": "aap",
+   "t": "you",
+   "note": "respectful"
+  },
+  {
+   "w": "subah",
+   "t": "morning"
+  },
+  {
+   "w": "kya",
+   "t": "what"
+  },
+  {
+   "w": "peete",
+   "t": "drink",
+   "note": "plural/respectful form"
+  },
+  {
+   "w": "hain",
+   "t": "do (are)"
+  }
+ ],
+ "woh kaam karti hai": [
+  {
+   "w": "woh",
+   "t": "she"
+  },
+  {
+   "w": "kaam",
+   "t": "work"
+  },
+  {
+   "w": "karti",
+   "t": "does",
+   "note": "kaam karna = to work; feminine"
+  },
+  {
+   "w": "hai",
+   "t": "does (is)"
+  }
+ ],
+ "hum roz chai peete hain": [
+  {
+   "w": "hum",
+   "t": "we"
+  },
+  {
+   "w": "roz",
+   "t": "daily"
+  },
+  {
+   "w": "chai",
+   "t": "tea"
+  },
+  {
+   "w": "peete",
+   "t": "drink",
+   "note": "masculine plural"
+  },
+  {
+   "w": "hain",
+   "t": "are (do)"
+  }
+ ],
+ "aap kahan jaate hain subah?": [
+  {
+   "w": "aap",
+   "t": "you",
+   "note": "respectful"
+  },
+  {
+   "w": "kahan",
+   "t": "where"
+  },
+  {
+   "w": "jaate",
+   "t": "go",
+   "note": "plural/respectful form"
+  },
+  {
+   "w": "hain",
+   "t": "do (are)"
+  },
+  {
+   "w": "subah",
+   "t": "morning"
+  }
+ ],
+ "main chai pita hoon": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "chai",
+   "t": "chai (tea)"
+  },
+  {
+   "w": "pita",
+   "t": "drink",
+   "note": "masculine habitual"
+  },
+  {
+   "w": "hoon",
+   "t": "am"
+  }
+ ],
+ "main chai pi raha hoon": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "chai",
+   "t": "chai (tea)"
+  },
+  {
+   "w": "pi",
+   "t": "drinking"
+  },
+  {
+   "w": "raha",
+   "t": "am ...-ing",
+   "note": "pi raha = continuous, masculine"
+  },
+  {
+   "w": "hoon",
+   "t": "am"
+  }
+ ],
+ "kya kar rahe ho?": [
+  {
+   "w": "kya",
+   "t": "what"
+  },
+  {
+   "w": "kar",
+   "t": "doing"
+  },
+  {
+   "w": "rahe",
+   "t": "are ...-ing",
+   "note": "continuous, casual"
+  },
+  {
+   "w": "ho",
+   "t": "are"
+  }
+ ],
+ "kya karte ho?": [
+  {
+   "w": "kya",
+   "t": "what"
+  },
+  {
+   "w": "karte",
+   "t": "do",
+   "note": "habitual; asking job/routine"
+  },
+  {
+   "w": "ho",
+   "t": "do (are)"
+  }
+ ],
+ "ladka khel raha hai": [
+  {
+   "w": "ladka",
+   "t": "the boy"
+  },
+  {
+   "w": "khel",
+   "t": "playing"
+  },
+  {
+   "w": "raha",
+   "t": "is ...-ing",
+   "note": "continuous, masculine"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "ladki khel rahi hai": [
+  {
+   "w": "ladki",
+   "t": "the girl"
+  },
+  {
+   "w": "khel",
+   "t": "playing"
+  },
+  {
+   "w": "rahi",
+   "t": "is ...-ing",
+   "note": "continuous, feminine"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "bachhe khel rahe hain": [
+  {
+   "w": "bachhe",
+   "t": "the children"
+  },
+  {
+   "w": "khel",
+   "t": "playing"
+  },
+  {
+   "w": "rahe",
+   "t": "are ...-ing",
+   "note": "continuous, plural"
+  },
+  {
+   "w": "hain",
+   "t": "are"
+  }
+ ],
+ "ladkiyaan khel rahi hain": [
+  {
+   "w": "ladkiyaan",
+   "t": "the girls",
+   "note": "feminine plural"
+  },
+  {
+   "w": "khel",
+   "t": "play",
+   "note": "verb stem of khelna"
+  },
+  {
+   "w": "rahi",
+   "t": "-ing (continuous)",
+   "note": "feminine form of raha"
+  },
+  {
+   "w": "hain",
+   "t": "are"
+  }
+ ],
+ "main Mumbai mein rehta hoon": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "mumbai",
+   "t": "Mumbai"
+  },
+  {
+   "w": "mein",
+   "t": "in"
+  },
+  {
+   "w": "rehta",
+   "t": "live",
+   "note": "habitual, masc."
+  },
+  {
+   "w": "hoon",
+   "t": "am"
+  }
+ ],
+ "aap kahan rehte hain?": [
+  {
+   "w": "aap",
+   "t": "you",
+   "note": "respectful"
+  },
+  {
+   "w": "kahan",
+   "t": "where"
+  },
+  {
+   "w": "rehte",
+   "t": "live",
+   "note": "plural -te form for aap"
+  },
+  {
+   "w": "hain",
+   "t": "do/are"
+  }
+ ],
+ "main abhi khaa raha hoon": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "abhi",
+   "t": "right now"
+  },
+  {
+   "w": "khaa",
+   "t": "eat",
+   "note": "stem of khaana"
+  },
+  {
+   "w": "raha",
+   "t": "-ing (continuous)",
+   "note": "masc."
+  },
+  {
+   "w": "hoon",
+   "t": "am"
+  }
+ ],
+ "main gaya / main gayi": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "gaya",
+   "t": "went",
+   "note": "masc. speaker"
+  },
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "gayi",
+   "t": "went",
+   "note": "fem. speaker"
+  }
+ ],
+ "woh aaya / woh aayi": [
+  {
+   "w": "woh",
+   "t": "he"
+  },
+  {
+   "w": "aaya",
+   "t": "came",
+   "note": "masc."
+  },
+  {
+   "w": "woh",
+   "t": "she"
+  },
+  {
+   "w": "aayi",
+   "t": "came",
+   "note": "fem."
+  }
+ ],
+ "humne khana khaya": [
+  {
+   "w": "humne",
+   "t": "we",
+   "note": "hum + ne (past transitive marker)"
+  },
+  {
+   "w": "khana",
+   "t": "food"
+  },
+  {
+   "w": "khaya",
+   "t": "ate",
+   "note": "agrees with khana (masc. object)"
+  }
+ ],
+ "maine kaha tha / maine kahi thi": [
+  {
+   "w": "maine",
+   "t": "I",
+   "note": "main + ne"
+  },
+  {
+   "w": "kaha",
+   "t": "said",
+   "note": "masc. object"
+  },
+  {
+   "w": "tha",
+   "t": "had",
+   "note": "past perfect marker, masc."
+  },
+  {
+   "w": "maine",
+   "t": "I",
+   "note": "main + ne"
+  },
+  {
+   "w": "kahi",
+   "t": "said",
+   "note": "fem. object"
+  },
+  {
+   "w": "thi",
+   "t": "had",
+   "note": "past perfect marker, fem."
+  }
+ ],
+ "tum kahan the? / tum kahan thi?": [
+  {
+   "w": "tum",
+   "t": "you",
+   "note": "casual"
+  },
+  {
+   "w": "kahan",
+   "t": "where"
+  },
+  {
+   "w": "the",
+   "t": "were",
+   "note": "masc."
+  },
+  {
+   "w": "tum",
+   "t": "you",
+   "note": "casual"
+  },
+  {
+   "w": "kahan",
+   "t": "where"
+  },
+  {
+   "w": "thi",
+   "t": "were",
+   "note": "fem."
+  }
+ ],
+ "usne mujhe phone kiya": [
+  {
+   "w": "usne",
+   "t": "he/she",
+   "note": "us + ne (past transitive marker)"
+  },
+  {
+   "w": "mujhe",
+   "t": "me",
+   "note": "to me"
+  },
+  {
+   "w": "phone",
+   "t": "phone"
+  },
+  {
+   "w": "kiya",
+   "t": "did/made",
+   "note": "phone karna = to call"
+  }
+ ],
+ "kal main office nahi gaya": [
+  {
+   "w": "kal",
+   "t": "yesterday"
+  },
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "office",
+   "t": "office"
+  },
+  {
+   "w": "nahi",
+   "t": "didn't",
+   "note": "negation before verb"
+  },
+  {
+   "w": "gaya",
+   "t": "go",
+   "note": "past of jaana, masc."
+  }
+ ],
+ "bachpan mein hum roz khelke aate the": [
+  {
+   "w": "bachpan",
+   "t": "childhood"
+  },
+  {
+   "w": "mein",
+   "t": "in"
+  },
+  {
+   "w": "hum",
+   "t": "we"
+  },
+  {
+   "w": "roz",
+   "t": "daily"
+  },
+  {
+   "w": "khelke",
+   "t": "after playing",
+   "note": "khel + ke = having played"
+  },
+  {
+   "w": "aate",
+   "t": "used to come",
+   "note": "habitual -te form"
+  },
+  {
+   "w": "the",
+   "t": "used to",
+   "note": "past habitual marker, masc. pl."
+  }
+ ],
+ "kya hua? sab theek hai?": [
+  {
+   "w": "kya",
+   "t": "what"
+  },
+  {
+   "w": "hua",
+   "t": "happened",
+   "note": "past of hona"
+  },
+  {
+   "w": "sab",
+   "t": "everything"
+  },
+  {
+   "w": "theek",
+   "t": "okay/fine"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "maine socha ki tum aa rahe ho": [
+  {
+   "w": "maine",
+   "t": "I",
+   "note": "main + ne"
+  },
+  {
+   "w": "socha",
+   "t": "thought",
+   "note": "past of sochna"
+  },
+  {
+   "w": "ki",
+   "t": "that",
+   "note": "conjunction"
+  },
+  {
+   "w": "tum",
+   "t": "you",
+   "note": "casual"
+  },
+  {
+   "w": "aa",
+   "t": "come",
+   "note": "stem of aana"
+  },
+  {
+   "w": "rahe",
+   "t": "-ing (continuous)",
+   "note": "masc. for tum"
+  },
+  {
+   "w": "ho",
+   "t": "are"
+  }
+ ],
+ "main pita tha": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "pita",
+   "t": "used to drink",
+   "note": "habitual -ta form, masc."
+  },
+  {
+   "w": "tha",
+   "t": "used to",
+   "note": "past habitual marker"
+  }
+ ],
+ "maine piya": [
+  {
+   "w": "maine",
+   "t": "I",
+   "note": "main + ne"
+  },
+  {
+   "w": "piya",
+   "t": "drank",
+   "note": "simple past of pina"
+  }
+ ],
+ "maine pee liya": [
+  {
+   "w": "maine",
+   "t": "I",
+   "note": "main + ne"
+  },
+  {
+   "w": "pee",
+   "t": "drink",
+   "note": "stem of pina"
+  },
+  {
+   "w": "liya",
+   "t": "completed it",
+   "note": "auxiliary lena = finished, for self"
+  }
+ ],
+ "woh Mumbai mein rehta tha": [
+  {
+   "w": "woh",
+   "t": "he"
+  },
+  {
+   "w": "mumbai",
+   "t": "Mumbai"
+  },
+  {
+   "w": "mein",
+   "t": "in"
+  },
+  {
+   "w": "rehta",
+   "t": "used to live",
+   "note": "habitual, masc."
+  },
+  {
+   "w": "tha",
+   "t": "used to",
+   "note": "past habitual marker"
+  }
+ ],
+ "main har subah chai pita tha": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "har",
+   "t": "every"
+  },
+  {
+   "w": "subah",
+   "t": "morning"
+  },
+  {
+   "w": "chai",
+   "t": "tea/chai"
+  },
+  {
+   "w": "pita",
+   "t": "used to drink",
+   "note": "habitual, masc."
+  },
+  {
+   "w": "tha",
+   "t": "used to",
+   "note": "past habitual marker"
+  }
+ ],
+ "woh school paidal jaati thi": [
+  {
+   "w": "woh",
+   "t": "she"
+  },
+  {
+   "w": "school",
+   "t": "school"
+  },
+  {
+   "w": "paidal",
+   "t": "on foot",
+   "note": "walking"
+  },
+  {
+   "w": "jaati",
+   "t": "used to go",
+   "note": "habitual, fem."
+  },
+  {
+   "w": "thi",
+   "t": "used to",
+   "note": "past habitual marker, fem."
+  }
+ ],
+ "maine kar liya": [
+  {
+   "w": "maine",
+   "t": "I",
+   "note": "main + ne"
+  },
+  {
+   "w": "kar",
+   "t": "do",
+   "note": "stem of karna"
+  },
+  {
+   "w": "liya",
+   "t": "done it",
+   "note": "auxiliary lena = completed, for self"
+  }
+ ],
+ "usne mujhe paisa de diya": [
+  {
+   "w": "usne",
+   "t": "he",
+   "note": "us + ne"
+  },
+  {
+   "w": "mujhe",
+   "t": "me",
+   "note": "to me"
+  },
+  {
+   "w": "paisa",
+   "t": "money"
+  },
+  {
+   "w": "de",
+   "t": "give",
+   "note": "stem of dena"
+  },
+  {
+   "w": "diya",
+   "t": "gave (off)",
+   "note": "auxiliary dena = completed, to someone else"
+  }
+ ],
+ "woh thak ke so gaya": [
+  {
+   "w": "woh",
+   "t": "he"
+  },
+  {
+   "w": "thak",
+   "t": "get tired",
+   "note": "stem of thakna"
+  },
+  {
+   "w": "ke",
+   "t": "and (having)",
+   "note": "links the two actions"
+  },
+  {
+   "w": "so",
+   "t": "sleep",
+   "note": "stem of sona"
+  },
+  {
+   "w": "gaya",
+   "t": "fell asleep",
+   "note": "auxiliary jaana = finality"
+  }
+ ],
+ "maine khaana kha liya": [
+  {
+   "w": "maine",
+   "t": "I",
+   "note": "main + ne"
+  },
+  {
+   "w": "khaana",
+   "t": "food"
+  },
+  {
+   "w": "kha",
+   "t": "eat",
+   "note": "stem of khaana"
+  },
+  {
+   "w": "liya",
+   "t": "finished it",
+   "note": "auxiliary lena = completed, for self"
+  }
+ ],
+ "main karunga / main karungi": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "karunga",
+   "t": "will do",
+   "note": "masc."
+  },
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "karungi",
+   "t": "will do",
+   "note": "fem."
+  }
+ ],
+ "tu padhega / tu padhegi": [
+  {
+   "w": "tu",
+   "t": "you",
+   "note": "very intimate/informal"
+  },
+  {
+   "w": "padhega",
+   "t": "will study",
+   "note": "masc."
+  },
+  {
+   "w": "tu",
+   "t": "you",
+   "note": "very intimate/informal"
+  },
+  {
+   "w": "padhegi",
+   "t": "will study",
+   "note": "fem."
+  }
+ ],
+ "tum karoge / tum karogi": [
+  {
+   "w": "tum",
+   "t": "you",
+   "note": "casual"
+  },
+  {
+   "w": "karoge",
+   "t": "will do",
+   "note": "masc., -oge for tum"
+  },
+  {
+   "w": "tum",
+   "t": "you",
+   "note": "casual"
+  },
+  {
+   "w": "karogi",
+   "t": "will do",
+   "note": "fem."
+  }
+ ],
+ "woh karega / woh karegi": [
+  {
+   "w": "woh",
+   "t": "he"
+  },
+  {
+   "w": "karega",
+   "t": "will do",
+   "note": "masc."
+  },
+  {
+   "w": "woh",
+   "t": "she"
+  },
+  {
+   "w": "karegi",
+   "t": "will do",
+   "note": "fem."
+  }
+ ],
+ "hum karenge / hum karengi": [
+  {
+   "w": "hum",
+   "t": "we"
+  },
+  {
+   "w": "karenge",
+   "t": "will do",
+   "note": "masc. group, -enge plural"
+  },
+  {
+   "w": "hum",
+   "t": "we"
+  },
+  {
+   "w": "karengi",
+   "t": "will do",
+   "note": "fem. group"
+  }
+ ],
+ "main kal jaaunga / main kal jaaungi": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "kal",
+   "t": "tomorrow"
+  },
+  {
+   "w": "jaaunga",
+   "t": "will go",
+   "note": "masc."
+  },
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "kal",
+   "t": "tomorrow"
+  },
+  {
+   "w": "jaaungi",
+   "t": "will go",
+   "note": "fem."
+  }
+ ],
+ "tum kab aaoge?": [
+  {
+   "w": "tum",
+   "t": "you",
+   "note": "casual"
+  },
+  {
+   "w": "kab",
+   "t": "when"
+  },
+  {
+   "w": "aaoge",
+   "t": "will come",
+   "note": "masc., -oge for tum"
+  }
+ ],
+ "main abhi aata hoon": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "abhi",
+   "t": "right now"
+  },
+  {
+   "w": "aata",
+   "t": "coming",
+   "note": "present used for immediate future"
+  },
+  {
+   "w": "hoon",
+   "t": "am"
+  }
+ ],
+ "kal baarish hogi": [
+  {
+   "w": "kal",
+   "t": "tomorrow"
+  },
+  {
+   "w": "baarish",
+   "t": "rain",
+   "note": "feminine noun"
+  },
+  {
+   "w": "hogi",
+   "t": "will happen",
+   "note": "future of hona, fem."
+  }
+ ],
+ "dekhte hain, kya hota hai": [
+  {
+   "w": "dekhte",
+   "t": "let's see"
+  },
+  {
+   "w": "hain",
+   "t": "(we) do",
+   "note": "with dekhte = let's see"
+  },
+  {
+   "w": "kya",
+   "t": "what"
+  },
+  {
+   "w": "hota",
+   "t": "happens"
+  },
+  {
+   "w": "hai",
+   "t": "is/does"
+  }
+ ],
+ "main kal aaunga": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "kal",
+   "t": "tomorrow"
+  },
+  {
+   "w": "aaunga",
+   "t": "will come",
+   "note": "masc."
+  }
+ ],
+ "main kal aaungi": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "kal",
+   "t": "tomorrow"
+  },
+  {
+   "w": "aaungi",
+   "t": "will come",
+   "note": "fem."
+  }
+ ],
+ "main khaaunga": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "khaaunga",
+   "t": "will eat",
+   "note": "masc."
+  }
+ ],
+ "main khaaungi": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "khaaungi",
+   "t": "will eat",
+   "note": "fem."
+  }
+ ],
+ "aap kab aayenge?": [
+  {
+   "w": "aap",
+   "t": "you",
+   "note": "respectful"
+  },
+  {
+   "w": "kab",
+   "t": "when"
+  },
+  {
+   "w": "aayenge",
+   "t": "will come",
+   "note": "plural -enge, even for one person"
+  }
+ ],
+ "ladkiyaan jaayengi": [
+  {
+   "w": "ladkiyaan",
+   "t": "the girls",
+   "note": "feminine plural"
+  },
+  {
+   "w": "jaayengi",
+   "t": "will go",
+   "note": "fem. plural -engi"
+  }
+ ],
+ "agar baarish hogi, to hum nahin jaayenge": [
+  {
+   "w": "agar",
+   "t": "if"
+  },
+  {
+   "w": "baarish",
+   "t": "rain"
+  },
+  {
+   "w": "hogi",
+   "t": "will happen",
+   "note": "fem."
+  },
+  {
+   "w": "to",
+   "t": "then"
+  },
+  {
+   "w": "hum",
+   "t": "we"
+  },
+  {
+   "w": "nahin",
+   "t": "won't",
+   "note": "negation"
+  },
+  {
+   "w": "jaayenge",
+   "t": "go",
+   "note": "future, masc. pl."
+  }
+ ],
+ "agar tum aaoge, to main bhi aaunga": [
+  {
+   "w": "agar",
+   "t": "if"
+  },
+  {
+   "w": "tum",
+   "t": "you",
+   "note": "casual"
+  },
+  {
+   "w": "aaoge",
+   "t": "will come",
+   "note": "masc."
+  },
+  {
+   "w": "to",
+   "t": "then"
+  },
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "bhi",
+   "t": "too/also"
+  },
+  {
+   "w": "aaunga",
+   "t": "will come",
+   "note": "masc."
+  }
+ ],
+ "agar samay hoga, to phone karungi": [
+  {
+   "w": "agar",
+   "t": "if"
+  },
+  {
+   "w": "samay",
+   "t": "time"
+  },
+  {
+   "w": "hoga",
+   "t": "will be",
+   "note": "samay hoga = I'll have time"
+  },
+  {
+   "w": "to",
+   "t": "then"
+  },
+  {
+   "w": "phone",
+   "t": "phone"
+  },
+  {
+   "w": "karungi",
+   "t": "will call",
+   "note": "fem., phone karna = to call"
+  }
+ ],
+ "main khaaunga (NOT main khaayega)": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "khaaunga",
+   "t": "will eat",
+   "note": "correct: main takes -unga"
+  },
+  {
+   "w": "not",
+   "t": "not"
+  },
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "khaayega",
+   "t": "(wrong form)",
+   "note": "-ega is for tu/woh, not main"
+  }
+ ],
+ "tu karega (NOT tu karunga)": [
+  {
+   "w": "tu",
+   "t": "you",
+   "note": "very intimate"
+  },
+  {
+   "w": "karega",
+   "t": "will do",
+   "note": "correct: tu takes -ega"
+  },
+  {
+   "w": "not",
+   "t": "not"
+  },
+  {
+   "w": "tu",
+   "t": "you",
+   "note": "very intimate"
+  },
+  {
+   "w": "karunga",
+   "t": "(wrong form)",
+   "note": "-unga is only for main"
+  }
+ ],
+ "tum jaaoge (NOT tum jaaoenge)": [
+  {
+   "w": "tum",
+   "t": "you",
+   "note": "casual"
+  },
+  {
+   "w": "jaaoge",
+   "t": "will go",
+   "note": "correct: tum takes -oge"
+  },
+  {
+   "w": "not",
+   "t": "not"
+  },
+  {
+   "w": "tum",
+   "t": "you",
+   "note": "casual"
+  },
+  {
+   "w": "jaaoenge",
+   "t": "(wrong form)",
+   "note": "-enge is for hum/aap/woh-pl"
+  }
+ ],
+ "kitchen mein / bathroom mein": [
+  {
+   "w": "kitchen",
+   "t": "kitchen"
+  },
+  {
+   "w": "mein",
+   "t": "in",
+   "note": "postposition, comes after the noun"
+  },
+  {
+   "w": "bathroom",
+   "t": "bathroom"
+  },
+  {
+   "w": "mein",
+   "t": "in",
+   "note": "postposition, comes after the noun"
+  }
+ ],
+ "table pe / chhat pe": [
+  {
+   "w": "table",
+   "t": "table"
+  },
+  {
+   "w": "pe",
+   "t": "on",
+   "note": "colloquial form of 'par'"
+  },
+  {
+   "w": "chhat",
+   "t": "roof"
+  },
+  {
+   "w": "pe",
+   "t": "on",
+   "note": "colloquial form of 'par'"
+  }
+ ],
+ "uske paas car nahi hai": [
+  {
+   "w": "uske",
+   "t": "his/her",
+   "note": "with 'paas' = belonging to him/her"
+  },
+  {
+   "w": "paas",
+   "t": "with/near",
+   "note": "'ke paas' expresses having"
+  },
+  {
+   "w": "car",
+   "t": "car"
+  },
+  {
+   "w": "nahi",
+   "t": "not"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "mandir ke saamne / park ke peeche": [
+  {
+   "w": "mandir",
+   "t": "temple"
+  },
+  {
+   "w": "ke",
+   "t": "of",
+   "note": "connector for two-word postpositions"
+  },
+  {
+   "w": "saamne",
+   "t": "in front of"
+  },
+  {
+   "w": "park",
+   "t": "park"
+  },
+  {
+   "w": "ke",
+   "t": "of",
+   "note": "connector for two-word postpositions"
+  },
+  {
+   "w": "peeche",
+   "t": "behind"
+  }
+ ],
+ "meeting ke baad / class se pehle": [
+  {
+   "w": "meeting",
+   "t": "meeting"
+  },
+  {
+   "w": "ke",
+   "t": "of",
+   "note": "connector before 'baad'"
+  },
+  {
+   "w": "baad",
+   "t": "after"
+  },
+  {
+   "w": "class",
+   "t": "class"
+  },
+  {
+   "w": "se",
+   "t": "from",
+   "note": "'before' uses 'se', not 'ke'"
+  },
+  {
+   "w": "pehle",
+   "t": "before"
+  }
+ ],
+ "yahan se wahan tak": [
+  {
+   "w": "yahan",
+   "t": "here"
+  },
+  {
+   "w": "se",
+   "t": "from"
+  },
+  {
+   "w": "wahan",
+   "t": "there"
+  },
+  {
+   "w": "tak",
+   "t": "to/until"
+  }
+ ],
+ "bachhon ke liye / mere liye": [
+  {
+   "w": "bachhon",
+   "t": "children",
+   "note": "oblique plural of 'bachha'"
+  },
+  {
+   "w": "ke",
+   "t": "for",
+   "note": "connector before 'liye'"
+  },
+  {
+   "w": "liye",
+   "t": "for"
+  },
+  {
+   "w": "mere",
+   "t": "my/me",
+   "note": "'mere liye' = for me"
+  },
+  {
+   "w": "liye",
+   "t": "for"
+  }
+ ],
+ "bus mein / auto se / paidal": [
+  {
+   "w": "bus",
+   "t": "bus"
+  },
+  {
+   "w": "mein",
+   "t": "in/by",
+   "note": "used for enclosed vehicles"
+  },
+  {
+   "w": "auto",
+   "t": "auto-rickshaw"
+  },
+  {
+   "w": "se",
+   "t": "by",
+   "note": "used for open vehicles or means"
+  },
+  {
+   "w": "paidal",
+   "t": "on foot"
+  }
+ ],
+ "is kaam ke baare mein socho": [
+  {
+   "w": "is",
+   "t": "this",
+   "note": "oblique form of 'yeh'"
+  },
+  {
+   "w": "kaam",
+   "t": "work/matter"
+  },
+  {
+   "w": "ke",
+   "t": "of",
+   "note": "part of 'ke baare mein' = about"
+  },
+  {
+   "w": "baare",
+   "t": "matter/regard",
+   "note": "part of 'ke baare mein'"
+  },
+  {
+   "w": "mein",
+   "t": "in",
+   "note": "completes 'about'"
+  },
+  {
+   "w": "socho",
+   "t": "think",
+   "note": "command form (tum)"
+  }
+ ],
+ "mere bina / tere saath": [
+  {
+   "w": "mere",
+   "t": "my/me",
+   "note": "'mere bina' = without me"
+  },
+  {
+   "w": "bina",
+   "t": "without"
+  },
+  {
+   "w": "tere",
+   "t": "your/you",
+   "note": "'tere saath' = with you"
+  },
+  {
+   "w": "saath",
+   "t": "with"
+  }
+ ],
+ "ghar mein": [
+  {
+   "w": "ghar",
+   "t": "house"
+  },
+  {
+   "w": "mein",
+   "t": "in"
+  }
+ ],
+ "mez par": [
+  {
+   "w": "mez",
+   "t": "table"
+  },
+  {
+   "w": "par",
+   "t": "on",
+   "note": "formal form of 'pe'"
+  }
+ ],
+ "Ram ke saath": [
+  {
+   "w": "ram",
+   "t": "Ram",
+   "note": "a name"
+  },
+  {
+   "w": "ke",
+   "t": "of",
+   "note": "connector before 'saath'"
+  },
+  {
+   "w": "saath",
+   "t": "with"
+  }
+ ],
+ "Delhi se": [
+  {
+   "w": "delhi",
+   "t": "Delhi"
+  },
+  {
+   "w": "se",
+   "t": "from"
+  }
+ ],
+ "mummy ka phone": [
+  {
+   "w": "mummy",
+   "t": "mummy"
+  },
+  {
+   "w": "ka",
+   "t": "'s",
+   "note": "masculine possessive (phone is masc)"
+  },
+  {
+   "w": "phone",
+   "t": "phone"
+  }
+ ],
+ "papa ki gaadi": [
+  {
+   "w": "papa",
+   "t": "papa"
+  },
+  {
+   "w": "ki",
+   "t": "'s",
+   "note": "feminine possessive (gaadi is fem)"
+  },
+  {
+   "w": "gaadi",
+   "t": "car"
+  }
+ ],
+ "didi ke kapde": [
+  {
+   "w": "didi",
+   "t": "elder sister"
+  },
+  {
+   "w": "ke",
+   "t": "'s",
+   "note": "masculine plural possessive (kapde)"
+  },
+  {
+   "w": "kapde",
+   "t": "clothes"
+  }
+ ],
+ "main / tu / tum / aap / woh / hum": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "tu",
+   "t": "you",
+   "note": "intimate, lowest level"
+  },
+  {
+   "w": "tum",
+   "t": "you",
+   "note": "casual/friendly level"
+  },
+  {
+   "w": "aap",
+   "t": "you",
+   "note": "formal/respectful level"
+  },
+  {
+   "w": "woh",
+   "t": "he/she/they"
+  },
+  {
+   "w": "hum",
+   "t": "we"
+  }
+ ],
+ "main jaata hoon, tu jaata hai, tum jaate ho, aap jaate hain": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "jaata",
+   "t": "go",
+   "note": "masc. habitual form"
+  },
+  {
+   "w": "hoon",
+   "t": "am",
+   "note": "auxiliary for 'main'"
+  },
+  {
+   "w": "tu",
+   "t": "you",
+   "note": "intimate"
+  },
+  {
+   "w": "jaata",
+   "t": "go",
+   "note": "masc. form"
+  },
+  {
+   "w": "hai",
+   "t": "are",
+   "note": "auxiliary for 'tu'"
+  },
+  {
+   "w": "tum",
+   "t": "you",
+   "note": "casual"
+  },
+  {
+   "w": "jaate",
+   "t": "go",
+   "note": "plural-form ending for 'tum'"
+  },
+  {
+   "w": "ho",
+   "t": "are",
+   "note": "auxiliary for 'tum'"
+  },
+  {
+   "w": "aap",
+   "t": "you",
+   "note": "formal"
+  },
+  {
+   "w": "jaate",
+   "t": "go",
+   "note": "plural-form ending for 'aap'"
+  },
+  {
+   "w": "hain",
+   "t": "are",
+   "note": "auxiliary for 'aap'"
+  }
+ ],
+ "mujhe / tujhe / tumhe / aapko / usko / humko": [
+  {
+   "w": "mujhe",
+   "t": "to me"
+  },
+  {
+   "w": "tujhe",
+   "t": "to you",
+   "note": "intimate"
+  },
+  {
+   "w": "tumhe",
+   "t": "to you",
+   "note": "casual"
+  },
+  {
+   "w": "aapko",
+   "t": "to you",
+   "note": "formal"
+  },
+  {
+   "w": "usko",
+   "t": "to him/her"
+  },
+  {
+   "w": "humko",
+   "t": "to us"
+  }
+ ],
+ "mera / tera / tumhara / aapka / uska / hamara": [
+  {
+   "w": "mera",
+   "t": "my"
+  },
+  {
+   "w": "tera",
+   "t": "your",
+   "note": "intimate"
+  },
+  {
+   "w": "tumhara",
+   "t": "your",
+   "note": "casual"
+  },
+  {
+   "w": "aapka",
+   "t": "your",
+   "note": "formal"
+  },
+  {
+   "w": "uska",
+   "t": "his/her"
+  },
+  {
+   "w": "hamara",
+   "t": "our"
+  }
+ ],
+ "meri behen / mera bhai / mere dost": [
+  {
+   "w": "meri",
+   "t": "my",
+   "note": "feminine form (behen is fem)"
+  },
+  {
+   "w": "behen",
+   "t": "sister"
+  },
+  {
+   "w": "mera",
+   "t": "my",
+   "note": "masculine form (bhai is masc)"
+  },
+  {
+   "w": "bhai",
+   "t": "brother"
+  },
+  {
+   "w": "mere",
+   "t": "my",
+   "note": "plural form (dost is plural here)"
+  },
+  {
+   "w": "dost",
+   "t": "friends"
+  }
+ ],
+ "woh jaata hai / woh jaati hai / woh jaate hain": [
+  {
+   "w": "woh",
+   "t": "he"
+  },
+  {
+   "w": "jaata",
+   "t": "goes",
+   "note": "masc. form"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "woh",
+   "t": "she"
+  },
+  {
+   "w": "jaati",
+   "t": "goes",
+   "note": "fem. form"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "woh",
+   "t": "they"
+  },
+  {
+   "w": "jaate",
+   "t": "go",
+   "note": "plural form"
+  },
+  {
+   "w": "hain",
+   "t": "are"
+  }
+ ],
+ "aap baitho / tum baitho / tu baith": [
+  {
+   "w": "aap",
+   "t": "you",
+   "note": "formal"
+  },
+  {
+   "w": "baitho",
+   "t": "sit",
+   "note": "command form"
+  },
+  {
+   "w": "tum",
+   "t": "you",
+   "note": "casual"
+  },
+  {
+   "w": "baitho",
+   "t": "sit",
+   "note": "command form"
+  },
+  {
+   "w": "tu",
+   "t": "you",
+   "note": "intimate"
+  },
+  {
+   "w": "baith",
+   "t": "sit",
+   "note": "bare-root command for 'tu'"
+  }
+ ],
+ "mujhe lagta hai ki woh nahi aayega": [
+  {
+   "w": "mujhe",
+   "t": "to me",
+   "note": "'mujhe lagta hai' = I think"
+  },
+  {
+   "w": "lagta",
+   "t": "seems"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "ki",
+   "t": "that",
+   "note": "links the two clauses"
+  },
+  {
+   "w": "woh",
+   "t": "he"
+  },
+  {
+   "w": "nahi",
+   "t": "not/won't"
+  },
+  {
+   "w": "aayega",
+   "t": "will come",
+   "note": "masc. future"
+  }
+ ],
+ "tumse ek baat poochni hai": [
+  {
+   "w": "tumse",
+   "t": "from you",
+   "note": "tum + se"
+  },
+  {
+   "w": "ek",
+   "t": "one/a"
+  },
+  {
+   "w": "baat",
+   "t": "thing/matter"
+  },
+  {
+   "w": "poochni",
+   "t": "to ask",
+   "note": "'poochni hai' = need to ask"
+  },
+  {
+   "w": "hai",
+   "t": "is/need to"
+  }
+ ],
+ "apna kaam karo, mera kaam mujhe karne do": [
+  {
+   "w": "apna",
+   "t": "your own",
+   "note": "reflexive possessive"
+  },
+  {
+   "w": "kaam",
+   "t": "work"
+  },
+  {
+   "w": "karo",
+   "t": "do",
+   "note": "command form"
+  },
+  {
+   "w": "mera",
+   "t": "my"
+  },
+  {
+   "w": "kaam",
+   "t": "work"
+  },
+  {
+   "w": "mujhe",
+   "t": "me",
+   "note": "'mujhe karne do' = let me do"
+  },
+  {
+   "w": "karne",
+   "t": "to do"
+  },
+  {
+   "w": "do",
+   "t": "let/give",
+   "note": "'karne do' = allow to do"
+  }
+ ],
+ "tu kya kar raha hai?": [
+  {
+   "w": "tu",
+   "t": "you",
+   "note": "intimate"
+  },
+  {
+   "w": "kya",
+   "t": "what"
+  },
+  {
+   "w": "kar",
+   "t": "do"
+  },
+  {
+   "w": "raha",
+   "t": "doing",
+   "note": "masc. continuous marker"
+  },
+  {
+   "w": "hai",
+   "t": "are"
+  }
+ ],
+ "tum kya kar rahe ho?": [
+  {
+   "w": "tum",
+   "t": "you",
+   "note": "casual"
+  },
+  {
+   "w": "kya",
+   "t": "what"
+  },
+  {
+   "w": "kar",
+   "t": "do"
+  },
+  {
+   "w": "rahe",
+   "t": "doing",
+   "note": "continuous marker for 'tum'"
+  },
+  {
+   "w": "ho",
+   "t": "are"
+  }
+ ],
+ "aap kya kar rahe hain?": [
+  {
+   "w": "aap",
+   "t": "you",
+   "note": "polite"
+  },
+  {
+   "w": "kya",
+   "t": "what"
+  },
+  {
+   "w": "kar",
+   "t": "do"
+  },
+  {
+   "w": "rahe",
+   "t": "doing",
+   "note": "continuous marker for 'aap'"
+  },
+  {
+   "w": "hain",
+   "t": "are"
+  }
+ ],
+ "main Hindi seekh raha hoon": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "hindi",
+   "t": "Hindi"
+  },
+  {
+   "w": "seekh",
+   "t": "learn"
+  },
+  {
+   "w": "raha",
+   "t": "-ing",
+   "note": "masc. continuous marker"
+  },
+  {
+   "w": "hoon",
+   "t": "am"
+  }
+ ],
+ "tum kahaan rehte ho?": [
+  {
+   "w": "tum",
+   "t": "you",
+   "note": "casual"
+  },
+  {
+   "w": "kahaan",
+   "t": "where"
+  },
+  {
+   "w": "rehte",
+   "t": "live",
+   "note": "habitual form for 'tum'"
+  },
+  {
+   "w": "ho",
+   "t": "are/do"
+  }
+ ],
+ "aap kya pasand karte hain?": [
+  {
+   "w": "aap",
+   "t": "you",
+   "note": "polite"
+  },
+  {
+   "w": "kya",
+   "t": "what"
+  },
+  {
+   "w": "pasand",
+   "t": "like",
+   "note": "'pasand karna' = to like"
+  },
+  {
+   "w": "karte",
+   "t": "do",
+   "note": "habitual form for 'aap'"
+  },
+  {
+   "w": "hain",
+   "t": "are/do"
+  }
+ ],
+ "woh chai peeti hai": [
+  {
+   "w": "woh",
+   "t": "she"
+  },
+  {
+   "w": "chai",
+   "t": "tea"
+  },
+  {
+   "w": "peeti",
+   "t": "drinks",
+   "note": "fem. form"
+  },
+  {
+   "w": "hai",
+   "t": "is/does"
+  }
+ ],
+ "aap kahaan rehte hain?": [
+  {
+   "w": "aap",
+   "t": "you",
+   "note": "polite"
+  },
+  {
+   "w": "kahaan",
+   "t": "where"
+  },
+  {
+   "w": "rehte",
+   "t": "live",
+   "note": "habitual form for 'aap'"
+  },
+  {
+   "w": "hain",
+   "t": "are/do",
+   "note": "correct auxiliary for 'aap'"
+  }
+ ],
+ "aap kahaan rehte ho?": [
+  {
+   "w": "aap",
+   "t": "you",
+   "note": "polite"
+  },
+  {
+   "w": "kahaan",
+   "t": "where"
+  },
+  {
+   "w": "rehte",
+   "t": "live"
+  },
+  {
+   "w": "ho",
+   "t": "are/do",
+   "note": "wrong with 'aap' — should be 'hain'"
+  }
+ ],
+ "arrey, sorry — aap kahaan rehte hain?": [
+  {
+   "w": "arrey",
+   "t": "oh/hey",
+   "note": "exclamation"
+  },
+  {
+   "w": "sorry",
+   "t": "sorry"
+  },
+  {
+   "w": "aap",
+   "t": "you",
+   "note": "polite"
+  },
+  {
+   "w": "kahaan",
+   "t": "where"
+  },
+  {
+   "w": "rehte",
+   "t": "live",
+   "note": "habitual form for 'aap'"
+  },
+  {
+   "w": "hain",
+   "t": "are/do",
+   "note": "correct auxiliary for 'aap'"
+  }
+ ],
+ "beta, tum kahaan ja rahe ho?": [
+  {
+   "w": "beta",
+   "t": "kid/son",
+   "note": "affectionate term for a child"
+  },
+  {
+   "w": "tum",
+   "t": "you",
+   "note": "casual; normal for a child"
+  },
+  {
+   "w": "kahaan",
+   "t": "where"
+  },
+  {
+   "w": "ja",
+   "t": "go"
+  },
+  {
+   "w": "rahe",
+   "t": "-ing",
+   "note": "continuous marker for 'tum'"
+  },
+  {
+   "w": "ho",
+   "t": "are"
+  }
+ ],
+ "tum bolo, aap mat bolo": [
+  {
+   "w": "tum",
+   "t": "you",
+   "note": "the casual pronoun to use"
+  },
+  {
+   "w": "bolo",
+   "t": "say",
+   "note": "command form"
+  },
+  {
+   "w": "aap",
+   "t": "you",
+   "note": "the formal pronoun"
+  },
+  {
+   "w": "mat",
+   "t": "don't",
+   "note": "negative command marker"
+  },
+  {
+   "w": "bolo",
+   "t": "say"
+  }
+ ],
+ "Hey Bhagwan, tu hi sahara hai": [
+  {
+   "w": "hey",
+   "t": "O/oh",
+   "note": "vocative call"
+  },
+  {
+   "w": "bhagwan",
+   "t": "God"
+  },
+  {
+   "w": "tu",
+   "t": "you",
+   "note": "intimate; closeness to the divine"
+  },
+  {
+   "w": "hi",
+   "t": "alone/only",
+   "note": "emphatic particle"
+  },
+  {
+   "w": "sahara",
+   "t": "shelter/support"
+  },
+  {
+   "w": "hai",
+   "t": "are"
+  }
+ ],
+ "yeh kamra bada hai, yeh kursi chhoti hai": [
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "kamra",
+   "t": "room",
+   "note": "masculine (-aa ending)"
+  },
+  {
+   "w": "bada",
+   "t": "big",
+   "note": "masc. form"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "kursi",
+   "t": "chair",
+   "note": "feminine (-ii ending)"
+  },
+  {
+   "w": "chhoti",
+   "t": "small",
+   "note": "fem. form"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "mera bhai accha hai, meri behen acchi hai": [
+  {
+   "w": "mera",
+   "t": "my",
+   "note": "masc. (bhai is masc)"
+  },
+  {
+   "w": "bhai",
+   "t": "brother"
+  },
+  {
+   "w": "accha",
+   "t": "good",
+   "note": "masc. form"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "meri",
+   "t": "my",
+   "note": "fem. (behen is fem)"
+  },
+  {
+   "w": "behen",
+   "t": "sister"
+  },
+  {
+   "w": "acchi",
+   "t": "good",
+   "note": "fem. form"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "yeh dukaan badi hai, yeh bazaar bada hai": [
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "dukaan",
+   "t": "shop",
+   "note": "feminine despite consonant ending"
+  },
+  {
+   "w": "badi",
+   "t": "big",
+   "note": "fem. form"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "bazaar",
+   "t": "market",
+   "note": "masculine"
+  },
+  {
+   "w": "bada",
+   "t": "big",
+   "note": "masc. form"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "paani saaf hai, chai meethi hai": [
+  {
+   "w": "paani",
+   "t": "water",
+   "note": "masculine despite -ii ending"
+  },
+  {
+   "w": "saaf",
+   "t": "clean",
+   "note": "invariable adjective"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "chai",
+   "t": "tea",
+   "note": "feminine"
+  },
+  {
+   "w": "meethi",
+   "t": "sweet",
+   "note": "fem. form of 'meetha'"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "darwaza khul gaya, khidki khul gayi": [
+  {
+   "w": "darwaza",
+   "t": "door",
+   "note": "masculine"
+  },
+  {
+   "w": "khul",
+   "t": "open"
+  },
+  {
+   "w": "gaya",
+   "t": "opened",
+   "note": "masc. past, agrees with darwaza"
+  },
+  {
+   "w": "khidki",
+   "t": "window",
+   "note": "feminine"
+  },
+  {
+   "w": "khul",
+   "t": "open"
+  },
+  {
+   "w": "gayi",
+   "t": "opened",
+   "note": "fem. past, agrees with khidki"
+  }
+ ],
+ "mere paas do bhai aur ek behen hai": [
+  {
+   "w": "mere",
+   "t": "my/I",
+   "note": "'mere paas' = I have"
+  },
+  {
+   "w": "paas",
+   "t": "with/have",
+   "note": "expresses possession"
+  },
+  {
+   "w": "do",
+   "t": "two"
+  },
+  {
+   "w": "bhai",
+   "t": "brothers"
+  },
+  {
+   "w": "aur",
+   "t": "and"
+  },
+  {
+   "w": "ek",
+   "t": "one"
+  },
+  {
+   "w": "behen",
+   "t": "sister"
+  },
+  {
+   "w": "hai",
+   "t": "is/have"
+  }
+ ],
+ "Hindi mushkil hai par interesting hai": [
+  {
+   "w": "hindi",
+   "t": "Hindi"
+  },
+  {
+   "w": "mushkil",
+   "t": "hard",
+   "note": "invariable adjective; doesn't change for gender"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "par",
+   "t": "but"
+  },
+  {
+   "w": "interesting",
+   "t": "interesting",
+   "note": "English loanword"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "yeh aurat doctor hai, woh aadmi engineer hai": [
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "aurat",
+   "t": "woman",
+   "note": "feminine noun"
+  },
+  {
+   "w": "doctor",
+   "t": "doctor"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "woh",
+   "t": "that"
+  },
+  {
+   "w": "aadmi",
+   "t": "man",
+   "note": "masculine despite -ii ending"
+  },
+  {
+   "w": "engineer",
+   "t": "engineer"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "meri gaadi nayi hai, mera scooter purana hai": [
+  {
+   "w": "meri",
+   "t": "my",
+   "note": "feminine form, agrees with gaadi"
+  },
+  {
+   "w": "gaadi",
+   "t": "car",
+   "note": "feminine noun"
+  },
+  {
+   "w": "nayi",
+   "t": "new",
+   "note": "feminine form of naya"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "mera",
+   "t": "my",
+   "note": "masculine form, agrees with scooter"
+  },
+  {
+   "w": "scooter",
+   "t": "scooter",
+   "note": "masculine loanword"
+  },
+  {
+   "w": "purana",
+   "t": "old",
+   "note": "masculine form"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "acche dost milte hain mushkil se": [
+  {
+   "w": "acche",
+   "t": "good",
+   "note": "masculine plural form of accha"
+  },
+  {
+   "w": "dost",
+   "t": "friends",
+   "note": "same form singular/plural"
+  },
+  {
+   "w": "milte",
+   "t": "are found",
+   "note": "from milna, to be found/met"
+  },
+  {
+   "w": "hain",
+   "t": "are",
+   "note": "plural of hai"
+  },
+  {
+   "w": "mushkil",
+   "t": "hard"
+  },
+  {
+   "w": "se",
+   "t": "with difficulty",
+   "note": "'mushkil se' = hardly/with difficulty"
+  }
+ ],
+ "ladka accha hai": [
+  {
+   "w": "ladka",
+   "t": "boy",
+   "note": "masculine"
+  },
+  {
+   "w": "accha",
+   "t": "good",
+   "note": "masculine form"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "ladki acchi hai": [
+  {
+   "w": "ladki",
+   "t": "girl",
+   "note": "feminine"
+  },
+  {
+   "w": "acchi",
+   "t": "good",
+   "note": "feminine form"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "accha khaana": [
+  {
+   "w": "accha",
+   "t": "good",
+   "note": "masculine form, agrees with khaana"
+  },
+  {
+   "w": "khaana",
+   "t": "food",
+   "note": "masculine noun"
+  }
+ ],
+ "acchi chai": [
+  {
+   "w": "acchi",
+   "t": "good",
+   "note": "feminine form, agrees with chai"
+  },
+  {
+   "w": "chai",
+   "t": "tea",
+   "note": "feminine noun"
+  }
+ ],
+ "naya kapda": [
+  {
+   "w": "naya",
+   "t": "new",
+   "note": "masculine form"
+  },
+  {
+   "w": "kapda",
+   "t": "cloth",
+   "note": "masculine noun"
+  }
+ ],
+ "nayi saari": [
+  {
+   "w": "nayi",
+   "t": "new",
+   "note": "feminine form"
+  },
+  {
+   "w": "saari",
+   "t": "saree",
+   "note": "feminine noun"
+  }
+ ],
+ "laal kapda / laal saari": [
+  {
+   "w": "laal",
+   "t": "red",
+   "note": "invariable; doesn't change for gender"
+  },
+  {
+   "w": "kapda",
+   "t": "cloth",
+   "note": "masculine noun"
+  },
+  {
+   "w": "laal",
+   "t": "red"
+  },
+  {
+   "w": "saari",
+   "t": "saree",
+   "note": "feminine noun"
+  }
+ ],
+ "main jaa raha hoon": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "jaa",
+   "t": "going",
+   "note": "stem of jaana"
+  },
+  {
+   "w": "raha",
+   "t": "-ing (masc.)",
+   "note": "progressive marker, masculine speaker"
+  },
+  {
+   "w": "hoon",
+   "t": "am"
+  }
+ ],
+ "main jaa rahi hoon": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "jaa",
+   "t": "going",
+   "note": "stem of jaana"
+  },
+  {
+   "w": "rahi",
+   "t": "-ing (fem.)",
+   "note": "progressive marker, feminine speaker"
+  },
+  {
+   "w": "hoon",
+   "t": "am"
+  }
+ ],
+ "maine roti khayi": [
+  {
+   "w": "maine",
+   "t": "I",
+   "note": "main + ne (ergative)"
+  },
+  {
+   "w": "roti",
+   "t": "roti",
+   "note": "feminine object"
+  },
+  {
+   "w": "khayi",
+   "t": "ate",
+   "note": "feminine ending, agrees with roti"
+  }
+ ],
+ "maine khaana khaya": [
+  {
+   "w": "maine",
+   "t": "I",
+   "note": "main + ne (ergative)"
+  },
+  {
+   "w": "khaana",
+   "t": "meal",
+   "note": "masculine object"
+  },
+  {
+   "w": "khaya",
+   "t": "ate",
+   "note": "masculine ending, agrees with khaana"
+  }
+ ],
+ "yeh chai pee lo": [
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "chai",
+   "t": "tea"
+  },
+  {
+   "w": "pee",
+   "t": "drink",
+   "note": "stem of peena"
+  },
+  {
+   "w": "lo",
+   "t": "up / completely",
+   "note": "from lena; marks completion + gentle insistence"
+  }
+ ],
+ "main yeh kaam kar dungi": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "kaam",
+   "t": "work"
+  },
+  {
+   "w": "kar",
+   "t": "do",
+   "note": "stem of karna"
+  },
+  {
+   "w": "dungi",
+   "t": "will do (for you)",
+   "note": "kar + dena; committed, done for someone"
+  }
+ ],
+ "yeh kitaab mujhe de dijiye": [
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "kitaab",
+   "t": "book",
+   "note": "feminine noun"
+  },
+  {
+   "w": "mujhe",
+   "t": "to me"
+  },
+  {
+   "w": "de",
+   "t": "give",
+   "note": "stem of dena"
+  },
+  {
+   "w": "dijiye",
+   "t": "please give",
+   "note": "de + dijiye polite; softens the request"
+  }
+ ],
+ "bachhe so gaye": [
+  {
+   "w": "bachhe",
+   "t": "the kids",
+   "note": "masculine plural"
+  },
+  {
+   "w": "so",
+   "t": "sleep",
+   "note": "stem of sona"
+  },
+  {
+   "w": "gaye",
+   "t": "fell (asleep)",
+   "note": "so jaana = fall asleep; gaye is past perfective plural"
+  }
+ ],
+ "khaana khaa lo, theek se": [
+  {
+   "w": "khaana",
+   "t": "food"
+  },
+  {
+   "w": "khaa",
+   "t": "eat",
+   "note": "stem of khaana"
+  },
+  {
+   "w": "lo",
+   "t": "up",
+   "note": "khaa + le; eat it up"
+  },
+  {
+   "w": "theek",
+   "t": "properly",
+   "note": "'theek se' = properly"
+  },
+  {
+   "w": "se",
+   "t": "with / -ly",
+   "note": "forms adverb with theek"
+  }
+ ],
+ "light band kar do please": [
+  {
+   "w": "light",
+   "t": "light",
+   "note": "English loanword"
+  },
+  {
+   "w": "band",
+   "t": "off / closed"
+  },
+  {
+   "w": "kar",
+   "t": "do / make",
+   "note": "'band kar' = switch off"
+  },
+  {
+   "w": "do",
+   "t": "(for me)",
+   "note": "kar + dena; for the speaker's benefit, softer request"
+  },
+  {
+   "w": "please",
+   "t": "please"
+  }
+ ],
+ "main aapka number save kar leti hoon": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "aapka",
+   "t": "your",
+   "note": "polite"
+  },
+  {
+   "w": "number",
+   "t": "number"
+  },
+  {
+   "w": "save",
+   "t": "save",
+   "note": "English loanword"
+  },
+  {
+   "w": "kar",
+   "t": "do",
+   "note": "stem of karna"
+  },
+  {
+   "w": "leti",
+   "t": "(let me) take care of",
+   "note": "kar + le; small/quick action for self"
+  },
+  {
+   "w": "hoon",
+   "t": "am"
+  }
+ ],
+ "wo ghar pahunch gayi": [
+  {
+   "w": "wo",
+   "t": "she"
+  },
+  {
+   "w": "ghar",
+   "t": "home"
+  },
+  {
+   "w": "pahunch",
+   "t": "reach",
+   "note": "stem of pahunchna"
+  },
+  {
+   "w": "gayi",
+   "t": "reached",
+   "note": "pahunch + jaana; completion, feminine subject"
+  }
+ ],
+ "thoda paani pila do na": [
+  {
+   "w": "thoda",
+   "t": "a little"
+  },
+  {
+   "w": "paani",
+   "t": "water"
+  },
+  {
+   "w": "pila",
+   "t": "give to drink",
+   "note": "causative of peena"
+  },
+  {
+   "w": "do",
+   "t": "(for me)",
+   "note": "pila + dena; do it for the speaker"
+  },
+  {
+   "w": "na",
+   "t": "won't you?",
+   "note": "soft tag adding friendly insistence"
+  }
+ ],
+ "yeh sab samjha do bachon ko": [
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "sab",
+   "t": "all"
+  },
+  {
+   "w": "samjha",
+   "t": "explain",
+   "note": "from samjhana"
+  },
+  {
+   "w": "do",
+   "t": "(to them)",
+   "note": "samjha + dena; for the listeners' benefit"
+  },
+  {
+   "w": "bachon",
+   "t": "kids",
+   "note": "oblique plural of bachha"
+  },
+  {
+   "w": "ko",
+   "t": "to"
+  }
+ ],
+ "woh khaata hai": [
+  {
+   "w": "woh",
+   "t": "he"
+  },
+  {
+   "w": "khaata",
+   "t": "eats",
+   "note": "bare verb; habitual/in-progress, neutral"
+  },
+  {
+   "w": "hai",
+   "t": "does / is"
+  }
+ ],
+ "usne khaa liya": [
+  {
+   "w": "usne",
+   "t": "he",
+   "note": "us + ne (ergative)"
+  },
+  {
+   "w": "khaa",
+   "t": "eat",
+   "note": "stem of khaana"
+  },
+  {
+   "w": "liya",
+   "t": "ate up",
+   "note": "khaa + lena (past); finished, benefits the doer"
+  }
+ ],
+ "usne khaa diya": [
+  {
+   "w": "usne",
+   "t": "he",
+   "note": "us + ne (ergative)"
+  },
+  {
+   "w": "khaa",
+   "t": "eat",
+   "note": "stem of khaana"
+  },
+  {
+   "w": "diya",
+   "t": "ate up",
+   "note": "khaa + dena (past); affects/benefits someone else"
+  }
+ ],
+ "main thak gayi hoon": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "thak",
+   "t": "tire",
+   "note": "stem of thakna"
+  },
+  {
+   "w": "gayi",
+   "t": "have gotten (tired)",
+   "note": "thak + jaana; state fully reached, feminine"
+  },
+  {
+   "w": "hoon",
+   "t": "am"
+  }
+ ],
+ "usne sab kuch khaa daala": [
+  {
+   "w": "usne",
+   "t": "he",
+   "note": "us + ne (ergative)"
+  },
+  {
+   "w": "sab",
+   "t": "all"
+  },
+  {
+   "w": "kuch",
+   "t": "thing",
+   "note": "'sab kuch' = everything"
+  },
+  {
+   "w": "khaa",
+   "t": "eat",
+   "note": "stem of khaana"
+  },
+  {
+   "w": "daala",
+   "t": "devoured",
+   "note": "khaa + daalna; emphatic, forceful"
+  }
+ ],
+ "bachha rone laga": [
+  {
+   "w": "bachha",
+   "t": "the child",
+   "note": "masculine"
+  },
+  {
+   "w": "rone",
+   "t": "to cry",
+   "note": "oblique infinitive of rona"
+  },
+  {
+   "w": "laga",
+   "t": "started",
+   "note": "rone laga = started crying; onset, masculine"
+  }
+ ],
+ "mera homework kar do": [
+  {
+   "w": "mera",
+   "t": "my"
+  },
+  {
+   "w": "homework",
+   "t": "homework",
+   "note": "English loanword"
+  },
+  {
+   "w": "kar",
+   "t": "do",
+   "note": "stem of karna"
+  },
+  {
+   "w": "do",
+   "t": "(for me)",
+   "note": "kar + dena; listener does it for the speaker"
+  }
+ ],
+ "apna homework kar lo": [
+  {
+   "w": "apna",
+   "t": "your own"
+  },
+  {
+   "w": "homework",
+   "t": "homework",
+   "note": "English loanword"
+  },
+  {
+   "w": "kar",
+   "t": "do",
+   "note": "stem of karna"
+  },
+  {
+   "w": "lo",
+   "t": "(for yourself)",
+   "note": "kar + lena; listener is own beneficiary"
+  }
+ ],
+ "yeh kaam kar daalo": [
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "kaam",
+   "t": "work"
+  },
+  {
+   "w": "kar",
+   "t": "do",
+   "note": "stem of karna"
+  },
+  {
+   "w": "daalo",
+   "t": "knock out",
+   "note": "kar + daalna; emphatic, finish with force"
+  }
+ ],
+ "maine chitthi likhi": [
+  {
+   "w": "maine",
+   "t": "I",
+   "note": "main + ne (ergative)"
+  },
+  {
+   "w": "chitthi",
+   "t": "letter",
+   "note": "feminine object"
+  },
+  {
+   "w": "likhi",
+   "t": "wrote",
+   "note": "feminine ending, agrees with chitthi"
+  }
+ ],
+ "usne dawa khaai": [
+  {
+   "w": "usne",
+   "t": "he/she",
+   "note": "us + ne (ergative)"
+  },
+  {
+   "w": "dawa",
+   "t": "medicine",
+   "note": "feminine object"
+  },
+  {
+   "w": "khaai",
+   "t": "took",
+   "note": "feminine ending, agrees with dawa; 'dawa khaana' = take medicine"
+  }
+ ],
+ "humne gaadi chalaayi": [
+  {
+   "w": "humne",
+   "t": "we",
+   "note": "hum + ne (ergative)"
+  },
+  {
+   "w": "gaadi",
+   "t": "car",
+   "note": "feminine object"
+  },
+  {
+   "w": "chalaayi",
+   "t": "drove",
+   "note": "feminine ending, agrees with gaadi"
+  }
+ ],
+ "main chair par baithi": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "chair",
+   "t": "chair",
+   "note": "English loanword"
+  },
+  {
+   "w": "par",
+   "t": "on"
+  },
+  {
+   "w": "baithi",
+   "t": "sat",
+   "note": "intransitive, no ne; agrees with main (fem. speaker)"
+  }
+ ],
+ "papa ne khaana banaya": [
+  {
+   "w": "papa",
+   "t": "papa"
+  },
+  {
+   "w": "ne",
+   "t": "(ergative marker)",
+   "note": "marks subject of a transitive past verb"
+  },
+  {
+   "w": "khaana",
+   "t": "food",
+   "note": "masculine object"
+  },
+  {
+   "w": "banaya",
+   "t": "made",
+   "note": "masculine ending, agrees with khaana"
+  }
+ ],
+ "tumne yeh gaana kab suna?": [
+  {
+   "w": "tumne",
+   "t": "you",
+   "note": "tum + ne (ergative)"
+  },
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "gaana",
+   "t": "song",
+   "note": "masculine object"
+  },
+  {
+   "w": "kab",
+   "t": "when"
+  },
+  {
+   "w": "suna",
+   "t": "hear",
+   "note": "masculine ending, agrees with gaana"
+  }
+ ],
+ "maine usse phone kiya": [
+  {
+   "w": "maine",
+   "t": "I",
+   "note": "main + ne (ergative)"
+  },
+  {
+   "w": "usse",
+   "t": "him/her",
+   "note": "to him/her"
+  },
+  {
+   "w": "phone",
+   "t": "phone",
+   "note": "masculine loanword"
+  },
+  {
+   "w": "kiya",
+   "t": "did/called",
+   "note": "'phone kiya' = called; masc., agrees with phone"
+  }
+ ],
+ "usne mujhe yeh batayi": [
+  {
+   "w": "usne",
+   "t": "she",
+   "note": "us + ne (ergative)"
+  },
+  {
+   "w": "mujhe",
+   "t": "me",
+   "note": "to me"
+  },
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "batayi",
+   "t": "told",
+   "note": "feminine ending; agrees with implicit 'baat' (thing/matter)"
+  }
+ ],
+ "main roya / main royi": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "roya",
+   "t": "cried (M)",
+   "note": "rona is intransitive, no ne; masculine speaker"
+  },
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "royi",
+   "t": "cried (F)",
+   "note": "intransitive, no ne; feminine speaker"
+  }
+ ],
+ "humne saara kaam kar liya": [
+  {
+   "w": "humne",
+   "t": "we",
+   "note": "hum + ne (ergative)"
+  },
+  {
+   "w": "saara",
+   "t": "all",
+   "note": "masculine, agrees with kaam"
+  },
+  {
+   "w": "kaam",
+   "t": "work",
+   "note": "masculine object"
+  },
+  {
+   "w": "kar",
+   "t": "do",
+   "note": "stem of karna"
+  },
+  {
+   "w": "liya",
+   "t": "got done",
+   "note": "kar + lena (perfective); still takes ne, agrees with kaam"
+  }
+ ],
+ "main jaata hoon": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "jaata",
+   "t": "go",
+   "note": "habitual present, masculine; no ne in present tense"
+  },
+  {
+   "w": "hoon",
+   "t": "do / am"
+  }
+ ],
+ "main soya": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "soya",
+   "t": "slept",
+   "note": "sona is intransitive, so no ne even in past"
+  }
+ ],
+ "maine khaana khaaya": [
+  {
+   "w": "maine",
+   "t": "I",
+   "note": "main + ne, ergative subject in past transitive"
+  },
+  {
+   "w": "khaana",
+   "t": "food",
+   "note": "noun here, the object"
+  },
+  {
+   "w": "khaaya",
+   "t": "ate",
+   "note": "agrees with khaana (m)"
+  }
+ ],
+ "maine kitaab padhi": [
+  {
+   "w": "maine",
+   "t": "I",
+   "note": "main + ne"
+  },
+  {
+   "w": "kitaab",
+   "t": "book",
+   "note": "feminine noun"
+  },
+  {
+   "w": "padhi",
+   "t": "read",
+   "note": "past; agrees with kitaab (f)"
+  }
+ ],
+ "maine roti khaayi": [
+  {
+   "w": "maine",
+   "t": "I",
+   "note": "main + ne"
+  },
+  {
+   "w": "roti",
+   "t": "roti",
+   "note": "feminine noun"
+  },
+  {
+   "w": "khaayi",
+   "t": "ate",
+   "note": "-i ending, agrees with roti (f)"
+  }
+ ],
+ "maine paani piya": [
+  {
+   "w": "maine",
+   "t": "I",
+   "note": "main + ne"
+  },
+  {
+   "w": "paani",
+   "t": "water",
+   "note": "masculine noun"
+  },
+  {
+   "w": "piya",
+   "t": "drank",
+   "note": "-a ending, agrees with paani (m)"
+  }
+ ],
+ "maine chai pi": [
+  {
+   "w": "maine",
+   "t": "I",
+   "note": "main + ne"
+  },
+  {
+   "w": "chai",
+   "t": "tea",
+   "note": "feminine noun"
+  },
+  {
+   "w": "pi",
+   "t": "drank",
+   "note": "-i ending, agrees with chai (f)"
+  }
+ ],
+ "maine kitaabein padhi": [
+  {
+   "w": "maine",
+   "t": "I",
+   "note": "main + ne"
+  },
+  {
+   "w": "kitaabein",
+   "t": "books",
+   "note": "feminine plural"
+  },
+  {
+   "w": "padhi",
+   "t": "read",
+   "note": "stays -i (irregular fem. pl. agreement)"
+  }
+ ],
+ "tumne kya kaha?": [
+  {
+   "w": "tumne",
+   "t": "you",
+   "note": "tum + ne, casual"
+  },
+  {
+   "w": "kya",
+   "t": "what"
+  },
+  {
+   "w": "kaha",
+   "t": "said",
+   "note": "past of kehna"
+  }
+ ],
+ "aapne khaana khaaya?": [
+  {
+   "w": "aapne",
+   "t": "you",
+   "note": "aap + ne, formal"
+  },
+  {
+   "w": "khaana",
+   "t": "food"
+  },
+  {
+   "w": "khaaya",
+   "t": "ate"
+  }
+ ],
+ "usne chai pi": [
+  {
+   "w": "usne",
+   "t": "he/she",
+   "note": "wo shifts to oblique us + ne"
+  },
+  {
+   "w": "chai",
+   "t": "tea"
+  },
+  {
+   "w": "pi",
+   "t": "drank",
+   "note": "agrees with chai (f)"
+  }
+ ],
+ "hamne movie dekhi": [
+  {
+   "w": "hamne",
+   "t": "we",
+   "note": "ham + ne"
+  },
+  {
+   "w": "movie",
+   "t": "movie"
+  },
+  {
+   "w": "dekhi",
+   "t": "watched",
+   "note": "agrees with movie (f)"
+  }
+ ],
+ "unhone gaana gaaya": [
+  {
+   "w": "unhone",
+   "t": "they",
+   "note": "plural oblique of wo + ne"
+  },
+  {
+   "w": "gaana",
+   "t": "song",
+   "note": "noun here, the object"
+  },
+  {
+   "w": "gaaya",
+   "t": "sang",
+   "note": "agrees with gaana (m)"
+  }
+ ],
+ "✗ main khaaya / ✓ maine khaaya": [
+  {
+   "w": "main",
+   "t": "I",
+   "note": "wrong: missing ne"
+  },
+  {
+   "w": "khaaya",
+   "t": "ate"
+  },
+  {
+   "w": "maine",
+   "t": "I",
+   "note": "correct: main + ne"
+  },
+  {
+   "w": "khaaya",
+   "t": "ate"
+  }
+ ],
+ "✗ main-ne soya / ✓ main soya": [
+  {
+   "w": "main-ne",
+   "t": "I",
+   "note": "wrong: ne added to intransitive"
+  },
+  {
+   "w": "soya",
+   "t": "slept"
+  },
+  {
+   "w": "main",
+   "t": "I",
+   "note": "correct: no ne (sona is intransitive)"
+  },
+  {
+   "w": "soya",
+   "t": "slept"
+  }
+ ],
+ "✗ maine roti khaaya / ✓ maine roti khaayi": [
+  {
+   "w": "maine",
+   "t": "I"
+  },
+  {
+   "w": "roti",
+   "t": "roti",
+   "note": "feminine"
+  },
+  {
+   "w": "khaaya",
+   "t": "ate",
+   "note": "wrong: -a doesn't agree with roti"
+  },
+  {
+   "w": "maine",
+   "t": "I"
+  },
+  {
+   "w": "roti",
+   "t": "roti"
+  },
+  {
+   "w": "khaayi",
+   "t": "ate",
+   "note": "correct: -i agrees with roti (f)"
+  }
+ ],
+ "✗ main-ne khaata hoon / ✓ main khaata hoon": [
+  {
+   "w": "main-ne",
+   "t": "I",
+   "note": "wrong: ne not used in present tense"
+  },
+  {
+   "w": "khaata",
+   "t": "eat"
+  },
+  {
+   "w": "hoon",
+   "t": "am"
+  },
+  {
+   "w": "main",
+   "t": "I",
+   "note": "correct: bare subject in present"
+  },
+  {
+   "w": "khaata",
+   "t": "eat"
+  },
+  {
+   "w": "hoon",
+   "t": "am"
+  }
+ ],
+ "Cutting din ke pehle grahak ka intezaar kar raha hai.": [
+  {
+   "w": "cutting",
+   "t": "Cutting",
+   "note": "the chaiwala mascot's name"
+  },
+  {
+   "w": "din",
+   "t": "day"
+  },
+  {
+   "w": "ke",
+   "t": "of",
+   "note": "part of ke pehle"
+  },
+  {
+   "w": "pehle",
+   "t": "first",
+   "note": "din ke pehle = the day's first"
+  },
+  {
+   "w": "grahak",
+   "t": "customer"
+  },
+  {
+   "w": "ka",
+   "t": "of/for",
+   "note": "links to intezaar"
+  },
+  {
+   "w": "intezaar",
+   "t": "wait"
+  },
+  {
+   "w": "kar",
+   "t": "doing",
+   "note": "intezaar kar = waiting"
+  },
+  {
+   "w": "raha",
+   "t": "-ing",
+   "note": "continuous marker (m)"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "Do chai dena, bhaiya. Ek meri aur ek aapki.": [
+  {
+   "w": "do",
+   "t": "two"
+  },
+  {
+   "w": "chai",
+   "t": "chais"
+  },
+  {
+   "w": "dena",
+   "t": "give",
+   "note": "polite request"
+  },
+  {
+   "w": "bhaiya",
+   "t": "brother",
+   "note": "friendly address to a man"
+  },
+  {
+   "w": "ek",
+   "t": "one"
+  },
+  {
+   "w": "meri",
+   "t": "mine",
+   "note": "for me (f form, agrees with chai)"
+  },
+  {
+   "w": "aur",
+   "t": "and"
+  },
+  {
+   "w": "ek",
+   "t": "one"
+  },
+  {
+   "w": "aapki",
+   "t": "yours",
+   "note": "for you (formal)"
+  }
+ ],
+ "Arrey wah! Mere liye bhi? Bahut shukriya, dost!": [
+  {
+   "w": "arrey",
+   "t": "oh!",
+   "note": "exclamation"
+  },
+  {
+   "w": "wah",
+   "t": "wow"
+  },
+  {
+   "w": "mere",
+   "t": "my",
+   "note": "part of mere liye = for me"
+  },
+  {
+   "w": "liye",
+   "t": "for"
+  },
+  {
+   "w": "bhi",
+   "t": "too"
+  },
+  {
+   "w": "bahut",
+   "t": "a lot"
+  },
+  {
+   "w": "shukriya",
+   "t": "thanks"
+  },
+  {
+   "w": "dost",
+   "t": "friend"
+  }
+ ],
+ "Tumhara naam kya hai?": [
+  {
+   "w": "tumhara",
+   "t": "your",
+   "note": "casual"
+  },
+  {
+   "w": "naam",
+   "t": "name"
+  },
+  {
+   "w": "kya",
+   "t": "what"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "Main Cutting hoon. Half-chai bechta hoon, full-friendship deta hoon.": [
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "cutting",
+   "t": "Cutting",
+   "note": "his name"
+  },
+  {
+   "w": "hoon",
+   "t": "am"
+  },
+  {
+   "w": "half-chai",
+   "t": "half-chai",
+   "note": "English play on 'cutting chai'"
+  },
+  {
+   "w": "bechta",
+   "t": "sell"
+  },
+  {
+   "w": "hoon",
+   "t": "do",
+   "note": "auxiliary"
+  },
+  {
+   "w": "full-friendship",
+   "t": "full-friendship",
+   "note": "English wordplay"
+  },
+  {
+   "w": "deta",
+   "t": "give"
+  },
+  {
+   "w": "hoon",
+   "t": "do",
+   "note": "auxiliary"
+  }
+ ],
+ "Maya hotel Surya dhoond rahi hai. Use kuchh pata nahi hai ki kahaan hai.": [
+  {
+   "w": "maya",
+   "t": "Maya",
+   "note": "a character's name"
+  },
+  {
+   "w": "hotel",
+   "t": "hotel"
+  },
+  {
+   "w": "surya",
+   "t": "Surya",
+   "note": "the hotel's name"
+  },
+  {
+   "w": "dhoond",
+   "t": "looking for",
+   "note": "dhoond rahi = searching"
+  },
+  {
+   "w": "rahi",
+   "t": "-ing",
+   "note": "continuous (f)"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "use",
+   "t": "to her",
+   "note": "dative of wo"
+  },
+  {
+   "w": "kuchh",
+   "t": "any",
+   "note": "kuchh pata nahi = no idea"
+  },
+  {
+   "w": "pata",
+   "t": "idea/clue"
+  },
+  {
+   "w": "nahi",
+   "t": "no/not"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "ki",
+   "t": "that",
+   "note": "clause linker"
+  },
+  {
+   "w": "kahaan",
+   "t": "where"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "Seedha jaao, phir left. Bilkul saamne hai.": [
+  {
+   "w": "seedha",
+   "t": "straight"
+  },
+  {
+   "w": "jaao",
+   "t": "go",
+   "note": "casual command"
+  },
+  {
+   "w": "phir",
+   "t": "then"
+  },
+  {
+   "w": "left",
+   "t": "left",
+   "note": "English loanword"
+  },
+  {
+   "w": "bilkul",
+   "t": "right/exactly"
+  },
+  {
+   "w": "saamne",
+   "t": "in front"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "Arrey nahi! Right le lo. Main bhi wahaan jaata hoon.": [
+  {
+   "w": "arrey",
+   "t": "oh!"
+  },
+  {
+   "w": "nahi",
+   "t": "no"
+  },
+  {
+   "w": "right",
+   "t": "right",
+   "note": "English loanword"
+  },
+  {
+   "w": "le",
+   "t": "take",
+   "note": "le lo = take it"
+  },
+  {
+   "w": "lo",
+   "t": "(take)",
+   "note": "completes the command"
+  },
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "bhi",
+   "t": "too"
+  },
+  {
+   "w": "wahaan",
+   "t": "there"
+  },
+  {
+   "w": "jaata",
+   "t": "go"
+  },
+  {
+   "w": "hoon",
+   "t": "do",
+   "note": "auxiliary"
+  }
+ ],
+ "Auntie, mere papa wahaan kaam karte hain. Main le chalti hoon.": [
+  {
+   "w": "auntie",
+   "t": "auntie",
+   "note": "respectful address to an older woman"
+  },
+  {
+   "w": "mere",
+   "t": "my"
+  },
+  {
+   "w": "papa",
+   "t": "papa/dad"
+  },
+  {
+   "w": "wahaan",
+   "t": "there"
+  },
+  {
+   "w": "kaam",
+   "t": "work",
+   "note": "kaam karte = works"
+  },
+  {
+   "w": "karte",
+   "t": "does"
+  },
+  {
+   "w": "hain",
+   "t": "do",
+   "note": "auxiliary (plural/respect)"
+  },
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "le",
+   "t": "take",
+   "note": "le chalti = will take you along"
+  },
+  {
+   "w": "chalti",
+   "t": "go/walk"
+  },
+  {
+   "w": "hoon",
+   "t": "do",
+   "note": "auxiliary"
+  }
+ ],
+ "Maya ab parivar ka hissa hai.": [
+  {
+   "w": "maya",
+   "t": "Maya"
+  },
+  {
+   "w": "ab",
+   "t": "now"
+  },
+  {
+   "w": "parivar",
+   "t": "family"
+  },
+  {
+   "w": "ka",
+   "t": "of",
+   "note": "parivar ka = of the family"
+  },
+  {
+   "w": "hissa",
+   "t": "part"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "Nani ji, namaste! Main aapse milne aaya hoon.": [
+  {
+   "w": "nani",
+   "t": "grandma",
+   "note": "maternal grandmother"
+  },
+  {
+   "w": "ji",
+   "t": "(respect)",
+   "note": "honorific suffix"
+  },
+  {
+   "w": "namaste",
+   "t": "hello"
+  },
+  {
+   "w": "main",
+   "t": "I"
+  },
+  {
+   "w": "aapse",
+   "t": "you",
+   "note": "aap + se = with/to you (formal)"
+  },
+  {
+   "w": "milne",
+   "t": "to meet"
+  },
+  {
+   "w": "aaya",
+   "t": "came",
+   "note": "male speaker"
+  },
+  {
+   "w": "hoon",
+   "t": "have",
+   "note": "auxiliary"
+  }
+ ],
+ "Arrey beta! Aa gaya tu? Joote yahin utaar de. Haath dho le.": [
+  {
+   "w": "arrey",
+   "t": "oh!"
+  },
+  {
+   "w": "beta",
+   "t": "child",
+   "note": "affectionate, to son/younger person"
+  },
+  {
+   "w": "aa",
+   "t": "come",
+   "note": "aa gaya = came/arrived"
+  },
+  {
+   "w": "gaya",
+   "t": "did",
+   "note": "completive (m)"
+  },
+  {
+   "w": "tu",
+   "t": "you",
+   "note": "intimate/familiar"
+  },
+  {
+   "w": "joote",
+   "t": "shoes"
+  },
+  {
+   "w": "yahin",
+   "t": "right here"
+  },
+  {
+   "w": "utaar",
+   "t": "take off",
+   "note": "utaar de = take off"
+  },
+  {
+   "w": "de",
+   "t": "(do it)",
+   "note": "completes the command"
+  },
+  {
+   "w": "haath",
+   "t": "hands"
+  },
+  {
+   "w": "dho",
+   "t": "wash",
+   "note": "dho le = wash them"
+  },
+  {
+   "w": "le",
+   "t": "(do it)",
+   "note": "completes the command"
+  }
+ ],
+ "Tu toh bahut patla ho gaya hai. Yeh poori, yeh sabzi, aur thoda halwa bhi.": [
+  {
+   "w": "tu",
+   "t": "you",
+   "note": "intimate"
+  },
+  {
+   "w": "toh",
+   "t": "really",
+   "note": "emphasis particle"
+  },
+  {
+   "w": "bahut",
+   "t": "very"
+  },
+  {
+   "w": "patla",
+   "t": "thin",
+   "note": "male"
+  },
+  {
+   "w": "ho",
+   "t": "become",
+   "note": "ho gaya = have become"
+  },
+  {
+   "w": "gaya",
+   "t": "got",
+   "note": "completive (m)"
+  },
+  {
+   "w": "hai",
+   "t": "have",
+   "note": "auxiliary"
+  },
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "poori",
+   "t": "poori",
+   "note": "fried bread"
+  },
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "sabzi",
+   "t": "vegetable dish"
+  },
+  {
+   "w": "aur",
+   "t": "and"
+  },
+  {
+   "w": "thoda",
+   "t": "a bit"
+  },
+  {
+   "w": "halwa",
+   "t": "halwa",
+   "note": "a sweet dish"
+  },
+  {
+   "w": "bhi",
+   "t": "too"
+  }
+ ],
+ "Nani, bas! Bahut khaa liya. Pet bhar gaya.": [
+  {
+   "w": "nani",
+   "t": "grandma"
+  },
+  {
+   "w": "bas",
+   "t": "enough"
+  },
+  {
+   "w": "bahut",
+   "t": "a lot"
+  },
+  {
+   "w": "khaa",
+   "t": "eaten",
+   "note": "khaa liya = have eaten"
+  },
+  {
+   "w": "liya",
+   "t": "(did)",
+   "note": "completive marker"
+  },
+  {
+   "w": "pet",
+   "t": "stomach"
+  },
+  {
+   "w": "bhar",
+   "t": "full",
+   "note": "bhar gaya = got full"
+  },
+  {
+   "w": "gaya",
+   "t": "got",
+   "note": "completive (m)"
+  }
+ ],
+ "Yeh dabba le ja. Ghar pe khaayega kal.": [
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "dabba",
+   "t": "tiffin/box"
+  },
+  {
+   "w": "le",
+   "t": "take",
+   "note": "le ja = take it away"
+  },
+  {
+   "w": "ja",
+   "t": "go",
+   "note": "completes the phrase"
+  },
+  {
+   "w": "ghar",
+   "t": "home"
+  },
+  {
+   "w": "pe",
+   "t": "at",
+   "note": "ghar pe = at home"
+  },
+  {
+   "w": "khaayega",
+   "t": "will eat",
+   "note": "future (m, tu/familiar)"
+  },
+  {
+   "w": "kal",
+   "t": "tomorrow"
+  }
+ ],
+ "Aaj Diwali hai! Chalo, chhat pe diye jalaate hain.": [
+  {
+   "w": "aaj",
+   "t": "today"
+  },
+  {
+   "w": "diwali",
+   "t": "Diwali",
+   "note": "festival of lights"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "chalo",
+   "t": "come on",
+   "note": "let's go"
+  },
+  {
+   "w": "chhat",
+   "t": "roof"
+  },
+  {
+   "w": "pe",
+   "t": "on",
+   "note": "chhat pe = on the roof"
+  },
+  {
+   "w": "diye",
+   "t": "lamps",
+   "note": "oil lamps (diya pl.)"
+  },
+  {
+   "w": "jalaate",
+   "t": "light",
+   "note": "jalaate hain = let's light"
+  },
+  {
+   "w": "hain",
+   "t": "(let's)",
+   "note": "auxiliary"
+  }
+ ],
+ "Pehle Lakshmi maa ko diya dikhao, beta. Phir baaki sab.": [
+  {
+   "w": "pehle",
+   "t": "first"
+  },
+  {
+   "w": "lakshmi",
+   "t": "Lakshmi",
+   "note": "goddess of prosperity"
+  },
+  {
+   "w": "maa",
+   "t": "mother",
+   "note": "respectful for the goddess"
+  },
+  {
+   "w": "ko",
+   "t": "to",
+   "note": "Lakshmi maa ko = to Goddess Lakshmi"
+  },
+  {
+   "w": "diya",
+   "t": "lamp"
+  },
+  {
+   "w": "dikhao",
+   "t": "show",
+   "note": "command"
+  },
+  {
+   "w": "beta",
+   "t": "child"
+  },
+  {
+   "w": "phir",
+   "t": "then"
+  },
+  {
+   "w": "baaki",
+   "t": "rest"
+  },
+  {
+   "w": "sab",
+   "t": "all"
+  }
+ ],
+ "Maine saari mithai laayi hai. Gulab jamun aur barfi!": [
+  {
+   "w": "maine",
+   "t": "I",
+   "note": "main + ne, past transitive"
+  },
+  {
+   "w": "saari",
+   "t": "all",
+   "note": "agrees with mithai (f)"
+  },
+  {
+   "w": "mithai",
+   "t": "sweets"
+  },
+  {
+   "w": "laayi",
+   "t": "brought",
+   "note": "agrees with mithai (f)"
+  },
+  {
+   "w": "hai",
+   "t": "have",
+   "note": "auxiliary"
+  },
+  {
+   "w": "gulab",
+   "t": "gulab",
+   "note": "part of gulab jamun"
+  },
+  {
+   "w": "jamun",
+   "t": "jamun",
+   "note": "gulab jamun, a sweet"
+  },
+  {
+   "w": "aur",
+   "t": "and"
+  },
+  {
+   "w": "barfi",
+   "t": "barfi",
+   "note": "a milk sweet"
+  }
+ ],
+ "Shubh Diwali, Nani ji! Yeh aapke liye chhota sa gift hai.": [
+  {
+   "w": "shubh",
+   "t": "happy/auspicious"
+  },
+  {
+   "w": "diwali",
+   "t": "Diwali"
+  },
+  {
+   "w": "nani",
+   "t": "grandma"
+  },
+  {
+   "w": "ji",
+   "t": "(respect)"
+  },
+  {
+   "w": "yeh",
+   "t": "this"
+  },
+  {
+   "w": "aapke",
+   "t": "your",
+   "note": "part of aapke liye = for you"
+  },
+  {
+   "w": "liye",
+   "t": "for"
+  },
+  {
+   "w": "chhota",
+   "t": "small"
+  },
+  {
+   "w": "sa",
+   "t": "little",
+   "note": "chhota sa = a small little (softener)"
+  },
+  {
+   "w": "gift",
+   "t": "gift",
+   "note": "English loanword"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "Khush raho, beta. Ghar roshan, dil roshan.": [
+  {
+   "w": "khush",
+   "t": "happy"
+  },
+  {
+   "w": "raho",
+   "t": "stay",
+   "note": "khush raho = stay happy (blessing)"
+  },
+  {
+   "w": "beta",
+   "t": "child"
+  },
+  {
+   "w": "ghar",
+   "t": "home"
+  },
+  {
+   "w": "roshan",
+   "t": "bright/lit"
+  },
+  {
+   "w": "dil",
+   "t": "heart"
+  },
+  {
+   "w": "roshan",
+   "t": "bright/lit"
+  }
+ ],
+ "Aaiye, baithiye. Kahiye, kya takleef hai?": [
+  {
+   "w": "aaiye",
+   "t": "come in",
+   "note": "polite command"
+  },
+  {
+   "w": "baithiye",
+   "t": "sit down",
+   "note": "polite command"
+  },
+  {
+   "w": "kahiye",
+   "t": "tell me",
+   "note": "polite command"
+  },
+  {
+   "w": "kya",
+   "t": "what"
+  },
+  {
+   "w": "takleef",
+   "t": "trouble/discomfort"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "Doctor sahab, do din se bukhar hai aur gala kharab hai.": [
+  {
+   "w": "doctor",
+   "t": "doctor",
+   "note": "English loanword"
+  },
+  {
+   "w": "sahab",
+   "t": "sir",
+   "note": "respectful suffix"
+  },
+  {
+   "w": "do",
+   "t": "two"
+  },
+  {
+   "w": "din",
+   "t": "days"
+  },
+  {
+   "w": "se",
+   "t": "for/since",
+   "note": "do din se = for two days"
+  },
+  {
+   "w": "bukhar",
+   "t": "fever"
+  },
+  {
+   "w": "hai",
+   "t": "is/have"
+  },
+  {
+   "w": "aur",
+   "t": "and"
+  },
+  {
+   "w": "gala",
+   "t": "throat"
+  },
+  {
+   "w": "kharab",
+   "t": "bad/sore",
+   "note": "gala kharab = sore throat"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ],
+ "Aapko aaram chahiye. Khoob paani piyiye aur garam haldi-doodh lijiye.": [
+  {
+   "w": "aapko",
+   "t": "you",
+   "note": "aap + ko = to you"
+  },
+  {
+   "w": "aaram",
+   "t": "rest"
+  },
+  {
+   "w": "chahiye",
+   "t": "need",
+   "note": "aapko chahiye = you need"
+  },
+  {
+   "w": "khoob",
+   "t": "plenty of"
+  },
+  {
+   "w": "paani",
+   "t": "water"
+  },
+  {
+   "w": "piyiye",
+   "t": "drink",
+   "note": "polite command"
+  },
+  {
+   "w": "aur",
+   "t": "and"
+  },
+  {
+   "w": "garam",
+   "t": "warm"
+  },
+  {
+   "w": "haldi-doodh",
+   "t": "turmeric milk"
+  },
+  {
+   "w": "lijiye",
+   "t": "have/take",
+   "note": "polite command"
+  }
+ ],
+ "Theek hai, doctor sahab. Kya koi dawa bhi leni hogi?": [
+  {
+   "w": "theek",
+   "t": "okay",
+   "note": "theek hai = alright"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  },
+  {
+   "w": "doctor",
+   "t": "doctor"
+  },
+  {
+   "w": "sahab",
+   "t": "sir"
+  },
+  {
+   "w": "kya",
+   "t": "(question)",
+   "note": "yes/no question marker"
+  },
+  {
+   "w": "koi",
+   "t": "any"
+  },
+  {
+   "w": "dawa",
+   "t": "medicine"
+  },
+  {
+   "w": "bhi",
+   "t": "too"
+  },
+  {
+   "w": "leni",
+   "t": "to take",
+   "note": "agrees with dawa (f)"
+  },
+  {
+   "w": "hogi",
+   "t": "will need",
+   "note": "leni hogi = will have to take"
+  }
+ ],
+ "Abhi nahi. Aaram sabse achhi dawa hai.": [
+  {
+   "w": "abhi",
+   "t": "now/yet",
+   "note": "abhi nahi = not yet"
+  },
+  {
+   "w": "nahi",
+   "t": "not"
+  },
+  {
+   "w": "aaram",
+   "t": "rest"
+  },
+  {
+   "w": "sabse",
+   "t": "the most",
+   "note": "sabse achhi = the best"
+  },
+  {
+   "w": "achhi",
+   "t": "good/best",
+   "note": "agrees with dawa (f)"
+  },
+  {
+   "w": "dawa",
+   "t": "medicine"
+  },
+  {
+   "w": "hai",
+   "t": "is"
+  }
+ ]
+}

@@ -21,6 +21,7 @@ import { Doctor } from './characters/Doctor'
 import { markStoryRead } from '@/lib/stories-progress'
 import { speak } from '@/lib/speech'
 import { playSound } from '@/lib/sounds'
+import GlossableText from '@/components/GlossableText'
 import type { Story } from '@/types/story'
 
 const W = '#fff' // @design-allow: white literal
@@ -252,7 +253,7 @@ export function StoryReader({ story }: StoryReaderProps) {
                   marginBottom: 12,
                 }}
               >
-                {panel.hindi}
+                <GlossableText phrase={panel.hindi} language="hindi" />
               </div>
 
               {panel.pronunciation && (
