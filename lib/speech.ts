@@ -1,8 +1,20 @@
-// Shared speech utility for Hindi and Dutch text read-aloud
-// Uses Google Translate TTS via our own proxy (avoids CORS, free, no API key)
-// Falls back to browser speechSynthesis if Google TTS fails
+// Shared speech utility for Hindi and Dutch text read-aloud.
+// Prefers a pre-rendered ElevenLabs clip (Hindi lesson phrases) when one exists,
+// otherwise uses Google Translate TTS via our own proxy, falling back to browser
+// speechSynthesis if that fails too.
+
+import hiAudioJson from '@/content/hi-audio.json'
 
 let currentAudio: HTMLAudioElement | null = null
+
+// Romanized Hindi phrase → pre-rendered clip filename (public/audio/hi/<file>).
+// Produced by scripts/generate-audio.mjs; empty until generated.
+const hiAudio = hiAudioJson as Record<string, string>
+
+function hiClipUrl(text: string): string | null {
+  const file = hiAudio[text.trim()]
+  return file ? `/audio/hi/${file}` : null
+}
 
 /** Strip content in parentheses (typically English translations) */
 function stripParenthetical(text: string): string {
@@ -51,6 +63,16 @@ export function speak(text: string, ttsLocale = 'hi', onEnd?: () => void): void 
   if (!cleaned) {
     onEnd?.()
     return
+  }
+
+  // Prefer a pre-rendered ElevenLabs clip (Hindi lesson phrases). On any
+  // playback error, fall through to live Google TTS.
+  if (ttsLocale === 'hi') {
+    const clip = hiClipUrl(cleaned)
+    if (clip) {
+      speakUrl(clip, onEnd, () => playChunks(splitText(cleaned), 0, ttsLocale, onEnd))
+      return
+    }
   }
 
   const chunks = splitText(cleaned)
