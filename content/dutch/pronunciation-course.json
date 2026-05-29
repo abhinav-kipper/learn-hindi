@@ -107,7 +107,7 @@
         { "id": "c-w-water", "grapheme": "w", "hint": "lighter than English 'w', lips relaxed", "anchor": { "word": "water", "en": "water" }, "kind": "consonant" },
         { "id": "c-j-jas", "grapheme": "j", "hint": "sounds like English 'y' — 'jas' = 'yas'", "anchor": { "word": "jas", "en": "coat" }, "kind": "consonant" },
         { "id": "c-r-rood", "grapheme": "r", "hint": "rolled at the tip or rasped at the back", "anchor": { "word": "rood", "en": "red" }, "kind": "consonant" },
-        { "id": "c-d-hond", "grapheme": "d→t", "hint": "voiced letters go voiceless at word end — 'hond' = 'hont'", "anchor": { "word": "hond", "en": "dog" }, "kind": "consonant" }
+        { "id": "c-d-hond", "grapheme": "d→t", "hint": "voiced letters go voiceless at word end — 'hond' = 'hont'", "anchor": { "word": "hond", "en": "dog" }, "kind": "consonant", "say": "d" }
       ],
       "earQuiz": {
         "prompt": "Which word did you hear?",
@@ -128,7 +128,7 @@
       "intro": "This is THE Dutch sound: a rasp from the back of the throat, like clearing it gently. The same sound spelled g, ch, and sch. Drill it until your throat is comfy.",
       "cards": [
         { "id": "g-goud2", "grapheme": "g", "hint": "throat rasp at the start — 'goud' ≈ 'chowt'", "anchor": { "word": "goud", "en": "gold" }, "kind": "consonant" },
-        { "id": "g-gezellig", "grapheme": "g…g", "hint": "the rasp at the start AND the end", "anchor": { "word": "gezellig", "en": "cozy" }, "kind": "consonant" },
+        { "id": "g-gezellig", "grapheme": "g…g", "hint": "the rasp at the start AND the end", "anchor": { "word": "gezellig", "en": "cozy" }, "kind": "consonant", "say": "g" },
         { "id": "g-ch-lachen", "grapheme": "ch", "hint": "same rasp in the middle/end of a word", "anchor": { "word": "lachen", "en": "to laugh" }, "kind": "consonant" },
         { "id": "g-ch-nacht", "grapheme": "ch", "hint": "rasp before 't' at word end", "anchor": { "word": "nacht", "en": "night" }, "kind": "consonant" },
         { "id": "g-sch-school", "grapheme": "sch", "hint": "'s' then the throat rasp — not English 'sh'", "anchor": { "word": "school", "en": "school" }, "kind": "consonant" }
@@ -151,10 +151,10 @@
       "goal": "Blend the two-letter vowels into one sound — including the tricky ui and eu.",
       "intro": "Some vowels are written with two letters but are ONE sound. Don't say each letter. The hardest are ui and eu — no English match.",
       "cards": [
-        { "id": "cv-ij-mijn", "grapheme": "ij / ei", "hint": "both sound like 'ay' in 'say' — identical", "anchor": { "word": "mijn", "en": "mine" }, "kind": "digraph" },
+        { "id": "cv-ij-mijn", "grapheme": "ij / ei", "hint": "both sound like 'ay' in 'say' — identical", "anchor": { "word": "mijn", "en": "mine" }, "kind": "digraph", "say": "ij" },
         { "id": "cv-ei-klein", "grapheme": "ei", "hint": "same 'ay' sound as ij", "anchor": { "word": "klein", "en": "small" }, "kind": "digraph" },
         { "id": "cv-oe-boek", "grapheme": "oe", "hint": "like 'oo' in 'boot'", "anchor": { "word": "boek", "en": "book" }, "kind": "digraph" },
-        { "id": "cv-ou-vrouw", "grapheme": "ou / au", "hint": "like 'ow' in 'now'", "anchor": { "word": "vrouw", "en": "woman" }, "kind": "digraph" },
+        { "id": "cv-ou-vrouw", "grapheme": "ou / au", "hint": "like 'ow' in 'now'", "anchor": { "word": "vrouw", "en": "woman" }, "kind": "digraph", "say": "ou" },
         { "id": "cv-ui-huis", "grapheme": "ui", "hint": "round lips for 'oo', then say 'eye' — unique to Dutch", "anchor": { "word": "huis", "en": "house" }, "kind": "digraph" },
         { "id": "cv-eu-deur", "grapheme": "eu", "hint": "round lips for 'o', then say 'e' (French eu)", "anchor": { "word": "deur", "en": "door" }, "kind": "digraph" }
       ],
@@ -198,8 +198,8 @@
       "cards": [
         { "id": "lk-de", "grapheme": "de", "hint": "unstressed 'e' becomes a tiny 'uh' (schwa) — 'duh'", "anchor": { "word": "de", "en": "the" }, "kind": "letter" },
         { "id": "lk-het", "grapheme": "het", "hint": "sounds like 'ut' — schwa with a faint h", "anchor": { "word": "het", "en": "the / it" }, "kind": "letter" },
-        { "id": "lk-lopen", "grapheme": "-en", "hint": "the '-en' ending collapses to '-un' — LOH-pun", "anchor": { "word": "lopen", "en": "to walk" }, "kind": "letter" },
-        { "id": "lk-water-stress", "grapheme": "WA-ter", "hint": "stress lands on the first syllable (the Dutch default)", "anchor": { "word": "water", "en": "water" }, "kind": "letter" },
+        { "id": "lk-lopen", "grapheme": "-en", "hint": "the '-en' ending collapses to '-un' — LOH-pun", "anchor": { "word": "lopen", "en": "to walk" }, "kind": "letter", "say": "en" },
+        { "id": "lk-water-stress", "grapheme": "WA-ter", "hint": "stress lands on the first syllable (the Dutch default)", "anchor": { "word": "water", "en": "water" }, "kind": "letter", "say": "water" },
         { "id": "lk-een-appel", "grapheme": "een appel", "hint": "words link: 'ay-NAP-pel', run together", "anchor": { "word": "een appel", "en": "an apple" }, "kind": "letter" },
         { "id": "lk-het-is", "grapheme": "het is", "hint": "links to 'ut-IS'", "anchor": { "word": "het is", "en": "it is" }, "kind": "letter" }
       ],
