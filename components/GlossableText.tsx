@@ -74,7 +74,7 @@ export default function GlossableText({
   }
 
   return (
-    <span style={{ ...style, ...noSelect }} draggable={false}>
+    <span className="gloss-phrase" style={{ ...style, ...noSelect }} draggable={false}>
       {pieces.map((p, i) => {
         if (!p.word) return <span key={i}>{p.text}</span>
         const token = gloss[p.wordIndex]

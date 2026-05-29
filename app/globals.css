@@ -78,3 +78,18 @@ html {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Long-press word glossing: kill native text selection + the iOS long-press
+   callout ("Copy · Look Up · Translate") across a glossable phrase. Inline
+   -webkit-user-select is unreliable on iOS Safari for the selection gesture,
+   so this stylesheet rule with !important on the element AND all descendants
+   is the dependable fix — it removes the blue highlight and the native menu
+   (which was the second bubble appearing below our popover). */
+.gloss-phrase,
+.gloss-phrase * {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
+}
