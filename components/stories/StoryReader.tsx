@@ -70,7 +70,7 @@ export function StoryReader({ story }: StoryReaderProps) {
   const playTts = () => {
     if (speaking) return
     setSpeaking(true)
-    speak(panel.hindi, 'hi-IN', () => setSpeaking(false))
+    speak(panel.hindi, 'hi', () => setSpeaking(false))
   }
 
   const SceneComponent = SCENES[panel.scene]
