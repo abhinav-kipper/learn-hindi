@@ -8,6 +8,9 @@ vi.mock('framer-motion', () => ({
   AnimatePresence: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }))
 vi.mock('@/lib/sounds', () => ({ playSound: vi.fn() }))
+vi.mock('@/lib/language-context', () => ({
+  useLanguage: () => ({ language: 'hindi', config: { storagePrefix: 'hindi', ttsLocale: 'hi' } }),
+}))
 
 const THEORY: Theory = {
   intro: 'Hindi has two genders.',
