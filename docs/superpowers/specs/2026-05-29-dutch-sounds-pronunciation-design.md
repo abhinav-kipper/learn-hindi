@@ -195,4 +195,20 @@ listen / repeat / ear-quiz / blend.
 
 - Recording / pronunciation feedback (Phase 2).
 - Hindi parity (Dutch-only for now).
-- Native audio assets (Google TTS only, consistent with the rest of the app).
+
+## Audio quality upgrade — ElevenLabs (in progress, 2026-05-29)
+
+The free Google Translate TTS is robotic and weak on isolated sounds, so we are
+pre-rendering natural ElevenLabs voices to static mp3s (live TTS stays as the
+fallback). Pipeline built (`scripts/generate-audio.mjs`, `lib/dutch/sounds-audio.ts`,
+`speakUrl()` in `lib/speech.ts`); manifest ships empty until generated.
+
+**3-voice plan (`eleven_multilingual_v2`):**
+1. Dutch pronunciation — the Sounds module → **female** Dutch voice (`ELEVEN_VOICE_NL`).
+2. Mr. Stroopwafel mascot (nl moment lines) → **male** Dutch voice (`ELEVEN_VOICE_NL_MASCOT`, planned).
+3. Chaina mascot + Hindi (hi moment lines) → **female** Hindi voice (`ELEVEN_VOICE_HI`, planned).
+
+Generation needs a fresh session (the env's open network policy only applies to
+new sessions) + the 3 voice IDs. See the CLAUDE.md "🚧 IN PROGRESS" handoff for
+the exact next steps (generate Sounds, then extend the generator + `chaina-voice.ts`
+for the mascot clips). The key is used only at generation time, never shipped.

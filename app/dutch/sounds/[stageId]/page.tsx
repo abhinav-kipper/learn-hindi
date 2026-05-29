@@ -29,7 +29,8 @@ import {
   type EarQuiz,
   type BlendSet,
 } from '@/lib/dutch/pronunciation'
-import { speak, stopSpeaking } from '@/lib/speech'
+import { speak, speakUrl, stopSpeaking } from '@/lib/speech'
+import { getSoundsAudioUrl } from '@/lib/dutch/sounds-audio'
 import { playSound } from '@/lib/sounds'
 
 const W = '#fff' // @design-allow: white literal
@@ -81,7 +82,11 @@ export default function SoundsStagePage({ params }: { params: Promise<{ stageId:
     }
     playSound('pop')
     setSpeakingId(id)
-    speak(text, 'nl', () => setSpeakingId(null))
+    const done = () => setSpeakingId(null)
+    // Prefer a pre-rendered ElevenLabs clip; fall back to live Google TTS.
+    const clip = getSoundsAudioUrl(text)
+    if (clip) speakUrl(clip, done, () => speak(text, 'nl', done))
+    else speak(text, 'nl', done)
   }
 
   const markDone = (id: string) => {
