@@ -57,6 +57,9 @@ const HI_SOUNDS_DIR = resolve(ROOT, 'public/audio/hi-sounds')
 const HI_SOUNDS_MANIFEST = resolve(ROOT, 'content/hindi/sounds-audio.json')
 const NL_LESSONS_DIR = resolve(ROOT, 'public/audio/nl')
 const NL_MANIFEST = resolve(ROOT, 'content/nl-audio.json')
+const SFX_DIR = resolve(ROOT, 'public/audio/sfx')
+const SFX_MANIFEST = resolve(ROOT, 'content/sfx-audio.json')
+const DO_SFX = process.env.ELEVEN_SFX === '1'
 
 const API_KEY = process.env.ELEVENLABS_API_KEY
 const VOICE_NL = process.env.ELEVEN_VOICE_NL
@@ -67,12 +70,13 @@ const MODEL = process.env.ELEVEN_MODEL || 'eleven_multilingual_v2'
 const SPEED = Number(process.env.ELEVEN_SPEED || '0.85')
 const FORCE = process.argv.includes('--force')
 
-if (!API_KEY || (!VOICE_NL && !VOICE_HI && !VOICE_NL_MASCOT)) {
+if (!API_KEY || (!VOICE_NL && !VOICE_HI && !VOICE_NL_MASCOT && !DO_SFX)) {
   console.error(
-    'Missing env. Set ELEVENLABS_API_KEY plus at least one voice id:\n' +
+    'Missing env. Set ELEVENLABS_API_KEY plus at least one of:\n' +
       '  ELEVEN_VOICE_NL=<dutch-female>         → Sounds module\n' +
       '  ELEVEN_VOICE_HI=<hindi-female>         → Chaina mascot lines\n' +
-      '  ELEVEN_VOICE_NL_MASCOT=<dutch-male>    → Mr. Stroopwafel mascot lines',
+      '  ELEVEN_VOICE_NL_MASCOT=<dutch-male>    → Mr. Stroopwafel mascot lines\n' +
+      '  ELEVEN_SFX=1                           → UI sound-effect pack',
   )
   process.exit(1)
 }
@@ -320,6 +324,60 @@ async function generateHindiSounds() {
   console.log(`Hindi Sounds done. ${made} generated, ${skipped} already current.`)
 }
 
+// ─── 1d. UI sound-effect pack (ElevenLabs Sound Effects API) ──────────────────
+
+// Designed counterparts to the synth blips in lib/sounds.ts. Generated once to
+// public/audio/sfx/<type>.mp3; the app prefers them and falls back to synth.
+// Cute / friendly Duolingo-ish character — short, soft, never harsh.
+const SFX = {
+  tap:      { prompt: 'soft short cute UI button tap, gentle pop, clean, minimal', seconds: 0.5 },
+  pop:      { prompt: 'playful little bubble pop, soft and cute', seconds: 0.5 },
+  swipe:    { prompt: 'light soft paper page-turn whoosh, gentle, quick', seconds: 0.5 },
+  correct:  { prompt: 'bright cheerful correct-answer chime, two quick ascending bells, happy, clean', seconds: 0.8 },
+  wrong:    { prompt: 'soft gentle friendly wrong-answer thunk, low and warm, not harsh, short', seconds: 0.6 },
+  complete: { prompt: 'happy lesson-complete success jingle, short ascending sparkly arpeggio, warm', seconds: 1.3 },
+  streak:   { prompt: 'magical twinkling fairy-dust sparkle cascade, light bells, short', seconds: 1.1 },
+  levelup:  { prompt: 'triumphant celebratory level-up fanfare with sparkle, short, joyful', seconds: 1.5 },
+}
+
+async function sfxGen(text, seconds) {
+  const res = await fetch('https://api.elevenlabs.io/v1/sound-generation', {
+    method: 'POST',
+    headers: { 'xi-api-key': API_KEY, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ text, duration_seconds: seconds, prompt_influence: 0.5, output_format: 'mp3_44100_128' }),
+  })
+  if (!res.ok) throw new Error(`${res.status} ${await res.text().catch(() => '')}`)
+  return Buffer.from(await res.arrayBuffer())
+}
+
+async function generateSfx() {
+  mkdirSync(SFX_DIR, { recursive: true })
+  const manifest = existsSync(SFX_MANIFEST) ? JSON.parse(readFileSync(SFX_MANIFEST, 'utf8')) : {}
+  console.log(`\nUI sound pack: ${Object.keys(SFX).length} effects (ElevenLabs Sound Effects).`)
+  let made = 0
+  let skipped = 0
+  for (const [type, { prompt, seconds }] of Object.entries(SFX)) {
+    const file = `${type}.mp3`
+    if (!FORCE && manifest[type] === file && existsSync(resolve(SFX_DIR, file))) {
+      skipped++
+      continue
+    }
+    try {
+      const buf = await sfxGen(prompt, seconds)
+      writeFileSync(resolve(SFX_DIR, file), buf)
+      manifest[type] = file
+      made++
+      console.log(`  ✓ ${type}  →  ${file}`)
+      await sleep(300)
+    } catch (e) {
+      console.error(`  ✗ ${type}  →  ${e.message}`)
+    }
+  }
+  const sorted = Object.fromEntries(Object.entries(manifest).sort(([a], [b]) => a.localeCompare(b)))
+  writeFileSync(SFX_MANIFEST, JSON.stringify(sorted, null, 2) + '\n')
+  console.log(`UI sound pack done. ${made} generated, ${skipped} already current.`)
+}
+
 // ─── 2 + 3. Mascot moment lines ──────────────────────────────────────────────
 
 // Moments that only ever fire on the Dutch track (Mr. Stroopwafel speaks them,
@@ -468,6 +526,7 @@ async function main() {
       LINES_NL[key] ?? defaultLines,
     )
   }
+  if (DO_SFX) await generateSfx()
   console.log('\nAll requested voice sets complete.')
 }
 
