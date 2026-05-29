@@ -52,11 +52,20 @@ export default function GlossableText({
 
   useEffect(() => () => { if (timer.current) clearTimeout(timer.current) }, [])
 
+  // Kill native text selection / the iOS long-press callout ("Copy · Look Up ·
+  // Translate") across the whole phrase, so only our gloss popover appears.
+  const noSelect: React.CSSProperties = {
+    WebkitTouchCallout: 'none',
+    WebkitUserSelect: 'none',
+    userSelect: 'none',
+  }
+
   if (!gloss) return <span style={style}>{phrase}</span>
 
   const pieces = tokenize(phrase)
 
   const openFor = (token: GlossToken, el: HTMLElement) => {
+    try { window.getSelection?.()?.removeAllRanges() } catch {}
     const r = el.getBoundingClientRect()
     const x = Math.min(Math.max(r.left + r.width / 2, 96), window.innerWidth - 96)
     // Sit just above the word; flip below if too close to the top edge.
@@ -65,7 +74,7 @@ export default function GlossableText({
   }
 
   return (
-    <span style={style}>
+    <span style={{ ...style, ...noSelect }} draggable={false}>
       {pieces.map((p, i) => {
         if (!p.word) return <span key={i}>{p.text}</span>
         const token = gloss[p.wordIndex]
