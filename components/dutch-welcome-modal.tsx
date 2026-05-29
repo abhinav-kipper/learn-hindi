@@ -89,7 +89,7 @@ export function DutchWelcomeModal() {
                   Hallo! Ready for your inburgeringsexamen?
                 </h2>
                 <p style={{ fontFamily: FONTS.body, fontSize: 14, color: COLORS.ink, lineHeight: 1.5, margin: '0 0 14px' }}>
-                  This Dutch track is built to prep you for the <strong>Inburgeringsexamen B1 + KNM</strong> — the exam HSM holders take to naturalize and get a Dutch passport.
+                  This Dutch track is built to prep you for the <strong>Inburgeringsexamen B1 + KNM</strong>, the exam HSM holders take to naturalize and get a Dutch passport.
                 </p>
 
                 <div style={{ marginBottom: 14 }}>
@@ -100,8 +100,8 @@ export function DutchWelcomeModal() {
                     Exam skills
                   </div>
                   <ul style={{ margin: 0, padding: 0, listStyle: 'none', fontFamily: FONTS.body, fontSize: 13, color: COLORS.ink, lineHeight: 1.6 }}>
-                    <li><strong>KNM</strong> — knowledge of Dutch society <em style={{ opacity: 0.7 }}>(live now)</em></li>
-                    <li><strong>Reading</strong> <em style={{ opacity: 0.6 }}>(Lezen)</em> · <strong>Listening</strong> <em style={{ opacity: 0.6 }}>(Luisteren)</em> · <strong>Writing</strong> <em style={{ opacity: 0.6 }}>(Schrijven)</em> · <strong>Speaking</strong> <em style={{ opacity: 0.6 }}>(Spreken)</em> — <em style={{ opacity: 0.7 }}>coming soon</em></li>
+                    <li><strong>KNM</strong>, knowledge of Dutch society <em style={{ opacity: 0.7 }}>(live now)</em></li>
+                    <li><strong>Reading</strong> <em style={{ opacity: 0.6 }}>(Lezen)</em> · <strong>Listening</strong> <em style={{ opacity: 0.6 }}>(Luisteren)</em> · <strong>Writing</strong> <em style={{ opacity: 0.6 }}>(Schrijven)</em> · <strong>Speaking</strong> <em style={{ opacity: 0.6 }}>(Spreken)</em>, <em style={{ opacity: 0.7 }}>coming soon</em></li>
                   </ul>
                 </div>
 

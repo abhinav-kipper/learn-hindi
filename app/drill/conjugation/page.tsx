@@ -444,9 +444,9 @@ export default function ConjugationDrillPage() {
             }}
           >
             {isGood
-              ? 'excellent — you know this tense well!'
+              ? 'excellent, you know this tense well!'
               : isOk
-              ? 'good start — drill again to lock it in.'
+              ? 'good start, drill again to lock it in.'
               : 'keep going, repetition is key.'}
           </div>
         </div>
@@ -725,7 +725,7 @@ export default function ConjugationDrillPage() {
                     lineHeight: 1.4,
                   }}
                 >
-                  ne construction — the verb agrees with the gender &amp; number of the direct
+                  ne construction, the verb agrees with the gender &amp; number of the direct
                   object, not the subject.
                 </div>
               )}

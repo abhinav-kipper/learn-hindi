@@ -103,7 +103,7 @@ export default function LuisterenModulePage() {
                 5 clips · 20 questions · 25 min · audio only
               </div>
               <div style={{ fontFamily: FONTS.body, fontSize: 11, color: W, opacity: 0.75, marginTop: 4, fontStyle: 'italic' }}>
-                Study first if you&apos;re new — the transcript helps.
+                Study first if you&apos;re new, the transcript helps.
               </div>
             </div>
           </div>

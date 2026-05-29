@@ -231,7 +231,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
                       marginBottom: 16,
                     }}
                   >
-                    you hit today&apos;s {goalBurst}-minute goal. mehnat ki keemat — streak strong, aage badho.
+                    you hit today&apos;s {goalBurst}-minute goal. mehnat ki keemat, streak strong, aage badho.
                   </div>
                   <button
                     onClick={dismissGoalBurst}

@@ -146,10 +146,9 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
     )
   }
 
-  // Show TheoryView for any foundation with a `theory` block — chapter
+  // Show TheoryView for any foundation with a `theory` block, chapter
   // first, phrases as drill. The phrase view has a 📖 chapter button to
-  // re-open theory at any time, and the chapter's CTA enters phrases —
-  // so navigation between the two modes is always available.
+  // re-open theory at any time, and the chapter's CTA enters phrases, // so navigation between the two modes is always available.
   if (lesson.theory && !showPhrases) {
     return (
       <TheoryView
@@ -387,7 +386,7 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
         <NavButton label="next →" disabled={idx === total - 1} onClick={() => go(1)} />
       </div>
 
-      {/* MARK COMPLETE — only after every phrase has been revealed (gated to ensure phrase progress is real) */}
+      {/* MARK COMPLETE, only after every phrase has been revealed (gated to ensure phrase progress is real) */}
       {(completed || allRevealed) && (
         <div
           style={{
@@ -421,7 +420,7 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
                   textTransform: 'lowercase',
                 }}
               >
-                ✓ chapter complete — practice it now →
+                ✓ chapter complete, practice it now →
               </div>
             </Sticker>
           ) : (

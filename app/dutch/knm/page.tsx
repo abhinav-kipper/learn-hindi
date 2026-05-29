@@ -90,7 +90,7 @@ export default function KnmModulePage() {
                 Start drill (30 questions)
               </div>
               <div style={{ fontFamily: FONTS.body, fontSize: 13, color: W, opacity: 0.9, marginTop: 2 }}>
-                Pass at 80% (24 / 30) — mirrors the real exam
+                Pass at 80% (24 / 30), mirrors the real exam
               </div>
             </div>
           </div>

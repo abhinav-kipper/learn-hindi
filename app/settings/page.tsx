@@ -495,7 +495,7 @@ export default function SettingsPage() {
               lineHeight: 1.4,
             }}
           >
-            wipe your {language === 'hindi' ? 'Hindi' : 'Dutch'} progress — streak, completed lessons, mistakes, favorites, quiz scores. your profile stays.
+            wipe your {language === 'hindi' ? 'Hindi' : 'Dutch'} progress, streak, completed lessons, mistakes, favorites, quiz scores. your profile stays.
           </div>
           {justReset ? (
             <div
@@ -507,7 +507,7 @@ export default function SettingsPage() {
                 color: COLORS.green,
               }}
             >
-              ✓ wiped — fresh start
+              ✓ wiped, fresh start
             </div>
           ) : !confirmReset ? (
             <button

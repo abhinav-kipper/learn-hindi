@@ -50,7 +50,7 @@ export function TheoryView({ theory, title, onStartPhrases, onGoToPractice }: Pr
   const [direction, setDirection] = useState<1 | -1>(1)
   const [passed, setPassed] = useState<Record<number, boolean>>({})
 
-  // Scroll to the top of the next page on transition — quick-checks sit at the
+  // Scroll to the top of the next page on transition, quick-checks sit at the
   // bottom of section pages, so the user would otherwise land mid-page.
   useEffect(() => {
     if (typeof window === 'undefined') return
@@ -246,7 +246,7 @@ export function TheoryView({ theory, title, onStartPhrases, onGoToPractice }: Pr
         </AnimatePresence>
       </div>
 
-      {/* Swipe-blocked nudge — quick-check still gates this page */}
+      {/* Swipe-blocked nudge, quick-check still gates this page */}
       <AnimatePresence>
         {gateHint && (
           <motion.div
@@ -533,7 +533,7 @@ function WrapUpPage({
       </motion.div>
       <CuttingSpeech
         mood="excited"
-        text="You made it through the chapter! Pick how you want to practice — drill phrases for vocab, or chat with me for live practice."
+        text="You made it through the chapter! Pick how you want to practice, drill phrases for vocab, or chat with me for live practice."
       />
       {wrapUp && (
         <div style={{ marginTop: 18 }}>
@@ -600,7 +600,7 @@ function WrapUpPage({
             textTransform: 'lowercase',
           }}
         >
-          or — chat with me to practice 💬
+          or, chat with me to practice 💬
         </motion.button>
       )}
     </div>

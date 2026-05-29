@@ -1,5 +1,5 @@
 /**
- * Moment registry — every Chaina appearance the app can trigger.
+ * Moment registry, every Chaina appearance the app can trigger.
  * Pure data + a small line picker. No React.
  *
  * Voice strategy:
@@ -7,7 +7,7 @@
  *                     chainaVoice tries /chaina/<key>-<idx>.mp3 first, falls back to
  *                     window.speechSynthesis with the speak string.
  *   - voice: false  → silent moment (idleNudge, phraseStreak, favoriteSaved,
- *                     conjugationCorrect, drillGotIt) — don't startle / interrupt.
+ *                     conjugationCorrect, drillGotIt), don't startle / interrupt.
  */
 
 import type { CuttingMood } from './Cutting';
@@ -157,13 +157,13 @@ const LINES: Record<string, Line[]> = {
   ],
   pronStageDone: [
     { main: 'wah! sahi bola 🔊', caption: 'sun ke bolo',        speak: 'वाह! सही बोला।' },
-    { main: 'kya baat — saaf uchchaaran', caption: 'agli dhwani', speak: 'क्या बात, साफ़ उच्चारण! अगली ध्वनि।' },
+    { main: 'kya baat, saaf uchchaaran', caption: 'agli dhwani', speak: 'क्या बात, साफ़ उच्चारण! अगली ध्वनि।' },
     { main: 'badhiya, bilkul sahi sound', caption: 'aage chalo',  speak: 'बढ़िया! बिल्कुल सही sound. आगे चलो।' },
   ],
   dailyGoalReached: [
     { main: 'daily goal done! 🎯', caption: 'mehnat ki keemat',          speak: 'Daily goal done! Mehnat ki keemat.' },
     { main: 'wah, target hit!',    caption: 'aaj ka kaam pura',          speak: 'Wah, target hit! Aaj ka kaam pura.' },
-    { main: 'kya baat hai 🔥',     caption: "today's minutes — done!", speak: 'Kya baat hai. Today minutes done.' },
+    { main: 'kya baat hai 🔥',     caption: "today's minutes, done!", speak: 'Kya baat hai. Today minutes done.' },
   ],
 };
 
@@ -250,7 +250,7 @@ const LINES_NL: Record<string, Line[]> = {
   ],
   dailyGoalReached: [
     { main: 'dagdoel gehaald! 🎯', caption: 'goed bezig', speak: 'Dagdoel gehaald! Goed bezig.' },
-    { main: 'top, doel gehaald!', caption: 'tijd van vandaag — klaar', speak: 'Top, doel gehaald!' },
+    { main: 'top, doel gehaald!', caption: 'tijd van vandaag, klaar', speak: 'Top, doel gehaald!' },
   ],
   pronStageDone: [
     { main: 'klank gehaald! 🔊', caption: 'goed uitgesproken',  speak: 'Klank gehaald! Goed uitgesproken.' },

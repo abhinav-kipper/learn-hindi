@@ -110,7 +110,7 @@ export default function ProgressPage() {
     recentActivities.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     setActivities(recentActivities.slice(0, 5))
 
-    // 7-day streak calendar — local-day comparison (matches streak rollover)
+    // 7-day streak calendar, local-day comparison (matches streak rollover)
     const todayStr = toLocalISO(new Date())
     const activeSet = new Set<string>()
     if (progress.lastActiveDate && progress.currentStreak > 0) {
@@ -372,7 +372,7 @@ export default function ProgressPage() {
                 textAlign: 'center',
               }}
             >
-              🔥 a day counts when you hit your daily goal — or finish a lesson, quiz, or practice.
+              🔥 a day counts when you hit your daily goal, or finish a lesson, quiz, or practice.
             </div>
           </Sticker>
         </motion.div>
@@ -812,7 +812,7 @@ function LessonGroup({
           ))}
           {active.length === 0 && (
             <div style={{ fontFamily: FONTS.body, fontWeight: 700, fontSize: 12, color: COLORS.green, marginTop: 4 }}>
-              all done — nice work 🎉
+              all done, nice work 🎉
             </div>
           )}
         </div>

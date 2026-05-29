@@ -312,7 +312,7 @@ function MockAudioPlayer({ clip, primary }: { clip: LuisterClip; primary: string
             {playing ? 'Playing…' : 'Play the clip'}
           </div>
           <div style={{ fontFamily: FONTS.body, fontSize: 12, color: W, opacity: 0.85, marginTop: 2 }}>
-            Audio only — no transcript in the mock. Replay as needed.
+            Audio only, no transcript in the mock. Replay as needed.
           </div>
         </div>
       </div>

@@ -49,7 +49,7 @@ export function QuizResults({
   }, [isGreatScore])
 
   const getMessage = () => {
-    if (percentage === 100) return 'perfect — wah!'
+    if (percentage === 100) return 'perfect, wah!'
     if (percentage >= 80) return 'you crushed it!'
     if (percentage >= 70) return 'bahut accha!'
     if (percentage >= 50) return 'good effort, yaar.'

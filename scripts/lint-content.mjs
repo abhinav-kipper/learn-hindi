@@ -16,9 +16,14 @@
 import { readdirSync, readFileSync, writeFileSync, statSync } from 'node:fs'
 import { resolve, dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import ts from 'typescript'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const CONTENT = resolve(ROOT, 'content')
+// UI copy lives in these dirs; we scan rendered strings (string/JSX/template
+// AST nodes) — never comments, and we don't flag arrows here because the app
+// uses → intentionally on CTAs and the blend-builder.
+const CODE_DIRS = [resolve(ROOT, 'app'), resolve(ROOT, 'components')]
 const FIX = process.argv.includes('--fix')
 
 // High-confidence AI clichés (word-boundary, case-insensitive). Kept tight to
@@ -108,6 +113,60 @@ for (const file of jsonFiles(CONTENT)) {
 if (FIX) {
   console.log(`\nlint-content --fix: updated ${fixedFiles} file(s). Re-run without --fix to verify + catch any clichés.`)
   process.exit(0)
+}
+
+// ─── UI copy in .tsx / .ts (rendered strings only) ───────────────────────────
+
+function codeFiles(dir) {
+  const out = []
+  for (const e of readdirSync(dir)) {
+    const p = join(dir, e)
+    // Skip non-UI code: deps, tests, server routes (AI prompts), dev playground.
+    if (e === 'node_modules' || e === '__tests__' || e === 'api' || e === '_dev') continue
+    if (statSync(p).isDirectory()) out.push(...codeFiles(p))
+    else if ((e.endsWith('.tsx') || e.endsWith('.ts')) && !e.endsWith('.test.ts') && !e.endsWith('.test.tsx')) out.push(p)
+  }
+  return out
+}
+
+// UI strings shouldn't carry em-dashes or clichés; arrows are skipped (the app
+// uses them on purpose in CTAs / the blend-builder).
+function checkUiString(s) {
+  const issues = []
+  if (/—/.test(s)) issues.push('em-dash (—)')
+  if (/\s–\s/.test(s)) issues.push('spaced en-dash (–)')
+  const cm = clicheRe.exec(s)
+  if (cm) issues.push(`AI cliché "${cm[1]}"`)
+  return issues
+}
+
+for (const dir of CODE_DIRS) {
+  for (const file of codeFiles(dir)) {
+    const src = readFileSync(file, 'utf8')
+    const sf = ts.createSourceFile(file, src, ts.ScriptTarget.Latest, true, file.endsWith('.tsx') ? ts.ScriptKind.TSX : ts.ScriptKind.TS)
+    const visit = (node) => {
+      // Skip import/export module specifiers (technical strings).
+      const p = node.parent
+      const isModuleSpecifier =
+        !!p && (ts.isImportDeclaration(p) || ts.isExportDeclaration(p)) && p.moduleSpecifier === node
+      if (!isModuleSpecifier) {
+        let text = null
+        if (ts.isStringLiteral(node) || ts.isNoSubstitutionTemplateLiteral(node)) text = node.text
+        else if (ts.isTemplateHead(node) || ts.isTemplateMiddle(node) || ts.isTemplateTail(node)) text = node.text
+        else if (ts.isJsxText(node)) text = node.text
+        if (text) {
+          const issues = checkUiString(text)
+          if (issues.length) {
+            violations++
+            const { line } = sf.getLineAndCharacterOfPosition(node.getStart(sf))
+            console.error(`✗ ${rel(file)}:${line + 1}: ${issues.join('; ')}\n    "${text.trim().slice(0, 90)}${text.length > 90 ? '…' : ''}"`)
+          }
+        }
+      }
+      ts.forEachChild(node, visit)
+    }
+    visit(sf)
+  }
 }
 
 if (violations) {

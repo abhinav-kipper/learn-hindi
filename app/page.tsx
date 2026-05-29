@@ -466,7 +466,7 @@ export default function Home() {
             <StreakChip count={streak} onClick={() => playSound('streak')} />
           </div>
 
-          {/* daily goal — pill bar (long-press to edit) */}
+          {/* daily goal, pill bar (long-press to edit) */}
           <div
             style={{ marginTop: 14, maxWidth: 480, marginLeft: 'auto', marginRight: 'auto', userSelect: 'none', WebkitUserSelect: 'none', touchAction: 'manipulation' }}
             onPointerDown={() => {
@@ -494,7 +494,7 @@ export default function Home() {
             onContextMenu={(e) => e.preventDefault()}
             role="button"
             tabIndex={0}
-            aria-label="Daily goal — hold to edit"
+            aria-label="Daily goal, hold to edit"
           >
             <div
               style={{
@@ -514,7 +514,7 @@ export default function Home() {
                   letterSpacing: 0.4,
                 }}
               >
-                {goalHit ? "today's goal — hit! 🎯" : "today's goal"}
+                {goalHit ? "today's goal, hit! 🎯" : "today's goal"}
               </div>
               <div
                 style={{
@@ -641,7 +641,7 @@ export default function Home() {
                       fontWeight: 600,
                     }}
                   >
-                    {continueInfo.percent}% done — pick up where you left off
+                    {continueInfo.percent}% done, pick up where you left off
                   </div>
                 </div>
                 <div
@@ -688,7 +688,7 @@ export default function Home() {
               </Sticker>
             </div>
 
-            {/* Sounds — from-zero pronunciation on-ramp (pre-A1) */}
+            {/* Sounds, from-zero pronunciation on-ramp (pre-A1) */}
             <div style={{ padding: '14px 20px 0', maxWidth: 480, margin: '0 auto', position: 'relative', zIndex: 2 }}>
               <Sticker color={theme.primary} radius={18} padding={14} onClick={() => { playSound('pop'); router.push('/dutch/sounds') }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
@@ -807,7 +807,7 @@ export default function Home() {
           </>
         )}
 
-        {/* HINDI SOUNDS — from-zero pronunciation on-ramp */}
+        {/* HINDI SOUNDS, from-zero pronunciation on-ramp */}
         {language === 'hindi' && (
           <div style={{ padding: '14px 20px 0', maxWidth: 480, margin: '0 auto', position: 'relative', zIndex: 2 }}>
             <Sticker color={theme.primary} radius={18} padding={14} onClick={() => { playSound('pop'); router.push('/sounds') }}>
@@ -827,7 +827,7 @@ export default function Home() {
           </div>
         )}
 
-        {/* HINDI STORIES — illustrated motion-comics, scoped to Hindi only */}
+        {/* HINDI STORIES, illustrated motion-comics, scoped to Hindi only */}
         {language === 'hindi' && hindiStories.length > 0 && (
           <div
             style={{
@@ -1018,7 +1018,7 @@ export default function Home() {
             >
               {language === 'dutch'
                 ? 'Lessons + grammar below build your A1-B1 foundation alongside the exam skills above.'
-                : 'Start with lesson 1 — everything builds from here'}
+                : 'Start with lesson 1, everything builds from here'}
             </div>
           </div>
         )}

@@ -82,7 +82,7 @@ export default function CategoryPage() {
 
     // Find the category's position in the master list for palette derivation
     if (typeof window !== 'undefined') {
-      // dynamic import is overkill — just compute via the same algorithm
+      // dynamic import is overkill, just compute via the same algorithm
       import('@/lib/vocabulary').then((m) => {
         const all = isDutch ? [] : m.getAllCategories()
         const idx = all.findIndex((c) => c.id === categoryId)
@@ -435,7 +435,7 @@ export default function CategoryPage() {
                   marginTop: 6,
                 }}
               >
-                {archivedCount} {archivedCount === 1 ? 'word' : 'words'} archived — nice work
+                {archivedCount} {archivedCount === 1 ? 'word' : 'words'} archived, nice work
               </div>
               <div style={{ display: 'flex', gap: 8, marginTop: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
                 {archivedWords.length > 0 && (

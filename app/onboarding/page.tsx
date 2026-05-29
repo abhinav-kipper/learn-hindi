@@ -27,9 +27,9 @@ const reasons = [
 ]
 
 const goals = [
-  { minutes: 5, label: '5 min — quick chai break', emoji: '☕' },
-  { minutes: 10, label: '10 min — solid practice', emoji: '💪' },
-  { minutes: 15, label: '15+ min — full immersion', emoji: '🔥' },
+  { minutes: 5, label: '5 min, quick chai break', emoji: '☕' },
+  { minutes: 10, label: '10 min, solid practice', emoji: '💪' },
+  { minutes: 15, label: '15+ min, full immersion', emoji: '🔥' },
 ]
 
 export default function OnboardingPage() {

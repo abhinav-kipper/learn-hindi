@@ -99,7 +99,7 @@ export default function LezenModulePage() {
                 5 texts · 20 questions · 25 min · Dutch only
               </div>
               <div style={{ fontFamily: FONTS.body, fontSize: 11, color: W, opacity: 0.75, marginTop: 4, fontStyle: 'italic' }}>
-                Study first if you&apos;re new — bilingual mode helps.
+                Study first if you&apos;re new, bilingual mode helps.
               </div>
             </div>
           </div>
