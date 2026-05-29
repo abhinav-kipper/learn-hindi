@@ -8,6 +8,7 @@ import { speak, stopSpeaking, isSpeaking } from '@/lib/speech'
 import { useLanguage } from '@/lib/language-context'
 import { getUniversalLessonById } from '@/lib/all-content'
 import { playSound } from '@/lib/sounds'
+import GlossableText from '@/components/GlossableText'
 import {
   Sticker,
   Tag,
@@ -319,7 +320,7 @@ export default function FavoritesPage() {
                                 lineHeight: 1.2,
                               }}
                             >
-                              {f.hindi}
+                              <GlossableText phrase={f.hindi} />
                             </div>
                             <div
                               style={{

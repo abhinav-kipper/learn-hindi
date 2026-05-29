@@ -1,0 +1,8468 @@
+{
+ "Waar vind ik de tomaten?": [
+  {
+   "w": "waar",
+   "t": "where"
+  },
+  {
+   "w": "vind",
+   "t": "find",
+   "note": "from 'vinden'; verb-second after 'waar'"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "de",
+   "t": "the",
+   "note": "de-word (common gender)"
+  },
+  {
+   "w": "tomaten",
+   "t": "tomatoes",
+   "note": "plural of 'tomaat'"
+  }
+ ],
+ "Heeft u ook biologische melk?": [
+  {
+   "w": "heeft",
+   "t": "have",
+   "note": "from 'hebben'; formal 'u' form"
+  },
+  {
+   "w": "u",
+   "t": "you (formal)"
+  },
+  {
+   "w": "ook",
+   "t": "also/too"
+  },
+  {
+   "w": "biologische",
+   "t": "organic",
+   "note": "inflected adjective"
+  },
+  {
+   "w": "melk",
+   "t": "milk",
+   "note": "de-word"
+  }
+ ],
+ "Hoeveel kost dit? Wat is de prijs?": [
+  {
+   "w": "hoeveel",
+   "t": "how much"
+  },
+  {
+   "w": "kost",
+   "t": "costs",
+   "note": "from 'kosten'"
+  },
+  {
+   "w": "dit",
+   "t": "this"
+  },
+  {
+   "w": "wat",
+   "t": "what"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "prijs",
+   "t": "price",
+   "note": "de-word"
+  }
+ ],
+ "Mag ik een tasje? Heeft u plastic zakken?": [
+  {
+   "w": "mag",
+   "t": "may/can I",
+   "note": "from 'mogen'; polite request"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "tasje",
+   "t": "(small) bag",
+   "note": "diminutive of 'tas'; het-word"
+  },
+  {
+   "w": "heeft",
+   "t": "have",
+   "note": "formal 'u' form"
+  },
+  {
+   "w": "u",
+   "t": "you (formal)"
+  },
+  {
+   "w": "plastic",
+   "t": "plastic"
+  },
+  {
+   "w": "zakken",
+   "t": "bags",
+   "note": "plural of 'zak'"
+  }
+ ],
+ "Dat is alles, dank u. Kan ik pinnen?": [
+  {
+   "w": "dat",
+   "t": "that"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "alles",
+   "t": "everything/all"
+  },
+  {
+   "w": "dank",
+   "t": "thank(s)",
+   "note": "in 'dank u' = thank you (formal)"
+  },
+  {
+   "w": "u",
+   "t": "you (formal)"
+  },
+  {
+   "w": "kan",
+   "t": "can I",
+   "note": "from 'kunnen'"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "pinnen",
+   "t": "pay by card",
+   "note": "standard Dutch term for debit/card payment"
+  }
+ ],
+ "Heeft u een bonuskaart? Heeft u een AH-kaart?": [
+  {
+   "w": "heeft",
+   "t": "have",
+   "note": "formal 'u' form"
+  },
+  {
+   "w": "u",
+   "t": "you (formal)"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "bonuskaart",
+   "t": "loyalty card",
+   "note": "supermarket discount card"
+  },
+  {
+   "w": "heeft",
+   "t": "have"
+  },
+  {
+   "w": "u",
+   "t": "you (formal)"
+  },
+  {
+   "w": "een",
+   "t": "a/an"
+  },
+  {
+   "w": "ah-kaart",
+   "t": "Albert Heijn card",
+   "note": "AH = the supermarket chain"
+  }
+ ],
+ "Excuseer, ik zoek de... afdeling. Kunt u mij helpen?": [
+  {
+   "w": "excuseer",
+   "t": "excuse me"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "zoek",
+   "t": "am looking for",
+   "note": "from 'zoeken'"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "afdeling",
+   "t": "section/department",
+   "note": "de-word"
+  },
+  {
+   "w": "kunt",
+   "t": "can",
+   "note": "from 'kunnen'; formal 'u' form"
+  },
+  {
+   "w": "u",
+   "t": "you (formal)"
+  },
+  {
+   "w": "mij",
+   "t": "me"
+  },
+  {
+   "w": "helpen",
+   "t": "help",
+   "note": "infinitive at clause end"
+  }
+ ],
+ "Hier is uw wisselgeld. Fijne dag verder!": [
+  {
+   "w": "hier",
+   "t": "here"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "uw",
+   "t": "your (formal)"
+  },
+  {
+   "w": "wisselgeld",
+   "t": "change",
+   "note": "change money returned; het-word"
+  },
+  {
+   "w": "fijne",
+   "t": "nice/pleasant",
+   "note": "inflected adjective"
+  },
+  {
+   "w": "dag",
+   "t": "day"
+  },
+  {
+   "w": "verder",
+   "t": "further/rest of",
+   "note": "'fijne dag verder' = nice rest of your day"
+  }
+ ],
+ "Hallo, ik ben [naam]. Aangenaam.": [
+  {
+   "w": "hallo",
+   "t": "hello"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ben",
+   "t": "am",
+   "note": "from 'zijn'"
+  },
+  {
+   "w": "naam",
+   "t": "name",
+   "note": "placeholder for your name"
+  },
+  {
+   "w": "aangenaam",
+   "t": "pleased to meet you",
+   "note": "lit. 'pleasant'"
+  }
+ ],
+ "Ik kom uit India. Ik ben hier al twee jaar.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "kom",
+   "t": "come",
+   "note": "from 'komen'"
+  },
+  {
+   "w": "uit",
+   "t": "from",
+   "note": "'komen uit' = come/be from"
+  },
+  {
+   "w": "india",
+   "t": "India"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ben",
+   "t": "am/have been"
+  },
+  {
+   "w": "hier",
+   "t": "here"
+  },
+  {
+   "w": "al",
+   "t": "already",
+   "note": "marks duration up to now"
+  },
+  {
+   "w": "twee",
+   "t": "two"
+  },
+  {
+   "w": "jaar",
+   "t": "years",
+   "note": "stays singular after a number"
+  }
+ ],
+ "Ik ben uw/jouw nieuwe buurman/buurvrouw. Ik woon nu op nummer [X].": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ben",
+   "t": "am"
+  },
+  {
+   "w": "uw",
+   "t": "your (formal)"
+  },
+  {
+   "w": "jouw",
+   "t": "your (informal)"
+  },
+  {
+   "w": "nieuwe",
+   "t": "new",
+   "note": "inflected adjective"
+  },
+  {
+   "w": "buurman",
+   "t": "neighbor (m)"
+  },
+  {
+   "w": "buurvrouw",
+   "t": "neighbor (f)"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "woon",
+   "t": "live",
+   "note": "from 'wonen'"
+  },
+  {
+   "w": "nu",
+   "t": "now"
+  },
+  {
+   "w": "op",
+   "t": "at",
+   "note": "'op nummer' = at number"
+  },
+  {
+   "w": "nummer",
+   "t": "number"
+  },
+  {
+   "w": "x",
+   "t": "X",
+   "note": "placeholder for house number"
+  }
+ ],
+ "Wat doe jij? Ik werk bij... Ik studeer...": [
+  {
+   "w": "wat",
+   "t": "what"
+  },
+  {
+   "w": "doe",
+   "t": "do",
+   "note": "from 'doen'"
+  },
+  {
+   "w": "jij",
+   "t": "you (informal)",
+   "note": "stressed form of 'je'"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "werk",
+   "t": "work",
+   "note": "from 'werken'"
+  },
+  {
+   "w": "bij",
+   "t": "at",
+   "note": "'werken bij' = work at (a company)"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "studeer",
+   "t": "study",
+   "note": "from 'studeren'"
+  }
+ ],
+ "Spreek je ook Nederlands? Ik leer het nog. Mijn Nederlands is niet zo goed.": [
+  {
+   "w": "spreek",
+   "t": "speak",
+   "note": "from 'spreken'"
+  },
+  {
+   "w": "je",
+   "t": "you (informal)"
+  },
+  {
+   "w": "ook",
+   "t": "also/too"
+  },
+  {
+   "w": "nederlands",
+   "t": "Dutch",
+   "note": "the language"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "leer",
+   "t": "am learning",
+   "note": "from 'leren'"
+  },
+  {
+   "w": "het",
+   "t": "it",
+   "note": "refers to Dutch"
+  },
+  {
+   "w": "nog",
+   "t": "still"
+  },
+  {
+   "w": "mijn",
+   "t": "my"
+  },
+  {
+   "w": "nederlands",
+   "t": "Dutch",
+   "note": "the language"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "niet",
+   "t": "not"
+  },
+  {
+   "w": "zo",
+   "t": "so/that"
+  },
+  {
+   "w": "goed",
+   "t": "good"
+  }
+ ],
+ "Hoe gaat het met u/jou? Goed, dank je. En met jou?": [
+  {
+   "w": "hoe",
+   "t": "how"
+  },
+  {
+   "w": "gaat",
+   "t": "goes",
+   "note": "'hoe gaat het' = how's it going"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "met",
+   "t": "with"
+  },
+  {
+   "w": "u",
+   "t": "you (formal)"
+  },
+  {
+   "w": "jou",
+   "t": "you (informal)"
+  },
+  {
+   "w": "goed",
+   "t": "good/fine"
+  },
+  {
+   "w": "dank",
+   "t": "thank(s)",
+   "note": "in 'dank je' = thank you (informal)"
+  },
+  {
+   "w": "je",
+   "t": "you (informal)"
+  },
+  {
+   "w": "en",
+   "t": "and"
+  },
+  {
+   "w": "met",
+   "t": "with"
+  },
+  {
+   "w": "jou",
+   "t": "you (informal)"
+  }
+ ],
+ "Welkom in de buurt! Als u iets nodig heeft, kom maar aankloppen.": [
+  {
+   "w": "welkom",
+   "t": "welcome"
+  },
+  {
+   "w": "in",
+   "t": "in/to"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "buurt",
+   "t": "neighborhood",
+   "note": "de-word"
+  },
+  {
+   "w": "als",
+   "t": "if",
+   "note": "subordinating; sends verb to end"
+  },
+  {
+   "w": "u",
+   "t": "you (formal)"
+  },
+  {
+   "w": "iets",
+   "t": "anything/something"
+  },
+  {
+   "w": "nodig",
+   "t": "need(ed)",
+   "note": "'nodig hebben' = to need"
+  },
+  {
+   "w": "heeft",
+   "t": "have",
+   "note": "verb at clause end after 'als'"
+  },
+  {
+   "w": "kom",
+   "t": "come",
+   "note": "imperative"
+  },
+  {
+   "w": "maar",
+   "t": "just",
+   "note": "softener here, not 'but'"
+  },
+  {
+   "w": "aankloppen",
+   "t": "knock",
+   "note": "separable verb 'aankloppen' = knock on the door"
+  }
+ ],
+ "Tot ziens! Tot gauw. Dag! Doei!": [
+  {
+   "w": "tot",
+   "t": "until",
+   "note": "'tot ziens' = goodbye"
+  },
+  {
+   "w": "ziens",
+   "t": "seeing",
+   "note": "only in 'tot ziens'"
+  },
+  {
+   "w": "tot",
+   "t": "until",
+   "note": "'tot gauw' = see you soon"
+  },
+  {
+   "w": "gauw",
+   "t": "soon"
+  },
+  {
+   "w": "dag",
+   "t": "bye",
+   "note": "casual goodbye (also 'day')"
+  },
+  {
+   "w": "doei",
+   "t": "bye",
+   "note": "very casual"
+  }
+ ],
+ "Mag ik een koffie, alstublieft? Graag een cappuccino.": [
+  {
+   "w": "mag",
+   "t": "may I",
+   "note": "from 'mogen'; polite request"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "koffie",
+   "t": "coffee"
+  },
+  {
+   "w": "alstublieft",
+   "t": "please (formal)"
+  },
+  {
+   "w": "graag",
+   "t": "please/gladly"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "cappuccino",
+   "t": "cappuccino"
+  }
+ ],
+ "Met of zonder melk? Met suiker? Welk brood wilt u?": [
+  {
+   "w": "met",
+   "t": "with"
+  },
+  {
+   "w": "of",
+   "t": "or"
+  },
+  {
+   "w": "zonder",
+   "t": "without"
+  },
+  {
+   "w": "melk",
+   "t": "milk"
+  },
+  {
+   "w": "met",
+   "t": "with"
+  },
+  {
+   "w": "suiker",
+   "t": "sugar"
+  },
+  {
+   "w": "welk",
+   "t": "which",
+   "note": "het-word form (brood is het-word)"
+  },
+  {
+   "w": "brood",
+   "t": "bread",
+   "note": "het-word"
+  },
+  {
+   "w": "wilt",
+   "t": "want",
+   "note": "from 'willen'; formal 'u' form"
+  },
+  {
+   "w": "u",
+   "t": "you (formal)"
+  }
+ ],
+ "Heeft u ook appelgebak? Is er een dagschotel?": [
+  {
+   "w": "heeft",
+   "t": "have",
+   "note": "formal 'u' form"
+  },
+  {
+   "w": "u",
+   "t": "you (formal)"
+  },
+  {
+   "w": "ook",
+   "t": "also"
+  },
+  {
+   "w": "appelgebak",
+   "t": "apple pie"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "er",
+   "t": "there",
+   "note": "'is er' = is there"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "dagschotel",
+   "t": "dish of the day"
+  }
+ ],
+ "Waar is het toilet? Is er wifi? Wat is het wachtwoord?": [
+  {
+   "w": "waar",
+   "t": "where"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "het",
+   "t": "the",
+   "note": "het-word"
+  },
+  {
+   "w": "toilet",
+   "t": "toilet",
+   "note": "het-word"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "er",
+   "t": "there",
+   "note": "'is er' = is there"
+  },
+  {
+   "w": "wifi",
+   "t": "wifi"
+  },
+  {
+   "w": "wat",
+   "t": "what"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "het",
+   "t": "the"
+  },
+  {
+   "w": "wachtwoord",
+   "t": "password",
+   "note": "het-word"
+  }
+ ],
+ "Mag ik de rekening, alstublieft? Kunnen we afrekenen?": [
+  {
+   "w": "mag",
+   "t": "may I",
+   "note": "polite request"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "rekening",
+   "t": "bill",
+   "note": "de-word"
+  },
+  {
+   "w": "alstublieft",
+   "t": "please (formal)"
+  },
+  {
+   "w": "kunnen",
+   "t": "can",
+   "note": "from 'kunnen'"
+  },
+  {
+   "w": "we",
+   "t": "we"
+  },
+  {
+   "w": "afrekenen",
+   "t": "settle the bill",
+   "note": "separable verb 'afrekenen'"
+  }
+ ],
+ "Kunnen we apart betalen? Ik betaal mijn deel.": [
+  {
+   "w": "kunnen",
+   "t": "can"
+  },
+  {
+   "w": "we",
+   "t": "we"
+  },
+  {
+   "w": "apart",
+   "t": "separately"
+  },
+  {
+   "w": "betalen",
+   "t": "pay",
+   "note": "infinitive at clause end"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "betaal",
+   "t": "pay/will pay",
+   "note": "from 'betalen'"
+  },
+  {
+   "w": "mijn",
+   "t": "my"
+  },
+  {
+   "w": "deel",
+   "t": "share/part",
+   "note": "het-word"
+  }
+ ],
+ "Kan ik pinnen? Accepteert u contant?": [
+  {
+   "w": "kan",
+   "t": "can I"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "pinnen",
+   "t": "pay by card"
+  },
+  {
+   "w": "accepteert",
+   "t": "accept",
+   "note": "formal 'u' form"
+  },
+  {
+   "w": "u",
+   "t": "you (formal)"
+  },
+  {
+   "w": "contant",
+   "t": "cash"
+  }
+ ],
+ "Het was erg lekker. Dank u voor het eten.": [
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "was",
+   "t": "was",
+   "note": "past of 'zijn'"
+  },
+  {
+   "w": "erg",
+   "t": "very"
+  },
+  {
+   "w": "lekker",
+   "t": "tasty/nice"
+  },
+  {
+   "w": "dank",
+   "t": "thank(s)",
+   "note": "in 'dank u' = thank you (formal)"
+  },
+  {
+   "w": "u",
+   "t": "you (formal)"
+  },
+  {
+   "w": "voor",
+   "t": "for"
+  },
+  {
+   "w": "het",
+   "t": "the"
+  },
+  {
+   "w": "eten",
+   "t": "food/meal",
+   "note": "het-word"
+  }
+ ],
+ "Ik heb pijn in mijn... buik / hoofd / keel / rug / borst / been": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "heb",
+   "t": "have",
+   "note": "from 'hebben'"
+  },
+  {
+   "w": "pijn",
+   "t": "pain"
+  },
+  {
+   "w": "in",
+   "t": "in"
+  },
+  {
+   "w": "mijn",
+   "t": "my"
+  },
+  {
+   "w": "buik",
+   "t": "belly/stomach"
+  },
+  {
+   "w": "hoofd",
+   "t": "head"
+  },
+  {
+   "w": "keel",
+   "t": "throat"
+  },
+  {
+   "w": "rug",
+   "t": "back"
+  },
+  {
+   "w": "borst",
+   "t": "chest"
+  },
+  {
+   "w": "been",
+   "t": "leg"
+  }
+ ],
+ "Ik voel me niet goed. Ik ben ziek. Ik heb koorts.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "voel",
+   "t": "feel",
+   "note": "from 'voelen'; reflexive here"
+  },
+  {
+   "w": "me",
+   "t": "myself",
+   "note": "reflexive pronoun"
+  },
+  {
+   "w": "niet",
+   "t": "not"
+  },
+  {
+   "w": "goed",
+   "t": "well/good"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ben",
+   "t": "am"
+  },
+  {
+   "w": "ziek",
+   "t": "sick/ill"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "heb",
+   "t": "have"
+  },
+  {
+   "w": "koorts",
+   "t": "fever"
+  }
+ ],
+ "Hoe lang heeft u dit al? Wanneer is het begonnen?": [
+  {
+   "w": "hoe",
+   "t": "how"
+  },
+  {
+   "w": "lang",
+   "t": "long",
+   "note": "'hoe lang' = how long"
+  },
+  {
+   "w": "heeft",
+   "t": "have",
+   "note": "formal 'u' form"
+  },
+  {
+   "w": "u",
+   "t": "you (formal)"
+  },
+  {
+   "w": "dit",
+   "t": "this"
+  },
+  {
+   "w": "al",
+   "t": "already"
+  },
+  {
+   "w": "wanneer",
+   "t": "when"
+  },
+  {
+   "w": "is",
+   "t": "is/did",
+   "note": "auxiliary for 'begonnen'"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "begonnen",
+   "t": "started",
+   "note": "past participle of 'beginnen'"
+  }
+ ],
+ "Ik ben allergisch voor... penicilline / noten / pollen": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ben",
+   "t": "am"
+  },
+  {
+   "w": "allergisch",
+   "t": "allergic"
+  },
+  {
+   "w": "voor",
+   "t": "to",
+   "note": "'allergisch voor' = allergic to"
+  },
+  {
+   "w": "penicilline",
+   "t": "penicillin"
+  },
+  {
+   "w": "noten",
+   "t": "nuts",
+   "note": "plural of 'noot'"
+  },
+  {
+   "w": "pollen",
+   "t": "pollen"
+  }
+ ],
+ "Kunt u een recept uitschrijven? Heeft u dit zonder recept?": [
+  {
+   "w": "kunt",
+   "t": "can",
+   "note": "formal 'u' form"
+  },
+  {
+   "w": "u",
+   "t": "you (formal)"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "recept",
+   "t": "prescription",
+   "note": "het-word"
+  },
+  {
+   "w": "uitschrijven",
+   "t": "write out",
+   "note": "separable verb 'uitschrijven' = issue (a prescription)"
+  },
+  {
+   "w": "heeft",
+   "t": "have"
+  },
+  {
+   "w": "u",
+   "t": "you (formal)"
+  },
+  {
+   "w": "dit",
+   "t": "this"
+  },
+  {
+   "w": "zonder",
+   "t": "without"
+  },
+  {
+   "w": "recept",
+   "t": "prescription"
+  }
+ ],
+ "Wanneer moet ik dit innemen? Hoeveel keer per dag?": [
+  {
+   "w": "wanneer",
+   "t": "when"
+  },
+  {
+   "w": "moet",
+   "t": "should/must",
+   "note": "from 'moeten'"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "dit",
+   "t": "this"
+  },
+  {
+   "w": "innemen",
+   "t": "take",
+   "note": "separable verb 'innemen' = take (medicine)"
+  },
+  {
+   "w": "hoeveel",
+   "t": "how many"
+  },
+  {
+   "w": "keer",
+   "t": "times"
+  },
+  {
+   "w": "per",
+   "t": "per"
+  },
+  {
+   "w": "dag",
+   "t": "day"
+  }
+ ],
+ "Ik wil graag een afspraak maken. Wanneer kunt u mij ontvangen?": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "wil",
+   "t": "want",
+   "note": "from 'willen'"
+  },
+  {
+   "w": "graag",
+   "t": "would like",
+   "note": "'wil graag' = would like to"
+  },
+  {
+   "w": "een",
+   "t": "an"
+  },
+  {
+   "w": "afspraak",
+   "t": "appointment"
+  },
+  {
+   "w": "maken",
+   "t": "make",
+   "note": "'afspraak maken' = make an appointment"
+  },
+  {
+   "w": "wanneer",
+   "t": "when"
+  },
+  {
+   "w": "kunt",
+   "t": "can",
+   "note": "formal 'u' form"
+  },
+  {
+   "w": "u",
+   "t": "you (formal)"
+  },
+  {
+   "w": "mij",
+   "t": "me"
+  },
+  {
+   "w": "ontvangen",
+   "t": "see/receive",
+   "note": "see (a patient)"
+  }
+ ],
+ "Is het ernstig? Moet ik rust houden? Wanneer ben ik beter?": [
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "ernstig",
+   "t": "serious"
+  },
+  {
+   "w": "moet",
+   "t": "must/need",
+   "note": "from 'moeten'"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "rust",
+   "t": "rest",
+   "note": "'rust houden' = to rest"
+  },
+  {
+   "w": "houden",
+   "t": "keep",
+   "note": "'rust houden' = to rest"
+  },
+  {
+   "w": "wanneer",
+   "t": "when"
+  },
+  {
+   "w": "ben",
+   "t": "am/will be"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "beter",
+   "t": "better"
+  }
+ ],
+ "Naar Amsterdam Centraal, alstublieft. Een retour of enkele reis?": [
+  {
+   "w": "naar",
+   "t": "to"
+  },
+  {
+   "w": "amsterdam",
+   "t": "Amsterdam"
+  },
+  {
+   "w": "centraal",
+   "t": "Central",
+   "note": "'Amsterdam Centraal' = central station"
+  },
+  {
+   "w": "alstublieft",
+   "t": "please (formal)"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "retour",
+   "t": "return ticket"
+  },
+  {
+   "w": "of",
+   "t": "or"
+  },
+  {
+   "w": "enkele",
+   "t": "single",
+   "note": "'enkele reis' = one-way trip"
+  },
+  {
+   "w": "reis",
+   "t": "trip/journey"
+  }
+ ],
+ "Van welk spoor vertrekt de trein naar Utrecht?": [
+  {
+   "w": "van",
+   "t": "from"
+  },
+  {
+   "w": "welk",
+   "t": "which",
+   "note": "het-word form (spoor is het-word)"
+  },
+  {
+   "w": "spoor",
+   "t": "platform/track",
+   "note": "het-word"
+  },
+  {
+   "w": "vertrekt",
+   "t": "departs",
+   "note": "from 'vertrekken'"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "trein",
+   "t": "train",
+   "note": "de-word"
+  },
+  {
+   "w": "naar",
+   "t": "to"
+  },
+  {
+   "w": "utrecht",
+   "t": "Utrecht"
+  }
+ ],
+ "Heeft u een OV-chipkaart? Ik wil een OV-chipkaart kopen.": [
+  {
+   "w": "heeft",
+   "t": "have",
+   "note": "formal 'u' form"
+  },
+  {
+   "w": "u",
+   "t": "you (formal)"
+  },
+  {
+   "w": "een",
+   "t": "an"
+  },
+  {
+   "w": "ov-chipkaart",
+   "t": "OV chip card",
+   "note": "public-transport travel card"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "wil",
+   "t": "want",
+   "note": "from 'willen'"
+  },
+  {
+   "w": "een",
+   "t": "an"
+  },
+  {
+   "w": "ov-chipkaart",
+   "t": "OV chip card"
+  },
+  {
+   "w": "kopen",
+   "t": "buy",
+   "note": "infinitive at clause end"
+  }
+ ],
+ "Is dit de juiste tram voor het Rijksmuseum?": [
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "dit",
+   "t": "this"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "juiste",
+   "t": "right/correct",
+   "note": "inflected adjective"
+  },
+  {
+   "w": "tram",
+   "t": "tram",
+   "note": "de-word"
+  },
+  {
+   "w": "voor",
+   "t": "for/to"
+  },
+  {
+   "w": "het",
+   "t": "the"
+  },
+  {
+   "w": "rijksmuseum",
+   "t": "Rijksmuseum"
+  }
+ ],
+ "Wat is de volgende halte? Moet ik hier overstappen?": [
+  {
+   "w": "wat",
+   "t": "what"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "volgende",
+   "t": "next"
+  },
+  {
+   "w": "halte",
+   "t": "stop",
+   "note": "transit stop; de-word"
+  },
+  {
+   "w": "moet",
+   "t": "must/need",
+   "note": "from 'moeten'"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "hier",
+   "t": "here"
+  },
+  {
+   "w": "overstappen",
+   "t": "transfer",
+   "note": "separable verb 'overstappen' = change trains/trams"
+  }
+ ],
+ "Waar kan ik een dagkaart kopen? Rijdt de bus ook op zondag?": [
+  {
+   "w": "waar",
+   "t": "where"
+  },
+  {
+   "w": "kan",
+   "t": "can"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "dagkaart",
+   "t": "day pass"
+  },
+  {
+   "w": "kopen",
+   "t": "buy",
+   "note": "infinitive at clause end"
+  },
+  {
+   "w": "rijdt",
+   "t": "runs",
+   "note": "from 'rijden'; for vehicles"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "bus",
+   "t": "bus",
+   "note": "de-word"
+  },
+  {
+   "w": "ook",
+   "t": "also/too"
+  },
+  {
+   "w": "op",
+   "t": "on"
+  },
+  {
+   "w": "zondag",
+   "t": "Sunday"
+  }
+ ],
+ "De trein heeft vertraging. Hoeveel minuten vertraging?": [
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "trein",
+   "t": "train",
+   "note": "de-word"
+  },
+  {
+   "w": "heeft",
+   "t": "has",
+   "note": "'vertraging hebben' = to be delayed"
+  },
+  {
+   "w": "vertraging",
+   "t": "delay"
+  },
+  {
+   "w": "hoeveel",
+   "t": "how many"
+  },
+  {
+   "w": "minuten",
+   "t": "minutes",
+   "note": "plural of 'minuut'"
+  },
+  {
+   "w": "vertraging",
+   "t": "delay"
+  }
+ ],
+ "Kunt u mij helpen? Ik zoek de uitgang / ingang / lift.": [
+  {
+   "w": "kunt",
+   "t": "can",
+   "note": "formal 'u' form"
+  },
+  {
+   "w": "u",
+   "t": "you (formal)"
+  },
+  {
+   "w": "mij",
+   "t": "me"
+  },
+  {
+   "w": "helpen",
+   "t": "help",
+   "note": "infinitive at clause end"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "zoek",
+   "t": "am looking for",
+   "note": "from 'zoeken'"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "uitgang",
+   "t": "exit"
+  },
+  {
+   "w": "ingang",
+   "t": "entrance"
+  },
+  {
+   "w": "lift",
+   "t": "elevator/lift"
+  }
+ ],
+ "Goedemorgen, ik heb een afspraak om half tien.": [
+  {
+   "w": "goedemorgen",
+   "t": "good morning"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "heb",
+   "t": "have"
+  },
+  {
+   "w": "een",
+   "t": "an"
+  },
+  {
+   "w": "afspraak",
+   "t": "appointment"
+  },
+  {
+   "w": "om",
+   "t": "at",
+   "note": "'om' for clock times"
+  },
+  {
+   "w": "half",
+   "t": "half",
+   "note": "'half tien' = 9:30 (half to ten)"
+  },
+  {
+   "w": "tien",
+   "t": "ten"
+  }
+ ],
+ "Ik kom mij inschrijven op een nieuw adres.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "kom",
+   "t": "come/am here",
+   "note": "from 'komen'"
+  },
+  {
+   "w": "mij",
+   "t": "myself",
+   "note": "reflexive with 'inschrijven'"
+  },
+  {
+   "w": "inschrijven",
+   "t": "register",
+   "note": "separable reflexive verb 'zich inschrijven'"
+  },
+  {
+   "w": "op",
+   "t": "at",
+   "note": "'op een adres' = at an address"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "nieuw",
+   "t": "new"
+  },
+  {
+   "w": "adres",
+   "t": "address",
+   "note": "het-word"
+  }
+ ],
+ "Hier zijn mijn paspoort en mijn huurcontract.": [
+  {
+   "w": "hier",
+   "t": "here"
+  },
+  {
+   "w": "zijn",
+   "t": "are",
+   "note": "from 'zijn' (to be)"
+  },
+  {
+   "w": "mijn",
+   "t": "my"
+  },
+  {
+   "w": "paspoort",
+   "t": "passport",
+   "note": "het-word"
+  },
+  {
+   "w": "en",
+   "t": "and"
+  },
+  {
+   "w": "mijn",
+   "t": "my"
+  },
+  {
+   "w": "huurcontract",
+   "t": "rental contract",
+   "note": "het-word"
+  }
+ ],
+ "Kunt u mij vertellen wat ik nog meer nodig heb?": [
+  {
+   "w": "kunt",
+   "t": "can",
+   "note": "formal 'u' form"
+  },
+  {
+   "w": "u",
+   "t": "you (formal)"
+  },
+  {
+   "w": "mij",
+   "t": "me"
+  },
+  {
+   "w": "vertellen",
+   "t": "tell"
+  },
+  {
+   "w": "wat",
+   "t": "what",
+   "note": "starts subordinate clause (verb to end)"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "nog",
+   "t": "still"
+  },
+  {
+   "w": "meer",
+   "t": "more",
+   "note": "'nog meer' = else/in addition"
+  },
+  {
+   "w": "nodig",
+   "t": "need",
+   "note": "'nodig hebben' = to need"
+  },
+  {
+   "w": "heb",
+   "t": "have",
+   "note": "verb at clause end"
+  }
+ ],
+ "Mijn BSN heb ik nog niet gekregen — kan ik die hier aanvragen?": [
+  {
+   "w": "mijn",
+   "t": "my"
+  },
+  {
+   "w": "bsn",
+   "t": "BSN",
+   "note": "citizen service number; fronted for emphasis"
+  },
+  {
+   "w": "heb",
+   "t": "have",
+   "note": "auxiliary for 'gekregen'"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "nog",
+   "t": "yet/still"
+  },
+  {
+   "w": "niet",
+   "t": "not",
+   "note": "'nog niet' = not yet"
+  },
+  {
+   "w": "gekregen",
+   "t": "received",
+   "note": "past participle of 'krijgen'"
+  },
+  {
+   "w": "kan",
+   "t": "can"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "die",
+   "t": "it/that one",
+   "note": "refers back to the BSN"
+  },
+  {
+   "w": "hier",
+   "t": "here"
+  },
+  {
+   "w": "aanvragen",
+   "t": "apply for",
+   "note": "separable verb 'aanvragen' = request/apply for"
+  }
+ ],
+ "Hoeveel weken duurt het voordat ik mijn pasje krijg?": [
+  {
+   "w": "hoeveel",
+   "t": "how many"
+  },
+  {
+   "w": "weken",
+   "t": "weeks",
+   "note": "plural of 'week'"
+  },
+  {
+   "w": "duurt",
+   "t": "takes",
+   "note": "from 'duren' = to last/take (time)"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "voordat",
+   "t": "before",
+   "note": "subordinating; sends verb to end"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "mijn",
+   "t": "my"
+  },
+  {
+   "w": "pasje",
+   "t": "card",
+   "note": "diminutive of 'pas'; het-word"
+  },
+  {
+   "w": "krijg",
+   "t": "receive",
+   "note": "verb at clause end after 'voordat'"
+  }
+ ],
+ "Sorry, ik begrijp u niet helemaal. Kunt u dat herhalen?": [
+  {
+   "w": "sorry",
+   "t": "sorry"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "begrijp",
+   "t": "understand",
+   "note": "from begrijpen, to understand"
+  },
+  {
+   "w": "u",
+   "t": "you",
+   "note": "formal 'you' (object)"
+  },
+  {
+   "w": "niet",
+   "t": "not"
+  },
+  {
+   "w": "helemaal",
+   "t": "completely",
+   "note": "niet helemaal = not quite/fully"
+  },
+  {
+   "w": "kunt",
+   "t": "can/could",
+   "note": "polite form of kunnen with 'u'"
+  },
+  {
+   "w": "u",
+   "t": "you",
+   "note": "formal 'you' (subject)"
+  },
+  {
+   "w": "dat",
+   "t": "that"
+  },
+  {
+   "w": "herhalen",
+   "t": "repeat",
+   "note": "to repeat"
+  }
+ ],
+ "Wat kost het om mijn adres door te geven?": [
+  {
+   "w": "wat",
+   "t": "what"
+  },
+  {
+   "w": "kost",
+   "t": "costs",
+   "note": "from kosten, to cost"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "om",
+   "t": "to",
+   "note": "om...te = in order to"
+  },
+  {
+   "w": "mijn",
+   "t": "my"
+  },
+  {
+   "w": "adres",
+   "t": "address",
+   "note": "het adres"
+  },
+  {
+   "w": "door",
+   "t": "(on/forward)",
+   "note": "prefix of separable verb doorgeven"
+  },
+  {
+   "w": "te",
+   "t": "to",
+   "note": "infinitive marker in om...te"
+  },
+  {
+   "w": "geven",
+   "t": "give",
+   "note": "doorgeven = to pass on / update"
+  }
+ ],
+ "Ik wil mijn afspraak verzetten naar volgende week.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "wil",
+   "t": "want to",
+   "note": "from willen"
+  },
+  {
+   "w": "mijn",
+   "t": "my"
+  },
+  {
+   "w": "afspraak",
+   "t": "appointment",
+   "note": "de afspraak"
+  },
+  {
+   "w": "verzetten",
+   "t": "reschedule",
+   "note": "to move/reschedule"
+  },
+  {
+   "w": "naar",
+   "t": "to"
+  },
+  {
+   "w": "volgende",
+   "t": "next"
+  },
+  {
+   "w": "week",
+   "t": "week"
+  }
+ ],
+ "Bedankt voor uw hulp. Een fijne dag verder.": [
+  {
+   "w": "bedankt",
+   "t": "thanks"
+  },
+  {
+   "w": "voor",
+   "t": "for"
+  },
+  {
+   "w": "uw",
+   "t": "your",
+   "note": "formal 'your'"
+  },
+  {
+   "w": "hulp",
+   "t": "help",
+   "note": "de hulp"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "fijne",
+   "t": "nice"
+  },
+  {
+   "w": "dag",
+   "t": "day"
+  },
+  {
+   "w": "verder",
+   "t": "rest of",
+   "note": "fijne dag verder = nice rest of your day"
+  }
+ ],
+ "Goedendag, u spreekt met Aisha Patel, huurder op de Beukenlaan 12.": [
+  {
+   "w": "goedendag",
+   "t": "good day"
+  },
+  {
+   "w": "u",
+   "t": "you",
+   "note": "formal 'you'"
+  },
+  {
+   "w": "spreekt",
+   "t": "are speaking",
+   "note": "u spreekt met = you're speaking with (phone)"
+  },
+  {
+   "w": "met",
+   "t": "with"
+  },
+  {
+   "w": "aisha",
+   "t": "Aisha",
+   "note": "name"
+  },
+  {
+   "w": "patel",
+   "t": "Patel",
+   "note": "surname"
+  },
+  {
+   "w": "huurder",
+   "t": "tenant",
+   "note": "de huurder"
+  },
+  {
+   "w": "op",
+   "t": "at"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "beukenlaan",
+   "t": "Beukenlaan",
+   "note": "street name"
+  },
+  {
+   "w": "12",
+   "t": "12"
+  }
+ ],
+ "De verwarming doet het al twee dagen niet meer.": [
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "verwarming",
+   "t": "heating",
+   "note": "de verwarming"
+  },
+  {
+   "w": "doet",
+   "t": "works",
+   "note": "doet het niet = doesn't work"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "al",
+   "t": "already",
+   "note": "al twee dagen = for two days now"
+  },
+  {
+   "w": "twee",
+   "t": "two"
+  },
+  {
+   "w": "dagen",
+   "t": "days"
+  },
+  {
+   "w": "niet",
+   "t": "not"
+  },
+  {
+   "w": "meer",
+   "t": "anymore",
+   "note": "niet meer = no longer"
+  }
+ ],
+ "Het is kapot gegaan gisternacht — plotseling stopte het gewoon.": [
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "is",
+   "t": "has",
+   "note": "auxiliary for kapot gegaan (zijn)"
+  },
+  {
+   "w": "kapot",
+   "t": "broken",
+   "note": "kapot gaan = to break down"
+  },
+  {
+   "w": "gegaan",
+   "t": "gone/broken",
+   "note": "past participle of gaan"
+  },
+  {
+   "w": "gisternacht",
+   "t": "last night"
+  },
+  {
+   "w": "plotseling",
+   "t": "suddenly"
+  },
+  {
+   "w": "stopte",
+   "t": "stopped",
+   "note": "past tense of stoppen"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "gewoon",
+   "t": "just",
+   "note": "here = simply/just"
+  }
+ ],
+ "Het is dringend — het vriest bijna buiten en wij hebben kleine kinderen.": [
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "dringend",
+   "t": "urgent"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "vriest",
+   "t": "freezing",
+   "note": "from vriezen, to freeze"
+  },
+  {
+   "w": "bijna",
+   "t": "almost"
+  },
+  {
+   "w": "buiten",
+   "t": "outside"
+  },
+  {
+   "w": "en",
+   "t": "and"
+  },
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "hebben",
+   "t": "have"
+  },
+  {
+   "w": "kleine",
+   "t": "small/young"
+  },
+  {
+   "w": "kinderen",
+   "t": "children"
+  }
+ ],
+ "Kunt u zo snel mogelijk iemand sturen om dit te repareren?": [
+  {
+   "w": "kunt",
+   "t": "can/could",
+   "note": "polite kunnen with 'u'"
+  },
+  {
+   "w": "u",
+   "t": "you",
+   "note": "formal 'you'"
+  },
+  {
+   "w": "zo",
+   "t": "as",
+   "note": "zo...mogelijk = as...as possible"
+  },
+  {
+   "w": "snel",
+   "t": "fast/soon"
+  },
+  {
+   "w": "mogelijk",
+   "t": "possible",
+   "note": "zo snel mogelijk = as soon as possible"
+  },
+  {
+   "w": "iemand",
+   "t": "someone"
+  },
+  {
+   "w": "sturen",
+   "t": "send"
+  },
+  {
+   "w": "om",
+   "t": "to",
+   "note": "om...te = in order to"
+  },
+  {
+   "w": "dit",
+   "t": "this"
+  },
+  {
+   "w": "te",
+   "t": "to",
+   "note": "infinitive marker"
+  },
+  {
+   "w": "repareren",
+   "t": "repair"
+  }
+ ],
+ "Wanneer komt de monteur precies — 's ochtends of 's middags?": [
+  {
+   "w": "wanneer",
+   "t": "when"
+  },
+  {
+   "w": "komt",
+   "t": "comes/coming"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "monteur",
+   "t": "technician",
+   "note": "de monteur, repair person"
+  },
+  {
+   "w": "precies",
+   "t": "exactly"
+  },
+  {
+   "w": "s",
+   "t": "(in the)",
+   "note": "'s ochtends = in the morning"
+  },
+  {
+   "w": "ochtends",
+   "t": "morning",
+   "note": "'s ochtends = in the morning"
+  },
+  {
+   "w": "of",
+   "t": "or"
+  },
+  {
+   "w": "s",
+   "t": "(in the)",
+   "note": "'s middags = in the afternoon"
+  },
+  {
+   "w": "middags",
+   "t": "afternoon",
+   "note": "'s middags = in the afternoon"
+  }
+ ],
+ "Mijn adres is Beukenlaan 12, tweede verdieping, flat B.": [
+  {
+   "w": "mijn",
+   "t": "my"
+  },
+  {
+   "w": "adres",
+   "t": "address",
+   "note": "het adres"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "beukenlaan",
+   "t": "Beukenlaan",
+   "note": "street name"
+  },
+  {
+   "w": "12",
+   "t": "12"
+  },
+  {
+   "w": "tweede",
+   "t": "second"
+  },
+  {
+   "w": "verdieping",
+   "t": "floor",
+   "note": "de verdieping; counted above ground"
+  },
+  {
+   "w": "flat",
+   "t": "flat/apartment"
+  },
+  {
+   "w": "b",
+   "t": "B"
+  }
+ ],
+ "Kunt u dit ook per e-mail bevestigen met een tijdstip?": [
+  {
+   "w": "kunt",
+   "t": "can/could",
+   "note": "polite kunnen with 'u'"
+  },
+  {
+   "w": "u",
+   "t": "you",
+   "note": "formal 'you'"
+  },
+  {
+   "w": "dit",
+   "t": "this"
+  },
+  {
+   "w": "ook",
+   "t": "also"
+  },
+  {
+   "w": "per",
+   "t": "by",
+   "note": "per e-mail = by email"
+  },
+  {
+   "w": "e-mail",
+   "t": "email"
+  },
+  {
+   "w": "bevestigen",
+   "t": "confirm"
+  },
+  {
+   "w": "met",
+   "t": "with"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "tijdstip",
+   "t": "time slot",
+   "note": "het tijdstip, point in time"
+  }
+ ],
+ "Als de monteur niet komt, moet ik contact opnemen met de Huurcommissie.": [
+  {
+   "w": "als",
+   "t": "if"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "monteur",
+   "t": "technician"
+  },
+  {
+   "w": "niet",
+   "t": "not"
+  },
+  {
+   "w": "komt",
+   "t": "comes",
+   "note": "verb-final after 'als'"
+  },
+  {
+   "w": "moet",
+   "t": "must/have to"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "contact",
+   "t": "contact"
+  },
+  {
+   "w": "opnemen",
+   "t": "get in touch",
+   "note": "contact opnemen met = to contact (separable)"
+  },
+  {
+   "w": "met",
+   "t": "with"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "huurcommissie",
+   "t": "Rent Tribunal",
+   "note": "de Huurcommissie, Dutch rent tribunal"
+  }
+ ],
+ "Dank u wel. Ik zie uw monteur dan op dinsdag.": [
+  {
+   "w": "dank",
+   "t": "thank",
+   "note": "dank u wel = thank you (formal)"
+  },
+  {
+   "w": "u",
+   "t": "you",
+   "note": "formal 'you'"
+  },
+  {
+   "w": "wel",
+   "t": "(intensifier)",
+   "note": "dank u wel = thank you very much"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "zie",
+   "t": "see",
+   "note": "here = will see"
+  },
+  {
+   "w": "uw",
+   "t": "your",
+   "note": "formal 'your'"
+  },
+  {
+   "w": "monteur",
+   "t": "technician"
+  },
+  {
+   "w": "dan",
+   "t": "then"
+  },
+  {
+   "w": "op",
+   "t": "on"
+  },
+  {
+   "w": "dinsdag",
+   "t": "Tuesday"
+  }
+ ],
+ "Ik wil graag een betaalrekening openen.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "wil",
+   "t": "want to",
+   "note": "from willen"
+  },
+  {
+   "w": "graag",
+   "t": "would like",
+   "note": "wil graag = would like to (polite)"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "betaalrekening",
+   "t": "current account",
+   "note": "de betaalrekening, everyday bank account"
+  },
+  {
+   "w": "openen",
+   "t": "open"
+  }
+ ],
+ "Ik heb mijn paspoort en mijn BSN bij me.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "heb",
+   "t": "have"
+  },
+  {
+   "w": "mijn",
+   "t": "my"
+  },
+  {
+   "w": "paspoort",
+   "t": "passport",
+   "note": "het paspoort"
+  },
+  {
+   "w": "en",
+   "t": "and"
+  },
+  {
+   "w": "mijn",
+   "t": "my"
+  },
+  {
+   "w": "bsn",
+   "t": "BSN",
+   "note": "citizen service number"
+  },
+  {
+   "w": "bij",
+   "t": "with",
+   "note": "bij me = with me/on me"
+  },
+  {
+   "w": "me",
+   "t": "me"
+  }
+ ],
+ "Hoe lang duurt het voordat ik de pinpas krijg?": [
+  {
+   "w": "hoe",
+   "t": "how",
+   "note": "hoe lang = how long"
+  },
+  {
+   "w": "lang",
+   "t": "long"
+  },
+  {
+   "w": "duurt",
+   "t": "takes",
+   "note": "from duren, to last/take"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "voordat",
+   "t": "before"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "pinpas",
+   "t": "debit card",
+   "note": "de pinpas"
+  },
+  {
+   "w": "krijg",
+   "t": "receive",
+   "note": "verb-final after 'voordat'"
+  }
+ ],
+ "Kunt u mij helpen de ING-app in te stellen?": [
+  {
+   "w": "kunt",
+   "t": "can/could",
+   "note": "polite kunnen with 'u'"
+  },
+  {
+   "w": "u",
+   "t": "you",
+   "note": "formal 'you'"
+  },
+  {
+   "w": "mij",
+   "t": "me"
+  },
+  {
+   "w": "helpen",
+   "t": "help"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "ing-app",
+   "t": "ING app"
+  },
+  {
+   "w": "in",
+   "t": "(up)",
+   "note": "prefix of separable verb instellen"
+  },
+  {
+   "w": "te",
+   "t": "to",
+   "note": "infinitive marker"
+  },
+  {
+   "w": "stellen",
+   "t": "set",
+   "note": "instellen = to set up/configure"
+  }
+ ],
+ "Ik zie hier een afschrijving die ik niet herken.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "zie",
+   "t": "see"
+  },
+  {
+   "w": "hier",
+   "t": "here"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "afschrijving",
+   "t": "debit/charge",
+   "note": "de afschrijving, deduction from account"
+  },
+  {
+   "w": "die",
+   "t": "that",
+   "note": "relative pronoun"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "niet",
+   "t": "not"
+  },
+  {
+   "w": "herken",
+   "t": "recognise",
+   "note": "verb-final in relative clause"
+  }
+ ],
+ "Kunt u mij uitleggen wat dit bedrag inhoudt?": [
+  {
+   "w": "kunt",
+   "t": "can/could",
+   "note": "polite kunnen with 'u'"
+  },
+  {
+   "w": "u",
+   "t": "you",
+   "note": "formal 'you'"
+  },
+  {
+   "w": "mij",
+   "t": "me"
+  },
+  {
+   "w": "uitleggen",
+   "t": "explain",
+   "note": "separable verb uitleggen"
+  },
+  {
+   "w": "wat",
+   "t": "what"
+  },
+  {
+   "w": "dit",
+   "t": "this"
+  },
+  {
+   "w": "bedrag",
+   "t": "amount",
+   "note": "het bedrag, sum of money"
+  },
+  {
+   "w": "inhoudt",
+   "t": "means",
+   "note": "inhouden = to entail/mean; verb-final in clause"
+  }
+ ],
+ "Ik wil hier bezwaar tegen maken — dit bedrag ken ik niet.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "wil",
+   "t": "want to"
+  },
+  {
+   "w": "hier",
+   "t": "this",
+   "note": "hier...tegen = against this"
+  },
+  {
+   "w": "bezwaar",
+   "t": "objection",
+   "note": "bezwaar maken tegen = to dispute"
+  },
+  {
+   "w": "tegen",
+   "t": "against",
+   "note": "part of hiertegen split up"
+  },
+  {
+   "w": "maken",
+   "t": "make",
+   "note": "bezwaar maken = to lodge an objection"
+  },
+  {
+   "w": "dit",
+   "t": "this"
+  },
+  {
+   "w": "bedrag",
+   "t": "amount",
+   "note": "het bedrag"
+  },
+  {
+   "w": "ken",
+   "t": "recognise",
+   "note": "from kennen; ken ik niet = I don't recognise"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "niet",
+   "t": "not"
+  }
+ ],
+ "Mijn pinpas is kwijt — kunt u die meteen blokkeren?": [
+  {
+   "w": "mijn",
+   "t": "my"
+  },
+  {
+   "w": "pinpas",
+   "t": "debit card",
+   "note": "de pinpas"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "kwijt",
+   "t": "lost",
+   "note": "kwijt zijn = to have lost"
+  },
+  {
+   "w": "kunt",
+   "t": "can/could",
+   "note": "polite kunnen with 'u'"
+  },
+  {
+   "w": "u",
+   "t": "you",
+   "note": "formal 'you'"
+  },
+  {
+   "w": "die",
+   "t": "it",
+   "note": "refers to the pinpas"
+  },
+  {
+   "w": "meteen",
+   "t": "immediately"
+  },
+  {
+   "w": "blokkeren",
+   "t": "block"
+  }
+ ],
+ "Wat zijn de kosten voor een automatische incasso?": [
+  {
+   "w": "wat",
+   "t": "what"
+  },
+  {
+   "w": "zijn",
+   "t": "are"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "kosten",
+   "t": "costs"
+  },
+  {
+   "w": "voor",
+   "t": "for"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "automatische",
+   "t": "automatic"
+  },
+  {
+   "w": "incasso",
+   "t": "direct debit",
+   "note": "automatische incasso = direct debit"
+  }
+ ],
+ "Bedankt voor uw hulp. Ik wacht op mijn pinpas.": [
+  {
+   "w": "bedankt",
+   "t": "thanks"
+  },
+  {
+   "w": "voor",
+   "t": "for"
+  },
+  {
+   "w": "uw",
+   "t": "your",
+   "note": "formal 'your'"
+  },
+  {
+   "w": "hulp",
+   "t": "help"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "wacht",
+   "t": "wait",
+   "note": "wachten op = to wait for"
+  },
+  {
+   "w": "op",
+   "t": "for",
+   "note": "wachten op = to wait for"
+  },
+  {
+   "w": "mijn",
+   "t": "my"
+  },
+  {
+   "w": "pinpas",
+   "t": "debit card"
+  }
+ ],
+ "U spreekt met Kavya Sharma, patiëntnummer 4872.": [
+  {
+   "w": "u",
+   "t": "you",
+   "note": "formal 'you'"
+  },
+  {
+   "w": "spreekt",
+   "t": "are speaking",
+   "note": "u spreekt met = you're speaking with (phone)"
+  },
+  {
+   "w": "met",
+   "t": "with"
+  },
+  {
+   "w": "kavya",
+   "t": "Kavya",
+   "note": "name"
+  },
+  {
+   "w": "sharma",
+   "t": "Sharma",
+   "note": "surname"
+  },
+  {
+   "w": "patiëntnummer",
+   "t": "patient number",
+   "note": "het patiëntnummer"
+  },
+  {
+   "w": "4872",
+   "t": "4872"
+  }
+ ],
+ "Ik wil graag een afspraak maken bij de huisarts.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "wil",
+   "t": "want to"
+  },
+  {
+   "w": "graag",
+   "t": "would like",
+   "note": "wil graag = would like to (polite)"
+  },
+  {
+   "w": "een",
+   "t": "an"
+  },
+  {
+   "w": "afspraak",
+   "t": "appointment",
+   "note": "afspraak maken = to make an appointment"
+  },
+  {
+   "w": "maken",
+   "t": "make"
+  },
+  {
+   "w": "bij",
+   "t": "with"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "huisarts",
+   "t": "GP",
+   "note": "de huisarts, family doctor"
+  }
+ ],
+ "Ik heb al drie weken last van ernstige migraine.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "heb",
+   "t": "have",
+   "note": "last hebben van = to suffer from"
+  },
+  {
+   "w": "al",
+   "t": "already",
+   "note": "al drie weken = for three weeks now"
+  },
+  {
+   "w": "drie",
+   "t": "three"
+  },
+  {
+   "w": "weken",
+   "t": "weeks"
+  },
+  {
+   "w": "last",
+   "t": "trouble",
+   "note": "last hebben van = to suffer from"
+  },
+  {
+   "w": "van",
+   "t": "of/from",
+   "note": "part of last...van"
+  },
+  {
+   "w": "ernstige",
+   "t": "severe"
+  },
+  {
+   "w": "migraine",
+   "t": "migraine(s)"
+  }
+ ],
+ "Het wordt steeds erger — de pijnaanvallen duren langer.": [
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "wordt",
+   "t": "is getting",
+   "note": "from worden, to become"
+  },
+  {
+   "w": "steeds",
+   "t": "increasingly",
+   "note": "steeds erger = worse and worse"
+  },
+  {
+   "w": "erger",
+   "t": "worse"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "pijnaanvallen",
+   "t": "pain attacks",
+   "note": "de pijnaanval, plural"
+  },
+  {
+   "w": "duren",
+   "t": "last",
+   "note": "to last/take time"
+  },
+  {
+   "w": "langer",
+   "t": "longer"
+  }
+ ],
+ "Ik heb paracetamol geprobeerd, maar dat helpt niet meer.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "heb",
+   "t": "have",
+   "note": "auxiliary for geprobeerd"
+  },
+  {
+   "w": "paracetamol",
+   "t": "paracetamol"
+  },
+  {
+   "w": "geprobeerd",
+   "t": "tried",
+   "note": "past participle of proberen"
+  },
+  {
+   "w": "maar",
+   "t": "but"
+  },
+  {
+   "w": "dat",
+   "t": "that"
+  },
+  {
+   "w": "helpt",
+   "t": "helps"
+  },
+  {
+   "w": "niet",
+   "t": "not"
+  },
+  {
+   "w": "meer",
+   "t": "anymore",
+   "note": "niet meer = no longer"
+  }
+ ],
+ "Zou ik een verwijzing kunnen krijgen naar een neuroloog?": [
+  {
+   "w": "zou",
+   "t": "would",
+   "note": "zou ik kunnen = would I be able to (polite)"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "verwijzing",
+   "t": "referral",
+   "note": "de verwijzing"
+  },
+  {
+   "w": "kunnen",
+   "t": "be able to"
+  },
+  {
+   "w": "krijgen",
+   "t": "get/receive"
+  },
+  {
+   "w": "naar",
+   "t": "to"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "neuroloog",
+   "t": "neurologist"
+  }
+ ],
+ "Soms word ik ook misselijk en gevoelig voor licht.": [
+  {
+   "w": "soms",
+   "t": "sometimes"
+  },
+  {
+   "w": "word",
+   "t": "become",
+   "note": "from worden; inversion after 'soms'"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ook",
+   "t": "also"
+  },
+  {
+   "w": "misselijk",
+   "t": "nauseous"
+  },
+  {
+   "w": "en",
+   "t": "and"
+  },
+  {
+   "w": "gevoelig",
+   "t": "sensitive",
+   "note": "gevoelig voor = sensitive to"
+  },
+  {
+   "w": "voor",
+   "t": "to",
+   "note": "part of gevoelig voor"
+  },
+  {
+   "w": "licht",
+   "t": "light"
+  }
+ ],
+ "Wanneer is de dokter beschikbaar en wat moet ik meenemen?": [
+  {
+   "w": "wanneer",
+   "t": "when"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "dokter",
+   "t": "doctor"
+  },
+  {
+   "w": "beschikbaar",
+   "t": "available"
+  },
+  {
+   "w": "en",
+   "t": "and"
+  },
+  {
+   "w": "wat",
+   "t": "what"
+  },
+  {
+   "w": "moet",
+   "t": "must/should"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "meenemen",
+   "t": "bring along",
+   "note": "separable verb meenemen"
+  }
+ ],
+ "Als het slechter wordt, moet ik dan naar de huisartsenpost?": [
+  {
+   "w": "als",
+   "t": "if"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "slechter",
+   "t": "worse"
+  },
+  {
+   "w": "wordt",
+   "t": "gets",
+   "note": "verb-final after 'als'"
+  },
+  {
+   "w": "moet",
+   "t": "should/must"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "dan",
+   "t": "then"
+  },
+  {
+   "w": "naar",
+   "t": "to"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "huisartsenpost",
+   "t": "out-of-hours GP centre",
+   "note": "de huisartsenpost, after-hours GP service"
+  }
+ ],
+ "Bedankt. Dan zie ik de huisarts op donderdag om twee uur.": [
+  {
+   "w": "bedankt",
+   "t": "thanks"
+  },
+  {
+   "w": "dan",
+   "t": "then"
+  },
+  {
+   "w": "zie",
+   "t": "see",
+   "note": "here = will see; inversion after 'dan'"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "huisarts",
+   "t": "GP"
+  },
+  {
+   "w": "op",
+   "t": "on"
+  },
+  {
+   "w": "donderdag",
+   "t": "Thursday"
+  },
+  {
+   "w": "om",
+   "t": "at",
+   "note": "om twee uur = at two o'clock"
+  },
+  {
+   "w": "twee",
+   "t": "two"
+  },
+  {
+   "w": "uur",
+   "t": "o'clock"
+  }
+ ],
+ "Aangenaam, ik ben Arjun Mehta — fijn u te ontmoeten.": [
+  {
+   "w": "aangenaam",
+   "t": "pleased to meet you",
+   "note": "standard formal greeting on introduction"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ben",
+   "t": "am"
+  },
+  {
+   "w": "arjun",
+   "t": "Arjun",
+   "note": "name"
+  },
+  {
+   "w": "mehta",
+   "t": "Mehta",
+   "note": "surname"
+  },
+  {
+   "w": "fijn",
+   "t": "nice",
+   "note": "fijn u te ontmoeten = nice to meet you"
+  },
+  {
+   "w": "u",
+   "t": "you",
+   "note": "formal 'you'"
+  },
+  {
+   "w": "te",
+   "t": "to",
+   "note": "infinitive marker"
+  },
+  {
+   "w": "ontmoeten",
+   "t": "meet"
+  }
+ ],
+ "Ik heb vijf jaar gewerkt als projectcoördinator bij een IT-bedrijf.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "heb",
+   "t": "have",
+   "note": "auxiliary for gewerkt (perfect tense)"
+  },
+  {
+   "w": "vijf",
+   "t": "five"
+  },
+  {
+   "w": "jaar",
+   "t": "years",
+   "note": "stays singular after a number"
+  },
+  {
+   "w": "gewerkt",
+   "t": "worked",
+   "note": "past participle of werken"
+  },
+  {
+   "w": "als",
+   "t": "as"
+  },
+  {
+   "w": "projectcoördinator",
+   "t": "project coordinator"
+  },
+  {
+   "w": "bij",
+   "t": "at"
+  },
+  {
+   "w": "een",
+   "t": "an"
+  },
+  {
+   "w": "it-bedrijf",
+   "t": "IT company",
+   "note": "het bedrijf, company"
+  }
+ ],
+ "Ik solliciteer omdat ik graag wil bijdragen aan duurzame innovatie.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "solliciteer",
+   "t": "am applying",
+   "note": "from solliciteren, to apply for a job"
+  },
+  {
+   "w": "omdat",
+   "t": "because",
+   "note": "sends verbs to clause end"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "graag",
+   "t": "gladly",
+   "note": "graag wil = would like to"
+  },
+  {
+   "w": "wil",
+   "t": "want to"
+  },
+  {
+   "w": "bijdragen",
+   "t": "contribute",
+   "note": "bijdragen aan = to contribute to"
+  },
+  {
+   "w": "aan",
+   "t": "to",
+   "note": "part of bijdragen aan"
+  },
+  {
+   "w": "duurzame",
+   "t": "sustainable"
+  },
+  {
+   "w": "innovatie",
+   "t": "innovation"
+  }
+ ],
+ "Ik werk graag in een team en ik communiceer open en direct.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "werk",
+   "t": "work"
+  },
+  {
+   "w": "graag",
+   "t": "gladly",
+   "note": "werk graag = enjoy working"
+  },
+  {
+   "w": "in",
+   "t": "in"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "team",
+   "t": "team"
+  },
+  {
+   "w": "en",
+   "t": "and"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "communiceer",
+   "t": "communicate"
+  },
+  {
+   "w": "open",
+   "t": "openly"
+  },
+  {
+   "w": "en",
+   "t": "and"
+  },
+  {
+   "w": "direct",
+   "t": "directly"
+  }
+ ],
+ "Soms wil ik te perfectionistisch zijn — ik werk eraan.": [
+  {
+   "w": "soms",
+   "t": "sometimes"
+  },
+  {
+   "w": "wil",
+   "t": "tend to",
+   "note": "inversion after 'soms'; here = tend/want to"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "te",
+   "t": "too",
+   "note": "te + adjective = too..."
+  },
+  {
+   "w": "perfectionistisch",
+   "t": "perfectionist"
+  },
+  {
+   "w": "zijn",
+   "t": "be"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "werk",
+   "t": "am working",
+   "note": "werken aan = to work on"
+  },
+  {
+   "w": "eraan",
+   "t": "on it",
+   "note": "er + aan = on it"
+  }
+ ],
+ "Bij mijn vorige werkgever heb ik geleerd hoe ik met deadlines om moet gaan.": [
+  {
+   "w": "bij",
+   "t": "at"
+  },
+  {
+   "w": "mijn",
+   "t": "my"
+  },
+  {
+   "w": "vorige",
+   "t": "previous"
+  },
+  {
+   "w": "werkgever",
+   "t": "employer",
+   "note": "de werkgever"
+  },
+  {
+   "w": "heb",
+   "t": "have",
+   "note": "auxiliary for geleerd; inversion after fronted phrase"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "geleerd",
+   "t": "learned",
+   "note": "past participle of leren"
+  },
+  {
+   "w": "hoe",
+   "t": "how"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "met",
+   "t": "with",
+   "note": "omgaan met = to deal with"
+  },
+  {
+   "w": "deadlines",
+   "t": "deadlines"
+  },
+  {
+   "w": "om",
+   "t": "(with)",
+   "note": "prefix of separable omgaan, split to clause end"
+  },
+  {
+   "w": "moet",
+   "t": "must/have to"
+  },
+  {
+   "w": "gaan",
+   "t": "deal",
+   "note": "omgaan met = to handle/deal with"
+  }
+ ],
+ "Wat zijn de salarisverwachtingen voor deze functie?": [
+  {
+   "w": "wat",
+   "t": "what"
+  },
+  {
+   "w": "zijn",
+   "t": "are"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "salarisverwachtingen",
+   "t": "salary expectations"
+  },
+  {
+   "w": "voor",
+   "t": "for"
+  },
+  {
+   "w": "deze",
+   "t": "this"
+  },
+  {
+   "w": "functie",
+   "t": "position",
+   "note": "de functie, job/role"
+  }
+ ],
+ "Als ik word aangenomen, wanneer zou ik dan kunnen beginnen?": [
+  {
+   "w": "als",
+   "t": "if"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "word",
+   "t": "am",
+   "note": "passive auxiliary; word aangenomen = am hired"
+  },
+  {
+   "w": "aangenomen",
+   "t": "hired",
+   "note": "aangenomen worden = to be hired"
+  },
+  {
+   "w": "wanneer",
+   "t": "when"
+  },
+  {
+   "w": "zou",
+   "t": "would",
+   "note": "zou ik kunnen = would I be able to"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "dan",
+   "t": "then"
+  },
+  {
+   "w": "kunnen",
+   "t": "be able to"
+  },
+  {
+   "w": "beginnen",
+   "t": "start"
+  }
+ ],
+ "Hoe ziet een typische werkdag eruit in deze rol?": [
+  {
+   "w": "hoe",
+   "t": "what/how"
+  },
+  {
+   "w": "ziet",
+   "t": "looks",
+   "note": "eruit zien = to look like (separable)"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "typische",
+   "t": "typical"
+  },
+  {
+   "w": "werkdag",
+   "t": "working day",
+   "note": "de werkdag"
+  },
+  {
+   "w": "eruit",
+   "t": "like",
+   "note": "part of separable eruit zien"
+  },
+  {
+   "w": "in",
+   "t": "in"
+  },
+  {
+   "w": "deze",
+   "t": "this"
+  },
+  {
+   "w": "rol",
+   "t": "role",
+   "note": "de rol"
+  }
+ ],
+ "Bedankt voor uw tijd. Ik zie uw reactie graag tegemoet.": [
+  {
+   "w": "bedankt",
+   "t": "thanks"
+  },
+  {
+   "w": "voor",
+   "t": "for"
+  },
+  {
+   "w": "uw",
+   "t": "your",
+   "note": "formal 'your'"
+  },
+  {
+   "w": "tijd",
+   "t": "time"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "zie",
+   "t": "look forward",
+   "note": "tegemoet zien = to look forward to"
+  },
+  {
+   "w": "uw",
+   "t": "your"
+  },
+  {
+   "w": "reactie",
+   "t": "response",
+   "note": "de reactie"
+  },
+  {
+   "w": "graag",
+   "t": "gladly",
+   "note": "reinforces looking forward to"
+  },
+  {
+   "w": "tegemoet",
+   "t": "to",
+   "note": "part of separable tegemoet zien"
+  }
+ ],
+ "Goedemiddag, ik ben de moeder van Sander — Priya Sharma.": [
+  {
+   "w": "goedemiddag",
+   "t": "good afternoon"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ben",
+   "t": "am"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "moeder",
+   "t": "mother",
+   "note": "de moeder van = the mother of"
+  },
+  {
+   "w": "van",
+   "t": "of"
+  },
+  {
+   "w": "sander",
+   "t": "Sander",
+   "note": "child's name"
+  },
+  {
+   "w": "priya",
+   "t": "Priya",
+   "note": "name"
+  },
+  {
+   "w": "sharma",
+   "t": "Sharma",
+   "note": "surname"
+  }
+ ],
+ "Hoe gaat het met hem op school in het algemeen?": [
+  {
+   "w": "hoe",
+   "t": "how",
+   "note": "hoe gaat het = how is it going"
+  },
+  {
+   "w": "gaat",
+   "t": "is going"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "met",
+   "t": "with"
+  },
+  {
+   "w": "hem",
+   "t": "him"
+  },
+  {
+   "w": "op",
+   "t": "at"
+  },
+  {
+   "w": "school",
+   "t": "school"
+  },
+  {
+   "w": "in",
+   "t": "in",
+   "note": "in het algemeen = in general"
+  },
+  {
+   "w": "het",
+   "t": "the"
+  },
+  {
+   "w": "algemeen",
+   "t": "general",
+   "note": "in het algemeen = in general"
+  }
+ ],
+ "Dat is fijn om te horen — hij is veel beter geworden in rekenen.": [
+  {
+   "w": "dat",
+   "t": "that"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "fijn",
+   "t": "nice"
+  },
+  {
+   "w": "om",
+   "t": "to",
+   "note": "part of 'om te' = in order to"
+  },
+  {
+   "w": "te",
+   "t": "to",
+   "note": "infinitive marker with 'om'"
+  },
+  {
+   "w": "horen",
+   "t": "hear"
+  },
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "is",
+   "t": "has",
+   "note": "'is geworden' = has become"
+  },
+  {
+   "w": "veel",
+   "t": "much"
+  },
+  {
+   "w": "beter",
+   "t": "better"
+  },
+  {
+   "w": "geworden",
+   "t": "become",
+   "note": "past participle of 'worden'"
+  },
+  {
+   "w": "in",
+   "t": "at",
+   "note": "'beter in' = better at"
+  },
+  {
+   "w": "rekenen",
+   "t": "maths",
+   "note": "arithmetic"
+  }
+ ],
+ "Hij vindt taal nog steeds lastig — hoe kunnen wij hem thuis helpen?": [
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "vindt",
+   "t": "finds"
+  },
+  {
+   "w": "taal",
+   "t": "language"
+  },
+  {
+   "w": "nog",
+   "t": "still",
+   "note": "with 'steeds'"
+  },
+  {
+   "w": "steeds",
+   "t": "still",
+   "note": "'nog steeds' = still"
+  },
+  {
+   "w": "lastig",
+   "t": "difficult"
+  },
+  {
+   "w": "hoe",
+   "t": "how"
+  },
+  {
+   "w": "kunnen",
+   "t": "can"
+  },
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "hem",
+   "t": "him"
+  },
+  {
+   "w": "thuis",
+   "t": "at home"
+  },
+  {
+   "w": "helpen",
+   "t": "help"
+  }
+ ],
+ "Hij heeft me verteld dat er gepest wordt op het schoolplein.": [
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "heeft",
+   "t": "has",
+   "note": "auxiliary with 'verteld'"
+  },
+  {
+   "w": "me",
+   "t": "me"
+  },
+  {
+   "w": "verteld",
+   "t": "told"
+  },
+  {
+   "w": "dat",
+   "t": "that",
+   "note": "conjunction"
+  },
+  {
+   "w": "er",
+   "t": "there",
+   "note": "placeholder in passive"
+  },
+  {
+   "w": "gepest",
+   "t": "bullied",
+   "note": "passive 'gepest wordt'"
+  },
+  {
+   "w": "wordt",
+   "t": "is being",
+   "note": "passive auxiliary"
+  },
+  {
+   "w": "op",
+   "t": "on"
+  },
+  {
+   "w": "het",
+   "t": "the"
+  },
+  {
+   "w": "schoolplein",
+   "t": "playground"
+  }
+ ],
+ "Wat doet de school hieraan — is er een antipestprotocol?": [
+  {
+   "w": "wat",
+   "t": "what"
+  },
+  {
+   "w": "doet",
+   "t": "doing"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "school",
+   "t": "school"
+  },
+  {
+   "w": "hieraan",
+   "t": "about this"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "er",
+   "t": "there"
+  },
+  {
+   "w": "een",
+   "t": "a/an"
+  },
+  {
+   "w": "antipestprotocol",
+   "t": "anti-bullying protocol"
+  }
+ ],
+ "Hoeveel huiswerk krijgt hij per week en wat wordt er verwacht?": [
+  {
+   "w": "hoeveel",
+   "t": "how much"
+  },
+  {
+   "w": "huiswerk",
+   "t": "homework"
+  },
+  {
+   "w": "krijgt",
+   "t": "gets"
+  },
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "per",
+   "t": "per"
+  },
+  {
+   "w": "week",
+   "t": "week"
+  },
+  {
+   "w": "en",
+   "t": "and"
+  },
+  {
+   "w": "wat",
+   "t": "what"
+  },
+  {
+   "w": "wordt",
+   "t": "is",
+   "note": "passive auxiliary"
+  },
+  {
+   "w": "er",
+   "t": "there",
+   "note": "placeholder in passive"
+  },
+  {
+   "w": "verwacht",
+   "t": "expected"
+  }
+ ],
+ "Zijn er extra lessen of begeleiding beschikbaar voor taalondersteuning?": [
+  {
+   "w": "zijn",
+   "t": "are"
+  },
+  {
+   "w": "er",
+   "t": "there"
+  },
+  {
+   "w": "extra",
+   "t": "extra"
+  },
+  {
+   "w": "lessen",
+   "t": "lessons"
+  },
+  {
+   "w": "of",
+   "t": "or"
+  },
+  {
+   "w": "begeleiding",
+   "t": "support",
+   "note": "guidance"
+  },
+  {
+   "w": "beschikbaar",
+   "t": "available"
+  },
+  {
+   "w": "voor",
+   "t": "for"
+  },
+  {
+   "w": "taalondersteuning",
+   "t": "language support"
+  }
+ ],
+ "Wanneer is het volgende oudergesprek en hoe kan ik tussentijds contact opnemen?": [
+  {
+   "w": "wanneer",
+   "t": "when"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "het",
+   "t": "the"
+  },
+  {
+   "w": "volgende",
+   "t": "next"
+  },
+  {
+   "w": "oudergesprek",
+   "t": "parent-teacher meeting"
+  },
+  {
+   "w": "en",
+   "t": "and"
+  },
+  {
+   "w": "hoe",
+   "t": "how"
+  },
+  {
+   "w": "kan",
+   "t": "can"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "tussentijds",
+   "t": "in the meantime"
+  },
+  {
+   "w": "contact",
+   "t": "contact",
+   "note": "'contact opnemen' = to get in touch"
+  },
+  {
+   "w": "opnemen",
+   "t": "make",
+   "note": "'contact opnemen' = to get in touch"
+  }
+ ],
+ "Bedankt voor uw tijd en de duidelijke uitleg.": [
+  {
+   "w": "bedankt",
+   "t": "thank you"
+  },
+  {
+   "w": "voor",
+   "t": "for"
+  },
+  {
+   "w": "uw",
+   "t": "your",
+   "note": "formal possessive"
+  },
+  {
+   "w": "tijd",
+   "t": "time"
+  },
+  {
+   "w": "en",
+   "t": "and"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "duidelijke",
+   "t": "clear"
+  },
+  {
+   "w": "uitleg",
+   "t": "explanation"
+  }
+ ],
+ "een, twee, drie, vier, vijf, zes, zeven, acht, negen, tien": [
+  {
+   "w": "een",
+   "t": "one"
+  },
+  {
+   "w": "twee",
+   "t": "two"
+  },
+  {
+   "w": "drie",
+   "t": "three"
+  },
+  {
+   "w": "vier",
+   "t": "four"
+  },
+  {
+   "w": "vijf",
+   "t": "five"
+  },
+  {
+   "w": "zes",
+   "t": "six"
+  },
+  {
+   "w": "zeven",
+   "t": "seven"
+  },
+  {
+   "w": "acht",
+   "t": "eight"
+  },
+  {
+   "w": "negen",
+   "t": "nine"
+  },
+  {
+   "w": "tien",
+   "t": "ten"
+  }
+ ],
+ "twintig, dertig, veertig, vijftig, zestig, zeventig, tachtig, negentig, honderd, duizend": [
+  {
+   "w": "twintig",
+   "t": "twenty"
+  },
+  {
+   "w": "dertig",
+   "t": "thirty"
+  },
+  {
+   "w": "veertig",
+   "t": "forty"
+  },
+  {
+   "w": "vijftig",
+   "t": "fifty"
+  },
+  {
+   "w": "zestig",
+   "t": "sixty"
+  },
+  {
+   "w": "zeventig",
+   "t": "seventy"
+  },
+  {
+   "w": "tachtig",
+   "t": "eighty",
+   "note": "irregular, from 'acht'"
+  },
+  {
+   "w": "negentig",
+   "t": "ninety"
+  },
+  {
+   "w": "honderd",
+   "t": "hundred"
+  },
+  {
+   "w": "duizend",
+   "t": "thousand"
+  }
+ ],
+ "maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag, zondag": [
+  {
+   "w": "maandag",
+   "t": "Monday"
+  },
+  {
+   "w": "dinsdag",
+   "t": "Tuesday"
+  },
+  {
+   "w": "woensdag",
+   "t": "Wednesday"
+  },
+  {
+   "w": "donderdag",
+   "t": "Thursday"
+  },
+  {
+   "w": "vrijdag",
+   "t": "Friday"
+  },
+  {
+   "w": "zaterdag",
+   "t": "Saturday"
+  },
+  {
+   "w": "zondag",
+   "t": "Sunday"
+  }
+ ],
+ "januari, februari, maart, april, mei, juni, juli, augustus, september, oktober, november, december": [
+  {
+   "w": "januari",
+   "t": "January"
+  },
+  {
+   "w": "februari",
+   "t": "February"
+  },
+  {
+   "w": "maart",
+   "t": "March"
+  },
+  {
+   "w": "april",
+   "t": "April"
+  },
+  {
+   "w": "mei",
+   "t": "May"
+  },
+  {
+   "w": "juni",
+   "t": "June"
+  },
+  {
+   "w": "juli",
+   "t": "July"
+  },
+  {
+   "w": "augustus",
+   "t": "August"
+  },
+  {
+   "w": "september",
+   "t": "September"
+  },
+  {
+   "w": "oktober",
+   "t": "October"
+  },
+  {
+   "w": "november",
+   "t": "November"
+  },
+  {
+   "w": "december",
+   "t": "December"
+  }
+ ],
+ "Hoe laat is het? Het is twee uur. Kwart over twee. Half drie. Kwart voor drie.": [
+  {
+   "w": "hoe",
+   "t": "how",
+   "note": "'hoe laat' = what time"
+  },
+  {
+   "w": "laat",
+   "t": "late",
+   "note": "'hoe laat' = what time"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "twee",
+   "t": "two"
+  },
+  {
+   "w": "uur",
+   "t": "o'clock",
+   "note": "hour"
+  },
+  {
+   "w": "kwart",
+   "t": "quarter"
+  },
+  {
+   "w": "over",
+   "t": "past"
+  },
+  {
+   "w": "twee",
+   "t": "two"
+  },
+  {
+   "w": "half",
+   "t": "half",
+   "note": "'half drie' = 2:30, half toward three"
+  },
+  {
+   "w": "drie",
+   "t": "three"
+  },
+  {
+   "w": "kwart",
+   "t": "quarter"
+  },
+  {
+   "w": "voor",
+   "t": "to/before"
+  },
+  {
+   "w": "drie",
+   "t": "three"
+  }
+ ],
+ "Wanneer is de afspraak? Morgen, op woensdag. Gisteren was het dinsdag. Overmorgen is het donderdag.": [
+  {
+   "w": "wanneer",
+   "t": "when"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "afspraak",
+   "t": "appointment"
+  },
+  {
+   "w": "morgen",
+   "t": "tomorrow"
+  },
+  {
+   "w": "op",
+   "t": "on"
+  },
+  {
+   "w": "woensdag",
+   "t": "Wednesday"
+  },
+  {
+   "w": "gisteren",
+   "t": "yesterday"
+  },
+  {
+   "w": "was",
+   "t": "was"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "dinsdag",
+   "t": "Tuesday"
+  },
+  {
+   "w": "overmorgen",
+   "t": "day after tomorrow"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "donderdag",
+   "t": "Thursday"
+  }
+ ],
+ "In welk jaar? In tweeduizend drieëntwintig. Welke datum? De vijfde mei.": [
+  {
+   "w": "in",
+   "t": "in"
+  },
+  {
+   "w": "welk",
+   "t": "which"
+  },
+  {
+   "w": "jaar",
+   "t": "year"
+  },
+  {
+   "w": "in",
+   "t": "in"
+  },
+  {
+   "w": "tweeduizend",
+   "t": "two thousand"
+  },
+  {
+   "w": "drieëntwintig",
+   "t": "twenty-three"
+  },
+  {
+   "w": "welke",
+   "t": "which"
+  },
+  {
+   "w": "datum",
+   "t": "date"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "vijfde",
+   "t": "fifth"
+  },
+  {
+   "w": "mei",
+   "t": "May"
+  }
+ ],
+ "honderd euro": [
+  {
+   "w": "honderd",
+   "t": "hundred",
+   "note": "no 'een' needed before it"
+  },
+  {
+   "w": "euro",
+   "t": "euros"
+  }
+ ],
+ "tweehonderdvijftig": [
+  {
+   "w": "tweehonderdvijftig",
+   "t": "two hundred fifty",
+   "note": "tweehonderd + vijftig"
+  }
+ ],
+ "vijftienhonderd": [
+  {
+   "w": "vijftienhonderd",
+   "t": "fifteen hundred",
+   "note": "vijftien + honderd = 1500"
+  }
+ ],
+ "tweeduizend zesentwintig": [
+  {
+   "w": "tweeduizend",
+   "t": "two thousand"
+  },
+  {
+   "w": "zesentwintig",
+   "t": "twenty-six",
+   "note": "zes-en-twintig, inverted"
+  }
+ ],
+ "drie miljoen": [
+  {
+   "w": "drie",
+   "t": "three"
+  },
+  {
+   "w": "miljoen",
+   "t": "million"
+  }
+ ],
+ "maandag, dinsdag, woensdag": [
+  {
+   "w": "maandag",
+   "t": "Monday"
+  },
+  {
+   "w": "dinsdag",
+   "t": "Tuesday"
+  },
+  {
+   "w": "woensdag",
+   "t": "Wednesday"
+  }
+ ],
+ "vandaag is het donderdag": [
+  {
+   "w": "vandaag",
+   "t": "today"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "donderdag",
+   "t": "Thursday"
+  }
+ ],
+ "mijn afspraak is op 15 maart": [
+  {
+   "w": "mijn",
+   "t": "my"
+  },
+  {
+   "w": "afspraak",
+   "t": "appointment"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "op",
+   "t": "on"
+  },
+  {
+   "w": "15",
+   "t": "15th"
+  },
+  {
+   "w": "maart",
+   "t": "March"
+  }
+ ],
+ "ik ben geboren op 3 januari 1990": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ben",
+   "t": "was",
+   "note": "'ben geboren' = was born"
+  },
+  {
+   "w": "geboren",
+   "t": "born"
+  },
+  {
+   "w": "op",
+   "t": "on"
+  },
+  {
+   "w": "3",
+   "t": "3rd"
+  },
+  {
+   "w": "januari",
+   "t": "January"
+  },
+  {
+   "w": "1990",
+   "t": "1990"
+  }
+ ],
+ "de winkel sluit om zes uur": [
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "winkel",
+   "t": "shop"
+  },
+  {
+   "w": "sluit",
+   "t": "closes"
+  },
+  {
+   "w": "om",
+   "t": "at",
+   "note": "'om' + time = at that time"
+  },
+  {
+   "w": "zes",
+   "t": "six"
+  },
+  {
+   "w": "uur",
+   "t": "o'clock"
+  }
+ ],
+ "glas, geld, groen, groot, gaan, grijs, gelukkig": [
+  {
+   "w": "glas",
+   "t": "glass"
+  },
+  {
+   "w": "geld",
+   "t": "money"
+  },
+  {
+   "w": "groen",
+   "t": "green"
+  },
+  {
+   "w": "groot",
+   "t": "big"
+  },
+  {
+   "w": "gaan",
+   "t": "go"
+  },
+  {
+   "w": "grijs",
+   "t": "grey"
+  },
+  {
+   "w": "gelukkig",
+   "t": "happy"
+  }
+ ],
+ "huis, buiten, uit, Zuid, buit, duin": [
+  {
+   "w": "huis",
+   "t": "house"
+  },
+  {
+   "w": "buiten",
+   "t": "outside"
+  },
+  {
+   "w": "uit",
+   "t": "out"
+  },
+  {
+   "w": "zuid",
+   "t": "south"
+  },
+  {
+   "w": "buit",
+   "t": "loot",
+   "note": "booty/spoils"
+  },
+  {
+   "w": "duin",
+   "t": "dune"
+  }
+ ],
+ "ijs, klein, mijn, zijn, rijden, tijd, wijn": [
+  {
+   "w": "ijs",
+   "t": "ice"
+  },
+  {
+   "w": "klein",
+   "t": "small"
+  },
+  {
+   "w": "mijn",
+   "t": "my"
+  },
+  {
+   "w": "zijn",
+   "t": "his / to be",
+   "note": "two meanings"
+  },
+  {
+   "w": "rijden",
+   "t": "to drive"
+  },
+  {
+   "w": "tijd",
+   "t": "time"
+  },
+  {
+   "w": "wijn",
+   "t": "wine"
+  }
+ ],
+ "oud, blauw, brood, ook, oog, rood": [
+  {
+   "w": "oud",
+   "t": "old"
+  },
+  {
+   "w": "blauw",
+   "t": "blue"
+  },
+  {
+   "w": "brood",
+   "t": "bread"
+  },
+  {
+   "w": "ook",
+   "t": "also"
+  },
+  {
+   "w": "oog",
+   "t": "eye"
+  },
+  {
+   "w": "rood",
+   "t": "red"
+  }
+ ],
+ "een appel, de auto, het is, wij eten, ik open": [
+  {
+   "w": "een",
+   "t": "an"
+  },
+  {
+   "w": "appel",
+   "t": "apple"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "auto",
+   "t": "car"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "eten",
+   "t": "eat"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "open",
+   "t": "open"
+  }
+ ],
+ "deur, neus, Europa, deuren, neuzen": [
+  {
+   "w": "deur",
+   "t": "door"
+  },
+  {
+   "w": "neus",
+   "t": "nose"
+  },
+  {
+   "w": "europa",
+   "t": "Europe"
+  },
+  {
+   "w": "deuren",
+   "t": "doors"
+  },
+  {
+   "w": "neuzen",
+   "t": "noses"
+  }
+ ],
+ "schip, school, schrijven, schoon, schilderij": [
+  {
+   "w": "schip",
+   "t": "ship"
+  },
+  {
+   "w": "school",
+   "t": "school"
+  },
+  {
+   "w": "schrijven",
+   "t": "to write"
+  },
+  {
+   "w": "schoon",
+   "t": "clean"
+  },
+  {
+   "w": "schilderij",
+   "t": "painting"
+  }
+ ],
+ "goed": [
+  {
+   "w": "goed",
+   "t": "good",
+   "note": "starts with guttural g"
+  }
+ ],
+ "gezellig": [
+  {
+   "w": "gezellig",
+   "t": "cozy / convivial",
+   "note": "guttural g at start and end"
+  }
+ ],
+ "lachen": [
+  {
+   "w": "lachen",
+   "t": "to laugh",
+   "note": "guttural ch in the middle"
+  }
+ ],
+ "Scheveningen": [
+  {
+   "w": "scheveningen",
+   "t": "(a seaside town)",
+   "note": "sch- = s + guttural ch"
+  }
+ ],
+ "WA-ter": [
+  {
+   "w": "wa-ter",
+   "t": "water",
+   "note": "first-syllable stress"
+  }
+ ],
+ "LE-ven": [
+  {
+   "w": "le-ven",
+   "t": "life / to live",
+   "note": "first-syllable stress"
+  }
+ ],
+ "be-GIN-nen": [
+  {
+   "w": "be-gin-nen",
+   "t": "to begin",
+   "note": "stress on second syllable; be- unstressed"
+  }
+ ],
+ "te-le-FOON": [
+  {
+   "w": "te-le-foon",
+   "t": "telephone",
+   "note": "final-syllable stress"
+  }
+ ],
+ "STAD-huis": [
+  {
+   "w": "stad-huis",
+   "t": "city hall",
+   "note": "compound, stress on first part"
+  }
+ ],
+ "de": [
+  {
+   "w": "de",
+   "t": "the",
+   "note": "common gender; schwa 'duh'"
+  }
+ ],
+ "het": [
+  {
+   "w": "het",
+   "t": "the / it",
+   "note": "neuter; schwa 'ut'"
+  }
+ ],
+ "lopen": [
+  {
+   "w": "lopen",
+   "t": "to walk",
+   "note": "-en collapses to schwa+n"
+  }
+ ],
+ "gemaakt": [
+  {
+   "w": "gemaakt",
+   "t": "made",
+   "note": "unstressed ge- is schwa"
+  }
+ ],
+ "gisteren": [
+  {
+   "w": "gisteren",
+   "t": "yesterday",
+   "note": "middle and final syllables are schwa"
+  }
+ ],
+ "werken: ik werk, jij werkt, hij/zij werkt, wij werken, jullie werken, zij werken": [
+  {
+   "w": "werken",
+   "t": "to work",
+   "note": "infinitive"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "werk",
+   "t": "work",
+   "note": "ik-form: stem, no ending"
+  },
+  {
+   "w": "jij",
+   "t": "you",
+   "note": "informal singular"
+  },
+  {
+   "w": "werkt",
+   "t": "work",
+   "note": "jij-form: stem + -t"
+  },
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "zij",
+   "t": "she"
+  },
+  {
+   "w": "werkt",
+   "t": "works",
+   "note": "hij/zij-form: stem + -t"
+  },
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "werken",
+   "t": "work",
+   "note": "plural: stem + -en"
+  },
+  {
+   "w": "jullie",
+   "t": "you (pl)"
+  },
+  {
+   "w": "werken",
+   "t": "work",
+   "note": "plural form"
+  },
+  {
+   "w": "zij",
+   "t": "they"
+  },
+  {
+   "w": "werken",
+   "t": "work",
+   "note": "plural form"
+  }
+ ],
+ "leven: ik leef, jij leeft, wij leven — spreken: ik spreek, jij spreekt, wij spreken": [
+  {
+   "w": "leven",
+   "t": "to live",
+   "note": "infinitive; stem leev → leef"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "leef",
+   "t": "live",
+   "note": "v reverts to f for ik"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "leeft",
+   "t": "live",
+   "note": "f + -t"
+  },
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "leven",
+   "t": "live",
+   "note": "v returns in plural"
+  },
+  {
+   "w": "spreken",
+   "t": "to speak",
+   "note": "infinitive"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "spreek",
+   "t": "speak"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "spreekt",
+   "t": "speak",
+   "note": "stem + -t"
+  },
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "spreken",
+   "t": "speak",
+   "note": "plural form"
+  }
+ ],
+ "hebben: ik heb, jij hebt, hij heeft, wij hebben, jullie hebben, zij hebben": [
+  {
+   "w": "hebben",
+   "t": "to have",
+   "note": "infinitive; irregular verb"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "heb",
+   "t": "have"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "hebt",
+   "t": "have"
+  },
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "heeft",
+   "t": "has",
+   "note": "irregular third person"
+  },
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "hebben",
+   "t": "have",
+   "note": "plural form"
+  },
+  {
+   "w": "jullie",
+   "t": "you (pl)"
+  },
+  {
+   "w": "hebben",
+   "t": "have",
+   "note": "plural form"
+  },
+  {
+   "w": "zij",
+   "t": "they"
+  },
+  {
+   "w": "hebben",
+   "t": "have",
+   "note": "plural form"
+  }
+ ],
+ "zijn: ik ben, jij bent, hij/zij is, wij zijn, jullie zijn, zij zijn": [
+  {
+   "w": "zijn",
+   "t": "to be",
+   "note": "infinitive; most irregular verb"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ben",
+   "t": "am"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "bent",
+   "t": "are"
+  },
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "zij",
+   "t": "she"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "zijn",
+   "t": "are",
+   "note": "same form as infinitive"
+  },
+  {
+   "w": "jullie",
+   "t": "you (pl)"
+  },
+  {
+   "w": "zijn",
+   "t": "are"
+  },
+  {
+   "w": "zij",
+   "t": "they"
+  },
+  {
+   "w": "zijn",
+   "t": "are"
+  }
+ ],
+ "Ik ben leraar. Jij bent nieuw hier. Zij is ziek. Wij zijn klaar.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ben",
+   "t": "am"
+  },
+  {
+   "w": "leraar",
+   "t": "teacher",
+   "note": "no article with professions"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "bent",
+   "t": "are"
+  },
+  {
+   "w": "nieuw",
+   "t": "new"
+  },
+  {
+   "w": "hier",
+   "t": "here"
+  },
+  {
+   "w": "zij",
+   "t": "she"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "ziek",
+   "t": "ill"
+  },
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "zijn",
+   "t": "are"
+  },
+  {
+   "w": "klaar",
+   "t": "ready",
+   "note": "also means done/finished"
+  }
+ ],
+ "Ik heb dorst. Heb jij een pen? Hij heeft koorts. Wij hebben haast.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "heb",
+   "t": "have"
+  },
+  {
+   "w": "dorst",
+   "t": "thirst",
+   "note": "hebben dorst = to be thirsty"
+  },
+  {
+   "w": "heb",
+   "t": "have",
+   "note": "inverted for question"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "pen",
+   "t": "pen"
+  },
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "heeft",
+   "t": "has"
+  },
+  {
+   "w": "koorts",
+   "t": "fever"
+  },
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "hebben",
+   "t": "have"
+  },
+  {
+   "w": "haast",
+   "t": "haste",
+   "note": "hebben haast = to be in a hurry"
+  }
+ ],
+ "Hoe gaat het? Het gaat goed, dank je. En met jou?": [
+  {
+   "w": "hoe",
+   "t": "how"
+  },
+  {
+   "w": "gaat",
+   "t": "goes",
+   "note": "het gaat = how things are going"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "gaat",
+   "t": "goes"
+  },
+  {
+   "w": "goed",
+   "t": "well"
+  },
+  {
+   "w": "dank",
+   "t": "thank"
+  },
+  {
+   "w": "je",
+   "t": "you",
+   "note": "informal; dank je = thanks"
+  },
+  {
+   "w": "en",
+   "t": "and"
+  },
+  {
+   "w": "met",
+   "t": "with"
+  },
+  {
+   "w": "jou",
+   "t": "you",
+   "note": "object form; met jou = with you"
+  }
+ ],
+ "ik eet een appel": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "eet",
+   "t": "eat",
+   "note": "eten → stem eet, no ending"
+  },
+  {
+   "w": "een",
+   "t": "an"
+  },
+  {
+   "w": "appel",
+   "t": "apple"
+  }
+ ],
+ "jij maakt koffie": [
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "maakt",
+   "t": "make",
+   "note": "maken → stem maak + -t"
+  },
+  {
+   "w": "koffie",
+   "t": "coffee"
+  }
+ ],
+ "hij fietst naar werk": [
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "fietst",
+   "t": "cycles",
+   "note": "fietsen → stem fiets + -t"
+  },
+  {
+   "w": "naar",
+   "t": "to"
+  },
+  {
+   "w": "werk",
+   "t": "work",
+   "note": "noun here"
+  }
+ ],
+ "wij wonen in Amsterdam": [
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "wonen",
+   "t": "live",
+   "note": "reside; plural stem + -en"
+  },
+  {
+   "w": "in",
+   "t": "in"
+  },
+  {
+   "w": "amsterdam",
+   "t": "Amsterdam"
+  }
+ ],
+ "Ik werk in Amsterdam.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "werk",
+   "t": "work"
+  },
+  {
+   "w": "in",
+   "t": "in"
+  },
+  {
+   "w": "amsterdam",
+   "t": "Amsterdam"
+  }
+ ],
+ "Werk ik in Amsterdam?": [
+  {
+   "w": "werk",
+   "t": "work",
+   "note": "verb fronted for question"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "in",
+   "t": "in"
+  },
+  {
+   "w": "amsterdam",
+   "t": "Amsterdam"
+  }
+ ],
+ "Vandaag werk ik in Amsterdam.": [
+  {
+   "w": "vandaag",
+   "t": "today"
+  },
+  {
+   "w": "werk",
+   "t": "work",
+   "note": "verb stays in position 2"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "in",
+   "t": "in"
+  },
+  {
+   "w": "amsterdam",
+   "t": "Amsterdam"
+  }
+ ],
+ "Werk jij in Amsterdam?": [
+  {
+   "w": "werk",
+   "t": "work",
+   "note": "dropped -t when inverted before jij"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "in",
+   "t": "in"
+  },
+  {
+   "w": "amsterdam",
+   "t": "Amsterdam"
+  }
+ ],
+ "Ik ben moe. Hij is Nederlands.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ben",
+   "t": "am"
+  },
+  {
+   "w": "moe",
+   "t": "tired"
+  },
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "nederlands",
+   "t": "Dutch"
+  }
+ ],
+ "Ik heb honger. Hij heeft een vraag.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "heb",
+   "t": "have"
+  },
+  {
+   "w": "honger",
+   "t": "hunger",
+   "note": "hebben honger = to be hungry"
+  },
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "heeft",
+   "t": "has",
+   "note": "not hebt for hij/zij/het"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "vraag",
+   "t": "question"
+  }
+ ],
+ "Ik ga naar huis. Jij gaat morgen.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ga",
+   "t": "go",
+   "note": "gaan → stem ga"
+  },
+  {
+   "w": "naar",
+   "t": "to"
+  },
+  {
+   "w": "huis",
+   "t": "home",
+   "note": "naar huis = (to) home"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "gaat",
+   "t": "go",
+   "note": "stem + -t"
+  },
+  {
+   "w": "morgen",
+   "t": "tomorrow"
+  }
+ ],
+ "Wat doe jij? Hij doet niets.": [
+  {
+   "w": "wat",
+   "t": "what"
+  },
+  {
+   "w": "doe",
+   "t": "do",
+   "note": "doen → stem doe; -t dropped before jij"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "doet",
+   "t": "does",
+   "note": "stem + -t"
+  },
+  {
+   "w": "niets",
+   "t": "nothing"
+  }
+ ],
+ "de straat, de deur, de kamer, de school, de winkel, de tuin, de trein": [
+  {
+   "w": "de",
+   "t": "the",
+   "note": "de-word (common gender)"
+  },
+  {
+   "w": "straat",
+   "t": "street"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "deur",
+   "t": "door"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "kamer",
+   "t": "room"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "school",
+   "t": "school"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "winkel",
+   "t": "shop"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "tuin",
+   "t": "garden"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "trein",
+   "t": "train"
+  }
+ ],
+ "het jaar, het woord, het nummer, het vliegtuig, het dorp, het brood, het hondje": [
+  {
+   "w": "het",
+   "t": "the",
+   "note": "het-word (neuter)"
+  },
+  {
+   "w": "jaar",
+   "t": "year"
+  },
+  {
+   "w": "het",
+   "t": "the"
+  },
+  {
+   "w": "woord",
+   "t": "word"
+  },
+  {
+   "w": "het",
+   "t": "the"
+  },
+  {
+   "w": "nummer",
+   "t": "number"
+  },
+  {
+   "w": "het",
+   "t": "the"
+  },
+  {
+   "w": "vliegtuig",
+   "t": "airplane"
+  },
+  {
+   "w": "het",
+   "t": "the"
+  },
+  {
+   "w": "dorp",
+   "t": "village"
+  },
+  {
+   "w": "het",
+   "t": "the"
+  },
+  {
+   "w": "brood",
+   "t": "bread"
+  },
+  {
+   "w": "het",
+   "t": "the",
+   "note": "all diminutives are het"
+  },
+  {
+   "w": "hondje",
+   "t": "little dog",
+   "note": "diminutive of hond"
+  }
+ ],
+ "een man, een vrouw, een kind, een huis — geen man, geen vrouw": [
+  {
+   "w": "een",
+   "t": "a",
+   "note": "same for all nouns"
+  },
+  {
+   "w": "man",
+   "t": "man"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "vrouw",
+   "t": "woman"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "kind",
+   "t": "child"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "huis",
+   "t": "house"
+  },
+  {
+   "w": "geen",
+   "t": "no",
+   "note": "not a / not any"
+  },
+  {
+   "w": "man",
+   "t": "man"
+  },
+  {
+   "w": "geen",
+   "t": "no"
+  },
+  {
+   "w": "vrouw",
+   "t": "woman"
+  }
+ ],
+ "de grote man, het grote huis, een grote man, een groot huis": [
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "grote",
+   "t": "big",
+   "note": "-e after de"
+  },
+  {
+   "w": "man",
+   "t": "man"
+  },
+  {
+   "w": "het",
+   "t": "the"
+  },
+  {
+   "w": "grote",
+   "t": "big",
+   "note": "-e after het (definite)"
+  },
+  {
+   "w": "huis",
+   "t": "house"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "grote",
+   "t": "big",
+   "note": "-e: een + de-word"
+  },
+  {
+   "w": "man",
+   "t": "man"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "groot",
+   "t": "big",
+   "note": "no -e: een + het-word"
+  },
+  {
+   "w": "huis",
+   "t": "house"
+  }
+ ],
+ "de mannen, de vrouwen, de kinderen, de huizen, de boeken, de auto's": [
+  {
+   "w": "de",
+   "t": "the",
+   "note": "all plurals take de"
+  },
+  {
+   "w": "mannen",
+   "t": "men"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "vrouwen",
+   "t": "women"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "kinderen",
+   "t": "children",
+   "note": "-eren plural"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "huizen",
+   "t": "houses"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "boeken",
+   "t": "books"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "auto's",
+   "t": "cars",
+   "note": "-s plural with apostrophe"
+  }
+ ],
+ "Deze trein is snel. Dit vliegtuig is groot. Dit zijn de kinderen. Is dit jouw nummer?": [
+  {
+   "w": "deze",
+   "t": "this",
+   "note": "with de-words"
+  },
+  {
+   "w": "trein",
+   "t": "train"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "snel",
+   "t": "fast"
+  },
+  {
+   "w": "dit",
+   "t": "this",
+   "note": "with het-words"
+  },
+  {
+   "w": "vliegtuig",
+   "t": "airplane"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "groot",
+   "t": "big"
+  },
+  {
+   "w": "dit",
+   "t": "these",
+   "note": "dit zijn = these are"
+  },
+  {
+   "w": "zijn",
+   "t": "are"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "kinderen",
+   "t": "children"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "dit",
+   "t": "this"
+  },
+  {
+   "w": "jouw",
+   "t": "your",
+   "note": "informal"
+  },
+  {
+   "w": "nummer",
+   "t": "number"
+  }
+ ],
+ "mijn boek, jouw fiets, zijn auto, haar huis, ons land, jullie stad": [
+  {
+   "w": "mijn",
+   "t": "my"
+  },
+  {
+   "w": "boek",
+   "t": "book"
+  },
+  {
+   "w": "jouw",
+   "t": "your",
+   "note": "informal singular"
+  },
+  {
+   "w": "fiets",
+   "t": "bicycle"
+  },
+  {
+   "w": "zijn",
+   "t": "his",
+   "note": "possessive here, not 'to be'"
+  },
+  {
+   "w": "auto",
+   "t": "car"
+  },
+  {
+   "w": "haar",
+   "t": "her"
+  },
+  {
+   "w": "huis",
+   "t": "house"
+  },
+  {
+   "w": "ons",
+   "t": "our",
+   "note": "ons with het-words"
+  },
+  {
+   "w": "land",
+   "t": "country"
+  },
+  {
+   "w": "jullie",
+   "t": "your",
+   "note": "plural"
+  },
+  {
+   "w": "stad",
+   "t": "city"
+  }
+ ],
+ "de man": [
+  {
+   "w": "de",
+   "t": "the",
+   "note": "common gender"
+  },
+  {
+   "w": "man",
+   "t": "man"
+  }
+ ],
+ "de vrouw": [
+  {
+   "w": "de",
+   "t": "the",
+   "note": "common gender"
+  },
+  {
+   "w": "vrouw",
+   "t": "woman"
+  }
+ ],
+ "de tafel": [
+  {
+   "w": "de",
+   "t": "the",
+   "note": "common gender"
+  },
+  {
+   "w": "tafel",
+   "t": "table"
+  }
+ ],
+ "het boek": [
+  {
+   "w": "het",
+   "t": "the",
+   "note": "neuter"
+  },
+  {
+   "w": "boek",
+   "t": "book"
+  }
+ ],
+ "het kind": [
+  {
+   "w": "het",
+   "t": "the",
+   "note": "neuter"
+  },
+  {
+   "w": "kind",
+   "t": "child"
+  }
+ ],
+ "het huis": [
+  {
+   "w": "het",
+   "t": "the",
+   "note": "neuter"
+  },
+  {
+   "w": "huis",
+   "t": "house"
+  }
+ ],
+ "de mooie tafel": [
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "mooie",
+   "t": "beautiful",
+   "note": "-e after de"
+  },
+  {
+   "w": "tafel",
+   "t": "table"
+  }
+ ],
+ "een mooie tafel": [
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "mooie",
+   "t": "beautiful",
+   "note": "-e: de-word even with een"
+  },
+  {
+   "w": "tafel",
+   "t": "table"
+  }
+ ],
+ "het mooie boek": [
+  {
+   "w": "het",
+   "t": "the"
+  },
+  {
+   "w": "mooie",
+   "t": "beautiful",
+   "note": "-e: het-word but definite"
+  },
+  {
+   "w": "boek",
+   "t": "book"
+  }
+ ],
+ "een mooi boek": [
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "mooi",
+   "t": "beautiful",
+   "note": "no -e: een + het-word"
+  },
+  {
+   "w": "boek",
+   "t": "book"
+  }
+ ],
+ "mooi water": [
+  {
+   "w": "mooi",
+   "t": "beautiful",
+   "note": "no -e: het-word, no article"
+  },
+  {
+   "w": "water",
+   "t": "water"
+  }
+ ],
+ "mooie boeken": [
+  {
+   "w": "mooie",
+   "t": "beautiful",
+   "note": "plural always takes -e"
+  },
+  {
+   "w": "boeken",
+   "t": "books"
+  }
+ ],
+ "Ik werk elke dag thuis. — Elke dag werk ik thuis.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "werk",
+   "t": "work"
+  },
+  {
+   "w": "elke",
+   "t": "every"
+  },
+  {
+   "w": "dag",
+   "t": "day"
+  },
+  {
+   "w": "thuis",
+   "t": "at home"
+  },
+  {
+   "w": "elke",
+   "t": "every"
+  },
+  {
+   "w": "dag",
+   "t": "day"
+  },
+  {
+   "w": "werk",
+   "t": "work",
+   "note": "stays in position 2 (V2 rule)"
+  },
+  {
+   "w": "ik",
+   "t": "I",
+   "note": "moves after verb (inversion)"
+  },
+  {
+   "w": "thuis",
+   "t": "at home"
+  }
+ ],
+ "Nu eet ik. Thuis werk ik altijd. Gisteren was hij ziek.": [
+  {
+   "w": "nu",
+   "t": "now"
+  },
+  {
+   "w": "eet",
+   "t": "eat",
+   "note": "verb in position 2"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "thuis",
+   "t": "at home"
+  },
+  {
+   "w": "werk",
+   "t": "work"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "altijd",
+   "t": "always"
+  },
+  {
+   "w": "gisteren",
+   "t": "yesterday"
+  },
+  {
+   "w": "was",
+   "t": "was",
+   "note": "past tense of zijn"
+  },
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "ziek",
+   "t": "sick"
+  }
+ ],
+ "thuiskomen: Ik kom vanavond thuis. Ik kom om 6 uur thuis. Kom jij ook thuis?": [
+  {
+   "w": "thuiskomen",
+   "t": "to come home",
+   "note": "separable verb"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "kom",
+   "t": "come"
+  },
+  {
+   "w": "vanavond",
+   "t": "tonight"
+  },
+  {
+   "w": "thuis",
+   "t": "home",
+   "note": "prefix goes to clause end"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "kom",
+   "t": "come"
+  },
+  {
+   "w": "om",
+   "t": "at",
+   "note": "om ... uur = at ... o'clock"
+  },
+  {
+   "w": "6",
+   "t": "6"
+  },
+  {
+   "w": "uur",
+   "t": "o'clock",
+   "note": "hour"
+  },
+  {
+   "w": "thuis",
+   "t": "home"
+  },
+  {
+   "w": "kom",
+   "t": "come",
+   "note": "fronted for question"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "ook",
+   "t": "too",
+   "note": "also"
+  },
+  {
+   "w": "thuis",
+   "t": "home"
+  }
+ ],
+ "afwassen: ik was af, inpakken: ik pak in, weggaan: ik ga weg, neerzetten: ik zet neer": [
+  {
+   "w": "afwassen",
+   "t": "to do dishes",
+   "note": "separable verb"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "was",
+   "t": "wash",
+   "note": "main verb, position 2"
+  },
+  {
+   "w": "af",
+   "t": "off",
+   "note": "prefix at end"
+  },
+  {
+   "w": "inpakken",
+   "t": "to pack up",
+   "note": "separable verb"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "pak",
+   "t": "pack"
+  },
+  {
+   "w": "in",
+   "t": "in",
+   "note": "prefix at end"
+  },
+  {
+   "w": "weggaan",
+   "t": "to leave",
+   "note": "to go away; separable"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ga",
+   "t": "go"
+  },
+  {
+   "w": "weg",
+   "t": "away",
+   "note": "prefix at end"
+  },
+  {
+   "w": "neerzetten",
+   "t": "to put down",
+   "note": "separable verb"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "zet",
+   "t": "put"
+  },
+  {
+   "w": "neer",
+   "t": "down",
+   "note": "prefix at end"
+  }
+ ],
+ "omdat ik te laat ben. omdat zij geen tijd heeft. omdat wij vroeg vertrekken.": [
+  {
+   "w": "omdat",
+   "t": "because",
+   "note": "sends verb to clause end"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "te",
+   "t": "too"
+  },
+  {
+   "w": "laat",
+   "t": "late"
+  },
+  {
+   "w": "ben",
+   "t": "am",
+   "note": "verb at end of clause"
+  },
+  {
+   "w": "omdat",
+   "t": "because"
+  },
+  {
+   "w": "zij",
+   "t": "she"
+  },
+  {
+   "w": "geen",
+   "t": "no",
+   "note": "not any"
+  },
+  {
+   "w": "tijd",
+   "t": "time"
+  },
+  {
+   "w": "heeft",
+   "t": "has",
+   "note": "verb at end"
+  },
+  {
+   "w": "omdat",
+   "t": "because"
+  },
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "vroeg",
+   "t": "early"
+  },
+  {
+   "w": "vertrekken",
+   "t": "leave",
+   "note": "depart; verb at end"
+  }
+ ],
+ "Ik hoop dat hij snel terugkomt. Ik zie dat jij hard werkt.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "hoop",
+   "t": "hope"
+  },
+  {
+   "w": "dat",
+   "t": "that",
+   "note": "sends verb to clause end"
+  },
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "snel",
+   "t": "soon",
+   "note": "also: quickly"
+  },
+  {
+   "w": "terugkomt",
+   "t": "comes back",
+   "note": "verb at end of clause"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "zie",
+   "t": "see"
+  },
+  {
+   "w": "dat",
+   "t": "that"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "hard",
+   "t": "hard"
+  },
+  {
+   "w": "werkt",
+   "t": "work",
+   "note": "verb at end of clause"
+  }
+ ],
+ "Spreekt u Nederlands? Heb jij een pen? Werkt zij vandaag?": [
+  {
+   "w": "spreekt",
+   "t": "speak",
+   "note": "verb fronted for question"
+  },
+  {
+   "w": "u",
+   "t": "you",
+   "note": "formal"
+  },
+  {
+   "w": "nederlands",
+   "t": "Dutch"
+  },
+  {
+   "w": "heb",
+   "t": "have",
+   "note": "-t dropped before jij"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "pen",
+   "t": "pen"
+  },
+  {
+   "w": "werkt",
+   "t": "work",
+   "note": "is ... working"
+  },
+  {
+   "w": "zij",
+   "t": "she"
+  },
+  {
+   "w": "vandaag",
+   "t": "today"
+  }
+ ],
+ "Ik ga morgen naar Amsterdam.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ga",
+   "t": "go",
+   "note": "am going"
+  },
+  {
+   "w": "morgen",
+   "t": "tomorrow"
+  },
+  {
+   "w": "naar",
+   "t": "to"
+  },
+  {
+   "w": "amsterdam",
+   "t": "Amsterdam"
+  }
+ ],
+ "Morgen ga ik naar Amsterdam.": [
+  {
+   "w": "morgen",
+   "t": "tomorrow"
+  },
+  {
+   "w": "ga",
+   "t": "go",
+   "note": "1st-person of gaan; V2 position"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "naar",
+   "t": "to"
+  },
+  {
+   "w": "amsterdam",
+   "t": "Amsterdam"
+  }
+ ],
+ "Naar Amsterdam ga ik morgen.": [
+  {
+   "w": "naar",
+   "t": "to"
+  },
+  {
+   "w": "amsterdam",
+   "t": "Amsterdam"
+  },
+  {
+   "w": "ga",
+   "t": "go",
+   "note": "verb stays at pos. 2"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "morgen",
+   "t": "tomorrow"
+  }
+ ],
+ "Ik kan dit boek niet lezen.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "kan",
+   "t": "can",
+   "note": "modal kunnen; infinitive goes to end"
+  },
+  {
+   "w": "dit",
+   "t": "this"
+  },
+  {
+   "w": "boek",
+   "t": "book"
+  },
+  {
+   "w": "niet",
+   "t": "not"
+  },
+  {
+   "w": "lezen",
+   "t": "read",
+   "note": "infinitive at clause end"
+  }
+ ],
+ "Ik heb dit boek gelezen.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "heb",
+   "t": "have",
+   "note": "auxiliary hebben for perfect tense"
+  },
+  {
+   "w": "dit",
+   "t": "this"
+  },
+  {
+   "w": "boek",
+   "t": "book"
+  },
+  {
+   "w": "gelezen",
+   "t": "read",
+   "note": "past participle of lezen"
+  }
+ ],
+ "Ik zal het morgen doen.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "zal",
+   "t": "will",
+   "note": "future auxiliary zullen"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "morgen",
+   "t": "tomorrow"
+  },
+  {
+   "w": "doen",
+   "t": "do",
+   "note": "infinitive at end"
+  }
+ ],
+ "Wij willen vanavond pizza eten.": [
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "willen",
+   "t": "want",
+   "note": "modal; infinitive goes to end"
+  },
+  {
+   "w": "vanavond",
+   "t": "tonight"
+  },
+  {
+   "w": "pizza",
+   "t": "pizza"
+  },
+  {
+   "w": "eten",
+   "t": "eat",
+   "note": "infinitive at end"
+  }
+ ],
+ "Ik heb gekookt. Jij hebt gebeld. Hij heeft gewacht. Wij hebben geluisterd.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "heb",
+   "t": "have",
+   "note": "1st-person of hebben"
+  },
+  {
+   "w": "gekookt",
+   "t": "cooked",
+   "note": "past participle of koken; -t (kofschip)"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "hebt",
+   "t": "have",
+   "note": "2nd-person of hebben"
+  },
+  {
+   "w": "gebeld",
+   "t": "called",
+   "note": "past participle of bellen; -d"
+  },
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "heeft",
+   "t": "has",
+   "note": "3rd-person of hebben"
+  },
+  {
+   "w": "gewacht",
+   "t": "waited",
+   "note": "past participle of wachten; -t"
+  },
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "hebben",
+   "t": "have",
+   "note": "plural of hebben"
+  },
+  {
+   "w": "geluisterd",
+   "t": "listened",
+   "note": "past participle of luisteren; -d"
+  }
+ ],
+ "'t kofschip: t, k, f, s, ch, p — gebruik -t. Andere letters — gebruik -d.": [
+  {
+   "w": "t",
+   "t": "the ('t)",
+   "note": "shortened 'het' in the mnemonic '​t kofschip"
+  },
+  {
+   "w": "kofschip",
+   "t": "cargo ship",
+   "note": "name of the -t/-d spelling mnemonic"
+  },
+  {
+   "w": "t",
+   "t": "letter t"
+  },
+  {
+   "w": "k",
+   "t": "letter k"
+  },
+  {
+   "w": "f",
+   "t": "letter f"
+  },
+  {
+   "w": "s",
+   "t": "letter s"
+  },
+  {
+   "w": "ch",
+   "t": "letters ch"
+  },
+  {
+   "w": "p",
+   "t": "letter p"
+  },
+  {
+   "w": "gebruik",
+   "t": "use",
+   "note": "imperative of gebruiken"
+  },
+  {
+   "w": "t",
+   "t": "-t ending"
+  },
+  {
+   "w": "andere",
+   "t": "other"
+  },
+  {
+   "w": "letters",
+   "t": "letters"
+  },
+  {
+   "w": "gebruik",
+   "t": "use",
+   "note": "imperative of gebruiken"
+  },
+  {
+   "w": "d",
+   "t": "-d ending"
+  }
+ ],
+ "zijn + beweging/verandering: ik ben gereden, ik ben opgestaan, ik ben gevlogen, ik ben gezwommen": [
+  {
+   "w": "zijn",
+   "t": "to be",
+   "note": "auxiliary for motion/change verbs"
+  },
+  {
+   "w": "beweging",
+   "t": "movement"
+  },
+  {
+   "w": "verandering",
+   "t": "change"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ben",
+   "t": "am",
+   "note": "1st-person of zijn"
+  },
+  {
+   "w": "gereden",
+   "t": "rode/drove",
+   "note": "past participle of rijden"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ben",
+   "t": "am"
+  },
+  {
+   "w": "opgestaan",
+   "t": "got up",
+   "note": "separable opstaan; ge- between prefix and stem"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ben",
+   "t": "am"
+  },
+  {
+   "w": "gevlogen",
+   "t": "flew",
+   "note": "past participle of vliegen"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ben",
+   "t": "am"
+  },
+  {
+   "w": "gezwommen",
+   "t": "swam",
+   "note": "past participle of zwemmen"
+  }
+ ],
+ "Ik ben vroeg opgestaan. Hij is naar Utrecht gereden. Zij is snel gegroeid.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ben",
+   "t": "am",
+   "note": "zijn-perfect for opstaan"
+  },
+  {
+   "w": "vroeg",
+   "t": "early"
+  },
+  {
+   "w": "opgestaan",
+   "t": "got up",
+   "note": "separable opstaan; ge- inside"
+  },
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "is",
+   "t": "is",
+   "note": "3rd-person of zijn"
+  },
+  {
+   "w": "naar",
+   "t": "to"
+  },
+  {
+   "w": "utrecht",
+   "t": "Utrecht"
+  },
+  {
+   "w": "gereden",
+   "t": "drove",
+   "note": "motion verb takes zijn"
+  },
+  {
+   "w": "zij",
+   "t": "she"
+  },
+  {
+   "w": "is",
+   "t": "is"
+  },
+  {
+   "w": "snel",
+   "t": "quickly"
+  },
+  {
+   "w": "gegroeid",
+   "t": "grew",
+   "note": "groeien (change of state) takes zijn"
+  }
+ ],
+ "Irregular: ik heb gezien (zien), ik heb gedaan (doen), ik heb gehad (hebben), ik ben geweest (zijn)": [
+  {
+   "w": "irregular",
+   "t": "irregular"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "heb",
+   "t": "have"
+  },
+  {
+   "w": "gezien",
+   "t": "seen",
+   "note": "irregular participle of zien"
+  },
+  {
+   "w": "zien",
+   "t": "to see",
+   "note": "infinitive label"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "heb",
+   "t": "have"
+  },
+  {
+   "w": "gedaan",
+   "t": "done",
+   "note": "irregular participle of doen"
+  },
+  {
+   "w": "doen",
+   "t": "to do",
+   "note": "infinitive label"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "heb",
+   "t": "have"
+  },
+  {
+   "w": "gehad",
+   "t": "had",
+   "note": "irregular participle of hebben"
+  },
+  {
+   "w": "hebben",
+   "t": "to have",
+   "note": "infinitive label"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ben",
+   "t": "am"
+  },
+  {
+   "w": "geweest",
+   "t": "been",
+   "note": "irregular participle of zijn; takes zijn"
+  },
+  {
+   "w": "zijn",
+   "t": "to be",
+   "note": "infinitive label"
+  }
+ ],
+ "Wat heb jij gisteren gedaan? Ik heb gekookt en daarna heb ik televisie gekeken.": [
+  {
+   "w": "wat",
+   "t": "what"
+  },
+  {
+   "w": "heb",
+   "t": "did/have",
+   "note": "auxiliary, fronted in question"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "gisteren",
+   "t": "yesterday"
+  },
+  {
+   "w": "gedaan",
+   "t": "done",
+   "note": "participle of doen"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "heb",
+   "t": "have"
+  },
+  {
+   "w": "gekookt",
+   "t": "cooked",
+   "note": "participle of koken"
+  },
+  {
+   "w": "en",
+   "t": "and"
+  },
+  {
+   "w": "daarna",
+   "t": "afterwards"
+  },
+  {
+   "w": "heb",
+   "t": "have",
+   "note": "inverted after daarna"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "televisie",
+   "t": "television"
+  },
+  {
+   "w": "gekeken",
+   "t": "watched",
+   "note": "participle of kijken"
+  }
+ ],
+ "Ik heb nooit Nederlands geleerd. Heb jij ooit in Amsterdam gewoond?": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "heb",
+   "t": "have"
+  },
+  {
+   "w": "nooit",
+   "t": "never",
+   "note": "goes before the participle"
+  },
+  {
+   "w": "nederlands",
+   "t": "Dutch"
+  },
+  {
+   "w": "geleerd",
+   "t": "learned",
+   "note": "participle of leren"
+  },
+  {
+   "w": "heb",
+   "t": "have",
+   "note": "fronted for yes/no question"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "ooit",
+   "t": "ever"
+  },
+  {
+   "w": "in",
+   "t": "in"
+  },
+  {
+   "w": "amsterdam",
+   "t": "Amsterdam"
+  },
+  {
+   "w": "gewoond",
+   "t": "lived",
+   "note": "participle of wonen"
+  }
+ ],
+ "Ik ben gisteren naar Amsterdam gegaan.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ben",
+   "t": "am",
+   "note": "gaan takes zijn, not hebben"
+  },
+  {
+   "w": "gisteren",
+   "t": "yesterday"
+  },
+  {
+   "w": "naar",
+   "t": "to"
+  },
+  {
+   "w": "amsterdam",
+   "t": "Amsterdam"
+  },
+  {
+   "w": "gegaan",
+   "t": "went/gone",
+   "note": "participle of gaan"
+  }
+ ],
+ "Ik heb je e-mail gelezen.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "heb",
+   "t": "have"
+  },
+  {
+   "w": "je",
+   "t": "your",
+   "note": "possessive here"
+  },
+  {
+   "w": "e-mail",
+   "t": "email"
+  },
+  {
+   "w": "gelezen",
+   "t": "read",
+   "note": "participle of lezen"
+  }
+ ],
+ "Wij hebben pizza gegeten.": [
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "hebben",
+   "t": "have"
+  },
+  {
+   "w": "pizza",
+   "t": "pizza"
+  },
+  {
+   "w": "gegeten",
+   "t": "eaten",
+   "note": "irregular participle of eten"
+  }
+ ],
+ "Ik heb gisteren een boek gelezen.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "heb",
+   "t": "have",
+   "note": "V2 position"
+  },
+  {
+   "w": "gisteren",
+   "t": "yesterday"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "boek",
+   "t": "book"
+  },
+  {
+   "w": "gelezen",
+   "t": "read",
+   "note": "participle at clause end"
+  }
+ ],
+ "Wij zijn vorige week naar Amsterdam gegaan.": [
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "zijn",
+   "t": "are",
+   "note": "zijn-perfect for gaan"
+  },
+  {
+   "w": "vorige",
+   "t": "last"
+  },
+  {
+   "w": "week",
+   "t": "week"
+  },
+  {
+   "w": "naar",
+   "t": "to"
+  },
+  {
+   "w": "amsterdam",
+   "t": "Amsterdam"
+  },
+  {
+   "w": "gegaan",
+   "t": "went/gone",
+   "note": "participle of gaan"
+  }
+ ],
+ "Heb je het boek gelezen?": [
+  {
+   "w": "heb",
+   "t": "have",
+   "note": "fronted for question (inversion)"
+  },
+  {
+   "w": "je",
+   "t": "you"
+  },
+  {
+   "w": "het",
+   "t": "the"
+  },
+  {
+   "w": "boek",
+   "t": "book"
+  },
+  {
+   "w": "gelezen",
+   "t": "read",
+   "note": "participle at end"
+  }
+ ],
+ "Ik heb hem gisteren opgebeld.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "heb",
+   "t": "have"
+  },
+  {
+   "w": "hem",
+   "t": "him"
+  },
+  {
+   "w": "gisteren",
+   "t": "yesterday"
+  },
+  {
+   "w": "opgebeld",
+   "t": "called up",
+   "note": "separable opbellen; ge- inside"
+  }
+ ],
+ "Hij was er niet.": [
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "was",
+   "t": "was",
+   "note": "simple past of zijn"
+  },
+  {
+   "w": "er",
+   "t": "there"
+  },
+  {
+   "w": "niet",
+   "t": "not"
+  }
+ ],
+ "Ik wist het niet.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "wist",
+   "t": "knew",
+   "note": "simple past of weten"
+  },
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "niet",
+   "t": "not"
+  }
+ ],
+ "Het regende de hele dag.": [
+  {
+   "w": "het",
+   "t": "it"
+  },
+  {
+   "w": "regende",
+   "t": "rained",
+   "note": "simple past of regenen"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "hele",
+   "t": "whole/entire"
+  },
+  {
+   "w": "dag",
+   "t": "day"
+  }
+ ],
+ "Toen ik klein was, woonde ik in Rotterdam.": [
+  {
+   "w": "toen",
+   "t": "when",
+   "note": "'when' for a past event"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "klein",
+   "t": "little/small"
+  },
+  {
+   "w": "was",
+   "t": "was",
+   "note": "simple past of zijn; verb at end of sub-clause"
+  },
+  {
+   "w": "woonde",
+   "t": "lived",
+   "note": "simple past of wonen"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "in",
+   "t": "in"
+  },
+  {
+   "w": "rotterdam",
+   "t": "Rotterdam"
+  }
+ ],
+ "willen: ik wil, jij wilt/wil, hij wil, wij willen — Ik wil een huis huren. Wil jij ook meekomen?": [
+  {
+   "w": "willen",
+   "t": "to want",
+   "note": "infinitive label"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "wil",
+   "t": "want"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "wilt",
+   "t": "want",
+   "note": "formal -t form for jij"
+  },
+  {
+   "w": "wil",
+   "t": "want",
+   "note": "informal jij form drops -t"
+  },
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "wil",
+   "t": "wants"
+  },
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "willen",
+   "t": "want"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "wil",
+   "t": "want"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "huis",
+   "t": "house"
+  },
+  {
+   "w": "huren",
+   "t": "rent",
+   "note": "infinitive at clause end"
+  },
+  {
+   "w": "wil",
+   "t": "want",
+   "note": "inverted in question"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "ook",
+   "t": "too/also"
+  },
+  {
+   "w": "meekomen",
+   "t": "come along",
+   "note": "separable meekomen; infinitive at end"
+  }
+ ],
+ "kunnen: ik kan, jij kunt/kan, hij kan, wij kunnen — Ik kan morgen komen. Kun jij dit formulier invullen?": [
+  {
+   "w": "kunnen",
+   "t": "to be able to",
+   "note": "infinitive label"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "kan",
+   "t": "can"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "kunt",
+   "t": "can",
+   "note": "formal -t form for jij"
+  },
+  {
+   "w": "kan",
+   "t": "can",
+   "note": "informal jij form"
+  },
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "kan",
+   "t": "can"
+  },
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "kunnen",
+   "t": "can"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "kan",
+   "t": "can"
+  },
+  {
+   "w": "morgen",
+   "t": "tomorrow"
+  },
+  {
+   "w": "komen",
+   "t": "come",
+   "note": "infinitive at end"
+  },
+  {
+   "w": "kun",
+   "t": "can",
+   "note": "kunt drops -t in inverted question"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "dit",
+   "t": "this"
+  },
+  {
+   "w": "formulier",
+   "t": "form"
+  },
+  {
+   "w": "invullen",
+   "t": "fill in",
+   "note": "separable invullen; infinitive at end"
+  }
+ ],
+ "moeten: ik moet, jij moet, hij moet, wij moeten — Ik moet werken. Moet jij morgen vroeg op?": [
+  {
+   "w": "moeten",
+   "t": "to have to",
+   "note": "infinitive label"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "moet",
+   "t": "must/have to"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "moet",
+   "t": "must/have to"
+  },
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "moet",
+   "t": "must/has to"
+  },
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "moeten",
+   "t": "must/have to"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "moet",
+   "t": "have to"
+  },
+  {
+   "w": "werken",
+   "t": "work",
+   "note": "infinitive at end"
+  },
+  {
+   "w": "moet",
+   "t": "must/have to",
+   "note": "inverted in question"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "morgen",
+   "t": "tomorrow"
+  },
+  {
+   "w": "vroeg",
+   "t": "early"
+  },
+  {
+   "w": "op",
+   "t": "up",
+   "note": "separable prefix of opstaan (get up)"
+  }
+ ],
+ "mogen: ik mag, jij mag, hij mag, wij mogen — Mag ik binnenkomen? Hier mag je niet roken.": [
+  {
+   "w": "mogen",
+   "t": "to be allowed to",
+   "note": "infinitive label"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "mag",
+   "t": "may"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "mag",
+   "t": "may"
+  },
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "mag",
+   "t": "may"
+  },
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "mogen",
+   "t": "may"
+  },
+  {
+   "w": "mag",
+   "t": "may",
+   "note": "inverted for polite question"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "binnenkomen",
+   "t": "come in",
+   "note": "separable binnenkomen; infinitive at end"
+  },
+  {
+   "w": "hier",
+   "t": "here"
+  },
+  {
+   "w": "mag",
+   "t": "may",
+   "note": "V2 after fronted 'hier'"
+  },
+  {
+   "w": "je",
+   "t": "you"
+  },
+  {
+   "w": "niet",
+   "t": "not"
+  },
+  {
+   "w": "roken",
+   "t": "smoke",
+   "note": "infinitive at end"
+  }
+ ],
+ "gaan + infinitive (future): Ik ga morgen werken. Wij gaan vanavond eten. Ga jij ook mee?": [
+  {
+   "w": "gaan",
+   "t": "to go",
+   "note": "gaan + infinitive expresses future"
+  },
+  {
+   "w": "infinitive",
+   "t": "infinitive"
+  },
+  {
+   "w": "future",
+   "t": "future"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "ga",
+   "t": "am going to"
+  },
+  {
+   "w": "morgen",
+   "t": "tomorrow"
+  },
+  {
+   "w": "werken",
+   "t": "work",
+   "note": "infinitive at end"
+  },
+  {
+   "w": "wij",
+   "t": "we"
+  },
+  {
+   "w": "gaan",
+   "t": "are going to"
+  },
+  {
+   "w": "vanavond",
+   "t": "this evening"
+  },
+  {
+   "w": "eten",
+   "t": "eat",
+   "note": "infinitive at end"
+  },
+  {
+   "w": "ga",
+   "t": "are going",
+   "note": "inverted in question"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "ook",
+   "t": "too/also"
+  },
+  {
+   "w": "mee",
+   "t": "along",
+   "note": "separable prefix of meegaan (come along)"
+  }
+ ],
+ "Ik wil dit niet kopen. Hij kan de deur niet openen. Je mag hier niet parkeren. Ik wil geen suiker.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "wil",
+   "t": "want"
+  },
+  {
+   "w": "dit",
+   "t": "this"
+  },
+  {
+   "w": "niet",
+   "t": "not",
+   "note": "before the infinitive"
+  },
+  {
+   "w": "kopen",
+   "t": "buy",
+   "note": "infinitive at end"
+  },
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "kan",
+   "t": "can"
+  },
+  {
+   "w": "de",
+   "t": "the"
+  },
+  {
+   "w": "deur",
+   "t": "door"
+  },
+  {
+   "w": "niet",
+   "t": "not"
+  },
+  {
+   "w": "openen",
+   "t": "open",
+   "note": "infinitive at end"
+  },
+  {
+   "w": "je",
+   "t": "you"
+  },
+  {
+   "w": "mag",
+   "t": "may/allowed"
+  },
+  {
+   "w": "hier",
+   "t": "here"
+  },
+  {
+   "w": "niet",
+   "t": "not"
+  },
+  {
+   "w": "parkeren",
+   "t": "park",
+   "note": "infinitive at end"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "wil",
+   "t": "want"
+  },
+  {
+   "w": "geen",
+   "t": "no/any",
+   "note": "negates indefinite noun; not 'niet een'"
+  },
+  {
+   "w": "suiker",
+   "t": "sugar"
+  }
+ ],
+ "Zou u even kunnen wachten? Zou ik uw paspoort mogen zien? Ik zou graag een formulier willen hebben.": [
+  {
+   "w": "zou",
+   "t": "would/could",
+   "note": "conditional, polite"
+  },
+  {
+   "w": "u",
+   "t": "you",
+   "note": "formal you"
+  },
+  {
+   "w": "even",
+   "t": "a moment"
+  },
+  {
+   "w": "kunnen",
+   "t": "be able to"
+  },
+  {
+   "w": "wachten",
+   "t": "wait",
+   "note": "infinitive at end"
+  },
+  {
+   "w": "zou",
+   "t": "could",
+   "note": "polite request"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "uw",
+   "t": "your",
+   "note": "formal possessive"
+  },
+  {
+   "w": "paspoort",
+   "t": "passport"
+  },
+  {
+   "w": "mogen",
+   "t": "be allowed to"
+  },
+  {
+   "w": "zien",
+   "t": "see",
+   "note": "infinitive at end"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "zou",
+   "t": "would"
+  },
+  {
+   "w": "graag",
+   "t": "gladly",
+   "note": "'zou graag ... willen' = would like"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "formulier",
+   "t": "form"
+  },
+  {
+   "w": "willen",
+   "t": "want/like"
+  },
+  {
+   "w": "hebben",
+   "t": "have",
+   "note": "infinitive at end"
+  }
+ ],
+ "Ik kan Nederlands spreken.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "kan",
+   "t": "can",
+   "note": "V2 position"
+  },
+  {
+   "w": "nederlands",
+   "t": "Dutch"
+  },
+  {
+   "w": "spreken",
+   "t": "speak",
+   "note": "infinitive at end"
+  }
+ ],
+ "Je moet hier wachten.": [
+  {
+   "w": "je",
+   "t": "you"
+  },
+  {
+   "w": "moet",
+   "t": "must/have to",
+   "note": "V2 position"
+  },
+  {
+   "w": "hier",
+   "t": "here"
+  },
+  {
+   "w": "wachten",
+   "t": "wait",
+   "note": "infinitive at end"
+  }
+ ],
+ "We willen morgen naar Amsterdam gaan.": [
+  {
+   "w": "we",
+   "t": "we"
+  },
+  {
+   "w": "willen",
+   "t": "want",
+   "note": "V2 position"
+  },
+  {
+   "w": "morgen",
+   "t": "tomorrow"
+  },
+  {
+   "w": "naar",
+   "t": "to"
+  },
+  {
+   "w": "amsterdam",
+   "t": "Amsterdam"
+  },
+  {
+   "w": "gaan",
+   "t": "go",
+   "note": "infinitive at end"
+  }
+ ],
+ "Kun jij me helpen?": [
+  {
+   "w": "kun",
+   "t": "can",
+   "note": "kunt drops -t in inverted question"
+  },
+  {
+   "w": "jij",
+   "t": "you"
+  },
+  {
+   "w": "me",
+   "t": "me"
+  },
+  {
+   "w": "helpen",
+   "t": "help",
+   "note": "infinitive at end"
+  }
+ ],
+ "Wil je een kopje thee?": [
+  {
+   "w": "wil",
+   "t": "want",
+   "note": "inverted form of wilt"
+  },
+  {
+   "w": "je",
+   "t": "you"
+  },
+  {
+   "w": "een",
+   "t": "a"
+  },
+  {
+   "w": "kopje",
+   "t": "cup",
+   "note": "diminutive of kop"
+  },
+  {
+   "w": "thee",
+   "t": "tea"
+  }
+ ],
+ "We moeten nu vertrekken.": [
+  {
+   "w": "we",
+   "t": "we"
+  },
+  {
+   "w": "moeten",
+   "t": "have to",
+   "note": "V2 position"
+  },
+  {
+   "w": "nu",
+   "t": "now"
+  },
+  {
+   "w": "vertrekken",
+   "t": "leave/depart",
+   "note": "infinitive at end"
+  }
+ ],
+ "Zou u mij kunnen vertellen waar het station is?": [
+  {
+   "w": "zou",
+   "t": "could",
+   "note": "polite conditional"
+  },
+  {
+   "w": "u",
+   "t": "you",
+   "note": "formal you"
+  },
+  {
+   "w": "mij",
+   "t": "me"
+  },
+  {
+   "w": "kunnen",
+   "t": "be able to"
+  },
+  {
+   "w": "vertellen",
+   "t": "tell",
+   "note": "infinitive at end of main clause"
+  },
+  {
+   "w": "waar",
+   "t": "where"
+  },
+  {
+   "w": "het",
+   "t": "the"
+  },
+  {
+   "w": "station",
+   "t": "station"
+  },
+  {
+   "w": "is",
+   "t": "is",
+   "note": "verb at end of sub-clause"
+  }
+ ],
+ "Ik zou graag een afspraak willen maken.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "zou",
+   "t": "would"
+  },
+  {
+   "w": "graag",
+   "t": "gladly",
+   "note": "'zou graag ... willen' = would like"
+  },
+  {
+   "w": "een",
+   "t": "an"
+  },
+  {
+   "w": "afspraak",
+   "t": "appointment"
+  },
+  {
+   "w": "willen",
+   "t": "want/like"
+  },
+  {
+   "w": "maken",
+   "t": "make",
+   "note": "infinitive at end"
+  }
+ ],
+ "Mag ik even storen?": [
+  {
+   "w": "mag",
+   "t": "may",
+   "note": "polite permission request"
+  },
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "even",
+   "t": "a moment"
+  },
+  {
+   "w": "storen",
+   "t": "interrupt/disturb",
+   "note": "infinitive at end"
+  }
+ ],
+ "Hij wil niet gaan.": [
+  {
+   "w": "hij",
+   "t": "he"
+  },
+  {
+   "w": "wil",
+   "t": "wants"
+  },
+  {
+   "w": "niet",
+   "t": "not",
+   "note": "directly before the infinitive"
+  },
+  {
+   "w": "gaan",
+   "t": "go",
+   "note": "infinitive at end"
+  }
+ ],
+ "Je mag dat hier niet doen.": [
+  {
+   "w": "je",
+   "t": "you"
+  },
+  {
+   "w": "mag",
+   "t": "may/allowed"
+  },
+  {
+   "w": "dat",
+   "t": "that"
+  },
+  {
+   "w": "hier",
+   "t": "here"
+  },
+  {
+   "w": "niet",
+   "t": "not"
+  },
+  {
+   "w": "doen",
+   "t": "do",
+   "note": "infinitive at end"
+  }
+ ],
+ "Ik wil geen koffie.": [
+  {
+   "w": "ik",
+   "t": "I"
+  },
+  {
+   "w": "wil",
+   "t": "want"
+  },
+  {
+   "w": "geen",
+   "t": "no/any",
+   "note": "negates indefinite noun; not 'niet een'"
+  },
+  {
+   "w": "koffie",
+   "t": "coffee"
+  }
+ ],
+ "We hebben geen tijd om te gaan.": [
+  {
+   "w": "we",
+   "t": "we"
+  },
+  {
+   "w": "hebben",
+   "t": "have"
+  },
+  {
+   "w": "geen",
+   "t": "no/any",
+   "note": "negates indefinite tijd"
+  },
+  {
+   "w": "tijd",
+   "t": "time"
+  },
+  {
+   "w": "om",
+   "t": "(in order) to",
+   "note": "om ... te = to (do)"
+  },
+  {
+   "w": "te",
+   "t": "to",
+   "note": "te before infinitive"
+  },
+  {
+   "w": "gaan",
+   "t": "go",
+   "note": "infinitive at end"
+  }
+ ]
+}

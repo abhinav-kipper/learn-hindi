@@ -26,6 +26,7 @@ import { playSound } from '@/lib/sounds'
 import { speak, stopSpeaking, isSpeaking } from '@/lib/speech'
 import { useChaina, canFire, markFired } from '@/components/design'
 import { TheoryView } from '@/components/lesson/TheoryView'
+import GlossableText from '@/components/GlossableText'
 
 interface Props {
   lesson: Lesson
@@ -598,7 +599,7 @@ function PhraseSticker({
             letterSpacing: -0.6,
           }}
         >
-          {phrase.hindi}
+          <GlossableText phrase={phrase.hindi} />
         </div>
         {phrase.pronunciation && (
           <div
