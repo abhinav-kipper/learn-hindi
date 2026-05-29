@@ -1,0 +1,216 @@
+{
+  "stages": [
+    {
+      "id": "alphabet",
+      "order": 0,
+      "title": "The alphabet & its sounds",
+      "subtitle": "het alfabet",
+      "goal": "Know the sound each letter makes, with an easy word to remember it by.",
+      "intro": "Welkom! Let's start at the very beginning: the 26 letters and the sound each one makes. Tap a letter, listen, and say it back to me.",
+      "cards": [
+        { "id": "a-appel", "grapheme": "a", "hint": "short 'a', like 'cut'", "anchor": { "word": "appel", "en": "apple" }, "kind": "letter" },
+        { "id": "b-boom", "grapheme": "b", "hint": "like English 'b'", "anchor": { "word": "boom", "en": "tree" }, "kind": "letter" },
+        { "id": "c-citroen", "grapheme": "c", "hint": "often 's' before e/i, else 'k'", "anchor": { "word": "citroen", "en": "lemon" }, "kind": "letter" },
+        { "id": "d-dak", "grapheme": "d", "hint": "like English 'd' (but 't' at word end)", "anchor": { "word": "dak", "en": "roof" }, "kind": "letter" },
+        { "id": "e-eend", "grapheme": "e", "hint": "short 'e', like 'pet'", "anchor": { "word": "eend", "en": "duck" }, "kind": "letter" },
+        { "id": "f-fiets", "grapheme": "f", "hint": "like English 'f'", "anchor": { "word": "fiets", "en": "bicycle" }, "kind": "letter" },
+        { "id": "g-goud", "grapheme": "g", "hint": "the guttural rasp, back of the throat (more in stage 5)", "anchor": { "word": "goud", "en": "gold" }, "kind": "letter" },
+        { "id": "h-huis", "grapheme": "h", "hint": "soft breathy 'h'", "anchor": { "word": "huis", "en": "house" }, "kind": "letter" },
+        { "id": "i-inkt", "grapheme": "i", "hint": "short 'i', like 'sit'", "anchor": { "word": "inkt", "en": "ink" }, "kind": "letter" },
+        { "id": "j-jas", "grapheme": "j", "hint": "sounds like English 'y'", "anchor": { "word": "jas", "en": "coat" }, "kind": "letter" },
+        { "id": "k-kat", "grapheme": "k", "hint": "like English 'k'", "anchor": { "word": "kat", "en": "cat" }, "kind": "letter" },
+        { "id": "l-lamp", "grapheme": "l", "hint": "like English 'l'", "anchor": { "word": "lamp", "en": "lamp" }, "kind": "letter" },
+        { "id": "m-maan", "grapheme": "m", "hint": "like English 'm'", "anchor": { "word": "maan", "en": "moon" }, "kind": "letter" },
+        { "id": "n-neus", "grapheme": "n", "hint": "like English 'n'", "anchor": { "word": "neus", "en": "nose" }, "kind": "letter" },
+        { "id": "o-oog", "grapheme": "o", "hint": "short 'o', like 'pot'", "anchor": { "word": "oog", "en": "eye" }, "kind": "letter" },
+        { "id": "p-pen", "grapheme": "p", "hint": "like English 'p'", "anchor": { "word": "pen", "en": "pen" }, "kind": "letter" },
+        { "id": "q-quote", "grapheme": "q", "hint": "rare, always 'qu' = 'kw'", "anchor": { "word": "quiz", "en": "quiz" }, "kind": "letter", "note": "rare in Dutch" },
+        { "id": "r-roos", "grapheme": "r", "hint": "rolled or throaty 'r' (more in stage 4)", "anchor": { "word": "roos", "en": "rose" }, "kind": "letter" },
+        { "id": "s-sok", "grapheme": "s", "hint": "like English 's'", "anchor": { "word": "sok", "en": "sock" }, "kind": "letter" },
+        { "id": "t-tafel", "grapheme": "t", "hint": "like English 't'", "anchor": { "word": "tafel", "en": "table" }, "kind": "letter" },
+        { "id": "u-uur", "grapheme": "u", "hint": "rounded 'u', no English match", "anchor": { "word": "uur", "en": "hour" }, "kind": "letter" },
+        { "id": "v-vis", "grapheme": "v", "hint": "often softens toward 'f'", "anchor": { "word": "vis", "en": "fish" }, "kind": "letter" },
+        { "id": "w-water", "grapheme": "w", "hint": "softer than English 'w', lips lighter", "anchor": { "word": "water", "en": "water" }, "kind": "letter" },
+        { "id": "x-taxi", "grapheme": "x", "hint": "rare, 'ks'", "anchor": { "word": "taxi", "en": "taxi" }, "kind": "letter", "note": "rare in Dutch" },
+        { "id": "y-baby", "grapheme": "y", "hint": "rare, mostly in loanwords", "anchor": { "word": "baby", "en": "baby" }, "kind": "letter", "note": "rare in Dutch" },
+        { "id": "z-zon", "grapheme": "z", "hint": "often softens toward 's'", "anchor": { "word": "zon", "en": "sun" }, "kind": "letter" }
+      ],
+      "earQuiz": {
+        "prompt": "Which word did you hear?",
+        "items": [
+          { "say": "appel", "options": ["appel", "tafel", "water"], "correctIndex": 0 },
+          { "say": "huis", "options": ["kat", "huis", "vis"], "correctIndex": 1 },
+          { "say": "zon", "options": ["sok", "zon", "neus"], "correctIndex": 1 },
+          { "say": "fiets", "options": ["fiets", "pen", "maan"], "correctIndex": 0 },
+          { "say": "boom", "options": ["roos", "lamp", "boom"], "correctIndex": 2 }
+        ]
+      }
+    },
+    {
+      "id": "short-vowels",
+      "order": 1,
+      "title": "Short vowels",
+      "subtitle": "korte klinkers",
+      "goal": "Say the five short vowel sounds: a, e, i, o, u.",
+      "intro": "Five short vowels. Each is a quick, clipped beat. Listen for how short they are.",
+      "cards": [
+        { "id": "sv-a-man", "grapheme": "a", "hint": "short 'a', like 'cup'", "anchor": { "word": "man", "en": "man" }, "kind": "vowel" },
+        { "id": "sv-e-pen", "grapheme": "e", "hint": "short 'e', like 'pet'", "anchor": { "word": "pen", "en": "pen" }, "kind": "vowel" },
+        { "id": "sv-i-kip", "grapheme": "i", "hint": "short 'i', like 'sit'", "anchor": { "word": "kip", "en": "chicken" }, "kind": "vowel" },
+        { "id": "sv-o-pot", "grapheme": "o", "hint": "short 'o', like 'pot'", "anchor": { "word": "pot", "en": "pot/jar" }, "kind": "vowel" },
+        { "id": "sv-u-bus", "grapheme": "u", "hint": "short 'u', clipped, slightly rounded", "anchor": { "word": "bus", "en": "bus" }, "kind": "vowel" }
+      ],
+      "earQuiz": {
+        "prompt": "Which word did you hear?",
+        "items": [
+          { "say": "man", "options": ["man", "pen", "kip"], "correctIndex": 0 },
+          { "say": "pot", "options": ["kip", "pot", "bus"], "correctIndex": 1 },
+          { "say": "kip", "options": ["kip", "pot", "man"], "correctIndex": 0 },
+          { "say": "bus", "options": ["pen", "bus", "pot"], "correctIndex": 1 }
+        ]
+      }
+    },
+    {
+      "id": "long-vowels",
+      "order": 2,
+      "title": "Long vowels & the doubling rule",
+      "subtitle": "lange klinkers",
+      "goal": "Hear and hold long vowels, and learn why 'maan' has a long 'aa'.",
+      "intro": "Long vowels are held about twice as long as short ones, and the length changes the word. Listen to the pairs.",
+      "cards": [
+        { "id": "lv-aa-maan", "grapheme": "aa", "hint": "long 'a', held — like 'father'", "anchor": { "word": "maan", "en": "moon" }, "kind": "vowel" },
+        { "id": "lv-ee-zee", "grapheme": "ee", "hint": "long 'e', like 'say' (no y-glide)", "anchor": { "word": "zee", "en": "sea" }, "kind": "vowel" },
+        { "id": "lv-oo-boom", "grapheme": "oo", "hint": "long 'o', like 'road'", "anchor": { "word": "boom", "en": "tree" }, "kind": "vowel" },
+        { "id": "lv-uu-vuur", "grapheme": "uu", "hint": "long rounded 'u', no English match", "anchor": { "word": "vuur", "en": "fire" }, "kind": "vowel" }
+      ],
+      "earQuiz": {
+        "prompt": "Short or long? Which word did you hear?",
+        "items": [
+          { "say": "maan", "options": ["man", "maan"], "correctIndex": 1 },
+          { "say": "bom", "options": ["bom", "boom"], "correctIndex": 0 },
+          { "say": "zoon", "options": ["zon", "zoon"], "correctIndex": 1 },
+          { "say": "kop", "options": ["kop", "koop"], "correctIndex": 0 },
+          { "say": "peen", "options": ["pen", "peen"], "correctIndex": 1 }
+        ]
+      }
+    },
+    {
+      "id": "consonants",
+      "order": 3,
+      "title": "Consonants & the Dutch twists",
+      "subtitle": "medeklinkers",
+      "goal": "Most consonants match English — learn the few that don't.",
+      "intro": "Most Dutch consonants sound like English. A handful play tricks. Here are the ones to watch.",
+      "cards": [
+        { "id": "c-v-vis", "grapheme": "v", "hint": "at word start, drifts toward 'f' — 'vis' ≈ 'fis'", "anchor": { "word": "vis", "en": "fish" }, "kind": "consonant" },
+        { "id": "c-z-zon", "grapheme": "z", "hint": "at word start, drifts toward 's' — 'zon' ≈ 'son'", "anchor": { "word": "zon", "en": "sun" }, "kind": "consonant" },
+        { "id": "c-w-water", "grapheme": "w", "hint": "lighter than English 'w', lips relaxed", "anchor": { "word": "water", "en": "water" }, "kind": "consonant" },
+        { "id": "c-j-jas", "grapheme": "j", "hint": "sounds like English 'y' — 'jas' = 'yas'", "anchor": { "word": "jas", "en": "coat" }, "kind": "consonant" },
+        { "id": "c-r-rood", "grapheme": "r", "hint": "rolled at the tip or rasped at the back", "anchor": { "word": "rood", "en": "red" }, "kind": "consonant" },
+        { "id": "c-d-hond", "grapheme": "d→t", "hint": "voiced letters go voiceless at word end — 'hond' = 'hont'", "anchor": { "word": "hond", "en": "dog" }, "kind": "consonant" }
+      ],
+      "earQuiz": {
+        "prompt": "Which word did you hear?",
+        "items": [
+          { "say": "vis", "options": ["vis", "zon", "jas"], "correctIndex": 0 },
+          { "say": "jas", "options": ["jas", "water", "rood"], "correctIndex": 0 },
+          { "say": "zon", "options": ["water", "zon", "vis"], "correctIndex": 1 },
+          { "say": "rood", "options": ["hond", "rood", "jas"], "correctIndex": 1 }
+        ]
+      }
+    },
+    {
+      "id": "guttural-g",
+      "order": 4,
+      "title": "The guttural g / ch / sch",
+      "subtitle": "de keel-g",
+      "goal": "Make the famous Dutch throat sound — g, ch, and sch.",
+      "intro": "This is THE Dutch sound: a rasp from the back of the throat, like clearing it gently. The same sound spelled g, ch, and sch. Drill it until your throat is comfy.",
+      "cards": [
+        { "id": "g-goud2", "grapheme": "g", "hint": "throat rasp at the start — 'goud' ≈ 'chowt'", "anchor": { "word": "goud", "en": "gold" }, "kind": "consonant" },
+        { "id": "g-gezellig", "grapheme": "g…g", "hint": "the rasp at the start AND the end", "anchor": { "word": "gezellig", "en": "cozy" }, "kind": "consonant" },
+        { "id": "g-ch-lachen", "grapheme": "ch", "hint": "same rasp in the middle/end of a word", "anchor": { "word": "lachen", "en": "to laugh" }, "kind": "consonant" },
+        { "id": "g-ch-nacht", "grapheme": "ch", "hint": "rasp before 't' at word end", "anchor": { "word": "nacht", "en": "night" }, "kind": "consonant" },
+        { "id": "g-sch-school", "grapheme": "sch", "hint": "'s' then the throat rasp — not English 'sh'", "anchor": { "word": "school", "en": "school" }, "kind": "consonant" }
+      ],
+      "earQuiz": {
+        "prompt": "Which word has the throat-g sound?",
+        "items": [
+          { "say": "goud", "options": ["goud", "boom", "kat"], "correctIndex": 0 },
+          { "say": "nacht", "options": ["pen", "nacht", "maan"], "correctIndex": 1 },
+          { "say": "school", "options": ["sok", "zee", "school"], "correctIndex": 2 },
+          { "say": "lachen", "options": ["lachen", "water", "vis"], "correctIndex": 0 }
+        ]
+      }
+    },
+    {
+      "id": "compound-vowels",
+      "order": 5,
+      "title": "Compound vowels",
+      "subtitle": "tweeklanken",
+      "goal": "Blend the two-letter vowels into one sound — including the tricky ui and eu.",
+      "intro": "Some vowels are written with two letters but are ONE sound. Don't say each letter. The hardest are ui and eu — no English match.",
+      "cards": [
+        { "id": "cv-ij-mijn", "grapheme": "ij / ei", "hint": "both sound like 'ay' in 'say' — identical", "anchor": { "word": "mijn", "en": "mine" }, "kind": "digraph" },
+        { "id": "cv-ei-klein", "grapheme": "ei", "hint": "same 'ay' sound as ij", "anchor": { "word": "klein", "en": "small" }, "kind": "digraph" },
+        { "id": "cv-oe-boek", "grapheme": "oe", "hint": "like 'oo' in 'boot'", "anchor": { "word": "boek", "en": "book" }, "kind": "digraph" },
+        { "id": "cv-ou-vrouw", "grapheme": "ou / au", "hint": "like 'ow' in 'now'", "anchor": { "word": "vrouw", "en": "woman" }, "kind": "digraph" },
+        { "id": "cv-ui-huis", "grapheme": "ui", "hint": "round lips for 'oo', then say 'eye' — unique to Dutch", "anchor": { "word": "huis", "en": "house" }, "kind": "digraph" },
+        { "id": "cv-eu-deur", "grapheme": "eu", "hint": "round lips for 'o', then say 'e' (French eu)", "anchor": { "word": "deur", "en": "door" }, "kind": "digraph" }
+      ],
+      "earQuiz": {
+        "prompt": "Which word did you hear?",
+        "items": [
+          { "say": "huis", "options": ["huis", "boek", "vrouw"], "correctIndex": 0 },
+          { "say": "boek", "options": ["huis", "boek", "deur"], "correctIndex": 1 },
+          { "say": "vrouw", "options": ["mijn", "vrouw", "boek"], "correctIndex": 1 },
+          { "say": "deur", "options": ["deur", "huis", "klein"], "correctIndex": 0 },
+          { "say": "mijn", "options": ["mijn", "deur", "vrouw"], "correctIndex": 0 }
+        ]
+      }
+    },
+    {
+      "id": "blending",
+      "order": 6,
+      "title": "Blending sounds into words",
+      "subtitle": "klanken samenvoegen",
+      "goal": "Build whole words sound by sound, then say them smoothly.",
+      "intro": "Now we glue the sounds together. Each word builds up piece by piece — tap each part, then say the whole word.",
+      "cards": [],
+      "blend": {
+        "words": [
+          { "parts": [{ "text": "m" }, { "text": "aa" }, { "text": "n" }], "whole": "maan", "en": "moon" },
+          { "parts": [{ "text": "b" }, { "text": "oe" }, { "text": "k" }], "whole": "boek", "en": "book" },
+          { "parts": [{ "text": "h" }, { "text": "ui" }, { "text": "s" }], "whole": "huis", "en": "house" },
+          { "parts": [{ "text": "p" }, { "text": "e" }, { "text": "n" }], "whole": "pen", "en": "pen" },
+          { "parts": [{ "text": "w" }, { "text": "a" }, { "text": "t" }, { "text": "er" }], "whole": "water", "en": "water" },
+          { "parts": [{ "text": "sch" }, { "text": "oo" }, { "text": "l" }], "whole": "school", "en": "school" }
+        ]
+      }
+    },
+    {
+      "id": "linking",
+      "order": 7,
+      "title": "Linking & rhythm",
+      "subtitle": "verbinden & ritme",
+      "goal": "Sound natural: blur the schwa, hit the first syllable, link words together.",
+      "intro": "Last step — making it flow. Dutch eats unstressed vowels (the schwa), stresses the first syllable, and links words together. This is what makes it sound real.",
+      "cards": [
+        { "id": "lk-de", "grapheme": "de", "hint": "unstressed 'e' becomes a tiny 'uh' (schwa) — 'duh'", "anchor": { "word": "de", "en": "the" }, "kind": "letter" },
+        { "id": "lk-het", "grapheme": "het", "hint": "sounds like 'ut' — schwa with a faint h", "anchor": { "word": "het", "en": "the / it" }, "kind": "letter" },
+        { "id": "lk-lopen", "grapheme": "-en", "hint": "the '-en' ending collapses to '-un' — LOH-pun", "anchor": { "word": "lopen", "en": "to walk" }, "kind": "letter" },
+        { "id": "lk-water-stress", "grapheme": "WA-ter", "hint": "stress lands on the first syllable (the Dutch default)", "anchor": { "word": "water", "en": "water" }, "kind": "letter" },
+        { "id": "lk-een-appel", "grapheme": "een appel", "hint": "words link: 'ay-NAP-pel', run together", "anchor": { "word": "een appel", "en": "an apple" }, "kind": "letter" },
+        { "id": "lk-het-is", "grapheme": "het is", "hint": "links to 'ut-IS'", "anchor": { "word": "het is", "en": "it is" }, "kind": "letter" }
+      ],
+      "earQuiz": {
+        "prompt": "Where does the stress fall? Which sounds right?",
+        "items": [
+          { "say": "water", "options": ["WA-ter", "wa-TER"], "correctIndex": 0 },
+          { "say": "lopen", "options": ["LO-pen", "lo-PEN"], "correctIndex": 0 },
+          { "say": "morgen", "options": ["MOR-gen", "mor-GEN"], "correctIndex": 0 }
+        ]
+      }
+    }
+  ]
+}
