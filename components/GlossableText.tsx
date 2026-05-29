@@ -1,21 +1,18 @@
 'use client'
 
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { COLORS, FONTS, BORDER, SHADOW } from '@/components/design'
 import { useLanguage } from '@/lib/language-context'
 import { tokenize, getGloss, type GlossToken } from '@/lib/gloss'
 
-const LONG_PRESS_MS = 380
-
 type Active = { token: GlossToken; x: number; y: number; below: boolean } | null
 
 /**
- * Renders a phrase inline; long-pressing any word pops a small Chai Galli
- * sticker with its context-aware translation (+ optional usage note). Short
- * taps pass through to the parent (so existing tap-to-reveal / TTS still work).
- * Words are only interactive when a pre-generated gloss exists for the phrase —
- * with an empty manifest this renders as plain text.
+ * Renders a phrase inline; tapping any word pops a small Chai Galli sticker with
+ * its context-aware translation. Tap is used (not long-press) so the iOS native
+ * selection/callout never triggers. Words are only interactive when a
+ * pre-generated gloss exists for the phrase — otherwise it renders plain text.
  */
 export default function GlossableText({
   phrase,
@@ -30,9 +27,6 @@ export default function GlossableText({
   const lang = language ?? ctx.language
   const gloss = getGloss(phrase, lang)
   const [active, setActive] = useState<Active>(null)
-
-  const timer = useRef<ReturnType<typeof setTimeout> | null>(null)
-  const longFired = useRef(false)
 
   useEffect(() => {
     if (!active) return
@@ -50,10 +44,8 @@ export default function GlossableText({
     }
   }, [active])
 
-  useEffect(() => () => { if (timer.current) clearTimeout(timer.current) }, [])
-
-  // Kill native text selection / the iOS long-press callout ("Copy · Look Up ·
-  // Translate") across the whole phrase, so only our gloss popover appears.
+  // Kill native text selection / the iOS long-press callout across the phrase,
+  // as a backstop for incidental holds (the trigger itself is a tap).
   const noSelect: React.CSSProperties = {
     WebkitTouchCallout: 'none',
     WebkitUserSelect: 'none',
@@ -65,7 +57,6 @@ export default function GlossableText({
   const pieces = tokenize(phrase)
 
   const openFor = (token: GlossToken, el: HTMLElement) => {
-    try { window.getSelection?.()?.removeAllRanges() } catch {}
     const r = el.getBoundingClientRect()
     const x = Math.min(Math.max(r.left + r.width / 2, 96), window.innerWidth - 96)
     // Sit just above the word; flip below if too close to the top edge.
@@ -79,30 +70,19 @@ export default function GlossableText({
         if (!p.word) return <span key={i}>{p.text}</span>
         const token = gloss[p.wordIndex]
         if (!token) return <span key={i}>{p.text}</span>
-        const start = (e: React.PointerEvent<HTMLSpanElement>) => {
-          longFired.current = false
-          const el = e.currentTarget
-          timer.current = setTimeout(() => {
-            longFired.current = true
-            try { navigator.vibrate?.(8) } catch {}
-            openFor(token, el)
-          }, LONG_PRESS_MS)
-        }
-        const cancel = () => { if (timer.current) { clearTimeout(timer.current); timer.current = null } }
         return (
           <span
             key={i}
-            onPointerDown={start}
-            onPointerUp={cancel}
-            onPointerLeave={cancel}
-            onPointerCancel={cancel}
-            onContextMenu={(e) => e.preventDefault()}
             onClick={(e) => {
-              // Swallow the click only if it was a long-press (so a normal tap
-              // still bubbles to the parent's reveal / TTS handler).
-              if (longFired.current) { e.preventDefault(); e.stopPropagation() }
+              // Tap a word → show its gloss. Stop the tap from also triggering a
+              // parent handler (reveal / TTS / panel advance).
+              e.preventDefault()
+              e.stopPropagation()
+              try { navigator.vibrate?.(6) } catch {}
+              openFor(token, e.currentTarget)
             }}
-            style={{ cursor: 'pointer', WebkitTouchCallout: 'none', WebkitUserSelect: 'none', userSelect: 'none' }}
+            onContextMenu={(e) => e.preventDefault()}
+            style={{ cursor: 'pointer' }}
           >
             {p.text}
           </span>
