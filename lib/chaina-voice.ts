@@ -17,6 +17,22 @@
  *   chaina-voice-muted  ← reserved for future fine-grained toggle
  */
 
+/** A ~1-sample silent WAV, used to unlock HTML audio on first user gesture. */
+function buildSilentWav(): string {
+  if (typeof window === 'undefined' || typeof btoa === 'undefined') return '';
+  const sr = 8000, samples = 1;
+  const buf = new ArrayBuffer(44 + samples * 2);
+  const dv = new DataView(buf);
+  const w = (o: number, s: string) => { for (let i = 0; i < s.length; i++) dv.setUint8(o + i, s.charCodeAt(i)); };
+  w(0, 'RIFF'); dv.setUint32(4, 36 + samples * 2, true); w(8, 'WAVE'); w(12, 'fmt ');
+  dv.setUint32(16, 16, true); dv.setUint16(20, 1, true); dv.setUint16(22, 1, true);
+  dv.setUint32(24, sr, true); dv.setUint32(28, sr * 2, true); dv.setUint16(32, 2, true);
+  dv.setUint16(34, 16, true); w(36, 'data'); dv.setUint32(40, samples * 2, true);
+  let bin = ''; const bytes = new Uint8Array(buf);
+  for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+  return 'data:audio/wav;base64,' + btoa(bin);
+}
+
 const PREFERRED_NAMES = [
   'Lekha', 'Veena', 'Rishi', 'Microsoft Heera',
   'Google हिन्दी',
@@ -40,6 +56,26 @@ class ChainaVoice {
   private audio: HTMLAudioElement | null = null;
   private missing = new Set<string>();
   private initialized = false;
+  private primed = false;
+
+  /**
+   * Unlock HTML audio under the browser autoplay policy. Mascot voices fire
+   * from a timer (200ms after the bubble appears) or on mount — i.e. outside a
+   * direct user gesture — so iOS Safari / Chrome block `audio.play()` and the
+   * voice goes silent. Calling this from the first real user gesture plays a
+   * silent clip, granting the document permission for later programmatic plays.
+   * Idempotent; only the first call does work.
+   */
+  prime(): void {
+    if (this.primed || typeof window === 'undefined') return;
+    this.primed = true;
+    try {
+      const a = new Audio(buildSilentWav());
+      a.volume = 0;
+      const p = a.play();
+      if (p && typeof p.then === 'function') p.then(() => { try { a.pause(); } catch {} }).catch(() => {});
+    } catch {}
+  }
 
   private ensureInit() {
     if (this.initialized || typeof window === 'undefined') return;
