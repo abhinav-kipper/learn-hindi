@@ -55,6 +55,8 @@ const VOICE_NL = process.env.ELEVEN_VOICE_NL
 const VOICE_HI = process.env.ELEVEN_VOICE_HI
 const VOICE_NL_MASCOT = process.env.ELEVEN_VOICE_NL_MASCOT
 const MODEL = process.env.ELEVEN_MODEL || 'eleven_multilingual_v2'
+// Playback pace. ElevenLabs accepts 0.7–1.2 (1.0 = default; lower = slower).
+const SPEED = Number(process.env.ELEVEN_SPEED || '0.85')
 const FORCE = process.argv.includes('--force')
 
 if (!API_KEY || (!VOICE_NL && !VOICE_HI && !VOICE_NL_MASCOT)) {
@@ -81,7 +83,7 @@ async function tts(text, voiceId) {
     body: JSON.stringify({
       text,
       model_id: MODEL,
-      voice_settings: { stability: 0.5, similarity_boost: 0.8, style: 0, use_speaker_boost: true },
+      voice_settings: { stability: 0.5, similarity_boost: 0.8, style: 0, use_speaker_boost: true, speed: SPEED },
     }),
   })
   if (!res.ok) throw new Error(`${res.status} ${await res.text().catch(() => '')}`)
