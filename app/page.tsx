@@ -12,6 +12,8 @@ import { FeatureTooltip } from '@/components/feature-tooltip'
 import { isOnboardingComplete, getUserProfile, saveUserProfile } from '@/lib/onboarding'
 import { playSound, isMuted, toggleMute } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
+import { chainaVoice } from '@/lib/chaina-voice'
+import { startAmbient, stopAmbient } from '@/lib/ambient'
 import { DutchWelcomeModal } from '@/components/dutch-welcome-modal'
 import { reorderLessonsByReason } from '@/lib/personalization'
 import { getLastActiveLesson } from '@/lib/last-active-lesson'
@@ -236,6 +238,20 @@ export default function Home() {
     if (language === 'dutch') setDutchKnmLearned(getLearnedCount())
   }, [language])
 
+  // Ambient soundscape: faint looping bed for the active track. Opt-in/off by
+  // default (toggle in Settings). Tries on mount, and again on the first user
+  // gesture in case the browser blocked autoplay. Fades out when leaving home.
+  useEffect(() => {
+    const track = language === 'dutch' ? 'dutch' : 'hindi'
+    startAmbient(track)
+    const retry = () => startAmbient(track)
+    window.addEventListener('pointerdown', retry, { once: true })
+    return () => {
+      window.removeEventListener('pointerdown', retry)
+      stopAmbient()
+    }
+  }, [language])
+
   const [dutchLezenStudied, setDutchLezenStudied] = useState(0)
   useEffect(() => {
     if (language === 'dutch') setDutchLezenStudied(getLezenStudiedCount())
@@ -363,7 +379,13 @@ export default function Home() {
                 type="button"
                 onClick={() => {
                   if (canFire('tap', 'debounce-800ms')) {
-                    play('tap')
+                    // Mix it up: most taps get a quick wordless bark for
+                    // personality; sometimes the mascot says a full line.
+                    if (Math.random() < 0.6) {
+                      chainaVoice.bark(language === 'dutch' ? 'nl' : 'hi')
+                    } else {
+                      play('tap')
+                    }
                     markFired('tap', 'debounce-800ms')
                   }
                 }}
@@ -437,6 +459,9 @@ export default function Home() {
                   e.stopPropagation()
                   const m = toggleMute()
                   setMuted(m)
+                  // Keep the ambient bed in sync with the global mute.
+                  if (m) stopAmbient()
+                  else startAmbient(language === 'dutch' ? 'dutch' : 'hindi')
                 }}
                 aria-label={muted ? 'Unmute sounds' : 'Mute sounds'}
                 style={{

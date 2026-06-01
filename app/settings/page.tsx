@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { getUserProfile, saveUserProfile } from '@/lib/onboarding'
 import { isMuted, toggleMute, playSound } from '@/lib/sounds'
+import { isAmbientOn, setAmbientOn } from '@/lib/ambient'
 import { useLanguage } from '@/lib/language-context'
 import {
   Sticker,
@@ -37,6 +38,7 @@ export default function SettingsPage() {
   const [gender, setGender] = useState<'female' | 'male'>('female')
   const [dailyGoal, setDailyGoal] = useState(5)
   const [muted, setMuted] = useState(false)
+  const [ambient, setAmbient] = useState(false)
   const [confirmReset, setConfirmReset] = useState(false)
   const [justReset, setJustReset] = useState(false)
 
@@ -47,6 +49,7 @@ export default function SettingsPage() {
     setGender(p.gender || 'female')
     setDailyGoal(p.dailyGoal || 5)
     setMuted(isMuted())
+    setAmbient(isAmbientOn())
     setReady(true)
   }, [])
 
@@ -78,6 +81,13 @@ export default function SettingsPage() {
     const m = toggleMute()
     setMuted(m)
     if (!m) playSound('tap')
+  }
+
+  function handleAmbient() {
+    const next = !ambient
+    setAmbient(next)
+    setAmbientOn(next, language === 'dutch' ? 'dutch' : 'hindi')
+    if (next) playSound('tap')
   }
 
   function handleLanguage(next: 'hindi' | 'dutch') {
@@ -423,6 +433,65 @@ export default function SettingsPage() {
               >
                 <motion.div
                   animate={{ x: muted ? 0 : 18 }}
+                  transition={{ type: 'spring', stiffness: 480, damping: 30 }}
+                  style={{
+                    width: 18,
+                    height: 18,
+                    borderRadius: 99,
+                    background: W,
+                    border: BORDER.thin,
+                    position: 'absolute',
+                    top: 2,
+                    left: 2,
+                  }}
+                />
+              </div>
+            </div>
+          </Sticker>
+
+          <div style={{ height: 8 }} />
+
+          <Sticker color={ambient ? COLORS.mint2 : W} radius={16} padding={14} onClick={handleAmbient}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+              <div style={{ fontSize: 26 }}>{ambient ? '🎧' : '🫧'}</div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div
+                  style={{
+                    fontFamily: FONTS.display,
+                    fontWeight: 800,
+                    fontSize: 15,
+                    color: COLORS.ink,
+                    lineHeight: 1.1,
+                  }}
+                >
+                  {ambient ? 'ambient on' : 'ambient off'}
+                </div>
+                <div
+                  style={{
+                    fontFamily: FONTS.body,
+                    fontWeight: 700,
+                    fontSize: 12,
+                    color: COLORS.ink60,
+                    marginTop: 2,
+                  }}
+                >
+                  {language === 'dutch' ? 'faint café hum on home' : 'faint chai-stall hum on home'}
+                </div>
+              </div>
+              <div
+                style={{
+                  width: 44,
+                  height: 26,
+                  borderRadius: 99,
+                  border: BORDER.sticker,
+                  background: ambient ? COLORS.green : W,
+                  position: 'relative',
+                  flexShrink: 0,
+                  transition: 'background 0.2s',
+                }}
+              >
+                <motion.div
+                  animate={{ x: ambient ? 18 : 0 }}
                   transition={{ type: 'spring', stiffness: 480, damping: 30 }}
                   style={{
                     width: 18,

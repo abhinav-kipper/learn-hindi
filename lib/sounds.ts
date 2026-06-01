@@ -322,6 +322,44 @@ function playSoundLevelup() {
   playNoise(0.15, 0.06, 8000, 5.0, chordStart + 0.04)
 }
 
+// === COMBO — escalating reward for consecutive correct answers ===
+// Climbs a C-major-pentatonic ladder as the streak grows, so a run of right
+// answers feels like a rising musical staircase (Duolingo combo energy). Pure
+// synth on purpose — the pitch is dynamic, so it can't be a pre-rendered clip.
+// Caller owns the counter: pass 1 on the first correct, 2 on the next, etc.,
+// and reset to 0 on a wrong answer.
+const COMBO_LADDER = [523, 587, 659, 784, 880, 1047, 1175, 1319, 1568, 1760, 2093]
+
+export function playCombo(streak: number): void {
+  if (typeof window === 'undefined') return
+  if (isMuted()) return
+
+  // Bigger combos get a punchier haptic.
+  vibrate(streak >= 5 ? [12, 30, 12] : 18)
+
+  const ctx = getAudioContext()
+  if (!ctx) return
+  const now = ctx.currentTime
+  const i = Math.min(Math.max(streak - 1, 0), COMBO_LADDER.length - 1)
+  const freq = COMBO_LADDER[i]
+
+  try {
+    // Bright rising blip with an octave shimmer — the higher the combo, the
+    // higher (and more triumphant) the note.
+    playGlide(freq * 0.75, freq, 0.12, 'sine', 0.45, now)
+    playTone(freq * 2, 0.1, 'sine', 0.14, now + 0.01)
+
+    // Every 5th in the run gets a little sparkle to mark the milestone.
+    if (streak > 0 && streak % 5 === 0) {
+      playNoise(0.12, 0.05, 6500, 4.0, now + 0.02)
+      playTone(freq * 2, 0.18, 'sine', 0.18, now + 0.06)
+      playTone(freq * 3, 0.12, 'sine', 0.07, now + 0.07)
+    }
+  } catch {
+    // Ignore audio errors (e.g. no user gesture yet).
+  }
+}
+
 const soundFunctions: Record<SoundType, () => void> = {
   tap: playSoundTap,
   correct: playSoundCorrect,

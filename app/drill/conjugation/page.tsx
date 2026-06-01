@@ -4,7 +4,7 @@ import { useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { VERBS, Tense, shuffle, getDistractors, type Verb, type ConjRow } from '@/lib/conjugations'
-import { playSound } from '@/lib/sounds'
+import { playSound, playCombo } from '@/lib/sounds'
 import { useChaina } from '@/components/design'
 import {
   Sticker,
@@ -71,6 +71,7 @@ export default function ConjugationDrillPage() {
   const [cardIdx, setCardIdx] = useState(0)
   const [chosen, setChosen] = useState<string | null>(null)
   const [score, setScore] = useState({ correct: 0, total: 0 })
+  const [combo, setCombo] = useState(0)
   const [done, setDone] = useState(false)
 
   const startDrill = useCallback((verb: Verb, tense: Tense) => {
@@ -79,6 +80,7 @@ export default function ConjugationDrillPage() {
     setCardIdx(0)
     setChosen(null)
     setScore({ correct: 0, total: 0 })
+    setCombo(0)
     setDone(false)
     setSelectedVerb(verb)
     setSelectedTense(tense)
@@ -89,8 +91,16 @@ export default function ConjugationDrillPage() {
     if (chosen !== null) return
     setChosen(choice)
     const isCorrect = choice === deck[cardIdx].correct
-    playSound(isCorrect ? 'correct' : 'wrong')
-    if (isCorrect) play('conjugationCorrect')
+    if (isCorrect) {
+      const nextCombo = combo + 1
+      setCombo(nextCombo)
+      if (nextCombo >= 2) playCombo(nextCombo)
+      else playSound('correct')
+      play('conjugationCorrect')
+    } else {
+      setCombo(0)
+      playSound('wrong')
+    }
     setScore((s) => ({
       correct: s.correct + (isCorrect ? 1 : 0),
       total: s.total + 1,

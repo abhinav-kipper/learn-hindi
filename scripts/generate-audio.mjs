@@ -22,6 +22,15 @@
 // chaina-voice.ts finds them with no manifest. Only the Sounds set needs the
 // hash manifest because its strings are arbitrary.
 //
+// Each voice set also renders its mascot's non-verbal "barks" (bark-0..N-1.mp3)
+// into the same dir — short voiced interjections played on light touch points.
+//
+// Two more non-voice sets, each gated on its own flag:
+//   ELEVEN_SFX=1     → designed UI sound pack (tap/correct/.../levelup) via the
+//                      Sound Effects API → public/audio/sfx/<type>.mp3.
+//   ELEVEN_AMBIENT=1 → faint loopable ambient soundscapes (chai-stall / café)
+//                      via the Sound Effects API → public/audio/ambient/<track>.mp3.
+//
 // The key is used ONLY here at generation time — it is never committed and the
 // runtime never needs it (the clips are static).
 //
@@ -30,6 +39,7 @@
 //   ELEVEN_VOICE_NL=<dutch-female-id> \
 //   ELEVEN_VOICE_HI=<hindi-female-id> \
 //   ELEVEN_VOICE_NL_MASCOT=<dutch-male-id> \
+//   ELEVEN_SFX=1 ELEVEN_AMBIENT=1 \
 //   node scripts/generate-audio.mjs
 //
 // Optional:
@@ -60,6 +70,8 @@ const NL_MANIFEST = resolve(ROOT, 'content/nl-audio.json')
 const SFX_DIR = resolve(ROOT, 'public/audio/sfx')
 const SFX_MANIFEST = resolve(ROOT, 'content/sfx-audio.json')
 const DO_SFX = process.env.ELEVEN_SFX === '1'
+const AMBIENT_DIR = resolve(ROOT, 'public/audio/ambient')
+const DO_AMBIENT = process.env.ELEVEN_AMBIENT === '1'
 
 const API_KEY = process.env.ELEVENLABS_API_KEY
 const VOICE_NL = process.env.ELEVEN_VOICE_NL
@@ -70,13 +82,14 @@ const MODEL = process.env.ELEVEN_MODEL || 'eleven_multilingual_v2'
 const SPEED = Number(process.env.ELEVEN_SPEED || '0.85')
 const FORCE = process.argv.includes('--force')
 
-if (!API_KEY || (!VOICE_NL && !VOICE_HI && !VOICE_NL_MASCOT && !DO_SFX)) {
+if (!API_KEY || (!VOICE_NL && !VOICE_HI && !VOICE_NL_MASCOT && !DO_SFX && !DO_AMBIENT)) {
   console.error(
     'Missing env. Set ELEVENLABS_API_KEY plus at least one of:\n' +
       '  ELEVEN_VOICE_NL=<dutch-female>         → Sounds module\n' +
-      '  ELEVEN_VOICE_HI=<hindi-female>         → Chaina mascot lines\n' +
-      '  ELEVEN_VOICE_NL_MASCOT=<dutch-male>    → Mr. Stroopwafel mascot lines\n' +
-      '  ELEVEN_SFX=1                           → UI sound-effect pack',
+      '  ELEVEN_VOICE_HI=<hindi-female>         → Chaina mascot lines + barks\n' +
+      '  ELEVEN_VOICE_NL_MASCOT=<dutch-male>    → Mr. Stroopwafel mascot lines + barks\n' +
+      '  ELEVEN_SFX=1                           → UI sound-effect pack\n' +
+      '  ELEVEN_AMBIENT=1                       → ambient soundscape loops',
   )
   process.exit(1)
 }
@@ -378,6 +391,83 @@ async function generateSfx() {
   console.log(`UI sound pack done. ${made} generated, ${skipped} already current.`)
 }
 
+// ─── 1e. Ambient soundscapes (ElevenLabs Sound Effects API) ───────────────────
+
+// A faint, loopable background bed per learning track. Played at low volume on
+// the home screen (lib/ambient.ts), opt-in via Settings. ElevenLabs caps a
+// single sound-generation at 22s, which loops cleanly for ambience.
+const AMBIENT = {
+  hindi: {
+    prompt:
+      'calm continuous ambient soundscape of an Indian roadside chai stall, gentle and cozy: faint distant street chatter, soft clink of small glass cups, a kettle quietly simmering, a far-off bicycle bell now and then, warm relaxed background hum, seamless loop, no music, no sudden loud sounds',
+    seconds: 22,
+  },
+  dutch: {
+    prompt:
+      'calm continuous ambient soundscape of a quiet Dutch city café terrace, gentle and cozy: faint distant chatter, soft clink of cups and saucers, an occasional passing bicycle bell, light breeze, relaxed background hum, seamless loop, no music, no sudden loud sounds',
+    seconds: 22,
+  },
+}
+
+async function generateAmbient() {
+  mkdirSync(AMBIENT_DIR, { recursive: true })
+  console.log(`\nAmbient soundscapes: ${Object.keys(AMBIENT).length} loops (ElevenLabs Sound Effects).`)
+  let made = 0
+  let skipped = 0
+  for (const [track, { prompt, seconds }] of Object.entries(AMBIENT)) {
+    const file = `${track}.mp3`
+    const outPath = resolve(AMBIENT_DIR, file)
+    if (!FORCE && existsSync(outPath)) {
+      skipped++
+      continue
+    }
+    try {
+      const buf = await sfxGen(prompt, seconds)
+      writeFileSync(outPath, buf)
+      made++
+      console.log(`  ✓ ${track}  →  ${file}`)
+      await sleep(300)
+    } catch (e) {
+      console.error(`  ✗ ${track}  →  ${e.message}`)
+    }
+  }
+  console.log(`Ambient done. ${made} generated, ${skipped} already on disk.`)
+}
+
+// ─── 1f. Mascot barks (short non-verbal voiced interjections) ─────────────────
+
+// Tiny voiced reactions in each mascot's own voice, played on light touch
+// points (lib/chaina-voice.ts bark()). bark-0..N-1.mp3 — keep BARK_COUNT in
+// lib/chaina-voice.ts in sync with the number of lines here.
+const BARKS = {
+  hi: ['हम्म!', 'ओहो!', 'अरे वाह!', 'हे हे!'],
+  nl: ['Hè!', 'Oho!', 'Hmm!', 'Tjonge!'],
+}
+
+async function generateBarks(label, dir, voiceId, lines) {
+  mkdirSync(dir, { recursive: true })
+  let made = 0
+  let skipped = 0
+  console.log(`\n${label} barks: ${lines.length} clips (voice ${voiceId}).`)
+  for (let idx = 0; idx < lines.length; idx++) {
+    const outPath = join(dir, `bark-${idx}.mp3`)
+    if (!FORCE && existsSync(outPath)) {
+      skipped++
+      continue
+    }
+    try {
+      const buf = await tts(lines[idx], voiceId)
+      writeFileSync(outPath, buf)
+      made++
+      console.log(`  ✓ bark-${idx}  "${lines[idx]}"`)
+      await sleep(250)
+    } catch (e) {
+      console.error(`  ✗ bark-${idx}  →  ${e.message}`)
+    }
+  }
+  console.log(`${label} barks done. ${made} generated, ${skipped} already on disk.`)
+}
+
 // ─── 2 + 3. Mascot moment lines ──────────────────────────────────────────────
 
 // Moments that only ever fire on the Dutch track (Mr. Stroopwafel speaks them,
@@ -519,14 +609,19 @@ async function main() {
     await generateHindiLessons()
     // Hindi "Sounds" pronunciation module — same voice, Devanagari-fed.
     await generateHindiSounds()
+    // Chaina's non-verbal barks.
+    await generateBarks('Chaina (hi)', CHAINA_DIR, VOICE_HI, BARKS.hi)
   }
   if (VOICE_NL_MASCOT) {
     // Mr. Stroopwafel speaks the Dutch variant where present, else the default.
     await generateMascot('Mr. Stroopwafel (nl)', STROOPWAFEL_DIR, VOICE_NL_MASCOT, (key, defaultLines, LINES_NL) =>
       LINES_NL[key] ?? defaultLines,
     )
+    // Mr. Stroopwafel's non-verbal barks.
+    await generateBarks('Mr. Stroopwafel (nl)', STROOPWAFEL_DIR, VOICE_NL_MASCOT, BARKS.nl)
   }
   if (DO_SFX) await generateSfx()
+  if (DO_AMBIENT) await generateAmbient()
   console.log('\nAll requested voice sets complete.')
 }
 
