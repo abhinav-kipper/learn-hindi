@@ -40,6 +40,12 @@ function isRateLimitError(err: unknown): { retryAfterSeconds?: number } | null {
   return null
 }
 
+// Model for the Chaina-as-friend companion + its memory write-back. Ideally a
+// stronger model (gemini-2.5-pro) for richer personality/memory, but kept on
+// flash so it works on keys without Pro access. Flip back to 'gemini-2.5-pro'
+// once the project's key has Pro enabled.
+const COMPANION_MODEL = 'gemini-2.5-flash'
+
 export async function POST(req: Request) {
   try {
     const { messages, lessonId, language = 'hindi', userContext, mode, memory } = await req.json()
@@ -52,7 +58,7 @@ export async function POST(req: Request) {
     if (mode === 'remember') {
       const memCard = memory ?? emptyMemory()
       const update = await generateObject({
-        model: google('gemini-2.5-pro'),
+        model: google(COMPANION_MODEL),
         schema: MemoryUpdateSchema,
         system: buildRememberPrompt(userContext, memCard),
         messages: msgs.length ? msgs : [{ role: 'user' as const, content: '(no new conversation)' }],
@@ -67,7 +73,7 @@ export async function POST(req: Request) {
     // Companion mode = "talk to Chaina": no lesson, smarter model, friend
     // persona with the Memory Card injected. Otherwise it's lesson practice.
     const isCompanion = mode === 'companion'
-    const modelId = isCompanion ? 'gemini-2.5-pro' : 'gemini-2.5-flash'
+    const modelId = isCompanion ? COMPANION_MODEL : 'gemini-2.5-flash'
 
     let systemPrompt: string
     let chatMessages = msgs
