@@ -7,6 +7,12 @@
 // Kept tiny on purpose so per-turn token cost stays flat: facts cap 20,
 // threads cap 8.
 
+// The write-back update shape is owned by lib/chat-schema (the validated
+// source of truth); re-exported here so consumers of the memory API get it
+// from one place and the two can't drift.
+export type { MemoryUpdate } from './chat-schema'
+import type { MemoryUpdate } from './chat-schema'
+
 export interface ChainaMemory {
   /** Durable personal facts ("has a sister Priya", "works in tech"). */
   facts: string[]
@@ -14,22 +20,12 @@ export interface ChainaMemory {
   threads: string[]
   /** 2-3 sentence gist of the relationship so far. */
   runningSummary: string
-  /** What you last talked about — seeds the next opener. */
+  /** What you last talked about, seeds the next opener. */
   lastTopic: string
   /** ISO timestamp of the last chat; drives the returning-callback opener. */
   lastSeenAt: string
   /** How many times you've talked. */
   chatCount: number
-}
-
-/** The shape the write-back summarization call returns. All fields optional. */
-export interface MemoryUpdate {
-  newFacts?: string[]
-  newThreads?: string[]
-  /** Threads that got resolved this session and should be dropped. */
-  resolvedThreads?: string[]
-  runningSummary?: string
-  lastTopic?: string
 }
 
 export const FACTS_CAP = 20

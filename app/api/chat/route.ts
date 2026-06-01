@@ -43,6 +43,9 @@ function isRateLimitError(err: unknown): { retryAfterSeconds?: number } | null {
 export async function POST(req: Request) {
   try {
     const { messages, lessonId, language = 'hindi', userContext, mode, memory } = await req.json()
+    // Callers always send an array, but the mode branches widen the surface —
+    // guard so a malformed body degrades instead of throwing a generic 500.
+    const msgs = Array.isArray(messages) ? messages : []
 
     // ── Chaina-as-friend write-back: distill the chat into Memory Card updates.
     // Runs once per session (smarter model, no romanization constraint needed).
@@ -52,7 +55,7 @@ export async function POST(req: Request) {
         model: google('gemini-2.5-pro'),
         schema: MemoryUpdateSchema,
         system: buildRememberPrompt(userContext, memCard),
-        messages: messages.length ? messages : [{ role: 'user' as const, content: '(no new conversation)' }],
+        messages: msgs.length ? msgs : [{ role: 'user' as const, content: '(no new conversation)' }],
         temperature: 0.2,
         maxRetries: 1,
       })
@@ -67,11 +70,11 @@ export async function POST(req: Request) {
     const modelId = isCompanion ? 'gemini-2.5-pro' : 'gemini-2.5-flash'
 
     let systemPrompt: string
-    let chatMessages = messages
+    let chatMessages = msgs
 
     if (isCompanion) {
       systemPrompt = buildFriendPrompt(language === 'dutch' ? 'dutch' : 'hindi', userContext, memory ?? emptyMemory())
-      if (messages.length === 0) {
+      if (msgs.length === 0) {
         chatMessages = [{ role: 'user' as const, content: 'Start the conversation with your opener.' }]
       }
     } else {
@@ -90,7 +93,7 @@ export async function POST(req: Request) {
         ? buildDutchSystemPrompt(lesson, userContext)
         : buildSystemPrompt(lesson, userContext)
 
-      chatMessages = messages.length === 0
+      chatMessages = msgs.length === 0
         ? [{ role: 'user' as const, content: "Start the session. Introduce today's topic and give the first prompt." }]
         : messages
     }

@@ -69,7 +69,9 @@ export default function ChainaPage() {
     handleInputChange,
     handleSubmit,
     isLoading,
+    error,
     retryLast,
+    resetChat,
   } = useChat({
     api: '/api/chat',
     body,
@@ -111,7 +113,9 @@ export default function ChainaPage() {
         applyRemember(update, config.storagePrefix)
       }
     } catch {
-      rememberedRef.current = false // allow a later retry if it failed
+      // Best-effort: keep rememberedRef set so we never double-fire (and never
+      // double-bump chatCount). A failed write-back just skips this session's
+      // distillation rather than risking a duplicate.
     }
   }, [language, config.storagePrefix])
 
@@ -168,7 +172,7 @@ export default function ChainaPage() {
             ←
           </button>
           <Mascot size={52} mood="happy" />
-          <div style={{ minWidth: 0 }}>
+          <div style={{ minWidth: 0, flex: 1 }}>
             <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 22, color: COLORS.ink, lineHeight: 1 }}>
               Chaina
             </div>
@@ -176,6 +180,28 @@ export default function ChainaPage() {
               your Hindi dost · she remembers
             </div>
           </div>
+          <button
+            type="button"
+            onClick={() => {
+              playSound('tap')
+              resetChat()
+            }}
+            aria-label="Start a fresh chat"
+            title="Start fresh"
+            style={{
+              width: 38,
+              height: 38,
+              borderRadius: 99,
+              background: W,
+              border: BORDER.sticker,
+              boxShadow: SHADOW.chip,
+              cursor: 'pointer',
+              color: COLORS.ink,
+              flexShrink: 0,
+            }}
+          >
+            ↻
+          </button>
         </div>
       </div>
 
@@ -195,6 +221,20 @@ export default function ChainaPage() {
           ))}
         </AnimatePresence>
         {isLoading && messages[messages.length - 1]?.role !== 'assistant' && <TypingDots />}
+        {error && error !== 'rate_limited' && (
+          <div
+            style={{
+              fontFamily: FONTS.body,
+              fontSize: 12,
+              fontWeight: 700,
+              color: COLORS.ink60,
+              textAlign: 'center',
+              padding: '8px 4px',
+            }}
+          >
+            Chaina got distracted, dobara bolo (tap a failed bubble to retry).
+          </div>
+        )}
         <div ref={messagesEndRef} />
       </div>
 

@@ -710,7 +710,7 @@ export default function Home() {
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: 14 }}>
                 <Mascot size={56} mood="happy" />
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <Tag>{chainaHasMessage ? 'new message' : 'talk to chaina'}</Tag>
+                  <Tag>{chainaHasMessage ? 'catch up' : 'talk to chaina'}</Tag>
                   <div
                     style={{
                       fontFamily: FONTS.display,
@@ -721,10 +721,10 @@ export default function Home() {
                       marginTop: 4,
                     }}
                   >
-                    {chainaHasMessage ? 'Chaina ne kuch poocha hai' : 'Chat with Chaina'}
+                    {chainaHasMessage ? 'Catch up with Chaina' : 'Chat with Chaina'}
                   </div>
                   <div style={{ fontFamily: FONTS.body, fontSize: 12, color: COLORS.ink60, marginTop: 2, fontWeight: 600 }}>
-                    {chainaHasMessage ? 'she remembered something, jaake batao' : 'your Hindi dost who remembers you'}
+                    {chainaHasMessage ? 'she remembers your last chat, pick it up' : 'your Hindi dost who remembers you'}
                   </div>
                 </div>
                 <motion.span
