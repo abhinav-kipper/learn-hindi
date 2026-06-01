@@ -12,7 +12,6 @@ import { FeatureTooltip } from '@/components/feature-tooltip'
 import { isOnboardingComplete, getUserProfile, saveUserProfile } from '@/lib/onboarding'
 import { playSound, isMuted, toggleMute } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
-import { chainaVoice } from '@/lib/chaina-voice'
 import { startAmbient, stopAmbient } from '@/lib/ambient'
 import { DutchWelcomeModal } from '@/components/dutch-welcome-modal'
 import { reorderLessonsByReason } from '@/lib/personalization'
@@ -379,13 +378,7 @@ export default function Home() {
                 type="button"
                 onClick={() => {
                   if (canFire('tap', 'debounce-800ms')) {
-                    // Mix it up: most taps get a quick wordless bark for
-                    // personality; sometimes the mascot says a full line.
-                    if (Math.random() < 0.6) {
-                      chainaVoice.bark(language === 'dutch' ? 'nl' : 'hi')
-                    } else {
-                      play('tap')
-                    }
+                    play('tap')
                     markFired('tap', 'debounce-800ms')
                   }
                 }}

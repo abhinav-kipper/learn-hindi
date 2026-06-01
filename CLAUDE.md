@@ -236,7 +236,8 @@ from these. Always import via the barrel `@/components/design`.
 
 ### Chaina moment triggers (where `play(key)` is called)
 Fire on real beats only — accomplishments, retention nudges, character touch points. Frequency-capped via `canFire`/`markFired`.
-- Home header tap — debounce-800ms; ~60% a wordless mascot bark (`chainaVoice.bark`), ~40% a full `play('tap')` line
+- Home header tap — `play('tap')` (debounce-800ms)
+- Vocab "I know this" right-swipe — `chainaVoice.bark()` (wordless mascot cheer; no Chaina popup on this beat, so no clash)
 - Welcome back / first open today — fired from `app/page.tsx` mount (mutex, once-per-session)
 - Correct/wrong quiz — `play('correctAnswer')` / `play('wrongAnswer')`
 - First mistake of day — `play('firstMistake')` (once-per-day, fires from quiz/practice)
@@ -304,7 +305,7 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 Three additive audio features layered on the now-shipped ElevenLabs pipeline. All gated by the existing global mute; combo works on pure synth immediately, barks + ambient play once their clips are generated (same generate-then-commit pattern as the voices) and are silent no-ops until then.
 
 - **Combo / streak audio escalation** (`lib/sounds.ts` `playCombo(streak)`). A run of consecutive correct answers climbs a C-major-pentatonic ladder (rising note per correct, sparkle every 5th) — Duolingo combo energy. Pure synth on purpose (pitch is dynamic, can't be a pre-rendered clip). Wired into `/quiz` and `/drill/conjugation`: caller keeps a `combo` counter (reset on wrong / on (re)start); single correct keeps the satisfying reward ding, 2+ escalates.
-- **Mascot barks** (`lib/chaina-voice.ts` `bark(locale)`). Tiny wordless voiced interjections (हम्म!, ओहो! / Hè!, Oho!) in each mascot's own voice. Picks one of `BARK_COUNT` (4) random clips: `hi` → `/chaina/bark-<n>.mp3`, `nl` → `/stroopwafel/bark-<n>.mp3`. No text fallback (barks are wordless) → silent if no clip. Wired to the home-header mascot tap: ~60% of taps bark, ~40% say a full `play('tap')` line (still debounce-800ms-gated).
+- **Mascot barks** (`lib/chaina-voice.ts` `bark(locale)`). Tiny wordless voiced interjections (हम्म!, ओहो! / Hè!, Oho!) in each mascot's own voice. Picks one of `BARK_COUNT` (4) random clips: `hi` → `/chaina/bark-<n>.mp3`, `nl` → `/stroopwafel/bark-<n>.mp3`. No text fallback (barks are wordless) → silent if no clip. Wired to the vocab "I know this" right-swipe (`/vocabulary/[category]`) — a positive beat with no Chaina popup, so the bark adds personality without competing with the moment system's voice. (The home-header mascot tap is left as the full `play('tap')` popup + speech line, unchanged.)
 - **Ambient soundscapes** (`lib/ambient.ts`). A faint looping background bed per track — chai-stall hum (Hindi) / café terrace (Dutch). **Opt-in, OFF by default**; toggle in `/settings` ("ambient on/off" under the sounds section). Low volume (0.14) with fade in/out, loops, respects the global mute, starts on a user gesture (the toggle tap, or first pointerdown on home). `startAmbient(track)` / `stopAmbient()` / `isAmbientOn()` / `setAmbientOn(on, track)`. Home mounts/stops it per the `language` and keeps it in sync with the home mute pill. Clips: `public/audio/ambient/{hindi,dutch}.mp3`. TDD'd (`__tests__/lib/ambient.test.ts`, 5 tests).
 - **Generator** (`scripts/generate-audio.mjs`): new `ELEVEN_AMBIENT=1` flag → 22s loopable soundscapes via the Sound Effects API (`/v1/sound-generation`); barks fold into the existing `ELEVEN_VOICE_HI` / `ELEVEN_VOICE_NL_MASCOT` runs (`BARKS` map → `tts()`). Keep `BARK_COUNT` in `lib/chaina-voice.ts` in sync with the number of `BARKS` lines.
 
