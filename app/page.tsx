@@ -13,6 +13,7 @@ import { isOnboardingComplete, getUserProfile, saveUserProfile } from '@/lib/onb
 import { playSound, isMuted, toggleMute } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
 import { startAmbient, stopAmbient } from '@/lib/ambient'
+import { getMemory, isReturning } from '@/lib/chaina-memory'
 import { DutchWelcomeModal } from '@/components/dutch-welcome-modal'
 import { reorderLessonsByReason } from '@/lib/personalization'
 import { getLastActiveLesson } from '@/lib/last-active-lesson'
@@ -92,6 +93,12 @@ export default function Home() {
     language === 'hindi' ? reorderLessonsByReason(rawLessons, reason) : rawLessons
 
   const hindiStories = useMemo(() => (language === 'hindi' ? getAllStories() : []), [language])
+  const [chainaHasMessage, setChainaHasMessage] = useState(false)
+  useEffect(() => {
+    if (language !== 'hindi') return
+    const mem = getMemory(config.storagePrefix)
+    setChainaHasMessage(mem.chatCount > 0 && mem.threads.length > 0 && isReturning(mem, 12))
+  }, [language, config.storagePrefix])
   const [storiesReadCount, setStoriesReadCount] = useState(0)
   const [readStoryIds, setReadStoryIds] = useState<Set<string>>(new Set())
   const [storiesFoldOpen, setStoriesFoldOpen] = useState(false)
@@ -685,6 +692,51 @@ export default function Home() {
               </div>
             </Sticker>
           </motion.div>
+        )}
+
+        {/* TALK TO CHAINA — the friend companion (Hindi) */}
+        {language === 'hindi' && (
+          <div style={{ padding: '14px 20px 0', maxWidth: 480, margin: '0 auto', position: 'relative', zIndex: 2 }}>
+            <Sticker
+              color={chainaHasMessage ? COLORS.butter : COLORS.peach2}
+              radius={22}
+              padding={0}
+              onClick={() => {
+                playSound('pop')
+                router.push('/chaina')
+              }}
+              style={{ overflow: 'hidden' }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, padding: 14 }}>
+                <Mascot size={56} mood="happy" />
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <Tag>{chainaHasMessage ? 'new message' : 'talk to chaina'}</Tag>
+                  <div
+                    style={{
+                      fontFamily: FONTS.display,
+                      fontWeight: 800,
+                      fontSize: 18,
+                      color: COLORS.ink,
+                      lineHeight: 1.15,
+                      marginTop: 4,
+                    }}
+                  >
+                    {chainaHasMessage ? 'Chaina ne kuch poocha hai' : 'Chat with Chaina'}
+                  </div>
+                  <div style={{ fontFamily: FONTS.body, fontSize: 12, color: COLORS.ink60, marginTop: 2, fontWeight: 600 }}>
+                    {chainaHasMessage ? 'she remembered something, jaake batao' : 'your Hindi dost who remembers you'}
+                  </div>
+                </div>
+                <motion.span
+                  animate={{ x: [0, 4, 0] }}
+                  transition={{ duration: 1.6, ease: 'easeInOut', repeat: Infinity }}
+                  style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 22, color: COLORS.ink, paddingRight: 4 }}
+                >
+                  →
+                </motion.span>
+              </div>
+            </Sticker>
+          </div>
         )}
 
         {language === 'dutch' && (
