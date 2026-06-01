@@ -30,3 +30,33 @@ export const ChatReplySchema = z.object({
 })
 
 export type ChatReply = z.infer<typeof ChatReplySchema>
+
+/**
+ * Write-back shape for the Chaina-as-friend companion: after a chat, the model
+ * distills the conversation into durable updates for the Memory Card. All
+ * fields optional — emit only what's genuinely worth remembering.
+ */
+export const MemoryUpdateSchema = z.object({
+  newFacts: z
+    .array(z.string())
+    .optional()
+    .describe('Durable new personal facts learned this chat (names, relationships, job, where they live, lasting preferences). NOT transient small-talk. Empty if nothing durable.'),
+  newThreads: z
+    .array(z.string())
+    .optional()
+    .describe('New open loops worth following up next time (e.g. "sister visiting next week", "job interview Friday").'),
+  resolvedThreads: z
+    .array(z.string())
+    .optional()
+    .describe('Existing open threads that got resolved/closed this chat and should be dropped. Match the existing thread wording.'),
+  runningSummary: z
+    .string()
+    .optional()
+    .describe('An updated 2-3 sentence gist of the whole relationship so far (not just this chat).'),
+  lastTopic: z
+    .string()
+    .optional()
+    .describe('A few words naming what this chat was mostly about.'),
+})
+
+export type MemoryUpdate = z.infer<typeof MemoryUpdateSchema>
