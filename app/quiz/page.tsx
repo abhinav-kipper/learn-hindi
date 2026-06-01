@@ -10,7 +10,7 @@ import { QuizQuestion, QuizResult } from '@/types/quiz'
 import { QuizCard } from '@/components/quiz/quiz-card'
 import { QuizResults } from '@/components/quiz/quiz-results'
 import { FeatureTooltip } from '@/components/feature-tooltip'
-import { playSound } from '@/lib/sounds'
+import { playSound, playCombo } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
 import { useChaina, canFire, markFired } from '@/components/design'
 import {
@@ -38,6 +38,7 @@ export default function QuizPage() {
   const [quizComplete, setQuizComplete] = useState(false)
   const [loading, setLoading] = useState(true)
   const [locked, setLocked] = useState(false)
+  const [combo, setCombo] = useState(0)
 
   const startQuiz = useCallback(() => {
     const progress = getProgress(config.storagePrefix)
@@ -54,6 +55,7 @@ export default function QuizPage() {
     setResults([])
     setQuizComplete(false)
     setLoading(false)
+    setCombo(0)
   }, [language, config.storagePrefix])
 
   useEffect(() => {
@@ -70,9 +72,15 @@ export default function QuizPage() {
     const isCorrect = selectedAnswer?.isCorrect ?? false
 
     if (isCorrect) {
-      playSound('correct')
+      const nextCombo = combo + 1
+      setCombo(nextCombo)
+      // Single correct keeps the satisfying reward ding; a run of 2+ escalates
+      // up the combo ladder instead.
+      if (nextCombo >= 2) playCombo(nextCombo)
+      else playSound('correct')
       play('correctAnswer')
     } else {
+      setCombo(0)
       playSound('wrong')
       play('wrongAnswer')
       const correctAnswer = question.answers.find((a) => a.isCorrect)

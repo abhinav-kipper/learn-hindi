@@ -148,7 +148,7 @@ shadows anywhere.
 | `/practice/[id]` | AI chat. Butter header w/ happy Cutting + hands-free/reset/finish toolbar pills. Mint scenario sticker w/ chai motif. AI bubbles = white stickers w/ teal Cutting avatar; user bubbles = peach stickers; correction stickers = butter w/ dashed border. Bottom input bar: orange mic pill + white text input pill + green send. Tutor reply tagged `[[CORRECTION: original="…" correct="…" reason="…"]]` saved as mistake |
 | `/quiz` | Mint header, per-question segmented progress, question sticker (orange "question N of N" tag + "what does this mean?" + Hindi headline + butter 📢 hear-it on translate-to-english questions), 4 colored option stickers with ink letter columns (A/B/C/D). Picked-wrong shakes + filled red w/ ✕; correct fills mint w/ ✓; unpicked-wrong fades to 0.55. Auto-advance after 1.2s. |
 | `/progress` | Lavender header. Streak hero: float-y orange tile + flame-flicker 🔥 + count-up day number + 7-day calendar w/ active(orange ✓)/pending(dashed)/inactive. 2×2 stat tiles (phrases/practice/quiz-avg/lessons), 3-col tools (mistakes/saved/drill), lesson groups w/ animated progress bars + "N completed" fold, recent-activity sticker. Gear icon in the header top-right → `/settings` |
-| `/settings` | Cream header w/ back button + ⚙ tag + "tinker, tweak" title. White-sticker sections for: daily goal (5/10/15 chips + custom number input), name (text input), gender (2-chip grid), reason (4-chip grid), sound mute (toggle slider), language (hindi/dutch pill). Red "danger zone" sticker w/ 2-step reset-progress confirm (wipes `${prefix}-*` keys for the current language, keeps profile) |
+| `/settings` | Cream header w/ back button + ⚙ tag + "tinker, tweak" title. White-sticker sections for: daily goal (5/10/15 chips + custom number input), name (text input), gender (2-chip grid), reason (4-chip grid), sound mute (toggle slider), ambient soundscape (toggle slider, opt-in), language (hindi/dutch pill). Red "danger zone" sticker w/ 2-step reset-progress confirm (wipes `${prefix}-*` keys for the current language, keeps profile) |
 | `/mistakes` | Red-bg header. Drill-all orange CTA w/ wobble 🎯, mistake groups (palette+motif derived per lesson) w/ source chip (quiz/practice), strikethrough → green correct, delete buttons. Drill bottom-sheet: butter bg w/ drag handle, sliding cards, mint correct-answer card w/ TTS + reason, still-learning/got-it pair |
 | `/favorites` | Butter header. Grouped sticker lists w/ inline TTS play/stop button per row (orange when speaking), ⭐ remove |
 | `/vocabulary` | Mint header. Overall progress sticker w/ animated fill, 2-col category grid w/ motif tile + animated progress bar |
@@ -178,7 +178,8 @@ shadows anywhere.
 | `vocab-review.ts` | Separate known/review sets for vocab swipe UI |
 | `vocab-archive.ts` | Per-language archived-vocab set. `getArchived/addArchived/removeArchived/isArchived/migrateLegacyKnown`. TDD'd, 15 tests. Powers swipe-right-archive on `/vocabulary/[category]`. |
 | `personalization.ts` | Onboarding reason reorders Hindi lessons (family/bollywood/moving/curious) |
-| `sounds.ts` | 8 generative Web Audio sounds (tap/correct/wrong/complete/swipe/streak/levelup/pop). **Cute Duolingo-style palette** — sine+triangle waves, major-interval chimes, pitch glides via `playGlide` helper. Vibration patterns paired per sound. Mute toggle persisted in `bolna-seekho-muted` |
+| `sounds.ts` | 8 generative Web Audio sounds (tap/correct/wrong/complete/swipe/streak/levelup/pop) — prefers designed ElevenLabs clips (`content/sfx-audio.json` → `public/audio/sfx/`), falls back to the synth. **Cute Duolingo-style palette** — sine+triangle waves, major-interval chimes, pitch glides via `playGlide`. Plus `playCombo(streak)` — escalating pentatonic combo reward (synth-only). Vibration patterns paired per sound. Mute toggle persisted in `bolna-seekho-muted` |
+| `ambient.ts` | Faint looping background soundscape per track (chai-stall hum / café terrace). Opt-in, OFF by default (`bolna-seekho-ambient`). `startAmbient(track)`/`stopAmbient()`/`isAmbientOn()`/`setAmbientOn(on,track)`. Fades, loops, respects global mute, starts on a user gesture. Clips at `public/audio/ambient/{hindi,dutch}.mp3`. TDD'd, 5 tests. |
 | `last-active-lesson.ts` | Powers Continue CTA on home |
 | `quiz.ts` | Quiz scores, average |
 | `favorites.ts` | Star phrases — `toggleFavorite`, `isFavorite`, `getFavorites`. Key `${lessonId}::${hindi}` |
@@ -236,6 +237,7 @@ from these. Always import via the barrel `@/components/design`.
 ### Chaina moment triggers (where `play(key)` is called)
 Fire on real beats only — accomplishments, retention nudges, character touch points. Frequency-capped via `canFire`/`markFired`.
 - Home header tap — `play('tap')` (debounce-800ms)
+- Vocab "I know this" right-swipe — `chainaVoice.bark()` (wordless mascot cheer; no Chaina popup on this beat, so no clash)
 - Welcome back / first open today — fired from `app/page.tsx` mount (mutex, once-per-session)
 - Correct/wrong quiz — `play('correctAnswer')` / `play('wrongAnswer')`
 - First mistake of day — `play('firstMistake')` (once-per-day, fires from quiz/practice)
@@ -269,6 +271,7 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `${prefix}-last-active-lesson`
 - `${prefix}-home-tab` — restores Situations vs Foundations
 - `bolna-seekho-muted` (global, not prefixed) — sound mute toggle
+- `bolna-seekho-ambient` (global) — ambient soundscape on/off (`'1'`/`'0'`, default off). Set via the Settings "ambient" toggle; read by `lib/ambient.ts`.
 - `bolna-seekho-onboarding` (global) — user profile
 - `chaina-first-ever-seen` — set to '1' after firstEver fires once
 - `chaina-last-session-ts` — timestamp for welcomeBack/firstOpenToday discrimination
@@ -297,44 +300,39 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 
 ### Recent feature work log
 
-**2026-05-29 — 🚧 IN PROGRESS: ElevenLabs natural voices (HANDOFF — read first)**
+**2026-06-01 wave — Fun-pass: combo escalation + mascot barks + ambient soundscapes**
 
-**Problem:** All app audio uses the free Google Translate TTS scrape (`/api/tts`) — robotic, and weakest on the isolated letters/sounds the Dutch "Sounds" module needs most. Goal: replace with natural **ElevenLabs** voices, **pre-generated once** into static mp3s (no runtime cost/latency, offline-capable, full control), with live Google TTS as the automatic fallback.
+Three additive audio features layered on the now-shipped ElevenLabs pipeline. All gated by the existing global mute; combo works on pure synth immediately, barks + ambient play once their clips are generated (same generate-then-commit pattern as the voices) and are silent no-ops until then.
 
-**Code: all built + merged to `main`.** The whole pipeline is in place; only the actual clip *generation* (which needs a key + voice ids) is left.
-- `scripts/generate-audio.mjs` — renders all 3 voice sets, each gated on its own voice-id env var (run any subset):
-  - `ELEVEN_VOICE_NL` → the Sounds module: every spoken string in `content/dutch/pronunciation-course.json` (letter sounds, anchor words, ear-quiz words, blend parts/wholes) → `public/audio/sounds/<hash>.mp3`, recorded in the manifest `content/dutch/sounds-audio.json` (text→file).
-  - `ELEVEN_VOICE_HI` → Chaina mascot: every voice-enabled line in `components/design/moments.ts` (default/Hindi lines) → `public/chaina/<momentKey>-<idx>.mp3` (50 clips).
-  - `ELEVEN_VOICE_NL_MASCOT` → Mr. Stroopwafel mascot: the `LINES_NL` Dutch variant where present, else the default line → `public/stroopwafel/<momentKey>-<idx>.mp3` (48 clips).
-  - Idempotent (skips existing), `--force` to regenerate. Parses `moments.ts` by regex (no `export` needed). Verified the parse against the live file: 21 voice moments → 50 Chaina + 48 Stroopwafel clips.
-- `lib/dutch/sounds-audio.ts` `getSoundsAudioUrl(text)` + `lib/speech.ts` `speakUrl(url, onEnd, onError)`. The Sounds stage (`app/dutch/sounds/[stageId]/page.tsx` `sayIt`) **prefers a clip, falls back to live TTS**.
-- `lib/chaina-voice.ts` `play(key, idx, fallbackText, locale)` now prefers a clip per locale: `hi` → `/chaina/<key>-<idx>.mp3`, `nl` → `/stroopwafel/<key>-<idx>.mp3`; any other locale or a missing clip falls through Google TTS → speechSynthesis. (Was `.wav`, `hi`-only.) 5/5 chaina-voice tests pass; tsc clean.
-- All manifests/dirs ship **empty** (manifest `{}`, `public/chaina` + `public/stroopwafel` have only `.gitkeep`), so there is **zero behavior change** until the generator is run.
+- **Combo / streak audio escalation** (`lib/sounds.ts` `playCombo(streak)`). A run of consecutive correct answers climbs a C-major-pentatonic ladder (rising note per correct, sparkle every 5th) — Duolingo combo energy. Pure synth on purpose (pitch is dynamic, can't be a pre-rendered clip). Wired into `/quiz` and `/drill/conjugation`: caller keeps a `combo` counter (reset on wrong / on (re)start); single correct keeps the satisfying reward ding, 2+ escalates.
+- **Mascot barks** (`lib/chaina-voice.ts` `bark(locale)`). Tiny wordless voiced interjections (हम्म!, ओहो! / Hè!, Oho!) in each mascot's own voice. Picks one of `BARK_COUNT` (4) random clips: `hi` → `/chaina/bark-<n>.mp3`, `nl` → `/stroopwafel/bark-<n>.mp3`. No text fallback (barks are wordless) → silent if no clip. Wired to the vocab "I know this" right-swipe (`/vocabulary/[category]`) — a positive beat with no Chaina popup, so the bark adds personality without competing with the moment system's voice. (The home-header mascot tap is left as the full `play('tap')` popup + speech line, unchanged.)
+- **Ambient soundscapes** (`lib/ambient.ts`). A faint looping background bed per track — chai-stall hum (Hindi) / café terrace (Dutch). **Opt-in, OFF by default**; toggle in `/settings` ("ambient on/off" under the sounds section). Low volume (0.14) with fade in/out, loops, respects the global mute, starts on a user gesture (the toggle tap, or first pointerdown on home). `startAmbient(track)` / `stopAmbient()` / `isAmbientOn()` / `setAmbientOn(on, track)`. Home mounts/stops it per the `language` and keeps it in sync with the home mute pill. Clips: `public/audio/ambient/{hindi,dutch}.mp3`. TDD'd (`__tests__/lib/ambient.test.ts`, 5 tests).
+- **Generator** (`scripts/generate-audio.mjs`): new `ELEVEN_AMBIENT=1` flag → 22s loopable soundscapes via the Sound Effects API (`/v1/sound-generation`); barks fold into the existing `ELEVEN_VOICE_HI` / `ELEVEN_VOICE_NL_MASCOT` runs (`BARKS` map → `tts()`). Keep `BARK_COUNT` in `lib/chaina-voice.ts` in sync with the number of `BARKS` lines.
 
-**Blocker (network): cleared.** `api.elevenlabs.io` is now reachable from fresh sessions (HTTP 200).
+**To generate the new clips** (same pattern as the voices — run locally with a paid key, listen-check, commit the mp3s):
+```
+ELEVENLABS_API_KEY=… ELEVEN_VOICE_HI=<hindi-female> ELEVEN_VOICE_NL_MASCOT=<dutch-male> \
+ELEVEN_AMBIENT=1 node scripts/generate-audio.mjs
+```
+Commit `public/chaina/bark-*.mp3` + `public/stroopwafel/bark-*.mp3` + `public/audio/ambient/*.mp3`.
 
-**Blocker (account): NEW — free tier can't generate through the sandbox proxy.** Running the generator here (2026-05-29, with a valid free-tier key) returned `401 detected_unusual_activity — "Free Tier usage disabled… If you are using a proxy/VPN you might need to purchase a Paid Plan"` on **every** call. The sandbox routes outbound traffic through a proxy, which trips ElevenLabs' abuse detector; free-tier keys are refused. Zero clips written. Two ways forward:
-1. **Upgrade the ElevenLabs account to any paid tier** (Starter is cheapest) — paid keys aren't proxy-restricted — then re-run the one-liner below in a session.
-2. **Generate on a local (non-proxied) machine:** clone, `npm i`, run the same one-liner with the key + 3 voice ids, then commit `public/audio/sounds/*.mp3` + `content/dutch/sounds-audio.json` + `public/chaina/*.mp3` + `public/stroopwafel/*.mp3` and push. No app code changes needed — the playback wiring is already merged.
+**2026-05-29 — ✅ DONE: ElevenLabs natural voices (pipeline shipped + clips generated)**
 
-Voice ids in use: Sounds + Dutch content = `ELEVEN_VOICE_NL`; Chaina + Hindi = `ELEVEN_VOICE_HI`; Mr. Stroopwafel = `ELEVEN_VOICE_NL_MASCOT`.
+All app audio can now use natural **ElevenLabs** voices, **pre-generated once** into static mp3s (no runtime cost/latency, offline-capable), with live Google TTS → `speechSynthesis` as the automatic fallback. The pipeline shipped *and* the clips are generated and committed.
 
-**Voice plan (3 voices, model `eleven_multilingual_v2`):**
-1. **Dutch pronunciation — the Sounds module** → **female** Dutch voice. Env `ELEVEN_VOICE_NL`.
-2. **Mr. Stroopwafel mascot** (Dutch moment lines, `locale = nl`) → **male** Dutch voice. Env `ELEVEN_VOICE_NL_MASCOT`.
-3. **Chaina mascot + Hindi** (Hindi/Hinglish moment lines, `locale = hi`) → **female** Hindi voice. Env `ELEVEN_VOICE_HI`.
+**Generator** — `scripts/generate-audio.mjs`, each set gated on its own env var (run any subset):
+  - `ELEVEN_VOICE_NL` → Dutch "Sounds" module + Dutch lesson/foundation "hear it" phrases → `public/audio/{sounds,nl}/<hash>.mp3`, manifests `content/dutch/sounds-audio.json` + `content/nl-audio.json`.
+  - `ELEVEN_VOICE_HI` → Chaina mascot moment lines (Devanagari-fed for accent) → `public/chaina/<momentKey>-<idx>.mp3`; **plus** Hindi lesson "hear it" phrases → `public/audio/hi/` (`content/hi-audio.json`, needs `content/hi-translit.json`) and the Hindi "Sounds" module → `public/audio/hi-sounds/` (`content/hindi/sounds-audio.json`).
+  - `ELEVEN_VOICE_NL_MASCOT` → Mr. Stroopwafel mascot lines (Dutch `LINES_NL` variant where present) → `public/stroopwafel/<momentKey>-<idx>.mp3`.
+  - `ELEVEN_SFX=1` → designed UI sound pack (tap/correct/wrong/complete/swipe/streak/levelup/pop) via the Sound Effects API → `public/audio/sfx/<type>.mp3` (`content/sfx-audio.json`). `lib/sounds.ts` prefers these, falls back to the Web-Audio synth.
+  - Idempotent (skips existing), `--force` to regenerate. Two ElevenLabs APIs: `/v1/text-to-speech/{voice}` (voices) and `/v1/sound-generation` (SFX + ambient).
 
-**Only remaining step — generate + commit the clips:**
-1. Paste the 3 voice IDs + a **fresh** API key (rotate the one pasted in the earlier transcript).
-2. One run does everything:
-   ```
-   ELEVENLABS_API_KEY=… ELEVEN_VOICE_NL=<dutch-female> ELEVEN_VOICE_HI=<hindi-female> \
-   ELEVEN_VOICE_NL_MASCOT=<dutch-male> node scripts/generate-audio.mjs
-   ```
-   (or run any subset — each voice set is independent.)
-3. Listen-check a few clips, then commit `public/audio/sounds/*.mp3` + the populated `content/dutch/sounds-audio.json` + `public/chaina/*.mp3` + `public/stroopwafel/*.mp3`. Verify in-app, merge to `main`.
+**Playback wiring (all with graceful fallback):**
+- `lib/speech.ts` — content TTS; prefers a generated clip via the per-language manifests, else `/api/tts` (Google) → `speechSynthesis`.
+- `lib/chaina-voice.ts` `play(key, idx, fallbackText, locale)` — `hi` → `/chaina/`, `nl` → `/stroopwafel/`; missing clip → Google TTS → `speechSynthesis`.
+- `lib/sounds.ts` — designed SFX clip → synth fallback.
 
-**Security:** the ElevenLabs key is used only at generation time — never committed, never shipped (the clips are static). Rotate the pasted key.
+**Status:** clips are generated and committed (≈37 Chaina + 48 Stroopwafel mascot lines, 93 Dutch Sounds, plus Hindi/Dutch lesson + Hindi Sounds + SFX packs). The earlier free-tier proxy blocker was resolved by generating with a paid key. **Security:** the key is used only at generation time — never committed, never shipped (clips are static). Rotate any key pasted into a session.
 
 **2026-05-29 wave — Dutch "Sounds" from-zero pronunciation module**
 

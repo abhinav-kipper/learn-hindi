@@ -33,6 +33,9 @@ function buildSilentWav(): string {
   return 'data:audio/wav;base64,' + btoa(bin);
 }
 
+/** Number of non-verbal bark clips generated per mascot (bark-0..N-1.mp3). */
+const BARK_COUNT = 4;
+
 const PREFERRED_NAMES = [
   'Lekha', 'Veena', 'Rishi', 'Microsoft Heera',
   'Google हिन्दी',
@@ -169,6 +172,42 @@ class ChainaVoice {
       if (this.missing.has(url)) return; // already handled by onerror
       this.missing.add(url);
       this.speakGoogle(fallbackText, locale);
+    });
+    this.audio = audio;
+  }
+
+  /**
+   * Play a short non-verbal mascot "bark" — a tiny voiced interjection
+   * (hmm!, oho!, hè!) that adds personality on light touch points like tapping
+   * the mascot. Picks one of BARK_COUNT pre-rendered clips at random:
+   *   hi → /chaina/bark-<n>.mp3   nl → /stroopwafel/bark-<n>.mp3
+   * Unlike spoken lines there is NO text fallback — barks are wordless, so if
+   * no clip is shipped this is simply a silent no-op.
+   */
+  bark(locale: string = 'hi'): void {
+    this.ensureInit();
+    if (typeof window === 'undefined') return;
+    if (this.isMutedNow()) return;
+    const base = locale === 'nl' ? this.stroopwafelBase : this.clipBase;
+    const idx = Math.floor(Math.random() * BARK_COUNT);
+    const url = `${base}/bark-${idx}.mp3`;
+    if (this.missing.has(url)) return;
+    this.stopAudio();
+    let audio: HTMLAudioElement;
+    try {
+      audio = new Audio(url);
+    } catch {
+      this.missing.add(url);
+      return;
+    }
+    audio.volume = 0.85;
+    audio.onerror = () => {
+      if (this.audio !== audio) return;
+      this.missing.add(url);
+    };
+    audio.play().catch(() => {
+      if (this.audio !== audio) return;
+      this.missing.add(url);
     });
     this.audio = audio;
   }

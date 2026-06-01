@@ -29,6 +29,7 @@ import {
 import { speak, stopSpeaking, isSpeaking } from '@/lib/speech'
 import { playSound } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
+import { chainaVoice } from '@/lib/chaina-voice'
 import {
   Sticker,
   Tag,
@@ -143,6 +144,9 @@ export default function CategoryPage() {
   const handleSwipeRight = useCallback(
     (word: VocabWord) => {
       playSound('correct')
+      // A quick wordless mascot cheer — this beat has no Chaina popup, so the
+      // bark adds personality without competing with one.
+      chainaVoice.bark(isDutch ? 'nl' : 'hi')
       addArchived(config.storagePrefix, word.hindi)
       removeVocabReview(word.hindi)
       setArchivedSet((prev) => new Set([...prev, word.hindi]))
