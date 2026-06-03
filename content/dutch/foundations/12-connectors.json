@@ -1,0 +1,355 @@
+{
+  "id": "connectors",
+  "title": "Joining Ideas: en, maar, want, omdat",
+  "situation": "Foundation: linking two short clauses with the everyday joiners en, maar, of, want, dus, and the key A2 contrast between want and omdat",
+  "level": "A2",
+  "skills": [
+    "coordinating joiners (en, maar, of, want, dus)",
+    "giving reasons with want",
+    "omdat and verb-to-the-end",
+    "want vs omdat word order"
+  ],
+  "phrases": [
+    {
+      "hindi": "Ik drink koffie en ik lees de krant.",
+      "english": "I drink coffee and I read the newspaper.",
+      "context": "The simplest joiner. `en` (and) glues two full sentences without disturbing them. The verb stays in second place in each half.",
+      "pronunciation": "ik DRINK kof-FEE en ik LAYS de KRANT"
+    },
+    {
+      "hindi": "Ik wil komen, maar ik heb geen tijd.",
+      "english": "I want to come, but I have no time.",
+      "context": "`maar` (but) sets up a contrast. Put a comma before it. Word order in the second half stays normal: subject, then verb.",
+      "pronunciation": "ik WIL KOH-men, maar ik HEP chayn TAYT"
+    },
+    {
+      "hindi": "Wil je thee of wil je koffie?",
+      "english": "Do you want tea or do you want coffee?",
+      "context": "`of` (or) offers a choice. It joins the two options and leaves each clause in its normal shape.",
+      "pronunciation": "wil ye TAY of wil ye kof-FEE"
+    },
+    {
+      "hindi": "Ik blijf thuis, want ik ben ziek.",
+      "english": "I stay home, because I am sick.",
+      "context": "`want` (because) gives a reason and keeps normal order: `ik ben ziek`. The verb `ben` stays in second place, right behind `ik`.",
+      "pronunciation": "ik BLAYF TOWS, want ik ben ZEEK"
+    },
+    {
+      "hindi": "Ik blijf thuis omdat ik ziek ben.",
+      "english": "I stay home because I am sick.",
+      "context": "Same meaning, different machine. `omdat` (because) sends the verb to the very end: `ik ziek ben`, not `ik ben ziek`. Compare it with the want sentence above.",
+      "pronunciation": "ik BLAYF TOWS om-DAT ik ZEEK ben"
+    },
+    {
+      "hindi": "Hij eet niet, omdat hij geen honger heeft.",
+      "english": "He is not eating, because he is not hungry.",
+      "context": "`omdat` again pushes the verb `heeft` to the end of its half. Read it slowly: `omdat hij geen honger heeft`.",
+      "pronunciation": "hay AYT NEET, om-DAT hay chayn HONG-er HAYFT"
+    },
+    {
+      "hindi": "Het regent, dus ik neem de paraplu mee.",
+      "english": "It is raining, so I take the umbrella with me.",
+      "context": "`dus` (so) gives the result of the first half. It keeps normal order: `ik neem`. Put a comma before it.",
+      "pronunciation": "het RAY-chent, dus ik NAYM de pa-ra-PLUU MAY"
+    },
+    {
+      "hindi": "Ik leer Nederlands, want ik woon hier en ik wil het examen halen.",
+      "english": "I am learning Dutch, because I live here and I want to pass the exam.",
+      "context": "Joiners can stack in one sentence. `want` gives the reason, then `en` chains a second reason. Each clause keeps the verb in second place.",
+      "pronunciation": "ik LAYR NAY-der-lants, want ik WOHN HEER en ik WIL het ek-SAH-men HAH-len"
+    }
+  ],
+  "grammar_notes": [
+    "`en`, `maar`, `of`, `want`, and `dus` are coordinating joiners (they connect two equal main clauses). After them the word order stays normal: the verb stays in second place, with no swap of subject and verb.",
+    "`want` and `omdat` both mean 'because', but they behave oppositely. `want` is coordinating and keeps normal order ('ik ben ziek'). `omdat` is a subordinating word (it sends the verb to the end of its clause): 'ik ziek ben'.",
+    "With `omdat`, gather every other word first, then drop the conjugated verb at the very end. 'omdat ik morgen vroeg moet werken' = because I have to work early tomorrow.",
+    "Use a comma before `maar`, `want`, and `dus`. Before `en` and `of` a comma is usually left out when the two halves are short.",
+    "`dus` shows a result and `want` shows a reason, so they are mirror images. 'Ik ben moe, dus ik ga slapen' (result) versus 'Ik ga slapen, want ik ben moe' (reason)."
+  ],
+  "culture_notes": [
+    "`want` is the joiner you will hear most in everyday speech because it is easier: you never have to move the verb. Beginners lean on it, and that is completely fine for the A2 speaking exam.",
+    "`omdat` sounds a touch more careful and is common in writing and in answers to a `waarom?` (why?) question. Switching from `want` to `omdat` is a clear sign your Dutch is levelling up.",
+    "Dutch people answer 'waarom?' very directly, often starting the reply with `omdat`. A short, honest reason is normal and polite; you do not need to soften it the way English sometimes does."
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "joiners that keep normal order (en, maar, of, want, dus)",
+      "explanation": "These five glue two complete main clauses together and leave each one untouched: subject first, conjugated verb second. The only care points are the commas (use one before maar, want, dus).",
+      "more_examples": [
+        {
+          "hindi": "Ik kook en jij doet de afwas.",
+          "english": "I cook and you do the dishes."
+        },
+        {
+          "hindi": "Het is duur, maar het is mooi.",
+          "english": "It is expensive, but it is beautiful."
+        },
+        {
+          "hindi": "We gaan met de trein of we nemen de auto.",
+          "english": "We go by train or we take the car."
+        },
+        {
+          "hindi": "Ik ben blij, want morgen is het weekend.",
+          "english": "I am happy, because tomorrow it is the weekend."
+        }
+      ]
+    },
+    {
+      "skill": "omdat and verb-to-the-end",
+      "explanation": "`omdat` is a subordinating word (it sends the verb to the end of its clause). Line up the subject and the other words, then place the conjugated verb last. If two verbs belong together, both go to the end.",
+      "more_examples": [
+        {
+          "hindi": "Ik bel je omdat ik een vraag heb.",
+          "english": "I am calling you because I have a question."
+        },
+        {
+          "hindi": "Zij komt niet omdat ze ziek is.",
+          "english": "She is not coming because she is sick."
+        },
+        {
+          "hindi": "We blijven binnen omdat het hard regent.",
+          "english": "We are staying inside because it is raining hard."
+        },
+        {
+          "hindi": "Ik leer Nederlands omdat ik hier wil blijven.",
+          "english": "I am learning Dutch because I want to stay here."
+        }
+      ]
+    }
+  ],
+  "practice_prompt": "You are a friendly Dutch tutor drilling the want-versus-omdat contrast one item at a time. Address the user as 'je'. Open with: 'Hoi! We oefenen vandaag met want en omdat. Allebei betekenen 'because', maar de woordvolgorde is anders. Eerste opdracht: maak een zin met want, 'Ik blijf thuis ... ik ben ziek.'' Give one short task per turn: finish a sentence with want (normal order, verb second), then rewrite the same sentence with omdat (verb to the end), then go the other way, then mix in en, maar, of, and dus. Use easy A2 vocabulary about daily life. The single thing you are checking is word order. If the learner keeps the verb in second place after omdat, or moves it to the end after want, flag it with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] and explain the rule in one plain sentence. Praise correct answers briefly. Stay in Dutch unless the learner asks for English. After 6 to 8 items, close with 'Goed gedaan! Tot de volgende keer.'",
+  "theory": {
+    "intro": "Once you can build single Dutch sentences, the next step is gluing two of them together. A handful of small joining words do almost all of this work. Most of them, `en`, `maar`, `of`, `want`, and `dus`, are friendly: they leave both halves of your sentence exactly as they were. One of them, `omdat`, plays by a different rule and reshuffles the verb. Learn which group a joiner belongs to and your longer sentences will sound natural straight away.",
+    "sections": [
+      {
+        "heading": "The easy joiners: en, maar, of",
+        "body": "Start with the three you will reach for constantly. `en` means **and**, `maar` means **but**, and `of` means **or**. Each one simply glues two complete sentences side by side and changes nothing inside them. The subject still comes first and the conjugated verb still comes second in each half.\n\n- `en` adds: `Ik werk en ik studeer` (I work and I study).\n- `maar` contrasts: `Het is klein, maar het is gezellig` (It is small, but it is cosy).\n- `of` offers a choice: `Koffie of thee?` (Coffee or tea?).\n\nPut a comma before `maar`. Before `en` and `of` you usually leave the comma out when the halves are short.",
+        "table": {
+          "caption": "The three easy joiners",
+          "columns": [
+            "joiner",
+            "meaning",
+            "example"
+          ],
+          "rows": [
+            [
+              "en",
+              "and",
+              "Ik kook en jij helpt."
+            ],
+            [
+              "maar",
+              "but",
+              "Ik wil komen, maar ik kan niet."
+            ],
+            [
+              "of",
+              "or",
+              "Bel je of mail je?"
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "tip",
+          "body": "These three never touch the word order. Whatever the sentence looked like alone, it keeps that shape after `en`, `maar`, or `of`. That makes them the safest joiners to start with."
+        },
+        "cutting_intro": "Hoi, ik ben Mr. Stroopwafel! Let's glue sentences together. The first three joiners are gentle: they leave both halves exactly as they are.",
+        "quick_check": {
+          "question": "Which joiner sets up a contrast, like 'I want to, but I can't'?",
+          "options": [
+            "en",
+            "maar",
+            "of"
+          ],
+          "correct_index": 1,
+          "explanation": "Yes, `maar` means 'but' and signals a contrast. Remember the comma before it: `Ik wil komen, maar ik kan niet`."
+        }
+      },
+      {
+        "heading": "Giving a reason with want",
+        "body": "To say **because**, the everyday choice is `want`. It works just like the easy joiners: it glues a reason onto your sentence and keeps normal word order. The subject comes first and the conjugated verb stays second.\n\nLook at the second half closely: `Ik blijf thuis, want ik ben ziek` (I stay home, because I am sick). After `want` you get `ik ben ziek`, the ordinary shape of that sentence, with `ben` in second place. Nothing moves.\n\nUse a comma before `want`. Because it never reshuffles anything, `want` is the joiner most learners rely on first, and it is perfectly correct.",
+        "examples": [
+          {
+            "hindi": "Ik eet nu, want ik heb honger.",
+            "english": "I am eating now, because I am hungry.",
+            "breakdown": "want + normal order: `ik heb honger` (subject, then verb `heb` in second place)."
+          },
+          {
+            "hindi": "Zij belt, want ze wil iets vragen.",
+            "english": "She is calling, because she wants to ask something.",
+            "breakdown": "want + `ze wil iets vragen`, the verb `wil` stays second."
+          },
+          {
+            "hindi": "We gaan naar binnen, want het regent.",
+            "english": "We are going inside, because it is raining.",
+            "breakdown": "want + `het regent`, untouched normal order."
+          }
+        ],
+        "callout": {
+          "tone": "note",
+          "body": "`want` keeps the verb in second place, exactly where it sits in a plain sentence. If you can say `ik ben ziek` on its own, you can drop it straight in after `want`."
+        },
+        "cutting_intro": "Now let's give reasons. The easy way to say 'because' is `want`, and the best part is the word order never changes.",
+        "quick_check": {
+          "question": "Which sentence uses `want` with the correct word order?",
+          "options": [
+            "Ik blijf thuis, want ik ziek ben.",
+            "Ik blijf thuis, want ik ben ziek.",
+            "Ik blijf thuis, want ben ik ziek."
+          ],
+          "correct_index": 1,
+          "explanation": "Right. After `want` the order is normal: `ik ben ziek`, with the verb `ben` in second place. `want` never sends the verb to the end."
+        }
+      },
+      {
+        "heading": "omdat sends the verb to the end",
+        "body": "There is a second way to say **because**: `omdat`. It means the same thing as `want`, but it is a subordinating word (it sends the conjugated verb to the end of its clause). This is the one rule to burn into memory.\n\nWatch the verb move. With `want` you say `Ik blijf thuis, want ik ben ziek`. With `omdat` the verb `ben` slides all the way to the end: `Ik blijf thuis omdat ik ziek ben`. The other words stay in their order; only the verb travels to the back.\n\nTo build an `omdat` clause, line up the subject and everything else first, then drop the conjugated verb last. `omdat ik morgen vroeg moet werken` (because I have to work early tomorrow): if two verbs belong together, both land at the end.",
+        "table": {
+          "caption": "Same idea, two word orders",
+          "columns": [
+            "joiner",
+            "sentence",
+            "where the verb sits"
+          ],
+          "rows": [
+            [
+              "want",
+              "Ik blijf thuis, want ik ben ziek.",
+              "second (normal)"
+            ],
+            [
+              "omdat",
+              "Ik blijf thuis omdat ik ziek ben.",
+              "at the end"
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "hindi": "Ik bel je omdat ik een vraag heb.",
+            "english": "I am calling you because I have a question.",
+            "breakdown": "omdat + `ik een vraag heb`, the verb `heb` goes to the end."
+          },
+          {
+            "hindi": "Hij komt niet omdat hij moe is.",
+            "english": "He is not coming because he is tired.",
+            "breakdown": "omdat + `hij moe is`, the verb `is` lands last."
+          }
+        ],
+        "callout": {
+          "tone": "warning",
+          "body": "The most common slip is keeping normal order after `omdat`. `omdat ik ben ziek` is wrong; it must be `omdat ik ziek ben`. After `omdat`, the verb always goes to the very end."
+        },
+        "cutting_intro": "Here is the tricky one. `omdat` also means 'because', but it kicks the verb all the way to the end of the clause. Watch it move.",
+        "quick_check": {
+          "question": "How do you finish 'Ik blijf thuis omdat ik ...' (I stay home because I am sick)?",
+          "options": [
+            "omdat ik ben ziek",
+            "omdat ik ziek ben",
+            "omdat ben ik ziek"
+          ],
+          "correct_index": 1,
+          "explanation": "Correct. `omdat` sends the verb to the end, so it is `omdat ik ziek ben`, with `ben` last."
+        }
+      },
+      {
+        "heading": "want vs omdat, side by side",
+        "body": "Now hold the two next to each other, because this is exactly what the A2 exam tests. Both mean **because**. The difference is only the word order.\n\n- `want` keeps normal order: the verb stays second. `Ik leer Nederlands, want ik woon hier`.\n- `omdat` sends the verb to the end. `Ik leer Nederlands omdat ik hier woon`.\n\nNotice the same two words, `hier` and `woon`, swap places: `ik woon hier` after `want`, `ik hier woon` after `omdat`. A handy memory trick: `want` rhymes with nothing special and just keeps things normal, while `omdat` is the one that does the extra work of moving the verb.\n\nWhen you answer a `waarom?` (why?) question, either joiner works. `omdat` sounds a little more careful, `want` a little more relaxed.",
+        "table": {
+          "caption": "The full contrast",
+          "columns": [
+            "feature",
+            "want",
+            "omdat"
+          ],
+          "rows": [
+            [
+              "meaning",
+              "because",
+              "because"
+            ],
+            [
+              "word order after it",
+              "normal (verb second)",
+              "verb to the end"
+            ],
+            [
+              "example",
+              "..., want ik ben moe.",
+              "... omdat ik moe ben."
+            ],
+            [
+              "comma before it",
+              "yes",
+              "usually yes"
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "hindi": "Ik neem de fiets, want het is dichtbij.",
+            "english": "I am taking the bike, because it is nearby.",
+            "breakdown": "want + normal order `het is dichtbij`."
+          },
+          {
+            "hindi": "Ik neem de fiets omdat het dichtbij is.",
+            "english": "I am taking the bike because it is nearby.",
+            "breakdown": "omdat + verb to the end `het dichtbij is`."
+          }
+        ],
+        "callout": {
+          "tone": "tip",
+          "body": "If word order makes you nervous, start every reason with `want`. It is always correct and never moves the verb. Add `omdat` once the verb-to-the-end move feels automatic."
+        },
+        "cutting_intro": "Let's put them face to face. Same meaning, two different word orders. This pairing is a favourite on the A2 exam.",
+        "quick_check": {
+          "question": "Which pair shows the correct word order for both joiners?",
+          "options": [
+            "want ik moe ben / omdat ik ben moe",
+            "want ik ben moe / omdat ik moe ben",
+            "want ben ik moe / omdat ik ben moe"
+          ],
+          "correct_index": 1,
+          "explanation": "Yes. `want ik ben moe` keeps the verb second; `omdat ik moe ben` sends it to the end. That is the whole contrast."
+        }
+      },
+      {
+        "heading": "dus and longer sentences",
+        "body": "One more useful joiner: `dus`, meaning **so**. It introduces a result, the opposite direction from a reason. `Het regent, dus ik neem de paraplu mee` (It is raining, so I take the umbrella with me). Like `want`, it keeps normal order: the verb stays second.\n\nThink of `want` and `dus` as a pair. `want` looks back to the reason, `dus` looks forward to the result.\n\n- Reason: `Ik ga slapen, want ik ben moe` (I am going to sleep, because I am tired).\n- Result: `Ik ben moe, dus ik ga slapen` (I am tired, so I am going to sleep).\n\nYou can also stack joiners to build a longer sentence: `Ik leer Nederlands, want ik woon hier en ik wil blijven`. Each clause still keeps its own correct word order. Mix and match these joiners and your Dutch starts to flow in full, connected sentences.",
+        "examples": [
+          {
+            "hindi": "Ik heb geen geld, dus ik blijf thuis.",
+            "english": "I have no money, so I am staying home.",
+            "breakdown": "dus + normal order `ik blijf thuis`."
+          },
+          {
+            "hindi": "Het is laat, dus we gaan naar huis.",
+            "english": "It is late, so we are going home.",
+            "breakdown": "dus + normal order `we gaan naar huis`."
+          }
+        ],
+        "callout": {
+          "tone": "note",
+          "body": "`dus` (so) and `want` (because) both keep normal order, so the only joiner in this whole chapter that moves the verb is `omdat`. Remember that one exception and the rest take care of themselves."
+        },
+        "cutting_intro": "Last piece. `dus` means 'so' and points at a result, the mirror image of a reason. Then we stack everything into longer sentences.",
+        "quick_check": {
+          "question": "Which joiner introduces a result, as in 'It is late, ___ we are going home'?",
+          "options": [
+            "want",
+            "omdat",
+            "dus"
+          ],
+          "correct_index": 2,
+          "explanation": "Correct. `dus` means 'so' and points to the result. `want` and `omdat` point to the reason instead."
+        }
+      }
+    ],
+    "wrap_up": "You now have the everyday toolkit for joining ideas. `en`, `maar`, `of`, `want`, and `dus` all keep normal word order, with the verb in second place, so they are easy to drop in. The one to watch is `omdat`: it means 'because' just like `want`, but it sends the verb to the end of its clause (`omdat ik ziek ben`, not `omdat ik ben ziek`). If word order ever worries you, lean on `want` for your reasons; it is always correct. The phrases below give you mixed practice, so pay attention to where the verb lands each time."
+  },
+  "references": [
+    "dutchgrammar.com (Dutch Grammar by Bieneke Berendsen)",
+    "TaalCompleet A2 (KleurRijker NT2 method)",
+    "Nederlands in gang (Coutinho NT2 method)"
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "id": "future",
+  "title": "Talking About the Future",
+  "level": "A2",
+  "situation": "Foundation: the three everyday ways Dutch talks about the future, present tense plus a time word, gaan plus a verb, and zullen plus a verb",
+  "skills": [
+    "present tense for future",
+    "gaan + infinitive",
+    "zullen + infinitive",
+    "choosing the right future form"
+  ],
+  "phrases": [
+    {
+      "hindi": "Ik werk morgen tot vijf uur.",
+      "english": "I am working tomorrow until five o'clock.",
+      "context": "The default future in Dutch. Plain present tense `werk` plus the time word `morgen` (tomorrow). No special future verb needed when a time word makes the future clear.",
+      "pronunciation": "ik WERK MOR-ghu tot VAYF UUR"
+    },
+    {
+      "hindi": "Volgende week ga ik op vakantie.",
+      "english": "Next week I am going on holiday.",
+      "context": "A fronted time phrase `volgende week` (next week) pushes the verb to second place, so `ga ik`, not `ik ga`. Present tense again, with the time word carrying the future.",
+      "pronunciation": "VOL-ghu-duh WAYK ghaa ik op vaa-KAN-see"
+    },
+    {
+      "hindi": "Ik ga vanavond koken.",
+      "english": "I am going to cook tonight.",
+      "context": "`gaan` plus a verb shows a near plan or intention. The second verb `koken` (to cook) stays in its base form and goes to the very end of the sentence.",
+      "pronunciation": "ik ghaa va-NAA-vont KOH-ku"
+    },
+    {
+      "hindi": "We gaan volgend jaar verhuizen.",
+      "english": "We are going to move house next year.",
+      "context": "`gaan` for a planned change. Notice the base verb `verhuizen` (to move house) sits at the end, after the time phrase. This end-of-sentence spot is the rule for the second verb.",
+      "pronunciation": "wuh ghaan VOL-ghunt YAAR vur-HOW-zu"
+    },
+    {
+      "hindi": "Ik zal het morgen doen.",
+      "english": "I will do it tomorrow.",
+      "context": "`zullen` for a promise. `ik zal` plus the base verb `doen` (to do) at the end. Use this when you are giving your word, not just stating a plan.",
+      "pronunciation": "ik zal hut MOR-ghu DOON"
+    },
+    {
+      "hindi": "Zal ik je helpen?",
+      "english": "Shall I help you?",
+      "context": "`zullen` for an offer. `Zal ik...?` is the standard polite way to offer help or make a suggestion. The base verb `helpen` (to help) comes at the end.",
+      "pronunciation": "zal ik yuh HEL-pu"
+    },
+    {
+      "hindi": "Het zal morgen regenen.",
+      "english": "It will rain tomorrow.",
+      "context": "`zullen` for a prediction about something you cannot control. `Het zal regenen` (it will rain) is what you hear on the weather report. The base verb `regenen` goes last.",
+      "pronunciation": "hut zal MOR-ghu RAY-ghu-nu"
+    },
+    {
+      "hindi": "Morgen ben ik er niet, ik ga naar de dokter.",
+      "english": "Tomorrow I am not here, I am going to the doctor.",
+      "context": "Two future ideas in one breath. The first half uses plain present tense `ben` with the time word `morgen`. The second half uses `gaan` for the plan. Both are normal and natural together.",
+      "pronunciation": "MOR-ghu ben ik er NEET, ik ghaa naar duh DOK-tur"
+    }
+  ],
+  "grammar_notes": [
+    "Dutch has no single future tense. The everyday default is the plain present tense plus a time word: `Ik bel je later` (I will call you later), `We eten om zeven uur` (we will eat at seven).",
+    "`gaan` plus a base verb expresses a near plan or intention: `Ik ga studeren` (I am going to study). The second verb stays in its base form and moves to the end of the sentence.",
+    "`zullen` plus a base verb is for promises, offers, and predictions: `Ik zal het doen` (I will do it), `Zal ik helpen?` (shall I help?). The base verb also goes to the end.",
+    "`zullen` is irregular: `ik zal`, `jij zult` (also heard as `jij zal`), `hij/zij/het zal`, `wij/jullie/zij zullen`. The form `zou` is its past form and softens a request, but that belongs to a later chapter.",
+    "When a time word or phrase comes first, the verb still has to be second, so the subject moves behind it: `Morgen ga ik...`, not `Morgen ik ga...`. This is the same verb-second rule from the word-order chapter."
+  ],
+  "culture_notes": [
+    "In daily Dutch speech, the plain present tense is by far the most common way to talk about the future. Learners often reach for `zullen` because it looks like English `will`, but a native speaker mostly just says `Ik bel je morgen`.",
+    "`Zal ik...?` is the polite, friendly way to offer help or suggest something together. `Zal ik de deur opendoen?` (shall I open the door?) sounds warm and considerate, which fits the Dutch habit of checking before acting.",
+    "Weather and news reports lean on `zullen` for predictions: `Het zal morgen koud worden` (it will get cold tomorrow). Hearing it in that setting is a good way to get a feel for when `zullen` sounds natural."
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "present tense for the future",
+      "explanation": "Use the normal present-tense verb and let a time word do the work of pointing to the future. This is the default and the one to reach for first. Add a word like `morgen` (tomorrow), `straks` (in a bit), `later` (later), `volgende week` (next week), or a clock time, and the present tense already means the future.",
+      "more_examples": [
+        {
+          "hindi": "Ik kom straks.",
+          "english": "I will come in a bit."
+        },
+        {
+          "hindi": "De trein vertrekt om acht uur.",
+          "english": "The train will leave at eight o'clock."
+        },
+        {
+          "hindi": "Volgende maand begint mijn cursus.",
+          "english": "Next month my course starts."
+        },
+        {
+          "hindi": "We zien elkaar morgen.",
+          "english": "We will see each other tomorrow."
+        }
+      ]
+    },
+    {
+      "skill": "gaan + infinitive for plans",
+      "explanation": "Conjugate `gaan` for the subject (ik ga, jij gaat, hij gaat, wij gaan) and put the second verb at the end in its base form, the infinitive (the base or dictionary form of the verb). This expresses a near plan or intention, much like English `going to`. The base verb never changes shape and always lands at the end of the sentence.",
+      "more_examples": [
+        {
+          "hindi": "Ik ga een huis kopen.",
+          "english": "I am going to buy a house."
+        },
+        {
+          "hindi": "Wat ga jij doen?",
+          "english": "What are you going to do?"
+        },
+        {
+          "hindi": "Zij gaat Nederlands leren.",
+          "english": "She is going to learn Dutch."
+        },
+        {
+          "hindi": "We gaan vanavond een film kijken.",
+          "english": "We are going to watch a film tonight."
+        }
+      ]
+    },
+    {
+      "skill": "zullen + infinitive for promises and offers",
+      "explanation": "Conjugate `zullen` (ik zal, jij zult/zal, hij zal, wij/jullie/zij zullen) and put the base verb at the end. Use it for promises (`Ik zal het doen`), offers and suggestions (`Zal ik...?`, `Zullen we...?`), and predictions (`Het zal regenen`). It is the closest thing to English `will` or `shall`, but in everyday talk it is less common than the plain present tense.",
+      "more_examples": [
+        {
+          "hindi": "Ik zal je later bellen.",
+          "english": "I will call you later."
+        },
+        {
+          "hindi": "Zullen we koffie drinken?",
+          "english": "Shall we drink coffee?"
+        },
+        {
+          "hindi": "Dat zal niet werken.",
+          "english": "That will not work."
+        },
+        {
+          "hindi": "Hij zal het zeker vergeten.",
+          "english": "He will surely forget it."
+        }
+      ]
+    }
+  ],
+  "practice_prompt": "You are a friendly Dutch tutor drilling the three ways to talk about the future. Address the user as `u`. Open with: 'Goedendag! We oefenen vandaag de toekomst. Eerste opdracht: zeg in het Nederlands dat u morgen werkt.' Give one short task at a time, and rotate through all three forms: (1) present tense plus a time word as the default, `Ik werk morgen`, `Volgende week ga ik op vakantie`; (2) `gaan` plus a base verb for plans, with the base verb at the end, `Ik ga koken`; (3) `zullen` plus a base verb for promises, offers, and predictions, `Ik zal het doen`, `Zal ik helpen?`. Across 6 to 8 items, ask the user to translate a sentence, turn a plan into a `gaan` sentence, make an offer with `Zal ik...?`, or fix a wrong sentence. Watch for these mistakes: putting the second verb in the middle instead of the end, conjugating the second verb instead of leaving it as a base form, wrong `zullen` forms (such as `ik zult` or `hij zullen`), and forgetting the verb-second order after a fronted time word (`Morgen ik ga` instead of `Morgen ga ik`). When the user makes a mistake, flag it with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] and name the rule in one short line. Stay in Dutch unless the user asks for English. After 6 to 8 items, end warmly with 'Heel goed gedaan! Tot de volgende keer.'",
+  "theory": {
+    "intro": "Here is a piece of good news: Dutch has no separate future tense to memorize. There is no special set of endings like in some languages. Instead, Dutch talks about the future in three everyday ways. The most common one is the plain present tense with a time word. The other two use a helper verb: `gaan` for plans and `zullen` for promises and predictions. Learn when each one fits and you can talk about tomorrow with confidence.",
+    "sections": [
+      {
+        "heading": "The default: present tense plus a time word",
+        "body": "Start here, because this is what Dutch people use most. You take the **normal present-tense verb** and add a word that points to the future. The verb does not change. The time word does all the work.\n\nCommon time words are `morgen` (tomorrow), `straks` (in a bit), `later` (later), `vanavond` (tonight), `volgende week` (next week), and any clock time like `om acht uur` (at eight o'clock).\n\n- `Ik werk morgen.` means I will work tomorrow.\n- `We eten straks.` means we will eat in a bit.\n- `De film begint om acht uur.` means the film will start at eight o'clock.\n\nOne thing to watch. If the time word comes first, the verb still has to be the second thing in the sentence, so the subject jumps behind it. `Morgen werk ik`, not `Morgen ik werk`. This is the same verb-second rule you already know.",
+        "table": {
+          "caption": "Present tense plus a time word",
+          "columns": [
+            "Dutch",
+            "English",
+            "time word"
+          ],
+          "rows": [
+            [
+              "Ik bel je later.",
+              "I will call you later.",
+              "later"
+            ],
+            [
+              "We vertrekken straks.",
+              "We will leave in a bit.",
+              "straks"
+            ],
+            [
+              "Volgende week kom ik terug.",
+              "Next week I will come back.",
+              "volgende week"
+            ],
+            [
+              "De winkel sluit om zes uur.",
+              "The shop will close at six o'clock.",
+              "om zes uur"
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "tip",
+          "body": "When in doubt, use this one. If the sentence already has a clear time word, plain present tense is the most natural Dutch. You rarely need a special future verb."
+        },
+        "cutting_intro": "Hoi! Mr. Stroopwafel here. The future in Dutch is easier than you think. Most of the time you just use the normal verb and add a time word. Watch.",
+        "quick_check": {
+          "question": "How do you say `I will work tomorrow` in the most natural everyday Dutch?",
+          "options": [
+            "Ik zal morgen werken.",
+            "Ik werk morgen.",
+            "Ik ga morgen te werken."
+          ],
+          "correct_index": 1,
+          "explanation": "Right. `Ik werk morgen` is the default and the most common. The plain present tense plus the time word `morgen` already means the future."
+        }
+      },
+      {
+        "heading": "gaan + a base verb for plans",
+        "body": "The second way uses `gaan` (to go) as a helper. You conjugate `gaan` for the subject, then add a second verb in its base form, the infinitive (the base or dictionary form of the verb). This is very close to English `going to` and it expresses a **plan or intention**.\n\nThe forms of `gaan` are: `ik ga`, `jij gaat`, `hij/zij/het gaat`, `wij gaan`, `jullie gaan`, `zij gaan`.\n\nThe key rule is where the second verb goes. The base verb always travels to the **end** of the sentence and never changes shape.\n\n- `Ik ga koffie drinken.` means I am going to drink coffee. The base verb `drinken` is last.\n- `We gaan verhuizen.` means we are going to move house.\n- `Wat ga jij doen?` means what are you going to do?\n\nNotice that anything else, like `koffie` in the first example, sits between the two verbs.",
+        "examples": [
+          {
+            "hindi": "Ik ga vanavond koken.",
+            "english": "I am going to cook tonight.",
+            "breakdown": "ga = conjugated gaan / koken = base verb at the end"
+          },
+          {
+            "hindi": "We gaan een nieuw huis kopen.",
+            "english": "We are going to buy a new house.",
+            "breakdown": "gaan + the object `een nieuw huis` in the middle + base verb `kopen` last"
+          },
+          {
+            "hindi": "Zij gaat Nederlands leren.",
+            "english": "She is going to learn Dutch.",
+            "breakdown": "gaat for hij/zij/het + base verb `leren` at the end"
+          }
+        ],
+        "callout": {
+          "tone": "warning",
+          "body": "Do not conjugate the second verb. It must stay in its base form. Say `Ik ga koken`, never `Ik ga kook`. And keep that base verb at the very end of the sentence."
+        },
+        "cutting_intro": "Got a plan? Use `gaan` plus a verb. Just remember to park the second verb at the end and leave it in its base form.",
+        "quick_check": {
+          "question": "Which sentence correctly uses `gaan` for a plan?",
+          "options": [
+            "Ik ga kook vanavond.",
+            "Ik ga vanavond koken.",
+            "Ik koken ga vanavond."
+          ],
+          "correct_index": 1,
+          "explanation": "Correct. `Ik ga vanavond koken` keeps the base verb `koken` in its base form and puts it at the end. `kook` would be wrong because the second verb must stay in its base form."
+        }
+      },
+      {
+        "heading": "zullen + a base verb for promises and offers",
+        "body": "The third way uses `zullen` as a helper, plus a base verb at the end. `zullen` is the closest thing Dutch has to English `will` or `shall`. Use it for three jobs: **promises**, **offers or suggestions**, and **predictions**.\n\n`zullen` is irregular, so learn its forms:\n\n- `ik zal`\n- `jij zult` (you will also hear `jij zal` in casual speech)\n- `hij/zij/het zal`\n- `wij zullen`, `jullie zullen`, `zij zullen`\n\nNow the three jobs in action.\n\n- Promise: `Ik zal het morgen doen.` (I will do it tomorrow.)\n- Offer: `Zal ik je helpen?` (Shall I help you?) and `Zullen we gaan?` (Shall we go?)\n- Prediction: `Het zal morgen regenen.` (It will rain tomorrow.)\n\nAs with `gaan`, the base verb goes to the end: `doen`, `helpen`, `gaan`, `regenen`.",
+        "table": {
+          "caption": "zullen conjugated",
+          "columns": [
+            "subject",
+            "form"
+          ],
+          "rows": [
+            [
+              "ik",
+              "zal"
+            ],
+            [
+              "jij / u",
+              "zult (or zal)"
+            ],
+            [
+              "hij / zij / het",
+              "zal"
+            ],
+            [
+              "wij",
+              "zullen"
+            ],
+            [
+              "jullie",
+              "zullen"
+            ],
+            [
+              "zij (they)",
+              "zullen"
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "hindi": "Ik zal je later bellen.",
+            "english": "I will call you later.",
+            "breakdown": "promise / zal + base verb `bellen` at the end"
+          },
+          {
+            "hindi": "Zal ik het raam opendoen?",
+            "english": "Shall I open the window?",
+            "breakdown": "offer / Zal ik...? + base verb `opendoen` last"
+          },
+          {
+            "hindi": "Het zal druk zijn op de markt.",
+            "english": "It will be busy at the market.",
+            "breakdown": "prediction / zal + base verb `zijn` at the end"
+          }
+        ],
+        "callout": {
+          "tone": "note",
+          "body": "`Zal ik...?` and `Zullen we...?` are the warm, polite way to offer help or suggest doing something together. They sound considerate, which is why you hear them often."
+        },
+        "cutting_intro": "For a promise, an offer, or a weather prediction, reach for `zullen`. It is irregular, so let me show you its forms.",
+        "quick_check": {
+          "question": "What is the correct `zullen` form for `jij`?",
+          "options": [
+            "jij zullen",
+            "jij zalt",
+            "jij zult (or zal)"
+          ],
+          "correct_index": 2,
+          "explanation": "Yes. The form for `jij` is `zult`, and in casual speech `jij zal` is also heard. `zullen` is the plural form, used for wij, jullie, and zij."
+        }
+      },
+      {
+        "heading": "Which one should you use?",
+        "body": "Three ways can feel like a lot, so here is a simple guide.\n\n- **Present tense plus a time word** is the default. If a time word makes the future clear, just use it. `Ik werk morgen.` This covers most everyday situations.\n- **`gaan` plus a base verb** is for a plan or intention you have decided on. `We gaan verhuizen.` Think of it as English `going to`.\n- **`zullen` plus a base verb** is for a promise, an offer, or a prediction. `Ik zal het doen.` `Zal ik helpen?` `Het zal regenen.`\n\nA common learner habit is to over-use `zullen` because it looks like English `will`. Resist that. In real Dutch, the plain present tense is far more common. When you are not sure, the present tense plus a time word is almost always safe and natural.",
+        "table": {
+          "caption": "Picking the right form",
+          "columns": [
+            "you want to express",
+            "use",
+            "example"
+          ],
+          "rows": [
+            [
+              "a plain future fact",
+              "present + time word",
+              "Ik kom morgen."
+            ],
+            [
+              "a plan or intention",
+              "gaan + base verb",
+              "Ik ga studeren."
+            ],
+            [
+              "a promise",
+              "zullen + base verb",
+              "Ik zal het doen."
+            ],
+            [
+              "an offer or suggestion",
+              "Zal ik...? / Zullen we...?",
+              "Zal ik helpen?"
+            ],
+            [
+              "a prediction",
+              "zullen + base verb",
+              "Het zal regenen."
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "tip",
+          "body": "When in doubt, use the present tense with a time word. It is the most common, the most natural, and almost never wrong."
+        },
+        "cutting_intro": "Three forms, one simple rule of thumb. Let me sort out which goes where so you never have to guess.",
+        "quick_check": {
+          "question": "You want to offer to carry someone's bag. Which form fits best?",
+          "options": [
+            "Ik draag jouw tas.",
+            "Ik ga jouw tas dragen.",
+            "Zal ik jouw tas dragen?"
+          ],
+          "correct_index": 2,
+          "explanation": "Correct. An offer or suggestion uses `Zal ik...?`. `Zal ik jouw tas dragen?` is the warm, polite way to offer help."
+        }
+      }
+    ],
+    "wrap_up": "Dutch has no single future tense, and that is good news. Reach first for the plain present tense plus a time word, because that is what Dutch people use most. Use `gaan` plus a base verb when you have a plan, like English `going to`. Use `zullen` plus a base verb for promises, offers, and predictions, remembering that it is irregular (ik zal, jij zult, hij zal, wij zullen). In all three, any second verb sits in its base form at the end of the sentence. The phrases below mix the three forms so you can feel which one fits each moment."
+  },
+  "references": [
+    "dutchgrammar.com (Dutch Grammar by Bieneke Berendsen)",
+    "Dutch: A Comprehensive Grammar by Bruce Donaldson (Routledge)",
+    "TaalCompleet A2 (KleurRijker NT2 method)"
+  ]
+}

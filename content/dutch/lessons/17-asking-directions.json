@@ -1,0 +1,162 @@
+{
+  "id": "dutch-asking-directions",
+  "title": "Asking for Directions",
+  "situation": "You stop a stranger on the street to find your way. The person you ask is an adult you don't know, so you use the formal 'u' register throughout.",
+  "skills": [
+    "asking where something is",
+    "understanding directions you get back",
+    "using polite address with strangers",
+    "confirming you understood correctly"
+  ],
+  "phrases": [
+    {
+      "hindi": "Pardon, mag ik u iets vragen?",
+      "english": "Excuse me, may I ask you something?",
+      "context": "The standard polite opener for stopping a stranger. 'Pardon' softens the interruption. 'Mag ik' = may I (asking permission, more courteous than jumping straight to the question). Use this before asking anything of someone you don't know.",
+      "pronunciation": "PAR-don, mach ik u EETS VRAH-chen?"
+    },
+    {
+      "hindi": "Waar is het station?",
+      "english": "Where is the train station?",
+      "context": "'Waar is' + place = the simplest way to ask for a location. 'Het station' = the train station. Swap in: 'de Albert Heijn', 'het gemeentehuis' (town hall), 'het postkantoor' (post office), 'de apotheek' (pharmacy).",
+      "pronunciation": "waar IS het sta-SYON?"
+    },
+    {
+      "hindi": "Hoe kom ik bij de Albert Heijn?",
+      "english": "How do I get to the Albert Heijn?",
+      "context": "'Hoe kom ik bij' + place = how do I get to. Use 'bij' for shops, buildings, and named places. For streets use 'op' (Hoe kom ik op de Kerkstraat?). This is more open-ended than 'Waar is' and invites a fuller answer.",
+      "pronunciation": "hoo KOM ik bay de AL-bert HAYN?"
+    },
+    {
+      "hindi": "Is het ver? Is het hier in de buurt?",
+      "english": "Is it far? Is it nearby?",
+      "context": "'Ver' = far. 'In de buurt' = in the neighborhood, nearby. Good follow-up questions after you get the location. If someone says 'Nee, het is vlakbij' (right nearby) or 'Ja, het is een eindje lopen' (it's a bit of a walk), you can decide whether to walk or take a bus.",
+      "pronunciation": "is het VER? is het HEER in de BURT?"
+    },
+    {
+      "hindi": "Ga rechtdoor, dan linksaf, dan rechtsaf.",
+      "english": "Go straight ahead, then turn left, then turn right.",
+      "context": "Core direction words you will hear back: 'rechtdoor' = straight ahead, 'linksaf' = turn left, 'rechtsaf' = turn right. 'Sla linksaf' and 'sla rechtsaf' are alternatives (sla = turn, from 'slaan'). 'Dan' = then (sequence). Learn these three words and you can follow almost any direction.",
+      "pronunciation": "cha RECHT-door, dan LINKS-af, dan RECHTS-af."
+    },
+    {
+      "hindi": "De eerste straat rechts, de tweede straat links.",
+      "english": "The first street on the right, the second street on the left.",
+      "context": "Ordinal numbers (first, second, third) with streets: 'de eerste straat' = the first street, 'de tweede straat' = the second street, 'de derde straat' = the third street. Combined with 'rechts' (on the right) or 'links' (on the left). Often said without 'sla' in casual speech.",
+      "pronunciation": "de EER-ste straat RECHTS, de TWAY-de straat LINKS."
+    },
+    {
+      "hindi": "Het is naast de bibliotheek, tegenover het park, op de hoek.",
+      "english": "It is next to the library, opposite the park, on the corner.",
+      "context": "Landmark prepositions (words that place things relative to something): 'naast' = next to, 'tegenover' = opposite/across from, 'op de hoek' = on the corner. These are the three most useful. Also handy: 'achter' (behind), 'voor' (in front of), 'tussen' (between).",
+      "pronunciation": "het is NAAST de bib-lee-oh-TAYK, TAY-chen-OH-ver het PARK, op de HOOK."
+    },
+    {
+      "hindi": "Kunt u het op de kaart aanwijzen?",
+      "english": "Could you point it out on the map?",
+      "context": "'Kunt u' = could you (polite question with 'u'). 'Aanwijzen' = to point out (separable verb: the prefix 'aan' jumps to the end). Very useful when you have Google Maps open on your phone. Most Dutch people are happy to point.",
+      "pronunciation": "kunt u het op de KAART AAN-way-zen?"
+    },
+    {
+      "hindi": "Moet ik hier linksaf?",
+      "english": "Do I turn left here?",
+      "context": "A good confirmation check after receiving directions. 'Moet ik' = do I / must I. Substitute 'linksaf' with 'rechtsaf', 'rechtdoor', or a landmark: 'Moet ik bij de kerk rechtsaf?' (Do I turn right at the church?). A quick check prevents a long detour.",
+      "pronunciation": "moot ik HEER LINKS-af?"
+    },
+    {
+      "hindi": "Dank u wel, fijne dag!",
+      "english": "Thank you very much, have a nice day!",
+      "context": "'Dank u wel' = formal thank you (matches the 'u' register you have used throughout). 'Dank je wel' is the informal version. 'Fijne dag' = nice day (short for 'een fijne dag nog'). A warm, complete closing. You will often hear 'U ook!' (you too!) back.",
+      "pronunciation": "dank u WEL, FAY-ne DACH!"
+    }
+  ],
+  "grammar_notes": [
+    "'Hoe kom ik bij...?' is the standard question form (question word) for getting directions. 'Hoe' = how, 'kom ik' = do I come/get (inverted word order because the question word comes first, a rule called verb-second or V2). Use 'bij' + named place: 'bij de supermarkt', 'bij het station'. For streets use 'op': 'Hoe kom ik op de Kerkstraat?'",
+    "Imperative directions (command forms given by the person helping you): 'Ga rechtdoor' (go straight), 'Sla linksaf' (turn left), 'Sla rechtsaf' (turn right), 'Neem de eerste straat links' (take the first street on the left). The base form (dictionary form) of the verb is used directly. No ending is added for 'you' singular commands.",
+    "Prepositions of place: 'naast' (next to), 'tegenover' (opposite), 'op de hoek' (on the corner), 'voor' (in front of), 'achter' (behind). These follow the noun directly without any case change. Dutch no longer inflects nouns for case, so 'naast het station' and 'voor het station' stay the same form.",
+    "The formal register with 'u' vs informal 'je/jij': with a stranger on the street, 'u' is the respectful choice. It shows you are not assuming familiarity. 'Kunt u...?' and 'Dank u wel' keep that register consistent. If the person is clearly young (student-age), 'je' is acceptable, but 'u' is never wrong with a stranger.",
+    "'Is het ver?' vs 'Is het dichtbij?' (Is it nearby?): opposite pairs worth knowing. 'Ver' = far, 'dichtbij' = close/nearby. A confirming answer is 'Het is vlakbij' (it is right nearby) or 'Het is een eindje lopen' (it is a short walk, lit. a little bit of walking)."
+  ],
+  "culture_notes": [
+    "Dutch people are generally direct and helpful to strangers asking for directions. Many will speak English if they hear an accent, but trying in Dutch is appreciated and often keeps the conversation going. Do not worry about an imperfect sentence.",
+    "The Netherlands is a cycling-first country. City layouts often have separate fietspaden (cycle paths) running alongside roads. When a local says 'linksaf', they may mean at the cycle-path junction rather than the car junction. If you are on foot, clarify 'te voet' (on foot) if needed.",
+    "Google Maps ('Google Maps gebruiken') is completely normal and unrude in the Netherlands. Showing your phone screen and asking 'Kunt u het aanwijzen?' is a common and accepted way to confirm directions without needing to remember a long sequence of turns.",
+    "Dutch streets often have clear signage and the famed grid-like canal-ring layout in Amsterdam can be confusing: streets curve, names change at each block, and the canals all look similar. Short, landmark-based directions (bij de kerk, op de hoek van de Kalverstraat) are more reliable than counting streets."
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "Asking where something is",
+      "explanation": "Two main patterns: 'Waar is' + place (simple location question) and 'Hoe kom ik bij' + place (how do I get to). Both work in any Dutch city. Start with 'Pardon, mag ik u iets vragen?' to politely interrupt. Finish with 'Dank u wel' to close respectfully.",
+      "more_examples": [
+        {
+          "hindi": "Waar is de dichtstbijzijnde bushalte?",
+          "english": "Where is the nearest bus stop?"
+        },
+        {
+          "hindi": "Hoe kom ik bij het ziekenhuis?",
+          "english": "How do I get to the hospital?"
+        },
+        {
+          "hindi": "Pardon, weet u waar de apotheek is?",
+          "english": "Excuse me, do you know where the pharmacy is?"
+        },
+        {
+          "hindi": "Is er een supermarkt in de buurt?",
+          "english": "Is there a supermarket nearby?"
+        }
+      ]
+    },
+    {
+      "skill": "Understanding the directions you get back",
+      "explanation": "Listen for the core direction words: 'rechtdoor' (straight), 'linksaf' (left), 'rechtsaf' (right), ordinals like 'eerste/tweede straat' (first/second street), and landmarks like 'naast', 'tegenover', 'op de hoek'. If you miss something, ask 'Kunt u dat herhalen?' (could you repeat that?) or 'Moet ik hier linksaf?' to confirm one step at a time.",
+      "more_examples": [
+        {
+          "hindi": "Ga rechtdoor tot aan de stoplichten.",
+          "english": "Go straight ahead to the traffic lights."
+        },
+        {
+          "hindi": "Sla bij de kerk rechtsaf.",
+          "english": "Turn right at the church."
+        },
+        {
+          "hindi": "Het is op de hoek van de Hoofdstraat.",
+          "english": "It is on the corner of the Hoofdstraat."
+        },
+        {
+          "hindi": "Na de brug is het aan uw linkerhand.",
+          "english": "After the bridge it is on your left."
+        }
+      ]
+    },
+    {
+      "skill": "Confirming and checking understanding",
+      "explanation": "Do not just nod and walk away. A quick confirmation question saves a long detour. Use 'Moet ik hier...?' to check a specific turn. 'Kunt u het op de kaart aanwijzen?' works well with your phone. 'Dus ik ga rechtdoor en dan linksaf?' (So I go straight and then left?) repeats the sequence back so the person can correct you.",
+      "more_examples": [
+        {
+          "hindi": "Moet ik bij het station rechtsaf?",
+          "english": "Do I turn right at the station?"
+        },
+        {
+          "hindi": "Dus ik ga over de brug en dan rechtdoor?",
+          "english": "So I go over the bridge and then straight on?"
+        },
+        {
+          "hindi": "Kunt u dat herhalen, alstublieft?",
+          "english": "Could you repeat that, please?"
+        },
+        {
+          "hindi": "Hoeveel minuten lopen is het?",
+          "english": "How many minutes' walk is it?"
+        }
+      ]
+    }
+  ],
+  "practice_prompt": "You are Piet, a friendly middle-aged Dutch man on his lunch break near the Marktplein in a Dutch town. You have just been stopped by a learner asking for directions to the station. Use formal 'u' throughout because the person approached you as a stranger. Open verbatim with: 'Maar natuurlijk! Het station? Dat is niet zo moeilijk, hoor.' Then give clear, step-by-step directions using the lesson's words: ga rechtdoor, sla linksaf bij de kerk, dan is het op de hoek tegenover de bibliotheek. Keep each direction short and concrete. If the learner asks a follow-up or seems uncertain, offer to point it out on their map. Weave in 'Is het ver?' or confirm 'Ja, het is een eindje lopen, ongeveer vijf minuten.' Flag mistakes with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]], especially wrong direction words, 'je' instead of 'u' with you, or dropped verb-second word order. Keep the exchange to 6-8 turns and close warmly with 'Succes! Goede reis!' when the learner thanks you.",
+  "level": "A1",
+  "exam_targeted": false,
+  "references": [
+    "Naar Nederland (NT2 inburgering programme)",
+    "TaalCompleet A1 (KleurRijker NT2 method)",
+    "Bart de Pau, learndutch.org (NT2 courses)"
+  ]
+}

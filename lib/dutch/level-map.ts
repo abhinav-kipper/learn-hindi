@@ -4,10 +4,13 @@ export const ALL_LEVELS: Level[] = ['A1', 'A2', 'B1']
 
 const LEVEL_MAP: Record<string, Level> = {
   // Ground-up conversational starters (A1)
-  'dutch-first-words':    'A1',
-  'dutch-small-talk':     'A1',
-  'dutch-family-home':    'A1',
-  'dutch-daily-routine':  'A1',
+  'dutch-first-words':       'A1',
+  'dutch-small-talk':        'A1',
+  'dutch-family-home':       'A1',
+  'dutch-daily-routine':     'A1',
+  'dutch-asking-directions': 'A1',
+  'dutch-phone-basics':      'A1',
+  'dutch-making-plans':      'A2',
 
   // Existing Dutch conversational lessons (ID = JSON `id` field, dutch- prefixed)
   'dutch-supermarket':    'A1',
@@ -15,13 +18,14 @@ const LEVEL_MAP: Record<string, Level> = {
   'dutch-cafe':           'A1',
   'dutch-doctor':         'A1',
   'dutch-transport':      'A1',
+  'dutch-restaurant':     'A2',
 
-  // New exam-targeted lessons (A2)
+  // Exam-targeted lessons (A2)
   'dutch-gemeente':         'A2',
   'dutch-housing-problem':  'A2',
   'dutch-bank':             'A2',
 
-  // New exam-targeted lessons (B1)
+  // Exam-targeted lessons (B1)
   'dutch-huisarts-call':   'B1',
   'dutch-job-interview':   'B1',
   'dutch-primary-school':  'B1',
@@ -36,8 +40,11 @@ const LEVEL_MAP: Record<string, Level> = {
   'simple-sentences': 'A1',
   'de-het':         'A1',
   'word-order':     'A2',
+  'connectors':     'A2',
   'past-tense':     'A2',
+  'future':         'A2',
   'modals':         'A2',
+  'comparatives':   'A2',
 }
 
 export function getLevel(id: string): Level {

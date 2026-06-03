@@ -1,0 +1,141 @@
+{
+  "id": "dutch-phone-basics",
+  "title": "A Phone Call",
+  "situation": "You call a friend to make plans, or a friend's housemate picks up. You also practice what to say when someone is not home, when the line is bad, and how to leave a message.",
+  "level": "A1",
+  "exam_targeted": false,
+  "skills": [
+    "answering and opening a call with 'Met [naam]'",
+    "asking to speak to someone",
+    "leaving a message or asking for a callback",
+    "handling a bad connection",
+    "closing a call warmly"
+  ],
+  "phrases": [
+    {
+      "hindi": "Met Anna.",
+      "english": "Anna speaking. (answering the phone)",
+      "context": "The standard Dutch phone answer. You say your OWN name, not 'hallo'. This surprises many learners. If a stranger calls you can say 'Met wie spreek ik?' (who am I speaking with?) before giving your name, but in practice most Dutch people just say 'Met [naam].' and wait. Informal: 'Hoi, met Anna.'",
+      "pronunciation": "met AN-na."
+    },
+    {
+      "hindi": "Hallo, met Tom. Spreek ik met Sanne?",
+      "english": "Hi, it's Tom. Am I speaking to Sanne?",
+      "context": "'Spreek ik met...?' confirms you reached the right person. Use it when the voice is unfamiliar or when a housemate might pick up. You lead with your own name first: 'Met Tom.' then the question.",
+      "pronunciation": "HA-loh, met TOM. SPRAYK ik met SAN-ne?"
+    },
+    {
+      "hindi": "Kan ik Sanne spreken?",
+      "english": "Can I speak to Sanne?",
+      "context": "'Iemand spreken' (to speak to someone) is the polite standard phrase when asking for a specific person. Slightly more formal than 'Is Sanne er?' (is Sanne there?), which is also fine between friends.",
+      "pronunciation": "kan ik SAN-ne SPRAY-ken?"
+    },
+    {
+      "hindi": "Een moment, ik geef je door.",
+      "english": "One moment, I'll put you through.",
+      "context": "'Doorverbinden' or the shorter 'doorgeven' = to put through, to transfer a call. 'Ik geef je door' is the everyday spoken form. In formal or work contexts: 'Ik verbind u door.'",
+      "pronunciation": "uhn mo-MENT, ik CHAYF ye DOR."
+    },
+    {
+      "hindi": "Ze is er nu niet. Kan ik een bericht achterlaten?",
+      "english": "She's not here right now. Can I leave a message?",
+      "context": "'Er niet zijn' = to not be there / not be available. 'Een bericht achterlaten' = to leave a message. 'Achterlaten' is a separable verb (the base or dictionary form is 'achterlaten', but in a sentence it splits: 'ik laat een bericht achter').",
+      "pronunciation": "ze is er nu NEET. kan ik uhn be-RICHT ACH-ter-LAA-ten?"
+    },
+    {
+      "hindi": "Kun je hem vragen mij terug te bellen?",
+      "english": "Can you ask him to call me back?",
+      "context": "'Terugbellen' = to call back. It is a separable verb: in a sentence 'hij belt mij terug' (he calls me back). In the infinitive after 'te' it stays joined: 'terug te bellen'. This construction 'vragen iemand iets te doen' (to ask someone to do something) is useful beyond the phone.",
+      "pronunciation": "kun ye HEM VRAY-chen may te-RUCH te BEL-len?"
+    },
+    {
+      "hindi": "Ik bel je straks terug.",
+      "english": "I'll call you back in a bit.",
+      "context": "'Straks' = in a little while, shortly (within the same day). 'Zo meteen' is even sooner (in a few minutes). 'Terugbellen' splits in the sentence: 'ik bel terug' (no object) or 'ik bel je terug' (with object).",
+      "pronunciation": "ik BEL ye STRAKS te-RUCH."
+    },
+    {
+      "hindi": "Je valt weg. Ik versta je slecht.",
+      "english": "You're breaking up. I can't hear you well.",
+      "context": "'Wegvallen' = to drop out (of a call), to cut off. In a sentence it splits: 'je valt weg'. 'Versta' comes from 'verstaan' (to understand by hearing), not 'begrijpen' (to understand by meaning). On a bad line, Dutch people also say 'Kun je dat herhalen?' (can you repeat that?) or 'Kun je harder praten?' (can you speak louder?).",
+      "pronunciation": "ye VALT wech. ik ver-STAA ye SLECHT."
+    },
+    {
+      "hindi": "Ik bel je later nog een keer.",
+      "english": "I'll call you again later.",
+      "context": "'Nog een keer' = one more time, again. A natural way to close when the connection is bad or the person is not available. Less abrupt than just hanging up.",
+      "pronunciation": "ik BEL ye LAA-ter noch uhn KAYR."
+    },
+    {
+      "hindi": "Tot horens! Doei!",
+      "english": "Speak soon! Bye! (phone sign-off)",
+      "context": "'Tot horens' = until we hear each other (lit.), a phone-specific goodbye. More common in everyday use: 'Doei!' (very casual), 'Dag!' (slightly warmer), or just 'Tot snel!' (see you soon). 'Doei doei' said twice is completely normal.",
+      "pronunciation": "tot HO-rens! DOO-ee!"
+    }
+  ],
+  "grammar_notes": [
+    "The 'Met [naam]' answering convention: Dutch phone etiquette calls for saying your own name when you pick up, not 'hallo' on its own. The pattern is 'Met [naam].' You also open the call the same way: 'Hallo, met Tom.' This is the single most important thing to learn for Dutch phone calls, and it catches almost every learner off guard.",
+    "Separable verbs on the phone: several phone verbs split in a sentence. 'Achterlaten' (to leave behind / to leave a message): 'ik laat een bericht achter'. 'Terugbellen' (to call back): 'hij belt je terug'. 'Doorverbinden' (to put through / transfer): 'ik verbind u door'. The two parts go to the front and back of the clause.",
+    "'Spreek ik met...?' (am I speaking with...?) vs 'Is [naam] er?' (is [name] there?): both are correct. 'Spreek ik met' is slightly more careful, good when you are not sure who picked up. 'Is Sanne er?' is the most natural, relaxed form between friends.",
+    "Je vs u on the phone: with friends and peers use 'je/jij'. With a business, a service desk, or an older person you do not know well, use 'u'. The Dutch are relaxed about this, but starting with 'u' with a stranger is never wrong and you can follow their lead.",
+    "'Verstaan' vs 'begrijpen': on a bad line you say 'ik versta je slecht' (I cannot hear/catch your words). You would only say 'ik begrijp je niet' if the words came through clearly but the meaning was unclear. The distinction matters on the phone."
+  ],
+  "culture_notes": [
+    "Dutch people answer with their name, not just 'hallo'. If you call someone and they say 'Met Jan', you know immediately you reached the right person. Business and formal calls follow the same rule: 'ABN AMRO, u spreekt met Mirjam de Boer.'",
+    "Voicemail ('de voicemail') is common but many Dutch people dislike leaving long messages. Short and clear: your name, your number, and one sentence about why you called. 'Hoi, met Tom, kun je me even terugbellen? Mijn nummer is...' is the standard structure.",
+    "Making appointments by phone is still very normal in the Netherlands, especially for the huisarts (GP), gemeentehuis (town hall), and tradespeople. Being ready with your name, the reason for your call, and available times gets you through quickly.",
+    "The Dutch are direct on the phone. There is no long warm-up before the reason for the call. State your name, then the point: 'Met Tom, ik bel over het feest van vrijdag.' Small talk comes after the business, not before."
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "Starting a phone call",
+      "explanation": "Open with your name on both sides: the person answering says 'Met [naam]', the caller says 'Hallo, met [naam]'. Then check you have the right person ('Spreek ik met...?' or 'Is [naam] er?') and state your reason briefly. The Dutch expect the reason early.",
+      "more_examples": [
+        {
+          "hindi": "Hallo, met Lisa. Is David er?",
+          "english": "Hi, it's Lisa. Is David there?"
+        },
+        {
+          "hindi": "Met Pieter. Ik bel over ons plan voor zaterdag.",
+          "english": "It's Pieter. I'm calling about our plan for Saturday."
+        },
+        {
+          "hindi": "Spreek ik met de moeder van Emma?",
+          "english": "Am I speaking with Emma's mother?"
+        },
+        {
+          "hindi": "Goedemiddag, met de klantenservice van Bol. Hoe kan ik u helpen?",
+          "english": "Good afternoon, customer service at Bol. How can I help you?"
+        }
+      ]
+    },
+    {
+      "skill": "Leaving a message and handling a bad line",
+      "explanation": "When someone is not available: 'Ze is er niet, kan ik een bericht achterlaten?' When the connection is poor: 'Je valt weg' or 'Ik versta je slecht.' Wrap up a failed call cleanly: 'Ik bel je later nog een keer.'",
+      "more_examples": [
+        {
+          "hindi": "Kunt u hem zeggen dat ik heb gebeld?",
+          "english": "Could you tell him that I called?"
+        },
+        {
+          "hindi": "Mijn nummer is 06-12345678, hij kan me bereiken tot zes uur.",
+          "english": "My number is 06-12345678, he can reach me until six o'clock."
+        },
+        {
+          "hindi": "Je verbreekt steeds. Zal ik opnieuw bellen?",
+          "english": "You keep cutting out. Shall I call again?"
+        },
+        {
+          "hindi": "Kun je iets harder praten? Ik hoor je nauwelijks.",
+          "english": "Can you speak a bit louder? I can barely hear you."
+        }
+      ]
+    }
+  ],
+  "practice_prompt": "You are Bas, a Dutch guy sharing a student house with Tom. The user is calling to speak to Tom. You pick up. Use informal 'je' throughout. Open with: 'Met Bas.' Then wait for the caller. If they ask for Tom, explain he is not home right now but will be back around seven. Ask if you can take a message. If they want Tom to call back, ask for their name and number. Weave in natural Dutch filler ('een momentje', 'ik zeg het hem', 'geen probleem'). If the line sounds bad, comment on it: 'Hé, je valt een beetje weg.' After the message is taken, close warmly: 'Oké, ik geef het door. Tot horens!' Keep the conversation to 6-8 turns. Flag errors with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]. Pay special attention to separable-verb splitting ('ik laat een bericht achter', not 'ik achterlaat'), the 'Met [naam]' convention, and the difference between 'verstaan' and 'begrijpen' on a bad line.",
+  "references": [
+    "Naar Nederland (NT2 inburgering programme)",
+    "TaalCompleet A1 (KleurRijker NT2 method)",
+    "Taalthuis.nl (free NT2 course)"
+  ]
+}
