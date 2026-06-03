@@ -612,7 +612,14 @@ Run tests: `npx vitest run` (or `npx vitest` for watch mode)
 ## Backlog (not yet implemented)
 
 ### High priority
-1. **Vercel preview deploys** — Link the GitHub repo to Vercel so every PR
+1. **Cross-device progress sync** (parked 2026-06-03 — design agreed, not built). Today all progress is local-only `localStorage`, so it can silently vanish on browser/iOS data-eviction or when switching devices (this bit the user after the offline-cache work, though caching wasn't the cause — there's just no backup). Add optional sync so progress survives across devices.
+   - **Backend:** Supabase (chosen by user). One table e.g. `sync(key text primary key, data jsonb, updated_at timestamptz)`. User sets up the project + adds `SUPABASE_URL` + a service/anon key as Vercel env vars (never commit keys). API route `app/api/sync/route.ts` (GET fetch blob by key, PUT upsert).
+   - **Identity: DECISION STILL OPEN.** Recommended = a "sync code" (a generated passphrase like `chai-marigold-otter-37` entered on each device, no email/login; data stored under a hash of the code; pseudonymous). Alternative = real email accounts (heavier, against the no-auth ethos). Confirm before building.
+   - **Merge = smart-merge, never last-write-wins:** union of `completedLessons`/favorites/mistakes/seen-lessons/vocab sets, max of streak + counters + `todayActiveMs`, newest-by-timestamp for profile/settings. So neither device loses progress.
+   - **Scope:** `lib/sync.ts` (snapshot all `${prefix}-*` + global `hindi-user-profile` keys → blob; restore; merge), `app/api/sync/route.ts` (Supabase), Settings "sync" section (generate/enter code, "Sync now", last-synced time, on/off), auto-sync on app open + on background (`visibilitychange`). TDD the merge logic.
+   - **Note:** this is the only real protection against the local-only data-loss risk; everything else (offline cache) is orthogonal.
+
+2. **Vercel preview deploys** — Link the GitHub repo to Vercel so every PR
    gets a preview URL automatically. Costs nothing; saves needing the CLI.
 
 ### Medium priority
