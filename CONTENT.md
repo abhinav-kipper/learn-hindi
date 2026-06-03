@@ -214,7 +214,7 @@ Step-by-step for adding a new lesson:
 - ~~**No level markers** — no A1/A2/B1 progression~~ — RESOLVED for Dutch (Lesson type has `level?` field; all Dutch lessons tagged via JSON + `lib/dutch/level-map.ts`). Hindi has no CEFR system intentionally.
 - ~~**Theory examples had no TTS playback**~~ — RESOLVED 2026-05-27. Every `ExampleBlock` in `components/lesson/TheoryView.tsx` now has a hear-it play button, locale-aware via `useLanguage().config.ttsLocale`. Applies to all 16 foundations.
 - **Audio quality (🚧 in progress)** — runtime audio uses Google `/api/tts` (robotic, weak on isolated sounds). An ElevenLabs pre-render pipeline is built (`scripts/generate-audio.mjs` → static mp3s under `public/audio/`, live TTS as fallback) but not yet generated — needs a fresh session with open network + 3 voice IDs (Dutch-female for Sounds, Dutch-male for Mr. Stroopwafel, Hindi-female for Chaina). See the CLAUDE.md "🚧 IN PROGRESS: ElevenLabs natural voices" handoff.
-- **Scope is still growing** — Hindi: 10 situations + 9 foundations + 100 vocab + 5 stories. Dutch: 11 lessons + 7 foundations + 100 KNM + 10 Lezen texts + 10 Luisteren clips + an 8-stage from-zero "Sounds" pronunciation course (`content/dutch/pronunciation-course.json`, loader `lib/dutch/pronunciation.ts`). Vocab expansion planned to ~300 via `scripts/generate-vocab.mjs` (Gemini-drafted, user-reviewed). The grow-vs-polish balance is currently leaning grow.
+- **Scope is still growing** — Hindi: 10 situations + 9 foundations + 100 vocab + 5 stories. Dutch: 15 lessons (4 ground-up conversational + 5 casual + 6 exam-targeted) + 11 foundations (8 A1 + 3 A2) + 100 KNM + 10 Lezen texts + 10 Luisteren clips + an 8-stage from-zero "Sounds" pronunciation course (`content/dutch/pronunciation-course.json`, loader `lib/dutch/pronunciation.ts`). Vocab expansion planned to ~300 via `scripts/generate-vocab.mjs` (Gemini-drafted, user-reviewed). The grow-vs-polish balance is currently leaning grow.
 
 ## Loading
 
@@ -229,8 +229,8 @@ Hindi:
 - `lib/stories-progress.ts` — Hindi-stories-read tracking (`learn-hindi:hindi-stories-read`)
 
 Dutch:
-- `lib/dutch/lessons.ts` — imports all 11 Dutch lesson JSONs (5 casual + 6 exam-targeted)
-- `lib/dutch/foundations.ts` — imports 7 Dutch grammar foundations
+- `lib/dutch/lessons.ts` — imports all 15 Dutch lesson JSONs (4 ground-up conversational A1 + 5 casual + 6 exam-targeted)
+- `lib/dutch/foundations.ts` — imports 11 Dutch grammar foundations (8 A1 + 3 A2), ordered ground-up (pronouns+zijn/hebben first)
 - `lib/dutch/knm.ts` — KNM loader + drill draw + scoring + attempt history (TDD'd, 12 tests)
 - `lib/dutch/lezen.ts` — Lezen loader + tier filter + 5-text mock draw + scoring (TDD'd, 12 tests)
 - `lib/dutch/luisteren.ts` — Luisteren (Listening) loader + `buildAudioScript` (TTS) + tier filter + 5-clip mock draw + scoring (TDD'd, 14 tests). Content: `content/dutch/luisteren.json` — 10 clips (4 A1 / 4 A2 / 2 B1), monologues + dialogues, each `lines[]` + 4 bilingual MCQs. Audio is device TTS (no native recordings).

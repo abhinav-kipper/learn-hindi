@@ -1,0 +1,325 @@
+{
+  "id": "negation",
+  "title": "Saying No: niet & geen",
+  "situation": "Foundation: how to say not, no, and none in Dutch using niet and geen",
+  "level": "A1",
+  "exam_targeted": false,
+  "skills": [
+    "geen (negating nouns)",
+    "niet (negating everything else)",
+    "placement of niet",
+    "choosing geen or niet"
+  ],
+  "phrases": [
+    {
+      "hindi": "Ik heb geen geld.",
+      "english": "I have no money. / I don't have any money.",
+      "context": "Use `geen` to negate a noun that has no article or an indefinite one. Money is uncountable here, so it's `geen`, never `niet`.",
+      "pronunciation": "ik HEP chayn CHELT"
+    },
+    {
+      "hindi": "Ik heb geen auto.",
+      "english": "I don't have a car.",
+      "context": "`geen` means 'not a' in one word. Dutch does not say 'niet een auto'; the negated indefinite noun always takes `geen`.",
+      "pronunciation": "ik HEP chayn OW-toh"
+    },
+    {
+      "hindi": "Er is geen brood.",
+      "english": "There is no bread.",
+      "context": "`Er is geen ...` is the everyday way to say 'there is no ...'. Bread has no article here, so `geen` does the negating.",
+      "pronunciation": "er IS chayn BROHT"
+    },
+    {
+      "hindi": "Ik werk niet.",
+      "english": "I don't work.",
+      "context": "To negate a verb, use `niet`. In a short clause it sits at the very end: subject, verb, then `niet`.",
+      "pronunciation": "ik VERK NEET"
+    },
+    {
+      "hindi": "Het is niet duur.",
+      "english": "It is not expensive.",
+      "context": "To negate an adjective, put `niet` directly in front of it: `niet duur`, `niet groot`, `niet ver`.",
+      "pronunciation": "het IS neet DUUR"
+    },
+    {
+      "hindi": "Ik ken die man niet.",
+      "english": "I don't know that man.",
+      "context": "`die man` is a definite noun (a specific man), so you negate with `niet`, not `geen`. The `niet` lands at the end of the clause.",
+      "pronunciation": "ik KEN dee MAN neet"
+    },
+    {
+      "hindi": "Ik ga niet naar huis.",
+      "english": "I'm not going home.",
+      "context": "`niet` goes in front of the prepositional phrase it negates: `niet naar huis`, `niet in Amsterdam`.",
+      "pronunciation": "ik CHA neet naar HOWS"
+    },
+    {
+      "hindi": "Nee, dank je. Ik wil geen koffie.",
+      "english": "No, thank you. I don't want any coffee.",
+      "context": "`nee` is the word 'no' you answer with. The negation inside a sentence is still `geen` or `niet`: here `geen koffie` because coffee is an indefinite noun.",
+      "pronunciation": "NAY, dank ye. ik VIL chayn KOH-fee"
+    }
+  ],
+  "grammar_notes": [
+    "`geen` negates an indefinite or article-less noun. It replaces both the article and the negation in one word: 'een auto' becomes 'geen auto', and 'geld' becomes 'geen geld'.",
+    "`niet` negates everything that is not an indefinite noun: verbs, adjectives, adverbs, definite nouns (with de/het/die/deze/mijn), and prepositional phrases.",
+    "Placement of `niet`: it goes at the end of a simple clause when it negates the whole action ('Ik begrijp het niet'), but directly in front of an adjective, place, or time word when it negates just that ('niet duur', 'niet hier', 'niet vandaag').",
+    "Decision rule: ask 'am I negating an indefinite or article-less noun?' If yes, use `geen`. If no, use `niet`. That single question covers almost every case.",
+    "`nee` is the answer-word 'no' and never goes inside a sentence to negate it. Don't confuse it with `niet`/`geen`: you say 'Nee, ik heb geen tijd', not 'Nee, ik heb nee tijd'."
+  ],
+  "culture_notes": [
+    "Dutch people are famously direct, so a plain 'nee' is normal and not considered rude. You don't need to soften every refusal the way English speakers often do.",
+    "To be polite while still saying no, pair `nee` with a small phrase: 'Nee, dank je' (no, thanks) or 'Nee, liever niet' (no, I'd rather not). The directness stays; the warmth comes from tone, not extra words.",
+    "'Nee, hoor' is a very common friendly way to say no. The little word `hoor` softens it and signals there's no problem, roughly 'no, don't worry'."
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "geen (negating nouns)",
+      "explanation": "Use `geen` when you negate a noun that is indefinite ('een ...') or has no article at all. It swallows the article and the negation together, so 'een hond' becomes 'geen hond' and 'tijd' becomes 'geen tijd'. Never use `niet een`.",
+      "more_examples": [
+        {
+          "hindi": "Ik heb geen tijd.",
+          "english": "I don't have time. / I have no time."
+        },
+        {
+          "hindi": "Wij hebben geen kinderen.",
+          "english": "We don't have children."
+        },
+        {
+          "hindi": "Er is geen probleem.",
+          "english": "There is no problem."
+        },
+        {
+          "hindi": "Zij heeft geen broer.",
+          "english": "She doesn't have a brother."
+        }
+      ]
+    },
+    {
+      "skill": "niet (negating the rest)",
+      "explanation": "Use `niet` for everything that isn't an indefinite noun: verbs, adjectives, adverbs, definite nouns, and prepositional phrases. It sits at the end of a short clause for whole-action negation, or right before the word it targets.",
+      "more_examples": [
+        {
+          "hindi": "Ik begrijp het niet.",
+          "english": "I don't understand it."
+        },
+        {
+          "hindi": "Het weer is niet goed.",
+          "english": "The weather is not good."
+        },
+        {
+          "hindi": "Hij woont niet in Utrecht.",
+          "english": "He doesn't live in Utrecht."
+        },
+        {
+          "hindi": "Ik ken jouw zus niet.",
+          "english": "I don't know your sister."
+        }
+      ]
+    }
+  ],
+  "practice_prompt": "You are a friendly Dutch tutor drilling the choice between `geen` and `niet`, one item at a time. Address the user as 'je'. Open with: 'Hoi! We oefenen vandaag geen of niet. Eerste zin: maak ontkennend: \\'Ik heb een fiets.\\'' Give exactly one task per turn: ask the user to make a sentence negative, fix a wrong negation, or choose between geen and niet for a noun. Start easy (indefinite nouns, so `geen`), then mix in verbs and adjectives (so `niet`), then definite nouns and prepositional phrases. Watch for the classic mistakes: using `niet een` instead of `geen`, using `geen` with a definite noun ('geen die man'), and putting `niet` in the wrong spot. When the user errs, flag it with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] and name the rule in one short line. Keep your turns brief and stay in Dutch unless the user asks for English. After 6 to 8 items, close with 'Heel goed! Tot de volgende keer.'",
+  "references": [
+    "Dutch Grammar (Oosten/Donaldson), Routledge, negation chapter",
+    "NT2 A1 Inburgering syllabus, niet/geen module"
+  ],
+  "theory": {
+    "intro": "Dutch has two ways to say 'not', and which one you pick depends entirely on what you're negating. Use `geen` in front of a noun that has no article or an indefinite one. Use `niet` for everything else. Learn that one split and you can make almost any Dutch sentence negative correctly.",
+    "sections": [
+      {
+        "heading": "geen: negating nouns",
+        "body": "`geen` is the word you reach for when you want to negate a **noun** that is indefinite or has no article at all. Think of it as a single word that means 'not a' or 'not any'.\n\n- 'Ik heb **een** auto' (I have a car) becomes 'Ik heb **geen** auto' (I have no car).\n- 'Ik heb tijd' (I have time) becomes 'Ik heb **geen** tijd' (I have no time).\n\nNotice what happens: `geen` takes the place of the article `een`, or fills the gap where there was no article. You never write 'niet een auto'. Dutch packs the article and the negation into that one word `geen`.",
+        "table": {
+          "caption": "positive noun phrase becomes geen",
+          "columns": [
+            "positive",
+            "negative",
+            "meaning"
+          ],
+          "rows": [
+            [
+              "een auto",
+              "geen auto",
+              "no car"
+            ],
+            [
+              "geld",
+              "geen geld",
+              "no money"
+            ],
+            [
+              "brood",
+              "geen brood",
+              "no bread"
+            ],
+            [
+              "een broer",
+              "geen broer",
+              "no brother"
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "warning",
+          "body": "Never say `niet een`. Where English would let you say 'not a car', Dutch insists on `geen auto`. The single word `geen` already carries both the article and the 'not'."
+        },
+        "cutting_intro": "Hallo! When you want to say you don't have something, Dutch has a special little word: `geen`. Let me show you.",
+        "quick_check": {
+          "question": "How do you say 'I have no money' in Dutch?",
+          "options": [
+            "Ik heb niet geld.",
+            "Ik heb geen geld.",
+            "Ik heb niet een geld."
+          ],
+          "correct_index": 1,
+          "explanation": "Right. `geld` is an article-less noun, so you negate it with `geen`: 'Ik heb geen geld'."
+        }
+      },
+      {
+        "heading": "niet: negating everything else",
+        "body": "When you are not negating an indefinite noun, you use `niet`. That covers most of the language: verbs, adjectives, adverbs, definite nouns, and whole phrases.\n\n- a **verb**: 'Ik werk **niet**' (I don't work)\n- an **adjective**: 'Het is **niet** duur' (it is not expensive)\n- a **definite noun** (with de, het, die, deze, mijn): 'Ik ken die man **niet**' (I don't know that man)\n- a **prepositional phrase**: 'Ik ga **niet** naar huis' (I'm not going home)\n\nThe key signal for a definite noun is the article or determiner in front of it. 'die man' (that man) is a specific man, so it's definite, and you negate it with `niet`, not `geen`.",
+        "examples": [
+          {
+            "hindi": "Ik werk niet.",
+            "english": "I don't work.",
+            "breakdown": "negating a verb, so `niet`, at the end of the clause"
+          },
+          {
+            "hindi": "Het is niet duur.",
+            "english": "It is not expensive.",
+            "breakdown": "negating an adjective, so `niet` right before `duur`"
+          },
+          {
+            "hindi": "Ik ken die man niet.",
+            "english": "I don't know that man.",
+            "breakdown": "`die man` is definite, so `niet`, never `geen`"
+          },
+          {
+            "hindi": "Wij gaan niet naar Amsterdam.",
+            "english": "We're not going to Amsterdam.",
+            "breakdown": "negating a prepositional phrase, so `niet` before `naar`"
+          }
+        ],
+        "callout": {
+          "tone": "tip",
+          "body": "A noun with `de`, `het`, `die`, `deze`, or a possessive (`mijn`, `jouw`) is definite. Definite nouns take `niet`, not `geen`. The determiner is your clue."
+        },
+        "cutting_intro": "Now, almost everything else uses the other word: `niet`. Verbs, adjectives, places, all of it. Watch.",
+        "quick_check": {
+          "question": "Which sentence correctly negates 'Het is duur' (it is expensive)?",
+          "options": [
+            "Het is geen duur.",
+            "Het is niet duur.",
+            "Het is duur niet."
+          ],
+          "correct_index": 1,
+          "explanation": "Correct. `duur` is an adjective, so you negate it with `niet` placed right in front of it: 'Het is niet duur'."
+        }
+      },
+      {
+        "heading": "Where niet goes",
+        "body": "`niet` has two homes, depending on what it negates.\n\n**At the end of the clause** when it negates the whole action. In a short simple sentence, `niet` lands last: 'Ik begrijp het **niet**' (I don't understand it), 'Ik weet het **niet**' (I don't know).\n\n**Directly in front of the word** when it negates just an adjective, a place, or a time. Here `niet` hugs the thing it targets: '**niet** duur' (not expensive), '**niet** hier' (not here), '**niet** in Amsterdam' (not in Amsterdam), '**niet** vandaag' (not today).\n\nSo the question is: are you saying the whole thing doesn't happen, or are you correcting one specific detail? Whole action goes to the end; one detail gets `niet` right before it.",
+        "table": {
+          "caption": "where niet sits",
+          "columns": [
+            "sentence",
+            "meaning",
+            "why"
+          ],
+          "rows": [
+            [
+              "Ik begrijp het niet.",
+              "I don't understand it.",
+              "whole action, niet at the end"
+            ],
+            [
+              "Het is niet duur.",
+              "It is not expensive.",
+              "negates the adjective, niet in front"
+            ],
+            [
+              "Hij is niet hier.",
+              "He is not here.",
+              "negates the place, niet in front"
+            ],
+            [
+              "Wij komen niet vandaag.",
+              "We're not coming today.",
+              "negates the time word, niet in front"
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "note",
+          "body": "When a sentence has both a definite object and a place or time, `niet` usually comes after the object but before the place or time: 'Ik zie hem niet vandaag' (I don't see him today)."
+        },
+        "cutting_intro": "`niet` is a bit of a wanderer. Sometimes it goes at the very end, sometimes right in front of a word. Let me show you the two spots.",
+        "quick_check": {
+          "question": "Where does `niet` go in 'Ik begrijp het ___' (I don't understand it)?",
+          "options": [
+            "right after 'Ik'",
+            "at the end, after 'het'",
+            "in front of 'begrijp'"
+          ],
+          "correct_index": 1,
+          "explanation": "Right. When `niet` negates the whole action, it goes at the end of a short clause: 'Ik begrijp het niet'."
+        }
+      },
+      {
+        "heading": "geen or niet? the decision",
+        "body": "Every time you want to say 'not', ask yourself one question: **am I negating an indefinite or article-less noun?**\n\n- If **yes**, use `geen`. Examples: 'geen geld', 'geen auto', 'geen tijd', 'geen kinderen'.\n- If **no**, use `niet`. That covers verbs, adjectives, definite nouns, and phrases.\n\nThat single question handles nearly everything. Two mistakes catch almost every learner. First, using `niet een` where Dutch wants `geen`: it's 'geen auto', never 'niet een auto'. Second, using `geen` with a definite noun: 'die man' is definite, so it must be 'Ik ken die man **niet**', not 'geen die man'.\n\nOne more word to keep separate: `nee`. That's the 'no' you answer a question with. It never goes inside a sentence to negate it. You say 'Nee, ik heb geen tijd', using `nee` to answer and `geen` to negate.",
+        "table": {
+          "caption": "the decision and common mistakes",
+          "columns": [
+            "what you negate",
+            "use",
+            "example"
+          ],
+          "rows": [
+            [
+              "indefinite noun (een ...)",
+              "geen",
+              "geen auto"
+            ],
+            [
+              "article-less noun",
+              "geen",
+              "geen geld"
+            ],
+            [
+              "verb",
+              "niet",
+              "ik werk niet"
+            ],
+            [
+              "adjective",
+              "niet",
+              "niet duur"
+            ],
+            [
+              "definite noun (de/het/die)",
+              "niet",
+              "ik ken die man niet"
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "warning",
+          "body": "The two errors to drill out: `niet een` (wrong, use `geen`) and `geen` with a definite noun (wrong, use `niet`). And keep `nee` for answering, `niet`/`geen` for negating inside the sentence."
+        },
+        "cutting_intro": "Here's the whole thing in one question you can ask yourself every time. Get this and you've got Dutch negation.",
+        "quick_check": {
+          "question": "Pick the correct negation of 'Ik ken die man' (I know that man).",
+          "options": [
+            "Ik ken geen die man.",
+            "Ik ken die man niet.",
+            "Ik ken niet die man."
+          ],
+          "correct_index": 1,
+          "explanation": "Correct. `die man` is a definite noun, so you negate with `niet` at the end: 'Ik ken die man niet'. `geen` is only for indefinite or article-less nouns."
+        }
+      }
+    ],
+    "wrap_up": "Dutch negation comes down to one question: are you negating an indefinite or article-less noun? If yes, use `geen` ('geen geld', 'geen auto'). If no, use `niet` for the verb, adjective, definite noun, or phrase. Place `niet` at the end of a short clause for whole-action negation, or right in front of an adjective, place, or time word. Avoid the two classic traps: `niet een` (always `geen`) and `geen` with a definite noun (always `niet`). And remember `nee` is only for answering a question, never for negating inside a sentence. The phrases below give you mixed practice across all of it."
+  }
+}

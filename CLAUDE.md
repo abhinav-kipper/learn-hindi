@@ -44,8 +44,8 @@ lib/                    → Utilities (see "Libraries" below)
 content/lessons/        → 10 Hindi situation JSON files (A1-A2)
 content/foundations/    → 9 Hindi foundation JSON files (A1-A2)
 content/vocabulary.json → 100 words in 6 categories
-content/dutch/lessons/  → 11 Dutch lesson JSONs (5 A1 casual + 6 A2/B1 exam-targeted)
-content/dutch/foundations/ → 7 Dutch foundation JSONs
+content/dutch/lessons/  → 15 Dutch lesson JSONs (4 A1 ground-up conversational + 5 A1 casual + 6 A2/B1 exam-targeted)
+content/dutch/foundations/ → 11 Dutch foundation JSONs (8 A1 + 3 A2)
 content/dutch/knm.json  → 100 KNM exam questions (bilingual, 6 categories)
 content/dutch/lezen.json → 10 Lezen B1-prep reading texts (bilingual, 40 MCQs)
 content/dutch/pronunciation-course.json → 8-stage from-zero "Sounds" ladder (alphabet→linking)
@@ -301,6 +301,15 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-pron-earquiz-done` — JSON array of "Sounds" stage ids whose ear-quiz passed. Stage completion + the rolling unlock are derived from these two sets.
 
 ### Recent feature work log
+
+**2026-06-03 — Dutch ground-up expansion (Batch 1: 8 conversational A1 units)**
+
+Added a true from-zero on-ramp so the Dutch track grows conversationally before its exam-prep capstone (it previously jumped from the Sounds phonics course straight into errand scenarios + A2 grammar). 4 new foundations + 4 new situational lessons, all A1, conversational-first.
+
+- **Foundations** (full theory chapters, bare ids): `pronouns-zijn-hebben` (pronouns + the two key verbs), `questions` (yes/no inversion incl. the dropped -t with je/jij + question words), `negation` (`geen` vs `niet`), `simple-sentences` (gentle A1 V2 / inversion / `er is`/`er zijn`, a soft preview of the A2 word-order chapter). `lib/dutch/foundations.ts` reordered ground-up: pronouns-zijn-hebben → numbers → pronunciation → present-tense → questions → negation → simple-sentences → de-het → word-order → past-tense → modals (7 → 11 foundations).
+- **Situations** (no theory, `exam_targeted:false`): `dutch-first-words` (survival phrases), `dutch-small-talk` (weather/how-are-you), `dutch-family-home`, `dutch-daily-routine`. Prepended before the errand scenarios in `lib/dutch/lessons.ts` (11 → 15 lessons).
+- All 8 tagged A1 in `lib/dutch/level-map.ts` (foundations bare ids, lessons `dutch-` ids). Authored via 8 parallel subagents (Opus for the grammar foundations, Sonnet for the conversations), matching the schema/voice and passing the copy lint.
+- **Also fixed a latent CI break:** the earlier PWA offline work left two em-dashes (`offline-banner.tsx`, `settings/page.tsx`) that violate `lint:content` (a CI gate) — replaced with commas.
 
 **2026-06-03 — PWA offline: precache warm-up + caching + status banner**
 

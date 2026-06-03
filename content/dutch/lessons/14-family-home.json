@@ -1,0 +1,140 @@
+{
+  "id": "dutch-family-home",
+  "title": "Family & Where You Live",
+  "situation": "A friendly get-to-know-you chat where you tell someone about your family and where you live.",
+  "skills": [
+    "talking about your family",
+    "saying where you live",
+    "using hebben for relationships",
+    "describing your home situation"
+  ],
+  "phrases": [
+    {
+      "hindi": "Ik heb twee kinderen. Een zoon en een dochter.",
+      "english": "I have two children. A son and a daughter.",
+      "context": "The most natural opener when someone asks about your family. 'Kinderen' is the plural of 'kind'. Use 'ik heb' for all family members you have.",
+      "pronunciation": "ik HEP tway KIN-der-en. en ZOHN en en DOCH-ter."
+    },
+    {
+      "hindi": "Heb je broers of zussen?",
+      "english": "Do you have brothers or sisters?",
+      "context": "A common get-to-know-you question. 'Broer' (brother, plural 'broers'), 'zus' (sister, plural 'zussen'). You can answer: 'Ik heb een broer' or 'Ik heb geen zussen' (I have no sisters).",
+      "pronunciation": "HEP ye BROORS of ZUS-sen?"
+    },
+    {
+      "hindi": "Ik ben getrouwd. Mijn man werkt in Amsterdam.",
+      "english": "I'm married. My husband works in Amsterdam.",
+      "context": "'Getrouwd' = married. 'Man' = husband (also means 'man'). 'Vrouw' = wife (also 'woman'). 'Mijn' = my. The Dutch often follow up on where a partner works, not just the relationship status.",
+      "pronunciation": "ik BEN che-TROWT. mayn MAN WERKT in AM-ster-dam."
+    },
+    {
+      "hindi": "Ik woon samen met mijn vriendin. We wonen al vijf jaar samen.",
+      "english": "I live together with my girlfriend. We've been living together for five years already.",
+      "context": "'Samenwonen' = cohabiting, living together without being married. Very common in the Netherlands and completely unremarkable. 'Al' = already (signals ongoing duration).",
+      "pronunciation": "ik WOHN SAA-men met mayn VREEN-din. we WOH-nen al VAYF yaar SAA-men."
+    },
+    {
+      "hindi": "Ik woon in Utrecht, in het centrum.",
+      "english": "I live in Utrecht, in the city center.",
+      "context": "'Wonen in' = to live in. City name follows directly without an article. 'Het centrum' = the city center. Mentioning your woonplaats (place of residence) is a standard small-talk move in the Netherlands.",
+      "pronunciation": "ik WOHN in OO-trekt, in het SEN-trum."
+    },
+    {
+      "hindi": "Woon je in een huis of een appartement?",
+      "english": "Do you live in a house or an apartment?",
+      "context": "Asking about home type is normal small talk. 'Huis' = house. 'Appartement' = apartment/flat. You can reply: 'Ik woon in een appartement op de derde etage' (I live in an apartment on the third floor).",
+      "pronunciation": "WOHN ye in en HOYS of en a-par-te-MENT?"
+    },
+    {
+      "hindi": "Woon je in het centrum of buiten de stad?",
+      "english": "Do you live in the city center or outside the city?",
+      "context": "A natural follow-up to learning someone's city. 'Buiten de stad' = outside the city. You might also hear 'in de wijk' (in the neighborhood/district) or 'in een dorp' (in a village).",
+      "pronunciation": "WOHN ye in het SEN-trum of BOW-ten de STAT?"
+    },
+    {
+      "hindi": "Hoe oud zijn je kinderen? Mijn dochter is zeven.",
+      "english": "How old are your children? My daughter is seven.",
+      "context": "'Hoe oud zijn...?' = how old are...? Note 'zijn' (are) instead of 'hebben'. 'Mijn dochter' = my daughter. 'Mijn zoon' = my son. For age you always use 'zijn', not 'hebben'.",
+      "pronunciation": "hoo OWT zayn ye KIN-der-en? mayn DOCH-ter is ZAY-ven."
+    },
+    {
+      "hindi": "Mijn ouders wonen nog in India. Ik mis ze wel eens.",
+      "english": "My parents still live in India. I miss them sometimes.",
+      "context": "'Ouders' = parents. 'Nog' = still. 'Ik mis ze' = I miss them. 'Wel eens' softens to 'sometimes, now and then'. A natural thing to say when you're far from family, and the Dutch will respond warmly.",
+      "pronunciation": "mayn OW-ders WOH-nen NOCH in IN-dya. ik MIS ze wel ENS."
+    },
+    {
+      "hindi": "Mijn opa en oma wonen bij ons in de buurt.",
+      "english": "My grandfather and grandmother live near us.",
+      "context": "'Opa' = grandpa, 'oma' = grandma (used as first names too, e.g. 'Opa Jan'). 'In de buurt' = nearby, in the neighborhood. 'Bij ons' = near us / at our place.",
+      "pronunciation": "mayn OH-pa en OH-ma WOH-nen bay ONS in de BURT."
+    }
+  ],
+  "grammar_notes": [
+    "'Ik heb' (I have) is used for family members you have: 'Ik heb een broer', 'Ik heb drie kinderen', 'Ik heb geen zussen'. The verb 'hebben' does not change for 'ik': always 'ik heb'.",
+    "'Wonen in' takes the city or place directly: 'Ik woon in Amsterdam', 'Ik woon in een appartement', 'Ik woon op de tweede etage'. No article before city names.",
+    "Possessives: 'mijn' = my, 'je/jouw' = your (informal), 'uw' = your (formal). 'Mijn man', 'je ouders', 'uw kinderen'. 'Jouw' is used when emphasizing (it's YOUR book, not mine).",
+    "Family words without an article: say 'Ik ben getrouwd' (not 'een getrouwde') and 'Ik heb een broer' (article needed here). Professions drop the article ('ik ben leraar') but family relationships with 'heb' keep it ('ik heb een zus').",
+    "'Getrouwd' = married; 'samenwonen' = cohabiting (living together). Both are equally accepted in Dutch society. 'Ik ben gescheiden' = I am divorced. 'Mijn partner' is a neutral, common word for a partner of any gender."
+  ],
+  "culture_notes": [
+    "Dutch families tend to be smaller than in many countries, one or two children is typical. Asking 'heb je kinderen?' is normal small talk and not considered intrusive.",
+    "Samenwonen (cohabiting) is very common in the Netherlands. Many couples live together for years before marrying, or never marry at all. It carries no social stigma.",
+    "The Dutch are direct about personal questions like where you live and what your family situation is. They ask early and expect a clear, short answer. Vagueness can read as unfriendly.",
+    "Mentioning your woonplaats (place of residence) is a standard small-talk opener. Dutch people will often follow up with the neighborhood, commute, or rent situation. It's a practical society and housing is a shared concern."
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "Talking about your family",
+      "explanation": "Use 'ik heb' to say what family members you have. For age and marital status, switch to 'zijn': 'Ik ben getrouwd', 'mijn zoon is acht jaar oud'.",
+      "more_examples": [
+        {
+          "hindi": "Ik heb een oudere zus.",
+          "english": "I have an older sister."
+        },
+        {
+          "hindi": "Ik heb geen broers.",
+          "english": "I have no brothers."
+        },
+        {
+          "hindi": "Mijn ouders zijn al oud.",
+          "english": "My parents are already old."
+        },
+        {
+          "hindi": "We hebben twee katten en geen kinderen.",
+          "english": "We have two cats and no children."
+        }
+      ]
+    },
+    {
+      "skill": "Saying where you live",
+      "explanation": "Use 'ik woon in' for city or neighborhood, 'ik woon op' for a floor, and 'ik woon samen met' for a housemate or partner.",
+      "more_examples": [
+        {
+          "hindi": "Ik woon in Rotterdam, in het zuiden.",
+          "english": "I live in Rotterdam, in the south."
+        },
+        {
+          "hindi": "We wonen in een rijtjeshuis.",
+          "english": "We live in a terraced house."
+        },
+        {
+          "hindi": "Ik woon alleen, maar ik wil graag verhuizen.",
+          "english": "I live alone, but I'd like to move."
+        },
+        {
+          "hindi": "Hoe lang woon jij al in Nederland?",
+          "english": "How long have you been living in the Netherlands?"
+        }
+      ]
+    }
+  ],
+  "practice_prompt": "You are Fatima, a friendly Dutch woman in your 30s who just sat down next to the learner at a buurtbarbecue (neighborhood barbecue). You are curious and warm, use informal 'je/jij' throughout. Open verbatim with: 'Hoi! Ik ben Fatima, ik woon hier om de hoek. Woon jij hier ook in de buurt?' Keep the conversation on family and home: ask if they live alone or with someone, whether they have children or siblings, and where their family is originally from. Share that you have two kids, a son of nine and a daughter of six, and that you live in a rijtjeshuis (terraced house) nearby with your man. If they mention living far from family, respond with warmth. Weave in 'Ik heb', 'Ik woon', 'mijn man / vrouw / kinderen', 'wonen samen', and possessives. Flag errors with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]], especially wrong verb form (heb vs heeft), missing article before 'kinderen', and mixing 'zijn' and 'hebben' for age vs. possession. Stay in Dutch. Keep it to 6-8 turns and close with something warm like 'Gezellig! Fijn dat ik je heb leren kennen.'",
+  "level": "A1",
+  "exam_targeted": false,
+  "references": [
+    "Kooij & van Oostendorp, Beknopte grammatica van het Nederlands (2003): hebben vs zijn, possessives",
+    "Prisma cursus Nederlands voor anderstaligen, A1/A2 module (family + housing vocabulary)",
+    "Inburgering.nl official exam prep materials: woonplaats small talk + samenwonen cultural context"
+  ]
+}

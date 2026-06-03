@@ -101,7 +101,7 @@ export function OfflineBanner() {
             >
               {reconnected
                 ? 'back online'
-                : "you're offline — saved lessons still work"}
+                : "you're offline, saved lessons still work"}
             </span>
           </div>
         </motion.div>
