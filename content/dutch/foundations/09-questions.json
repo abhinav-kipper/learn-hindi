@@ -1,0 +1,393 @@
+{
+  "id": "questions",
+  "title": "Asking Questions",
+  "level": "A1",
+  "situation": "Foundation: forming yes/no questions by inversion, the question words, and answering with ja, nee, and jawel",
+  "skills": [
+    "yes/no questions by inversion",
+    "the dropped -t with je/jij",
+    "question words (wie, wat, waar...)",
+    "answering ja / nee / jawel"
+  ],
+  "phrases": [
+    {
+      "hindi": "Woon jij in Amsterdam?",
+      "english": "Do you live in Amsterdam?",
+      "context": "Yes/no question by inversion: put the verb first, then the subject. Note the dropped -t: the statement is 'jij woont', but in the question it becomes 'woon jij'.",
+      "pronunciation": "WOHN yay in am-ster-DAM?"
+    },
+    {
+      "hindi": "Heb je een fiets?",
+      "english": "Do you have a bike?",
+      "context": "A very common opener. 'Je hebt' becomes 'heb je' when inverted, the -t drops because 'je' follows the verb.",
+      "pronunciation": "HEP ye ayn FEETS?"
+    },
+    {
+      "hindi": "Hoe heet je?",
+      "english": "What is your name? (lit. how are you called?)",
+      "context": "The standard way to ask someone's name. Question word 'hoe' first, then verb, then subject. 'Je heet' loses its -t to give 'heet je'.",
+      "pronunciation": "hoo HAYT ye?"
+    },
+    {
+      "hindi": "Waar woont u?",
+      "english": "Where do you live?",
+      "context": "With the formal 'u', the -t stays: 'woont u', never 'woon u'. The -t only drops for je/jij.",
+      "pronunciation": "WAAR WOHNT oo?"
+    },
+    {
+      "hindi": "Wat doe je in het weekend?",
+      "english": "What do you do at the weekend?",
+      "context": "Question word 'wat' + verb + subject. 'Je doet' becomes 'doe je' in inversion. A friendly small-talk question.",
+      "pronunciation": "VAT DOO ye in het VEE-kent?"
+    },
+    {
+      "hindi": "Waarom leer je Nederlands?",
+      "english": "Why are you learning Dutch?",
+      "context": "'Waarom' (why) opens the question. The verb 'leer' is second, the subject 'je' is third. The answer usually starts with 'omdat' (because).",
+      "pronunciation": "vaar-OM LAYR ye nay-der-LANTS?"
+    },
+    {
+      "hindi": "Hoeveel kost het?",
+      "english": "How much does it cost?",
+      "context": "'Hoeveel' asks how much or how many. Essential at the market or the till. 'Het' here means 'it'.",
+      "pronunciation": "hoo-VAYL KOST het?"
+    },
+    {
+      "hindi": "Is het ver?",
+      "english": "Is it far?",
+      "context": "A yes/no question with the irregular verb 'zijn'. Verb 'is' comes first, subject 'het' second. Handy when you are asking for directions.",
+      "pronunciation": "IS het VEHR?"
+    }
+  ],
+  "grammar_notes": [
+    "Yes/no questions are made by inversion: move the conjugated verb to the front, then the subject. 'Jij woont hier' becomes 'Woon jij hier?'",
+    "Critical rule: when 'je' or 'jij' follows the verb, the -t ending drops. 'Jij werkt' but 'Werk jij?'; 'je heet' but 'Hoe heet je?'. This NEVER happens with 'u' (woont u stays woont u) or with hij/zij (werkt hij stays werkt hij)",
+    "Wh-questions follow one order: question word, then verb, then subject. 'Waar woon je?', 'Wat doe je?', 'Hoe heet je?'",
+    "The main question words are: wie (who), wat (what), waar (where), wanneer (when), waarom (why), hoe (how), welke (which), hoeveel (how much/how many)",
+    "Answer yes with 'ja' and no with 'nee'. Use 'jawel' only to contradict a negative: if someone says 'Je hebt geen fiets' (you have no bike) and you do, you reply 'Jawel!' (yes I do)"
+  ],
+  "culture_notes": [
+    "Dutch people are known for direct questions. Asking 'Waarom?' (why?) or 'Hoeveel verdien je?' (how much do you earn?) is far less taboo than in many cultures and is usually meant as honest interest, not rudeness",
+    "With strangers, officials, and older people, ask questions with 'u' (Woont u hier?). With peers, friends, and children, use 'je/jij'. When unsure, 'u' is the safe, polite default",
+    "'Hoe gaat het?' (how are you?) is a real question, not just a greeting. A short honest answer like 'Het gaat wel' (it's going okay) is normal and expected"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "yes/no questions by inversion",
+      "explanation": "To ask a yes/no question, swap the subject and the conjugated verb so the verb comes first. The statement 'Jij hebt tijd' (you have time) becomes the question 'Heb jij tijd?'. Nothing else moves: the rest of the sentence stays in the same order. The voice rises at the end.",
+      "more_examples": [
+        {
+          "hindi": "Spreek je Engels?",
+          "english": "Do you speak English? (statement: je spreekt Engels)"
+        },
+        {
+          "hindi": "Komt hij vanavond?",
+          "english": "Is he coming tonight? (hij comes after the verb, but -t stays because it is not je/jij)"
+        },
+        {
+          "hindi": "Bent u de dokter?",
+          "english": "Are you the doctor? (zijn: u bent becomes bent u)"
+        },
+        {
+          "hindi": "Hebben jullie kinderen?",
+          "english": "Do you (plural) have children?"
+        }
+      ]
+    },
+    {
+      "skill": "the dropped -t with je/jij",
+      "explanation": "When 'je' or 'jij' lands directly after the verb, the verb loses its -t. So 'jij werkt' becomes 'Werk jij?', and 'je heet' becomes 'Hoe heet je?'. Watch the trap: this only applies to je/jij. With 'u' the -t stays ('Woont u hier?'), and with hij/zij/het the verb keeps its full form ('Werkt hij?').",
+      "more_examples": [
+        {
+          "hindi": "jij werkt becomes Werk jij?",
+          "english": "you work becomes Do you work? (the -t drops)"
+        },
+        {
+          "hindi": "je woont becomes Woon je hier?",
+          "english": "you live becomes Do you live here? (the -t drops)"
+        },
+        {
+          "hindi": "u woont blijft Woont u hier?",
+          "english": "you (formal) live stays Do you live here? (the -t stays with u)"
+        },
+        {
+          "hindi": "hij werkt blijft Werkt hij hier?",
+          "english": "he works stays Does he work here? (the -t stays with hij)"
+        }
+      ]
+    },
+    {
+      "skill": "question words and their order",
+      "explanation": "An open question starts with a question word, then the verb, then the subject: question word, verb, subject. 'Waar woon je?' (where do you live?), 'Wanneer begint de les?' (when does the lesson start?). The je/jij -t drop still applies after the verb: 'Wat doe je?', not 'Wat doet je?'.",
+      "more_examples": [
+        {
+          "hindi": "Wie is dat?",
+          "english": "Who is that?"
+        },
+        {
+          "hindi": "Wanneer kom je?",
+          "english": "When are you coming? (je after the verb, so doe/kom loses the -t)"
+        },
+        {
+          "hindi": "Welke bus gaat naar het centrum?",
+          "english": "Which bus goes to the centre?"
+        },
+        {
+          "hindi": "Hoeveel kinderen heb je?",
+          "english": "How many children do you have?"
+        }
+      ]
+    }
+  ],
+  "practice_prompt": "You are a Dutch tutor drilling question formation. Address the user as 'u'. Open with: 'Goedendag! We gaan vragen oefenen. Eerste opdracht: maak van \\'Jij woont in Utrecht\\' een vraag.' Work one item at a time. Give the user a statement to turn into a yes/no question (forcing inversion plus the dropped -t with je/jij), or a prompt to build a wh-question from a question word plus a verb, or a short answer task using ja, nee, or jawel. Escalate across 6-8 items: start with a simple inversion (Jij werkt hier), then one with 'u' where the -t must stay (U woont in Den Haag), then a wh-question (waar / je / wonen), then 'jawel' to contradict a negative. Watch for these mistakes and flag each with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]: keeping the -t in 'werkt jij' (should be 'werk jij'), dropping the -t with 'u' ('woon u' should be 'woont u'), wrong word order in wh-questions, and using 'ja' where 'jawel' is needed. Briefly name the rule each time. Stay in Dutch unless asked. After 6-8 items end with 'Uitstekend! Tot de volgende keer.'",
+  "references": [
+    "Snell, Bridget. Dutch: An Essential Grammar (Routledge), chapters on word order and interrogatives",
+    "TaalCompleet A1 (KleurRijker), units on vragen stellen",
+    "Bart de Pau, Learn Dutch (1000 most common words) video course"
+  ],
+  "theory": {
+    "intro": "Dutch questions are built from rules you already half-know. Yes/no questions just flip the verb to the front. Open questions add a question word like `wat` or `waar`. The one trap that catches every learner is small but constant: when `je` or `jij` follows the verb, the `-t` quietly disappears. Learn that, plus the eight question words, and you can ask about almost anything.",
+    "sections": [
+      {
+        "heading": "Yes/no questions: flip the verb to the front",
+        "body": "A yes/no question is one you can answer with `ja` or `nee`. In Dutch you make one by **inversion**: take a statement and swap the subject and the verb so the verb comes first.\n\n- `Jij woont in Amsterdam.` (You live in Amsterdam.)\n- `Woon jij in Amsterdam?` (Do you live in Amsterdam?)\n\nThe verb hops to the front, the subject slides in right behind it, and the rest of the sentence stays put. There is no Dutch word for the English 'do' in 'do you live'. The inversion itself does the job. Your voice rises at the end, just like in English.",
+        "table": {
+          "caption": "Statement becomes question by inversion",
+          "columns": [
+            "statement",
+            "question"
+          ],
+          "rows": [
+            [
+              "Jij hebt een fiets.",
+              "Heb jij een fiets?"
+            ],
+            [
+              "U komt morgen.",
+              "Komt u morgen?"
+            ],
+            [
+              "Hij is ziek.",
+              "Is hij ziek?"
+            ],
+            [
+              "Jullie wonen hier.",
+              "Wonen jullie hier?"
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "tip",
+          "body": "There is no extra helper word for questions. Where English adds 'do' or 'does', Dutch just moves the verb to the front. `Speak you Dutch?` is exactly how `Spreek je Nederlands?` is built."
+        },
+        "cutting_intro": "Hallo! Asking yes/no questions in Dutch is wonderfully simple: just put the verb first. Watch.",
+        "quick_check": {
+          "question": "How do you turn `Jij komt vanavond` (You are coming tonight) into a yes/no question?",
+          "options": [
+            "Komt jij vanavond?",
+            "Kom jij vanavond?",
+            "Jij komt vanavond?"
+          ],
+          "correct_index": 1,
+          "explanation": "Right. The verb goes first, and because `jij` follows it, the `-t` drops: `Kom jij vanavond?`. We'll dig into that dropped `-t` next."
+        }
+      },
+      {
+        "heading": "The dropped -t with je and jij",
+        "body": "Here is the one rule that trips up every Dutch learner. When `je` or `jij` comes **right after** the verb, the verb loses its `-t`.\n\n- Statement: `jij werkt` (you work). Question: `Werk jij?` (Do you work?)\n- Statement: `je heet` (you are called). Question: `Hoe heet je?` (What is your name?)\n\nThe `-t` is there in the statement, but it vanishes the moment `je`/`jij` moves behind the verb. This happens in every inverted sentence, not only questions.\n\nNow the crucial limits. This drop applies **only** to `je` and `jij`. It never touches:\n\n- `u`: the formal you keeps its `-t`, so `Woont u hier?`, never `woon u`\n- `hij`, `zij`, `het`: these keep the full form, so `Werkt hij?`, never `werk hij`\n\nSo the same verb can look two different ways in two questions: `Werk jij?` but `Werkt u?`.",
+        "examples": [
+          {
+            "hindi": "Werk jij in Rotterdam?",
+            "english": "Do you work in Rotterdam?",
+            "breakdown": "jij werkt becomes werk jij, the -t drops after jij"
+          },
+          {
+            "hindi": "Werkt u in Rotterdam?",
+            "english": "Do you (formal) work in Rotterdam?",
+            "breakdown": "u keeps the -t: werkt u, never werk u"
+          },
+          {
+            "hindi": "Hoe heet je?",
+            "english": "What is your name?",
+            "breakdown": "je heet becomes heet je, the -t drops after je"
+          },
+          {
+            "hindi": "Werkt hij vandaag?",
+            "english": "Does he work today?",
+            "breakdown": "hij keeps the full form: werkt hij, the drop is only for je/jij"
+          }
+        ],
+        "callout": {
+          "tone": "warning",
+          "body": "The single most common Dutch question mistake is keeping the `-t`: learners write `werkt jij?` when it must be `werk jij?`. Remember: only `je`/`jij` triggers the drop. `u`, `hij`, `zij`, and `het` all keep the `-t`."
+        },
+        "cutting_intro": "Pay close attention to this one. When `je` or `jij` follows the verb, the `-t` simply disappears.",
+        "quick_check": {
+          "question": "Which form is correct?",
+          "options": [
+            "Woont jij in Den Haag?",
+            "Woon jij in Den Haag?",
+            "Woon u in Den Haag?"
+          ],
+          "correct_index": 1,
+          "explanation": "`Woon jij?` is right: the `-t` drops after `jij`. With `u` it would stay (`Woont u?`), so the third option is wrong the other way."
+        }
+      },
+      {
+        "heading": "The question words",
+        "body": "For open questions, ones you cannot answer with just `ja` or `nee`, Dutch uses a small set of question words. Learn these eight and you can ask about people, things, places, times, and reasons.\n\n- `wie` means **who**\n- `wat` means **what**\n- `waar` means **where**\n- `wanneer` means **when**\n- `waarom` means **why**\n- `hoe` means **how**\n- `welke` means **which**\n- `hoeveel` means **how much** or **how many**\n\nTwo are easy to mix up at first. `waar` is *where* and `wanneer` is *when*; they look a little alike but mean different things. And `hoe` (how) teams up with other words: `hoeveel` (how many), `hoe laat` (what time), `hoe lang` (how long).",
+        "table": {
+          "caption": "The eight question words",
+          "columns": [
+            "Dutch",
+            "English",
+            "example"
+          ],
+          "rows": [
+            [
+              "wie",
+              "who",
+              "Wie is dat?"
+            ],
+            [
+              "wat",
+              "what",
+              "Wat is dit?"
+            ],
+            [
+              "waar",
+              "where",
+              "Waar woon je?"
+            ],
+            [
+              "wanneer",
+              "when",
+              "Wanneer kom je?"
+            ],
+            [
+              "waarom",
+              "why",
+              "Waarom leer je Nederlands?"
+            ],
+            [
+              "hoe",
+              "how",
+              "Hoe gaat het?"
+            ],
+            [
+              "welke",
+              "which",
+              "Welke bus is dit?"
+            ],
+            [
+              "hoeveel",
+              "how much / many",
+              "Hoeveel kost het?"
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "note",
+          "body": "`welke` can change shape with `het`-words: `welke bus` (which bus, a de-word) but `welk huis` (which house, a het-word). For now, `welke` covers most cases you will meet early on."
+        },
+        "cutting_intro": "Now for the open questions. Eight little words let you ask about almost anything.",
+        "quick_check": {
+          "question": "Which question word asks `why`?",
+          "options": [
+            "waar",
+            "wanneer",
+            "waarom"
+          ],
+          "correct_index": 2,
+          "explanation": "`waarom` means why. Watch out for `waar` (where) and `wanneer` (when), which start with the same letters but mean different things."
+        }
+      },
+      {
+        "heading": "Word order in wh-questions",
+        "body": "Open questions follow one fixed order: **question word, then verb, then subject**, and then the rest.\n\n- `Waar` + `woon` + `je`? gives `Waar woon je?` (Where do you live?)\n- `Wat` + `doet` + `hij`? gives `Wat doet hij?` (What does he do?)\n- `Hoeveel` + `kost` + `het`? gives `Hoeveel kost het?` (How much does it cost?)\n\nThe question word fills the front slot, so the verb stays in second position, exactly the verb-second pattern you saw with statements. The subject comes third.\n\nAnd yes, the dropped `-t` rule still applies. Because the subject `je`/`jij` sits after the verb, the verb loses its `-t`: `Wat doe je?`, not `Wat doet je?`. With `u` or `hij`, the `-t` stays: `Wat doet u?`, `Wat doet hij?`.",
+        "examples": [
+          {
+            "hindi": "Waar woon je?",
+            "english": "Where do you live?",
+            "breakdown": "question word (waar) + verb (woon) + subject (je), -t dropped after je"
+          },
+          {
+            "hindi": "Wanneer begint de les?",
+            "english": "When does the lesson start?",
+            "breakdown": "question word + verb + subject; here the subject is de les, so begint keeps its -t"
+          },
+          {
+            "hindi": "Hoe heet u?",
+            "english": "What is your name? (formal)",
+            "breakdown": "with u the -t stays: heet u, compare hoe heet je"
+          },
+          {
+            "hindi": "Wie helpt mij?",
+            "english": "Who helps me?",
+            "breakdown": "when wie is itself the subject, the verb simply agrees: wie helpt"
+          }
+        ],
+        "callout": {
+          "tone": "tip",
+          "body": "Same pattern every time: question word, verb, subject. The verb never leaves second place. If you can build `Waar woon je?`, you can build `Wanneer kom je?` and `Hoeveel betaal je?` the exact same way."
+        },
+        "cutting_intro": "Open questions have one tidy order. Question word first, verb second, subject third. Let's lock it in.",
+        "quick_check": {
+          "question": "Put these in order to ask `Where do you work?`: woon / waar / je. (Hint: where = waar.)",
+          "options": [
+            "Waar werk je?",
+            "Werk waar je?",
+            "Waar werkt je?"
+          ],
+          "correct_index": 0,
+          "explanation": "`Waar werk je?` is correct: question word, verb, subject. And the `-t` drops because `je` follows the verb."
+        }
+      },
+      {
+        "heading": "Answering: ja, nee, and jawel",
+        "body": "Answering is mostly easy. `Ja` means **yes** and `nee` means **no**.\n\n- `Woon je in Amsterdam?` `Ja, ik woon in Amsterdam.`\n- `Heb je een auto?` `Nee, ik heb geen auto.`\n\nThe interesting one is `jawel`. You use it to **contradict a negative**, when someone assumes the answer is no, but it is actually yes. English does this with stress ('Yes I do!'); Dutch has a dedicated word.\n\n- Someone says: `Je hebt geen fiets.` (You have no bike.)\n- You reply: `Jawel!` (Yes I do!)\n\nSo `ja` answers a normal positive question, but `jawel` pushes back against a negative statement or a negative question. If nobody has said anything negative, plain `ja` is what you want.",
+        "table": {
+          "caption": "Which yes-word to use",
+          "columns": [
+            "situation",
+            "answer"
+          ],
+          "rows": [
+            [
+              "Woon je hier? (positive question, you do)",
+              "Ja"
+            ],
+            [
+              "Woon je hier? (positive question, you don't)",
+              "Nee"
+            ],
+            [
+              "Je woont hier niet, toch? (negative, but you do)",
+              "Jawel"
+            ],
+            [
+              "Heb je geen geld? (negative, and you don't)",
+              "Nee, klopt"
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "note",
+          "body": "Use `jawel` only when there is a negative to push back against. After a plain positive question like `Kom je mee?`, the answer is `Ja`, not `Jawel`."
+        },
+        "cutting_intro": "Last piece, and a fun one. Dutch has a special yes-word, `jawel`, just for when you disagree with a no.",
+        "quick_check": {
+          "question": "Your friend says `Jij spreekt geen Nederlands` (You don't speak Dutch), but you do. What do you reply?",
+          "options": [
+            "Ja",
+            "Nee",
+            "Jawel"
+          ],
+          "correct_index": 2,
+          "explanation": "`Jawel!` is the word for contradicting a negative. Your friend assumed no, you are insisting yes, so plain `ja` is not enough here."
+        }
+      }
+    ],
+    "wrap_up": "You now have the full toolkit for asking questions in Dutch. Flip the verb to the front for yes/no questions. Lead with a question word for open questions. Keep the verb in second place every time. And never forget the one rule that catches everyone: when `je` or `jij` follows the verb, the `-t` drops (`werk jij?`), but `u` and `hij` keep it (`werkt u?`, `werkt hij?`). Answer with `ja` or `nee`, and reach for `jawel` only to overturn a negative. The phrases below mix all of this together, so practice spotting the dropped `-t` as you go."
+  }
+}

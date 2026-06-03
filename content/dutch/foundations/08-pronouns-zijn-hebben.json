@@ -1,0 +1,458 @@
+{
+  "id": "pronouns-zijn-hebben",
+  "title": "Pronouns, zijn & hebben",
+  "situation": "Foundation: the first grammar a beginner needs, subject pronouns plus the two core verbs zijn (to be) and hebben (to have)",
+  "level": "A1",
+  "skills": [
+    "subject pronouns",
+    "zijn (to be)",
+    "hebben (to have)",
+    "je vs u register"
+  ],
+  "phrases": [
+    {
+      "hindi": "Ik ben Anna. Ik ben Engels.",
+      "english": "I am Anna. I am English.",
+      "context": "The two most useful sentences on day one: your name and where you're from. No article before a nationality, just `ik ben Engels`.",
+      "pronunciation": "ik BEN AN-na. ik ben ENG-els."
+    },
+    {
+      "hindi": "Hij is mijn buurman. Zij is mijn buurvrouw.",
+      "english": "He is my neighbour (man). She is my neighbour (woman).",
+      "context": "`hij` = he, `zij` = she. Both take `is`. Pointing people out is one of the first things you do in a new place.",
+      "pronunciation": "hay IS mayn BUUR-man. zay IS mayn BUUR-vrow."
+    },
+    {
+      "hindi": "Wij zijn moe en jullie zijn klaar.",
+      "english": "We are tired and you (plural) are ready.",
+      "context": "All three plurals (`wij`, `jullie`, `zij`) use `zijn`. `moe` = tired and `klaar` = ready/done are everyday state words.",
+      "pronunciation": "way ZAYN MOO en yul-LEE ZAYN KLAAR."
+    },
+    {
+      "hindi": "Ik heb honger. Heb jij dorst?",
+      "english": "I am hungry (lit. have hunger). Are you thirsty (lit. have thirst)?",
+      "context": "Dutch says `honger/dorst hebben` where English says 'to be hungry/thirsty'. Note the dropped `-t`: `heb jij?` not `hebt jij?`.",
+      "pronunciation": "ik HEP HONG-er. hep YAY DORST?"
+    },
+    {
+      "hindi": "Zij heeft een auto. Hij heeft een fiets.",
+      "english": "She has a car. He has a bicycle.",
+      "context": "Possession with `hebben`. Watch the irregular `heeft` for hij/zij/het, not `hebt`.",
+      "pronunciation": "zay HAYFT en OW-toh. hay HAYFT en FEETS."
+    },
+    {
+      "hindi": "Hoe oud ben jij? Ik ben dertig. Mijn zoon is vijf.",
+      "english": "How old are you? I am thirty. My son is five.",
+      "context": "Dutch uses `zijn` for age the way English does ('I am thirty'), but for hunger and thirst it switches to `hebben`. Mixing these up is a classic beginner slip.",
+      "pronunciation": "hoo OWT ben YAY? ik ben DER-tich. mayn ZOHN is FAYF."
+    },
+    {
+      "hindi": "Bent u de dokter? Ja, dat ben ik.",
+      "english": "Are you the doctor? Yes, that's me (lit. that am I).",
+      "context": "The formal `u` always takes `bent`. `Dat ben ik` is the natural way to say 'that's me'. Use `u` with a professional you don't know.",
+      "pronunciation": "bent UU de DOK-ter? YAA, dat BEN ik."
+    },
+    {
+      "hindi": "Wij hebben twee kinderen en zij hebben een hond.",
+      "english": "We have two children and they have a dog.",
+      "context": "Plurals again: `wij hebben`, `zij hebben`. Same `hebben` form for all three plural pronouns, easy to remember.",
+      "pronunciation": "way HEB-ben TWAY KIN-der-en en zay HEB-ben en HONT."
+    }
+  ],
+  "grammar_notes": [
+    "Subject pronouns: ik (I), jij/je (you, informal), u (you, formal), hij (he), zij/ze (she), het (it), wij/we (we), jullie (you all), zij/ze (they). `zij` does double duty for both 'she' and 'they'; the verb form tells them apart (`zij is` = she is, `zij zijn` = they are).",
+    "`je` is the unstressed everyday form of `jij`; `jij` is the stressed form you use to point the spotlight at the person, as in `Ik werk hier, en jij?`. Same word, different emphasis. `ze` and `we` are likewise the unstressed forms of `zij` and `wij`.",
+    "`zijn` (to be) is fully irregular: ik ben, jij/u bent, hij/zij/het is, and all three plurals are `zijn`. The infinitive `zijn` is identical to the plural form.",
+    "`hebben` (to have) is also irregular in the singular: ik heb, jij hebt, hij/zij/het heeft. The plurals are all `hebben`. With formal `u` both `u hebt` and `u heeft` are correct and common.",
+    "When `jij` (or `je`) follows the verb in a question, the `-t` drops: `jij hebt` becomes `heb jij?`, `jij bent` becomes `ben jij?`. This dropped `-t` happens only with `jij`/`je`, never with `u`, `hij`, or `zij`."
+  ],
+  "culture_notes": [
+    "`jij/je` is informal, `u` is formal. With strangers, older people, officials, your doctor, or a shopkeeper you don't know, default to `u`. With friends, peers, children, and young people, use `je`. When unsure, start with `u`; nobody is offended by being treated politely.",
+    "Dutch is becoming steadily more informal, and many people, especially in cities and younger crowds, use `je` quite freely. If someone addresses you with `je` first, it's a friendly cue that you can answer in kind.",
+    "Watch out: `zijn` is also the possessive 'his' (`zijn boek` = his book), and `het` is both the pronoun 'it' and the word 'the' for het-words. Context makes the meaning clear, but it surprises beginners."
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "subject pronouns",
+      "explanation": "Nine subject pronouns cover every person. Learn `je` and `ze` and `we` as the casual everyday forms, and reach for `jij`, `zij`, `wij` only when you want to stress the subject.",
+      "more_examples": [
+        {
+          "hindi": "Ik woon in Utrecht.",
+          "english": "I live in Utrecht."
+        },
+        {
+          "hindi": "Zij is mijn collega.",
+          "english": "She is my colleague."
+        },
+        {
+          "hindi": "Wij wonen naast de school.",
+          "english": "We live next to the school."
+        },
+        {
+          "hindi": "Het is koud vandaag.",
+          "english": "It is cold today."
+        }
+      ]
+    },
+    {
+      "skill": "zijn (to be)",
+      "explanation": "Use `zijn` for identity, origin, and states: who you are, where you're from, and how you feel. Singular forms are ben/bent/is; all plurals are `zijn`.",
+      "more_examples": [
+        {
+          "hindi": "Ik ben moe.",
+          "english": "I am tired."
+        },
+        {
+          "hindi": "Jij bent aardig.",
+          "english": "You are kind."
+        },
+        {
+          "hindi": "Hij is uit Marokko.",
+          "english": "He is from Morocco."
+        },
+        {
+          "hindi": "Wij zijn er bijna.",
+          "english": "We are almost there."
+        }
+      ]
+    },
+    {
+      "skill": "hebben (to have)",
+      "explanation": "Use `hebben` for possession and for body states like hunger, thirst, and being in a hurry. Singular forms are heb/hebt/heeft; all plurals are `hebben`.",
+      "more_examples": [
+        {
+          "hindi": "Ik heb een vraag.",
+          "english": "I have a question."
+        },
+        {
+          "hindi": "Jij hebt gelijk.",
+          "english": "You are right (lit. you have right)."
+        },
+        {
+          "hindi": "Hij heeft haast.",
+          "english": "He is in a hurry (lit. has haste)."
+        },
+        {
+          "hindi": "Zij hebben een mooi huis.",
+          "english": "They have a beautiful house."
+        }
+      ]
+    }
+  ],
+  "practice_prompt": "You are a friendly, patient Dutch tutor drilling subject pronouns plus the verbs zijn (to be) and hebben (to have) for an absolute beginner. Address the user as `je`. Open with exactly: 'Hoi! Laten we de werkwoorden zijn en hebben oefenen. Eerste vraag: wat is de ik-vorm van zijn?' Give one tiny item at a time and wait for the answer before the next. Mix the task types: ask for a single conjugation (the jullie-form of hebben), give a pronoun plus a state and ask for a full short sentence (`hij` plus moe gives `hij is moe`), or ask which verb fits a meaning (hunger uses hebben, age uses zijn). After each answer, confirm briefly, then give the next item. Watch for the classic errors: `ik bent`, `hij hebt` instead of `hij heeft`, using zijn for hunger, and forgetting the dropped `-t` in `heb jij?`. Mark every mistake with the exact tag [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] and add one short plain reason. Keep it warm and encouraging, stay in simple Dutch, and after about eight items finish with 'Goed gedaan! Tot de volgende keer.'",
+  "references": [
+    "Dutch Grammar (dutchgrammar.com)",
+    "TaalCompleet A1",
+    "Naar Nederland"
+  ],
+  "theory": {
+    "intro": "Before any other Dutch grammar, you need two things: the words for the people doing the action, and the two verbs you'll reach for in almost every sentence. The pronouns are `ik`, `jij`, `u`, `hij`, `zij`, `het`, `wij`, `jullie`, and `zij` again. The verbs are `zijn` (to be) and `hebben` (to have). Both are irregular, but they're so common that a few days of use will fix them in your memory. Get these, and you can already say who you are, where you're from, how you feel, and what you have.",
+    "sections": [
+      {
+        "heading": "The pronouns",
+        "body": "A subject pronoun is the little word that says who is doing something: `ik` (I), `jij` (you), `hij` (he). Dutch has nine of them, and two pairs of look-alikes to sort out.\n\nFirst pair: `jij` versus `je`. They mean the same thing, the informal 'you'. `je` is the relaxed everyday form you'll use most of the time. `jij` is the stressed form, for when you want to put the spotlight on the person: `Ik ben klaar, en jij?` (I'm done, and you?). The same goes for `wij`/`we` and `zij`/`ze`, the second word in each pair is just the unstressed everyday version.\n\nSecond thing to watch: `zij` does double duty. It means both **she** and **they**. Don't panic, the verb form always tells you which. `zij is` can only be 'she is', and `zij zijn` can only be 'they are'.\n\nAnd then there's `u`, the polite, formal 'you'. We'll give it its own section later, because choosing between `je` and `u` is a small social skill of its own.",
+        "table": {
+          "caption": "The nine subject pronouns",
+          "columns": [
+            "Dutch",
+            "English",
+            "note"
+          ],
+          "rows": [
+            [
+              "ik",
+              "I",
+              ""
+            ],
+            [
+              "jij / je",
+              "you (informal)",
+              "jij = stressed, je = everyday"
+            ],
+            [
+              "u",
+              "you (formal)",
+              "polite, for strangers/elders"
+            ],
+            [
+              "hij",
+              "he",
+              ""
+            ],
+            [
+              "zij / ze",
+              "she",
+              "ze = everyday form"
+            ],
+            [
+              "het",
+              "it",
+              "also means 'the' for het-words"
+            ],
+            [
+              "wij / we",
+              "we",
+              "we = everyday form"
+            ],
+            [
+              "jullie",
+              "you all",
+              "plural 'you'"
+            ],
+            [
+              "zij / ze",
+              "they",
+              "same word as 'she'"
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "tip",
+          "body": "In real speech you'll hear `je`, `ze`, and `we` far more than `jij`, `zij`, and `wij`. Save the stressed forms for when you genuinely want to emphasize who you mean."
+        },
+        "cutting_intro": "Hallo, ik ben Mr. Stroopwafel! Let's meet the people-words first, the pronouns. There are nine, and two little pairs to keep an eye on.",
+        "quick_check": {
+          "question": "What does `zij` mean in the sentence `zij zijn moe`?",
+          "options": [
+            "she",
+            "they",
+            "you"
+          ],
+          "correct_index": 1,
+          "explanation": "`zij` means both 'she' and 'they'. Here the plural verb `zijn` tells you it's 'they'. If it were 'she', the verb would be `is` (`zij is moe`)."
+        }
+      },
+      {
+        "heading": "zijn, to be",
+        "body": "`zijn` is the verb 'to be', and it's the single most useful verb in Dutch. You use it for who you are (`Ik ben Anna`), where you're from (`Ik ben Engels`), and how you feel right now (`Ik ben moe`).\n\nIt's irregular, so there's no stem rule to lean on. You just memorize the forms. The good news: there are really only four to learn, because all three plurals share one form.\n\n- `ik ben`\n- `jij bent` and `u bent`\n- `hij`, `zij`, `het` all take `is`\n- `wij`, `jullie`, `zij` all take `zijn`\n\nNotice that the plural form `zijn` is spelled exactly like the infinitive. That's not a coincidence to fight, it's a gift: one form covers the dictionary entry and all three plurals.",
+        "table": {
+          "caption": "`zijn` (to be) conjugated",
+          "columns": [
+            "subject",
+            "form"
+          ],
+          "rows": [
+            [
+              "ik",
+              "ben"
+            ],
+            [
+              "jij / u",
+              "bent"
+            ],
+            [
+              "hij / zij / het",
+              "is"
+            ],
+            [
+              "wij",
+              "zijn"
+            ],
+            [
+              "jullie",
+              "zijn"
+            ],
+            [
+              "zij (they)",
+              "zijn"
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "hindi": "Ik ben Anna.",
+            "english": "I am Anna.",
+            "breakdown": "Identity: name. `ik ben` plus the name, no extra word."
+          },
+          {
+            "hindi": "Ik ben Engels.",
+            "english": "I am English.",
+            "breakdown": "Origin: nationality goes straight after `ben`, no article."
+          },
+          {
+            "hindi": "Hij is moe.",
+            "english": "He is tired.",
+            "breakdown": "State: `hij` plus `is` plus the feeling word."
+          },
+          {
+            "hindi": "Wij zijn er bijna.",
+            "english": "We are almost there.",
+            "breakdown": "Plural: `wij zijn`, same form as the infinitive."
+          }
+        ],
+        "callout": {
+          "tone": "note",
+          "body": "Unlike English, Dutch puts no article before a profession or nationality: `Ik ben leraar` (I am a teacher), `Ik ben Engels` (I am English). Drop the 'a'."
+        },
+        "cutting_intro": "Now the big one: `zijn`, the verb 'to be'. It's irregular, but there are only four forms because the plurals all match. Easy.",
+        "quick_check": {
+          "question": "Which form of `zijn` goes with `jij`?",
+          "options": [
+            "ben",
+            "bent",
+            "is"
+          ],
+          "correct_index": 1,
+          "explanation": "`jij bent`, and `u bent` too. `ik` takes `ben`, and `hij/zij/het` take `is`. Don't say `ik bent`, that's the most common slip."
+        }
+      },
+      {
+        "heading": "hebben, to have",
+        "body": "`hebben` is the verb 'to have', and it's just as essential as `zijn`. You use it for possession (`Ik heb een fiets`, I have a bicycle) and for a whole family of body states where English uses 'to be': `Ik heb honger` (I am hungry, literally 'I have hunger'), `Ik heb dorst` (I am thirsty), `Ik heb haast` (I am in a hurry).\n\nIt's irregular too, but the pattern is short:\n\n- `ik heb`\n- `jij hebt`\n- `hij`, `zij`, `het` take `heeft` (this is the one to memorize)\n- `wij`, `jullie`, `zij` all take `hebben`\n\nThe trap is `heeft`. A regular verb would give you `hebt` for hij/zij/het, but `hebben` flips to `heeft`. Say it out loud a few times so it becomes automatic.\n\nDutch also uses `zijn` for age, just like English: `Hoe oud ben jij?` then `Ik ben dertig`. So age is a `zijn` thing, not a `hebben` thing.",
+        "table": {
+          "caption": "`hebben` (to have) conjugated",
+          "columns": [
+            "subject",
+            "form"
+          ],
+          "rows": [
+            [
+              "ik",
+              "heb"
+            ],
+            [
+              "jij",
+              "hebt"
+            ],
+            [
+              "u",
+              "hebt / heeft"
+            ],
+            [
+              "hij / zij / het",
+              "heeft"
+            ],
+            [
+              "wij",
+              "hebben"
+            ],
+            [
+              "jullie / zij (they)",
+              "hebben"
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "hindi": "Ik heb een auto.",
+            "english": "I have a car.",
+            "breakdown": "Possession: `ik heb` plus the thing owned."
+          },
+          {
+            "hindi": "Zij heeft honger.",
+            "english": "She is hungry (lit. has hunger).",
+            "breakdown": "Body state: Dutch uses `hebben` where English uses 'to be'. Note `heeft`."
+          },
+          {
+            "hindi": "Hij heeft een vraag.",
+            "english": "He has a question.",
+            "breakdown": "`hij heeft`, the irregular third-person form, not `hij hebt`."
+          },
+          {
+            "hindi": "Wij hebben twee kinderen.",
+            "english": "We have two children.",
+            "breakdown": "Plural: `wij hebben`, same form for all three plurals."
+          }
+        ],
+        "callout": {
+          "tone": "warning",
+          "body": "Hunger, thirst, and haste use `hebben` in Dutch, not `zijn`. Say `ik heb honger`, never `ik ben honger`. But age uses `zijn`: `ik ben dertig`. Sort these two buckets early."
+        },
+        "cutting_intro": "Next: `hebben`, to have. One form to drill harder than the rest: `hij heeft`, not `hij hebt`. Let's lock it in.",
+        "quick_check": {
+          "question": "How do you say 'she has a car'?",
+          "options": [
+            "zij hebt een auto",
+            "zij heeft een auto",
+            "zij hebben een auto"
+          ],
+          "correct_index": 1,
+          "explanation": "`zij heeft een auto`. hij/zij/het all take the irregular `heeft`, not `hebt`. `hebben` is the plural form, for `wij`/`jullie`/`zij` (they)."
+        }
+      },
+      {
+        "heading": "je or u?",
+        "body": "Dutch has two ways to say 'you', and choosing between them is a small but real social skill. `je` (or stressed `jij`) is informal. `u` is formal and polite.\n\nThe rule of thumb is simple. Use `u` with people you don't know, people older than you, and anyone in a professional role: a doctor, an official at the gemeente, a shopkeeper you've never met. Use `je` with friends, peers, children, and young people.\n\nWhen you genuinely can't tell, start with `u`. Nobody has ever been offended by being treated politely, and a Dutch person will often invite you to switch by saying something like `je mag je zeggen, hoor` (you can use 'je', you know).\n\nOne grammar point ties this section to the last two. `u` always takes the singular verb form, the same one `jij` uses: `u bent`, `u hebt`. So `u` borrows the `jij`-form of the verb, even though it's polite. The only special touch is that `u heeft` is also accepted alongside `u hebt`.",
+        "examples": [
+          {
+            "hindi": "Hoe heet je?",
+            "english": "What's your name? (informal)",
+            "breakdown": "`je` with a peer, a classmate, a child."
+          },
+          {
+            "hindi": "Hoe heet u?",
+            "english": "What's your name? (formal)",
+            "breakdown": "`u` with a stranger, an official, an older person."
+          },
+          {
+            "hindi": "Bent u de dokter?",
+            "english": "Are you the doctor? (formal)",
+            "breakdown": "`u bent`, formal, but it uses the same `bent` form as `jij`."
+          },
+          {
+            "hindi": "Heb je tijd?",
+            "english": "Do you have time? (informal)",
+            "breakdown": "`je` plus dropped `-t` in the inverted question: `heb je?`, not `hebt je?`."
+          }
+        ],
+        "callout": {
+          "tone": "tip",
+          "body": "When in doubt, use `u`. It's the safe, respectful default with anyone you don't already know. You can always relax into `je` once the other person does."
+        },
+        "cutting_intro": "Two words for 'you', and picking the right one shows you understand the room. Here's how Dutch people choose between `je` and `u`.",
+        "quick_check": {
+          "question": "You're meeting your new doctor for the first time. Which 'you' do you use?",
+          "options": [
+            "je",
+            "u",
+            "jullie"
+          ],
+          "correct_index": 1,
+          "explanation": "Use `u`. It's the polite form for a professional you don't know. `je` is for friends and peers; `jullie` is the plural 'you all'."
+        }
+      },
+      {
+        "heading": "Putting it together",
+        "body": "Now you have all the pieces: nine pronouns, the verb `zijn`, the verb `hebben`, and the `je`/`u` choice. Combining them is the whole game at this stage, and the pattern is short.\n\nFor a basic sentence, put the pronoun first and the verb second, so pronoun plus verb plus the rest.\n\n- `Ik ben Anna.` (identity)\n- `Hij is Nederlands.` (origin)\n- `Wij zijn moe.` (state)\n- `Ik heb honger.` (body state)\n- `Zij heeft een hond.` (possession)\n\nTo ask a yes/no question, swap the first two, so verb plus pronoun plus the rest. `Ben jij Engels?` (Are you English?), `Heeft hij tijd?` (Does he have time?). And remember the one quirk from `hebben` and `zijn`: when `jij`/`je` follows the verb, the `-t` drops. `Jij hebt` becomes `Heb je?`, and `Jij bent` becomes `Ben je?`.\n\nThat's genuinely enough to introduce yourself, describe people, and ask simple questions. Everything else in Dutch builds on top of this.",
+        "examples": [
+          {
+            "hindi": "Ik ben nieuw hier.",
+            "english": "I am new here.",
+            "breakdown": "Pronoun plus `zijn` plus the rest. `ik ben` plus `nieuw hier`."
+          },
+          {
+            "hindi": "Zij heeft een mooi huis.",
+            "english": "She has a beautiful house.",
+            "breakdown": "Pronoun plus `hebben` plus the rest. Note `heeft`, not `hebt`."
+          },
+          {
+            "hindi": "Ben jij moe?",
+            "english": "Are you tired?",
+            "breakdown": "Question: verb first, then `jij`. `Jij bent` flips to `Ben jij?`."
+          },
+          {
+            "hindi": "Heb je honger?",
+            "english": "Are you hungry?",
+            "breakdown": "Question with dropped `-t`: `je hebt` becomes `Heb je?`."
+          }
+        ],
+        "callout": {
+          "tone": "tip",
+          "body": "Drill the two questions `Ben je...?` and `Heb je...?` until they're automatic. The dropped `-t` (`heb je`, not `hebt je`) is the detail that makes you sound natural fast."
+        },
+        "cutting_intro": "Last step: stack the pieces into real sentences. Pronoun, then verb, then the rest. Flip the first two and you've got a question.",
+        "quick_check": {
+          "question": "Which is the correct way to ask 'Are you hungry?' informally?",
+          "options": [
+            "Hebt je honger?",
+            "Heb je honger?",
+            "Je hebt honger?"
+          ],
+          "correct_index": 1,
+          "explanation": "`Heb je honger?`. When `je` follows the verb in a question, the `-t` drops, so it's `heb je`, not `hebt je`. And hunger uses `hebben`, not `zijn`."
+        }
+      }
+    ],
+    "wrap_up": "You now have the foundation under everything else in Dutch: nine subject pronouns, the verb `zijn` for who you are and how you feel, the verb `hebben` for what you have, and the `je`/`u` choice for matching your tone to the situation. Keep two traps in mind, `hij heeft` (not `hebt`) and the dropped `-t` in `heb je?` / `ben je?`. Memorize hunger and thirst as `hebben` words and age as a `zijn` word. The phrases below mix all of this together so you can practice introducing yourself, describing people, and asking simple questions."
+  }
+}

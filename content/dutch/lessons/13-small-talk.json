@@ -1,0 +1,162 @@
+{
+  "id": "dutch-small-talk",
+  "title": "Small Talk & the Weather",
+  "situation": "Chatting with a neighbour at the door, a colleague in the lift, or a cashier at the checkout. The everyday social glue that keeps Dutch life running.",
+  "level": "A1",
+  "exam_targeted": false,
+  "skills": [
+    "asking how someone is",
+    "talking about the weather",
+    "tag questions with hè and toch",
+    "light small talk openers and closers"
+  ],
+  "phrases": [
+    {
+      "hindi": "Hoe gaat het met je?",
+      "english": "How are you? (informal)",
+      "context": "The standard daily check-in with anyone you know a little. Expect a short, upbeat answer. Most Dutch people won't launch into a long story here.",
+      "pronunciation": "hoo CHAAT het met ye?"
+    },
+    {
+      "hindi": "Goed, en met jou?",
+      "english": "Good, and you? (informal reply)",
+      "context": "The standard two-part bounce-back. 'Goed, dank je' is also fine. Match whatever length the other person used.",
+      "pronunciation": "CHOOT, en met YOW?"
+    },
+    {
+      "hindi": "Het gaat wel.",
+      "english": "It's going fine. / Not bad.",
+      "context": "A slightly more honest, low-key reply than 'goed'. Signals you're okay without overdoing the positivity. Very natural in Dutch.",
+      "pronunciation": "het CHAAT vel."
+    },
+    {
+      "hindi": "Lekker weer, hè?",
+      "english": "Nice weather, isn't it?",
+      "context": "'Hè' at the end turns any statement into a tag question asking for agreement. This exact phrase is the single most common Dutch conversation-starter with strangers.",
+      "pronunciation": "LEK-ker VAYR, hay?"
+    },
+    {
+      "hindi": "Wat een mooie dag!",
+      "english": "What a beautiful day!",
+      "context": "Use this on a genuinely sunny day. The Dutch treat a warm sunny day as a minor event worth celebrating together. You will be understood and appreciated.",
+      "pronunciation": "vat en MOH-ye DACH!"
+    },
+    {
+      "hindi": "Het regent. Wat een rotweer.",
+      "english": "It's raining. What awful weather.",
+      "context": "'Rotweer' (lit. rotten weather) is a beloved Dutch compound. Complaining about rain together is a bonding ritual, not negativity. Say it with a slight smile.",
+      "pronunciation": "het RAY-chent. vat en ROT-vayr."
+    },
+    {
+      "hindi": "Het is koud / warm / zonnig / winderig.",
+      "english": "It is cold / warm / sunny / windy.",
+      "context": "The basic weather-description toolkit. 'Zonnig' is always a conversation brightener. Dutch wind is a daily reality, so 'winderig' comes up often.",
+      "pronunciation": "het is KOWT / VARM / ZON-ich / VIN-de-rich."
+    },
+    {
+      "hindi": "Heb je een fijn weekend gehad?",
+      "english": "Did you have a good weekend?",
+      "context": "A Monday-morning classic at the office. Uses the perfect tense ('gehad'). Expect 'ja, lekker!' or a short description. Return the question with 'en jij?'",
+      "pronunciation": "hep ye en FAYN VAYK-ent che-HAT?"
+    },
+    {
+      "hindi": "Wat ga je dit weekend doen?",
+      "english": "What are you going to do this weekend?",
+      "context": "A Friday staple. Uses 'gaan + infinitive' for future plans. Light and friendly, invites a short answer. No commitment expected from you to share your own plans.",
+      "pronunciation": "vat CHAA ye dit VAYK-ent DOON?"
+    },
+    {
+      "hindi": "Tot de volgende keer!",
+      "english": "Until next time! / See you next time!",
+      "context": "A warm close for a brief chat, warmer than 'tot ziens'. Natural after a quick exchange with a neighbour or the person at the checkout.",
+      "pronunciation": "tot de VOL-chen-de KAYR!"
+    }
+  ],
+  "grammar_notes": [
+    "'Het' as a dummy weather subject: Dutch weather verbs always take 'het' as a fixed subject (het regent, het sneeuwt, het is koud). There is no real noun behind this 'het'; it exists only to fill the subject slot, the same way English uses 'it' in 'it's raining'.",
+    "The tag word 'hè': placed at the end of a statement, 'hè' asks the listener to agree (like 'isn't it?' or 'right?'). Stress it slightly upward. 'Toch' does the same job with a firmer expectation of agreement: 'Je komt toch? / You're coming, right?'",
+    "'Hoe gaat het' is a fixed idiom: the full phrase is 'hoe gaat het met je/u?' but in casual speech the 'met je' is often dropped to just 'hoe gaat het?' The reply is always about personal well-being, never about the literal going/movement meaning of 'gaan'.",
+    "'Jou' vs 'jij/je': after a preposition ('met jou', 'voor jou', 'bij jou') you must use the stressed object form 'jou', not 'je'. So: 'Hoe gaat het met jou?' not 'met je' when you want to emphasize the 'you'.",
+    "Future with 'gaan': the near future is formed with 'gaan + infinitive' (Wat ga je doen? / What are you going to do?). The verb 'gaan' conjugates normally (ik ga, jij gaat, hij gaat) and the infinitive goes to the end."
+  ],
+  "culture_notes": [
+    "Weather is the universal Dutch icebreaker. The Netherlands has genuinely changeable weather, so observations like 'lekker weer' or 'wat een rotweer' are never filler, they reflect daily lived experience. Opening with weather is socially safe and widely appreciated.",
+    "Dutch small talk is brief and purposeful. A typical lift exchange runs 2-3 turns and ends cleanly. Overstaying a small talk moment (filling silences, adding extra questions) can feel odd. Short and warm beats long and eager.",
+    "'Gezellig' (cozy, convivial, pleasant) is the single most valued quality of a social moment in Dutch culture. A gezellige short chat with a neighbour over the garden fence is a social good. Aim for that tone: friendly, unhurried, not too personal.",
+    "Personal questions (salary, relationship status, age) are considered too private for small talk with acquaintances. Keep topics to weather, weekend plans, and how things are going generally. The Dutch are warm but value a clear boundary between acquaintance-chat and friend-talk."
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "Asking how someone is",
+      "explanation": "Dutch has several levels of this question. 'Hoe gaat het?' is the everyday all-purpose form. 'Hoe is het?' is slightly more informal. 'Alles goed?' is a breezy shortened form you will hear constantly.",
+      "more_examples": [
+        {
+          "hindi": "Hoe is het met je?",
+          "english": "How is it going with you? (casual variant)"
+        },
+        {
+          "hindi": "Alles goed?",
+          "english": "Everything good? (very casual, from friends or younger cashiers)"
+        },
+        {
+          "hindi": "Gaat het een beetje?",
+          "english": "Getting along okay? (sympathetic check-in when something looks hard)"
+        },
+        {
+          "hindi": "Prima, dank je. En jij?",
+          "english": "Great, thanks. And you? (slightly warmer reply than 'goed')"
+        }
+      ]
+    },
+    {
+      "skill": "Talking about the weather",
+      "explanation": "Weather talk follows a simple pattern: 'het is + adjective' or 'het + weather verb'. Learn 5-6 adjectives and you can comment on any Dutch day. Adding 'hè' at the end instantly invites the other person to agree.",
+      "more_examples": [
+        {
+          "hindi": "Het is bewolkt vandaag, hè?",
+          "english": "It is cloudy today, isn't it?"
+        },
+        {
+          "hindi": "Het waait hard.",
+          "english": "The wind is blowing hard. / It is very windy."
+        },
+        {
+          "hindi": "Gelukkig regent het niet.",
+          "english": "Fortunately it is not raining."
+        },
+        {
+          "hindi": "Eindelijk wat zon!",
+          "english": "Finally some sun!"
+        }
+      ]
+    },
+    {
+      "skill": "Opening and closing a short chat",
+      "explanation": "Dutch small talk has a clear arc: greeting + weather or how-are-you + one follow-up + close. Knowing the standard openers and closers lets you participate comfortably without the chat dragging.",
+      "more_examples": [
+        {
+          "hindi": "Oh, ik moet er vandoor.",
+          "english": "Oh, I have to run. (common exit line)"
+        },
+        {
+          "hindi": "Prettig weekend verder!",
+          "english": "Have a good rest of the weekend!"
+        },
+        {
+          "hindi": "Doe rustig aan!",
+          "english": "Take it easy! (warm closer, like 'take care')"
+        },
+        {
+          "hindi": "Fijn gesprekje, tot gauw!",
+          "english": "Nice little chat, see you soon!"
+        }
+      ]
+    }
+  ],
+  "practice_prompt": "You are Marieke, the user's friendly Dutch neighbour. You have bumped into them in the lift of your apartment building. Use informal 'je/jij' throughout. Open verbatim with: 'Oh hoi! Wat een verrassing, ik zie je zo weinig. Hoe gaat het met je?' From there, chat briefly about the weather today (pick one: sunny and rare, or grey and windy and very Dutch), ask about their weekend plans or what they did last weekend, and share a small detail about your own weekend (a market visit, a bike ride, something low-key). Keep it warm and brief, 6-8 turns at most, and close naturally with 'tot de volgende keer' or similar. If the user makes a grammar mistake, flag it immediately with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] and then continue the conversation. Key corrections to watch: 'het' omitted in weather statements (it is always 'het regent', not just 'regent'), wrong word order after a fronted adverb (verb must come second: 'Morgen ga ik', not 'Morgen ik ga'), and 'jou' vs 'je' after a preposition. Stay in Dutch the whole time.",
+  "references": [
+    "Bart de Pau, NT2 Dutch courses (YouTube / learndutch.org): small talk and weather vocabulary",
+    "Taalunie, Referentiekader Nederlands A1/A2 (2008): A1 spoken interaction descriptors",
+    "Nicoline van der Sijs, Chronologisch woordenboek (Van Dale, 2001): 'gezellig' etymology and cultural notes"
+  ]
+}

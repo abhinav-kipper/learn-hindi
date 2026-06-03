@@ -1,6 +1,10 @@
 import { Lesson } from '@/types/lesson'
 import { getDutchFoundationById, getDutchFoundations } from '@/lib/dutch/foundations'
 
+import firstWords from '@/content/dutch/lessons/12-first-words.json'
+import smallTalk from '@/content/dutch/lessons/13-small-talk.json'
+import familyHome from '@/content/dutch/lessons/14-family-home.json'
+import dailyRoutine from '@/content/dutch/lessons/15-daily-routine.json'
 import supermarket from '@/content/dutch/lessons/01-supermarket.json'
 import introductions from '@/content/dutch/lessons/02-introductions.json'
 import cafe from '@/content/dutch/lessons/03-cafe.json'
@@ -13,7 +17,13 @@ import huisartsCall from '@/content/dutch/lessons/09-huisarts-call.json'
 import jobInterview from '@/content/dutch/lessons/10-job-interview.json'
 import primarySchool from '@/content/dutch/lessons/11-primary-school.json'
 
+// Ground-up first: survival phrases + everyday social chats, then the original
+// errand scenarios, then the A2/B1 exam-targeted lessons.
 const lessons: Lesson[] = [
+  firstWords,
+  smallTalk,
+  familyHome,
+  dailyRoutine,
   supermarket,
   introductions,
   cafe,

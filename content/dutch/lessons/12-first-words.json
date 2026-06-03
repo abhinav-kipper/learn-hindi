@@ -1,0 +1,174 @@
+{
+  "id": "dutch-first-words",
+  "title": "First Words & Survival Phrases",
+  "situation": "You've just arrived in the Netherlands and are meeting Dutch people for the first time. These are the handful of phrases that get you through any early interaction: greetings, thanks, apologies, and the three sentences that save you when you don't understand.",
+  "level": "A1",
+  "exam_targeted": false,
+  "skills": [
+    "greetings by time of day",
+    "saying please and thank you",
+    "asking for clarification",
+    "polite apologies",
+    "saying goodbye"
+  ],
+  "phrases": [
+    {
+      "hindi": "Hallo! / Hoi! / Dag!",
+      "english": "Hello! / Hi! / Hi there!",
+      "context": "'Hallo' is neutral and safe with anyone. 'Hoi' is casual, for peers and people you meet informally. 'Dag' doubles as both hello and goodbye in everyday Dutch.",
+      "pronunciation": "HA-loh! / HOY! / DACH!"
+    },
+    {
+      "hindi": "Goedemorgen. / Goedemiddag. / Goedenavond.",
+      "english": "Good morning. / Good afternoon. / Good evening.",
+      "context": "Time-of-day greetings: use 'goedemorgen' until about noon, 'goedemiddag' from noon to six, 'goedenavond' after six. More formal than 'hoi', good for shopkeepers, neighbors you don't know yet, and anyone older.",
+      "pronunciation": "CHOO-de-MOR-chen. / CHOO-de-MI-dach. / CHOO-de-na-FONT."
+    },
+    {
+      "hindi": "Alsjeblieft. / Alstublieft.",
+      "english": "Please. / Here you go. / You're welcome. (formal)",
+      "context": "'Alsjeblieft' (informal, 'als-je-BLEEFT') is the everyday word. 'Alstublieft' (formal, 'als-tu-BLEEFT') is for strangers, older people, and service staff. Both mean 'please' when asking and 'here you are' when handing something over.",
+      "pronunciation": "als-ye-BLEEFT. / als-tu-BLEEFT."
+    },
+    {
+      "hindi": "Dank je wel. / Dank u wel.",
+      "english": "Thank you. (informal) / Thank you. (formal)",
+      "context": "'Dank je wel' with peers, friends, and shop assistants your age. 'Dank u wel' with the gemeente desk, a doctor, an older neighbor. The Dutch say this crisply, with a nod rather than elaborate warmth.",
+      "pronunciation": "DANK ye vel. / DANK u vel."
+    },
+    {
+      "hindi": "Graag gedaan.",
+      "english": "You're welcome. / My pleasure.",
+      "context": "The standard reply when someone thanks you. Warmer than silence but not over-the-top. Pair it with a small nod. 'Geen probleem' (no problem) is the casual younger alternative.",
+      "pronunciation": "CHRAACH che-DAAN."
+    },
+    {
+      "hindi": "Sorry. / Pardon?",
+      "english": "Sorry. / Excuse me? / Could you repeat that?",
+      "context": "'Sorry' (borrowed from English, said 'SOR-ry') is the go-to apology for bumping into someone or small mistakes. 'Pardon?' (said 'par-DON') is used when you didn't hear or didn't understand, and it prompts the speaker to repeat.",
+      "pronunciation": "SOR-ry. / par-DON?"
+    },
+    {
+      "hindi": "Ja. / Nee.",
+      "english": "Yes. / No.",
+      "context": "The two most useful words in any language. Dutch 'ja' sounds like English 'ya'. 'Nee' sounds like English 'nay'. Dutch people will use these without softening, it is not rude.",
+      "pronunciation": "YAA. / NAY."
+    },
+    {
+      "hindi": "Ik begrijp het niet. / Ik snap het niet.",
+      "english": "I don't understand.",
+      "context": "Say this early and often. 'Begrijp' is slightly more formal, 'snap' is everyday spoken Dutch. Both will prompt the speaker to slow down or switch approach. This phrase is your best friend as a beginner.",
+      "pronunciation": "ik be-CHRAYP het NEET. / ik SNAP het NEET."
+    },
+    {
+      "hindi": "Kunt u dat herhalen? / Kun je dat herhalen?",
+      "english": "Could you repeat that? (formal) / Could you repeat that? (informal)",
+      "context": "'Kunt u' (formal) for strangers, officials, older neighbors. 'Kun je' (informal) for peers and friendly encounters. Use this whenever 'pardon?' gets the same fast Dutch back at you.",
+      "pronunciation": "KUNT u dat her-HAA-len? / KUN ye dat her-HAA-len?"
+    },
+    {
+      "hindi": "Spreekt u Engels? / Spreek je Engels?",
+      "english": "Do you speak English? (formal) / Do you speak English? (informal)",
+      "context": "Most Dutch people speak excellent English and will happily switch. Asking in Dutch first, even if you then need English, makes a strong positive impression. It signals you are trying.",
+      "pronunciation": "SPRAYKT u ENG-els? / SPRAYK ye ENG-els?"
+    },
+    {
+      "hindi": "Langzamer, alstublieft.",
+      "english": "Slower, please.",
+      "context": "Two words that change everything. Dutch spoken at native speed is dense with linked sounds. This phrase, said with a smile, will almost always get a patient, slower response. Very few beginners know to use it.",
+      "pronunciation": "LANG-zaa-mer, als-tu-BLEEFT."
+    },
+    {
+      "hindi": "Tot ziens! / Doei!",
+      "english": "Goodbye! / Bye! (casual)",
+      "context": "'Tot ziens' is the standard, warm goodbye for any setting. 'Doei' is the casual exit, like waving 'bye'. Dutch people often say 'doei doei!' twice in a row for extra friendliness.",
+      "pronunciation": "tot ZEENS! / DOO-ee!"
+    }
+  ],
+  "grammar_notes": [
+    "'Je' (informal) vs 'u' (formal): use 'je/jij' with peers, younger people, and anyone who seems relaxed. Use 'u' with strangers in formal settings, older people, and officials. When in doubt, start with 'u'. The other person will say 'zeg maar je' (just say je) if they prefer informal.",
+    "'Alsjeblieft' vs 'alstublieft': the 'je' / 'u' distinction applies here too. 'Als-je-belieft' contracts to 'alsjeblieft'; 'als-u-belieft' contracts to 'alstublieft'. The meaning is the same in both directions: please (when asking) and here you are (when handing something over).",
+    "Dutch verb conjugation for survival questions: 'spreekt u' (formal, -t ending) vs 'spreek je' (informal, no -t ending when 'je' follows the verb). Same pattern for 'kunt u' vs 'kun je'. You don't need to master this yet, just memorize both forms as pairs.",
+    "These survival phrases are fixed expressions. Learn them as whole chunks, not word by word. 'Ik snap het niet' and 'langzamer, alstublieft' will serve you in every early conversation."
+  ],
+  "culture_notes": [
+    "Dutch directness is real and warm, not cold. If a Dutch person corrects your Dutch or switches to English, it is not a rejection. It means they want the conversation to work. The effort you put in still registers.",
+    "A firm, brief handshake on first meeting is standard. Friends and family often do three air-cheek-kisses, but for a first encounter with a stranger, the handshake is the safe default.",
+    "'Doei' is very casual. Reserve it for people you have warmed up with. Starting with 'tot ziens' and letting them say 'doei' first tells you where the register sits.",
+    "Dutch people appreciate when foreigners try Dutch, even badly. A genuine 'dank je wel' or 'goedemorgen' at the bakery will often get a smile and a slower, clearer Dutch reply. The attempt matters."
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "Greeting by time of day",
+      "explanation": "Dutch has three time-of-day greetings used in most formal and semi-formal encounters. 'Goedemorgen' until noon, 'goedemiddag' until six, 'goedenavond' after six. 'Hallo' and 'hoi' work any time and are the safe casual option.",
+      "more_examples": [
+        {
+          "hindi": "Goedemorgen! Hoe gaat het?",
+          "english": "Good morning! How are you?"
+        },
+        {
+          "hindi": "Goedemiddag, heeft u een momentje?",
+          "english": "Good afternoon, do you have a moment?"
+        },
+        {
+          "hindi": "Goedenavond! Welkom.",
+          "english": "Good evening! Welcome."
+        },
+        {
+          "hindi": "Hoi! Alles goed?",
+          "english": "Hi! All good?"
+        }
+      ]
+    },
+    {
+      "skill": "Asking someone to help you understand",
+      "explanation": "Three phrases that keep a conversation alive when you get lost: 'ik snap het niet' (I don't understand), 'kunt u dat herhalen' (can you repeat that), and 'langzamer, alstublieft' (slower, please). Use them freely. Dutch speakers will not be offended.",
+      "more_examples": [
+        {
+          "hindi": "Sorry, ik snap het niet. Kunt u dat herhalen?",
+          "english": "Sorry, I don't understand. Could you repeat that?"
+        },
+        {
+          "hindi": "Langzamer, alstublieft. Mijn Nederlands is nog niet zo goed.",
+          "english": "Slower, please. My Dutch is not so good yet."
+        },
+        {
+          "hindi": "Wat betekent dat?",
+          "english": "What does that mean?"
+        },
+        {
+          "hindi": "Spreekt u Engels? Ik leer Nederlands.",
+          "english": "Do you speak English? I am learning Dutch."
+        }
+      ]
+    },
+    {
+      "skill": "Saying please and thank you",
+      "explanation": "'Alsjeblieft' and 'dank je wel' are the everyday pair. The formal versions swap 'je' for 'u'. Use 'graag gedaan' to reply when someone thanks you. These three exchanges cover nearly every polite transaction in daily Dutch life.",
+      "more_examples": [
+        {
+          "hindi": "Een koffie, alsjeblieft.",
+          "english": "A coffee, please."
+        },
+        {
+          "hindi": "Dank je wel! Graag gedaan.",
+          "english": "Thank you! You're welcome."
+        },
+        {
+          "hindi": "Alstublieft, mevrouw.",
+          "english": "Here you are, ma'am."
+        },
+        {
+          "hindi": "Dank u wel voor uw hulp.",
+          "english": "Thank you very much for your help."
+        }
+      ]
+    }
+  ],
+  "practice_prompt": "You are Femke, a friendly Dutch woman in her thirties who volunteers at a newcomers welcome desk at the local gemeenschapshuis. You are meeting the learner for the very first time. Start formal with 'u' because this is a service setting and the learner is new, but if they respond naturally and warmly, you can gently shift to 'je' mid-conversation and note the register change. Open verbatim with: 'Goedemiddag! Welkom. Ik ben Femke. U bent hier voor het eerst, toch?' Keep your Dutch slow and clear throughout, since this is exactly the kind of patient interaction a beginners desk is meant to provide. Draw naturally on the lesson phrases: greet them by time of day, offer something with 'alstublieft', thank them for something with 'dank u wel', say goodbye with 'tot ziens'. If they say 'ik snap het niet', slow down and rephrase. If they ask for 'langzamer', do exactly that. If they try 'spreekt u Engels', gently confirm you do but encourage them to keep trying Dutch. Correct slips with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]. Focus on: mixing up 'je' and 'u' in the same utterance, saying 'dank jij' instead of 'dank je', dropping 'het' in 'ik begrijp niet'. Keep it warm, patient, and practical. Close the exchange naturally with 'tot ziens en veel succes!' after 6 to 8 turns.",
+  "references": [
+    "DUO oefenen.nl, A1 survival vocabulary and phrase lists",
+    "TaalCompleet A1 (Boom uitgevers), Unit 1, first encounters and basic courtesy",
+    "Naar Nederland, NT2 intake module, first-contact phrases and je/u register"
+  ]
+}

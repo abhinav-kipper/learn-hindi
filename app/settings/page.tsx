@@ -98,7 +98,7 @@ export default function SettingsPage() {
       })
       if (res.pages === 0) {
         setDlState('error')
-        setDlLabel('could not download — check your connection')
+        setDlLabel('could not download, check your connection')
         return
       }
       const today = new Date().toISOString().split('T')[0]

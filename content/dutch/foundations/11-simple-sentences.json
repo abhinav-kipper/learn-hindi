@@ -1,0 +1,325 @@
+{
+  "id": "simple-sentences",
+  "title": "Building a Sentence",
+  "level": "A1",
+  "exam_targeted": false,
+  "situation": "Foundation: how a basic Dutch sentence is built, subject plus verb plus the rest, and a gentle first look at keeping the verb second",
+  "skills": [
+    "basic word order (subject + verb + rest)",
+    "the verb stays second",
+    "inversion after time or place",
+    "er is / er zijn (there is / there are)"
+  ],
+  "phrases": [
+    {
+      "hindi": "Ik drink koffie.",
+      "english": "I drink coffee.",
+      "context": "The simplest Dutch sentence: subject first (ik), verb second (drink), then the rest (koffie). This order feels just like English.",
+      "pronunciation": "ik DRINK KOF-fee."
+    },
+    {
+      "hindi": "Zij woont in Utrecht.",
+      "english": "She lives in Utrecht.",
+      "context": "Same shape with a different subject. The verb 'woont' sits right after the subject 'zij'. Build most sentences from this pattern.",
+      "pronunciation": "zay WOONT in U-trecht."
+    },
+    {
+      "hindi": "Wij eten brood.",
+      "english": "We eat bread.",
+      "context": "A plural subject works the same way: 'wij' first, the verb 'eten' second, 'brood' last. Subject, verb, rest.",
+      "pronunciation": "way AY-ten BROHT."
+    },
+    {
+      "hindi": "Ik werk vandaag.",
+      "english": "I work today.",
+      "context": "Normal order with a time word at the end. Compare this with the next phrase, where 'vandaag' moves to the front.",
+      "pronunciation": "ik WERK van-DAACH."
+    },
+    {
+      "hindi": "Vandaag werk ik.",
+      "english": "Today I work.",
+      "context": "Start with the time word and the verb still has to come second, so 'ik' moves to after the verb. This subject and verb swap is called inversion.",
+      "pronunciation": "van-DAACH WERK ik."
+    },
+    {
+      "hindi": "In Amsterdam woont mijn zus.",
+      "english": "My sister lives in Amsterdam.",
+      "context": "Start with a place and the verb 'woont' stays second, so the subject 'mijn zus' comes after it. The verb did not move; the subject did.",
+      "pronunciation": "in AM-ster-dam WOONT mayn ZUS."
+    },
+    {
+      "hindi": "Er is een probleem.",
+      "english": "There is a problem.",
+      "context": "Use 'er is' to say 'there is' with one thing. It introduces something new into the sentence, just like English 'there is'.",
+      "pronunciation": "er IS un proh-BLAYM."
+    },
+    {
+      "hindi": "Er zijn veel mensen.",
+      "english": "There are many people.",
+      "context": "Use 'er zijn' for more than one thing. 'Er is' for one, 'er zijn' for many. It pairs with plural nouns like 'mensen'.",
+      "pronunciation": "er ZAYN VAYL MEN-sen."
+    }
+  ],
+  "grammar_notes": [
+    "The basic Dutch sentence is subject + conjugated verb + the rest: 'Ik drink koffie', 'Zij woont in Utrecht'. Lean on this shape for most of what you say",
+    "In a main clause the conjugated verb is always the second element. This is the verb-second idea you will hear a lot",
+    "When you start with a time word or a place, the verb still stays second, so the subject hops to just after it: 'Vandaag werk ik', 'In Amsterdam woont mijn zus'. This swap is called inversion",
+    "Use 'er is' for one thing (there is) and 'er zijn' for more than one (there are): 'Er is een probleem', 'Er zijn veel mensen'",
+    "Dutch has no extra helper word for these simple sentences. Where English adds 'do' or '-ing', Dutch just conjugates the one verb: 'Ik werk' covers both 'I work' and 'I am working'"
+  ],
+  "culture_notes": [
+    "Dutch people front a time or place word very often in normal speech, so 'Morgen ga ik naar de markt' (Tomorrow I go to the market) sounds more natural than always starting with 'ik'. Getting the inversion right makes you sound much less foreign",
+    "Keeping your first sentences short and clear is genuinely fine in the Netherlands. Even short, correct sentences read as polite and confident, so you do not need long ones to be taken seriously",
+    "'Er' shows up constantly in everyday Dutch ('er is koffie', 'er zijn nog plekken vrij'). Listen for it; it is one of the small words that makes speech sound truly Dutch"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "subject + verb + rest",
+      "explanation": "Build the plain sentence in three steps: who or what (the subject), the conjugated verb, then everything else. The verb sits right after the subject.",
+      "more_examples": [
+        {
+          "hindi": "Ik lees een boek.",
+          "english": "I read a book."
+        },
+        {
+          "hindi": "Hij speelt voetbal.",
+          "english": "He plays football."
+        },
+        {
+          "hindi": "Wij wonen in Rotterdam.",
+          "english": "We live in Rotterdam."
+        },
+        {
+          "hindi": "Zij drinkt thee.",
+          "english": "She drinks tea."
+        }
+      ]
+    },
+    {
+      "skill": "inversion after time or place",
+      "explanation": "Put a time or place word first and the verb must still be second, so the subject moves to just after the verb. Compare the plain order with the inverted one.",
+      "more_examples": [
+        {
+          "hindi": "Ik werk vandaag. / Vandaag werk ik.",
+          "english": "I work today. / Today I work."
+        },
+        {
+          "hindi": "Wij eten om zes uur. / Om zes uur eten wij.",
+          "english": "We eat at six. / At six we eat."
+        },
+        {
+          "hindi": "Mijn zus woont hier. / Hier woont mijn zus.",
+          "english": "My sister lives here. / Here my sister lives."
+        },
+        {
+          "hindi": "Ik ga morgen. / Morgen ga ik.",
+          "english": "I go tomorrow. / Tomorrow I go."
+        }
+      ]
+    },
+    {
+      "skill": "er is / er zijn",
+      "explanation": "Use 'er is' to introduce one new thing and 'er zijn' for more than one. It matches English 'there is' and 'there are', and the verb still sits in second position.",
+      "more_examples": [
+        {
+          "hindi": "Er is een winkel.",
+          "english": "There is a shop."
+        },
+        {
+          "hindi": "Er zijn twee kamers.",
+          "english": "There are two rooms."
+        },
+        {
+          "hindi": "Er is geen melk.",
+          "english": "There is no milk."
+        },
+        {
+          "hindi": "Er zijn veel kinderen.",
+          "english": "There are many children."
+        }
+      ]
+    }
+  ],
+  "practice_prompt": "You are a friendly Dutch tutor drilling how to build a simple Dutch sentence, one item at a time. Address the student with 'je'. Open with: 'Hoi! We gaan eenvoudige zinnen bouwen. Eerste opdracht: maak een zin met deze woorden: ik / koffie / drinken.' Give ONE task and wait for the answer. Rotate three task types: (1) build a plain subject + verb + rest sentence from given words, (2) take a normal sentence and move a time or place word to the front so the student must invert the subject and verb (for example 'Ik werk vandaag' becomes 'Vandaag werk ik'), (3) ask the student to say 'there is' or 'there are' with a noun, choosing 'er is' or 'er zijn'. Watch for: the verb not staying second after a fronted time or place word (for example 'Vandaag ik werk' is wrong, it must be 'Vandaag werk ik'), a wrongly conjugated verb, and mixing up 'er is' with 'er zijn'. Flag every mistake with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] and give one short, warm tip. Keep tasks short and concrete, stay in Dutch unless asked otherwise, and after 6 to 8 items end with 'Heel goed gedaan! Tot ziens.'",
+  "references": [
+    "Hammarberg & Beersmans, Dutch: An Essential Grammar (Routledge), Ch. on word order",
+    "Naar Nederland (NT2) A1, basic sentence units",
+    "Bart de Pau, Learn Dutch 1000 words course"
+  ],
+  "theory": {
+    "intro": "A Dutch sentence is built from a few tidy pieces. You start with who or what the sentence is about (the subject), add the verb, then add the rest. This chapter shows you that basic shape, then one rule that makes Dutch feel a little different from English: the verb likes to sit in second position. You will also learn how to say 'there is' and 'there are'. We stay on simple main-clause sentences here. The bigger word-order rules come later.",
+    "sections": [
+      {
+        "heading": "Subject, verb, then the rest",
+        "body": "Most Dutch sentences follow one simple shape. First comes the **subject**, the person or thing doing the action. Then comes the **verb**. Then comes the rest, the extra information.\n\n- `Ik` (subject) `drink` (verb) `koffie` (rest)\n- `Zij` (subject) `woont` (verb) `in Utrecht` (rest)\n\nThis feels just like English: `I drink coffee`, `She lives in Utrecht`. Start here, and you can already say a lot. The verb always sits right after the subject.",
+        "table": {
+          "caption": "The basic shape: subject + verb + rest",
+          "columns": [
+            "subject",
+            "verb",
+            "rest"
+          ],
+          "rows": [
+            [
+              "Ik",
+              "drink",
+              "koffie"
+            ],
+            [
+              "Zij",
+              "woont",
+              "in Utrecht"
+            ],
+            [
+              "Wij",
+              "eten",
+              "brood"
+            ],
+            [
+              "Hij",
+              "speelt",
+              "voetbal"
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "tip",
+          "body": "Build your first sentences in this exact order and they will be correct. Pick a subject, pick a verb, then add the rest. Short and clear is good Dutch."
+        },
+        "cutting_intro": "Hoi! I'm Mr. Stroopwafel. Let's build a Dutch sentence. The recipe is simple: subject, then verb, then the rest.",
+        "quick_check": {
+          "question": "Which order is the basic Dutch sentence?",
+          "options": [
+            "subject, verb, rest",
+            "verb, subject, rest",
+            "rest, subject, verb"
+          ],
+          "correct_index": 0,
+          "explanation": "Yes. The plain Dutch sentence is subject, then verb, then the rest, like `Ik drink koffie`."
+        }
+      },
+      {
+        "heading": "The verb likes to be second",
+        "body": "Here is the one idea to hold onto: in a normal Dutch sentence, the conjugated verb sits in **second position**. People call this the verb-second rule, but you do not need the label yet.\n\nIn `Ik drink koffie`, the subject `ik` is first and the verb `drink` is second. In `Zij woont in Utrecht`, `zij` is first and `woont` is second. So far this matches English perfectly.\n\nThe rule only starts to matter when something other than the subject goes first. That is the next section. For now, just notice that in every plain sentence, the verb is the second thing.",
+        "examples": [
+          {
+            "hindi": "Ik drink koffie.",
+            "english": "I drink coffee.",
+            "breakdown": "subject (ik) is first, verb (drink) is second"
+          },
+          {
+            "hindi": "Wij eten brood.",
+            "english": "We eat bread.",
+            "breakdown": "subject (wij) is first, verb (eten) is second"
+          },
+          {
+            "hindi": "Hij speelt voetbal.",
+            "english": "He plays football.",
+            "breakdown": "subject (hij) is first, verb (speelt) is second"
+          }
+        ],
+        "callout": {
+          "tone": "note",
+          "body": "For now, second position just means second when you count from the left. When the subject leads, the verb naturally lands second. The next page shows what happens when something else goes first."
+        },
+        "cutting_intro": "Now a small but important habit. In a normal Dutch sentence, the verb sits in second place. Watch where it lands.",
+        "quick_check": {
+          "question": "In `Zij woont in Utrecht`, which position is the verb `woont` in?",
+          "options": [
+            "first",
+            "second",
+            "last"
+          ],
+          "correct_index": 1,
+          "explanation": "Right. `Zij` is first and `woont` is second. In a normal main clause the verb is always the second element."
+        }
+      },
+      {
+        "heading": "Starting with time or place",
+        "body": "Dutch loves to start a sentence with a time word or a place. When you do that, the verb **still has to be second**. So the subject moves to just after the verb. This swap is called **inversion**.\n\nLook at the change. `Ik werk vandaag` is the plain order: subject, verb, then the time word. Move `vandaag` to the front and you get `Vandaag werk ik`. The verb `werk` did not move out of second place; the subject `ik` slid behind it.\n\nThe same thing happens with a place: `Mijn zus woont in Amsterdam` becomes `In Amsterdam woont mijn zus`. First the place, then the verb second, then the subject. The verb stays put; the subject moves.",
+        "table": {
+          "caption": "Plain order vs starting with time or place",
+          "columns": [
+            "first",
+            "verb (second)",
+            "subject + rest"
+          ],
+          "rows": [
+            [
+              "Ik",
+              "werk",
+              "vandaag"
+            ],
+            [
+              "Vandaag",
+              "werk",
+              "ik"
+            ],
+            [
+              "Mijn zus",
+              "woont",
+              "in Amsterdam"
+            ],
+            [
+              "In Amsterdam",
+              "woont",
+              "mijn zus"
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "warning",
+          "body": "Do not say `Vandaag ik werk`. That keeps the subject in front of the verb, and it sounds wrong to a Dutch ear. The moment a time or place word leads, swap the subject and verb: `Vandaag werk ik`."
+        },
+        "cutting_intro": "Here is where Dutch differs from English. Start with a time or place, and the verb still stays second, so the subject jumps behind it.",
+        "quick_check": {
+          "question": "How do you say `Today I work` in Dutch?",
+          "options": [
+            "Vandaag ik werk.",
+            "Vandaag werk ik.",
+            "Ik vandaag werk."
+          ],
+          "correct_index": 1,
+          "explanation": "Correct. `Vandaag` goes first, so the verb `werk` stays second and the subject `ik` moves after it: `Vandaag werk ik`."
+        }
+      },
+      {
+        "heading": "Saying there is and there are",
+        "body": "To say that something exists, Dutch uses **er is** for one thing and **er zijn** for more than one. This matches English `there is` and `there are`.\n\n- `Er is een probleem` (There is a problem), one thing, so `er is`\n- `Er zijn veel mensen` (There are many people), more than one, so `er zijn`\n\nThe little word `er` works like English `there`. It opens the sentence to introduce something new. Pick `is` or `zijn` to match how many: one thing takes `is`, several take `zijn`. You will hear `er is` and `er zijn` everywhere in daily Dutch.",
+        "examples": [
+          {
+            "hindi": "Er is een winkel om de hoek.",
+            "english": "There is a shop around the corner.",
+            "breakdown": "one shop, so `er is`"
+          },
+          {
+            "hindi": "Er zijn twee kamers vrij.",
+            "english": "There are two rooms free.",
+            "breakdown": "two rooms, so `er zijn`"
+          },
+          {
+            "hindi": "Er is geen melk meer.",
+            "english": "There is no more milk.",
+            "breakdown": "one thing (milk), so `er is`, even when it is `no` milk"
+          }
+        ],
+        "callout": {
+          "tone": "tip",
+          "body": "Count the thing first. One takes `er is`; two or more takes `er zijn`. If the noun is plural (`mensen`, `kamers`, `kinderen`), you will almost always want `er zijn`."
+        },
+        "cutting_intro": "Last piece for today. To say something exists, Dutch uses `er is` for one and `er zijn` for many. Let's hear them.",
+        "quick_check": {
+          "question": "Which is correct for `There are many people`?",
+          "options": [
+            "Er is veel mensen.",
+            "Er zijn veel mensen.",
+            "Er ben veel mensen."
+          ],
+          "correct_index": 1,
+          "explanation": "Yes. `Mensen` is plural (many people), so you use `er zijn`, not `er is`."
+        }
+      }
+    ],
+    "wrap_up": "You can now build a Dutch sentence from its pieces. Start with the subject, put the verb second, then add the rest. Remember the one habit that makes Dutch feel Dutch: the verb stays in second position, so when you lead with a time or place word, the subject jumps behind the verb (`Vandaag werk ik`, `In Amsterdam woont mijn zus`). And to say something exists, use `er is` for one thing and `er zijn` for more than one. The phrases below let you practise all of this. The fuller word-order rules, like longer verb groups and joining clauses, come in a later chapter."
+  }
+}

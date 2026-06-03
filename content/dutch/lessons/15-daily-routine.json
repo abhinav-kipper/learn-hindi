@@ -1,0 +1,140 @@
+{
+  "id": "dutch-daily-routine",
+  "title": "My Daily Routine",
+  "situation": "You're chatting with a Dutch friend about what a normal day looks like for each of you.",
+  "skills": [
+    "describing daily activities and times",
+    "separable verbs in the present tense",
+    "saying how often you do things",
+    "time-of-day expressions"
+  ],
+  "phrases": [
+    {
+      "hindi": "Ik sta om zeven uur op.",
+      "english": "I get up at seven o'clock.",
+      "context": "'Opstaan' is a separable verb. The prefix 'op' detaches and goes to the end of the sentence. You'll hear this construction all the time with daily-routine verbs.",
+      "pronunciation": "ik STA om ZEY-ven ur OP."
+    },
+    {
+      "hindi": "Ik ontbijt meestal met brood en kaas.",
+      "english": "I usually have breakfast with bread and cheese.",
+      "context": "'Ontbijten' = to have breakfast (not separable). 'Meestal' = usually, sits just after the verb. Bread and cheese is the classic Dutch lunch too, not just breakfast.",
+      "pronunciation": "ik ont-BAYT MEES-tal met BROHT en KAAS."
+    },
+    {
+      "hindi": "'s Ochtends ga ik naar mijn werk.",
+      "english": "In the morning I go to work.",
+      "context": "Starting with a time expression flips the subject and verb: 's Ochtends GA ik (not 'ik ga'). This inversion rule applies whenever you front a time or place word.",
+      "pronunciation": "s-OCH-tends CHA ik naar mayn WERK."
+    },
+    {
+      "hindi": "Ik werk van negen tot vijf.",
+      "english": "I work from nine to five.",
+      "context": "'Van ... tot ...' = from ... to ... for spans of time or distance. Very versatile. 'Ik werk van maandag tot vrijdag' works just as well.",
+      "pronunciation": "ik WERK van NEY-chen tot FAYF."
+    },
+    {
+      "hindi": "Ik drink altijd koffie om half tien.",
+      "english": "I always drink coffee at half past nine.",
+      "context": "'Altijd' = always. Frequency adverbs like altijd, vaak, soms, nooit slot in right after the verb. 'Half tien' in Dutch means 9:30, not 10:30. The half-hour looks back at the next hour, not forward.",
+      "pronunciation": "ik DRINK AL-tayt KO-fee om HAL TEEN."
+    },
+    {
+      "hindi": "'s Middags eet ik een boterham.",
+      "english": "At midday I eat a sandwich.",
+      "context": "The Dutch lunch is light and quick: a boterham (slice of bread with one topping). The early-afternoon koffie break is almost a cultural institution in offices.",
+      "pronunciation": "s-MI-dachs EET ik en BOH-ter-ham."
+    },
+    {
+      "hindi": "'s Avonds kook ik het eten om zes uur.",
+      "english": "In the evening I cook dinner at six o'clock.",
+      "context": "Dutch dinner is early, usually between 17:30 and 18:30. If someone invites you for 'eten', arriving at 18:00 is spot-on. 'Kook ik' not 'ik kook' because 's Avonds' is fronted.",
+      "pronunciation": "s-AH-fonts KOHK ik het EY-ten om ZES ur."
+    },
+    {
+      "hindi": "Ik ga soms na het eten een stukje fietsen.",
+      "english": "I sometimes go for a short bike ride after dinner.",
+      "context": "'Soms' = sometimes. 'Na het eten' = after dinner (lit. after the eating). 'Een stukje fietsen' = a short bit of cycling. This is extremely Dutch and a great phrase to drop in.",
+      "pronunciation": "ik CHA SOMS naa het EY-ten en STUK-ye FEET-sen."
+    },
+    {
+      "hindi": "Ik ga om elf uur naar bed.",
+      "english": "I go to bed at eleven o'clock.",
+      "context": "'Naar bed gaan' = to go to bed. The phrase works as a natural closer in conversation. You can swap the time easily: 'om tien uur', 'om middernacht'.",
+      "pronunciation": "ik CHA om ELF ur naar BET."
+    },
+    {
+      "hindi": "Wat doe jij op een gewone dag?",
+      "english": "What do you do on a normal day?",
+      "context": "Open question to flip the conversation. 'Gewone' = ordinary, normal. The Dutch love talking about routines and schedules, so asking this always gets a real answer.",
+      "pronunciation": "wat DOO yay op en che-WOH-ne DACH?"
+    }
+  ],
+  "grammar_notes": [
+    "Separable verbs: 'opstaan' splits into 'sta ... op' in a simple sentence. The base verb goes in position 2; the prefix goes to the very end. Common daily-routine examples: 'aankleden' (sta aan), 'thuiskomen' (kom thuis), 'aankloppen' (klop aan).",
+    "Time-of-day words: 's ochtends' (in the morning, until ~12), 's middags' (afternoon, 12-18), 's avonds' (evening, after 18), 's nachts' (at night). The apostrophe marks the old genitive 'des'. These words always come with inversion when fronted.",
+    "Inversion after fronted time expressions: when a time word opens the sentence, subject and verb swap. 's Avonds kook ik (not 's avonds ik kook). This applies to any fronted element, not just time words.",
+    "Frequency adverbs placement: altijd (always), vaak (often), soms (sometimes), nooit (never) go right after the conjugated verb. 'Ik drink altijd koffie', 'hij gaat nooit vroeg naar bed'.",
+    "'Van ... tot ...' for spans: works for time ('van negen tot vijf'), days ('van maandag tot vrijdag'), and places ('van Amsterdam tot Utrecht'). Both boundaries are included."
+  ],
+  "culture_notes": [
+    "Dutch dinner is early, typically 17:30 to 18:30. If you're invited for 'eten om zes uur', that means 18:00 sharp. Arriving at 19:00 as you might in southern Europe would mean the food is already cold and cleared.",
+    "The koffie break is sacred. Most Dutch workplaces have a fixed 10:00 and 15:00 koffie moment where people gather. Joining in is a fast track to being included socially, even if you only drink water.",
+    "Bread at lunch is the norm, not a side. A typical Dutch lunch is two slices of bread with one topping (peanut butter, cheese, hagelslag). Hot lunch is for Sundays or special occasions.",
+    "Agenda culture: the Dutch plan ahead and guard their schedules. Dropping by unannounced is uncommon. Saying 'Ik ga om elf uur naar bed' sets a clear expectation and is not rude, it's honest."
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "Telling the time of your activities",
+      "explanation": "Combine 'om + time' for a specific clock moment, or use 's ochtends / 's middags / 's avonds' for a general time of day. Front the time word for emphasis and remember inversion.",
+      "more_examples": [
+        {
+          "hindi": "Ik eet om zeven uur 's avonds.",
+          "english": "I eat at seven in the evening."
+        },
+        {
+          "hindi": "'s Ochtends douche ik altijd.",
+          "english": "In the morning I always shower."
+        },
+        {
+          "hindi": "Om half acht vertrek ik naar school.",
+          "english": "At half past seven I leave for school."
+        },
+        {
+          "hindi": "'s Nachts slaap ik zeven uur.",
+          "english": "At night I sleep for seven hours."
+        }
+      ]
+    },
+    {
+      "skill": "Saying how often you do things",
+      "explanation": "Put the frequency adverb (altijd, vaak, soms, nooit) right after the conjugated verb. The order is: subject, verb, frequency, rest of the sentence.",
+      "more_examples": [
+        {
+          "hindi": "Ik fiets vaak naar het werk.",
+          "english": "I often cycle to work."
+        },
+        {
+          "hindi": "Ze kookt nooit 's middags.",
+          "english": "She never cooks at midday."
+        },
+        {
+          "hindi": "Wij gaan soms wandelen na het eten.",
+          "english": "We sometimes go for a walk after dinner."
+        },
+        {
+          "hindi": "Hij drinkt altijd thee in de ochtend.",
+          "english": "He always drinks tea in the morning."
+        }
+      ]
+    }
+  ],
+  "practice_prompt": "You are Lotte, a friendly Dutch colleague who bumped into the user at the coffee machine on a slow Friday afternoon. Use informal 'je/jij' throughout. Open verbatim with: 'Hé, hoe ziet jouw dag er eigenlijk uit? Je bent er altijd zo vroeg bij.' You're genuinely curious about their routine. Ask what time they get up, whether they eat breakfast, how they get to work, and what they do in the evenings. Share your own routine naturally: you wake up at 6:30, cycle to the office, always have a boterham at your desk, and cook early because your kids eat at 17:30. Keep the conversation on daily times and habits. Weave in 's ochtends / 's avonds, van ... tot ..., and frequency words like altijd / soms / nooit. Flag errors with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]], especially wrong inversion after fronted time words, frequency adverb placed before the verb, and 'half + hour' misread (half tien = 9:30, not 10:30). Stay in Dutch. Wrap up after 6-8 turns with something like 'Leuk om te horen! Nou, ik ga weer aan de slag. Tot straks!'",
+  "level": "A1",
+  "exam_targeted": false,
+  "references": [
+    "Beginner's Dutch by Guntram A. Sola, Hippocrene Books (daily routine unit)",
+    "NT2 Methode Nederlands in Gang, A1 chapter 4 (dagelijkse routine)",
+    "Taalthuis.nl A1 lesson series, unit on tijdsaanduiding en frequentie"
+  ]
+}
