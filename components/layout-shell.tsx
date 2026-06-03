@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { BottomNav } from '@/components/bottom-nav'
 import { NotificationPrompt } from '@/components/notification-prompt'
 import { DailyReviewPopup } from '@/components/daily-review-popup'
+import { OfflineBanner } from '@/components/offline-banner'
 import { registerServiceWorker, shouldShowNotificationPrompt, maybeShowReminderOnOpen, fireOneTimeTestNotification, maybeFireRandomNudge } from '@/lib/notifications'
 import { addTodayActiveMs, getTodayActiveMinutes, todayISO, updateStreak } from '@/lib/progress'
 import { getUserProfile } from '@/lib/onboarding'
@@ -139,6 +140,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
 
   return (
     <>
+      <OfflineBanner />
       <main className="pb-16">
         {children}
       </main>
