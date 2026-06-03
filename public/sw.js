@@ -13,8 +13,10 @@
 //   /api/chat, /api/pronounce network-only  (real-time LLM, must stay fresh)
 //
 // Bump CACHE_VERSION to invalidate every cache on the next deploy.
+// v2: never cache range/partial (206) media responses (was corrupting audio
+// playback and breaking the pre-generated mp3 voices, esp. on iOS PWAs).
 
-const CACHE_VERSION = 'v1'
+const CACHE_VERSION = 'v2'
 const STATIC_CACHE = `bs-static-${CACHE_VERSION}` // hashed _next assets, icons, misc GETs
 const AUDIO_CACHE = `bs-audio-${CACHE_VERSION}` // pre-generated mp3 clips
 const TTS_CACHE = `bs-tts-${CACHE_VERSION}` // /api/tts responses
@@ -67,6 +69,12 @@ self.addEventListener('fetch', (event) => {
   // Cache API only stores GET. Let POST/PUT (chat, pronounce) pass straight through.
   if (request.method !== 'GET') return
 
+  // Range requests (media seeking — audio/video elements, esp. on iOS/Safari)
+  // return 206 Partial Content. Caching and replaying a partial corrupts
+  // playback, which broke the pre-generated mp3 voices. Let them go straight to
+  // the network, untouched by the cache.
+  if (request.headers.has('range')) return
+
   const url = new URL(request.url)
 
   // Only manage our own origin. Anything cross-origin passes through untouched
@@ -118,7 +126,8 @@ async function cacheFirst(request, cacheName, maxEntries) {
   if (cached) return cached
   try {
     const res = await fetch(request)
-    if (res && res.ok) {
+    // Only cache a full 200 response (never a 206 partial / opaque / error).
+    if (res && res.status === 200) {
       await cache.put(request, res.clone())
       if (maxEntries) trimCache(cacheName, maxEntries)
     }
@@ -134,7 +143,7 @@ async function networkFirstPage(request) {
   const cache = await caches.open(PAGE_CACHE)
   try {
     const res = await fetch(request)
-    if (res && res.ok) await cache.put(request, res.clone())
+    if (res && res.status === 200) await cache.put(request, res.clone())
     return res
   } catch {
     const cached = await cache.match(request)
@@ -149,7 +158,7 @@ async function staleWhileRevalidate(request, cacheName) {
   const cached = await cache.match(request)
   const network = fetch(request)
     .then((res) => {
-      if (res && res.ok) cache.put(request, res.clone())
+      if (res && res.status === 200) cache.put(request, res.clone())
       return res
     })
     .catch(() => null)

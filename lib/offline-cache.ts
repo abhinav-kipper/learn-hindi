@@ -24,9 +24,9 @@ import { getClips } from '@/lib/dutch/luisteren'
 import hiAudio from '@/content/hi-audio.json'
 import nlAudio from '@/content/nl-audio.json'
 
-// Cache names MUST stay in sync with public/sw.js (CACHE_VERSION = 'v1').
-const PAGE_CACHE = 'bs-pages-v1'
-const AUDIO_CACHE = 'bs-audio-v1'
+// Cache names MUST stay in sync with public/sw.js (CACHE_VERSION = 'v2').
+const PAGE_CACHE = 'bs-pages-v2'
+const AUDIO_CACHE = 'bs-audio-v2'
 
 const STATIC_ROUTES = [
   '/',

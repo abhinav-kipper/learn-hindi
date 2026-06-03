@@ -162,10 +162,15 @@ export default function SettingsPage() {
   function resetProgress() {
     if (typeof window === 'undefined') return
     const prefix = config.storagePrefix
+    // The user profile / onboarding lives under the global key 'hindi-user-profile'
+    // (not language-namespaced). It starts with 'hindi-', so a Hindi reset would
+    // wipe it and force re-onboarding. Always preserve it — reset clears progress,
+    // not who you are.
+    const PRESERVE = new Set(['hindi-user-profile', 'hindi-notification-pref'])
     const toDelete: string[] = []
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i)
-      if (key && key.startsWith(`${prefix}-`)) toDelete.push(key)
+      if (key && key.startsWith(`${prefix}-`) && !PRESERVE.has(key)) toDelete.push(key)
     }
     toDelete.forEach((k) => localStorage.removeItem(k))
     setConfirmReset(false)
