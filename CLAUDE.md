@@ -102,9 +102,13 @@ Resolve any merge conflicts, re-run `npx vitest run` and `npx tsc --noEmit`
 before pushing.
 
 **CI gate:** `.github/workflows/ci.yml` runs `tsc --noEmit` + `vitest run`
-on every push and PR. A red ❌ on the commit means the build will break
-in prod — fix before the next deploy. ESLint is not in CI yet (pre-existing
-violations need cleanup first — backlog #1b).
+plus three content lints on every push and PR:
+- `lint:design` — Chai Galli palette/shadow/border rules.
+- `lint:content` (`scripts/lint-content.mjs`) — copy style: no em-dashes, no arrows, no AI clichés (scans `content/**` + UI strings in `app/`/`components/`).
+- `lint:quality` (`scripts/lint-quality.mjs`) — content **legitimacy + readability**: every lesson must cite ≥1 source from the vetted `KNOWN_SOURCES` allowlist (blocks fabricated/conflated references), and grammar jargon must be glossed in plain words once per file (`auxiliary` → "the helper verb", `infinitive` → "the base or dictionary form", etc. — add new terms to the `JARGON` map). Run `npm run lint:quality` locally before committing content.
+
+A red ❌ on the commit means the build will break in prod — fix before the
+next deploy. ESLint runs in CI too (`npx eslint .`).
 
 **Direct commit to main** (for solo hotfixes): same flow, just commit on `main` and push.
 
@@ -301,6 +305,10 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-pron-earquiz-done` — JSON array of "Sounds" stage ids whose ear-quiz passed. Stage completion + the rolling unlock are derived from these two sets.
 
 ### Recent feature work log
+
+**2026-06-03 — Content quality CI gate (vetted references + plain-language jargon)**
+
+New `scripts/lint-quality.mjs` (wired into `ci.yml`, `npm run lint:quality`): every learner-facing lesson/foundation must cite ≥1 source from a vetted `KNOWN_SOURCES` allowlist (catches fabricated/conflated citations — e.g. a subagent had attributed the Hindi "Snell & Weightman" author to a Dutch grammar), and grammar jargon must be glossed in plain words once per file (`JARGON` map: `auxiliary`→helper, `infinitive`→base/dictionary form, `diphthong`→sound, `interrogative`→question, `ergative`→doer). Bringing the whole repo green required: fixing the fabricated refs in the 8 new Dutch units, **adding vetted references to 24 older lessons that predated the `references` field**, and glossing `infinitive`/`auxiliary`/`ergative` at first mention across ~12 existing files. To extend: add real sources to `KNOWN_SOURCES`, add jargon pairs to `JARGON`.
 
 **2026-06-03 — Dutch ground-up expansion (Batch 1: 8 conversational A1 units)**
 

@@ -59,7 +59,7 @@
     }
   ],
   "grammar_notes": [
-    "'Moeten + infinitive' for necessity: 'Moet ik hier uitstappen?' (Do I have to get off here?), 'Moet ik overstappen?' (Do I need to transfer?)",
+    "'Moeten + infinitive (the base or dictionary form of the verb)' for necessity: 'Moet ik hier uitstappen?' (Do I have to get off here?), 'Moet ik overstappen?' (Do I need to transfer?)",
     "Separable verbs in transport: inchecken (in|checken), uitchecken (uit|checken), overstappen (over|stappen), uitstappen (uit|stappen), instappen (in|stappen)",
     "'Van...naar' = from...to: 'Van Amsterdam naar Rotterdam', very useful for buying tickets and asking directions",
     "'Rijden' is used for vehicles: 'de bus rijdt', 'de trein rijdt'. 'Gaan' for people: 'ik ga naar Amsterdam'"
@@ -118,5 +118,10 @@
   ],
   "practice_prompt": "You are an NS (Dutch Railways) ticket-counter employee at Amsterdam Centraal. The user has walked up to your loket to buy a ticket or ask about a route. Use formal 'u' throughout, service register. Open with: 'Goedemiddag, waar kan ik u mee helpen?'. Help them figure out their destination (Utrecht, Den Haag, Rotterdam, etc.), confirm 'enkel of retour?', default to 'tweede klas' unless they ask otherwise, give the platform ('spoor 7a') and a Dutch-style departure time ('half elf' = 10:30, 'kwart voor twaalf' = 11:45). Mention 'overstappen' if a transfer is needed, and ask whether they will pay with OV-chipkaart or want a paper ticket, remind them to 'inchecken' and 'uitchecken'. If the user makes mistakes (wrong time-telling like 'half drie' meaning 3:30 instead of 2:30, missing V2 inversion in questions, or English-style 'ik wil een ticket naar' word order), flag them with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]. Keep it to 6-8 turns. Close with 'dat is ... euro' and 'goede reis!'. Do not switch to English unless the user explicitly asks.",
   "level": "A1",
-  "exam_targeted": false
+  "exam_targeted": false,
+  "references": [
+    "Naar Nederland (NT2 inburgering programme)",
+    "TaalCompleet A1 (KleurRijker NT2 method)",
+    "Bart de Pau, learndutch.org (NT2 courses)"
+  ]
 }

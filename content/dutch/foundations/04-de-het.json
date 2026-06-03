@@ -54,7 +54,7 @@
   ],
   "grammar_notes": [
     "There is no reliable gender rule in Dutch, you must memorize each noun with its article. Good habit: when learning a new word, always learn 'de/het + word'",
-    "Reliable rules that DO exist: (1) All diminutives (-je, -tje, -pje, -etje) are always het. (2) All plurals are always de. (3) Infinitives used as nouns are het: 'het eten' (the eating/food)",
+    "Reliable rules that DO exist: (1) All diminutives (-je, -tje, -pje, -etje) are always het. (2) All plurals are always de. (3) Infinitives (the base or dictionary form of a verb) used as nouns are het: 'het eten' (the eating/food)",
     "Adjective -e rule: add -e EXCEPT for het-words in indefinite singular context. Memory trick: if you'd say 'een groot X', no -e. If you'd say 'de grote X' or 'het grote X', add -e",
     "Gender matters for pronouns: de-words / hij (he) even for objects. het-words / het (it). 'De stoel' / 'hij staat daar' (the chair, he stands there)"
   ],
@@ -379,5 +379,10 @@
       }
     ],
     "wrap_up": "De/het is the single biggest memorization load in Dutch. There's no clever rule, just a lot of words to learn one at a time. The good news: once you know a noun's article, everything else (adjective endings, demonstratives, sometimes pronouns) follows automatically. Memorize the article with every new noun, lean hard on the diminutive rule (`-je` = always `het`), and accept that the rest is rote learning that pays compound interest. The phrases below mix `de`-words and `het`-words on purpose, so you can drill spotting the difference in context."
-  }
+  },
+  "references": [
+    "dutchgrammar.com (Dutch Grammar by Bieneke Berendsen)",
+    "TaalCompleet A1 (KleurRijker NT2 method)",
+    "Naar Nederland (NT2 inburgering programme)"
+  ]
 }

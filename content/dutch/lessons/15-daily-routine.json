@@ -24,7 +24,7 @@
     {
       "hindi": "'s Ochtends ga ik naar mijn werk.",
       "english": "In the morning I go to work.",
-      "context": "Starting with a time expression flips the subject and verb: 's Ochtends GA ik (not 'ik ga'). This inversion rule applies whenever you front a time or place word.",
+      "context": "Starting with a time expression flips the subject and verb: 's Ochtends GA ik (not 'ik ga'). This inversion (the verb and subject swap places) applies whenever you front a time or place word.",
       "pronunciation": "s-OCH-tends CHA ik naar mayn WERK."
     },
     {
@@ -133,8 +133,8 @@
   "level": "A1",
   "exam_targeted": false,
   "references": [
-    "Beginner's Dutch by Guntram A. Sola, Hippocrene Books (daily routine unit)",
-    "NT2 Methode Nederlands in Gang, A1 chapter 4 (dagelijkse routine)",
-    "Taalthuis.nl A1 lesson series, unit on tijdsaanduiding en frequentie"
+    "Nederlands in gang (Coutinho NT2 method)",
+    "Taalthuis.nl (free NT2 course)",
+    "dutchgrammar.com (Dutch Grammar by Bieneke Berendsen)"
   ]
 }

@@ -154,7 +154,7 @@
     "sections": [
       {
         "heading": "The simple future shape",
-        "body": "Hindi future = **verb stem** + a person-and-gender ending (suffix). There's no separate `will` word. The stem is what's left after you strip `-na` from the infinitive: - `karna` (to do) / stem `kar`\n- `aana` (to come) / stem `aa`\n- `khaana` (to eat) / stem `khaa` The ending changes by both **person** and **gender**. Every future sentence uses one of the six endings in the table below.",
+        "body": "Hindi future = **verb stem** + a person-and-gender ending (suffix). There's no separate `will` word. The stem is what's left after you strip `-na` from the infinitive (the base or dictionary form of the verb): - `karna` (to do) / stem `kar`\n- `aana` (to come) / stem `aa`\n- `khaana` (to eat) / stem `khaa` The ending changes by both **person** and **gender**. Every future sentence uses one of the six endings in the table below.",
         "table": {
           "caption": "Future endings for `karna` (to do)",
           "columns": [
@@ -383,5 +383,9 @@
       }
     ],
     "wrap_up": "The future is mechanical once you internalize the endings: verb stem plus the right `-ga`/`-gi`/`-ge` for the subject. Drill the endings until they're automatic, then practice `agar...to` conditionals for the most common real-world use. The phrases below cover plans, predictions, and polite requests. Notice which pronoun pairs with which ending as you read them."
-  }
+  },
+  "references": [
+    "Snell & Weightman, 'Teach Yourself Hindi'",
+    "McGregor, 'Outline of Hindi Grammar'"
+  ]
 }

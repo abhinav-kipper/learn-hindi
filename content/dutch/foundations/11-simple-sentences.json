@@ -38,7 +38,7 @@
     {
       "hindi": "Vandaag werk ik.",
       "english": "Today I work.",
-      "context": "Start with the time word and the verb still has to come second, so 'ik' moves to after the verb. This subject and verb swap is called inversion.",
+      "context": "Start with the time word and the verb still has to come second, so 'ik' moves to after the verb. This subject and verb swap is called inversion (the verb and subject swap places).",
       "pronunciation": "van-DAACH WERK ik."
     },
     {
@@ -142,9 +142,9 @@
   ],
   "practice_prompt": "You are a friendly Dutch tutor drilling how to build a simple Dutch sentence, one item at a time. Address the student with 'je'. Open with: 'Hoi! We gaan eenvoudige zinnen bouwen. Eerste opdracht: maak een zin met deze woorden: ik / koffie / drinken.' Give ONE task and wait for the answer. Rotate three task types: (1) build a plain subject + verb + rest sentence from given words, (2) take a normal sentence and move a time or place word to the front so the student must invert the subject and verb (for example 'Ik werk vandaag' becomes 'Vandaag werk ik'), (3) ask the student to say 'there is' or 'there are' with a noun, choosing 'er is' or 'er zijn'. Watch for: the verb not staying second after a fronted time or place word (for example 'Vandaag ik werk' is wrong, it must be 'Vandaag werk ik'), a wrongly conjugated verb, and mixing up 'er is' with 'er zijn'. Flag every mistake with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] and give one short, warm tip. Keep tasks short and concrete, stay in Dutch unless asked otherwise, and after 6 to 8 items end with 'Heel goed gedaan! Tot ziens.'",
   "references": [
-    "Hammarberg & Beersmans, Dutch: An Essential Grammar (Routledge), Ch. on word order",
-    "Naar Nederland (NT2) A1, basic sentence units",
-    "Bart de Pau, Learn Dutch 1000 words course"
+    "Dutch: An Essential Grammar by William Shetter & Esther Ham (Routledge)",
+    "Naar Nederland (NT2 inburgering programme)",
+    "Bart de Pau, learndutch.org (NT2 courses)"
   ],
   "theory": {
     "intro": "A Dutch sentence is built from a few tidy pieces. You start with who or what the sentence is about (the subject), add the verb, then add the rest. This chapter shows you that basic shape, then one rule that makes Dutch feel a little different from English: the verb likes to sit in second position. You will also learn how to say 'there is' and 'there are'. We stay on simple main-clause sentences here. The bigger word-order rules come later.",

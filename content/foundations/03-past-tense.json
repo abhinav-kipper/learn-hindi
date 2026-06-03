@@ -388,5 +388,9 @@
       }
     ],
     "wrap_up": "Past tense is where Hindi gets its reputation for being hard. The three forms have distinct meanings, and the gender and `ne` agreement add complexity English doesn't prepare you for. The good news is that it's learnable in layers. Drill the past habitual first: no `ne`, just subject agreement. Then the simple past for intransitive verbs: still just subject agreement, no `ne`. Then graduate to the `ne` construction for transitive simple past (its own chapter). Finally, layer on the compound completive forms (`kar liya`, `de diya`) as you hear them. The phrases below mix all three so you can start spotting the patterns in context."
-  }
+  },
+  "references": [
+    "Snell & Weightman, 'Teach Yourself Hindi'",
+    "McGregor, 'Outline of Hindi Grammar'"
+  ]
 }

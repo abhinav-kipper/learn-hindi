@@ -12,7 +12,7 @@
     {
       "hindi": "werken: ik werk, jij werkt, hij/zij werkt, wij werken, jullie werken, zij werken",
       "english": "to work: I work, you work, he/she works, we work, you (pl) work, they work",
-      "context": "The pattern: find the stem (infinitive minus -en), then add nothing for ik, -t for jij/hij/zij, and -en stays for plural. 'Werken' stem = 'werk'",
+      "context": "The pattern: find the stem (infinitive (the base or dictionary form of the verb) minus -en), then add nothing for ik, -t for jij/hij/zij, and -en stays for plural. 'Werken' stem = 'werk'",
       "pronunciation": "WER-ken: ik WERK, yay WERKT, hay/zay WERKT, way WER-ken, yul-YE WER-ken, zay WER-ken"
     },
     {
@@ -424,5 +424,10 @@
       }
     ],
     "wrap_up": "Learn the stem-finding rule plus the three-form ending pattern (`-`, `-t`, `-en`), and 80% of Dutch verbs conjugate themselves. Then drill the verb-second inversion until questions flow naturally. It's the most distinctive feature of Dutch sentence structure, and the dropped `-t` in inverted `jij`-questions is the most common mistake. Finally, memorize the irregulars (`zijn`, `hebben`, `gaan`, `doen`), the backbone of every conversation. The phrases below give you mixed practice across all three layers."
-  }
+  },
+  "references": [
+    "dutchgrammar.com (Dutch Grammar by Bieneke Berendsen)",
+    "TaalCompleet A1 (KleurRijker NT2 method)",
+    "Naar Nederland (NT2 inburgering programme)"
+  ]
 }

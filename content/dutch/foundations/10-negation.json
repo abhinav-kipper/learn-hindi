@@ -120,8 +120,9 @@
   ],
   "practice_prompt": "You are a friendly Dutch tutor drilling the choice between `geen` and `niet`, one item at a time. Address the user as 'je'. Open with: 'Hoi! We oefenen vandaag geen of niet. Eerste zin: maak ontkennend: \\'Ik heb een fiets.\\'' Give exactly one task per turn: ask the user to make a sentence negative, fix a wrong negation, or choose between geen and niet for a noun. Start easy (indefinite nouns, so `geen`), then mix in verbs and adjectives (so `niet`), then definite nouns and prepositional phrases. Watch for the classic mistakes: using `niet een` instead of `geen`, using `geen` with a definite noun ('geen die man'), and putting `niet` in the wrong spot. When the user errs, flag it with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] and name the rule in one short line. Keep your turns brief and stay in Dutch unless the user asks for English. After 6 to 8 items, close with 'Heel goed! Tot de volgende keer.'",
   "references": [
-    "Dutch Grammar (Oosten/Donaldson), Routledge, negation chapter",
-    "NT2 A1 Inburgering syllabus, niet/geen module"
+    "Dutch: A Comprehensive Grammar by Bruce Donaldson (Routledge)",
+    "dutchgrammar.com (Dutch Grammar by Bieneke Berendsen)",
+    "Naar Nederland (NT2 inburgering programme)"
   ],
   "theory": {
     "intro": "Dutch has two ways to say 'not', and which one you pick depends entirely on what you're negating. Use `geen` in front of a noun that has no article or an indefinite one. Use `niet` for everything else. Learn that one split and you can make almost any Dutch sentence negative correctly.",
