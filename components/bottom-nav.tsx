@@ -12,7 +12,7 @@ const W = '#fff' // @design-allow: white literal
 
 const tabs = [
   { href: '/', label: 'home', icon: HomeIcon, requiresLesson: false },
-  { href: '/quiz', label: 'quiz', icon: QuizIcon, requiresLesson: true },
+  { href: '/play', label: 'play', icon: QuizIcon, requiresLesson: false },
   { href: '/vocabulary', label: 'words', icon: VocabIcon, requiresLesson: false },
   { href: '/progress', label: 'you', icon: ProgressIcon, requiresLesson: false },
 ]
@@ -30,6 +30,7 @@ export function BottomNav() {
   if (
     pathname.startsWith('/lessons/') ||
     pathname.startsWith('/practice/') ||
+    pathname.startsWith('/play/duel/') ||
     pathname.startsWith('/chaina') ||
     pathname.startsWith('/onboarding') ||
     pathname.startsWith('/_dev')
