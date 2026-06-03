@@ -5,9 +5,13 @@ import firstWords from '@/content/dutch/lessons/12-first-words.json'
 import smallTalk from '@/content/dutch/lessons/13-small-talk.json'
 import familyHome from '@/content/dutch/lessons/14-family-home.json'
 import dailyRoutine from '@/content/dutch/lessons/15-daily-routine.json'
+import makingPlans from '@/content/dutch/lessons/16-making-plans.json'
+import askingDirections from '@/content/dutch/lessons/17-asking-directions.json'
+import phoneBasics from '@/content/dutch/lessons/19-phone-basics.json'
 import supermarket from '@/content/dutch/lessons/01-supermarket.json'
 import introductions from '@/content/dutch/lessons/02-introductions.json'
 import cafe from '@/content/dutch/lessons/03-cafe.json'
+import restaurant from '@/content/dutch/lessons/18-restaurant.json'
 import doctor from '@/content/dutch/lessons/04-doctor.json'
 import transport from '@/content/dutch/lessons/05-transport.json'
 import gemeente from '@/content/dutch/lessons/06-gemeente.json'
@@ -24,9 +28,13 @@ const lessons: Lesson[] = [
   smallTalk,
   familyHome,
   dailyRoutine,
+  makingPlans,
+  askingDirections,
+  phoneBasics,
   supermarket,
   introductions,
   cafe,
+  restaurant,
   doctor,
   transport,
   gemeente,

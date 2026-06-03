@@ -1,0 +1,389 @@
+{
+  "id": "comparatives",
+  "title": "Comparing Things: groter, het grootst",
+  "level": "A2",
+  "situation": "Foundation: comparing things in Dutch with the comparative (-er), the superlative (-st), the irregular pairs, and the equality phrase even ... als",
+  "skills": [
+    "comparative (-er) + dan",
+    "superlative (-st) with het / -ste",
+    "irregular comparisons (goed, veel, graag, weinig)",
+    "equality with even ... als"
+  ],
+  "phrases": [
+    {
+      "hindi": "Amsterdam is groter dan Utrecht.",
+      "english": "Amsterdam is bigger than Utrecht.",
+      "context": "The core comparative pattern: adjective + -er, then dan for 'than'. 'groot' becomes 'groter'.",
+      "pronunciation": "AM-ster-dam is CHROH-ter dan UU-trekht"
+    },
+    {
+      "hindi": "Deze fiets is duurder dan die fiets.",
+      "english": "This bike is more expensive than that bike.",
+      "context": "A spelling-tweak comparative: 'duur' ends in -r, but at A2 the everyday form is 'duurder'. The extra -d keeps it pronounceable.",
+      "pronunciation": "DAY-ze FEETS is DUUR-der dan dee FEETS"
+    },
+    {
+      "hindi": "Dit is het grootste huis van de straat.",
+      "english": "This is the biggest house on the street.",
+      "context": "Attributive superlative: 'de/het' + adjective + -ste before a noun. 'groot' becomes 'grootste'.",
+      "pronunciation": "dit is het CHROHT-ste HOWS van de STRAAT"
+    },
+    {
+      "hindi": "In de winter zijn de dagen het kortst.",
+      "english": "In winter the days are the shortest.",
+      "context": "Predicate superlative: when it stands alone after the verb, use 'het' + adjective + -st. 'kort' becomes 'het kortst'.",
+      "pronunciation": "in de WIN-ter zayn de DAA-chen het KORTST"
+    },
+    {
+      "hindi": "Deze koffie is beter dan die van gisteren.",
+      "english": "This coffee is better than yesterday's.",
+      "context": "An irregular pair you must memorize: 'goed' becomes 'beter', not 'goeder'. The superlative is 'best'.",
+      "pronunciation": "DAY-ze KO-fee is BAY-ter dan dee van CHIS-te-ren"
+    },
+    {
+      "hindi": "Ik drink liever thee dan koffie.",
+      "english": "I'd rather drink tea than coffee.",
+      "context": "'graag' (gladly) becomes 'liever' for preferences, and 'liefst' for the favorite. 'liever ... dan' means 'rather ... than'.",
+      "pronunciation": "ik DRINK LEE-ver TAY dan KO-fee"
+    },
+    {
+      "hindi": "Jan is even lang als Piet.",
+      "english": "Jan is as tall as Piet.",
+      "context": "Equality: 'even' + adjective + 'als' means 'as ... as'. The adjective stays in its plain form, no -er.",
+      "pronunciation": "yan is AY-ven LANG als peet"
+    },
+    {
+      "hindi": "Welke trui vind je het mooist?",
+      "english": "Which sweater do you like best (find prettiest)?",
+      "context": "A natural superlative question with 'vinden' (to find). 'mooi' becomes 'het mooist'.",
+      "pronunciation": "WEL-ke TROW vint ye het MOH-ist"
+    }
+  ],
+  "grammar_notes": [
+    "The comparative (the -er or 'more' form) is just adjective + -er: 'klein' becomes 'kleiner', 'mooi' becomes 'mooier'. The word for 'than' is 'dan': 'kleiner dan'.",
+    "The superlative (the -st or 'most' form) is adjective + -st. Standing alone after the verb it usually takes 'het': 'het grootst'. Before a noun it takes 'de' or 'het' plus -ste: 'de grootste stad'.",
+    "Spelling follows the normal rules: long vowels stay long ('duur' becomes 'duurder', 'vies' becomes 'viezer' where the s softens to z between vowels), short vowels keep their doubled consonant ('dik' becomes 'dikker').",
+    "Four high-frequency adjectives are irregular and must be memorized: 'goed' becomes 'beter' / 'best', 'veel' becomes 'meer' / 'meest', 'graag' becomes 'liever' / 'liefst', 'weinig' becomes 'minder' / 'minst'.",
+    "Long adjectives and many ending in -r use 'meer' (more) and 'meest' (most) instead of -er / -st where that sounds more natural: 'meer interessant', 'het meest interessant'.",
+    "For equality use 'even ... als' (as ... as): 'even groot als'. Here the adjective keeps its plain form, with no -er ending."
+  ],
+  "culture_notes": [
+    "Dutch people compare prices openly and value a good deal, so 'goedkoper' (cheaper) and 'duurder' (more expensive) come up constantly when shopping or at the market.",
+    "'liever' and 'het liefst' are everywhere in daily talk about preferences: 'ik fiets liever' (I'd rather cycle), 'het liefst ga ik met de trein' (I most prefer to go by train).",
+    "Saying 'even goed als' (just as good as) is a common, polite way to compare two options without putting one down, which fits the Dutch preference for evenhandedness."
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "comparative (-er) + dan",
+      "explanation": "Add -er to the adjective and use 'dan' for 'than'. Apply the standard spelling rules: keep long vowels long ('duurder'), keep short vowels short with a doubled consonant ('dikker'), and soften a final -s to -z between vowels ('viezer').",
+      "more_examples": [
+        {
+          "hindi": "Mijn broer is ouder dan ik.",
+          "english": "My brother is older than me."
+        },
+        {
+          "hindi": "De trein is sneller dan de bus.",
+          "english": "The train is faster than the bus."
+        },
+        {
+          "hindi": "Deze tas is goedkoper dan die.",
+          "english": "This bag is cheaper than that one."
+        },
+        {
+          "hindi": "Het weer is vandaag viezer dan gisteren.",
+          "english": "The weather is nastier today than yesterday."
+        }
+      ]
+    },
+    {
+      "skill": "superlative (-st) with het / -ste",
+      "explanation": "Add -st for the superlative. Standing alone after the verb, use 'het' + adjective + -st ('het grootst'). Before a noun, use 'de' or 'het' + adjective + -ste ('de grootste stad', 'het kleinste kind').",
+      "more_examples": [
+        {
+          "hindi": "Dit is de mooiste foto.",
+          "english": "This is the prettiest photo."
+        },
+        {
+          "hindi": "Welke route is het kortst?",
+          "english": "Which route is the shortest?"
+        },
+        {
+          "hindi": "Zij is de jongste van de klas.",
+          "english": "She is the youngest in the class."
+        },
+        {
+          "hindi": "In juli zijn de dagen het langst.",
+          "english": "In July the days are the longest."
+        }
+      ]
+    },
+    {
+      "skill": "irregular comparisons (goed, veel, graag, weinig)",
+      "explanation": "Four very common words do not follow the -er / -st pattern. 'goed' (good) becomes 'beter' / 'best', 'veel' (much) becomes 'meer' / 'meest', 'graag' (gladly) becomes 'liever' / 'liefst', and 'weinig' (little) becomes 'minder' / 'minst'. Use 'liever ... dan' for 'rather ... than'.",
+      "more_examples": [
+        {
+          "hindi": "Dit boek is beter dan de film.",
+          "english": "This book is better than the film."
+        },
+        {
+          "hindi": "Ik heb meer tijd dan jij.",
+          "english": "I have more time than you."
+        },
+        {
+          "hindi": "Ik loop liever dan ik fiets.",
+          "english": "I'd rather walk than cycle."
+        },
+        {
+          "hindi": "Hij heeft de minste ervaring.",
+          "english": "He has the least experience."
+        }
+      ]
+    }
+  ],
+  "practice_prompt": "You are a friendly Dutch tutor drilling comparisons one item at a time. Address the user with 'je'. Open with: 'Hallo! We oefenen vergelijkingen. Eerste opdracht: maak de vergrotende trap van \\'klein\\'.' Give one small task per turn and wait for the answer before moving on. Mix these task types across 6 to 8 items: form the comparative of an adjective ('groot' to 'groter'), build a full 'X is ...-er dan Y' sentence, form a superlative with 'het' or with 'de/het ...-ste' before a noun, supply an irregular form ('goed', 'veel', 'graag', 'weinig'), and once make an 'even ... als' equality sentence. Start easy ('klein', 'snel'), then add a spelling tweak ('duur', 'vies'), then the irregulars, then equality. Watch for: regularizing irregulars ('goeder' instead of 'beter', 'veeler' instead of 'meer'), forgetting 'dan' after a comparative, missing 'het' or the -ste ending on a superlative, and adding -er after 'even'. When you spot a mistake, tag it exactly as [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] and give a one-line reason. Praise good answers briefly. Stay in Dutch unless the user asks for English. After 6 to 8 items, finish with 'Goed gedaan! Tot de volgende keer.'",
+  "theory": {
+    "intro": "Once you can describe one thing, the next step is comparing two. Dutch comparisons are mostly tidy. Add `-er` to compare ('bigger'), add `-st` to pick the top one ('biggest'), and use `even ... als` to say two things are equal. A small set of common words break the rules, but there are only four to memorize. Learn the patterns here and you can talk about prices, sizes, and preferences all day.",
+    "sections": [
+      {
+        "heading": "The comparative: adjective + -er + dan",
+        "body": "To say one thing has **more** of a quality, add `-er` to the adjective. This is the comparative (the -er or 'more' form).\n\n- `groot` (big) becomes `groter`\n- `klein` (small) becomes `kleiner`\n- `mooi` (pretty) becomes `mooier`\n\nThe word for 'than' is `dan`. So the full pattern is **adjective + -er ... dan**:\n\n- `Amsterdam is groter dan Utrecht` (Amsterdam is bigger than Utrecht)\n- `Deze fiets is mooier dan die fiets` (This bike is prettier than that one)\n\nSpelling follows the rules you already know. Long vowels stay long, so `duur` (expensive) becomes `duurder`. A final `-s` between vowels softens to `-z`, so `vies` (dirty) becomes `viezer`. Short vowels keep their doubled consonant, so `dik` (thick) becomes `dikker`.",
+        "table": {
+          "caption": "Common comparatives",
+          "columns": [
+            "adjective",
+            "meaning",
+            "comparative"
+          ],
+          "rows": [
+            [
+              "groot",
+              "big",
+              "groter"
+            ],
+            [
+              "klein",
+              "small",
+              "kleiner"
+            ],
+            [
+              "snel",
+              "fast",
+              "sneller"
+            ],
+            [
+              "duur",
+              "expensive",
+              "duurder"
+            ],
+            [
+              "vies",
+              "dirty",
+              "viezer"
+            ],
+            [
+              "oud",
+              "old",
+              "ouder"
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "hindi": "De bus is sneller dan de fiets.",
+            "english": "The bus is faster than the bike.",
+            "breakdown": "snel + -er = sneller, then dan for 'than'."
+          },
+          {
+            "hindi": "Mijn zus is ouder dan ik.",
+            "english": "My sister is older than me.",
+            "breakdown": "oud + -er = ouder. Use dan, not 'als', for 'than'."
+          }
+        ],
+        "callout": {
+          "tone": "tip",
+          "body": "'Than' is always `dan` after a comparative. You may hear `als` in casual speech, but `dan` is the correct written form: `groter dan`, never `groter als`."
+        },
+        "cutting_intro": "Hoi! Comparing two things is easy in Dutch. Stick `-er` on the adjective and pop `dan` after it. Watch.",
+        "quick_check": {
+          "question": "How do you say `faster than` in Dutch?",
+          "options": [
+            "sneller als",
+            "sneller dan",
+            "meer snel dan"
+          ],
+          "correct_index": 1,
+          "explanation": "Right, `sneller dan`. Add -er for the comparative and use `dan` for 'than'."
+        }
+      },
+      {
+        "heading": "The superlative: -st with het and -ste",
+        "body": "To pick the **top** one, add `-st` to the adjective. This is the superlative (the -st or 'most' form).\n\nThere are two spots it appears, and each has its own shape.\n\n- **Standing alone after the verb**, it usually takes `het`: `In de winter zijn de dagen het kortst` (In winter the days are the shortest). Use `het` + adjective + `-st`.\n- **Right before a noun**, it takes `de` or `het` plus `-ste`: `de grootste stad` (the biggest city), `het kleinste kind` (the smallest child).\n\nWhich article you use before a noun, `de` or `het`, follows the noun's own gender, exactly as it does for any adjective.",
+        "table": {
+          "caption": "Comparative and superlative side by side",
+          "columns": [
+            "adjective",
+            "comparative (-er)",
+            "superlative (-st)"
+          ],
+          "rows": [
+            [
+              "groot",
+              "groter",
+              "het grootst / de grootste"
+            ],
+            [
+              "klein",
+              "kleiner",
+              "het kleinst / de kleinste"
+            ],
+            [
+              "mooi",
+              "mooier",
+              "het mooist / de mooiste"
+            ],
+            [
+              "kort",
+              "korter",
+              "het kortst / de kortste"
+            ],
+            [
+              "jong",
+              "jonger",
+              "het jongst / de jongste"
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "hindi": "Dit is de mooiste foto van de dag.",
+            "english": "This is the prettiest photo of the day.",
+            "breakdown": "Before a noun: de + mooi + -ste = de mooiste foto."
+          },
+          {
+            "hindi": "Deze route is het kortst.",
+            "english": "This route is the shortest.",
+            "breakdown": "Standing alone after the verb: het + kort + -st = het kortst."
+          }
+        ],
+        "callout": {
+          "tone": "note",
+          "body": "Quick rule of thumb: alone after the verb, use `het ...-st` (`het grootst`); before a noun, use `de/het ...-ste` (`de grootste stad`)."
+        },
+        "cutting_intro": "Now the winner of the group. Add `-st`, and remember the little `het` that usually comes along. Let's see it.",
+        "quick_check": {
+          "question": "Which is correct for `the biggest city`?",
+          "options": [
+            "de grootst stad",
+            "de grootste stad",
+            "het grootst stad"
+          ],
+          "correct_index": 1,
+          "explanation": "Yes, `de grootste stad`. Before a noun the superlative takes -ste, and `stad` is a de-word."
+        }
+      },
+      {
+        "heading": "The irregular four: goed, veel, graag, weinig",
+        "body": "Four very common words refuse the `-er` / `-st` machine. You'll use them constantly, so memorize them as fixed pairs.\n\n- `goed` (good) becomes **beter** / **best**\n- `veel` (much, many) becomes **meer** / **meest**\n- `graag` (gladly) becomes **liever** / **liefst**\n- `weinig` (little, few) becomes **minder** / **minst**\n\nThe `graag` set is special: it's how Dutch expresses preferences. `Ik drink graag thee` means 'I like drinking tea'. Bump it up to `liever` for 'rather', and to `het liefst` for your absolute favorite.\n\n- `Ik drink liever thee dan koffie` (I'd rather drink tea than coffee)\n- `Het liefst drink ik thee` (Most of all I like drinking tea)",
+        "table": {
+          "caption": "The four irregular comparisons",
+          "columns": [
+            "base",
+            "comparative",
+            "superlative"
+          ],
+          "rows": [
+            [
+              "goed (good)",
+              "beter",
+              "best"
+            ],
+            [
+              "veel (much)",
+              "meer",
+              "meest"
+            ],
+            [
+              "graag (gladly)",
+              "liever",
+              "liefst"
+            ],
+            [
+              "weinig (little)",
+              "minder",
+              "minst"
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "hindi": "Dit boek is beter dan de film.",
+            "english": "This book is better than the film.",
+            "breakdown": "goed becomes beter, never 'goeder'."
+          },
+          {
+            "hindi": "Ik heb meer tijd dan jij.",
+            "english": "I have more time than you.",
+            "breakdown": "veel becomes meer, never 'veeler'."
+          },
+          {
+            "hindi": "Ik fiets liever dan ik loop.",
+            "english": "I'd rather cycle than walk.",
+            "breakdown": "graag becomes liever, used with dan for 'rather ... than'."
+          }
+        ],
+        "callout": {
+          "tone": "warning",
+          "body": "Don't regularize these. `goeder`, `veeler`, and `graager` are all wrong. The forms are `beter`, `meer`, and `liever`. There are only four, so drill them like flashcards."
+        },
+        "cutting_intro": "Watch out, four words break the pattern completely. They're the ones you'll say most, so let's lock them in.",
+        "quick_check": {
+          "question": "What's the comparative of `goed` (good)?",
+          "options": [
+            "goeder",
+            "beter",
+            "meer goed"
+          ],
+          "correct_index": 1,
+          "explanation": "`beter`, irregular. `goed` becomes `beter` / `best`, just like English good / better / best."
+        }
+      },
+      {
+        "heading": "Saying things are equal: even ... als",
+        "body": "Not every comparison has a winner. To say two things are **the same** in some quality, wrap the adjective in `even ... als` (as ... as).\n\nThe key detail: the adjective stays in its **plain form**. No `-er`, no `-st`.\n\n- `Jan is even lang als Piet` (Jan is as tall as Piet)\n- `Deze koffie is even sterk als die van gisteren` (This coffee is as strong as yesterday's)\n- `Mijn fiets is even oud als die van jou` (My bike is as old as yours)\n\nA common slip is to add `-er` here. But `even groter als` is wrong, because `even ... als` already does the comparing for you. Keep the adjective bare: `even groot als`.",
+        "examples": [
+          {
+            "hindi": "Zij is even oud als haar broer.",
+            "english": "She is as old as her brother.",
+            "breakdown": "even + oud (plain form) + als. No -er on the adjective."
+          },
+          {
+            "hindi": "Deze tas is even duur als die.",
+            "english": "This bag is as expensive as that one.",
+            "breakdown": "even + duur + als = 'as expensive as'."
+          }
+        ],
+        "callout": {
+          "tone": "tip",
+          "body": "Memorize the frame `even ___ als` with a bare adjective in the middle. If you find yourself adding `-er`, you've slipped back into the `dan` comparison: pick one or the other."
+        },
+        "cutting_intro": "Last one, and it's handy. When two things match, use `even ... als` and leave the adjective alone. Let's try it.",
+        "quick_check": {
+          "question": "How do you say `as tall as Piet`?",
+          "options": [
+            "langer als Piet",
+            "even langer als Piet",
+            "even lang als Piet"
+          ],
+          "correct_index": 2,
+          "explanation": "`even lang als Piet`. With `even ... als` the adjective stays plain, so no -er."
+        }
+      }
+    ],
+    "wrap_up": "You can now compare anything in Dutch. Add `-er` plus `dan` for 'more ... than', add `-st` (with `het`, or `de/het ...-ste` before a noun) for the top one, and use `even ... als` for 'as ... as'. The only real homework is the irregular four: `goed` / `beter` / `best`, `veel` / `meer` / `meest`, `graag` / `liever` / `liefst`, and `weinig` / `minder` / `minst`. Drill those until they're automatic, then run through the phrases below to put it all together."
+  },
+  "references": [
+    "dutchgrammar.com (Dutch Grammar by Bieneke Berendsen)",
+    "Dutch: A Comprehensive Grammar by Bruce Donaldson (Routledge)",
+    "TaalCompleet A2 (KleurRijker NT2 method)"
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "id": "dutch-restaurant",
+  "title": "Dinner at a Restaurant",
+  "situation": "You are going out for a sit-down dinner. You reserve a table, study the menu, order a full meal, handle dietary needs, and settle the bill.",
+  "skills": [
+    "making a reservation",
+    "ordering a meal politely",
+    "communicating dietary needs",
+    "paying the bill"
+  ],
+  "phrases": [
+    {
+      "hindi": "Ik wil graag een tafel voor twee reserveren.",
+      "english": "I would like to reserve a table for two.",
+      "context": "'Ik wil graag' is the polite ordering frame (lit. 'I would gladly'). Use it any time you want something from staff. 'Reserveren' = to book/reserve.",
+      "pronunciation": "ik wil CHRAACH uhn TAA-fel voor TWAY ray-zer-VAY-ren."
+    },
+    {
+      "hindi": "We hebben gereserveerd op naam van [naam].",
+      "english": "We have a reservation under the name [name].",
+      "context": "'We hebben gereserveerd' = we have reserved (present perfect). 'Op naam van' = under the name of. Say this when the host asks at the door.",
+      "pronunciation": "we HEB-ben che-ray-zer-VAIRT op NAAM van [naam]."
+    },
+    {
+      "hindi": "Mogen we de menukaart, alstublieft?",
+      "english": "May we have the menu, please?",
+      "context": "'Mogen we...?' = may we...? (polite request form, lit. 'are we allowed to'). 'De menukaart' = the menu (lit. 'menu card'). 'Alstublieft' is the formal 'please', fitting when you use 'u' with staff.",
+      "pronunciation": "MOH-chen we de may-nu-KAART, als-tu-BLEEFT?"
+    },
+    {
+      "hindi": "Wat kunt u aanbevelen?",
+      "english": "What can you recommend?",
+      "context": "'Aanbevelen' = to recommend (separable verb: 'beveel aan'). A great opener to get the waiter talking about the specials. Expect answers like 'de vis is vandaag heel vers' (the fish is very fresh today).",
+      "pronunciation": "wat KUNT u AAN-be-VAY-len?"
+    },
+    {
+      "hindi": "Ik wil graag de biefstuk, alstublieft.",
+      "english": "I would like the steak, please.",
+      "context": "'Ik wil graag de/het [dish]' is the standard full-sentence order. You can shorten it to 'de biefstuk graag' once the conversation is flowing. 'Biefstuk' = steak (beef steak, lit.).",
+      "pronunciation": "ik wil CHRAACH de BEEF-stuk, als-tu-BLEEFT."
+    },
+    {
+      "hindi": "Voor mij de soep, alstublieft.",
+      "english": "The soup for me, please.",
+      "context": "'Voor mij...' = for me... This is the most natural way to order when others are ordering too. Shorter and more fluid than repeating 'ik wil graag' every time.",
+      "pronunciation": "VOOR may de SOOP, als-tu-BLEEFT."
+    },
+    {
+      "hindi": "Ik ben vegetariër. Zijn er vegetarische opties?",
+      "english": "I am a vegetarian. Are there vegetarian options?",
+      "context": "Note the umlaut on 'vegetariër' (the two dots above the e signal a new syllable). 'Zijn er...?' = are there...? Dutch menus are increasingly vegetarian-friendly, but always worth asking.",
+      "pronunciation": "ik ben vey-che-ta-REE-er. zayn er vey-che-ta-REE-se OP-sees?"
+    },
+    {
+      "hindi": "Ik ben allergisch voor noten.",
+      "english": "I am allergic to nuts.",
+      "context": "'Ik ben allergisch voor' = I am allergic to. Substitute 'noten' (nuts) with 'gluten', 'melk' (milk/dairy), 'schaaldieren' (shellfish), or 'ei' (egg) as needed. Restaurants are legally required to list allergens.",
+      "pronunciation": "ik ben a-LER-chis voor NOH-ten."
+    },
+    {
+      "hindi": "Het smaakt heerlijk.",
+      "english": "It tastes wonderful.",
+      "context": "'Smaken' = to taste. 'Heerlijk' = wonderful/divine (a strong positive). 'Lekker' is the everyday 'tasty' but 'heerlijk' suits a restaurant compliment better. Saying this to the waiter is always appreciated.",
+      "pronunciation": "het SMAAKT HAYR-luk."
+    },
+    {
+      "hindi": "De rekening, alstublieft.",
+      "english": "The bill, please.",
+      "context": "'De rekening' = the bill. In Dutch restaurants you normally wait until you ask for it, the waiter will not bring it unsolicited. Catch the waiter's eye and say this, or raise your hand briefly.",
+      "pronunciation": "de RAY-ke-ning, als-tu-BLEEFT."
+    },
+    {
+      "hindi": "Kan ik pinnen?",
+      "english": "Can I pay by card?",
+      "context": "'Pinnen' = paying by debit card or contactless (the dominant payment method in the Netherlands). Most restaurants accept it, but a few smaller places are cash-only ('alleen contant'). Asking first avoids an awkward moment.",
+      "pronunciation": "KAN ik PIN-nen?"
+    }
+  ],
+  "grammar_notes": [
+    "'Ik wil graag ...' is the polite frame for ordering anything: 'ik wil graag een tafel', 'ik wil graag de zalm'. Adding 'graag' (gladly) softens 'ik wil' from blunt request to warm preference. An even shorter form: '[item] graag' works once the conversation is relaxed.",
+    "'Mogen we ...?' (may we ...?) uses 'mogen', the modal verb (helper word) for permission. It is softer than 'kunnen we?' (can we?) in service contexts: 'Mogen we de menukaart?' / 'Mogen we even wachten?'",
+    "'Voor mij ..., alstublieft' is the natural group-order pattern. When the waiter goes round the table, each person says 'voor mij de ...' rather than repeating a full sentence every time.",
+    "'Reserveren' and 'aanbevelen' are infinitive (base form) verbs. 'Aanbevelen' is separable: the prefix 'aan' splits off in a main clause: 'wat beveelt u aan?' (what do you recommend?). The infinitive stays together after 'kunt u': 'wat kunt u aanbevelen?'",
+    "Register: use 'u' (formal 'you') with restaurant staff throughout this conversation. 'Uw' is the possessive: 'op uw naam' (under your name). This is standard Dutch service register and is not stiff."
+  ],
+  "culture_notes": [
+    "Tipping is not included in the bill and not obligatory. Most Dutch diners round up to a convenient figure or leave a few euro if service was good. A 10% tip is considered generous. Don't feel pressure to tip if service was poor.",
+    "Pinnen (card payment) is the norm in Dutch restaurants. Contactless and mobile payments (Apple Pay, Google Pay) work at most places. Some traditional cafes and smaller restaurants still prefer cash ('contant'), so it is worth asking 'kan ik pinnen?' before ordering.",
+    "Dinner time in the Netherlands is early: most Dutch families eat at 18:00 and popular restaurants fill up between 18:00 and 19:30. Booking a table ('reserveren') is wise for weekends or any well-reviewed spot, even for a party of two.",
+    "Tap water ('kraanwater') is not always free at Dutch restaurants. Some charge a small amount per person for a carafe. Sparkling water is 'bruiswater', still water is 'plat water'. When in doubt, ask: 'Heeft u ook kraanwater?'"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "Ordering politely",
+      "explanation": "Three frames cover almost every ordering situation. Full sentence: 'Ik wil graag de [dish].' Group order shorthand: 'Voor mij de [dish], alstublieft.' Quick reorder: '[dish] graag.' Always end with 'graag' or 'alstublieft' to keep the tone warm.",
+      "more_examples": [
+        {
+          "hindi": "Ik wil graag de dagschotel.",
+          "english": "I would like the dish of the day."
+        },
+        {
+          "hindi": "Voor mij de pasta, alstublieft.",
+          "english": "The pasta for me, please."
+        },
+        {
+          "hindi": "Heeft u ook een kindermenu?",
+          "english": "Do you also have a children's menu?"
+        },
+        {
+          "hindi": "Kan ik de biefstuk medium-rare krijgen?",
+          "english": "Can I have the steak medium-rare?"
+        }
+      ]
+    },
+    {
+      "skill": "Handling the bill and dietary needs",
+      "explanation": "Ask for the bill with 'de rekening, alstublieft' and confirm payment method with 'kan ik pinnen?'. For dietary needs, the patterns 'ik ben allergisch voor [ingredient]' and 'zijn er [type] opties?' cover most situations. Staff are trained to help, so be direct.",
+      "more_examples": [
+        {
+          "hindi": "Kan ik apart betalen?",
+          "english": "Can I pay separately?"
+        },
+        {
+          "hindi": "Ik ben allergisch voor gluten.",
+          "english": "I am allergic to gluten."
+        },
+        {
+          "hindi": "Zijn er veganistische gerechten?",
+          "english": "Are there vegan dishes?"
+        },
+        {
+          "hindi": "Bevat dit gerecht noten?",
+          "english": "Does this dish contain nuts?"
+        }
+      ]
+    }
+  ],
+  "practice_prompt": "You are Bas, a waiter (ober) at a mid-range Dutch restaurant in Amsterdam on a busy Friday evening. Use 'u' with the guest throughout, as this is house policy at a sit-down restaurant. Open verbatim with: 'Goedenavond! Heeft u een reservering, of wilt u een tafel voor hoeveel personen?' After seating, hand the menu and offer the specials: the 'dagsoep' (tomato soup) and a 'zalm met groenten'. When the guest orders, confirm the choice warmly ('Uitstekende keuze!'). If they mention a dietary need or allergy, acknowledge it and offer an alternative. After the main course, ask 'Was alles naar wens?' and offer dessert ('Wilt u ook een toetje?'). When the guest asks for the bill, present it and confirm the payment method. Flag errors with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]], especially: bare 'ik wil' without 'graag', wrong article ('het rekening' not 'de rekening'), 'vegetarier' without the umlaut, or English words where a Dutch phrase was just modelled. Stay in Dutch. Close with 'Dank u wel, prettige avond verder!' after payment.",
+  "level": "A2",
+  "exam_targeted": false,
+  "references": [
+    "Naar Nederland (NT2 inburgering programme)",
+    "TaalCompleet A2 (KleurRijker NT2 method)",
+    "Bart de Pau, learndutch.org (NT2 courses)"
+  ]
+}
