@@ -63,8 +63,8 @@
     {
       "hindi": "Zullen we om acht uur afspreken?",
       "english": "Shall we meet at eight o'clock?",
-      "context": "Combining 'Zullen we ...?' for the suggestion with 'afspreken' (separable: base or dictionary form here, moving 'af' to the end). 'Om' before the time is required in Dutch: always 'om acht uur', not 'at acht uur'.",
-      "pronunciation": "ZUL-len we om ACHt uur AF-spray-ken?"
+      "context": "Combining 'Zullen we ...?' for the suggestion with 'afspreken'. Here 'afspreken' is the infinitive (the base or dictionary form), so the prefix 'af' stays attached and the whole verb goes to the end. It only splits when it is the finite verb, as in 'Hoe laat spreken we af?'. 'Om' before the time is required in Dutch: always 'om acht uur', not 'at acht uur'.",
+      "pronunciation": "ZUL-len we om ACHT uur AF-spray-ken?"
     },
     {
       "hindi": "Tot zaterdag!",
@@ -78,7 +78,7 @@
     "'Zullen we ...?' for suggestions: 'zullen' is a modal verb. In the 'zullen we ...?' pattern it works as a soft suggestion or invitation, equivalent to 'shall we ...?'. The main verb follows as an infinitive (the base or dictionary form) at the end: 'Zullen we lunchen?', 'Zullen we morgen bellen?'",
     "Near future with 'gaan + infinitive': Dutch uses 'gaan' + infinitive (the base or dictionary form of the verb) for concrete near-future plans, the same way English uses 'going to'. 'Gaan' conjugates normally: ik ga, jij gaat, hij gaat, we gaan. The infinitive always goes to the end: 'Ik ga vanavond koken.'",
     "'Afspreken' as a separable verb: in Dutch, many verbs have a prefix that detaches and moves to the end of the clause. 'Afspreken' (to arrange to meet) splits into 'spreken ... af': 'Hoe laat spreken we af?' In the infinitive (the base or dictionary form) it stays together: 'om af te spreken'. The same pattern applies to 'uitkomen' (to be convenient): 'Komt het jou uit?' / 'om uit te komen'.",
-    "'Je' vs 'jou': 'je' is the unstressed object form used in everyday speech. 'Jou' is the stressed object form used when you want to put weight on the 'you': 'Past zaterdag je?' (neutral) vs 'Komt het jou uit?' (slight emphasis on the person being asked). After prepositions, both are correct but 'jou' is often preferred in writing."
+    "'Je' vs 'jou': 'je' is the unstressed object form used in everyday speech. 'Jou' is the stressed object form used when you want to put weight on the 'you': 'Past zaterdag je?' (neutral) vs 'Komt het jou uit?' (slight emphasis on the person being asked). After a preposition you also use the object form, and the stressed 'jou' is the more common choice there: 'voor jou', 'met jou'."
   ],
   "culture_notes": [
     "Dutch people tend to plan ahead. Calling a friend on Friday to meet that same evening can feel presumptuous. A week or two in advance is the norm for social plans, and checking someone's 'agenda' (diary) before suggesting a date is considered considerate, not overly formal.",
