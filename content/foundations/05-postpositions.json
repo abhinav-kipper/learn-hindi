@@ -439,5 +439,9 @@
       }
     ],
     "wrap_up": "Postpositions are everywhere in Hindi, and the instinct to put them before the noun is the first thing to unlearn. Master the simple four (`mein`/`par`/`se`/`ko`), then the possessive cluster (`ka/ki/ke` with its agreement), then the compounds (`ke saath`, `ke liye`, and so on). The oblique case on `-aa`-ending nouns is the trap to watch: `ladka` becomes `ladke`, `kamra` becomes `kamre`, every time. The phrases below practice all of these."
-  }
+  },
+  "references": [
+    "Snell & Weightman, 'Teach Yourself Hindi'",
+    "McGregor, 'Outline of Hindi Grammar'"
+  ]
 }

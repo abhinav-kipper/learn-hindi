@@ -1,7 +1,7 @@
 {
   "id": "ne-rule",
-  "title": "The 'ne' Rule (Ergative Past)",
-  "situation": "Hindi's most-feared grammar rule: in the perfective past, TRANSITIVE verbs flip the construction. The subject gets 'ne' attached, and the verb agrees with the OBJECT, not the subject. 'maine khaaya' (I ate), pure black magic until it clicks.",
+  "title": "The 'ne' Rule (ergative (the way Hindi marks the doer with 'ne') Past)",
+  "situation": "Hindi's most-feared grammar rule, also called the ergative (the way Hindi marks the doer with 'ne') construction: in the perfective past, TRANSITIVE verbs flip the construction. The subject gets 'ne' attached, and the verb agrees with the OBJECT, not the subject. 'maine khaaya' (I ate), pure black magic until it clicks.",
   "skills": [
     "the 'ne' marker",
     "object-verb agreement",

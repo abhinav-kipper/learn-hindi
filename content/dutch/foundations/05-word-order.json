@@ -364,5 +364,10 @@
       }
     ],
     "wrap_up": "Word order is what makes Dutch feel structurally different from English. Master verb-second first: the conjugated verb comes second in every main clause, no exceptions. Then internalize the rest-of-verb-at-the-end rule: modals, perfect tense, and separable prefixes all push their partner verb-parts to the back of the clause. Finally, learn the subordinate-clause flip: `omdat`, `als`, `dat`, and `wanneer` all send the verb to the very end. Once these three patterns click, you can build any Dutch sentence. The phrases below mix all three to drill the transformations until they feel automatic."
-  }
+  },
+  "references": [
+    "Dutch: A Comprehensive Grammar by Bruce Donaldson (Routledge)",
+    "dutchgrammar.com (Dutch Grammar by Bieneke Berendsen)",
+    "TaalCompleet A1 (KleurRijker NT2 method)"
+  ]
 }

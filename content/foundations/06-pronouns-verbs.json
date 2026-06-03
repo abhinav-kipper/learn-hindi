@@ -428,5 +428,9 @@
       }
     ],
     "wrap_up": "The pronoun you pick carries social meaning more than information. It's a constant background signal about how you see the relationship. Master the verb-ending grid for each one (`hoon / hai / ho / hain` is the single most useful pattern in present-tense Hindi), drill `aap` first since it's the safest default, and stay consistent within a conversation. The phrases below practice spotting and choosing the right register. Notice which auxiliary pairs with which pronoun."
-  }
+  },
+  "references": [
+    "Snell & Weightman, 'Teach Yourself Hindi'",
+    "McGregor, 'Outline of Hindi Grammar'"
+  ]
 }
