@@ -27,7 +27,7 @@ A PWA for learning conversational/colloquial Hindi (romanized, no Devanagari). B
 - Framer Motion (animations)
 - Google Gemini API (`gemini-2.5-flash`) via Vercel AI SDK (`ai` + `@ai-sdk/google`)
 - localStorage for progress (no DB, no auth)
-- PWA (manifest + iOS install prompt)
+- PWA (manifest + iOS install prompt + offline caching service worker; see 2026-06-03 work log)
 - Deployed on Vercel (pnpm)
 
 ## Key Architecture Decisions
@@ -230,7 +230,8 @@ from these. Always import via the barrel `@/components/design`.
 | `dutch-welcome-modal.tsx` | First-time-only Dutch onboarding card |
 | `notification-prompt.tsx` | Daily-reminder opt-in butter sticker |
 | `install-prompt.tsx` | iOS PWA install hint peach sticker |
-| `layout-shell.tsx` | Mounts BottomNav, NotificationPrompt, DailyReviewPopup. Wires notification reminders (`maybeFireRandomNudge`, `maybeShowReminderOnOpen`) on visibility events |
+| `offline-banner.tsx` | Global connectivity status pill. Slides down from the top when the device goes offline ("you're offline — saved lessons still work") + a brief green "back online" confirmation on reconnect. `pointerEvents:none` (never blocks taps), renders only when offline, z-index 80 (below modals/tooltips/gloss popovers). Driven by browser `online`/`offline` events. No network calls. |
+| `layout-shell.tsx` | Mounts OfflineBanner, BottomNav, NotificationPrompt, DailyReviewPopup. Wires notification reminders (`maybeFireRandomNudge`, `maybeShowReminderOnOpen`) on visibility events |
 | `voice-button.tsx` | Mic button (Chai Galli orange pill, red + pulse when listening). STT via `lib/speech.ts` |
 | `quiz/quiz-card.tsx`, `quiz/quiz-results.tsx` | Quiz question + results screens. Use design primitives. |
 
@@ -300,9 +301,13 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 
 ### Recent feature work log
 
-**2026-06-03 — PWA offline caching (service worker)**
+**2026-06-03 — PWA offline: caching + status banner**
 
-`public/sw.js` was previously notification-only ("does NOT cache network responses"). It now also adds an offline caching layer so the PWA loads and works without internet. No new npm dependency (hand-written SW, Next 16-safe); registration is unchanged (`registerServiceWorker()` in `layout-shell.tsx`).
+Two additive offline features. Spec at `docs/superpowers/specs/2026-06-03-pwa-offline-design.md`.
+
+*Offline status banner* (`components/offline-banner.tsx`, mounted in `layout-shell.tsx`, TDD'd 4 tests): a slim pill slides down from the top whenever the device goes offline, plus a brief green "back online" confirmation on reconnect. `pointerEvents:none` so it never blocks taps, renders only when offline (zero footprint online, SSR renders nothing), layered at z-index 80 (below the daily-goal modal z90/91, feature tooltips z100-102, and the gloss popover z81). Pure status indicator — no network calls, no sync.
+
+*PWA offline caching (service worker).* `public/sw.js` was previously notification-only ("does NOT cache network responses"). It now also adds an offline caching layer so the PWA loads and works without internet. No new npm dependency (hand-written SW, Next 16-safe); registration is unchanged (`registerServiceWorker()` in `layout-shell.tsx`).
 
 - **Strategies** (GET only — POST like `/api/chat` is never intercepted):
   - `/_next/static/*` (content-hashed) + `/audio,/chaina,/stroopwafel` (pre-gen mp3s) → **cache-first**.
@@ -313,6 +318,7 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - **Cache versioning:** bump `CACHE_VERSION` in `sw.js` to invalidate all `bs-*` caches on next deploy (cleared in the `activate` handler).
 - **Not made offline:** AI practice chat + pronunciation coaching fundamentally need the LLM. They show network errors offline by design (offline.html explains this). Graceful in-app offline-mode UI for those was scoped out.
 - New `public/offline.html` (Chai-Galli-styled static fallback). Manifest gained `id`/`scope: "/"`.
+- **Progress is local-only — no sync, nothing to flush.** All progress/activity (streak, lesson completion, daily active-minutes ticker, quiz scores, mistakes, favorites, vocab, Dutch attempts, Chaina memory) writes synchronously to `localStorage` regardless of connectivity, so offline progress is committed instantly and never queued or lost — there is no online→offline sync step because there is no server/DB. The SW's Cache API is fully separate from `localStorage`. The (by-design) tradeoff is **no cross-device sync**: progress is per-browser/per-device. Adding multi-device sync would require an account + backend, which the app deliberately doesn't have.
 
 **2026-06-01 wave — Fun-pass: combo escalation + mascot barks + ambient soundscapes**
 
