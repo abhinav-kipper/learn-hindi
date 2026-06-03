@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import { getUserProfile, saveUserProfile } from '@/lib/onboarding'
 import { isMuted, toggleMute, playSound } from '@/lib/sounds'
 import { isAmbientOn, setAmbientOn } from '@/lib/ambient'
+import { warmOfflineCache } from '@/lib/offline-cache'
 import { useLanguage } from '@/lib/language-context'
 import {
   Sticker,
@@ -41,6 +42,12 @@ export default function SettingsPage() {
   const [ambient, setAmbient] = useState(false)
   const [confirmReset, setConfirmReset] = useState(false)
   const [justReset, setJustReset] = useState(false)
+  const [dlState, setDlState] = useState<'idle' | 'running' | 'done' | 'error'>('idle')
+  const [dlPct, setDlPct] = useState(0)
+  const [dlLabel, setDlLabel] = useState('')
+  const [savedDate, setSavedDate] = useState<string | null>(null)
+
+  const OFFLINE_SAVED_KEY = 'bs-offline-full-saved-date'
 
   useEffect(() => {
     const p = getUserProfile()
@@ -50,8 +57,64 @@ export default function SettingsPage() {
     setDailyGoal(p.dailyGoal || 5)
     setMuted(isMuted())
     setAmbient(isAmbientOn())
+    try {
+      setSavedDate(localStorage.getItem(OFFLINE_SAVED_KEY))
+    } catch {
+      /* ignore */
+    }
     setReady(true)
   }, [])
+
+  async function downloadOffline() {
+    if (dlState === 'running') return
+    if (typeof navigator !== 'undefined' && navigator.onLine === false) {
+      setDlState('error')
+      setDlLabel('connect to the internet first')
+      return
+    }
+    setDlState('running')
+    setDlPct(0)
+    setDlLabel('lessons')
+    playSound('tap')
+    try {
+      const res = await warmOfflineCache({
+        audio: true,
+        language: language === 'dutch' ? 'dutch' : 'hindi',
+        onProgress: (p) => {
+          const frac = p.total ? p.done / p.total : 0
+          if (p.phase === 'pages') {
+            setDlPct(Math.round(frac * 25))
+            setDlLabel('lessons')
+          } else if (p.phase === 'assets') {
+            setDlPct(25 + Math.round(frac * 20))
+            setDlLabel('app files')
+          } else if (p.phase === 'audio') {
+            setDlPct(45 + Math.round(frac * 55))
+            setDlLabel('audio clips')
+          } else {
+            setDlPct(100)
+          }
+        },
+      })
+      if (res.pages === 0) {
+        setDlState('error')
+        setDlLabel('could not download — check your connection')
+        return
+      }
+      const today = new Date().toISOString().split('T')[0]
+      try {
+        localStorage.setItem(OFFLINE_SAVED_KEY, today)
+      } catch {
+        /* ignore */
+      }
+      setSavedDate(today)
+      setDlState('done')
+      playSound('levelup')
+    } catch {
+      setDlState('error')
+      setDlLabel('something went wrong')
+    }
+  }
 
   function updateGoal(g: number) {
     const clamped = Math.max(1, Math.min(120, Math.round(g)))
@@ -506,6 +569,97 @@ export default function SettingsPage() {
                 />
               </div>
             </div>
+          </Sticker>
+        </Section>
+
+        {/* OFFLINE */}
+        <Section title="offline" subtitle="save the app so lessons work with no internet">
+          <Sticker color={dlState === 'done' ? COLORS.mint2 : COLORS.butter} radius={16} padding={14}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+              <div style={{ fontSize: 26 }}>{dlState === 'done' ? '✅' : '📥'}</div>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div
+                  style={{
+                    fontFamily: FONTS.display,
+                    fontWeight: 800,
+                    fontSize: 15,
+                    color: COLORS.ink,
+                    lineHeight: 1.1,
+                  }}
+                >
+                  download for offline
+                </div>
+                <div
+                  style={{
+                    fontFamily: FONTS.body,
+                    fontWeight: 700,
+                    fontSize: 12,
+                    color: COLORS.ink60,
+                    marginTop: 2,
+                    lineHeight: 1.35,
+                  }}
+                >
+                  {dlState === 'running'
+                    ? `downloading ${dlLabel}… ${dlPct}%`
+                    : dlState === 'error'
+                    ? dlLabel
+                    : dlState === 'done'
+                    ? 'saved! all lessons + audio work offline now'
+                    : savedDate
+                    ? `last saved ${savedDate} · tap to update`
+                    : 'grabs every lesson, grammar chapter + "hear it" audio'}
+                </div>
+              </div>
+            </div>
+
+            {dlState === 'running' && (
+              <div
+                style={{
+                  marginTop: 12,
+                  height: 12,
+                  borderRadius: 99,
+                  border: BORDER.thin,
+                  background: W,
+                  overflow: 'hidden',
+                }}
+              >
+                <motion.div
+                  animate={{ width: `${dlPct}%` }}
+                  transition={{ ease: 'easeOut', duration: 0.3 }}
+                  style={{ height: '100%', background: COLORS.green }}
+                />
+              </div>
+            )}
+
+            <button
+              type="button"
+              onClick={downloadOffline}
+              disabled={dlState === 'running'}
+              style={{
+                marginTop: 12,
+                width: '100%',
+                padding: '11px',
+                background: dlState === 'done' ? W : COLORS.orange,
+                color: dlState === 'done' ? COLORS.ink : W,
+                border: BORDER.sticker,
+                boxShadow: SHADOW.chip,
+                borderRadius: 99,
+                fontFamily: FONTS.display,
+                fontWeight: 800,
+                fontSize: 14,
+                cursor: dlState === 'running' ? 'wait' : 'pointer',
+                opacity: dlState === 'running' ? 0.6 : 1,
+                textTransform: 'lowercase',
+              }}
+            >
+              {dlState === 'running'
+                ? `downloading… ${dlPct}%`
+                : dlState === 'done'
+                ? 'download again'
+                : savedDate
+                ? 'update offline files'
+                : 'save everything for offline'}
+            </button>
           </Sticker>
         </Section>
 

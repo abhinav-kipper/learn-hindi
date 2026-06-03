@@ -180,6 +180,7 @@ shadows anywhere.
 | `personalization.ts` | Onboarding reason reorders Hindi lessons (family/bollywood/moving/curious) |
 | `sounds.ts` | 8 generative Web Audio sounds (tap/correct/wrong/complete/swipe/streak/levelup/pop) — prefers designed ElevenLabs clips (`content/sfx-audio.json` → `public/audio/sfx/`), falls back to the synth. **Cute Duolingo-style palette** — sine+triangle waves, major-interval chimes, pitch glides via `playGlide`. Plus `playCombo(streak)` — escalating pentatonic combo reward (synth-only). Vibration patterns paired per sound. Mute toggle persisted in `bolna-seekho-muted` |
 | `ambient.ts` | Faint looping background soundscape per track (chai-stall hum / café terrace). Opt-in, OFF by default (`bolna-seekho-ambient`). `startAmbient(track)`/`stopAmbient()`/`isAmbientOn()`/`setAmbientOn(on,track)`. Fades, loops, respects global mute, starts on a user gesture. Clips at `public/audio/ambient/{hindi,dutch}.mp3`. TDD'd, 5 tests. |
+| `offline-cache.ts` | PWA offline precache warm-up. `getAllRoutes()` (route list from bundled content), `getAudioUrls(lang)`, `warmOfflineCache({audio,language,onProgress})` (fetches every route doc → `bs-pages-v1`, parses + fetches `/_next/static` assets, optionally all audio → `bs-audio-v1`), `autoWarmOfflineCache(lang)` (once/day background, no audio, data-saver-aware). Cache names mirror `public/sw.js`. TDD'd, 8 tests. |
 | `last-active-lesson.ts` | Powers Continue CTA on home |
 | `quiz.ts` | Quiz scores, average |
 | `favorites.ts` | Star phrases — `toggleFavorite`, `isFavorite`, `getFavorites`. Key `${lessonId}::${hindi}` |
@@ -301,9 +302,11 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 
 ### Recent feature work log
 
-**2026-06-03 — PWA offline: caching + status banner**
+**2026-06-03 — PWA offline: precache warm-up + caching + status banner**
 
-Two additive offline features. Spec at `docs/superpowers/specs/2026-06-03-pwa-offline-design.md`.
+Offline-support wave. Spec at `docs/superpowers/specs/2026-06-03-pwa-offline-design.md`.
+
+*Offline precache warm-up* (`lib/offline-cache.ts`, TDD'd 8 tests). The SW caches lazily (only what you visit), so lessons never opened were unavailable offline ("offline" message / dead buttons from missing chunks). Since the app is a pure client SPA with bundled content, the fix is to proactively download the whole app while online: `warmOfflineCache()` fetches every route's HTML into `bs-pages-v1`, parses each document's `/_next/static` asset URLs and fetches them (SW caches cache-first → fixes hydration/dead-buttons offline), and optionally all "hear it" audio into `bs-audio-v1`. `getAllRoutes()` derives the full route list from bundled content loaders. Deploy-agnostic (no build step), awaitable (real progress). Cache names must stay in sync with `public/sw.js` (`CACHE_VERSION='v1'`). Wired two ways: (a) `autoWarmOfflineCache(lang)` runs once/day in the background from `layout-shell.tsx` (pages+assets, no audio, skips on data-saver), (b) a Settings → **offline** section with a "save everything for offline" button (incl. audio) showing a live progress bar. Offline soft-nav to an uncached route fails the RSC fetch and Next falls back to a hard navigation, which the SW serves from the cached document.
 
 *Offline status banner* (`components/offline-banner.tsx`, mounted in `layout-shell.tsx`, TDD'd 4 tests): a slim pill slides down from the top whenever the device goes offline, plus a brief green "back online" confirmation on reconnect. `pointerEvents:none` so it never blocks taps, renders only when offline (zero footprint online, SSR renders nothing), layered at z-index 80 (below the daily-goal modal z90/91, feature tooltips z100-102, and the gloss popover z81). Pure status indicator — no network calls, no sync.
 
