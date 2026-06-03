@@ -21,6 +21,7 @@ import { getStages as getHindiSoundStages } from '@/lib/hindi/pronunciation'
 import { getStages as getDutchSoundStages } from '@/lib/dutch/pronunciation'
 import { getLezenTexts } from '@/lib/dutch/lezen'
 import { getClips } from '@/lib/dutch/luisteren'
+import { getDuels } from '@/lib/games'
 import hiAudio from '@/content/hi-audio.json'
 import nlAudio from '@/content/nl-audio.json'
 
@@ -36,6 +37,7 @@ const STATIC_ROUTES = [
   '/mistakes',
   '/favorites',
   '/vocabulary',
+  '/play',
   '/drill/conjugation',
   '/sounds',
   '/onboarding',
@@ -78,6 +80,7 @@ export function getAllRoutes(): string[] {
     ...ids(getDutchSoundStages).map((id) => `/dutch/sounds/${id}`),
     ...ids(getLezenTexts).map((id) => `/dutch/lezen/${id}`),
     ...ids(getClips).map((id) => `/dutch/luisteren/${id}`),
+    ...['hindi', 'dutch'].flatMap((l) => getDuels(l)).map((d) => `/play/duel/${d.id}`),
   ]
   return [...new Set(routes)]
 }

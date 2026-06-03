@@ -227,7 +227,7 @@ from these. Always import via the barrel `@/components/design`.
 
 | File | What it does |
 |------|--------------|
-| `bottom-nav.tsx` | Floating white sticker pill at the bottom of all non-fullscreen pages. Active-tab cream pill slides via Framer `layoutId`. Hidden on `/lessons/*`, `/practice/*`, `/onboarding`. |
+| `bottom-nav.tsx` | Floating white sticker pill at the bottom of all non-fullscreen pages. Active-tab cream pill slides via Framer `layoutId`. Hidden on `/lessons/*`, `/practice/*`, `/play/duel/*`, `/onboarding`. The 2nd tab is now `/play` (Quizzes + Games hub), was `/quiz`. |
 | `design/MomentStage.tsx` | **Chaina moments system.** `ChainaProvider` mounts once in `app/layout.tsx`. `useChaina()` returns `{ play(key), stop() }`. **22 moments** registered in `moments.ts` (welcomeBack/correctAnswer/lessonComplete/streakMilestone/newContent/knmAttemptComplete/knmPassed/lezenStudyDone/lezenMockPassed/a2Milestone/dailyGoalReached/etc). Each moment fires `<Cutting>` + `<SpeechBubble>` w/ animations, plus voice via `chainaVoice.play()` (MP3 → speechSynthesis fallback). Frequency caps in `chainaFrequency.ts`. |
 | `search-overlay.tsx` | Full-screen search modal triggered from the home magnifying-glass. Language-aware index. Locks body scroll, restores focus on close, Esc to dismiss |
 | `daily-review-popup.tsx` | Butter bottom-sheet w/ Cutting, fires every 24h after first lesson complete. Mixes vocab + lesson phrases through SRS |
@@ -305,6 +305,15 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-pron-earquiz-done` — JSON array of "Sounds" stage ids whose ear-quiz passed. Stage completion + the rolling unlock are derived from these two sets.
 
 ### Recent feature work log
+
+**2026-06-03 — Games: Play hub + Gender Duel (Hindi)**
+
+Repurposed the bottom-nav **Quiz** tab into a **Play** hub (`/play`) with two sections: **Quizzes** (links to the existing `/quiz`, unchanged) and **Games**. First game: **Duel** — a fast binary-choice game for chronically-confused distinctions (the format from the user's de/het screenshots). First Hindi duel: **Gender Duel** (masculine vs feminine — the direct de/het analog).
+
+- Engine: `components/games/DuelGame.tsx` (intro/rules screen → 30 shuffled rounds → done screen). Reuses Chai Galli primitives, `playCombo(streak)` escalation + flame combo chip, `Confetti` on ≥60%, mascot-happy done screen. Wrong answers log to the **mistakes** system under `lessonId: 'noun-gender'` (source `quiz`) so they're drillable.
+- Data: generic `Duel` schema (`types/game.ts`) — `left`/`right` sides + `items[{prompt, answer:'left'|'right', emoji?, hint?, explain?}]`. Content `content/games/hindi/gender-duel.json` (52 nouns, 25 M / 27 F, gender-audited clean). Loader `lib/games.ts` (`getDuels(language)`, `getDuelById`, `drawDuelRound` Fisher-Yates, `getDuelBest`/`recordDuelResult` per-prefix best score). TDD'd, 7 tests.
+- Routes: `/play` (hub), `/play/duel/[id]` (fullscreen game, bottom-nav hidden). Bottom-nav `/quiz`→`/play` (label "play", no longer requires a completed lesson). `/play` added to the offline precache route list.
+- Generic + reusable: the Dutch **de/het** duel (the original screenshot) drops in by adding a `content/games/dutch/*.json` + one loader entry — deferred to a follow-up.
 
 **2026-06-03 — Content quality CI gate (vetted references + plain-language jargon)**
 
