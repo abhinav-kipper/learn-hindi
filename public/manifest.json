@@ -3,6 +3,8 @@
   "short_name": "Bolna",
   "description": "Learn conversational Hindi the natural way",
   "start_url": "/",
+  "id": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#fffbeb",
   "theme_color": "#f97316",
