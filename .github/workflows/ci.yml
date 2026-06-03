@@ -41,5 +41,8 @@ jobs:
       - name: Content copy lint (no em-dashes / arrows / AI clichés)
         run: node scripts/lint-content.mjs
 
+      - name: Content quality lint (vetted references + plain-language jargon)
+        run: node scripts/lint-quality.mjs
+
       - name: Tests
         run: npx vitest run

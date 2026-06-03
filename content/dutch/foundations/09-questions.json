@@ -13,7 +13,7 @@
     {
       "hindi": "Woon jij in Amsterdam?",
       "english": "Do you live in Amsterdam?",
-      "context": "Yes/no question by inversion: put the verb first, then the subject. Note the dropped -t: the statement is 'jij woont', but in the question it becomes 'woon jij'.",
+      "context": "Yes/no question by inversion (the verb and subject swap places): put the verb first, then the subject. Note the dropped -t: the statement is 'jij woont', but in the question it becomes 'woon jij'.",
       "pronunciation": "WOHN yay in am-ster-DAM?"
     },
     {
@@ -141,9 +141,9 @@
   ],
   "practice_prompt": "You are a Dutch tutor drilling question formation. Address the user as 'u'. Open with: 'Goedendag! We gaan vragen oefenen. Eerste opdracht: maak van \\'Jij woont in Utrecht\\' een vraag.' Work one item at a time. Give the user a statement to turn into a yes/no question (forcing inversion plus the dropped -t with je/jij), or a prompt to build a wh-question from a question word plus a verb, or a short answer task using ja, nee, or jawel. Escalate across 6-8 items: start with a simple inversion (Jij werkt hier), then one with 'u' where the -t must stay (U woont in Den Haag), then a wh-question (waar / je / wonen), then 'jawel' to contradict a negative. Watch for these mistakes and flag each with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]: keeping the -t in 'werkt jij' (should be 'werk jij'), dropping the -t with 'u' ('woon u' should be 'woont u'), wrong word order in wh-questions, and using 'ja' where 'jawel' is needed. Briefly name the rule each time. Stay in Dutch unless asked. After 6-8 items end with 'Uitstekend! Tot de volgende keer.'",
   "references": [
-    "Snell, Bridget. Dutch: An Essential Grammar (Routledge), chapters on word order and interrogatives",
-    "TaalCompleet A1 (KleurRijker), units on vragen stellen",
-    "Bart de Pau, Learn Dutch (1000 most common words) video course"
+    "Dutch: An Essential Grammar by William Shetter & Esther Ham (Routledge)",
+    "TaalCompleet A1 (KleurRijker NT2 method)",
+    "Bart de Pau, learndutch.org (NT2 courses)"
   ],
   "theory": {
     "intro": "Dutch questions are built from rules you already half-know. Yes/no questions just flip the verb to the front. Open questions add a question word like `wat` or `waar`. The one trap that catches every learner is small but constant: when `je` or `jij` follows the verb, the `-t` quietly disappears. Learn that, plus the eight question words, and you can ask about almost anything.",

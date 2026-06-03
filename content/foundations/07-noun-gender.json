@@ -300,7 +300,7 @@
       },
       {
         "heading": "Verb agreement (the harder bit)",
-        "body": "Verb agreement has two patterns, depending on tense. **Present tense:** the verb agrees with the **subject's** gender.\n- `main jaa raha hoon`: masculine speaker\n- `main jaa rahi hoon`: feminine speaker Same sentence, same meaning, different verb ending because the speaker's gender changed. **Past tense with `ne`** (the ergative-past construction): the verb agrees with the **object's** gender instead.\n- `maine roti khayi`: `roti` is feminine / verb ends in `-i`\n- `maine khaana khaya`: `khaana` is masculine / verb ends in `-a` The subject `main` hasn't changed. The verb flipped because the object did. This catches every English speaker off guard.",
+        "body": "Verb agreement has two patterns, depending on tense. **Present tense:** the verb agrees with the **subject's** gender.\n- `main jaa raha hoon`: masculine speaker\n- `main jaa rahi hoon`: feminine speaker Same sentence, same meaning, different verb ending because the speaker's gender changed. **Past tense with `ne`** (the ergative (the way Hindi marks the doer with 'ne')-past construction): the verb agrees with the **object's** gender instead.\n- `maine roti khayi`: `roti` is feminine / verb ends in `-i`\n- `maine khaana khaya`: `khaana` is masculine / verb ends in `-a` The subject `main` hasn't changed. The verb flipped because the object did. This catches every English speaker off guard.",
         "examples": [
           {
             "hindi": "main jaa raha hoon",

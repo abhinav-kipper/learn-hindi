@@ -10,6 +10,7 @@
     "lint:design": "node scripts/lint-design.mjs",
     "lint:design:strict": "node scripts/lint-design-strict.mjs",
     "lint:content": "node scripts/lint-content.mjs",
+    "lint:quality": "node scripts/lint-quality.mjs",
     "test": "vitest",
     "test:run": "vitest run",
     "test:visual": "playwright test",

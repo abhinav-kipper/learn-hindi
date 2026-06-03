@@ -62,7 +62,7 @@
   "grammar_notes": [
     "Subject pronouns: ik (I), jij/je (you, informal), u (you, formal), hij (he), zij/ze (she), het (it), wij/we (we), jullie (you all), zij/ze (they). `zij` does double duty for both 'she' and 'they'; the verb form tells them apart (`zij is` = she is, `zij zijn` = they are).",
     "`je` is the unstressed everyday form of `jij`; `jij` is the stressed form you use to point the spotlight at the person, as in `Ik werk hier, en jij?`. Same word, different emphasis. `ze` and `we` are likewise the unstressed forms of `zij` and `wij`.",
-    "`zijn` (to be) is fully irregular: ik ben, jij/u bent, hij/zij/het is, and all three plurals are `zijn`. The infinitive `zijn` is identical to the plural form.",
+    "`zijn` (to be) is fully irregular: ik ben, jij/u bent, hij/zij/het is, and all three plurals are `zijn`. The infinitive (the base or dictionary form of the verb) `zijn` is identical to the plural form.",
     "`hebben` (to have) is also irregular in the singular: ik heb, jij hebt, hij/zij/het heeft. The plurals are all `hebben`. With formal `u` both `u hebt` and `u heeft` are correct and common.",
     "When `jij` (or `je`) follows the verb in a question, the `-t` drops: `jij hebt` becomes `heb jij?`, `jij bent` becomes `ben jij?`. This dropped `-t` happens only with `jij`/`je`, never with `u`, `hij`, or `zij`."
   ],
@@ -141,9 +141,9 @@
   ],
   "practice_prompt": "You are a friendly, patient Dutch tutor drilling subject pronouns plus the verbs zijn (to be) and hebben (to have) for an absolute beginner. Address the user as `je`. Open with exactly: 'Hoi! Laten we de werkwoorden zijn en hebben oefenen. Eerste vraag: wat is de ik-vorm van zijn?' Give one tiny item at a time and wait for the answer before the next. Mix the task types: ask for a single conjugation (the jullie-form of hebben), give a pronoun plus a state and ask for a full short sentence (`hij` plus moe gives `hij is moe`), or ask which verb fits a meaning (hunger uses hebben, age uses zijn). After each answer, confirm briefly, then give the next item. Watch for the classic errors: `ik bent`, `hij hebt` instead of `hij heeft`, using zijn for hunger, and forgetting the dropped `-t` in `heb jij?`. Mark every mistake with the exact tag [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] and add one short plain reason. Keep it warm and encouraging, stay in simple Dutch, and after about eight items finish with 'Goed gedaan! Tot de volgende keer.'",
   "references": [
-    "Dutch Grammar (dutchgrammar.com)",
-    "TaalCompleet A1",
-    "Naar Nederland"
+    "dutchgrammar.com (Dutch Grammar by Bieneke Berendsen)",
+    "TaalCompleet A1 (KleurRijker NT2 method)",
+    "Naar Nederland (NT2 inburgering programme)"
   ],
   "theory": {
     "intro": "Before any other Dutch grammar, you need two things: the words for the people doing the action, and the two verbs you'll reach for in almost every sentence. The pronouns are `ik`, `jij`, `u`, `hij`, `zij`, `het`, `wij`, `jullie`, and `zij` again. The verbs are `zijn` (to be) and `hebben` (to have). Both are irregular, but they're so common that a few days of use will fix them in your memory. Get these, and you can already say who you are, where you're from, how you feel, and what you have.",

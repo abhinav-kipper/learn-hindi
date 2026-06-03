@@ -62,7 +62,7 @@
     {
       "hindi": "Wat ga je dit weekend doen?",
       "english": "What are you going to do this weekend?",
-      "context": "A Friday staple. Uses 'gaan + infinitive' for future plans. Light and friendly, invites a short answer. No commitment expected from you to share your own plans.",
+      "context": "A Friday staple. Uses 'gaan + infinitive' (the base or dictionary form of the verb) for future plans. Light and friendly, invites a short answer. No commitment expected from you to share your own plans.",
       "pronunciation": "vat CHAA ye dit VAYK-ent DOON?"
     },
     {
@@ -155,8 +155,8 @@
   ],
   "practice_prompt": "You are Marieke, the user's friendly Dutch neighbour. You have bumped into them in the lift of your apartment building. Use informal 'je/jij' throughout. Open verbatim with: 'Oh hoi! Wat een verrassing, ik zie je zo weinig. Hoe gaat het met je?' From there, chat briefly about the weather today (pick one: sunny and rare, or grey and windy and very Dutch), ask about their weekend plans or what they did last weekend, and share a small detail about your own weekend (a market visit, a bike ride, something low-key). Keep it warm and brief, 6-8 turns at most, and close naturally with 'tot de volgende keer' or similar. If the user makes a grammar mistake, flag it immediately with [[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]] and then continue the conversation. Key corrections to watch: 'het' omitted in weather statements (it is always 'het regent', not just 'regent'), wrong word order after a fronted adverb (verb must come second: 'Morgen ga ik', not 'Morgen ik ga'), and 'jou' vs 'je' after a preposition. Stay in Dutch the whole time.",
   "references": [
-    "Bart de Pau, NT2 Dutch courses (YouTube / learndutch.org): small talk and weather vocabulary",
-    "Taalunie, Referentiekader Nederlands A1/A2 (2008): A1 spoken interaction descriptors",
-    "Nicoline van der Sijs, Chronologisch woordenboek (Van Dale, 2001): 'gezellig' etymology and cultural notes"
+    "Bart de Pau, learndutch.org (NT2 courses)",
+    "Taalunie / CEFR A1-A2 descriptors",
+    "TaalCompleet A1 (KleurRijker NT2 method)"
   ]
 }

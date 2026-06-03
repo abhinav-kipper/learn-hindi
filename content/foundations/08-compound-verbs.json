@@ -70,7 +70,7 @@
     }
   ],
   "grammar_notes": [
-    "Compound verbs = main verb stem + auxiliary (le/de/kar/jaa/ho). The auxiliary loses its own meaning and just adds aspect/politeness.",
+    "Compound verbs = main verb stem + auxiliary (the helper verb) like le/de/kar/jaa/ho. The auxiliary loses its own meaning and just adds aspect/politeness.",
     "'le lena' (take up): the main verb's action benefits the doer. 'khaa lo' = eat (for yourself).",
     "'de dena' (give over): the main verb's action benefits someone else. 'de do' = hand it over (to them).",
     "'kar dena' (do over): emphasizes completion + politeness. 'kar do' is softer/more polite than bare 'karo'.",
@@ -252,7 +252,7 @@
           {
             "hindi": "bachha rone laga",
             "english": "the child started crying",
-            "breakdown": "rone (V1 oblique infinitive) + laga (lagna, past masc.), onset, not completion"
+            "breakdown": "rone (V1 oblique infinitive (the base or dictionary form of the verb)) + laga (lagna, past masc.), onset, not completion"
           }
         ],
         "callout": {
