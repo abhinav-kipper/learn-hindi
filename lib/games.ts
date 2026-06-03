@@ -1,7 +1,17 @@
 import type { Duel, DuelItem } from '@/types/game'
 import genderDuel from '@/content/games/hindi/gender-duel.json'
+import neRuleDuel from '@/content/games/hindi/ne-rule.json'
+import haiHainDuel from '@/content/games/hindi/hai-hain.json'
+import deHetDuel from '@/content/games/dutch/de-het.json'
+import hebbenZijnDuel from '@/content/games/dutch/hebben-zijn.json'
 
-const DUELS: Duel[] = [genderDuel as Duel]
+const DUELS: Duel[] = [
+  genderDuel as Duel,
+  neRuleDuel as Duel,
+  haiHainDuel as Duel,
+  deHetDuel as Duel,
+  hebbenZijnDuel as Duel,
+]
 
 /** All duels for a language (Dutch duels can be added later). */
 export function getDuels(language: string): Duel[] {
@@ -63,4 +73,50 @@ export function recordDuelResult(prefix: string, id: string, score: number, tota
     }
   }
   return best as DuelBest
+}
+
+// ── Resume (per-round checkpoint) ────────────────────────────────────────────
+// Saved when a round of 10 completes, so the player can pick up where they left
+// off. Cleared when the game finishes or is restarted.
+
+const progressKey = (prefix: string, id: string) => `${prefix}-game-${id}-progress`
+
+export interface DuelProgress {
+  items: DuelItem[]
+  index: number
+  score: number
+  combo: number
+}
+
+export function getDuelProgress(prefix: string, id: string): DuelProgress | null {
+  if (typeof window === 'undefined') return null
+  try {
+    const raw = localStorage.getItem(progressKey(prefix, id))
+    if (!raw) return null
+    const p = JSON.parse(raw)
+    if (Array.isArray(p?.items) && typeof p?.index === 'number' && p.index > 0 && p.index < p.items.length) {
+      return p
+    }
+    return null
+  } catch {
+    return null
+  }
+}
+
+export function saveDuelProgress(prefix: string, id: string, p: DuelProgress): void {
+  if (typeof window === 'undefined') return
+  try {
+    localStorage.setItem(progressKey(prefix, id), JSON.stringify(p))
+  } catch {
+    /* ignore */
+  }
+}
+
+export function clearDuelProgress(prefix: string, id: string): void {
+  if (typeof window === 'undefined') return
+  try {
+    localStorage.removeItem(progressKey(prefix, id))
+  } catch {
+    /* ignore */
+  }
 }

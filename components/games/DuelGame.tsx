@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import type { Duel, DuelItem } from '@/types/game'
-import { drawDuelRound, getDuelBest, recordDuelResult } from '@/lib/games'
+import { drawDuelRound, getDuelBest, recordDuelResult, getDuelProgress, saveDuelProgress, clearDuelProgress } from '@/lib/games'
 import { addMistake } from '@/lib/mistakes'
 import { playSound, playCombo } from '@/lib/sounds'
 import { useLanguage } from '@/lib/language-context'
@@ -57,13 +57,18 @@ export function DuelGame({ duel }: { duel: Duel }) {
   const [flash, setFlash] = useState<number | null>(null)
   const [best, setBest] = useState<{ score: number; total: number } | null>(null)
   const [newBest, setNewBest] = useState(false)
+  const [resume, setResume] = useState<{ round: number } | null>(null)
 
   const scoreRef = useRef(0)
   scoreRef.current = score
+  const comboRef = useRef(0)
+  comboRef.current = combo
   const firedMilestones = useRef<Set<number>>(new Set())
 
   useEffect(() => {
     setBest(getDuelBest(prefix, duel.id))
+    const p = getDuelProgress(prefix, duel.id)
+    setResume(p ? { round: Math.floor(p.index / SET_SIZE) + 1 } : null)
   }, [prefix, duel.id])
 
   useEffect(() => {
@@ -78,10 +83,31 @@ export function DuelGame({ duel }: { duel: Duel }) {
   const inSet = (index % SET_SIZE) + 1
 
   function start() {
+    clearDuelProgress(prefix, duel.id)
+    setResume(null)
     setItems(drawDuelRound(duel, TOTAL))
     setIndex(0)
     setScore(0)
     setCombo(0)
+    setPicked(null)
+    setReaction(null)
+    setNewBest(false)
+    firedMilestones.current = new Set()
+    setPhase('playing')
+    playSound('tap')
+    buzz(10)
+  }
+
+  function resumeGame() {
+    const p = getDuelProgress(prefix, duel.id)
+    if (!p) {
+      start()
+      return
+    }
+    setItems(p.items)
+    setIndex(p.index)
+    setScore(p.score)
+    setCombo(p.combo)
     setPicked(null)
     setReaction(null)
     setNewBest(false)
@@ -133,6 +159,7 @@ export function DuelGame({ duel }: { duel: Duel }) {
   function advance() {
     const next = index + 1
     if (next >= TOTAL) {
+      clearDuelProgress(prefix, duel.id)
       const finalScore = scoreRef.current
       const result = recordDuelResult(prefix, duel.id, finalScore, TOTAL)
       setNewBest(!best || finalScore > best.score)
@@ -148,6 +175,8 @@ export function DuelGame({ duel }: { duel: Duel }) {
     setPicked(null)
     setReaction(null)
     if (next % SET_SIZE === 0) {
+      // Round done: checkpoint + save so the player can resume from here.
+      saveDuelProgress(prefix, duel.id, { items, index: next, score: scoreRef.current, combo: comboRef.current })
       setPhase('checkpoint')
       playSound('complete')
       buzz([20, 50, 20])
@@ -175,7 +204,7 @@ export function DuelGame({ duel }: { duel: Duel }) {
       </div>
 
       <div style={{ position: 'relative', zIndex: 2, flex: 1, display: 'flex', flexDirection: 'column', padding: '0 18px 24px', maxWidth: 480, margin: '0 auto', width: '100%' }}>
-        {phase === 'intro' && <IntroView duel={duel} best={best} onStart={start} primary={theme.primary} />}
+        {phase === 'intro' && <IntroView duel={duel} best={best} resume={resume} onStart={start} onResume={resumeGame} primary={theme.primary} />}
         {phase === 'playing' && current && (
           <PlayView duel={duel} item={current} setNum={setNum} inSet={inSet} combo={combo} picked={picked} reaction={reaction} onPick={pick} />
         )}
@@ -214,7 +243,21 @@ export function DuelGame({ duel }: { duel: Duel }) {
   )
 }
 
-function IntroView({ duel, best, onStart, primary }: { duel: Duel; best: { score: number; total: number } | null; onStart: () => void; primary: string }) {
+function IntroView({
+  duel,
+  best,
+  resume,
+  onStart,
+  onResume,
+  primary,
+}: {
+  duel: Duel
+  best: { score: number; total: number } | null
+  resume: { round: number } | null
+  onStart: () => void
+  onResume: () => void
+  primary: string
+}) {
   return (
     <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} style={{ display: 'flex', flexDirection: 'column', gap: 14, flex: 1 }}>
       <div style={{ textAlign: 'center', fontFamily: FONTS.body, fontWeight: 700, fontSize: 14, color: COLORS.ink60 }}>{duel.subtitle}</div>
@@ -232,10 +275,57 @@ function IntroView({ duel, best, onStart, primary }: { duel: Duel; best: { score
         3 rounds of 10{best ? ` · 🏆 best ${best.score}/${best.total}` : ''}
       </div>
       <div style={{ flex: 1 }} />
-      <button type="button" onClick={onStart} style={{ width: '100%', padding: '15px', background: primary, color: W, border: BORDER.sticker, boxShadow: SHADOW.sticker, borderRadius: 22, fontFamily: FONTS.display, fontWeight: 800, fontSize: 17, cursor: 'pointer', textTransform: 'lowercase' }}>
-        start game
-      </button>
+      {resume ? (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          <button type="button" onClick={onResume} style={{ width: '100%', padding: '15px', background: primary, color: W, border: BORDER.sticker, boxShadow: SHADOW.sticker, borderRadius: 22, fontFamily: FONTS.display, fontWeight: 800, fontSize: 17, cursor: 'pointer', textTransform: 'lowercase' }}>
+            continue · round {resume.round} of {NUM_SETS}
+          </button>
+          <button type="button" onClick={onStart} style={{ width: '100%', padding: '12px', background: W, color: COLORS.ink, border: BORDER.sticker, boxShadow: SHADOW.chip, borderRadius: 20, fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, cursor: 'pointer', textTransform: 'lowercase' }}>
+            start over
+          </button>
+        </div>
+      ) : (
+        <button type="button" onClick={onStart} style={{ width: '100%', padding: '15px', background: primary, color: W, border: BORDER.sticker, boxShadow: SHADOW.sticker, borderRadius: 22, fontFamily: FONTS.display, fontWeight: 800, fontSize: 17, cursor: 'pointer', textTransform: 'lowercase' }}>
+          start game
+        </button>
+      )}
     </motion.div>
+  )
+}
+
+// Visual round stepper: 3 chips showing done / current / upcoming.
+function RoundStepper({ setNum }: { setNum: number }) {
+  return (
+    <div style={{ display: 'flex', gap: 6, marginBottom: 8 }}>
+      {Array.from({ length: NUM_SETS }).map((_, i) => {
+        const n = i + 1
+        const done = n < setNum
+        const active = n === setNum
+        return (
+          <div
+            key={n}
+            style={{
+              flex: 1,
+              height: 26,
+              borderRadius: 99,
+              border: BORDER.sticker,
+              background: done ? COLORS.mint : active ? COLORS.orange : W,
+              boxShadow: active ? SHADOW.chip : 'none',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 4,
+              fontFamily: FONTS.display,
+              fontWeight: 800,
+              fontSize: 12,
+              color: active ? W : COLORS.ink,
+            }}
+          >
+            {done ? '✓' : `R${n}`}
+          </div>
+        )
+      })}
+    </div>
   )
 }
 
@@ -308,7 +398,8 @@ function PlayView({
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 12, paddingTop: 4 }}>
+      <RoundStepper setNum={setNum} />
+      <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
         {/* 10-segment within-set progress */}
         <div style={{ flex: 1, display: 'flex', gap: 3 }}>
           {Array.from({ length: SET_SIZE }).map((_, i) => (
@@ -319,9 +410,6 @@ function PlayView({
           <span style={{ fontSize: 16 }}>⚡</span>
           {combo}x
         </div>
-      </div>
-      <div style={{ fontFamily: FONTS.body, fontWeight: 700, fontSize: 12, color: COLORS.ink45, marginTop: 5 }}>
-        round {setNum} of {NUM_SETS} · {inSet}/{SET_SIZE}
       </div>
 
       <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
