@@ -1,0 +1,371 @@
+{
+  "id": "hebben-zijn",
+  "language": "dutch",
+  "title": "Hebben or Zijn",
+  "subtitle": "In the perfect tense, which helper verb does it take?",
+  "tip": "Picture the verb. If something moves to a place or changes into a new state, reach for zijn. For everything you simply do, reach for hebben. A fast wrong tap still teaches you the tricky one.",
+  "left": {
+    "label": "HEBBEN",
+    "bullets": [
+      "Most verbs use hebben: eten, drinken, kopen, lezen, doen.",
+      "Activities you perform: werken, spelen, koken, slapen, lachen.",
+      "Verbs that act on an object: zien, geven, helpen, betalen.",
+      "When in doubt, pick hebben, you are right more than half the time."
+    ]
+  },
+  "right": {
+    "label": "ZIJN",
+    "bullets": [
+      "Movement toward a place: gaan, komen, vertrekken, aankomen.",
+      "Change of state: worden, vallen, sterven, groeien, stijgen.",
+      "Fixed exceptions: blijven (stay) and zijn itself (geweest).",
+      "Disappearing or moving house: verdwijnen, verhuizen, ontstaan."
+    ]
+  },
+  "rounds": 30,
+  "items": [
+    {
+      "prompt": "gaan",
+      "answer": "right",
+      "emoji": "🚶",
+      "hint": "to go (ik ben gegaan)",
+      "explain": "Zijn, a motion verb heading to a destination."
+    },
+    {
+      "prompt": "eten",
+      "answer": "left",
+      "emoji": "🍽️",
+      "hint": "to eat (ik heb gegeten)",
+      "explain": "Hebben, an activity acting on food."
+    },
+    {
+      "prompt": "komen",
+      "answer": "right",
+      "emoji": "🚪",
+      "hint": "to come (ik ben gekomen)",
+      "explain": "Zijn, a motion verb of arrival."
+    },
+    {
+      "prompt": "drinken",
+      "answer": "left",
+      "emoji": "🥤",
+      "hint": "to drink (ik heb gedronken)",
+      "explain": "Hebben, an activity acting on a drink."
+    },
+    {
+      "prompt": "worden",
+      "answer": "right",
+      "emoji": "🔄",
+      "hint": "to become (ik ben geworden)",
+      "explain": "Zijn, the clearest change-of-state verb."
+    },
+    {
+      "prompt": "kopen",
+      "answer": "left",
+      "emoji": "🛒",
+      "hint": "to buy (ik heb gekocht)",
+      "explain": "Hebben, a transitive verb acting on an object."
+    },
+    {
+      "prompt": "vallen",
+      "answer": "right",
+      "emoji": "🍂",
+      "hint": "to fall (ik ben gevallen)",
+      "explain": "Zijn, a change of state from up to down."
+    },
+    {
+      "prompt": "lezen",
+      "answer": "left",
+      "emoji": "📖",
+      "hint": "to read (ik heb gelezen)",
+      "explain": "Hebben, an activity acting on text."
+    },
+    {
+      "prompt": "blijven",
+      "answer": "right",
+      "emoji": "🪑",
+      "hint": "to stay (ik ben gebleven)",
+      "explain": "Zijn, a fixed exception, learn it as a special case."
+    },
+    {
+      "prompt": "schrijven",
+      "answer": "left",
+      "emoji": "✍️",
+      "hint": "to write (ik heb geschreven)",
+      "explain": "Hebben, an activity that produces text."
+    },
+    {
+      "prompt": "sterven",
+      "answer": "right",
+      "emoji": "🕯️",
+      "hint": "to die (hij is gestorven)",
+      "explain": "Zijn, the ultimate change of state."
+    },
+    {
+      "prompt": "werken",
+      "answer": "left",
+      "emoji": "🛠️",
+      "hint": "to work (ik heb gewerkt)",
+      "explain": "Hebben, an activity you perform."
+    },
+    {
+      "prompt": "opstaan",
+      "answer": "right",
+      "emoji": "⏰",
+      "hint": "to get up (ik ben opgestaan)",
+      "explain": "Zijn, a change from lying to standing."
+    },
+    {
+      "prompt": "maken",
+      "answer": "left",
+      "emoji": "🔨",
+      "hint": "to make (ik heb gemaakt)",
+      "explain": "Hebben, a transitive verb acting on an object."
+    },
+    {
+      "prompt": "vertrekken",
+      "answer": "right",
+      "emoji": "🚆",
+      "hint": "to leave/depart (ik ben vertrokken)",
+      "explain": "Zijn, a motion verb of departure."
+    },
+    {
+      "prompt": "zien",
+      "answer": "left",
+      "emoji": "👀",
+      "hint": "to see (ik heb gezien)",
+      "explain": "Hebben, an activity acting on what you see."
+    },
+    {
+      "prompt": "groeien",
+      "answer": "right",
+      "emoji": "🌱",
+      "hint": "to grow (zij is gegroeid)",
+      "explain": "Zijn, a change of state in size."
+    },
+    {
+      "prompt": "spelen",
+      "answer": "left",
+      "emoji": "⚽",
+      "hint": "to play (ik heb gespeeld)",
+      "explain": "Hebben, an activity you perform."
+    },
+    {
+      "prompt": "aankomen",
+      "answer": "right",
+      "emoji": "🛬",
+      "hint": "to arrive (ik ben aangekomen)",
+      "explain": "Zijn, a motion verb reaching a destination."
+    },
+    {
+      "prompt": "koken",
+      "answer": "left",
+      "emoji": "🍳",
+      "hint": "to cook (ik heb gekookt)",
+      "explain": "Hebben, an activity acting on food."
+    },
+    {
+      "prompt": "verhuizen",
+      "answer": "right",
+      "emoji": "📦",
+      "hint": "to move house (wij zijn verhuisd)",
+      "explain": "Zijn, motion plus a change of where you live."
+    },
+    {
+      "prompt": "betalen",
+      "answer": "left",
+      "emoji": "💶",
+      "hint": "to pay (ik heb betaald)",
+      "explain": "Hebben, an activity acting on a bill."
+    },
+    {
+      "prompt": "verdwijnen",
+      "answer": "right",
+      "emoji": "💨",
+      "hint": "to disappear (het is verdwenen)",
+      "explain": "Zijn, a change from present to gone."
+    },
+    {
+      "prompt": "helpen",
+      "answer": "left",
+      "emoji": "🤝",
+      "hint": "to help (ik heb geholpen)",
+      "explain": "Hebben, an activity directed at someone."
+    },
+    {
+      "prompt": "stijgen",
+      "answer": "right",
+      "emoji": "📈",
+      "hint": "to rise (de prijs is gestegen)",
+      "explain": "Zijn, a change of state upward."
+    },
+    {
+      "prompt": "geven",
+      "answer": "left",
+      "emoji": "🎁",
+      "hint": "to give (ik heb gegeven)",
+      "explain": "Hebben, a transitive verb acting on an object."
+    },
+    {
+      "prompt": "dalen",
+      "answer": "right",
+      "emoji": "📉",
+      "hint": "to fall/drop (de prijs is gedaald)",
+      "explain": "Zijn, a change of state downward."
+    },
+    {
+      "prompt": "slapen",
+      "answer": "left",
+      "emoji": "😴",
+      "hint": "to sleep (ik heb geslapen)",
+      "explain": "Hebben, an activity, not a movement to a place."
+    },
+    {
+      "prompt": "gebeuren",
+      "answer": "right",
+      "emoji": "❗",
+      "hint": "to happen (het is gebeurd)",
+      "explain": "Zijn, an event coming into being."
+    },
+    {
+      "prompt": "kennen",
+      "answer": "left",
+      "emoji": "🧠",
+      "hint": "to know (ik heb gekend)",
+      "explain": "Hebben, a state you hold, acting on what you know."
+    },
+    {
+      "prompt": "slagen",
+      "answer": "right",
+      "emoji": "🎓",
+      "hint": "to pass/succeed (ik ben geslaagd)",
+      "explain": "Zijn, a change of state into success."
+    },
+    {
+      "prompt": "doen",
+      "answer": "left",
+      "emoji": "✅",
+      "hint": "to do (ik heb gedaan)",
+      "explain": "Hebben, the most general activity verb."
+    },
+    {
+      "prompt": "ontstaan",
+      "answer": "right",
+      "emoji": "✨",
+      "hint": "to arise/come into being (het is ontstaan)",
+      "explain": "Zijn, something coming into existence."
+    },
+    {
+      "prompt": "luisteren",
+      "answer": "left",
+      "emoji": "👂",
+      "hint": "to listen (ik heb geluisterd)",
+      "explain": "Hebben, an activity you perform."
+    },
+    {
+      "prompt": "vragen",
+      "answer": "left",
+      "emoji": "❓",
+      "hint": "to ask (ik heb gevraagd)",
+      "explain": "Hebben, an activity directed at someone."
+    },
+    {
+      "prompt": "nemen",
+      "answer": "left",
+      "emoji": "✋",
+      "hint": "to take (ik heb genomen)",
+      "explain": "Hebben, a transitive verb acting on an object."
+    },
+    {
+      "prompt": "kijken",
+      "answer": "left",
+      "emoji": "📺",
+      "hint": "to watch/look (ik heb gekeken)",
+      "explain": "Hebben, an activity you perform."
+    },
+    {
+      "prompt": "wachten",
+      "answer": "left",
+      "emoji": "⏳",
+      "hint": "to wait (ik heb gewacht)",
+      "explain": "Hebben, an activity, not a movement to a place."
+    },
+    {
+      "prompt": "leren",
+      "answer": "left",
+      "emoji": "📚",
+      "hint": "to learn (ik heb geleerd)",
+      "explain": "Hebben, an activity acting on what you study."
+    },
+    {
+      "prompt": "wonen",
+      "answer": "left",
+      "emoji": "🏠",
+      "hint": "to live/reside (ik heb gewoond)",
+      "explain": "Hebben, a state, not a movement to a place."
+    },
+    {
+      "prompt": "bellen",
+      "answer": "left",
+      "emoji": "📞",
+      "hint": "to call (ik heb gebeld)",
+      "explain": "Hebben, an activity directed at someone."
+    },
+    {
+      "prompt": "lachen",
+      "answer": "left",
+      "emoji": "😄",
+      "hint": "to laugh (ik heb gelachen)",
+      "explain": "Hebben, an activity you perform."
+    },
+    {
+      "prompt": "huilen",
+      "answer": "left",
+      "emoji": "😢",
+      "hint": "to cry (ik heb gehuild)",
+      "explain": "Hebben, an activity you perform."
+    },
+    {
+      "prompt": "zoeken",
+      "answer": "left",
+      "emoji": "🔍",
+      "hint": "to search (ik heb gezocht)",
+      "explain": "Hebben, an activity acting on what you seek."
+    },
+    {
+      "prompt": "vinden",
+      "answer": "left",
+      "emoji": "💡",
+      "hint": "to find (ik heb gevonden)",
+      "explain": "Hebben, a transitive verb acting on an object."
+    },
+    {
+      "prompt": "studeren",
+      "answer": "left",
+      "emoji": "🎒",
+      "hint": "to study (ik heb gestudeerd)",
+      "explain": "Hebben, an activity you perform."
+    },
+    {
+      "prompt": "zijn",
+      "answer": "right",
+      "emoji": "🌟",
+      "hint": "to be (ik ben geweest)",
+      "explain": "Zijn, the verb to be takes itself as helper, learn geweest."
+    },
+    {
+      "prompt": "schilderen",
+      "answer": "left",
+      "emoji": "🎨",
+      "hint": "to paint (ik heb geschilderd)",
+      "explain": "Hebben, an activity acting on a surface."
+    },
+    {
+      "prompt": "antwoorden",
+      "answer": "left",
+      "emoji": "💬",
+      "hint": "to answer (ik heb geantwoord)",
+      "explain": "Hebben, an activity directed at a question."
+    }
+  ]
+}

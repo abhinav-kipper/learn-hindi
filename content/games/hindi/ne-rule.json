@@ -1,0 +1,392 @@
+{
+  "id": "ne-rule",
+  "language": "hindi",
+  "title": "Ne or No Ne",
+  "subtitle": "In the past tense, does the subject take 'ne'?",
+  "tip": "Read the verb, not the subject. Ask 'did this action land on an object?' Yes means ne, no means no ne. Then watch for the three liars: bola, laaya, bhoola look transitive but never take ne.",
+  "left": {
+    "label": "NE",
+    "bullets": [
+      "Transitive perfective past takes ne: maine khaaya, usne padha, Ram ne chai pi.",
+      "If the action lands on an object (ate what, read what), it is transitive: khaana, peena, padhna, likhna, dekhna, sunna.",
+      "Compound verbs inherit the main verb's transitivity: maine kar liya, usne de diya.",
+      "The verb then agrees with the OBJECT's gender, not the subject: maine roti khaayi, maine paani piya."
+    ]
+  },
+  "right": {
+    "label": "NO NE",
+    "bullets": [
+      "Intransitive verbs never take ne: woh gaya, main soya, bachcha roya, woh baitha.",
+      "If there is no object (go, come, sleep, sit, cry, fall, run), the verb is intransitive.",
+      "Three transitive-looking liars also take NO ne: bolna (woh bola), laana (main laaya), bhoolna (main bhool gaya).",
+      "Here the verb agrees with the SUBJECT as normal: woh aayi, main soyi."
+    ]
+  },
+  "rounds": 30,
+  "items": [
+    {
+      "prompt": "maine khaana khaaya",
+      "answer": "left",
+      "emoji": "🍛",
+      "hint": "I ate the food",
+      "explain": "khaana (to eat) is transitive and past, so the subject takes ne."
+    },
+    {
+      "prompt": "woh ghar gaya",
+      "answer": "right",
+      "emoji": "🏠",
+      "hint": "he went home",
+      "explain": "jaana (to go) is intransitive, so no ne and the verb agrees with the subject."
+    },
+    {
+      "prompt": "usne kitaab padhi",
+      "answer": "left",
+      "emoji": "📖",
+      "hint": "he/she read the book",
+      "explain": "padhna (to read) is transitive and past, so the subject gets ne (us / usne)."
+    },
+    {
+      "prompt": "main raat ko soya",
+      "answer": "right",
+      "emoji": "😴",
+      "hint": "I slept at night",
+      "explain": "sona (to sleep) is intransitive, so no ne."
+    },
+    {
+      "prompt": "Ram ne chai pi",
+      "answer": "left",
+      "emoji": "☕",
+      "hint": "Ram drank chai",
+      "explain": "peena (to drink) is transitive, so even a named subject takes ne."
+    },
+    {
+      "prompt": "bachcha zor se roya",
+      "answer": "right",
+      "emoji": "😭",
+      "hint": "the child cried loudly",
+      "explain": "rona (to cry) is intransitive, so no ne."
+    },
+    {
+      "prompt": "maine chitthi likhi",
+      "answer": "left",
+      "emoji": "✉️",
+      "hint": "I wrote a letter",
+      "explain": "likhna (to write) is transitive, so the subject takes ne."
+    },
+    {
+      "prompt": "woh kursi par baithi",
+      "answer": "right",
+      "emoji": "🪑",
+      "hint": "she sat on the chair",
+      "explain": "baithna (to sit) is intransitive, so no ne."
+    },
+    {
+      "prompt": "usne film dekhi",
+      "answer": "left",
+      "emoji": "🎬",
+      "hint": "he/she watched the film",
+      "explain": "dekhna (to watch) is transitive, so the subject gets ne."
+    },
+    {
+      "prompt": "woh dhanyavaad bola",
+      "answer": "right",
+      "emoji": "🗣️",
+      "hint": "he said thank you",
+      "explain": "bolna (to speak) looks transitive but is one of the exceptions that takes NO ne."
+    },
+    {
+      "prompt": "humne gaana suna",
+      "answer": "left",
+      "emoji": "🎵",
+      "hint": "we listened to a song",
+      "explain": "sunna (to hear) is transitive, so the subject takes ne (ham / humne)."
+    },
+    {
+      "prompt": "main subah uthi",
+      "answer": "right",
+      "emoji": "🌅",
+      "hint": "I got up in the morning",
+      "explain": "uthna (to get up) is intransitive, so no ne."
+    },
+    {
+      "prompt": "maine kaam kiya",
+      "answer": "left",
+      "emoji": "💼",
+      "hint": "I did the work",
+      "explain": "karna (to do) is transitive, so the subject takes ne."
+    },
+    {
+      "prompt": "woh seedhiyon se gira",
+      "answer": "right",
+      "emoji": "🪜",
+      "hint": "he fell down the stairs",
+      "explain": "girna (to fall) is intransitive, so no ne."
+    },
+    {
+      "prompt": "usne khaana banaya",
+      "answer": "left",
+      "emoji": "🍳",
+      "hint": "he/she made the food",
+      "explain": "banaana (to make) is transitive, so the subject gets ne."
+    },
+    {
+      "prompt": "main yeh kitaab laaya",
+      "answer": "right",
+      "emoji": "📚",
+      "hint": "I brought this book",
+      "explain": "laana (to bring) looks transitive but is an exception that takes NO ne."
+    },
+    {
+      "prompt": "maine darwaaza khola",
+      "answer": "left",
+      "emoji": "🚪",
+      "hint": "I opened the door",
+      "explain": "kholna (to open) is transitive, so the subject takes ne."
+    },
+    {
+      "prompt": "woh tezi se daudi",
+      "answer": "right",
+      "emoji": "🏃",
+      "hint": "she ran fast",
+      "explain": "daudna (to run) is intransitive, so no ne."
+    },
+    {
+      "prompt": "main pata bhool gaya",
+      "answer": "right",
+      "emoji": "🤔",
+      "hint": "I forgot the address",
+      "explain": "bhoolna (to forget) looks transitive but is an exception that takes NO ne."
+    },
+    {
+      "prompt": "usne sawaal poocha",
+      "answer": "left",
+      "emoji": "❓",
+      "hint": "he/she asked a question",
+      "explain": "poochna (to ask) is transitive, so the subject gets ne."
+    },
+    {
+      "prompt": "woh station pahuncha",
+      "answer": "right",
+      "emoji": "🚉",
+      "hint": "he reached the station",
+      "explain": "pahunchna (to arrive) is intransitive, so no ne."
+    },
+    {
+      "prompt": "maine gaadi chalaayi",
+      "answer": "left",
+      "emoji": "🚗",
+      "hint": "I drove the car",
+      "explain": "chalaana (to drive) is transitive, so the subject takes ne."
+    },
+    {
+      "prompt": "woh khushi se hansa",
+      "answer": "right",
+      "emoji": "😂",
+      "hint": "he laughed with joy",
+      "explain": "hansna (to laugh) is intransitive, so no ne."
+    },
+    {
+      "prompt": "tum sach bole",
+      "answer": "right",
+      "emoji": "💬",
+      "hint": "you spoke the truth",
+      "explain": "bolna (to speak) is one of the exceptions that takes NO ne, so the subject stays tum (not tumne) and the verb agrees with it."
+    },
+    {
+      "prompt": "usne naya phone khareeda",
+      "answer": "left",
+      "emoji": "📱",
+      "hint": "he/she bought a new phone",
+      "explain": "khareedna (to buy) is transitive, so the subject gets ne."
+    },
+    {
+      "prompt": "woh ghar lauta",
+      "answer": "right",
+      "emoji": "🔙",
+      "hint": "he returned home",
+      "explain": "lautna (to return) is intransitive, so no ne."
+    },
+    {
+      "prompt": "maine roti khaayi",
+      "answer": "left",
+      "emoji": "🫓",
+      "hint": "I ate roti",
+      "explain": "khaana is transitive, so ne; the verb ends in -i to agree with roti (feminine)."
+    },
+    {
+      "prompt": "main bistar par leti",
+      "answer": "right",
+      "emoji": "🛏️",
+      "hint": "I lay down on the bed",
+      "explain": "letna (to lie down) is intransitive, so no ne."
+    },
+    {
+      "prompt": "usne gaana gaaya",
+      "answer": "left",
+      "emoji": "🎤",
+      "hint": "he/she sang a song",
+      "explain": "gaana (to sing) is transitive, so the subject takes ne."
+    },
+    {
+      "prompt": "woh bench par baitha",
+      "answer": "right",
+      "emoji": "🪑",
+      "hint": "he sat on the bench",
+      "explain": "baithna (to sit) is intransitive, so no ne."
+    },
+    {
+      "prompt": "main chaabi laayi",
+      "answer": "right",
+      "emoji": "🔑",
+      "hint": "I brought the key",
+      "explain": "laana (to bring) is an exception that takes NO ne, so the subject stays main (not maine) and the verb agrees with it."
+    },
+    {
+      "prompt": "humne match jeeta",
+      "answer": "left",
+      "emoji": "🏆",
+      "hint": "we won the match",
+      "explain": "jeetna (to win) is transitive here, so the subject takes ne (ham / humne)."
+    },
+    {
+      "prompt": "woh school aayi",
+      "answer": "right",
+      "emoji": "🏫",
+      "hint": "she came to school",
+      "explain": "aana (to come) is intransitive, so no ne."
+    },
+    {
+      "prompt": "usne chitthi bheji",
+      "answer": "left",
+      "emoji": "📮",
+      "hint": "he/she sent the letter",
+      "explain": "bhejna (to send) is transitive, so the subject gets ne."
+    },
+    {
+      "prompt": "main daftar pahunchi",
+      "answer": "right",
+      "emoji": "🏢",
+      "hint": "I reached the office",
+      "explain": "pahunchna (to arrive) is intransitive, so no ne."
+    },
+    {
+      "prompt": "maine paani piya",
+      "answer": "left",
+      "emoji": "💧",
+      "hint": "I drank water",
+      "explain": "peena is transitive, so ne; the verb ends in -a to agree with paani (masculine)."
+    },
+    {
+      "prompt": "woh raaste mein ruka",
+      "answer": "right",
+      "emoji": "🛑",
+      "hint": "he stopped on the way",
+      "explain": "rukna (to stop) is intransitive, so no ne."
+    },
+    {
+      "prompt": "usne sabzi kaati",
+      "answer": "left",
+      "emoji": "🔪",
+      "hint": "he/she cut the vegetables",
+      "explain": "kaatna (to cut) is transitive, so the subject gets ne."
+    },
+    {
+      "prompt": "main saari raat jaaga",
+      "answer": "right",
+      "emoji": "🌙",
+      "hint": "I stayed awake all night",
+      "explain": "jaagna (to stay awake) is intransitive, so no ne."
+    },
+    {
+      "prompt": "tum mera naam bhoole",
+      "answer": "right",
+      "emoji": "🙈",
+      "hint": "you forgot my name",
+      "explain": "bhoolna (to forget) is an exception that takes NO ne, so the subject stays tum (not tumne) and the verb agrees with it."
+    },
+    {
+      "prompt": "maine kapde dhoye",
+      "answer": "left",
+      "emoji": "🧺",
+      "hint": "I washed the clothes",
+      "explain": "dhona (to wash) is transitive, so the subject takes ne."
+    },
+    {
+      "prompt": "woh khushi se naachi",
+      "answer": "right",
+      "emoji": "💃",
+      "hint": "she danced with joy",
+      "explain": "naachna (to dance) is intransitive, so no ne."
+    },
+    {
+      "prompt": "usne darwaaza band kiya",
+      "answer": "left",
+      "emoji": "🚪",
+      "hint": "he/she closed the door",
+      "explain": "karna (band karna, to close) is transitive, so the subject gets ne."
+    },
+    {
+      "prompt": "main thoda ghabraaya",
+      "answer": "right",
+      "emoji": "😰",
+      "hint": "I got a little nervous",
+      "explain": "ghabraana (to get nervous) is intransitive, so no ne."
+    },
+    {
+      "prompt": "humne nayi baat seekhi",
+      "answer": "left",
+      "emoji": "🧠",
+      "hint": "we learned a new thing",
+      "explain": "seekhna (to learn) is transitive, so the subject takes ne (ham / humne)."
+    },
+    {
+      "prompt": "woh dost se mila",
+      "answer": "right",
+      "emoji": "🤝",
+      "hint": "he met a friend",
+      "explain": "milna (to meet) is intransitive in Hindi, so no ne."
+    },
+    {
+      "prompt": "maine chai banayi",
+      "answer": "left",
+      "emoji": "🍵",
+      "hint": "I made tea",
+      "explain": "banaana is transitive, so ne; the verb ends in -i to agree with chai (feminine)."
+    },
+    {
+      "prompt": "woh dheere dheere chala",
+      "answer": "right",
+      "emoji": "🚶",
+      "hint": "he walked slowly",
+      "explain": "chalna (to walk) is intransitive, so no ne."
+    },
+    {
+      "prompt": "usne mez uthayi",
+      "answer": "left",
+      "emoji": "🪑",
+      "hint": "he/she lifted the table",
+      "explain": "uthaana (to lift) is transitive, so the subject gets ne."
+    },
+    {
+      "prompt": "woh kal subah jaagi",
+      "answer": "right",
+      "emoji": "⏰",
+      "hint": "she woke up yesterday morning",
+      "explain": "jaagna (to wake up) is intransitive, so no ne."
+    },
+    {
+      "prompt": "tum paani laaye",
+      "answer": "right",
+      "emoji": "🚰",
+      "hint": "you brought water",
+      "explain": "laana (to bring) is an exception that takes NO ne, so the subject stays tum (not tumne) and the verb agrees with it."
+    },
+    {
+      "prompt": "maine sara kaam kar liya",
+      "answer": "left",
+      "emoji": "✅",
+      "hint": "I got all the work done",
+      "explain": "the compound kar liya inherits transitivity from karna, so the subject takes ne."
+    }
+  ]
+}
