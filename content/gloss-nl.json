@@ -8464,5 +8464,3795 @@
       "t": "go",
       "note": "infinitive at end"
     }
+  ],
+  "Hallo! / Hoi! / Dag!": [
+    {
+      "w": "hallo",
+      "t": "hello"
+    },
+    {
+      "w": "hoi",
+      "t": "hi",
+      "note": "casual"
+    },
+    {
+      "w": "dag",
+      "t": "hi/bye",
+      "note": "works as both greeting and goodbye"
+    }
+  ],
+  "Goedemorgen. / Goedemiddag. / Goedenavond.": [
+    {
+      "w": "goedemorgen",
+      "t": "good morning"
+    },
+    {
+      "w": "goedemiddag",
+      "t": "good afternoon"
+    },
+    {
+      "w": "goedenavond",
+      "t": "good evening"
+    }
+  ],
+  "Alsjeblieft. / Alstublieft.": [
+    {
+      "w": "alsjeblieft",
+      "t": "please / here you go",
+      "note": "informal"
+    },
+    {
+      "w": "alstublieft",
+      "t": "please / here you go",
+      "note": "formal"
+    }
+  ],
+  "Dank je wel. / Dank u wel.": [
+    {
+      "w": "dank",
+      "t": "thanks"
+    },
+    {
+      "w": "je",
+      "t": "you",
+      "note": "informal"
+    },
+    {
+      "w": "wel",
+      "t": "really",
+      "note": "adds warmth here"
+    },
+    {
+      "w": "dank",
+      "t": "thanks"
+    },
+    {
+      "w": "u",
+      "t": "you",
+      "note": "formal"
+    },
+    {
+      "w": "wel",
+      "t": "really"
+    }
+  ],
+  "Graag gedaan.": [
+    {
+      "w": "graag",
+      "t": "gladly"
+    },
+    {
+      "w": "gedaan",
+      "t": "done",
+      "note": "from 'doen'; together means 'you're welcome'"
+    }
+  ],
+  "Sorry. / Pardon?": [
+    {
+      "w": "sorry",
+      "t": "sorry"
+    },
+    {
+      "w": "pardon",
+      "t": "excuse me?",
+      "note": "to ask someone to repeat"
+    }
+  ],
+  "Ja. / Nee.": [
+    {
+      "w": "ja",
+      "t": "yes"
+    },
+    {
+      "w": "nee",
+      "t": "no"
+    }
+  ],
+  "Ik begrijp het niet. / Ik snap het niet.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "begrijp",
+      "t": "understand",
+      "note": "from 'begrijpen'"
+    },
+    {
+      "w": "het",
+      "t": "it"
+    },
+    {
+      "w": "niet",
+      "t": "not"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "snap",
+      "t": "get/understand",
+      "note": "from 'snappen'; more casual"
+    },
+    {
+      "w": "het",
+      "t": "it"
+    },
+    {
+      "w": "niet",
+      "t": "not"
+    }
+  ],
+  "Kunt u dat herhalen? / Kun je dat herhalen?": [
+    {
+      "w": "kunt",
+      "t": "can",
+      "note": "from 'kunnen'; formal 'u' form"
+    },
+    {
+      "w": "u",
+      "t": "you",
+      "note": "formal"
+    },
+    {
+      "w": "dat",
+      "t": "that"
+    },
+    {
+      "w": "herhalen",
+      "t": "repeat"
+    },
+    {
+      "w": "kun",
+      "t": "can",
+      "note": "informal 'je' form"
+    },
+    {
+      "w": "je",
+      "t": "you",
+      "note": "informal"
+    },
+    {
+      "w": "dat",
+      "t": "that"
+    },
+    {
+      "w": "herhalen",
+      "t": "repeat"
+    }
+  ],
+  "Spreekt u Engels? / Spreek je Engels?": [
+    {
+      "w": "spreekt",
+      "t": "speak",
+      "note": "from 'spreken'; formal form"
+    },
+    {
+      "w": "u",
+      "t": "you",
+      "note": "formal"
+    },
+    {
+      "w": "engels",
+      "t": "English"
+    },
+    {
+      "w": "spreek",
+      "t": "speak",
+      "note": "informal form"
+    },
+    {
+      "w": "je",
+      "t": "you",
+      "note": "informal"
+    },
+    {
+      "w": "engels",
+      "t": "English"
+    }
+  ],
+  "Langzamer, alstublieft.": [
+    {
+      "w": "langzamer",
+      "t": "slower"
+    },
+    {
+      "w": "alstublieft",
+      "t": "please",
+      "note": "formal"
+    }
+  ],
+  "Tot ziens! / Doei!": [
+    {
+      "w": "tot",
+      "t": "until"
+    },
+    {
+      "w": "ziens",
+      "t": "seeing",
+      "note": "'tot ziens' means goodbye"
+    },
+    {
+      "w": "doei",
+      "t": "bye",
+      "note": "casual"
+    }
+  ],
+  "Hoe gaat het met je?": [
+    {
+      "w": "hoe",
+      "t": "how"
+    },
+    {
+      "w": "gaat",
+      "t": "goes",
+      "note": "from 'gaan'"
+    },
+    {
+      "w": "het",
+      "t": "it"
+    },
+    {
+      "w": "met",
+      "t": "with"
+    },
+    {
+      "w": "je",
+      "t": "you",
+      "note": "informal"
+    }
+  ],
+  "Goed, en met jou?": [
+    {
+      "w": "goed",
+      "t": "good"
+    },
+    {
+      "w": "en",
+      "t": "and"
+    },
+    {
+      "w": "met",
+      "t": "with"
+    },
+    {
+      "w": "jou",
+      "t": "you",
+      "note": "informal, stressed form"
+    }
+  ],
+  "Het gaat wel.": [
+    {
+      "w": "het",
+      "t": "it"
+    },
+    {
+      "w": "gaat",
+      "t": "goes",
+      "note": "from 'gaan'"
+    },
+    {
+      "w": "wel",
+      "t": "okay",
+      "note": "softens to 'not bad'"
+    }
+  ],
+  "Lekker weer, hè?": [
+    {
+      "w": "lekker",
+      "t": "nice"
+    },
+    {
+      "w": "weer",
+      "t": "weather",
+      "note": "het-word"
+    },
+    {
+      "w": "hè",
+      "t": "isn't it?",
+      "note": "tag asking for agreement"
+    }
+  ],
+  "Wat een mooie dag!": [
+    {
+      "w": "wat",
+      "t": "what"
+    },
+    {
+      "w": "een",
+      "t": "a"
+    },
+    {
+      "w": "mooie",
+      "t": "beautiful",
+      "note": "inflected adjective"
+    },
+    {
+      "w": "dag",
+      "t": "day",
+      "note": "de-word"
+    }
+  ],
+  "Het regent. Wat een rotweer.": [
+    {
+      "w": "het",
+      "t": "it"
+    },
+    {
+      "w": "regent",
+      "t": "is raining",
+      "note": "from 'regenen'"
+    },
+    {
+      "w": "wat",
+      "t": "what"
+    },
+    {
+      "w": "een",
+      "t": "a"
+    },
+    {
+      "w": "rotweer",
+      "t": "awful weather",
+      "note": "'rot' (rotten) + 'weer' (weather)"
+    }
+  ],
+  "Het is koud / warm / zonnig / winderig.": [
+    {
+      "w": "het",
+      "t": "it"
+    },
+    {
+      "w": "is",
+      "t": "is",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "koud",
+      "t": "cold"
+    },
+    {
+      "w": "warm",
+      "t": "warm"
+    },
+    {
+      "w": "zonnig",
+      "t": "sunny"
+    },
+    {
+      "w": "winderig",
+      "t": "windy"
+    }
+  ],
+  "Heb je een fijn weekend gehad?": [
+    {
+      "w": "heb",
+      "t": "have",
+      "note": "from 'hebben'"
+    },
+    {
+      "w": "je",
+      "t": "you",
+      "note": "informal"
+    },
+    {
+      "w": "een",
+      "t": "a"
+    },
+    {
+      "w": "fijn",
+      "t": "nice/good"
+    },
+    {
+      "w": "weekend",
+      "t": "weekend",
+      "note": "het-word"
+    },
+    {
+      "w": "gehad",
+      "t": "had",
+      "note": "past participle of 'hebben'"
+    }
+  ],
+  "Wat ga je dit weekend doen?": [
+    {
+      "w": "wat",
+      "t": "what"
+    },
+    {
+      "w": "ga",
+      "t": "going",
+      "note": "from 'gaan'; expresses future"
+    },
+    {
+      "w": "je",
+      "t": "you",
+      "note": "informal"
+    },
+    {
+      "w": "dit",
+      "t": "this"
+    },
+    {
+      "w": "weekend",
+      "t": "weekend",
+      "note": "het-word"
+    },
+    {
+      "w": "doen",
+      "t": "to do"
+    }
+  ],
+  "Tot de volgende keer!": [
+    {
+      "w": "tot",
+      "t": "until"
+    },
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "volgende",
+      "t": "next"
+    },
+    {
+      "w": "keer",
+      "t": "time",
+      "note": "as in 'next time'"
+    }
+  ],
+  "Ik heb twee kinderen. Een zoon en een dochter.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "heb",
+      "t": "have",
+      "note": "from 'hebben'"
+    },
+    {
+      "w": "twee",
+      "t": "two"
+    },
+    {
+      "w": "kinderen",
+      "t": "children",
+      "note": "plural of 'kind'"
+    },
+    {
+      "w": "een",
+      "t": "a"
+    },
+    {
+      "w": "zoon",
+      "t": "son"
+    },
+    {
+      "w": "en",
+      "t": "and"
+    },
+    {
+      "w": "een",
+      "t": "a"
+    },
+    {
+      "w": "dochter",
+      "t": "daughter"
+    }
+  ],
+  "Heb je broers of zussen?": [
+    {
+      "w": "heb",
+      "t": "have",
+      "note": "from 'hebben'"
+    },
+    {
+      "w": "je",
+      "t": "you",
+      "note": "informal"
+    },
+    {
+      "w": "broers",
+      "t": "brothers",
+      "note": "plural of 'broer'"
+    },
+    {
+      "w": "of",
+      "t": "or"
+    },
+    {
+      "w": "zussen",
+      "t": "sisters",
+      "note": "plural of 'zus'"
+    }
+  ],
+  "Ik ben getrouwd. Mijn man werkt in Amsterdam.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "ben",
+      "t": "am",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "getrouwd",
+      "t": "married"
+    },
+    {
+      "w": "mijn",
+      "t": "my"
+    },
+    {
+      "w": "man",
+      "t": "husband",
+      "note": "also means 'man'"
+    },
+    {
+      "w": "werkt",
+      "t": "works",
+      "note": "from 'werken'"
+    },
+    {
+      "w": "in",
+      "t": "in"
+    },
+    {
+      "w": "amsterdam",
+      "t": "Amsterdam"
+    }
+  ],
+  "Ik woon samen met mijn vriendin. We wonen al vijf jaar samen.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "woon",
+      "t": "live",
+      "note": "from 'wonen'"
+    },
+    {
+      "w": "samen",
+      "t": "together"
+    },
+    {
+      "w": "met",
+      "t": "with"
+    },
+    {
+      "w": "mijn",
+      "t": "my"
+    },
+    {
+      "w": "vriendin",
+      "t": "girlfriend",
+      "note": "female form of 'vriend'"
+    },
+    {
+      "w": "we",
+      "t": "we"
+    },
+    {
+      "w": "wonen",
+      "t": "live"
+    },
+    {
+      "w": "al",
+      "t": "already"
+    },
+    {
+      "w": "vijf",
+      "t": "five"
+    },
+    {
+      "w": "jaar",
+      "t": "years"
+    },
+    {
+      "w": "samen",
+      "t": "together"
+    }
+  ],
+  "Ik woon in Utrecht, in het centrum.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "woon",
+      "t": "live",
+      "note": "from 'wonen'"
+    },
+    {
+      "w": "in",
+      "t": "in"
+    },
+    {
+      "w": "utrecht",
+      "t": "Utrecht"
+    },
+    {
+      "w": "in",
+      "t": "in"
+    },
+    {
+      "w": "het",
+      "t": "the",
+      "note": "het-word"
+    },
+    {
+      "w": "centrum",
+      "t": "city center"
+    }
+  ],
+  "Woon je in een huis of een appartement?": [
+    {
+      "w": "woon",
+      "t": "live",
+      "note": "from 'wonen'"
+    },
+    {
+      "w": "je",
+      "t": "you",
+      "note": "informal"
+    },
+    {
+      "w": "in",
+      "t": "in"
+    },
+    {
+      "w": "een",
+      "t": "a"
+    },
+    {
+      "w": "huis",
+      "t": "house",
+      "note": "het-word"
+    },
+    {
+      "w": "of",
+      "t": "or"
+    },
+    {
+      "w": "een",
+      "t": "an"
+    },
+    {
+      "w": "appartement",
+      "t": "apartment",
+      "note": "het-word"
+    }
+  ],
+  "Woon je in het centrum of buiten de stad?": [
+    {
+      "w": "woon",
+      "t": "live",
+      "note": "from 'wonen'"
+    },
+    {
+      "w": "je",
+      "t": "you",
+      "note": "informal"
+    },
+    {
+      "w": "in",
+      "t": "in"
+    },
+    {
+      "w": "het",
+      "t": "the",
+      "note": "het-word"
+    },
+    {
+      "w": "centrum",
+      "t": "city center"
+    },
+    {
+      "w": "of",
+      "t": "or"
+    },
+    {
+      "w": "buiten",
+      "t": "outside"
+    },
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "stad",
+      "t": "city"
+    }
+  ],
+  "Hoe oud zijn je kinderen? Mijn dochter is zeven.": [
+    {
+      "w": "hoe",
+      "t": "how"
+    },
+    {
+      "w": "oud",
+      "t": "old"
+    },
+    {
+      "w": "zijn",
+      "t": "are",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "je",
+      "t": "your",
+      "note": "informal possessive"
+    },
+    {
+      "w": "kinderen",
+      "t": "children",
+      "note": "plural of 'kind'"
+    },
+    {
+      "w": "mijn",
+      "t": "my"
+    },
+    {
+      "w": "dochter",
+      "t": "daughter"
+    },
+    {
+      "w": "is",
+      "t": "is",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "zeven",
+      "t": "seven"
+    }
+  ],
+  "Mijn ouders wonen nog in India. Ik mis ze wel eens.": [
+    {
+      "w": "mijn",
+      "t": "my"
+    },
+    {
+      "w": "ouders",
+      "t": "parents"
+    },
+    {
+      "w": "wonen",
+      "t": "live"
+    },
+    {
+      "w": "nog",
+      "t": "still"
+    },
+    {
+      "w": "in",
+      "t": "in"
+    },
+    {
+      "w": "india",
+      "t": "India"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "mis",
+      "t": "miss",
+      "note": "from 'missen'"
+    },
+    {
+      "w": "ze",
+      "t": "them"
+    },
+    {
+      "w": "wel",
+      "t": "",
+      "note": "'wel eens' means 'sometimes'"
+    },
+    {
+      "w": "eens",
+      "t": "sometimes",
+      "note": "part of 'wel eens'"
+    }
+  ],
+  "Mijn opa en oma wonen bij ons in de buurt.": [
+    {
+      "w": "mijn",
+      "t": "my"
+    },
+    {
+      "w": "opa",
+      "t": "grandfather"
+    },
+    {
+      "w": "en",
+      "t": "and"
+    },
+    {
+      "w": "oma",
+      "t": "grandmother"
+    },
+    {
+      "w": "wonen",
+      "t": "live"
+    },
+    {
+      "w": "bij",
+      "t": "near/by"
+    },
+    {
+      "w": "ons",
+      "t": "us"
+    },
+    {
+      "w": "in",
+      "t": "in"
+    },
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "buurt",
+      "t": "neighborhood",
+      "note": "'in de buurt' means nearby"
+    }
+  ],
+  "Ik sta om zeven uur op.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "sta",
+      "t": "get",
+      "note": "from 'opstaan'; separable verb"
+    },
+    {
+      "w": "om",
+      "t": "at",
+      "note": "with clock times"
+    },
+    {
+      "w": "zeven",
+      "t": "seven"
+    },
+    {
+      "w": "uur",
+      "t": "o'clock"
+    },
+    {
+      "w": "op",
+      "t": "up",
+      "note": "prefix of 'opstaan' sent to the end"
+    }
+  ],
+  "Ik ontbijt meestal met brood en kaas.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "ontbijt",
+      "t": "have breakfast",
+      "note": "from 'ontbijten'"
+    },
+    {
+      "w": "meestal",
+      "t": "usually"
+    },
+    {
+      "w": "met",
+      "t": "with"
+    },
+    {
+      "w": "brood",
+      "t": "bread",
+      "note": "het-word"
+    },
+    {
+      "w": "en",
+      "t": "and"
+    },
+    {
+      "w": "kaas",
+      "t": "cheese",
+      "note": "de-word"
+    }
+  ],
+  "'s Ochtends ga ik naar mijn werk.": [
+    {
+      "w": "s",
+      "t": "in the",
+      "note": "'s ochtends' means 'in the morning'"
+    },
+    {
+      "w": "ochtends",
+      "t": "morning"
+    },
+    {
+      "w": "ga",
+      "t": "go",
+      "note": "from 'gaan'; verb-second after time phrase"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "naar",
+      "t": "to"
+    },
+    {
+      "w": "mijn",
+      "t": "my"
+    },
+    {
+      "w": "werk",
+      "t": "work",
+      "note": "het-word"
+    }
+  ],
+  "Ik werk van negen tot vijf.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "werk",
+      "t": "work",
+      "note": "from 'werken'"
+    },
+    {
+      "w": "van",
+      "t": "from"
+    },
+    {
+      "w": "negen",
+      "t": "nine"
+    },
+    {
+      "w": "tot",
+      "t": "until"
+    },
+    {
+      "w": "vijf",
+      "t": "five"
+    }
+  ],
+  "Ik drink altijd koffie om half tien.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "drink",
+      "t": "drink",
+      "note": "from 'drinken'"
+    },
+    {
+      "w": "altijd",
+      "t": "always"
+    },
+    {
+      "w": "koffie",
+      "t": "coffee"
+    },
+    {
+      "w": "om",
+      "t": "at"
+    },
+    {
+      "w": "half",
+      "t": "half",
+      "note": "'half tien' is half past nine, counts toward ten"
+    },
+    {
+      "w": "tien",
+      "t": "ten"
+    }
+  ],
+  "'s Middags eet ik een boterham.": [
+    {
+      "w": "s",
+      "t": "in the",
+      "note": "'s middags' means 'at midday'"
+    },
+    {
+      "w": "middags",
+      "t": "midday"
+    },
+    {
+      "w": "eet",
+      "t": "eat",
+      "note": "from 'eten'; verb-second after time phrase"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "een",
+      "t": "a"
+    },
+    {
+      "w": "boterham",
+      "t": "sandwich",
+      "note": "a slice of bread with topping"
+    }
+  ],
+  "'s Avonds kook ik het eten om zes uur.": [
+    {
+      "w": "s",
+      "t": "in the",
+      "note": "'s avonds' means 'in the evening'"
+    },
+    {
+      "w": "avonds",
+      "t": "evening"
+    },
+    {
+      "w": "kook",
+      "t": "cook",
+      "note": "from 'koken'; verb-second after time phrase"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "het",
+      "t": "the",
+      "note": "het-word"
+    },
+    {
+      "w": "eten",
+      "t": "food/dinner"
+    },
+    {
+      "w": "om",
+      "t": "at"
+    },
+    {
+      "w": "zes",
+      "t": "six"
+    },
+    {
+      "w": "uur",
+      "t": "o'clock"
+    }
+  ],
+  "Ik ga soms na het eten een stukje fietsen.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "ga",
+      "t": "go",
+      "note": "from 'gaan'"
+    },
+    {
+      "w": "soms",
+      "t": "sometimes"
+    },
+    {
+      "w": "na",
+      "t": "after"
+    },
+    {
+      "w": "het",
+      "t": "the",
+      "note": "het-word"
+    },
+    {
+      "w": "eten",
+      "t": "food/dinner"
+    },
+    {
+      "w": "een",
+      "t": "a"
+    },
+    {
+      "w": "stukje",
+      "t": "little bit",
+      "note": "diminutive of 'stuk'; 'een stukje fietsen' means a short bike ride"
+    },
+    {
+      "w": "fietsen",
+      "t": "to cycle"
+    }
+  ],
+  "Ik ga om elf uur naar bed.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "ga",
+      "t": "go",
+      "note": "from 'gaan'"
+    },
+    {
+      "w": "om",
+      "t": "at"
+    },
+    {
+      "w": "elf",
+      "t": "eleven"
+    },
+    {
+      "w": "uur",
+      "t": "o'clock"
+    },
+    {
+      "w": "naar",
+      "t": "to"
+    },
+    {
+      "w": "bed",
+      "t": "bed",
+      "note": "het-word"
+    }
+  ],
+  "Wat doe jij op een gewone dag?": [
+    {
+      "w": "wat",
+      "t": "what"
+    },
+    {
+      "w": "doe",
+      "t": "do",
+      "note": "from 'doen'"
+    },
+    {
+      "w": "jij",
+      "t": "you",
+      "note": "informal, stressed form"
+    },
+    {
+      "w": "op",
+      "t": "on"
+    },
+    {
+      "w": "een",
+      "t": "a"
+    },
+    {
+      "w": "gewone",
+      "t": "ordinary",
+      "note": "inflected adjective"
+    },
+    {
+      "w": "dag",
+      "t": "day",
+      "note": "de-word"
+    }
+  ],
+  "Heb je zin om koffie te drinken?": [
+    {
+      "w": "heb",
+      "t": "have",
+      "note": "from 'hebben'"
+    },
+    {
+      "w": "je",
+      "t": "you",
+      "note": "informal"
+    },
+    {
+      "w": "zin",
+      "t": "feel like",
+      "note": "'zin hebben om' means to feel like doing"
+    },
+    {
+      "w": "om",
+      "t": "to",
+      "note": "pairs with 'te' before the verb"
+    },
+    {
+      "w": "koffie",
+      "t": "coffee"
+    },
+    {
+      "w": "te",
+      "t": "to"
+    },
+    {
+      "w": "drinken",
+      "t": "drink"
+    }
+  ],
+  "Zullen we naar de film gaan?": [
+    {
+      "w": "zullen",
+      "t": "shall"
+    },
+    {
+      "w": "we",
+      "t": "we"
+    },
+    {
+      "w": "naar",
+      "t": "to"
+    },
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "film",
+      "t": "film/cinema"
+    },
+    {
+      "w": "gaan",
+      "t": "go"
+    }
+  ],
+  "Wanneer komt het jou uit?": [
+    {
+      "w": "wanneer",
+      "t": "when"
+    },
+    {
+      "w": "komt",
+      "t": "comes",
+      "note": "from 'uitkomen'; separable verb"
+    },
+    {
+      "w": "het",
+      "t": "it"
+    },
+    {
+      "w": "jou",
+      "t": "you",
+      "note": "informal, stressed form"
+    },
+    {
+      "w": "uit",
+      "t": "out",
+      "note": "prefix of 'uitkomen'; 'uitkomen' here means to suit"
+    }
+  ],
+  "Past zaterdag je?": [
+    {
+      "w": "past",
+      "t": "fits/suits",
+      "note": "from 'passen'"
+    },
+    {
+      "w": "zaterdag",
+      "t": "Saturday"
+    },
+    {
+      "w": "je",
+      "t": "you",
+      "note": "informal"
+    }
+  ],
+  "Dat is goed! Leuk!": [
+    {
+      "w": "dat",
+      "t": "that"
+    },
+    {
+      "w": "is",
+      "t": "is",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "goed",
+      "t": "good/fine"
+    },
+    {
+      "w": "leuk",
+      "t": "nice/great"
+    }
+  ],
+  "Ik kan helaas niet, ik heb al iets.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "kan",
+      "t": "can",
+      "note": "from 'kunnen'"
+    },
+    {
+      "w": "helaas",
+      "t": "unfortunately"
+    },
+    {
+      "w": "niet",
+      "t": "not"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "heb",
+      "t": "have",
+      "note": "from 'hebben'"
+    },
+    {
+      "w": "al",
+      "t": "already"
+    },
+    {
+      "w": "iets",
+      "t": "something (on)"
+    }
+  ],
+  "Hoe laat spreken we af?": [
+    {
+      "w": "hoe",
+      "t": "how"
+    },
+    {
+      "w": "laat",
+      "t": "late",
+      "note": "'hoe laat' means 'what time'"
+    },
+    {
+      "w": "spreken",
+      "t": "meet/arrange",
+      "note": "part of separable 'afspreken'"
+    },
+    {
+      "w": "we",
+      "t": "we"
+    },
+    {
+      "w": "af",
+      "t": "(part of 'afspreken')",
+      "note": "separable prefix"
+    }
+  ],
+  "Zullen we om acht uur afspreken?": [
+    {
+      "w": "zullen",
+      "t": "shall"
+    },
+    {
+      "w": "we",
+      "t": "we"
+    },
+    {
+      "w": "om",
+      "t": "at",
+      "note": "for clock times"
+    },
+    {
+      "w": "acht",
+      "t": "eight"
+    },
+    {
+      "w": "uur",
+      "t": "o'clock/hour"
+    },
+    {
+      "w": "afspreken",
+      "t": "to meet up/arrange",
+      "note": "separable verb"
+    }
+  ],
+  "Tot zaterdag!": [
+    {
+      "w": "tot",
+      "t": "until/see you"
+    },
+    {
+      "w": "zaterdag",
+      "t": "Saturday"
+    }
+  ],
+  "Pardon, mag ik u iets vragen?": [
+    {
+      "w": "pardon",
+      "t": "excuse me"
+    },
+    {
+      "w": "mag",
+      "t": "may",
+      "note": "from 'mogen'"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "u",
+      "t": "you (formal)"
+    },
+    {
+      "w": "iets",
+      "t": "something"
+    },
+    {
+      "w": "vragen",
+      "t": "to ask"
+    }
+  ],
+  "Waar is het station?": [
+    {
+      "w": "waar",
+      "t": "where"
+    },
+    {
+      "w": "is",
+      "t": "is",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "het",
+      "t": "the",
+      "note": "het-word"
+    },
+    {
+      "w": "station",
+      "t": "train station"
+    }
+  ],
+  "Hoe kom ik bij de Albert Heijn?": [
+    {
+      "w": "hoe",
+      "t": "how"
+    },
+    {
+      "w": "kom",
+      "t": "get/come",
+      "note": "from 'komen'"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "bij",
+      "t": "to/at"
+    },
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "albert",
+      "t": "Albert",
+      "note": "supermarket name"
+    },
+    {
+      "w": "heijn",
+      "t": "Heijn",
+      "note": "supermarket name"
+    }
+  ],
+  "Is het ver? Is het hier in de buurt?": [
+    {
+      "w": "is",
+      "t": "is",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "het",
+      "t": "it"
+    },
+    {
+      "w": "ver",
+      "t": "far"
+    },
+    {
+      "w": "is",
+      "t": "is",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "het",
+      "t": "it"
+    },
+    {
+      "w": "hier",
+      "t": "here"
+    },
+    {
+      "w": "in",
+      "t": "in"
+    },
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "buurt",
+      "t": "neighbourhood",
+      "note": "'in de buurt' means nearby"
+    }
+  ],
+  "Ga rechtdoor, dan linksaf, dan rechtsaf.": [
+    {
+      "w": "ga",
+      "t": "go",
+      "note": "from 'gaan'"
+    },
+    {
+      "w": "rechtdoor",
+      "t": "straight ahead"
+    },
+    {
+      "w": "dan",
+      "t": "then"
+    },
+    {
+      "w": "linksaf",
+      "t": "left (turn)"
+    },
+    {
+      "w": "dan",
+      "t": "then"
+    },
+    {
+      "w": "rechtsaf",
+      "t": "right (turn)"
+    }
+  ],
+  "De eerste straat rechts, de tweede straat links.": [
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "eerste",
+      "t": "first"
+    },
+    {
+      "w": "straat",
+      "t": "street",
+      "note": "de-word"
+    },
+    {
+      "w": "rechts",
+      "t": "on the right"
+    },
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "tweede",
+      "t": "second"
+    },
+    {
+      "w": "straat",
+      "t": "street",
+      "note": "de-word"
+    },
+    {
+      "w": "links",
+      "t": "on the left"
+    }
+  ],
+  "Het is naast de bibliotheek, tegenover het park, op de hoek.": [
+    {
+      "w": "het",
+      "t": "it"
+    },
+    {
+      "w": "is",
+      "t": "is",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "naast",
+      "t": "next to"
+    },
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "bibliotheek",
+      "t": "library"
+    },
+    {
+      "w": "tegenover",
+      "t": "opposite"
+    },
+    {
+      "w": "het",
+      "t": "the",
+      "note": "het-word"
+    },
+    {
+      "w": "park",
+      "t": "park"
+    },
+    {
+      "w": "op",
+      "t": "on"
+    },
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "hoek",
+      "t": "corner",
+      "note": "'op de hoek' means on the corner"
+    }
+  ],
+  "Kunt u het op de kaart aanwijzen?": [
+    {
+      "w": "kunt",
+      "t": "can",
+      "note": "from 'kunnen'; formal 'u' form"
+    },
+    {
+      "w": "u",
+      "t": "you (formal)"
+    },
+    {
+      "w": "het",
+      "t": "it"
+    },
+    {
+      "w": "op",
+      "t": "on"
+    },
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "kaart",
+      "t": "map",
+      "note": "de-word"
+    },
+    {
+      "w": "aanwijzen",
+      "t": "to point out",
+      "note": "separable verb"
+    }
+  ],
+  "Moet ik hier linksaf?": [
+    {
+      "w": "moet",
+      "t": "must/should",
+      "note": "from 'moeten'"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "hier",
+      "t": "here"
+    },
+    {
+      "w": "linksaf",
+      "t": "turn left"
+    }
+  ],
+  "Dank u wel, fijne dag!": [
+    {
+      "w": "dank",
+      "t": "thanks",
+      "note": "'dank u wel' means thank you (formal)"
+    },
+    {
+      "w": "u",
+      "t": "you (formal)"
+    },
+    {
+      "w": "wel",
+      "t": "(intensifier)"
+    },
+    {
+      "w": "fijne",
+      "t": "nice",
+      "note": "inflected adjective"
+    },
+    {
+      "w": "dag",
+      "t": "day",
+      "note": "de-word"
+    }
+  ],
+  "Ik wil graag een tafel voor twee reserveren.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "wil",
+      "t": "would like",
+      "note": "from 'willen'"
+    },
+    {
+      "w": "graag",
+      "t": "gladly",
+      "note": "'wil graag' means would like"
+    },
+    {
+      "w": "een",
+      "t": "a"
+    },
+    {
+      "w": "tafel",
+      "t": "table",
+      "note": "de-word"
+    },
+    {
+      "w": "voor",
+      "t": "for"
+    },
+    {
+      "w": "twee",
+      "t": "two"
+    },
+    {
+      "w": "reserveren",
+      "t": "to reserve"
+    }
+  ],
+  "We hebben gereserveerd op naam van [naam].": [
+    {
+      "w": "we",
+      "t": "we"
+    },
+    {
+      "w": "hebben",
+      "t": "have"
+    },
+    {
+      "w": "gereserveerd",
+      "t": "reserved",
+      "note": "past participle of 'reserveren'"
+    },
+    {
+      "w": "op",
+      "t": "under"
+    },
+    {
+      "w": "naam",
+      "t": "name",
+      "note": "de-word"
+    },
+    {
+      "w": "van",
+      "t": "of"
+    },
+    {
+      "w": "naam",
+      "t": "name",
+      "note": "placeholder for the actual name"
+    }
+  ],
+  "Mogen we de menukaart, alstublieft?": [
+    {
+      "w": "mogen",
+      "t": "may (we have)"
+    },
+    {
+      "w": "we",
+      "t": "we"
+    },
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "menukaart",
+      "t": "menu"
+    },
+    {
+      "w": "alstublieft",
+      "t": "please (formal)"
+    }
+  ],
+  "Wat kunt u aanbevelen?": [
+    {
+      "w": "wat",
+      "t": "what"
+    },
+    {
+      "w": "kunt",
+      "t": "can",
+      "note": "from 'kunnen'; formal 'u' form"
+    },
+    {
+      "w": "u",
+      "t": "you (formal)"
+    },
+    {
+      "w": "aanbevelen",
+      "t": "to recommend",
+      "note": "separable verb"
+    }
+  ],
+  "Ik wil graag de biefstuk, alstublieft.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "wil",
+      "t": "would like",
+      "note": "from 'willen'"
+    },
+    {
+      "w": "graag",
+      "t": "gladly",
+      "note": "'wil graag' means would like"
+    },
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "biefstuk",
+      "t": "steak"
+    },
+    {
+      "w": "alstublieft",
+      "t": "please (formal)"
+    }
+  ],
+  "Voor mij de soep, alstublieft.": [
+    {
+      "w": "voor",
+      "t": "for"
+    },
+    {
+      "w": "mij",
+      "t": "me"
+    },
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "soep",
+      "t": "soup",
+      "note": "de-word"
+    },
+    {
+      "w": "alstublieft",
+      "t": "please (formal)"
+    }
+  ],
+  "Ik ben vegetariër. Zijn er vegetarische opties?": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "ben",
+      "t": "am",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "vegetariër",
+      "t": "vegetarian (person)"
+    },
+    {
+      "w": "zijn",
+      "t": "are",
+      "note": "from 'zijn'; verb-first in question"
+    },
+    {
+      "w": "er",
+      "t": "there"
+    },
+    {
+      "w": "vegetarische",
+      "t": "vegetarian",
+      "note": "inflected adjective"
+    },
+    {
+      "w": "opties",
+      "t": "options",
+      "note": "plural of 'optie'"
+    }
+  ],
+  "Ik ben allergisch voor noten.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "ben",
+      "t": "am",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "allergisch",
+      "t": "allergic"
+    },
+    {
+      "w": "voor",
+      "t": "to",
+      "note": "'allergisch voor' means allergic to"
+    },
+    {
+      "w": "noten",
+      "t": "nuts",
+      "note": "plural of 'noot'"
+    }
+  ],
+  "Het smaakt heerlijk.": [
+    {
+      "w": "het",
+      "t": "it"
+    },
+    {
+      "w": "smaakt",
+      "t": "tastes",
+      "note": "from 'smaken'"
+    },
+    {
+      "w": "heerlijk",
+      "t": "wonderful/delicious"
+    }
+  ],
+  "De rekening, alstublieft.": [
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "rekening",
+      "t": "bill",
+      "note": "de-word"
+    },
+    {
+      "w": "alstublieft",
+      "t": "please (formal)"
+    }
+  ],
+  "Kan ik pinnen?": [
+    {
+      "w": "kan",
+      "t": "can",
+      "note": "from 'kunnen'"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "pinnen",
+      "t": "to pay by debit card"
+    }
+  ],
+  "Met Anna.": [
+    {
+      "w": "met",
+      "t": "this is",
+      "note": "phone greeting, lit. 'with'"
+    },
+    {
+      "w": "anna",
+      "t": "Anna",
+      "note": "name"
+    }
+  ],
+  "Hallo, met Tom. Spreek ik met Sanne?": [
+    {
+      "w": "hallo",
+      "t": "hi"
+    },
+    {
+      "w": "met",
+      "t": "this is",
+      "note": "phone greeting, lit. 'with'"
+    },
+    {
+      "w": "tom",
+      "t": "Tom",
+      "note": "name"
+    },
+    {
+      "w": "spreek",
+      "t": "am speaking",
+      "note": "from 'spreken'"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "met",
+      "t": "to/with"
+    },
+    {
+      "w": "sanne",
+      "t": "Sanne",
+      "note": "name"
+    }
+  ],
+  "Kan ik Sanne spreken?": [
+    {
+      "w": "kan",
+      "t": "can",
+      "note": "from 'kunnen'"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "sanne",
+      "t": "Sanne",
+      "note": "name"
+    },
+    {
+      "w": "spreken",
+      "t": "to speak to"
+    }
+  ],
+  "Een moment, ik geef je door.": [
+    {
+      "w": "een",
+      "t": "a/one"
+    },
+    {
+      "w": "moment",
+      "t": "moment"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "geef",
+      "t": "give/put",
+      "note": "part of separable 'doorgeven'"
+    },
+    {
+      "w": "je",
+      "t": "you"
+    },
+    {
+      "w": "door",
+      "t": "through",
+      "note": "separable prefix; 'doorgeven' means put through"
+    }
+  ],
+  "Ze is er nu niet. Kan ik een bericht achterlaten?": [
+    {
+      "w": "ze",
+      "t": "she"
+    },
+    {
+      "w": "is",
+      "t": "is",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "er",
+      "t": "here/there"
+    },
+    {
+      "w": "nu",
+      "t": "now"
+    },
+    {
+      "w": "niet",
+      "t": "not"
+    },
+    {
+      "w": "kan",
+      "t": "can",
+      "note": "from 'kunnen'"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "een",
+      "t": "a"
+    },
+    {
+      "w": "bericht",
+      "t": "message",
+      "note": "het-word"
+    },
+    {
+      "w": "achterlaten",
+      "t": "to leave (behind)",
+      "note": "separable verb"
+    }
+  ],
+  "Kun je hem vragen mij terug te bellen?": [
+    {
+      "w": "kun",
+      "t": "can",
+      "note": "from 'kunnen'; 'je' form"
+    },
+    {
+      "w": "je",
+      "t": "you"
+    },
+    {
+      "w": "hem",
+      "t": "him"
+    },
+    {
+      "w": "vragen",
+      "t": "to ask"
+    },
+    {
+      "w": "mij",
+      "t": "me"
+    },
+    {
+      "w": "terug",
+      "t": "back",
+      "note": "part of 'terugbellen'"
+    },
+    {
+      "w": "te",
+      "t": "to",
+      "note": "infinitive marker"
+    },
+    {
+      "w": "bellen",
+      "t": "to call"
+    }
+  ],
+  "Ik bel je straks terug.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "bel",
+      "t": "call",
+      "note": "part of separable 'terugbellen'"
+    },
+    {
+      "w": "je",
+      "t": "you"
+    },
+    {
+      "w": "straks",
+      "t": "in a bit/later"
+    },
+    {
+      "w": "terug",
+      "t": "back",
+      "note": "separable prefix"
+    }
+  ],
+  "Je valt weg. Ik versta je slecht.": [
+    {
+      "w": "je",
+      "t": "you"
+    },
+    {
+      "w": "valt",
+      "t": "fall/cut out",
+      "note": "part of separable 'wegvallen'"
+    },
+    {
+      "w": "weg",
+      "t": "away",
+      "note": "'wegvallen' means to break up/cut out"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "versta",
+      "t": "understand/hear",
+      "note": "from 'verstaan'"
+    },
+    {
+      "w": "je",
+      "t": "you"
+    },
+    {
+      "w": "slecht",
+      "t": "badly/poorly"
+    }
+  ],
+  "Ik bel je later nog een keer.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "bel",
+      "t": "call",
+      "note": "from 'bellen'"
+    },
+    {
+      "w": "je",
+      "t": "you"
+    },
+    {
+      "w": "later",
+      "t": "later"
+    },
+    {
+      "w": "nog",
+      "t": "again",
+      "note": "'nog een keer' means one more time"
+    },
+    {
+      "w": "een",
+      "t": "one"
+    },
+    {
+      "w": "keer",
+      "t": "time"
+    }
+  ],
+  "Tot horens! Doei!": [
+    {
+      "w": "tot",
+      "t": "until/speak",
+      "note": "'tot horens' means speak soon"
+    },
+    {
+      "w": "horens",
+      "t": "hearing",
+      "note": "from 'horen'; phone sign-off"
+    },
+    {
+      "w": "doei",
+      "t": "bye"
+    }
+  ],
+  "Ik ben Anna. Ik ben Engels.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "ben",
+      "t": "am",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "anna",
+      "t": "Anna",
+      "note": "name"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "ben",
+      "t": "am",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "engels",
+      "t": "English"
+    }
+  ],
+  "Hij is mijn buurman. Zij is mijn buurvrouw.": [
+    {
+      "w": "hij",
+      "t": "he"
+    },
+    {
+      "w": "is",
+      "t": "is",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "mijn",
+      "t": "my"
+    },
+    {
+      "w": "buurman",
+      "t": "neighbour (man)"
+    },
+    {
+      "w": "zij",
+      "t": "she"
+    },
+    {
+      "w": "is",
+      "t": "is",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "mijn",
+      "t": "my"
+    },
+    {
+      "w": "buurvrouw",
+      "t": "neighbour (woman)"
+    }
+  ],
+  "Wij zijn moe en jullie zijn klaar.": [
+    {
+      "w": "wij",
+      "t": "we"
+    },
+    {
+      "w": "zijn",
+      "t": "are",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "moe",
+      "t": "tired"
+    },
+    {
+      "w": "en",
+      "t": "and"
+    },
+    {
+      "w": "jullie",
+      "t": "you (plural)"
+    },
+    {
+      "w": "zijn",
+      "t": "are",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "klaar",
+      "t": "ready/done"
+    }
+  ],
+  "Ik heb honger. Heb jij dorst?": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "heb",
+      "t": "have",
+      "note": "from 'hebben'"
+    },
+    {
+      "w": "honger",
+      "t": "hunger",
+      "note": "'honger hebben' means to be hungry"
+    },
+    {
+      "w": "heb",
+      "t": "have",
+      "note": "from 'hebben'; verb-first in question"
+    },
+    {
+      "w": "jij",
+      "t": "you"
+    },
+    {
+      "w": "dorst",
+      "t": "thirst",
+      "note": "'dorst hebben' means to be thirsty"
+    }
+  ],
+  "Zij heeft een auto. Hij heeft een fiets.": [
+    {
+      "w": "zij",
+      "t": "she"
+    },
+    {
+      "w": "heeft",
+      "t": "has",
+      "note": "from 'hebben'"
+    },
+    {
+      "w": "een",
+      "t": "a"
+    },
+    {
+      "w": "auto",
+      "t": "car",
+      "note": "de-word"
+    },
+    {
+      "w": "hij",
+      "t": "he"
+    },
+    {
+      "w": "heeft",
+      "t": "has",
+      "note": "from 'hebben'"
+    },
+    {
+      "w": "een",
+      "t": "a"
+    },
+    {
+      "w": "fiets",
+      "t": "bicycle",
+      "note": "de-word"
+    }
+  ],
+  "Hoe oud ben jij? Ik ben dertig. Mijn zoon is vijf.": [
+    {
+      "w": "hoe",
+      "t": "how"
+    },
+    {
+      "w": "oud",
+      "t": "old"
+    },
+    {
+      "w": "ben",
+      "t": "are",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "jij",
+      "t": "you"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "ben",
+      "t": "am",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "dertig",
+      "t": "thirty"
+    },
+    {
+      "w": "mijn",
+      "t": "my"
+    },
+    {
+      "w": "zoon",
+      "t": "son",
+      "note": "de-word"
+    },
+    {
+      "w": "is",
+      "t": "is",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "vijf",
+      "t": "five"
+    }
+  ],
+  "Bent u de dokter? Ja, dat ben ik.": [
+    {
+      "w": "bent",
+      "t": "are",
+      "note": "from 'zijn'; formal 'u' form"
+    },
+    {
+      "w": "u",
+      "t": "you (formal)"
+    },
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "dokter",
+      "t": "doctor"
+    },
+    {
+      "w": "ja",
+      "t": "yes"
+    },
+    {
+      "w": "dat",
+      "t": "that"
+    },
+    {
+      "w": "ben",
+      "t": "am",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "ik",
+      "t": "I",
+      "note": "'dat ben ik' means that's me"
+    }
+  ],
+  "Wij hebben twee kinderen en zij hebben een hond.": [
+    {
+      "w": "wij",
+      "t": "we"
+    },
+    {
+      "w": "hebben",
+      "t": "have"
+    },
+    {
+      "w": "twee",
+      "t": "two"
+    },
+    {
+      "w": "kinderen",
+      "t": "children",
+      "note": "plural of 'kind'"
+    },
+    {
+      "w": "en",
+      "t": "and"
+    },
+    {
+      "w": "zij",
+      "t": "they"
+    },
+    {
+      "w": "hebben",
+      "t": "have"
+    },
+    {
+      "w": "een",
+      "t": "a"
+    },
+    {
+      "w": "hond",
+      "t": "dog",
+      "note": "de-word"
+    }
+  ],
+  "Woon jij in Amsterdam?": [
+    {
+      "w": "woon",
+      "t": "live",
+      "note": "from 'wonen'; verb-first in question"
+    },
+    {
+      "w": "jij",
+      "t": "you"
+    },
+    {
+      "w": "in",
+      "t": "in"
+    },
+    {
+      "w": "amsterdam",
+      "t": "Amsterdam",
+      "note": "city"
+    }
+  ],
+  "Heb je een fiets?": [
+    {
+      "w": "heb",
+      "t": "have",
+      "note": "from 'hebben'; verb-first in question"
+    },
+    {
+      "w": "je",
+      "t": "you"
+    },
+    {
+      "w": "een",
+      "t": "a"
+    },
+    {
+      "w": "fiets",
+      "t": "bicycle",
+      "note": "de-word"
+    }
+  ],
+  "Hoe heet je?": [
+    {
+      "w": "hoe",
+      "t": "how"
+    },
+    {
+      "w": "heet",
+      "t": "are called",
+      "note": "from 'heten'"
+    },
+    {
+      "w": "je",
+      "t": "you"
+    }
+  ],
+  "Waar woont u?": [
+    {
+      "w": "waar",
+      "t": "where"
+    },
+    {
+      "w": "woont",
+      "t": "live",
+      "note": "from 'wonen'; formal 'u' form"
+    },
+    {
+      "w": "u",
+      "t": "you (formal)"
+    }
+  ],
+  "Wat doe je in het weekend?": [
+    {
+      "w": "wat",
+      "t": "what"
+    },
+    {
+      "w": "doe",
+      "t": "do",
+      "note": "from 'doen'"
+    },
+    {
+      "w": "je",
+      "t": "you"
+    },
+    {
+      "w": "in",
+      "t": "in/at"
+    },
+    {
+      "w": "het",
+      "t": "the",
+      "note": "het-word"
+    },
+    {
+      "w": "weekend",
+      "t": "weekend"
+    }
+  ],
+  "Waarom leer je Nederlands?": [
+    {
+      "w": "waarom",
+      "t": "why"
+    },
+    {
+      "w": "leer",
+      "t": "learn",
+      "note": "from 'leren'"
+    },
+    {
+      "w": "je",
+      "t": "you"
+    },
+    {
+      "w": "nederlands",
+      "t": "Dutch"
+    }
+  ],
+  "Hoeveel kost het?": [
+    {
+      "w": "hoeveel",
+      "t": "how much"
+    },
+    {
+      "w": "kost",
+      "t": "costs",
+      "note": "from 'kosten'"
+    },
+    {
+      "w": "het",
+      "t": "it"
+    }
+  ],
+  "Is het ver?": [
+    {
+      "w": "is",
+      "t": "is",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "het",
+      "t": "it"
+    },
+    {
+      "w": "ver",
+      "t": "far"
+    }
+  ],
+  "Ik heb geen geld.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "heb",
+      "t": "have",
+      "note": "from 'hebben'"
+    },
+    {
+      "w": "geen",
+      "t": "no/not any",
+      "note": "negates a noun"
+    },
+    {
+      "w": "geld",
+      "t": "money"
+    }
+  ],
+  "Ik heb geen auto.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "heb",
+      "t": "have",
+      "note": "from 'hebben'"
+    },
+    {
+      "w": "geen",
+      "t": "no/not a",
+      "note": "negates a noun"
+    },
+    {
+      "w": "auto",
+      "t": "car"
+    }
+  ],
+  "Er is geen brood.": [
+    {
+      "w": "er",
+      "t": "there"
+    },
+    {
+      "w": "is",
+      "t": "is",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "geen",
+      "t": "no/not any",
+      "note": "negates a noun"
+    },
+    {
+      "w": "brood",
+      "t": "bread"
+    }
+  ],
+  "Ik werk niet.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "werk",
+      "t": "work",
+      "note": "from 'werken'"
+    },
+    {
+      "w": "niet",
+      "t": "not",
+      "note": "negates the verb"
+    }
+  ],
+  "Het is niet duur.": [
+    {
+      "w": "het",
+      "t": "it"
+    },
+    {
+      "w": "is",
+      "t": "is",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "niet",
+      "t": "not"
+    },
+    {
+      "w": "duur",
+      "t": "expensive"
+    }
+  ],
+  "Ik ken die man niet.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "ken",
+      "t": "know",
+      "note": "from 'kennen'"
+    },
+    {
+      "w": "die",
+      "t": "that"
+    },
+    {
+      "w": "man",
+      "t": "man"
+    },
+    {
+      "w": "niet",
+      "t": "not"
+    }
+  ],
+  "Ik ga niet naar huis.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "ga",
+      "t": "go",
+      "note": "from 'gaan'"
+    },
+    {
+      "w": "niet",
+      "t": "not"
+    },
+    {
+      "w": "naar",
+      "t": "to"
+    },
+    {
+      "w": "huis",
+      "t": "home"
+    }
+  ],
+  "Nee, dank je. Ik wil geen koffie.": [
+    {
+      "w": "nee",
+      "t": "no"
+    },
+    {
+      "w": "dank",
+      "t": "thanks",
+      "note": "from 'danken'"
+    },
+    {
+      "w": "je",
+      "t": "you"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "wil",
+      "t": "want",
+      "note": "from 'willen'"
+    },
+    {
+      "w": "geen",
+      "t": "no/not any",
+      "note": "negates a noun"
+    },
+    {
+      "w": "koffie",
+      "t": "coffee"
+    }
+  ],
+  "Ik drink koffie.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "drink",
+      "t": "drink",
+      "note": "from 'drinken'"
+    },
+    {
+      "w": "koffie",
+      "t": "coffee"
+    }
+  ],
+  "Zij woont in Utrecht.": [
+    {
+      "w": "zij",
+      "t": "she"
+    },
+    {
+      "w": "woont",
+      "t": "lives",
+      "note": "from 'wonen'"
+    },
+    {
+      "w": "in",
+      "t": "in"
+    },
+    {
+      "w": "utrecht",
+      "t": "Utrecht",
+      "note": "Dutch city"
+    }
+  ],
+  "Wij eten brood.": [
+    {
+      "w": "wij",
+      "t": "we"
+    },
+    {
+      "w": "eten",
+      "t": "eat",
+      "note": "from 'eten'"
+    },
+    {
+      "w": "brood",
+      "t": "bread"
+    }
+  ],
+  "Ik werk vandaag.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "werk",
+      "t": "work",
+      "note": "from 'werken'"
+    },
+    {
+      "w": "vandaag",
+      "t": "today"
+    }
+  ],
+  "Vandaag werk ik.": [
+    {
+      "w": "vandaag",
+      "t": "today"
+    },
+    {
+      "w": "werk",
+      "t": "work",
+      "note": "verb-second after time phrase"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    }
+  ],
+  "In Amsterdam woont mijn zus.": [
+    {
+      "w": "in",
+      "t": "in"
+    },
+    {
+      "w": "amsterdam",
+      "t": "Amsterdam",
+      "note": "Dutch city"
+    },
+    {
+      "w": "woont",
+      "t": "lives",
+      "note": "verb-second after place phrase"
+    },
+    {
+      "w": "mijn",
+      "t": "my"
+    },
+    {
+      "w": "zus",
+      "t": "sister"
+    }
+  ],
+  "Er is een probleem.": [
+    {
+      "w": "er",
+      "t": "there"
+    },
+    {
+      "w": "is",
+      "t": "is",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "een",
+      "t": "a"
+    },
+    {
+      "w": "probleem",
+      "t": "problem"
+    }
+  ],
+  "Er zijn veel mensen.": [
+    {
+      "w": "er",
+      "t": "there"
+    },
+    {
+      "w": "zijn",
+      "t": "are",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "veel",
+      "t": "many"
+    },
+    {
+      "w": "mensen",
+      "t": "people",
+      "note": "plural of 'mens'"
+    }
+  ],
+  "Ik drink koffie en ik lees de krant.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "drink",
+      "t": "drink",
+      "note": "from 'drinken'"
+    },
+    {
+      "w": "koffie",
+      "t": "coffee"
+    },
+    {
+      "w": "en",
+      "t": "and"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "lees",
+      "t": "read",
+      "note": "from 'lezen'"
+    },
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "krant",
+      "t": "newspaper"
+    }
+  ],
+  "Ik wil komen, maar ik heb geen tijd.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "wil",
+      "t": "want",
+      "note": "from 'willen'"
+    },
+    {
+      "w": "komen",
+      "t": "to come"
+    },
+    {
+      "w": "maar",
+      "t": "but"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "heb",
+      "t": "have",
+      "note": "from 'hebben'"
+    },
+    {
+      "w": "geen",
+      "t": "no/not any",
+      "note": "negates a noun"
+    },
+    {
+      "w": "tijd",
+      "t": "time"
+    }
+  ],
+  "Wil je thee of wil je koffie?": [
+    {
+      "w": "wil",
+      "t": "want",
+      "note": "from 'willen'"
+    },
+    {
+      "w": "je",
+      "t": "you"
+    },
+    {
+      "w": "thee",
+      "t": "tea"
+    },
+    {
+      "w": "of",
+      "t": "or"
+    },
+    {
+      "w": "wil",
+      "t": "want",
+      "note": "from 'willen'"
+    },
+    {
+      "w": "je",
+      "t": "you"
+    },
+    {
+      "w": "koffie",
+      "t": "coffee"
+    }
+  ],
+  "Ik blijf thuis, want ik ben ziek.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "blijf",
+      "t": "stay",
+      "note": "from 'blijven'"
+    },
+    {
+      "w": "thuis",
+      "t": "(at) home"
+    },
+    {
+      "w": "want",
+      "t": "because",
+      "note": "keeps normal word order"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "ben",
+      "t": "am",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "ziek",
+      "t": "sick"
+    }
+  ],
+  "Ik blijf thuis omdat ik ziek ben.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "blijf",
+      "t": "stay",
+      "note": "from 'blijven'"
+    },
+    {
+      "w": "thuis",
+      "t": "(at) home"
+    },
+    {
+      "w": "omdat",
+      "t": "because",
+      "note": "sends the verb to the end"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "ziek",
+      "t": "sick"
+    },
+    {
+      "w": "ben",
+      "t": "am",
+      "note": "verb at end after 'omdat'"
+    }
+  ],
+  "Hij eet niet, omdat hij geen honger heeft.": [
+    {
+      "w": "hij",
+      "t": "he"
+    },
+    {
+      "w": "eet",
+      "t": "eats",
+      "note": "from 'eten'"
+    },
+    {
+      "w": "niet",
+      "t": "not"
+    },
+    {
+      "w": "omdat",
+      "t": "because",
+      "note": "sends the verb to the end"
+    },
+    {
+      "w": "hij",
+      "t": "he"
+    },
+    {
+      "w": "geen",
+      "t": "no/not any",
+      "note": "negates a noun"
+    },
+    {
+      "w": "honger",
+      "t": "hunger",
+      "note": "'honger hebben' means to be hungry"
+    },
+    {
+      "w": "heeft",
+      "t": "has",
+      "note": "verb at end after 'omdat'"
+    }
+  ],
+  "Het regent, dus ik neem de paraplu mee.": [
+    {
+      "w": "het",
+      "t": "it"
+    },
+    {
+      "w": "regent",
+      "t": "rains",
+      "note": "from 'regenen'"
+    },
+    {
+      "w": "dus",
+      "t": "so"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "neem",
+      "t": "take",
+      "note": "from 'meenemen'"
+    },
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "paraplu",
+      "t": "umbrella"
+    },
+    {
+      "w": "mee",
+      "t": "with (me)",
+      "note": "separable part of 'meenemen'"
+    }
+  ],
+  "Ik leer Nederlands, want ik woon hier en ik wil het examen halen.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "leer",
+      "t": "learn",
+      "note": "from 'leren'"
+    },
+    {
+      "w": "nederlands",
+      "t": "Dutch"
+    },
+    {
+      "w": "want",
+      "t": "because",
+      "note": "keeps normal word order"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "woon",
+      "t": "live",
+      "note": "from 'wonen'"
+    },
+    {
+      "w": "hier",
+      "t": "here"
+    },
+    {
+      "w": "en",
+      "t": "and"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "wil",
+      "t": "want",
+      "note": "from 'willen'"
+    },
+    {
+      "w": "het",
+      "t": "the",
+      "note": "het-word"
+    },
+    {
+      "w": "examen",
+      "t": "exam"
+    },
+    {
+      "w": "halen",
+      "t": "to pass",
+      "note": "'een examen halen' means to pass an exam"
+    }
+  ],
+  "Ik werk morgen tot vijf uur.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "werk",
+      "t": "work",
+      "note": "from 'werken'"
+    },
+    {
+      "w": "morgen",
+      "t": "tomorrow"
+    },
+    {
+      "w": "tot",
+      "t": "until"
+    },
+    {
+      "w": "vijf",
+      "t": "five"
+    },
+    {
+      "w": "uur",
+      "t": "o'clock/hour"
+    }
+  ],
+  "Volgende week ga ik op vakantie.": [
+    {
+      "w": "volgende",
+      "t": "next"
+    },
+    {
+      "w": "week",
+      "t": "week"
+    },
+    {
+      "w": "ga",
+      "t": "go/am going",
+      "note": "from 'gaan'; verb-second after time phrase"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "op",
+      "t": "on"
+    },
+    {
+      "w": "vakantie",
+      "t": "holiday",
+      "note": "'op vakantie' means on holiday"
+    }
+  ],
+  "Ik ga vanavond koken.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "ga",
+      "t": "am going to",
+      "note": "'gaan' + verb for the future"
+    },
+    {
+      "w": "vanavond",
+      "t": "tonight"
+    },
+    {
+      "w": "koken",
+      "t": "to cook"
+    }
+  ],
+  "We gaan volgend jaar verhuizen.": [
+    {
+      "w": "we",
+      "t": "we"
+    },
+    {
+      "w": "gaan",
+      "t": "are going to",
+      "note": "'gaan' + verb for the future"
+    },
+    {
+      "w": "volgend",
+      "t": "next"
+    },
+    {
+      "w": "jaar",
+      "t": "year"
+    },
+    {
+      "w": "verhuizen",
+      "t": "to move house"
+    }
+  ],
+  "Zal ik je helpen?": [
+    {
+      "w": "zal",
+      "t": "shall",
+      "note": "from 'zullen'"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "je",
+      "t": "you"
+    },
+    {
+      "w": "helpen",
+      "t": "help"
+    }
+  ],
+  "Het zal morgen regenen.": [
+    {
+      "w": "het",
+      "t": "it"
+    },
+    {
+      "w": "zal",
+      "t": "will",
+      "note": "from 'zullen'"
+    },
+    {
+      "w": "morgen",
+      "t": "tomorrow"
+    },
+    {
+      "w": "regenen",
+      "t": "to rain"
+    }
+  ],
+  "Morgen ben ik er niet, ik ga naar de dokter.": [
+    {
+      "w": "morgen",
+      "t": "tomorrow"
+    },
+    {
+      "w": "ben",
+      "t": "am",
+      "note": "from 'zijn'; verb-second after time phrase"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "er",
+      "t": "here/there"
+    },
+    {
+      "w": "niet",
+      "t": "not"
+    },
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "ga",
+      "t": "go/am going",
+      "note": "from 'gaan'"
+    },
+    {
+      "w": "naar",
+      "t": "to"
+    },
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "dokter",
+      "t": "doctor"
+    }
+  ],
+  "Amsterdam is groter dan Utrecht.": [
+    {
+      "w": "amsterdam",
+      "t": "Amsterdam",
+      "note": "Dutch city"
+    },
+    {
+      "w": "is",
+      "t": "is",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "groter",
+      "t": "bigger",
+      "note": "comparative of 'groot'"
+    },
+    {
+      "w": "dan",
+      "t": "than"
+    },
+    {
+      "w": "utrecht",
+      "t": "Utrecht",
+      "note": "Dutch city"
+    }
+  ],
+  "Deze fiets is duurder dan die fiets.": [
+    {
+      "w": "deze",
+      "t": "this"
+    },
+    {
+      "w": "fiets",
+      "t": "bike",
+      "note": "de-word"
+    },
+    {
+      "w": "is",
+      "t": "is",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "duurder",
+      "t": "more expensive",
+      "note": "comparative of 'duur'"
+    },
+    {
+      "w": "dan",
+      "t": "than"
+    },
+    {
+      "w": "die",
+      "t": "that"
+    },
+    {
+      "w": "fiets",
+      "t": "bike"
+    }
+  ],
+  "Dit is het grootste huis van de straat.": [
+    {
+      "w": "dit",
+      "t": "this"
+    },
+    {
+      "w": "is",
+      "t": "is",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "het",
+      "t": "the",
+      "note": "het-word"
+    },
+    {
+      "w": "grootste",
+      "t": "biggest",
+      "note": "superlative of 'groot'"
+    },
+    {
+      "w": "huis",
+      "t": "house",
+      "note": "het-word"
+    },
+    {
+      "w": "van",
+      "t": "on/of"
+    },
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "straat",
+      "t": "street"
+    }
+  ],
+  "In de winter zijn de dagen het kortst.": [
+    {
+      "w": "in",
+      "t": "in"
+    },
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "winter",
+      "t": "winter"
+    },
+    {
+      "w": "zijn",
+      "t": "are",
+      "note": "from 'zijn'; verb-second after place phrase"
+    },
+    {
+      "w": "de",
+      "t": "the",
+      "note": "de-word"
+    },
+    {
+      "w": "dagen",
+      "t": "days",
+      "note": "plural of 'dag'"
+    },
+    {
+      "w": "het",
+      "t": "the",
+      "note": "part of 'het kortst' (shortest)"
+    },
+    {
+      "w": "kortst",
+      "t": "shortest",
+      "note": "superlative of 'kort'"
+    }
+  ],
+  "Deze koffie is beter dan die van gisteren.": [
+    {
+      "w": "deze",
+      "t": "this"
+    },
+    {
+      "w": "koffie",
+      "t": "coffee"
+    },
+    {
+      "w": "is",
+      "t": "is",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "beter",
+      "t": "better",
+      "note": "irregular comparative of 'goed'"
+    },
+    {
+      "w": "dan",
+      "t": "than"
+    },
+    {
+      "w": "die",
+      "t": "that (one)"
+    },
+    {
+      "w": "van",
+      "t": "of/from"
+    },
+    {
+      "w": "gisteren",
+      "t": "yesterday"
+    }
+  ],
+  "Ik drink liever thee dan koffie.": [
+    {
+      "w": "ik",
+      "t": "I"
+    },
+    {
+      "w": "drink",
+      "t": "drink",
+      "note": "from 'drinken'"
+    },
+    {
+      "w": "liever",
+      "t": "rather/prefer to",
+      "note": "'liever' marks a preference"
+    },
+    {
+      "w": "thee",
+      "t": "tea"
+    },
+    {
+      "w": "dan",
+      "t": "than"
+    },
+    {
+      "w": "koffie",
+      "t": "coffee"
+    }
+  ],
+  "Jan is even lang als Piet.": [
+    {
+      "w": "jan",
+      "t": "Jan",
+      "note": "name"
+    },
+    {
+      "w": "is",
+      "t": "is",
+      "note": "from 'zijn'"
+    },
+    {
+      "w": "even",
+      "t": "as/equally",
+      "note": "'even ... als' means as ... as"
+    },
+    {
+      "w": "lang",
+      "t": "tall"
+    },
+    {
+      "w": "als",
+      "t": "as"
+    },
+    {
+      "w": "piet",
+      "t": "Piet",
+      "note": "name"
+    }
+  ],
+  "Welke trui vind je het mooist?": [
+    {
+      "w": "welke",
+      "t": "which"
+    },
+    {
+      "w": "trui",
+      "t": "sweater",
+      "note": "de-word"
+    },
+    {
+      "w": "vind",
+      "t": "find/think",
+      "note": "from 'vinden'"
+    },
+    {
+      "w": "je",
+      "t": "you"
+    },
+    {
+      "w": "het",
+      "t": "the",
+      "note": "part of 'het mooist' (prettiest)"
+    },
+    {
+      "w": "mooist",
+      "t": "prettiest",
+      "note": "superlative of 'mooi'"
+    }
   ]
 }
