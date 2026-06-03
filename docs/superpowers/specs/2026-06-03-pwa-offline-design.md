@@ -94,7 +94,44 @@ fully separate from `localStorage`. The by-design tradeoff: progress is
 per-browser/per-device; multi-device sync would require an account + backend the
 app deliberately doesn't have.
 
+## Update — precache warm-up (same day)
+
+The first cut cached lazily (only visited routes), so lessons the user hadn't
+opened were unavailable offline — they saw the offline page or, worse, a
+half-loaded page with dead buttons (missing JS chunks → no hydration). The app
+is a pure client SPA with bundled content, so the fix is to **download the whole
+app while online**.
+
+`lib/offline-cache.ts` (TDD'd, 8 tests):
+
+- `getAllRoutes()` — every navigable route, derived from the bundled content
+  loaders (lessons + foundations × Hindi/Dutch → `/lessons/*` + `/practice/*`,
+  stories, vocab categories, Hindi/Dutch sounds stages, Dutch lezen/luisteren,
+  plus the static routes).
+- `warmOfflineCache({ audio, language, onProgress, signal })` — fetches each
+  route's HTML into `bs-pages-v1`, parses the `/_next/static` asset URLs out of
+  each document and fetches them (the SW stores them cache-first → fixes the
+  dead-button/hydration case offline), and optionally every "hear it" audio clip
+  into `bs-audio-v1`. Deploy-agnostic (no build hook), fully awaitable → real
+  progress.
+- `autoWarmOfflineCache(lang)` — once-per-day background run (pages + assets, no
+  audio; skips on `connection.saveData`).
+
+Wiring: auto warm-up fires 4s after mount from `layout-shell.tsx`; a Settings →
+**offline** section adds a "save everything for offline" button (includes audio)
+with a live progress bar and a "last saved" state.
+
+Offline navigation: a soft (client) nav to an uncached route fails its RSC fetch
+and Next falls back to a hard navigation, which the SW serves from the cached
+document — so it loads (with a reload) rather than failing. Cache names in
+`offline-cache.ts` mirror `public/sw.js` (`CACHE_VERSION='v1'`).
+
+**Caveat:** the offline behavior itself can only be fully confirmed on a real
+device/browser (the build environment is headless). Logic + route derivation +
+build are verified below.
+
 ## Verification
 
-`next build` ✓ · `tsc --noEmit` ✓ · `vitest run` (356 tests, 4 new) ✓ ·
-`lint:design` ✓. SW + offline.html + manifest validated (syntax/JSON/HTML).
+`next build` ✓ · `tsc --noEmit` ✓ · `vitest run` (364 tests, 12 new across
+offline-cache + banner) ✓ · `lint:design` ✓. SW + offline.html + manifest
+validated (syntax/JSON/HTML).

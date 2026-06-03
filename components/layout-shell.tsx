@@ -7,6 +7,7 @@ import { DailyReviewPopup } from '@/components/daily-review-popup'
 import { OfflineBanner } from '@/components/offline-banner'
 import { registerServiceWorker, shouldShowNotificationPrompt, maybeShowReminderOnOpen, fireOneTimeTestNotification, maybeFireRandomNudge } from '@/lib/notifications'
 import { addTodayActiveMs, getTodayActiveMinutes, todayISO, updateStreak } from '@/lib/progress'
+import { autoWarmOfflineCache } from '@/lib/offline-cache'
 import { getUserProfile } from '@/lib/onboarding'
 import { Confetti } from '@/components/design'
 import { playSound } from '@/lib/sounds'
@@ -33,7 +34,7 @@ function checkDailyGoalCrossed(prefix: string, onFire: (goalMinutes: number) => 
 }
 
 export function LayoutShell({ children }: { children: React.ReactNode }) {
-  const { config } = useLanguage()
+  const { config, language } = useLanguage()
   const { play } = useChaina()
   const theme = useTheme()
   const [showNotificationPrompt, setShowNotificationPrompt] = useState(false)
@@ -67,6 +68,17 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [goalBurst])
+
+  // Warm the offline cache in the background (once per day, online only) so
+  // every lesson works offline — not just ones already visited. Delayed so it
+  // doesn't compete with the initial page load.
+  useEffect(() => {
+    const lang = language === 'dutch' ? 'dutch' : 'hindi'
+    const t = setTimeout(() => {
+      autoWarmOfflineCache(lang).catch(() => {})
+    }, 4000)
+    return () => clearTimeout(t)
+  }, [language])
 
   useEffect(() => {
     registerServiceWorker()
