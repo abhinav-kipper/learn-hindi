@@ -41,8 +41,14 @@ afterEach(() => {
 describe('getAllRoutes', () => {
   it('includes core static routes and content-derived dynamic routes', () => {
     const routes = getAllRoutes()
+    // core app pages (not just lessons) must be cached so they work offline too
     expect(routes).toContain('/')
+    expect(routes).toContain('/progress')
     expect(routes).toContain('/quiz')
+    expect(routes).toContain('/mistakes')
+    expect(routes).toContain('/favorites')
+    expect(routes).toContain('/vocabulary')
+    expect(routes).toContain('/settings')
     expect(routes).toContain('/lessons/greetings')
     expect(routes).toContain('/practice/greetings')
     expect(routes).toContain('/lessons/dutch-supermarket')

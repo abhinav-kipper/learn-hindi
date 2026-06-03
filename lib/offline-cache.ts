@@ -38,6 +38,8 @@ const STATIC_ROUTES = [
   '/vocabulary',
   '/drill/conjugation',
   '/sounds',
+  '/onboarding',
+  '/chaina',
   '/dutch/knm',
   '/dutch/knm/drill',
   '/dutch/lezen',
