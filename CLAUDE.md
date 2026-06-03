@@ -300,6 +300,20 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 
 ### Recent feature work log
 
+**2026-06-03 — PWA offline caching (service worker)**
+
+`public/sw.js` was previously notification-only ("does NOT cache network responses"). It now also adds an offline caching layer so the PWA loads and works without internet. No new npm dependency (hand-written SW, Next 16-safe); registration is unchanged (`registerServiceWorker()` in `layout-shell.tsx`).
+
+- **Strategies** (GET only — POST like `/api/chat` is never intercepted):
+  - `/_next/static/*` (content-hashed) + `/audio,/chaina,/stroopwafel` (pre-gen mp3s) → **cache-first**.
+  - `/api/tts` → **cache-first**, FIFO-capped at `TTS_MAX_ENTRIES` (300). Deterministic per text+lang, so a phrase spoken once works offline after. A miss while offline returns `Response.error()`, which `lib/speech.ts` already degrades to browser `speechSynthesis`.
+  - Navigations (HTML) → **network-first** → cached page → `public/offline.html` fallback. Any route visited online becomes available offline.
+  - Other same-origin GET (icons, manifest, RSC flight payloads) → **stale-while-revalidate**.
+  - `/api/chat`, `/api/pronounce` → **network-only** (real-time Gemini, must stay fresh).
+- **Cache versioning:** bump `CACHE_VERSION` in `sw.js` to invalidate all `bs-*` caches on next deploy (cleared in the `activate` handler).
+- **Not made offline:** AI practice chat + pronunciation coaching fundamentally need the LLM. They show network errors offline by design (offline.html explains this). Graceful in-app offline-mode UI for those was scoped out.
+- New `public/offline.html` (Chai-Galli-styled static fallback). Manifest gained `id`/`scope: "/"`.
+
 **2026-06-01 wave — Fun-pass: combo escalation + mascot barks + ambient soundscapes**
 
 Three additive audio features layered on the now-shipped ElevenLabs pipeline. All gated by the existing global mute; combo works on pure synth immediately, barks + ambient play once their clips are generated (same generate-then-commit pattern as the voices) and are silent no-ops until then.
