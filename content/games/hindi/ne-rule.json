@@ -3,6 +3,7 @@
   "language": "hindi",
   "title": "Ne or No Ne",
   "subtitle": "In the past tense, does the subject take 'ne'?",
+  "question": "Does this past-tense sentence take 'ne'?",
   "tip": "Read the verb, not the subject. Ask 'did this action land on an object?' Yes means ne, no means no ne. Then watch for the three liars: bola, laaya, bhoola look transitive but never take ne.",
   "left": {
     "label": "NE",

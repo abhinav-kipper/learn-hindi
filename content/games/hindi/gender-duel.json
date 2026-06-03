@@ -3,6 +3,7 @@
   "language": "hindi",
   "title": "Gender Duel",
   "subtitle": "Every Hindi noun is masculine or feminine",
+  "question": "What gender is this noun?",
   "tip": "When you are not sure, trust the ending and tap fast. The point of the duel is to pick up the tricky words by playing, so a quick wrong guess still teaches you.",
   "left": {
     "label": "MASCULINE",

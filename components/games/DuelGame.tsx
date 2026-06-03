@@ -317,11 +317,11 @@ function RoundStepper({ setNum }: { setNum: number }) {
               gap: 4,
               fontFamily: FONTS.display,
               fontWeight: 800,
-              fontSize: 12,
+              fontSize: 11.5,
               color: active ? W : COLORS.ink,
             }}
           >
-            {done ? '✓' : `R${n}`}
+            {done ? `Round ${n} ✓` : `Round ${n}`}
           </div>
         )
       })}
@@ -411,6 +411,12 @@ function PlayView({
           {combo}x
         </div>
       </div>
+
+      {(duel.question || duel.subtitle) && (
+        <div style={{ textAlign: 'center', marginTop: 14, fontFamily: FONTS.display, fontWeight: 800, fontSize: 16, color: COLORS.ink, lineHeight: 1.25 }}>
+          {duel.question || duel.subtitle}
+        </div>
+      )}
 
       <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <AnimatePresence mode="wait">

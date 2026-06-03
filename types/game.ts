@@ -26,6 +26,8 @@ export interface Duel {
   language: 'hindi' | 'dutch'
   title: string
   subtitle: string
+  /** the clear instruction shown on every round, e.g. "Does it take 'ne'?" */
+  question?: string
   /** friendly tactic shown in the intro tip box */
   tip?: string
   left: DuelSide

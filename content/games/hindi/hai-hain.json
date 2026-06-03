@@ -3,6 +3,7 @@
   "language": "hindi",
   "title": "Hai or Hain",
   "subtitle": "Which form of 'to be' does this subject take?",
+  "question": "Which form of 'to be' fits this subject?",
   "tip": "Count the subject first, then add respect. One ordinary thing or person takes hai; many of anything, or anyone you would speak to politely, takes hain.",
   "left": {
     "label": "HAI",
@@ -24,55 +25,305 @@
   },
   "rounds": 30,
   "items": [
-    { "prompt": "woh ladka", "answer": "left", "hint": "that boy", "explain": "One boy in the third person takes the singular hai." },
-    { "prompt": "yeh ladki", "answer": "left", "hint": "this girl", "explain": "A single girl takes the singular hai." },
-    { "prompt": "mera bhai", "answer": "left", "hint": "my brother", "explain": "One brother, no special respect, takes hai." },
-    { "prompt": "meri behen", "answer": "left", "hint": "my sister", "explain": "One sister takes the singular hai." },
-    { "prompt": "yeh kitaab", "answer": "left", "hint": "this book", "explain": "A single book is one thing, so hai." },
-    { "prompt": "woh ghar", "answer": "left", "hint": "that house", "explain": "One house takes the singular hai." },
-    { "prompt": "ek kutta", "answer": "left", "hint": "one dog", "explain": "Ek marks exactly one, so hai." },
-    { "prompt": "yeh billi", "answer": "left", "hint": "this cat", "explain": "A single cat takes hai." },
-    { "prompt": "Raj", "answer": "left", "hint": "Raj (a friend)", "explain": "One named person with no respect marker takes hai." },
-    { "prompt": "Mira", "answer": "left", "hint": "Mira (a friend)", "explain": "A single named peer takes hai." },
-    { "prompt": "mera dost", "answer": "left", "hint": "my friend (one)", "explain": "One friend takes the singular hai." },
-    { "prompt": "woh aurat", "answer": "left", "hint": "that woman", "explain": "A single woman, spoken about plainly, takes hai." },
-    { "prompt": "yeh chai", "answer": "left", "hint": "this tea", "explain": "One cup of tea is a single thing, so hai." },
-    { "prompt": "mera kamra", "answer": "left", "hint": "my room", "explain": "One room takes the singular hai." },
-    { "prompt": "ek phool", "answer": "left", "hint": "one flower", "explain": "Ek marks exactly one flower, so hai." },
-    { "prompt": "woh aadmi", "answer": "left", "hint": "that man", "explain": "One man spoken about plainly takes hai." },
-    { "prompt": "yeh saamaan", "answer": "left", "hint": "this luggage", "explain": "Treated as one mass, saamaan takes hai." },
-    { "prompt": "mera beta", "answer": "left", "hint": "my son", "explain": "One son takes the singular hai." },
-    { "prompt": "yeh dukaan", "answer": "left", "hint": "this shop", "explain": "A single shop takes hai." },
-    { "prompt": "ek bachcha", "answer": "left", "hint": "one child", "explain": "Ek marks one child, so hai." },
-    { "prompt": "woh gaadi", "answer": "left", "hint": "that car", "explain": "A single car takes the singular hai." },
-    { "prompt": "ek seb", "answer": "left", "hint": "one apple", "explain": "Ek marks exactly one apple, so hai." },
-    { "prompt": "mera school", "answer": "left", "hint": "my school", "explain": "One school takes hai." },
-    { "prompt": "yeh shahar", "answer": "left", "hint": "this city", "explain": "A single city takes the singular hai." },
-    { "prompt": "woh darwaaza", "answer": "left", "hint": "that door", "explain": "One door takes hai." },
-    { "prompt": "ve log", "answer": "right", "hint": "those people", "explain": "Log here is plural, so it takes hain." },
-    { "prompt": "mere dost", "answer": "right", "hint": "my friends", "explain": "More than one friend takes the plural hain." },
-    { "prompt": "do bachche", "answer": "right", "hint": "two children", "explain": "Two children is plural, so hain." },
-    { "prompt": "yeh kitaaben", "answer": "right", "hint": "these books", "explain": "The plural kitaaben takes hain." },
-    { "prompt": "ve ladke", "answer": "right", "hint": "those boys", "explain": "Several boys take the plural hain." },
-    { "prompt": "meri behnein", "answer": "right", "hint": "my sisters", "explain": "More than one sister takes hain." },
-    { "prompt": "paanch phool", "answer": "right", "hint": "five flowers", "explain": "Paanch marks several flowers, so hain." },
-    { "prompt": "teen kursiyan", "answer": "right", "hint": "three chairs", "explain": "Three chairs is plural, so hain." },
-    { "prompt": "mere bhai-behen", "answer": "right", "hint": "my siblings", "explain": "A group of siblings takes the plural hain." },
-    { "prompt": "ve auratein", "answer": "right", "hint": "those women", "explain": "Several women take the plural hain." },
-    { "prompt": "humare padosi", "answer": "right", "hint": "our neighbours", "explain": "More than one neighbour takes hain." },
-    { "prompt": "paanch aam", "answer": "right", "hint": "five mangoes", "explain": "Paanch marks several mangoes, so hain." },
-    { "prompt": "char dost", "answer": "right", "hint": "four friends", "explain": "Four friends is plural, so hain." },
-    { "prompt": "ve student", "answer": "right", "hint": "those students", "explain": "A group of students takes the plural hain." },
-    { "prompt": "bahut log", "answer": "right", "hint": "many people", "explain": "Many people is plural, so hain." },
-    { "prompt": "aap", "answer": "right", "hint": "you (respectful)", "explain": "The polite aap always takes hain, even for one person." },
-    { "prompt": "papa ji", "answer": "right", "hint": "father (respectful)", "explain": "An elder addressed with -ji takes the respectful hain." },
-    { "prompt": "mummy ji", "answer": "right", "hint": "mother (respectful)", "explain": "Respect for a parent makes this hain." },
-    { "prompt": "Sharma ji", "answer": "right", "hint": "Mr. Sharma (respectful)", "explain": "A named adult honoured with -ji takes hain." },
-    { "prompt": "guru ji", "answer": "right", "hint": "teacher (respectful)", "explain": "A teacher shown respect takes the respectful hain." },
-    { "prompt": "dada ji", "answer": "right", "hint": "grandfather (respectful)", "explain": "Grandfather with -ji takes the respectful hain." },
-    { "prompt": "Gupta ji", "answer": "right", "hint": "Mr. Gupta (respectful)", "explain": "A respected named adult takes hain." },
-    { "prompt": "nani ji", "answer": "right", "hint": "grandmother (respectful)", "explain": "Grandmother with -ji takes the respectful hain." },
-    { "prompt": "doctor sahab", "answer": "right", "hint": "the doctor (respectful)", "explain": "Sahab marks respect, so this takes hain." },
-    { "prompt": "pradhan ji", "answer": "right", "hint": "the headman (respectful)", "explain": "A community elder with -ji takes the respectful hain." }
+    {
+      "prompt": "woh ladka",
+      "answer": "left",
+      "hint": "that boy",
+      "explain": "One boy in the third person takes the singular hai."
+    },
+    {
+      "prompt": "yeh ladki",
+      "answer": "left",
+      "hint": "this girl",
+      "explain": "A single girl takes the singular hai."
+    },
+    {
+      "prompt": "mera bhai",
+      "answer": "left",
+      "hint": "my brother",
+      "explain": "One brother, no special respect, takes hai."
+    },
+    {
+      "prompt": "meri behen",
+      "answer": "left",
+      "hint": "my sister",
+      "explain": "One sister takes the singular hai."
+    },
+    {
+      "prompt": "yeh kitaab",
+      "answer": "left",
+      "hint": "this book",
+      "explain": "A single book is one thing, so hai."
+    },
+    {
+      "prompt": "woh ghar",
+      "answer": "left",
+      "hint": "that house",
+      "explain": "One house takes the singular hai."
+    },
+    {
+      "prompt": "ek kutta",
+      "answer": "left",
+      "hint": "one dog",
+      "explain": "Ek marks exactly one, so hai."
+    },
+    {
+      "prompt": "yeh billi",
+      "answer": "left",
+      "hint": "this cat",
+      "explain": "A single cat takes hai."
+    },
+    {
+      "prompt": "Raj",
+      "answer": "left",
+      "hint": "Raj (a friend)",
+      "explain": "One named person with no respect marker takes hai."
+    },
+    {
+      "prompt": "Mira",
+      "answer": "left",
+      "hint": "Mira (a friend)",
+      "explain": "A single named peer takes hai."
+    },
+    {
+      "prompt": "mera dost",
+      "answer": "left",
+      "hint": "my friend (one)",
+      "explain": "One friend takes the singular hai."
+    },
+    {
+      "prompt": "woh aurat",
+      "answer": "left",
+      "hint": "that woman",
+      "explain": "A single woman, spoken about plainly, takes hai."
+    },
+    {
+      "prompt": "yeh chai",
+      "answer": "left",
+      "hint": "this tea",
+      "explain": "One cup of tea is a single thing, so hai."
+    },
+    {
+      "prompt": "mera kamra",
+      "answer": "left",
+      "hint": "my room",
+      "explain": "One room takes the singular hai."
+    },
+    {
+      "prompt": "ek phool",
+      "answer": "left",
+      "hint": "one flower",
+      "explain": "Ek marks exactly one flower, so hai."
+    },
+    {
+      "prompt": "woh aadmi",
+      "answer": "left",
+      "hint": "that man",
+      "explain": "One man spoken about plainly takes hai."
+    },
+    {
+      "prompt": "yeh saamaan",
+      "answer": "left",
+      "hint": "this luggage",
+      "explain": "Treated as one mass, saamaan takes hai."
+    },
+    {
+      "prompt": "mera beta",
+      "answer": "left",
+      "hint": "my son",
+      "explain": "One son takes the singular hai."
+    },
+    {
+      "prompt": "yeh dukaan",
+      "answer": "left",
+      "hint": "this shop",
+      "explain": "A single shop takes hai."
+    },
+    {
+      "prompt": "ek bachcha",
+      "answer": "left",
+      "hint": "one child",
+      "explain": "Ek marks one child, so hai."
+    },
+    {
+      "prompt": "woh gaadi",
+      "answer": "left",
+      "hint": "that car",
+      "explain": "A single car takes the singular hai."
+    },
+    {
+      "prompt": "ek seb",
+      "answer": "left",
+      "hint": "one apple",
+      "explain": "Ek marks exactly one apple, so hai."
+    },
+    {
+      "prompt": "mera school",
+      "answer": "left",
+      "hint": "my school",
+      "explain": "One school takes hai."
+    },
+    {
+      "prompt": "yeh shahar",
+      "answer": "left",
+      "hint": "this city",
+      "explain": "A single city takes the singular hai."
+    },
+    {
+      "prompt": "woh darwaaza",
+      "answer": "left",
+      "hint": "that door",
+      "explain": "One door takes hai."
+    },
+    {
+      "prompt": "ve log",
+      "answer": "right",
+      "hint": "those people",
+      "explain": "Log here is plural, so it takes hain."
+    },
+    {
+      "prompt": "mere dost",
+      "answer": "right",
+      "hint": "my friends",
+      "explain": "More than one friend takes the plural hain."
+    },
+    {
+      "prompt": "do bachche",
+      "answer": "right",
+      "hint": "two children",
+      "explain": "Two children is plural, so hain."
+    },
+    {
+      "prompt": "yeh kitaaben",
+      "answer": "right",
+      "hint": "these books",
+      "explain": "The plural kitaaben takes hain."
+    },
+    {
+      "prompt": "ve ladke",
+      "answer": "right",
+      "hint": "those boys",
+      "explain": "Several boys take the plural hain."
+    },
+    {
+      "prompt": "meri behnein",
+      "answer": "right",
+      "hint": "my sisters",
+      "explain": "More than one sister takes hain."
+    },
+    {
+      "prompt": "paanch phool",
+      "answer": "right",
+      "hint": "five flowers",
+      "explain": "Paanch marks several flowers, so hain."
+    },
+    {
+      "prompt": "teen kursiyan",
+      "answer": "right",
+      "hint": "three chairs",
+      "explain": "Three chairs is plural, so hain."
+    },
+    {
+      "prompt": "mere bhai-behen",
+      "answer": "right",
+      "hint": "my siblings",
+      "explain": "A group of siblings takes the plural hain."
+    },
+    {
+      "prompt": "ve auratein",
+      "answer": "right",
+      "hint": "those women",
+      "explain": "Several women take the plural hain."
+    },
+    {
+      "prompt": "humare padosi",
+      "answer": "right",
+      "hint": "our neighbours",
+      "explain": "More than one neighbour takes hain."
+    },
+    {
+      "prompt": "paanch aam",
+      "answer": "right",
+      "hint": "five mangoes",
+      "explain": "Paanch marks several mangoes, so hain."
+    },
+    {
+      "prompt": "char dost",
+      "answer": "right",
+      "hint": "four friends",
+      "explain": "Four friends is plural, so hain."
+    },
+    {
+      "prompt": "ve student",
+      "answer": "right",
+      "hint": "those students",
+      "explain": "A group of students takes the plural hain."
+    },
+    {
+      "prompt": "bahut log",
+      "answer": "right",
+      "hint": "many people",
+      "explain": "Many people is plural, so hain."
+    },
+    {
+      "prompt": "aap",
+      "answer": "right",
+      "hint": "you (respectful)",
+      "explain": "The polite aap always takes hain, even for one person."
+    },
+    {
+      "prompt": "papa ji",
+      "answer": "right",
+      "hint": "father (respectful)",
+      "explain": "An elder addressed with -ji takes the respectful hain."
+    },
+    {
+      "prompt": "mummy ji",
+      "answer": "right",
+      "hint": "mother (respectful)",
+      "explain": "Respect for a parent makes this hain."
+    },
+    {
+      "prompt": "Sharma ji",
+      "answer": "right",
+      "hint": "Mr. Sharma (respectful)",
+      "explain": "A named adult honoured with -ji takes hain."
+    },
+    {
+      "prompt": "guru ji",
+      "answer": "right",
+      "hint": "teacher (respectful)",
+      "explain": "A teacher shown respect takes the respectful hain."
+    },
+    {
+      "prompt": "dada ji",
+      "answer": "right",
+      "hint": "grandfather (respectful)",
+      "explain": "Grandfather with -ji takes the respectful hain."
+    },
+    {
+      "prompt": "Gupta ji",
+      "answer": "right",
+      "hint": "Mr. Gupta (respectful)",
+      "explain": "A respected named adult takes hain."
+    },
+    {
+      "prompt": "nani ji",
+      "answer": "right",
+      "hint": "grandmother (respectful)",
+      "explain": "Grandmother with -ji takes the respectful hain."
+    },
+    {
+      "prompt": "doctor sahab",
+      "answer": "right",
+      "hint": "the doctor (respectful)",
+      "explain": "Sahab marks respect, so this takes hain."
+    },
+    {
+      "prompt": "pradhan ji",
+      "answer": "right",
+      "hint": "the headman (respectful)",
+      "explain": "A community elder with -ji takes the respectful hain."
+    }
   ]
 }

@@ -3,6 +3,7 @@
   "language": "dutch",
   "title": "De or Het",
   "subtitle": "Every Dutch noun takes 'de' or 'het'",
+  "question": "Which article does this noun take?",
   "tip": "Roughly 7 out of 10 nouns are 'de', so when you have no idea, tap DE and the odds are on your side. The duel is here to drill the trickier 'het' words into your memory by feel.",
   "left": {
     "label": "DE",
@@ -24,60 +25,390 @@
   },
   "rounds": 30,
   "items": [
-    { "prompt": "huis", "answer": "right", "emoji": "🏠", "hint": "house", "explain": "Het huis is one of the most common het-words, learn it early." },
-    { "prompt": "man", "answer": "left", "emoji": "👨", "hint": "man", "explain": "De man, people are nearly always de-words." },
-    { "prompt": "vrouw", "answer": "left", "emoji": "👩", "hint": "woman", "explain": "De vrouw, like most nouns for people, takes de." },
-    { "prompt": "kind", "answer": "right", "emoji": "🧒", "hint": "child", "explain": "Het kind is het, even though its plural de kinderen flips to de." },
-    { "prompt": "boek", "answer": "right", "emoji": "📖", "hint": "book", "explain": "Het boek is a core het-word to memorize." },
-    { "prompt": "tafel", "answer": "left", "emoji": "🪑", "hint": "table", "explain": "De tafel, a plain everyday object that takes de." },
-    { "prompt": "stoel", "answer": "left", "emoji": "🪑", "hint": "chair", "explain": "De stoel takes de, like most furniture words." },
-    { "prompt": "water", "answer": "right", "emoji": "💧", "hint": "water", "explain": "Het water is het, like many liquids and mass nouns." },
-    { "prompt": "auto", "answer": "left", "emoji": "🚗", "hint": "car", "explain": "De auto takes de." },
-    { "prompt": "fiets", "answer": "left", "emoji": "🚲", "hint": "bicycle", "explain": "De fiets takes de." },
-    { "prompt": "geld", "answer": "right", "emoji": "💶", "hint": "money", "explain": "Het geld is het, a common one to memorize." },
-    { "prompt": "jaar", "answer": "right", "emoji": "📅", "hint": "year", "explain": "Het jaar is het, while de week and de maand are de." },
-    { "prompt": "week", "answer": "left", "emoji": "🗓️", "hint": "week", "explain": "De week takes de, unlike het jaar." },
-    { "prompt": "maand", "answer": "left", "emoji": "📆", "hint": "month", "explain": "De maand takes de, unlike het jaar." },
-    { "prompt": "dag", "answer": "left", "emoji": "☀️", "hint": "day", "explain": "De dag takes de." },
-    { "prompt": "huisje", "answer": "right", "emoji": "🏡", "hint": "little house", "explain": "Het huisje, every -je diminutive is het, no exceptions." },
-    { "prompt": "meisje", "answer": "right", "emoji": "👧", "hint": "girl", "explain": "Het meisje is het because -je diminutives are always het, even for a girl." },
-    { "prompt": "brood", "answer": "right", "emoji": "🍞", "hint": "bread", "explain": "Het brood is a core het-word." },
-    { "prompt": "koffie", "answer": "left", "emoji": "☕", "hint": "coffee", "explain": "De koffie takes de, while het bier and het water are het." },
-    { "prompt": "melk", "answer": "left", "emoji": "🥛", "hint": "milk", "explain": "De melk takes de, even though water and beer are het." },
-    { "prompt": "appel", "answer": "left", "emoji": "🍎", "hint": "apple", "explain": "De appel, most fruits are de-words." },
-    { "prompt": "ei", "answer": "right", "emoji": "🥚", "hint": "egg", "explain": "Het ei is het, and its plural is the irregular de eieren." },
-    { "prompt": "kaas", "answer": "left", "emoji": "🧀", "hint": "cheese", "explain": "De kaas takes de." },
-    { "prompt": "school", "answer": "left", "emoji": "🏫", "hint": "school", "explain": "De school takes de." },
-    { "prompt": "straat", "answer": "left", "emoji": "🛣️", "hint": "street", "explain": "De straat takes de." },
-    { "prompt": "winkel", "answer": "left", "emoji": "🏬", "hint": "shop", "explain": "De winkel takes de." },
-    { "prompt": "stad", "answer": "left", "emoji": "🏙️", "hint": "city", "explain": "De stad takes de, while het dorp and het land are het." },
-    { "prompt": "dorp", "answer": "right", "emoji": "🏘️", "hint": "village", "explain": "Het dorp is het, unlike de stad." },
-    { "prompt": "land", "answer": "right", "emoji": "🌍", "hint": "country", "explain": "Het land is het, a common one to memorize." },
-    { "prompt": "station", "answer": "right", "emoji": "🚉", "hint": "station", "explain": "Het station is het, while de trein is de." },
-    { "prompt": "trein", "answer": "left", "emoji": "🚆", "hint": "train", "explain": "De trein takes de, unlike het station." },
-    { "prompt": "huisarts", "answer": "left", "emoji": "🩺", "hint": "family doctor", "explain": "De huisarts, professions are de-words." },
-    { "prompt": "ziekenhuis", "answer": "right", "emoji": "🏥", "hint": "hospital", "explain": "Het ziekenhuis is het because it ends in -huis." },
-    { "prompt": "paspoort", "answer": "right", "emoji": "🛂", "hint": "passport", "explain": "Het paspoort is het, useful for the inburgering exam." },
-    { "prompt": "formulier", "answer": "right", "emoji": "📄", "hint": "form", "explain": "Het formulier is het, a key word for paperwork." },
-    { "prompt": "brief", "answer": "left", "emoji": "✉️", "hint": "letter", "explain": "De brief takes de." },
-    { "prompt": "krant", "answer": "left", "emoji": "📰", "hint": "newspaper", "explain": "De krant takes de." },
-    { "prompt": "probleem", "answer": "right", "emoji": "❗", "hint": "problem", "explain": "Het probleem is het, like many -eem words." },
-    { "prompt": "vraag", "answer": "left", "emoji": "❓", "hint": "question", "explain": "De vraag takes de, while het antwoord (answer) is het." },
-    { "prompt": "woning", "answer": "left", "emoji": "🏢", "hint": "home / dwelling", "explain": "De woning is de because nouns ending in -ing are de-words." },
-    { "prompt": "vrijheid", "answer": "left", "emoji": "🕊️", "hint": "freedom", "explain": "De vrijheid is de because the ending -heid is always de." },
-    { "prompt": "gebouw", "answer": "right", "emoji": "🏛️", "hint": "building", "explain": "Het gebouw is het, words starting with ge- tend to be het." },
-    { "prompt": "gezin", "answer": "right", "emoji": "👪", "hint": "family (household)", "explain": "Het gezin is het, another ge- word." },
-    { "prompt": "werk", "answer": "right", "emoji": "🛠️", "hint": "work", "explain": "Het werk is het, while de baan (job) is de." },
-    { "prompt": "baan", "answer": "left", "emoji": "💼", "hint": "job", "explain": "De baan takes de, unlike het werk." },
-    { "prompt": "hand", "answer": "left", "emoji": "✋", "hint": "hand", "explain": "De hand takes de, while het hoofd and het been are het." },
-    { "prompt": "oog", "answer": "right", "emoji": "👁️", "hint": "eye", "explain": "Het oog is het, with the irregular plural de ogen." },
-    { "prompt": "deur", "answer": "left", "emoji": "🚪", "hint": "door", "explain": "De deur takes de, while het raam (window) is het." },
-    { "prompt": "bed", "answer": "right", "emoji": "🛏️", "hint": "bed", "explain": "Het bed is het." },
-    { "prompt": "weer", "answer": "right", "emoji": "🌦️", "hint": "weather", "explain": "Het weer is het, handy for small talk." },
-    { "prompt": "telefoon", "answer": "left", "emoji": "📱", "hint": "telephone", "explain": "De telefoon takes de." },
-    { "prompt": "hond", "answer": "left", "emoji": "🐕", "hint": "dog", "explain": "De hond takes de, like most animals." },
-    { "prompt": "kat", "answer": "left", "emoji": "🐈", "hint": "cat", "explain": "De kat takes de." },
-    { "prompt": "boom", "answer": "left", "emoji": "🌳", "hint": "tree", "explain": "De boom takes de, trees are de-words." },
-    { "prompt": "kopje", "answer": "right", "emoji": "🍵", "hint": "little cup", "explain": "Het kopje is het, the -je diminutive rule makes every such word het." }
+    {
+      "prompt": "huis",
+      "answer": "right",
+      "emoji": "🏠",
+      "hint": "house",
+      "explain": "Het huis is one of the most common het-words, learn it early."
+    },
+    {
+      "prompt": "man",
+      "answer": "left",
+      "emoji": "👨",
+      "hint": "man",
+      "explain": "De man, people are nearly always de-words."
+    },
+    {
+      "prompt": "vrouw",
+      "answer": "left",
+      "emoji": "👩",
+      "hint": "woman",
+      "explain": "De vrouw, like most nouns for people, takes de."
+    },
+    {
+      "prompt": "kind",
+      "answer": "right",
+      "emoji": "🧒",
+      "hint": "child",
+      "explain": "Het kind is het, even though its plural de kinderen flips to de."
+    },
+    {
+      "prompt": "boek",
+      "answer": "right",
+      "emoji": "📖",
+      "hint": "book",
+      "explain": "Het boek is a core het-word to memorize."
+    },
+    {
+      "prompt": "tafel",
+      "answer": "left",
+      "emoji": "🪑",
+      "hint": "table",
+      "explain": "De tafel, a plain everyday object that takes de."
+    },
+    {
+      "prompt": "stoel",
+      "answer": "left",
+      "emoji": "🪑",
+      "hint": "chair",
+      "explain": "De stoel takes de, like most furniture words."
+    },
+    {
+      "prompt": "water",
+      "answer": "right",
+      "emoji": "💧",
+      "hint": "water",
+      "explain": "Het water is het, like many liquids and mass nouns."
+    },
+    {
+      "prompt": "auto",
+      "answer": "left",
+      "emoji": "🚗",
+      "hint": "car",
+      "explain": "De auto takes de."
+    },
+    {
+      "prompt": "fiets",
+      "answer": "left",
+      "emoji": "🚲",
+      "hint": "bicycle",
+      "explain": "De fiets takes de."
+    },
+    {
+      "prompt": "geld",
+      "answer": "right",
+      "emoji": "💶",
+      "hint": "money",
+      "explain": "Het geld is het, a common one to memorize."
+    },
+    {
+      "prompt": "jaar",
+      "answer": "right",
+      "emoji": "📅",
+      "hint": "year",
+      "explain": "Het jaar is het, while de week and de maand are de."
+    },
+    {
+      "prompt": "week",
+      "answer": "left",
+      "emoji": "🗓️",
+      "hint": "week",
+      "explain": "De week takes de, unlike het jaar."
+    },
+    {
+      "prompt": "maand",
+      "answer": "left",
+      "emoji": "📆",
+      "hint": "month",
+      "explain": "De maand takes de, unlike het jaar."
+    },
+    {
+      "prompt": "dag",
+      "answer": "left",
+      "emoji": "☀️",
+      "hint": "day",
+      "explain": "De dag takes de."
+    },
+    {
+      "prompt": "huisje",
+      "answer": "right",
+      "emoji": "🏡",
+      "hint": "little house",
+      "explain": "Het huisje, every -je diminutive is het, no exceptions."
+    },
+    {
+      "prompt": "meisje",
+      "answer": "right",
+      "emoji": "👧",
+      "hint": "girl",
+      "explain": "Het meisje is het because -je diminutives are always het, even for a girl."
+    },
+    {
+      "prompt": "brood",
+      "answer": "right",
+      "emoji": "🍞",
+      "hint": "bread",
+      "explain": "Het brood is a core het-word."
+    },
+    {
+      "prompt": "koffie",
+      "answer": "left",
+      "emoji": "☕",
+      "hint": "coffee",
+      "explain": "De koffie takes de, while het bier and het water are het."
+    },
+    {
+      "prompt": "melk",
+      "answer": "left",
+      "emoji": "🥛",
+      "hint": "milk",
+      "explain": "De melk takes de, even though water and beer are het."
+    },
+    {
+      "prompt": "appel",
+      "answer": "left",
+      "emoji": "🍎",
+      "hint": "apple",
+      "explain": "De appel, most fruits are de-words."
+    },
+    {
+      "prompt": "ei",
+      "answer": "right",
+      "emoji": "🥚",
+      "hint": "egg",
+      "explain": "Het ei is het, and its plural is the irregular de eieren."
+    },
+    {
+      "prompt": "kaas",
+      "answer": "left",
+      "emoji": "🧀",
+      "hint": "cheese",
+      "explain": "De kaas takes de."
+    },
+    {
+      "prompt": "school",
+      "answer": "left",
+      "emoji": "🏫",
+      "hint": "school",
+      "explain": "De school takes de."
+    },
+    {
+      "prompt": "straat",
+      "answer": "left",
+      "emoji": "🛣️",
+      "hint": "street",
+      "explain": "De straat takes de."
+    },
+    {
+      "prompt": "winkel",
+      "answer": "left",
+      "emoji": "🏬",
+      "hint": "shop",
+      "explain": "De winkel takes de."
+    },
+    {
+      "prompt": "stad",
+      "answer": "left",
+      "emoji": "🏙️",
+      "hint": "city",
+      "explain": "De stad takes de, while het dorp and het land are het."
+    },
+    {
+      "prompt": "dorp",
+      "answer": "right",
+      "emoji": "🏘️",
+      "hint": "village",
+      "explain": "Het dorp is het, unlike de stad."
+    },
+    {
+      "prompt": "land",
+      "answer": "right",
+      "emoji": "🌍",
+      "hint": "country",
+      "explain": "Het land is het, a common one to memorize."
+    },
+    {
+      "prompt": "station",
+      "answer": "right",
+      "emoji": "🚉",
+      "hint": "station",
+      "explain": "Het station is het, while de trein is de."
+    },
+    {
+      "prompt": "trein",
+      "answer": "left",
+      "emoji": "🚆",
+      "hint": "train",
+      "explain": "De trein takes de, unlike het station."
+    },
+    {
+      "prompt": "huisarts",
+      "answer": "left",
+      "emoji": "🩺",
+      "hint": "family doctor",
+      "explain": "De huisarts, professions are de-words."
+    },
+    {
+      "prompt": "ziekenhuis",
+      "answer": "right",
+      "emoji": "🏥",
+      "hint": "hospital",
+      "explain": "Het ziekenhuis is het because it ends in -huis."
+    },
+    {
+      "prompt": "paspoort",
+      "answer": "right",
+      "emoji": "🛂",
+      "hint": "passport",
+      "explain": "Het paspoort is het, useful for the inburgering exam."
+    },
+    {
+      "prompt": "formulier",
+      "answer": "right",
+      "emoji": "📄",
+      "hint": "form",
+      "explain": "Het formulier is het, a key word for paperwork."
+    },
+    {
+      "prompt": "brief",
+      "answer": "left",
+      "emoji": "✉️",
+      "hint": "letter",
+      "explain": "De brief takes de."
+    },
+    {
+      "prompt": "krant",
+      "answer": "left",
+      "emoji": "📰",
+      "hint": "newspaper",
+      "explain": "De krant takes de."
+    },
+    {
+      "prompt": "probleem",
+      "answer": "right",
+      "emoji": "❗",
+      "hint": "problem",
+      "explain": "Het probleem is het, like many -eem words."
+    },
+    {
+      "prompt": "vraag",
+      "answer": "left",
+      "emoji": "❓",
+      "hint": "question",
+      "explain": "De vraag takes de, while het antwoord (answer) is het."
+    },
+    {
+      "prompt": "woning",
+      "answer": "left",
+      "emoji": "🏢",
+      "hint": "home / dwelling",
+      "explain": "De woning is de because nouns ending in -ing are de-words."
+    },
+    {
+      "prompt": "vrijheid",
+      "answer": "left",
+      "emoji": "🕊️",
+      "hint": "freedom",
+      "explain": "De vrijheid is de because the ending -heid is always de."
+    },
+    {
+      "prompt": "gebouw",
+      "answer": "right",
+      "emoji": "🏛️",
+      "hint": "building",
+      "explain": "Het gebouw is het, words starting with ge- tend to be het."
+    },
+    {
+      "prompt": "gezin",
+      "answer": "right",
+      "emoji": "👪",
+      "hint": "family (household)",
+      "explain": "Het gezin is het, another ge- word."
+    },
+    {
+      "prompt": "werk",
+      "answer": "right",
+      "emoji": "🛠️",
+      "hint": "work",
+      "explain": "Het werk is het, while de baan (job) is de."
+    },
+    {
+      "prompt": "baan",
+      "answer": "left",
+      "emoji": "💼",
+      "hint": "job",
+      "explain": "De baan takes de, unlike het werk."
+    },
+    {
+      "prompt": "hand",
+      "answer": "left",
+      "emoji": "✋",
+      "hint": "hand",
+      "explain": "De hand takes de, while het hoofd and het been are het."
+    },
+    {
+      "prompt": "oog",
+      "answer": "right",
+      "emoji": "👁️",
+      "hint": "eye",
+      "explain": "Het oog is het, with the irregular plural de ogen."
+    },
+    {
+      "prompt": "deur",
+      "answer": "left",
+      "emoji": "🚪",
+      "hint": "door",
+      "explain": "De deur takes de, while het raam (window) is het."
+    },
+    {
+      "prompt": "bed",
+      "answer": "right",
+      "emoji": "🛏️",
+      "hint": "bed",
+      "explain": "Het bed is het."
+    },
+    {
+      "prompt": "weer",
+      "answer": "right",
+      "emoji": "🌦️",
+      "hint": "weather",
+      "explain": "Het weer is het, handy for small talk."
+    },
+    {
+      "prompt": "telefoon",
+      "answer": "left",
+      "emoji": "📱",
+      "hint": "telephone",
+      "explain": "De telefoon takes de."
+    },
+    {
+      "prompt": "hond",
+      "answer": "left",
+      "emoji": "🐕",
+      "hint": "dog",
+      "explain": "De hond takes de, like most animals."
+    },
+    {
+      "prompt": "kat",
+      "answer": "left",
+      "emoji": "🐈",
+      "hint": "cat",
+      "explain": "De kat takes de."
+    },
+    {
+      "prompt": "boom",
+      "answer": "left",
+      "emoji": "🌳",
+      "hint": "tree",
+      "explain": "De boom takes de, trees are de-words."
+    },
+    {
+      "prompt": "kopje",
+      "answer": "right",
+      "emoji": "🍵",
+      "hint": "little cup",
+      "explain": "Het kopje is het, the -je diminutive rule makes every such word het."
+    }
   ]
 }
