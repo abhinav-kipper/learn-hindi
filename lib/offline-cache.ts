@@ -22,6 +22,7 @@ import { getStages as getDutchSoundStages } from '@/lib/dutch/pronunciation'
 import { getLezenTexts } from '@/lib/dutch/lezen'
 import { getClips } from '@/lib/dutch/luisteren'
 import { getDuels } from '@/lib/games'
+import { getSentenceGames } from '@/lib/sentence-game'
 import hiAudio from '@/content/hi-audio.json'
 import nlAudio from '@/content/nl-audio.json'
 
@@ -81,6 +82,7 @@ export function getAllRoutes(): string[] {
     ...ids(getLezenTexts).map((id) => `/dutch/lezen/${id}`),
     ...ids(getClips).map((id) => `/dutch/luisteren/${id}`),
     ...['hindi', 'dutch'].flatMap((l) => getDuels(l)).map((d) => `/play/duel/${d.id}`),
+    ...['hindi', 'dutch'].flatMap((l) => getSentenceGames(l)).map((g) => `/play/sentence/${g.id}`),
   ]
   return [...new Set(routes)]
 }

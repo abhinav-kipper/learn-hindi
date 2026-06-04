@@ -36,3 +36,23 @@ export interface Duel {
   rounds?: number
   items: DuelItem[]
 }
+
+// ── Sentence Builder: arrange scrambled word-tiles into the correct order ─────
+
+export interface SentenceItem {
+  /** the sentence in its correct word order (romanized) */
+  hindi: string
+  /** English meaning shown as the prompt */
+  english: string
+  level: 'easy' | 'medium' | 'hard'
+}
+
+export interface SentenceGame {
+  id: string
+  language: 'hindi' | 'dutch'
+  title: string
+  subtitle: string
+  question?: string
+  tip?: string
+  items: SentenceItem[]
+}

@@ -306,6 +306,14 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 
 ### Recent feature work log
 
+**2026-06-03 — Games: Sentence Builder (Hindi, second game type)**
+
+A second game type beyond duels, in the Play hub: **Sentence Builder** (`/play/sentence/[id]`) — tap scrambled Hindi word-tiles into the correct SOV order to match an English meaning (Hindi word order + postposition placement is the marquee challenge for English speakers). **Creative/progressive difficulty inside one game:** 3 rounds of 4, ramping — round 1 exact tiles, round 2 sneaks in 1 decoy word, round 3 adds 2 decoys (decoys drawn from the rest of the sentence pool).
+
+- Engine `components/games/SentenceBuilderGame.tsx`: intro/how-it-works → 3 rounds → done, the same shell as the duel (round stepper, combo chip, checkpoints, Confetti, mascot, haptics). Tap a tray tile to place it, tap a placed tile to take it back; auto-checks when the answer row fills. Correct → green + combo + the sentence is spoken aloud (`speak(.., 'hi')`); wrong → red shake + shows the right order + logs to the **mistakes** system under `lessonId: 'pronouns-verbs'`.
+- Content `content/games/hindi/sentence-builder.json` (36 sentences, 12 easy/medium/hard, curated for a single canonical order, accuracy-audited). Loader `lib/sentence-game.ts` (`getSentenceGames`, `drawSentenceGame` with decoy ramp via `lib/gloss` `words()`, best-score). Types in `types/game.ts`. TDD'd, 5 tests.
+- Hub (`/play`) now lists both game types (sentence games + duels) via a shared `GameCard`. Nav hidden on `/play/sentence/*`; route added to the offline precache. Generic enough that more sentence sets (or Dutch) drop in via content + a loader entry.
+
 **2026-06-03 — Games: Play hub + Gender Duel (Hindi)**
 
 Repurposed the bottom-nav **Quiz** tab into a **Play** hub (`/play`) with two sections: **Quizzes** (links to the existing `/quiz`, unchanged) and **Games**. First game: **Duel** — a fast binary-choice game for chronically-confused distinctions (the format from the user's de/het screenshots). First Hindi duel: **Gender Duel** (masculine vs feminine — the direct de/het analog).

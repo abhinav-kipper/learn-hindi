@@ -31,6 +31,7 @@ export function BottomNav() {
     pathname.startsWith('/lessons/') ||
     pathname.startsWith('/practice/') ||
     pathname.startsWith('/play/duel/') ||
+    pathname.startsWith('/play/sentence/') ||
     pathname.startsWith('/chaina') ||
     pathname.startsWith('/onboarding') ||
     pathname.startsWith('/_dev')

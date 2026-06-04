@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { getDuels, getDuelBest } from '@/lib/games'
+import { getSentenceGames, getSentenceBest } from '@/lib/sentence-game'
 import { useLanguage } from '@/lib/language-context'
 import { playSound } from '@/lib/sounds'
 import {
@@ -24,6 +25,7 @@ export default function PlayPage() {
   const { language, config } = useLanguage()
   const theme = useTheme()
   const duels = getDuels(language)
+  const sentenceGames = getSentenceGames(language)
   const [bests, setBests] = useState<Record<string, string>>({})
 
   useEffect(() => {
@@ -31,6 +33,10 @@ export default function PlayPage() {
     for (const d of duels) {
       const b = getDuelBest(config.storagePrefix, d.id)
       if (b) next[d.id] = `🏆 ${b.score}/${b.total}`
+    }
+    for (const g of sentenceGames) {
+      const b = getSentenceBest(config.storagePrefix, g.id)
+      if (b) next[g.id] = `🏆 ${b.score}/${b.total}`
     }
     setBests(next)
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -89,37 +95,42 @@ export default function PlayPage() {
 
         {/* GAMES */}
         <SectionLabel>games</SectionLabel>
-        {duels.length === 0 ? (
+        {duels.length === 0 && sentenceGames.length === 0 ? (
           <Sticker color={W} radius={20} padding={18} dashed>
             <div style={{ fontFamily: FONTS.body, fontWeight: 700, fontSize: 13.5, color: COLORS.ink60, textAlign: 'center' }}>
               more games coming soon for this language 🎮
             </div>
           </Sticker>
         ) : (
-          duels.map((d) => (
-            <Link key={d.id} href={`/play/duel/${d.id}`} style={{ textDecoration: 'none' }} onClick={() => playSound('tap')}>
-              <Sticker color={COLORS.butter} radius={20} padding={16}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-                  <TileIcon emoji="⚔️" bg={COLORS.orange} />
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 17, color: COLORS.ink }}>{d.title}</div>
-                    <div style={{ fontFamily: FONTS.body, fontWeight: 700, fontSize: 12.5, color: COLORS.ink60, marginTop: 2 }}>
-                      {d.subtitle}
-                    </div>
-                    {bests[d.id] && (
-                      <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 12, color: COLORS.ink45, marginTop: 4 }}>
-                        {bests[d.id]}
-                      </div>
-                    )}
-                  </div>
-                  <Chevron />
-                </div>
-              </Sticker>
-            </Link>
-          ))
+          <>
+            {sentenceGames.map((g) => (
+              <GameCard key={g.id} href={`/play/sentence/${g.id}`} emoji="🧩" bg={COLORS.teal} title={g.title} subtitle={g.subtitle} best={bests[g.id]} />
+            ))}
+            {duels.map((d) => (
+              <GameCard key={d.id} href={`/play/duel/${d.id}`} emoji="⚔️" bg={COLORS.orange} title={d.title} subtitle={d.subtitle} best={bests[d.id]} />
+            ))}
+          </>
         )}
       </div>
     </div>
+  )
+}
+
+function GameCard({ href, emoji, bg, title, subtitle, best }: { href: string; emoji: string; bg: string; title: string; subtitle: string; best?: string }) {
+  return (
+    <Link href={href} style={{ textDecoration: 'none' }} onClick={() => playSound('tap')}>
+      <Sticker color={COLORS.butter} radius={20} padding={16}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+          <TileIcon emoji={emoji} bg={bg} />
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 17, color: COLORS.ink }}>{title}</div>
+            <div style={{ fontFamily: FONTS.body, fontWeight: 700, fontSize: 12.5, color: COLORS.ink60, marginTop: 2 }}>{subtitle}</div>
+            {best && <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 12, color: COLORS.ink45, marginTop: 4 }}>{best}</div>}
+          </div>
+          <Chevron />
+        </div>
+      </Sticker>
+    </Link>
   )
 }
 
