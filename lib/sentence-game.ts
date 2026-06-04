@@ -92,3 +92,46 @@ export function recordSentenceResult(prefix: string, id: string, score: number, 
   }
   return best as SentenceBest
 }
+
+// ── Resume (per-round checkpoint), mirroring the duels ───────────────────────
+
+const progressKey = (prefix: string, id: string) => `${prefix}-game-${id}-progress`
+
+export interface SentenceProgress {
+  builds: Build[]
+  index: number
+  score: number
+}
+
+export function getSentenceProgress(prefix: string, id: string): SentenceProgress | null {
+  if (typeof window === 'undefined') return null
+  try {
+    const raw = localStorage.getItem(progressKey(prefix, id))
+    if (!raw) return null
+    const p = JSON.parse(raw)
+    if (Array.isArray(p?.builds) && typeof p?.index === 'number' && p.index > 0 && p.index < p.builds.length) {
+      return p
+    }
+    return null
+  } catch {
+    return null
+  }
+}
+
+export function saveSentenceProgress(prefix: string, id: string, p: SentenceProgress): void {
+  if (typeof window === 'undefined') return
+  try {
+    localStorage.setItem(progressKey(prefix, id), JSON.stringify(p))
+  } catch {
+    /* ignore */
+  }
+}
+
+export function clearSentenceProgress(prefix: string, id: string): void {
+  if (typeof window === 'undefined') return
+  try {
+    localStorage.removeItem(progressKey(prefix, id))
+  } catch {
+    /* ignore */
+  }
+}

@@ -5,6 +5,9 @@ import {
   drawSentenceGame,
   getSentenceBest,
   recordSentenceResult,
+  getSentenceProgress,
+  saveSentenceProgress,
+  clearSentenceProgress,
   SENTENCE_TOTAL,
   SENTENCE_PER_ROUND,
 } from '@/lib/sentence-game'
@@ -50,6 +53,26 @@ describe('drawSentenceGame', () => {
     for (const b of drawSentenceGame(g)) {
       expect(allOrders.has(b.correct.join(' '))).toBe(true)
     }
+  })
+})
+
+describe('resume progress', () => {
+  it('saves a round checkpoint, reads it back, and clears it', () => {
+    const g = getSentenceGameById('sentence-builder')!
+    const builds = drawSentenceGame(g)
+    expect(getSentenceProgress('hindi', 'sentence-builder')).toBeNull()
+    saveSentenceProgress('hindi', 'sentence-builder', { builds, index: 4, score: 3 })
+    const p = getSentenceProgress('hindi', 'sentence-builder')
+    expect(p?.index).toBe(4)
+    expect(p?.score).toBe(3)
+    clearSentenceProgress('hindi', 'sentence-builder')
+    expect(getSentenceProgress('hindi', 'sentence-builder')).toBeNull()
+  })
+
+  it('ignores a checkpoint at index 0', () => {
+    const g = getSentenceGameById('sentence-builder')!
+    saveSentenceProgress('hindi', 'sentence-builder', { builds: drawSentenceGame(g), index: 0, score: 0 })
+    expect(getSentenceProgress('hindi', 'sentence-builder')).toBeNull()
   })
 })
 
