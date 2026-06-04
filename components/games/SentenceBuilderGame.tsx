@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import type { SentenceGame } from '@/types/game'
-import { drawSentenceGame, getSentenceBest, recordSentenceResult, SENTENCE_TOTAL, SENTENCE_PER_ROUND, type Build } from '@/lib/sentence-game'
+import { drawSentenceGame, getSentenceBest, recordSentenceResult, getSentenceProgress, saveSentenceProgress, clearSentenceProgress, SENTENCE_TOTAL, SENTENCE_PER_ROUND, type Build } from '@/lib/sentence-game'
 import { addMistake } from '@/lib/mistakes'
 import { playSound, playCombo } from '@/lib/sounds'
 import { speak } from '@/lib/speech'
@@ -42,12 +42,15 @@ export function SentenceBuilderGame({ game }: { game: SentenceGame }) {
   const [combo, setCombo] = useState(0)
   const [best, setBest] = useState<{ score: number; total: number } | null>(null)
   const [newBest, setNewBest] = useState(false)
+  const [resume, setResume] = useState<{ round: number } | null>(null)
 
   const scoreRef = useRef(0)
   scoreRef.current = score
 
   useEffect(() => {
     setBest(getSentenceBest(prefix, game.id))
+    const p = getSentenceProgress(prefix, game.id)
+    setResume(p ? { round: Math.floor(p.index / SENTENCE_PER_ROUND) + 1 } : null)
   }, [prefix, game.id])
 
   const current = builds[index]
@@ -56,11 +59,30 @@ export function SentenceBuilderGame({ game }: { game: SentenceGame }) {
   const tileById = (id: number) => current?.tiles.find((t) => t.id === id)
 
   function start() {
+    clearSentenceProgress(prefix, game.id)
+    setResume(null)
     setBuilds(drawSentenceGame(game))
     setIndex(0)
     setPlaced([])
     setStatus(null)
     setScore(0)
+    setCombo(0)
+    setNewBest(false)
+    setPhase('playing')
+    playSound('tap')
+  }
+
+  function resumeGame() {
+    const p = getSentenceProgress(prefix, game.id)
+    if (!p) {
+      start()
+      return
+    }
+    setBuilds(p.builds)
+    setIndex(p.index)
+    setScore(p.score)
+    setPlaced([])
+    setStatus(null)
     setCombo(0)
     setNewBest(false)
     setPhase('playing')
@@ -113,6 +135,7 @@ export function SentenceBuilderGame({ game }: { game: SentenceGame }) {
   function advance() {
     const next = index + 1
     if (next >= SENTENCE_TOTAL) {
+      clearSentenceProgress(prefix, game.id)
       const finalScore = scoreRef.current
       const result = recordSentenceResult(prefix, game.id, finalScore, SENTENCE_TOTAL)
       setNewBest(!best || finalScore > best.score)
@@ -127,6 +150,8 @@ export function SentenceBuilderGame({ game }: { game: SentenceGame }) {
     setPlaced([])
     setStatus(null)
     if (next % SENTENCE_PER_ROUND === 0) {
+      // Round done: checkpoint + save so the player can resume from here.
+      saveSentenceProgress(prefix, game.id, { builds, index: next, score: scoreRef.current })
       setPhase('checkpoint')
       playSound('complete')
       buzz([20, 50, 20])
@@ -147,7 +172,7 @@ export function SentenceBuilderGame({ game }: { game: SentenceGame }) {
       </div>
 
       <div style={{ position: 'relative', zIndex: 2, flex: 1, display: 'flex', flexDirection: 'column', padding: '0 18px 24px', maxWidth: 480, margin: '0 auto', width: '100%' }}>
-        {phase === 'intro' && <Intro game={game} best={best} onStart={start} primary={theme.primary} />}
+        {phase === 'intro' && <Intro game={game} best={best} resume={resume} onStart={start} onResume={resumeGame} primary={theme.primary} />}
         {phase === 'playing' && current && (
           <Play game={game} build={current} setNum={setNum} inSet={inSet} combo={combo} placed={placed} tray={tray} status={status} tileById={tileById} onPlace={place} onUnplace={unplace} />
         )}
@@ -277,7 +302,7 @@ function Checkpoint({ setNum, score, answered, onContinue, primary }: { setNum: 
   )
 }
 
-function Intro({ game, best, onStart, primary }: { game: SentenceGame; best: { score: number; total: number } | null; onStart: () => void; primary: string }) {
+function Intro({ game, best, resume, onStart, onResume, primary }: { game: SentenceGame; best: { score: number; total: number } | null; resume: { round: number } | null; onStart: () => void; onResume: () => void; primary: string }) {
   return (
     <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} style={{ display: 'flex', flexDirection: 'column', gap: 14, flex: 1 }}>
       <div style={{ textAlign: 'center', fontFamily: FONTS.body, fontWeight: 700, fontSize: 14, color: COLORS.ink60 }}>{game.subtitle}</div>
@@ -299,7 +324,18 @@ function Intro({ game, best, onStart, primary }: { game: SentenceGame; best: { s
         3 rounds of {SENTENCE_PER_ROUND}{best ? ` · 🏆 best ${best.score}/${best.total}` : ''}
       </div>
       <div style={{ flex: 1 }} />
-      <button type="button" onClick={onStart} style={{ width: '100%', padding: '15px', background: primary, color: W, border: BORDER.sticker, boxShadow: SHADOW.sticker, borderRadius: 22, fontFamily: FONTS.display, fontWeight: 800, fontSize: 17, cursor: 'pointer', textTransform: 'lowercase' }}>start game</button>
+      {resume ? (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          <button type="button" onClick={onResume} style={{ width: '100%', padding: '15px', background: primary, color: W, border: BORDER.sticker, boxShadow: SHADOW.sticker, borderRadius: 22, fontFamily: FONTS.display, fontWeight: 800, fontSize: 17, cursor: 'pointer', textTransform: 'lowercase' }}>
+            continue · round {resume.round} of {NUM_ROUNDS}
+          </button>
+          <button type="button" onClick={onStart} style={{ width: '100%', padding: '12px', background: W, color: COLORS.ink, border: BORDER.sticker, boxShadow: SHADOW.chip, borderRadius: 20, fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, cursor: 'pointer', textTransform: 'lowercase' }}>
+            start over
+          </button>
+        </div>
+      ) : (
+        <button type="button" onClick={onStart} style={{ width: '100%', padding: '15px', background: primary, color: W, border: BORDER.sticker, boxShadow: SHADOW.sticker, borderRadius: 22, fontFamily: FONTS.display, fontWeight: 800, fontSize: 17, cursor: 'pointer', textTransform: 'lowercase' }}>start game</button>
+      )}
     </motion.div>
   )
 }
