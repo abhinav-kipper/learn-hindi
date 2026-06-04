@@ -205,9 +205,15 @@ describe('LessonChaiGalli', () => {
     expect(screen.getByText(/reveal every phrase/i)).toBeInTheDocument()
   })
 
-  it('shows a "chapter complete" pill instead of the green CTA when already done', async () => {
+  it('opens a chooser (review phrases / practice) when already done, and entering phrases shows the complete pill', async () => {
     mockIsLessonComplete.mockReturnValue(true)
     render(<LessonChaiGalli lesson={LESSON} />)
+    // a finished lesson opens to the chooser, not straight into the phrases
+    await waitFor(() => screen.getByText(/what next/i))
+    expect(screen.getByText(/review the phrases/i)).toBeInTheDocument()
+    expect(screen.getByText(/practice with the tutor/i)).toBeInTheDocument()
+    // choosing phrases shows the completed pill, never the green mark-complete CTA
+    fireEvent.click(screen.getByText(/review the phrases/i))
     await waitFor(() => screen.getByText(/chapter complete/i))
     expect(screen.queryByText(/^✓ mark chapter complete$/i)).not.toBeInTheDocument()
   })

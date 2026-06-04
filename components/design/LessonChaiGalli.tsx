@@ -50,6 +50,10 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
   const [completed, setCompleted] = useState(false)
   const [celebrate, setCelebrate] = useState(false)
   const [showPhrases, setShowPhrases] = useState(false)
+  // A completed lesson opens to a chooser (theory / phrases / practice) instead
+  // of jumping straight into the chapter. Read synchronously like `resume`.
+  const initiallyCompleted = useMemo(() => isLessonComplete(lesson.id, config.storagePrefix), [lesson.id, config.storagePrefix])
+  const [showMenu, setShowMenu] = useState(initiallyCompleted)
 
   useEffect(() => {
     setCompleted(isLessonComplete(lesson.id, config.storagePrefix))
@@ -142,6 +146,22 @@ export function LessonChaiGalli({ lesson, chapterNumber, kind = 'situations' }: 
         lesson={lesson}
         onPractice={() => router.push(`/practice/${lesson.id}`)}
         onHome={() => router.push('/')}
+      />
+    )
+  }
+
+  // Completed lesson → a chooser so you can re-read theory, review phrases, or
+  // jump into practice.
+  if (showMenu) {
+    return (
+      <LessonCompletedMenu
+        lesson={lesson}
+        chapterNumber={chapterNumber}
+        headerBg={headerBg}
+        onTheory={lesson.theory ? () => { playSound('tap'); setShowPhrases(false); setShowMenu(false) } : undefined}
+        onPhrases={() => { playSound('swipe'); setShowPhrases(true); setShowMenu(false) }}
+        onPractice={() => router.push(`/practice/${lesson.id}`)}
+        onBack={() => { playSound('tap'); router.push('/') }}
       />
     )
   }
@@ -917,5 +937,90 @@ function StatSticker({ value, label, color }: { value: number; label: string; co
         </div>
       </div>
     </Sticker>
+  )
+}
+
+// Chooser shown when a finished lesson is reopened: re-read theory, review the
+// phrases, or jump into AI practice. Chai Galli styled to match the lesson view.
+function LessonCompletedMenu({
+  lesson,
+  chapterNumber,
+  headerBg,
+  onTheory,
+  onPhrases,
+  onPractice,
+  onBack,
+}: {
+  lesson: Lesson
+  chapterNumber?: number
+  headerBg: string
+  onTheory?: () => void
+  onPhrases: () => void
+  onPractice: () => void
+  onBack: () => void
+}) {
+  const options: Array<{ emoji: string; bg: string; label: string; sub: string; onClick: () => void }> = []
+  if (onTheory) options.push({ emoji: '📖', bg: COLORS.lav2, label: 'read the chapter', sub: 'go back through the theory', onClick: onTheory })
+  options.push({ emoji: '🗂️', bg: COLORS.mint, label: 'review the phrases', sub: `step through all ${lesson.phrases.length} phrases`, onClick: onPhrases })
+  options.push({ emoji: '💬', bg: COLORS.peach2, label: 'practice with the tutor', sub: 'chat and get corrected', onClick: onPractice })
+
+  return (
+    <div style={{ position: 'relative', minHeight: '100dvh', background: COLORS.lav, paddingBottom: 110 }}>
+      <DottedBg />
+
+      <motion.div
+        initial={{ opacity: 0, y: -16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ type: 'spring', stiffness: 220, damping: 24 }}
+        style={{ position: 'relative', padding: '50px 20px 18px', background: headerBg, borderBottomLeftRadius: 36, borderBottomRightRadius: 36, borderBottom: BORDER.sticker, boxShadow: SHADOW.headerBand, zIndex: 2 }}
+      >
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', maxWidth: 480, margin: '0 auto' }}>
+          <button
+            onClick={onBack}
+            aria-label="Back"
+            style={{ width: 40, height: 40, borderRadius: 99, background: W, border: BORDER.sticker, boxShadow: SHADOW.chip, display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: COLORS.ink, padding: 0 }}
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <div style={{ marginRight: -6, marginTop: -6 }}>
+            <Mascot size={74} mood="happy" />
+          </div>
+        </div>
+        <div style={{ maxWidth: 480, margin: '10px auto 0' }}>
+          <Tag bg={COLORS.green} color={W} border={COLORS.ink}>
+            ✓ chapter {(chapterNumber ?? 1).toString().padStart(2, '0')} done
+          </Tag>
+          <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 28, color: COLORS.ink, lineHeight: 1.05, marginTop: 6, letterSpacing: -0.5 }}>
+            {lesson.title}
+          </div>
+        </div>
+      </motion.div>
+
+      <div style={{ position: 'relative', zIndex: 2, maxWidth: 480, margin: '0 auto', padding: '18px 20px 0', display: 'flex', flexDirection: 'column', gap: 12 }}>
+        <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 13, color: COLORS.ink, textTransform: 'uppercase', letterSpacing: 0.6 }}>
+          what next?
+        </div>
+        {options.map((o, i) => (
+          <motion.div key={o.label} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 * i, type: 'spring', stiffness: 240, damping: 22 }}>
+            <Sticker color={W} radius={20} padding={16} onClick={o.onClick}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+                <div style={{ width: 46, height: 46, borderRadius: 14, background: o.bg, border: BORDER.sticker, boxShadow: SHADOW.chip, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 24, flexShrink: 0 }}>
+                  {o.emoji}
+                </div>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 17, color: COLORS.ink }}>{o.label}</div>
+                  <div style={{ fontFamily: FONTS.body, fontWeight: 700, fontSize: 12.5, color: COLORS.ink60, marginTop: 2 }}>{o.sub}</div>
+                </div>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke={COLORS.ink45} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 6l6 6-6 6" />
+                </svg>
+              </div>
+            </Sticker>
+          </motion.div>
+        ))}
+      </div>
+    </div>
   )
 }
