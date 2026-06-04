@@ -312,7 +312,7 @@ A second game type beyond duels, in the Play hub: **Sentence Builder** (`/play/s
 
 - Engine `components/games/SentenceBuilderGame.tsx`: intro/how-it-works → 3 rounds → done, the same shell as the duel (round stepper, combo chip, checkpoints, Confetti, mascot, haptics). Tap a tray tile to place it, tap a placed tile to take it back; auto-checks when the answer row fills. Correct → green + combo + the sentence is spoken aloud (`speak(.., 'hi')`); wrong → red shake + shows the right order + logs to the **mistakes** system under `lessonId: 'pronouns-verbs'`.
 - Content `content/games/hindi/sentence-builder.json` (36 sentences, 12 easy/medium/hard, curated for a single canonical order, accuracy-audited). Loader `lib/sentence-game.ts` (`getSentenceGames`, `drawSentenceGame` with decoy ramp via `lib/gloss` `words()`, best-score). Types in `types/game.ts`. TDD'd, 5 tests.
-- Hub (`/play`) now lists both game types (sentence games + duels) via a shared `GameCard`. Nav hidden on `/play/sentence/*`; route added to the offline precache. Generic enough that more sentence sets (or Dutch) drop in via content + a loader entry.
+- Hub (`/play`) now lists both game types (sentence games + duels) via a shared `GameCard`. Nav hidden on `/play/sentence/*`; route added to the offline precache. Generic enough that more sentence sets drop in via content + a loader entry. **A Dutch set (`sentence-builder-nl`, V2 / participle-at-end / separable-verb order, audit-clean) was added the same day** so Dutch now shows a sentence builder too; `getSentenceGameById` needs unique ids across languages (Hindi `sentence-builder`, Dutch `sentence-builder-nl`).
 
 **2026-06-03 — Games: Play hub + Gender Duel (Hindi)**
 
