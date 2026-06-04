@@ -1,0 +1,66 @@
+import { describe, it, expect, beforeEach } from 'vitest'
+import {
+  getSentenceGames,
+  getSentenceGameById,
+  drawSentenceGame,
+  getSentenceBest,
+  recordSentenceResult,
+  SENTENCE_TOTAL,
+  SENTENCE_PER_ROUND,
+} from '@/lib/sentence-game'
+import { words } from '@/lib/gloss'
+
+beforeEach(() => localStorage.clear())
+
+describe('sentence game loader', () => {
+  it('exposes the Hindi sentence builder and none for Dutch', () => {
+    expect(getSentenceGames('hindi').length).toBeGreaterThan(0)
+    expect(getSentenceGames('dutch')).toEqual([])
+    expect(getSentenceGameById('sentence-builder')).toBeDefined()
+  })
+
+  it('has at least PER_ROUND items in every difficulty tier', () => {
+    const g = getSentenceGameById('sentence-builder')!
+    for (const level of ['easy', 'medium', 'hard'] as const) {
+      expect(g.items.filter((i) => i.level === level).length).toBeGreaterThanOrEqual(SENTENCE_PER_ROUND)
+    }
+  })
+})
+
+describe('drawSentenceGame', () => {
+  it('draws SENTENCE_TOTAL builds, ramping decoys by round', () => {
+    const g = getSentenceGameById('sentence-builder')!
+    const builds = drawSentenceGame(g)
+    expect(builds).toHaveLength(SENTENCE_TOTAL)
+    builds.forEach((b, i) => {
+      const round = Math.floor(i / SENTENCE_PER_ROUND) // 0,1,2
+      // tiles = correct words + `round` decoys
+      expect(b.tiles.length).toBe(b.correct.length + round)
+      // the correct words are all present among the tiles
+      const tileWords = b.tiles.map((t) => t.w)
+      expect(b.correct.every((w) => tileWords.includes(w))).toBe(true)
+      // correct order matches the source sentence tokenization
+      expect(b.correct.length).toBeGreaterThan(0)
+    })
+  })
+
+  it('correct order is the real tokenization of a real item', () => {
+    const g = getSentenceGameById('sentence-builder')!
+    const allOrders = new Set(g.items.map((it) => words(it.hindi).join(' ')))
+    for (const b of drawSentenceGame(g)) {
+      expect(allOrders.has(b.correct.join(' '))).toBe(true)
+    }
+  })
+})
+
+describe('sentence best score', () => {
+  it('records and only improves', () => {
+    expect(getSentenceBest('hindi', 'sentence-builder')).toBeNull()
+    recordSentenceResult('hindi', 'sentence-builder', 8, 12)
+    expect(getSentenceBest('hindi', 'sentence-builder')).toEqual({ score: 8, total: 12 })
+    recordSentenceResult('hindi', 'sentence-builder', 5, 12)
+    expect(getSentenceBest('hindi', 'sentence-builder')).toEqual({ score: 8, total: 12 })
+    recordSentenceResult('hindi', 'sentence-builder', 11, 12)
+    expect(getSentenceBest('hindi', 'sentence-builder')).toEqual({ score: 11, total: 12 })
+  })
+})
