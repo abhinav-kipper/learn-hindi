@@ -1,8 +1,9 @@
 import type { SentenceGame, SentenceItem } from '@/types/game'
 import { words } from '@/lib/gloss'
 import sentenceBuilder from '@/content/games/hindi/sentence-builder.json'
+import sentenceBuilderNl from '@/content/games/dutch/sentence-builder.json'
 
-const GAMES: SentenceGame[] = [sentenceBuilder as SentenceGame]
+const GAMES: SentenceGame[] = [sentenceBuilder as SentenceGame, sentenceBuilderNl as SentenceGame]
 
 export function getSentenceGames(language: string): SentenceGame[] {
   return GAMES.filter((g) => g.language === language)
