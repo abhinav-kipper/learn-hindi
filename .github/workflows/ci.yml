@@ -44,5 +44,8 @@ jobs:
       - name: Content quality lint (vetted references + plain-language jargon)
         run: node scripts/lint-quality.mjs
 
+      - name: Hindi natural-voice coverage (every spoken string has an ElevenLabs clip)
+        run: node scripts/check-hi-audio.mjs
+
       - name: Tests
         run: npx vitest run

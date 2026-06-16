@@ -62,6 +62,7 @@ public/                 → PWA manifest, icon.svg
 1. Create `content/lessons/NN-topic-name.json` (follow existing lesson structure, see CONTENT.md for schema)
 2. Import and add to array in `lib/lessons.ts`
 3. Update CONTENT.md inventory table
+4. **Natural voice (REQUIRED for Hindi):** every "hear it" string must play the ElevenLabs **Anika** voice (`ELEVEN_VOICE_HI=RABOvaPec1ymXz02oDQi`), not the robotic TTS fallback. Add a romanized→Devanagari pair for each new spoken string to `content/hi-translit.json`, run `ELEVENLABS_API_KEY=… ELEVEN_VOICE_HI=RABOvaPec1ymXz02oDQi node scripts/generate-audio.mjs` (idempotent), commit the new `public/audio/hi/*.mp3` + updated `content/hi-audio.json`. **Never commit the key.** Verify with `npm run audio:check` (a CI gate). Full reference: `docs/superpowers/specs/2026-06-16-natural-voice-pipeline.md`.
 
 ### Auto-generated weekly lesson
 The cron in `.github/workflows/generate-content.yml` fires every Monday

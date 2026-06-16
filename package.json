@@ -15,7 +15,8 @@
     "test:run": "vitest run",
     "test:visual": "playwright test",
     "test:visual:update": "playwright test --update-snapshots",
-    "voices": "node scripts/generate-chaina-voices.mjs"
+    "voices": "node scripts/generate-chaina-voices.mjs",
+    "audio:check": "node scripts/check-hi-audio.mjs"
   },
   "dependencies": {
     "@ai-sdk/google": "^3.0.75",
