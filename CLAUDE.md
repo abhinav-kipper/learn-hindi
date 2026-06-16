@@ -150,7 +150,7 @@ shadows anywhere.
 | Path | Purpose |
 |------|---------|
 | `/` | Home — peach gradient header band w/ Cutting mascot, compact search + mute icon buttons + animated streak chip, daily-goal bar fills 0→pct, marigold divider, Continue rickshaw-chip, Talk-to-Chaina card, Situations/Foundations tab pill (sliding cream indicator via Framer `layoutId`), staggered lesson sticker list (completed lessons collapse into a DoneFold). **Decluttered 2026-06-16:** search shrank from a full-width bar to an icon, and the Sounds + Stories sections moved off home into the new `/learn` hub. |
-| `/diary` | **Chai Diary** (Hindi-only daily journal). Cool-neutral bg, focused writing screen (nav hidden). Header: back chevron + "Chai Diary" + coral journal-streak chip + segmented "today's page / the diary" + Holi-dots garland. **Today:** ruled cream `PageSurface` (margin rule + punch holes), date header + corner Mascot, the day's prompt (deterministic by date) with "Chaina padhegi" (natural Anika TTS of the Devanagari) + peek (English), a handwriting-face `<textarea>` on ruled lines. Actions: 🔍 check (`/api/journal-check`, **Claude Sonnet 4.6** via `@ai-sdk/anthropic` for Hinglish-intent understanding; falls back to Gemini if `ANTHROPIC_API_KEY` is unset, then to an offline regex pre-check on the client) opens a spring-in modal of gentle fixes; "tuck into the diary →" stamps it done + Confetti, shows Chaina's reaction bubble (mood by sentiment) + "chaina's little notes" fixes (saved as mistakes under `__journal__`). **The diary:** streak card + 21-day cool-mint calendar heatmap + flip-back book of past entries (3D page turn, ribbon bookmark, per-page "translate" reveal). Entries persist per-date, per-language. |
+| `/diary` | **Chai Diary** (Hindi-only daily journal). Cool-neutral bg, focused writing screen (nav hidden). Header: back chevron + "Chai Diary" + coral journal-streak chip + segmented "today's page / the diary" + Holi-dots garland. **Today:** ruled cream `PageSurface` (margin rule + punch holes), date header + corner Mascot, the day's prompt (deterministic by date) with "Chaina padhegi" (natural Anika TTS of the Devanagari) + peek (English), a handwriting-face `<textarea>` on ruled lines. Actions: 🔍 check (`/api/journal-check`, **Claude Sonnet 4.6** via `@ai-sdk/anthropic` for Hinglish-intent understanding; falls back to Gemini if `ANTHROPIC_API_KEY` is unset, then to an offline regex pre-check on the client) opens a spring-in modal of gentle fixes; "tuck into the diary →" stamps it done + Confetti, shows Chaina's reaction bubble (mood by sentiment) + "chaina's little notes" fixes (saved as mistakes under `__journal__`). An `✎ edit` button beside the stamp returns to the writing state (text pre-filled); re-tucking re-runs the check and reconciles the logged mistakes (via stored `mistakeIds`) so no duplicates pile up. **The diary:** streak card + 21-day cool-mint calendar heatmap + flip-back book of past entries (3D page turn, ribbon bookmark, per-page "translate" reveal). Entries persist per-date, per-language. |
 | `/learn` | "Learn" hub (the renamed `words` bottom-nav tab). Themed header band + link cards: Vocabulary (→`/vocabulary`), Sounds (→`/sounds` for Hindi, `/dutch/sounds` for Dutch, w/ `N/M stages`), and (Hindi only) the Stories section (StoryCards + read DoneFold) moved here from home. |
 | `/lessons/[id]` | Single-page lesson view: palette-matched header w/ chapter tag + title + 3 skill chips, segmented per-phrase progress, phrase Sticker w/ ⭐ star, hindi headline, butter pronunciation pill, lavender→mint reveal-zone, "hear it" TTS, prev/next, "mark chapter complete". On complete → full celebration screen w/ confetti + expanding rings + happy-hop Cutting + 3-up stat stickers + practice CTA |
 | `/practice/[id]` | AI chat. Butter header w/ happy Cutting + hands-free/reset/finish toolbar pills. Mint scenario sticker w/ chai motif. AI bubbles = white stickers w/ teal Cutting avatar; user bubbles = peach stickers; correction stickers = butter w/ dashed border. Bottom input bar: orange mic pill + white text input pill + green send. Tutor reply tagged `[[CORRECTION: original="…" correct="…" reason="…"]]` saved as mistake |
@@ -678,19 +678,14 @@ Run tests: `npx vitest run` (or `npx vitest` for watch mode)
 3. **Prettier with `--check` in CI** — Add `prettier --check .` to the CI
    workflow. Keeps diffs clean and prevents whitespace noise in PRs.
 
-3a. **Chai Diary — edit a tucked-in entry** (requested 2026-06-16, build later).
-   Today once you "tuck into the diary" the entry is read-only for the rest of
-   the day. Add an "edit" affordance on the tucked-in `TodayPage` (and ideally
-   on archive pages for past dates) that returns the page to the writing state
-   with the saved text pre-filled. On re-tuck: re-run the check (re-using the
-   `tuck()` path in `components/journal/JournalScreen.tsx`), overwrite the
-   stored `JournalEntry` for that date via `saveEntry`, refresh `translation`,
-   and **reconcile mistakes** — the simplest correct approach is to delete the
-   prior journal mistakes for that date before re-logging (the current
-   `logMistakesOnce` ref guard assumes one tuck per mount, so it needs an
-   edit-aware reset). Keep edits scoped to the same calendar day's prompt;
-   editing a past archive entry should keep that day's original prompt. Storage
-   key unchanged (`${prefix}-journal-<YYYY-MM-DD>`).
+3a. ~~**Chai Diary — edit a tucked-in entry**~~ SHIPPED 2026-06-16. An `✎ edit`
+   button on the tucked-in `TodayPage` returns to the writing state with the
+   text pre-filled (same day's prompt). On re-tuck it re-runs the check and
+   **reconciles mistakes**: `addMistake` now returns the new id, each entry
+   stores its `mistakeIds`, and `syncMistakes()` deletes the prior ids before
+   re-logging, so an edit never leaves stale/duplicate journal fixes in the
+   drill list. (Archive editing for past dates was not built — only today's
+   page is editable.)
 
 4. **SessionStart hook for AI sessions** — A `.claude/settings.json` hook
    that runs `npx vitest run --reporter=dot 2>&1 | tail -5` on session

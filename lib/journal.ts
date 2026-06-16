@@ -33,6 +33,8 @@ export interface JournalEntry {
   mood?: JournalMood
   fixes?: JournalFix[]
   translation?: string
+  /** ids of the mistakes logged for this entry, so an edit can reconcile them */
+  mistakeIds?: string[]
 }
 
 export interface JournalPrompt {

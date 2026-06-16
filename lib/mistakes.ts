@@ -84,12 +84,13 @@ export function addMistake(
   lessonId: string,
   prefix = 'hindi',
   source: MistakeSource = 'practice',
-): void {
-  if (typeof window === 'undefined') return
-  if (!extracted.original || !extracted.correction) return
+): string | null {
+  if (typeof window === 'undefined') return null
+  if (!extracted.original || !extracted.correction) return null
   const mistakes = getMistakes(prefix)
+  const id = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
   mistakes.push({
-    id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+    id,
     original: extracted.original,
     correction: extracted.correction,
     reason: extracted.reason,
@@ -98,6 +99,7 @@ export function addMistake(
     source,
   })
   saveMistakes(mistakes, prefix)
+  return id
 }
 
 export function deleteMistake(id: string, prefix = 'hindi'): void {

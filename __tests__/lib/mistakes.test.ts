@@ -106,6 +106,17 @@ describe('addMistake + getMistakes', () => {
     expect(getMistakes('hindi')).toHaveLength(0)
   })
 
+  it('returns the new id (and null when skipped) so callers can reconcile', () => {
+    const id = addMistake({ original: 'A', correction: 'B', reason: '' }, '__journal__', 'hindi')
+    expect(typeof id).toBe('string')
+    expect(getMistakes('hindi')[0].id).toBe(id)
+    // delete it back out using the returned id (the edit-reconciliation path)
+    deleteMistake(id as string, 'hindi')
+    expect(getMistakes('hindi')).toHaveLength(0)
+    // skipped entries return null
+    expect(addMistake({ original: '', correction: 'B', reason: '' }, 'l', 'hindi')).toBeNull()
+  })
+
   it('deleteMistake removes a specific entry', () => {
     addMistake({ original: 'A', correction: 'B', reason: '' }, 'l', 'hindi')
     addMistake({ original: 'C', correction: 'D', reason: '' }, 'l', 'hindi')

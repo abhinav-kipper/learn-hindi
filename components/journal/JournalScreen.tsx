@@ -7,7 +7,7 @@ import { Mascot, COLORS, FONTS, BORDER, SHADOW, HOLI_DOTS } from '@/components/d
 import { useLanguage } from '@/lib/language-context'
 import { playSound } from '@/lib/sounds'
 import { speak, stopSpeaking } from '@/lib/speech'
-import { addMistake } from '@/lib/mistakes'
+import { addMistake, deleteMistake } from '@/lib/mistakes'
 import {
   promptForDate,
   dateKey,
@@ -73,33 +73,34 @@ export function JournalScreen() {
   const [hydrated, setHydrated] = useState(false)
   // the entry text `result` was computed for (so a check goes stale on edit)
   const [checkedFor, setCheckedFor] = useState<string | null>(null)
-  // mistakes are logged exactly once per tuck, with the FINAL fixes only
-  const loggedRef = useRef(false)
+  // ids of the mistakes logged for today's entry, so an edit reconciles them
+  const mistakeIdsRef = useRef<string[]>([])
 
   useEffect(() => {
     const saved = getEntry(prefix, todayKey)
     if (saved) {
       setEntry(saved.entry)
       setDone(saved.done)
+      mistakeIdsRef.current = saved.mistakeIds || []
       if (saved.done && saved.reaction) {
         setResult({ reaction: saved.reaction, mood: saved.mood || 'neutral', fixes: saved.fixes || [], translation: saved.translation })
         setCheckedFor(saved.entry)
-        loggedRef.current = true // already-tucked days logged their mistakes at tuck time
       }
     }
     setStreak(getJournalStreak(prefix))
     setHydrated(true)
   }, [prefix, todayKey])
 
-  // autosave the in-progress draft (only while not yet tucked in)
+  // autosave the in-progress draft (only while not yet tucked in). Preserve the
+  // logged mistake ids so a mid-edit reload can still reconcile them on re-tuck.
   useEffect(() => {
     if (!hydrated || done) return
-    saveEntry(prefix, todayKey, { entry, done: false, ts: new Date().toISOString() })
+    saveEntry(prefix, todayKey, { entry, done: false, ts: new Date().toISOString(), mistakeIds: mistakeIdsRef.current })
   }, [entry, done, hydrated, prefix, todayKey])
 
   // write the tucked-in entry; idempotent so it can run on optimistic + final.
   const saveEntryData = useCallback(
-    (text: string, check: JournalCheck) => {
+    (text: string, check: JournalCheck, mistakeIds: string[]) => {
       saveEntry(prefix, todayKey, {
         entry: text,
         done: true,
@@ -108,21 +109,27 @@ export function JournalScreen() {
         mood: check.mood,
         fixes: check.fixes,
         translation: check.translation,
+        mistakeIds,
       })
     },
     [prefix, todayKey],
   )
 
-  // log each genuine fix to the drillable mistakes system, exactly once.
-  const logMistakesOnce = useCallback(
-    (check: JournalCheck) => {
-      if (loggedRef.current) return
-      loggedRef.current = true
+  // Reconcile drillable mistakes for today's entry: drop the previously-logged
+  // ones (so editing doesn't leave stale fixes), log the current fixes, and
+  // return the new ids to store on the entry.
+  const syncMistakes = useCallback(
+    (check: JournalCheck): string[] => {
+      for (const id of mistakeIdsRef.current) deleteMistake(id, prefix)
+      const ids: string[] = []
       for (const f of check.fixes) {
         if (!f.enrich && f.original && f.fix) {
-          addMistake({ original: f.original, correction: f.fix, reason: f.note }, JOURNAL_MISTAKE_ID, prefix, 'practice')
+          const id = addMistake({ original: f.original, correction: f.fix, reason: f.note }, JOURNAL_MISTAKE_ID, prefix, 'practice')
+          if (id) ids.push(id)
         }
       }
+      mistakeIdsRef.current = ids
+      return ids
     },
     [prefix],
   )
@@ -139,24 +146,32 @@ export function JournalScreen() {
 
       // Reuse a fresh check if we have one for this exact text; otherwise show an
       // instant offline reaction, then upgrade to the model result. Mistakes are
-      // logged ONCE, from the final check only (never the optimistic one).
+      // reconciled ONCE per tuck, from the final check (drops any prior ones).
       const fresh = result && checkedFor === text ? result : null
       if (fresh) {
-        saveEntryData(text, fresh)
-        logMistakesOnce(fresh)
+        saveEntryData(text, fresh, syncMistakes(fresh))
         return
       }
       const optimistic = analyzeEntryOffline(text)
       setResult(optimistic)
-      saveEntryData(text, optimistic)
+      // keep the existing mistake ids in storage until the final check reconciles
+      saveEntryData(text, optimistic, mistakeIdsRef.current)
       const real = await runCheck(text, prompt.hinglish, config.code)
       setCheckedFor(text)
       setResult(real)
-      saveEntryData(text, real)
-      logMistakesOnce(real)
+      saveEntryData(text, real, syncMistakes(real))
     },
-    [entry, result, checkedFor, saveEntryData, logMistakesOnce, prefix, prompt.hinglish, config.code],
+    [entry, result, checkedFor, saveEntryData, syncMistakes, prefix, prompt.hinglish, config.code],
   )
+
+  // Edit a tucked-in entry: return to the writing state with the text
+  // pre-filled. The day's prompt is unchanged. Mistakes are reconciled on the
+  // next tuck (syncMistakes drops the old ids before re-logging).
+  const editEntry = useCallback(() => {
+    playSound('tap')
+    setChecking(false)
+    setDone(false)
+  }, [])
 
   const openCheck = useCallback(async () => {
     if (!entry.trim()) return
@@ -184,6 +199,7 @@ export function JournalScreen() {
             result={result}
             onCheck={openCheck}
             onTuck={() => tuck()}
+            onEdit={editEntry}
           />
         ) : (
           <DiaryView prefix={prefix} streak={streak} />
@@ -356,7 +372,7 @@ function CorrectionCard({ fix }: { fix: JournalFix }) {
 }
 
 // ── today's page ─────────────────────────────────────────────────────────────
-function TodayPage({ prompt, entry, setEntry, done, result, onCheck, onTuck }: {
+function TodayPage({ prompt, entry, setEntry, done, result, onCheck, onTuck, onEdit }: {
   prompt: ReturnType<typeof promptForDate>
   entry: string
   setEntry: (v: string) => void
@@ -364,6 +380,7 @@ function TodayPage({ prompt, entry, setEntry, done, result, onCheck, onTuck }: {
   result: JournalCheck | null
   onCheck: () => void
   onTuck: () => void
+  onEdit: () => void
 }) {
   const { config } = useLanguage()
   const [speaking, setSpeaking] = useState(false)
@@ -432,22 +449,34 @@ function TodayPage({ prompt, entry, setEntry, done, result, onCheck, onTuck }: {
           }}>tuck into the diary →</button>
         </div>
       ) : (
-        <DoneBlock result={result} />
+        <DoneBlock result={result} onEdit={onEdit} />
       )}
     </div>
   )
 }
 
-function DoneBlock({ result }: { result: JournalCheck | null }) {
+function DoneBlock({ result, onEdit }: { result: JournalCheck | null; onEdit: () => void }) {
   if (!result) return null
   return (
     <div style={{ marginTop: 16, animation: 'jrise 0.35s ease-out' }}>
-      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 14 }}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 10, marginBottom: 14 }}>
         <div style={{
           background: COLORS.journalAccent2, color: W, border: BORDER.sticker, borderRadius: 999,
           padding: '5px 16px', boxShadow: SHADOW.chip, fontFamily: FONTS.display, fontWeight: 800, fontSize: 13,
           textTransform: 'lowercase', animation: 'jstamp 0.4s ease-out',
         }}>✓ tucked in for today</div>
+        <button
+          type="button"
+          onClick={onEdit}
+          aria-label="Edit today's entry"
+          style={{
+            display: 'inline-flex', alignItems: 'center', gap: 5, background: W, color: COLORS.ink,
+            border: BORDER.sticker, borderRadius: 999, padding: '5px 12px', boxShadow: SHADOW.chip,
+            cursor: 'pointer', fontFamily: FONTS.display, fontWeight: 800, fontSize: 12, textTransform: 'lowercase',
+          }}
+        >
+          ✎ edit
+        </button>
       </div>
       <div style={{ display: 'flex', alignItems: 'flex-end', gap: 10, marginBottom: 12 }}>
         <div style={{ flexShrink: 0 }}><Mascot size={62} mood={result.mood === 'sympathy' ? 'sympathy' : 'happy'} /></div>
