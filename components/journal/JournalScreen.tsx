@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useRef, useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import confetti from 'canvas-confetti'
 import { Mascot, COLORS, FONTS, BORDER, SHADOW, HOLI_DOTS } from '@/components/design'
@@ -19,8 +19,8 @@ import {
   getJournalStreak,
   getCalendar,
   analyzeEntryOffline,
+  keepRealFixes,
   type JournalCheck,
-  type JournalEntry,
   type JournalFix,
   type ArchivePage,
   type CalendarCell,
@@ -40,9 +40,12 @@ async function runCheck(entry: string, prompt: string, language: string): Promis
     })
     if (!res.ok) throw new Error(String(res.status))
     const data = await res.json()
-    const fixes: JournalFix[] = Array.isArray(data.fixes) && data.fixes.length > 0
-      ? data.fixes.map((f: JournalFix) => ({ original: f.original, fix: f.fix, note: f.note }))
-      : [{ enrich: true, original: '', fix: '', note: data.enrich || 'Already clean. Lovely.' }]
+    // Only keep fixes whose `original` actually appears in the entry (drops
+    // hallucinated/empty corrections), capped at 3.
+    const valid = keepRealFixes(entry, data.fixes)
+    const fixes: JournalFix[] = valid.length
+      ? valid
+      : [{ enrich: true, original: '', fix: '', note: data.enrich || 'Already clean. Lovely, keep going.' }]
     return {
       reaction: data.reaction || 'Padh liya. Likhte raho.',
       mood: data.mood === 'happy' || data.mood === 'sympathy' ? data.mood : 'neutral',
@@ -68,6 +71,10 @@ export function JournalScreen() {
   const [result, setResult] = useState<JournalCheck | null>(null)
   const [streak, setStreak] = useState(0)
   const [hydrated, setHydrated] = useState(false)
+  // the entry text `result` was computed for (so a check goes stale on edit)
+  const [checkedFor, setCheckedFor] = useState<string | null>(null)
+  // mistakes are logged exactly once per tuck, with the FINAL fixes only
+  const loggedRef = useRef(false)
 
   useEffect(() => {
     const saved = getEntry(prefix, todayKey)
@@ -76,6 +83,8 @@ export function JournalScreen() {
       setDone(saved.done)
       if (saved.done && saved.reaction) {
         setResult({ reaction: saved.reaction, mood: saved.mood || 'neutral', fixes: saved.fixes || [], translation: saved.translation })
+        setCheckedFor(saved.entry)
+        loggedRef.current = true // already-tucked days logged their mistakes at tuck time
       }
     }
     setStreak(getJournalStreak(prefix))
@@ -88,57 +97,79 @@ export function JournalScreen() {
     saveEntry(prefix, todayKey, { entry, done: false, ts: new Date().toISOString() })
   }, [entry, done, hydrated, prefix, todayKey])
 
-  const persistDone = useCallback(
-    (check: JournalCheck) => {
-      const data: JournalEntry = {
-        entry,
+  // write the tucked-in entry; idempotent so it can run on optimistic + final.
+  const saveEntryData = useCallback(
+    (text: string, check: JournalCheck) => {
+      saveEntry(prefix, todayKey, {
+        entry: text,
         done: true,
         ts: new Date().toISOString(),
         reaction: check.reaction,
         mood: check.mood,
         fixes: check.fixes,
         translation: check.translation,
-      }
-      saveEntry(prefix, todayKey, data)
+      })
+    },
+    [prefix, todayKey],
+  )
+
+  // log each genuine fix to the drillable mistakes system, exactly once.
+  const logMistakesOnce = useCallback(
+    (check: JournalCheck) => {
+      if (loggedRef.current) return
+      loggedRef.current = true
       for (const f of check.fixes) {
         if (!f.enrich && f.original && f.fix) {
           addMistake({ original: f.original, correction: f.fix, reason: f.note }, JOURNAL_MISTAKE_ID, prefix, 'practice')
         }
       }
     },
-    [entry, prefix, todayKey],
+    [prefix],
   )
 
   const tuck = useCallback(
-    async (preChecked?: JournalCheck) => {
-      if (!entry.trim()) return
+    async () => {
+      const text = entry
+      if (!text.trim()) return
       setChecking(false)
       setDone(true)
       playSound('levelup')
       confetti({ particleCount: 90, spread: 70, origin: { y: 0.6 }, colors: [...HOLI_DOTS], ticks: 90, scalar: 0.9 })
-      // optimistic: show something immediately, upgrade with the model result
-      const optimistic = preChecked || result || analyzeEntryOffline(entry)
-      setResult(optimistic)
-      persistDone(optimistic)
       setStreak(getJournalStreak(prefix))
-      if (!preChecked && !result) {
-        const real = await runCheck(entry, prompt.hinglish, config.code)
-        setResult(real)
-        persistDone(real)
+
+      // Reuse a fresh check if we have one for this exact text; otherwise show an
+      // instant offline reaction, then upgrade to the model result. Mistakes are
+      // logged ONCE, from the final check only (never the optimistic one).
+      const fresh = result && checkedFor === text ? result : null
+      if (fresh) {
+        saveEntryData(text, fresh)
+        logMistakesOnce(fresh)
+        return
       }
+      const optimistic = analyzeEntryOffline(text)
+      setResult(optimistic)
+      saveEntryData(text, optimistic)
+      const real = await runCheck(text, prompt.hinglish, config.code)
+      setCheckedFor(text)
+      setResult(real)
+      saveEntryData(text, real)
+      logMistakesOnce(real)
     },
-    [entry, result, persistDone, prefix, prompt.hinglish, config.code],
+    [entry, result, checkedFor, saveEntryData, logMistakesOnce, prefix, prompt.hinglish, config.code],
   )
 
   const openCheck = useCallback(async () => {
     if (!entry.trim()) return
     playSound('pop')
     setChecking(true)
-    if (!result) {
-      const real = await runCheck(entry, prompt.hinglish, config.code)
+    // (re)fetch if we have no result, or the result is stale for the edited text
+    if (!result || checkedFor !== entry) {
+      const text = entry
+      const real = await runCheck(text, prompt.hinglish, config.code)
+      setCheckedFor(text)
       setResult(real)
     }
-  }, [entry, result, prompt.hinglish, config.code])
+  }, [entry, result, checkedFor, prompt.hinglish, config.code])
 
   return (
     <div style={{ minHeight: '100dvh', position: 'relative', background: COLORS.journalBg, fontFamily: FONTS.body, color: COLORS.ink }}>
@@ -161,10 +192,10 @@ export function JournalScreen() {
       </div>
       {checking && (
         <CheckSheet
-          loading={!result}
-          result={result}
+          loading={!result || checkedFor !== entry}
+          result={!result || checkedFor !== entry ? null : result}
           onClose={() => { playSound('tap'); setChecking(false) }}
-          onTuck={() => tuck(result || undefined)}
+          onTuck={() => tuck()}
         />
       )}
     </div>
@@ -223,7 +254,7 @@ function HoliDots({ style }: { style?: React.CSSProperties }) {
   return (
     <div style={{ display: 'flex', gap: 7, alignItems: 'center', justifyContent: 'center', ...style }}>
       {HOLI_DOTS.map((c, i) => (
-        <span key={i} style={{ width: i % 2 ? 7 : 9, height: i % 2 ? 7 : 9, borderRadius: 999, background: c, border: `1.5px solid ${COLORS.ink}`, transform: `translateY(${i % 2 ? 3 : -2}px)` }} />
+        <span key={i} style={{ width: i % 2 ? 7 : 9, height: i % 2 ? 7 : 9, borderRadius: 999, background: c, border: `1.8px solid `, transform: `translateY(${i % 2 ? 3 : -2}px)` }} />
       ))}
     </div>
   )
@@ -236,7 +267,7 @@ function PageSurface({ children, style }: { children: React.ReactNode; style?: R
       <div style={{ position: 'absolute', top: 0, bottom: 0, left: 34, width: 1.6, background: COLORS.journalLine }} />
       <div style={{ position: 'absolute', top: 18, bottom: 18, left: 12, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
         {[0, 1, 2, 3].map((i) => (
-          <div key={i} style={{ width: 9, height: 9, borderRadius: 999, background: COLORS.journalLine, border: `1.5px solid ${COLORS.ink}33` }} />
+          <div key={i} style={{ width: 9, height: 9, borderRadius: 999, background: COLORS.journalLine, border: `1px solid 33` }} />
         ))}
       </div>
       {children}
@@ -348,7 +379,7 @@ function TodayPage({ prompt, entry, setEntry, done, result, onCheck, onTuck }: {
   return (
     <div style={{ padding: '2px 16px 48px', maxWidth: 480, margin: '0 auto', animation: 'jrise 0.3s ease-out' }}>
       <PageSurface style={{ padding: '14px 18px 18px 46px', minHeight: done ? undefined : 430 }}>
-        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', borderBottom: `1.6px solid ${COLORS.ink}22`, paddingBottom: 4, marginBottom: 10 }}>
+        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', borderBottom: `1.8px solid 22`, paddingBottom: 4, marginBottom: 10 }}>
           <div style={ruled({ fontSize: 24 })}>
             {weekdayLabel(new Date())}, {shortLabel(new Date())}
             <div style={{ fontFamily: FONTS.script, fontSize: 16, color: COLORS.ink45, lineHeight: 1 }}>Dear diary,</div>
@@ -395,7 +426,7 @@ function TodayPage({ prompt, entry, setEntry, done, result, onCheck, onTuck }: {
           }}>🔍 check</button>
           <button type="button" disabled={!entry.trim()} onClick={onTuck} style={{
             flex: 1, padding: 14, border: BORDER.sticker, borderRadius: 16,
-            background: entry.trim() ? COLORS.journalAccent : '#e0d8c6', color: entry.trim() ? W : COLORS.ink60,
+            background: entry.trim() ? COLORS.journalAccent : COLORS.journalDisabled, color: entry.trim() ? W : COLORS.ink60,
             boxShadow: SHADOW.sticker, cursor: entry.trim() ? 'pointer' : 'default',
             fontFamily: FONTS.display, fontWeight: 800, fontSize: 16, textTransform: 'lowercase',
           }}>tuck into the diary →</button>
@@ -471,7 +502,7 @@ function CheckSheet({ loading, result, onClose, onTuck }: { loading: boolean; re
         )}
         <div style={{ display: 'flex', gap: 10, marginTop: 16 }}>
           <button type="button" onClick={onClose} style={{ flex: 1, padding: 12, borderRadius: 14, border: BORDER.sticker, background: W, color: COLORS.ink, boxShadow: SHADOW.chip, cursor: 'pointer', fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, textTransform: 'lowercase' }}>theek karun</button>
-          <button type="button" disabled={loading} onClick={onTuck} style={{ flex: 1, padding: 12, borderRadius: 14, border: BORDER.sticker, background: loading ? '#e0d8c6' : COLORS.journalAccent, color: loading ? COLORS.ink60 : W, boxShadow: SHADOW.chip, cursor: loading ? 'default' : 'pointer', fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, textTransform: 'lowercase' }}>tuck it in →</button>
+          <button type="button" disabled={loading} onClick={onTuck} style={{ flex: 1, padding: 12, borderRadius: 14, border: BORDER.sticker, background: loading ? COLORS.journalDisabled : COLORS.journalAccent, color: loading ? COLORS.ink60 : W, boxShadow: SHADOW.chip, cursor: loading ? 'default' : 'pointer', fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, textTransform: 'lowercase' }}>tuck it in →</button>
         </div>
       </div>
     </div>
@@ -519,21 +550,21 @@ function DiaryView({ prefix, streak }: { prefix: string; streak: number }) {
         <>
           <div style={{ position: 'relative', perspective: 1500 }}>
             <PageSurface key={idx} style={{ padding: '14px 16px 16px 46px', minHeight: 220, animation: `${flip === 'next' ? 'book-next' : 'book-prev'} 0.46s ease-out`, backfaceVisibility: 'hidden' }}>
-              <div style={{ ...ruled({ fontSize: 21 }), borderBottom: `1.6px solid ${COLORS.ink}22`, paddingBottom: 2, marginBottom: 8, paddingRight: 28 }}>{page.label}</div>
+              <div style={{ ...ruled({ fontSize: 21 }), borderBottom: `1.8px solid 22`, paddingBottom: 2, marginBottom: 8, paddingRight: 28 }}>{page.label}</div>
               <div style={{ fontFamily: FONTS.body, fontWeight: 800, fontSize: 13, color: COLORS.ink60, fontStyle: 'italic', marginBottom: 8 }}>“{page.prompt}”</div>
               <div style={ruledBg(4)}>
                 <div style={{ ...ruled({ fontSize: 20 }), paddingTop: 4, whiteSpace: 'pre-wrap' }}>{page.entry}</div>
               </div>
               {page.translation && (
                 <div style={{ marginTop: 10 }}>
-                  <button type="button" onClick={() => { playSound('tap'); setTrans((v) => !v) }} style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', fontFamily: FONTS.body, fontWeight: 800, fontSize: 12, color: COLORS.journalAccent, borderBottom: `1.5px dashed ${COLORS.journalAccent}`, lineHeight: 1.3 }}>
+                  <button type="button" onClick={() => { playSound('tap'); setTrans((v) => !v) }} style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', fontFamily: FONTS.body, fontWeight: 800, fontSize: 12, color: COLORS.journalAccent, borderBottom: `1.8px dashed `, lineHeight: 1.3 }}>
                     {trans ? 'hide English' : 'translate ↓'}
                   </button>
                   {trans && <div style={{ marginTop: 6, fontFamily: FONTS.body, fontWeight: 600, fontSize: 13, color: COLORS.ink60, lineHeight: 1.5, animation: 'jpop 0.2s ease-out' }}>{page.translation}</div>}
                 </div>
               )}
             </PageSurface>
-            <div style={{ position: 'absolute', top: -6, right: 18, width: 18, height: 40, background: COLORS.journalAccent2, border: `2px solid ${COLORS.ink}`, borderTop: 'none', clipPath: 'polygon(0 0,100% 0,100% 100%,50% 80%,0 100%)' }} />
+            <div style={{ position: 'absolute', top: -6, right: 18, width: 18, height: 40, background: COLORS.journalAccent2, border: `1.8px solid `, borderTop: 'none', clipPath: 'polygon(0 0,100% 0,100% 100%,50% 80%,0 100%)' }} />
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginTop: 14 }}>
@@ -566,7 +597,7 @@ function CalendarStrip({ cells }: { cells: CalendarCell[] }) {
           return (
             <div key={c.dateKey} style={{
               aspectRatio: '1', borderRadius: 10,
-              border: c.isToday ? `2.5px solid ${COLORS.journalAccent}` : j ? `1.5px solid ${COLORS.ink}22` : `1.5px solid ${COLORS.ink}18`,
+              border: c.isToday ? `2.5px solid ${COLORS.journalAccent}` : j ? `1px solid 22` : `1px solid 18`,
               background: tileBg, display: 'flex', alignItems: 'center', justifyContent: 'center',
               boxShadow: c.isToday ? `2px 2px 0 ${COLORS.journalAccent}55` : 'none',
             }}>

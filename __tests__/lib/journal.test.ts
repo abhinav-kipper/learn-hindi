@@ -10,6 +10,7 @@ import {
   getJournalStreak,
   getCalendar,
   analyzeEntryOffline,
+  keepRealFixes,
 } from '@/lib/journal'
 
 const P = 'hindi'
@@ -121,5 +122,29 @@ describe('analyzeEntryOffline', () => {
     const r = analyzeEntryOffline('sab badhiya raha')
     expect(r.fixes).toHaveLength(1)
     expect(r.fixes[0].enrich).toBe(true)
+  })
+})
+
+describe('keepRealFixes (anti-hallucination guard)', () => {
+  const entry = 'aaj mai bahut khush hu'
+  it('keeps a fix whose original is in the entry', () => {
+    const out = keepRealFixes(entry, [{ original: 'mai', fix: 'main', note: 'x' }])
+    expect(out).toHaveLength(1)
+    expect(out[0].fix).toBe('main')
+  })
+  it('drops a phantom fix whose original is not in the entry', () => {
+    const out = keepRealFixes(entry, [{ original: 'kitaab', fix: 'kitaabein', note: 'x' }])
+    expect(out).toHaveLength(0)
+  })
+  it('drops empty and no-op fixes', () => {
+    const out = keepRealFixes(entry, [
+      { original: '', fix: 'main', note: '' },
+      { original: 'mai', fix: 'mai', note: 'same' },
+    ])
+    expect(out).toHaveLength(0)
+  })
+  it('caps at three fixes', () => {
+    const many = 'mai hu muje thik nai'.split(' ').map((w) => ({ original: w, fix: w + 'x', note: '' }))
+    expect(keepRealFixes('mai hu muje thik nai', many).length).toBe(3)
   })
 })

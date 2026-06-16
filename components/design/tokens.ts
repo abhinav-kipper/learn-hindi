@@ -39,6 +39,7 @@ export const COLORS = {
   journalAccent2: '#e8806b', // warm coral — streak / ribbon / stamp / diary tab
   journalAccentSoft: '#e6efea', // pale mint — secondary button
   journalFill: '#a6d0c4', // cool-mint heatmap fill (journaled days)
+  journalDisabled: '#e0d8c6', // muted oat — disabled CTA on the diary paper
 } as const
 
 // Holi powder-dot garland used on the diary screen.

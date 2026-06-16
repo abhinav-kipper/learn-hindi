@@ -229,6 +229,29 @@ const WARM_NEUTRAL = [
   'Likhte raho, main har panna padhti hoon.',
 ]
 
+/**
+ * Keep only fixes that are real: a non-empty `original` that actually appears
+ * in what the learner wrote, a different non-empty `fix`, capped at 3. Guards
+ * against a model hallucinating a correction for text that isn't there (which
+ * would strike through phantom words and save a bogus drillable mistake).
+ */
+export function keepRealFixes(entry: string, fixes: JournalFix[] | undefined): JournalFix[] {
+  const lower = (entry || '').toLowerCase()
+  return (fixes || [])
+    .filter(
+      (f) =>
+        !!f &&
+        typeof f.original === 'string' &&
+        typeof f.fix === 'string' &&
+        f.original.trim().length > 0 &&
+        f.fix.trim().length > 0 &&
+        f.original.trim().toLowerCase() !== f.fix.trim().toLowerCase() &&
+        lower.includes(f.original.trim().toLowerCase()),
+    )
+    .slice(0, 3)
+    .map((f) => ({ original: f.original.trim(), fix: f.fix.trim(), note: (f.note || '').trim() }))
+}
+
 /** Offline fallback analysis (no network). The model path is preferred. */
 export function analyzeEntryOffline(text: string): JournalCheck {
   const t = (text || '').trim()
