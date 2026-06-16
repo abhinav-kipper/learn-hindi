@@ -1,0 +1,384 @@
+{
+  "id": "questions",
+  "title": "Questions & Question Words",
+  "situation": "Asking is half of every conversation. Hindi makes it easy: yes/no questions keep the same word order as a statement, and the six question words drop neatly into the slot right before the verb. Learn this and you can ask for anything.",
+  "skills": [
+    "asking yes/no questions",
+    "using the question words",
+    "questions that agree or shift"
+  ],
+  "phrases": [
+    {
+      "hindi": "yeh kya hai?",
+      "english": "What is this?",
+      "context": "The most common question you will ask as a beginner. Here kya means 'what'. Point at anything and say it.",
+      "pronunciation": "YEH kya hai"
+    },
+    {
+      "hindi": "aapka naam kya hai?",
+      "english": "What is your name?",
+      "context": "Notice kya sits right before hai, not at the front like English. The literal order is 'your name what is'.",
+      "pronunciation": "AAP-ka NAAM kya hai"
+    },
+    {
+      "hindi": "aap kaun hain?",
+      "english": "Who are you?",
+      "context": "kaun means 'who'. With aap the verb is the respectful hain, never hai.",
+      "pronunciation": "AAP kaun hain"
+    },
+    {
+      "hindi": "bathroom kahan hai?",
+      "english": "Where is the bathroom?",
+      "context": "kahan means 'where'. A survival phrase. The English loanword bathroom is widely understood.",
+      "pronunciation": "BATH-room ka-HAN hai"
+    },
+    {
+      "hindi": "train kab aayegi?",
+      "english": "When will the train come?",
+      "context": "kab means 'when'. The verb aayegi is feminine future because train is treated as feminine, like gaadi.",
+      "pronunciation": "TRAIN kab aa-YE-gi"
+    },
+    {
+      "hindi": "yeh kaise karte hain?",
+      "english": "How do you do this?",
+      "context": "kaise means 'how'. A handy phrase any time someone shows you something new.",
+      "pronunciation": "YEH kai-SE kar-TE hain"
+    },
+    {
+      "hindi": "aap pareshaan kyun hain?",
+      "english": "Why are you upset?",
+      "context": "kyun means 'why'. Using aap and a gentle tone keeps a 'why' question from sounding blunt.",
+      "pronunciation": "AAP pa-re-SHAAN kyun hain"
+    },
+    {
+      "hindi": "yeh kitne ka hai?",
+      "english": "How much is this?",
+      "context": "kitne ka is the set phrase for asking a price of a masculine item. For a feminine item you would say kitne ki.",
+      "pronunciation": "YEH kit-NE ka hai"
+    },
+    {
+      "hindi": "aapko kaun si chai pasand hai?",
+      "english": "Which tea do you like?",
+      "context": "kaun si means 'which', and it shifts to the -i form to match chai (feminine). For a masculine thing it would be kaun sa.",
+      "pronunciation": "AAP-ko kaun si CHAI pa-SAND hai"
+    },
+    {
+      "hindi": "kya aap chai lenge?",
+      "english": "Will you have tea?",
+      "context": "This kya is different: at the very start it is just a yes/no flag, not the word 'what'. Drop it and a rising tone alone still asks the question.",
+      "pronunciation": "kya AAP chai LEN-ge"
+    }
+  ],
+  "grammar_notes": [
+    "Yes/no questions keep the SAME word order as a statement. You ask either by raising your tone at the end, or by putting kya at the very start as a yes/no flag. 'aap chai lenge' (you will have tea) becomes 'kya aap chai lenge?' (will you have tea). This front kya does NOT mean 'what'",
+    "kya has two jobs. At the start of a sentence (unstressed) it is just a yes/no marker. Anywhere else it means 'what': 'yeh kya hai?' (what is this), 'aap kya kar rahe hain?' (what are you doing)",
+    "The six core question words: kya (what), kaun (who), kahan (where), kab (when), kaise (how), kyun (why). Learn these first; they cover most questions",
+    "A question word sits where the answer would go, usually right before the verb, NOT fronted to the start like English. 'aap kahan ja rahe hain?' is literally 'you where going are'. You do not reshuffle the rest of the sentence",
+    "kitna (how much/many) changes for gender and number like an -aa adjective: kitna paisa (how much money, masc), kitni chai (how much tea, fem), kitne log (how many people, plural). kaun sa (which) does the same: kaun sa / kaun si / kaun se",
+    "Before a postposition, kya and kaun change to kis (singular) or kin (plural): kis ka (whose), kis ko (to whom), kis se (from/with whom), kis mein (in which). 'yeh kiska hai?' means 'whose is this'",
+    "To ask a price, Hindi uses kitne ka (masc item) or kitne ki (fem item): 'yeh kitne ka hai?' for a masculine thing, 'yeh kitne ki hai?' for a feminine thing"
+  ],
+  "culture_notes": [
+    "Using aap and a soft tone makes a question polite. A bare kyun? (why?) can sound blunt or even accusing, while 'aap pareshaan kyun hain?' is gentle and caring",
+    "A few question phrases are everyday conversation openers: kya hua? (what happened?), kya baat hai? (what's the matter, or also 'wow!' as praise), aur batao (so, tell me, what's new)",
+    "In casual speech people often drop the front kya and just lift their tone for yes/no questions, exactly like a surprised English 'you're coming?'"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "asking yes/no questions",
+      "explanation": "Keep the statement exactly as it is. Either raise your tone at the end, or add kya at the very front as a yes/no flag. Remember this front kya is just a marker, not the word 'what'. The verb still agrees with the subject as normal.",
+      "more_examples": [
+        {
+          "hindi": "aap aayenge / kya aap aayenge?",
+          "english": "you will come / will you come?"
+        },
+        {
+          "hindi": "yeh theek hai / kya yeh theek hai?",
+          "english": "this is fine / is this fine?"
+        },
+        {
+          "hindi": "khaana ban gaya / kya khaana ban gaya?",
+          "english": "the food is ready / is the food ready?"
+        },
+        {
+          "hindi": "aapko Hindi aati hai?",
+          "english": "do you know Hindi? (tone alone, no kya)"
+        },
+        {
+          "hindi": "kya aap taiyaar hain?",
+          "english": "are you ready?"
+        }
+      ]
+    },
+    {
+      "skill": "using the question words",
+      "explanation": "Pick the right word (kya, kaun, kahan, kab, kaise, kyun) and drop it into the spot just before the verb, where the answer would sit. Do not move the rest of the sentence around the way English does.",
+      "more_examples": [
+        {
+          "hindi": "woh kaun hai?",
+          "english": "who is that?"
+        },
+        {
+          "hindi": "aap kahan rehte hain?",
+          "english": "where do you live?"
+        },
+        {
+          "hindi": "film kab shuru hogi?",
+          "english": "when will the film start?"
+        },
+        {
+          "hindi": "yeh shabd kaise bolte hain?",
+          "english": "how do you say this word?"
+        },
+        {
+          "hindi": "aap kyun ja rahe hain?",
+          "english": "why are you going?"
+        }
+      ]
+    },
+    {
+      "skill": "questions that agree or shift",
+      "explanation": "Two question words are not fixed. kitna (how much/many) and kaun sa (which) change ending for gender and number like an -aa adjective. And before a postposition, kya/kaun turn into kis (or kin for plural), giving kiska, kisko, kisse.",
+      "more_examples": [
+        {
+          "hindi": "kitna paisa / kitni chai / kitne log",
+          "english": "how much money / how much tea / how many people"
+        },
+        {
+          "hindi": "kaun sa rang / kaun si saari",
+          "english": "which colour / which saree"
+        },
+        {
+          "hindi": "yeh kiska ghar hai?",
+          "english": "whose house is this? (kis + ka)"
+        },
+        {
+          "hindi": "aap kisko bula rahe hain?",
+          "english": "whom are you calling? (kis + ko)"
+        },
+        {
+          "hindi": "aap kisse baat kar rahe hain?",
+          "english": "whom are you talking to? (kis + se)"
+        }
+      ]
+    }
+  ],
+  "practice_prompt": "You are a warm, encouraging Hindi tutor drilling how to ask questions. Use `aap` throughout. Cover four things: (a) yes/no questions (same word order, optional front `kya`, or just rising tone), (b) the six question words `kya / kaun / kahan / kab / kaise / kyun` placed right before the verb, (c) the agreeing words `kitna` and `kaun sa`, and (d) the `kis` oblique form before a postposition (`kiska / kisko / kisse`). Open with `chaliye, sawaal poochhna seekhte hain. pehla: 'what is your name?' Hindi mein kaise poochhenge?` Then mix 6 to 8 items across drill modes: translate-the-question (give English, learner produces the Hindi), fix-the-order (give a wrong fronted version like `kahan aap ja rahe hain?` and ask the learner to correct it to `aap kahan ja rahe hain?`), pick-the-word (give a blank: `aap ___ aaye? = why did you come`), and the two-roles-of-kya check (is this `kya` 'what' or a yes/no flag?). Escalate from simple `yeh kya hai?` to `kitna`/`kaun sa` agreement and finally `kis` before a postposition. Watch for: fronting the question word English-style, confusing the two roles of `kya`, missing gender agreement on `kitni`/`kaun si`, and using `kya`/`kaun` instead of `kis` before a postposition. Flag mistakes as `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]`. Stay in Hindi unless asked. End with `shabash! ab aap kuch bhi poochh sakte hain. phir milte hain.`",
+  "references": [
+    "Snell & Weightman, 'Teach Yourself Hindi', chapter on questions and interrogative words",
+    "McGregor, 'Outline of Hindi Grammar', sections on interrogatives and the oblique forms kis / kin",
+    "Afroz Taj, 'A Door Into Hindi' (UNC), lesson introducing question words with audio examples"
+  ],
+  "theory": {
+    "intro": "Questions are where a conversation actually starts moving, and Hindi makes them friendlier than English does. Yes/no questions need no reshuffling at all: you keep the sentence exactly as it is and either lift your tone or drop a small flag word at the front. For everything else there are six question words, and they slot neatly into one predictable spot. This chapter covers both, plus the two question words that change their ending and the special form you need before a postposition.",
+    "sections": [
+      {
+        "heading": "Two ways to ask yes/no",
+        "body": "A yes/no question in Hindi uses the **same word order as the statement**. You do not flip anything. There are two ways to mark it as a question.\n- **rising tone**: say the statement and lift your voice at the end. `aap chai lenge?` (will you have tea?)\n- **front `kya`**: put `kya` at the very start as a yes/no flag. `kya aap chai lenge?`\n\nBoth mean the same thing. The important trap: this front `kya` is just a question flag. It does **not** mean 'what' here.",
+        "examples": [
+          {
+            "hindi": "aap taiyaar hain",
+            "english": "you are ready",
+            "breakdown": "a plain statement"
+          },
+          {
+            "hindi": "kya aap taiyaar hain?",
+            "english": "are you ready?",
+            "breakdown": "same words, kya added at the front as a yes/no flag"
+          }
+        ],
+        "callout": {
+          "tone": "tip",
+          "body": "English makes yes/no questions by swapping the verb to the front ('you are' becomes 'are you'). Hindi never does that. Keep the order, add tone or a front kya."
+        },
+        "cutting_intro": "Hi! Let's start with the easiest questions of all, the yes/no kind. Hindi barely changes anything.",
+        "quick_check": {
+          "question": "How do you turn 'aap aayenge' (you will come) into a yes/no question?",
+          "options": [
+            "Add kya at the front, or just raise your tone",
+            "Reorder it like English: aayenge aap?",
+            "Add kyun at the front: kyun aap aayenge?"
+          ],
+          "correct_index": 0,
+          "explanation": "Keep the same order and either lift your tone or add the yes/no flag kya at the front: kya aap aayenge? You don't reorder like English, and kyun means 'why', not a yes/no flag."
+        }
+      },
+      {
+        "heading": "The six question words",
+        "body": "For real questions (not yes/no), Hindi leans on a small set of words. These six cover almost everything:\n- `kya` / what\n- `kaun` / who\n- `kahan` / where\n- `kab` / when\n- `kaise` / how\n- `kyun` / why\n\nLearn these as a block. Most of your questions will start from one of them.",
+        "table": {
+          "caption": "The core question words",
+          "columns": [
+            "word",
+            "meaning",
+            "example"
+          ],
+          "rows": [
+            [
+              "kya",
+              "what",
+              "yeh kya hai? (what is this?)"
+            ],
+            [
+              "kaun",
+              "who",
+              "woh kaun hai? (who is that?)"
+            ],
+            [
+              "kahan",
+              "where",
+              "aap kahan hain? (where are you?)"
+            ],
+            [
+              "kab",
+              "when",
+              "aap kab aayenge? (when will you come?)"
+            ],
+            [
+              "kaise",
+              "how",
+              "aap kaise hain? (how are you?)"
+            ],
+            [
+              "kyun",
+              "why",
+              "aap kyun ruke? (why did you stop?)"
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "note",
+          "body": "Almost all of them start with a k sound (kya, kaun, kahan, kab, kaise, kyun). That shared k is a handy memory hook for spotting a question word."
+        },
+        "cutting_intro": "Now the toolkit: six little words that ask almost anything. Notice they nearly all start with a k.",
+        "quick_check": {
+          "question": "Which word would you use to ask 'when'?",
+          "options": [
+            "kahan",
+            "kab",
+            "kaise"
+          ],
+          "correct_index": 1,
+          "explanation": "kab means 'when'. kahan is 'where' and kaise is 'how'."
+        }
+      },
+      {
+        "heading": "Where the question word goes",
+        "body": "This is the part that feels different from English. In English you yank the question word to the front: 'WHERE are you going?'. Hindi does not. The question word sits **where the answer would go**, which is usually right **before the verb**.\n\nThink of it as filling the same slot the answer fills:\n- statement: `aap ghar ja rahe hain` (you are going home)\n- question: `aap kahan ja rahe hain?` (you are going where?)\n\n`kahan` simply takes the place of `ghar`. The rest of the sentence does not move at all.",
+        "examples": [
+          {
+            "hindi": "aap kya kha rahe hain?",
+            "english": "what are you eating?",
+            "breakdown": "kya sits in the object slot, right before the verb"
+          },
+          {
+            "hindi": "yeh kaam kaise hota hai?",
+            "english": "how does this work?",
+            "breakdown": "kaise sits just before the verb hota hai"
+          },
+          {
+            "hindi": "aap kab soyenge?",
+            "english": "when will you sleep?",
+            "breakdown": "kab drops in before the verb, nothing else moves"
+          }
+        ],
+        "callout": {
+          "tone": "warning",
+          "body": "Resist the urge to front the question word. 'kahan aap ja rahe hain?' sounds off. The natural order is 'aap kahan ja rahe hain?', with the question word just before the verb."
+        },
+        "cutting_intro": "Here's the big difference from English. You don't drag the question word to the front. Let me show you.",
+        "quick_check": {
+          "question": "What is the natural way to ask 'where are you going?'",
+          "options": [
+            "kahan aap ja rahe hain?",
+            "aap kahan ja rahe hain?",
+            "aap ja rahe hain kahan?"
+          ],
+          "correct_index": 1,
+          "explanation": "The question word sits just before the verb: aap kahan ja rahe hain? You don't front it like English."
+        }
+      },
+      {
+        "heading": "Questions that change form",
+        "body": "Most question words never change, but two of them do, because they behave like `-aa` adjectives and must agree with their noun.\n- `kitna` / how much or how many: `kitna paisa` (how much money, masc), `kitni chai` (how much tea, fem), `kitne log` (how many people, plural)\n- `kaun sa` / which: `kaun sa rang` (which colour, masc), `kaun si saari` (which saree, fem), `kaun se joote` (which shoes, plural)\n\nTo ask a price, Hindi uses a set phrase built from `kitna`: `kitne ka` for a masculine item, `kitne ki` for a feminine one.",
+        "table": {
+          "caption": "kitna and kaun sa agreeing with the noun",
+          "columns": [
+            "with",
+            "kitna (how much)",
+            "kaun sa (which)"
+          ],
+          "rows": [
+            [
+              "masculine",
+              "kitna paisa",
+              "kaun sa rang"
+            ],
+            [
+              "feminine",
+              "kitni chai",
+              "kaun si saari"
+            ],
+            [
+              "plural",
+              "kitne log",
+              "kaun se joote"
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "tip",
+          "body": "If you already know the -aa / -i / -e adjective endings, kitna and kaun sa cost you nothing new. They follow the exact same agreement pattern."
+        },
+        "cutting_intro": "Two of the question words are a little fancier, they dress up to match the noun, just like adjectives do.",
+        "quick_check": {
+          "question": "How do you say 'which tea' (chai is feminine)?",
+          "options": [
+            "kaun sa chai",
+            "kaun si chai",
+            "kaun se chai"
+          ],
+          "correct_index": 1,
+          "explanation": "kaun sa shifts to the -i form for a feminine noun: kaun si chai."
+        }
+      },
+      {
+        "heading": "kis: questions before a postposition",
+        "body": "There is one more shift to know. When `kya` or `kaun` is followed by a **postposition** (a small word like `ka`, `ko`, `se`, `mein`), it changes into the oblique form, the form a word takes before a postposition.\n- singular: `kya` / `kaun` become `kis`\n- plural: they become `kin`\n\nSo you get `kis ka` (whose), `kis ko` (to whom), `kis se` (from or with whom), `kis mein` (in which). In writing these often join up: `kiska`, `kisko`, `kisse`.",
+        "examples": [
+          {
+            "hindi": "yeh kiska hai?",
+            "english": "whose is this?",
+            "breakdown": "kis + ka, the oblique of kaun before the postposition ka"
+          },
+          {
+            "hindi": "aap kisko dhoondh rahe hain?",
+            "english": "whom are you looking for?",
+            "breakdown": "kis + ko, before the postposition ko"
+          },
+          {
+            "hindi": "yeh kis se bana hai?",
+            "english": "what is this made of?",
+            "breakdown": "kis + se, the oblique of kya before se"
+          }
+        ],
+        "callout": {
+          "tone": "warning",
+          "body": "Don't keep kya or kaun in front of a postposition. 'kaun ka' is wrong; it must be kis ka (kiska). The shift to kis is required whenever a postposition follows."
+        },
+        "cutting_intro": "One last piece. When a postposition follows, kya and kaun quietly change into kis. It's the same oblique idea you've seen before.",
+        "quick_check": {
+          "question": "How do you say 'whose house is this?' (ghar = house)",
+          "options": [
+            "yeh kaun ka ghar hai?",
+            "yeh kiska ghar hai?",
+            "yeh kya ka ghar hai?"
+          ],
+          "correct_index": 1,
+          "explanation": "Before the postposition ka, kaun becomes kis: kis + ka = kiska. yeh kiska ghar hai?"
+        }
+      }
+    ],
+    "wrap_up": "You can now ask anything. Yes/no questions stay in statement order, marked by tone or a front kya. Content questions use one of the six k-words, dropped into the slot just before the verb instead of being fronted like English. kitna and kaun sa agree with their noun, and kya/kaun shift to kis before a postposition. The phrases below are real questions you'll use constantly, so read each one and notice exactly where the question word lands."
+  }
+}

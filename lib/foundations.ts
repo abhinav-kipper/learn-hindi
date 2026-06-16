@@ -10,6 +10,7 @@ import nounGender from '@/content/foundations/07-noun-gender.json'
 import compoundVerbs from '@/content/foundations/08-compound-verbs.json'
 import neRule from '@/content/foundations/09-ne-rule.json'
 import adjectives from '@/content/foundations/10-adjectives.json'
+import questions from '@/content/foundations/11-questions.json'
 
 const foundations: Lesson[] = [
   numbers,
@@ -22,6 +23,7 @@ const foundations: Lesson[] = [
   compoundVerbs,
   neRule,
   adjectives,
+  questions,
 ] as Lesson[]
 
 export function getAllFoundations(): Lesson[] {
