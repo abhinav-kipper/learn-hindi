@@ -19,6 +19,7 @@
     "audio:check": "node scripts/check-hi-audio.mjs"
   },
   "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.84",
     "@ai-sdk/google": "^3.0.75",
     "ai": "^6.0.184",
     "canvas-confetti": "^1.9.4",
