@@ -143,8 +143,13 @@ describe('keepRealFixes (anti-hallucination guard)', () => {
     ])
     expect(out).toHaveLength(0)
   })
-  it('caps at three fixes', () => {
-    const many = 'mai hu muje thik nai'.split(' ').map((w) => ({ original: w, fix: w + 'x', note: '' }))
-    expect(keepRealFixes('mai hu muje thik nai', many).length).toBe(3)
+  it('caps at five fixes by default', () => {
+    const entry6 = 'mai hu muje thik nai bhi'
+    const many = entry6.split(' ').map((w) => ({ original: w, fix: w + 'x', note: '' }))
+    expect(keepRealFixes(entry6, many).length).toBe(5)
+  })
+  it('honours a custom max', () => {
+    const many = 'mai hu muje'.split(' ').map((w) => ({ original: w, fix: w + 'x', note: '' }))
+    expect(keepRealFixes('mai hu muje', many, 2).length).toBe(2)
   })
 })

@@ -41,11 +41,14 @@ async function runCheck(entry: string, prompt: string, language: string): Promis
     if (!res.ok) throw new Error(String(res.status))
     const data = await res.json()
     // Only keep fixes whose `original` actually appears in the entry (drops
-    // hallucinated/empty corrections), capped at 3.
-    const valid = keepRealFixes(entry, data.fixes)
-    const fixes: JournalFix[] = valid.length
-      ? valid
-      : [{ enrich: true, original: '', fix: '', note: data.enrich || 'Already clean. Lovely, keep going.' }]
+    // hallucinated/empty corrections), capped at 5.
+    const fixes: JournalFix[] = keepRealFixes(entry, data.fixes)
+    // Always surface the gentle "did you mean..." suggestion if the model gave
+    // one (e.g. for a garbled clause it couldn't safely correct) — as an extra
+    // card alongside the fixes, not only when there are zero fixes.
+    const enrichNote = typeof data.enrich === 'string' ? data.enrich.trim() : ''
+    if (enrichNote) fixes.push({ enrich: true, original: '', fix: '', note: enrichNote })
+    if (fixes.length === 0) fixes.push({ enrich: true, original: '', fix: '', note: 'Already clean. Lovely, keep going.' })
     return {
       reaction: data.reaction || 'Padh liya. Likhte raho.',
       mood: data.mood === 'happy' || data.mood === 'sympathy' ? data.mood : 'neutral',

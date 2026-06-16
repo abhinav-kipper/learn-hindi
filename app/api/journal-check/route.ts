@@ -24,11 +24,11 @@ const CheckSchema = z.object({
         note: z.string().describe('a one-line, plain, warm reason. No jargon. Max ~16 words.'),
       }),
     )
-    .max(3)
-    .describe('0 to 3 GENUINE beginner slips. Empty if the entry is already fine, or if you are not sure what a phrase was meant to say.'),
+    .max(5)
+    .describe('0 to 5 GENUINE slips, one per distinct issue across the WHOLE entry (do not stop after the first line). Empty if the entry is already fine, or if you are not sure what a phrase was meant to say.'),
   enrich: z
     .string()
-    .describe('used when there are no confident fixes: one short, warm tip. If a phrase is garbled and you cannot tell what was meant, gently suggest a clearer phrasing here as a question (e.g. "Did you mean X? You could write it as: ..."). Empty string if there is nothing to add.'),
+    .describe('an ADDITIONAL gentle suggestion, returned EVEN IF there are fixes. If any clause is garbled or its meaning is unclear or likely not what they intended, suggest a clearer phrasing here as a question (e.g. "Did you mean X? You could write it as: ..."). Empty string only if there is genuinely nothing to add.'),
   translation: z.string().describe('a natural English translation of what the learner MEANT, 1-3 sentences.'),
 })
 
@@ -64,12 +64,12 @@ export async function POST(req: Request) {
       `FIRST, work out what the learner MEANT, even if the romanisation is rough or the grammar is tangled. Read it the way a kind native speaker would, using the whole entry for context. THEN respond:\n` +
       `1. reaction: one warm Hinglish line, like a friend, not a teacher.\n` +
       `2. mood: the sentiment.\n` +
-      `3. fixes: at most THREE genuine beginner slips. Encouragement first. Correct only real errors (e.g. "mai" should be "main", "hu" should be "hoon", a missing long vowel, a clearly wrong verb ending or postposition). Each fix MUST preserve the learner's intended meaning, and its "original" MUST be copied verbatim from the entry.\n` +
+      `3. fixes: up to FIVE genuine slips. Cover the WHOLE entry, every line, not just the first sentence. Encouragement first. Correct real errors (e.g. "mai" should be "main", "hu" should be "hoon", a missing long vowel, a clearly wrong verb ending or postposition, a word that gives a different meaning than intended). Each fix MUST preserve the learner's intended meaning, and its "original" MUST be copied verbatim from the entry.\n` +
       `4. translation: natural English of what they MEANT (1-3 sentences).\n\n` +
       `HARD RULES:\n` +
       `- NEVER invent a correction. If a fix's "original" is not present word-for-word in the entry, do not include it.\n` +
       `- NEVER rewrite a phrase into a different meaning than the learner intended. A correction fixes form, not message.\n` +
-      `- If a phrase is genuinely garbled and you cannot tell what was meant, do NOT guess a fix. Instead put a gentle suggestion in "enrich", phrased as a question ("Did you mean ...? You could write it as: ...").\n` +
+      `- If a phrase is genuinely garbled and you cannot tell exactly what was meant, do NOT force a fix. Instead put a gentle suggestion in "enrich", phrased as a question ("Did you mean ...? You could write it as: ..."). Provide "enrich" EVEN IF you also returned some fixes.\n` +
       `- Treat these as correct house spellings, never "fix" them: accha, acchi, khaaya, theek, hoon.\n` +
       `- Keep every field short and human. Simple punctuation. No em-dashes, no arrows.\n\n` +
       `Entry:\n"""${entry.slice(0, 1500)}"""`
