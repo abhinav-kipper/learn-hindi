@@ -191,8 +191,9 @@ export function TheoryView({ theory, title, onStartPhrases, onGoToPractice }: Pr
         </div>
       )}
 
-      {/* Page content */}
-      <div style={{ maxWidth: 480, margin: '0 auto', padding: '0 16px' }}>
+      {/* Page content — bottom padding clears the fixed prev/next nav so a tall
+          section (e.g. a quick-check with options) never renders under it. */}
+      <div style={{ maxWidth: 480, margin: '0 auto', padding: '0 16px 132px' }}>
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={page}
