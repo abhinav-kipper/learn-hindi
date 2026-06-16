@@ -1,0 +1,361 @@
+{
+  "id": "adjectives",
+  "title": "Adjectives & Agreement",
+  "situation": "Hindi adjectives dress up to match their noun. Some change their ending for gender and number, some never move at all, and a postposition can shift them again. Learn the one mechanical test and your descriptions stop sounding like a beginner's.",
+  "skills": [
+    "choosing the right ending",
+    "agreement after a postposition",
+    "making comparisons"
+  ],
+  "phrases": [
+    {
+      "hindi": "yeh kamra bahut bada hai",
+      "english": "This room is very big",
+      "context": "The base case. kamra (room) is masculine singular, so the changing adjective bada keeps its -aa ending. This is the form you find in the dictionary.",
+      "pronunciation": "YEH KAM-ra ba-HUT ba-DA hai"
+    },
+    {
+      "hindi": "meri nayi gaadi laal hai",
+      "english": "My new car is red",
+      "context": "Two adjectives, two behaviours. nayi shifts to the -i form because gaadi (car) is feminine, but laal (red) never changes for anyone. Watch meri agree too.",
+      "pronunciation": "ME-ri na-YI GAA-di LAAL hai"
+    },
+    {
+      "hindi": "woh ladki bahut sundar hai",
+      "english": "That girl is very beautiful",
+      "context": "sundar (beautiful) ends in a consonant, so it stays flat for any noun. You'd say sundar ladka and sundar ladki with no change at all.",
+      "pronunciation": "WOH lad-KI ba-HUT SUN-dar hai"
+    },
+    {
+      "hindi": "mujhe thandi chai pasand nahi hai",
+      "english": "I don't like cold tea",
+      "context": "thanda becomes thandi to match chai (feminine). The same drink hot would be garam, which never changes because it doesn't end in -aa.",
+      "pronunciation": "muj-HE than-DI CHAI pa-SAND na-HI hai"
+    },
+    {
+      "hindi": "bade kamre mein do kursiyan hain",
+      "english": "There are two chairs in the big room",
+      "context": "The marquee pattern. Before the postposition mein (in), the masculine pair shifts together: bada becomes bade and kamra becomes kamre. This is the oblique form.",
+      "pronunciation": "ba-DE KAM-re mein DO kur-si-YAAN hain"
+    },
+    {
+      "hindi": "yeh sawaal us sawaal se mushkil hai",
+      "english": "This question is harder than that one",
+      "context": "No -er ending exists in Hindi. You make a comparison with se (than). mushkil itself stays flat, and us sawaal se is the oblique form before se.",
+      "pronunciation": "YEH sa-WAAL US sa-WAAL se mush-KIL hai"
+    },
+    {
+      "hindi": "acche dost mushkil se milte hain",
+      "english": "Good friends are hard to find",
+      "context": "Plural masculine. accha becomes acche because dost here is plural. The -e form covers both masculine plural and the respectful register.",
+      "pronunciation": "ac-CHE DOST mush-KIL se mil-TE hain"
+    },
+    {
+      "hindi": "yeh sabse acchi mithai hai",
+      "english": "This is the best sweet",
+      "context": "sabse (than all) makes the superlative. The adjective still agrees normally, acchi here because mithai is feminine. There is no separate best ending.",
+      "pronunciation": "YEH sab-SE ac-CHI mi-THAI hai"
+    },
+    {
+      "hindi": "uske naye joote mehnge the",
+      "english": "His new shoes were expensive",
+      "context": "Everything goes plural masculine together: uske, naye, mehnge all take -e to match joote (shoes). The possessive behaves exactly like a changing adjective.",
+      "pronunciation": "us-KE na-YE JOO-te meh-NGE the"
+    },
+    {
+      "hindi": "saaf paani peena zaroori hai",
+      "english": "Drinking clean water is necessary",
+      "context": "Two flat adjectives in a row. saaf (clean) and zaroori (necessary) both end in a consonant or -i, so neither changes, even though paani is masculine.",
+      "pronunciation": "SAAF paa-NI PEE-na za-ROO-ri hai"
+    }
+  ],
+  "grammar_notes": [
+    "The one test that decides everything: does the adjective end in -aa? If yes, it changes to match the noun. If it ends in anything else (a consonant, -i, -u), it never changes. accha changes; saaf, laal, mushkil, sundar, zaroori do not",
+    "A changing adjective has three forms: -aa for masculine singular (accha ladka), -i for feminine singular or plural (acchi ladki, acchi ladkiyan), and -e for masculine plural (acche ladke)",
+    "The -e form also appears with the respectful you. With aap you say acche, the same ending as masculine plural, because aap is grammatically plural",
+    "Adjectives sit BEFORE the noun, always: accha khaana (good food), never khaana accha when describing. khaana accha hai is a full sentence (the food is good), which is different",
+    "The oblique twist: before a postposition (mein, ko, se, par, ka), a masculine -aa adjective shifts to -e, and a masculine -aa noun shifts with it. bada kamra becomes bade kamre mein. Feminine forms do not change here",
+    "Comparisons use words, not endings. X se accha means better than X (se = than), and sabse accha means best (sabse = than all). The adjective keeps agreeing with its own noun as usual",
+    "A small set of -aa adjectives borrowed from Persian and Arabic break the rule and never change: taaza (fresh), zinda (alive). Learn these few as flat exceptions"
+  ],
+  "culture_notes": [
+    "Native speakers fix agreement automatically and won't be confused if you slip, but consistent wrong endings instantly mark you as a beginner. The good news is that the -aa / -i / -e pattern is regular, so a little drilling fixes most mistakes",
+    "Everyday praise leans on a tiny set of adjectives. accha (good), sundar (beautiful), mast and badhiya (great, casual) carry most compliments. Knowing ten adjectives well beats knowing fifty you never reach for",
+    "In fast casual speech endings sometimes blur together, but aim for correct agreement when you write or speak carefully. It is the clearest signal that you actually know the grammar"
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "choosing the right ending",
+      "explanation": "First ask whether the adjective ends in -aa. If it doesn't, you're done, it never changes. If it does, pick the ending from the noun: -aa for one masculine thing, -i for any feminine thing, -e for several masculine things or the respectful aap.",
+      "more_examples": [
+        {
+          "hindi": "chhota bachcha / chhoti bachchi / chhote bachche",
+          "english": "small boy / small girl / small children"
+        },
+        {
+          "hindi": "purana ghar / purani kitaab",
+          "english": "old house / old book"
+        },
+        {
+          "hindi": "saaf kamra / saaf kitaab",
+          "english": "clean room / clean book (saaf never changes)"
+        },
+        {
+          "hindi": "aap acche hain",
+          "english": "you are good (respectful, -e form with aap)"
+        },
+        {
+          "hindi": "mushkil sawaal / mushkil baat",
+          "english": "hard question / hard matter (mushkil stays flat)"
+        }
+      ]
+    },
+    {
+      "skill": "agreement after a postposition",
+      "explanation": "A postposition (mein, ko, se, par, ka, ke, ki) puts the noun into its oblique form, the form a noun takes before a postposition. A masculine -aa adjective then shifts to -e, and a masculine -aa noun shifts with it. Feminine adjectives and nouns stay the same, which makes the feminine side easier.",
+      "more_examples": [
+        {
+          "hindi": "accha ladka / acche ladke ko",
+          "english": "good boy / to the good boy"
+        },
+        {
+          "hindi": "bada kamra / bade kamre mein",
+          "english": "big room / in the big room"
+        },
+        {
+          "hindi": "accha ghar / acche ghar mein",
+          "english": "good house / in the good house (ghar doesn't end in -aa, so only the adjective moves)"
+        },
+        {
+          "hindi": "acchi ladki / acchi ladki ko",
+          "english": "good girl / to the good girl (feminine stays flat)"
+        },
+        {
+          "hindi": "mera kamra / mere kamre mein",
+          "english": "my room / in my room (the possessive shifts too)"
+        }
+      ]
+    },
+    {
+      "skill": "making comparisons",
+      "explanation": "Hindi has no -er or -est ending. For more than X, put X se before the adjective (se means than), and add zyada for extra emphasis. For the most, use sabse (than all). The adjective keeps agreeing with its own noun the whole time.",
+      "more_examples": [
+        {
+          "hindi": "yeh us se accha hai",
+          "english": "this is better than that"
+        },
+        {
+          "hindi": "yeh us se zyada accha hai",
+          "english": "this is even better than that (zyada adds emphasis)"
+        },
+        {
+          "hindi": "yeh sabse accha hai",
+          "english": "this is the best (of all)"
+        },
+        {
+          "hindi": "yeh chai us chai se acchi hai",
+          "english": "this tea is better than that tea (acchi agrees with chai)"
+        },
+        {
+          "hindi": "yeh sabse acchi dukaan hai",
+          "english": "this is the best shop"
+        }
+      ]
+    }
+  ],
+  "practice_prompt": "You are a friendly Hindi tutor drilling adjective agreement. Use `aap` throughout. The learner already knows noun gender, so focus on the adjective: the -aa / -i / -e endings, flat (unchanging) adjectives, the oblique shift before a postposition, and comparisons with `se` / `sabse`. Open with `chaliye, adjectives practice karte hain. pehla: 'accha' ko 'chai' ke saath sahi banaiye, kya hoga?` and then mix 6 to 8 items across four drill modes: (a) fill-the-ending, give a noun plus a changing adjective and ask for the right form (accha + ladke = ?); (b) flat-or-changing, name an adjective (saaf, laal, mushkil, accha) and ask whether it changes at all; (c) oblique-fix, give a phrase with a postposition and a wrong ending like `bada kamre mein` and ask the learner to fix it to `bade kamre mein`; (d) comparison, ask them to say 'better than that' or 'the best' using `se` / `sabse`. Escalate from simple agreement (accha / acchi / acche) to flat adjectives, then the oblique shift (bada kamra to bade kamre mein), then comparatives. Watch for these mistakes: changing a flat adjective (saaf has no saafi), forgetting the -e shift before a postposition, dropping agreement on the possessive, and inventing an English-style -er ending. Flag every error as `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]`. Stay in Hindi unless the learner asks for English. End with `bahut acche! har naye adjective ke saath socho, kya yeh -aa pe khatam hota hai? phir milte hain.`",
+  "references": [
+    "Snell & Weightman, 'Teach Yourself Hindi', chapters on adjectives, oblique case, and comparison",
+    "McGregor, 'Outline of Hindi Grammar', sections on adjective inflection and the oblique case",
+    "Afroz Taj, 'A Door Into Hindi' (UNC), lessons introducing adjective agreement with audio examples"
+  ],
+  "theory": {
+    "intro": "Adjectives in Hindi agree with their noun, the way they dress up to match it. Some adjectives change their ending for gender and number, others never move at all, and a postposition can shift them one more time. The good news is that a single test decides which adjective does what, and once you know it the whole system becomes predictable. This chapter walks through that test, the three endings, the oblique shift that catches most learners, and how to compare things without an -er ending.",
+    "sections": [
+      {
+        "heading": "Two kinds of adjectives",
+        "body": "Every Hindi adjective falls into one of two camps, and one quick test sorts them.\n\n**Does the adjective end in `-aa`?**\n- yes / it **changes** to match the noun: `accha`, `bada`, `chhota`, `naya`, `purana`\n- no / it **never changes**, for any noun: `saaf` (clean), `laal` (red), `mushkil` (hard), `sundar` (beautiful), `zaroori` (necessary)\n\nSo `accha` will shift around a lot in this chapter, while `saaf` stays exactly the same whether the noun is masculine, feminine, singular, or plural.",
+        "examples": [
+          {
+            "hindi": "accha khaana",
+            "english": "good food",
+            "breakdown": "accha ends in -aa, so it will change to match its noun"
+          },
+          {
+            "hindi": "saaf khaana / saaf chai",
+            "english": "clean food / clean tea",
+            "breakdown": "saaf ends in a consonant, so it stays flat for any noun"
+          }
+        ],
+        "callout": {
+          "tone": "tip",
+          "body": "Make this test automatic. Before you worry about gender or number, just check the last sound of the adjective. Ends in -aa means it changes; anything else means it doesn't."
+        },
+        "cutting_intro": "Hi! Adjectives split into two groups. One quick test tells them apart, so let's learn that first.",
+        "quick_check": {
+          "question": "Which of these adjectives changes its ending to match the noun?",
+          "options": [
+            "laal (red)",
+            "accha (good)",
+            "mushkil (hard)"
+          ],
+          "correct_index": 1,
+          "explanation": "Only accha ends in -aa, so only accha changes. laal and mushkil stay flat for every noun."
+        }
+      },
+      {
+        "heading": "The three endings",
+        "body": "A changing adjective has exactly three forms. You pick one based on the noun's gender and number.\n- `-aa` / one masculine thing: `accha ladka` (good boy)\n- `-i` / any feminine thing, singular or plural: `acchi ladki`, `acchi ladkiyan` (good girl, good girls)\n- `-e` / several masculine things: `acche ladke` (good boys)\n\nThe feminine form covers both singular and plural, so it does double duty. The `-e` form has a second job too: it appears with the respectful **aap**, because `aap` counts as plural. So `aap acche hain` (you are good) uses the same `-e` ending.",
+        "table": {
+          "caption": "The three forms of a changing adjective",
+          "columns": [
+            "form",
+            "used for",
+            "example"
+          ],
+          "rows": [
+            [
+              "-aa",
+              "masculine singular",
+              "accha ladka (good boy)"
+            ],
+            [
+              "-i",
+              "feminine singular or plural",
+              "acchi ladki / acchi ladkiyan"
+            ],
+            [
+              "-e",
+              "masculine plural, and with aap",
+              "acche ladke / aap acche hain"
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "note",
+          "body": "Word order matters. A describing adjective comes before its noun: accha khaana. If you put the adjective after the noun with hai, you've made a full sentence instead, khaana accha hai means the food is good."
+        },
+        "cutting_intro": "A changing adjective has just three forms. Learn this little set and you can describe almost anything.",
+        "quick_check": {
+          "question": "Which form goes with the respectful `aap`?",
+          "options": [
+            "aap accha hain",
+            "aap acchi hain",
+            "aap acche hain"
+          ],
+          "correct_index": 2,
+          "explanation": "aap is grammatically plural, so it takes the -e form: aap acche hain. Same ending as masculine plural."
+        }
+      },
+      {
+        "heading": "The oblique shift (the tricky one)",
+        "body": "Here is the pattern that trips up most learners. When a noun is followed by a **postposition** (a little word like `mein` (in), `ko` (to), `se` (from / than), `par` (on), `ka` (of)), the noun goes into its **oblique** form, the form a noun takes before a postposition.\n\nWhen that happens, a masculine `-aa` adjective shifts to `-e`, and a masculine `-aa` noun shifts to `-e` with it.\n- direct: `bada kamra` (big room)\n- oblique: `bade kamre mein` (in the big room)\n\nBoth words moved together. If the noun doesn't end in `-aa` (like `ghar`), only the adjective shifts: `acche ghar mein` (in a good house). And the feminine side is easier, nothing changes: `acchi ladki ko` (to the good girl) keeps every ending exactly as it was.",
+        "examples": [
+          {
+            "hindi": "bada kamra / bade kamre mein",
+            "english": "big room / in the big room",
+            "breakdown": "postposition mein pushes both bada and kamra to the -e form"
+          },
+          {
+            "hindi": "acche ghar mein",
+            "english": "in a good house",
+            "breakdown": "ghar doesn't end in -aa, so only the adjective shifts to acche"
+          },
+          {
+            "hindi": "acchi ladki ko",
+            "english": "to the good girl",
+            "breakdown": "feminine forms stay flat in the oblique, nothing changes"
+          }
+        ],
+        "callout": {
+          "tone": "warning",
+          "body": "It's easy to say bada kamre mein, mixing a direct adjective with an oblique noun. The two must match: bade kamre mein. When a postposition appears, sweep back and shift the masculine -aa adjective too."
+        },
+        "cutting_intro": "Heads up, this is the one most learners miss. A little postposition can shift the adjective again.",
+        "quick_check": {
+          "question": "How do you say 'in the big room'?",
+          "options": [
+            "bada kamra mein",
+            "bada kamre mein",
+            "bade kamre mein"
+          ],
+          "correct_index": 2,
+          "explanation": "The postposition mein puts everything into the oblique, so both words take -e: bade kamre mein."
+        }
+      },
+      {
+        "heading": "Possessives agree too",
+        "body": "Words like `mera` (my), `tera` (your), `uska` (his / her), and `hamara` (our) are really just changing adjectives in disguise. They end in `-aa`, so they follow the same three-form rule, and they agree with the **thing owned**, not the owner.\n- `mera kamra` (my room) / owned thing is masculine\n- `meri kursi` (my chair) / owned thing is feminine\n- `mere joote` (my shoes) / owned thing is masculine plural\n\nThey also take the oblique shift: `mere kamre mein` (in my room). The demonstratives `yeh` (this) and `woh` (that) are different, they do not change for gender at all, so any agreement in the phrase rides on the adjective instead.",
+        "examples": [
+          {
+            "hindi": "mera naya phone",
+            "english": "my new phone",
+            "breakdown": "both mera and naya take -aa for the masculine phone"
+          },
+          {
+            "hindi": "meri nayi gaadi",
+            "english": "my new car",
+            "breakdown": "both shift to -i for the feminine gaadi"
+          },
+          {
+            "hindi": "uske acche dost",
+            "english": "his good friends",
+            "breakdown": "masculine plural, so uske and acche both take -e"
+          }
+        ],
+        "callout": {
+          "tone": "tip",
+          "body": "Treat mera / tera / uska / hamara as ordinary -aa adjectives. They always match the owned noun, so 'my sister' is meri behen even though the speaker may be male."
+        },
+        "cutting_intro": "Good news, the words for my and your already follow the rule you just learned. They're changing adjectives too.",
+        "quick_check": {
+          "question": "Why is it `meri behen` and not `mera behen`?",
+          "options": [
+            "Because the speaker is female",
+            "Because the owned noun (behen) is feminine",
+            "Because behen is plural"
+          ],
+          "correct_index": 1,
+          "explanation": "Possessives agree with the owned thing, not the owner. behen (sister) is feminine, so the possessive takes the -i form: meri behen."
+        }
+      },
+      {
+        "heading": "Comparing things",
+        "body": "Hindi has no `-er` or `-est` ending. You compare with small words and leave the adjective to agree normally.\n- more than X / put `X se` before the adjective (`se` means than): `yeh us se accha hai` (this is better than that)\n- add `zyada` for emphasis: `yeh us se zyada accha hai` (this is even better)\n- the most / use `sabse` (than all): `yeh sabse accha hai` (this is the best)\n\nThe adjective still agrees with its own noun the whole time, so with a feminine noun it stays in the `-i` form: `yeh sabse acchi chai hai` (this is the best tea). Note that the thing you compare against takes a postposition (`se`), so it sits in the oblique: `us chai se` (than that tea).",
+        "examples": [
+          {
+            "hindi": "yeh us se accha hai",
+            "english": "this is better than that",
+            "breakdown": "us se = than that; accha agrees with the masculine subject"
+          },
+          {
+            "hindi": "yeh sabse acchi mithai hai",
+            "english": "this is the best sweet",
+            "breakdown": "sabse = than all; acchi agrees with the feminine mithai"
+          },
+          {
+            "hindi": "yeh kamra us kamre se bada hai",
+            "english": "this room is bigger than that room",
+            "breakdown": "us kamre se is oblique before se; bada agrees with the masculine subject"
+          }
+        ],
+        "callout": {
+          "tone": "note",
+          "body": "There are also ready-made comparison words borrowed into Hindi, behtar (better) and behtareen (best). These are flat and don't change, handy when you want a quick option."
+        },
+        "cutting_intro": "Last piece. Hindi doesn't add -er or -est. You compare with little words instead, and the adjective just keeps agreeing.",
+        "quick_check": {
+          "question": "How do you say 'this is better than that'?",
+          "options": [
+            "yeh accha-er hai",
+            "yeh us se accha hai",
+            "yeh sabse accha hai"
+          ],
+          "correct_index": 1,
+          "explanation": "Use X se (than X): yeh us se accha hai. sabse accha would mean the best (of all), not better than that."
+        }
+      }
+    ],
+    "wrap_up": "Adjectives come down to one habit: check the last sound. If it ends in -aa, it changes (accha, acchi, acche); if not, it stays flat (saaf, laal, mushkil). Watch for the oblique shift when a postposition appears (bada kamra becomes bade kamre mein), remember that possessives play by the same rule, and build comparisons with se and sabse instead of an English ending. The phrases below put all of this into real sentences, so read each one and notice exactly why the ending landed where it did."
+  }
+}

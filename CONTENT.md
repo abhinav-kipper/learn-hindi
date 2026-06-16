@@ -20,7 +20,7 @@ Conversational Hindi taught through scenarios. Each lesson: 9-10 phrases + gramm
 | `09-doctor-visit` | At the Doctor | Describing symptoms at a clinic | body parts & pain, describing symptoms, polite requests, asking about restrictions |
 | `10-phone-with-parents` | Phone Call with Parents | Weekly Sunday call with mummy & papa | sustained aap register, family terms, future plans, feminine future-tense verbs |
 
-### Foundations (`content/foundations/*.json`) — 9 lessons
+### Foundations (`content/foundations/*.json`) — 10 lessons
 Grammar core. Same schema as situations. As of 2026-05-26 all 9 foundations have full skill_breakdowns (was previously a gap for 01-06; backfilled and 2 new foundations — compound-verbs + ne-rule — added).
 
 **Textbook chapters (new 2026-05-26):** Foundations can now have an optional `theory` block — a scrollable textbook-style chapter that opens BEFORE the phrase carousel (intro paragraph + 3-5 sub-sections each with heading + body paragraphs + optional conjugation table / worked examples / tone-coded callout + wrap-up + CTA "got it — try the phrases →"). Pilot: `07-noun-gender` has the first chapter. Other 8 foundations are pending the same treatment. See the Schema section below for the `Theory` / `TheorySection` / `TheoryTable` / `TheoryExample` / `TheoryCallout` types.
@@ -36,6 +36,7 @@ Grammar core. Same schema as situations. As of 2026-05-26 all 9 foundations have
 | `07-noun-gender` | Noun Gender |
 | `08-compound-verbs` | Compound Verbs (le/de/kar dena) |
 | `09-ne-rule` | The 'ne' Rule (Ergative Past) |
+| `10-adjectives` | Adjectives & Agreement |
 
 ### Vocabulary (`content/vocabulary.json`)
 6 categories × ~15-20 words = **100 words total**: Everyday Words, Emotions & Feelings, Food & Drinks, People & Relationships, Time & Numbers, Actions.
