@@ -148,7 +148,7 @@ export function DuelGame({ duel }: { duel: Duel }) {
           correction: `${current.prompt} is ${correctLabel.toLowerCase()}`,
           reason: current.explain || '',
         },
-        'noun-gender',
+        duel.mistakeLessonId ?? 'noun-gender',
         prefix,
         'quiz',
       )

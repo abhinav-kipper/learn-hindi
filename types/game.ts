@@ -34,6 +34,8 @@ export interface Duel {
   right: DuelSide
   /** how many rounds to draw per play (default 30) */
   rounds?: number
+  /** lesson id to file wrong answers under in the mistakes system (default 'noun-gender') */
+  mistakeLessonId?: string
   items: DuelItem[]
 }
 

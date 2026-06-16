@@ -2,6 +2,7 @@ import type { Duel, DuelItem } from '@/types/game'
 import genderDuel from '@/content/games/hindi/gender-duel.json'
 import neRuleDuel from '@/content/games/hindi/ne-rule.json'
 import haiHainDuel from '@/content/games/hindi/hai-hain.json'
+import registerDuel from '@/content/games/hindi/register-duel.json'
 import deHetDuel from '@/content/games/dutch/de-het.json'
 import hebbenZijnDuel from '@/content/games/dutch/hebben-zijn.json'
 
@@ -9,6 +10,7 @@ const DUELS: Duel[] = [
   genderDuel as Duel,
   neRuleDuel as Duel,
   haiHainDuel as Duel,
+  registerDuel as Duel,
   deHetDuel as Duel,
   hebbenZijnDuel as Duel,
 ]

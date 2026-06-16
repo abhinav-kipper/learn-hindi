@@ -1,0 +1,294 @@
+{
+  "id": "register",
+  "language": "hindi",
+  "title": "Aap or Tum",
+  "subtitle": "Which 'you' fits this person?",
+  "question": "How would you address this person?",
+  "tip": "When in doubt, pick aap, it is never rude. Switch to tum once you are clearly friends or peers, or with younger family. The third level, tu, is only for real closeness, small children, or open anger, so as a learner you rarely need it.",
+  "mistakeLessonId": "pronouns-verbs",
+  "left": {
+    "label": "AAP",
+    "bullets": [
+      "Anyone older or senior: bosses, teachers, elders, officials.",
+      "Strangers and people you have only just met.",
+      "Formal and service settings: doctors, clerks, interviewers, customers.",
+      "The safe default. aap is never rude, so when unsure, choose it."
+    ]
+  },
+  "right": {
+    "label": "TUM",
+    "bullets": [
+      "Close friends and people your own age you are comfortable with.",
+      "Younger family: little brothers, sisters, younger cousins.",
+      "Children and juniors you already know well.",
+      "Warm but still polite. The even more intimate tu is only for very close bonds, small kids, or anger."
+    ]
+  },
+  "rounds": 30,
+  "items": [
+    {
+      "prompt": "a stranger on the street",
+      "answer": "left",
+      "hint": "someone you don't know",
+      "explain": "With anyone new to you, start with the respectful aap."
+    },
+    {
+      "prompt": "your new boss",
+      "answer": "left",
+      "hint": "your manager at work",
+      "explain": "A senior at work always takes aap."
+    },
+    {
+      "prompt": "your school teacher",
+      "answer": "left",
+      "hint": "your teacher",
+      "explain": "Teachers are shown respect, so aap."
+    },
+    {
+      "prompt": "a police officer",
+      "answer": "left",
+      "hint": "a policeman",
+      "explain": "Officials and authority figures take the respectful aap."
+    },
+    {
+      "prompt": "an elderly man",
+      "answer": "left",
+      "hint": "a much older man",
+      "explain": "Anyone clearly older than you takes aap."
+    },
+    {
+      "prompt": "a shopkeeper you don't know",
+      "answer": "left",
+      "hint": "a shop owner, first time",
+      "explain": "A stranger in a service setting takes aap."
+    },
+    {
+      "prompt": "your father-in-law",
+      "answer": "left",
+      "hint": "your spouse's father",
+      "explain": "In-laws are addressed with respect, so aap."
+    },
+    {
+      "prompt": "a job interviewer",
+      "answer": "left",
+      "hint": "the person interviewing you",
+      "explain": "An interview is formal, so aap throughout."
+    },
+    {
+      "prompt": "the doctor",
+      "answer": "left",
+      "hint": "your doctor",
+      "explain": "A doctor is a professional you respect, so aap."
+    },
+    {
+      "prompt": "an older aunty next door",
+      "answer": "left",
+      "hint": "an older neighbour woman",
+      "explain": "An older neighbour takes the respectful aap."
+    },
+    {
+      "prompt": "a government clerk",
+      "answer": "left",
+      "hint": "an office official",
+      "explain": "Formal office dealings take aap."
+    },
+    {
+      "prompt": "your friend's parents",
+      "answer": "left",
+      "hint": "a friend's mother or father",
+      "explain": "Elders, even a friend's, take aap."
+    },
+    {
+      "prompt": "a customer at your shop",
+      "answer": "left",
+      "hint": "someone buying from you",
+      "explain": "Customers are addressed politely with aap."
+    },
+    {
+      "prompt": "pandit ji at the temple",
+      "answer": "left",
+      "hint": "the temple priest",
+      "explain": "A religious figure is shown respect, so aap."
+    },
+    {
+      "prompt": "a senior colleague",
+      "answer": "left",
+      "hint": "an older coworker",
+      "explain": "A senior at work takes aap until they invite tum."
+    },
+    {
+      "prompt": "your professor",
+      "answer": "left",
+      "hint": "your university teacher",
+      "explain": "Professors take the respectful aap."
+    },
+    {
+      "prompt": "a bank officer",
+      "answer": "left",
+      "hint": "the person at the bank desk",
+      "explain": "A formal service setting takes aap."
+    },
+    {
+      "prompt": "your grandfather",
+      "answer": "left",
+      "hint": "dada ji or nana ji",
+      "explain": "Grandparents are honoured with aap."
+    },
+    {
+      "prompt": "an elderly woman on the bus",
+      "answer": "left",
+      "hint": "an old lady, a stranger",
+      "explain": "An older stranger takes aap, doubly so for age."
+    },
+    {
+      "prompt": "a guest visiting your home",
+      "answer": "left",
+      "hint": "a visitor, not a close friend",
+      "explain": "Guests are welcomed with the respectful aap."
+    },
+    {
+      "prompt": "the passport office officer",
+      "answer": "left",
+      "hint": "an official at the counter",
+      "explain": "Officials in formal settings take aap."
+    },
+    {
+      "prompt": "your boss's boss",
+      "answer": "left",
+      "hint": "a senior manager",
+      "explain": "The more senior the person, the clearer the aap."
+    },
+    {
+      "prompt": "your best friend",
+      "answer": "right",
+      "hint": "your closest friend",
+      "explain": "Close friends your age take the friendly tum."
+    },
+    {
+      "prompt": "your younger brother",
+      "answer": "right",
+      "hint": "a little brother",
+      "explain": "Younger siblings take tum."
+    },
+    {
+      "prompt": "your younger sister",
+      "answer": "right",
+      "hint": "a little sister",
+      "explain": "A younger sister takes the casual tum."
+    },
+    {
+      "prompt": "a childhood friend",
+      "answer": "right",
+      "hint": "a friend since childhood",
+      "explain": "Old friends your age take tum."
+    },
+    {
+      "prompt": "a classmate your age",
+      "answer": "right",
+      "hint": "a peer at school",
+      "explain": "Peers you study with take the friendly tum."
+    },
+    {
+      "prompt": "your cousin your own age",
+      "answer": "right",
+      "hint": "a same-age cousin",
+      "explain": "Cousins your age are family and peers, so tum."
+    },
+    {
+      "prompt": "a friend's little brother",
+      "answer": "right",
+      "hint": "a younger kid you know",
+      "explain": "A younger person you know well takes tum."
+    },
+    {
+      "prompt": "a child you are babysitting",
+      "answer": "right",
+      "hint": "a small kid in your care",
+      "explain": "Children take tum (some families even use tu)."
+    },
+    {
+      "prompt": "your college roommate",
+      "answer": "right",
+      "hint": "the friend you live with",
+      "explain": "A close peer you share a room with takes tum."
+    },
+    {
+      "prompt": "a teammate your age",
+      "answer": "right",
+      "hint": "a player on your team",
+      "explain": "Peers on your team take the friendly tum."
+    },
+    {
+      "prompt": "a junior you mentor",
+      "answer": "right",
+      "hint": "someone younger you guide",
+      "explain": "A younger junior you know well takes tum."
+    },
+    {
+      "prompt": "a friend from the gym",
+      "answer": "right",
+      "hint": "a workout buddy your age",
+      "explain": "A peer you are friendly with takes tum."
+    },
+    {
+      "prompt": "your younger cousin sister",
+      "answer": "right",
+      "hint": "a younger cousin",
+      "explain": "Younger family members take tum."
+    },
+    {
+      "prompt": "a buddy you grew up with",
+      "answer": "right",
+      "hint": "a lifelong friend",
+      "explain": "A lifelong friend your age takes tum."
+    },
+    {
+      "prompt": "a kid at the playground",
+      "answer": "right",
+      "hint": "a small child",
+      "explain": "Children take tum in friendly talk."
+    },
+    {
+      "prompt": "your nephew",
+      "answer": "right",
+      "hint": "your sibling's young son",
+      "explain": "A young nephew takes the casual tum."
+    },
+    {
+      "prompt": "a school friend",
+      "answer": "right",
+      "hint": "a friend from school",
+      "explain": "Friends your own age take tum."
+    },
+    {
+      "prompt": "a neighbour your age you joke with",
+      "answer": "right",
+      "hint": "a friendly same-age neighbour",
+      "explain": "A peer you are comfortable with takes tum."
+    },
+    {
+      "prompt": "a close friend's younger sibling",
+      "answer": "right",
+      "hint": "a younger person you know",
+      "explain": "Someone younger you know well takes tum."
+    },
+    {
+      "prompt": "your little niece",
+      "answer": "right",
+      "hint": "your sibling's young daughter",
+      "explain": "A young niece takes the casual tum."
+    },
+    {
+      "prompt": "a friend from college",
+      "answer": "right",
+      "hint": "a university friend your age",
+      "explain": "College friends your age take tum."
+    },
+    {
+      "prompt": "a younger cousin",
+      "answer": "right",
+      "hint": "a cousin younger than you",
+      "explain": "Younger cousins take the friendly tum."
+    }
+  ]
+}

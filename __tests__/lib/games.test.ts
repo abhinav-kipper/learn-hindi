@@ -33,7 +33,7 @@ describe('duel loader', () => {
   })
 
   it('finds each expected duel by id', () => {
-    for (const id of ['gender', 'ne-rule', 'hai-hain', 'de-het', 'hebben-zijn']) {
+    for (const id of ['gender', 'ne-rule', 'hai-hain', 'register', 'de-het', 'hebben-zijn']) {
       expect(getDuelById(id)).toBeDefined()
     }
   })
