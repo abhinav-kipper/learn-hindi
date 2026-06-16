@@ -37,6 +37,7 @@ const STATIC_ROUTES = [
   '/settings',
   '/mistakes',
   '/favorites',
+  '/diary',
   '/learn',
   '/vocabulary',
   '/play',

@@ -149,6 +149,7 @@ shadows anywhere.
 | Path | Purpose |
 |------|---------|
 | `/` | Home — peach gradient header band w/ Cutting mascot, compact search + mute icon buttons + animated streak chip, daily-goal bar fills 0→pct, marigold divider, Continue rickshaw-chip, Talk-to-Chaina card, Situations/Foundations tab pill (sliding cream indicator via Framer `layoutId`), staggered lesson sticker list (completed lessons collapse into a DoneFold). **Decluttered 2026-06-16:** search shrank from a full-width bar to an icon, and the Sounds + Stories sections moved off home into the new `/learn` hub. |
+| `/diary` | **Chai Diary** (Hindi-only daily journal). Cool-neutral bg, focused writing screen (nav hidden). Header: back chevron + "Chai Diary" + coral journal-streak chip + segmented "today's page / the diary" + Holi-dots garland. **Today:** ruled cream `PageSurface` (margin rule + punch holes), date header + corner Mascot, the day's prompt (deterministic by date) with "Chaina padhegi" (natural Anika TTS of the Devanagari) + peek (English), a handwriting-face `<textarea>` on ruled lines. Actions: 🔍 check (model `/api/journal-check`, offline regex fallback) opens a spring-in modal of gentle fixes; "tuck into the diary →" stamps it done + Confetti, shows Chaina's reaction bubble (mood by sentiment) + "chaina's little notes" fixes (saved as mistakes under `__journal__`). **The diary:** streak card + 21-day cool-mint calendar heatmap + flip-back book of past entries (3D page turn, ribbon bookmark, per-page "translate" reveal). Entries persist per-date, per-language. |
 | `/learn` | "Learn" hub (the renamed `words` bottom-nav tab). Themed header band + link cards: Vocabulary (→`/vocabulary`), Sounds (→`/sounds` for Hindi, `/dutch/sounds` for Dutch, w/ `N/M stages`), and (Hindi only) the Stories section (StoryCards + read DoneFold) moved here from home. |
 | `/lessons/[id]` | Single-page lesson view: palette-matched header w/ chapter tag + title + 3 skill chips, segmented per-phrase progress, phrase Sticker w/ ⭐ star, hindi headline, butter pronunciation pill, lavender→mint reveal-zone, "hear it" TTS, prev/next, "mark chapter complete". On complete → full celebration screen w/ confetti + expanding rings + happy-hop Cutting + 3-up stat stickers + practice CTA |
 | `/practice/[id]` | AI chat. Butter header w/ happy Cutting + hands-free/reset/finish toolbar pills. Mint scenario sticker w/ chai motif. AI bubbles = white stickers w/ teal Cutting avatar; user bubbles = peach stickers; correction stickers = butter w/ dashed border. Bottom input bar: orange mic pill + white text input pill + green send. Tutor reply tagged `[[CORRECTION: original="…" correct="…" reason="…"]]` saved as mistake |
@@ -186,6 +187,7 @@ shadows anywhere.
 | `personalization.ts` | Onboarding reason reorders Hindi lessons (family/bollywood/moving/curious) |
 | `sounds.ts` | 8 generative Web Audio sounds (tap/correct/wrong/complete/swipe/streak/levelup/pop) — prefers designed ElevenLabs clips (`content/sfx-audio.json` → `public/audio/sfx/`), falls back to the synth. **Cute Duolingo-style palette** — sine+triangle waves, major-interval chimes, pitch glides via `playGlide`. Plus `playCombo(streak)` — escalating pentatonic combo reward (synth-only). Vibration patterns paired per sound. Mute toggle persisted in `bolna-seekho-muted` |
 | `ambient.ts` | Faint looping background soundscape per track (chai-stall hum / café terrace). Opt-in, OFF by default (`bolna-seekho-ambient`). `startAmbient(track)`/`stopAmbient()`/`isAmbientOn()`/`setAmbientOn(on,track)`. Fades, loops, respects global mute, starts on a user gesture. Clips at `public/audio/ambient/{hindi,dutch}.mp3`. TDD'd, 5 tests. |
+| `journal.ts` | **Chai Diary** engine. 14 curated daily `PROMPTS` (`hi` Devanagari for TTS, `hinglish` shown, `en` peek, `starter`, `tag`). `promptForDate` (deterministic by day-of-year), per-date per-prefix storage (`${prefix}-journal-<YYYY-MM-DD>` → entry/done/reaction/mood/fixes/translation), `getArchive`/`getJournaledDateKeys`/`getJournalStreak`/`getCalendar` derived from real history, and `analyzeEntryOffline` (safe regex fallback that never nitpicks house romanisation). TDD'd, 15 tests. |
 | `offline-cache.ts` | PWA offline precache warm-up. `getAllRoutes()` (route list from bundled content), `getAudioUrls(lang)`, `warmOfflineCache({audio,language,onProgress})` (fetches every route doc → `bs-pages-v1`, parses + fetches `/_next/static` assets, optionally all audio → `bs-audio-v1`), `autoWarmOfflineCache(lang)` (once/day background, no audio, data-saver-aware). Cache names mirror `public/sw.js`. TDD'd, 8 tests. |
 | `last-active-lesson.ts` | Powers Continue CTA on home |
 | `quiz.ts` | Quiz scores, average |
@@ -229,7 +231,7 @@ from these. Always import via the barrel `@/components/design`.
 
 | File | What it does |
 |------|--------------|
-| `bottom-nav.tsx` | Floating white sticker pill at the bottom of all non-fullscreen pages. Active-tab cream pill slides via Framer `layoutId`. Hidden on `/lessons/*`, `/practice/*`, `/play/duel/*`, `/onboarding`. Tabs: `home` (`/`), `play` (`/play`, Quizzes + Games), `learn` (`/learn`, Vocabulary + Sounds + Stories hub; was `words`→`/vocabulary`), `you` (`/progress`), plus the language-toggle flag. |
+| `bottom-nav.tsx` | Floating white sticker pill at the bottom of all non-fullscreen pages. Active-tab cream pill slides via Framer `layoutId`. Hidden on `/lessons/*`, `/practice/*`, `/play/duel/*`, `/onboarding`. Tabs: `home` (`/`), `play` (`/play`, Quizzes + Games), `learn` (`/learn`, Vocabulary + Sounds + Stories hub; was `words`→`/vocabulary`), `diary` (`/diary`, **Hindi-only**, coral book icon, inserted between learn and you), `you` (`/progress`), plus the language-toggle flag. Nav also hides on `/diary`. |
 | `design/MomentStage.tsx` | **Chaina moments system.** `ChainaProvider` mounts once in `app/layout.tsx`. `useChaina()` returns `{ play(key), stop() }`. **22 moments** registered in `moments.ts` (welcomeBack/correctAnswer/lessonComplete/streakMilestone/newContent/knmAttemptComplete/knmPassed/lezenStudyDone/lezenMockPassed/a2Milestone/dailyGoalReached/etc). Each moment fires `<Cutting>` + `<SpeechBubble>` w/ animations, plus voice via `chainaVoice.play()` (MP3 → speechSynthesis fallback). Frequency caps in `chainaFrequency.ts`. |
 | `search-overlay.tsx` | Full-screen search modal triggered from the home magnifying-glass. Language-aware index. Locks body scroll, restores focus on close, Esc to dismiss |
 | `daily-review-popup.tsx` | Butter bottom-sheet w/ Cutting, fires every 24h after first lesson complete. Mixes vocab + lesson phrases through SRS |
@@ -277,6 +279,7 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `${prefix}-vocab-learned`
 - `${prefix}-vocab-archived` — JSON array of romanized Hindi headwords the user has archived from the vocab category pages. Migrated additively from the legacy global `vocab-known` on first read.
 - `${prefix}-last-active-lesson`
+- `${prefix}-journal-<YYYY-MM-DD>` — Chai Diary: one entry per date `{ entry, done, ts, reaction, mood, fixes, translation }`. Streak/calendar/archive derived from these. Mistakes from the check save under `lessonId: '__journal__'`.
 - `${prefix}-home-tab` — restores Situations vs Foundations
 - `bolna-seekho-muted` (global, not prefixed) — sound mute toggle
 - `bolna-seekho-ambient` (global) — ambient soundscape on/off (`'1'`/`'0'`, default off). Set via the Settings "ambient" toggle; read by `lib/ambient.ts`.
@@ -307,6 +310,28 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-pron-earquiz-done` — JSON array of "Sounds" stage ids whose ear-quiz passed. Stage completion + the rolling unlock are derived from these two sets.
 
 ### Recent feature work log
+
+**2026-06-16 — Chai Diary (daily journal) + home declutter**
+
+A daily journaling feature (design handover from Claude design, recreated in the
+codebase). Once a day Chaina asks one warm personal question; the learner writes
+a short entry in **romanised Hindi (Hinglish, never Devanagari)**, hears the
+prompt in Chaina's natural Anika voice, can peek the English, run a model-backed
+**check** for a few gentle fixes, then **tuck the page in**. Past entries live in
+a flip-back archive with a cool-mint streak calendar. Hindi-only (prompts are
+Hindi). Files: `lib/journal.ts` (engine, TDD'd), `app/api/journal-check/route.ts`
+(Gemini `generateObject` → reaction/mood/fixes/translation, offline regex
+fallback), `components/journal/JournalScreen.tsx` (the screen), `components/
+journal/DiaryHomeCard.tsx` (home "aaj ka sawaal" entry), `app/diary/page.tsx`.
+New journal tokens + `HOLI_DOTS` in `tokens.ts`; journal keyframes (`jbar`,
+`jspring`, `jstamp`, `book-next/prev`, `galli-bob`, …) in `animations.css`.
+Diary tab added to `bottom-nav` (Hindi only); `/diary` precached + nav hidden.
+Prompt audio: each prompt's romanized→Devanagari pair added to
+`hi-translit.json` and rendered to Anika clips (per the natural-voice pipeline).
+Corrections persist as mistakes under `lessonId: '__journal__'`. Storage key
+`${prefix}-journal-<YYYY-MM-DD>`. The home was also decluttered just before this
+(search→icon, Sounds+Stories→`/learn` hub) so the diary card has a clean lane.
+
 
 **2026-06-03 — Games: Sentence Builder (Hindi, second game type)**
 

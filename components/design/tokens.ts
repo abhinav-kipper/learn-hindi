@@ -30,7 +30,19 @@ export const COLORS = {
   rose: '#f6b6c0',
   redBg: '#ffd6d6',
   red: '#e85a5a',
+
+  // Chai Diary (journal) — a cooler, festive layer on top of the ink/cream base.
+  journalBg: '#e9e7dd', // cool neutral page background
+  journalPaper: '#fdfaf3', // bright cream diary paper
+  journalLine: '#d8d3c4', // warm hairline (margin rule + punch holes)
+  journalAccent: '#2c9b8c', // fresh teal — primary CTA / today ring
+  journalAccent2: '#e8806b', // warm coral — streak / ribbon / stamp / diary tab
+  journalAccentSoft: '#e6efea', // pale mint — secondary button
+  journalFill: '#a6d0c4', // cool-mint heatmap fill (journaled days)
 } as const
+
+// Holi powder-dot garland used on the diary screen.
+export const HOLI_DOTS = ['#e8806b', '#f2b13c', '#2c9b8c', '#8b7cc8', '#ec7fa0'] as const
 
 export const FONTS = {
   display: 'var(--font-bricolage), system-ui, sans-serif',

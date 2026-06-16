@@ -27,6 +27,7 @@ export type { Theme, MascotProps, MascotMood } from './theme'
 
 export {
   COLORS,
+  HOLI_DOTS,
   FONTS,
   RADIUS,
   SHADOW,

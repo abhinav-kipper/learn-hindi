@@ -62,3 +62,27 @@
 /* Hide scrollbars for sticker-list scroll regions */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
+
+/* Chai Diary (journal) keyframes */
+@keyframes galli-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+@keyframes jbar { 0%, 100% { transform: scaleY(0.35); } 50% { transform: scaleY(1); } }
+@keyframes jrise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes jstamp {
+  0% { transform: scale(0) rotate(-20deg); }
+  60% { transform: scale(1.2) rotate(-6deg); }
+  100% { transform: scale(1) rotate(-7deg); }
+}
+@keyframes jpop { 0% { transform: scale(0.7); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+@keyframes jspring { 0% { transform: scale(0.6); opacity: 0; } 55% { transform: scale(1.06); opacity: 1; } 100% { transform: scale(1); } }
+@keyframes jfade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes book-next {
+  0% { transform: perspective(1500px) rotateY(-92deg); transform-origin: left center; opacity: 0.15; filter: brightness(0.9); }
+  100% { transform: perspective(1500px) rotateY(0); transform-origin: left center; opacity: 1; filter: none; }
+}
+@keyframes book-prev {
+  0% { transform: perspective(1500px) rotateY(92deg); transform-origin: right center; opacity: 0.15; filter: brightness(0.9); }
+  100% { transform: perspective(1500px) rotateY(0); transform-origin: right center; opacity: 1; filter: none; }
+}

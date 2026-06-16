@@ -27,6 +27,7 @@ import { getStudiedCount as getLuisterStudiedCount } from '@/lib/dutch/luisteren
 import { getCourseProgress as getSoundsCourseProgress } from '@/lib/dutch/pronunciation'
 import { getItemsByLevel, ALL_LEVELS, type Level } from '@/lib/dutch/level-map'
 import type { Lesson } from '@/types/lesson'
+import { DiaryHomeCard } from '@/components/journal/DiaryHomeCard'
 
 const W = '#fff' // @design-allow: white literal
 
@@ -567,6 +568,18 @@ export default function Home() {
         >
           <MarigoldStrip count={9} />
         </div>
+
+        {/* CHAI DIARY — daily prompt, the home entry point (Hindi only) */}
+        {language === 'hindi' && (
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, type: 'spring', stiffness: 240, damping: 22 }}
+            style={{ padding: '0 20px', maxWidth: 480, margin: '0 auto 14px', position: 'relative', zIndex: 2 }}
+          >
+            <DiaryHomeCard />
+          </motion.div>
+        )}
 
         {/* CONTINUE RICKSHAW-CHIP */}
         {continueInfo && (

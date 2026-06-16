@@ -10,17 +10,30 @@ import { playSound } from '@/lib/sounds'
 import { COLORS, FONTS, BORDER, SHADOW, useTheme } from '@/components/design'
 const W = '#fff' // @design-allow: white literal
 
-const tabs = [
+// Chai Diary tab uses a warm coral fill (journalAccent2).
+const DIARY_CORAL = COLORS.journalAccent2
+
+type Tab = { href: string; label: string; icon: (p: { active: boolean }) => React.ReactElement; requiresLesson: boolean }
+
+const BASE_TABS: Tab[] = [
   { href: '/', label: 'home', icon: HomeIcon, requiresLesson: false },
   { href: '/play', label: 'play', icon: QuizIcon, requiresLesson: false },
   { href: '/learn', label: 'learn', icon: VocabIcon, requiresLesson: false },
   { href: '/progress', label: 'you', icon: ProgressIcon, requiresLesson: false },
 ]
+// The Chai Diary is Hindi-only (its prompts are in Hindi), so the tab appears
+// between "learn" and "you" on the Hindi track only.
+const DIARY_TAB: Tab = { href: '/diary', label: 'diary', icon: DiaryIcon, requiresLesson: false }
 
 export function BottomNav() {
   const pathname = usePathname()
   const { config, toggle } = useLanguage()
   const [hasCompletedLesson, setHasCompletedLesson] = useState(true)
+
+  const tabs =
+    config.code === 'hindi'
+      ? [...BASE_TABS.slice(0, 3), DIARY_TAB, ...BASE_TABS.slice(3)]
+      : BASE_TABS
 
   useEffect(() => {
     const progress = getProgress(config.storagePrefix)
@@ -33,6 +46,7 @@ export function BottomNav() {
     pathname.startsWith('/play/duel/') ||
     pathname.startsWith('/play/sentence/') ||
     pathname.startsWith('/chaina') ||
+    pathname.startsWith('/diary') ||
     pathname.startsWith('/onboarding') ||
     pathname.startsWith('/_dev')
   ) {
@@ -252,6 +266,19 @@ function VocabIcon({ active }: { active: boolean }) {
       <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
       <path d="M8 7h8" />
       <path d="M8 11h6" />
+    </svg>
+  )
+}
+
+// Chai Diary — a little closed book (cover + spine + a page line).
+function DiaryIcon({ active }: { active: boolean }) {
+  const stroke = active ? COLORS.ink : COLORS.ink60
+  const fill = active ? DIARY_CORAL : 'none'
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill={fill} stroke={stroke} strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="5" y="3" width="14" height="18" rx="2" />
+      <line x1="9" y1="3" x2="9" y2="21" />
+      <path d="M12.5 8H16" />
     </svg>
   )
 }
