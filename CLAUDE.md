@@ -678,6 +678,20 @@ Run tests: `npx vitest run` (or `npx vitest` for watch mode)
 3. **Prettier with `--check` in CI** — Add `prettier --check .` to the CI
    workflow. Keeps diffs clean and prevents whitespace noise in PRs.
 
+3a. **Chai Diary — edit a tucked-in entry** (requested 2026-06-16, build later).
+   Today once you "tuck into the diary" the entry is read-only for the rest of
+   the day. Add an "edit" affordance on the tucked-in `TodayPage` (and ideally
+   on archive pages for past dates) that returns the page to the writing state
+   with the saved text pre-filled. On re-tuck: re-run the check (re-using the
+   `tuck()` path in `components/journal/JournalScreen.tsx`), overwrite the
+   stored `JournalEntry` for that date via `saveEntry`, refresh `translation`,
+   and **reconcile mistakes** — the simplest correct approach is to delete the
+   prior journal mistakes for that date before re-logging (the current
+   `logMistakesOnce` ref guard assumes one tuck per mount, so it needs an
+   edit-aware reset). Keep edits scoped to the same calendar day's prompt;
+   editing a past archive entry should keep that day's original prompt. Storage
+   key unchanged (`${prefix}-journal-<YYYY-MM-DD>`).
+
 4. **SessionStart hook for AI sessions** — A `.claude/settings.json` hook
    that runs `npx vitest run --reporter=dot 2>&1 | tail -5` on session
    start so each session begins with instant awareness of any broken state.
