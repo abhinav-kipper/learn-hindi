@@ -794,17 +794,6 @@ function SwipeableWordCard({
                 </div>
                 <div
                   style={{
-                    marginTop: 2,
-                    fontFamily: FONTS.body,
-                    fontWeight: 600,
-                    fontSize: 11,
-                    color: COLORS.ink45,
-                  }}
-                >
-                  {word.pronunciation}
-                </div>
-                <div
-                  style={{
                     marginTop: 4,
                     fontFamily: FONTS.body,
                     fontWeight: 700,
