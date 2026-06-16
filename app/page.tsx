@@ -29,6 +29,7 @@ import { getCourseProgress as getHindiSoundsCourseProgress } from '@/lib/hindi/p
 import { getItemsByLevel, ALL_LEVELS, type Level } from '@/lib/dutch/level-map'
 import { getAllStories } from '@/lib/stories'
 import { getStoriesReadCount, getStoriesRead } from '@/lib/stories-progress'
+import type { Lesson } from '@/types/lesson'
 import { StoryCard } from '@/components/stories/StoryCard'
 
 const W = '#fff' // @design-allow: white literal
@@ -41,6 +42,7 @@ import {
   MarigoldStrip,
   StreakChip,
   DottedBg,
+  DoneFold,
   LessonStickerCard,
   COLORS,
   FONTS,
@@ -101,7 +103,6 @@ export default function Home() {
   }, [language, config.storagePrefix])
   const [storiesReadCount, setStoriesReadCount] = useState(0)
   const [readStoryIds, setReadStoryIds] = useState<Set<string>>(new Set())
-  const [storiesFoldOpen, setStoriesFoldOpen] = useState(false)
   useEffect(() => {
     if (language === 'hindi') {
       setStoriesReadCount(getStoriesReadCount())
@@ -957,43 +958,17 @@ export default function Home() {
                     </div>
                   )}
                   {read.length > 0 && (
-                    <div style={{ marginTop: unread.length > 0 ? 12 : 0 }}>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setStoriesFoldOpen((v) => !v)
-                          playSound('tap')
-                        }}
-                        aria-expanded={storiesFoldOpen}
-                        style={{
-                          width: '100%',
-                          padding: '10px 14px',
-                          background: '#fff', // @design-allow: white literal
-                          color: COLORS.ink,
-                          border: BORDER.sticker,
-                          boxShadow: SHADOW.chip,
-                          borderRadius: 99,
-                          fontFamily: FONTS.display,
-                          fontWeight: 800,
-                          fontSize: 12,
-                          cursor: 'pointer',
-                          textTransform: 'lowercase',
-                          display: 'flex',
-                          justifyContent: 'space-between',
-                          alignItems: 'center',
-                        }}
-                      >
-                        <span>✓ {read.length} read</span>
-                        <span style={{ color: COLORS.ink60 }}>{storiesFoldOpen ? 'hide ▴' : 'show ▾'}</span>
-                      </button>
-                      {storiesFoldOpen && (
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 10 }}>
-                          {read.map(({ s, i }) => (
-                            <StoryCard key={s.id} story={s} index={i} />
-                          ))}
-                        </div>
-                      )}
-                    </div>
+                    <DoneFold
+                      count={read.length}
+                      noun="read"
+                      gap={12}
+                      storageKey="learn-hindi:hindi-stories-fold"
+                      style={{ marginTop: unread.length > 0 ? 12 : 0 }}
+                    >
+                      {read.map(({ s, i }) => (
+                        <StoryCard key={s.id} story={s} index={i} />
+                      ))}
+                    </DoneFold>
                   )}
                 </>
               )
@@ -1106,50 +1081,72 @@ export default function Home() {
             margin: '0 auto',
           }}
         >
-          {currentLessons.map((lesson, index) => {
-            const isFirst = index === 0 && activeTab === 'situations'
-            const isLocked =
-              activeTab === 'situations' &&
-              completedCount === 0 &&
-              index > 0 &&
-              language === 'hindi'
+          {(() => {
+            const indexed = currentLessons.map((lesson, index) => ({ lesson, index }))
+            const pending = indexed.filter(({ lesson }) => !isLessonComplete(lesson.id, config.storagePrefix))
+            const done = indexed.filter(({ lesson }) => isLessonComplete(lesson.id, config.storagePrefix))
 
-            const card = (
-              <motion.div
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: 0.25 + index * 0.06,
-                  type: 'spring',
-                  stiffness: 240,
-                  damping: 22,
-                }}
-              >
-                <LessonStickerCard
-                  lesson={lesson}
-                  index={index}
-                  routeBase="lessons"
-                  locked={isLocked}
-                  isNew={language === 'hindi' && !hasBeenSeen(lesson.id)}
-                />
-              </motion.div>
-            )
+            const renderCard = ({ lesson, index }: { lesson: Lesson; index: number }, stagger: number, isFirst: boolean) => {
+              const isLocked =
+                activeTab === 'situations' &&
+                completedCount === 0 &&
+                index > 0 &&
+                language === 'hindi'
 
-            if (isFirst) {
-              return (
-                <FeatureTooltip
-                  key={lesson.id}
-                  id="home"
-                  message="Start here! Tap a lesson to begin learning."
-                  position="bottom"
+              const card = (
+                <motion.div
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    delay: 0.25 + stagger * 0.06,
+                    type: 'spring',
+                    stiffness: 240,
+                    damping: 22,
+                  }}
                 >
-                  {card}
-                </FeatureTooltip>
+                  <LessonStickerCard
+                    lesson={lesson}
+                    index={index}
+                    routeBase="lessons"
+                    locked={isLocked}
+                    isNew={language === 'hindi' && !hasBeenSeen(lesson.id)}
+                  />
+                </motion.div>
               )
+
+              if (isFirst) {
+                return (
+                  <FeatureTooltip
+                    key={lesson.id}
+                    id="home"
+                    message="Start here! Tap a lesson to begin learning."
+                    position="bottom"
+                  >
+                    {card}
+                  </FeatureTooltip>
+                )
+              }
+
+              return <div key={lesson.id}>{card}</div>
             }
 
-            return <div key={lesson.id}>{card}</div>
-          })}
+            return (
+              <>
+                {pending.map((item, i) => renderCard(item, i, i === 0 && activeTab === 'situations'))}
+                <DoneFold
+                  count={done.length}
+                  noun="done"
+                  storageKey={`${config.storagePrefix}-home-${activeTab}-done-fold`}
+                >
+                  {done.map(({ lesson, index }) => (
+                    <div key={lesson.id}>
+                      <LessonStickerCard lesson={lesson} index={index} routeBase="lessons" />
+                    </div>
+                  ))}
+                </DoneFold>
+              </>
+            )
+          })()}
         </div>
       </div>
     </>
