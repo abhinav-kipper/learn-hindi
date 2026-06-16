@@ -25,12 +25,8 @@ import { getLearnedCount } from '@/lib/dutch/knm'
 import { getStudiedCount as getLezenStudiedCount } from '@/lib/dutch/lezen'
 import { getStudiedCount as getLuisterStudiedCount } from '@/lib/dutch/luisteren'
 import { getCourseProgress as getSoundsCourseProgress } from '@/lib/dutch/pronunciation'
-import { getCourseProgress as getHindiSoundsCourseProgress } from '@/lib/hindi/pronunciation'
 import { getItemsByLevel, ALL_LEVELS, type Level } from '@/lib/dutch/level-map'
-import { getAllStories } from '@/lib/stories'
-import { getStoriesReadCount, getStoriesRead } from '@/lib/stories-progress'
 import type { Lesson } from '@/types/lesson'
-import { StoryCard } from '@/components/stories/StoryCard'
 
 const W = '#fff' // @design-allow: white literal
 
@@ -94,21 +90,12 @@ export default function Home() {
   const lessons =
     language === 'hindi' ? reorderLessonsByReason(rawLessons, reason) : rawLessons
 
-  const hindiStories = useMemo(() => (language === 'hindi' ? getAllStories() : []), [language])
   const [chainaHasMessage, setChainaHasMessage] = useState(false)
   useEffect(() => {
     if (language !== 'hindi') return
     const mem = getMemory(config.storagePrefix)
     setChainaHasMessage(mem.chatCount > 0 && mem.threads.length > 0 && isReturning(mem, 12))
   }, [language, config.storagePrefix])
-  const [storiesReadCount, setStoriesReadCount] = useState(0)
-  const [readStoryIds, setReadStoryIds] = useState<Set<string>>(new Set())
-  useEffect(() => {
-    if (language === 'hindi') {
-      setStoriesReadCount(getStoriesReadCount())
-      setReadStoryIds(new Set(getStoriesRead()))
-    }
-  }, [language])
 
   const dutchExamLessons = useMemo(
     () => (language === 'dutch' ? lessons.filter((l) => l.exam_targeted === true) : []),
@@ -279,16 +266,6 @@ export default function Home() {
     }
   }, [language])
 
-  const [hindiSoundsDone, setHindiSoundsDone] = useState(0)
-  const [hindiSoundsTotal, setHindiSoundsTotal] = useState(6)
-  useEffect(() => {
-    if (language === 'hindi') {
-      const p = getHindiSoundsCourseProgress()
-      setHindiSoundsDone(p.completed)
-      setHindiSoundsTotal(p.total)
-    }
-  }, [language])
-
   const dutchStageProgress = useMemo(() => {
     const empty: Record<Level, { done: number; total: number }> = {
       A1: { done: 0, total: 0 },
@@ -398,7 +375,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* search + mute pill + streak chip */}
+          {/* search + mute icons + streak chip */}
           <div
             style={{
               marginTop: 12,
@@ -410,86 +387,73 @@ export default function Home() {
               marginRight: 'auto',
             }}
           >
-            <div
+            <button
               onClick={() => {
                 playSound('tap')
                 setSearchOpen(true)
               }}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault()
-                  playSound('tap')
-                  setSearchOpen(true)
-                }
-              }}
-              role="button"
-              tabIndex={0}
               aria-label="Search lessons"
               style={{
-                flex: 1,
+                width: 38,
+                height: 38,
+                borderRadius: 99,
                 background: '#fff', // @design-allow: white literal
                 border: BORDER.sticker,
-                borderRadius: 99,
-                padding: '7px 14px',
+                boxShadow: SHADOW.chip,
                 display: 'flex',
                 alignItems: 'center',
-                gap: 8,
-                boxShadow: SHADOW.chip,
-                fontFamily: FONTS.body,
-                color: COLORS.ink60,
-                fontSize: 14,
-                fontWeight: 600,
+                justifyContent: 'center',
                 cursor: 'pointer',
+                color: COLORS.ink,
+                padding: 0,
+                flexShrink: 0,
               }}
             >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.8"
-                strokeLinecap="round"
-              >
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.8" strokeLinecap="round">
                 <circle cx="11" cy="11" r="7" />
                 <path d="M21 21l-4.3-4.3" />
               </svg>
-              search…
-              <button
-                onClick={(e) => {
-                  e.stopPropagation()
-                  const m = toggleMute()
-                  setMuted(m)
-                  // Keep the ambient bed in sync with the global mute.
-                  if (m) stopAmbient()
-                  else startAmbient(language === 'dutch' ? 'dutch' : 'hindi')
-                }}
-                aria-label={muted ? 'Unmute sounds' : 'Mute sounds'}
-                style={{
-                  marginLeft: 'auto',
-                  background: 'transparent',
-                  border: 'none',
-                  padding: 0,
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  color: COLORS.ink,
-                }}
-              >
-                {muted ? (
-                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M10 3.75a.75.75 0 0 0-1.264-.546L4.703 7H3.167a.75.75 0 0 0-.7.48A6.985 6.985 0 0 0 2 10c0 .887.165 1.737.468 2.52.111.29.39.48.7.48h1.535l4.033 3.796A.75.75 0 0 0 10 16.25V3.75Z" />
-                    <path d="M14.22 7.22a.75.75 0 0 1 1.06 0L16.5 8.44l1.22-1.22a.75.75 0 1 1 1.06 1.06L17.56 9.5l1.22 1.22a.75.75 0 1 1-1.06 1.06L16.5 10.56l-1.22 1.22a.75.75 0 1 1-1.06-1.06l1.22-1.22-1.22-1.22a.75.75 0 0 1 0-1.06Z" />
-                  </svg>
-                ) : (
-                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M10 3.75a.75.75 0 0 0-1.264-.546L4.703 7H3.167a.75.75 0 0 0-.7.48A6.985 6.985 0 0 0 2 10c0 .887.165 1.737.468 2.52.111.29.39.48.7.48h1.535l4.033 3.796A.75.75 0 0 0 10 16.25V3.75ZM15.95 5.05a.75.75 0 0 0-1.06 1.061 5.5 5.5 0 0 1 0 7.778.75.75 0 0 0 1.06 1.06 7 7 0 0 0 0-9.899Z" />
-                    <path d="M13.829 7.172a.75.75 0 0 0-1.061 1.06 2.5 2.5 0 0 1 0 3.536.75.75 0 0 0 1.06 1.06 4 4 0 0 0 0-5.656Z" />
-                  </svg>
-                )}
-              </button>
+            </button>
+            <button
+              onClick={() => {
+                const m = toggleMute()
+                setMuted(m)
+                // Keep the ambient bed in sync with the global mute.
+                if (m) stopAmbient()
+                else startAmbient(language === 'dutch' ? 'dutch' : 'hindi')
+              }}
+              aria-label={muted ? 'Unmute sounds' : 'Mute sounds'}
+              style={{
+                width: 38,
+                height: 38,
+                borderRadius: 99,
+                background: '#fff', // @design-allow: white literal
+                border: BORDER.sticker,
+                boxShadow: SHADOW.chip,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                color: COLORS.ink,
+                padding: 0,
+                flexShrink: 0,
+              }}
+            >
+              {muted ? (
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10 3.75a.75.75 0 0 0-1.264-.546L4.703 7H3.167a.75.75 0 0 0-.7.48A6.985 6.985 0 0 0 2 10c0 .887.165 1.737.468 2.52.111.29.39.48.7.48h1.535l4.033 3.796A.75.75 0 0 0 10 16.25V3.75Z" />
+                  <path d="M14.22 7.22a.75.75 0 0 1 1.06 0L16.5 8.44l1.22-1.22a.75.75 0 1 1 1.06 1.06L17.56 9.5l1.22 1.22a.75.75 0 1 1-1.06 1.06L16.5 10.56l-1.22 1.22a.75.75 0 1 1-1.06-1.06l1.22-1.22-1.22-1.22a.75.75 0 0 1 0-1.06Z" />
+                </svg>
+              ) : (
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10 3.75a.75.75 0 0 0-1.264-.546L4.703 7H3.167a.75.75 0 0 0-.7.48A6.985 6.985 0 0 0 2 10c0 .887.165 1.737.468 2.52.111.29.39.48.7.48h1.535l4.033 3.796A.75.75 0 0 0 10 16.25V3.75ZM15.95 5.05a.75.75 0 0 0-1.06 1.061 5.5 5.5 0 0 1 0 7.778.75.75 0 0 0 1.06 1.06 7 7 0 0 0 0-9.899Z" />
+                  <path d="M13.829 7.172a.75.75 0 0 0-1.061 1.06 2.5 2.5 0 0 1 0 3.536.75.75 0 0 0 1.06 1.06 4 4 0 0 0 0-5.656Z" />
+                </svg>
+              )}
+            </button>
+            <div style={{ marginLeft: 'auto' }}>
+              <StreakChip count={streak} onClick={() => playSound('streak')} />
             </div>
-            <StreakChip count={streak} onClick={() => playSound('streak')} />
           </div>
 
           {/* daily goal, pill bar (long-press to edit) */}
@@ -876,104 +840,6 @@ export default function Home() {
               </div>
             </div>
           </>
-        )}
-
-        {/* HINDI SOUNDS, from-zero pronunciation on-ramp */}
-        {language === 'hindi' && (
-          <div style={{ padding: '14px 20px 0', maxWidth: 480, margin: '0 auto', position: 'relative', zIndex: 2 }}>
-            <Sticker color={theme.primary} radius={18} padding={14} onClick={() => { playSound('pop'); router.push('/sounds') }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                <span style={{ fontSize: 30 }}>🔊</span>
-                <div style={{ flex: 1 }}>
-                  <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 17, color: W }}>
-                    Sounds: learn to speak from zero
-                  </div>
-                  <div style={{ fontFamily: FONTS.body, fontSize: 12.5, color: W, opacity: 0.92, marginTop: 2 }}>
-                    <em>uchchaaran</em> · vowels, sounds, words · {hindiSoundsDone}/{hindiSoundsTotal} stages
-                  </div>
-                </div>
-                <span style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 20, color: W }}>→</span>
-              </div>
-            </Sticker>
-          </div>
-        )}
-
-        {/* HINDI STORIES, illustrated motion-comics, scoped to Hindi only */}
-        {language === 'hindi' && hindiStories.length > 0 && (
-          <div
-            style={{
-              padding: '20px 20px 8px',
-              maxWidth: 480,
-              margin: '0 auto',
-              position: 'relative',
-              zIndex: 2,
-            }}
-          >
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                marginBottom: 8,
-              }}
-            >
-              <div
-                style={{
-                  fontFamily: FONTS.display,
-                  fontWeight: 800,
-                  fontSize: 14,
-                  color: COLORS.ink,
-                  textTransform: 'uppercase',
-                  letterSpacing: 1,
-                }}
-              >
-                Stories
-              </div>
-              <div
-                style={{
-                  fontFamily: FONTS.display,
-                  fontWeight: 800,
-                  fontSize: 11,
-                  color: COLORS.ink60,
-                  background: COLORS.cream,
-                  border: BORDER.thin,
-                  padding: '2px 10px',
-                  borderRadius: 999,
-                }}
-              >
-                {storiesReadCount} of {hindiStories.length} read
-              </div>
-            </div>
-            {(() => {
-              const indexed = hindiStories.map((s, i) => ({ s, i }))
-              const unread = indexed.filter(({ s }) => !readStoryIds.has(s.id))
-              const read = indexed.filter(({ s }) => readStoryIds.has(s.id))
-              return (
-                <>
-                  {unread.length > 0 && (
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                      {unread.map(({ s, i }) => (
-                        <StoryCard key={s.id} story={s} index={i} />
-                      ))}
-                    </div>
-                  )}
-                  {read.length > 0 && (
-                    <DoneFold
-                      count={read.length}
-                      noun="read"
-                      gap={12}
-                      storageKey="learn-hindi:hindi-stories-fold"
-                      style={{ marginTop: unread.length > 0 ? 12 : 0 }}
-                    >
-                      {read.map(({ s, i }) => (
-                        <StoryCard key={s.id} story={s} index={i} />
-                      ))}
-                    </DoneFold>
-                  )}
-                </>
-              )
-            })()}
-          </div>
         )}
 
         {/* TABS */}

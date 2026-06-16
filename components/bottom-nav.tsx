@@ -13,7 +13,7 @@ const W = '#fff' // @design-allow: white literal
 const tabs = [
   { href: '/', label: 'home', icon: HomeIcon, requiresLesson: false },
   { href: '/play', label: 'play', icon: QuizIcon, requiresLesson: false },
-  { href: '/vocabulary', label: 'words', icon: VocabIcon, requiresLesson: false },
+  { href: '/learn', label: 'learn', icon: VocabIcon, requiresLesson: false },
   { href: '/progress', label: 'you', icon: ProgressIcon, requiresLesson: false },
 ]
 
