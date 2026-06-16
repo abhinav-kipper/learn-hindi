@@ -21,6 +21,7 @@ import {
   Tag,
   Mascot,
   DottedBg,
+  DoneFold,
   COLORS,
   FONTS,
   BORDER,
@@ -773,24 +774,6 @@ function LessonGroup({
         </div>
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-          {done.length > 0 && (
-            <div
-              style={{
-                fontFamily: FONTS.display,
-                fontWeight: 800,
-                fontSize: 10,
-                color: COLORS.green,
-                textTransform: 'uppercase',
-                letterSpacing: 0.8,
-                marginBottom: -2,
-              }}
-            >
-              ✓ completed ({done.length})
-            </div>
-          )}
-          {done.map(({ lesson, pct }) => (
-            <LessonRow key={lesson.id} title={lesson.title} pct={pct} />
-          ))}
           {active.length > 0 && (
             <div
               style={{
@@ -800,7 +783,6 @@ function LessonGroup({
                 color: COLORS.ink45,
                 textTransform: 'uppercase',
                 letterSpacing: 0.8,
-                marginTop: done.length > 0 ? 6 : 0,
                 marginBottom: -2,
               }}
             >
@@ -811,10 +793,20 @@ function LessonGroup({
             <LessonRow key={lesson.id} title={lesson.title} pct={pct} />
           ))}
           {active.length === 0 && (
-            <div style={{ fontFamily: FONTS.body, fontWeight: 700, fontSize: 12, color: COLORS.green, marginTop: 4 }}>
+            <div style={{ fontFamily: FONTS.body, fontWeight: 700, fontSize: 12, color: COLORS.green, marginBottom: 2 }}>
               all done, nice work 🎉
             </div>
           )}
+          <DoneFold
+            count={done.length}
+            noun="completed"
+            gap={10}
+            storageKey={`${prefix}-progress-${title}-done-fold`}
+          >
+            {done.map(({ lesson, pct }) => (
+              <LessonRow key={lesson.id} title={lesson.title} pct={pct} />
+            ))}
+          </DoneFold>
         </div>
       )}
     </div>

@@ -6,6 +6,7 @@ import {
   Sticker,
   Tag,
   Mascot,
+  DoneFold,
   COLORS,
   FONTS,
   BORDER,
@@ -128,9 +129,19 @@ export default function LezenModulePage() {
               </Sticker>
               {isOpen && (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: 8, paddingLeft: 8 }}>
-                  {texts.map((t) => (
+                  {texts.filter((t) => !isStudied(t.id)).map((t) => (
                     <TextCard key={t.id} text={t} onOpen={() => router.push(`/dutch/lezen/${t.id}`)} />
                   ))}
+                  <DoneFold
+                    count={studiedInTier}
+                    noun="studied"
+                    gap={8}
+                    storageKey={`dutch-lezen-${tier.key}-studied-fold`}
+                  >
+                    {texts.filter((t) => isStudied(t.id)).map((t) => (
+                      <TextCard key={t.id} text={t} onOpen={() => router.push(`/dutch/lezen/${t.id}`)} />
+                    ))}
+                  </DoneFold>
                 </div>
               )}
             </div>

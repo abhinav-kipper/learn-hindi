@@ -25,6 +25,7 @@ import {
   Tag,
   Mascot,
   DottedBg,
+  DoneFold,
   MotifIcon,
   COLORS,
   FONTS,
@@ -210,8 +211,16 @@ export default function VocabularyPage() {
         </motion.div>
 
         {/* CATEGORY GRID */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gridAutoRows: '1fr', gap: 10 }}>
-          {categories.map((category, index) => {
+        {(() => {
+          const indexed = categories.map((category, index) => ({ category, index }))
+          const isDone = ({ category }: { category: VocabCategory }) => {
+            const total = category.words.length
+            return total > 0 && (categoryProgress[category.id] || 0) >= total
+          }
+          const pending = indexed.filter((x) => !isDone(x))
+          const done = indexed.filter(isDone)
+
+          const renderCard = ({ category, index }: { category: VocabCategory; index: number }) => {
             const learned = categoryProgress[category.id] || 0
             const total = category.words.length
             const progressPct = total > 0 ? Math.round((learned / total) * 100) : 0
@@ -329,8 +338,25 @@ export default function VocabularyPage() {
                 </Link>
               </motion.div>
             )
-          })}
-        </div>
+          }
+
+          const gridStyle = { display: 'grid', gridTemplateColumns: '1fr 1fr', gridAutoRows: '1fr', gap: 10 } as const
+
+          return (
+            <>
+              <div style={gridStyle}>{pending.map(renderCard)}</div>
+              <DoneFold
+                count={done.length}
+                noun="completed"
+                gap={10}
+                storageKey={`${config.storagePrefix}-vocab-done-fold`}
+                style={{ marginTop: pending.length > 0 ? 12 : 0 }}
+              >
+                <div style={gridStyle}>{done.map(renderCard)}</div>
+              </DoneFold>
+            </>
+          )
+        })()}
       </div>
     </div>
   )

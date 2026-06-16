@@ -6,6 +6,7 @@ import {
   Sticker,
   Tag,
   Mascot,
+  DoneFold,
   COLORS,
   FONTS,
   useTheme,
@@ -132,9 +133,19 @@ export default function LuisterenModulePage() {
               </Sticker>
               {isOpen && (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginTop: 8, paddingLeft: 8 }}>
-                  {clips.map((c) => (
+                  {clips.filter((c) => !isStudied(c.id)).map((c) => (
                     <ClipCard key={c.id} clip={c} onOpen={() => router.push(`/dutch/luisteren/${c.id}`)} />
                   ))}
+                  <DoneFold
+                    count={studiedInTier}
+                    noun="studied"
+                    gap={8}
+                    storageKey={`dutch-luisteren-${tier.key}-studied-fold`}
+                  >
+                    {clips.filter((c) => isStudied(c.id)).map((c) => (
+                      <ClipCard key={c.id} clip={c} onOpen={() => router.push(`/dutch/luisteren/${c.id}`)} />
+                    ))}
+                  </DoneFold>
                 </div>
               )}
             </div>
