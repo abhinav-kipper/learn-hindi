@@ -94,19 +94,26 @@ export async function POST(req: Request) {
 
     // Prefer Claude (best at Hinglish intent). Fall back to Gemini if the
     // Anthropic key is absent or Claude is overloaded, so the feature keeps
-    // working either way.
+    // working either way. `served` records which model actually answered and is
+    // returned as the `x-journal-model` response header (so you can verify in
+    // the browser Network tab which model is live).
     let object
+    let served: string
     if (anthropicMissing()) {
+      served = 'gemini-2.5-flash'
       object = await runGoogle('gemini-2.5-flash')
     } else {
       try {
         object = await runAnthropic()
+        served = 'claude-sonnet-4-6'
       } catch (e) {
         if (isBusy(e)) {
           try {
             object = await runGoogle('gemini-2.5-flash')
+            served = 'gemini-2.5-flash'
           } catch {
             object = await runGoogle('gemini-2.0-flash')
+            served = 'gemini-2.0-flash'
           }
         } else {
           throw e
@@ -114,7 +121,7 @@ export async function POST(req: Request) {
       }
     }
 
-    return Response.json(object)
+    return Response.json(object, { headers: { 'x-journal-model': served } })
   } catch (error) {
     const msg = error instanceof Error ? error.message : String(error)
     if (isBusy(error)) return Response.json({ error: 'busy' }, { status: 503 })
