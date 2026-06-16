@@ -16,11 +16,14 @@ const CheckSchema = z.object({
     .string()
     .describe('a warm, personal 1-sentence reaction in Hinglish, like a kind friend who just read the entry. No emojis required. Max ~16 words.'),
   mood: z.enum(['happy', 'sympathy', 'neutral']).describe('overall sentiment of the entry'),
+  translation: z
+    .string()
+    .describe('FILL THIS BEFORE fixes. A natural English translation of what the learner MEANT (not a literal word-for-word gloss), 1-3 sentences. Commit to the most sensible reading given the question and context; the fixes must be consistent with this understanding.'),
   fixes: z
     .array(
       z.object({
         original: z.string().describe('the exact slip, copied VERBATIM from the entry (must appear in the text character-for-character)'),
-        fix: z.string().describe('the corrected romanised form that preserves the learner intended meaning'),
+        fix: z.string().describe('the corrected romanised form that preserves the meaning you captured in translation'),
         note: z.string().describe('a one-line, plain, warm reason. No jargon. Max ~16 words.'),
       }),
     )
@@ -29,7 +32,6 @@ const CheckSchema = z.object({
   enrich: z
     .string()
     .describe('an ADDITIONAL gentle suggestion, returned EVEN IF there are fixes. If any clause is garbled or its meaning is unclear or likely not what they intended, suggest a clearer phrasing here as a question (e.g. "Did you mean X? You could write it as: ..."). Empty string only if there is genuinely nothing to add.'),
-  translation: z.string().describe('a natural English translation of what the learner MEANT, 1-3 sentences.'),
 })
 
 function isBusy(err: unknown): boolean {
@@ -52,24 +54,29 @@ function anthropicMissing(): boolean {
 
 export async function POST(req: Request) {
   try {
-    const { entry, prompt, language = 'hindi' } = await req.json()
+    const { entry, prompt, promptEn, language = 'hindi' } = await req.json()
     if (!entry || typeof entry !== 'string' || !entry.trim()) {
       return Response.json({ error: 'Missing entry' }, { status: 400 })
     }
     const langName = language === 'dutch' ? 'Dutch' : 'Hindi'
+    const askedEn = typeof promptEn === 'string' && promptEn.trim() ? ` In plain English the question means: "${promptEn.trim()}".` : ''
 
     const sys =
-      `You are Chaina, a warm, encouraging ${langName} diary companion. The learner journals in ROMANISED ${langName} (Hinglish for Hindi) on purpose, so they never type the native script.\n\n` +
-      `They were asked: "${prompt || 'their day'}". Their entry is below.\n\n` +
-      `FIRST, work out what the learner MEANT, even if the romanisation is rough or the grammar is tangled. Read it the way a kind native speaker would, using the whole entry for context. THEN respond:\n` +
+      `You are Chaina, a warm, encouraging ${langName} diary companion.\n\n` +
+      `WHO IS WRITING: an English speaker learning ${langName} as a BEGINNER. They journal in ROMANISED ${langName} (Hinglish) on purpose and never type the native script. Expect their writing to be rough: the romanisation is phonetic and inconsistent (they spell words the way they hear them), grammar and word order may follow English, agreement and postpositions are often off, and they freely mix in English words (e.g. colleague, feedback, boss, office). Those English words are INTENTIONAL code-mixing, not mistakes, so never flag them.\n\n` +
+      `THE QUESTION THEY ANSWERED: "${prompt || 'their day'}".${askedEn} Use it as the anchor for what their entry is probably about.\n\n` +
+      `HOW TO READ IT: read by SOUND, not by exact spelling. A beginner often writes a word the way they heard it and lands on a real but UNINTENDED ${langName} word. Use the question and the rest of the entry to pick the word they actually meant, and only correct to it when the context makes the intent clear. Examples of sound-alike confusions: "kheti" (farming) when they mean "kehti" (to say); "hota" vs "hoti"; "sakta" vs "sakti"; "mai" for "main"; "hu" for "hoon".\n\n` +
+      `STEPS:\n` +
       `1. reaction: one warm Hinglish line, like a friend, not a teacher.\n` +
       `2. mood: the sentiment.\n` +
-      `3. fixes: up to FIVE genuine slips. Cover the WHOLE entry, every line, not just the first sentence. Encouragement first. Correct real errors (e.g. "mai" should be "main", "hu" should be "hoon", a missing long vowel, a clearly wrong verb ending or postposition, a word that gives a different meaning than intended). Each fix MUST preserve the learner's intended meaning, and its "original" MUST be copied verbatim from the entry.\n` +
-      `4. translation: natural English of what they MEANT (1-3 sentences).\n\n` +
+      `3. translation: FIRST work out what they MEANT across the WHOLE entry and write it as natural English. Everything else must be consistent with this reading.\n` +
+      `4. fixes: up to FIVE genuine slips, covering every line (not just the first). Encouragement first. Correct real errors only (wrong/sound-alike word, missing long vowel, wrong verb ending, wrong/missing postposition, agreement). Each fix MUST keep the meaning from your translation, and its "original" MUST be copied verbatim from the entry.\n` +
+      `5. enrich: see rules.\n\n` +
       `HARD RULES:\n` +
       `- NEVER invent a correction. If a fix's "original" is not present word-for-word in the entry, do not include it.\n` +
       `- NEVER rewrite a phrase into a different meaning than the learner intended. A correction fixes form, not message.\n` +
-      `- If a phrase is genuinely garbled and you cannot tell exactly what was meant, do NOT force a fix. Instead put a gentle suggestion in "enrich", phrased as a question ("Did you mean ...? You could write it as: ..."). Provide "enrich" EVEN IF you also returned some fixes.\n` +
+      `- Never flag English loanwords the learner chose to use.\n` +
+      `- If a phrase is genuinely garbled and you cannot tell exactly what was meant, do NOT force a fix. Put a gentle suggestion in "enrich", phrased as a question ("Did you mean ...? You could write it as: ..."). Provide "enrich" EVEN IF you also returned some fixes.\n` +
       `- Treat these as correct house spellings, never "fix" them: accha, acchi, khaaya, theek, hoon.\n` +
       `- Keep every field short and human. Simple punctuation. No em-dashes, no arrows.\n\n` +
       `Entry:\n"""${entry.slice(0, 1500)}"""`

@@ -31,12 +31,12 @@ const RULE = 32 // ruled-line spacing
 const JOURNAL_MISTAKE_ID = '__journal__'
 
 // ── async check: model first (/api/journal-check), offline fallback ──────────
-async function runCheck(entry: string, prompt: string, language: string): Promise<JournalCheck> {
+async function runCheck(entry: string, prompt: string, promptEn: string, language: string): Promise<JournalCheck> {
   try {
     const res = await fetch('/api/journal-check', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ entry, prompt, language }),
+      body: JSON.stringify({ entry, prompt, promptEn, language }),
     })
     if (!res.ok) throw new Error(String(res.status))
     const data = await res.json()
@@ -159,12 +159,12 @@ export function JournalScreen() {
       setResult(optimistic)
       // keep the existing mistake ids in storage until the final check reconciles
       saveEntryData(text, optimistic, mistakeIdsRef.current)
-      const real = await runCheck(text, prompt.hinglish, config.code)
+      const real = await runCheck(text, prompt.hinglish, prompt.en, config.code)
       setCheckedFor(text)
       setResult(real)
       saveEntryData(text, real, syncMistakes(real))
     },
-    [entry, result, checkedFor, saveEntryData, syncMistakes, prefix, prompt.hinglish, config.code],
+    [entry, result, checkedFor, saveEntryData, syncMistakes, prefix, prompt.hinglish, prompt.en, config.code],
   )
 
   // Edit a tucked-in entry: return to the writing state with the text
@@ -183,11 +183,11 @@ export function JournalScreen() {
     // (re)fetch if we have no result, or the result is stale for the edited text
     if (!result || checkedFor !== entry) {
       const text = entry
-      const real = await runCheck(text, prompt.hinglish, config.code)
+      const real = await runCheck(text, prompt.hinglish, prompt.en, config.code)
       setCheckedFor(text)
       setResult(real)
     }
-  }, [entry, result, checkedFor, prompt.hinglish, config.code])
+  }, [entry, result, checkedFor, prompt.hinglish, prompt.en, config.code])
 
   return (
     <div style={{ minHeight: '100dvh', position: 'relative', background: COLORS.journalBg, fontFamily: FONTS.body, color: COLORS.ink }}>
