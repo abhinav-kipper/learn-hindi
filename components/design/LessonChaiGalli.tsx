@@ -620,25 +620,6 @@ function PhraseSticker({
         >
           <GlossableText phrase={phrase.hindi} />
         </div>
-        {phrase.pronunciation && (
-          <div
-            style={{
-              marginTop: 8,
-              padding: '6px 12px',
-              borderRadius: 12,
-              display: 'inline-block',
-              background: COLORS.butter,
-              border: BORDER.thin,
-              fontFamily: FONTS.body,
-              fontSize: 13,
-              fontWeight: 700,
-              color: COLORS.ink60,
-            }}
-          >
-            <span style={{ opacity: 0.6 }}>say it · </span>
-            <span style={{ color: COLORS.ink }}>{phrase.pronunciation}</span>
-          </div>
-        )}
       </div>
 
       <div

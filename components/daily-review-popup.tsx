@@ -396,20 +396,6 @@ function ReviewView({
             >
               {currentPhrase.phrase.hindi}
             </div>
-            {currentPhrase.phrase.pronunciation && (
-              <div
-                style={{
-                  marginTop: 4,
-                  fontFamily: FONTS.body,
-                  fontWeight: 600,
-                  fontSize: 11,
-                  color: COLORS.ink45,
-                  textAlign: 'center',
-                }}
-              >
-                {currentPhrase.phrase.pronunciation}
-              </div>
-            )}
             {revealed ? (
               <motion.div
                 initial={{ opacity: 0, y: 8 }}

@@ -256,20 +256,6 @@ export function StoryReader({ story }: StoryReaderProps) {
                 <GlossableText phrase={panel.hindi} language="hindi" />
               </div>
 
-              {panel.pronunciation && (
-                <div
-                  style={{
-                    fontFamily: FONTS.body,
-                    fontSize: 13,
-                    color: COLORS.ink45,
-                    fontStyle: 'italic',
-                    marginBottom: 12,
-                  }}
-                >
-                  {panel.pronunciation}
-                </div>
-              )}
-
               <motion.div
                 initial={false}
                 animate={{
