@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest'
-import { generateQuiz } from '@/lib/quiz'
+import { generateQuiz, reviewIdForQuestion } from '@/lib/quiz'
 
 const localStorageMock = (() => {
   let store: Record<string, string> = {}
@@ -69,5 +69,27 @@ describe('generateQuiz', () => {
   it('returns empty array when no lessons match', () => {
     const questions = generateQuiz(['nonexistent-lesson'], 10)
     expect(questions).toEqual([])
+  })
+})
+
+describe('reviewIdForQuestion', () => {
+  it('maps a phrase question to its SRS phraseId', () => {
+    expect(reviewIdForQuestion({ source: 'phrase', lessonId: 'greetings', phraseIndex: 3 }))
+      .toBe('greetings-3')
+  })
+
+  it('treats a missing source as a phrase (backward compat)', () => {
+    expect(reviewIdForQuestion({ source: undefined, lessonId: 'greetings', phraseIndex: 0 }))
+      .toBe('greetings-0')
+  })
+
+  it('skips vocab questions', () => {
+    expect(reviewIdForQuestion({ source: 'vocab', lessonId: 'vocab', phraseIndex: -1 }))
+      .toBeNull()
+  })
+
+  it('skips questions with no phrase index', () => {
+    expect(reviewIdForQuestion({ source: 'phrase', lessonId: 'greetings', phraseIndex: -1 }))
+      .toBeNull()
   })
 })

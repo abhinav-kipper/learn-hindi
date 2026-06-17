@@ -3,7 +3,8 @@
 import { useState, useCallback, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/navigation'
-import { generateQuiz, saveQuizScore } from '@/lib/quiz'
+import { generateQuiz, saveQuizScore, reviewIdForQuestion } from '@/lib/quiz'
+import { markReviewed } from '@/lib/review'
 import { getProgress, getStreak, getSeenStreakMilestones, markStreakMilestoneSeen, updateStreak } from '@/lib/progress'
 import { addMistake } from '@/lib/mistakes'
 import { QuizQuestion, QuizResult } from '@/types/quiz'
@@ -70,6 +71,11 @@ export default function QuizPage() {
     const question = questions[currentIndex]
     const selectedAnswer = question.answers.find((a) => a.id === answerId)
     const isCorrect = selectedAnswer?.isCorrect ?? false
+
+    // Feed the objective right/wrong outcome into the spaced-repetition
+    // scheduler so phrases fumbled in the quiz resurface in the daily review.
+    const reviewId = reviewIdForQuestion(question)
+    if (reviewId) markReviewed(reviewId, isCorrect, config.storagePrefix)
 
     if (isCorrect) {
       const nextCombo = combo + 1
