@@ -204,6 +204,20 @@ export function generateQuiz(lessonIds: string[], count: number, language = 'hin
   return shuffle([...phraseQuestions, ...vocabQuestions])
 }
 
+/**
+ * The SM-2 review id a quiz question should report its outcome to, or null if
+ * it shouldn't feed the spaced-repetition scheduler. Only phrase-source
+ * questions map to a review card; the id format mirrors lib/review.ts
+ * (`${lessonId}-${phraseIndex}`). Vocab questions (phraseIndex -1) are skipped.
+ */
+export function reviewIdForQuestion(
+  q: Pick<QuizQuestion, 'source' | 'lessonId' | 'phraseIndex'>,
+): string | null {
+  if ((q.source ?? 'phrase') !== 'phrase') return null
+  if (q.phraseIndex < 0) return null
+  return `${q.lessonId}-${q.phraseIndex}`
+}
+
 export interface QuizScore {
   score: number
   total: number
