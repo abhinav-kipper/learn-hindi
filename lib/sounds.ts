@@ -3,6 +3,7 @@
 // feel cute and friendly (Duolingo-ish). Empty manifest = pure synth (unchanged).
 
 import sfxManifest from '@/content/sfx-audio.json'
+import { stopAmbient } from '@/lib/ambient'
 
 export type SoundType = 'tap' | 'correct' | 'wrong' | 'complete' | 'swipe' | 'streak' | 'levelup' | 'pop'
 
@@ -54,6 +55,10 @@ export function isMuted(): boolean {
 export function toggleMute(): boolean {
   const newMuted = !isMuted()
   localStorage.setItem(MUTE_KEY, String(newMuted))
+  // The mute flag is only consulted when ambient *starts*, so an already-looping
+  // ambient bed would keep playing after muting. Stop it here so mute is
+  // authoritative from every mute button (home pill, settings) and can't regress.
+  if (newMuted) stopAmbient()
   return newMuted
 }
 

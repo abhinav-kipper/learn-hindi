@@ -68,4 +68,27 @@ describe('ambient soundscape', () => {
     startAmbient('dutch')
     expect(ctor).toHaveBeenCalledWith('/audio/ambient/dutch.mp3')
   })
+
+  it('toggleMute stops the ambient bed when muting (mute is authoritative)', async () => {
+    // The regression: muting only wrote a flag; an already-looping ambient bed
+    // kept playing because the flag is read only when ambient *starts*.
+    const stopAmbient = vi.fn()
+    vi.doMock('@/lib/ambient', () => ({
+      stopAmbient,
+      startAmbient: vi.fn(),
+      isAmbientOn: () => false,
+      setAmbientOn: vi.fn(),
+    }))
+    localStorage.setItem('bolna-seekho-muted', 'false') // start unmuted
+    const { toggleMute } = await import('@/lib/sounds')
+
+    expect(toggleMute()).toBe(true) // now muted
+    expect(stopAmbient).toHaveBeenCalledTimes(1)
+
+    // Unmuting must NOT stop it again.
+    expect(toggleMute()).toBe(false)
+    expect(stopAmbient).toHaveBeenCalledTimes(1)
+
+    vi.doUnmock('@/lib/ambient')
+  })
 })
