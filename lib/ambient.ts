@@ -1,7 +1,7 @@
 // Ambient soundscapes — a faint, looping background bed per learning track
 // (a chai-stall hum for Hindi, a café terrace for Dutch). Opt-in and OFF by
 // default: a low-volume loop that starts on a user gesture, respects the
-// global sound mute, and fades in/out so it never jars.
+// global sound mute, and fades in so it never jars.
 //
 // Audio is pre-rendered once via scripts/generate-audio.mjs (ELEVEN_AMBIENT=1)
 // into public/audio/ambient/<track>.mp3. Until those clips are shipped this is
@@ -15,6 +15,14 @@ export type AmbientTrack = 'hindi' | 'dutch'
 let el: HTMLAudioElement | null = null
 let currentTrack: AmbientTrack | null = null
 let fadeTimer: ReturnType<typeof setInterval> | null = null
+
+// Every element we've started, so stopAmbient() can guarantee none keeps
+// looping. The old teardown faded out via the shared timer and only paused in
+// the fade's callback; a start/stop firing during that fade cancelled it before
+// the pause ran, orphaning a looping clip with no reference to stop it (silent
+// only on tab close, and immune to the off toggle + mute). Tracking every
+// element makes teardown total.
+const activeEls = new Set<HTMLAudioElement>()
 
 const TARGET_VOLUME = 0.14
 
@@ -81,12 +89,16 @@ export function startAmbient(track: AmbientTrack): void {
     a.loop = true
     a.volume = 0
     a.preload = 'auto'
+    activeEls.add(a)
     const p = a.play()
     if (p && typeof p.then === 'function') {
       p.then(() => fade(a, TARGET_VOLUME, 1500)).catch(() => {
         // No clip shipped yet, or autoplay blocked — silently give up.
-        el = null
-        currentTrack = null
+        teardown(a)
+        if (el === a) {
+          el = null
+          currentTrack = null
+        }
       })
     }
     el = a
@@ -97,25 +109,29 @@ export function startAmbient(track: AmbientTrack): void {
   }
 }
 
-/** Fade out and tear down the current ambient bed. */
-export function stopAmbient(): void {
-  clearFade()
-  if (!el) return
-  const a = el
-  el = null
-  currentTrack = null
+/** Immediately and permanently silence one element (no cancellable fade). */
+function teardown(a: HTMLAudioElement): void {
   try {
-    fade(a, 0, 500, () => {
-      try {
-        a.pause()
-        a.src = ''
-      } catch {
-        /* ignore */
-      }
-    })
+    a.pause()
+    a.loop = false
+    a.src = ''
   } catch {
     /* ignore */
   }
+  activeEls.delete(a)
+}
+
+/**
+ * Hard-stop EVERY ambient element so none can keep looping. Deliberately
+ * skips the graceful fade-out: a fade that can be cancelled mid-flight is what
+ * orphaned looping clips before. Reliability wins over a 500ms fade here.
+ */
+export function stopAmbient(): void {
+  clearFade()
+  activeEls.forEach(teardown)
+  activeEls.clear()
+  el = null
+  currentTrack = null
 }
 
 /**

@@ -69,6 +69,36 @@ describe('ambient soundscape', () => {
     expect(ctor).toHaveBeenCalledWith('/audio/ambient/dutch.mp3')
   })
 
+  it('stopAmbient hard-stops every element it started (no orphaned loops)', async () => {
+    // Regression: a start/stop during the old fade-out orphaned a looping clip
+    // that nothing could stop. stopAmbient() must pause EVERY element.
+    // NB: a real class is required here — vi.fn().mockImplementation() does not
+    // run its body when invoked with `new`, so it can't capture instances.
+    const instances: Array<{ pause: ReturnType<typeof vi.fn> }> = []
+    class MockAudio {
+      play = vi.fn().mockResolvedValue(undefined)
+      pause = vi.fn()
+      loop = false
+      preload = ''
+      volume = 0
+      src = ''
+      constructor(public url: string) {
+        instances.push(this)
+      }
+    }
+    global.Audio = MockAudio as unknown as typeof Audio
+    localStorage.setItem('bolna-seekho-ambient', '1')
+
+    const { startAmbient, stopAmbient } = await import('@/lib/ambient')
+    startAmbient('hindi') // element 0
+    startAmbient('dutch') // switches track: tears down 0, starts element 1
+    expect(instances.length).toBe(2)
+
+    stopAmbient()
+    // Neither element may be left looping.
+    for (const inst of instances) expect(inst.pause).toHaveBeenCalled()
+  })
+
   it('toggleMute stops the ambient bed when muting (mute is authoritative)', async () => {
     // The regression: muting only wrote a flag; an already-looping ambient bed
     // kept playing because the flag is read only when ambient *starts*.
