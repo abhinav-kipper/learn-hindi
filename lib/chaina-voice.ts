@@ -90,10 +90,11 @@ class ChainaVoice {
       setTimeout(() => this.refreshVoices(), 1200);
     }
     try {
-      const sfxMute = localStorage.getItem('bolna-seekho-muted');
-      this.muted =
-        sfxMute === '1' || sfxMute === 'true' ||
-        localStorage.getItem('chaina-voice-muted') === '1';
+      // Cache ONLY the per-voice toggle here. The global SFX mute is read live
+      // in isMutedNow(), so unmuting takes effect immediately — caching the
+      // global state would leave the mascot silent until reload if the app
+      // first inited while muted.
+      this.muted = localStorage.getItem('chaina-voice-muted') === '1';
     } catch {}
   }
 

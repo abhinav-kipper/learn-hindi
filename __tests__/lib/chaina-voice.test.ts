@@ -63,6 +63,24 @@ describe('chainaVoice', () => {
     expect(speakSpy).not.toHaveBeenCalled()
   })
 
+  it('unmuting restores the voice in the same session (no sticky global mute)', async () => {
+    // Regression: caching the global mute into this.muted left the mascot
+    // silent after unmute until reload if it first inited while muted.
+    localStorage.setItem('bolna-seekho-muted', 'true')
+    const speakSpy = vi.fn()
+    Object.defineProperty(window, 'speechSynthesis', {
+      value: { speak: speakSpy, cancel: vi.fn(), getVoices: () => [], onvoiceschanged: null },
+      configurable: true,
+    })
+    const { chainaVoice } = await import('@/lib/chaina-voice')
+    chainaVoice.speak('hello') // inits while muted → stays silent
+    expect(speakSpy).not.toHaveBeenCalled()
+
+    localStorage.setItem('bolna-seekho-muted', 'false') // user unmutes
+    chainaVoice.speak('hello again') // must speak now, not stay stuck
+    expect(speakSpy).toHaveBeenCalledTimes(1)
+  })
+
   it('respects the chaina-voice-muted key', async () => {
     localStorage.setItem('chaina-voice-muted', '1')
     const speakSpy = vi.fn()
