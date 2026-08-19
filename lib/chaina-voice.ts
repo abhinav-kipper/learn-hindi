@@ -90,8 +90,9 @@ class ChainaVoice {
       setTimeout(() => this.refreshVoices(), 1200);
     }
     try {
+      const sfxMute = localStorage.getItem('bolna-seekho-muted');
       this.muted =
-        localStorage.getItem('bolna-seekho-muted') === '1' ||
+        sfxMute === '1' || sfxMute === 'true' ||
         localStorage.getItem('chaina-voice-muted') === '1';
     } catch {}
   }
@@ -121,9 +122,10 @@ class ChainaVoice {
   private isMutedNow(): boolean {
     if (typeof window === 'undefined') return true;
     try {
+      const sfxMute = localStorage.getItem('bolna-seekho-muted');
       return (
         this.muted ||
-        localStorage.getItem('bolna-seekho-muted') === '1' ||
+        sfxMute === '1' || sfxMute === 'true' ||
         localStorage.getItem('chaina-voice-muted') === '1'
       );
     } catch {

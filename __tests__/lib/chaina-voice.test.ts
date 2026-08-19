@@ -51,6 +51,18 @@ describe('chainaVoice', () => {
     expect(speakSpy).not.toHaveBeenCalled()
   })
 
+  it("respects bolna-seekho-muted when stored as 'true' (the value toggleMute writes)", async () => {
+    localStorage.setItem('bolna-seekho-muted', 'true')
+    const speakSpy = vi.fn()
+    Object.defineProperty(window, 'speechSynthesis', {
+      value: { speak: speakSpy, cancel: vi.fn(), getVoices: () => [], onvoiceschanged: null },
+      configurable: true,
+    })
+    const { chainaVoice } = await import('@/lib/chaina-voice')
+    chainaVoice.speak('hello')
+    expect(speakSpy).not.toHaveBeenCalled()
+  })
+
   it('respects the chaina-voice-muted key', async () => {
     localStorage.setItem('chaina-voice-muted', '1')
     const speakSpy = vi.fn()
