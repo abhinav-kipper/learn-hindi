@@ -14,8 +14,10 @@ const sfxFiles = sfxManifest as Partial<Record<SoundType, string>>
 const sfxCache: Partial<Record<SoundType, HTMLAudioElement>> = {}
 
 /** Play the designed clip for a sound, if one is shipped. Returns false to let
- *  the caller fall back to the synth voice. */
-function playClip(type: SoundType): boolean {
+ *  the caller fall back to the synth voice. `onFail` fires when a shipped clip
+ *  is found but can't actually play (cold cache after a service-worker purge,
+ *  decode error, autoplay block) so the caller's sound is never silently lost. */
+function playClip(type: SoundType, onFail: () => void): boolean {
   const file = sfxFiles[type]
   if (!file || typeof window === 'undefined') return false
   try {
@@ -23,11 +25,15 @@ function playClip(type: SoundType): boolean {
     if (!a) {
       a = new Audio(`/audio/sfx/${file}`)
       a.volume = 0.55
+      a.preload = 'auto'
       sfxCache[type] = a
     }
     a.currentTime = 0
     const p = a.play()
-    if (p && typeof p.then === 'function') p.catch(() => {})
+    if (p && typeof p.then === 'function') {
+      // The clip couldn't play — fall back to the synth so the sound still fires.
+      p.catch(() => { try { onFail() } catch { /* ignore */ } })
+    }
     return true
   } catch {
     return false
@@ -401,13 +407,16 @@ export function playSound(type: SoundType): void {
 
   vibrate(haptics[type])
 
-  // Prefer the designed clip; fall back to the synth voice if none is shipped
-  // (or it can't play).
-  if (playClip(type)) return
-
-  try {
-    soundFunctions[type]()
-  } catch {
-    // Silently ignore audio errors (e.g., user hasn't interacted yet)
+  const synth = () => {
+    try {
+      soundFunctions[type]()
+    } catch {
+      // Silently ignore audio errors (e.g., user hasn't interacted yet)
+    }
   }
+
+  // Prefer the designed clip; fall back to the synth voice if none is shipped
+  // or it can't play (playClip invokes `synth` on a play failure).
+  if (playClip(type, synth)) return
+  synth()
 }
