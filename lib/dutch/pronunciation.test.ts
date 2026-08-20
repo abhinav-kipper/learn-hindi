@@ -85,20 +85,21 @@ describe('lib/dutch/pronunciation', () => {
     expect(isStageComplete(stage)).toBe(true)
   })
 
-  it('opens stages 0 and 1 before anything is completed', () => {
-    expect(unlockedStageIds()).toEqual(['alphabet', 'short-vowels'])
+  it('opens every stage from the start (the ladder is not gated)', () => {
+    const all = getStages().map((s) => s.id)
+    expect(unlockedStageIds()).toEqual(all)
+    expect(isStageUnlocked(getStage('long-vowels')!)).toBe(true)
+    expect(isStageUnlocked(getStage('linking')!)).toBe(true)
     expect(isEarQuizPassed('alphabet')).toBe(false)
   })
 
-  it('completing a stage unlocks the next two', () => {
+  it('stays fully open regardless of completion', () => {
+    const all = getStages().map((s) => s.id)
+    expect(unlockedStageIds()).toEqual(all)
     completeStage(getStage('alphabet')!)
-    // frontier = 0 + 2 = 2 → orders 0,1,2 open
-    expect(unlockedStageIds()).toEqual(['alphabet', 'short-vowels', 'long-vowels'])
-
-    completeStage(getStage('short-vowels')!)
-    // frontier = 1 + 2 = 3
-    expect(unlockedStageIds()).toContain('consonants')
-    expect(isStageUnlocked(getStage('guttural-g')!)).toBe(false)
+    // completion no longer changes access; every stage stays reachable
+    expect(unlockedStageIds()).toEqual(all)
+    expect(isStageUnlocked(getStage('guttural-g')!)).toBe(true)
   })
 
   it('tracks course progress count', () => {

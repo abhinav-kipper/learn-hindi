@@ -126,24 +126,15 @@ export function isStageComplete(stage: PronStage): boolean {
   return true
 }
 
-/** Highest `order` among completed stages, or -1 if none complete. */
-function maxCompletedOrder(): number {
-  let max = -1
-  for (const s of getStages()) {
-    if (isStageComplete(s) && s.order > max) max = s.order
-  }
-  return max
-}
-
-export function isStageUnlocked(stage: PronStage): boolean {
-  return stage.order <= maxCompletedOrder() + UNLOCK_WINDOW
+// The Sounds ladder is fully open: every stage is unlocked so learners can jump
+// to any pronunciation topic (long vowels, the guttural g, etc.) in any order.
+// Per-stage progress and completion are still tracked; nothing is gated.
+export function isStageUnlocked(_stage: PronStage): boolean {
+  return true
 }
 
 export function unlockedStageIds(): string[] {
-  const frontier = maxCompletedOrder() + UNLOCK_WINDOW
-  return getStages()
-    .filter((s) => s.order <= frontier)
-    .map((s) => s.id)
+  return getStages().map((s) => s.id)
 }
 
 /** How many of a stage's checkpoints (cards + blend words + ear-quiz) are done. */
