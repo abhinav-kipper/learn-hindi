@@ -52,6 +52,7 @@ const STATIC_ROUTES = [
   '/dutch/luisteren',
   '/dutch/luisteren/mock',
   '/dutch/sounds',
+  '/dutch/lookup',
 ]
 
 // Pull ids from a loader, swallowing any failure so one bad loader can't abort

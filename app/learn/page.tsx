@@ -126,6 +126,22 @@ export default function LearnPage() {
           </div>
         </Sticker>
 
+        {/* WORD LOOKUP (Dutch only) */}
+        {language === 'dutch' && (
+          <Sticker color={COLORS.butter} radius={18} padding={14} onClick={() => { playSound('pop'); router.push('/dutch/lookup') }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+              <span style={{ fontSize: 30 }}>🔍</span>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 17, color: COLORS.ink }}>Word lookup</div>
+                <div style={{ fontFamily: FONTS.body, fontSize: 12.5, color: COLORS.ink60, marginTop: 2 }}>
+                  type a Dutch word, hear it, see the meaning
+                </div>
+              </div>
+              <span style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 20, color: COLORS.ink }}>→</span>
+            </div>
+          </Sticker>
+        )}
+
         {/* STORIES (Hindi only) */}
         {language === 'hindi' && stories.length > 0 && (
           <div style={{ marginTop: 6 }}>
