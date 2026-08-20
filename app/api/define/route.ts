@@ -35,6 +35,21 @@ const DefineSchema = z.object({
     .string()
     .describe('one short, natural example sentence in the target language that uses the word'),
   example_en: z.string().describe('the English translation of the example sentence'),
+  otherSenses: z
+    .array(
+      z.object({
+        translation: z.string().describe('another English meaning of this spelling, a few words'),
+        note: z
+          .string()
+          .describe(
+            'a short note on when this sense applies. If it is a form of a DIFFERENT base word (very common for conjugated verbs), name the base word and its meaning and give a tiny example, e.g. "form of heten (to be called): ik heet Anna = my name is Anna".',
+          ),
+      }),
+    )
+    .max(3)
+    .describe(
+      'OTHER common meanings the SAME spelling can have, INCLUDING when it is also a common conjugated form of a different word. Empty only if there is genuinely one meaning.',
+    ),
 })
 
 /** Transient Gemini overload / unavailability (possibly wrapped by the SDK). */
@@ -72,6 +87,12 @@ export async function POST(req: Request) {
         : `- Leave "article" empty.\n`) +
       `- "translation" is just the core English meaning in a few words.\n` +
       `- The example sentence must be natural and actually use the word.\n` +
+      `- IMPORTANT: many ${langName} words share a spelling with a different word or a conjugated verb form. ` +
+      `List EVERY common meaning the learner might have meant in "otherSenses". ` +
+      (language === 'dutch'
+        ? `For example, "heet" is the adjective "hot" AND the verb form of "heten" (to be called): "ik heet Anna" means "my name is Anna", and "hoe heet je?" means "what is your name?". `
+        : ``) +
+      `Do not drop the everyday meaning in favour of a rarer one.\n` +
       `- Simple punctuation. No em-dashes, no arrows.`
 
     const run = (modelId: string) =>

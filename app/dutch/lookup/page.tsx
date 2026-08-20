@@ -29,6 +29,7 @@ interface Definition {
   meaning: string
   example: string
   example_en: string
+  otherSenses?: { translation: string; note: string }[]
 }
 
 type Status = 'idle' | 'loading' | 'ok' | 'notfound' | 'offline' | 'error'
@@ -266,6 +267,24 @@ export default function DutchLookupPage() {
                           tap for the English
                         </div>
                       )}
+                    </div>
+                  ) : null}
+
+                  {result.otherSenses && result.otherSenses.length > 0 ? (
+                    <div style={{ marginTop: 12 }}>
+                      <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 11, color: COLORS.ink60, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 6 }}>
+                        also means
+                      </div>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                        {result.otherSenses.map((s, i) => (
+                          <div key={i} style={{ padding: 10, background: COLORS.lav, border: BORDER.thin, borderRadius: 12 }}>
+                            <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, color: COLORS.ink }}>{s.translation}</div>
+                            {s.note ? (
+                              <div style={{ fontFamily: FONTS.body, fontWeight: 600, fontSize: 12, color: COLORS.ink60, marginTop: 2 }}>{s.note}</div>
+                            ) : null}
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   ) : null}
                 </Sticker>
