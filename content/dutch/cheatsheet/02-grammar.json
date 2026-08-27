@@ -1,0 +1,719 @@
+{
+  "group": {
+    "id": "grammar",
+    "title": "Core grammar",
+    "subtitle_nl": "de basisgrammatica",
+    "blurb": "Pronouns, the present tense, the two verbs you cannot avoid, and how to show who owns what. Everything else in Dutch sits on top of these four.",
+    "emoji": "🧱"
+  },
+  "topics": [
+    {
+      "id": "subject-pronouns",
+      "title": "Subject pronouns",
+      "subtitle_nl": "personaal pronomen, subjectvorm",
+      "emoji": "🙋",
+      "summary": "Nine subject pronouns, each with a strong and a weak form, plus when u is worth the effort and why zij is ambiguous.",
+      "sections": [
+        {
+          "heading": "The full table",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["", "Dutch", "English", "Note"],
+              "rows": [
+                ["1 sg", "ik", "I", "always lower case unless it starts the sentence"],
+                ["2 sg", "jij / je", "you", "je is the everyday form"],
+                ["2 sg formal", "u", "you", "singular and plural, polite"],
+                ["3 sg m", "hij", "he", ""],
+                ["3 sg f", "zij / ze", "she", ""],
+                ["3 sg n", "het", "it", "for het-words, weather and time"],
+                ["1 pl", "wij / we", "we", ""],
+                ["2 pl", "jullie", "you (a group)", "no separate weak form"],
+                ["3 pl", "zij / ze", "they", ""]
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Strong form or weak form",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "`jij / zij / wij` are the **stressed** forms and `je / ze / we` the **unstressed** ones. In normal speech the weak form is the default. Reach for the strong form only when you are contrasting people."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Waar woon je?", "en": "Where do you live?", "note": "neutral question, weak form" },
+                { "nl": "En jij? Waar woon jij?", "en": "And you? Where do YOU live?", "note": "contrast, strong form" },
+                { "nl": "We gaan naar Frankrijk.", "en": "We are going to France." },
+                { "nl": "Wij gaan naar Frankrijk, zij gaan naar Spanje.", "en": "We are going to France, they are going to Spain." }
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "Overusing the strong form",
+              "body": "Saying `jij` and `wij` in every sentence makes you sound insistent, as if you were always correcting someone. If you are not contrasting, use `je` and `we`."
+            }
+          ]
+        },
+        {
+          "heading": "When to use u",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "`u` is the polite you. It covers **one person or several**, and it always takes a **-t** on the verb: `u woont`, `u bent`, `u hebt`.\n- Use `u` with older people, officials, doctors, and anyone at a counter.\n- Use `je` with colleagues, classmates, shop staff your own age, and anybody who says `je` to you first.\n- If in doubt, start with `u`. Dutch people will often invite you down with `Je mag je zeggen, hoor.`"
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Mevrouw Jansen, hebt u een minuutje voor mij?", "en": "Mrs Jansen, do you have a minute for me?" },
+                { "nl": "Waar komt u vandaan?", "en": "Where are you from? (formal)" },
+                { "nl": "Meneer, weet u hoe laat het is?", "en": "Sir, do you know what time it is?" }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "The tricky ones",
+          "blocks": [
+            {
+              "kind": "pitfall",
+              "title": "zij can be she or they",
+              "body": "The **verb** tells you which one:\n- `Zij is de beste moeder.` (she is)\n- `Zij zijn 1 en 3 jaar oud.` (they are)\nIf the sentence is still ambiguous, use a name or `ze allebei` to clear it up."
+            },
+            {
+              "kind": "pitfall",
+              "title": "jullie is not formal",
+              "body": "`jullie` is simply the plural of `je`. It is informal. To address a group politely, use `u`: `Wilt u allemaal gaan zitten?`"
+            },
+            {
+              "kind": "rule",
+              "title": "het does more than it",
+              "body": "`het` stands in for a het-word (`Waar is het boek? Het ligt daar.`), and it also carries weather, time and general statements where English uses \"it\":\n- `Het regent.`\n- `Het is drie uur.`\n- `Het is koud vandaag.`"
+            },
+            {
+              "kind": "tip",
+              "title": "je as a general you",
+              "body": "Like English \"you\", `je` can mean people in general: `In Nederland fiets je overal naartoe.` (In the Netherlands you cycle everywhere.) Nobody specific is meant."
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Use the weak forms je, ze, we by default and the strong forms jij, zij, wij only for contrast.",
+        "u is polite, works for one person or many, and always takes -t on the verb.",
+        "zij is both she and they, and only the verb tells them apart.",
+        "jullie is plural and informal, so it is not the polite option."
+      ],
+      "exercises": [
+        {
+          "id": "pron-1",
+          "kind": "fill",
+          "prompt": "De docent heet Jan. ___ werkt maandag en woensdag.",
+          "before": "",
+          "after": "werkt maandag en woensdag.",
+          "answers": ["hij"],
+          "explain": "Jan is one man, so hij."
+        },
+        {
+          "id": "pron-2",
+          "kind": "fill",
+          "prompt": "Ik en mijn vriend hebben een relatie. ___ wonen samen sinds een jaar.",
+          "before": "",
+          "after": "wonen samen sinds een jaar.",
+          "answers": ["wij", "we"],
+          "explain": "Ik plus another person gives wij or we. The verb wonen confirms a plural subject."
+        },
+        {
+          "id": "pron-3",
+          "kind": "fill",
+          "prompt": "Dit zijn mijn honden. ___ zijn 1 en 3 jaar oud.",
+          "before": "",
+          "after": "zijn 1 en 3 jaar oud.",
+          "answers": ["zij", "ze"],
+          "explain": "Two dogs, so the plural zij or ze. The verb zijn shows it is plural, not singular."
+        },
+        {
+          "id": "pron-4",
+          "kind": "fill",
+          "prompt": "The teacher asks the whole class: Begrijpen ___ de grammatica?",
+          "before": "Begrijpen",
+          "after": "de grammatica?",
+          "answers": ["jullie"],
+          "explain": "A group being addressed informally takes jullie."
+        },
+        {
+          "id": "pron-5",
+          "kind": "mcq",
+          "prompt": "You are at the doctor's desk. Which is right?",
+          "options": ["Heb jij een moment?", "Hebben jullie een moment?", "Hebt u een moment?", "Heeft je een moment?"],
+          "correct": 2,
+          "explain": "A stranger in an official setting takes u, and u takes the -t form hebt (heeft is also accepted)."
+        },
+        {
+          "id": "pron-6",
+          "kind": "mcq",
+          "prompt": "Which sentence uses the strong form correctly?",
+          "options": ["Jij woont in Utrecht en jij werkt daar.", "Wij gaan naar Frankrijk, zij gaan naar Spanje.", "Wij woon in Amsterdam.", "Jij ben docent."],
+          "correct": 1,
+          "explain": "The strong forms earn their place when two groups are being contrasted."
+        },
+        {
+          "id": "pron-7",
+          "kind": "mcq",
+          "prompt": "Het regent. What is het doing here?",
+          "options": ["referring to a het-word mentioned earlier", "carrying the weather, like English it", "replacing jullie", "marking a question"],
+          "correct": 1,
+          "explain": "het carries weather, time and general statements: Het regent, Het is drie uur."
+        }
+      ]
+    },
+    {
+      "id": "present-tense",
+      "title": "The present tense",
+      "subtitle_nl": "het presens",
+      "emoji": "⚙️",
+      "summary": "Find the stem, add nothing, add -t, or use the base form. Three endings cover every regular Dutch verb, and one rule about jij explains most mistakes.",
+      "sections": [
+        {
+          "heading": "Step 1: find the stem",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Take the base form (the dictionary form, called the `infinitief`), cut off `-en`, then fix the spelling with the two sound rules:\n- **wonen** minus -en gives wo-, and the o must stay long, so double it: stem `woon`\n- **zitten** minus -en gives zitt-, and one t keeps the i short: stem `zit`\n- **reizen** minus -en gives reiz-, but no word ends in z: stem `reis`\n- **blijven** minus -en gives blijv-, but no word ends in v: stem `blijf`"
+            }
+          ]
+        },
+        {
+          "heading": "Step 2: add the ending",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Subject", "Ending", "wonen", "spreken"],
+              "rows": [
+                ["ik", "stem", "ik woon", "ik spreek"],
+                ["jij / je", "stem + t", "jij woont", "jij spreekt"],
+                ["u", "stem + t", "u woont", "u spreekt"],
+                ["hij / zij / het", "stem + t", "hij woont", "hij spreekt"],
+                ["wij / we", "base form", "wij wonen", "wij spreken"],
+                ["jullie", "base form", "jullie wonen", "jullie spreken"],
+                ["zij / ze", "base form", "zij wonen", "zij spreken"]
+              ],
+              "note": "Notice the plural row is simply the base form again. That is three quarters of the work done."
+            },
+            {
+              "kind": "table",
+              "title": "The four spelling patterns side by side",
+              "headers": ["", "wonen", "zitten", "reizen", "blijven"],
+              "rows": [
+                ["ik", "woon", "zit", "reis", "blijf"],
+                ["jij", "woont", "zit", "reist", "blijft"],
+                ["hij", "woont", "zit", "reist", "blijft"],
+                ["wij", "wonen", "zitten", "reizen", "blijven"]
+              ],
+              "note": "zit does not become zitt, because Dutch never writes a double t at the end of a word."
+            }
+          ]
+        },
+        {
+          "heading": "The jij rule: drop the t after the verb",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "When `jij` or `je` comes **directly after** the verb, the `-t` disappears. This happens in questions and after any inversion.\n- `Jij woont in Utrecht.` gives `Woon je in Utrecht?`\n- `Jij bent docent.` gives `Ben je docent?`\n- `Jij kookt pasta.` gives `Kook je pasta?`\n- `Morgen werk je thuis.` (inversion, so no -t)"
+            },
+            {
+              "kind": "pitfall",
+              "title": "Only jij and je",
+              "body": "The t stays with everybody else: `Woont u in Utrecht?`, `Woont hij in Utrecht?`, `Wonen jullie in Utrecht?`. The rule is about the word `jij/je`, not about questions in general."
+            }
+          ]
+        },
+        {
+          "heading": "Stems that already end in t or d",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Dutch never writes `tt` or `dt` at the end of a word, but it does write `dt` in the middle of a form.\n- `heten` has stem `heet`, so `jij heet` (adding a t would give heett, which is not allowed)\n- `sporten` has stem `sport`, so `zij sport`\n- `worden` has stem `word`, so `jij wordt` and `hij wordt` (d plus t is written out)\n- `vinden` has stem `vind`, so `hij vindt`"
+            },
+            {
+              "kind": "pitfall",
+              "title": "wordt versus word",
+              "body": "`ik word` (stem only) but `jij wordt` and `hij wordt` (stem plus t). In a question with je the t drops again: `word je moe?`. This is the classic mistake Dutch people make too."
+            }
+          ]
+        },
+        {
+          "heading": "Verbs that break the pattern",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Base form", "ik", "jij / hij", "wij"],
+              "rows": [
+                ["zijn", "ben", "bent / is", "zijn"],
+                ["hebben", "heb", "hebt / heeft", "hebben"],
+                ["gaan", "ga", "gaat", "gaan"],
+                ["staan", "sta", "staat", "staan"],
+                ["doen", "doe", "doet", "doen"],
+                ["zien", "zie", "ziet", "zien"],
+                ["komen", "kom", "komt", "komen"],
+                ["kunnen", "kan", "kunt / kan", "kunnen"],
+                ["willen", "wil", "wilt / wil", "willen"],
+                ["mogen", "mag", "mag", "mogen"],
+                ["zullen", "zal", "zult / zal", "zullen"]
+              ],
+              "note": "komen looks irregular but is not: ko-men has a long o that would need doubling, yet the stem is kom with a short o. Learn it as an exception."
+            }
+          ]
+        },
+        {
+          "heading": "What the Dutch present tense covers",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "One Dutch present tense does the work of several English ones. There is no separate \"am doing\" form.\n- `Ik werk.` = I work **and** I am working.\n- `Ik woon hier al twee jaar.` = I have been living here for two years.\n- `Ik ga morgen naar Utrecht.` = I am going to Utrecht tomorrow (near future)."
+            },
+            {
+              "kind": "tip",
+              "title": "If you really need to stress right now",
+              "body": "Use `aan het` plus the base form: `Ik ben aan het koken.` (I am cooking right now.) Save it for when the timing genuinely matters."
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Stem for ik, stem plus t for jij, u, hij, zij, het, and the base form for all plurals.",
+        "After the verb, jij and je knock the -t off: woon je, ben je, kook je.",
+        "A stem ending in t gets no second t (jij heet), a stem ending in d does (jij wordt).",
+        "One present tense covers I work, I am working, and I am going tomorrow."
+      ],
+      "exercises": [
+        {
+          "id": "pres-1",
+          "kind": "fill",
+          "prompt": "Fill in the right form: Jij ___ in Badhoevedorp. (wonen)",
+          "before": "Jij",
+          "after": "in Badhoevedorp.",
+          "answers": ["woont"],
+          "explain": "jij takes stem plus t, and the stem of wonen is woon."
+        },
+        {
+          "id": "pres-2",
+          "kind": "fill",
+          "prompt": "Fill in the right form: De meisjes ___ altijd naar werk. (fietsen)",
+          "before": "De meisjes",
+          "after": "altijd naar werk.",
+          "answers": ["fietsen"],
+          "explain": "A plural subject takes the base form: fietsen."
+        },
+        {
+          "id": "pres-3",
+          "kind": "fill",
+          "prompt": "Fill in the right form: Karolina ___ twee keer per week. (sporten)",
+          "before": "Karolina",
+          "after": "twee keer per week.",
+          "answers": ["sport"],
+          "explain": "The stem sport already ends in t, so no second t is added."
+        },
+        {
+          "id": "pres-4",
+          "kind": "fill",
+          "prompt": "Fill in the right form: ___ jij ook Engels? (spreken)",
+          "before": "",
+          "after": "jij ook Engels?",
+          "answers": ["spreek"],
+          "explain": "jij follows the verb, so the -t drops: Spreek jij ook Engels?"
+        },
+        {
+          "id": "pres-5",
+          "kind": "fill",
+          "prompt": "Fill in the right form: Peter ___ nooit zijn huiswerk. (maken)",
+          "before": "Peter",
+          "after": "nooit zijn huiswerk.",
+          "answers": ["maakt"],
+          "explain": "Stem maak (long a doubled) plus t for hij."
+        },
+        {
+          "id": "pres-6",
+          "kind": "fill",
+          "prompt": "Fill in the right form: Hij ___ een brief aan zijn vrouw. (schrijven)",
+          "before": "Hij",
+          "after": "een brief aan zijn vrouw.",
+          "answers": ["schrijft"],
+          "explain": "Stem schrijf (v becomes f at the end) plus t."
+        },
+        {
+          "id": "pres-7",
+          "kind": "mcq",
+          "prompt": "Which is correct?",
+          "options": ["Woon jij in Utrecht?", "Woont jij in Utrecht?", "Wonen jij in Utrecht?", "Woonen jij in Utrecht?"],
+          "correct": 0,
+          "explain": "jij right after the verb removes the -t."
+        },
+        {
+          "id": "pres-8",
+          "kind": "mcq",
+          "prompt": "Which is correct?",
+          "options": ["Woon u in Utrecht?", "Woont u in Utrecht?", "Wonen u in Utrecht?", "Woonde u in Utrecht?"],
+          "correct": 1,
+          "explain": "The t only drops for jij and je. u keeps it: Woont u?"
+        },
+        {
+          "id": "pres-9",
+          "kind": "mcq",
+          "prompt": "Which is correct?",
+          "options": ["Jij word moe.", "Jij wordt moe.", "Jij wort moe.", "Jij worden moe."],
+          "correct": 1,
+          "explain": "The stem is word, and jij adds a t, so wordt. Only ik word has no t."
+        },
+        {
+          "id": "pres-10",
+          "kind": "order",
+          "prompt": "Build: I walk to my work because it is nearby.",
+          "words": ["naar", "loop", "Ik", "want", "is", "mijn", "het", "werk", "dichtbij"],
+          "answer": ["Ik", "loop", "naar", "mijn", "werk", "want", "het", "is", "dichtbij"],
+          "explain": "want joins two main clauses and does not change the word order after it."
+        }
+      ]
+    },
+    {
+      "id": "hebben-zijn",
+      "title": "hebben and zijn",
+      "subtitle_nl": "de werkwoorden hebben en zijn",
+      "emoji": "🔑",
+      "summary": "The two most common Dutch verbs, both irregular, both needed in almost every sentence. Plus the fixed expressions that decide which one you need.",
+      "sections": [
+        {
+          "heading": "The two tables",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Subject", "hebben (to have)", "zijn (to be)"],
+              "rows": [
+                ["ik", "heb", "ben"],
+                ["jij / je", "hebt", "bent"],
+                ["u", "hebt of heeft", "bent"],
+                ["hij / zij / het", "heeft", "is"],
+                ["wij / we", "hebben", "zijn"],
+                ["jullie", "hebben", "zijn"],
+                ["zij / ze", "hebben", "zijn"]
+              ]
+            },
+            {
+              "kind": "rule",
+              "title": "In questions with je the t drops here too",
+              "body": "- `Jij hebt tijd.` gives `Heb je tijd?`\n- `Jij bent moe.` gives `Ben je moe?`\nAnd as always, `u` keeps its form: `Hebt u tijd?`, `Bent u moe?`"
+            },
+            {
+              "kind": "tip",
+              "title": "u hebt or u heeft",
+              "body": "Both are correct and both are common. `u hebt` follows the pattern more strictly, `u heeft` sounds a touch more formal. Pick one and stay consistent."
+            }
+          ]
+        },
+        {
+          "heading": "Which one do you need?",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Use zijn for", "Example"],
+              "rows": [
+                ["identity", "Ik ben Esther."],
+                ["profession", "Zij is arts."],
+                ["age", "Ik ben 37 jaar."],
+                ["origin and nationality", "Ik ben Nederlands."],
+                ["states and feelings", "Ik ben moe. Hij is blij."],
+                ["location", "Wij zijn in de les."],
+                ["being late or on time", "Ik ben te laat. Jij bent nooit op tijd."]
+              ]
+            },
+            {
+              "kind": "table",
+              "headers": ["Use hebben for", "Example"],
+              "rows": [
+                ["possession", "Ik heb twee broers."],
+                ["appointments", "Mijn broer heeft een afspraak bij de tandarts."],
+                ["time and space", "Jij hebt nooit tijd."],
+                ["physical needs", "Ik heb honger. Wij hebben dorst."],
+                ["being right", "Je hebt gelijk."],
+                ["feeling like something", "Ik heb zin in koffie."],
+                ["suffering from something", "Ik heb last van mijn rug."]
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "The two that flip compared to English",
+              "body": "- Age takes **zijn**: `Ik ben 37`, never `ik heb 37 jaar`.\n- Hunger and thirst take **hebben**: `Ik heb honger`, never `ik ben hongerig` in normal speech.\nThese two catch nearly every learner in the first month."
+            }
+          ]
+        },
+        {
+          "heading": "A minimal pair worth memorising",
+          "blocks": [
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Jij hebt nooit tijd.", "en": "You never have time.", "note": "possession of time" },
+                { "nl": "Jij bent nooit op tijd.", "en": "You are never on time.", "note": "a state, so zijn plus op tijd" }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "er is and er zijn",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "English \"there is / there are\" is `er is / er zijn`, and the verb agrees with what follows.\n- `Er is een café op de hoek.`\n- `Er zijn twee cafés in de straat.`\nIn a question the order flips: `Is er een toilet hier?`"
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "hebben: heb, hebt, heeft, hebben. zijn: ben, bent, is, zijn.",
+        "In a question with je both drop the t: heb je, ben je. With u they do not: hebt u, bent u.",
+        "Age, profession, nationality and states take zijn.",
+        "Hunger, time, appointments, being right and possession take hebben."
+      ],
+      "exercises": [
+        {
+          "id": "hz-1",
+          "kind": "fill",
+          "prompt": "Ik ___ twee broers en drie zussen. En jij?",
+          "before": "Ik",
+          "after": "twee broers en drie zussen.",
+          "answers": ["heb"],
+          "explain": "Possession takes hebben, and the ik-form is heb."
+        },
+        {
+          "id": "hz-2",
+          "kind": "fill",
+          "prompt": "Mijn kat ___ heel blij met zijn nieuwe huisje.",
+          "before": "Mijn kat",
+          "after": "heel blij met zijn nieuwe huisje.",
+          "answers": ["is"],
+          "explain": "blij is a state, so zijn. Third person singular gives is."
+        },
+        {
+          "id": "hz-3",
+          "kind": "fill",
+          "prompt": "Mevrouw Jansen, ___ u een minuutje voor mij?",
+          "before": "Mevrouw Jansen,",
+          "after": "u een minuutje voor mij?",
+          "answers": ["hebt", "heeft"],
+          "explain": "Possession of a minute takes hebben, and u accepts both hebt and heeft."
+        },
+        {
+          "id": "hz-4",
+          "kind": "fill",
+          "prompt": "___ jij morgen in de les?",
+          "before": "",
+          "after": "jij morgen in de les?",
+          "answers": ["ben"],
+          "explain": "Location takes zijn, and jij after the verb removes the t: Ben jij?"
+        },
+        {
+          "id": "hz-5",
+          "kind": "fill",
+          "prompt": "Mijn broer ___ morgen een afspraak met de tandarts.",
+          "before": "Mijn broer",
+          "after": "morgen een afspraak met de tandarts.",
+          "answers": ["heeft"],
+          "explain": "An appointment is something you have, so heeft for hij."
+        },
+        {
+          "id": "hz-6",
+          "kind": "mcq",
+          "prompt": "Which sentence means 'You are never on time'?",
+          "options": ["Jij hebt nooit tijd.", "Jij bent nooit op tijd.", "Jij hebt nooit op tijd.", "Jij bent nooit tijd."],
+          "correct": 1,
+          "explain": "op tijd zijn is being punctual. tijd hebben is having free time."
+        },
+        {
+          "id": "hz-7",
+          "kind": "mcq",
+          "prompt": "Which is correct?",
+          "options": ["Ik ben honger.", "Ik heb honger.", "Ik ben hongerig van het eten.", "Ik heb 37 jaar."],
+          "correct": 1,
+          "explain": "Hunger is something you have in Dutch: Ik heb honger. Age, by contrast, uses zijn."
+        },
+        {
+          "id": "hz-8",
+          "kind": "order",
+          "prompt": "Build the question: are you tired? (informal)",
+          "words": ["moe", "Ben", "je", "?"],
+          "answer": ["Ben", "je", "moe", "?"],
+          "explain": "Verb first in a yes/no question, and bent loses its t before je."
+        },
+        {
+          "id": "hz-9",
+          "kind": "mcq",
+          "prompt": "Complete: ___ een toilet hier?",
+          "options": ["Is er", "Zijn er", "Er is", "Heeft er"],
+          "correct": 0,
+          "explain": "One toilet is singular, and in a question the verb comes first: Is er een toilet hier?"
+        }
+      ]
+    },
+    {
+      "id": "possessives",
+      "title": "Possessive pronouns",
+      "subtitle_nl": "possessief pronomen",
+      "emoji": "🔖",
+      "summary": "My, your, his, her, our, their. Only one of them changes shape, but that one (ons or onze) catches everybody.",
+      "sections": [
+        {
+          "heading": "The table",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["", "Dutch", "English", "Example"],
+              "rows": [
+                ["1 sg", "mijn", "my", "mijn vader"],
+                ["2 sg", "jouw / je", "your", "jouw naam / je naam"],
+                ["2 sg formal", "uw", "your (formal)", "uw adres"],
+                ["3 sg m", "zijn", "his", "zijn moeder"],
+                ["3 sg f", "haar", "her", "haar broer"],
+                ["1 pl", "ons / onze", "our", "ons huis / onze buren"],
+                ["2 pl", "jullie", "your (plural)", "jullie docent"],
+                ["3 pl", "hun", "their", "hun appartement"]
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "ons or onze",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "This is the only possessive that changes, and the rule is short:\n- `ons` before a **singular het-word**: `ons huis`, `ons appartement`, `ons kind`\n- `onze` **everywhere else**: `onze buren`, `onze auto`, `onze moeder`, `onze kinderen`\nIf you do not know whether a word is a de-word or a het-word, `onze` is the safer bet, because it covers three of the four cases."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Ons appartement is precies naast hun appartement.", "en": "Our flat is right next to their flat.", "note": "het appartement, singular, so ons" },
+                { "nl": "Onze buren heten Daan en Saïda.", "en": "Our neighbours are called Daan and Saïda.", "note": "plural, so onze" },
+                { "nl": "Onze hond heet Sam.", "en": "Our dog is called Sam.", "note": "de hond, so onze" }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "jouw or je",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Same logic as the subject pronouns: `jouw` is the stressed form, `je` the everyday one.\n- `Wat is je naam?` (neutral)\n- `Dat is mijn fiets. Waar is jouw fiets?` (contrast)\nBe careful with the spelling: `jouw` with a w is the possessive, `jou` without a w is the object form (`Dit is voor jou.`)."
+            }
+          ]
+        },
+        {
+          "heading": "Showing possession with van",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Dutch prefers `van` where English uses an apostrophe s.\n- `de auto van mijn broer` = my brother's car\n- `de zus van je moeder` = your mother's sister\n- `de man van je oma` = your grandmother's husband\nThis is also how you build family riddles: `Wie is de zoon van je tante?`"
+            },
+            {
+              "kind": "rule",
+              "title": "When Dutch does use -s",
+              "body": "Names and close family words can take a plain `-s`, with no apostrophe:\n- `Peters fiets`, `Esthers moeder`, `mijn moeders lievelingseten`\nAn apostrophe appears only when the name ends in a single long vowel letter (a, i, o, u, y) that the plain -s would spoil: `Anna's fiets`, `Rico's auto`, `Harry's tas`. A name ending in -e keeps the plain -s: `Sophies tas`."
+            }
+          ]
+        },
+        {
+          "heading": "The classic mix-up",
+          "blocks": [
+            {
+              "kind": "pitfall",
+              "title": "zijn means his, not my",
+              "body": "Learners copy the possessive from the wrong person. Read this and spot the errors:\n- Wrong: `Mijn naam is Sophie. Ik woon in Amsterdam met zijn vriend.`\n- Right: `Mijn naam is Sophie. Ik woon in Amsterdam met mijn vriend.`\nThe possessive follows the **owner**, so if Sophie is speaking about her own boyfriend it is `mijn`."
+            },
+            {
+              "kind": "pitfall",
+              "title": "zijn is also a verb",
+              "body": "`zijn` is both the possessive \"his\" and the verb \"to be\". Word order tells them apart: after a subject it is the verb (`Ze zijn allebei 30 jaar`), before a noun it is the possessive (`zijn naam is Robert`)."
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "ons goes before a singular het-word, onze everywhere else.",
+        "jouw is the stressed form, je the everyday one, and jou without w is the object form.",
+        "Use van instead of an apostrophe s: de auto van mijn broer.",
+        "The possessive follows the owner, so a woman talking about her partner says mijn or haar, never zijn."
+      ],
+      "exercises": [
+        {
+          "id": "poss-1",
+          "kind": "mcq",
+          "prompt": "Which is correct?",
+          "options": ["onze appartement", "ons appartement", "ons buren", "onzen appartement"],
+          "correct": 1,
+          "explain": "het appartement is a singular het-word, so it takes ons."
+        },
+        {
+          "id": "poss-2",
+          "kind": "fill",
+          "prompt": "Complete with our: ___ buren heten Daan en Saïda.",
+          "before": "",
+          "after": "buren heten Daan en Saïda.",
+          "answers": ["onze"],
+          "explain": "buren is plural, so onze."
+        },
+        {
+          "id": "poss-3",
+          "kind": "fill",
+          "prompt": "Sophie is speaking about her own boyfriend. Fix the possessive: Ik woon in Amsterdam met ___ vriend.",
+          "before": "Ik woon in Amsterdam met",
+          "after": "vriend.",
+          "answers": ["mijn"],
+          "explain": "Sophie is the owner and the speaker, so mijn. zijn would mean his."
+        },
+        {
+          "id": "poss-4",
+          "kind": "mcq",
+          "prompt": "Which spelling means 'your name'?",
+          "options": ["jou naam", "jouw naam", "jouws naam", "jow naam"],
+          "correct": 1,
+          "explain": "jouw with a w is the possessive. jou without a w is the object form, as in voor jou."
+        },
+        {
+          "id": "poss-5",
+          "kind": "order",
+          "prompt": "Build: my brother's car is new.",
+          "words": ["van", "auto", "broer", "De", "is", "mijn", "nieuw"],
+          "answer": ["De", "auto", "van", "mijn", "broer", "is", "nieuw"],
+          "explain": "Dutch builds possession with van: de auto van mijn broer."
+        },
+        {
+          "id": "poss-6",
+          "kind": "fill",
+          "prompt": "Talking about Robert: ___ naam is Robert en hij is arts.",
+          "before": "",
+          "after": "naam is Robert en hij is arts.",
+          "answers": ["zijn"],
+          "explain": "Robert is male, so zijn (his)."
+        },
+        {
+          "id": "poss-7",
+          "kind": "mcq",
+          "prompt": "The neighbours own the flat. Which is right?",
+          "options": ["Jullie appartement is naast ons.", "Hun appartement is naast ons.", "Haar appartement is naast ons.", "Onze appartement is naast ons."],
+          "correct": 1,
+          "explain": "hun is the possessive for they."
+        },
+        {
+          "id": "poss-8",
+          "kind": "fill",
+          "prompt": "Ask formally for someone's address.",
+          "before": "Wat is",
+          "after": "adres?",
+          "answers": ["uw"],
+          "explain": "The formal possessive matching u is uw."
+        }
+      ]
+    }
+  ]
+}

@@ -23,6 +23,7 @@ import { SearchOverlay } from '@/components/search-overlay'
 import { initBaseline, isInitialized, getUnseenIds, hasBeenSeen } from '@/lib/seen-lessons'
 import { getLearnedCount } from '@/lib/dutch/knm'
 import { getStudiedCount as getLezenStudiedCount } from '@/lib/dutch/lezen'
+import { getOverallProgress as getCheatsheetProgress } from '@/lib/dutch/cheatsheet'
 import { getStudiedCount as getLuisterStudiedCount } from '@/lib/dutch/luisteren'
 import { getCourseProgress as getSoundsCourseProgress } from '@/lib/dutch/pronunciation'
 import { getItemsByLevel, ALL_LEVELS, type Level } from '@/lib/dutch/level-map'
@@ -264,6 +265,16 @@ export default function Home() {
       const p = getSoundsCourseProgress()
       setDutchSoundsDone(p.completed)
       setDutchSoundsTotal(p.total)
+    }
+  }, [language])
+
+  const [dutchCheatPassed, setDutchCheatPassed] = useState(0)
+  const [dutchCheatTotal, setDutchCheatTotal] = useState(0)
+  useEffect(() => {
+    if (language === 'dutch') {
+      const p = getCheatsheetProgress()
+      setDutchCheatPassed(p.passed)
+      setDutchCheatTotal(p.totalTopics)
     }
   }, [language])
 
@@ -750,6 +761,24 @@ export default function Home() {
                     </div>
                   </div>
                   <span style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 20, color: W }}>→</span>
+                </div>
+              </Sticker>
+            </div>
+
+            {/* Concept cheatsheets: reference plus drills for the core grammar */}
+            <div style={{ padding: '14px 20px 0', maxWidth: 480, margin: '0 auto', position: 'relative', zIndex: 2 }}>
+              <Sticker color={COLORS.butter} radius={18} padding={14} onClick={() => { playSound('pop'); router.push('/dutch/cheatsheet') }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                  <span style={{ fontSize: 30 }}>📒</span>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 17, color: COLORS.ink }}>
+                      Cheatsheets: the concepts, condensed
+                    </div>
+                    <div style={{ fontFamily: FONTS.body, fontSize: 12.5, color: COLORS.ink60, marginTop: 2 }}>
+                      <em>de basis op een rij</em> · rules, tables, drills · {dutchCheatPassed}/{dutchCheatTotal} passed
+                    </div>
+                  </div>
+                  <span style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 20, color: COLORS.ink }}>→</span>
                 </div>
               </Sticker>
             </div>

@@ -1,0 +1,763 @@
+{
+  "group": {
+    "id": "people",
+    "title": "People and description",
+    "subtitle_nl": "mensen beschrijven",
+    "blurb": "Family, nationality, languages, and how to describe what someone looks like, including the adjective ending that decides whether it is een klein huis or een kleine man.",
+    "emoji": "👨‍👩‍👧"
+  },
+  "topics": [
+    {
+      "id": "family",
+      "title": "Family",
+      "subtitle_nl": "de familie en het gezin",
+      "emoji": "👪",
+      "summary": "Every family word you need, the gezin versus familie split, and why neef can mean two completely different relatives.",
+      "sections": [
+        {
+          "heading": "The core family",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Dutch", "English"],
+              "rows": [
+                ["de vader", "the father"],
+                ["de moeder", "the mother"],
+                ["de ouders", "the parents"],
+                ["het kind / de kinderen", "the child / the children"],
+                ["de zoon", "the son"],
+                ["de dochter", "the daughter"],
+                ["de broer", "the brother"],
+                ["de zus", "the sister"],
+                ["het gezin", "the household: parents plus children"],
+                ["de familie", "the wider family: all relatives"]
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "gezin is not familie",
+              "body": "`het gezin` is the people you live with, parents and children. `de familie` is everyone you are related to, including cousins in another country. Asking `Hoe groot is jouw gezin?` gets you a very different number from `Hoe groot is jouw familie?`."
+            }
+          ]
+        },
+        {
+          "heading": "Wider family",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Dutch", "English"],
+              "rows": [
+                ["de opa / de grootvader", "the grandfather"],
+                ["de oma / de grootmoeder", "the grandmother"],
+                ["de grootouders", "the grandparents"],
+                ["het kleinkind", "the grandchild"],
+                ["de oom", "the uncle"],
+                ["de tante", "the aunt"],
+                ["de neef / het neefje", "the male cousin or the nephew"],
+                ["de nicht / het nichtje", "the female cousin or the niece"]
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "neef and nicht are ambiguous",
+              "body": "Dutch uses one word for cousin and for nephew or niece. If it matters, spell it out: `de zoon van mijn tante` (my cousin) or `de zoon van mijn broer` (my nephew)."
+            }
+          ]
+        },
+        {
+          "heading": "In-laws and step-family",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Two prefixes do most of the work:\n- `schoon-` marks family by marriage: `de schoonvader`, `de schoonmoeder`, `de schoonouders`, `de schoonzus`, `de schoondochter`\n- `stief-` marks step-family: `de stiefvader`, `de stiefmoeder`, `het stiefkind`\nTwo words break the pattern: `de zwager` (brother-in-law) and `de halfbroer / de halfzus`."
+            },
+            {
+              "kind": "vocab",
+              "title": "Relationship status",
+              "items": [
+                { "nl": "de partner", "en": "the partner" },
+                { "nl": "de man / de echtgenoot", "en": "the husband" },
+                { "nl": "de vrouw / de echtgenote", "en": "the wife" },
+                { "nl": "het vriendje / het vriendinnetje", "en": "the boyfriend / the girlfriend" },
+                { "nl": "getrouwd", "en": "married" },
+                { "nl": "verloofd", "en": "engaged" },
+                { "nl": "gescheiden", "en": "divorced" },
+                { "nl": "single / alleenstaand", "en": "single" },
+                { "nl": "Ik heb een relatie.", "en": "I am in a relationship." },
+                { "nl": "Wij wonen samen.", "en": "We live together." }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "The -je ending",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Adding `-je` makes a word small, young or affectionate. It is called the `verkleinwoord` (the little form). Every word with `-je` becomes a **het-word**, whatever it was before.\n- `de hond` gives `het hondje` (the little dog)\n- `de neef` gives `het neefje` (the young cousin or nephew)\n- `het huis` gives `het huisje` (the little house)\nThe ending has variants after certain sounds: `-tje` (het autootje), `-pje` (het boompje), `-kje` (het koninkje)."
+            }
+          ]
+        },
+        {
+          "heading": "Talking about your family",
+          "blocks": [
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Heb je broers of zussen?", "en": "Do you have brothers or sisters?" },
+                { "nl": "Ik heb twee broers en drie zussen.", "en": "I have two brothers and three sisters." },
+                { "nl": "Ik ben enig kind.", "en": "I am an only child." },
+                { "nl": "Wie is ouder, jij of je zus?", "en": "Who is older, you or your sister?" },
+                { "nl": "Ik ben de oudste. Mijn broer is de jongste.", "en": "I am the eldest. My brother is the youngest." },
+                { "nl": "Hoe heten je ouders en waar wonen ze?", "en": "What are your parents called and where do they live?" },
+                { "nl": "Mijn moeder heet Dorine. Ze woont samen met mijn vader en hun hondje Sam.", "en": "My mother is called Dorine. She lives with my father and their little dog Sam." }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "Family riddles are the fastest drill",
+              "body": "Build them with `van`: `Wie is de zus van je moeder?` (je tante), `Wie is de man van je oma?` (je opa), `Wie is de zoon van je broer?` (je neef). Ask a Dutch speaker a few and the vocabulary sticks in one evening."
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "het gezin is parents plus children, de familie is every relative.",
+        "neef and nicht cover both cousin and nephew or niece, so use van to be precise.",
+        "schoon- marks in-laws, stief- marks step-family.",
+        "Any word ending in -je is small and always a het-word."
+      ],
+      "exercises": [
+        {
+          "id": "fam-1",
+          "kind": "fill",
+          "prompt": "Wie is de zus van je moeder?",
+          "before": "Dat is mijn",
+          "after": ".",
+          "answers": ["tante"],
+          "explain": "Your mother's sister is your tante."
+        },
+        {
+          "id": "fam-2",
+          "kind": "fill",
+          "prompt": "Wie is de man van je oma?",
+          "before": "Dat is mijn",
+          "after": ".",
+          "answers": ["opa", "grootvader"],
+          "explain": "Your grandmother's husband is your opa or grootvader."
+        },
+        {
+          "id": "fam-3",
+          "kind": "fill",
+          "prompt": "Wie is de man van je zus?",
+          "before": "Dat is mijn",
+          "after": ".",
+          "answers": ["zwager"],
+          "explain": "Your sister's husband is your zwager, one of the words that does not use schoon-."
+        },
+        {
+          "id": "fam-4",
+          "kind": "mcq",
+          "prompt": "Someone asks Hoe groot is jouw gezin? What are they asking about?",
+          "options": ["all your relatives", "the people you live with", "your cousins only", "your grandparents"],
+          "correct": 1,
+          "explain": "het gezin is the household: parents and children. de familie is everyone else too."
+        },
+        {
+          "id": "fam-5",
+          "kind": "mcq",
+          "prompt": "Which article goes with hondje?",
+          "options": ["de hondje", "het hondje", "een de hondje", "die hondje"],
+          "correct": 1,
+          "explain": "Every -je word is a het-word, even when the original word took de."
+        },
+        {
+          "id": "fam-6",
+          "kind": "fill",
+          "prompt": "Say you have no brothers or sisters.",
+          "before": "Ik ben",
+          "after": ".",
+          "answers": ["enig kind"],
+          "explain": "enig kind is the fixed expression for an only child."
+        },
+        {
+          "id": "fam-7",
+          "kind": "order",
+          "prompt": "Build the question: do you have brothers or sisters?",
+          "words": ["zussen", "je", "of", "broers", "Heb", "?"],
+          "answer": ["Heb", "je", "broers", "of", "zussen", "?"],
+          "explain": "Yes/no question, so the verb comes first, and hebt loses its t before je."
+        },
+        {
+          "id": "fam-8",
+          "kind": "mcq",
+          "prompt": "Your mother-in-law is:",
+          "options": ["de stiefmoeder", "de schoonmoeder", "de grootmoeder", "de halfmoeder"],
+          "correct": 1,
+          "explain": "schoon- marks family by marriage, stief- marks step-family."
+        }
+      ]
+    },
+    {
+      "id": "countries-languages",
+      "title": "Countries, nationalities and languages",
+      "subtitle_nl": "landen, nationaliteiten en talen",
+      "emoji": "🌍",
+      "summary": "One table you can read three ways, the four nationality endings, and the capital-letter rule that surprises almost everyone.",
+      "sections": [
+        {
+          "heading": "The three-column table",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Land", "Nationaliteit", "Taal"],
+              "rows": [
+                ["Nederland", "Nederlands", "Nederlands"],
+                ["België", "Belgisch", "Nederlands en Frans"],
+                ["Duitsland", "Duits", "Duits"],
+                ["Engeland", "Engels", "Engels"],
+                ["Frankrijk", "Frans", "Frans"],
+                ["Italië", "Italiaans", "Italiaans"],
+                ["Spanje", "Spaans", "Spaans"],
+                ["Portugal", "Portugees", "Portugees"],
+                ["Brazilië", "Braziliaans", "Portugees"],
+                ["de Verenigde Staten", "Amerikaans", "Engels"],
+                ["Mexico", "Mexicaans", "Spaans"],
+                ["Griekenland", "Grieks", "Grieks"],
+                ["Turkije", "Turks", "Turks"],
+                ["Marokko", "Marokkaans", "Arabisch en Berbers"],
+                ["Somalië", "Somalisch", "Somalisch en Arabisch"],
+                ["Polen", "Pools", "Pools"],
+                ["Rusland", "Russisch", "Russisch"],
+                ["Georgië", "Georgisch", "Georgisch"],
+                ["India", "Indiaas", "Hindi, Engels en meer"],
+                ["China", "Chinees", "Chinees"],
+                ["Japan", "Japans", "Japans"]
+              ],
+              "note": "Read across: the nationality and the language are usually the same word. Brazil, the United States, Mexico and Morocco are the reminders that they are not always."
+            }
+          ]
+        },
+        {
+          "heading": "The four endings",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Nationality words cluster into four endings. Knowing them lets you guess a country you have not learned yet.\n- `-s`: Duits, Engels, Frans, Grieks, Turks, Pools, Japans\n- `-isch`: Russisch, Somalisch, Georgisch\n- `-aans`: Italiaans, Mexicaans, Amerikaans, Marokkaans, Indiaas\n- `-ees`: Portugees, Chinees, Libanees"
+            },
+            {
+              "kind": "pitfall",
+              "title": "Capital letters, always",
+              "body": "Dutch writes nationalities and languages with a **capital letter**, even in the middle of a sentence: `Ik spreek Nederlands en Engels.` Many languages do not do this, so it is an easy point to lose in writing."
+            }
+          ]
+        },
+        {
+          "heading": "The person versus the adjective",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "`Nederlands` is the adjective and the language. The **person** is a different word, and it has a male and a female form."
+            },
+            {
+              "kind": "table",
+              "headers": ["Country", "A man", "A woman"],
+              "rows": [
+                ["Nederland", "een Nederlander", "een Nederlandse"],
+                ["Duitsland", "een Duitser", "een Duitse"],
+                ["Engeland", "een Engelsman", "een Engelse"],
+                ["Frankrijk", "een Fransman", "een Franse"],
+                ["België", "een Belg", "een Belgische"],
+                ["Italië", "een Italiaan", "een Italiaanse"],
+                ["Spanje", "een Spanjaard", "een Spaanse"]
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Saying it out loud",
+          "blocks": [
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Wat is je nationaliteit? Ik ben Nederlands.", "en": "What is your nationality? I am Dutch." },
+                { "nl": "Ik heb de Nederlandse nationaliteit.", "en": "I have Dutch nationality.", "note": "the formal version, note the -e on Nederlandse" },
+                { "nl": "Welke talen spreek je? Ik spreek Nederlands, Engels en Spaans.", "en": "Which languages do you speak? I speak Dutch, English and Spanish." },
+                { "nl": "Ik kom uit India, maar ik woon in Nederland.", "en": "I come from India, but I live in the Netherlands." },
+                { "nl": "Mijn moedertaal is Hindi.", "en": "My mother tongue is Hindi." },
+                { "nl": "Ik spreek een beetje Nederlands.", "en": "I speak a little Dutch." },
+                { "nl": "Ik leer Nederlands.", "en": "I am learning Dutch." }
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "No article with a language",
+              "body": "Say `Ik spreek Nederlands`, not `het Nederlands` in everyday speech. The article only appears in formal or technical phrasing: `Het Nederlands is een Germaanse taal.`"
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Nationality and language are usually the same word, with Brazil, the US, Mexico and Morocco as the reminders that they are not.",
+        "The four endings are -s, -isch, -aans and -ees.",
+        "Nationalities and languages always take a capital letter in Dutch.",
+        "The person is a separate word: een Nederlander, een Nederlandse."
+      ],
+      "exercises": [
+        {
+          "id": "cnl-1",
+          "kind": "fill",
+          "prompt": "Land: Duitsland. Wat is de taal?",
+          "before": "De taal is",
+          "after": ".",
+          "answers": ["duits"],
+          "explain": "Duitsland gives Duits for both the nationality and the language."
+        },
+        {
+          "id": "cnl-2",
+          "kind": "mcq",
+          "prompt": "Which language is spoken in Brazilië?",
+          "options": ["Braziliaans", "Spaans", "Portugees", "Brazilies"],
+          "correct": 2,
+          "explain": "The nationality is Braziliaans but the language is Portugees. Braziliaans is not a language."
+        },
+        {
+          "id": "cnl-3",
+          "kind": "mcq",
+          "prompt": "Which sentence is written correctly?",
+          "options": ["Ik spreek nederlands en engels.", "Ik spreek Nederlands en Engels.", "Ik spreek het nederlands en engels.", "ik spreek Nederlands en engels."],
+          "correct": 1,
+          "explain": "Languages always take a capital letter in Dutch, and no article in everyday speech."
+        },
+        {
+          "id": "cnl-4",
+          "kind": "fill",
+          "prompt": "A man from the Netherlands is:",
+          "before": "een",
+          "after": "",
+          "answers": ["nederlander"],
+          "explain": "The person word is een Nederlander. Nederlands is the adjective and the language."
+        },
+        {
+          "id": "cnl-5",
+          "kind": "mcq",
+          "prompt": "Which nationality ending group does Russisch belong to?",
+          "options": ["-s", "-isch", "-aans", "-ees"],
+          "correct": 1,
+          "explain": "Russisch, Somalisch and Georgisch all take -isch."
+        },
+        {
+          "id": "cnl-6",
+          "kind": "order",
+          "prompt": "Build the question: which languages do you speak?",
+          "words": ["talen", "je", "spreek", "Welke", "?"],
+          "answer": ["Welke", "talen", "spreek", "je", "?"],
+          "explain": "welke plus the noun comes first, then the verb, then the subject. spreekt loses its t before je."
+        },
+        {
+          "id": "cnl-7",
+          "kind": "fill",
+          "prompt": "Say you speak a little Dutch.",
+          "before": "Ik spreek een beetje",
+          "after": ".",
+          "answers": ["nederlands"],
+          "explain": "een beetje plus the language name, capitalised in writing."
+        }
+      ]
+    },
+    {
+      "id": "appearance",
+      "title": "Describing appearance",
+      "subtitle_nl": "het uiterlijk beschrijven",
+      "emoji": "🧑‍🦱",
+      "summary": "Three verbs do the whole job: you ARE tall, you HAVE brown eyes, and you WEAR glasses. Get those right and the vocabulary is easy.",
+      "sections": [
+        {
+          "heading": "The three verbs",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Verb", "Used for", "Example"],
+              "rows": [
+                ["zijn", "height, age, build, being bald or blond", "Hij is lang. Zij is klein. Hij is kaal."],
+                ["hebben", "hair, eyes, features", "Zij heeft bruine ogen. Hij heeft een baard."],
+                ["dragen", "glasses, hats, clothes", "Mijn moeder draagt een bril."]
+              ],
+              "note": "Glasses can take either verb: Hij heeft een bril and Hij draagt een bril are both fine."
+            },
+            {
+              "kind": "examples",
+              "title": "A full description",
+              "items": [
+                { "nl": "Mijn vader is lang. Hij heeft kort, bruin en steil haar.", "en": "My father is tall. He has short, brown, straight hair." },
+                { "nl": "Mijn moeder is klein. Ze heeft korte, bruine krullen.", "en": "My mother is short. She has short, brown curls." },
+                { "nl": "Mijn vader draagt een bril en mijn moeder draagt geen bril.", "en": "My father wears glasses and my mother does not wear glasses." },
+                { "nl": "Sam heeft blonde krullen.", "en": "Sam has blond curls." }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Height, build and age",
+          "blocks": [
+            {
+              "kind": "vocab",
+              "items": [
+                { "nl": "lang / groot", "en": "tall" },
+                { "nl": "klein", "en": "short (in height)" },
+                { "nl": "niet groot en niet klein", "en": "average height" },
+                { "nl": "slank / dun", "en": "slim / thin" },
+                { "nl": "dik / stevig", "en": "heavy / solidly built" },
+                { "nl": "gespierd", "en": "muscular" },
+                { "nl": "jong / oud", "en": "young / old" },
+                { "nl": "van middelbare leeftijd", "en": "middle-aged" },
+                { "nl": "een jaar of dertig", "en": "around thirty" }
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "kort is not klein",
+              "body": "`klein` is short in height, `kort` is short in length. A person is `klein`, but their hair is `kort`. Saying `Hij heeft klein haar` sounds like the hair itself is a small object."
+            }
+          ]
+        },
+        {
+          "heading": "Hair and eyes",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Category", "Dutch"],
+              "rows": [
+                ["colour", "blond, bruin, zwart, rood, grijs, wit, geverfd"],
+                ["texture", "steil, krullend, golvend, krullen (curls)"],
+                ["length", "lang, halflang, kort"],
+                ["none", "kaal, een kaal hoofd"],
+                ["styles", "een staart, een knot, een vlecht, een pony"],
+                ["eyes", "blauwe, groene, bruine, grijze ogen"]
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "haar is singular, ogen is plural",
+              "body": "`het haar` is one het-word with no article in a description, so it takes no -e: `Hij heeft **bruin** haar`. `de ogen` is plural, so the adjective always takes -e: `Hij heeft **bruine** ogen`. That single difference explains why the two sentences look inconsistent."
+            }
+          ]
+        },
+        {
+          "heading": "Faces and accessories",
+          "blocks": [
+            {
+              "kind": "vocab",
+              "items": [
+                { "nl": "een bril", "en": "glasses" },
+                { "nl": "een zonnebril", "en": "sunglasses" },
+                { "nl": "een snor", "en": "a moustache" },
+                { "nl": "een baard", "en": "a beard" },
+                { "nl": "sproeten", "en": "freckles" },
+                { "nl": "een grote / kleine neus", "en": "a big / small nose" },
+                { "nl": "dikke lippen", "en": "full lips" },
+                { "nl": "kleine oren", "en": "small ears" },
+                { "nl": "een hoed / een pet", "en": "a hat / a cap" },
+                { "nl": "een tatoeage", "en": "a tattoo" }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Asking about someone",
+          "blocks": [
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Hoe ziet hij eruit?", "en": "What does he look like?", "note": "eruitzien splits, so eruit goes to the end" },
+                { "nl": "Is hij lang of klein?", "en": "Is he tall or short?" },
+                { "nl": "Welke kleur haar heeft ze?", "en": "What colour hair does she have?" },
+                { "nl": "Welke kleur ogen heeft hij?", "en": "What colour eyes does he have?" },
+                { "nl": "Heeft zij steil haar of krullen?", "en": "Does she have straight hair or curls?" },
+                { "nl": "Draagt hij een bril?", "en": "Does he wear glasses?" },
+                { "nl": "Is hij kaal?", "en": "Is he bald?" }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "The guessing game",
+              "body": "Describing a face in yes/no questions is the fastest practice there is: `Heeft hij een baard?`, `Draagt zij een hoed?`, `Is het een vrouw?`, `Heeft hij dikke lippen?`. Every answer is `Ja` or `Nee`, so you can focus on the question form."
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "zijn for height, age and being bald, hebben for hair and eyes, dragen for glasses and hats.",
+        "klein is short in height, kort is short in length.",
+        "bruin haar has no -e (het-word, no article), bruine ogen does (plural).",
+        "Hoe ziet hij eruit? sends eruit to the end of the sentence."
+      ],
+      "exercises": [
+        {
+          "id": "app-1",
+          "kind": "mcq",
+          "prompt": "Which is correct?",
+          "options": ["Hij is bruine ogen.", "Hij heeft bruine ogen.", "Hij draagt bruine ogen.", "Hij heeft bruin ogen."],
+          "correct": 1,
+          "explain": "Eyes are something you have, and ogen is plural so the adjective takes -e."
+        },
+        {
+          "id": "app-2",
+          "kind": "fill",
+          "prompt": "Complete: Hij heeft ___ haar. (bruin)",
+          "before": "Hij heeft",
+          "after": "haar.",
+          "answers": ["bruin"],
+          "explain": "het haar is a singular het-word with no article here, so the adjective stays bare: bruin haar."
+        },
+        {
+          "id": "app-3",
+          "kind": "fill",
+          "prompt": "Complete: Mijn moeder ___ een bril.",
+          "before": "Mijn moeder",
+          "after": "een bril.",
+          "answers": ["draagt", "heeft"],
+          "explain": "Glasses take dragen or hebben. Both are natural."
+        },
+        {
+          "id": "app-4",
+          "kind": "mcq",
+          "prompt": "Your friend is 1.60 m tall. Which is right?",
+          "options": ["Zij is kort.", "Zij is klein.", "Zij heeft klein.", "Zij draagt klein."],
+          "correct": 1,
+          "explain": "klein is short in height. kort is for length, as in kort haar."
+        },
+        {
+          "id": "app-5",
+          "kind": "order",
+          "prompt": "Build the question: what does she look like?",
+          "words": ["ze", "Hoe", "eruit", "ziet", "?"],
+          "answer": ["Hoe", "ziet", "ze", "eruit", "?"],
+          "explain": "eruitzien is a split verb, so eruit lands at the end of the sentence."
+        },
+        {
+          "id": "app-6",
+          "kind": "fill",
+          "prompt": "Ask what colour eyes he has.",
+          "before": "Welke kleur",
+          "after": "heeft hij?",
+          "answers": ["ogen"],
+          "explain": "Welke kleur ogen heeft hij? The noun sits right after welke kleur."
+        },
+        {
+          "id": "app-7",
+          "kind": "mcq",
+          "prompt": "Which sentence says he has no hair?",
+          "options": ["Hij is kaal.", "Hij heeft kaal.", "Hij draagt kaal.", "Hij is kaalt."],
+          "correct": 0,
+          "explain": "kaal is a state, so it takes zijn: Hij is kaal."
+        },
+        {
+          "id": "app-8",
+          "kind": "order",
+          "prompt": "Build: my mother has short, brown curls.",
+          "words": ["korte,", "krullen", "heeft", "moeder", "Mijn", "bruine"],
+          "answer": ["Mijn", "moeder", "heeft", "korte,", "bruine", "krullen"],
+          "explain": "krullen is plural, so both adjectives take -e: korte, bruine krullen."
+        }
+      ]
+    },
+    {
+      "id": "adjectives",
+      "title": "Adjective endings",
+      "subtitle_nl": "het adjectief",
+      "emoji": "🎨",
+      "summary": "Adjectives before a noun almost always take -e. There is exactly one situation where they do not, and this is how to spot it in a second.",
+      "sections": [
+        {
+          "heading": "The default: add -e",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "An adjective standing **before a noun** normally takes `-e`.\n- `de grote man`, `een grote man`\n- `de kleine huizen`, `kleine huizen`\n- `mijn nieuwe fiets`, `dit lekkere eten`"
+            }
+          ]
+        },
+        {
+          "heading": "The one exception",
+          "blocks": [
+            {
+              "kind": "rule",
+              "title": "No -e when all three are true",
+              "body": "Leave the `-e` off only when the noun is:\n1. a **het-word**, and\n2. **singular**, and\n3. **indefinite** (after `een`, `geen`, or with no article at all)\n\nThat gives `een klein huis`, `geen groot probleem`, `lekker eten`. Change any one of those three and the -e comes back: `het kleine huis`, `kleine huizen`, `dit kleine huis`."
+            },
+            {
+              "kind": "table",
+              "headers": ["", "de-word (de man)", "het-word (het huis)"],
+              "rows": [
+                ["definite singular", "de grote man", "het grote huis"],
+                ["indefinite singular", "een grote man", "een groot huis"],
+                ["plural", "grote mannen", "grote huizen"],
+                ["after mijn / dit / dat", "mijn grote man", "mijn grote huis"]
+              ],
+              "note": "Only one cell in the whole table has no -e. That is the entire rule."
+            }
+          ]
+        },
+        {
+          "heading": "Spelling when you add the -e",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Adding `-e` opens the last syllable, so the same sound rules kick in:\n- long vowel loses a letter: `groot` gives `grote`, `duur` gives `dure`\n- short vowel doubles the consonant: `dik` gives `dikke`, `wit` gives `witte`\n- f goes back to v and s back to z: `lief` gives `lieve`, `grijs` gives `grijze`"
+            },
+            {
+              "kind": "table",
+              "headers": ["Adjective", "With -e", "Why"],
+              "rows": [
+                ["groot", "grote", "long o keeps one letter in an open syllable"],
+                ["klein", "kleine", "nothing changes"],
+                ["dik", "dikke", "short i needs the double consonant"],
+                ["wit", "witte", "short i needs the double consonant"],
+                ["lief", "lieve", "f becomes v when it is no longer final"],
+                ["grijs", "grijze", "s becomes z when it is no longer final"],
+                ["rood", "rode", "long o keeps one letter"]
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Adjectives that never change",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "- Adjectives ending in `-en` take no `-e`: `een open deur`, `mijn eigen huis`, `een gouden ring`, `een tevreden klant`.\n- After `zijn`, `worden` or `blijven` the adjective is **never** inflected, because it is not standing in front of a noun:\n  - `Het huis is groot.`\n  - `De man is groot.`\n  - `Zij wordt moe.`"
+            },
+            {
+              "kind": "pitfall",
+              "title": "The most common learner slip",
+              "body": "Saying `Het huis is grote`. Adjectives after `zijn` stay bare, always. The `-e` only appears when the adjective sits directly before its noun."
+            }
+          ]
+        },
+        {
+          "heading": "geen and niet",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "- `geen` negates a noun that has `een` or no article: `Ik heb **geen** bril.`, `Wij hebben **geen** kinderen.`\n- `niet` negates everything else, and usually sits at the end or just before the word it targets: `Ik werk **niet**.`, `Hij is **niet** lang.`, `Dat is **niet** mijn fiets.`"
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Mijn moeder draagt geen bril.", "en": "My mother does not wear glasses." },
+                { "nl": "Wij hebben geen kinderen of huisdieren.", "en": "We have no children or pets." },
+                { "nl": "Hij is niet groot en niet klein.", "en": "He is neither tall nor short." },
+                { "nl": "Ik begrijp de docent niet.", "en": "I do not understand the teacher.", "note": "definite noun, so niet, and it goes to the end" }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Comparing",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Base", "More", "Most"],
+              "rows": [
+                ["klein", "kleiner", "kleinst"],
+                ["groot", "groter", "grootst"],
+                ["mooi", "mooier", "mooist"],
+                ["goed", "beter", "best"],
+                ["veel", "meer", "meest"],
+                ["weinig", "minder", "minst"],
+                ["graag", "liever", "liefst"]
+              ],
+              "note": "Comparison uses dan: Hij is groter dan zijn broer. The superlative takes de or het: Zij is de jongste."
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Before a noun, an adjective takes -e by default.",
+        "The only exception is a singular indefinite het-word: een klein huis.",
+        "After zijn, worden or blijven the adjective never takes an ending.",
+        "geen replaces een before a noun, niet negates everything else."
+      ],
+      "exercises": [
+        {
+          "id": "adj-1",
+          "kind": "fill",
+          "prompt": "Complete with groot: een ___ huis.",
+          "before": "een",
+          "after": "huis.",
+          "answers": ["groot"],
+          "explain": "het huis, singular, after een, so no -e. All three conditions are met."
+        },
+        {
+          "id": "adj-2",
+          "kind": "fill",
+          "prompt": "Complete with groot: het ___ huis.",
+          "before": "het",
+          "after": "huis.",
+          "answers": ["grote"],
+          "explain": "het makes it definite, so the -e comes back. Long o loses a letter: grote."
+        },
+        {
+          "id": "adj-3",
+          "kind": "fill",
+          "prompt": "Complete with groot: een ___ man.",
+          "before": "een",
+          "after": "man.",
+          "answers": ["grote"],
+          "explain": "de man is a de-word, so the -e always appears."
+        },
+        {
+          "id": "adj-4",
+          "kind": "mcq",
+          "prompt": "Which is correct?",
+          "options": ["Het huis is grote.", "Het huis is groot.", "Het grote huis is grote.", "Het huis zijn groot."],
+          "correct": 1,
+          "explain": "After zijn the adjective is never inflected."
+        },
+        {
+          "id": "adj-5",
+          "kind": "fill",
+          "prompt": "Complete with wit: een ___ muur. (de muur)",
+          "before": "een",
+          "after": "muur.",
+          "answers": ["witte"],
+          "explain": "de-word, so -e. The short i needs a doubled consonant: witte."
+        },
+        {
+          "id": "adj-6",
+          "kind": "mcq",
+          "prompt": "Which sentence uses geen correctly?",
+          "options": ["Ik heb niet een bril.", "Ik heb geen bril.", "Ik heb geen de bril.", "Ik heb de bril geen."],
+          "correct": 1,
+          "explain": "geen replaces een before a noun. niet een is not used here."
+        },
+        {
+          "id": "adj-7",
+          "kind": "order",
+          "prompt": "Build: I do not understand the teacher.",
+          "words": ["niet", "de", "begrijp", "docent", "Ik"],
+          "answer": ["Ik", "begrijp", "de", "docent", "niet"],
+          "explain": "With a definite noun you use niet, and it goes to the end of the sentence."
+        },
+        {
+          "id": "adj-8",
+          "kind": "fill",
+          "prompt": "Complete with lief: een ___ man.",
+          "before": "een",
+          "after": "man.",
+          "answers": ["lieve"],
+          "explain": "de man takes -e, and the f goes back to v once it is no longer at the end: lieve."
+        },
+        {
+          "id": "adj-9",
+          "kind": "mcq",
+          "prompt": "Which phrase takes no -e?",
+          "options": ["een oude fiets", "mijn nieuwe boek", "een gouden ring", "de kleine kinderen"],
+          "correct": 2,
+          "explain": "Adjectives ending in -en never inflect: een gouden ring, een open deur."
+        }
+      ]
+    }
+  ]
+}

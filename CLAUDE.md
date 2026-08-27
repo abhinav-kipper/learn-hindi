@@ -49,6 +49,7 @@ content/dutch/foundations/ → 14 Dutch foundation JSONs (8 A1 + 6 A2)
 content/dutch/knm.json  → 100 KNM exam questions (bilingual, 6 categories)
 content/dutch/lezen.json → 10 Lezen B1-prep reading texts (bilingual, 40 MCQs)
 content/dutch/pronunciation-course.json → 8-stage from-zero "Sounds" ladder (alphabet→linking)
+content/dutch/cheatsheet/    → 5 grouped concept-cheatsheet JSONs (19 topics, 154 drill questions)
 content/stories/        → 5 Hindi story JSONs (Chai Galli motion-comics)
 docs/audits/             → Content audit rubric + per-run reports + master summaries
 scripts/audit-content.mjs → Audit dispatcher (lists 57 units, builds per-unit prompts, aggregates reports)
@@ -121,7 +122,7 @@ next deploy. ESLint runs in CI too (`npx eslint .`).
 
 The app now serves two distinct learning goals:
 - **Hindi** — conversational/colloquial Hindi via 10 situational lessons + 9 grammar foundations + 100-word vocab. Casual learning, no exam.
-- **Dutch** — focused prep for the **Inburgeringsexamen B1 + KNM** (the Dutch civic-integration exam HSM holders take to naturalize). Dutch home reoriented as: Goal banner → 3-stage path (A1/A2/B1) → 5 exam-skill modules (KNM live, Reading live, Listening/Writing/Speaking soon) → Exam scenarios (6 lessons, A2/B1) → casual Lessons & Grammar.
+- **Dutch** — focused prep for the **Inburgeringsexamen B1 + KNM** (the Dutch civic-integration exam HSM holders take to naturalize). Dutch home reoriented as: Goal banner → Sounds → Cheatsheets → 3-stage path (A1/A2/B1) → 5 exam-skill modules (KNM live, Reading live, Listening/Writing/Speaking soon) → Exam scenarios (6 lessons, A2/B1) → casual Lessons & Grammar. The **Cheatsheets** section (`/dutch/cheatsheet`) is the revision layer: 19 concept pages of rules, tables and examples, each with its own drill.
 
 All UI/labels are English; Dutch only appears in (a) content being learned (KNM questions, Lezen texts, lesson phrases), (b) Chaina's voice lines (she speaks Dutch in the Dutch track, Hinglish in the Hindi track), (c) italic Dutch-skill-name subtitles for exposure.
 
@@ -173,6 +174,10 @@ shadows anywhere.
 | `/dutch/luisteren/mock` | 25-min timed Listening drill (audio-only, no transcript). 5 random clips × 4 Qs = 20 questions. Live timer pill pink under 5 min. Auto-advance 1.5s. Pass ≥16/20 → `luisterMockPassed` + Confetti. Save to `dutch-luisteren-mock-attempts`. |
 | `/dutch/sounds` | "Sounds" module home (Dutch from-zero pronunciation). Orange header w/ Mr. Stroopwafel, `N/8 stages` count, and the 8-stage ladder as Stickers: complete (green ✓), unlocked (tappable + progress bar), locked (dimmed + 🔒). Rolling unlock — finishing a stage opens the next two. |
 | `/dutch/sounds/[stageId]` | Single pronunciation stage. Mr. Stroopwafel intro bubble + sound-card deck (grapheme + plain hint + anchor word/gloss + 🔊 Google TTS + got-it self-check) + optional minimal-pair ear-quiz + optional blend builder (word assembled part-by-part, each playable). On completion → Confetti + `pronStageDone` Chaina moment + "next stage" CTA. |
+| `/dutch/cheatsheet` | Concept-cheatsheet hub. Themed header band + "topics passed" mastery bar + orange "Mixed review" CTA (15 questions across every topic) + 5 collapsible group Stickers (First contact / Core grammar / People and description / Building sentences / Time and daily life), each folding out its topic cards with a green `✓ n/n` best-score badge or a grey `read` chip. |
+| `/dutch/cheatsheet/[topicId]` | One concept sheet: summary Sticker, numbered sections rendering rule/tip/pitfall callouts, scrollable tables, and example/vocab lists with a per-line 🔊 (Dutch TTS). Ends with a mint "Remember this much" takeaway list, the practice CTA (shows best score), a "Mark as read" toggle and a "Next up" link. |
+| `/dutch/cheatsheet/[topicId]/practice` | Per-topic drill via `DrillRunner`. Shuffled mix of MCQ / fill-the-gap / tap-to-order questions, per-question segmented progress, combo chip, instant feedback sticker with the correct answer (🔊) plus the explanation. Done screen at 80% pass with Confetti; result saved as the topic's best score. Bottom nav hidden. |
+| `/dutch/cheatsheet/review` | Mixed review: 15 questions drawn at random across all 19 topics, same `DrillRunner` shell. Not scored per topic. Bottom nav hidden. |
 | `/stories/[id]` | Single Hindi story — tap-through 5-panel Chai Galli motion-comic. Each panel: scene background (composed SVG: ChaiStall / Bazaar / NaniHouse / NarratorCard) + character w/ idle motion (Cutting / Nani / Customer / Shopkeeper) + dialogue Sticker w/ syllable-stress pronunciation hint + 🔊 hear-it (browser TTS, hi-IN) + tap-to-reveal English (lavender → mint reveal-zone). Framer Motion slide-in panel transitions. Last panel marks story-read in `learn-hindi:hindi-stories-read` + fires Confetti + "✓ read more stories" CTA back to home. |
 
 ### Libraries (`lib/`)
@@ -200,6 +205,7 @@ shadows anywhere.
 | `seen-lessons.ts` | localStorage-backed Set tracking which lessons a user has seen (per-language). `initBaseline()` silent-tags existing IDs on first detection so the popup never false-fires; `getUnseenIds()`, `markAsSeen()`, `hasBeenSeen()`, `unseeIds()`. TDD'd, 9 tests. |
 | `dutch/lessons.ts`, `dutch/foundations.ts` | Parallel loaders for Dutch content (11 lessons + 7 foundations). `getDutchAllContent()` returns both combined for cross-module use (e.g. search). |
 | `dutch/pronunciation.ts` | "Sounds" module loader (TDD'd, 9 tests). 8-stage from-zero ladder from `content/dutch/pronunciation-course.json`. `getStages/getStage`, `markCardDone/isCardDone`, `markEarQuizPassed/isEarQuizPassed`, `isStageComplete` (derived), rolling-window `unlockedStageIds`/`isStageUnlocked` (finish → next 2 open), `getStageProgress`/`getCourseProgress`. |
+| `dutch/cheatsheet.ts` | Concept-cheatsheet loader + drill engine (TDD'd, 21 tests). Flattens `content/dutch/cheatsheet/*.json` into 5 groups / 19 topics. `getGroups/getTopics/getTopicById/getGroupOfTopic/getNextTopic`, `drawTopicDrill`/`drawMixedReview(15)`/`scrambleWords` (never returns the answer order), `normalizeAnswer`/`isCorrect`/`scoreDrill` (80% pass), studied set + best-score-per-topic history, `getWeakTopics`/`getOverallProgress`. |
 | `dutch/knm.ts` | KNM loader + `drawDrillSet(30)` (Fisher-Yates) + `scoreAttempt()` (80% pass) + attempt history (capped at 50) + per-question studied tracking. TDD'd, 12 tests. |
 | `dutch/lezen.ts` | Same shape as `knm.ts` for the Lezen module — `drawMockSet(5)`, 20-Q scoring, 25-min `MOCK_TIMER_MS` constant, studied set. TDD'd, 12 tests. |
 | `dutch/exam-target.ts` | User preference `'a2' \| 'b1'` for exam-target level (default B1). Surfaced as toggle in Dutch welcome modal. |
@@ -309,8 +315,39 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-luisteren-mock-attempts` — same shape as the Lezen attempts, plus `clip_ids: string[]`.
 - `dutch-pron-cards-done` — JSON array of "Sounds" card ids marked got-it (blend words tracked as `blend:<whole>`).
 - `dutch-pron-earquiz-done` — JSON array of "Sounds" stage ids whose ear-quiz passed. Stage completion + the rolling unlock are derived from these two sets.
+- `dutch-cheatsheet-studied` — JSON array of cheatsheet topic ids marked as read.
+- `dutch-cheatsheet-scores` — `{ [topicId]: { best, total, attempts, lastTs } }`, keeping the best ratio ever scored on that topic's drill. A topic counts as passed at 80%.
 
 ### Recent feature work log
+
+**2026-08-27 — Dutch concept cheatsheets (reference + drills)**
+
+A standalone Dutch section that turns the A1 core into revisable reference pages,
+each paired with its own practice drill. Reached from a butter card on the Dutch
+home (between Sounds and Your path).
+
+- **Content** `content/dutch/cheatsheet/*.json`, one file per group: **5 groups,
+  19 topics, 154 exercises**. Groups: First contact (greetings, introductions,
+  personal details, numbers, alphabet/spelling, sounds + spelling rules), Core
+  grammar (subject pronouns, present tense, hebben/zijn, possessives), People and
+  description (family, countries/nationalities/languages, appearance, adjective
+  endings), Building sentences (word order + inversion, questions), Time and daily
+  life (clock, calendar + time prepositions, café + favourites).
+- **Block schema** (rendered by `components/cheatsheet/CheatBlocks.tsx`): `table`
+  (headers/rows/note, scrolls horizontally), `rule` / `tip` / `pitfall` callouts
+  (markdown-lite body: `` `token` `` chips, `**bold**`, `- ` bullets, `1. ` steps),
+  `examples` / `vocab` (nl/en/note rows, each with a 🔊 Dutch TTS button). Every
+  block kind carries a single literal `kind` so the union narrows cleanly.
+- **Exercises** are three kinds: `mcq`, `fill` (typed, `answers[]` accepted, matched
+  through `normalizeAnswer` so case and punctuation are forgiving) and `order`
+  (tap word tiles into place, auto-checks when the row fills). `components/
+  cheatsheet/DrillRunner.tsx` is the shared engine (segmented progress, combo chip
+  via `playCombo`, feedback sticker with the correct answer + explanation, 80% pass
+  done screen with Confetti). Used by both the per-topic drill and the mixed review.
+- `lib/dutch/cheatsheet.ts` (TDD'd, 21 tests). The tests double as content
+  integrity gates: unique topic + exercise ids, every table row matching its header
+  width, and every `order` exercise's tile pool matching its answer exactly.
+- Routes precached for offline; bottom nav hidden on the two drill screens.
 
 **2026-06-16 — Chai Diary (daily journal) + home declutter**
 

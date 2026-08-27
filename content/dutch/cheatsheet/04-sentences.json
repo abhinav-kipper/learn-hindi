@@ -1,0 +1,381 @@
+{
+  "group": {
+    "id": "sentences",
+    "title": "Building sentences",
+    "subtitle_nl": "zinnen bouwen",
+    "blurb": "The single rule that governs Dutch word order, what happens when you start a sentence with a time or place, and how to turn any statement into a question.",
+    "emoji": "🧩"
+  },
+  "topics": [
+    {
+      "id": "word-order",
+      "title": "Word order and inversion",
+      "subtitle_nl": "de hoofdzin en inversie",
+      "emoji": "🔁",
+      "summary": "The verb sits in second position. Always. Everything else in Dutch word order follows from that one fact.",
+      "sections": [
+        {
+          "heading": "The V2 rule",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "In a Dutch main clause the **first verb is always the second element**. Not the second word, the second **element**: a whole time phrase or a whole subject counts as one slot.\n\nThat gives you two shapes:\n- **Standard**: subject first, then the verb.\n- **Inversion**: something else first, then the verb, and the subject slides in right after it."
+            },
+            {
+              "kind": "table",
+              "headers": ["1st slot", "verb", "subject", "rest"],
+              "rows": [
+                ["Ik", "neem", "", "nu een biertje."],
+                ["Nu", "neem", "ik", "een biertje."],
+                ["Ik", "betaal", "", "dit rondje."],
+                ["Dit rondje", "betaal", "ik", "."],
+                ["Wij", "gaan", "", "altijd in de zomer naar Frankrijk."],
+                ["In de zomer", "gaan", "we", "altijd naar Frankrijk."],
+                ["Ik", "ben", "", "in december jarig."],
+                ["In december", "ben", "ik", "jarig."],
+                ["Mijn moeder", "komt", "", "vrijdag op bezoek."],
+                ["Vrijdag", "komt", "mijn moeder", "op bezoek."]
+              ],
+              "note": "Read the verb column top to bottom. It never moves, whatever happens on the left."
+            }
+          ]
+        },
+        {
+          "heading": "Why front something?",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Inversion is not decoration. Dutch speakers front a word to **highlight** it or to **link** to what was just said.\n- `Dit rondje betaal ik.` = This round is on me (not the last one).\n- `In december ben ik jarig.` = As for December, that is when my birthday is.\nStarting every sentence with the subject is grammatical but flat, so this is one of the quickest ways to sound more fluent."
+            }
+          ]
+        },
+        {
+          "heading": "The order of the rest",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "After the verb and subject, the default order is **Time, Manner, Place**.\n- `Ik ga morgen met de trein naar Utrecht.` (when, how, where)\n- `Wij eten elke zondag samen bij mijn moeder.`\nEnglish tends to do the opposite (place before time), which is why `Ik ga naar Utrecht morgen` sounds off to Dutch ears."
+            }
+          ]
+        },
+        {
+          "heading": "The words that do not count as slot one",
+          "blocks": [
+            {
+              "kind": "pitfall",
+              "title": "en, maar, want, dus, of",
+              "body": "These five join two main clauses and stand **outside** the count. The word order after them stays completely normal.\n- `Ik loop naar mijn werk **want** het is dichtbij.` (not: want is het dichtbij)\n- `Zij komt uit Nederland **en** zij woont in Amsterdam.`\n- `Ik wil komen **maar** ik heb geen tijd.`\nCompare `dus`, which many people also use with inversion for emphasis: both `dus ik ga naar huis` and `dus ga ik naar huis` are heard."
+            }
+          ]
+        },
+        {
+          "heading": "The second verb goes to the end",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "When a sentence has two verbs, only the first one obeys V2. The second stays in its base form and drops to the **end**.\n- `Ik wil een biertje **drinken**.`\n- `Wij gaan volgend jaar **trouwen**.`\n- `Kun je dat **herhalen**?`\nSplit verbs behave the same way: `Mijn moeder komt vrijdag op bezoek` sends `op` to the end, and `Hoe ziet hij eruit?` sends `eruit` to the end."
+            }
+          ]
+        },
+        {
+          "heading": "Where negation goes",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "- `geen` sits directly before the noun it cancels: `Ik heb **geen** tijd.`\n- `niet` goes to the **end** of the sentence, unless it targets one specific word, in which case it stands just before it: `Ik begrijp de docent **niet**.` versus `Hij is **niet** lang.`"
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "The first verb is always the second element of a main clause.",
+        "Start with anything other than the subject and the subject moves behind the verb.",
+        "The rest of the sentence runs Time, Manner, Place.",
+        "en, maar, want, dus and of do not count as the first element.",
+        "A second verb keeps its base form and goes to the end."
+      ],
+      "exercises": [
+        {
+          "id": "wo-1",
+          "kind": "order",
+          "prompt": "Start with In de zomer: we always go to France in the summer.",
+          "words": ["gaan", "we", "In de zomer", "naar", "altijd", "Frankrijk"],
+          "answer": ["In de zomer", "gaan", "we", "altijd", "naar", "Frankrijk"],
+          "explain": "The time phrase fills slot one, so the verb comes next and we slides in behind it."
+        },
+        {
+          "id": "wo-2",
+          "kind": "order",
+          "prompt": "Start with In december: my birthday is in December.",
+          "words": ["ik", "In december", "jarig", "ben"],
+          "answer": ["In december", "ben", "ik", "jarig"],
+          "explain": "Inversion: the verb ben stays in second position and ik follows it."
+        },
+        {
+          "id": "wo-3",
+          "kind": "mcq",
+          "prompt": "Which sentence is correct?",
+          "options": ["Vrijdag mijn moeder komt op bezoek.", "Vrijdag komt mijn moeder op bezoek.", "Vrijdag komt op bezoek mijn moeder.", "Komt vrijdag mijn moeder op bezoek."],
+          "correct": 1,
+          "explain": "Vrijdag is the first element, so the verb must be second and the subject follows it."
+        },
+        {
+          "id": "wo-4",
+          "kind": "mcq",
+          "prompt": "Which sentence is correct?",
+          "options": ["Ik loop naar mijn werk want is het dichtbij.", "Ik loop naar mijn werk want het is dichtbij.", "Ik loop naar mijn werk, want dichtbij het is.", "Ik loop want naar mijn werk het is dichtbij."],
+          "correct": 1,
+          "explain": "want does not count as an element, so the clause after it keeps normal subject-verb order."
+        },
+        {
+          "id": "wo-5",
+          "kind": "order",
+          "prompt": "Build: I am going to Utrecht by train tomorrow.",
+          "words": ["Utrecht", "ga", "de", "naar", "morgen", "Ik", "met", "trein"],
+          "answer": ["Ik", "ga", "morgen", "met", "de", "trein", "naar", "Utrecht"],
+          "explain": "Time (morgen), manner (met de trein), place (naar Utrecht)."
+        },
+        {
+          "id": "wo-6",
+          "kind": "order",
+          "prompt": "Start with Dit rondje: I am paying for this round.",
+          "words": ["ik", "betaal", "Dit rondje"],
+          "answer": ["Dit rondje", "betaal", "ik"],
+          "explain": "Fronting the object puts the emphasis on it, and the subject moves behind the verb."
+        },
+        {
+          "id": "wo-7",
+          "kind": "order",
+          "prompt": "Build: we want to drink a beer.",
+          "words": ["biertje", "willen", "drinken", "Wij", "een"],
+          "answer": ["Wij", "willen", "een", "biertje", "drinken"],
+          "explain": "The first verb keeps position two, the second verb drops to the end in its base form."
+        },
+        {
+          "id": "wo-8",
+          "kind": "mcq",
+          "prompt": "Which is the most natural Dutch order?",
+          "options": ["Ik ga naar Utrecht morgen.", "Ik ga morgen naar Utrecht.", "Morgen ik ga naar Utrecht.", "Naar Utrecht ik ga morgen."],
+          "correct": 1,
+          "explain": "Time comes before place in Dutch, and the subject stays in slot one here."
+        }
+      ]
+    },
+    {
+      "id": "questions",
+      "title": "Asking questions",
+      "subtitle_nl": "vragen stellen",
+      "emoji": "❓",
+      "summary": "Two question types, one shared shape. Move the verb to the front for yes/no, put a question word before it for everything else.",
+      "sections": [
+        {
+          "heading": "Yes/no questions",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Take the statement and put the **verb first**. Nothing else changes.\n- `Hij spreekt tien talen.` gives `Spreekt hij tien talen?`\n- `Wij leren Nederlands.` gives `Leren wij Nederlands?`\n- `Zij woont in Utrecht.` gives `Woont zij in Utrecht?`"
+            },
+            {
+              "kind": "pitfall",
+              "title": "With jij or je the -t disappears",
+              "body": "- `Jij bent docent.` gives `**Ben** je docent?` (not bent je)\n- `Jij kookt pasta.` gives `**Kook** jij pasta?`\n- `Jij hebt tijd.` gives `**Heb** je tijd?`\nWith `u`, `hij` or a plural the t stays: `Bent u docent?`, `Kookt hij pasta?`, `Koken jullie pasta?`"
+            },
+            {
+              "kind": "examples",
+              "title": "Answering",
+              "items": [
+                { "nl": "Ja, dat klopt.", "en": "Yes, that is right." },
+                { "nl": "Ja, hoor.", "en": "Yes, sure.", "note": "hoor softens the answer, it means nothing on its own" },
+                { "nl": "Nee, helaas niet.", "en": "No, unfortunately not." },
+                { "nl": "Nee, hoor.", "en": "No, not at all." },
+                { "nl": "Jawel!", "en": "Yes it is! (contradicting a negative question)" }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Question words",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Dutch", "English", "Example"],
+              "rows": [
+                ["wie", "who", "Wie is dat?"],
+                ["wat", "what", "Wat is je naam?"],
+                ["waar", "where", "Waar woon je?"],
+                ["wanneer", "when", "Wanneer ga je op vakantie?"],
+                ["hoe", "how", "Hoe gaat het?"],
+                ["waarom", "why", "Waarom ben je moe?"],
+                ["welk / welke", "which", "Welke talen spreek je?"],
+                ["hoeveel", "how many", "Hoeveel broers heb je?"],
+                ["hoe laat", "what time", "Hoe laat begint de les?"],
+                ["hoe lang", "how long", "Hoe lang woon je hier?"],
+                ["hoe vaak", "how often", "Hoe vaak sport je?"],
+                ["wat voor", "what kind of", "Wat voor werk doe je?"]
+              ]
+            },
+            {
+              "kind": "rule",
+              "title": "The shape",
+              "body": "`Question word + verb + subject + rest`\n- `Waarom leer je Nederlands?`\n- `Hoeveel broers heb je?`\n- `Welke boeken heeft jouw moeder?`\nIt is the same inversion as before: the question word is the first element, so the verb has to be second."
+            }
+          ]
+        },
+        {
+          "heading": "welk or welke",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Same logic as the adjective ending.\n- `welk` before a **singular het-word**: `welk land`, `welk boek`, `welk huis`\n- `welke` everywhere else: `welke stad`, `welke talen`, `welke kleur`"
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Uit welk land kom je?", "en": "Which country are you from?" },
+                { "nl": "Uit welke stad kom je?", "en": "Which city are you from?" },
+                { "nl": "Welke kleur ogen heeft hij?", "en": "What colour eyes does he have?" }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "When the question word IS the subject",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Compare these three:\n1. `Is deze plaats vrij?` (yes/no: verb first)\n2. `Welke dag is het vandaag?` (question word, then verb, then subject `het`)\n3. `Wie is jonger, hij of jij?` (question word `wie` **is** the subject, so nothing inverts)\n\nWhen `wie` or `wat` is doing the action, there is no separate subject to move: `Wie komt er vanavond?`, `Wat gebeurt er?`"
+            }
+          ]
+        },
+        {
+          "heading": "Split question words",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Some question phrases break in two, with the second half going to the end of the sentence.\n- `Waar kom je **vandaan**?` (where from)\n- `Waar ga je **naartoe**?` (where to)\n- `Waar praten jullie **over**?` (what about)\nThe pattern is `waar` plus a preposition, and the preposition lands at the end."
+            }
+          ]
+        },
+        {
+          "heading": "Polite questions",
+          "blocks": [
+            {
+              "kind": "vocab",
+              "items": [
+                { "nl": "Mag ik iets vragen?", "en": "May I ask something?" },
+                { "nl": "Kunt u dat herhalen?", "en": "Could you repeat that?" },
+                { "nl": "Zou u me kunnen helpen?", "en": "Could you help me?" },
+                { "nl": "Weet u misschien hoe laat het is?", "en": "Do you perhaps know what time it is?" },
+                { "nl": "Sorry, mag ik u iets vragen?", "en": "Sorry, may I ask you something?" }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "misschien and even soften everything",
+              "body": "Dropping `misschien` (perhaps) or `even` (just briefly) into a request makes it sound much less blunt: `Heb je even tijd?`, `Weet u misschien waar het station is?`"
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Yes/no question: verb first, and drop the -t before jij or je.",
+        "Question word plus verb plus subject plus rest.",
+        "welk before a singular het-word, welke everywhere else.",
+        "If wie or wat is the subject, nothing inverts: Wie komt er?",
+        "waar plus a preposition splits, and the preposition goes to the end."
+      ],
+      "exercises": [
+        {
+          "id": "q-1",
+          "kind": "order",
+          "prompt": "Put in order: hoe / heten / jouw / kinderen",
+          "words": ["kinderen", "heten", "jouw", "Hoe"],
+          "answer": ["Hoe", "heten", "jouw", "kinderen"],
+          "explain": "Question word, verb, then the subject jouw kinderen. Plural subject takes the base form heten."
+        },
+        {
+          "id": "q-2",
+          "kind": "order",
+          "prompt": "Put in order: wonen / ouders / waar / jouw",
+          "words": ["wonen", "ouders", "waar", "jouw"],
+          "answer": ["waar", "wonen", "jouw", "ouders"],
+          "explain": "waar plus the verb plus the subject jouw ouders."
+        },
+        {
+          "id": "q-3",
+          "kind": "order",
+          "prompt": "Put in order: zus / jouw / welke / spreekt / talen",
+          "words": ["zus", "jouw", "welke", "spreekt", "talen"],
+          "answer": ["welke", "talen", "spreekt", "jouw", "zus"],
+          "explain": "welke stays glued to its noun talen, and together they form the first element."
+        },
+        {
+          "id": "q-4",
+          "kind": "order",
+          "prompt": "Put in order: je / hoeveel / ooms / tantes / heb / en",
+          "words": ["je", "hoeveel", "ooms", "tantes", "heb", "en"],
+          "answer": ["hoeveel", "ooms", "en", "tantes", "heb", "je"],
+          "explain": "hoeveel plus the nouns is the first element. hebt loses its t before je."
+        },
+        {
+          "id": "q-5",
+          "kind": "order",
+          "prompt": "Put in order: ben / waarom / je / moe",
+          "words": ["ben", "waarom", "je", "moe"],
+          "answer": ["waarom", "ben", "je", "moe"],
+          "explain": "waarom, then the verb, then the subject. bent loses its t before je."
+        },
+        {
+          "id": "q-6",
+          "kind": "mcq",
+          "prompt": "Turn 'Jij kookt pasta' into a question.",
+          "options": ["Kookt jij pasta?", "Kook jij pasta?", "Koken jij pasta?", "Jij kookt pasta?"],
+          "correct": 1,
+          "explain": "The verb moves to the front and jij right after it removes the -t."
+        },
+        {
+          "id": "q-7",
+          "kind": "mcq",
+          "prompt": "Turn 'Hij spreekt tien talen' into a question.",
+          "options": ["Spreek hij tien talen?", "Spreekt hij tien talen?", "Spreken hij tien talen?", "Hij spreekt tien talen?"],
+          "correct": 1,
+          "explain": "The -t only drops for jij and je. hij keeps it."
+        },
+        {
+          "id": "q-8",
+          "kind": "fill",
+          "prompt": "Complete: Uit ___ land kom je?",
+          "before": "Uit",
+          "after": "land kom je?",
+          "answers": ["welk"],
+          "explain": "het land is a singular het-word, so welk with no -e."
+        },
+        {
+          "id": "q-9",
+          "kind": "fill",
+          "prompt": "Complete: Uit ___ stad kom je?",
+          "before": "Uit",
+          "after": "stad kom je?",
+          "answers": ["welke"],
+          "explain": "de stad is a de-word, so welke."
+        },
+        {
+          "id": "q-10",
+          "kind": "mcq",
+          "prompt": "Which question needs NO inversion?",
+          "options": ["Waar woon je?", "Wie is jonger, hij of jij?", "Hoe laat begint de les?", "Welke dag is het?"],
+          "correct": 1,
+          "explain": "wie is the subject here, so there is no other subject to move behind the verb."
+        },
+        {
+          "id": "q-11",
+          "kind": "order",
+          "prompt": "Build: where are you going to?",
+          "words": ["ga", "naartoe", "je", "Waar", "?"],
+          "answer": ["Waar", "ga", "je", "naartoe", "?"],
+          "explain": "waar plus naartoe splits, and naartoe lands at the end."
+        }
+      ]
+    }
+  ]
+}
