@@ -1,0 +1,633 @@
+{
+  "group": {
+    "id": "time",
+    "title": "Time and daily life",
+    "subtitle_nl": "tijd en dagelijks leven",
+    "blurb": "The clock (including the half hour that runs backwards), days, months, seasons, the three time prepositions, and everything you say in a café.",
+    "emoji": "🕓"
+  },
+  "topics": [
+    {
+      "id": "clock",
+      "title": "Telling the time",
+      "subtitle_nl": "hoe laat is het?",
+      "emoji": "🕰️",
+      "summary": "Dutch counts towards the next hour, so half vier is 3:30 and not 4:30. Once that clicks, the rest is quick.",
+      "sections": [
+        {
+          "heading": "The question and the frame",
+          "blocks": [
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Hoe laat is het?", "en": "What time is it?" },
+                { "nl": "Het is drie uur.", "en": "It is three o'clock." },
+                { "nl": "Hoe laat begint de les?", "en": "What time does the class start?" },
+                { "nl": "Om half negen.", "en": "At half past eight." },
+                { "nl": "Weet u misschien hoe laat het is?", "en": "Do you perhaps know what time it is?" }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "The half hour runs forwards",
+          "blocks": [
+            {
+              "kind": "rule",
+              "title": "This is the one that catches everyone",
+              "body": "`half` in Dutch means **half way to** the next hour, not half past the current one.\n- `half vier` = 3:30 (half way to four)\n- `half negen` = 8:30\n- `half een` = 12:30\nSo whenever you hear `half`, subtract one from the number you heard."
+            }
+          ]
+        },
+        {
+          "heading": "Quarters and minutes",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Time", "Dutch", "Literally"],
+              "rows": [
+                ["3:00", "drie uur", "three hour"],
+                ["3:05", "vijf over drie", "five past three"],
+                ["3:10", "tien over drie", "ten past three"],
+                ["3:15", "kwart over drie", "quarter past three"],
+                ["3:20", "tien voor half vier", "ten before half four"],
+                ["3:25", "vijf voor half vier", "five before half four"],
+                ["3:30", "half vier", "half four"],
+                ["3:35", "vijf over half vier", "five past half four"],
+                ["3:40", "tien over half vier", "ten past half four"],
+                ["3:45", "kwart voor vier", "quarter to four"],
+                ["3:50", "tien voor vier", "ten to four"],
+                ["3:55", "vijf voor vier", "five to four"]
+              ],
+              "note": "Between :20 and :40 Dutch counts from the half hour, not from the hour. That is why 3:25 is vijf voor half vier."
+            },
+            {
+              "kind": "tip",
+              "title": "The escape hatch",
+              "body": "In shops, stations and at work people also use the digital style: `drie uur dertig`, `vijftien uur dertig`, `negen uur vijfenveertig`. It is always understood, so use it while the half-hour system settles in."
+            }
+          ]
+        },
+        {
+          "heading": "Parts of the day",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Dutch", "English", "Roughly"],
+              "rows": [
+                ["'s ochtends / 's morgens", "in the morning", "06:00 to 12:00"],
+                ["'s middags", "in the afternoon", "12:00 to 18:00"],
+                ["'s avonds", "in the evening", "18:00 to 24:00"],
+                ["'s nachts", "at night", "00:00 to 06:00"],
+                ["tussen de middag", "around lunchtime", "12:00 to 13:00"]
+              ],
+              "note": "The apostrophe-s is a leftover of an old word for des. Say it as one word: sochtends, savonds."
+            },
+            {
+              "kind": "vocab",
+              "title": "This particular one",
+              "items": [
+                { "nl": "vanochtend / vanmorgen", "en": "this morning" },
+                { "nl": "vanmiddag", "en": "this afternoon" },
+                { "nl": "vanavond", "en": "this evening" },
+                { "nl": "vannacht", "en": "tonight or last night" }
+              ]
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Om acht uur 's ochtends begin ik met werken.", "en": "At eight in the morning I start work." },
+                { "nl": "Om acht uur kijken we altijd naar het nieuws op tv.", "en": "At eight o'clock we always watch the news on TV." },
+                { "nl": "'s Avonds lees ik meestal een boek.", "en": "In the evening I usually read a book.", "note": "fronted, so the verb comes second and ik follows" }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Being roughly on time",
+          "blocks": [
+            {
+              "kind": "vocab",
+              "items": [
+                { "nl": "om precies drie uur", "en": "at exactly three" },
+                { "nl": "rond drie uur", "en": "around three" },
+                { "nl": "ongeveer een uur", "en": "about an hour" },
+                { "nl": "op tijd", "en": "on time" },
+                { "nl": "te laat", "en": "late" },
+                { "nl": "te vroeg", "en": "early" },
+                { "nl": "Wees op tijd.", "en": "Be on time." },
+                { "nl": "We beginnen om elf uur.", "en": "We start at eleven." }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "Dutch punctuality is real",
+              "body": "An invitation for 11:00 means 11:00. If you will be more than five minutes late, a quick message is expected. `Sorry, ik ben iets later` covers it."
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "half vier is 3:30, so subtract one from the number you hear after half.",
+        "Between :20 and :40 Dutch counts from the half hour: vijf voor half vier is 3:25.",
+        "kwart over and kwart voor work exactly like English quarters.",
+        "'s ochtends, 's middags, 's avonds, 's nachts split the day."
+      ],
+      "exercises": [
+        {
+          "id": "clk-1",
+          "kind": "mcq",
+          "prompt": "What time is half vier?",
+          "options": ["4:30", "3:30", "4:00", "3:00"],
+          "correct": 1,
+          "explain": "half counts towards the next hour, so half vier is half way to four: 3:30."
+        },
+        {
+          "id": "clk-2",
+          "kind": "mcq",
+          "prompt": "How do you say 8:30?",
+          "options": ["half acht", "half negen", "acht half", "half over acht"],
+          "correct": 1,
+          "explain": "8:30 is half way to nine, so half negen."
+        },
+        {
+          "id": "clk-3",
+          "kind": "fill",
+          "prompt": "Say 3:15 in Dutch.",
+          "before": "Het is",
+          "after": ".",
+          "answers": ["kwart over drie"],
+          "explain": "Quarters work like English: kwart over drie."
+        },
+        {
+          "id": "clk-4",
+          "kind": "mcq",
+          "prompt": "What time is vijf voor half vier?",
+          "options": ["3:25", "3:35", "4:25", "3:55"],
+          "correct": 0,
+          "explain": "half vier is 3:30, and five before that is 3:25."
+        },
+        {
+          "id": "clk-5",
+          "kind": "fill",
+          "prompt": "Say 3:45 in Dutch.",
+          "before": "Het is",
+          "after": ".",
+          "answers": ["kwart voor vier"],
+          "explain": "Quarter to four is kwart voor vier."
+        },
+        {
+          "id": "clk-6",
+          "kind": "order",
+          "prompt": "Build: at eight o'clock we always watch the news.",
+          "words": ["kijken", "altijd", "we", "Om acht uur", "naar", "het nieuws"],
+          "answer": ["Om acht uur", "kijken", "we", "altijd", "naar", "het nieuws"],
+          "explain": "The time phrase is the first element, so the verb comes second and we follows it."
+        },
+        {
+          "id": "clk-7",
+          "kind": "mcq",
+          "prompt": "Which one means 'at night'?",
+          "options": ["'s avonds", "'s nachts", "'s middags", "vanavond"],
+          "correct": 1,
+          "explain": "'s nachts is roughly midnight to six. 's avonds is the evening."
+        },
+        {
+          "id": "clk-8",
+          "kind": "fill",
+          "prompt": "Ask what time the class starts.",
+          "before": "Hoe laat",
+          "after": "de les?",
+          "answers": ["begint"],
+          "explain": "de les is third person singular, so stem plus t: begint."
+        }
+      ]
+    },
+    {
+      "id": "calendar",
+      "title": "Days, months, seasons and time prepositions",
+      "subtitle_nl": "dagen, maanden, seizoenen en preposities",
+      "emoji": "📅",
+      "summary": "The calendar vocabulary plus the three-way choice that decides everything: op for days, in for months and seasons, om for clock times.",
+      "sections": [
+        {
+          "heading": "The calendar",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Dagen", "Maanden", "Seizoenen"],
+              "rows": [
+                ["maandag", "januari", "de lente / het voorjaar"],
+                ["dinsdag", "februari", "de zomer"],
+                ["woensdag", "maart", "de herfst / het najaar"],
+                ["donderdag", "april", "de winter"],
+                ["vrijdag", "mei", ""],
+                ["zaterdag", "juni", ""],
+                ["zondag", "juli", ""],
+                ["", "augustus", ""],
+                ["", "september", ""],
+                ["", "oktober", ""],
+                ["", "november", ""],
+                ["", "december", ""]
+              ],
+              "note": "Days and months are written in lower case in Dutch, unlike English. Only the start of a sentence gives them a capital."
+            },
+            {
+              "kind": "vocab",
+              "title": "Relative days",
+              "items": [
+                { "nl": "eergisteren", "en": "the day before yesterday" },
+                { "nl": "gisteren", "en": "yesterday" },
+                { "nl": "vandaag", "en": "today" },
+                { "nl": "morgen", "en": "tomorrow" },
+                { "nl": "overmorgen", "en": "the day after tomorrow" },
+                { "nl": "het weekend", "en": "the weekend" },
+                { "nl": "doordeweeks", "en": "on weekdays" },
+                { "nl": "vorige week / volgende week", "en": "last week / next week" },
+                { "nl": "vorige maand / volgend jaar", "en": "last month / next year" }
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "morgen has two jobs",
+              "body": "`morgen` on its own means **tomorrow**. Inside `goedemorgen` and `vanmorgen` it means **morning**. Context sorts it out: `Tot morgen!` is see you tomorrow, `vanmorgen` is this morning."
+            }
+          ]
+        },
+        {
+          "heading": "op, in, om",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Preposition", "Used with", "Example"],
+              "rows": [
+                ["op", "a specific day", "Ik heb les op maandag."],
+                ["op", "a specific date", "Ik ben getrouwd op 15 augustus."],
+                ["in", "a month", "Ik ben jarig in januari."],
+                ["in", "a season", "Kerst is in de winter."],
+                ["in", "a specific year", "Ik ben geboren in 1988."],
+                ["om", "a clock time", "Ik heb les om negen uur."]
+              ],
+              "note": "One way to remember it: om is the smallest unit (a point on the clock), op is a day, in is anything bigger."
+            },
+            {
+              "kind": "rule",
+              "title": "Other useful ones",
+              "body": "- `van ... tot ...`: `De field trip is van 10:45 tot 14:00.`\n- `'s maandags` means every Monday, a habit: `'s Maandags werk ik thuis.`\n- `over`: `Ik kom over tien minuten.` (in ten minutes from now)\n- `sinds`: `Ik woon hier sinds 2022.`\n- `tijdens`: `tijdens de les`"
+            },
+            {
+              "kind": "pitfall",
+              "title": "Often no preposition at all",
+              "body": "With a day used as the first element, Dutch usually drops the preposition altogether: `**Vrijdag** komt mijn moeder op bezoek.` Same with `volgende week`, `elke dag`, `vanavond`: `Volgende week ga ik naar Parijs.`"
+            }
+          ]
+        },
+        {
+          "heading": "How often",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Dutch", "English"],
+              "rows": [
+                ["altijd", "always"],
+                ["meestal", "usually"],
+                ["vaak", "often"],
+                ["soms", "sometimes"],
+                ["af en toe", "now and then"],
+                ["zelden", "rarely"],
+                ["nooit", "never"],
+                ["elke dag / elke week", "every day / every week"],
+                ["een keer per week", "once a week"],
+                ["twee keer per maand", "twice a month"]
+              ]
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Ik sport twee keer per week.", "en": "I do sport twice a week." },
+                { "nl": "Hij belt elke dag zijn moeder.", "en": "He calls his mother every day." },
+                { "nl": "Wij gaan altijd in de zomer naar Frankrijk.", "en": "We always go to France in the summer." },
+                { "nl": "Peter maakt nooit zijn huiswerk.", "en": "Peter never does his homework." }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Dates",
+          "blocks": [
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Wat is de datum vandaag?", "en": "What is the date today?" },
+                { "nl": "Het is 25 augustus.", "en": "It is 25 August.", "note": "spoken: vijfentwintig augustus" },
+                { "nl": "Welke dag is het vandaag?", "en": "Which day is it today?" },
+                { "nl": "Het is dinsdag.", "en": "It is Tuesday." },
+                { "nl": "Mijn geboortedatum is 15 augustus 1988.", "en": "My date of birth is 15 August 1988." },
+                { "nl": "Ik ben jarig op 15 augustus.", "en": "My birthday is on 15 August." }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "jarig zijn",
+              "body": "Dutch has a dedicated adjective for having a birthday: `Ik ben jarig.` (It is my birthday.) `Wanneer ben je jarig?` The person celebrating is `de jarige`, and the standard congratulation is `Gefeliciteerd!`"
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Days and months are lower case in Dutch.",
+        "op for a day or date, in for a month, season or year, om for a clock time.",
+        "Fronting a day usually drops the preposition: Vrijdag komt mijn moeder.",
+        "'s maandags means every Monday, as a habit.",
+        "jarig zijn is the verb for having a birthday."
+      ],
+      "exercises": [
+        {
+          "id": "cal-1",
+          "kind": "fill",
+          "prompt": "Complete: Ik ben jarig ___ januari.",
+          "before": "Ik ben jarig",
+          "after": "januari.",
+          "answers": ["in"],
+          "explain": "in goes with months, seasons and years."
+        },
+        {
+          "id": "cal-2",
+          "kind": "fill",
+          "prompt": "Complete: Ik heb les ___ maandag.",
+          "before": "Ik heb les",
+          "after": "maandag.",
+          "answers": ["op"],
+          "explain": "op goes with a specific day or date."
+        },
+        {
+          "id": "cal-3",
+          "kind": "fill",
+          "prompt": "Complete: Ik heb les ___ negen uur.",
+          "before": "Ik heb les",
+          "after": "negen uur.",
+          "answers": ["om"],
+          "explain": "om goes with clock times."
+        },
+        {
+          "id": "cal-4",
+          "kind": "fill",
+          "prompt": "Complete: Kerst is ___ de winter.",
+          "before": "Kerst is",
+          "after": "de winter.",
+          "answers": ["in"],
+          "explain": "Seasons take in: in de winter, in de zomer."
+        },
+        {
+          "id": "cal-5",
+          "kind": "fill",
+          "prompt": "Complete: Ik ben geboren ___ 1988.",
+          "before": "Ik ben geboren",
+          "after": "1988.",
+          "answers": ["in"],
+          "explain": "A specific year takes in."
+        },
+        {
+          "id": "cal-6",
+          "kind": "mcq",
+          "prompt": "Which is written correctly?",
+          "options": ["Ik werk op Maandag.", "Ik werk op maandag.", "Ik werk in maandag.", "Ik werk om maandag."],
+          "correct": 1,
+          "explain": "Days take op and are written in lower case."
+        },
+        {
+          "id": "cal-7",
+          "kind": "mcq",
+          "prompt": "What does 'Tot morgen!' mean?",
+          "options": ["See you this morning", "Good morning", "See you tomorrow", "Until noon"],
+          "correct": 2,
+          "explain": "morgen on its own is tomorrow. Inside vanmorgen and goedemorgen it means morning."
+        },
+        {
+          "id": "cal-8",
+          "kind": "order",
+          "prompt": "Build: he calls his mother every day.",
+          "words": ["moeder", "belt", "elke dag", "Hij", "zijn"],
+          "answer": ["Hij", "belt", "elke dag", "zijn", "moeder"],
+          "explain": "Subject, verb, then the time phrase before the object."
+        },
+        {
+          "id": "cal-9",
+          "kind": "fill",
+          "prompt": "Say it is your birthday.",
+          "before": "Ik ben",
+          "after": ".",
+          "answers": ["jarig"],
+          "explain": "jarig zijn is the fixed way to say you are having your birthday."
+        }
+      ]
+    },
+    {
+      "id": "cafe",
+      "title": "At the café and talking about favourites",
+      "subtitle_nl": "in het café en over voorkeuren praten",
+      "emoji": "☕",
+      "summary": "Ordering, paying, splitting the bill, and the two different ways Dutch says favourite.",
+      "sections": [
+        {
+          "heading": "Getting a seat and ordering",
+          "blocks": [
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Is deze plaats vrij?", "en": "Is this seat free?" },
+                { "nl": "Mag ik de kaart, alstublieft?", "en": "Could I have the menu, please?" },
+                { "nl": "Ik wil graag een koffie.", "en": "I would like a coffee." },
+                { "nl": "Doe mij maar een biertje.", "en": "I will have a beer.", "note": "very common and casual" },
+                { "nl": "Voor mij een thee, graag.", "en": "A tea for me, please." },
+                { "nl": "Ik neem nu een biertje.", "en": "I am having a beer now." },
+                { "nl": "Nog een rondje, alstublieft.", "en": "Another round, please." }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "The little-word habit",
+              "body": "Drinks almost always take the `-je` ending in a café: `een biertje`, `een wijntje`, `een kopje koffie`, `een glaasje water`. It is not about size, it is friendliness. Ordering `een bier` is not wrong, just blunter."
+            }
+          ]
+        },
+        {
+          "heading": "The vocabulary",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Drinken", "Eten", "Mensen en dingen"],
+              "rows": [
+                ["de koffie", "het broodje", "de ober / de serveerster"],
+                ["de thee", "de tosti", "de rekening"],
+                ["de cappuccino", "de appeltaart", "de kaart / het menu"],
+                ["het bier / het biertje", "de bitterballen", "de fooi"],
+                ["de wijn (rood / wit)", "de soep", "het rondje"],
+                ["het water", "de friet", "het terras"],
+                ["de jus d'orange", "de kaas", "de pin / de pinpas"]
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Paying",
+          "blocks": [
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "De rekening, alstublieft.", "en": "The bill, please." },
+                { "nl": "Mag ik afrekenen?", "en": "Could I pay?" },
+                { "nl": "Kan ik pinnen?", "en": "Can I pay by card?" },
+                { "nl": "Samen of apart?", "en": "Together or separately?" },
+                { "nl": "Apart, graag.", "en": "Separately, please." },
+                { "nl": "Ik betaal dit rondje.", "en": "This round is on me." },
+                { "nl": "Laat maar zitten.", "en": "Keep the change." },
+                { "nl": "Proost!", "en": "Cheers!" }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "Two Dutch café habits",
+              "body": "Most places are **card only**, so `Kan ik pinnen?` is the practical question and cash can be refused. Tipping is not obligatory: rounding up or leaving five to ten percent for good service is plenty, and `Laat maar zitten` handles it."
+            }
+          ]
+        },
+        {
+          "heading": "Favourites: lievelings- or favoriete",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Dutch has two words for favourite and they behave differently.\n- `lievelings-` is **glued onto the noun** as one word: `mijn lievelingseten`, `mijn lievelingsboek`, `mijn lievelingsfilm`, `mijn lievelingskleur`.\n- `favoriete` is a **normal adjective** and takes the usual `-e`: `mijn favoriete vakantieland`, `mijn favoriete café`."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Wat is je lievelingseten?", "en": "What is your favourite food?" },
+                { "nl": "Mijn lievelingseten is pasta met pesto.", "en": "My favourite food is pasta with pesto." },
+                { "nl": "Wat is je favoriete vakantieland?", "en": "What is your favourite holiday country?" },
+                { "nl": "Mijn favoriete vakantieland is Griekenland.", "en": "My favourite holiday country is Greece." },
+                { "nl": "Dat is mijn favoriete café!", "en": "That is my favourite café!" }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Saying what you like",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Dutch", "English", "Note"],
+              "rows": [
+                ["Ik hou van koffie.", "I love coffee.", "hou van plus a noun"],
+                ["Ik vind pasta lekker.", "I find pasta tasty.", "lekker for food and drink"],
+                ["Ik vind die film leuk.", "I like that film.", "leuk for things and people"],
+                ["Ik drink graag koffie.", "I like drinking coffee.", "graag plus a verb"],
+                ["Ik drink liever thee.", "I prefer tea.", "liever is the comparative of graag"],
+                ["Het liefst drink ik koffie.", "Most of all I drink coffee.", "het liefst is the superlative"],
+                ["Ik lust geen vis.", "I do not care for fish.", "lusten is only for food"]
+              ],
+              "note": "graag, liever, liefst attach to the verb, not the noun. That is why they sit in the middle of the sentence."
+            },
+            {
+              "kind": "pitfall",
+              "title": "lekker and leuk are not interchangeable",
+              "body": "`lekker` is for taste, smell and physical comfort (`lekker eten`, `lekker weer`, `lekker slapen`). `leuk` is for things you enjoy (`een leuke film`, `een leuk feest`, `Wat leuk!`). Calling a film `lekker` says something else entirely."
+            }
+          ]
+        },
+        {
+          "heading": "Small talk starters",
+          "blocks": [
+            {
+              "kind": "vocab",
+              "items": [
+                { "nl": "Wat drink je meestal in een café?", "en": "What do you usually drink in a café?" },
+                { "nl": "Bestel jij al in het Nederlands?", "en": "Do you order in Dutch already?" },
+                { "nl": "Hoe zeg je proost in jouw taal?", "en": "How do you say cheers in your language?" },
+                { "nl": "Betaal je weleens een rondje?", "en": "Do you ever buy a round?" },
+                { "nl": "Geef je in jouw land altijd fooi?", "en": "Do you always tip in your country?" },
+                { "nl": "Wat is jouw favoriete café in de buurt?", "en": "What is your favourite café around here?" }
+              ]
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "lievelings- is glued to the noun, favoriete is a normal adjective with -e.",
+        "Drinks take the -je form in a café: een biertje, een kopje koffie.",
+        "Kan ik pinnen? is the question that matters, since most places are card only.",
+        "graag, liever and het liefst go with the verb, in the middle of the sentence.",
+        "lekker is for taste and comfort, leuk is for things you enjoy."
+      ],
+      "exercises": [
+        {
+          "id": "cafe-1",
+          "kind": "mcq",
+          "prompt": "Which is written correctly?",
+          "options": ["mijn lievelings eten", "mijn lievelingseten", "mijn lieveling eten", "mijn lievelinge eten"],
+          "correct": 1,
+          "explain": "lievelings- is glued onto the noun as one word."
+        },
+        {
+          "id": "cafe-2",
+          "kind": "fill",
+          "prompt": "Complete with favoriet: Mijn ___ vakantieland is Griekenland.",
+          "before": "Mijn",
+          "after": "vakantieland is Griekenland.",
+          "answers": ["favoriete"],
+          "explain": "favoriet is a normal adjective, and after mijn it takes -e."
+        },
+        {
+          "id": "cafe-3",
+          "kind": "fill",
+          "prompt": "Ask whether you can pay by card.",
+          "before": "Kan ik",
+          "after": "?",
+          "answers": ["pinnen"],
+          "explain": "pinnen is paying by debit card, and it is the standard question in a Dutch café."
+        },
+        {
+          "id": "cafe-4",
+          "kind": "mcq",
+          "prompt": "The waiter asks Samen of apart? What is being asked?",
+          "options": ["Do you want to sit together?", "Together or separate bills?", "Are you leaving together?", "One glass or two?"],
+          "correct": 1,
+          "explain": "It is about the bill: one payment or one per person."
+        },
+        {
+          "id": "cafe-5",
+          "kind": "mcq",
+          "prompt": "Which sentence is natural Dutch?",
+          "options": ["Ik vind die film lekker.", "Ik vind die film leuk.", "Die film is lekker leuk gezellig.", "Ik hou die film."],
+          "correct": 1,
+          "explain": "leuk is for things you enjoy. lekker is for taste, smell and physical comfort."
+        },
+        {
+          "id": "cafe-6",
+          "kind": "order",
+          "prompt": "Build: I prefer to drink tea.",
+          "words": ["thee", "drink", "Ik", "liever"],
+          "answer": ["Ik", "drink", "liever", "thee"],
+          "explain": "liever goes with the verb, so it sits between the verb and the object."
+        },
+        {
+          "id": "cafe-7",
+          "kind": "order",
+          "prompt": "Start with Dit rondje: this round is on me.",
+          "words": ["ik", "Dit rondje", "betaal"],
+          "answer": ["Dit rondje", "betaal", "ik"],
+          "explain": "The fronted object puts the emphasis on this round, so the subject moves behind the verb."
+        },
+        {
+          "id": "cafe-8",
+          "kind": "fill",
+          "prompt": "Ask whether the seat is free.",
+          "before": "Is deze plaats",
+          "after": "?",
+          "answers": ["vrij"],
+          "explain": "Is deze plaats vrij? is the standard way to ask before sitting down."
+        }
+      ]
+    }
+  ]
+}

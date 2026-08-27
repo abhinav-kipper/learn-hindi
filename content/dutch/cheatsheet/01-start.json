@@ -1,0 +1,1097 @@
+{
+  "group": {
+    "id": "start",
+    "title": "First contact",
+    "subtitle_nl": "kennismaken",
+    "blurb": "Everything you need in the first two minutes of any Dutch conversation: greeting, name, where you are from, numbers, and spelling.",
+    "emoji": "👋"
+  },
+  "topics": [
+    {
+      "id": "greetings",
+      "title": "Greetings and goodbyes",
+      "subtitle_nl": "begroetingen en afscheid",
+      "emoji": "👋",
+      "summary": "Which hello fits which hour, how to say goodbye without sounding final, and the four ways Dutch people ask how you are.",
+      "sections": [
+        {
+          "heading": "Saying hello",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Dutch splits the day into three greetings, and each one is written as **one word**. The time-of-day greetings are a little more polite than `hoi`, so they are your safe default with strangers, shopkeepers and colleagues."
+            },
+            {
+              "kind": "table",
+              "headers": ["Dutch", "English", "When", "Register"],
+              "rows": [
+                ["Hoi", "Hi", "any time", "casual"],
+                ["Hallo", "Hello", "any time", "neutral"],
+                ["Dag", "Hello / bye", "any time", "neutral"],
+                ["Goedemorgen", "Good morning", "until about 12:00", "polite"],
+                ["Goedemiddag", "Good afternoon", "12:00 until about 18:00", "polite"],
+                ["Goedenavond", "Good evening", "after about 18:00", "polite"],
+                ["Goedenacht", "Good night", "only when going to bed", "polite"]
+              ],
+              "note": "In speech people swallow the first syllable: 'morgen, 'middag, 'avond. You will also hear goeiemorgen, which is the same word said fast."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Goedemorgen! Alles goed?", "en": "Good morning! All good?" },
+                { "nl": "Hoi, ik ben Samira.", "en": "Hi, I am Samira." },
+                { "nl": "Dag mevrouw, mag ik u iets vragen?", "en": "Hello madam, may I ask you something?" }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Saying goodbye",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "The workhorse pattern is `tot` plus a time expression. It literally means \"until\", so it always says **when you expect to meet again**. Pick the one that matches reality and you sound native immediately."
+            },
+            {
+              "kind": "table",
+              "headers": ["Dutch", "English", "Meets again"],
+              "rows": [
+                ["Doei! / Doeidoei!", "Bye!", "casual, no promise"],
+                ["Dag!", "Bye!", "neutral, no promise"],
+                ["Tot zo!", "See you in a bit", "within the hour"],
+                ["Tot straks!", "See you later", "later today"],
+                ["Tot morgen!", "See you tomorrow", "tomorrow"],
+                ["Tot donderdag!", "See you Thursday", "that weekday"],
+                ["Tot volgende week!", "See you next week", "next week"],
+                ["Tot snel!", "See you soon", "soon, date unknown"],
+                ["Tot ziens!", "Goodbye", "polite, maybe never"]
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "Add a wish",
+              "body": "Dutch people almost always tack a wish onto the goodbye: `Fijne dag!` (have a nice day), `Fijn weekend!`, `Fijne avond!`, `Prettige dag verder!`. Answering `Jij ook!` (you too) is enough."
+            }
+          ]
+        },
+        {
+          "heading": "Meeting someone for the first time",
+          "blocks": [
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Aangenaam!", "en": "Pleased to meet you.", "note": "slightly formal, always correct" },
+                { "nl": "Leuk je te ontmoeten!", "en": "Nice to meet you.", "note": "casual, uses je" },
+                { "nl": "Leuk u te ontmoeten!", "en": "Nice to meet you.", "note": "the u version" },
+                { "nl": "Leuk je te zien!", "en": "Nice to see you.", "note": "only if you have met before" }
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "Zien is not ontmoeten",
+              "body": "`ontmoeten` is meeting for the first time, `zien` is seeing someone again. Saying `Leuk je te zien` to a stranger sounds like you have forgotten them."
+            }
+          ]
+        },
+        {
+          "heading": "How are you?",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Question", "English", "Register"],
+              "rows": [
+                ["Hoe gaat het?", "How is it going?", "neutral"],
+                ["Hoe gaat het met je?", "How are you?", "informal"],
+                ["Hoe gaat het met u?", "How are you?", "formal"],
+                ["Hoe is het?", "How is it?", "casual"],
+                ["Alles goed?", "All good?", "casual, very common"]
+              ]
+            },
+            {
+              "kind": "examples",
+              "title": "Answers",
+              "items": [
+                { "nl": "Goed, dank je! En met jou?", "en": "Good, thanks! And you?" },
+                { "nl": "Prima, hoor.", "en": "Fine, really." },
+                { "nl": "Het gaat wel.", "en": "So-so.", "note": "polite way to say not great" },
+                { "nl": "Niet zo goed, eerlijk gezegd.", "en": "Not so good, honestly." }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "Always bounce it back",
+              "body": "Dutch small talk expects the return question: `En met jou?` or `En met u?`. Leaving it out reads as uninterested."
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Time-of-day greetings are single words: goedemorgen, goedemiddag, goedenavond.",
+        "tot + time says when you will meet again, so pick one that is true.",
+        "Answer how-are-you and then bounce it back with En met jou? or En met u?",
+        "Goedenacht is only for going to bed, never as an evening greeting."
+      ],
+      "exercises": [
+        {
+          "id": "greetings-1",
+          "kind": "mcq",
+          "prompt": "It is 15:00 and you walk into a bakery. What do you say?",
+          "options": ["Goedemorgen", "Goedemiddag", "Goedenavond", "Goedenacht"],
+          "correct": 1,
+          "explain": "Goedemiddag covers roughly 12:00 until 18:00."
+        },
+        {
+          "id": "greetings-2",
+          "kind": "mcq",
+          "prompt": "You are leaving a class that meets again tomorrow. The most natural goodbye is:",
+          "options": ["Tot ziens!", "Tot morgen!", "Goedenacht!", "Tot zo!"],
+          "correct": 1,
+          "explain": "Tot morgen names exactly when you meet again. Tot ziens is polite but sounds like you may not return."
+        },
+        {
+          "id": "greetings-3",
+          "kind": "fill",
+          "prompt": "Complete the goodbye: you will see your colleague again in ten minutes.",
+          "before": "Tot",
+          "after": "!",
+          "answers": ["zo", "straks"],
+          "explain": "Tot zo is for within the hour. Tot straks (later today) also works."
+        },
+        {
+          "id": "greetings-4",
+          "kind": "fill",
+          "prompt": "Someone asks Hoe gaat het met je? Give the standard positive answer plus the return question.",
+          "before": "Goed, dank je! En met",
+          "after": "?",
+          "answers": ["jou", "jij"],
+          "explain": "En met jou? is the object form after met. En met u? is the formal version."
+        },
+        {
+          "id": "greetings-5",
+          "kind": "order",
+          "prompt": "Build the question: how are you (formal)?",
+          "words": ["met", "gaat", "u", "Hoe", "het"],
+          "answer": ["Hoe", "gaat", "het", "met", "u"],
+          "explain": "Question word first, then the verb, then the subject het, then the rest."
+        },
+        {
+          "id": "greetings-6",
+          "kind": "mcq",
+          "prompt": "Which greeting is written as ONE word in Dutch?",
+          "options": ["Goede morgen", "Goedemorgen", "Goede-morgen", "Goed morgen"],
+          "correct": 1,
+          "explain": "Goedemorgen, goedemiddag and goedenavond are all single words."
+        },
+        {
+          "id": "greetings-7",
+          "kind": "mcq",
+          "prompt": "You are introduced to your neighbour for the first time. Which is wrong?",
+          "options": ["Aangenaam!", "Leuk je te ontmoeten!", "Leuk je te zien!", "Hallo, ik ben Sam."],
+          "correct": 2,
+          "explain": "Leuk je te zien means nice to see you again, so it does not fit a first meeting."
+        },
+        {
+          "id": "greetings-8",
+          "kind": "fill",
+          "prompt": "A friendly wish on a Friday afternoon as you leave the office.",
+          "before": "Fijn",
+          "after": "!",
+          "answers": ["weekend"],
+          "explain": "Fijn weekend! is the standard Friday goodbye. Note weekend is a het-word, so no -e on fijn."
+        }
+      ]
+    },
+    {
+      "id": "introductions",
+      "title": "Introducing yourself and others",
+      "subtitle_nl": "jezelf en anderen voorstellen",
+      "emoji": "🤝",
+      "summary": "Three ways to give your name, the matching three questions, and how to present someone else to a group.",
+      "sections": [
+        {
+          "heading": "Three ways to give your name",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Statement", "Matching question", "Literally"],
+              "rows": [
+                ["Ik heet Esther.", "Hoe heet je?", "How are you called?"],
+                ["Mijn naam is Esther.", "Wat is je naam?", "What is your name?"],
+                ["Ik ben Esther.", "Wie ben jij?", "Who are you?"]
+              ],
+              "note": "All three are equally common. Match the answer to the question you were asked and the exchange sounds natural."
+            },
+            {
+              "kind": "rule",
+              "title": "Watch the verb heten",
+              "body": "`heten` means \"to be called\". Its stem is `heet`, which already ends in **t**, so the jij and hij forms do not get a second t.\n- ik heet\n- jij heet (never heett)\n- hij/zij heet\n- wij/jullie/zij heten"
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Hoi! Ik ben Esther. En jij? Wie ben jij?", "en": "Hi! I am Esther. And you? Who are you?" },
+                { "nl": "Hallo! Mijn naam is Esther. Wat is jouw naam?", "en": "Hello! My name is Esther. What is your name?" },
+                { "nl": "Hallo! Ik heet Esther. Hoe heet jij?", "en": "Hello! My name is Esther. What are you called?" }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Formal introductions",
+          "blocks": [
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Mag ik me even voorstellen? Ik ben Abhinav Mudgal.", "en": "May I introduce myself? I am Abhinav Mudgal." },
+                { "nl": "Ik ben de nieuwe collega van de afdeling verkoop.", "en": "I am the new colleague from the sales department." },
+                { "nl": "Hoe is uw naam, als ik vragen mag?", "en": "What is your name, if I may ask?" }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "voornaam and achternaam",
+              "body": "`de voornaam` is the first name, `de achternaam` the surname. Many Dutch surnames carry a `tussenvoegsel` (van, de, van der, van den). When someone asks `Hoe spel je dat?`, spell the tussenvoegsel too."
+            }
+          ]
+        },
+        {
+          "heading": "Introducing someone else",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Point with `Dit is ...`, then switch to `hij` or `zij` and keep going. This is exactly what you do when you present your conversation partner to a group."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Dit is Esther. Zij komt uit Nederland en zij woont in Amsterdam.", "en": "This is Esther. She comes from the Netherlands and she lives in Amsterdam." },
+                { "nl": "Dit is James. Hij spreekt Engels en Spaans.", "en": "This is James. He speaks English and Spanish." },
+                { "nl": "Haar lievelingseten is pasta met pesto.", "en": "Her favourite food is pasta with pesto." },
+                { "nl": "Zijn naam is Hein en hij is 62 jaar.", "en": "His name is Hein and he is 62 years old." }
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "zijn and haar switch with the person, not with you",
+              "body": "`zijn` = his, `haar` = her. Learners often keep saying `zijn` for everybody. If you are talking about Esther, it is `haar naam`, `haar broer`, `haar werk`."
+            }
+          ]
+        },
+        {
+          "heading": "The interview kit",
+          "blocks": [
+            {
+              "kind": "vocab",
+              "title": "Ask these six and you can introduce anyone",
+              "items": [
+                { "nl": "Hoe heet je?", "en": "What is your name?" },
+                { "nl": "Waar woon je?", "en": "Where do you live?" },
+                { "nl": "Waar kom je vandaan?", "en": "Where are you from?" },
+                { "nl": "Hoe oud ben je?", "en": "How old are you?" },
+                { "nl": "Welke talen spreek je?", "en": "Which languages do you speak?" },
+                { "nl": "Wat is je lievelingseten?", "en": "What is your favourite food?" }
+              ]
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Ik heet / Mijn naam is / Ik ben are interchangeable, match them to the question asked.",
+        "heten has stem heet, so jij heet keeps a single t.",
+        "Present a third person with Dit is ..., then continue with hij or zij.",
+        "zijn = his, haar = her, and they follow the person you describe."
+      ],
+      "exercises": [
+        {
+          "id": "intro-1",
+          "kind": "fill",
+          "prompt": "A: Hoe ___ je? B: Ik heet Esther.",
+          "before": "Hoe",
+          "after": "je?",
+          "answers": ["heet"],
+          "explain": "The stem heet already ends in t, so no extra t is added."
+        },
+        {
+          "id": "intro-2",
+          "kind": "mcq",
+          "prompt": "Which answer matches the question Wat is je naam?",
+          "options": ["Ik heet Samira.", "Mijn naam is Samira.", "Ik kom uit Spanje.", "Ik ben 30 jaar."],
+          "correct": 1,
+          "explain": "Question and answer mirror each other: naam question, naam answer."
+        },
+        {
+          "id": "intro-3",
+          "kind": "order",
+          "prompt": "Introduce your partner to the group: this is Esther, she comes from the Netherlands.",
+          "words": ["Esther", "uit", "komt", "Dit", "Zij", "is", "Nederland"],
+          "answer": ["Dit", "is", "Esther", "Zij", "komt", "uit", "Nederland"],
+          "explain": "Dit is + name, then a fresh sentence with the pronoun zij."
+        },
+        {
+          "id": "intro-4",
+          "kind": "fill",
+          "prompt": "Talking about Esther: complete with the right possessive. ___ naam is Esther.",
+          "before": "",
+          "after": "naam is Esther.",
+          "answers": ["haar"],
+          "explain": "Esther is female, so haar (her). Zijn would mean his."
+        },
+        {
+          "id": "intro-5",
+          "kind": "mcq",
+          "prompt": "Which form is spelled correctly?",
+          "options": ["Jij heett Samira", "Jij heet Samira", "Jij heten Samira", "Jij heetd Samira"],
+          "correct": 1,
+          "explain": "Stem + t, but a stem ending in t never doubles: jij heet."
+        },
+        {
+          "id": "intro-6",
+          "kind": "fill",
+          "prompt": "The polite opener before giving your name in a meeting.",
+          "before": "Mag ik me even",
+          "after": "?",
+          "answers": ["voorstellen"],
+          "explain": "Mag ik me even voorstellen? = May I introduce myself?"
+        },
+        {
+          "id": "intro-7",
+          "kind": "order",
+          "prompt": "Build: what is your name (informal, with jouw)?",
+          "words": ["naam", "is", "jouw", "Wat", "?"],
+          "answer": ["Wat", "is", "jouw", "naam", "?"],
+          "explain": "Question word, verb, then the subject jouw naam."
+        }
+      ]
+    },
+    {
+      "id": "personal-details",
+      "title": "Personal details",
+      "subtitle_nl": "persoonlijke informatie",
+      "emoji": "🪪",
+      "summary": "Country, city, neighbourhood, address, birth date, phone number, age and job: the questions every form and every first conversation asks.",
+      "sections": [
+        {
+          "heading": "Where are you from?",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Origin uses the verb `komen` with the preposition `uit`. Two questions ask for it:\n- `Waar kom je vandaan?` The word `vandaan` splits off and lands at the end.\n- `Uit welk land kom je?` Here the preposition sits at the front, glued to `welk land`."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Ik kom uit Nederland.", "en": "I come from the Netherlands." },
+                { "nl": "Ik kom uit Edinburgh, de hoofdstad van Schotland.", "en": "I come from Edinburgh, the capital of Scotland." },
+                { "nl": "Mijn geboorteland is Duitsland.", "en": "My country of birth is Germany." },
+                { "nl": "Uit welke stad kom je?", "en": "Which city are you from?" }
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "Some countries carry de",
+              "body": "Most country names take no article, but a handful do: `de Verenigde Staten`, `de Filipijnen`, `de Dominicaanse Republiek`. So it is `Ik kom uit de Verenigde Staten`, never `uit Verenigde Staten`."
+            }
+          ]
+        },
+        {
+          "heading": "Where do you live?",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Living somewhere uses `wonen` plus `in` for a city or country, and `op` for some street types. Dutch cities are cut into compass districts and locals name them constantly."
+            },
+            {
+              "kind": "table",
+              "headers": ["Dutch", "English"],
+              "rows": [
+                ["het noorden / Amsterdam-Noord", "the north / Amsterdam North"],
+                ["het zuiden / Amsterdam-Zuid", "the south / Amsterdam South"],
+                ["het oosten / Amsterdam-Oost", "the east / Amsterdam East"],
+                ["het westen / Amsterdam-West", "the west / Amsterdam West"],
+                ["het centrum", "the centre"],
+                ["de buurt / de wijk", "the neighbourhood / the district"]
+              ]
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Ik woon in Amsterdam-Noord, dichtbij het filmmuseum.", "en": "I live in Amsterdam North, close to the film museum." },
+                { "nl": "In welke buurt woon je?", "en": "Which neighbourhood do you live in?" },
+                { "nl": "Ik woon vlakbij café De Ceuvel.", "en": "I live right near café De Ceuvel." }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Address, birth date, phone number",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Question", "Answer pattern"],
+              "rows": [
+                ["Wat is je adres?", "Mijn adres is Elandsgracht 70."],
+                ["Wat is je postcode?", "Mijn postcode is 1016 TX."],
+                ["Wat is je geboortedatum?", "Mijn geboortedatum is 15 augustus 1988."],
+                ["Waar ben je geboren?", "Ik ben geboren in Delhi."],
+                ["Wat is je telefoonnummer?", "Mijn telefoonnummer is 06 12 34 56 78."],
+                ["Wat is je e-mailadres?", "Mijn e-mailadres is naam apenstaartje mail punt nl."]
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "Three Dutch formatting habits",
+              "body": "1. The street comes first, the number after it: `Elandsgracht 70`.\n2. Months are written in **lower case**: `15 augustus 1988`.\n3. Phone numbers are read in pairs: `06 12 34 56 78` is nul-zes, twaalf, vierendertig, zesenvijftig, achtenzeventig. The `@` sign is `apenstaartje` (little monkey tail)."
+            }
+          ]
+        },
+        {
+          "heading": "Age, time in the country, work",
+          "blocks": [
+            {
+              "kind": "pitfall",
+              "title": "Age uses zijn, not hebben",
+              "body": "Dutch says you **are** a number of years: `Ik ben 37 jaar.` or `Ik ben 37.` Never `ik heb 37 jaar`. The unit stays singular: `jaar`, not `jaren`."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Hoe oud ben je? Ik ben 37 jaar.", "en": "How old are you? I am 37." },
+                { "nl": "Hoe lang woon je al in Nederland?", "en": "How long have you lived in the Netherlands?" },
+                { "nl": "Ik woon hier al twee jaar.", "en": "I have lived here for two years.", "note": "Dutch uses the present tense plus al, where English uses have lived" },
+                { "nl": "Wat voor werk doe je?", "en": "What kind of work do you do?" },
+                { "nl": "Ik ben docent.", "en": "I am a teacher.", "note": "no article before a profession" }
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "No article with professions",
+              "body": "After `zijn`, a job name drops the article: `Ik ben arts`, `Zij is ingenieur`, `Hij is student`. Adding `een` is not wrong when you also add an adjective: `Hij is een goede arts`."
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "komen uit for origin, wonen in for where you live.",
+        "Waar kom je vandaan? sends vandaan to the end of the sentence.",
+        "Age takes zijn and the singular jaar: Ik ben 37 jaar.",
+        "Street before number, months in lower case, phone numbers read in pairs.",
+        "No een before a job title after zijn: Ik ben docent."
+      ],
+      "exercises": [
+        {
+          "id": "pd-1",
+          "kind": "fill",
+          "prompt": "Complete: C: Uit welk ___ kom je? D: Ik kom uit Schotland.",
+          "before": "Uit welk",
+          "after": "kom je?",
+          "answers": ["land"],
+          "explain": "welk + het-word singular: het land, so welk land."
+        },
+        {
+          "id": "pd-2",
+          "kind": "order",
+          "prompt": "Build the question: where do you come from?",
+          "words": ["je", "kom", "vandaan", "Waar"],
+          "answer": ["Waar", "kom", "je", "vandaan"],
+          "explain": "vandaan splits off from waar and goes to the very end."
+        },
+        {
+          "id": "pd-3",
+          "kind": "mcq",
+          "prompt": "Which sentence is correct?",
+          "options": ["Ik heb 37 jaar.", "Ik ben 37 jaren.", "Ik ben 37 jaar.", "Ik heb 37 jaren."],
+          "correct": 2,
+          "explain": "Age takes zijn, and the unit stays singular: jaar."
+        },
+        {
+          "id": "pd-4",
+          "kind": "mcq",
+          "prompt": "Which is correct?",
+          "options": ["Ik kom uit Verenigde Staten.", "Ik kom uit de Verenigde Staten.", "Ik kom van de Verenigde Staten.", "Ik kom in de Verenigde Staten."],
+          "correct": 1,
+          "explain": "de Verenigde Staten is one of the few country names that keeps its article, and origin uses uit."
+        },
+        {
+          "id": "pd-5",
+          "kind": "fill",
+          "prompt": "Give your address the Dutch way: street Elandsgracht, number 70.",
+          "before": "Mijn adres is",
+          "after": ".",
+          "answers": ["elandsgracht 70"],
+          "explain": "Street name first, house number after it."
+        },
+        {
+          "id": "pd-6",
+          "kind": "mcq",
+          "prompt": "Which birth date is written correctly in Dutch?",
+          "options": ["15 Augustus 1988", "15 augustus 1988", "Augustus 15, 1988", "1988 augustus 15"],
+          "correct": 1,
+          "explain": "Day, month, year, and Dutch months are lower case."
+        },
+        {
+          "id": "pd-7",
+          "kind": "fill",
+          "prompt": "Say what you do for a living (teacher), with no article.",
+          "before": "Ik ben",
+          "after": ".",
+          "answers": ["docent", "leraar", "lerares"],
+          "explain": "Professions after zijn take no een: Ik ben docent."
+        },
+        {
+          "id": "pd-8",
+          "kind": "order",
+          "prompt": "Build: I have lived in the Netherlands for two years already.",
+          "words": ["al", "in", "twee", "woon", "Ik", "jaar", "Nederland"],
+          "answer": ["Ik", "woon", "al", "twee", "jaar", "in", "Nederland"],
+          "explain": "Dutch uses the present tense with al. Time (al twee jaar) comes before place (in Nederland)."
+        }
+      ]
+    },
+    {
+      "id": "numbers",
+      "title": "Numbers and counting",
+      "subtitle_nl": "de getallen",
+      "emoji": "🔢",
+      "summary": "0 to a million, the backwards teens, when to write a trema, and how to say years, prices and phone numbers.",
+      "sections": [
+        {
+          "heading": "0 to 20",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["#", "Dutch", "#", "Dutch"],
+              "rows": [
+                ["0", "nul", "11", "elf"],
+                ["1", "een / één", "12", "twaalf"],
+                ["2", "twee", "13", "dertien"],
+                ["3", "drie", "14", "veertien"],
+                ["4", "vier", "15", "vijftien"],
+                ["5", "vijf", "16", "zestien"],
+                ["6", "zes", "17", "zeventien"],
+                ["7", "zeven", "18", "achttien"],
+                ["8", "acht", "19", "negentien"],
+                ["9", "negen", "20", "twintig"],
+                ["10", "tien", "", ""]
+              ],
+              "note": "13 and 14 are dertien and veertien, not drietien or viertien. Learn those two as exceptions and the rest are regular."
+            },
+            {
+              "kind": "tip",
+              "title": "een or één?",
+              "body": "`een` (no accents) is the article \"a/an\". `één` with two accents is the number **one**, used when you need to stress it: `Ik heb maar één fiets.` In running text most people write `een` and let context decide."
+            }
+          ]
+        },
+        {
+          "heading": "The tens",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["#", "Dutch", "Note"],
+              "rows": [
+                ["20", "twintig", ""],
+                ["30", "dertig", "not drietig"],
+                ["40", "veertig", "not viertig"],
+                ["50", "vijftig", ""],
+                ["60", "zestig", ""],
+                ["70", "zeventig", ""],
+                ["80", "tachtig", "not achttig"],
+                ["90", "negentig", ""],
+                ["100", "honderd", ""]
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "21 to 99: units first",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Dutch says the **unit before the ten**, joined by `en`, all written as **one word**. So 21 is \"one-and-twenty\".\n- 21 = `eenentwintig`\n- 45 = `vijfenveertig`\n- 78 = `achtenzeventig`\n- 99 = `negenennegentig`"
+            },
+            {
+              "kind": "rule",
+              "title": "When to write a trema",
+              "body": "If the unit ends in a vowel that would clash with the `en`, Dutch writes a **trema** (the two dots) to show where the syllable breaks. That only happens with **twee** and **drie**.\n- 22 = `tweeëntwintig`\n- 23 = `drieëntwintig`\n- 24 = `vierentwintig` (no clash, no trema)\n- 53 = `drieënvijftig`"
+            },
+            {
+              "kind": "pitfall",
+              "title": "Listen to the end first",
+              "body": "When a Dutch person says a phone number or price, the last part you hear is the ten. `vierenzestig` is 64, not 46. Train your ear by writing the second half of the word down first."
+            }
+          ]
+        },
+        {
+          "heading": "Hundreds, thousands and beyond",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["#", "Dutch"],
+              "rows": [
+                ["100", "honderd"],
+                ["101", "honderdeen"],
+                ["200", "tweehonderd"],
+                ["300", "driehonderd"],
+                ["305", "driehonderdvijf"],
+                ["348", "driehonderdachtenveertig"],
+                ["1000", "duizend"],
+                ["1500", "vijftienhonderd of duizend vijfhonderd"],
+                ["10.000", "tienduizend"],
+                ["100.000", "honderdduizend"],
+                ["1.000.000", "een miljoen"]
+              ],
+              "note": "Dutch uses a dot for thousands and a comma for decimals: 1.250,50 is one thousand two hundred fifty euro and fifty cents."
+            }
+          ]
+        },
+        {
+          "heading": "Years, prices, phone numbers",
+          "blocks": [
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Ik ben geboren in 1988.", "en": "I was born in 1988.", "note": "spoken: negentienhonderdachtentachtig" },
+                { "nl": "Het is nu 2026.", "en": "It is now 2026.", "note": "spoken: tweeduizend zesentwintig" },
+                { "nl": "Dat kost 4 euro 50.", "en": "That costs 4.50.", "note": "vier euro vijftig" },
+                { "nl": "Mijn nummer is 06 12 34 56 78.", "en": "My number is 06 12 34 56 78.", "note": "read in pairs, so twaalf, vierendertig, zesenvijftig, achtenzeventig" }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Ordinal numbers",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Add `-de` up to 19 and `-ste` from 20 upwards. Four forms are irregular and worth memorising: `eerste`, `derde`, `achtste`, `veertigste`."
+            },
+            {
+              "kind": "table",
+              "headers": ["#", "Dutch", "#", "Dutch"],
+              "rows": [
+                ["1st", "eerste", "8th", "achtste"],
+                ["2nd", "tweede", "9th", "negende"],
+                ["3rd", "derde", "10th", "tiende"],
+                ["4th", "vierde", "20th", "twintigste"],
+                ["5th", "vijfde", "21st", "eenentwintigste"],
+                ["6th", "zesde", "100th", "honderdste"],
+                ["7th", "zevende", "", ""]
+              ]
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Ons appartement is op de derde verdieping.", "en": "Our flat is on the third floor." },
+                { "nl": "Dit is mijn eerste les Nederlands.", "en": "This is my first Dutch lesson." }
+              ]
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "13 and 14 are dertien and veertien, 30 and 40 are dertig and veertig, 80 is tachtig.",
+        "From 21 up, the unit comes first and everything is one word: vijfenveertig.",
+        "Only twee and drie take a trema: tweeentwintig is written tweeëntwintig.",
+        "Ordinals take -de up to 19 and -ste from 20, with eerste, derde and achtste irregular."
+      ],
+      "exercises": [
+        {
+          "id": "num-1",
+          "kind": "fill",
+          "prompt": "Write 22 in words.",
+          "before": "22 =",
+          "after": "",
+          "answers": ["tweeëntwintig", "tweeentwintig"],
+          "explain": "Unit first, then en, then the ten. twee plus en needs a trema: tweeëntwintig."
+        },
+        {
+          "id": "num-2",
+          "kind": "mcq",
+          "prompt": "Which number is vierenzestig?",
+          "options": ["46", "64", "44", "66"],
+          "correct": 1,
+          "explain": "vier (4) plus en plus zestig (60) gives 64. The ten is always the second half of the word."
+        },
+        {
+          "id": "num-3",
+          "kind": "mcq",
+          "prompt": "Which spelling is correct for 40?",
+          "options": ["viertig", "vertig", "veertig", "vierentig"],
+          "correct": 2,
+          "explain": "40 is veertig, one of the irregular tens alongside dertig and tachtig."
+        },
+        {
+          "id": "num-4",
+          "kind": "fill",
+          "prompt": "Write 305 in words (one word).",
+          "before": "305 =",
+          "after": "",
+          "answers": ["driehonderdvijf"],
+          "explain": "driehonderd plus vijf, written as a single word."
+        },
+        {
+          "id": "num-5",
+          "kind": "mcq",
+          "prompt": "You are on the third floor. How do you say it?",
+          "options": ["op de drie verdieping", "op de derde verdieping", "op de driede verdieping", "op de derdste verdieping"],
+          "correct": 1,
+          "explain": "derde is the irregular ordinal for 3."
+        },
+        {
+          "id": "num-6",
+          "kind": "fill",
+          "prompt": "Write 78 in words.",
+          "before": "78 =",
+          "after": "",
+          "answers": ["achtenzeventig"],
+          "explain": "acht + en + zeventig, one word, no trema because acht ends in a consonant."
+        },
+        {
+          "id": "num-7",
+          "kind": "mcq",
+          "prompt": "Which one means 'a bicycle' rather than 'one bicycle'?",
+          "options": ["één fiets", "een fiets", "eene fiets", "eén fiets"],
+          "correct": 1,
+          "explain": "een without accents is the article. één with accents stresses the number one."
+        },
+        {
+          "id": "num-8",
+          "kind": "fill",
+          "prompt": "Write 93 in words.",
+          "before": "93 =",
+          "after": "",
+          "answers": ["drieënnegentig", "drieennegentig"],
+          "explain": "drie + en + negentig. drie ends in a vowel, so the trema appears: drieënnegentig."
+        }
+      ]
+    },
+    {
+      "id": "alphabet-spelling",
+      "title": "The alphabet and spelling out loud",
+      "subtitle_nl": "het alfabet en spellen",
+      "emoji": "🔤",
+      "summary": "Dutch letter names in four easy families, plus the phrases you need when someone asks you to spell your surname over the phone.",
+      "sections": [
+        {
+          "heading": "Four families of letter names",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Do not learn 26 letter names one by one. Almost all of them fall into four groups that rhyme with each other."
+            },
+            {
+              "kind": "table",
+              "headers": ["Group", "Letters", "Sound like"],
+              "rows": [
+                ["1. the -ee family", "B, C, D, E, G, J, P, T, V, W", "bee, cee, dee, ee, gee, jee, pee, tee, vee, wee"],
+                ["2. the -aa family", "A, H, K", "aa, haa, kaa"],
+                ["3. the e- family", "F, L, M, N, R, S", "ef, el, em, en, er, es"],
+                ["4. the odd ones", "I, O, U, Q, X, Y, Z", "ie, oo, uu, kuu, ix, i-grec, zet"]
+              ],
+              "note": "Group 4 is the only one you have to memorise item by item. Y is often called i-grec or Griekse ij."
+            },
+            {
+              "kind": "pitfall",
+              "title": "G and J trip up English speakers",
+              "body": "Dutch `G` is said \"gee\" (like the English word gay) and `J` is said \"jee\" (like yay). English speakers regularly swap them. `W` is \"wee\", not double-u."
+            }
+          ]
+        },
+        {
+          "heading": "The ij",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "`ij` is the Dutch **lange ij**, treated almost as one letter. In handwriting and in capitals both letters get capitalised: `IJsselmeer`, not `Ijsselmeer`. When spelling out loud you can say \"lange ij\" to distinguish it from the letter y (\"i-grec\")."
+            }
+          ]
+        },
+        {
+          "heading": "Spelling something out",
+          "blocks": [
+            {
+              "kind": "vocab",
+              "items": [
+                { "nl": "Hoe spel je dat?", "en": "How do you spell that?" },
+                { "nl": "Hoe spelt u dat?", "en": "How do you spell that? (formal)" },
+                { "nl": "Kun je dat herhalen?", "en": "Can you repeat that?" },
+                { "nl": "Kunt u dat spellen, alstublieft?", "en": "Could you spell that, please?" },
+                { "nl": "met een hoofdletter", "en": "with a capital letter" },
+                { "nl": "met een kleine letter", "en": "with a small letter" },
+                { "nl": "dubbel l", "en": "double l" },
+                { "nl": "een streepje", "en": "a hyphen" },
+                { "nl": "een spatie", "en": "a space" },
+                { "nl": "aan elkaar", "en": "as one word" }
+              ]
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "A: Wat is je achternaam? B: Te Riele. A: Hoe spel je dat?", "en": "A: What is your surname? B: Te Riele. A: How do you spell that?" },
+                { "nl": "T, E, spatie, R, I, E, L, E.", "en": "T, E, space, R, I, E, L, E." },
+                { "nl": "Van der Berg, met een streepje? Nee, aan elkaar.", "en": "Van der Berg, with a hyphen? No, as one word." }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "The tussenvoegsel",
+              "body": "Dutch surnames often carry a small linking word: `van`, `de`, `den`, `van der`, `ter`. It is called the `tussenvoegsel` and it is written in lower case inside a full name (`Esther te Riele`) but with a capital when the first name is left out (`mevrouw Te Riele`)."
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Ten letters rhyme with -ee, three with -aa, six start with e-, and seven are odd ones out.",
+        "G is gee and J is jee, the opposite of what English speakers expect.",
+        "ij is the lange ij and capitalises both letters: IJmuiden.",
+        "Hoe spel je dat? and Kun je dat herhalen? get you through any phone call."
+      ],
+      "exercises": [
+        {
+          "id": "abc-1",
+          "kind": "mcq",
+          "prompt": "How is the letter G pronounced when you spell in Dutch?",
+          "options": ["like English gee in geese", "gay", "guh", "yay"],
+          "correct": 1,
+          "explain": "G belongs to the -ee family and is said gee, rhyming with the English word gay."
+        },
+        {
+          "id": "abc-2",
+          "kind": "mcq",
+          "prompt": "Which group do F, L, M, N, R and S belong to?",
+          "options": ["they rhyme with -ee", "they rhyme with -aa", "they start with an e sound", "they are the odd ones"],
+          "correct": 2,
+          "explain": "ef, el, em, en, er, es all begin with a short e."
+        },
+        {
+          "id": "abc-3",
+          "kind": "fill",
+          "prompt": "Ask someone how to spell what they just said (informal).",
+          "before": "Hoe",
+          "after": "je dat?",
+          "answers": ["spel"],
+          "explain": "spellen has stem spel. With je after the verb in a question, no -t is added."
+        },
+        {
+          "id": "abc-4",
+          "kind": "mcq",
+          "prompt": "Which spelling of the lake is correct?",
+          "options": ["Ijsselmeer", "IJsselmeer", "ijsselmeer", "IJSselmeer"],
+          "correct": 1,
+          "explain": "The ij counts as one letter, so both parts take the capital: IJsselmeer."
+        },
+        {
+          "id": "abc-5",
+          "kind": "fill",
+          "prompt": "You did not catch the spelling. Ask for a repeat.",
+          "before": "Kun je dat",
+          "after": "?",
+          "answers": ["herhalen"],
+          "explain": "Kun je dat herhalen? = Can you repeat that? The second verb stays in the base form at the end."
+        },
+        {
+          "id": "abc-6",
+          "kind": "mcq",
+          "prompt": "How do you say the letter Y when spelling?",
+          "options": ["ie", "uu", "i-grec", "jee"],
+          "correct": 2,
+          "explain": "Y is i-grec (or Griekse ij). I is ie and J is jee."
+        }
+      ]
+    },
+    {
+      "id": "sounds-spelling",
+      "title": "Sounds and spelling rules",
+      "subtitle_nl": "klanken en spellingsregels",
+      "emoji": "🔊",
+      "summary": "Short versus long vowels, why wonen becomes woon but zitten becomes zit, and the rule that no Dutch word ends in v or z.",
+      "sections": [
+        {
+          "heading": "Short vowel or long vowel",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "This is the single most useful sound contrast in Dutch. One vowel letter in a **closed** syllable (a syllable that ends in a consonant) is **short**. Two vowel letters make it **long**."
+            },
+            {
+              "kind": "table",
+              "headers": ["Short", "Long", "Meaning"],
+              "rows": [
+                ["bos", "boom", "forest / tree"],
+                ["kat", "kaas", "cat / cheese"],
+                ["pen", "peer", "pen / pear"],
+                ["bus", "zuur", "bus / sour"],
+                ["zon", "zoon", "sun / son"],
+                ["man", "maan", "man / moon"]
+              ],
+              "note": "Say them as a pair out loud. The long one takes clearly more time, and the mouth stays tenser."
+            }
+          ]
+        },
+        {
+          "heading": "Why the spelling changes",
+          "blocks": [
+            {
+              "kind": "rule",
+              "title": "Rule 1: open syllables need only one vowel",
+              "body": "In `wo-nen` the first syllable ends in a vowel, so it is open and the `o` is already long. Cut the ending off and the syllable closes, so you must **double the vowel** to keep it long: `wonen` gives `ik woon`. Same for `lezen` giving `ik lees` and `spelen` giving `ik speel`."
+            },
+            {
+              "kind": "rule",
+              "title": "Rule 2: short vowels keep the double consonant",
+              "body": "In `zit-ten` the first syllable is closed, so the `i` is short. Cut the ending off and one consonant is enough to keep it closed: `zitten` gives `ik zit`. Same for `bellen` giving `ik bel` and `stoppen` giving `ik stop`."
+            },
+            {
+              "kind": "table",
+              "headers": ["Infinitive", "Syllables", "ik-form", "Why"],
+              "rows": [
+                ["wonen", "wo-nen", "ik woon", "long o, needs two letters when closed"],
+                ["lezen", "le-zen", "ik lees", "long e, doubled, and z becomes s"],
+                ["zitten", "zit-ten", "ik zit", "short i, one t is enough"],
+                ["bellen", "bel-len", "ik bel", "short e, one l is enough"],
+                ["maken", "ma-ken", "ik maak", "long a, doubled"],
+                ["stoppen", "stop-pen", "ik stop", "short o, one p"]
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "No Dutch word ends in v or z",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "At the end of a word, `v` is written `f` and `z` is written `s`. The letter comes back as soon as an ending is added."
+            },
+            {
+              "kind": "table",
+              "headers": ["Base form", "End of word", "Ending added"],
+              "rows": [
+                ["blijven", "ik blijf", "wij blijven"],
+                ["reizen", "ik reis", "wij reizen"],
+                ["lezen", "ik lees", "wij lezen"],
+                ["de brief", "brief", "de brieven"],
+                ["het huis", "huis", "de huizen"],
+                ["lief", "hij is lief", "een lieve man"]
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "Final consonants go quiet too",
+              "body": "Even where the letter stays, the sound hardens at the end of a word: `hond` sounds like \"hont\", `rood` like \"root\", `heb` like \"hep\". This is why `hij heeft` and `ik heb` feel so different."
+            }
+          ]
+        },
+        {
+          "heading": "Vowel teams to recognise",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Spelling", "Example", "English hint"],
+              "rows": [
+                ["ie", "knie, niet", "like ee in see"],
+                ["oe", "voet, boek", "like oo in book, longer"],
+                ["eu", "sleutel, deur", "no English match, round your lips on eh"],
+                ["ui", "huis, uit", "no English match, the hardest one"],
+                ["ou / au", "koud, blauw", "like ow in now"],
+                ["ij / ei", "bij, geit", "between eye and ay"],
+                ["aai / ooi / oei", "saai, mooi, moeilijk", "long vowel plus a quick y"],
+                ["eeu / ieu", "leeuw, nieuw", "long vowel plus a quick w"]
+              ],
+              "note": "ij and ei sound identical. Which one to write is pure vocabulary, so learn each word with its spelling."
+            },
+            {
+              "kind": "pitfall",
+              "title": "The unstressed e",
+              "body": "In `de`, `het`, `-en` and `-er`, the `e` is a lazy uh sound, not a clear e. `lopen` in normal speech is closer to \"lope\" than \"lo-pen\", because the final n is often dropped."
+            }
+          ]
+        },
+        {
+          "heading": "The consonants that mark a foreign accent",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Letter", "Example", "How"],
+              "rows": [
+                ["g / ch", "goed, acht, lachen", "scrape it at the back of the throat"],
+                ["sch", "school, schrijven", "s plus that same scrape, two sounds"],
+                ["j", "ja, jaar", "like y in yes"],
+                ["w", "water, wonen", "lips together, softer than English w"],
+                ["v", "vet, vader", "between English f and v"],
+                ["r", "rood, boor", "rolled at the front or scraped at the back, both fine"]
+              ]
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "One vowel in a closed syllable is short, two vowels make it long: bos versus boom.",
+        "Closing a syllable means doubling the vowel (wonen gives woon), keeping it short means one consonant (zitten gives zit).",
+        "Words never end in v or z: blijven gives blijf, reizen gives reis.",
+        "ij and ei sound the same, so their spelling has to be learned word by word."
+      ],
+      "exercises": [
+        {
+          "id": "snd-1",
+          "kind": "fill",
+          "prompt": "Give the ik-form of maken.",
+          "before": "ik",
+          "after": "",
+          "answers": ["maak"],
+          "explain": "ma-ken has an open syllable with a long a, so closing it needs two letters: maak."
+        },
+        {
+          "id": "snd-2",
+          "kind": "fill",
+          "prompt": "Give the ik-form of zitten.",
+          "before": "ik",
+          "after": "",
+          "answers": ["zit"],
+          "explain": "zit-ten has a short i, so one t keeps the syllable closed: zit."
+        },
+        {
+          "id": "snd-3",
+          "kind": "mcq",
+          "prompt": "Which is the correct ik-form of reizen?",
+          "options": ["ik reiz", "ik reis", "ik reiss", "ik reize"],
+          "correct": 1,
+          "explain": "No Dutch word ends in z, so it is written s: ik reis, wij reizen."
+        },
+        {
+          "id": "snd-4",
+          "kind": "mcq",
+          "prompt": "Which pair shows short versus long?",
+          "options": ["kat and kaas", "kat and kip", "kaas and boom", "bos and bus"],
+          "correct": 0,
+          "explain": "kat has a short a, kaas has a long aa. The other pairs are both short or both long."
+        },
+        {
+          "id": "snd-5",
+          "kind": "fill",
+          "prompt": "Give the plural of het huis.",
+          "before": "de",
+          "after": "",
+          "answers": ["huizen"],
+          "explain": "The s at the end of huis goes back to z once an ending is added: huizen."
+        },
+        {
+          "id": "snd-6",
+          "kind": "mcq",
+          "prompt": "Which statement about ij and ei is true?",
+          "options": ["ij is longer than ei", "they sound identical, only the spelling differs", "ei is only used in names", "ij is always at the end of a word"],
+          "correct": 1,
+          "explain": "They are pronounced the same. Which spelling a word takes is vocabulary, not a rule."
+        },
+        {
+          "id": "snd-7",
+          "kind": "fill",
+          "prompt": "Give the ik-form of blijven.",
+          "before": "ik",
+          "after": "",
+          "answers": ["blijf"],
+          "explain": "v at the end of a word is written f: ik blijf, wij blijven."
+        }
+      ]
+    }
+  ]
+}

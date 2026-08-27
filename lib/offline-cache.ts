@@ -21,6 +21,7 @@ import { getStages as getHindiSoundStages } from '@/lib/hindi/pronunciation'
 import { getStages as getDutchSoundStages } from '@/lib/dutch/pronunciation'
 import { getLezenTexts } from '@/lib/dutch/lezen'
 import { getClips } from '@/lib/dutch/luisteren'
+import { getTopics as getCheatTopics } from '@/lib/dutch/cheatsheet'
 import { getDuels } from '@/lib/games'
 import { getSentenceGames } from '@/lib/sentence-game'
 import hiAudio from '@/content/hi-audio.json'
@@ -53,6 +54,8 @@ const STATIC_ROUTES = [
   '/dutch/luisteren/mock',
   '/dutch/sounds',
   '/dutch/lookup',
+  '/dutch/cheatsheet',
+  '/dutch/cheatsheet/review',
 ]
 
 // Pull ids from a loader, swallowing any failure so one bad loader can't abort
@@ -84,6 +87,10 @@ export function getAllRoutes(): string[] {
     ...ids(getDutchSoundStages).map((id) => `/dutch/sounds/${id}`),
     ...ids(getLezenTexts).map((id) => `/dutch/lezen/${id}`),
     ...ids(getClips).map((id) => `/dutch/luisteren/${id}`),
+    ...ids(getCheatTopics).flatMap((id) => [
+      `/dutch/cheatsheet/${id}`,
+      `/dutch/cheatsheet/${id}/practice`,
+    ]),
     ...['hindi', 'dutch'].flatMap((l) => getDuels(l)).map((d) => `/play/duel/${d.id}`),
     ...['hindi', 'dutch'].flatMap((l) => getSentenceGames(l)).map((g) => `/play/sentence/${g.id}`),
   ]
