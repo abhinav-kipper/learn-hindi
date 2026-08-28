@@ -390,7 +390,7 @@
         {
           "id": "cal-6",
           "kind": "mcq",
-          "prompt": "Which is written correctly?",
+          "prompt": "Which sentence uses the day and its preposition correctly?",
           "options": ["Ik werk op Maandag.", "Ik werk op maandag.", "Ik werk in maandag.", "Ik werk om maandag."],
           "correct": 1,
           "explain": "Days take op and are written in lower case."
@@ -504,8 +504,8 @@
                 ["de cappuccino", "de appeltaart", "de kaart / het menu"],
                 ["het bier / het biertje", "de bitterballen", "de fooi"],
                 ["de wijn (rood / wit)", "de soep", "het rondje"],
-                ["het water", "de friet", "het terras"],
-                ["de jus d'orange", "de kaas", "de pin / de pinpas"]
+                ["het water", "de patat / de friet", "het terras"],
+                ["de jus d'orange", "de kaas", "de pinpas / pinnen"]
               ]
             }
           ]
@@ -604,7 +604,7 @@
         {
           "id": "cafe-1",
           "kind": "mcq",
-          "prompt": "Which is written correctly?",
+          "prompt": "Which spelling of 'my favourite food' is correct?",
           "options": ["mijn lievelings eten", "mijn lievelingseten", "mijn lieveling eten", "mijn lievelinge eten"],
           "correct": 1,
           "explain": "lievelings- is glued onto the noun as one word."
@@ -770,7 +770,7 @@
               "items": [
                 { "nl": "Wanneer schikt het jou?", "en": "When suits you?" },
                 { "nl": "Hoe laat spreken we af?", "en": "What time shall we agree on?" },
-                { "nl": "Past woensdag jou?", "en": "Does Wednesday work for you?" },
+                { "nl": "Komt woensdag jou uit?", "en": "Does Wednesday work for you?" },
                 { "nl": "Zullen we om acht uur afspreken?", "en": "Shall we meet at eight?" },
                 { "nl": "Ik zet het in mijn agenda.", "en": "I will put it in my diary." },
                 { "nl": "Tot dan!", "en": "See you then!" }
@@ -888,7 +888,7 @@
         {
           "id": "plan-3",
           "kind": "mcq",
-          "prompt": "Which is correct?",
+          "prompt": "Which way of asking 'do you fancy swimming?' is correct?",
           "options": ["Heb je zin in zwemmen?", "Heb je zin om te zwemmen?", "Heb je zin te zwemmen?", "Heb je zin om zwemmen?"],
           "correct": 1,
           "explain": "A verb needs zin om ... te. zin in only takes a noun, as in zin in koffie."

@@ -346,7 +346,7 @@
         {
           "id": "pres-7",
           "kind": "mcq",
-          "prompt": "Which is correct?",
+          "prompt": "Which present-tense question is correct with jij?",
           "options": ["Woon jij in Utrecht?", "Woont jij in Utrecht?", "Wonen jij in Utrecht?", "Woonen jij in Utrecht?"],
           "correct": 0,
           "explain": "jij right after the verb removes the -t."
@@ -354,7 +354,7 @@
         {
           "id": "pres-8",
           "kind": "mcq",
-          "prompt": "Which is correct?",
+          "prompt": "Which present-tense question is correct with u?",
           "options": ["Woon u in Utrecht?", "Woont u in Utrecht?", "Wonen u in Utrecht?", "Woonde u in Utrecht?"],
           "correct": 1,
           "explain": "The t only drops for jij and je. u keeps it: Woont u?"
@@ -362,7 +362,7 @@
         {
           "id": "pres-9",
           "kind": "mcq",
-          "prompt": "Which is correct?",
+          "prompt": "Which form of worden is correct after jij?",
           "options": ["Jij word moe.", "Jij wordt moe.", "Jij wort moe.", "Jij worden moe."],
           "correct": 1,
           "explain": "The stem is word, and jij adds a t, so wordt. Only ik word has no t."
@@ -533,7 +533,7 @@
         {
           "id": "hz-7",
           "kind": "mcq",
-          "prompt": "Which is correct?",
+          "prompt": "Which sentence uses hebben and zijn correctly?",
           "options": ["Ik ben honger.", "Ik heb honger.", "Ik ben hongerig van het eten.", "Ik heb 37 jaar."],
           "correct": 1,
           "explain": "Hunger is something you have in Dutch: Ik heb honger. Age, by contrast, uses zijn."
@@ -648,7 +648,7 @@
         {
           "id": "poss-1",
           "kind": "mcq",
-          "prompt": "Which is correct?",
+          "prompt": "Which possessive fits appartement?",
           "options": ["onze appartement", "ons appartement", "ons buren", "onzen appartement"],
           "correct": 1,
           "explain": "het appartement is a singular het-word, so it takes ons."
@@ -758,7 +758,7 @@
             {
               "kind": "pitfall",
               "title": "Words ending in a single vowel double it",
-              "body": "A word that ends in one vowel letter needs that vowel doubled before `-tje`, so the sound stays long:\n- `auto` becomes `autootje`\n- `paraplu` becomes `parapluutje`\n- `cafe` becomes `cafeetje`\nA word already ending in two vowels or a diphthong just takes `-tje`: `ei` becomes `eitje`."
+              "body": "A word that ends in one vowel letter needs that vowel doubled before `-tje`, so the sound stays long:\n- `auto` becomes `autootje`\n- `paraplu` becomes `parapluutje`\n- `café` becomes `cafeetje`\nA word already ending in two vowels or a diphthong just takes `-tje`: `ei` becomes `eitje`."
             }
           ]
         },
@@ -775,9 +775,9 @@
               "rows": [
                 ["het meisje", "the girl", "de meid, a maid or a girl, dated"],
                 ["het broodje", "the bread roll", "het brood, the loaf"],
-                ["het toetje", "the dessert", "het toe, not used alone"],
+                ["het toetje", "the dessert", "toe is a particle here, not a noun on its own"],
                 ["het kwartiertje", "a quarter of an hour", "het kwartier, the same but flatter"],
-                ["het uitje", "the outing", "het uit, not a noun"],
+                ["het koekje", "the biscuit", "de koek, a cake or gingerbread slab"],
                 ["het kaartje", "the ticket", "de kaart, the map or card"]
               ]
             }

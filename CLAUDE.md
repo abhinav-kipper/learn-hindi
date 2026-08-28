@@ -359,6 +359,18 @@ home (between Sounds and Your path).
   split, the how-are-you scale, and Dutch appointment culture). The `cafe` topic
   also gained the full order-to-payment exchange, `pinnen of contant`, spa
   rood/blauw, and the rule that you never call out `Ober!`.
+- **Audit pass over all 22 topics.** Fixed 7 accuracy slips (`cafe` written
+  without its accent in the diminutive rule; `het toe` and `het uit` presented as
+  nouns when they are not, the latter swapped for `het koekje`; `de pin` listed as
+  a noun instead of `de pinpas` / `pinnen`; `de friet` given without the more
+  common NL `de patat`; the unidiomatic `Past woensdag jou?` replaced with `Komt
+  woensdag jou uit?`; and the adjective table's de-word switched from `de man` to
+  `de fiets` so `mijn grote fiets` reads naturally). Also rewrote 17 context-free
+  MCQ prompts ("Which is correct?") to name what they test, since in the mixed
+  review they arrive with no topic around them. Verified by a scripted pass that
+  walks all 22 drills answering each question with its own stated answer and
+  asserts a 100% score, which catches any mismatched answer key or unreachable
+  word tile.
 
 **2026-06-16 — Chai Diary (daily journal) + home declutter**
 

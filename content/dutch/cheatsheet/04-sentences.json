@@ -114,7 +114,7 @@
         {
           "id": "wo-3",
           "kind": "mcq",
-          "prompt": "Which sentence is correct?",
+          "prompt": "Which sentence puts the verb in the right place after Vrijdag?",
           "options": ["Vrijdag mijn moeder komt op bezoek.", "Vrijdag komt mijn moeder op bezoek.", "Vrijdag komt op bezoek mijn moeder.", "Komt vrijdag mijn moeder op bezoek."],
           "correct": 1,
           "explain": "Vrijdag is the first element, so the verb must be second and the subject follows it."
@@ -122,7 +122,7 @@
         {
           "id": "wo-4",
           "kind": "mcq",
-          "prompt": "Which sentence is correct?",
+          "prompt": "Which sentence keeps the right word order after want?",
           "options": ["Ik loop naar mijn werk want is het dichtbij.", "Ik loop naar mijn werk want het is dichtbij.", "Ik loop naar mijn werk, want dichtbij het is.", "Ik loop want naar mijn werk het is dichtbij."],
           "correct": 1,
           "explain": "want does not count as an element, so the clause after it keeps normal subject-verb order."
@@ -513,7 +513,7 @@
         {
           "id": "2v-3",
           "kind": "mcq",
-          "prompt": "Which sentence is correct?",
+          "prompt": "Which two-verb sentence is correct?",
           "options": ["Ik wil een biertje drinkt.", "Ik wil een biertje drinken.", "Ik wil drinken een biertje.", "Ik wil om een biertje te drinken."],
           "correct": 1,
           "explain": "The second verb keeps its base form and goes to the end. om ... te never follows a modal verb."
@@ -538,7 +538,7 @@
         {
           "id": "2v-6",
           "kind": "mcq",
-          "prompt": "Which is correct?",
+          "prompt": "Which sentence combines willen and koken correctly?",
           "options": ["Ik wil om te koken.", "Ik wil koken.", "Ik wil te koken.", "Ik wil kook."],
           "correct": 1,
           "explain": "After a modal verb the base form stands alone, with no om and no te."
