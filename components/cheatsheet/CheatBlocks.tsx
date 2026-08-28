@@ -8,48 +8,64 @@ import type { CheatBlock, CheatPair, CheatSection } from '@/lib/dutch/cheatsheet
 
 const W = '#fff' // @design-allow: white literal
 
-/**
- * Inline markdown subset shared with the theory chapters:
- *   `token`   becomes a butter-bg Dutch-token chip
- *   **bold**  becomes a bold key term
- */
-export function renderInline(text: string, keyPrefix: string): React.ReactNode[] {
+/** Split `**bold**` runs out of a plain string. Used on its own and inside chips. */
+function renderBold(text: string, keyPrefix: string): React.ReactNode[] {
   const nodes: React.ReactNode[] = []
-  const re = /`([^`]+)`|\*\*([^*]+)\*\*/g
+  const re = /\*\*([^*]+)\*\*/g
   let last = 0
   let m: RegExpExecArray | null
   let i = 0
   while ((m = re.exec(text)) !== null) {
     if (m.index > last) nodes.push(text.slice(last, m.index))
-    if (m[1] !== undefined) {
-      nodes.push(
-        <span
-          key={`${keyPrefix}-c${i}`}
-          style={{
-            background: COLORS.butter,
-            border: BORDER.thin,
-            borderRadius: 6,
-            padding: '0 5px',
-            fontSize: '0.92em',
-            fontWeight: 700,
-            color: COLORS.ink,
-            whiteSpace: 'nowrap',
-          }}
-        >
-          {m[1]}
-        </span>,
-      )
-    } else if (m[2] !== undefined) {
-      nodes.push(
-        <strong key={`${keyPrefix}-b${i}`} style={{ fontWeight: 800, color: COLORS.ink }}>
-          {m[2]}
-        </strong>,
-      )
-    }
+    nodes.push(
+      <strong key={`${keyPrefix}-b${i}`} style={{ fontWeight: 800, color: COLORS.ink }}>
+        {m[1]}
+      </strong>,
+    )
     last = re.lastIndex
     i++
   }
   if (last < text.length) nodes.push(text.slice(last))
+  return nodes
+}
+
+/**
+ * Inline markdown subset shared with the theory chapters:
+ *   `token`   becomes a butter-bg Dutch-token chip
+ *   **bold**  becomes a bold key term
+ *
+ * Bold nests inside a chip, so a sentence chip can still point at the one word
+ * that matters: `Ik wil een biertje **drinken**.`
+ */
+export function renderInline(text: string, keyPrefix: string): React.ReactNode[] {
+  const nodes: React.ReactNode[] = []
+  const re = /`([^`]+)`/g
+  let last = 0
+  let m: RegExpExecArray | null
+  let i = 0
+  while ((m = re.exec(text)) !== null) {
+    if (m.index > last) nodes.push(...renderBold(text.slice(last, m.index), `${keyPrefix}-p${i}`))
+    nodes.push(
+      <span
+        key={`${keyPrefix}-c${i}`}
+        style={{
+          background: COLORS.butter,
+          border: BORDER.thin,
+          borderRadius: 6,
+          padding: '0 5px',
+          fontSize: '0.92em',
+          fontWeight: 700,
+          color: COLORS.ink,
+          whiteSpace: 'nowrap',
+        }}
+      >
+        {renderBold(m[1], `${keyPrefix}-c${i}`)}
+      </span>,
+    )
+    last = re.lastIndex
+    i++
+  }
+  if (last < text.length) nodes.push(...renderBold(text.slice(last), `${keyPrefix}-t`))
   return nodes
 }
 

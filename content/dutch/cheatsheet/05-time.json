@@ -448,6 +448,47 @@
               "kind": "tip",
               "title": "The little-word habit",
               "body": "Drinks almost always take the `-je` ending in a café: `een biertje`, `een wijntje`, `een kopje koffie`, `een glaasje water`. It is not about size, it is friendliness. Ordering `een bier` is not wrong, just blunter."
+            },
+            {
+              "kind": "pitfall",
+              "title": "Never call out Ober!",
+              "body": "Shouting `Ober!` across the room is what tourists do in films. In the Netherlands you catch the server's eye, raise a hand slightly, or wait to be noticed. If you must speak, `Sorry?` or `Mag ik even?` is plenty."
+            }
+          ]
+        },
+        {
+          "heading": "The whole exchange, start to finish",
+          "blocks": [
+            {
+              "kind": "examples",
+              "title": "Ordering",
+              "items": [
+                { "nl": "Mogen we bestellen?", "en": "Can we order?", "note": "or Kunnen we bestellen?" },
+                { "nl": "Zegt u het maar.", "en": "Go ahead.", "note": "what the server says back" },
+                { "nl": "Voor mij een pilsje, graag.", "en": "A beer for me, please." },
+                { "nl": "Mag ik een cola?", "en": "Could I have a cola?" },
+                { "nl": "Doe mij maar een spa rood.", "en": "I will have a sparkling water." },
+                { "nl": "Natuurlijk.", "en": "Of course." },
+                { "nl": "Een pilsje, een cola en een spa rood. Alstublieft.", "en": "A beer, a cola and a sparkling water. Here you go." },
+                { "nl": "Dank u wel.", "en": "Thank you." }
+              ]
+            },
+            {
+              "kind": "examples",
+              "title": "Paying",
+              "items": [
+                { "nl": "Mag ik de rekening, alstublieft?", "en": "Could I have the bill, please?" },
+                { "nl": "Kan ik betalen? / Kan ik afrekenen?", "en": "Can I pay?" },
+                { "nl": "Dat is 10 euro, alstublieft. Pinnen of contant?", "en": "That is 10 euros, please. Card or cash?" },
+                { "nl": "Contant graag. Alstublieft, het is goed zo.", "en": "Cash please. Here you are, keep the change." },
+                { "nl": "Dank u wel. Fijne avond nog!", "en": "Thank you. Have a nice evening!" },
+                { "nl": "Dank u wel, u ook!", "en": "Thank you, you too!" }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "spa rood and spa blauw",
+              "body": "Dutch cafés name water by bottle colour: `spa rood` is sparkling, `spa blauw` is still. `Een kraantje` or `een glaasje kraanwater` is tap water, though not every place serves it. A `pilsje` is a small draught lager, the default beer."
             }
           ]
         },
@@ -626,6 +667,289 @@
           "after": "?",
           "answers": ["vrij"],
           "explain": "Is deze plaats vrij? is the standard way to ask before sitting down."
+        },
+        {
+          "id": "cafe-9",
+          "kind": "mcq",
+          "prompt": "You want to get the server's attention in a Dutch café. What do you do?",
+          "options": ["Call out Ober!", "Catch their eye or raise a hand slightly", "Knock on the table", "Stand up and walk to the kitchen"],
+          "correct": 1,
+          "explain": "Shouting Ober! is not done here. Eye contact or a small raised hand is the norm."
+        },
+        {
+          "id": "cafe-10",
+          "kind": "fill",
+          "prompt": "Ask whether your group may order.",
+          "before": "Mogen we",
+          "after": "?",
+          "answers": ["bestellen"],
+          "explain": "Mogen we bestellen? The second verb keeps its base form at the end."
+        },
+        {
+          "id": "cafe-11",
+          "kind": "mcq",
+          "prompt": "The server asks Pinnen of contant? What is the choice?",
+          "options": ["Inside or outside", "Together or separately", "Card or cash", "Small or large"],
+          "correct": 2,
+          "explain": "pinnen is paying by card, contant is cash. Many places take card only."
+        },
+        {
+          "id": "cafe-12",
+          "kind": "mcq",
+          "prompt": "You want sparkling water. What do you order?",
+          "options": ["spa blauw", "spa rood", "een kraantje", "een pilsje"],
+          "correct": 1,
+          "explain": "Red is sparkling, blue is still. A kraantje is tap water and a pilsje is a beer."
+        },
+        {
+          "id": "cafe-13",
+          "kind": "fill",
+          "prompt": "Tell the server to keep the change.",
+          "before": "Alstublieft, het is",
+          "after": "zo.",
+          "answers": ["goed"],
+          "explain": "Het is goed zo is the usual way to round up and leave the rest."
+        }
+      ]
+    },
+    {
+      "id": "making-plans",
+      "title": "Making plans and reacting",
+      "subtitle_nl": "een afspraak maken en reageren",
+      "emoji": "📅",
+      "summary": "How to suggest something with zullen, three other ways to invite someone, and a full set of yes and no answers that do not sound rude.",
+      "sections": [
+        {
+          "heading": "Suggesting with zullen",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "`zullen` is the suggestion verb. It follows the two-verb pattern, so the second verb drops to the end.\n- `Zal ik ...?` offers something **you** will do.\n- `Zullen we ...?` proposes something you do **together**."
+            },
+            {
+              "kind": "table",
+              "headers": ["Subject", "Form"],
+              "rows": [
+                ["ik", "zal"],
+                ["jij / je", "zult of zal"],
+                ["u", "zult"],
+                ["hij / zij / het", "zal"],
+                ["wij / jullie / zij", "zullen"]
+              ],
+              "note": "In a suggestion you almost only ever need zal ik and zullen we, so those two are worth drilling until they are automatic."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Zal ik donderdag voor je koken?", "en": "Shall I cook for you on Thursday?" },
+                { "nl": "Zal ik mijn naam even voor je spellen?", "en": "Shall I spell my name for you?" },
+                { "nl": "Zullen we morgen samen winkelen?", "en": "Shall we go shopping together tomorrow?" },
+                { "nl": "Zullen we naar Amstelveen fietsen?", "en": "Shall we cycle to Amstelveen?" },
+                { "nl": "Zullen we naar de bioscoop?", "en": "Shall we go to the cinema?", "note": "gaan is left out because it is obvious" }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Three other ways to invite",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Pattern", "Example", "English"],
+              "rows": [
+                ["Ga je mee naar + place", "Ga je mee naar de dierentuin?", "Are you coming to the zoo?"],
+                ["Ga je mee + base form", "Ga je mee wandelen?", "Do you want to come for a walk?"],
+                ["Heb je zin in + noun", "Heb je zin in koffie?", "Do you fancy a coffee?"],
+                ["Heb je zin om ... te + base form", "Heb je zin om morgen te zwemmen?", "Do you fancy going swimming tomorrow?"]
+              ],
+              "note": "Watch the split: zin in takes a noun, zin om ... te takes a verb. Mixing them up is the most common slip here."
+            },
+            {
+              "kind": "vocab",
+              "title": "Settling the details",
+              "items": [
+                { "nl": "Wanneer schikt het jou?", "en": "When suits you?" },
+                { "nl": "Hoe laat spreken we af?", "en": "What time shall we agree on?" },
+                { "nl": "Past woensdag jou?", "en": "Does Wednesday work for you?" },
+                { "nl": "Zullen we om acht uur afspreken?", "en": "Shall we meet at eight?" },
+                { "nl": "Ik zet het in mijn agenda.", "en": "I will put it in my diary." },
+                { "nl": "Tot dan!", "en": "See you then!" }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Saying yes",
+          "blocks": [
+            {
+              "kind": "vocab",
+              "items": [
+                { "nl": "Ja, dat klinkt goed!", "en": "Yes, that sounds good!" },
+                { "nl": "Ja, leuk idee!", "en": "Yes, nice idea!" },
+                { "nl": "Ja, gezellig!", "en": "Yes, lovely!" },
+                { "nl": "Ja, is goed!", "en": "Yes, that is fine!" },
+                { "nl": "Ja, goed plan!", "en": "Yes, good plan!" },
+                { "nl": "Ja, dat kan!", "en": "Yes, that works!" },
+                { "nl": "Ja, dan kan ik.", "en": "Yes, I am free then." },
+                { "nl": "Ja, prima!", "en": "Yes, great!" }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "gezellig",
+              "body": "`gezellig` has no clean English match. It covers cosy, sociable and warm all at once, and it is the single most Dutch way to accept an invitation. `Ja, gezellig!` works for almost anything social."
+            }
+          ]
+        },
+        {
+          "heading": "Saying no without being blunt",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Dutch", "English", "Reason given"],
+              "rows": [
+                ["Sorry, dan kan ik niet.", "Sorry, I cannot then.", "availability"],
+                ["Nee, dan heb ik helaas geen tijd.", "No, I have no time then.", "availability"],
+                ["Nee, ik heb dan al een afspraak.", "No, I already have plans then.", "availability"],
+                ["Nee sorry, daar heb ik geen zin in.", "No sorry, I do not feel like it.", "preference"],
+                ["Nee, dat vind ik niet zo leuk.", "No, I do not really enjoy that.", "preference"],
+                ["Nee, ik hou niet van musea.", "No, I do not like museums.", "preference"]
+              ],
+              "note": "An availability reason is the easy no. A preference reason is direct, which Dutch people are comfortable with, but soften it with sorry and niet zo."
+            },
+            {
+              "kind": "rule",
+              "title": "daar ... in",
+              "body": "`Daar heb ik geen zin in` looks scrambled because `daarin` splits around the rest of the sentence. The pattern is common:\n- `Ik heb geen zin **in** koffie.` becomes `**Daar** heb ik geen zin **in**.`\n- `Ik hou **van** koken.` becomes `**Daar** hou ik **van**.`\nThe `daar` fronts and the preposition stays at the end."
+            }
+          ]
+        },
+        {
+          "heading": "How is it going, on a scale",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Answer", "English", "Feeling"],
+              "rows": [
+                ["Heel goed! / Uitstekend!", "Very good! / Excellent!", "great"],
+                ["Prima! / Goed hoor!", "Fine! / Good!", "good"],
+                ["Het gaat wel.", "It is okay.", "so-so"],
+                ["Niet zo goed.", "Not so good.", "poor"],
+                ["Heel slecht.", "Really bad.", "bad"]
+              ],
+              "note": "You can front the whole answer with Met mij gaat het ... , then finish with en met jou? Leaving off the return question sounds uninterested."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Hoi Hans, alles goed?", "en": "Hi Hans, all good?" },
+                { "nl": "Met mij gaat het prima, en met jou?", "en": "I am doing fine, and you?" },
+                { "nl": "Het gaat wel, ik ben een beetje moe.", "en": "So-so, I am a bit tired." }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Why everything goes in the diary",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "In the Netherlands an `afspraak` is made for far more than English speakers expect. Turning up unannounced, even at a good friend's house, is unusual. Expect to plan:\n- coffee with a colleague\n- a drink with a friend\n- dinner at someone's home\n- a birthday visit\n- the doctor, the hairdresser, the bank\nInvitations often land a week or more ahead, and `Ik moet even in mijn agenda kijken` is a completely normal, non-evasive answer."
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Zal ik ...? offers what you will do, Zullen we ...? proposes something together.",
+        "zin in takes a noun, zin om ... te takes a verb.",
+        "Ja, gezellig! accepts almost any social invitation.",
+        "Turning something down on availability is easier than on preference.",
+        "In daar heb ik geen zin in, daar fronts and the preposition stays at the end.",
+        "Almost everything social is arranged by appointment, often a week ahead."
+      ],
+      "exercises": [
+        {
+          "id": "plan-1",
+          "kind": "order",
+          "prompt": "Build: shall we go shopping together tomorrow?",
+          "words": ["winkelen", "we", "morgen", "Zullen", "samen"],
+          "answer": ["Zullen", "we", "morgen", "samen", "winkelen"],
+          "explain": "zullen is conjugated in first position for a question, and winkelen drops to the end."
+        },
+        {
+          "id": "plan-2",
+          "kind": "fill",
+          "prompt": "Offer to cook for someone on Thursday: ___ ik donderdag voor je koken?",
+          "before": "",
+          "after": "ik donderdag voor je koken?",
+          "answers": ["zal"],
+          "explain": "Zal ik ...? offers something you will do yourself."
+        },
+        {
+          "id": "plan-3",
+          "kind": "mcq",
+          "prompt": "Which is correct?",
+          "options": ["Heb je zin in zwemmen?", "Heb je zin om te zwemmen?", "Heb je zin te zwemmen?", "Heb je zin om zwemmen?"],
+          "correct": 1,
+          "explain": "A verb needs zin om ... te. zin in only takes a noun, as in zin in koffie."
+        },
+        {
+          "id": "plan-4",
+          "kind": "fill",
+          "prompt": "Complete: Heb je zin ___ koffie?",
+          "before": "Heb je zin",
+          "after": "koffie?",
+          "answers": ["in"],
+          "explain": "koffie is a noun, so it takes zin in."
+        },
+        {
+          "id": "plan-5",
+          "kind": "mcq",
+          "prompt": "Someone asks Zullen we zaterdag naar de markt? You are busy. Which fits best?",
+          "options": ["Nee, ik hou niet van jou.", "Sorry, dan kan ik niet.", "Ja, dat kan!", "Nee, dat is niet waar."],
+          "correct": 1,
+          "explain": "Turning something down on availability is the easy, polite no."
+        },
+        {
+          "id": "plan-6",
+          "kind": "order",
+          "prompt": "Build the reply: no sorry, I do not feel like that.",
+          "words": ["in", "geen", "heb", "Daar", "zin", "ik"],
+          "answer": ["Daar", "heb", "ik", "geen", "zin", "in"],
+          "explain": "daar fronts the sentence and the preposition in stays at the very end."
+        },
+        {
+          "id": "plan-7",
+          "kind": "mcq",
+          "prompt": "Which answer to Hoe gaat het? means 'so-so'?",
+          "options": ["Uitstekend!", "Prima!", "Het gaat wel.", "Heel slecht."],
+          "correct": 2,
+          "explain": "Het gaat wel sits in the middle of the scale: not bad, not great."
+        },
+        {
+          "id": "plan-8",
+          "kind": "fill",
+          "prompt": "Accept an invitation in the most Dutch way possible.",
+          "before": "Ja,",
+          "after": "!",
+          "answers": ["gezellig", "leuk", "graag", "prima", "leuk idee", "goed plan"],
+          "explain": "Ja, gezellig! is the classic acceptance. Leuk, prima and goed plan all work too."
+        },
+        {
+          "id": "plan-9",
+          "kind": "mcq",
+          "prompt": "A Dutch friend says Ik moet even in mijn agenda kijken. What does that signal?",
+          "options": ["they are politely refusing", "they are genuinely checking their diary", "they are offended", "they want you to decide"],
+          "correct": 1,
+          "explain": "Diaries are taken seriously here. It is a literal answer, not a brush-off."
+        },
+        {
+          "id": "plan-10",
+          "kind": "order",
+          "prompt": "Build: are you coming along for a walk?",
+          "words": ["mee", "je", "Ga", "wandelen"],
+          "answer": ["Ga", "je", "mee", "wandelen"],
+          "explain": "meegaan splits, so mee sits in the middle and the second verb wandelen closes the sentence."
         }
       ]
     }
