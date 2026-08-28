@@ -498,7 +498,7 @@
         {
           "id": "pd-3",
           "kind": "mcq",
-          "prompt": "Which sentence is correct?",
+          "prompt": "Which sentence gives your age correctly?",
           "options": ["Ik heb 37 jaar.", "Ik ben 37 jaren.", "Ik ben 37 jaar.", "Ik heb 37 jaren."],
           "correct": 2,
           "explain": "Age takes zijn, and the unit stays singular: jaar."
@@ -506,7 +506,7 @@
         {
           "id": "pd-4",
           "kind": "mcq",
-          "prompt": "Which is correct?",
+          "prompt": "Which sentence says where you are from correctly?",
           "options": ["Ik kom uit Verenigde Staten.", "Ik kom uit de Verenigde Staten.", "Ik kom van de Verenigde Staten.", "Ik kom in de Verenigde Staten."],
           "correct": 1,
           "explain": "de Verenigde Staten is one of the few country names that keeps its article, and origin uses uit."

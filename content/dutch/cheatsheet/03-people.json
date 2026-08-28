@@ -324,7 +324,7 @@
         {
           "id": "cnl-3",
           "kind": "mcq",
-          "prompt": "Which sentence is written correctly?",
+          "prompt": "Which sentence writes the language names correctly?",
           "options": ["Ik spreek nederlands en engels.", "Ik spreek Nederlands en Engels.", "Ik spreek het nederlands en engels.", "ik spreek Nederlands en engels."],
           "correct": 1,
           "explain": "Languages always take a capital letter in Dutch, and no article in everyday speech."
@@ -496,7 +496,7 @@
         {
           "id": "app-1",
           "kind": "mcq",
-          "prompt": "Which is correct?",
+          "prompt": "Which sentence describes someone's eyes correctly?",
           "options": ["Hij is bruine ogen.", "Hij heeft bruine ogen.", "Hij draagt bruine ogen.", "Hij heeft bruin ogen."],
           "correct": 1,
           "explain": "Eyes are something you have, and ogen is plural so the adjective takes -e."
@@ -588,12 +588,12 @@
             },
             {
               "kind": "table",
-              "headers": ["", "de-word (de man)", "het-word (het huis)"],
+              "headers": ["", "de-word (de fiets)", "het-word (het huis)"],
               "rows": [
-                ["definite singular", "de grote man", "het grote huis"],
-                ["indefinite singular", "een grote man", "een groot huis"],
-                ["plural", "grote mannen", "grote huizen"],
-                ["after mijn / dit / dat", "mijn grote man", "mijn grote huis"]
+                ["definite singular", "de grote fiets", "het grote huis"],
+                ["indefinite singular", "een grote fiets", "een groot huis"],
+                ["plural", "grote fietsen", "grote huizen"],
+                ["after mijn / dit / dat", "mijn grote fiets", "mijn grote huis"]
               ],
               "note": "Only one cell in the whole table has no -e. That is the entire rule."
             }
@@ -710,7 +710,7 @@
         {
           "id": "adj-4",
           "kind": "mcq",
-          "prompt": "Which is correct?",
+          "prompt": "Which sentence gets the adjective ending right after zijn?",
           "options": ["Het huis is grote.", "Het huis is groot.", "Het grote huis is grote.", "Het huis zijn groot."],
           "correct": 1,
           "explain": "After zijn the adjective is never inflected."

@@ -73,7 +73,7 @@
           "blocks": [
             {
               "kind": "rule",
-              "body": "When a sentence has two verbs, only the first one obeys V2. The second stays in its base form and drops to the **end**.\n- `Ik wil een biertje **drinken**.`\n- `Wij gaan volgend jaar **trouwen**.`\n- `Kun je dat **herhalen**?`\nSplit verbs behave the same way: `Mijn moeder komt vrijdag op bezoek` sends `op` to the end, and `Hoe ziet hij eruit?` sends `eruit` to the end."
+              "body": "When a sentence has two verbs, only the first one obeys V2. The second stays in its base form and drops to the **end**.\n- `Ik wil een biertje **drinken**.`\n- `Wij gaan volgend jaar **trouwen**.`\n- `Kun je dat **herhalen**?`\nSplit verbs behave the same way: `Mijn moeder komt vrijdag op bezoek` sends `op` to the end, and `Hoe ziet hij eruit?` sends `eruit` to the end. The **Two verbs in one sentence** sheet works this pattern through in full."
             }
           ]
         },
@@ -114,7 +114,7 @@
         {
           "id": "wo-3",
           "kind": "mcq",
-          "prompt": "Which sentence is correct?",
+          "prompt": "Which sentence puts the verb in the right place after Vrijdag?",
           "options": ["Vrijdag mijn moeder komt op bezoek.", "Vrijdag komt mijn moeder op bezoek.", "Vrijdag komt op bezoek mijn moeder.", "Komt vrijdag mijn moeder op bezoek."],
           "correct": 1,
           "explain": "Vrijdag is the first element, so the verb must be second and the subject follows it."
@@ -122,7 +122,7 @@
         {
           "id": "wo-4",
           "kind": "mcq",
-          "prompt": "Which sentence is correct?",
+          "prompt": "Which sentence keeps the right word order after want?",
           "options": ["Ik loop naar mijn werk want is het dichtbij.", "Ik loop naar mijn werk want het is dichtbij.", "Ik loop naar mijn werk, want dichtbij het is.", "Ik loop want naar mijn werk het is dichtbij."],
           "correct": 1,
           "explain": "want does not count as an element, so the clause after it keeps normal subject-verb order."
@@ -374,6 +374,199 @@
           "words": ["ga", "naartoe", "je", "Waar", "?"],
           "answer": ["Waar", "ga", "je", "naartoe", "?"],
           "explain": "waar plus naartoe splits, and naartoe lands at the end."
+        }
+      ]
+    },
+    {
+      "id": "two-verbs",
+      "title": "Two verbs in one sentence",
+      "subtitle_nl": "zinnen met twee werkwoorden",
+      "emoji": "🔗",
+      "summary": "The first verb stays in second position and the second one drops to the very end, unchanged. This one pattern unlocks wanting, having to, being able to, and every plan you make.",
+      "sections": [
+        {
+          "heading": "The pattern",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Only the **first** verb obeys the V2 rule and gets conjugated. The **second** verb goes to the **end of the sentence** and stays in its base form (the dictionary form).\n\n`subject + verb 1 + everything else + verb 2`"
+            },
+            {
+              "kind": "table",
+              "headers": ["Subject", "verb 1", "rest", "verb 2"],
+              "rows": [
+                ["Ik", "wil", "een biertje", "drinken."],
+                ["Wij", "gaan", "volgend jaar", "trouwen."],
+                ["Zij", "moet", "morgen naar de dokter", "gaan."],
+                ["Je", "kunt", "hier met de pin", "betalen."],
+                ["Ik", "mag", "vandaag eerder naar huis", "gaan."],
+                ["Hans", "komt", "vrijdag bij ons", "eten."]
+              ],
+              "note": "Everything piles up in the middle. The longer the sentence, the further apart the two verbs sit, which is what makes Dutch feel back-loaded to English speakers."
+            },
+            {
+              "kind": "pitfall",
+              "title": "Do not conjugate the second verb",
+              "body": "It is `Ik wil een biertje **drinken**`, never `Ik wil een biertje drinkt`. The second verb never changes, whoever the subject is."
+            }
+          ]
+        },
+        {
+          "heading": "Which verbs start the pattern",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Verb", "Means", "Example"],
+              "rows": [
+                ["willen", "to want", "Ik wil naar huis gaan."],
+                ["kunnen", "to be able to", "Kun je mij helpen?"],
+                ["moeten", "to have to", "Ik moet nog boodschappen doen."],
+                ["mogen", "to be allowed to", "Mag ik hier zitten?"],
+                ["zullen", "shall", "Zullen we samen koken?"],
+                ["gaan", "to be going to", "Ik ga morgen zwemmen."],
+                ["komen", "to come and", "Hij komt vanavond eten."],
+                ["blijven", "to keep on", "Zij blijft slapen."],
+                ["laten", "to let or have done", "Ik laat mijn haar knippen."]
+              ]
+            },
+            {
+              "kind": "table",
+              "title": "The four you will use most, conjugated",
+              "headers": ["", "kunnen", "moeten", "willen", "mogen"],
+              "rows": [
+                ["ik", "kan", "moet", "wil", "mag"],
+                ["jij", "kunt of kan", "moet", "wilt of wil", "mag"],
+                ["u", "kunt", "moet", "wilt", "mag"],
+                ["hij / zij", "kan", "moet", "wil", "mag"],
+                ["wij / jullie / zij", "kunnen", "moeten", "willen", "mogen"]
+              ],
+              "note": "These are irregular in the singular, so the ik and hij forms have no -t. In a question with je the t drops as usual: kun je, wil je, moet je, mag je."
+            }
+          ]
+        },
+        {
+          "heading": "When the second verb disappears",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "If the missing verb is obvious, Dutch simply leaves it out. This happens almost always with movement.\n- `Zullen we naar de bioscoop?` (gaan is understood)\n- `Ik moet naar huis.` (gaan is understood)\n- `Ik wil een koffie.` (hebben or drinken is understood)\nBoth versions are correct. The short one sounds more natural in speech."
+            }
+          ]
+        },
+        {
+          "heading": "om ... te plus the base form",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "To say **in order to**, or after a noun or adjective that needs a verb, Dutch uses `om` plus `te` plus the base form. The `te` and the verb sit together at the end.\n- `Heb je zin **om** morgen **te zwemmen**?`\n- `Ik heb geen tijd **om te koken**.`\n- `Ik ga naar de markt **om** groente **te kopen**.`\n- `Het is te laat **om** nog **te bellen**.`"
+            },
+            {
+              "kind": "pitfall",
+              "title": "Not after the modal verbs",
+              "body": "Never combine the two patterns. It is `Ik wil koken`, never `Ik wil om te koken`. `om ... te` only appears after nouns, adjectives, and purpose, not after willen, kunnen, moeten, mogen, zullen or gaan."
+            }
+          ]
+        },
+        {
+          "heading": "Split verbs in the pattern",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "A verb like `opbellen`, `meegaan`, `aankomen` or `afrekenen` splits when it is the **conjugated** verb, but stays whole when it is the **second** verb at the end.\n- `Ik **bel** je morgen **op**.` (conjugated, so it splits)\n- `Ik wil je morgen **opbellen**.` (second verb, so it stays whole)\n- `**Ga** je **mee**?` versus `Wil je **meegaan**?`"
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Kan ik hier afrekenen?", "en": "Can I pay here?" },
+                { "nl": "Ik reken bij de bar af.", "en": "I pay at the bar." },
+                { "nl": "Zullen we samen meegaan?", "en": "Shall we go along together?" },
+                { "nl": "De trein komt om negen uur aan.", "en": "The train arrives at nine." }
+              ]
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Verb 1 is conjugated and sits in second position, verb 2 goes to the end in its base form.",
+        "willen, kunnen, moeten, mogen, zullen, gaan, komen, blijven and laten all start the pattern.",
+        "kan, wil, moet and mag take no -t in the ik and hij forms.",
+        "Drop the second verb when it is obvious: Zullen we naar de bioscoop?",
+        "om ... te goes with nouns, adjectives and purpose, never after a modal verb."
+      ],
+      "exercises": [
+        {
+          "id": "2v-1",
+          "kind": "order",
+          "prompt": "Build: I want to drink a beer.",
+          "words": ["drinken", "een", "wil", "Ik", "biertje"],
+          "answer": ["Ik", "wil", "een", "biertje", "drinken"],
+          "explain": "wil takes second position, drinken drops to the end in its base form."
+        },
+        {
+          "id": "2v-2",
+          "kind": "order",
+          "prompt": "Build: we are getting married next year.",
+          "words": ["trouwen", "gaan", "volgend", "Wij", "jaar"],
+          "answer": ["Wij", "gaan", "volgend", "jaar", "trouwen"],
+          "explain": "The time phrase sits in the middle, between the two verbs."
+        },
+        {
+          "id": "2v-3",
+          "kind": "mcq",
+          "prompt": "Which two-verb sentence is correct?",
+          "options": ["Ik wil een biertje drinkt.", "Ik wil een biertje drinken.", "Ik wil drinken een biertje.", "Ik wil om een biertje te drinken."],
+          "correct": 1,
+          "explain": "The second verb keeps its base form and goes to the end. om ... te never follows a modal verb."
+        },
+        {
+          "id": "2v-4",
+          "kind": "fill",
+          "prompt": "Complete with kunnen: ___ je mij helpen?",
+          "before": "",
+          "after": "je mij helpen?",
+          "answers": ["kun", "kan"],
+          "explain": "kunt loses its t before je, giving kun je. kan je is also heard."
+        },
+        {
+          "id": "2v-5",
+          "kind": "order",
+          "prompt": "Build: do you feel like swimming tomorrow?",
+          "words": ["zwemmen", "om", "Heb", "zin", "je", "morgen", "te"],
+          "answer": ["Heb", "je", "zin", "om", "morgen", "te", "zwemmen"],
+          "explain": "zin hebben is followed by om ... te, and te plus the verb close the sentence."
+        },
+        {
+          "id": "2v-6",
+          "kind": "mcq",
+          "prompt": "Which sentence combines willen and koken correctly?",
+          "options": ["Ik wil om te koken.", "Ik wil koken.", "Ik wil te koken.", "Ik wil kook."],
+          "correct": 1,
+          "explain": "After a modal verb the base form stands alone, with no om and no te."
+        },
+        {
+          "id": "2v-7",
+          "kind": "mcq",
+          "prompt": "Which sentence handles the split verb opbellen correctly?",
+          "options": ["Ik wil je morgen bel op.", "Ik wil je morgen opbellen.", "Ik opbel je morgen.", "Ik wil opbellen je morgen."],
+          "correct": 1,
+          "explain": "As the second verb it stays whole at the end. It only splits when it is the conjugated verb: Ik bel je morgen op."
+        },
+        {
+          "id": "2v-8",
+          "kind": "fill",
+          "prompt": "Complete the split verb: Ik ___ je morgen op. (opbellen)",
+          "before": "Ik",
+          "after": "je morgen op.",
+          "answers": ["bel"],
+          "explain": "The conjugated part comes second and the prefix op goes to the end."
+        },
+        {
+          "id": "2v-9",
+          "kind": "mcq",
+          "prompt": "Zullen we naar de bioscoop? What happened to the second verb?",
+          "options": ["it was forgotten, the sentence is wrong", "gaan is left out because it is obvious", "zullen replaced it", "it moved to the front"],
+          "correct": 1,
+          "explain": "With movement the infinitive is usually dropped. Zullen we naar de bioscoop gaan? is equally correct."
         }
       ]
     }
