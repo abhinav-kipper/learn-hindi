@@ -50,6 +50,7 @@ content/dutch/knm.json  → 100 KNM exam questions (bilingual, 6 categories)
 content/dutch/lezen.json → 10 Lezen B1-prep reading texts (bilingual, 40 MCQs)
 content/dutch/pronunciation-course.json → 8-stage from-zero "Sounds" ladder (alphabet→linking)
 content/dutch/cheatsheet/    → 5 grouped concept-cheatsheet JSONs (22 topics, 186 drill questions)
+content/dutch/vocabulary.json → 100 Dutch words in 6 categories (nouns carry de/het)
 content/stories/        → 5 Hindi story JSONs (Chai Galli motion-comics)
 docs/audits/             → Content audit rubric + per-run reports + master summaries
 scripts/audit-content.mjs → Audit dispatcher (lists 57 units, builds per-unit prompts, aggregates reports)
@@ -321,6 +322,28 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-define-cache` — `{ [word]: Definition }` from `/api/define`, capped at 300, so tapped words resolve instantly and keep working offline once seen.
 
 ### Recent feature work log
+
+**2026-08-30 — Dutch vocabulary deck grown to Hindi parity**
+
+`content/dutch/vocabulary.json` went from 32 words in 4 categories to **100 in 6**,
+matching the Hindi deck. The four existing categories were extended in place and
+two were added: **People & Family** (18) and **Common Verbs** (18). Every original
+entry is untouched, so per-word learned/archived progress (keyed by category id
+plus headword) survives.
+
+Selection rules, enforced by `__tests__/lib/dutch-vocabulary.test.ts`:
+- **nouns carry their article** (`de vader`, `het gezin`), because de/het is the
+  hardest part of a Dutch noun and a bare headword teaches nothing
+- verbs are listed in the base form, the shape you look up and build from
+- confusable pairs get examples that separate them rather than a bare gloss:
+  `weten` vs `kennen`, `verstaan` vs `begrijpen`
+- headwords are unique deck-wide (a duplicate would make two cards share one
+  learned state) and lower case
+- content skews to what the learner's course and the Inburgering exam actually
+  need: family, personal details, time, polite service phrases, core verbs
+
+Audited by cross-checking every noun's article against the articles the
+cheatsheets already teach: 13 of the 17 nouns appear in both, with no conflicts.
 
 **2026-08-27 — Dutch concept cheatsheets (reference + drills)**
 
