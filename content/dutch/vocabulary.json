@@ -61,6 +61,55 @@
           "english": "bye / day",
           "example": "Dag! Prettige dag verder!, Bye! Have a nice day!",
           "type": "farewell"
+        },
+        {
+          "hindi": "hoi",
+          "pronunciation": "HOY",
+          "english": "hi (casual)",
+          "example": "Hoi, alles goed?, Hi, all good?",
+          "type": "greeting"
+        },
+        {
+          "hindi": "goedenacht",
+          "pronunciation": "CHOO-de-NACHT",
+          "english": "good night (going to bed)",
+          "example": "Goedenacht, slaap lekker., Good night, sleep well.",
+          "type": "greeting"
+        },
+        {
+          "hindi": "welkom",
+          "pronunciation": "VEL-kom",
+          "english": "welcome",
+          "example": "Welkom in Nederland!, Welcome to the Netherlands!",
+          "type": "greeting"
+        },
+        {
+          "hindi": "aangenaam",
+          "pronunciation": "AAN-che-naam",
+          "english": "pleased to meet you",
+          "example": "Aangenaam, ik ben Abhinav., Pleased to meet you, I am Abhinav.",
+          "type": "phrase"
+        },
+        {
+          "hindi": "tot morgen",
+          "pronunciation": "tot MOR-chen",
+          "english": "see you tomorrow",
+          "example": "Tot morgen in de les!, See you tomorrow in class!",
+          "type": "farewell"
+        },
+        {
+          "hindi": "tot straks",
+          "pronunciation": "tot STRAKS",
+          "english": "see you later today",
+          "example": "Ik ga even weg. Tot straks!, I am off for a bit. See you later!",
+          "type": "farewell"
+        },
+        {
+          "hindi": "fijne dag",
+          "pronunciation": "FAY-ne DACH",
+          "english": "have a nice day",
+          "example": "Fijne dag verder!, Have a nice day!",
+          "type": "farewell"
         }
       ]
     },
@@ -125,6 +174,55 @@
           "english": "please / gladly / yes please",
           "example": "Wil je koffie? Graag!, Do you want coffee? Yes please!",
           "type": "adverb"
+        },
+        {
+          "hindi": "pardon",
+          "pronunciation": "par-DON",
+          "english": "excuse me (getting past someone)",
+          "example": "Pardon, mag ik er even langs?, Excuse me, may I get past?",
+          "type": "phrase"
+        },
+        {
+          "hindi": "geen probleem",
+          "pronunciation": "chayn pro-BLAYM",
+          "english": "no problem",
+          "example": "Geen probleem, hoor., No problem at all.",
+          "type": "phrase"
+        },
+        {
+          "hindi": "mag ik",
+          "pronunciation": "MACH ik",
+          "english": "may I",
+          "example": "Mag ik de rekening, alstublieft?, May I have the bill, please?",
+          "type": "phrase"
+        },
+        {
+          "hindi": "kunt u mij helpen",
+          "pronunciation": "kunt u may HEL-pen",
+          "english": "can you help me (formal)",
+          "example": "Sorry, kunt u mij helpen?, Sorry, can you help me?",
+          "type": "phrase"
+        },
+        {
+          "hindi": "hoe zeg je dat",
+          "pronunciation": "hoo ZECH ye dat",
+          "english": "how do you say that",
+          "example": "Hoe zeg je dat in het Nederlands?, How do you say that in Dutch?",
+          "type": "phrase"
+        },
+        {
+          "hindi": "kunt u dat herhalen",
+          "pronunciation": "kunt u dat her-HAA-len",
+          "english": "could you repeat that",
+          "example": "Sorry, kunt u dat herhalen?, Sorry, could you repeat that?",
+          "type": "phrase"
+        },
+        {
+          "hindi": "ik begrijp het niet",
+          "pronunciation": "ik be-CHRAYP het neet",
+          "english": "I do not understand",
+          "example": "Sorry, ik begrijp het niet., Sorry, I do not understand.",
+          "type": "phrase"
         }
       ]
     },
@@ -189,6 +287,76 @@
           "english": "actually / to be honest",
           "example": "Eigenlijk weet ik het niet., Actually, I don't know.",
           "type": "adverb"
+        },
+        {
+          "hindi": "niet",
+          "pronunciation": "NEET",
+          "english": "not",
+          "example": "Ik begrijp de docent niet., I do not understand the teacher.",
+          "type": "adverb"
+        },
+        {
+          "hindi": "geen",
+          "pronunciation": "CHAYN",
+          "english": "no / not any (before a noun)",
+          "example": "Ik heb geen tijd., I have no time.",
+          "type": "determiner"
+        },
+        {
+          "hindi": "ook",
+          "pronunciation": "OHK",
+          "english": "also / too",
+          "example": "Ik kom ook uit India., I am from India too.",
+          "type": "adverb"
+        },
+        {
+          "hindi": "maar",
+          "pronunciation": "MAAR",
+          "english": "but",
+          "example": "Ik wil komen, maar ik heb geen tijd., I want to come, but I have no time.",
+          "type": "conjunction"
+        },
+        {
+          "hindi": "want",
+          "pronunciation": "VANT",
+          "english": "because",
+          "example": "Ik loop naar mijn werk want het is dichtbij., I walk to work because it is nearby.",
+          "type": "conjunction"
+        },
+        {
+          "hindi": "heel",
+          "pronunciation": "HAYL",
+          "english": "very",
+          "example": "Het is heel koud vandaag., It is very cold today.",
+          "type": "adverb"
+        },
+        {
+          "hindi": "een beetje",
+          "pronunciation": "un BAY-tye",
+          "english": "a little",
+          "example": "Ik spreek een beetje Nederlands., I speak a little Dutch.",
+          "type": "phrase"
+        },
+        {
+          "hindi": "misschien",
+          "pronunciation": "mis-SCHEEN",
+          "english": "maybe",
+          "example": "Misschien kom ik later., Maybe I will come later.",
+          "type": "adverb"
+        },
+        {
+          "hindi": "natuurlijk",
+          "pronunciation": "na-TUUR-lik",
+          "english": "of course",
+          "example": "Natuurlijk, dat kan!, Of course, that works!",
+          "type": "adverb"
+        },
+        {
+          "hindi": "druk",
+          "pronunciation": "DRUK",
+          "english": "busy",
+          "example": "Het is druk in de stad., It is busy in town.",
+          "type": "adjective"
         }
       ]
     },
@@ -253,6 +421,330 @@
           "english": "never",
           "example": "Ik eet nooit vlees., I never eat meat.",
           "type": "adverb"
+        },
+        {
+          "hindi": "vanavond",
+          "pronunciation": "van-AA-vont",
+          "english": "this evening",
+          "example": "Vanavond eten we bij mijn moeder., This evening we eat at my mother's.",
+          "type": "adverb"
+        },
+        {
+          "hindi": "overmorgen",
+          "pronunciation": "OH-ver-mor-chen",
+          "english": "the day after tomorrow",
+          "example": "Overmorgen ben ik jarig., The day after tomorrow is my birthday.",
+          "type": "adverb"
+        },
+        {
+          "hindi": "vaak",
+          "pronunciation": "VAAK",
+          "english": "often",
+          "example": "Ik fiets vaak naar mijn werk., I often cycle to work.",
+          "type": "adverb"
+        },
+        {
+          "hindi": "meestal",
+          "pronunciation": "MAY-stal",
+          "english": "usually",
+          "example": "Ik drink meestal koffie., I usually drink coffee.",
+          "type": "adverb"
+        },
+        {
+          "hindi": "vroeg",
+          "pronunciation": "VROOCH",
+          "english": "early",
+          "example": "Ik sta vroeg op., I get up early.",
+          "type": "adjective"
+        },
+        {
+          "hindi": "laat",
+          "pronunciation": "LAAT",
+          "english": "late",
+          "example": "Sorry, ik ben te laat., Sorry, I am late.",
+          "type": "adjective"
+        },
+        {
+          "hindi": "de week",
+          "pronunciation": "de VAYK",
+          "english": "the week",
+          "example": "Volgende week ga ik naar Parijs., Next week I am going to Paris.",
+          "type": "noun"
+        },
+        {
+          "hindi": "het weekend",
+          "pronunciation": "het VEE-kent",
+          "english": "the weekend",
+          "example": "Fijn weekend!, Have a good weekend!",
+          "type": "noun"
+        }
+      ]
+    },
+    {
+      "id": "dutch-people",
+      "title": "People & Family",
+      "emoji": "👥",
+      "gradient": "from-pink-500 to-rose-600",
+      "words": [
+        {
+          "hindi": "de familie",
+          "pronunciation": "de fa-MEE-lee",
+          "english": "the family (all relatives)",
+          "example": "Mijn familie woont in India., My family lives in India.",
+          "type": "noun"
+        },
+        {
+          "hindi": "het gezin",
+          "pronunciation": "het che-ZIN",
+          "english": "the household: parents and children",
+          "example": "Ons gezin is klein., Our household is small.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de vader",
+          "pronunciation": "de VAA-der",
+          "english": "the father",
+          "example": "Mijn vader heet Hein., My father is called Hein.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de moeder",
+          "pronunciation": "de MOO-der",
+          "english": "the mother",
+          "example": "Mijn moeder komt vrijdag op bezoek., My mother is visiting on Friday.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de ouders",
+          "pronunciation": "de OW-ders",
+          "english": "the parents",
+          "example": "Waar wonen je ouders?, Where do your parents live?",
+          "type": "noun"
+        },
+        {
+          "hindi": "de broer",
+          "pronunciation": "de BROOR",
+          "english": "the brother",
+          "example": "Ik heb twee broers., I have two brothers.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de zus",
+          "pronunciation": "de ZUS",
+          "english": "the sister",
+          "example": "Mijn zus is jonger dan ik., My sister is younger than me.",
+          "type": "noun"
+        },
+        {
+          "hindi": "het kind",
+          "pronunciation": "het KINT",
+          "english": "the child",
+          "example": "Wij hebben geen kinderen., We have no children.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de zoon",
+          "pronunciation": "de ZOHN",
+          "english": "the son",
+          "example": "Hun zoon is drie jaar., Their son is three years old.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de dochter",
+          "pronunciation": "de DOCH-ter",
+          "english": "the daughter",
+          "example": "Zij is de dochter van mijn tante., She is my aunt's daughter.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de oma",
+          "pronunciation": "de OH-maa",
+          "english": "the grandmother",
+          "example": "Mijn oma is negentig., My grandmother is ninety.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de opa",
+          "pronunciation": "de OH-paa",
+          "english": "the grandfather",
+          "example": "De man van je oma is je opa., Your grandmother's husband is your grandfather.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de vriend",
+          "pronunciation": "de VREENT",
+          "english": "the friend / boyfriend",
+          "example": "Ik ga met een vriend naar het café., I am going to the café with a friend.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de buurman",
+          "pronunciation": "de BUUR-man",
+          "english": "the neighbour (male)",
+          "example": "Onze buurman heet Daan., Our neighbour is called Daan.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de collega",
+          "pronunciation": "de kol-LAY-cha",
+          "english": "the colleague",
+          "example": "Ik drink koffie met een collega., I am having coffee with a colleague.",
+          "type": "noun"
+        },
+        {
+          "hindi": "getrouwd",
+          "pronunciation": "che-TROWT",
+          "english": "married",
+          "example": "Ik ben getrouwd op 15 augustus., I got married on 15 August.",
+          "type": "adjective"
+        },
+        {
+          "hindi": "jong",
+          "pronunciation": "YONG",
+          "english": "young",
+          "example": "Wie is jonger, hij of jij?, Who is younger, he or you?",
+          "type": "adjective"
+        },
+        {
+          "hindi": "lang",
+          "pronunciation": "LANG",
+          "english": "tall / long",
+          "example": "Mijn vader is lang., My father is tall.",
+          "type": "adjective"
+        }
+      ]
+    },
+    {
+      "id": "dutch-verbs",
+      "title": "Common Verbs",
+      "emoji": "🏃",
+      "gradient": "from-teal-500 to-cyan-600",
+      "words": [
+        {
+          "hindi": "zijn",
+          "pronunciation": "ZAYN",
+          "english": "to be",
+          "example": "Ik ben moe., I am tired.",
+          "type": "verb"
+        },
+        {
+          "hindi": "hebben",
+          "pronunciation": "HEB-ben",
+          "english": "to have",
+          "example": "Ik heb honger., I am hungry.",
+          "type": "verb"
+        },
+        {
+          "hindi": "gaan",
+          "pronunciation": "CHAAN",
+          "english": "to go",
+          "example": "Ik ga morgen naar Utrecht., I am going to Utrecht tomorrow.",
+          "type": "verb"
+        },
+        {
+          "hindi": "komen",
+          "pronunciation": "KOH-men",
+          "english": "to come",
+          "example": "Waar kom je vandaan?, Where do you come from?",
+          "type": "verb"
+        },
+        {
+          "hindi": "doen",
+          "pronunciation": "DOON",
+          "english": "to do",
+          "example": "Wat voor werk doe je?, What kind of work do you do?",
+          "type": "verb"
+        },
+        {
+          "hindi": "wonen",
+          "pronunciation": "VOH-nen",
+          "english": "to live somewhere",
+          "example": "Ik woon in Amsterdam-Noord., I live in Amsterdam North.",
+          "type": "verb"
+        },
+        {
+          "hindi": "werken",
+          "pronunciation": "VER-ken",
+          "english": "to work",
+          "example": "Zij werkt maandag en woensdag., She works Monday and Wednesday.",
+          "type": "verb"
+        },
+        {
+          "hindi": "spreken",
+          "pronunciation": "SPRAY-ken",
+          "english": "to speak",
+          "example": "Welke talen spreek je?, Which languages do you speak?",
+          "type": "verb"
+        },
+        {
+          "hindi": "praten",
+          "pronunciation": "PRAA-ten",
+          "english": "to talk, to chat",
+          "example": "Wij praten over onze familie., We are talking about our family.",
+          "type": "verb"
+        },
+        {
+          "hindi": "verstaan",
+          "pronunciation": "ver-STAAN",
+          "english": "to catch, to make out what was said",
+          "example": "Ik versta u niet, kunt u harder praten?, I cannot make out what you said, can you speak up?",
+          "type": "verb"
+        },
+        {
+          "hindi": "begrijpen",
+          "pronunciation": "be-CHRAY-pen",
+          "english": "to understand, to grasp",
+          "example": "Ik hoor het wel, maar ik begrijp het niet., I can hear it, but I do not understand it.",
+          "type": "verb"
+        },
+        {
+          "hindi": "weten",
+          "pronunciation": "VAY-ten",
+          "english": "to know a fact",
+          "example": "Weet u hoe laat het is?, Do you know what time it is?",
+          "type": "verb"
+        },
+        {
+          "hindi": "kennen",
+          "pronunciation": "KEN-nen",
+          "english": "to know a person or place",
+          "example": "Ken jij jouw buren?, Do you know your neighbours?",
+          "type": "verb"
+        },
+        {
+          "hindi": "willen",
+          "pronunciation": "VIL-len",
+          "english": "to want",
+          "example": "Ik wil een biertje drinken., I want to drink a beer.",
+          "type": "verb"
+        },
+        {
+          "hindi": "kunnen",
+          "pronunciation": "KUN-nen",
+          "english": "to be able to",
+          "example": "Kun je mij helpen?, Can you help me?",
+          "type": "verb"
+        },
+        {
+          "hindi": "moeten",
+          "pronunciation": "MOO-ten",
+          "english": "to have to",
+          "example": "Ik moet nog boodschappen doen., I still have to do the shopping.",
+          "type": "verb"
+        },
+        {
+          "hindi": "mogen",
+          "pronunciation": "MOH-chen",
+          "english": "to be allowed to",
+          "example": "Mag ik hier zitten?, May I sit here?",
+          "type": "verb"
+        },
+        {
+          "hindi": "eten",
+          "pronunciation": "AY-ten",
+          "english": "to eat",
+          "example": "Wat eten we vanavond?, What are we eating tonight?",
+          "type": "verb"
         }
       ]
     }
