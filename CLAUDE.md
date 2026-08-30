@@ -174,8 +174,8 @@ shadows anywhere.
 | `/dutch/luisteren/mock` | 25-min timed Listening drill (audio-only, no transcript). 5 random clips × 4 Qs = 20 questions. Live timer pill pink under 5 min. Auto-advance 1.5s. Pass ≥16/20 → `luisterMockPassed` + Confetti. Save to `dutch-luisteren-mock-attempts`. |
 | `/dutch/sounds` | "Sounds" module home (Dutch from-zero pronunciation). Orange header w/ Mr. Stroopwafel, `N/8 stages` count, and the 8-stage ladder as Stickers: complete (green ✓), unlocked (tappable + progress bar), locked (dimmed + 🔒). Rolling unlock — finishing a stage opens the next two. |
 | `/dutch/sounds/[stageId]` | Single pronunciation stage. Mr. Stroopwafel intro bubble + sound-card deck (grapheme + plain hint + anchor word/gloss + 🔊 Google TTS + got-it self-check) + optional minimal-pair ear-quiz + optional blend builder (word assembled part-by-part, each playable). On completion → Confetti + `pronStageDone` Chaina moment + "next stage" CTA. |
-| `/dutch/cheatsheet` | Concept-cheatsheet hub. Themed header band + "topics passed" mastery bar + orange "Mixed review" CTA (15 questions across every topic) + 5 collapsible group Stickers (First contact / Core grammar / People and description / Building sentences / Time and daily life), each folding out its topic cards with a green `✓ n/n` best-score badge or a grey `read` chip. |
-| `/dutch/cheatsheet/[topicId]` | One concept sheet: summary Sticker, numbered sections rendering rule/tip/pitfall callouts, scrollable tables, and example/vocab lists with a per-line 🔊 (Dutch TTS). Ends with a mint "Remember this much" takeaway list, the practice CTA (shows best score), a "Mark as read" toggle and a "Next up" link. |
+| `/dutch/cheatsheet` | Concept-cheatsheet hub. Themed header band + "topics passed" mastery bar + orange "Mixed review" CTA (15 questions across every topic) + 5 collapsible group Stickers (First contact / Core grammar / People and description / Building sentences / Time and daily life), each folding out its topic rows. Each row carries a green `✓ n/n` best-score badge and a **covered check circle**: tap it (or swipe the row right) to mark the topic as covered, swipe left or tap again to clear. |
+| `/dutch/cheatsheet/[topicId]` | One concept sheet: summary Sticker, numbered sections rendering rule/tip/pitfall callouts, scrollable tables, and example/vocab lists with a per-line 🔊 (Dutch TTS). **Every Dutch string is tappable** (dotted underline): one tap speaks it and opens a butter bottom sheet with article, part of speech, meaning, an example and other senses. Ends with a mint "Remember this much" takeaway list, the practice CTA (shows best score), a "Mark as read" toggle and a "Next up" link. |
 | `/dutch/cheatsheet/[topicId]/practice` | Per-topic drill via `DrillRunner`. Shuffled mix of MCQ / fill-the-gap / tap-to-order questions, per-question segmented progress, combo chip, instant feedback sticker with the correct answer (🔊) plus the explanation. Done screen at 80% pass with Confetti; result saved as the topic's best score. Bottom nav hidden. |
 | `/dutch/cheatsheet/review` | Mixed review: 15 questions drawn at random across all 22 topics, same `DrillRunner` shell. Not scored per topic. Bottom nav hidden. |
 | `/stories/[id]` | Single Hindi story — tap-through 5-panel Chai Galli motion-comic. Each panel: scene background (composed SVG: ChaiStall / Bazaar / NaniHouse / NarratorCard) + character w/ idle motion (Cutting / Nani / Customer / Shopkeeper) + dialogue Sticker w/ syllable-stress pronunciation hint + 🔊 hear-it (browser TTS, hi-IN) + tap-to-reveal English (lavender → mint reveal-zone). Framer Motion slide-in panel transitions. Last panel marks story-read in `learn-hindi:hindi-stories-read` + fires Confetti + "✓ read more stories" CTA back to home. |
@@ -205,6 +205,7 @@ shadows anywhere.
 | `seen-lessons.ts` | localStorage-backed Set tracking which lessons a user has seen (per-language). `initBaseline()` silent-tags existing IDs on first detection so the popup never false-fires; `getUnseenIds()`, `markAsSeen()`, `hasBeenSeen()`, `unseeIds()`. TDD'd, 9 tests. |
 | `dutch/lessons.ts`, `dutch/foundations.ts` | Parallel loaders for Dutch content (11 lessons + 7 foundations). `getDutchAllContent()` returns both combined for cross-module use (e.g. search). |
 | `dutch/pronunciation.ts` | "Sounds" module loader (TDD'd, 9 tests). 8-stage from-zero ladder from `content/dutch/pronunciation-course.json`. `getStages/getStage`, `markCardDone/isCardDone`, `markEarQuizPassed/isEarQuizPassed`, `isStageComplete` (derived), rolling-window `unlockedStageIds`/`isStageUnlocked` (finish → next 2 open), `getStageProgress`/`getCourseProgress`. |
+| `dutch/define.ts` | Tap-a-word dictionary layer for the cheatsheets (TDD'd, 19 tests). `defineTerm` is cache-first over the existing `/api/define` route, storing results in memory + `dutch-define-cache` and feeding the Word Lookup history; failures return `unavailable` so the sheet still speaks the term. `shouldLookUp` skips whole sentences (over 5 words). `splitCell` breaks a table cell into individually tappable terms (splits on `/`, on sentence boundaries, and on commas only when every piece is a single word, so `Sorry, dan kan ik niet.` stays whole). |
 | `dutch/cheatsheet.ts` | Concept-cheatsheet loader + drill engine (TDD'd, 21 tests). Flattens `content/dutch/cheatsheet/*.json` into 5 groups / 22 topics. `getGroups/getTopics/getTopicById/getGroupOfTopic/getNextTopic`, `drawTopicDrill`/`drawMixedReview(15)`/`scrambleWords` (never returns the answer order), `normalizeAnswer`/`isCorrect`/`scoreDrill` (80% pass), studied set + best-score-per-topic history, `getWeakTopics`/`getOverallProgress`. |
 | `dutch/knm.ts` | KNM loader + `drawDrillSet(30)` (Fisher-Yates) + `scoreAttempt()` (80% pass) + attempt history (capped at 50) + per-question studied tracking. TDD'd, 12 tests. |
 | `dutch/lezen.ts` | Same shape as `knm.ts` for the Lezen module — `drawMockSet(5)`, 20-Q scoring, 25-min `MOCK_TIMER_MS` constant, studied set. TDD'd, 12 tests. |
@@ -317,6 +318,7 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-pron-earquiz-done` — JSON array of "Sounds" stage ids whose ear-quiz passed. Stage completion + the rolling unlock are derived from these two sets.
 - `dutch-cheatsheet-studied` — JSON array of cheatsheet topic ids marked as read.
 - `dutch-cheatsheet-scores` — `{ [topicId]: { best, total, attempts, lastTs } }`, keeping the best ratio ever scored on that topic's drill. A topic counts as passed at 80%.
+- `dutch-define-cache` — `{ [word]: Definition }` from `/api/define`, capped at 300, so tapped words resolve instantly and keep working offline once seen.
 
 ### Recent feature work log
 
@@ -371,6 +373,24 @@ home (between Sounds and Your path).
   walks all 22 drills answering each question with its own stated answer and
   asserts a 100% score, which catches any mismatched answer key or unreachable
   word tile.
+- **Covered-tracking + tap-any-Dutch wave (same date).** Two additions on top:
+  1. **Quick "covered" marking** on the hub rows: a check circle (tap) and a
+     row swipe (right marks, left clears), both writing the existing
+     `dutch-cheatsheet-studied` set. The swipe is `drag="x"` with
+     `dragDirectionLock` so the list still scrolls; the post-swipe DOM click is
+     swallowed by comparing pointer-down x with click x (Framer's `onDragEnd`
+     can land *after* the click, so latching on it is not enough). The topic
+     page's "Mark as read" became a real toggle via the previously unused
+     `unmarkTopicStudied`.
+  2. **Every Dutch string is tappable** (`components/cheatsheet/DutchTerm.tsx`):
+     token chips, example/vocab lines and Dutch table cells open a bottom sheet
+     that speaks the term and shows what it means. Meaning comes first from the
+     gloss the content already carries (instant, offline), then from
+     `/api/define` for bare tokens. Dutch table columns are marked **explicitly**
+     per table via `nl_cols` (+ optional `en_col`), because the Dutch column
+     varies across all 51 tables and a heuristic mislabels English cells; a test
+     guards those indices. The drill screens are deliberately left untouched, so
+     tapping cannot leak an answer mid-question.
 
 **2026-06-16 — Chai Diary (daily journal) + home declutter**
 

@@ -110,6 +110,37 @@ describe('cheatsheet content', () => {
     }
   })
 
+  // The Dutch columns are marked by hand, so guard the indices against drift:
+  // an out-of-range index would silently stop a column being tappable, and an
+  // en_col pointing at a Dutch column would show the wrong "meaning".
+  it('keeps every nl_cols / en_col index inside its table', () => {
+    for (const t of getTopics()) {
+      for (const s of t.sections) {
+        for (const b of s.blocks) {
+          if (b.kind !== 'table') continue
+          const width = b.headers.length
+          for (const c of b.nl_cols ?? []) {
+            expect(c, `${t.id}: nl_cols out of range`).toBeGreaterThanOrEqual(0)
+            expect(c, `${t.id}: nl_cols out of range`).toBeLessThan(width)
+          }
+          if (b.en_col !== undefined) {
+            expect(b.en_col, `${t.id}: en_col out of range`).toBeLessThan(width)
+            expect(b.nl_cols ?? [], `${t.id}: en_col also marked as Dutch`).not.toContain(b.en_col)
+          }
+        }
+      }
+    }
+  })
+
+  it('marks Dutch columns on the tables that have Dutch in them', () => {
+    const tables = getTopics().flatMap((t) =>
+      t.sections.flatMap((s) => s.blocks.filter((b) => b.kind === 'table')),
+    )
+    const annotated = tables.filter((b) => (b.nl_cols?.length ?? 0) > 0)
+    // Every table but the alphabet one (letter names, not Dutch words) is annotated.
+    expect(annotated.length).toBe(tables.length - 1)
+  })
+
   it('finds a topic, its group and the next one in order', () => {
     const all = getTopics()
     expect(getTopicById('greetings')?.title).toBeTruthy()

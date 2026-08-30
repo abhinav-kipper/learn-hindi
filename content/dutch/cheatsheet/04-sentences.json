@@ -36,7 +36,8 @@
                 ["Mijn moeder", "komt", "", "vrijdag op bezoek."],
                 ["Vrijdag", "komt", "mijn moeder", "op bezoek."]
               ],
-              "note": "Read the verb column top to bottom. It never moves, whatever happens on the left."
+              "note": "Read the verb column top to bottom. It never moves, whatever happens on the left.",
+              "nl_cols": [0, 1, 2, 3]
             }
           ]
         },
@@ -212,7 +213,9 @@
                 ["hoe lang", "how long", "Hoe lang woon je hier?"],
                 ["hoe vaak", "how often", "Hoe vaak sport je?"],
                 ["wat voor", "what kind of", "Wat voor werk doe je?"]
-              ]
+              ],
+              "nl_cols": [0, 2],
+              "en_col": 1
             },
             {
               "kind": "rule",
@@ -402,7 +405,8 @@
                 ["Ik", "mag", "vandaag eerder naar huis", "gaan."],
                 ["Hans", "komt", "vrijdag bij ons", "eten."]
               ],
-              "note": "Everything piles up in the middle. The longer the sentence, the further apart the two verbs sit, which is what makes Dutch feel back-loaded to English speakers."
+              "note": "Everything piles up in the middle. The longer the sentence, the further apart the two verbs sit, which is what makes Dutch feel back-loaded to English speakers.",
+              "nl_cols": [0, 1, 2, 3]
             },
             {
               "kind": "pitfall",
@@ -427,7 +431,9 @@
                 ["komen", "to come and", "Hij komt vanavond eten."],
                 ["blijven", "to keep on", "Zij blijft slapen."],
                 ["laten", "to let or have done", "Ik laat mijn haar knippen."]
-              ]
+              ],
+              "nl_cols": [0, 2],
+              "en_col": 1
             },
             {
               "kind": "table",
@@ -440,7 +446,8 @@
                 ["hij / zij", "kan", "moet", "wil", "mag"],
                 ["wij / jullie / zij", "kunnen", "moeten", "willen", "mogen"]
               ],
-              "note": "These are irregular in the singular, so the ik and hij forms have no -t. In a question with je the t drops as usual: kun je, wil je, moet je, mag je."
+              "note": "These are irregular in the singular, so the ik and hij forms have no -t. In a question with je the t drops as usual: kun je, wil je, moet je, mag je.",
+              "nl_cols": [0, 1, 2, 3, 4]
             }
           ]
         },

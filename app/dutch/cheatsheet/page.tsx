@@ -1,8 +1,8 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
+import { motion, useMotionValue, useTransform } from 'framer-motion'
 import {
   Sticker,
   Tag,
@@ -19,11 +19,14 @@ import {
   getScores,
   getStudiedCount,
   isTopicStudied,
+  markTopicStudied,
+  unmarkTopicStudied,
   getWeakTopics,
   getTotalExerciseCount,
   PASS_THRESHOLD,
   MIXED_REVIEW_SIZE,
   type TopicScore,
+  type CheatTopic,
 } from '@/lib/dutch/cheatsheet'
 import { playSound } from '@/lib/sounds'
 
@@ -62,6 +65,23 @@ export default function CheatsheetHubPage() {
     (s) => s.total > 0 && s.best / s.total >= PASS_THRESHOLD,
   ).length
   const pct = totalTopics > 0 ? Math.round((passedCount / totalTopics) * 100) : 0
+
+  const toggleCovered = (id: string) => {
+    setStudiedIds((prev) => {
+      const next = new Set(prev)
+      if (next.has(id)) {
+        unmarkTopicStudied(id)
+        next.delete(id)
+        playSound('tap')
+      } else {
+        markTopicStudied(id)
+        next.add(id)
+        playSound('correct')
+      }
+      setStudied(next.size)
+      return next
+    })
+  }
 
   const toggleGroup = (id: string) => {
     playSound('tap')
@@ -312,90 +332,185 @@ export default function CheatsheetHubPage() {
                     paddingLeft: 8,
                   }}
                 >
-                  {group.topics.map((topic) => {
-                    const s = scores[topic.id]
-                    const ratio = s && s.total > 0 ? s.best / s.total : null
-                    const hasPassed = ratio !== null && ratio >= PASS_THRESHOLD
-                    return (
-                      <Sticker
-                        key={topic.id}
-                        color={W}
-                        radius={14}
-                        padding={12}
-                        onClick={() => {
-                          playSound('tap')
-                          router.push(`/dutch/cheatsheet/${topic.id}`)
-                        }}
-                      >
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 11 }}>
-                          <span style={{ fontSize: 21 }}>{topic.emoji}</span>
-                          <div style={{ flex: 1, minWidth: 0 }}>
-                            <div
-                              style={{
-                                fontFamily: FONTS.display,
-                                fontWeight: 800,
-                                fontSize: 15,
-                                color: COLORS.ink,
-                              }}
-                            >
-                              {topic.title}
-                            </div>
-                            <div
-                              style={{
-                                fontFamily: FONTS.body,
-                                fontSize: 11.5,
-                                color: COLORS.ink45,
-                                fontStyle: 'italic',
-                              }}
-                            >
-                              {topic.subtitle_nl}
-                            </div>
-                          </div>
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: 3, alignItems: 'flex-end' }}>
-                            {ratio !== null && (
-                              <span
-                                style={{
-                                  fontFamily: FONTS.body,
-                                  fontSize: 11,
-                                  fontWeight: 800,
-                                  color: hasPassed ? GREEN : COLORS.ink60,
-                                  background: hasPassed ? COLORS.mint : COLORS.butter,
-                                  borderRadius: 99,
-                                  padding: '2px 8px',
-                                  whiteSpace: 'nowrap',
-                                }}
-                              >
-                                {hasPassed ? '✓ ' : ''}
-                                {s.best}/{s.total}
-                              </span>
-                            )}
-                            {studiedIds.has(topic.id) && ratio === null && (
-                              <span
-                                style={{
-                                  fontFamily: FONTS.body,
-                                  fontSize: 11,
-                                  fontWeight: 700,
-                                  color: COLORS.ink60,
-                                  background: COLORS.lav,
-                                  borderRadius: 99,
-                                  padding: '2px 8px',
-                                  whiteSpace: 'nowrap',
-                                }}
-                              >
-                                read
-                              </span>
-                            )}
-                          </div>
-                        </div>
-                      </Sticker>
-                    )
-                  })}
+                  {group.topics.map((topic) => (
+                    <TopicRow
+                      key={topic.id}
+                      topic={topic}
+                      score={scores[topic.id]}
+                      covered={studiedIds.has(topic.id)}
+                      onOpen={() => {
+                        playSound('tap')
+                        router.push(`/dutch/cheatsheet/${topic.id}`)
+                      }}
+                      onToggleCovered={() => toggleCovered(topic.id)}
+                    />
+                  ))}
                 </div>
               )}
             </div>
           )
         })}
       </div>
+    </div>
+  )
+}
+
+
+/**
+ * One topic on the hub. Tapping the row opens the sheet; the check circle marks
+ * it as covered, and so does a swipe (right to mark, left to clear). The drag is
+ * direction-locked to the x axis so the list still scrolls normally.
+ */
+function TopicRow({
+  topic,
+  score,
+  covered,
+  onOpen,
+  onToggleCovered,
+}: {
+  topic: CheatTopic
+  score: TopicScore | undefined
+  covered: boolean
+  onOpen: () => void
+  onToggleCovered: () => void
+}) {
+  const x = useMotionValue(0)
+  // A swipe also ends in a DOM click on the card, which would navigate away.
+  // Framer's onDragEnd can land after that click, so instead compare where the
+  // pointer went down with where the click came up and swallow it if it moved.
+  const downX = useRef(0)
+  const markOpacity = useTransform(x, [0, 60], [0, 1])
+  const clearOpacity = useTransform(x, [-60, 0], [1, 0])
+  const ratio = score && score.total > 0 ? score.best / score.total : null
+  const hasPassed = ratio !== null && ratio >= PASS_THRESHOLD
+
+  return (
+    <div
+      style={{ position: 'relative' }}
+      onPointerDownCapture={(e) => {
+        downX.current = e.clientX
+      }}
+      onClickCapture={(e) => {
+        if (Math.abs(e.clientX - downX.current) > 8) {
+          e.stopPropagation()
+          e.preventDefault()
+        }
+      }}
+    >
+      {/* what the swipe reveals underneath */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          borderRadius: 14,
+          background: covered ? COLORS.lav2 : COLORS.mint,
+          border: BORDER.sticker,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          padding: '0 16px',
+          fontFamily: FONTS.display,
+          fontWeight: 800,
+          fontSize: 13,
+          color: COLORS.ink,
+        }}
+      >
+        <motion.span style={{ opacity: markOpacity }}>
+          {covered ? '✕ not yet' : '✓ covered'}
+        </motion.span>
+        <motion.span style={{ opacity: clearOpacity }}>
+          {covered ? '✕ not yet' : '✓ covered'}
+        </motion.span>
+      </div>
+
+      <motion.div
+        drag="x"
+        dragDirectionLock
+        style={{ x, position: 'relative' }}
+        dragConstraints={{ left: 0, right: 0 }}
+        dragElastic={0.5}
+        onDragEnd={(_, info) => {
+          if (Math.abs(info.offset.x) > 70) onToggleCovered()
+        }}
+      >
+        <Sticker
+          color={W}
+          radius={14}
+          padding={12}
+          onClick={onOpen}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: 11 }}>
+            <span style={{ fontSize: 21 }}>{topic.emoji}</span>
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div
+                style={{
+                  fontFamily: FONTS.display,
+                  fontWeight: 800,
+                  fontSize: 15,
+                  color: COLORS.ink,
+                }}
+              >
+                {topic.title}
+              </div>
+              <div
+                style={{
+                  fontFamily: FONTS.body,
+                  fontSize: 11.5,
+                  color: COLORS.ink45,
+                  fontStyle: 'italic',
+                }}
+              >
+                {topic.subtitle_nl}
+              </div>
+            </div>
+
+            {ratio !== null && (
+              <span
+                style={{
+                  fontFamily: FONTS.body,
+                  fontSize: 11,
+                  fontWeight: 800,
+                  color: hasPassed ? GREEN : COLORS.ink60,
+                  background: hasPassed ? COLORS.mint : COLORS.butter,
+                  borderRadius: 99,
+                  padding: '2px 8px',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                {hasPassed ? '\u2713 ' : ''}
+                {score!.best}/{score!.total}
+              </span>
+            )}
+
+            <button
+              aria-label={covered ? `Mark ${topic.title} as not covered` : `Mark ${topic.title} as covered`}
+              aria-pressed={covered}
+              onClick={(e) => {
+                e.stopPropagation()
+                onToggleCovered()
+              }}
+              style={{
+                flexShrink: 0,
+                width: 30,
+                height: 30,
+                borderRadius: 99,
+                border: BORDER.sticker,
+                background: covered ? COLORS.mint : W,
+                color: COLORS.ink,
+                fontSize: 14,
+                lineHeight: 1,
+                cursor: 'pointer',
+                padding: 0,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              {covered ? '✓' : ''}
+            </button>
+          </div>
+        </Sticker>
+      </motion.div>
     </div>
   )
 }

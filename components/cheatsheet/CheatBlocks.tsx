@@ -5,6 +5,7 @@ import { Sticker, COLORS, FONTS, BORDER } from '@/components/design'
 import { speak } from '@/lib/speech'
 import { playSound } from '@/lib/sounds'
 import type { CheatBlock, CheatPair, CheatSection } from '@/lib/dutch/cheatsheet'
+import { DutchTerm, DutchCell } from './DutchTerm'
 
 const W = '#fff' // @design-allow: white literal
 
@@ -188,7 +189,7 @@ function SpeakRow({ pair }: { pair: CheatPair }) {
       </button>
       <div style={{ flex: 1, minWidth: 0 }}>
         <div style={{ fontFamily: FONTS.body, fontSize: 14.5, fontWeight: 700, color: COLORS.ink }}>
-          {pair.nl}
+          <DutchTerm text={pair.nl} known={pair.en} note={pair.note} />
         </div>
         <div style={{ fontFamily: FONTS.body, fontSize: 13, color: COLORS.ink60 }}>{pair.en}</div>
         {pair.note && (
@@ -262,22 +263,29 @@ export function BlockView({ block }: { block: CheatBlock }) {
             <tbody>
               {block.rows.map((row, r) => (
                 <tr key={r} style={{ background: r % 2 === 0 ? W : COLORS.peach2 }}>
-                  {row.map((cell, c) => (
-                    <td
-                      key={c}
-                      style={{
-                        fontFamily: FONTS.body,
-                        fontSize: 13,
-                        color: c === 0 ? COLORS.ink : COLORS.ink60,
-                        fontWeight: c === 0 ? 700 : 500,
-                        padding: '8px 12px',
-                        verticalAlign: 'top',
-                        lineHeight: 1.4,
-                      }}
-                    >
-                      {cell}
-                    </td>
-                  ))}
+                  {row.map((cell, c) => {
+                    const isDutch = block.nl_cols?.includes(c) ?? false
+                    const gloss =
+                      block.en_col !== undefined && block.en_col !== c
+                        ? row[block.en_col]
+                        : undefined
+                    return (
+                      <td
+                        key={c}
+                        style={{
+                          fontFamily: FONTS.body,
+                          fontSize: 13,
+                          color: c === 0 ? COLORS.ink : COLORS.ink60,
+                          fontWeight: c === 0 ? 700 : 500,
+                          padding: '8px 12px',
+                          verticalAlign: 'top',
+                          lineHeight: 1.4,
+                        }}
+                      >
+                        {isDutch ? <DutchCell text={cell} known={gloss} /> : cell}
+                      </td>
+                    )
+                  })}
                 </tr>
               ))}
             </tbody>

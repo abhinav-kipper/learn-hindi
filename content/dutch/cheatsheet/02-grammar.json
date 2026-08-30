@@ -30,7 +30,9 @@
                 ["1 pl", "wij / we", "we", ""],
                 ["2 pl", "jullie", "you (a group)", "no separate weak form"],
                 ["3 pl", "zij / ze", "they", ""]
-              ]
+              ],
+              "nl_cols": [1],
+              "en_col": 2
             }
           ]
         },
@@ -200,7 +202,8 @@
                 ["jullie", "base form", "jullie wonen", "jullie spreken"],
                 ["zij / ze", "base form", "zij wonen", "zij spreken"]
               ],
-              "note": "Notice the plural row is simply the base form again. That is three quarters of the work done."
+              "note": "Notice the plural row is simply the base form again. That is three quarters of the work done.",
+              "nl_cols": [0, 2, 3]
             },
             {
               "kind": "table",
@@ -212,7 +215,8 @@
                 ["hij", "woont", "zit", "reist", "blijft"],
                 ["wij", "wonen", "zitten", "reizen", "blijven"]
               ],
-              "note": "zit does not become zitt, because Dutch never writes a double t at the end of a word."
+              "note": "zit does not become zitt, because Dutch never writes a double t at the end of a word.",
+              "nl_cols": [0, 1, 2, 3, 4]
             }
           ]
         },
@@ -263,7 +267,8 @@
                 ["mogen", "mag", "mag", "mogen"],
                 ["zullen", "zal", "zult / zal", "zullen"]
               ],
-              "note": "komen looks irregular but is not: ko-men has a long o that would need doubling, yet the stem is kom with a short o. Learn it as an exception."
+              "note": "komen looks irregular but is not: ko-men has a long o that would need doubling, yet the stem is kom with a short o. Learn it as an exception.",
+              "nl_cols": [0, 1, 2, 3]
             }
           ]
         },
@@ -398,7 +403,8 @@
                 ["wij / we", "hebben", "zijn"],
                 ["jullie", "hebben", "zijn"],
                 ["zij / ze", "hebben", "zijn"]
-              ]
+              ],
+              "nl_cols": [0, 1, 2]
             },
             {
               "kind": "rule",
@@ -426,7 +432,8 @@
                 ["states and feelings", "Ik ben moe. Hij is blij."],
                 ["location", "Wij zijn in de les."],
                 ["being late or on time", "Ik ben te laat. Jij bent nooit op tijd."]
-              ]
+              ],
+              "nl_cols": [1]
             },
             {
               "kind": "table",
@@ -439,7 +446,8 @@
                 ["being right", "Je hebt gelijk."],
                 ["feeling like something", "Ik heb zin in koffie."],
                 ["suffering from something", "Ik heb last van mijn rug."]
-              ]
+              ],
+              "nl_cols": [1]
             },
             {
               "kind": "pitfall",
@@ -578,7 +586,9 @@
                 ["1 pl", "ons / onze", "our", "ons huis / onze buren"],
                 ["2 pl", "jullie", "your (plural)", "jullie docent"],
                 ["3 pl", "hun", "their", "hun appartement"]
-              ]
+              ],
+              "nl_cols": [1, 3],
+              "en_col": 2
             }
           ]
         },
@@ -753,7 +763,8 @@
                 ["-kje", "after an unstressed -ing", "koning, koninkje / woning, woninkje"],
                 ["-etje", "after a short vowel plus l, m, n, r or ng", "bal, balletje / kam, kammetje / man, mannetje / ster, sterretje / ding, dingetje"]
               ],
-              "note": "The -etje group doubles the consonant, because the short vowel has to stay short. Same spelling rule as ik zit from zitten."
+              "note": "The -etje group doubles the consonant, because the short vowel has to stay short. Same spelling rule as ik zit from zitten.",
+              "nl_cols": [2]
             },
             {
               "kind": "pitfall",
@@ -779,7 +790,9 @@
                 ["het kwartiertje", "a quarter of an hour", "het kwartier, the same but flatter"],
                 ["het koekje", "the biscuit", "de koek, a cake or gingerbread slab"],
                 ["het kaartje", "the ticket", "de kaart, the map or card"]
-              ]
+              ],
+              "nl_cols": [0],
+              "en_col": 1
             }
           ]
         },

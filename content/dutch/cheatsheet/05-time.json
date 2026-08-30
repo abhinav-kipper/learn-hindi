@@ -59,7 +59,8 @@
                 ["3:50", "tien voor vier", "ten to four"],
                 ["3:55", "vijf voor vier", "five to four"]
               ],
-              "note": "Between :20 and :40 Dutch counts from the half hour, not from the hour. That is why 3:25 is vijf voor half vier."
+              "note": "Between :20 and :40 Dutch counts from the half hour, not from the hour. That is why 3:25 is vijf voor half vier.",
+              "nl_cols": [1]
             },
             {
               "kind": "tip",
@@ -81,7 +82,9 @@
                 ["'s nachts", "at night", "00:00 to 06:00"],
                 ["tussen de middag", "around lunchtime", "12:00 to 13:00"]
               ],
-              "note": "The apostrophe-s is a leftover of an old word for des. Say it as one word: sochtends, savonds."
+              "note": "The apostrophe-s is a leftover of an old word for des. Say it as one word: sochtends, savonds.",
+              "nl_cols": [0],
+              "en_col": 1
             },
             {
               "kind": "vocab",
@@ -230,7 +233,8 @@
                 ["", "november", ""],
                 ["", "december", ""]
               ],
-              "note": "Days and months are written in lower case in Dutch, unlike English. Only the start of a sentence gives them a capital."
+              "note": "Days and months are written in lower case in Dutch, unlike English. Only the start of a sentence gives them a capital.",
+              "nl_cols": [0, 1, 2]
             },
             {
               "kind": "vocab",
@@ -268,7 +272,8 @@
                 ["in", "a specific year", "Ik ben geboren in 1988."],
                 ["om", "a clock time", "Ik heb les om negen uur."]
               ],
-              "note": "One way to remember it: om is the smallest unit (a point on the clock), op is a day, in is anything bigger."
+              "note": "One way to remember it: om is the smallest unit (a point on the clock), op is a day, in is anything bigger.",
+              "nl_cols": [0, 2]
             },
             {
               "kind": "rule",
@@ -299,7 +304,9 @@
                 ["elke dag / elke week", "every day / every week"],
                 ["een keer per week", "once a week"],
                 ["twee keer per maand", "twice a month"]
-              ]
+              ],
+              "nl_cols": [0],
+              "en_col": 1
             },
             {
               "kind": "examples",
@@ -506,7 +513,8 @@
                 ["de wijn (rood / wit)", "de soep", "het rondje"],
                 ["het water", "de patat / de friet", "het terras"],
                 ["de jus d'orange", "de kaas", "de pinpas / pinnen"]
-              ]
+              ],
+              "nl_cols": [0, 1, 2]
             }
           ]
         },
@@ -567,7 +575,9 @@
                 ["Het liefst drink ik koffie.", "Most of all I drink coffee.", "het liefst is the superlative"],
                 ["Ik lust geen vis.", "I do not care for fish.", "lusten is only for food"]
               ],
-              "note": "graag, liever, liefst attach to the verb, not the noun. That is why they sit in the middle of the sentence."
+              "note": "graag, liever, liefst attach to the verb, not the noun. That is why they sit in the middle of the sentence.",
+              "nl_cols": [0],
+              "en_col": 1
             },
             {
               "kind": "pitfall",
@@ -736,7 +746,8 @@
                 ["hij / zij / het", "zal"],
                 ["wij / jullie / zij", "zullen"]
               ],
-              "note": "In a suggestion you almost only ever need zal ik and zullen we, so those two are worth drilling until they are automatic."
+              "note": "In a suggestion you almost only ever need zal ik and zullen we, so those two are worth drilling until they are automatic.",
+              "nl_cols": [0, 1]
             },
             {
               "kind": "examples",
@@ -762,7 +773,9 @@
                 ["Heb je zin in + noun", "Heb je zin in koffie?", "Do you fancy a coffee?"],
                 ["Heb je zin om ... te + base form", "Heb je zin om morgen te zwemmen?", "Do you fancy going swimming tomorrow?"]
               ],
-              "note": "Watch the split: zin in takes a noun, zin om ... te takes a verb. Mixing them up is the most common slip here."
+              "note": "Watch the split: zin in takes a noun, zin om ... te takes a verb. Mixing them up is the most common slip here.",
+              "nl_cols": [1],
+              "en_col": 2
             },
             {
               "kind": "vocab",
@@ -815,7 +828,9 @@
                 ["Nee, dat vind ik niet zo leuk.", "No, I do not really enjoy that.", "preference"],
                 ["Nee, ik hou niet van musea.", "No, I do not like museums.", "preference"]
               ],
-              "note": "An availability reason is the easy no. A preference reason is direct, which Dutch people are comfortable with, but soften it with sorry and niet zo."
+              "note": "An availability reason is the easy no. A preference reason is direct, which Dutch people are comfortable with, but soften it with sorry and niet zo.",
+              "nl_cols": [0],
+              "en_col": 1
             },
             {
               "kind": "rule",
@@ -837,7 +852,9 @@
                 ["Niet zo goed.", "Not so good.", "poor"],
                 ["Heel slecht.", "Really bad.", "bad"]
               ],
-              "note": "You can front the whole answer with Met mij gaat het ... , then finish with en met jou? Leaving off the return question sounds uninterested."
+              "note": "You can front the whole answer with Met mij gaat het ... , then finish with en met jou? Leaving off the return question sounds uninterested.",
+              "nl_cols": [0],
+              "en_col": 1
             },
             {
               "kind": "examples",

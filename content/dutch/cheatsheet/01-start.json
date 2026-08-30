@@ -33,7 +33,9 @@
                 ["Goedenavond", "Good evening", "after about 18:00", "polite"],
                 ["Goedenacht", "Good night", "only when going to bed", "polite"]
               ],
-              "note": "In speech people swallow the first syllable: 'morgen, 'middag, 'avond. You will also hear goeiemorgen, which is the same word said fast."
+              "note": "In speech people swallow the first syllable: 'morgen, 'middag, 'avond. You will also hear goeiemorgen, which is the same word said fast.",
+              "nl_cols": [0],
+              "en_col": 1
             },
             {
               "kind": "examples",
@@ -65,7 +67,9 @@
                 ["Tot volgende week!", "See you next week", "next week"],
                 ["Tot snel!", "See you soon", "soon, date unknown"],
                 ["Tot ziens!", "Goodbye", "polite, maybe never"]
-              ]
+              ],
+              "nl_cols": [0],
+              "en_col": 1
             },
             {
               "kind": "tip",
@@ -105,7 +109,9 @@
                 ["Hoe gaat het met u?", "How are you?", "formal"],
                 ["Hoe is het?", "How is it?", "casual"],
                 ["Alles goed?", "All good?", "casual, very common"]
-              ]
+              ],
+              "nl_cols": [0],
+              "en_col": 1
             },
             {
               "kind": "examples",
@@ -219,7 +225,8 @@
                 ["Mijn naam is Esther.", "Wat is je naam?", "What is your name?"],
                 ["Ik ben Esther.", "Wie ben jij?", "Who are you?"]
               ],
-              "note": "All three are equally common. Match the answer to the question you were asked and the exchange sounds natural."
+              "note": "All three are equally common. Match the answer to the question you were asked and the exchange sounds natural.",
+              "nl_cols": [0, 1]
             },
             {
               "kind": "rule",
@@ -410,7 +417,9 @@
                 ["het westen / Amsterdam-West", "the west / Amsterdam West"],
                 ["het centrum", "the centre"],
                 ["de buurt / de wijk", "the neighbourhood / the district"]
-              ]
+              ],
+              "nl_cols": [0],
+              "en_col": 1
             },
             {
               "kind": "examples",
@@ -435,7 +444,8 @@
                 ["Waar ben je geboren?", "Ik ben geboren in Delhi."],
                 ["Wat is je telefoonnummer?", "Mijn telefoonnummer is 06 12 34 56 78."],
                 ["Wat is je e-mailadres?", "Mijn e-mailadres is naam apenstaartje mail punt nl."]
-              ]
+              ],
+              "nl_cols": [0, 1]
             },
             {
               "kind": "tip",
@@ -573,7 +583,8 @@
                 ["9", "negen", "20", "twintig"],
                 ["10", "tien", "", ""]
               ],
-              "note": "13 and 14 are dertien and veertien, not drietien or viertien. Learn those two as exceptions and the rest are regular."
+              "note": "13 and 14 are dertien and veertien, not drietien or viertien. Learn those two as exceptions and the rest are regular.",
+              "nl_cols": [1, 3]
             },
             {
               "kind": "tip",
@@ -598,7 +609,8 @@
                 ["80", "tachtig", "not achttig"],
                 ["90", "negentig", ""],
                 ["100", "honderd", ""]
-              ]
+              ],
+              "nl_cols": [1]
             }
           ]
         },
@@ -640,7 +652,8 @@
                 ["100.000", "honderdduizend"],
                 ["1.000.000", "een miljoen"]
               ],
-              "note": "Dutch uses a dot for thousands and a comma for decimals: 1.250,50 is one thousand two hundred fifty euro and fifty cents."
+              "note": "Dutch uses a dot for thousands and a comma for decimals: 1.250,50 is one thousand two hundred fifty euro and fifty cents.",
+              "nl_cols": [1]
             }
           ]
         },
@@ -676,7 +689,8 @@
                 ["5th", "vijfde", "21st", "eenentwintigste"],
                 ["6th", "zesde", "100th", "honderdste"],
                 ["7th", "zevende", "", ""]
-              ]
+              ],
+              "nl_cols": [1, 3]
             },
             {
               "kind": "examples",
@@ -924,7 +938,9 @@
                 ["zon", "zoon", "sun / son"],
                 ["man", "maan", "man / moon"]
               ],
-              "note": "Say them as a pair out loud. The long one takes clearly more time, and the mouth stays tenser."
+              "note": "Say them as a pair out loud. The long one takes clearly more time, and the mouth stays tenser.",
+              "nl_cols": [0, 1],
+              "en_col": 2
             }
           ]
         },
@@ -951,7 +967,8 @@
                 ["bellen", "bel-len", "ik bel", "short e, one l is enough"],
                 ["maken", "ma-ken", "ik maak", "long a, doubled"],
                 ["stoppen", "stop-pen", "ik stop", "short o, one p"]
-              ]
+              ],
+              "nl_cols": [0, 2]
             }
           ]
         },
@@ -972,7 +989,8 @@
                 ["de brief", "brief", "de brieven"],
                 ["het huis", "huis", "de huizen"],
                 ["lief", "hij is lief", "een lieve man"]
-              ]
+              ],
+              "nl_cols": [0, 1, 2]
             },
             {
               "kind": "tip",
@@ -997,7 +1015,8 @@
                 ["aai / ooi / oei", "saai, mooi, moeilijk", "long vowel plus a quick y"],
                 ["eeu / ieu", "leeuw, nieuw", "long vowel plus a quick w"]
               ],
-              "note": "ij and ei sound identical. Which one to write is pure vocabulary, so learn each word with its spelling."
+              "note": "ij and ei sound identical. Which one to write is pure vocabulary, so learn each word with its spelling.",
+              "nl_cols": [1]
             },
             {
               "kind": "pitfall",
@@ -1019,7 +1038,8 @@
                 ["w", "water, wonen", "lips together, softer than English w"],
                 ["v", "vet, vader", "between English f and v"],
                 ["r", "rood, boor", "rolled at the front or scraped at the back, both fine"]
-              ]
+              ],
+              "nl_cols": [1]
             }
           ]
         }

@@ -31,7 +31,9 @@
                 ["de zus", "the sister"],
                 ["het gezin", "the household: parents plus children"],
                 ["de familie", "the wider family: all relatives"]
-              ]
+              ],
+              "nl_cols": [0],
+              "en_col": 1
             },
             {
               "kind": "pitfall",
@@ -55,7 +57,9 @@
                 ["de tante", "the aunt"],
                 ["de neef / het neefje", "the male cousin or the nephew"],
                 ["de nicht / het nichtje", "the female cousin or the niece"]
-              ]
+              ],
+              "nl_cols": [0],
+              "en_col": 1
             },
             {
               "kind": "pitfall",
@@ -234,7 +238,8 @@
                 ["China", "Chinees", "Chinees"],
                 ["Japan", "Japans", "Japans"]
               ],
-              "note": "Read across: the nationality and the language are usually the same word. Brazil, the United States, Mexico and Morocco are the reminders that they are not always."
+              "note": "Read across: the nationality and the language are usually the same word. Brazil, the United States, Mexico and Morocco are the reminders that they are not always.",
+              "nl_cols": [0, 1, 2]
             }
           ]
         },
@@ -270,7 +275,8 @@
                 ["België", "een Belg", "een Belgische"],
                 ["Italië", "een Italiaan", "een Italiaanse"],
                 ["Spanje", "een Spanjaard", "een Spaanse"]
-              ]
+              ],
+              "nl_cols": [0, 1, 2]
             }
           ]
         },
@@ -383,7 +389,8 @@
                 ["hebben", "hair, eyes, features", "Zij heeft bruine ogen. Hij heeft een baard."],
                 ["dragen", "glasses, hats, clothes", "Mijn moeder draagt een bril."]
               ],
-              "note": "Glasses can take either verb: Hij heeft een bril and Hij draagt een bril are both fine."
+              "note": "Glasses can take either verb: Hij heeft een bril and Hij draagt een bril are both fine.",
+              "nl_cols": [0, 2]
             },
             {
               "kind": "examples",
@@ -434,7 +441,8 @@
                 ["none", "kaal, een kaal hoofd"],
                 ["styles", "een staart, een knot, een vlecht, een pony"],
                 ["eyes", "blauwe, groene, bruine, grijze ogen"]
-              ]
+              ],
+              "nl_cols": [1]
             },
             {
               "kind": "pitfall",
@@ -595,7 +603,8 @@
                 ["plural", "grote fietsen", "grote huizen"],
                 ["after mijn / dit / dat", "mijn grote fiets", "mijn grote huis"]
               ],
-              "note": "Only one cell in the whole table has no -e. That is the entire rule."
+              "note": "Only one cell in the whole table has no -e. That is the entire rule.",
+              "nl_cols": [1, 2]
             }
           ]
         },
@@ -617,7 +626,8 @@
                 ["lief", "lieve", "f becomes v when it is no longer final"],
                 ["grijs", "grijze", "s becomes z when it is no longer final"],
                 ["rood", "rode", "long o keeps one letter"]
-              ]
+              ],
+              "nl_cols": [0, 1]
             }
           ]
         },
@@ -668,7 +678,8 @@
                 ["weinig", "minder", "minst"],
                 ["graag", "liever", "liefst"]
               ],
-              "note": "Comparison uses dan: Hij is groter dan zijn broer. The superlative takes de or het: Zij is de jongste."
+              "note": "Comparison uses dan: Hij is groter dan zijn broer. The superlative takes de or het: Zij is de jongste.",
+              "nl_cols": [0, 1, 2]
             }
           ]
         }

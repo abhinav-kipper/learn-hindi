@@ -21,6 +21,15 @@ export interface CheatTableBlock {
   headers: string[]
   rows: string[][]
   note?: string
+  /**
+   * Which columns hold Dutch, so those cells become tappable for meaning and
+   * pronunciation. Marked explicitly per table because the Dutch column varies
+   * (some tables are Dutch throughout, some only in an example column) and a
+   * heuristic would wrongly offer to "define" English cells.
+   */
+  nl_cols?: number[]
+  /** Column holding the English gloss for this table's Dutch cells, when one maps cleanly. */
+  en_col?: number
 }
 
 // Each block gets a single literal `kind` so TypeScript can narrow the union
