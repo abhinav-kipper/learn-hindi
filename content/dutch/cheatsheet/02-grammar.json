@@ -914,9 +914,10 @@
               "headers": ["Ending", "When", "Examples"],
               "rows": [
                 ["-en", "most words, the default", "de ui, de uien / de banaan, de bananen / de fiets, de fietsen"],
-                ["-s", "after -el, -em, -en, -er, -ie, -e and -é", "de appel, de appels / de tante, de tantes / de courgette, de courgettes"],
+                ["-s", "after unstressed -el, -em, -en, -er, -ie, and after -e or -é", "de appel, de appels / de tante, de tantes / de courgette, de courgettes"],
                 ["-s", "words borrowed from another language", "de computer, de computers / de manager, de managers"],
-                ["-'s", "after a single -a, -i, -o, -u or -y", "de kiwi, de kiwi's / de foto, de foto's / de paprika, de paprika's"]
+                ["-'s", "after a single -a, -i, -o, -u or -y", "de kiwi, de kiwi's / de foto, de foto's / de paprika, de paprika's"],
+                ["-s", "every diminutive, whatever the base word was", "het huisje, de huisjes / het kopje, de kopjes"]
               ],
               "note": "When in doubt, -en is the safer guess. It covers the clear majority of Dutch nouns.",
               "nl_cols": [2]
@@ -992,6 +993,7 @@
                 ["de dag", "de dagen", "the short a stretches to a long a"],
                 ["het glas", "de glazen", "the vowel stretches and s becomes z"],
                 ["de koe", "de koeien", "takes -ien"],
+                ["de knie", "de knieën", "a stressed -ie takes -ën, not -s"],
                 ["het museum", "de musea of de museums", "a Latin ending, both are accepted"]
               ],
               "nl_cols": [0, 1]
@@ -1042,12 +1044,11 @@
         },
         {
           "id": "plu-3",
-          "kind": "fill",
-          "prompt": "Give the plural of de kiwi.",
-          "before": "de",
-          "after": "",
-          "answers": ["kiwi's", "kiwis"],
-          "explain": "A single vowel at the end takes -'s, so the i stays long: kiwi's."
+          "kind": "mcq",
+          "prompt": "Which is the correct plural of de kiwi?",
+          "options": ["de kiwis", "de kiwi's", "de kiwien", "de kiwies"],
+          "correct": 1,
+          "explain": "A single vowel at the end takes -'s. The apostrophe keeps the i long, exactly as in foto's and paprika's."
         },
         {
           "id": "plu-4",
@@ -1171,7 +1172,7 @@
             },
             {
               "kind": "table",
-              "headers": ["Blunt", "Friendly", "English"],
+              "headers": ["Plain", "Softer", "English"],
               "rows": [
                 ["Zeg het.", "Zeg het maar.", "Go ahead."],
                 ["Wacht.", "Wacht even.", "Hang on a moment."],
