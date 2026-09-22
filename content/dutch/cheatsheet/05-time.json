@@ -3,7 +3,7 @@
     "id": "time",
     "title": "Time and daily life",
     "subtitle_nl": "tijd en dagelijks leven",
-    "blurb": "The clock (including the half hour that runs backwards), days, months, seasons, the three time prepositions, and everything you say in a café.",
+    "blurb": "The clock (including the half hour that runs backwards), days, months, seasons, the three time prepositions, making plans, and everything you say in a café or at the market.",
     "emoji": "🕓"
   },
   "topics": [
@@ -967,6 +967,304 @@
           "words": ["mee", "je", "Ga", "wandelen"],
           "answer": ["Ga", "je", "mee", "wandelen"],
           "explain": "meegaan splits, so mee sits in the middle and the second verb wandelen closes the sentence."
+        }
+      ]
+    },
+    {
+      "id": "food-market",
+      "title": "Food, groceries and the market",
+      "subtitle_nl": "eten, boodschappen en de markt",
+      "emoji": "🥕",
+      "summary": "Fruit and vegetables, the fixed script every market seller uses, Dutch meal habits, and the three interchangeable ways to say you like a food.",
+      "sections": [
+        {
+          "heading": "Groente",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Dutch", "English"],
+              "rows": [
+                ["de ui", "the onion"],
+                ["de wortel", "the carrot"],
+                ["de aardappel", "the potato"],
+                ["de tomaat", "the tomato"],
+                ["de paprika", "the pepper"],
+                ["de komkommer", "the cucumber"],
+                ["de courgette", "the courgette"],
+                ["de aubergine", "the aubergine"],
+                ["de champignon", "the mushroom"],
+                ["de bloemkool", "the cauliflower"],
+                ["de broccoli", "the broccoli"],
+                ["de sla", "the lettuce"],
+                ["de spinazie", "the spinach"],
+                ["de andijvie", "the endive"],
+                ["de boon / het boontje", "the bean / the green bean"]
+              ],
+              "nl_cols": [0],
+              "en_col": 1
+            }
+          ]
+        },
+        {
+          "heading": "Fruit",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Dutch", "English"],
+              "rows": [
+                ["de appel", "the apple"],
+                ["de peer", "the pear"],
+                ["de banaan", "the banana"],
+                ["de sinaasappel", "the orange"],
+                ["de mandarijn", "the mandarin"],
+                ["de citroen", "the lemon"],
+                ["de druif", "the grape"],
+                ["de aardbei", "the strawberry"],
+                ["de blauwe bes / de bosbes", "the blueberry"],
+                ["de kiwi", "the kiwi"],
+                ["de mango", "the mango"],
+                ["de meloen", "the melon"],
+                ["de perzik", "the peach"],
+                ["de ananas", "the pineapple"]
+              ],
+              "nl_cols": [0],
+              "en_col": 1
+            },
+            {
+              "kind": "tip",
+              "title": "Almost all of them are de-words",
+              "body": "Every fruit and vegetable above takes `de`, which makes this a rare stretch of Dutch where the article is not a guessing game. The catch is the collective: `de groente` but `het fruit`."
+            },
+            {
+              "kind": "pitfall",
+              "title": "These are also your plural drill",
+              "body": "The market is where the plural rules bite: `de ui` gives `de uien`, `de appel` gives `de appels`, `de kiwi` gives `de kiwi's`, `de druif` gives `de druiven`. Run the Plurals sheet on this list and you get two topics for one."
+            }
+          ]
+        },
+        {
+          "heading": "At the market, word for word",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Buying produce runs on a fixed script. Learn these eight lines and you can do the whole exchange without improvising."
+            },
+            {
+              "kind": "examples",
+              "title": "The seller says",
+              "items": [
+                { "nl": "Wie is er aan de beurt?", "en": "Who is next?", "note": "your cue to speak up" },
+                { "nl": "Zegt u het maar.", "en": "Go ahead, what can I get you?" },
+                { "nl": "Anders nog iets?", "en": "Anything else?", "note": "also Verder nog iets?" },
+                { "nl": "Dat is dan drie euro.", "en": "That will be three euros then." },
+                { "nl": "Heeft u het niet kleiner?", "en": "Do you have anything smaller?", "note": "asked when you hand over a big note" },
+                { "nl": "Wilt u een tasje?", "en": "Would you like a bag?" }
+              ]
+            },
+            {
+              "kind": "examples",
+              "title": "You say",
+              "items": [
+                { "nl": "Ik!", "en": "Me!", "note": "the answer to Wie is er aan de beurt?" },
+                { "nl": "Een courgette, alstublieft.", "en": "One courgette, please." },
+                { "nl": "Ik wil ook graag twee aubergines.", "en": "I would also like two aubergines." },
+                { "nl": "Nee, dat was het.", "en": "No, that was everything." },
+                { "nl": "Ja, graag. / Nee, bedankt.", "en": "Yes please. / No thanks." },
+                { "nl": "Tot ziens, werk ze!", "en": "Bye, enjoy the rest of your shift!" }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "werk ze",
+              "body": "`Werk ze!` is a small, very Dutch kindness said to someone who is still working when you leave. You will hear it at markets, in offices and in shops. `Fijne dag verder!` does the same job if you forget it."
+            }
+          ]
+        },
+        {
+          "heading": "How much of it",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Dutch", "English"],
+              "rows": [
+                ["een kilo", "a kilo"],
+                ["een pond", "500 grams, not an imperial pound"],
+                ["een half pondje", "250 grams"],
+                ["honderd gram", "100 grams"],
+                ["een bakje", "a small tub"],
+                ["een zakje", "a small bag"],
+                ["een bosje", "a bunch"],
+                ["een tros", "a bunch of bananas or grapes"],
+                ["per stuk", "each"],
+                ["een stuk of vijf", "about five"]
+              ],
+              "note": "The little forms are everywhere here: bakje, zakje, bosje, pondje. That is the diminutive doing its friendly work again.",
+              "nl_cols": [0],
+              "en_col": 1
+            },
+            {
+              "kind": "pitfall",
+              "title": "A Dutch pond is half a kilo",
+              "body": "`een pond` is exactly 500 grams and `een half pondje` is 250. It has nothing to do with the imperial pound, so asking for `een pond kaas` gets you more cheese than you may expect."
+            }
+          ]
+        },
+        {
+          "heading": "Meals and when the Dutch eat them",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Dutch", "English", "Usually"],
+              "rows": [
+                ["het ontbijt", "breakfast", "bread, yoghurt, granola"],
+                ["de lunch", "lunch", "bread again, cold, quick"],
+                ["het avondeten", "dinner", "the hot meal, early, around 18:00"],
+                ["het tussendoortje", "a snack between meals", "fruit or a biscuit"],
+                ["het toetje", "dessert", "yoghurt or vla"]
+              ],
+              "nl_cols": [0],
+              "en_col": 1
+            },
+            {
+              "kind": "tip",
+              "title": "The hot meal is early",
+              "body": "Dutch households eat the warm meal in the **evening and early**, often around six. Lunch is usually a cold `boterham`. Inviting someone to dinner at 20:00 reads as unusually late."
+            },
+            {
+              "kind": "vocab",
+              "title": "Things you will be offered",
+              "items": [
+                { "nl": "de boterham", "en": "a slice of bread with a topping" },
+                { "nl": "de tosti", "en": "a toasted cheese sandwich" },
+                { "nl": "de stamppot", "en": "mashed potato with vegetables, the classic winter dish" },
+                { "nl": "de erwtensoep", "en": "thick pea soup, also called snert" },
+                { "nl": "de vla", "en": "pourable custard, a standard dessert" },
+                { "nl": "de hagelslag", "en": "chocolate sprinkles, eaten on bread" },
+                { "nl": "de pindakaas", "en": "peanut butter" },
+                { "nl": "de appeltaart", "en": "apple pie" }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Saying what you like",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Three constructions say the same thing, and Dutch people swap between them freely.\n- `Ik eet graag stamppot.`\n- `Ik hou van stamppot.`\n- `Ik vind stamppot lekker.`\nThe negatives work the same way: `Ik lust geen vis.`, `Ik hou niet van vis.`, `Ik vind vis niet lekker.`"
+            },
+            {
+              "kind": "vocab",
+              "title": "Questions to ask over a meal",
+              "items": [
+                { "nl": "Wat eet jij graag?", "en": "What do you like eating?" },
+                { "nl": "Welke groente vind je lekker?", "en": "Which vegetables do you like?" },
+                { "nl": "Wat is je favoriete ontbijt?", "en": "What is your favourite breakfast?" },
+                { "nl": "Ben je allergisch voor iets?", "en": "Are you allergic to anything?" },
+                { "nl": "Kook je altijd met verse groente?", "en": "Do you always cook with fresh vegetables?" },
+                { "nl": "Eet je een warme of koude lunch?", "en": "Do you eat a hot or a cold lunch?" }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "When you do not know",
+              "body": "Three phrases buy you time without switching to English: `Ik denk...`, `Ik weet het niet.` and `Ik heb geen idee.`"
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Every fruit and vegetable takes de, but the collective het fruit does not.",
+        "Wie is er aan de beurt? is your cue to say Ik! and start ordering.",
+        "A Dutch pond is 500 grams and een half pondje is 250.",
+        "eet graag, hou van and vind lekker all say the same thing.",
+        "The hot meal is in the evening and early, and lunch is usually cold bread."
+      ],
+      "exercises": [
+        {
+          "id": "food-1",
+          "kind": "mcq",
+          "prompt": "The seller calls out Wie is er aan de beurt? What do you say?",
+          "options": ["Alstublieft!", "Ik!", "Tot ziens!", "Dat was het."],
+          "correct": 1,
+          "explain": "Ik! claims your turn. Then the seller says Zegt u het maar."
+        },
+        {
+          "id": "food-2",
+          "kind": "fill",
+          "prompt": "The seller asks whether you want anything else: Anders nog ___?",
+          "before": "Anders nog",
+          "after": "?",
+          "answers": ["iets"],
+          "explain": "Anders nog iets? or Verder nog iets? Both mean anything else."
+        },
+        {
+          "id": "food-3",
+          "kind": "mcq",
+          "prompt": "How much is een pond at a Dutch market?",
+          "options": ["250 grams", "500 grams", "a kilo", "about 450 grams"],
+          "correct": 1,
+          "explain": "A Dutch pond is exactly 500 grams. een half pondje is 250."
+        },
+        {
+          "id": "food-4",
+          "kind": "fill",
+          "prompt": "Ask for a kilo of potatoes.",
+          "before": "Een kilo",
+          "after": ", alstublieft.",
+          "answers": ["aardappels", "aardappelen"],
+          "explain": "de aardappel takes -s after its -el ending, though aardappelen is also heard."
+        },
+        {
+          "id": "food-5",
+          "kind": "mcq",
+          "prompt": "Which article goes with the collective word for fruit?",
+          "options": ["de fruit", "het fruit", "een fruit", "de fruiten"],
+          "correct": 1,
+          "explain": "It is het fruit, even though every individual fruit is a de-word. Compare de groente."
+        },
+        {
+          "id": "food-6",
+          "kind": "order",
+          "prompt": "Build: I would also like two aubergines.",
+          "words": ["graag", "twee", "wil", "Ik", "aubergines", "ook"],
+          "answer": ["Ik", "wil", "ook", "graag", "twee", "aubergines"],
+          "explain": "ook graag sits between the verb and the thing you want."
+        },
+        {
+          "id": "food-7",
+          "kind": "fill",
+          "prompt": "The seller offers you a bag: Wilt u een ___?",
+          "before": "Wilt u een",
+          "after": "?",
+          "answers": ["tasje"],
+          "explain": "een tasje, the little form of de tas, is what you are offered at a till."
+        },
+        {
+          "id": "food-8",
+          "kind": "mcq",
+          "prompt": "Which sentence does NOT say that you like pasta?",
+          "options": ["Ik eet graag pasta.", "Ik hou van pasta.", "Ik vind pasta lekker.", "Ik lust geen pasta."],
+          "correct": 3,
+          "explain": "lust geen is the negative: it says you do not care for it."
+        },
+        {
+          "id": "food-9",
+          "kind": "fill",
+          "prompt": "Which meal is the hot one in a Dutch household?",
+          "before": "het",
+          "after": "",
+          "answers": ["avondeten", "diner"],
+          "explain": "The warm meal is het avondeten, eaten early in the evening. Lunch is usually cold bread."
+        },
+        {
+          "id": "food-10",
+          "kind": "fill",
+          "prompt": "Give the plural of de druif, as you would order it.",
+          "before": "de",
+          "after": "",
+          "answers": ["druiven"],
+          "explain": "The f becomes v between vowels: de druiven."
         }
       ]
     }

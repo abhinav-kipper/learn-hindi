@@ -3,7 +3,7 @@
     "id": "grammar",
     "title": "Core grammar",
     "subtitle_nl": "de basisgrammatica",
-    "blurb": "Pronouns, the present tense, the two verbs you cannot avoid, and how to show who owns what. Everything else in Dutch sits on top of these four.",
+    "blurb": "Pronouns, the present tense, the two verbs you cannot avoid, who owns what, and how Dutch makes a word small, plural or into an instruction. Everything else sits on top of these.",
     "emoji": "🧱"
   },
   "topics": [
@@ -892,6 +892,413 @@
           "after": "?",
           "answers": ["momentje"],
           "explain": "een momentje is softer than een moment, which is why it is the standard phrasing."
+        }
+      ]
+    },
+    {
+      "id": "plurals",
+      "title": "Plurals",
+      "subtitle_nl": "de pluralis",
+      "emoji": "📚",
+      "summary": "Two endings do almost all the work, the choice is made by the sound at the end of the word, and every plural takes de whatever the singular was.",
+      "sections": [
+        {
+          "heading": "The three endings",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Dutch has two plural endings, `-en` and `-s`, plus `-'s` as a spelling variant of `-s`. Which one you get is decided by the **sound at the end of the word**, the same way the diminutive is decided."
+            },
+            {
+              "kind": "table",
+              "headers": ["Ending", "When", "Examples"],
+              "rows": [
+                ["-en", "most words, the default", "de ui, de uien / de banaan, de bananen / de fiets, de fietsen"],
+                ["-s", "after -el, -em, -en, -er, -ie, -e and -é", "de appel, de appels / de tante, de tantes / de courgette, de courgettes"],
+                ["-s", "words borrowed from another language", "de computer, de computers / de manager, de managers"],
+                ["-'s", "after a single -a, -i, -o, -u or -y", "de kiwi, de kiwi's / de foto, de foto's / de paprika, de paprika's"]
+              ],
+              "note": "When in doubt, -en is the safer guess. It covers the clear majority of Dutch nouns.",
+              "nl_cols": [2]
+            },
+            {
+              "kind": "tip",
+              "title": "Why the apostrophe",
+              "body": "The apostrophe in `foto's` keeps the vowel long. Written `fotos`, the o would close the syllable and go short. It is the same instinct behind `auto` becoming `autootje`."
+            }
+          ]
+        },
+        {
+          "heading": "Spelling changes when you add -en",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Adding `-en` opens the last syllable, so the same four sound rules you already use for the present tense kick in. If you can get `ik woon` out of `wonen`, you can do this: it is that rule run backwards."
+            },
+            {
+              "kind": "table",
+              "headers": ["Singular", "Plural", "Why"],
+              "rows": [
+                ["de man", "de mannen", "short vowel keeps the consonant doubled"],
+                ["de aap", "de apen", "long vowel drops a letter in an open syllable"],
+                ["de kaas", "de kazen", "s becomes z between vowels"],
+                ["de duif", "de duiven", "f becomes v between vowels"],
+                ["de fiets", "de fietsen", "nothing changes"],
+                ["de meloen", "de meloenen", "nothing changes"]
+              ],
+              "nl_cols": [0, 1]
+            }
+          ]
+        },
+        {
+          "heading": "After a number, some words stay singular",
+          "blocks": [
+            {
+              "kind": "pitfall",
+              "title": "cent, jaar, uur, kilo",
+              "body": "Units of measure stay **singular** when a number is in front of them.\n- `twee jaar`, never twee jaren\n- `drie kilo appels`\n- `vijf euro`\n- `tien keer`\n- `een half uur`\nOn their own, away from a number, they do take a plural: `de jaren negentig` (the nineties)."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Ik woon hier al twee jaar.", "en": "I have lived here for two years." },
+                { "nl": "Een kilo aardappels, alstublieft.", "en": "A kilo of potatoes, please." },
+                { "nl": "Dat kost vijf euro.", "en": "That costs five euros." },
+                { "nl": "De les duurt anderhalf uur.", "en": "The class lasts an hour and a half." }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Every plural takes de",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Whatever article the singular had, the plural is **always a de-word**. That is one less thing to memorise.\n- `het huis` gives `de huizen`\n- `het kind` gives `de kinderen`\n- `het boek` gives `de boeken`\nIt also means the adjective always takes `-e` in the plural: `de kleine huizen`, `kleine huizen`."
+            }
+          ]
+        },
+        {
+          "heading": "The irregular ones worth knowing",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": ["Singular", "Plural", "What happens"],
+              "rows": [
+                ["het kind", "de kinderen", "takes -eren, not -en"],
+                ["het ei", "de eieren", "takes -eren"],
+                ["de stad", "de steden", "the vowel changes completely"],
+                ["het schip", "de schepen", "the vowel changes completely"],
+                ["de dag", "de dagen", "the short a stretches to a long a"],
+                ["het glas", "de glazen", "the vowel stretches and s becomes z"],
+                ["de koe", "de koeien", "takes -ien"],
+                ["het museum", "de musea of de museums", "a Latin ending, both are accepted"]
+              ],
+              "nl_cols": [0, 1]
+            }
+          ]
+        },
+        {
+          "heading": "Plurals in a sentence",
+          "blocks": [
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Ik heb twee broers en drie zussen.", "en": "I have two brothers and three sisters." },
+                { "nl": "De kinderen fietsen naar school.", "en": "The children cycle to school." },
+                { "nl": "Zij eet graag bananen en aardbeien.", "en": "She likes eating bananas and strawberries." },
+                { "nl": "Wij hebben geen huisdieren.", "en": "We have no pets." },
+                { "nl": "Hoeveel talen spreek je?", "en": "How many languages do you speak?" }
+              ]
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "-en is the default, -s follows -el, -em, -en, -er, -ie and -e, and -'s follows a single a, i, o, u or y.",
+        "Adding -en triggers the present-tense spelling rules: mannen, apen, kazen, duiven.",
+        "After a number, cent, jaar, uur and kilo stay singular: twee jaar, drie kilo.",
+        "Every plural is a de-word, so the adjective always takes -e.",
+        "kind and ei take -eren, and stad and schip change their vowel outright."
+      ],
+      "exercises": [
+        {
+          "id": "plu-1",
+          "kind": "fill",
+          "prompt": "Give the plural of de ui.",
+          "before": "de",
+          "after": "",
+          "answers": ["uien"],
+          "explain": "A regular word takes -en: de uien."
+        },
+        {
+          "id": "plu-2",
+          "kind": "fill",
+          "prompt": "Give the plural of de appel.",
+          "before": "de",
+          "after": "",
+          "answers": ["appels"],
+          "explain": "A word ending in -el takes -s, not -en."
+        },
+        {
+          "id": "plu-3",
+          "kind": "fill",
+          "prompt": "Give the plural of de kiwi.",
+          "before": "de",
+          "after": "",
+          "answers": ["kiwi's", "kiwis"],
+          "explain": "A single vowel at the end takes -'s, so the i stays long: kiwi's."
+        },
+        {
+          "id": "plu-4",
+          "kind": "mcq",
+          "prompt": "Which is the correct plural of de kaas?",
+          "options": ["de kaasen", "de kazen", "de kaas's", "de kasen"],
+          "correct": 1,
+          "explain": "The s becomes z between vowels and the long a loses a letter: de kazen."
+        },
+        {
+          "id": "plu-5",
+          "kind": "fill",
+          "prompt": "Give the plural of de man.",
+          "before": "de",
+          "after": "",
+          "answers": ["mannen"],
+          "explain": "The short a needs the doubled consonant to stay short: mannen."
+        },
+        {
+          "id": "plu-6",
+          "kind": "fill",
+          "prompt": "Complete: Ik woon hier al twee ___.",
+          "before": "Ik woon hier al twee",
+          "after": ".",
+          "answers": ["jaar"],
+          "explain": "After a number, jaar stays singular. twee jaren is wrong."
+        },
+        {
+          "id": "plu-7",
+          "kind": "mcq",
+          "prompt": "What is the plural of het kind?",
+          "options": ["het kinden", "de kinden", "de kinderen", "de kinds"],
+          "correct": 2,
+          "explain": "kind takes the rare -eren ending, and every plural is a de-word."
+        },
+        {
+          "id": "plu-8",
+          "kind": "fill",
+          "prompt": "Give the plural of de aardbei.",
+          "before": "de",
+          "after": "",
+          "answers": ["aardbeien"],
+          "explain": "A regular -en plural: de aardbeien."
+        },
+        {
+          "id": "plu-9",
+          "kind": "mcq",
+          "prompt": "Which article does a plural take?",
+          "options": ["always de", "always het", "the same as the singular", "no article at all"],
+          "correct": 0,
+          "explain": "Every Dutch plural is a de-word, even when the singular was het."
+        },
+        {
+          "id": "plu-10",
+          "kind": "order",
+          "prompt": "Build: a kilo of potatoes, please.",
+          "words": ["kilo", "alstublieft", "Een", "aardappels"],
+          "answer": ["Een", "kilo", "aardappels", "alstublieft"],
+          "explain": "kilo stays singular after een, and aardappels takes the regular -s ending."
+        }
+      ]
+    },
+    {
+      "id": "imperative",
+      "title": "The imperative",
+      "subtitle_nl": "de imperatief",
+      "emoji": "📣",
+      "summary": "Telling someone to do something is the easiest form in Dutch: just the stem. The hard part is the little words that stop it sounding like an order.",
+      "sections": [
+        {
+          "heading": "The neutral form is the stem",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "To tell someone to do something, use the **stem**, the same form you use with `ik`. No subject, no ending, nothing else.\n- `komen` gives `Kom!`\n- `wachten` gives `Wacht!`\n- `zeggen` gives `Zeg het maar.`\n- `doen` gives `Doe maar.`\nThis is the one place where Dutch asks less of you than the present tense does."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                { "nl": "Kom binnen!", "en": "Come in!" },
+                { "nl": "Wacht even.", "en": "Hang on a second." },
+                { "nl": "Ga zitten.", "en": "Take a seat." },
+                { "nl": "Zeg het maar.", "en": "Go ahead, what can I get you?" },
+                { "nl": "Let op!", "en": "Watch out! / Note this!" }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "The formal form adds -t and u",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "With `u` you use **stem + t** and say `u` out loud. It is the only imperative that looks like an ordinary present-tense form."
+            },
+            {
+              "kind": "table",
+              "headers": ["Neutral", "Formal", "English"],
+              "rows": [
+                ["Ga zitten.", "Gaat u zitten.", "Take a seat."],
+                ["Zeg het maar.", "Zegt u het maar.", "What can I get you?"],
+                ["Kom binnen.", "Komt u binnen.", "Come in."],
+                ["Wacht even.", "Wacht u even.", "Please wait a moment."]
+              ],
+              "nl_cols": [0, 1],
+              "en_col": 2
+            },
+            {
+              "kind": "tip",
+              "title": "You will hear this one daily",
+              "body": "`Zegt u het maar` is what a shop assistant, a market seller or a waiter says when it is your turn. It is the Dutch equivalent of \"what can I get you\"."
+            }
+          ]
+        },
+        {
+          "heading": "maar and even make it friendly",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "A bare imperative can land as a command. Dutch softens it with a small word: `maar`, `even`, `eens`, or by adding `alsjeblieft` / `alstublieft`. Leaving them out is the most common way a learner sounds unintentionally blunt."
+            },
+            {
+              "kind": "table",
+              "headers": ["Blunt", "Friendly", "English"],
+              "rows": [
+                ["Zeg het.", "Zeg het maar.", "Go ahead."],
+                ["Wacht.", "Wacht even.", "Hang on a moment."],
+                ["Kom binnen.", "Kom maar binnen.", "Do come in."],
+                ["Geef mij het zout.", "Geef mij het zout even, alsjeblieft.", "Pass me the salt, please."]
+              ],
+              "nl_cols": [0, 1],
+              "en_col": 2
+            }
+          ]
+        },
+        {
+          "heading": "Split verbs split here too",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "A separable verb behaves exactly as it does when conjugated: the prefix goes to the **end**.\n- `dichtdoen` gives `Doe je boek dicht!`\n- `opstaan` gives `Sta op!`\n- `uitkijken` gives `Kijk uit!`\n- `meekomen` gives `Kom mee!`\n- `invullen` gives `Vul het formulier in.`\n- `opschieten` gives `Schiet op!` (hurry up)"
+            }
+          ]
+        },
+        {
+          "heading": "Where you actually meet it",
+          "blocks": [
+            {
+              "kind": "vocab",
+              "title": "Recipes and instructions",
+              "items": [
+                { "nl": "Snijd de ui fijn.", "en": "Chop the onion finely." },
+                { "nl": "Roer goed.", "en": "Stir well." },
+                { "nl": "Voeg water toe.", "en": "Add water.", "note": "toevoegen splits, so toe lands at the end" },
+                { "nl": "Bak de groente vijf minuten.", "en": "Fry the vegetables for five minutes." },
+                { "nl": "Laat het tien minuten koken.", "en": "Let it boil for ten minutes." }
+              ]
+            },
+            {
+              "kind": "vocab",
+              "title": "Forms, signs and offices",
+              "items": [
+                { "nl": "Vul het formulier in.", "en": "Fill in the form." },
+                { "nl": "Druk op de knop.", "en": "Press the button." },
+                { "nl": "Neem een nummertje.", "en": "Take a ticket." },
+                { "nl": "Kijk uit!", "en": "Look out!" },
+                { "nl": "Pak je telefoon.", "en": "Get your phone out." }
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "Signs often use the base form instead",
+              "body": "Public notices skip the imperative and use the base form: `Niet roken` (no smoking), `Deur sluiten` (close the door), `Niet storen` (do not disturb). Spoken, a negative imperative puts `niet` after the verb: `Doe dat niet!`"
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "The neutral imperative is just the stem: Kom! Wacht! Zeg het maar.",
+        "With u it is stem plus t: Gaat u zitten, Zegt u het maar.",
+        "maar and even are what turn an order into a friendly request.",
+        "Separable verbs split, so the prefix lands at the end: Doe je boek dicht!",
+        "Signs use the base form instead: Niet roken, Deur sluiten."
+      ],
+      "exercises": [
+        {
+          "id": "imp-1",
+          "kind": "fill",
+          "prompt": "Make the neutral imperative of komen.",
+          "before": "",
+          "after": "binnen!",
+          "answers": ["kom"],
+          "explain": "The neutral imperative is the bare stem: Kom binnen!"
+        },
+        {
+          "id": "imp-2",
+          "kind": "mcq",
+          "prompt": "Which is the formal way to invite someone to sit down?",
+          "options": ["Ga u zitten.", "Gaat u zitten.", "Gaan u zitten.", "U gaat zitten."],
+          "correct": 1,
+          "explain": "With u the imperative takes stem plus t: Gaat u zitten."
+        },
+        {
+          "id": "imp-3",
+          "kind": "fill",
+          "prompt": "Soften this so it does not sound like an order: Zeg het ___.",
+          "before": "Zeg het",
+          "after": ".",
+          "answers": ["maar"],
+          "explain": "maar is the little word that makes an imperative warm rather than blunt."
+        },
+        {
+          "id": "imp-4",
+          "kind": "order",
+          "prompt": "Build: close your book! (dichtdoen)",
+          "words": ["boek", "Doe", "dicht", "je"],
+          "answer": ["Doe", "je", "boek", "dicht"],
+          "explain": "dichtdoen splits, so dicht goes to the end of the sentence."
+        },
+        {
+          "id": "imp-5",
+          "kind": "fill",
+          "prompt": "Complete the separable verb opstaan: Sta ___!",
+          "before": "Sta",
+          "after": "!",
+          "answers": ["op"],
+          "explain": "The prefix op separates and lands at the end: Sta op!"
+        },
+        {
+          "id": "imp-6",
+          "kind": "mcq",
+          "prompt": "A sign reads Niet roken. Which form is that?",
+          "options": ["the stem, as an imperative", "the base form, which signs prefer", "the u form", "the plural"],
+          "correct": 1,
+          "explain": "Public notices use the base form: Niet roken, Deur sluiten, Niet storen."
+        },
+        {
+          "id": "imp-7",
+          "kind": "order",
+          "prompt": "Build: fill in the form. (invullen)",
+          "words": ["formulier", "het", "in", "Vul"],
+          "answer": ["Vul", "het", "formulier", "in"],
+          "explain": "invullen splits, so in closes the sentence."
+        },
+        {
+          "id": "imp-8",
+          "kind": "mcq",
+          "prompt": "A market seller says Zegt u het maar. What is happening?",
+          "options": ["they are telling you off", "it is your turn to order", "they are closing up", "they want your name"],
+          "correct": 1,
+          "explain": "It is the formal imperative of zeggen plus maar, meaning go ahead, what can I get you."
         }
       ]
     }

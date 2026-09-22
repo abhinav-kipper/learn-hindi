@@ -49,7 +49,7 @@ content/dutch/foundations/ → 14 Dutch foundation JSONs (8 A1 + 6 A2)
 content/dutch/knm.json  → 100 KNM exam questions (bilingual, 6 categories)
 content/dutch/lezen.json → 10 Lezen B1-prep reading texts (bilingual, 40 MCQs)
 content/dutch/pronunciation-course.json → 8-stage from-zero "Sounds" ladder (alphabet→linking)
-content/dutch/cheatsheet/    → 5 grouped concept-cheatsheet JSONs (22 topics, 186 drill questions)
+content/dutch/cheatsheet/    → 5 grouped concept-cheatsheet JSONs (25 topics, 214 drill questions)
 content/dutch/vocabulary.json → 100 Dutch words in 6 categories (nouns carry de/het)
 content/stories/        → 5 Hindi story JSONs (Chai Galli motion-comics)
 docs/audits/             → Content audit rubric + per-run reports + master summaries
@@ -123,7 +123,7 @@ next deploy. ESLint runs in CI too (`npx eslint .`).
 
 The app now serves two distinct learning goals:
 - **Hindi** — conversational/colloquial Hindi via 10 situational lessons + 9 grammar foundations + 100-word vocab. Casual learning, no exam.
-- **Dutch** — focused prep for the **Inburgeringsexamen B1 + KNM** (the Dutch civic-integration exam HSM holders take to naturalize). Dutch home reoriented as: Goal banner → Sounds → Cheatsheets → 3-stage path (A1/A2/B1) → 5 exam-skill modules (KNM live, Reading live, Listening/Writing/Speaking soon) → Exam scenarios (6 lessons, A2/B1) → casual Lessons & Grammar. The **Cheatsheets** section (`/dutch/cheatsheet`) is the revision layer: 22 concept pages of rules, tables and examples, each with its own drill.
+- **Dutch** — focused prep for the **Inburgeringsexamen B1 + KNM** (the Dutch civic-integration exam HSM holders take to naturalize). Dutch home reoriented as: Goal banner → Sounds → Cheatsheets → 3-stage path (A1/A2/B1) → 5 exam-skill modules (KNM live, Reading live, Listening/Writing/Speaking soon) → Exam scenarios (6 lessons, A2/B1) → casual Lessons & Grammar. The **Cheatsheets** section (`/dutch/cheatsheet`) is the revision layer: 25 concept pages of rules, tables and examples, each with its own drill. They cover all ten grammar goals of the learner's DE1 course.
 
 All UI/labels are English; Dutch only appears in (a) content being learned (KNM questions, Lezen texts, lesson phrases), (b) Chaina's voice lines (she speaks Dutch in the Dutch track, Hinglish in the Hindi track), (c) italic Dutch-skill-name subtitles for exposure.
 
@@ -178,7 +178,7 @@ shadows anywhere.
 | `/dutch/cheatsheet` | Concept-cheatsheet hub. Themed header band + "topics passed" mastery bar + orange "Mixed review" CTA (15 questions across every topic) + 5 collapsible group Stickers (First contact / Core grammar / People and description / Building sentences / Time and daily life), each folding out its topic rows. Each row carries a green `✓ n/n` best-score badge and a **covered check circle**: tap it (or swipe the row right) to mark the topic as covered, swipe left or tap again to clear. |
 | `/dutch/cheatsheet/[topicId]` | One concept sheet: summary Sticker, numbered sections rendering rule/tip/pitfall callouts, scrollable tables, and example/vocab lists with a per-line 🔊 (Dutch TTS). **Every Dutch string is tappable** (dotted underline): one tap speaks it and opens a butter bottom sheet with article, part of speech, meaning, an example and other senses. Ends with a mint "Remember this much" takeaway list, the practice CTA (shows best score), a "Mark as read" toggle and a "Next up" link. |
 | `/dutch/cheatsheet/[topicId]/practice` | Per-topic drill via `DrillRunner`. Shuffled mix of MCQ / fill-the-gap / tap-to-order questions, per-question segmented progress, combo chip, instant feedback sticker with the correct answer (🔊) plus the explanation. Done screen at 80% pass with Confetti; result saved as the topic's best score. Bottom nav hidden. |
-| `/dutch/cheatsheet/review` | Mixed review: 15 questions drawn at random across all 22 topics, same `DrillRunner` shell. Not scored per topic. Bottom nav hidden. |
+| `/dutch/cheatsheet/review` | Mixed review: 15 questions drawn at random across all 25 topics, same `DrillRunner` shell. Not scored per topic. Bottom nav hidden. |
 | `/stories/[id]` | Single Hindi story — tap-through 5-panel Chai Galli motion-comic. Each panel: scene background (composed SVG: ChaiStall / Bazaar / NaniHouse / NarratorCard) + character w/ idle motion (Cutting / Nani / Customer / Shopkeeper) + dialogue Sticker w/ syllable-stress pronunciation hint + 🔊 hear-it (browser TTS, hi-IN) + tap-to-reveal English (lavender → mint reveal-zone). Framer Motion slide-in panel transitions. Last panel marks story-read in `learn-hindi:hindi-stories-read` + fires Confetti + "✓ read more stories" CTA back to home. |
 
 ### Libraries (`lib/`)
@@ -207,7 +207,7 @@ shadows anywhere.
 | `dutch/lessons.ts`, `dutch/foundations.ts` | Parallel loaders for Dutch content (11 lessons + 7 foundations). `getDutchAllContent()` returns both combined for cross-module use (e.g. search). |
 | `dutch/pronunciation.ts` | "Sounds" module loader (TDD'd, 9 tests). 8-stage from-zero ladder from `content/dutch/pronunciation-course.json`. `getStages/getStage`, `markCardDone/isCardDone`, `markEarQuizPassed/isEarQuizPassed`, `isStageComplete` (derived), rolling-window `unlockedStageIds`/`isStageUnlocked` (finish → next 2 open), `getStageProgress`/`getCourseProgress`. |
 | `dutch/define.ts` | Tap-a-word dictionary layer for the cheatsheets (TDD'd, 19 tests). `defineTerm` is cache-first over the existing `/api/define` route, storing results in memory + `dutch-define-cache` and feeding the Word Lookup history; failures return `unavailable` so the sheet still speaks the term. `shouldLookUp` skips whole sentences (over 5 words). `splitCell` breaks a table cell into individually tappable terms (splits on `/`, on sentence boundaries, and on commas only when every piece is a single word, so `Sorry, dan kan ik niet.` stays whole). |
-| `dutch/cheatsheet.ts` | Concept-cheatsheet loader + drill engine (TDD'd, 21 tests). Flattens `content/dutch/cheatsheet/*.json` into 5 groups / 22 topics. `getGroups/getTopics/getTopicById/getGroupOfTopic/getNextTopic`, `drawTopicDrill`/`drawMixedReview(15)`/`scrambleWords` (never returns the answer order), `normalizeAnswer`/`isCorrect`/`scoreDrill` (80% pass), studied set + best-score-per-topic history, `getWeakTopics`/`getOverallProgress`. |
+| `dutch/cheatsheet.ts` | Concept-cheatsheet loader + drill engine (TDD'd, 21 tests). Flattens `content/dutch/cheatsheet/*.json` into 5 groups / 25 topics. `getGroups/getTopics/getTopicById/getGroupOfTopic/getNextTopic`, `drawTopicDrill`/`drawMixedReview(15)`/`scrambleWords` (never returns the answer order), `normalizeAnswer`/`isCorrect`/`scoreDrill` (80% pass), studied set + best-score-per-topic history, `getWeakTopics`/`getOverallProgress`. |
 | `dutch/knm.ts` | KNM loader + `drawDrillSet(30)` (Fisher-Yates) + `scoreAttempt()` (80% pass) + attempt history (capped at 50) + per-question studied tracking. TDD'd, 12 tests. |
 | `dutch/lezen.ts` | Same shape as `knm.ts` for the Lezen module — `drawMockSet(5)`, 20-Q scoring, 25-min `MOCK_TIMER_MS` constant, studied set. TDD'd, 12 tests. |
 | `dutch/exam-target.ts` | User preference `'a2' \| 'b1'` for exam-target level (default B1). Surfaced as toggle in Dutch welcome modal. |
@@ -322,6 +322,38 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-define-cache` — `{ [word]: Definition }` from `/api/define`, capped at 300, so tapped words resolve instantly and keep working offline once seen.
 
 ### Recent feature work log
+
+**2026-09-22 — Cheatsheets completed against the DE1 course (lessons 7 to 10)**
+
+Extracted lessons 6 to 10 of the learner's course and diffed them against the
+sheets. Lesson 6 was already covered and lesson 9 turned out to be
+reinforcement, leaving three real gaps, now added (**22 to 25 topics, 186 to
+214 exercises**):
+
+- `plurals` (Core grammar). The cheatsheets *used* plurals on nearly every page
+  but never taught how to form one. Covers `-en` / `-s` / `-'s` chosen by the
+  final sound, the present-tense spelling rules running backwards (mannen,
+  apen, kazen, duiven), the units that stay singular after a number (cent,
+  jaar, uur, kilo), the fact that **every plural is a de-word**, and the
+  irregulars (kinderen, eieren, steden, schepen).
+- `imperative` (Core grammar). Neutral = the bare stem, formal = stem + t with
+  `u`, and the point learners miss: `maar` and `even` are what stop it sounding
+  like an order. Separable verbs split (`Doe je boek dicht!`), and signs use the
+  base form instead (`Niet roken`).
+- `food-market` (Time and daily life). Groente and fruit decks (all de-words,
+  but `het fruit`), the fixed market script (`Wie is er aan de beurt?` through
+  `Werk ze!`), quantities including the Dutch `pond` being 500 g, Dutch meal
+  habits, and the three interchangeable ways to say you like a food.
+
+With these, the sheets cover **all ten grammar goals** the course lists
+(pronouns, possessives, verb conjugation, hebben/zijn, hoofdzin + inversie,
+ja/nee + vraagwoordvragen, zullen, pluralis, adjectief, imperatief). The
+course's follow-on (DE2) starts on the perfect tense, which is the next group
+to build.
+
+Verified with the existing scripted passes, both widened to 25 topics: all 25
+pages render with no leaked markdown, and all 25 drills score 100% answering
+each question with its own stated answer.
 
 **2026-08-30 — Dutch vocabulary deck grown to Hindi parity**
 
