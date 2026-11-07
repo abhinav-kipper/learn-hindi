@@ -19,6 +19,10 @@ A PWA for learning conversational/colloquial Hindi (romanized, no Devanagari). B
 **Live:** https://hindi-app.vercel.app
 **Deploy:** push to `main` — GitHub is connected to Vercel, auto-deploys on every push. Do NOT run `vercel --prod` manually.
 
+**Dutch exam prep:** see **`docs/DUTCH_EXAM_PLAN.md`** for the durable dossier on this track: the learner's target (A2), the five exam
+papers and what the app covers, decisions already made and why, traps that have cost a session, and the prioritised roadmap. Read it
+before planning any Dutch work.
+
 **Content map:** see `CONTENT.md` for the full inventory of lessons/foundations/vocab, schema, style guide, and known content issues. Read it before editing any `content/*.json` file.
 
 ## Tech Stack
