@@ -747,6 +747,810 @@
           "type": "verb"
         }
       ]
+    },
+    {
+      "id": "dutch-health",
+      "title": "Health & Doctor",
+      "emoji": "🩺",
+      "gradient": "from-red-500 to-rose-600",
+      "words": [
+        {
+          "hindi": "de huisarts",
+          "pronunciation": "HOWS-arts",
+          "english": "GP, family doctor",
+          "example": "Ik heb een afspraak bij de huisarts., I have an appointment with the GP.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de apotheek",
+          "pronunciation": "a-po-TAYK",
+          "english": "pharmacy",
+          "example": "Ik haal mijn medicijnen bij de apotheek., I collect my medicine at the pharmacy.",
+          "type": "noun"
+        },
+        {
+          "hindi": "het ziekenhuis",
+          "pronunciation": "ZEE-ken-hows",
+          "english": "hospital",
+          "example": "Mijn moeder ligt in het ziekenhuis., My mother is in hospital.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de afspraak",
+          "pronunciation": "AF-spraak",
+          "english": "appointment",
+          "example": "Ik wil graag een afspraak maken., I would like to make an appointment.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de klacht",
+          "pronunciation": "KLACHT",
+          "english": "complaint, symptom",
+          "example": "Wat zijn uw klachten?, What are your symptoms?",
+          "type": "noun"
+        },
+        {
+          "hindi": "de pijn",
+          "pronunciation": "PAYN",
+          "english": "pain",
+          "example": "Ik heb pijn in mijn rug., I have pain in my back.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de koorts",
+          "pronunciation": "KOHRTS",
+          "english": "fever",
+          "example": "Mijn zoon heeft koorts., My son has a fever.",
+          "type": "noun"
+        },
+        {
+          "hindi": "het medicijn",
+          "pronunciation": "me-di-SAYN",
+          "english": "medicine",
+          "example": "Neem dit medicijn drie keer per dag., Take this medicine three times a day.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de verzekering",
+          "pronunciation": "ver-ZAY-ke-ring",
+          "english": "insurance",
+          "example": "Heeft u een zorgverzekering?, Do you have health insurance?",
+          "type": "noun"
+        },
+        {
+          "hindi": "de tandarts",
+          "pronunciation": "TAND-arts",
+          "english": "dentist",
+          "example": "Ik ga twee keer per jaar naar de tandarts., I go to the dentist twice a year.",
+          "type": "noun"
+        },
+        {
+          "hindi": "ziek",
+          "pronunciation": "ZEEK",
+          "english": "ill, sick",
+          "example": "Ik ben vandaag ziek., I am ill today.",
+          "type": "adjective"
+        },
+        {
+          "hindi": "gezond",
+          "pronunciation": "che-ZONT",
+          "english": "healthy",
+          "example": "Mijn kinderen zijn gelukkig gezond., Luckily my children are healthy.",
+          "type": "adjective"
+        },
+        {
+          "hindi": "beter",
+          "pronunciation": "BAY-ter",
+          "english": "better",
+          "example": "Ik voel me al beter., I already feel better.",
+          "type": "adjective"
+        },
+        {
+          "hindi": "moe",
+          "pronunciation": "MOO",
+          "english": "tired",
+          "example": "Ik ben erg moe., I am very tired.",
+          "type": "adjective"
+        },
+        {
+          "hindi": "de verwijzing",
+          "pronunciation": "ver-WAY-zing",
+          "english": "referral",
+          "example": "U heeft een verwijzing nodig voor de specialist., You need a referral for the specialist.",
+          "type": "noun"
+        },
+        {
+          "hindi": "het recept",
+          "pronunciation": "re-SEPT",
+          "english": "prescription",
+          "example": "De huisarts geeft mij een recept., The GP gives me a prescription.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de spoedeisende hulp",
+          "pronunciation": "SPOOT-ay-sen-de HULP",
+          "english": "accident and emergency",
+          "example": "Bij een ongeluk gaat u naar de spoedeisende hulp., In an accident you go to accident and emergency.",
+          "type": "noun"
+        },
+        {
+          "hindi": "overleggen",
+          "pronunciation": "oh-ver-LE-chen",
+          "english": "to discuss, to consult",
+          "example": "Ik wil dit even met mijn man overleggen., I want to discuss this with my husband.",
+          "type": "verb"
+        }
+      ]
+    },
+    {
+      "id": "dutch-work",
+      "title": "Work & Money",
+      "emoji": "💼",
+      "gradient": "from-amber-500 to-orange-600",
+      "words": [
+        {
+          "hindi": "het werk",
+          "pronunciation": "WERK",
+          "english": "work, job",
+          "example": "Ik ga om acht uur naar mijn werk., I go to work at eight.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de baan",
+          "pronunciation": "BAAN",
+          "english": "job, position",
+          "example": "Ik zoek een nieuwe baan., I am looking for a new job.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de werkgever",
+          "pronunciation": "WERK-chay-ver",
+          "english": "employer",
+          "example": "Mijn werkgever betaalt de reiskosten., My employer pays the travel costs.",
+          "type": "noun"
+        },
+        {
+          "hindi": "het salaris",
+          "pronunciation": "sa-LAA-ris",
+          "english": "salary",
+          "example": "Het salaris wordt elke maand betaald., The salary is paid every month.",
+          "type": "noun"
+        },
+        {
+          "hindi": "het contract",
+          "pronunciation": "kon-TRAKT",
+          "english": "contract",
+          "example": "Ik heb een contract voor een jaar., I have a contract for a year.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de sollicitatie",
+          "pronunciation": "so-li-see-TAA-see",
+          "english": "job application, interview",
+          "example": "Ik heb morgen een sollicitatie., I have a job interview tomorrow.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de ervaring",
+          "pronunciation": "er-VAA-ring",
+          "english": "experience",
+          "example": "Ik heb vijf jaar ervaring., I have five years of experience.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de rekening",
+          "pronunciation": "RAY-ke-ning",
+          "english": "bill, account",
+          "example": "De rekening moet voor vrijdag betaald zijn., The bill must be paid before Friday.",
+          "type": "noun"
+        },
+        {
+          "hindi": "het geld",
+          "pronunciation": "CHELT",
+          "english": "money",
+          "example": "Ik heb niet genoeg geld bij me., I do not have enough money on me.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de belasting",
+          "pronunciation": "be-LAS-ting",
+          "english": "tax",
+          "example": "Ik betaal elk jaar belasting., I pay tax every year.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de uitkering",
+          "pronunciation": "OWT-kay-ring",
+          "english": "benefit, allowance",
+          "example": "Hij krijgt een uitkering van het UWV., He gets a benefit from the UWV.",
+          "type": "noun"
+        },
+        {
+          "hindi": "het loon",
+          "pronunciation": "LOHN",
+          "english": "wage, pay",
+          "example": "Mijn loon komt op de vijfentwintigste., My pay comes on the twenty-fifth.",
+          "type": "noun"
+        },
+        {
+          "hindi": "verdienen",
+          "pronunciation": "ver-DEE-nen",
+          "english": "to earn",
+          "example": "Hoeveel verdien je per uur?, How much do you earn per hour?",
+          "type": "verb"
+        },
+        {
+          "hindi": "solliciteren",
+          "pronunciation": "so-li-see-TAY-ren",
+          "english": "to apply for a job",
+          "example": "Ik wil bij die winkel solliciteren., I want to apply at that shop.",
+          "type": "verb"
+        },
+        {
+          "hindi": "betalen",
+          "pronunciation": "be-TAA-len",
+          "english": "to pay",
+          "example": "Kan ik met pin betalen?, Can I pay by card?",
+          "type": "verb"
+        },
+        {
+          "hindi": "pinnen",
+          "pronunciation": "PIN-nen",
+          "english": "to pay by debit card",
+          "example": "Mag ik hier pinnen?, May I pay by card here?",
+          "type": "verb"
+        },
+        {
+          "hindi": "werkloos",
+          "pronunciation": "WERK-lohs",
+          "english": "unemployed",
+          "example": "Hij is sinds januari werkloos., He has been unemployed since January.",
+          "type": "adjective"
+        },
+        {
+          "hindi": "duur",
+          "pronunciation": "DUUR",
+          "english": "expensive",
+          "example": "Deze jas is te duur voor mij., This coat is too expensive for me.",
+          "type": "adjective"
+        }
+      ]
+    },
+    {
+      "id": "dutch-home",
+      "title": "House & Home",
+      "emoji": "🏠",
+      "gradient": "from-lime-500 to-green-600",
+      "words": [
+        {
+          "hindi": "de woning",
+          "pronunciation": "WOH-ning",
+          "english": "home, dwelling",
+          "example": "Wij zoeken een grotere woning., We are looking for a bigger home.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de huur",
+          "pronunciation": "HUUR",
+          "english": "rent",
+          "example": "De huur gaat elk jaar omhoog., The rent goes up every year.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de huurder",
+          "pronunciation": "HUUR-der",
+          "english": "tenant",
+          "example": "De huurder betaalt elke maand op tijd., The tenant pays on time every month.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de verhuurder",
+          "pronunciation": "ver-HUUR-der",
+          "english": "landlord",
+          "example": "Ik bel de verhuurder over de verwarming., I am calling the landlord about the heating.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de buren",
+          "pronunciation": "BUU-ren",
+          "english": "neighbours",
+          "example": "Mijn buren zijn heel aardig., My neighbours are very nice.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de keuken",
+          "pronunciation": "KUH-ken",
+          "english": "kitchen",
+          "example": "De keuken is klein maar licht., The kitchen is small but light.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de slaapkamer",
+          "pronunciation": "SLAAP-kaa-mer",
+          "english": "bedroom",
+          "example": "Wij hebben twee slaapkamers., We have two bedrooms.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de badkamer",
+          "pronunciation": "BAT-kaa-mer",
+          "english": "bathroom",
+          "example": "De badkamer is net opgeknapt., The bathroom has just been done up.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de verwarming",
+          "pronunciation": "ver-WAR-ming",
+          "english": "heating",
+          "example": "De verwarming doet het niet., The heating is not working.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de sleutel",
+          "pronunciation": "SLUH-tel",
+          "english": "key",
+          "example": "Ik ben mijn sleutel kwijt., I have lost my key.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de meter",
+          "pronunciation": "MAY-ter",
+          "english": "meter (gas, water, electricity)",
+          "example": "De meterstand geef ik elk jaar door., I pass on the meter reading every year.",
+          "type": "noun"
+        },
+        {
+          "hindi": "het contract opzeggen",
+          "pronunciation": "kon-TRAKT OP-ze-chen",
+          "english": "to cancel the contract",
+          "example": "Ik wil het contract opzeggen., I want to cancel the contract.",
+          "type": "phrase"
+        },
+        {
+          "hindi": "verhuizen",
+          "pronunciation": "ver-HOW-zen",
+          "english": "to move house",
+          "example": "Wij gaan volgende maand verhuizen., We are moving house next month.",
+          "type": "verb"
+        },
+        {
+          "hindi": "huren",
+          "pronunciation": "HUU-ren",
+          "english": "to rent",
+          "example": "Wij huren een appartement in Utrecht., We rent a flat in Utrecht.",
+          "type": "verb"
+        },
+        {
+          "hindi": "de storing",
+          "pronunciation": "STOH-ring",
+          "english": "fault, breakdown",
+          "example": "Er is een storing in de lift., There is a fault in the lift.",
+          "type": "noun"
+        },
+        {
+          "hindi": "kapot",
+          "pronunciation": "ka-POT",
+          "english": "broken",
+          "example": "De wasmachine is kapot., The washing machine is broken.",
+          "type": "adjective"
+        },
+        {
+          "hindi": "de woningcorporatie",
+          "pronunciation": "WOH-ning-kor-po-raa-see",
+          "english": "housing corporation",
+          "example": "De woningcorporatie verhuurt sociale woningen., The housing corporation lets social housing.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de overlast",
+          "pronunciation": "OH-ver-last",
+          "english": "nuisance",
+          "example": "Wij hebben overlast van het lawaai., We are bothered by the noise.",
+          "type": "noun"
+        }
+      ]
+    },
+    {
+      "id": "dutch-travel",
+      "title": "Travel & Getting Around",
+      "emoji": "🚆",
+      "gradient": "from-sky-500 to-blue-600",
+      "words": [
+        {
+          "hindi": "het station",
+          "pronunciation": "sta-SHON",
+          "english": "station",
+          "example": "Het station is tien minuten lopen., The station is ten minutes' walk.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de trein",
+          "pronunciation": "TRAYN",
+          "english": "train",
+          "example": "De trein vertrekt om half negen., The train leaves at half past eight.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de bus",
+          "pronunciation": "BUS",
+          "english": "bus",
+          "example": "Ik neem de bus naar het centrum., I take the bus to the centre.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de halte",
+          "pronunciation": "HAL-te",
+          "english": "stop (bus, tram)",
+          "example": "De halte is vlakbij mijn huis., The stop is close to my house.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de fiets",
+          "pronunciation": "FEETS",
+          "english": "bicycle",
+          "example": "Ik ga met de fiets naar mijn werk., I go to work by bike.",
+          "type": "noun"
+        },
+        {
+          "hindi": "het kaartje",
+          "pronunciation": "KAAR-tye",
+          "english": "ticket",
+          "example": "Waar kan ik een kaartje kopen?, Where can I buy a ticket?",
+          "type": "noun"
+        },
+        {
+          "hindi": "de reis",
+          "pronunciation": "RAYS",
+          "english": "journey, trip",
+          "example": "De reis duurt ongeveer een uur., The journey takes about an hour.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de vertraging",
+          "pronunciation": "ver-TRAA-ching",
+          "english": "delay",
+          "example": "De trein heeft tien minuten vertraging., The train has a ten-minute delay.",
+          "type": "noun"
+        },
+        {
+          "hindi": "overstappen",
+          "pronunciation": "OH-ver-stap-pen",
+          "english": "to change (trains, buses)",
+          "example": "In Utrecht moet u overstappen., You have to change in Utrecht.",
+          "type": "verb"
+        },
+        {
+          "hindi": "vertrekken",
+          "pronunciation": "ver-TRE-ken",
+          "english": "to depart",
+          "example": "Wij vertrekken morgenvroeg., We depart tomorrow morning.",
+          "type": "verb"
+        },
+        {
+          "hindi": "aankomen",
+          "pronunciation": "AAN-koh-men",
+          "english": "to arrive",
+          "example": "Hoe laat komt de trein aan?, What time does the train arrive?",
+          "type": "verb"
+        },
+        {
+          "hindi": "de weg",
+          "pronunciation": "WECH",
+          "english": "the way, road",
+          "example": "Kunt u mij de weg wijzen?, Could you show me the way?",
+          "type": "noun"
+        },
+        {
+          "hindi": "rechtsaf",
+          "pronunciation": "RECHTS-af",
+          "english": "to the right",
+          "example": "Ga bij de kerk rechtsaf., Turn right at the church.",
+          "type": "adverb"
+        },
+        {
+          "hindi": "linksaf",
+          "pronunciation": "LINKS-af",
+          "english": "to the left",
+          "example": "Bij de brug gaat u linksaf., At the bridge you turn left.",
+          "type": "adverb"
+        },
+        {
+          "hindi": "rechtdoor",
+          "pronunciation": "RECHT-dohr",
+          "english": "straight on",
+          "example": "Loop rechtdoor tot het plein., Walk straight on to the square.",
+          "type": "adverb"
+        },
+        {
+          "hindi": "dichtbij",
+          "pronunciation": "dicht-BAY",
+          "english": "nearby, close",
+          "example": "De supermarkt is heel dichtbij., The supermarket is very close.",
+          "type": "adjective"
+        },
+        {
+          "hindi": "de ingang",
+          "pronunciation": "IN-chang",
+          "english": "entrance",
+          "example": "De ingang is aan de andere kant., The entrance is on the other side.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de uitgang",
+          "pronunciation": "OWT-chang",
+          "english": "exit",
+          "example": "De uitgang is rechts van de trap., The exit is to the right of the stairs.",
+          "type": "noun"
+        }
+      ]
+    },
+    {
+      "id": "dutch-shopping",
+      "title": "Shopping & Food",
+      "emoji": "🛒",
+      "gradient": "from-fuchsia-500 to-purple-600",
+      "words": [
+        {
+          "hindi": "de winkel",
+          "pronunciation": "WIN-kel",
+          "english": "shop",
+          "example": "De winkel gaat om zes uur dicht., The shop closes at six.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de markt",
+          "pronunciation": "MARKT",
+          "english": "market",
+          "example": "Op zaterdag is er markt op het plein., On Saturday there is a market on the square.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de supermarkt",
+          "pronunciation": "SUU-per-markt",
+          "english": "supermarket",
+          "example": "Ik doe boodschappen in de supermarkt., I do the shopping in the supermarket.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de boodschappen",
+          "pronunciation": "BOHT-scha-pen",
+          "english": "the groceries",
+          "example": "Ik moet nog boodschappen doen., I still have to do the shopping.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de prijs",
+          "pronunciation": "PRAYS",
+          "english": "price",
+          "example": "Wat is de prijs van deze jas?, What is the price of this coat?",
+          "type": "noun"
+        },
+        {
+          "hindi": "de korting",
+          "pronunciation": "KOR-ting",
+          "english": "discount",
+          "example": "Vandaag is er korting op groente., Today there is a discount on vegetables.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de kassa",
+          "pronunciation": "KA-sa",
+          "english": "checkout, till",
+          "example": "U kunt bij kassa drie betalen., You can pay at checkout three.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de bon",
+          "pronunciation": "BON",
+          "english": "receipt",
+          "example": "Mag ik de bon, alstublieft?, May I have the receipt, please?",
+          "type": "noun"
+        },
+        {
+          "hindi": "de maat",
+          "pronunciation": "MAAT",
+          "english": "size",
+          "example": "Heeft u deze trui in maat medium?, Do you have this jumper in medium?",
+          "type": "noun"
+        },
+        {
+          "hindi": "het brood",
+          "pronunciation": "BROHT",
+          "english": "bread",
+          "example": "Ik koop elke dag vers brood., I buy fresh bread every day.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de groente",
+          "pronunciation": "CHROON-te",
+          "english": "vegetables",
+          "example": "Groente en fruit zijn gezond., Vegetables and fruit are healthy.",
+          "type": "noun"
+        },
+        {
+          "hindi": "het fruit",
+          "pronunciation": "FROWT",
+          "english": "fruit",
+          "example": "Er ligt fruit op tafel., There is fruit on the table.",
+          "type": "noun"
+        },
+        {
+          "hindi": "goedkoop",
+          "pronunciation": "choot-KOHP",
+          "english": "cheap",
+          "example": "Deze fiets was heel goedkoop., This bike was very cheap.",
+          "type": "adjective"
+        },
+        {
+          "hindi": "ruilen",
+          "pronunciation": "ROW-len",
+          "english": "to exchange",
+          "example": "Kan ik deze broek ruilen?, Can I exchange these trousers?",
+          "type": "verb"
+        },
+        {
+          "hindi": "passen",
+          "pronunciation": "PA-sen",
+          "english": "to try on, to fit",
+          "example": "Mag ik deze schoenen passen?, May I try on these shoes?",
+          "type": "verb"
+        },
+        {
+          "hindi": "kosten",
+          "pronunciation": "KOS-ten",
+          "english": "to cost",
+          "example": "Hoeveel kost dit?, How much does this cost?",
+          "type": "verb"
+        },
+        {
+          "hindi": "het aanbod",
+          "pronunciation": "AAN-bot",
+          "english": "offer",
+          "example": "Dit aanbod geldt tot zondag., This offer is valid until Sunday.",
+          "type": "noun"
+        },
+        {
+          "hindi": "contant",
+          "pronunciation": "kon-TANT",
+          "english": "cash",
+          "example": "Wilt u contant of pinnen?, Would you like to pay cash or by card?",
+          "type": "adverb"
+        }
+      ]
+    },
+    {
+      "id": "dutch-official",
+      "title": "Official & Paperwork",
+      "emoji": "🏢",
+      "gradient": "from-slate-500 to-gray-600",
+      "words": [
+        {
+          "hindi": "de gemeente",
+          "pronunciation": "che-MAYN-te",
+          "english": "municipality",
+          "example": "Ik moet mij bij de gemeente inschrijven., I have to register with the municipality.",
+          "type": "noun"
+        },
+        {
+          "hindi": "het formulier",
+          "pronunciation": "for-muu-LEER",
+          "english": "form",
+          "example": "Wilt u dit formulier invullen?, Would you fill in this form?",
+          "type": "noun"
+        },
+        {
+          "hindi": "de brief",
+          "pronunciation": "BREEF",
+          "english": "letter",
+          "example": "Ik heb een brief van de gemeente gekregen., I received a letter from the municipality.",
+          "type": "noun"
+        },
+        {
+          "hindi": "het paspoort",
+          "pronunciation": "PAS-pohrt",
+          "english": "passport",
+          "example": "Neem uw paspoort mee naar de afspraak., Bring your passport to the appointment.",
+          "type": "noun"
+        },
+        {
+          "hindi": "het bewijs",
+          "pronunciation": "be-WAYS",
+          "english": "proof, evidence",
+          "example": "Heeft u een bewijs van inschrijving?, Do you have proof of registration?",
+          "type": "noun"
+        },
+        {
+          "hindi": "de handtekening",
+          "pronunciation": "HAND-tay-ke-ning",
+          "english": "signature",
+          "example": "Zet hier uw handtekening., Put your signature here.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de aanvraag",
+          "pronunciation": "AAN-vraach",
+          "english": "application, request",
+          "example": "Mijn aanvraag is goedgekeurd., My application has been approved.",
+          "type": "noun"
+        },
+        {
+          "hindi": "het bezwaar",
+          "pronunciation": "be-ZWAAR",
+          "english": "objection",
+          "example": "U kunt bezwaar maken tegen dit besluit., You can object to this decision.",
+          "type": "noun"
+        },
+        {
+          "hindi": "het besluit",
+          "pronunciation": "be-SLOWT",
+          "english": "decision",
+          "example": "Het besluit staat in de brief., The decision is in the letter.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de termijn",
+          "pronunciation": "ter-MAYN",
+          "english": "deadline, term",
+          "example": "De termijn is zes weken., The deadline is six weeks.",
+          "type": "noun"
+        },
+        {
+          "hindi": "de balie",
+          "pronunciation": "BAA-lee",
+          "english": "counter, desk",
+          "example": "Meldt u zich bij de balie., Report at the counter.",
+          "type": "noun"
+        },
+        {
+          "hindi": "invullen",
+          "pronunciation": "IN-vu-len",
+          "english": "to fill in",
+          "example": "Kunt u uw adres hier invullen?, Can you fill in your address here?",
+          "type": "verb"
+        },
+        {
+          "hindi": "inschrijven",
+          "pronunciation": "IN-schray-ven",
+          "english": "to register",
+          "example": "U moet zich binnen vijf dagen inschrijven., You must register within five days.",
+          "type": "verb"
+        },
+        {
+          "hindi": "meenemen",
+          "pronunciation": "MAY-nay-men",
+          "english": "to bring along",
+          "example": "Wat moet ik meenemen naar de afspraak?, What do I have to bring to the appointment?",
+          "type": "verb"
+        },
+        {
+          "hindi": "doorgeven",
+          "pronunciation": "DOHR-chay-ven",
+          "english": "to pass on, to report",
+          "example": "Geef uw nieuwe adres door aan de gemeente., Report your new address to the municipality.",
+          "type": "verb"
+        },
+        {
+          "hindi": "geldig",
+          "pronunciation": "CHEL-dich",
+          "english": "valid",
+          "example": "Mijn paspoort is nog twee jaar geldig., My passport is valid for another two years.",
+          "type": "adjective"
+        },
+        {
+          "hindi": "verplicht",
+          "pronunciation": "ver-PLICHT",
+          "english": "compulsory",
+          "example": "Een zorgverzekering is verplicht in Nederland., Health insurance is compulsory in the Netherlands.",
+          "type": "adjective"
+        },
+        {
+          "hindi": "de identiteitskaart",
+          "pronunciation": "ee-den-tee-TAYTS-kaart",
+          "english": "identity card",
+          "example": "Neem uw identiteitskaart of paspoort mee., Bring your identity card or passport.",
+          "type": "noun"
+        }
+      ]
     }
   ]
 }

@@ -34,6 +34,8 @@ const CATEGORIES: Array<{ key: Category; en: string; nl: string; motif: string }
   { key: 'wonen',        en: 'Housing',    nl: 'Wonen',        motif: '🏠' },
   { key: 'gezondheid',   en: 'Healthcare', nl: 'Gezondheid',   motif: '🩺' },
   { key: 'geschiedenis', en: 'History',    nl: 'Geschiedenis', motif: '📜' },
+  { key: 'omgangsvormen', en: 'Manners & values', nl: 'Omgangsvormen', motif: '🤝' },
+  { key: 'instanties',    en: 'Official bodies',  nl: 'Instanties',    motif: '🏢' },
 ]
 
 export default function KnmModulePage() {

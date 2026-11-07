@@ -20,14 +20,41 @@ beforeEach(() => {
 })
 
 describe('knm', () => {
-  it('loads 100 questions', () => {
-    expect(getKnmQuestions().length).toBe(100)
+  it('loads 132 questions', () => {
+    expect(getKnmQuestions().length).toBe(132)
+  })
+
+  it('covers all eight statutory KNM themes', () => {
+    // The exam draws across eight themes. Missing a theme means a whole slice
+    // of the paper is untested, which is what happened before 2026-11-07.
+    const themes = new Set(getKnmQuestions().map((q) => q.category))
+    expect([...themes].sort()).toEqual([
+      'geschiedenis',
+      'gezondheid',
+      'instanties',
+      'omgangsvormen',
+      'onderwijs',
+      'politiek',
+      'werk',
+      'wonen',
+    ])
+  })
+
+  it('has a usable number of questions in every theme', () => {
+    const counts = new Map<string, number>()
+    for (const q of getKnmQuestions()) counts.set(q.category, (counts.get(q.category) ?? 0) + 1)
+    for (const [cat, n] of counts) expect(n, cat).toBeGreaterThanOrEqual(10)
+  })
+
+  it('has no duplicate question ids', () => {
+    const ids = getKnmQuestions().map((q) => q.id)
+    expect(new Set(ids).size).toBe(ids.length)
   })
 
   it('every question has all required fields', () => {
     for (const q of getKnmQuestions()) {
       expect(q.id).toMatch(/^knm-\d{3}$/)
-      expect(['politiek','werk','onderwijs','wonen','gezondheid','geschiedenis']).toContain(q.category)
+      expect(['politiek','werk','onderwijs','wonen','gezondheid','geschiedenis','omgangsvormen','instanties']).toContain(q.category)
       expect(q.options_nl.length).toBe(4)
       expect([0,1,2,3]).toContain(q.correct_index)
       expect(q.question_nl.length).toBeGreaterThan(0)

@@ -21,12 +21,13 @@ import { getLessonPercent } from '@/lib/phrase-progress'
 import { getUniversalLessonById } from '@/lib/all-content'
 import { SearchOverlay } from '@/components/search-overlay'
 import { initBaseline, isInitialized, getUnseenIds, hasBeenSeen } from '@/lib/seen-lessons'
-import { getLearnedCount } from '@/lib/dutch/knm'
+import { getLearnedCount, getKnmQuestions } from '@/lib/dutch/knm'
 import { getStudiedCount as getLezenStudiedCount } from '@/lib/dutch/lezen'
 import { getOverallProgress as getCheatsheetProgress } from '@/lib/dutch/cheatsheet'
 import { getStudiedCount as getLuisterStudiedCount } from '@/lib/dutch/luisteren'
 import { getCourseProgress as getSoundsCourseProgress } from '@/lib/dutch/pronunciation'
 import { getItemsByLevel, ALL_LEVELS, type Level } from '@/lib/dutch/level-map'
+import { getExamTarget, targetLabel, isBeyondTarget, type ExamTarget } from '@/lib/dutch/exam-target'
 import type { Lesson } from '@/types/lesson'
 import { DiaryHomeCard } from '@/components/journal/DiaryHomeCard'
 
@@ -258,6 +259,7 @@ export default function Home() {
     if (language === 'dutch') setDutchLuisterStudied(getLuisterStudiedCount())
   }, [language])
 
+  const [examTarget, setExamTargetState] = useState<ExamTarget>('a2')
   const [dutchSoundsDone, setDutchSoundsDone] = useState(0)
   const [dutchSoundsTotal, setDutchSoundsTotal] = useState(8)
   useEffect(() => {
@@ -276,6 +278,12 @@ export default function Home() {
       setDutchCheatPassed(p.passed)
       setDutchCheatTotal(p.totalTopics)
     }
+  }, [language])
+
+  // Which exam the learner is actually sitting. Drives the goal banner, the
+  // path, and whether B1 content reads as "still to do" or "beyond your target".
+  useEffect(() => {
+    if (language === 'dutch') setExamTargetState(getExamTarget())
   }, [language])
 
   const dutchStageProgress = useMemo(() => {
@@ -740,7 +748,7 @@ export default function Home() {
                       Goal
                     </div>
                     <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 18, color: COLORS.ink, marginTop: 2 }}>
-                      Inburgeringsexamen B1 + KNM
+                      Inburgeringsexamen {targetLabel(examTarget)} + KNM
                     </div>
                   </div>
                 </div>
@@ -786,23 +794,42 @@ export default function Home() {
             {/* Your path: 3 stages */}
             <div style={{ padding: '14px 20px 0', maxWidth: 480, margin: '0 auto', position: 'relative', zIndex: 2 }}>
               <Sticker color={W} radius={18} padding={16}>
-                <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, color: COLORS.ink, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 12 }}>
-                  Your path
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
+                  <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, color: COLORS.ink, textTransform: 'uppercase', letterSpacing: 1 }}>
+                    Your path
+                  </div>
+                  <span style={{
+                    background: COLORS.butter, border: BORDER.sticker, borderRadius: 999,
+                    padding: '1px 9px', fontFamily: FONTS.display, fontWeight: 800,
+                    fontSize: 11, color: COLORS.ink,
+                  }}>
+                    to {targetLabel(examTarget)}
+                  </span>
                 </div>
                 {ALL_LEVELS.map((lvl, i) => {
                   const p = dutchStageProgress[lvl]
                   const pct = p.total > 0 ? Math.round((p.done / p.total) * 100) : 0
+                  // Stages above the chosen exam stay visible (the target can be
+                  // changed in Settings) but read as optional, not as a backlog.
+                  const beyond = isBeyondTarget(lvl, examTarget)
                   return (
-                    <div key={lvl} style={{ marginBottom: i < 2 ? 12 : 0 }}>
+                    <div key={lvl} style={{ marginBottom: i < 2 ? 12 : 0, opacity: beyond ? 0.45 : 1 }}>
                       <div style={{ display: 'flex', justifyContent: 'space-between', fontFamily: FONTS.body, fontWeight: 700, fontSize: 13, color: COLORS.ink, marginBottom: 4 }}>
-                        <span>{i + 1}. {lvl}</span>
+                        <span>
+                          {beyond ? '' : `${i + 1}. `}{lvl}
+                          {beyond && (
+                            <span style={{ fontWeight: 400, fontStyle: 'italic', marginLeft: 6 }}>
+                              beyond your target
+                            </span>
+                          )}
+                        </span>
                         <span>{p.done} / {p.total}</span>
                       </div>
                       <div style={{ height: 8, background: COLORS.lav, borderRadius: 4, overflow: 'hidden', border: BORDER.sticker }}>
                         <motion.div
                           initial={{ width: 0 }}
                           animate={{ width: `${pct}%` }}
-                          style={{ height: '100%', background: theme.primary }}
+                          style={{ height: '100%', background: beyond ? COLORS.ink60 : theme.primary }}
                           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 + i * 0.1 }}
                         />
                       </div>
@@ -818,7 +845,7 @@ export default function Home() {
                 Exam skills
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10 }}>
-                <SkillCard label="KNM" subtitle="Knowledge" subDutch="van NL" status={`${dutchKnmLearned}/100`} live onClick={() => router.push('/dutch/knm')} />
+                <SkillCard label="KNM" subtitle="Knowledge" subDutch="van NL" status={`${dutchKnmLearned}/${getKnmQuestions().length}`} live onClick={() => router.push('/dutch/knm')} />
                 <SkillCard
                   label="Reading"
                   subtitle="Lezen"
@@ -847,13 +874,18 @@ export default function Home() {
                   fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, color: COLORS.ink,
                   textTransform: 'uppercase', letterSpacing: 1, marginBottom: 8,
                 }}>
-                  Exam scenarios <span style={{ opacity: 0.5, fontStyle: 'italic', fontSize: 11, marginLeft: 6, textTransform: 'none' }}>A2 / B1</span>
+                  Exam scenarios <span style={{ opacity: 0.5, fontStyle: 'italic', fontSize: 11, marginLeft: 6, textTransform: 'none' }}>
+                    {examTarget === 'a2' ? 'A2' : 'A2 / B1'}
+                  </span>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
                   {dutchExamLessons.map((lesson, index) => {
                     const level = lesson.level ?? 'A2'
+                    // Above-target scenarios stay available, but are dimmed and
+                    // badged so they don't read as required for this exam.
+                    const beyond = isBeyondTarget(level, examTarget)
                     return (
-                      <div key={lesson.id} style={{ position: 'relative' }}>
+                      <div key={lesson.id} style={{ position: 'relative', opacity: beyond ? 0.55 : 1 }}>
                         <LessonStickerCard
                           lesson={lesson}
                           index={index}
@@ -861,12 +893,12 @@ export default function Home() {
                         />
                         <div style={{
                           position: 'absolute', top: 12, right: 12,
-                          background: level === 'B1' ? COLORS.peach : COLORS.butter,
+                          background: beyond ? COLORS.lav : COLORS.butter,
                           border: BORDER.sticker, padding: '2px 10px', borderRadius: 999,
                           fontFamily: FONTS.display, fontWeight: 800, fontSize: 11, color: COLORS.ink,
                           zIndex: 3,
                         }}>
-                          {level}
+                          {beyond ? `${level} · extra` : level}
                         </div>
                       </div>
                     )
@@ -970,7 +1002,7 @@ export default function Home() {
               }}
             >
               {language === 'dutch'
-                ? 'Lessons + grammar below build your A1-B1 foundation alongside the exam skills above.'
+                ? `Lessons + grammar below build your A1-${targetLabel(examTarget)} foundation alongside the exam skills above.`
                 : 'Start with lesson 1, everything builds from here'}
             </div>
           </div>

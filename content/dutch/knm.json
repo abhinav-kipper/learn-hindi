@@ -2299,6 +2299,742 @@
       "references": [
         "Naar Nederland Ch. 6"
       ]
+    },
+    {
+      "id": "knm-101",
+      "category": "omgangsvormen",
+      "question_nl": "Wat doen Nederlanders meestal als ze elkaar voor het eerst ontmoeten?",
+      "question_en": "What do Dutch people usually do when they meet someone for the first time?",
+      "options_nl": [
+        "Ze geven een hand",
+        "Ze geven drie zoenen",
+        "Ze buigen",
+        "Ze zwaaien alleen"
+      ],
+      "options_en": [
+        "They shake hands",
+        "They give three kisses",
+        "They bow",
+        "They only wave"
+      ],
+      "correct_index": 0,
+      "explanation_en": "A handshake with eye contact is the normal first-meeting greeting, at work and in private. Three kisses on the cheek are for family and good friends, not strangers.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-102",
+      "category": "omgangsvormen",
+      "question_nl": "U wilt bij iemand op bezoek. Wat is in Nederland gebruikelijk?",
+      "question_en": "You want to visit someone. What is usual in the Netherlands?",
+      "options_nl": [
+        "Zomaar langsgaan",
+        "Van tevoren een afspraak maken",
+        "'s Avonds laat aanbellen",
+        "Met veel familie tegelijk komen"
+      ],
+      "options_en": [
+        "Just drop by",
+        "Make an appointment in advance",
+        "Ring the bell late at night",
+        "Come with a lot of family at once"
+      ],
+      "correct_index": 1,
+      "explanation_en": "Dutch people plan visits. Dropping in unannounced is unusual, even between friends. Call or message first and agree a time.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-103",
+      "category": "omgangsvormen",
+      "question_nl": "Een Nederlandse collega zegt heel direct dat hij het niet met u eens is. Wat betekent dat meestal?",
+      "question_en": "A Dutch colleague says very directly that he disagrees with you. What does that usually mean?",
+      "options_nl": [
+        "Hij is boos op u",
+        "Hij vindt u onbeleefd",
+        "Hij geeft gewoon zijn mening",
+        "Hij wil niet meer samenwerken"
+      ],
+      "options_en": [
+        "He is angry with you",
+        "He thinks you are rude",
+        "He is simply giving his opinion",
+        "He does not want to work with you any more"
+      ],
+      "correct_index": 2,
+      "explanation_en": "Directness is normal in the Netherlands and is not meant as an insult. Saying what you think plainly is seen as honest and efficient, not aggressive.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-104",
+      "category": "omgangsvormen",
+      "question_nl": "Wat staat er in artikel 1 van de Nederlandse Grondwet?",
+      "question_en": "What does article 1 of the Dutch Constitution say?",
+      "options_nl": [
+        "Iedereen moet Nederlands spreken",
+        "Discriminatie is niet toegestaan",
+        "Iedereen moet werken",
+        "De koning is het staatshoofd"
+      ],
+      "options_en": [
+        "Everyone must speak Dutch",
+        "Discrimination is not allowed",
+        "Everyone must work",
+        "The king is head of state"
+      ],
+      "correct_index": 1,
+      "explanation_en": "Article 1 says everyone in the Netherlands must be treated equally in equal cases. Discrimination on grounds such as religion, belief, political opinion, race or sex is not permitted.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-105",
+      "category": "omgangsvormen",
+      "question_nl": "Mogen twee mannen of twee vrouwen in Nederland met elkaar trouwen?",
+      "question_en": "Can two men or two women marry each other in the Netherlands?",
+      "options_nl": [
+        "Nee, dat mag niet",
+        "Ja, dat mag",
+        "Alleen in Amsterdam",
+        "Alleen met toestemming van de gemeente"
+      ],
+      "options_en": [
+        "No, that is not allowed",
+        "Yes, that is allowed",
+        "Only in Amsterdam",
+        "Only with permission from the municipality"
+      ],
+      "correct_index": 1,
+      "explanation_en": "The Netherlands was the first country in the world to open marriage to same-sex couples, in 2001. Same-sex couples have the same rights as other married couples.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-106",
+      "category": "omgangsvormen",
+      "question_nl": "Hoe zijn man en vrouw volgens de Nederlandse wet?",
+      "question_en": "How are men and women under Dutch law?",
+      "options_nl": [
+        "De man beslist",
+        "Gelijkwaardig",
+        "De vrouw beslist over het huishouden",
+        "Dat hangt af van het geloof"
+      ],
+      "options_en": [
+        "The man decides",
+        "Equal",
+        "The woman decides about the household",
+        "It depends on the religion"
+      ],
+      "correct_index": 1,
+      "explanation_en": "Men and women have equal rights and equal standing in law: in work, in pay, in marriage and in raising children. Both partners may work and both share responsibility at home.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-107",
+      "category": "omgangsvormen",
+      "question_nl": "Wanneer zegt u 'u' tegen iemand?",
+      "question_en": "When do you say 'u' to someone?",
+      "options_nl": [
+        "Tegen kinderen",
+        "Tegen goede vrienden",
+        "Tegen onbekenden en oudere mensen",
+        "Tegen iedereen, altijd"
+      ],
+      "options_en": [
+        "To children",
+        "To good friends",
+        "To strangers and older people",
+        "To everyone, always"
+      ],
+      "correct_index": 2,
+      "explanation_en": "'U' is the polite form, used with strangers, older people and in formal settings. With friends, peers and children you use 'je'. If unsure, start with 'u'.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-108",
+      "category": "omgangsvormen",
+      "question_nl": "U bent uitgenodigd voor een verjaardag. Wat is gebruikelijk?",
+      "question_en": "You are invited to a birthday. What is usual?",
+      "options_nl": [
+        "Niets meenemen",
+        "Een klein cadeau meenemen",
+        "Geld geven aan de buren",
+        "Zonder bericht wegblijven"
+      ],
+      "options_en": [
+        "Bring nothing",
+        "Bring a small present",
+        "Give money to the neighbours",
+        "Stay away without letting them know"
+      ],
+      "correct_index": 1,
+      "explanation_en": "A small present or flowers is normal. You also congratulate the other guests, not only the person whose birthday it is, which often surprises newcomers.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-109",
+      "category": "omgangsvormen",
+      "question_nl": "In Nederland is er vrijheid van godsdienst. Wat betekent dat?",
+      "question_en": "There is freedom of religion in the Netherlands. What does that mean?",
+      "options_nl": [
+        "Iedereen moet hetzelfde geloven",
+        "Iedereen mag zelf kiezen wat hij gelooft",
+        "Alleen christenen mogen bidden",
+        "De overheid kiest het geloof"
+      ],
+      "options_en": [
+        "Everyone must believe the same",
+        "Everyone may choose what they believe",
+        "Only Christians may pray",
+        "The government chooses the religion"
+      ],
+      "correct_index": 1,
+      "explanation_en": "Everyone is free to have a religion, to change it, or to have none at all. The state is separate from religion and does not prescribe what people believe.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-110",
+      "category": "omgangsvormen",
+      "question_nl": "Wat hoort bij goede omgang met uw buren?",
+      "question_en": "What belongs to getting on well with your neighbours?",
+      "options_nl": [
+        "'s Nachts harde muziek draaien",
+        "Rekening houden met geluidsoverlast",
+        "Nooit iets zeggen",
+        "Het afval in de tuin van de buren zetten"
+      ],
+      "options_en": [
+        "Playing loud music at night",
+        "Being mindful about noise",
+        "Never saying anything",
+        "Putting rubbish in the neighbours' garden"
+      ],
+      "correct_index": 1,
+      "explanation_en": "Noise, especially at night, is the most common source of neighbour conflict. The usual first step is a friendly conversation; only after that the landlord or the municipality.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-111",
+      "category": "omgangsvormen",
+      "question_nl": "Een Nederlandse vriend stelt voor om in een restaurant de rekening te delen. Wat betekent dat?",
+      "question_en": "A Dutch friend suggests splitting the bill in a restaurant. What does that mean?",
+      "options_nl": [
+        "Hij vindt u niet aardig",
+        "Hij heeft geen geld",
+        "Iedereen betaalt zijn eigen deel, dat is normaal",
+        "Hij wil niet nog eens afspreken"
+      ],
+      "options_en": [
+        "He does not like you",
+        "He has no money",
+        "Everyone pays their own share, which is normal",
+        "He does not want to meet again"
+      ],
+      "correct_index": 2,
+      "explanation_en": "Splitting the bill is ordinary and carries no judgement. It is not a sign of stinginess or of a problem with you.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-112",
+      "category": "omgangsvormen",
+      "question_nl": "Wat betekent het Nederlandse woord 'gezellig'?",
+      "question_en": "What does the Dutch word 'gezellig' mean?",
+      "options_nl": [
+        "Duur",
+        "Prettig en gezellig samen zijn",
+        "Druk en lawaaiig",
+        "Formeel"
+      ],
+      "options_en": [
+        "Expensive",
+        "A pleasant, sociable, cosy feeling",
+        "Busy and noisy",
+        "Formal"
+      ],
+      "correct_index": 1,
+      "explanation_en": "'Gezellig' describes a warm, companionable atmosphere: a good conversation, a coffee with friends, a comfortable evening. It is used constantly and has no exact English word.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-113",
+      "category": "omgangsvormen",
+      "question_nl": "Mogen kinderen in Nederland hun eigen mening geven?",
+      "question_en": "May children in the Netherlands give their own opinion?",
+      "options_nl": [
+        "Nee, nooit",
+        "Ja, dat wordt aangemoedigd",
+        "Alleen op school",
+        "Alleen als ze 18 zijn"
+      ],
+      "options_en": [
+        "No, never",
+        "Yes, it is encouraged",
+        "Only at school",
+        "Only when they are 18"
+      ],
+      "correct_index": 1,
+      "explanation_en": "Children are encouraged to say what they think, at home and at school. Parents often discuss decisions with them rather than simply instructing them.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-114",
+      "category": "omgangsvormen",
+      "question_nl": "U heeft een afspraak om 14.00 uur. Wanneer komt u?",
+      "question_en": "You have an appointment at 2 pm. When do you arrive?",
+      "options_nl": [
+        "Rond 14.30 uur",
+        "Op tijd, om 14.00 uur",
+        "Wanneer het u uitkomt",
+        "Een uur eerder"
+      ],
+      "options_en": [
+        "Around 2.30 pm",
+        "On time, at 2 pm",
+        "Whenever suits you",
+        "An hour earlier"
+      ],
+      "correct_index": 1,
+      "explanation_en": "Punctuality matters in the Netherlands. If you are going to be late, the expectation is that you let the other person know in advance.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-115",
+      "category": "omgangsvormen",
+      "question_nl": "Vrijheid van meningsuiting betekent in Nederland dat u:",
+      "question_en": "Freedom of expression in the Netherlands means that you:",
+      "options_nl": [
+        "alles mag zeggen, zonder enige grens",
+        "uw mening mag geven, maar niet mag discrimineren of aanzetten tot haat",
+        "alleen positieve dingen mag zeggen",
+        "niets over de regering mag zeggen"
+      ],
+      "options_en": [
+        "may say anything, with no limit at all",
+        "may give your opinion, but may not discriminate or incite hatred",
+        "may only say positive things",
+        "may say nothing about the government"
+      ],
+      "correct_index": 1,
+      "explanation_en": "You may criticise the government, religion and anything else. The limit is that discrimination, insult of a group, and incitement to hatred or violence are punishable.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-116",
+      "category": "omgangsvormen",
+      "question_nl": "Wat doet u in een winkel of bij de gemeente als er een nummertjesysteem is?",
+      "question_en": "What do you do in a shop or at the municipality when there is a number system?",
+      "options_nl": [
+        "Vooraan gaan staan",
+        "Een nummer trekken en wachten tot u aan de beurt bent",
+        "Hard roepen",
+        "Weggaan"
+      ],
+      "options_en": [
+        "Go stand at the front",
+        "Take a number and wait your turn",
+        "Call out loudly",
+        "Leave"
+      ],
+      "correct_index": 1,
+      "explanation_en": "Waiting your turn is taken seriously. You take a number or join the queue; pushing in is considered rude.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-117",
+      "category": "instanties",
+      "question_nl": "U verhuist naar een andere stad. Bij welke instantie moet u zich inschrijven?",
+      "question_en": "You move to another city. Which body must you register with?",
+      "options_nl": [
+        "De Belastingdienst",
+        "De gemeente",
+        "Het UWV",
+        "De politie"
+      ],
+      "options_en": [
+        "The tax office",
+        "The municipality",
+        "The UWV",
+        "The police"
+      ],
+      "correct_index": 1,
+      "explanation_en": "You register your address with the gemeente, in the Basisregistratie Personen (BRP). Almost everything else, from benefits to voting, depends on that address being correct.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-118",
+      "category": "instanties",
+      "question_nl": "Waarvoor gebruikt u DigiD?",
+      "question_en": "What do you use DigiD for?",
+      "options_nl": [
+        "Om te reizen",
+        "Om online in te loggen bij de overheid",
+        "Om te pinnen",
+        "Om een huis te huren"
+      ],
+      "options_en": [
+        "To travel",
+        "To log in online with government bodies",
+        "To pay by card",
+        "To rent a house"
+      ],
+      "correct_index": 1,
+      "explanation_en": "DigiD is your digital identity for government services: the tax office, your municipality, your health insurer and the pension bank. Never share your DigiD with anyone.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-119",
+      "category": "instanties",
+      "question_nl": "Welke instantie gaat over belastingen en toeslagen?",
+      "question_en": "Which body deals with taxes and allowances?",
+      "options_nl": [
+        "De Belastingdienst",
+        "Het UWV",
+        "De SVB",
+        "De IND"
+      ],
+      "options_en": [
+        "The Belastingdienst",
+        "The UWV",
+        "The SVB",
+        "The IND"
+      ],
+      "correct_index": 0,
+      "explanation_en": "The Belastingdienst collects tax and pays out allowances such as huurtoeslag and zorgtoeslag. You apply for allowances yourself; they are not given automatically.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-120",
+      "category": "instanties",
+      "question_nl": "U wordt werkloos. Bij welke instantie vraagt u een WW-uitkering aan?",
+      "question_en": "You become unemployed. Which body do you apply to for unemployment benefit?",
+      "options_nl": [
+        "De gemeente",
+        "Het UWV",
+        "De Belastingdienst",
+        "De vakbond"
+      ],
+      "options_en": [
+        "The municipality",
+        "The UWV",
+        "The tax office",
+        "The trade union"
+      ],
+      "correct_index": 1,
+      "explanation_en": "UWV handles employee benefits: unemployment (WW) and long-term sickness or disability. If you have no right to WW, the gemeente handles social assistance (bijstand).",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-121",
+      "category": "instanties",
+      "question_nl": "Welke instantie gaat over verblijfsvergunningen en naturalisatie-aanvragen?",
+      "question_en": "Which body deals with residence permits and naturalisation applications?",
+      "options_nl": [
+        "De IND",
+        "Het UWV",
+        "De SVB",
+        "De Belastingdienst"
+      ],
+      "options_en": [
+        "The IND",
+        "The UWV",
+        "The SVB",
+        "The tax office"
+      ],
+      "correct_index": 0,
+      "explanation_en": "The Immigratie- en Naturalisatiedienst decides on residence permits, asylum and applications to become Dutch.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-122",
+      "category": "instanties",
+      "question_nl": "Welke instantie betaalt de kinderbijslag en de AOW?",
+      "question_en": "Which body pays child benefit and the state pension?",
+      "options_nl": [
+        "De SVB",
+        "Het UWV",
+        "De gemeente",
+        "De zorgverzekeraar"
+      ],
+      "options_en": [
+        "The SVB",
+        "The UWV",
+        "The municipality",
+        "The health insurer"
+      ],
+      "correct_index": 0,
+      "explanation_en": "The Sociale Verzekeringsbank pays national insurance benefits: kinderbijslag for children and AOW, the state pension. UWV is for employee benefits, which is the usual confusion.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-123",
+      "category": "instanties",
+      "question_nl": "U wilt naar een specialist in het ziekenhuis. Wat heeft u meestal eerst nodig?",
+      "question_en": "You want to see a specialist in hospital. What do you usually need first?",
+      "options_nl": [
+        "Een verwijzing van de huisarts",
+        "Een brief van de gemeente",
+        "Toestemming van het UWV",
+        "Niets"
+      ],
+      "options_en": [
+        "A referral from the GP",
+        "A letter from the municipality",
+        "Permission from the UWV",
+        "Nothing"
+      ],
+      "correct_index": 0,
+      "explanation_en": "The huisarts is the gatekeeper of Dutch healthcare. Except in an emergency, you need a referral before a specialist visit is covered.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-124",
+      "category": "instanties",
+      "question_nl": "Er is direct gevaar en u heeft meteen hulp nodig. Welk nummer belt u?",
+      "question_en": "There is immediate danger and you need help right away. Which number do you call?",
+      "options_nl": [
+        "112",
+        "0900-8844",
+        "113",
+        "144"
+      ],
+      "options_en": [
+        "112",
+        "0900-8844",
+        "113",
+        "144"
+      ],
+      "correct_index": 0,
+      "explanation_en": "112 is the emergency number for police, fire brigade and ambulance when every second counts. For police matters that are not urgent you call 0900-8844.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-125",
+      "category": "instanties",
+      "question_nl": "U wilt aangifte doen van een fiets die gisteren gestolen is. Er is geen spoed. Wat doet u?",
+      "question_en": "You want to report a bicycle stolen yesterday. It is not urgent. What do you do?",
+      "options_nl": [
+        "112 bellen",
+        "0900-8844 bellen of online aangifte doen",
+        "Naar de gemeente gaan",
+        "Niets doen"
+      ],
+      "options_en": [
+        "Call 112",
+        "Call 0900-8844 or report online",
+        "Go to the municipality",
+        "Do nothing"
+      ],
+      "correct_index": 1,
+      "explanation_en": "112 is only for emergencies. For a report without urgency you use 0900-8844 or politie.nl. A report is often needed for your insurance.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-126",
+      "category": "instanties",
+      "question_nl": "U heeft een juridisch probleem maar weinig geld. Waar kunt u gratis advies krijgen?",
+      "question_en": "You have a legal problem but little money. Where can you get free advice?",
+      "options_nl": [
+        "Bij Het Juridisch Loket",
+        "Bij de Belastingdienst",
+        "Bij het UWV",
+        "Bij de politie"
+      ],
+      "options_en": [
+        "At Het Juridisch Loket",
+        "At the tax office",
+        "At the UWV",
+        "At the police"
+      ],
+      "correct_index": 0,
+      "explanation_en": "Het Juridisch Loket gives free legal advice, by phone on 0800-8020 and at walk-in offices around the country. If you then need a lawyer, you may qualify for subsidised legal aid.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-127",
+      "category": "instanties",
+      "question_nl": "U huurt een woning en bent het niet eens met de huurprijs. Welke instantie kan daarover oordelen?",
+      "question_en": "You rent a home and disagree with the rent. Which body can rule on that?",
+      "options_nl": [
+        "De Huurcommissie",
+        "De IND",
+        "Het CBR",
+        "De SVB"
+      ],
+      "options_en": [
+        "The Huurcommissie",
+        "The IND",
+        "The CBR",
+        "The SVB"
+      ],
+      "correct_index": 0,
+      "explanation_en": "The Huurcommissie settles disputes between tenants and landlords about rent, service charges and maintenance. Try to resolve it with the landlord first.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-128",
+      "category": "instanties",
+      "question_nl": "Welke instantie gaat over het rijbewijs en het rijexamen?",
+      "question_en": "Which body deals with the driving licence and the driving test?",
+      "options_nl": [
+        "Het CBR",
+        "De RDW alleen",
+        "Het UWV",
+        "De politie"
+      ],
+      "options_en": [
+        "The CBR",
+        "The RDW only",
+        "The UWV",
+        "The police"
+      ],
+      "correct_index": 0,
+      "explanation_en": "The CBR organises theory and practical driving exams and judges medical fitness to drive. Your municipality issues the licence itself.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-129",
+      "category": "instanties",
+      "question_nl": "Welke organisatie regelt het inburgeringsexamen en studiefinanciering?",
+      "question_en": "Which organisation arranges the civic integration exam and student finance?",
+      "options_nl": [
+        "DUO",
+        "De IND",
+        "Het UWV",
+        "De gemeente"
+      ],
+      "options_en": [
+        "DUO",
+        "The IND",
+        "The UWV",
+        "The municipality"
+      ],
+      "correct_index": 0,
+      "explanation_en": "DUO (Dienst Uitvoering Onderwijs) is where you register and pay for the inburgeringsexamen and where the results come from. It also handles student finance.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-130",
+      "category": "instanties",
+      "question_nl": "Waarvoor gaat u naar het consultatiebureau?",
+      "question_en": "What do you go to the consultatiebureau for?",
+      "options_nl": [
+        "Voor de gezondheid en groei van jonge kinderen",
+        "Voor uw belastingaangifte",
+        "Voor een verblijfsvergunning",
+        "Voor een rijbewijs"
+      ],
+      "options_en": [
+        "For the health and growth of young children",
+        "For your tax return",
+        "For a residence permit",
+        "For a driving licence"
+      ],
+      "correct_index": 0,
+      "explanation_en": "The consultatiebureau follows the health, growth and vaccinations of babies and young children, free of charge. It is part of the Centrum voor Jeugd en Gezin.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-131",
+      "category": "instanties",
+      "question_nl": "U wilt een sociale huurwoning. Bij wie moet u zijn?",
+      "question_en": "You want a social rented home. Who do you need?",
+      "options_nl": [
+        "Bij een woningcorporatie",
+        "Bij de IND",
+        "Bij het CBR",
+        "Bij de Belastingdienst"
+      ],
+      "options_en": [
+        "At a housing corporation",
+        "At the IND",
+        "At the CBR",
+        "At the tax office"
+      ],
+      "correct_index": 0,
+      "explanation_en": "Social housing is let by woningcorporaties. You usually have to register and wait, and in many regions the waiting time runs to several years.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
+    },
+    {
+      "id": "knm-132",
+      "category": "instanties",
+      "question_nl": "U bent het oneens met een beslissing van een overheidsinstantie. Wat kunt u als eerste doen?",
+      "question_en": "You disagree with a decision by a government body. What can you do first?",
+      "options_nl": [
+        "Niets, de beslissing is definitief",
+        "Bezwaar maken bij die instantie, binnen de termijn in de brief",
+        "Meteen naar de politie",
+        "Verhuizen"
+      ],
+      "options_en": [
+        "Nothing, the decision is final",
+        "Object to that body, within the deadline given in the letter",
+        "Go straight to the police",
+        "Move house"
+      ],
+      "correct_index": 1,
+      "explanation_en": "Dutch decision letters state a deadline for lodging an objection (bezwaar), commonly six weeks. If the objection is rejected you can usually appeal to a court.",
+      "references": [
+        "Naar Nederland (NT2 inburgering programme)"
+      ]
     }
   ]
 }

@@ -6,7 +6,20 @@ export const ATTEMPTS_KEY = 'dutch-knm-attempts'
 export const LEARNED_KEY = 'dutch-knm-learned'
 const MAX_ATTEMPTS = 50
 
-export type Category = 'politiek' | 'werk' | 'onderwijs' | 'wonen' | 'gezondheid' | 'geschiedenis'
+/**
+ * The eight statutory KNM themes. `omgangsvormen` covers manners, values and
+ * norms; `instanties` covers the official bodies (gemeente, UWV, SVB, IND,
+ * Belastingdienst and the rest). Both were missing until 2026-11-07.
+ */
+export type Category =
+  | 'politiek'
+  | 'werk'
+  | 'onderwijs'
+  | 'wonen'
+  | 'gezondheid'
+  | 'geschiedenis'
+  | 'omgangsvormen'
+  | 'instanties'
 
 export interface KnmQuestion {
   id: string

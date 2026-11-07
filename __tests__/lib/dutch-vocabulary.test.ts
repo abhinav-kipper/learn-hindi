@@ -6,9 +6,26 @@ const categories = getDutchAllCategories()
 const words = categories.flatMap((c) => c.words)
 
 describe('Dutch vocabulary deck', () => {
-  it('matches the Hindi deck in size and shape', () => {
-    expect(getDutchTotalWordCount()).toBe(100)
-    expect(categories).toHaveLength(getAllCategories().length)
+  // The deck was grown past Hindi parity for the A2 exam: the six original
+  // categories plus six drawn from the situations the exam keeps returning to
+  // (doctor, work and money, housing, getting around, shopping, officialdom).
+  it('carries the full A2 deck and keeps every original category', () => {
+    expect(getDutchTotalWordCount()).toBe(208)
+    expect(categories.length).toBeGreaterThanOrEqual(getAllCategories().length)
+    expect(categories).toHaveLength(12)
+  })
+
+  it('still contains the six original categories, in their original order', () => {
+    // Progress is keyed by category id plus headword, so reordering or
+    // renaming an existing category would orphan the user's learned state.
+    expect(categories.slice(0, 6).map((c) => c.id)).toEqual([
+      'dutch-greetings',
+      'dutch-polite',
+      'dutch-everyday',
+      'dutch-time',
+      'dutch-people',
+      'dutch-verbs',
+    ])
   })
 
   it('gives every category the fields the grid renders', () => {

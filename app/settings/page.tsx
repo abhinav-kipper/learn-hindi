@@ -8,6 +8,7 @@ import { isMuted, toggleMute, playSound } from '@/lib/sounds'
 import { isAmbientOn, setAmbientOn } from '@/lib/ambient'
 import { warmOfflineCache } from '@/lib/offline-cache'
 import { useLanguage } from '@/lib/language-context'
+import { getExamTarget, setExamTarget, type ExamTarget } from '@/lib/dutch/exam-target'
 import {
   Sticker,
   Tag,
@@ -46,6 +47,7 @@ export default function SettingsPage() {
   const [dlPct, setDlPct] = useState(0)
   const [dlLabel, setDlLabel] = useState('')
   const [savedDate, setSavedDate] = useState<string | null>(null)
+  const [examTarget, setExamTargetState] = useState<ExamTarget>('a2')
 
   const OFFLINE_SAVED_KEY = 'bs-offline-full-saved-date'
 
@@ -57,6 +59,7 @@ export default function SettingsPage() {
     setDailyGoal(p.dailyGoal || 5)
     setMuted(isMuted())
     setAmbient(isAmbientOn())
+    setExamTargetState(getExamTarget())
     try {
       setSavedDate(localStorage.getItem(OFFLINE_SAVED_KEY))
     } catch {
@@ -157,6 +160,13 @@ export default function SettingsPage() {
     if (next === language) return
     setLanguage(next)
     playSound('swipe')
+  }
+
+  function handleExamTarget(next: ExamTarget) {
+    if (next === examTarget) return
+    setExamTarget(next)
+    setExamTargetState(next)
+    playSound('tap')
   }
 
   function resetProgress() {
@@ -667,6 +677,37 @@ export default function SettingsPage() {
             </button>
           </Sticker>
         </Section>
+
+        {/* EXAM TARGET (Dutch only) */}
+        {language === 'dutch' && (
+          <Section title="exam target" subtitle="which inburgeringsexamen you are sitting">
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
+              {([
+                { key: 'a2' as ExamTarget, label: 'A2', hint: 'the usual target' },
+                { key: 'b1' as ExamTarget, label: 'B1', hint: 'a level higher' },
+              ]).map((t) => (
+                <Sticker
+                  key={t.key}
+                  color={examTarget === t.key ? COLORS.peach : W}
+                  radius={16}
+                  padding={12}
+                  selected={examTarget === t.key}
+                  onClick={() => handleExamTarget(t.key)}
+                >
+                  <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 15, color: COLORS.ink, textAlign: 'center' }}>
+                    {t.label}{examTarget === t.key ? ' ✓' : ''}
+                  </div>
+                  <div style={{ fontFamily: FONTS.body, fontSize: 11.5, color: COLORS.ink, opacity: 0.7, textAlign: 'center', marginTop: 2 }}>
+                    {t.hint}
+                  </div>
+                </Sticker>
+              ))}
+            </div>
+            <div style={{ fontFamily: FONTS.body, fontSize: 12, color: COLORS.ink, opacity: 0.7, marginTop: 8, lineHeight: 1.5 }}>
+              Content above your target stays available, just marked as extra. Nothing is deleted or hidden.
+            </div>
+          </Section>
+        )}
 
         {/* LANGUAGE */}
         <Section title="language" subtitle="progress is kept separately per language">

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import { getExamTarget, isBeyondTarget, type ExamTarget } from '@/lib/dutch/exam-target'
 import {
   Sticker,
   Tag,
@@ -36,11 +37,13 @@ export default function LuisterenModulePage() {
   const router = useRouter()
   const theme = useTheme()
   const [studiedCount, setStudiedCount] = useState(0)
+  const [examTarget, setExamTarget] = useState<ExamTarget>('a2')
   const [attempts, setAttempts] = useState<ReturnType<typeof getMockHistory>>([])
   const [openTiers, setOpenTiers] = useState<Set<Tier>>(new Set<Tier>(['A1']))
 
   useEffect(() => {
     setStudiedCount(getStudiedCount())
+    setExamTarget(getExamTarget())
     setAttempts(getMockHistory())
   }, [])
 
@@ -114,8 +117,11 @@ export default function LuisterenModulePage() {
           const clips = getClipsByTier(tier.key)
           const studiedInTier = clips.filter((c) => isStudied(c.id)).length
           const isOpen = openTiers.has(tier.key)
+          // Above-target tiers stay reachable, but are dimmed and relabelled
+          // so they do not read as required for the exam being sat.
+          const beyond = isBeyondTarget(tier.key, examTarget)
           return (
-            <div key={tier.key} style={{ marginBottom: 16 }}>
+            <div key={tier.key} style={{ marginBottom: 16, opacity: beyond ? 0.6 : 1 }}>
               <Sticker color={tier.color} radius={16} padding={12} onClick={() => toggleTier(tier.key)}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <div>
@@ -123,7 +129,7 @@ export default function LuisterenModulePage() {
                       {tier.label}
                     </div>
                     <div style={{ fontFamily: FONTS.body, fontSize: 12, color: COLORS.ink, opacity: 0.7, fontStyle: 'italic' }}>
-                      {tier.subtitle}
+                      {beyond ? `${tier.key} \u00b7 beyond your target, optional` : tier.subtitle}
                     </div>
                   </div>
                   <div style={{ fontFamily: FONTS.body, fontSize: 13, color: COLORS.ink, fontWeight: 700 }}>

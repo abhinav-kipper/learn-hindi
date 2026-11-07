@@ -13,7 +13,7 @@ const WELCOMED_KEY = 'dutch-welcomed'
 export function DutchWelcomeModal() {
   const router = useRouter()
   const [show, setShow] = useState(false)
-  const [target, setTarget] = useState<ExamTarget>('b1')
+  const [target, setTarget] = useState<ExamTarget>('a2')
 
   useEffect(() => {
     if (!localStorage.getItem(WELCOMED_KEY)) {
@@ -89,7 +89,7 @@ export function DutchWelcomeModal() {
                   Hallo! Ready for your inburgeringsexamen?
                 </h2>
                 <p style={{ fontFamily: FONTS.body, fontSize: 14, color: COLORS.ink, lineHeight: 1.5, margin: '0 0 14px' }}>
-                  This Dutch track is built to prep you for the <strong>Inburgeringsexamen B1 + KNM</strong>, the exam HSM holders take to naturalize and get a Dutch passport.
+                  This Dutch track is built to prep you for the <strong>Inburgeringsexamen {target === 'a2' ? 'A2' : 'B1'} + KNM</strong>, the exam HSM holders take to naturalize and get a Dutch passport.
                 </p>
 
                 <div style={{ marginBottom: 14 }}>
@@ -121,8 +121,8 @@ export function DutchWelcomeModal() {
                       onClick={() => onChangeTarget('a2')}
                       style={{ flex: 1 }}
                     >
-                      <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, color: COLORS.ink, textAlign: 'center' }}>A2</div>
-                      <div style={{ fontFamily: FONTS.body, fontSize: 11, color: COLORS.ink, opacity: 0.7, textAlign: 'center' }}>basic, faster</div>
+                      <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, color: COLORS.ink, textAlign: 'center' }}>A2{target === 'a2' ? ' ✓' : ''}</div>
+                      <div style={{ fontFamily: FONTS.body, fontSize: 11, color: COLORS.ink, opacity: 0.7, textAlign: 'center' }}>the usual target</div>
                     </Sticker>
                     <Sticker
                       color={target === 'b1' ? COLORS.butter : W}
@@ -132,8 +132,8 @@ export function DutchWelcomeModal() {
                       onClick={() => onChangeTarget('b1')}
                       style={{ flex: 1 }}
                     >
-                      <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, color: COLORS.ink, textAlign: 'center' }}>B1 ✓</div>
-                      <div style={{ fontFamily: FONTS.body, fontSize: 11, color: COLORS.ink, opacity: 0.7, textAlign: 'center' }}>full coverage</div>
+                      <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 14, color: COLORS.ink, textAlign: 'center' }}>B1{target === 'b1' ? ' ✓' : ''}</div>
+                      <div style={{ fontFamily: FONTS.body, fontSize: 11, color: COLORS.ink, opacity: 0.7, textAlign: 'center' }}>a level higher</div>
                     </Sticker>
                   </div>
                 </div>

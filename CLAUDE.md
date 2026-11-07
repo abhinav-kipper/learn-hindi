@@ -46,11 +46,11 @@ content/foundations/    → 9 Hindi foundation JSON files (A1-A2)
 content/vocabulary.json → 100 words in 6 categories
 content/dutch/lessons/  → 19 Dutch lesson JSONs (6 A1 conversational + 1 A2 social + 6 errand/casual + 6 A2/B1 exam-targeted)
 content/dutch/foundations/ → 14 Dutch foundation JSONs (8 A1 + 6 A2)
-content/dutch/knm.json  → 100 KNM exam questions (bilingual, 6 categories)
+content/dutch/knm.json  → 132 KNM exam questions (bilingual, all 8 statutory themes)
 content/dutch/lezen.json → 10 Lezen B1-prep reading texts (bilingual, 40 MCQs)
 content/dutch/pronunciation-course.json → 8-stage from-zero "Sounds" ladder (alphabet→linking)
 content/dutch/cheatsheet/    → 5 grouped concept-cheatsheet JSONs (25 topics, 214 drill questions)
-content/dutch/vocabulary.json → 100 Dutch words in 6 categories (nouns carry de/het)
+content/dutch/vocabulary.json → 208 Dutch words in 12 categories (nouns carry de/het)
 content/stories/        → 5 Hindi story JSONs (Chai Galli motion-comics)
 docs/audits/             → Content audit rubric + per-run reports + master summaries
 scripts/audit-content.mjs → Audit dispatcher (lists 57 units, builds per-unit prompts, aggregates reports)
@@ -152,7 +152,7 @@ next deploy. ESLint runs in CI too (`npx eslint .`).
 
 The app now serves two distinct learning goals:
 - **Hindi** — conversational/colloquial Hindi via 10 situational lessons + 9 grammar foundations + 100-word vocab. Casual learning, no exam.
-- **Dutch** — focused prep for the **Inburgeringsexamen B1 + KNM** (the Dutch civic-integration exam HSM holders take to naturalize). Dutch home reoriented as: Goal banner → Sounds → Cheatsheets → 3-stage path (A1/A2/B1) → 5 exam-skill modules (KNM live, Reading live, Listening/Writing/Speaking soon) → Exam scenarios (6 lessons, A2/B1) → casual Lessons & Grammar. The **Cheatsheets** section (`/dutch/cheatsheet`) is the revision layer: 25 concept pages of rules, tables and examples, each with its own drill. They cover all ten grammar goals of the learner's DE1 course.
+- **Dutch** — focused prep for the **Inburgeringsexamen + KNM** (the Dutch civic-integration exam HSM holders take to naturalize). The level is the learner's choice via `dutch-exam-target`, **default A2**; B1 is opt-in. The chosen target drives the goal banner, the stage path and whether above-target content reads as required or as extra. Dutch home reoriented as: Goal banner → Sounds → Cheatsheets → 3-stage path (A1/A2/B1) → 5 exam-skill modules (KNM live, Reading live, Listening/Writing/Speaking soon) → Exam scenarios (6 lessons, A2/B1) → casual Lessons & Grammar. The **Cheatsheets** section (`/dutch/cheatsheet`) is the revision layer: 25 concept pages of rules, tables and examples, each with its own drill. They cover all ten grammar goals of the learner's DE1 course.
 
 All UI/labels are English; Dutch only appears in (a) content being learned (KNM questions, Lezen texts, lesson phrases), (b) Chaina's voice lines (she speaks Dutch in the Dutch track, Hinglish in the Hindi track), (c) italic Dutch-skill-name subtitles for exposure.
 
@@ -194,7 +194,7 @@ shadows anywhere.
 | `/vocabulary/[category]` | Palette-matched header. Swipeable word cards: card tilts -3°/+3° as you drag, behind-card "✓ KNOWN" (mint right) and "REVIEW ↺" (butter left) indicators fade in. Card bg shifts white → mint2 (known) → butter (review). Tap-flip reveals mint example card. TTS play button. |
 | `/drill/conjugation` | Lavender header on picker. Sliding tense pill (present/past/future, `layoutId`). Verb stickers w/ ink number column + bobbing arrow. Active drill: header bg changes per tense (mint/peach/lav). Mascot reacts happy on correct. 🪢 ne tag + warning for transitive past. Done screen w/ confetti + happy-hop Cutting on ≥80% |
 | `/onboarding` | 5-slide flow on peach→butter gradient. Progress pills (current = 28px ink). Slides: namaste welcome w/ 170px Cutting → 3 how-it-works stickers → name + reason 2×2 picker (selected lift via Sticker `selected` prop) → daily-goal vertical stack → ready w/ happy-hop Cutting + confetti |
-| `/dutch/knm` | KNM module home (Dutch exam track). 6 category cards (Politics/Work/Education/Housing/Healthcare/History) with English label + Dutch subtitle. Orange "Start drill" Cutting CTA. Bilingual study cards (Dutch question + English subtitle + correct-answer mint highlight + English explanation + "Mark as learned" toggle). Past-attempts fold. |
+| `/dutch/knm` | KNM module home (Dutch exam track). 8 category cards, one per statutory theme (Politics/Work/Education/Housing/Healthcare/History/Manners & values/Official bodies) with English label + Dutch subtitle. Orange "Start drill" Cutting CTA. Bilingual study cards (Dutch question + English subtitle + correct-answer mint highlight + English explanation + "Mark as learned" toggle). Past-attempts fold. |
 | `/dutch/knm/drill` | KNM 30-question mock. Dutch-only (no English crutch — exam-realistic). Sticker option picker w/ correct/wrong reveal. Pass at ≥80% (24/30) → Chaina `knmPassed` moment + Confetti + levelup sound. Fail → `knmAttemptComplete` encouragement. Attempt saved to `dutch-knm-attempts`. |
 | `/dutch/lezen` | Lezen (Reading) module home. 3 tier sections (Beginner A1 / Elementary A2 / Intermediate B1) collapsible with A1 open by default. Orange "Start timed mock" CTA (25-min, 5 texts, 20 Qs, Dutch-only). Past-mocks fold. |
 | `/dutch/lezen/[textId]` | Single Lezen text study mode. Dutch body w/ "Show English translation" toggle → mint sticker reveals `body_en`. Bilingual question cards (4 per text, types: hoofdgedachte/detail/woordbetekenis/gevolg). Mark-as-studied → Chaina `lezenStudyDone` + persist to `dutch-lezen-studied`. |
@@ -239,7 +239,7 @@ shadows anywhere.
 | `dutch/cheatsheet.ts` | Concept-cheatsheet loader + drill engine (TDD'd, 21 tests). Flattens `content/dutch/cheatsheet/*.json` into 5 groups / 25 topics. `getGroups/getTopics/getTopicById/getGroupOfTopic/getNextTopic`, `drawTopicDrill`/`drawMixedReview(15)`/`scrambleWords` (never returns the answer order), `normalizeAnswer`/`isCorrect`/`scoreDrill` (80% pass), studied set + best-score-per-topic history, `getWeakTopics`/`getOverallProgress`. |
 | `dutch/knm.ts` | KNM loader + `drawDrillSet(30)` (Fisher-Yates) + `scoreAttempt()` (80% pass) + attempt history (capped at 50) + per-question studied tracking. TDD'd, 12 tests. |
 | `dutch/lezen.ts` | Same shape as `knm.ts` for the Lezen module — `drawMockSet(5)`, 20-Q scoring, 25-min `MOCK_TIMER_MS` constant, studied set. TDD'd, 12 tests. |
-| `dutch/exam-target.ts` | User preference `'a2' \| 'b1'` for exam-target level (default B1). Surfaced as toggle in Dutch welcome modal. |
+| `dutch/exam-target.ts` | Exam level the learner is sitting, `'a2' \| 'b1'`, **default a2**. `targetLabel`, `levelsForTarget`, `isBeyondTarget(level, target)`. Read by the Dutch home (goal banner, path, exam-scenario badges) and by the Lezen/Luisteren tier lists, so above-target content is dimmed and relabelled rather than hidden. Changeable in the welcome modal **and in Settings**. TDD'd, 12 tests. |
 | `dutch/level-map.ts` | Lookup table tagging every Dutch content ID with `A1` / `A2` / `B1`. Powers the 3-stage progress bars on the Dutch home. **Every key must be the exact `id` field of the content JSON, which is `dutch-` prefixed for all Dutch units.** A bare key never matches, so `getLevel` silently returns the `A1` default and the stage bar counts items that can never complete. Fixed for lessons 2026-05-26 and for foundations 2026-11-07 (7 foundation keys were still bare). Guarded by `__tests__/lib/dutch-content-ids.test.ts` + `lib/dutch/level-map.test.ts`. |
 | `dutch/id-migration.ts` | One-time localStorage remap for the 2026-11-07 Dutch foundation ID rename (bare ids → `dutch-` prefixed). Rewrites `dutch-progress` (completedLessons + lessonCompletedAt), `dutch-phrase-progress`, `dutch-quiz-scores` and `dutch-last-active-lesson`, then sets the flag `dutch-foundation-id-migration-v1`. Called once from `layout-shell.tsx` on mount. Idempotent, Dutch-prefix only, never throws. TDD'd, 8 tests. |
 
@@ -338,7 +338,7 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `learn-hindi:seen-lesson-ids:hindi` — JSON array of lesson/foundation IDs the user has seen. Silent baseline on first detection (no false-positive popup). Powers the `newContent` Chaina moment + per-card NEW dot via `lib/seen-lessons.ts`.
 
 **Dutch exam-prep keys:**
-- `dutch-exam-target` — `'a2' | 'b1'`, default `'b1'`. Toggle in Dutch welcome modal.
+- `dutch-exam-target` — `'a2' | 'b1'`, **default `'a2'`**. Set in the Dutch welcome modal or Settings → exam target.
 - `dutch-knm-learned` — JSON array of question IDs the user has marked as learned in KNM study mode.
 - `dutch-knm-attempts` — JSON array of `{ts, score, total, passed}` capped at 50, most-recent-first.
 - `dutch-lezen-studied` — JSON array of Lezen text IDs.
@@ -352,6 +352,49 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-define-cache` — `{ [word]: Definition }` from `/api/define`, capped at 300, so tapped words resolve instantly and keep working offline once seen.
 
 ### Recent feature work log
+
+**2026-11-07 (later) — A2 as the real exam target, 2 missing KNM themes, 2x vocabulary**
+
+*A2, not B1.* `dutch-exam-target` existed but was **stored and never read** outside
+the welcome modal: it defaulted to `b1`, the goal banner hardcoded
+"Inburgeringsexamen B1 + KNM", and nothing anywhere distinguished B1 content. A
+learner sitting A2 saw a B1 app with B1 material mixed in unmarked. Now:
+- default is **a2**; `exam-target.ts` gained `targetLabel`, `levelsForTarget`
+  and `isBeyondTarget(level, target)`
+- the target drives the goal banner, the "Your path" header (`to A2`), the
+  exam-scenario section label, and the `A1-A2` foundation copy
+- above-target content is **dimmed and relabelled, never hidden**: the B1 path
+  row reads "beyond your target", B1 exam scenarios are badged `B1 · extra`,
+  and the B1 tier in Lezen/Luisteren reads "beyond your target, optional".
+  Switching back to B1 restores everything.
+- **Settings → exam target** added. The target was previously only settable in
+  the first-run welcome modal, so anyone past onboarding was stuck on B1 with
+  no way to change it. That was the actual trap.
+
+*KNM completed to the statutory 8 themes* (100 → **132** questions). The exam
+draws on eight themes; the app had six, so roughly a quarter of the paper was
+untested. Added `omgangsvormen` (manners, values and norms: greetings,
+directness, equality, article 1, freedom of religion, punctuality, splitting
+the bill) and `instanties` (gemeente/BRP, DigiD, Belastingdienst, UWV vs SVB,
+IND, huisarts as gatekeeper, 112 vs 0900-8844, Juridisch Loket, Huurcommissie,
+CBR, DUO, woningcorporatie, bezwaar). Facts are deliberately structural, no
+euro amounts or AOW ages, because the repo already warns those drift yearly.
+Two numbers were web-checked rather than written from memory: the police
+non-emergency line, and Het Juridisch Loket's **0800**-8020 (not 0900).
+`knm.test.ts` now asserts all eight themes are present, every theme has ≥10
+questions, and ids are unique.
+
+*Vocabulary 100 → 208 words, 6 → 12 categories.* Six new decks aimed at what
+the A2 exam actually asks about: Health & Doctor, Work & Money, House & Home,
+Travel & Getting Around, Shopping & Food, Official & Paperwork. All original
+categories and words are untouched and in their original positions, so per-word
+learned/archived progress survives; a test pins that order. Existing deck rules
+still hold (nouns carry de/het, headwords lower case and unique deck-wide).
+
+Verified in a browser across both targets: A2 default relabels everything and
+marks B1 as extra, an explicit B1 choice restores the old behaviour, all 8 KNM
+themes render, the 6 new vocab categories open, and the Settings switch
+persists and is reflected on the home screen. 514 tests, four lints clean.
 
 **2026-11-07 — Dutch foundations: ID-collision fix + full accuracy/clarity audit**
 
@@ -784,7 +827,7 @@ New-content surfacing for Hindi:
 
 Dutch exam-prep track (Inburgeringsexamen B1 + KNM):
 - Dutch section pivoted from "casual conversational" to a focused exam-prep frame. Goal banner + 3-stage A1/A2/B1 path + 5 skill-module grid on the Dutch home.
-- KNM module (`/dutch/knm/`): 100 original questions across 6 categories, bilingual study mode (Dutch + English subtitles), 30-question Dutch-only timed drill with ≥80% pass threshold.
+- KNM module (`/dutch/knm/`): originally 100 questions across 6 categories (now 132 across all 8), bilingual study mode (Dutch + English subtitles), 30-question Dutch-only timed drill with ≥80% pass threshold.
 - Lezen module (`/dutch/lezen/`): 10 reading texts re-tiered 5 A1 + 4 A2 + 1 B1 preview (B1 was originally the only target — too ambitious for A0-A1 starting level). Bilingual study mode, 25-min Dutch-only timed mock.
 - 6 exam-targeted scenario lessons added: `dutch-gemeente`, `dutch-housing-problem`, `dutch-bank`, `dutch-huisarts-call`, `dutch-job-interview`, `dutch-primary-school`. Each has 10 phrases + 5 grammar notes + 4 culture notes + 3 skill_breakdowns + a B1-register `practice_prompt` for `/practice/[id]`.
 - 6 new Dutch Chaina moments (knmAttemptComplete, knmPassed, a2Milestone, lezenStudyDone, lezenMockPassed). Lines are Dutch ("arrey! nayi... " replaced with Dutch equivalents like "Geslaagd! 🎉").
