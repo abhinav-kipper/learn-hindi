@@ -21,6 +21,7 @@ import { getStages as getHindiSoundStages } from '@/lib/hindi/pronunciation'
 import { getStages as getDutchSoundStages } from '@/lib/dutch/pronunciation'
 import { getLezenTexts } from '@/lib/dutch/lezen'
 import { getClips } from '@/lib/dutch/luisteren'
+import { getSchrijfTasks } from '@/lib/dutch/schrijven'
 import { getTopics as getCheatTopics } from '@/lib/dutch/cheatsheet'
 import { getDuels } from '@/lib/games'
 import { getSentenceGames } from '@/lib/sentence-game'
@@ -54,6 +55,7 @@ const STATIC_ROUTES = [
   '/dutch/lezen/mock',
   '/dutch/luisteren',
   '/dutch/luisteren/mock',
+  '/dutch/schrijven',
   '/dutch/sounds',
   '/dutch/lookup',
   '/dutch/cheatsheet',
@@ -89,6 +91,7 @@ export function getAllRoutes(): string[] {
     ...ids(getDutchSoundStages).map((id) => `/dutch/sounds/${id}`),
     ...ids(getLezenTexts).map((id) => `/dutch/lezen/${id}`),
     ...ids(getClips).map((id) => `/dutch/luisteren/${id}`),
+    ...ids(getSchrijfTasks).map((id) => `/dutch/schrijven/${id}`),
     ...ids(getCheatTopics).flatMap((id) => [
       `/dutch/cheatsheet/${id}`,
       `/dutch/cheatsheet/${id}/practice`,

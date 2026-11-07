@@ -29,7 +29,7 @@ commercial and disagree on timings and question counts.
 |---|---|---|
 | Lezen (reading) | ~25 questions, computer | live, thin at A2 |
 | Luisteren (listening) | ~25 questions, computer | live, TTS audio only |
-| **Schrijven (writing)** | 40 min, pen and paper, 4 tasks: one form plus short texts | **missing** |
+| Schrijven (writing) | ~40 min, pen and paper, 4 tasks: a form, a short note, an email, a short free text | live (shipped 2026-11-07), 12 tasks |
 | **Spreken (speaking)** | ~16 recorded tasks, ~35 min, 1 min each | **missing** |
 | KNM | 40 questions, 45 min, 8 statutory themes | live, strongest module |
 
@@ -95,8 +95,9 @@ Re-opening these without reason wastes a session.
 
 The principle: **the exam is won on the two papers the app does not have.**
 Reading, listening and KNM are recognition tasks and the app already trains
-them. Writing and speaking are production, they are 40% of the exam, and the
-app currently offers zero Dutch production practice of any kind.
+them. Writing and speaking are production and they are 40% of the exam.
+**Writing shipped on 2026-11-07**, so speaking is now the only paper with no
+practice of any kind, and therefore the single most valuable thing left to build.
 
 ### Tier 1 — decides pass or fail
 
@@ -108,10 +109,25 @@ story. **The backend already exists**: `components/voice-button.tsx` takes a
 `locale` and documents `nl-NL`, and `app/api/pronounce/route.ts` already turns
 recorded audio into scored coaching. This is wiring plus prompts, not greenfield.
 
-**2. Schrijven (writing).** Four tasks: a form, short messages, free writing.
-**The backend already exists too**: `app/api/journal-check/route.ts` branches on
-`language === 'dutch'` and is simply never surfaced on the Dutch track. The Chai
-Diary is the working pattern to copy.
+**2. Schrijven (writing).** ✅ **Shipped 2026-11-07.** `/dutch/schrijven`, 12 tasks
+in the paper's own proportions (3 forms, 3 short notes, 4 emails, 2 free texts).
+
+The decision that shaped it: the paper is marked first on **whether every point
+the task asked for is covered**, and only then on language. So each task leads
+with its marking checklist rather than revealing it after, and the AI marker's
+primary output is a tick or cross per checklist point. A learner who loses marks
+here almost always loses them by missing an instruction, not by bad grammar.
+
+Three things to keep in mind when extending it:
+- The marker returns **the learner's own answer corrected**, never a better answer
+  substituted. That is specified in the schema and is easy to lose in a reword.
+- The model answer and the checklist both work with no network, so the module
+  stays useful offline. Any new feature here should hold that line.
+- 12 tasks is enough to learn the formats, not enough to stop repeating them.
+  More tasks is the cheapest improvement; prefer new *situations* over new types.
+
+Still worth adding later: a timed 4-task run that mirrors the real 40-minute
+paper end to end, which is the one thing the module does not yet rehearse.
 
 ### Tier 2 — multiplies what is already built
 

@@ -1,0 +1,424 @@
+{
+  "tasks": [
+    {
+      "id": "schrijven-001",
+      "type": "formulier",
+      "tier": "A1",
+      "title_nl": "Inschrijven bij de bibliotheek",
+      "title_en": "Registering at the library",
+      "situation_en": "You want a library card. The desk gives you a form.",
+      "prompt_nl": "U wilt lid worden van de bibliotheek. Vul het formulier in met uw eigen gegevens.",
+      "prompt_en": "You want to join the library. Fill in the form with your own details.",
+      "min_sentences": 0,
+      "must_include": [
+        "Every field filled in, none left blank",
+        "A postcode in the Dutch format (4 digits + 2 letters)",
+        "A date of birth written day-month-year",
+        "An email address spelled correctly"
+      ],
+      "model_answer_nl": "Achternaam: Mudgal\nVoornaam: Abhinav\nGeboortedatum: 03-01-1990\nGeboorteland: India\nAdres: Keizersgracht 12\nPostcode: 1015 CJ\nWoonplaats: Amsterdam\nTelefoonnummer: 06 12345678\nE-mailadres: abhinav@voorbeeld.nl",
+      "model_answer_en": "A completed form. On a form you write only the details, not full sentences.",
+      "tips_en": [
+        "On a form you do not write sentences. Just the detail asked for.",
+        "Dutch dates are day-month-year. 3 January 1990 is 03-01-1990, never 01-03-1990.",
+        "A Dutch postcode is four digits, a space, then two letters: 1015 CJ.",
+        "Leave nothing blank. If something does not apply, write a dash."
+      ],
+      "fields": [
+        {
+          "label_nl": "Achternaam",
+          "label_en": "Surname",
+          "hint_en": "Your family name, in capitals if the form asks"
+        },
+        {
+          "label_nl": "Voornaam",
+          "label_en": "First name",
+          "hint_en": "Your given name"
+        },
+        {
+          "label_nl": "Geboortedatum",
+          "label_en": "Date of birth",
+          "hint_en": "Day-month-year, for example 03-01-1990"
+        },
+        {
+          "label_nl": "Geboorteland",
+          "label_en": "Country of birth",
+          "hint_en": ""
+        },
+        {
+          "label_nl": "Adres",
+          "label_en": "Address",
+          "hint_en": "Street and house number"
+        },
+        {
+          "label_nl": "Postcode",
+          "label_en": "Postcode",
+          "hint_en": "Four digits and two letters, for example 1012 AB"
+        },
+        {
+          "label_nl": "Woonplaats",
+          "label_en": "Town or city",
+          "hint_en": ""
+        },
+        {
+          "label_nl": "Telefoonnummer",
+          "label_en": "Telephone number",
+          "hint_en": ""
+        },
+        {
+          "label_nl": "E-mailadres",
+          "label_en": "Email address",
+          "hint_en": "Check the spelling, this is marked"
+        }
+      ]
+    },
+    {
+      "id": "schrijven-002",
+      "type": "formulier",
+      "tier": "A2",
+      "title_nl": "Aanmelden voor een taalcursus",
+      "title_en": "Signing up for a language course",
+      "situation_en": "You want to join a Dutch course at the local community centre.",
+      "prompt_nl": "U wilt zich aanmelden voor een cursus Nederlands. Vul het formulier in. Schrijf bij 'Waarom wilt u deze cursus volgen?' een of twee hele zinnen.",
+      "prompt_en": "You want to sign up for a Dutch course. Fill in the form. At 'Why do you want to take this course?' write one or two full sentences.",
+      "min_sentences": 0,
+      "must_include": [
+        "Every field filled in",
+        "The reason written as one or two complete sentences, not single words",
+        "A clear level choice",
+        "A date of birth in day-month-year order"
+      ],
+      "model_answer_nl": "Achternaam: Mudgal\nVoornaam: Abhinav\nGeboortedatum: 03-01-1990\nTelefoonnummer: 06 12345678\nE-mailadres: abhinav@voorbeeld.nl\nWelk niveau: A2\nWaarom wilt u deze cursus volgen: Ik woon sinds twee jaar in Nederland en ik wil beter Nederlands spreken. In juni doe ik het inburgeringsexamen.",
+      "model_answer_en": "A completed form. The reason is two full sentences: where you live and why you need the course.",
+      "tips_en": [
+        "The reason box is the part that is marked as writing. Use full sentences.",
+        "Two short, correct sentences beat one long sentence you cannot control.",
+        "Give a concrete reason: work, the exam, your children, your neighbours."
+      ],
+      "fields": [
+        {
+          "label_nl": "Achternaam",
+          "label_en": "Surname",
+          "hint_en": ""
+        },
+        {
+          "label_nl": "Voornaam",
+          "label_en": "First name",
+          "hint_en": ""
+        },
+        {
+          "label_nl": "Geboortedatum",
+          "label_en": "Date of birth",
+          "hint_en": "Day-month-year"
+        },
+        {
+          "label_nl": "Telefoonnummer",
+          "label_en": "Telephone number",
+          "hint_en": ""
+        },
+        {
+          "label_nl": "E-mailadres",
+          "label_en": "Email address",
+          "hint_en": ""
+        },
+        {
+          "label_nl": "Welk niveau wilt u volgen?",
+          "label_en": "Which level?",
+          "hint_en": "For example A1, A2 or B1"
+        },
+        {
+          "label_nl": "Waarom wilt u deze cursus volgen?",
+          "label_en": "Why do you want to take this course?",
+          "hint_en": "One or two full sentences"
+        }
+      ]
+    },
+    {
+      "id": "schrijven-003",
+      "type": "formulier",
+      "tier": "A2",
+      "title_nl": "Inschrijven bij de huisarts",
+      "title_en": "Registering with a GP",
+      "situation_en": "You have moved and need to register with a new GP practice.",
+      "prompt_nl": "U bent verhuisd en wilt zich inschrijven bij een nieuwe huisarts. Vul het formulier in. Schrijf bij 'Heeft u gezondheidsklachten?' een of twee hele zinnen.",
+      "prompt_en": "You have moved and want to register with a new GP. Fill in the form. At 'Do you have any health complaints?' write one or two full sentences.",
+      "min_sentences": 0,
+      "must_include": [
+        "Every field filled in",
+        "The health question answered in one or two complete sentences",
+        "Your insurance details given",
+        "A Dutch-format postcode"
+      ],
+      "model_answer_nl": "Achternaam: Mudgal\nVoornaam: Abhinav\nGeboortedatum: 03-01-1990\nAdres: Keizersgracht 12\nPostcode: 1015 CJ\nWoonplaats: Amsterdam\nZorgverzekeraar: Zilveren Kruis\nHeeft u gezondheidsklachten: Ik heb soms last van mijn rug. Verder ben ik gezond.",
+      "model_answer_en": "A completed form, with the health question answered in two short sentences.",
+      "tips_en": [
+        "`Ik heb last van ...` is the normal way to say something bothers you.",
+        "If you have nothing to report, write a sentence anyway: `Nee, ik ben gezond.`",
+        "Everyone in the Netherlands must have a zorgverzekering, so this field is always asked."
+      ],
+      "fields": [
+        {
+          "label_nl": "Achternaam",
+          "label_en": "Surname",
+          "hint_en": ""
+        },
+        {
+          "label_nl": "Voornaam",
+          "label_en": "First name",
+          "hint_en": ""
+        },
+        {
+          "label_nl": "Geboortedatum",
+          "label_en": "Date of birth",
+          "hint_en": "Day-month-year"
+        },
+        {
+          "label_nl": "Adres",
+          "label_en": "Address",
+          "hint_en": ""
+        },
+        {
+          "label_nl": "Postcode",
+          "label_en": "Postcode",
+          "hint_en": "For example 1015 CJ"
+        },
+        {
+          "label_nl": "Woonplaats",
+          "label_en": "Town or city",
+          "hint_en": ""
+        },
+        {
+          "label_nl": "Zorgverzekeraar",
+          "label_en": "Health insurer",
+          "hint_en": ""
+        },
+        {
+          "label_nl": "Heeft u gezondheidsklachten?",
+          "label_en": "Do you have any health complaints?",
+          "hint_en": "One or two full sentences"
+        }
+      ]
+    },
+    {
+      "id": "schrijven-004",
+      "type": "briefje",
+      "tier": "A1",
+      "title_nl": "Briefje voor de buren",
+      "title_en": "A note for the neighbours",
+      "situation_en": "A parcel for your neighbour was delivered to you while they were out.",
+      "prompt_nl": "Uw buurvrouw was niet thuis. U heeft een pakket voor haar aangenomen. Schrijf een briefje van 3 tot 5 zinnen.",
+      "prompt_en": "Your neighbour was not home. You accepted a parcel for her. Write a note of 3 to 5 sentences.",
+      "min_sentences": 3,
+      "must_include": [
+        "Say who you are and where you live",
+        "Say that you have the parcel",
+        "Say when she can collect it",
+        "A friendly closing with your name"
+      ],
+      "model_answer_nl": "Hallo,\n\nIk ben uw buurman van nummer 14. De postbode was er vanmiddag en u was niet thuis. Ik heb het pakket voor u aangenomen. U kunt het vanavond na zes uur ophalen.\n\nGroeten,\nAbhinav",
+      "model_answer_en": "Hello, I am your neighbour from number 14. The postman came this afternoon and you were not home. I accepted the parcel for you. You can collect it this evening after six. Greetings, Abhinav.",
+      "tips_en": [
+        "A note is short. Three to five sentences is enough, do not pad it.",
+        "`Groeten` or `Groetjes` is the normal friendly closing between neighbours.",
+        "Always sign your name. A note without a name loses a point."
+      ]
+    },
+    {
+      "id": "schrijven-005",
+      "type": "briefje",
+      "tier": "A2",
+      "title_nl": "Briefje voor je collega",
+      "title_en": "A note for your colleague",
+      "situation_en": "You are leaving work early and your colleague takes over.",
+      "prompt_nl": "U gaat vandaag eerder naar huis. Schrijf een briefje van 3 tot 5 zinnen voor uw collega. Schrijf wat u al gedaan heeft en wat uw collega nog moet doen.",
+      "prompt_en": "You are going home early today. Write a note of 3 to 5 sentences for your colleague. Write what you have already done and what your colleague still has to do.",
+      "min_sentences": 3,
+      "must_include": [
+        "Say that you are leaving early and why",
+        "Say what you have already finished",
+        "Say what your colleague still has to do",
+        "A closing with your name"
+      ],
+      "model_answer_nl": "Hoi Sanne,\n\nIk ga vandaag om drie uur weg, want ik heb een afspraak bij de tandarts. Ik heb de post al gedaan en de klanten gebeld. Wil jij de kast nog opruimen en de deur afsluiten? Bedankt alvast!\n\nGroetjes,\nAbhinav",
+      "model_answer_en": "Hi Sanne, I am leaving at three today because I have a dentist appointment. I have already done the post and called the customers. Could you tidy the cupboard and lock the door? Thanks in advance. Greetings, Abhinav.",
+      "tips_en": [
+        "`Wil jij ...?` is a natural way to ask a colleague to do something.",
+        "`Bedankt alvast` means thanks in advance. It softens a request.",
+        "Use the perfect tense for what you have done: `Ik heb de post gedaan.`"
+      ]
+    },
+    {
+      "id": "schrijven-006",
+      "type": "briefje",
+      "tier": "A2",
+      "title_nl": "Briefje voor je huisgenoot",
+      "title_en": "A note for your housemate",
+      "situation_en": "You are away for the weekend and need your housemate to help.",
+      "prompt_nl": "U bent dit weekend weg. Schrijf een briefje van 3 tot 5 zinnen voor uw huisgenoot. Vraag of hij of zij iets voor u wil doen.",
+      "prompt_en": "You are away this weekend. Write a note of 3 to 5 sentences for your housemate. Ask whether he or she will do something for you.",
+      "min_sentences": 3,
+      "must_include": [
+        "Say where you are going and for how long",
+        "Ask clearly for the favour",
+        "Give any detail they need to do it",
+        "A closing with your name"
+      ],
+      "model_answer_nl": "Hoi Tom,\n\nIk ben dit weekend bij mijn zus in Utrecht. Ik kom zondagavond terug. Wil jij de planten water geven? Het voer voor de kat staat in de keuken.\n\nGroetjes,\nAbhinav",
+      "model_answer_en": "Hi Tom, I am at my sister's in Utrecht this weekend. I am back on Sunday evening. Could you water the plants? The cat food is in the kitchen. Greetings, Abhinav.",
+      "tips_en": [
+        "Give the practical detail. The marker wants to see the reader could actually act on it.",
+        "`Ik kom zondagavond terug` uses the present tense for the future, which is normal Dutch.",
+        "Keep sentences short. Short and correct scores better than long and broken."
+      ]
+    },
+    {
+      "id": "schrijven-007",
+      "type": "email",
+      "tier": "A2",
+      "title_nl": "Een afspraak verzetten",
+      "title_en": "Moving an appointment",
+      "situation_en": "You cannot make your dentist appointment and need a new time.",
+      "prompt_nl": "U heeft donderdag om 10.00 uur een afspraak bij de tandarts, maar u kunt niet komen. Schrijf een e-mail van 4 tot 6 zinnen. Noem de oude afspraak, de reden, en stel een nieuwe dag voor.",
+      "prompt_en": "You have a dentist appointment on Thursday at 10:00 but you cannot come. Write an email of 4 to 6 sentences. Mention the old appointment, the reason, and propose a new day.",
+      "min_sentences": 4,
+      "must_include": [
+        "A proper opening (Geachte heer/mevrouw or Beste ...)",
+        "The existing appointment, with its day and time",
+        "A reason why you cannot come",
+        "A concrete proposal for a new day or time",
+        "A proper closing with your name"
+      ],
+      "model_answer_nl": "Geachte heer/mevrouw,\n\nIk heb donderdag 12 maart om 10.00 uur een afspraak bij de tandarts. Helaas kan ik niet komen, want ik moet die dag werken. Kan ik de afspraak verzetten? Volgende week dinsdag of woensdag komt mij goed uit. Ik hoor graag van u.\n\nMet vriendelijke groet,\nAbhinav Mudgal",
+      "model_answer_en": "Dear sir/madam, I have an appointment at the dentist on Thursday 12 March at 10:00. Unfortunately I cannot come, because I have to work that day. Can I move the appointment? Next Tuesday or Wednesday would suit me. I look forward to hearing from you. Kind regards, Abhinav Mudgal.",
+      "tips_en": [
+        "Learn two fixed pairs: `Geachte heer/mevrouw` with `Met vriendelijke groet`, and `Beste Anna` with `Groetjes`. Do not mix them.",
+        "Always propose a concrete alternative. 'Another day' is not enough to score.",
+        "`Komt mij goed uit` means it suits me. `Ik hoor graag van u` is a standard closing line."
+      ]
+    },
+    {
+      "id": "schrijven-008",
+      "type": "email",
+      "tier": "A2",
+      "title_nl": "Je ziek melden",
+      "title_en": "Calling in sick",
+      "situation_en": "You are ill and cannot go to work.",
+      "prompt_nl": "U bent ziek en kunt vandaag niet werken. Schrijf een e-mail van 4 tot 6 zinnen aan uw leidinggevende. Noem wat u heeft, hoe lang u denkt weg te blijven, en wat er met uw werk moet gebeuren.",
+      "prompt_en": "You are ill and cannot work today. Write an email of 4 to 6 sentences to your manager. Mention what is wrong, how long you expect to be away, and what should happen with your work.",
+      "min_sentences": 4,
+      "must_include": [
+        "A proper opening",
+        "That you are ill and cannot come today",
+        "Roughly how long you expect to be away",
+        "What should happen with your work or appointments",
+        "A proper closing with your name"
+      ],
+      "model_answer_nl": "Beste meneer De Vries,\n\nIk ben vanochtend ziek geworden. Ik heb koorts en kan vandaag niet werken. Ik denk dat ik morgen weer beter ben. Wilt u de vergadering van vanmiddag verzetten? Ik bel u morgenochtend.\n\nMet vriendelijke groet,\nAbhinav Mudgal",
+      "model_answer_en": "Dear Mr De Vries, I became ill this morning. I have a fever and cannot work today. I think I will be better tomorrow. Could you move this afternoon's meeting? I will call you tomorrow morning. Kind regards, Abhinav Mudgal.",
+      "tips_en": [
+        "In Dutch you report sick to your manager, not to a doctor. The GP is not involved on day one.",
+        "`Ik ben ziek geworden` (perfect) for what happened, `ik heb koorts` for how you are now.",
+        "Answer all three points. Missing one costs you marks even if the Dutch is perfect."
+      ]
+    },
+    {
+      "id": "schrijven-009",
+      "type": "email",
+      "tier": "A2",
+      "title_nl": "Een klacht aan de verhuurder",
+      "title_en": "A complaint to the landlord",
+      "situation_en": "The heating in your flat has stopped working.",
+      "prompt_nl": "De verwarming in uw woning is kapot. Schrijf een e-mail van 4 tot 6 zinnen aan uw verhuurder. Noem het probleem, sinds wanneer het speelt, en vraag om een oplossing.",
+      "prompt_en": "The heating in your home is broken. Write an email of 4 to 6 sentences to your landlord. Mention the problem, since when, and ask for a solution.",
+      "min_sentences": 4,
+      "must_include": [
+        "A proper opening",
+        "A clear statement of the problem",
+        "Since when the problem has existed",
+        "A clear request for it to be fixed, ideally with urgency",
+        "A proper closing with your name and address"
+      ],
+      "model_answer_nl": "Geachte heer/mevrouw,\n\nIk woon op Keizersgracht 12 in Amsterdam. De verwarming in mijn woning doet het sinds maandag niet meer. Het is nu erg koud in huis en ik heb twee jonge kinderen. Kunt u deze week een monteur sturen? Ik hoor graag wanneer hij komt.\n\nMet vriendelijke groet,\nAbhinav Mudgal\nKeizersgracht 12, 1015 CJ Amsterdam",
+      "model_answer_en": "Dear sir/madam, I live at Keizersgracht 12 in Amsterdam. The heating in my home has not worked since Monday. It is very cold in the house now and I have two young children. Could you send an engineer this week? I would like to hear when he is coming. Kind regards, Abhinav Mudgal, Keizersgracht 12, 1015 CJ Amsterdam.",
+      "tips_en": [
+        "In a complaint, give your address. The landlord has many tenants.",
+        "`doet het niet` is the everyday way to say something is not working.",
+        "`sinds maandag` with the present tense: Dutch uses the present where English uses 'has not worked since'.",
+        "Stay polite. A calm complaint is taken more seriously, and the exam rewards register."
+      ]
+    },
+    {
+      "id": "schrijven-010",
+      "type": "email",
+      "tier": "A2",
+      "title_nl": "Een e-mail aan de juf of meester",
+      "title_en": "An email to your child's teacher",
+      "situation_en": "Your child will miss school and you want to let the teacher know.",
+      "prompt_nl": "Uw zoon of dochter kan morgen niet naar school. Schrijf een e-mail van 4 tot 6 zinnen aan de juf of meester. Noem wie u bent, welk kind het is, waarom, en wanneer het kind weer komt.",
+      "prompt_en": "Your son or daughter cannot go to school tomorrow. Write an email of 4 to 6 sentences to the teacher. Mention who you are, which child, why, and when the child will be back.",
+      "min_sentences": 4,
+      "must_include": [
+        "A proper opening",
+        "Who you are and which child you mean, with their class if you can",
+        "The reason for the absence",
+        "When the child is expected back",
+        "A proper closing with your name"
+      ],
+      "model_answer_nl": "Beste juf Marieke,\n\nIk ben de vader van Aarav uit groep 4. Aarav is ziek en kan morgen niet naar school komen. Hij heeft griep en moet van de huisarts thuis blijven. Waarschijnlijk is hij maandag weer beter. Kunt u mij laten weten wat hij moet inhalen?\n\nMet vriendelijke groet,\nAbhinav Mudgal",
+      "model_answer_en": "Dear Miss Marieke, I am Aarav's father, from group 4. Aarav is ill and cannot come to school tomorrow. He has flu and the GP says he must stay at home. He will probably be better on Monday. Could you let me know what he has to catch up? Kind regards, Abhinav Mudgal.",
+      "tips_en": [
+        "Dutch primary school years are `groep 1` to `groep 8`, not 'class 1'.",
+        "Teachers are `de juf` (female) and `de meester` (male), usually with a first name.",
+        "Saying when the child returns is one of the marked points. Do not leave it out."
+      ]
+    },
+    {
+      "id": "schrijven-011",
+      "type": "vrij",
+      "tier": "A2",
+      "title_nl": "Vertel over je woonplaats",
+      "title_en": "Write about where you live",
+      "situation_en": "A free writing task. The exam gives a simple everyday topic.",
+      "prompt_nl": "Schrijf 4 of 5 zinnen over de plaats waar u woont. Schrijf wat u er leuk aan vindt en wat u mist.",
+      "prompt_en": "Write 4 or 5 sentences about the place where you live. Write what you like about it and what you miss.",
+      "min_sentences": 4,
+      "must_include": [
+        "Where you live, named",
+        "At least one thing you like, with a reason",
+        "At least one thing you miss or find less good",
+        "Complete sentences, not a list"
+      ],
+      "model_answer_nl": "Ik woon in Amsterdam. Ik vind het hier prettig, want alles is dichtbij en ik kan overal met de fiets naartoe. Mijn buurt is rustig en de buren zijn aardig. Ik mis wel de zon en mijn familie in India. Toch voel ik me hier thuis.",
+      "model_answer_en": "I live in Amsterdam. I like it here, because everything is close by and I can cycle everywhere. My neighbourhood is quiet and the neighbours are nice. I do miss the sun and my family in India. Still, I feel at home here.",
+      "tips_en": [
+        "Free writing is marked on whether you answered the question, not on being clever.",
+        "Use `want` to give a reason. It needs no word-order change, unlike `omdat`.",
+        "Five short correct sentences score better than three ambitious broken ones."
+      ]
+    },
+    {
+      "id": "schrijven-012",
+      "type": "vrij",
+      "tier": "A2",
+      "title_nl": "Waarom leer je Nederlands?",
+      "title_en": "Why are you learning Dutch?",
+      "situation_en": "A free writing task on a topic that comes up constantly.",
+      "prompt_nl": "Schrijf 4 of 5 zinnen over waarom u Nederlands leert. Schrijf hoe u leert en wat u moeilijk vindt.",
+      "prompt_en": "Write 4 or 5 sentences about why you are learning Dutch. Write how you learn and what you find difficult.",
+      "min_sentences": 4,
+      "must_include": [
+        "A clear reason for learning Dutch",
+        "How you learn, concretely",
+        "Something you find difficult",
+        "Complete sentences, not a list"
+      ],
+      "model_answer_nl": "Ik leer Nederlands omdat ik in Nederland woon en wil blijven. Op mijn werk spreken mijn collega's Nederlands en ik wil meedoen met het gesprek. Ik volg een cursus en ik oefen elke dag met een app. De uitspraak van de g vind ik moeilijk. In juni doe ik het inburgeringsexamen.",
+      "model_answer_en": "I am learning Dutch because I live in the Netherlands and want to stay. At work my colleagues speak Dutch and I want to join the conversation. I am taking a course and I practise every day with an app. I find the pronunciation of the g difficult. In June I am taking the civic integration exam.",
+      "tips_en": [
+        "`omdat` sends the verb to the end: `omdat ik in Nederland woon`.",
+        "Be concrete about how you learn. 'I learn a lot' says nothing the marker can credit.",
+        "A sentence about your plan (`In juni doe ik het examen`) is an easy extra point."
+      ]
+    }
+  ]
+}

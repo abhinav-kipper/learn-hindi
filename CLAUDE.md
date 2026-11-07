@@ -52,6 +52,7 @@ content/dutch/lessons/  → 19 Dutch lesson JSONs (6 A1 conversational + 1 A2 so
 content/dutch/foundations/ → 14 Dutch foundation JSONs (8 A1 + 6 A2)
 content/dutch/knm.json  → 132 KNM exam questions (bilingual, all 8 statutory themes)
 content/dutch/lezen.json → 10 Lezen B1-prep reading texts (bilingual, 40 MCQs)
+content/dutch/schrijven.json → 12 Schrijven (writing) tasks w/ marking checklists + model answers
 content/dutch/pronunciation-course.json → 8-stage from-zero "Sounds" ladder (alphabet→linking)
 content/dutch/cheatsheet/    → 5 grouped concept-cheatsheet JSONs (25 topics, 214 drill questions)
 content/dutch/vocabulary.json → 208 Dutch words in 12 categories (nouns carry de/het)
@@ -206,6 +207,8 @@ shadows anywhere.
 | `/dutch/luisteren` | Luisteren (Listening) module home. 3 tier folds (A1/A2/B1), "Start timed mock" CTA, past-mocks fold. Clip cards: 🔊 + English title + monologue/dialogue label + studied chip. Audio is device TTS reading a Dutch transcript (no native recordings). |
 | `/dutch/luisteren/[clipId]` | Single clip study mode. TTS audio player (play/stop/replay, no scrubbing) via `speak(buildAudioScript(clip), 'nl')`. Transcript hidden by default; "show transcript + translation" reveals lines w/ speaker labels + greyed English. 4 bilingual question cards (tap-to-reveal + explanation). Mark-as-studied → `luisterStudyDone` + persist to `dutch-luisteren-studied`. |
 | `/dutch/luisteren/mock` | 25-min timed Listening drill (audio-only, no transcript). 5 random clips × 4 Qs = 20 questions. Live timer pill pink under 5 min. Auto-advance 1.5s. Pass ≥16/20 → `luisterMockPassed` + Confetti. Save to `dutch-luisteren-mock-attempts`. |
+| `/dutch/schrijven` | Schrijven (Writing) module home. "The real paper" butter card stating the format (4 tasks, ~40 min, marked on coverage), orange continue/start CTA, then the 12 tasks grouped under the paper's four task types (Form / Short note / Email / Free writing), each row w/ tier chip + green ✓ when done. |
+| `/dutch/schrijven/[taskId]` | One writing task. Dutch prompt (w/ 🔊) + English below it, then the **marking checklist up front** ("your answer must …") because that is what the real paper scores. Forms render one labelled input per field; the other three types a textarea with a live sentence count and a "long enough" gate on the check button. "Check my writing" → `/api/schrijven-check` returns a band (not yet / nearly / pass / strong), a verdict, one strength, per-checklist-point ✓/✗, up to 5 fixes (strikethrough → green) and the learner's **own** answer corrected. Drafts autosave per task. A model answer (NL + EN, 🔊) is always available without the AI, so the page is useful offline. "Mark as done" persists. |
 | `/dutch/sounds` | "Sounds" module home (Dutch from-zero pronunciation). Orange header w/ Mr. Stroopwafel, `N/8 stages` count, and the 8-stage ladder as Stickers: complete (green ✓), unlocked (tappable + progress bar), locked (dimmed + 🔒). Rolling unlock — finishing a stage opens the next two. |
 | `/dutch/sounds/[stageId]` | Single pronunciation stage. Mr. Stroopwafel intro bubble + sound-card deck (grapheme + plain hint + anchor word/gloss + 🔊 Google TTS + got-it self-check) + optional minimal-pair ear-quiz + optional blend builder (word assembled part-by-part, each playable). On completion → Confetti + `pronStageDone` Chaina moment + "next stage" CTA. |
 | `/dutch/cheatsheet` | Concept-cheatsheet hub. Themed header band + "topics passed" mastery bar + orange "Mixed review" CTA (15 questions across every topic) + 5 collapsible group Stickers (First contact / Core grammar / People and description / Building sentences / Time and daily life), each folding out its topic rows. Each row carries a green `✓ n/n` best-score badge and a **covered check circle**: tap it (or swipe the row right) to mark the topic as covered, swipe left or tap again to clear. |
@@ -243,6 +246,7 @@ shadows anywhere.
 | `dutch/cheatsheet.ts` | Concept-cheatsheet loader + drill engine (TDD'd, 21 tests). Flattens `content/dutch/cheatsheet/*.json` into 5 groups / 25 topics. `getGroups/getTopics/getTopicById/getGroupOfTopic/getNextTopic`, `drawTopicDrill`/`drawMixedReview(15)`/`scrambleWords` (never returns the answer order), `normalizeAnswer`/`isCorrect`/`scoreDrill` (80% pass), studied set + best-score-per-topic history, `getWeakTopics`/`getOverallProgress`. |
 | `dutch/knm.ts` | KNM loader + `drawDrillSet(30)` (Fisher-Yates) + `scoreAttempt()` (80% pass) + attempt history (capped at 50) + per-question studied tracking. TDD'd, 12 tests. |
 | `dutch/lezen.ts` | Same shape as `knm.ts` for the Lezen module — `drawMockSet(5)`, 20-Q scoring, 25-min `MOCK_TIMER_MS` constant, studied set. TDD'd, 12 tests. |
+| `dutch/schrijven.ts` | Schrijven (writing) loader + progress + drafts (TDD'd, 20 tests). `getSchrijfTasks/getTaskById/getTasksByType/getNextTask`, `TASK_TYPES` (the paper's four, in exam order), `EXAM_TASK_COUNT`/`EXAM_MINUTES`, done set (`markTaskDone`/`isTaskDone`/`getDoneCount`), per-task drafts (`saveDraft`/`getDraft`, forms stored as a field map), and the length helpers `countWords`/`countSentences`/`isLongEnough` that gate the check button. The tests double as content gates: all four task types present, every task's checklist ≥3 points, forms ≥5 fields, writing tasks `min_sentences` ≥3, ids unique. |
 | `dutch/exam-target.ts` | Exam level the learner is sitting, `'a2' \| 'b1'`, **default a2**. `targetLabel`, `levelsForTarget`, `isBeyondTarget(level, target)`. Read by the Dutch home (goal banner, path, exam-scenario badges) and by the Lezen/Luisteren tier lists, so above-target content is dimmed and relabelled rather than hidden. Changeable in the welcome modal **and in Settings**. TDD'd, 12 tests. |
 | `dutch/level-map.ts` | Lookup table tagging every Dutch content ID with `A1` / `A2` / `B1`. Powers the 3-stage progress bars on the Dutch home. **Every key must be the exact `id` field of the content JSON, which is `dutch-` prefixed for all Dutch units.** A bare key never matches, so `getLevel` silently returns the `A1` default and the stage bar counts items that can never complete. Fixed for lessons 2026-05-26 and for foundations 2026-11-07 (7 foundation keys were still bare). Guarded by `__tests__/lib/dutch-content-ids.test.ts` + `lib/dutch/level-map.test.ts`. |
 | `dutch/id-migration.ts` | One-time localStorage remap for the 2026-11-07 Dutch foundation ID rename (bare ids → `dutch-` prefixed). Rewrites `dutch-progress` (completedLessons + lessonCompletedAt), `dutch-phrase-progress`, `dutch-quiz-scores` and `dutch-last-active-lesson`, then sets the flag `dutch-foundation-id-migration-v1`. Called once from `layout-shell.tsx` on mount. Idempotent, Dutch-prefix only, never throws. TDD'd, 8 tests. |
@@ -349,6 +353,8 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-lezen-mock-attempts` — same shape as `dutch-knm-attempts`, plus `text_ids: string[]`.
 - `dutch-luisteren-studied` — JSON array of Luisteren clip IDs marked studied.
 - `dutch-luisteren-mock-attempts` — same shape as the Lezen attempts, plus `clip_ids: string[]`.
+- `dutch-schrijven-done` — JSON array of Schrijven task ids marked done.
+- `dutch-schrijven-drafts` — `{ [taskId]: string }`. Writing is effortful, so every keystroke is autosaved and restored on return. Form tasks store a JSON-stringified field-label → value map in that same string slot; the other three types store the raw text.
 - `dutch-pron-cards-done` — JSON array of "Sounds" card ids marked got-it (blend words tracked as `blend:<whole>`).
 - `dutch-pron-earquiz-done` — JSON array of "Sounds" stage ids whose ear-quiz passed. Stage completion + the rolling unlock are derived from these two sets.
 - `dutch-cheatsheet-studied` — JSON array of cheatsheet topic ids marked as read.
@@ -356,6 +362,50 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-define-cache` — `{ [word]: Definition }` from `/api/define`, capped at 300, so tapped words resolve instantly and keep working offline once seen.
 
 ### Recent feature work log
+
+**2026-11-07 (later still) — Schrijven (A2 writing) module**
+
+The third of the five exam papers goes live. Writing was the paper with no coverage
+at all, and the one candidates prepare for least.
+
+*What the real paper is, and why the UI says so.* Checked before authoring: the A2
+Schrijven paper is **4 tasks in about 40 minutes, on paper** — a form, a short note
+(3 to 5 sentences), a semi-formal email (4 to 6 sentences) and a short free text.
+Crucially it is marked first on **whether every point the task asked for is
+covered**, and only then on language. So every task here leads with its marking
+checklist ("your answer must …") instead of hiding it behind a result, and the
+module home states the format up front. Sources for the format are commercial
+exam-prep publishers; DUO / inburgeren.nl is the authority if it ever changes.
+
+- **Content** `content/dutch/schrijven.json`: 12 tasks in the paper's own
+  proportions (3 formulier, 3 briefje, 4 email, 2 vrij). Each carries
+  `must_include` (the checklist, which is the marking scheme), a `model_answer_nl`
+  + `_en`, `tips_en`, and `fields[]` for the forms. Situations are the ones the
+  exam actually uses: registering at the gemeente, a note to a neighbour, moving a
+  doctor's appointment, reporting a housing problem.
+- **Marker** `app/api/schrijven-check/route.ts`. `generateObject` with a Zod schema
+  returning `{covered[], verdict, band, strength, fixes[], corrected}`, plus
+  per-type rules (a form is marked on format accuracy, not sentences; a briefje
+  must be informal; an email's opening and closing must match). Claude Sonnet 4.6
+  → Gemini 2.5-flash → 2.0-flash, the same fallback ladder as `/api/journal-check`.
+  `corrected` is deliberately specified as *the learner's own answer fixed*, never
+  a better answer substituted. The `covered` array is length-normalised server-side
+  so the UI can always zip it against the checklist.
+- **Offline is a first-class path, not an error.** The model answer renders from
+  bundled content with no network, and a failed check says so and points back at
+  the checklist to self-mark. Drafts autosave per task, so a half-written email
+  survives a reload or a tab switch.
+- `lib/dutch/schrijven.ts` (TDD'd, 20 tests, which double as content gates) and the
+  two routes added to the offline precache. Home "Writing / Schrijven" SkillCard
+  flipped from `soon` to live with an `N/12 done` count.
+
+Verified in a browser: 33 checks over all 12 task pages (each renders its own
+checklist), the sentence-count gate, draft persistence for both a textarea and a
+9-field form, the model-answer reveal, the done count flowing back to the module
+home, and both failure paths (offline, and a 500 from the marker) degrading to
+self-marking. The marker UI itself was verified against a stubbed response:
+band, verdict, strength, per-point ✓/✗, fixes and the corrected text all render.
+537 tests, four lints and the prod build clean.
 
 **2026-11-07 (later) — A2 as the real exam target, 2 missing KNM themes, 2x vocabulary**
 
@@ -896,7 +946,7 @@ Still open:
 - **No XP / leveling arc** — `phrasesLearned` is just a stat tile, no progression visual.
 - **No audio assets** — only browser TTS. Native recordings would matter most for Phase 3 Luisteren (Dutch listening drills).
 - **Conjugation drill is verb-by-verb** — no mixed-verb sets, no spaced-repetition wiring.
-- **Dutch Phase 3-6 still pending:** ~~Luisteren (Listening)~~ shipped 2026-05-27 (TTS-based, full Lezen parity). Schrijven (Writing), Spreken (Speaking), Mock-exam still pending — each gets its own spec → plan → ship cycle.
+- **Dutch Phase 3-6 still pending:** ~~Luisteren (Listening)~~ shipped 2026-05-27 (TTS-based, full Lezen parity). ~~Schrijven (Writing)~~ shipped 2026-11-07 (12 tasks, checklist-first marking, AI marker w/ offline fallback). **Spreken (Speaking)** and a full **mock exam** still pending — each gets its own spec → plan → ship cycle. Spreken is the last uncovered paper and needs STT (`nl-NL`) plus a decision on how to score a spoken answer.
 - **OV-chipkaart references in Lezen text 007** — system is being phased out in favor of OVpay (2023-2025). Naar Nederland A2 still uses this material so the audit flagged but didn't auto-rewrite.
 - **KNM date-anchored facts** ("AOW age 67 in 2026", "eigen risico €385", etc.) drift out of date annually. Worth a scheduled re-audit.
 

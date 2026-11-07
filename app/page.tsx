@@ -22,6 +22,7 @@ import { getUniversalLessonById } from '@/lib/all-content'
 import { SearchOverlay } from '@/components/search-overlay'
 import { initBaseline, isInitialized, getUnseenIds, hasBeenSeen } from '@/lib/seen-lessons'
 import { getLearnedCount, getKnmQuestions } from '@/lib/dutch/knm'
+import { getSchrijfTasks, getDoneCount as getSchrijvenDone } from '@/lib/dutch/schrijven'
 import { getStudiedCount as getLezenStudiedCount } from '@/lib/dutch/lezen'
 import { getOverallProgress as getCheatsheetProgress } from '@/lib/dutch/cheatsheet'
 import { getStudiedCount as getLuisterStudiedCount } from '@/lib/dutch/luisteren'
@@ -231,8 +232,12 @@ export default function Home() {
   }, [language, completedCount, play])
 
   const [dutchKnmLearned, setDutchKnmLearned] = useState(0)
+  const [dutchSchrijvenDone, setDutchSchrijvenDone] = useState(0)
   useEffect(() => {
-    if (language === 'dutch') setDutchKnmLearned(getLearnedCount())
+    if (language === 'dutch') {
+      setDutchKnmLearned(getLearnedCount())
+      setDutchSchrijvenDone(getSchrijvenDone())
+    }
   }, [language])
 
   // Ambient soundscape: faint looping bed for the active track. Opt-in/off by
@@ -862,7 +867,14 @@ export default function Home() {
                   live
                   onClick={() => router.push('/dutch/luisteren')}
                 />
-                <SkillCard label="Writing"   subtitle="Schrijven" subDutch=""  status="soon" />
+                <SkillCard
+                  label="Writing"
+                  subtitle="Schrijven"
+                  subDutch=""
+                  status={`${dutchSchrijvenDone}/${getSchrijfTasks().length} done`}
+                  live
+                  onClick={() => router.push('/dutch/schrijven')}
+                />
                 <SkillCard label="Speaking"  subtitle="Spreken"   subDutch=""  status="soon" />
               </div>
             </div>
