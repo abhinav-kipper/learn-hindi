@@ -12,8 +12,8 @@
     {
       "hindi": "willen: ik wil, jij wilt/wil, hij wil, wij willen, Ik wil een huis huren. Wil jij ook meekomen?",
       "english": "to want: I want, you want, he wants, we want, I want to rent a house. Do you want to come along too?",
-      "context": "Modal + infinitive: the infinitive goes to the END of the clause. 'Ik wil een huis huren', 'huren' is last. 'Willen' = strong want/wish. Informal: 'ik wil' and 'jij wil' (dropping -t) is common.",
-      "pronunciation": "WIL-len: ik WIL, yay WILT, hay WIL, way WIL-len, ik WIL uhn HOYS HUU-ren."
+      "context": "Modal + infinitive: the infinitive goes to the END of the clause. 'Ik wil een huis huren', 'huren' is last. 'Willen' = strong want/wish. For 'jij' both 'jij wilt' and 'jij wil' are heard, and the -t always drops when it is inverted: 'wil jij?'.",
+      "pronunciation": "WIL-len: ik WIL, yay WILT, hay WIL, way WIL-len, ik WIL uhn HOWS (rounded) HUU-ren."
     },
     {
       "hindi": "kunnen: ik kan, jij kunt/kan, hij kan, wij kunnen, Ik kan morgen komen. Kun jij dit formulier invullen?",
@@ -43,13 +43,13 @@
       "hindi": "Ik wil dit niet kopen. Hij kan de deur niet openen. Je mag hier niet parkeren. Ik wil geen suiker.",
       "english": "I don't want to buy this. He can't open the door. You're not allowed to park here. I don't want any sugar.",
       "context": "Negation with modals: 'niet' goes before the infinitive at the end. 'Ik wil dit niet kopen', object 'dit' first, then 'niet', then 'kopen'. 'Geen' replaces 'een' for indefinite nouns, never say 'niet een'.",
-      "pronunciation": "ik WIL dit NEET KOH-pen. hay KAN duh DUR NEET OH-pen-en. ye MACH HIER NEET PAR-KAY-ren. ik WIL CHAYN SUY-ker."
+      "pronunciation": "ik WIL dit NEET KOH-pen. hay KAN duh DUR NEET OH-pen-en. ye MACH HEER NEET par-KAY-ren. ik WIL CHAYN SOW-ker (rounded)."
     },
     {
       "hindi": "Zou u even kunnen wachten? Zou ik uw paspoort mogen zien? Ik zou graag een formulier willen hebben.",
       "english": "Could you wait a moment? May I see your passport? I would like to have a form.",
       "context": "'Zouden' = would/could, the conditional/polite form. 'Zou u kunnen...?' = could you...? (formal, using 'u'). 'Ik zou graag... willen' = I would like..., the polite way to make requests at the gemeente or bank.",
-      "pronunciation": "ZOW uu AY-ven KUN-nen WACH-ten? ZOW ik uw PAS-port MOH-chen ZEEN? ik ZOW CHAACH uhn for-MOO-lier WIL-len HEB-ben."
+      "pronunciation": "ZOW uu AY-ven KUN-nen WACH-ten? ZOW ik uw PAS-pohrt MOH-chen ZEEN? ik ZOW CHRAACH uhn for-mew-LEER WIL-len HEB-ben."
     }
   ],
   "grammar_notes": [
@@ -309,11 +309,11 @@
             ],
             [
               "Mag ik een koffie?",
-              "Zou ik een koffie mogen?",
+              "Zou ik een koffie mogen hebben?",
               "May/Could I have a coffee?"
             ],
             [
-              "Doe je dit?",
+              "Doe je dit even?",
               "Zou je dit kunnen doen?",
               "Will/Could you do this?"
             ]
@@ -379,7 +379,7 @@
           {
             "hindi": "We hebben geen tijd om te gaan.",
             "english": "We don't have time to go.",
-            "breakdown": "`geen` replaces indefinite `tijd` (time, uncountable here)."
+            "breakdown": "`tijd` carries no article, so `geen` does the negating."
           }
         ],
         "callout": {
@@ -405,5 +405,6 @@
     "dutchgrammar.com (Dutch Grammar by Bieneke Berendsen)",
     "TaalCompleet A1 (KleurRijker NT2 method)",
     "Naar Nederland (NT2 inburgering programme)"
-  ]
+  ],
+  "level": "A2"
 }

@@ -211,7 +211,8 @@ shadows anywhere.
 | `dutch/knm.ts` | KNM loader + `drawDrillSet(30)` (Fisher-Yates) + `scoreAttempt()` (80% pass) + attempt history (capped at 50) + per-question studied tracking. TDD'd, 12 tests. |
 | `dutch/lezen.ts` | Same shape as `knm.ts` for the Lezen module — `drawMockSet(5)`, 20-Q scoring, 25-min `MOCK_TIMER_MS` constant, studied set. TDD'd, 12 tests. |
 | `dutch/exam-target.ts` | User preference `'a2' \| 'b1'` for exam-target level (default B1). Surfaced as toggle in Dutch welcome modal. |
-| `dutch/level-map.ts` | Lookup table tagging every Dutch content ID with `A1` / `A2` / `B1`. Powers the 3-stage progress bars on the Dutch home. Keys use the `dutch-` prefixed form to match lesson JSON IDs (fixed 2026-05-26 — pre-existing bug had bare keys that never matched). |
+| `dutch/level-map.ts` | Lookup table tagging every Dutch content ID with `A1` / `A2` / `B1`. Powers the 3-stage progress bars on the Dutch home. **Every key must be the exact `id` field of the content JSON, which is `dutch-` prefixed for all Dutch units.** A bare key never matches, so `getLevel` silently returns the `A1` default and the stage bar counts items that can never complete. Fixed for lessons 2026-05-26 and for foundations 2026-11-07 (7 foundation keys were still bare). Guarded by `__tests__/lib/dutch-content-ids.test.ts` + `lib/dutch/level-map.test.ts`. |
+| `dutch/id-migration.ts` | One-time localStorage remap for the 2026-11-07 Dutch foundation ID rename (bare ids → `dutch-` prefixed). Rewrites `dutch-progress` (completedLessons + lessonCompletedAt), `dutch-phrase-progress`, `dutch-quiz-scores` and `dutch-last-active-lesson`, then sets the flag `dutch-foundation-id-migration-v1`. Called once from `layout-shell.tsx` on mount. Idempotent, Dutch-prefix only, never throws. TDD'd, 8 tests. |
 
 ### Components
 
@@ -322,6 +323,61 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-define-cache` — `{ [word]: Definition }` from `/api/define`, capped at 300, so tapped words resolve instantly and keep working offline once seen.
 
 ### Recent feature work log
+
+**2026-11-07 — Dutch foundations: ID-collision fix + full accuracy/clarity audit**
+
+Reported symptom: the Dutch "Asking Questions" foundation showed **Hindi** content.
+
+*Root cause (structural).* `content/dutch/foundations/09-questions.json` and
+`content/foundations/11-questions.json` both had `id: "questions"`. Content IDs
+are a single global namespace: `getUniversalLessonById` checks Hindi first, then
+Dutch, so the Dutch chapter was unreachable and `/lessons/questions` rendered
+`yeh kya hai?`. Six more Dutch foundations carried bare ids and were latent
+collisions. Fixes:
+- All 7 bare Dutch foundation ids renamed to the `dutch-` prefix every other
+  Dutch unit already used (`questions` → `dutch-questions`, plus `negation`,
+  `simple-sentences`, `connectors`, `future`, `comparatives`,
+  `pronouns-zijn-hebben`). Nothing outside `level-map.ts` hardcoded them.
+- **Second bug found while fixing the first:** `LEVEL_MAP`'s 14 foundation keys
+  were *all* bare, so none ever matched a real id. Every foundation fell through
+  to the `A1` default (so `dutch-word-order`, `dutch-past-tense`,
+  `dutch-modals`, `dutch-connectors`, `dutch-future`, `dutch-comparatives` were
+  silently mis-levelled) and `getItemsByLevel('A1')` returned ids that could
+  never complete, skewing the Dutch home stage bars and the `a2Milestone`
+  trigger. Keys corrected to the real ids.
+- `lib/dutch/id-migration.ts` remaps progress saved under the old bare ids, so
+  no completion is lost. Runs once from `layout-shell.tsx`.
+- CI gate `__tests__/lib/dutch-content-ids.test.ts`: asserts global id
+  uniqueness across all four content sets, that every Dutch id is `dutch-`
+  prefixed, and that each id resolves to its own language's unit.
+  `level-map.test.ts` had been asserting the *buggy* bare keys; corrected.
+
+*Content audit (all 14 chapters, ~118 edits).* Accuracy fixes: the Dutch `g`/`ch`
+described as a **voiced** velar fricative (it is voiceless, and the note
+contradicted its own Scottish-`loch` comparison); the soft southern `g` compared
+to Spanish `j` (that is the *hard* sound; now German `ich`); `want` listed among
+the conjunctions that send the verb to the end (it is coordinating, and the same
+file's culture note said so); `duurder`'s extra `-d` attributed to vowel length
+in three places (it is the `-r` insertion rule) and `-r` adjectives wrongly
+grouped under `meer`/`meest`; the `-s` plural triggered by "short vowel +
+consonant" (that takes `-en` with doubling); `tachtig` explained via a false
+English analogy; `niet` placed before time words as the default (that is the
+contrastive reading). Rendering: four chapters had a `- ` bullet glued mid-line
+so the list rendered as prose and swallowed the next paragraph. Pronunciation
+hints: ~40 fixes, mostly ones that taught the exact error the Sounds chapter
+warns about (`school` as "SKOOHL", `kofschip` as "KOF-ship", `huis` as "HOYS",
+`luisteren` with "oo"), plus the article `een` transcribed as the numeral `ayn`,
+`jullie`/`Amsterdam`/`Utrecht`/`koffie` stress, and `13-future`'s one-off `gh`
+transcription scheme converted to the house convention. Also: a Hindi-grammar
+aside removed from the Dutch de/het intro, de/het ratios harmonised (75/25 vs
+2/3), a practice prompt whose "you"→"u" substitution had broken its English,
+and 4 spoken Dutch fields that contained English/Dutch metalanguage
+(`jij werkt becomes Werk jij?`) rewritten so TTS reads only Dutch.
+The 7 chapters missing a `level` field now carry one.
+
+Verified by a Playwright pass over all 14 chapters asserting HTTP 200, the
+chapter's own title present, **zero Hindi romanisation**, no leaked `**`/backtick
+markers and no glued bullets. All three content lints pass; suite at 430 tests.
 
 **2026-08-30 — Dutch vocabulary deck grown to Hindi parity**
 

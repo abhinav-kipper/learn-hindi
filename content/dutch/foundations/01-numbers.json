@@ -81,7 +81,7 @@
           "english": "one hundred and five"
         },
         {
-          "hindi": "drieduizend vierhonderd twee",
+          "hindi": "drieduizend vierhonderdtwee",
           "english": "three thousand four hundred two"
         }
       ]
@@ -239,7 +239,7 @@
       },
       {
         "heading": "The big inversion: 21-99",
-        "body": "Here it is, the wall every English speaker hits. Dutch builds compound numbers **backwards**. The ones digit comes first, then `en` (and), then the tens. 21 isn't `twintig-een`. It's `eenentwintig`, literally `one-and-twenty`.\n\nThis isn't optional, and it isn't regional. It's how all of Dutch (and German) works.\n\n- 47 = `zevenenveertig` (seven-and-forty)\n- 99 = `negenennegentig` (nine-and-ninety)\n\nYour brain wants to start with the bigger number, the way English does. Dutch demands the opposite. Drill until the flip is automatic.\n\nThe decades themselves you'll recognize: `twintig, dertig, veertig, vijftig, zestig, zeventig, tachtig, negentig`. Note that `tachtig` (80) doesn't follow the obvious `acht-tig`. It's irregular, like English `eighty` dropping the `t` of `eight`.",
+        "body": "Here it is, the wall every English speaker hits. Dutch builds compound numbers **backwards**. The ones digit comes first, then `en` (and), then the tens. 21 isn't `twintig-een`. It's `eenentwintig`, literally `one-and-twenty`.\n\nThis isn't optional, and it isn't regional. It's how all of Dutch (and German) works.\n\n- 47 = `zevenenveertig` (seven-and-forty)\n- 99 = `negenennegentig` (nine-and-ninety)\n\nYour brain wants to start with the bigger number, the way English does. Dutch demands the opposite. Drill until the flip is automatic.\n\nThe decades themselves you'll recognize: `twintig, dertig, veertig, vijftig, zestig, zeventig, tachtig, negentig`. Note that `tachtig` (80) doesn't follow the obvious `acht-tig`. It's irregular: you would expect `achttig`, but the word picks up an extra `t` at the front instead. Memorize this one on its own.",
         "table": {
           "caption": "Sample compound numbers, with the inversion",
           "columns": [
@@ -464,5 +464,6 @@
     "dutchgrammar.com (Dutch Grammar by Bieneke Berendsen)",
     "TaalCompleet A1 (KleurRijker NT2 method)",
     "Naar Nederland (NT2 inburgering programme)"
-  ]
+  ],
+  "level": "A1"
 }

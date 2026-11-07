@@ -13,7 +13,7 @@
       "hindi": "werken: ik werk, jij werkt, hij/zij werkt, wij werken, jullie werken, zij werken",
       "english": "to work: I work, you work, he/she works, we work, you (pl) work, they work",
       "context": "The pattern: find the stem (infinitive (the base or dictionary form of the verb) minus -en), then add nothing for ik, -t for jij/hij/zij, and -en stays for plural. 'Werken' stem = 'werk'",
-      "pronunciation": "WER-ken: ik WERK, yay WERKT, hay/zay WERKT, way WER-ken, yul-YE WER-ken, zay WER-ken"
+      "pronunciation": "WER-ken: ik WERK, yay WERKT, hay/zay WERKT, way WER-ken, YUL-ye WER-ken, zay WER-ken"
     },
     {
       "hindi": "leven: ik leef, jij leeft, wij leven, spreken: ik spreek, jij spreekt, wij spreken",
@@ -25,13 +25,13 @@
       "hindi": "hebben: ik heb, jij hebt, hij heeft, wij hebben, jullie hebben, zij hebben",
       "english": "to have: I have, you have, he has, we have, you (pl) have, they have",
       "context": "ESSENTIAL verb, used for the perfect tense ('ik heb gewerkt' = I worked), for possession, and in many expressions. Note: 'hij HEEFT', irregular third person.",
-      "pronunciation": "HEB-ben: ik HEB, yay HEPT, hay HAYFT, way HEB-ben, yul-YE HEB-ben, zay HEB-ben"
+      "pronunciation": "HEB-ben: ik HEB, yay HEPT, hay HAYFT, way HEB-ben, YUL-ye HEB-ben, zay HEB-ben"
     },
     {
       "hindi": "zijn: ik ben, jij bent, hij/zij is, wij zijn, jullie zijn, zij zijn",
       "english": "to be: I am, you are, he/she is, we are, you (pl) are, they are",
       "context": "The most irregular verb. 'Zijn' is BOTH the infinitive (to be) AND the plural/wij form. 'Ik ben' but 'wij zijn'. Used for identity, states, and some perfect tenses.",
-      "pronunciation": "zayn: ik BEN, yay BENT, hay/zay IS, way ZAYN, yul-YE ZAYN, zay ZAYN"
+      "pronunciation": "zayn: ik BEN, yay BENT, hay/zay IS, way ZAYN, YUL-ye ZAYN, zay ZAYN"
     },
     {
       "hindi": "Ik ben leraar. Jij bent nieuw hier. Zij is ziek. Wij zijn klaar.",
@@ -43,7 +43,7 @@
       "hindi": "Ik heb dorst. Heb jij een pen? Hij heeft koorts. Wij hebben haast.",
       "english": "I am thirsty (lit. have thirst). Do you have a pen? He has a fever. We are in a hurry (lit. have haste).",
       "context": "Key: Dutch says 'hebben dorst/haast/koorts' where English says 'to be thirsty/in a hurry/have a fever'. Parallel to 'hebben honger', the body-state pattern.",
-      "pronunciation": "ik HEB DORST. hep YAY ayn PEN? hay HAYFT KOORTS. way HEB-ben HAAST."
+      "pronunciation": "ik HEB DORST. hep YAY un PEN? hay HAYFT KOORTS. way HEB-ben HAAST."
     },
     {
       "hindi": "Hoe gaat het? Het gaat goed, dank je. En met jou?",
@@ -55,7 +55,7 @@
   "grammar_notes": [
     "Stem extraction: take the infinitive (e.g. 'werken'), remove '-en', you get the stem ('werk'). All conjugation builds from the stem",
     "The 'jij/je' inversion rule: when 'jij/je' comes AFTER the verb (in questions or inverted sentences), drop the -t: 'Werk jij?' NOT 'Werkt jij?'",
-    "Spelling rule: double the consonant when the vowel before it is short: 'zitten' (stem 'zit'), 'ik zit'. Open the vowel when the stem ends in long vowel: 'horen' stem 'hoor' / 'ik hoor'",
+    "Spelling rule: a short vowel keeps one consonant at the end of the stem ('zitten' / stem 'zit' / 'ik zit'), and a long vowel is written doubled so it stays long ('horen' / stem 'hoor' / 'ik hoor')",
     "There is no progressive tense in Dutch like English '-ing'. 'Ik werk' means both 'I work' AND 'I am working'"
   ],
   "culture_notes": [
@@ -93,7 +93,7 @@
     "sections": [
       {
         "heading": "Find the stem first",
-        "body": "Every Dutch verb in the dictionary ends in `-en`: `werken` (to work), `lopen` (to walk), `eten` (to eat), `fietsen` (to cycle). Conjugation always starts the same way. Chop off the `-en`, and what's left is the **stem**. Then you add personal endings to it. The stem is the building block of every present-tense form. - `werken` / `werk`\n- `eten` / `eet`\n- `fietsen` / `fiets` Get good at this one move and the rest of the system unlocks.",
+        "body": "Every Dutch verb in the dictionary ends in `-en`: `werken` (to work), `lopen` (to walk), `eten` (to eat), `fietsen` (to cycle). Conjugation always starts the same way. Chop off the `-en`, and what's left is the **stem**. Then you add personal endings to it.\n\n- `werken` / `werk`\n- `eten` / `eet`\n- `fietsen` / `fiets`\n\nThe stem is the building block of every present-tense form. Get good at this one move and the rest of the system unlocks.",
         "table": {
           "caption": "Infinitive / stem for common verbs",
           "columns": [
@@ -274,7 +274,7 @@
       },
       {
         "heading": "Spelling shifts that protect the sound",
-        "body": "Dutch spelling has a tight relationship with vowel length, and conjugation has to honor it. Three patterns will catch you. **Long vowels double in closed syllables.** `lopen` (LOH-pen) has a long `o`. When you shrink it to a one-syllable stem, you double the `o` to keep it long: stem = `loop`, not `lop`. Same with `maken` / `maak`, `wonen` / `woon`, `horen` / `hoor`. **Doubled consonants drop one at the end of a word.** `zitten` (to sit) has a short `i` protected by the double `tt`. When the stem stands alone, one `t` is enough: stem = `zit`. Likewise `vallen` / `val`, `kennen` / `ken`. **Final `v` and `z` turn into `f` and `s`.** Dutch doesn't allow `v` or `z` at the end of a word. So `leven` (to live) / stem `leef`, `verhuizen` (to move house) / stem `verhuis`, `lezen` (to read) / stem `lees`. The plural forms (`wij leven`, `wij verhuizen`, `wij lezen`) keep the original letters, but the ik/jij/hij forms use the changed version.",
+        "body": "Dutch spelling has a tight relationship with vowel length, and conjugation has to honour it. Three patterns will catch you.\n\n**Long vowels double in a closed syllable.** `lopen` (LOH-pen) has a long `o`. When you shrink it to a one-syllable stem, you double the `o` to keep it long: stem = `loop`, not `lop`. Same with `maken` / `maak`, `wonen` / `woon`, `horen` / `hoor`.\n\n**Doubled consonants drop one at the end of a word.** `zitten` (to sit) has a short `i` protected by the double `tt`. When the stem stands alone, one `t` is enough: stem = `zit`. Likewise `vallen` / `val`, `kennen` / `ken`.\n\n**Final `v` and `z` turn into `f` and `s`.** Dutch doesn't allow `v` or `z` at the end of a word. So `leven` (to live) / stem `leef`, `verhuizen` (to move house) / stem `verhuis`, `lezen` (to read) / stem `lees`. The plural forms (`wij leven`, `wij verhuizen`, `wij lezen`) keep the original letters; only the ik/jij/hij forms use the changed version.",
         "table": {
           "caption": "Three spelling shifts in action",
           "columns": [
@@ -429,5 +429,6 @@
     "dutchgrammar.com (Dutch Grammar by Bieneke Berendsen)",
     "TaalCompleet A1 (KleurRijker NT2 method)",
     "Naar Nederland (NT2 inburgering programme)"
-  ]
+  ],
+  "level": "A1"
 }

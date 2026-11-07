@@ -30,21 +30,24 @@ const LEVEL_MAP: Record<string, Level> = {
   'dutch-job-interview':   'B1',
   'dutch-primary-school':  'B1',
 
-  // Foundations (IDs here are bare — foundation JSONs use raw IDs)
-  'pronouns-zijn-hebben': 'A1',
-  'numbers':        'A1',
-  'pronunciation':  'A1',
-  'present-tense':  'A1',
-  'questions':      'A1',
-  'negation':       'A1',
-  'simple-sentences': 'A1',
-  'de-het':         'A1',
-  'word-order':     'A2',
-  'connectors':     'A2',
-  'past-tense':     'A2',
-  'future':         'A2',
-  'modals':         'A2',
-  'comparatives':   'A2',
+  // Foundations. Keys MUST be the exact `id` field of the foundation JSON,
+  // which is `dutch-` prefixed for every one of them. Bare keys silently never
+  // match, so the stage bars count items that can never complete.
+  // `__tests__/lib/dutch-content-ids.test.ts` guards this.
+  'dutch-pronouns-zijn-hebben': 'A1',
+  'dutch-numbers':           'A1',
+  'dutch-pronunciation':     'A1',
+  'dutch-present-tense':     'A1',
+  'dutch-questions':         'A1',
+  'dutch-negation':          'A1',
+  'dutch-simple-sentences':  'A1',
+  'dutch-de-het':            'A1',
+  'dutch-word-order':        'A2',
+  'dutch-connectors':        'A2',
+  'dutch-past-tense':        'A2',
+  'dutch-future':            'A2',
+  'dutch-modals':            'A2',
+  'dutch-comparatives':      'A2',
 }
 
 export function getLevel(id: string): Level {

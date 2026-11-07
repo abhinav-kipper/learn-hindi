@@ -1,5 +1,5 @@
 {
-  "id": "questions",
+  "id": "dutch-questions",
   "title": "Asking Questions",
   "level": "A1",
   "situation": "Foundation: forming yes/no questions by inversion, the question words, and answering with ja, nee, and jawel",
@@ -38,13 +38,13 @@
       "hindi": "Wat doe je in het weekend?",
       "english": "What do you do at the weekend?",
       "context": "Question word 'wat' + verb + subject. 'Je doet' becomes 'doe je' in inversion. A friendly small-talk question.",
-      "pronunciation": "VAT DOO ye in het VEE-kent?"
+      "pronunciation": "WAT DOO ye in het WEE-kent?"
     },
     {
       "hindi": "Waarom leer je Nederlands?",
       "english": "Why are you learning Dutch?",
       "context": "'Waarom' (why) opens the question. The verb 'leer' is second, the subject 'je' is third. The answer usually starts with 'omdat' (because).",
-      "pronunciation": "vaar-OM LAYR ye nay-der-LANTS?"
+      "pronunciation": "waar-OM LAYR ye nay-der-LANTS?"
     },
     {
       "hindi": "Hoeveel kost het?",
@@ -99,20 +99,20 @@
       "explanation": "When 'je' or 'jij' lands directly after the verb, the verb loses its -t. So 'jij werkt' becomes 'Werk jij?', and 'je heet' becomes 'Hoe heet je?'. Watch the trap: this only applies to je/jij. With 'u' the -t stays ('Woont u hier?'), and with hij/zij/het the verb keeps its full form ('Werkt hij?').",
       "more_examples": [
         {
-          "hindi": "jij werkt becomes Werk jij?",
-          "english": "you work becomes Do you work? (the -t drops)"
+          "hindi": "Werk jij?",
+          "english": "Do you work? (statement `jij werkt`, the -t drops after jij)"
         },
         {
-          "hindi": "je woont becomes Woon je hier?",
-          "english": "you live becomes Do you live here? (the -t drops)"
+          "hindi": "Woon je hier?",
+          "english": "Do you live here? (statement `je woont`, the -t drops after je)"
         },
         {
-          "hindi": "u woont blijft Woont u hier?",
-          "english": "you (formal) live stays Do you live here? (the -t stays with u)"
+          "hindi": "Woont u hier?",
+          "english": "Do you live here? (formal u keeps the -t, never `woon u`)"
         },
         {
-          "hindi": "hij werkt blijft Werkt hij hier?",
-          "english": "he works stays Does he work here? (the -t stays with hij)"
+          "hindi": "Werkt hij hier?",
+          "english": "Does he work here? (hij keeps the -t, the drop is only for je/jij)"
         }
       ]
     },

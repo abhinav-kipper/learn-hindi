@@ -8,6 +8,7 @@ import { OfflineBanner } from '@/components/offline-banner'
 import { registerServiceWorker, shouldShowNotificationPrompt, maybeShowReminderOnOpen, fireOneTimeTestNotification, maybeFireRandomNudge } from '@/lib/notifications'
 import { addTodayActiveMs, getTodayActiveMinutes, todayISO, updateStreak } from '@/lib/progress'
 import { autoWarmOfflineCache } from '@/lib/offline-cache'
+import { migrateDutchFoundationIds } from '@/lib/dutch/id-migration'
 import { getUserProfile } from '@/lib/onboarding'
 import { Confetti } from '@/components/design'
 import { playSound } from '@/lib/sounds'
@@ -68,6 +69,13 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [goalBurst])
+
+  // Remap Dutch progress saved under the old bare foundation IDs (the rename
+  // that fixed the `questions` collision with the Hindi foundation). Runs once,
+  // then short-circuits on its own flag.
+  useEffect(() => {
+    migrateDutchFoundationIds()
+  }, [])
 
   // Warm the offline cache in the background (once per day, online only) so
   // every lesson works offline — not just ones already visited. Delayed so it

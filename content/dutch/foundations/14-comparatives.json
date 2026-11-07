@@ -1,5 +1,5 @@
 {
-  "id": "comparatives",
+  "id": "dutch-comparatives",
   "title": "Comparing Things: groter, het grootst",
   "level": "A2",
   "situation": "Foundation: comparing things in Dutch with the comparative (-er), the superlative (-st), the irregular pairs, and the equality phrase even ... als",
@@ -14,12 +14,12 @@
       "hindi": "Amsterdam is groter dan Utrecht.",
       "english": "Amsterdam is bigger than Utrecht.",
       "context": "The core comparative pattern: adjective + -er, then dan for 'than'. 'groot' becomes 'groter'.",
-      "pronunciation": "AM-ster-dam is CHROH-ter dan UU-trekht"
+      "pronunciation": "am-ster-DAM is CHROH-ter dan uu-TRECHT"
     },
     {
       "hindi": "Deze fiets is duurder dan die fiets.",
       "english": "This bike is more expensive than that bike.",
-      "context": "A spelling-tweak comparative: 'duur' ends in -r, but at A2 the everyday form is 'duurder'. The extra -d keeps it pronounceable.",
+      "context": "An adjective that already ends in -r inserts a -d- before the -er: 'duur' becomes 'duurder', not 'duurer'. Same for 'zwaar' / 'zwaarder' and 'lekker' / 'lekkerder'.",
       "pronunciation": "DAY-ze FEETS is DUUR-der dan dee FEETS"
     },
     {
@@ -38,13 +38,13 @@
       "hindi": "Deze koffie is beter dan die van gisteren.",
       "english": "This coffee is better than yesterday's.",
       "context": "An irregular pair you must memorize: 'goed' becomes 'beter', not 'goeder'. The superlative is 'best'.",
-      "pronunciation": "DAY-ze KO-fee is BAY-ter dan dee van CHIS-te-ren"
+      "pronunciation": "DAY-ze KOF-fee is BAY-ter dan dee van CHIS-te-ren"
     },
     {
       "hindi": "Ik drink liever thee dan koffie.",
       "english": "I'd rather drink tea than coffee.",
       "context": "'graag' (gladly) becomes 'liever' for preferences, and 'liefst' for the favorite. 'liever ... dan' means 'rather ... than'.",
-      "pronunciation": "ik DRINK LEE-ver TAY dan KO-fee"
+      "pronunciation": "ik DRINK LEE-ver TAY dan KOF-fee"
     },
     {
       "hindi": "Jan is even lang als Piet.",
@@ -62,9 +62,9 @@
   "grammar_notes": [
     "The comparative (the -er or 'more' form) is just adjective + -er: 'klein' becomes 'kleiner', 'mooi' becomes 'mooier'. The word for 'than' is 'dan': 'kleiner dan'.",
     "The superlative (the -st or 'most' form) is adjective + -st. Standing alone after the verb it usually takes 'het': 'het grootst'. Before a noun it takes 'de' or 'het' plus -ste: 'de grootste stad'.",
-    "Spelling follows the normal rules: long vowels stay long ('duur' becomes 'duurder', 'vies' becomes 'viezer' where the s softens to z between vowels), short vowels keep their doubled consonant ('dik' becomes 'dikker').",
+    "Spelling follows the normal rules: a final -s softens to -z between vowels ('vies' becomes 'viezer'), and a short vowel keeps its doubled consonant ('dik' becomes 'dikker'). One extra rule: an adjective ending in -r inserts a -d- before the -er, so 'duur' becomes 'duurder' and 'lekker' becomes 'lekkerder'.",
     "Four high-frequency adjectives are irregular and must be memorized: 'goed' becomes 'beter' / 'best', 'veel' becomes 'meer' / 'meest', 'graag' becomes 'liever' / 'liefst', 'weinig' becomes 'minder' / 'minst'.",
-    "Long adjectives and many ending in -r use 'meer' (more) and 'meest' (most) instead of -er / -st where that sounds more natural: 'meer interessant', 'het meest interessant'.",
+    "Long or borrowed adjectives use 'meer' (more) and 'meest' (most) instead of -er / -st where that sounds more natural: 'meer interessant', 'het meest interessant'. Adjectives ending in -r are not in this group; they take -der ('duurder').",
     "For equality use 'even ... als' (as ... as): 'even groot als'. Here the adjective keeps its plain form, with no -er ending."
   ],
   "culture_notes": [
@@ -146,7 +146,7 @@
     "sections": [
       {
         "heading": "The comparative: adjective + -er + dan",
-        "body": "To say one thing has **more** of a quality, add `-er` to the adjective. This is the comparative (the -er or 'more' form).\n\n- `groot` (big) becomes `groter`\n- `klein` (small) becomes `kleiner`\n- `mooi` (pretty) becomes `mooier`\n\nThe word for 'than' is `dan`. So the full pattern is **adjective + -er ... dan**:\n\n- `Amsterdam is groter dan Utrecht` (Amsterdam is bigger than Utrecht)\n- `Deze fiets is mooier dan die fiets` (This bike is prettier than that one)\n\nSpelling follows the rules you already know. Long vowels stay long, so `duur` (expensive) becomes `duurder`. A final `-s` between vowels softens to `-z`, so `vies` (dirty) becomes `viezer`. Short vowels keep their doubled consonant, so `dik` (thick) becomes `dikker`.",
+        "body": "To say one thing has **more** of a quality, add `-er` to the adjective. This is the comparative (the -er or 'more' form).\n\n- `groot` (big) becomes `groter`\n- `klein` (small) becomes `kleiner`\n- `mooi` (pretty) becomes `mooier`\n\nThe word for 'than' is `dan`. So the full pattern is **adjective + -er ... dan**:\n\n- `Amsterdam is groter dan Utrecht` (Amsterdam is bigger than Utrecht)\n- `Deze fiets is mooier dan die fiets` (This bike is prettier than that one)\n\nSpelling follows the rules you already know. A final `-s` between vowels softens to `-z`, so `vies` (dirty) becomes `viezer`. Short vowels keep their doubled consonant, so `dik` (thick) becomes `dikker`.\n\nOne rule is new: an adjective that already ends in `-r` slips a `-d-` in before the `-er`. So `duur` (expensive) becomes `duurder`, never `duurer`, and `lekker` (tasty) becomes `lekkerder`.",
         "table": {
           "caption": "Common comparatives",
           "columns": [
@@ -173,7 +173,7 @@
             [
               "duur",
               "expensive",
-              "duurder"
+              "duurder (-r adjectives add -der)"
             ],
             [
               "vies",

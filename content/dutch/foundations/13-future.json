@@ -1,5 +1,5 @@
 {
-  "id": "future",
+  "id": "dutch-future",
   "title": "Talking About the Future",
   "level": "A2",
   "situation": "Foundation: the three everyday ways Dutch talks about the future, present tense plus a time word, gaan plus a verb, and zullen plus a verb",
@@ -14,49 +14,49 @@
       "hindi": "Ik werk morgen tot vijf uur.",
       "english": "I am working tomorrow until five o'clock.",
       "context": "The default future in Dutch. Plain present tense `werk` plus the time word `morgen` (tomorrow). No special future verb needed when a time word makes the future clear.",
-      "pronunciation": "ik WERK MOR-ghu tot VAYF UUR"
+      "pronunciation": "ik WERK MOR-chen tot VAYF UUR"
     },
     {
       "hindi": "Volgende week ga ik op vakantie.",
       "english": "Next week I am going on holiday.",
       "context": "A fronted time phrase `volgende week` (next week) pushes the verb to second place, so `ga ik`, not `ik ga`. Present tense again, with the time word carrying the future.",
-      "pronunciation": "VOL-ghu-duh WAYK ghaa ik op vaa-KAN-see"
+      "pronunciation": "VOL-chen-de WAYK CHAA ik op vaa-KAN-see"
     },
     {
       "hindi": "Ik ga vanavond koken.",
       "english": "I am going to cook tonight.",
       "context": "`gaan` plus a verb shows a near plan or intention. The second verb `koken` (to cook) stays in its base form and goes to the very end of the sentence.",
-      "pronunciation": "ik ghaa va-NAA-vont KOH-ku"
+      "pronunciation": "ik CHAA va-NAA-vont KOH-ken"
     },
     {
       "hindi": "We gaan volgend jaar verhuizen.",
       "english": "We are going to move house next year.",
       "context": "`gaan` for a planned change. Notice the base verb `verhuizen` (to move house) sits at the end, after the time phrase. This end-of-sentence spot is the rule for the second verb.",
-      "pronunciation": "wuh ghaan VOL-ghunt YAAR vur-HOW-zu"
+      "pronunciation": "we CHAAN VOL-chent YAAR ver-HOW-zen (rounded ui)"
     },
     {
       "hindi": "Ik zal het morgen doen.",
       "english": "I will do it tomorrow.",
       "context": "`zullen` for a promise. `ik zal` plus the base verb `doen` (to do) at the end. Use this when you are giving your word, not just stating a plan.",
-      "pronunciation": "ik zal hut MOR-ghu DOON"
+      "pronunciation": "ik zal het MOR-chen DOON"
     },
     {
       "hindi": "Zal ik je helpen?",
       "english": "Shall I help you?",
       "context": "`zullen` for an offer. `Zal ik...?` is the standard polite way to offer help or make a suggestion. The base verb `helpen` (to help) comes at the end.",
-      "pronunciation": "zal ik yuh HEL-pu"
+      "pronunciation": "zal ik ye HEL-pen?"
     },
     {
       "hindi": "Het zal morgen regenen.",
       "english": "It will rain tomorrow.",
       "context": "`zullen` for a prediction about something you cannot control. `Het zal regenen` (it will rain) is what you hear on the weather report. The base verb `regenen` goes last.",
-      "pronunciation": "hut zal MOR-ghu RAY-ghu-nu"
+      "pronunciation": "het zal MOR-chen RAY-che-nen"
     },
     {
       "hindi": "Morgen ben ik er niet, ik ga naar de dokter.",
       "english": "Tomorrow I am not here, I am going to the doctor.",
       "context": "Two future ideas in one breath. The first half uses plain present tense `ben` with the time word `morgen`. The second half uses `gaan` for the plan. Both are normal and natural together.",
-      "pronunciation": "MOR-ghu ben ik er NEET, ik ghaa naar duh DOK-tur"
+      "pronunciation": "MOR-chen ben ik er NEET, ik CHAA naar de DOK-ter"
     }
   ],
   "grammar_notes": [
