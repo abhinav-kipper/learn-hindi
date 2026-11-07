@@ -643,9 +643,15 @@ Offline-support wave. Spec at `docs/superpowers/specs/2026-06-03-pwa-offline-des
   - `/_next/static/*` (content-hashed) + `/audio,/chaina,/stroopwafel` (pre-gen mp3s) → **cache-first**.
   - `/api/tts` → **cache-first**, FIFO-capped at `TTS_MAX_ENTRIES` (300). Deterministic per text+lang, so a phrase spoken once works offline after. A miss while offline returns `Response.error()`, which `lib/speech.ts` already degrades to browser `speechSynthesis`.
   - Navigations (HTML) → **network-first** → cached page → `public/offline.html` fallback. Any route visited online becomes available offline.
-  - Other same-origin GET (icons, manifest, RSC flight payloads) → **stale-while-revalidate**.
+  - **RSC flight payloads** (`?_rsc=`), fetched on every in-app soft navigation → **network-first**, cache only as an offline fallback.
+    These are a page's *content*, rebuilt every deploy and not content-hashed. They were previously stale-while-revalidate, which is why an
+    installed PWA kept showing the previous build after a deploy: the stale payload also referenced the previous build's cache-first chunks,
+    so it could stay stale indefinitely. Fixed 2026-11-07.
+  - Other same-origin GET (icons, manifest, images) → **stale-while-revalidate**.
   - `/api/chat`, `/api/pronounce` → **network-only** (real-time Gemini, must stay fresh).
-- **Cache versioning:** bump `CACHE_VERSION` in `sw.js` to invalidate all `bs-*` caches on next deploy (cleared in the `activate` handler).
+- **Cache versioning:** bump `CACHE_VERSION` in `sw.js` to invalidate all `bs-*` caches on the next deploy (cleared in the `activate` handler).
+  **`lib/offline-cache.ts` hard-codes the same bucket names and must be bumped in the same commit**, or the warm-up fills caches the worker
+  never reads and offline silently stops working. `__tests__/lib/sw-cache-sync.test.ts` fails the build if the two drift. Currently `v3`.
 - **Not made offline:** AI practice chat + pronunciation coaching fundamentally need the LLM. They show network errors offline by design (offline.html explains this). Graceful in-app offline-mode UI for those was scoped out.
 - New `public/offline.html` (Chai-Galli-styled static fallback). Manifest gained `id`/`scope: "/"`.
 - **Progress is local-only — no sync, nothing to flush.** All progress/activity (streak, lesson completion, daily active-minutes ticker, quiz scores, mistakes, favorites, vocab, Dutch attempts, Chaina memory) writes synchronously to `localStorage` regardless of connectivity, so offline progress is committed instantly and never queued or lost — there is no online→offline sync step because there is no server/DB. The SW's Cache API is fully separate from `localStorage`. The (by-design) tradeoff is **no cross-device sync**: progress is per-browser/per-device. Adding multi-device sync would require an account + backend, which the app deliberately doesn't have.

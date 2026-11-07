@@ -27,9 +27,11 @@ import { getSentenceGames } from '@/lib/sentence-game'
 import hiAudio from '@/content/hi-audio.json'
 import nlAudio from '@/content/nl-audio.json'
 
-// Cache names MUST stay in sync with public/sw.js (CACHE_VERSION = 'v2').
-const PAGE_CACHE = 'bs-pages-v2'
-const AUDIO_CACHE = 'bs-audio-v2'
+// Cache names MUST stay in sync with public/sw.js (CACHE_VERSION = 'v3').
+// Bumping one without the other makes the warm-up fill caches the service
+// worker never reads, so offline silently stops working.
+const PAGE_CACHE = 'bs-pages-v3'
+const AUDIO_CACHE = 'bs-audio-v3'
 
 const STATIC_ROUTES = [
   '/',

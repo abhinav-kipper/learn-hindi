@@ -14,7 +14,7 @@
 //
 // Bump CACHE_VERSION to invalidate every cache on the next deploy.
 
-const CACHE_VERSION = 'v2'
+const CACHE_VERSION = 'v3'
 const STATIC_CACHE = `bs-static-${CACHE_VERSION}` // hashed _next assets, icons, misc GETs
 const AUDIO_CACHE = `bs-audio-${CACHE_VERSION}` // pre-generated mp3 clips
 const TTS_CACHE = `bs-tts-${CACHE_VERSION}` // /api/tts responses
@@ -104,7 +104,19 @@ self.addEventListener('fetch', (event) => {
     return
   }
 
-  // Everything else same-origin (icons, manifest, images, RSC flight payloads).
+  // React Server Component payloads, fetched on every in-app (soft) navigation.
+  // These are the *content* of a page, not a static asset: they are rebuilt on
+  // every deploy and are not content-hashed. Serving them stale-while-
+  // revalidate meant an installed PWA kept showing the previous build's content
+  // after a deploy (and, because the stale payload references the previous
+  // build's cache-first chunks, it could stay stale indefinitely). Treat them
+  // like navigations: network-first, cache only as an offline fallback.
+  if (url.searchParams.has('_rsc') || request.headers.get('RSC') === '1') {
+    event.respondWith(networkFirstRsc(request))
+    return
+  }
+
+  // Everything else same-origin (icons, manifest, images).
   event.respondWith(staleWhileRevalidate(request, STATIC_CACHE))
 })
 
@@ -141,6 +153,23 @@ async function networkFirstPage(request) {
     if (cached) return cached
     const offline = await caches.match(OFFLINE_URL)
     return offline || Response.error()
+  }
+}
+
+/**
+ * RSC payloads: always try the network so a deploy is visible immediately.
+ * Falls back to the cached payload offline, and otherwise to a failed response,
+ * which makes Next fall back to a hard navigation that PAGE_CACHE can serve.
+ */
+async function networkFirstRsc(request) {
+  const cache = await caches.open(PAGE_CACHE)
+  try {
+    const res = await fetch(request)
+    if (res && res.ok) await cache.put(request, res.clone())
+    return res
+  } catch {
+    const cached = await cache.match(request)
+    return cached || Response.error()
   }
 }
 
