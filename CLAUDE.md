@@ -94,15 +94,31 @@ Vercel auto-deploys on every push to `main` via the GitHub integration —
 **no Vercel CLI needed** (and `vercel --prod` will fail in cloud sessions
 that have no Vercel auth token).
 
-**Shipping a feature branch:**
+**Default: ship to `main`.** The user tests on their phone against the live
+Vercel deploy, so finished work goes to `main` directly, without being asked and
+without opening a PR. Do NOT leave completed work parked on a feature branch.
+Work on a branch if you like, but the turn ends with `main` pushed.
+
+The bar before pushing (all of it, every time, since this deploys to prod):
 ```bash
-npx vitest run                    # 1. tests must pass first
+npx vitest run                    # 1. tests green (note the known-failing baseline)
+npx tsc --noEmit                  # 2. typecheck
+npm run lint:design && npm run lint:content && npm run lint:quality
+npm run build                     # 3. prod build must succeed
 git checkout main && git pull
 git merge <feature-branch> --no-ff -m "Merge: <summary>"
-git push origin main              # 2. Vercel auto-deploys
+git push origin main              # 4. Vercel auto-deploys
 ```
-Resolve any merge conflicts, re-run `npx vitest run` and `npx tsc --noEmit`
-before pushing.
+Resolve any merge conflicts, then re-run the tests and lints on the merged tree
+before pushing: a conflict resolution is new code nobody has tested.
+
+If something in that bar fails and can't be fixed in the same turn, do not push.
+Say what is red and leave `main` alone.
+
+*Known-failing baseline (not yours, don't chase):* 10 component test files in
+`__tests__/components/` fail at import inside `@testing-library/react`, and
+`tsc` reports ~18 matching errors in those same files. Confirm a failure is
+pre-existing by stashing and re-running, rather than assuming either way.
 
 **CI gate:** `.github/workflows/ci.yml` runs `tsc --noEmit` + `vitest run`
 plus three content lints on every push and PR:
