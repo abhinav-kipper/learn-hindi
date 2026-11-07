@@ -85,8 +85,13 @@ export default function ChainaPage() {
 
   // Write-back: once per session, distill the chat into the Memory Card. Fire
   // on leave (unmount / tab hidden), debounced so it runs at most once.
+  // Latest-value ref so `remember()` sees the current messages when it fires on
+  // unmount / tab-hide. Written in an effect, not during render: React forbids
+  // mutating a ref while rendering, and the only read is asynchronous.
   const messagesRef = useRef<Message[]>(messages)
-  messagesRef.current = messages
+  useEffect(() => {
+    messagesRef.current = messages
+  }, [messages])
   const rememberedRef = useRef(false)
 
   const remember = useCallback(async () => {

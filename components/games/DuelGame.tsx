@@ -59,10 +59,15 @@ export function DuelGame({ duel }: { duel: Duel }) {
   const [newBest, setNewBest] = useState(false)
   const [resume, setResume] = useState<{ round: number } | null>(null)
 
+  // Latest-value refs so the delayed `advance()` reads the committed score and
+  // combo. Written in an effect, not during render: React forbids mutating a
+  // ref while rendering, and `advance` only ever runs from a setTimeout.
   const scoreRef = useRef(0)
-  scoreRef.current = score
   const comboRef = useRef(0)
-  comboRef.current = combo
+  useEffect(() => {
+    scoreRef.current = score
+    comboRef.current = combo
+  }, [score, combo])
   const firedMilestones = useRef<Set<number>>(new Set())
 
   useEffect(() => {

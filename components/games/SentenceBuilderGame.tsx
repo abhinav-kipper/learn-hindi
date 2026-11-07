@@ -44,8 +44,13 @@ export function SentenceBuilderGame({ game }: { game: SentenceGame }) {
   const [newBest, setNewBest] = useState(false)
   const [resume, setResume] = useState<{ round: number } | null>(null)
 
+  // Latest-value ref so the delayed `advance()` reads the committed score.
+  // Written in an effect, not during render: React forbids mutating a ref while
+  // rendering, and `advance` only ever runs from a setTimeout.
   const scoreRef = useRef(0)
-  scoreRef.current = score
+  useEffect(() => {
+    scoreRef.current = score
+  }, [score])
 
   useEffect(() => {
     setBest(getSentenceBest(prefix, game.id))
