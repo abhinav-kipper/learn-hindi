@@ -13,12 +13,12 @@
       "hindi": "de straat, de deur, de kamer, de school, de winkel, de tuin, de trein",
       "english": "the street, the door, the room, the school, the shop, the garden, the train",
       "context": "These are 'de-words' (common gender). Most Dutch nouns are de-words. There's no reliable rule, you must learn each noun's article. Always learn: word + article together.",
-      "pronunciation": "de STRAAT, de DUR, de KAA-mer, de SKOOHL, de WIN-kel, de TOWN, de TRAYN"
+      "pronunciation": "de STRAAT, de DUR, de KAA-mer, de s-CHOOL, de WIN-kel, de TOWN, de TRAYN"
     },
     {
       "hindi": "het jaar, het woord, het nummer, het vliegtuig, het dorp, het brood, het hondje",
       "english": "the year, the word, the number, the airplane, the village, the bread, the little dog",
-      "context": "'Het-words' are neuter gender, roughly 1/3 of Dutch nouns. 'Hondje' is het because ALL diminutives (-je) are het. This is the ONE reliable rule: diminutive = always het.",
+      "context": "'Het-words' are neuter gender, roughly a quarter of Dutch nouns. 'Hondje' is het because ALL diminutives (-je) are het. This is the ONE reliable rule: diminutive = always het.",
       "pronunciation": "het YAAR, het WOORT, het NUM-mer, het FLEECH-towch, het DORP, het BROHT, het HON-tye"
     },
     {
@@ -36,7 +36,7 @@
     {
       "hindi": "de mannen, de vrouwen, de kinderen, de huizen, de boeken, de auto's",
       "english": "the men, the women, the children, the houses, the books, the cars",
-      "context": "ALL plurals use 'de'. 'De kinderen' even though 'het kind'. Plural endings: -en (most words), -s (after -el, -em, -en, -er, short vowel + consonant), -eren (child/egg/etc)",
+      "context": "ALL plurals use 'de'. 'De kinderen' even though 'het kind'. Plural endings: -en (most words, doubling the consonant after a short vowel: man / mannen), -s (after an unstressed -el, -em, -en, -er, and after a vowel with an apostrophe: auto's, foto's), -eren (a small set: kind / kinderen, ei / eieren)",
       "pronunciation": "de MAN-nen, de VROW-wen, de KIN-der-en, de HOW-zen, de BOO-ken, de OW-tohs"
     },
     {
@@ -61,12 +61,12 @@
   "culture_notes": [
     "Native Dutch speakers sometimes make de/het mistakes too, especially with less common words",
     "The Van Dale dictionary (Dutch standard dictionary) marks each noun as de or het",
-    "In informal speech, people sometimes say 'de' for het-words, Belgians do this more often"
+    "In casual speech a het-word occasionally picks up 'de', especially in regional dialects, but it is non-standard. Write and say the article the dictionary gives"
   ],
   "skill_breakdown": [
     {
       "skill": "de vs het words",
-      "explanation": "Roughly 2/3 of Dutch nouns are de-words, 1/3 are het-words. No rule covers all cases. The one hard rule: diminutives (-je form) are ALWAYS het. Start by learning the most common nouns with their articles.",
+      "explanation": "Roughly three in four Dutch nouns are de-words; the remaining quarter are het-words. No rule covers all cases. The one hard rule: diminutives (-je form) are ALWAYS het. Start by learning the most common nouns with their articles.",
       "more_examples": [
         {
           "hindi": "het huisje (the little house)",
@@ -109,9 +109,9 @@
       ]
     }
   ],
-  "practice_prompt": "You are a Dutch tutor drilling the de/het article system, including ripple effects on adjective endings and demonstratives. Address u as `u`. Open in Dutch: `Goedendag! Laten we de/het oefenen. Eerste vraag: 'boek', de of het?` Give ONE task at a time, wait for u's answer. Run 6-8 items, escalating: pick de or het for a noun (~75% de, ~25% het; include a diminutive, ALWAYS het, and a plural, always de), then a sentence-completion on the adjective trap (`een mooi boek` vs `een mooie tafel`, no -e when een + het-word), then a demonstrative pick (deze/die for de-words, dit/dat for het-words), then a singular / plural conversion (article flips to de). Flag mistakes with `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]`. Watch for: wrong article (remind u that guessing `de` is right 75% of the time), `een mooie boek` (should be `een mooi boek`), `die boek` (should be `dat boek`), and defaulting to `de` for plurals (praise this, correct). Stay in Dutch unless u asks for English. End with `Heel goed! De/het zit vast. Tot ziens.`",
+  "practice_prompt": "You are a Dutch tutor drilling the de/het article system, including ripple effects on adjective endings and demonstratives. Address the student as `u`. Open in Dutch: `Goedendag! Laten we de/het oefenen. Eerste vraag: 'boek', de of het?` Give ONE task at a time and wait for the student's answer. Run 6-8 items, escalating: pick de or het for a noun (~75% de, ~25% het; include a diminutive, ALWAYS het, and a plural, always de), then a sentence-completion on the adjective trap (`een mooi boek` vs `een mooie tafel`, no -e when een + het-word), then a demonstrative pick (deze/die for de-words, dit/dat for het-words), then a singular / plural conversion (article flips to de). Flag mistakes with `[[CORRECTION: original=\"...\" correct=\"...\" reason=\"...\"]]`. Watch for: wrong article (remind the student that guessing `de` is right about 75% of the time), `een mooie boek` (should be `een mooi boek`), `die boek` (should be `dat boek`), and defaulting to `de` for plurals (praise that, it is correct). Stay in Dutch unless the student asks for English. End with `Heel goed! De/het zit vast. Tot ziens.`",
   "theory": {
-    "intro": "Dutch has two genders hiding inside its articles: `de` and `het`. About three-quarters of all nouns take `de`, so when you guess, guess `de` and you'll be right 75% of the time. But `het` shows up often enough that you can't ignore it, and the article you pick ripples outward to adjective endings, demonstratives, and more. Unlike Hindi gender (where the noun ending gives a hint), Dutch gender has only weak surface patterns. Mostly you learn the article with every word. Painful upfront, mechanical afterwards.",
+    "intro": "Dutch has two genders hiding inside its articles: `de` and `het`. About three-quarters of all nouns take `de`, so when you guess, guess `de` and you'll be right 75% of the time. But `het` shows up often enough that you can't ignore it, and the article you pick ripples outward to adjective endings, demonstratives, and more. English gives you no practice at this at all, since `the` covers everything, and Dutch gender has only weak surface patterns to go on. Mostly you learn the article with every word. Painful upfront, mechanical afterwards.",
     "sections": [
       {
         "heading": "Two articles, no foolproof rule",
@@ -330,7 +330,7 @@
       },
       {
         "heading": "Demonstratives: deze/die vs dit/dat",
-        "body": "Once you know whether a noun is `de` or `het`, the demonstratives (this / that words) follow automatically. - `de`-words take `deze` (this) and `die` (that)\n- `het`-words take `dit` (this) and `dat` (that) Memory trick: `de`-words get the d-e shapes (deze, die); `het`-words get the d-i / d-a shapes (dit, dat). This extends to standalone demonstrative pronouns too. To say `this is good`, you pick based on the noun you have in mind: a `de`-word in mind / `deze is goed`; a `het`-word in mind / `dit is goed`. The system is fully consistent. Learn the article once and the demonstrative comes free.",
+        "body": "Once you know whether a noun is `de` or `het`, the demonstratives (the this / that words) follow automatically.\n\n- `de`-words take `deze` (this) and `die` (that)\n- `het`-words take `dit` (this) and `dat` (that)\n\nMemory trick: `de`-words get the d-e shapes (`deze`, `die`); `het`-words get the d-i / d-a shapes (`dit`, `dat`).\n\nThis carries over when the demonstrative stands on its own in place of the noun. Asked which bike you mean, you say `deze is goed` (`fiets` is a `de`-word); asked which book, `dit is goed` (`boek` is a `het`-word).\n\nOne exception is worth knowing early. When you are identifying or introducing something, Dutch opens with `dit` or `dat` whatever the gender follows: `Dit is mijn vrouw`, `Dat is een goede fiets`. So gender steers the demonstrative when you are pointing at a known noun, not when you are presenting something new.",
         "table": {
           "caption": "Demonstratives by gender",
           "columns": [
@@ -384,5 +384,6 @@
     "dutchgrammar.com (Dutch Grammar by Bieneke Berendsen)",
     "TaalCompleet A1 (KleurRijker NT2 method)",
     "Naar Nederland (NT2 inburgering programme)"
-  ]
+  ],
+  "level": "A1"
 }

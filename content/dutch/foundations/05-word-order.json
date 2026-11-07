@@ -25,7 +25,7 @@
       "hindi": "thuiskomen: Ik kom vanavond thuis. Ik kom om 6 uur thuis. Kom jij ook thuis?",
       "english": "to come home: I'm coming home tonight. I'm coming home at 6. Are you coming home too?",
       "context": "Separable verbs: 'thuis-komen' splits, the prefix 'thuis' goes to the END of the clause, the main verb stays second. 'Ik kom [om 6 uur] thuis', 'thuis' always falls at the very end of the main clause.",
-      "pronunciation": "TOWS-ko-men: ik KOM va-NAA-vont TOWS. ik KOM om ZEKS uur TOWS. kom YAY ook TOWS?"
+      "pronunciation": "TOWS-ko-men: ik KOM va-NAA-vont TOWS. ik KOM om ZES uur TOWS. kom YAY ook TOWS?"
     },
     {
       "hindi": "afwassen: ik was af, inpakken: ik pak in, weggaan: ik ga weg, neerzetten: ik zet neer",
@@ -36,8 +36,8 @@
     {
       "hindi": "omdat ik te laat ben. omdat zij geen tijd heeft. omdat wij vroeg vertrekken.",
       "english": "because I am too late. because she has no time. because we leave early.",
-      "context": "CRITICAL: in subordinate clauses (after 'omdat', 'dat', 'als', 'want', etc.), the verb goes to the END. 'Ik ben te laat' / 'omdat ik te laat BEN'. The subject stays after the conjunction, verb goes last.",
-      "pronunciation": "OM-dat ik te LAAT BEN. OM-dat zay CHAYN tayt HEFT. OM-dat way VROOCH fer-TREK-ken."
+      "context": "CRITICAL: in subordinate clauses (after 'omdat', 'dat', 'als', 'terwijl', etc.), the verb goes to the END. 'Ik ben te laat' / 'omdat ik te laat BEN'. The subject stays after the conjunction, verb goes last. Careful: 'want' also means 'because' but is NOT one of these, it keeps normal order ('want ik ben te laat').",
+      "pronunciation": "OM-dat ik te LAAT BEN. OM-dat zay CHAYN tayt HAYFT. OM-dat way VROOCH fer-TREK-ken."
     },
     {
       "hindi": "Ik hoop dat hij snel terugkomt. Ik zie dat jij hard werkt.",
@@ -48,15 +48,15 @@
     {
       "hindi": "Spreekt u Nederlands? Heb jij een pen? Werkt zij vandaag?",
       "english": "Do you speak Dutch? Do you have a pen? Is she working today?",
-      "context": "Yes/no questions: just invert subject and verb. No 'do' construction needed. 'Jij spreekt' / 'Spreekt jij?' Remember: 'jij/je' after verb drops the -t: 'Spreek JIJ?' not 'Spreekt jij?'",
-      "pronunciation": "SPRAAKT u NAY-der-lants? hep YAY uhn PEN? WERKT zay va-DAACH?"
+      "context": "Yes/no questions: just invert subject and verb. No 'do' construction needed. With the formal 'u' the -t stays: 'u spreekt' becomes 'Spreekt u?'. With 'jij/je' the -t drops once it follows the verb: 'jij spreekt' becomes 'Spreek jij?', never 'Spreekt jij?'",
+      "pronunciation": "SPRAYKT oo NAY-der-lants? hep YAY uhn PEN? WERKT zay va-DAACH?"
     }
   ],
   "grammar_notes": [
     "V2 rule: Dutch verb is ALWAYS in second position in main clauses. Count positions from the left, the verb must be #2, no matter what's in position #1",
     "Separable verbs in subordinate clauses: the prefix rejoins the verb at the end: 'omdat ik opsta' (because I get up), 'opsta' written together",
     "Verb cluster in subordinate clauses with modals: 'omdat hij kan werken' (because he can work), the modal goes before the infinitive (the base or dictionary form of the verb), both at the end",
-    "With perfect tense in subordinate clauses: 'omdat ik heb gewerkt', auxiliary (heb) before past participle (gewerkt), both at end"
+    "With perfect tense in subordinate clauses both verbs go to the end, and either order is standard: 'omdat ik heb gewerkt' and 'omdat ik gewerkt heb' are both correct"
   ],
   "culture_notes": [
     "The V2 rule makes Dutch news headlines confusing at first, they often start with a topic. Practice by noticing the verb in slot 2 whenever you read Dutch",
@@ -369,5 +369,6 @@
     "Dutch: A Comprehensive Grammar by Bruce Donaldson (Routledge)",
     "dutchgrammar.com (Dutch Grammar by Bieneke Berendsen)",
     "TaalCompleet A1 (KleurRijker NT2 method)"
-  ]
+  ],
+  "level": "A2"
 }

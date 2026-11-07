@@ -1,5 +1,5 @@
 {
-  "id": "pronouns-zijn-hebben",
+  "id": "dutch-pronouns-zijn-hebben",
   "title": "Pronouns, zijn & hebben",
   "situation": "Foundation: the first grammar a beginner needs, subject pronouns plus the two core verbs zijn (to be) and hebben (to have)",
   "level": "A1",
@@ -26,7 +26,7 @@
       "hindi": "Wij zijn moe en jullie zijn klaar.",
       "english": "We are tired and you (plural) are ready.",
       "context": "All three plurals (`wij`, `jullie`, `zij`) use `zijn`. `moe` = tired and `klaar` = ready/done are everyday state words.",
-      "pronunciation": "way ZAYN MOO en yul-LEE ZAYN KLAAR."
+      "pronunciation": "way ZAYN MOO en YUL-ee ZAYN KLAAR."
     },
     {
       "hindi": "Ik heb honger. Heb jij dorst?",
@@ -38,7 +38,7 @@
       "hindi": "Zij heeft een auto. Hij heeft een fiets.",
       "english": "She has a car. He has a bicycle.",
       "context": "Possession with `hebben`. Watch the irregular `heeft` for hij/zij/het, not `hebt`.",
-      "pronunciation": "zay HAYFT en OW-toh. hay HAYFT en FEETS."
+      "pronunciation": "zay HAYFT un OW-toh. hay HAYFT un FEETS."
     },
     {
       "hindi": "Hoe oud ben jij? Ik ben dertig. Mijn zoon is vijf.",
@@ -56,7 +56,7 @@
       "hindi": "Wij hebben twee kinderen en zij hebben een hond.",
       "english": "We have two children and they have a dog.",
       "context": "Plurals again: `wij hebben`, `zij hebben`. Same `hebben` form for all three plural pronouns, easy to remember.",
-      "pronunciation": "way HEB-ben TWAY KIN-der-en en zay HEB-ben en HONT."
+      "pronunciation": "way HEB-ben TWAY KIN-der-en en zay HEB-ben un HONT."
     }
   ],
   "grammar_notes": [
@@ -107,8 +107,8 @@
           "english": "You are kind."
         },
         {
-          "hindi": "Hij is uit Marokko.",
-          "english": "He is from Morocco."
+          "hindi": "Hij is Marokkaans.",
+          "english": "He is Moroccan."
         },
         {
           "hindi": "Wij zijn er bijna.",

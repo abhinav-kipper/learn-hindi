@@ -1,5 +1,5 @@
 {
-  "id": "connectors",
+  "id": "dutch-connectors",
   "title": "Joining Ideas: en, maar, want, omdat",
   "situation": "Foundation: linking two short clauses with the everyday joiners en, maar, of, want, dus, and the key A2 contrast between want and omdat",
   "level": "A2",
@@ -14,7 +14,7 @@
       "hindi": "Ik drink koffie en ik lees de krant.",
       "english": "I drink coffee and I read the newspaper.",
       "context": "The simplest joiner. `en` (and) glues two full sentences without disturbing them. The verb stays in second place in each half.",
-      "pronunciation": "ik DRINK kof-FEE en ik LAYS de KRANT"
+      "pronunciation": "ik DRINK KOF-fee en ik LAYS de KRANT"
     },
     {
       "hindi": "Ik wil komen, maar ik heb geen tijd.",
@@ -26,7 +26,7 @@
       "hindi": "Wil je thee of wil je koffie?",
       "english": "Do you want tea or do you want coffee?",
       "context": "`of` (or) offers a choice. It joins the two options and leaves each clause in its normal shape.",
-      "pronunciation": "wil ye TAY of wil ye kof-FEE"
+      "pronunciation": "wil ye TAY of wil ye KOF-fee"
     },
     {
       "hindi": "Ik blijf thuis, want ik ben ziek.",
@@ -56,7 +56,7 @@
       "hindi": "Ik leer Nederlands, want ik woon hier en ik wil het examen halen.",
       "english": "I am learning Dutch, because I live here and I want to pass the exam.",
       "context": "Joiners can stack in one sentence. `want` gives the reason, then `en` chains a second reason. Each clause keeps the verb in second place.",
-      "pronunciation": "ik LAYR NAY-der-lants, want ik WOHN HEER en ik WIL het ek-SAH-men HAH-len"
+      "pronunciation": "ik LAYR NAY-der-lants, want ik WOHN HEER en ik WIL het ek-SAA-men HAA-len"
     }
   ],
   "grammar_notes": [
@@ -254,7 +254,7 @@
       },
       {
         "heading": "want vs omdat, side by side",
-        "body": "Now hold the two next to each other, because this is exactly what the A2 exam tests. Both mean **because**. The difference is only the word order.\n\n- `want` keeps normal order: the verb stays second. `Ik leer Nederlands, want ik woon hier`.\n- `omdat` sends the verb to the end. `Ik leer Nederlands omdat ik hier woon`.\n\nNotice the same two words, `hier` and `woon`, swap places: `ik woon hier` after `want`, `ik hier woon` after `omdat`. A handy memory trick: `want` rhymes with nothing special and just keeps things normal, while `omdat` is the one that does the extra work of moving the verb.\n\nWhen you answer a `waarom?` (why?) question, either joiner works. `omdat` sounds a little more careful, `want` a little more relaxed.",
+        "body": "Now hold the two next to each other, because this is exactly what the A2 exam tests. Both mean **because**. The difference is only the word order.\n\n- `want` keeps normal order: the verb stays second. `Ik leer Nederlands, want ik woon hier`.\n- `omdat` sends the verb to the end. `Ik leer Nederlands omdat ik hier woon`.\n\nNotice the same two words, `hier` and `woon`, swap places: `ik woon hier` after `want`, `ik hier woon` after `omdat`. A handy memory trick: `omdat` is the longer word, and it is the one that does the extra work of moving the verb. `want` is short and leaves everything where it is.\n\nWhen you answer a `waarom?` (why?) question, either joiner works. `omdat` sounds a little more careful, `want` a little more relaxed.",
         "table": {
           "caption": "The full contrast",
           "columns": [
@@ -281,7 +281,7 @@
             [
               "comma before it",
               "yes",
-              "usually yes"
+              "optional, usually left out"
             ]
           ]
         },

@@ -18,7 +18,7 @@
     {
       "hindi": "huis, buiten, uit, Zuid, buit, duin",
       "english": "house, outside, out, south, loot/booty, dune",
-      "context": "The 'ui' sound: purse your lips like you're about to say 'oo', but say 'uh', it's a rounded front vowel unique to Dutch. Your lips should stay rounded throughout. Practice with 'huis', HOWS but with rounded lips.",
+      "context": "The 'ui' sound: round your lips as if to say 'oo', then try to say 'eye'. It lands somewhere between 'ow' and 'oy', lips rounded the whole way through. Nothing in English matches it. Practice with 'huis', HOWS but with rounded lips.",
       "pronunciation": "hows (rounded), BOW-tun (rounded), owt (rounded), zowt (rounded), bowt (rounded), down (rounded)"
     },
     {
@@ -31,13 +31,13 @@
       "hindi": "oud, blauw, brood, ook, oog, rood",
       "english": "old, blue, bread, also, eye, red",
       "context": "'Ou' and 'au' both sound like English 'ow' in 'how'. 'Brood' and 'rood' have the long 'oo' (like English 'road'). 'Oog', the double-o makes a long sound, and the final 'g' is guttural.",
-      "pronunciation": "owt, BLOW, broht, ohk, ohch, roht"
+      "pronunciation": "owt, BLOW (ow as in now), broht, ohk, ohch, roht"
     },
     {
       "hindi": "een appel, de auto, het is, wij eten, ik open",
       "english": "an apple, the car, it is, we eat, I open",
-      "context": "Linking: when a word ends in a consonant and the next starts with a vowel, they link together as one. 'Een appel' sounds like 'ay-NAP-el'. 'Het is' / 'het-IS'. This makes Dutch speakers sound fast!",
-      "pronunciation": "ayn-AP-el, duh-OW-toh, ut-IS, way-AY-tun, ik-OH-pun"
+      "context": "Linking: when a word ends in a consonant and the next starts with a vowel, they link together as one. 'Een appel' sounds like 'un-AP-el'. Careful: the article `een` is a quick `un`, not the `ayn` of the number `een`. 'Het is' / 'het-IS'. This makes Dutch speakers sound fast!",
+      "pronunciation": "un-AP-el, duh-OW-toh, ut-IS, way-AY-tun, ik-OH-pun"
     },
     {
       "hindi": "deur, neus, Europa, deuren, neuzen",
@@ -53,7 +53,7 @@
     }
   ],
   "grammar_notes": [
-    "The Dutch 'g' and 'ch' are the same sound, a voiced velar fricative. Think of the Scottish 'loch'. It varies by region: harder in the north, softer in the south and Belgium",
+    "In the northern Netherlands the Dutch 'g' and 'ch' are the same sound: a voiceless fricative scraped far back in the throat. Think of the Scottish 'loch'. It varies by region, harsher and scratchier in the north; in the south and in Belgium the 'g' softens into a voiced version while 'ch' stays voiceless",
     "Long vowels vs short vowels: 'man' (short a) vs 'maan' (long aa). Double vowels = long. Single vowel in open syllable = also long: 'ik ga' (I go), the 'a' in 'ga' is long",
     "Final devoicing: at the end of a word, voiced consonants become voiceless. 'Hond' (dog) is pronounced 'hont'. 'Bad' (bath) is pronounced 'bat'",
     "'V' at the start of words often sounds like 'f': 'voor' sounds like 'fohr'. 'Z' at start often sounds like 's': 'zee' sounds like 'say'"
@@ -82,7 +82,7 @@
         },
         {
           "hindi": "gezellig (cozy/nice)",
-          "english": "ge-ZEL-lich, g at start AND end"
+          "english": "chuh-ZEL-lich, g at start AND end"
         }
       ]
     },
@@ -115,7 +115,7 @@
     "sections": [
       {
         "heading": "The guttural g and ch",
-        "body": "The Dutch `g` and `ch` are the same sound, a harsh fricative made at the **back of the throat**. Imagine clearing your throat softly, then adding a vowel onto it. It's nothing like the English `g` in `gate` or `good`. It's even harsher than the German `ch` in `Bach`, though closer to that than to anything in English.\n\nYou'll meet this sound constantly. Every other Dutch word seems to have a `g`: `goed` (good), `geld` (money), `groen` (green), `gracht` (canal), `Scheveningen` (the seaside town once used as a wartime accent test). In the north of the Netherlands it's harder and scratchier. In Belgium and the south it's softer, almost like a Spanish `j`. Either is fine. Pick one and lean into it.",
+        "body": "The Dutch `g` and `ch` are the same sound, a harsh fricative made at the **back of the throat**. Imagine clearing your throat softly, then adding a vowel onto it. It's nothing like the English `g` in `gate` or `good`. It's even harsher than the German `ch` in `Bach`, though closer to that than to anything in English.\n\nYou'll meet this sound constantly. Every other Dutch word seems to have a `g`: `goed` (good), `geld` (money), `groen` (green), `gracht` (canal), `Scheveningen` (the seaside town said to have been used as a wartime accent test). In the north of the Netherlands it's harder and scratchier. In Belgium and the south it's softer, closer to the `ch` in German `ich`. Either is fine. Pick one and lean into it.",
         "examples": [
           {
             "hindi": "goed",
@@ -135,7 +135,7 @@
           {
             "hindi": "Scheveningen",
             "english": "(a seaside town)",
-            "breakdown": "sch- = s + guttural ch; used in WWII to spot non-Dutch speakers"
+            "breakdown": "sch- = s + guttural ch; said to have been used in WWII to spot non-Dutch speakers"
           }
         ],
         "callout": {
@@ -216,7 +216,7 @@
       },
       {
         "heading": "Long vs short vowels, the doubling rule",
-        "body": "Dutch vowels come in two lengths: short (a quick beat) and long (held about twice as long). The length changes meaning. - `man` (mahn, man) vs `maan` (mahhhn, moon)\n- `kop` (cup) vs `koop` (purchase) The spelling tells you which is which. A vowel is **long** when it's written doubled (`aa`, `ee`, `oo`, `uu`) or sits in an open syllable (with one consonant or none after it). It's **short** when it's a single letter closed off by a consonant. This matters when you add endings. A short-vowel word doubles its consonant to keep the vowel short (`man` / `mannen`, men). A long-vowel word stays clean (`maan` / `manen`, moons).",
+        "body": "Dutch vowels come in two lengths: short (a quick beat) and long (held about twice as long). The length changes the word.\n\n- `man` (mahn, man) vs `maan` (mahhhn, moon)\n- `kop` (cup) vs `koop` (purchase)\n\nThe spelling tells you which is which. A vowel is **long** when it's written doubled (`aa`, `ee`, `oo`, `uu`) or sits in an open syllable, with one consonant or none after it. It's **short** when it's a single letter closed off by a consonant.\n\nThis matters the moment you add an ending. A short-vowel word doubles its consonant to keep the vowel short (`man` / `mannen`, men). A long-vowel word stays clean (`maan` / `manen`, moons).",
         "table": {
           "caption": "Short vs long vowel pairs",
           "columns": [
@@ -276,7 +276,7 @@
       },
       {
         "heading": "Word stress, usually on the first syllable",
-        "body": "Dutch overwhelmingly stresses the first syllable of native words: `WA-ter` (water), `LE-ven` (life), `MOR-gen` (morning), `WERK-en` (to work). When in doubt, throw the beat onto the first syllable and you'll be right about 80% of the time.\n\nCompound words put the main stress on the first part: `SCHOOL-bord` (blackboard), `STAD-huis` (city hall), `BOEK-en-kast` (bookcase).\n\nTwo groups break the first-syllable habit:\n- Loanwords from Latin, Greek, or French keep their original stress: `te-le-FOON`, `mu-ZIEK`, `re-stau-RANT`.\n- Verbs with an unstressed prefix (`be-`, `ge-`, `ver-`, `ont-`, `her-`) put the stress *after* the prefix: `be-GIN-nen` (to begin), `ver-GE-ten` (to forget), `ont-MOE-ten` (to meet).",
+        "body": "Dutch overwhelmingly stresses the first syllable of native words: `WA-ter` (water), `LE-ven` (life), `MOR-gen` (morning), `WER-ken` (to work). When in doubt, throw the beat onto the first syllable and you'll be right about 80% of the time.\n\nCompound words put the main stress on the first part: `SCHOOL-bord` (blackboard), `STAD-huis` (city hall), `BOEK-en-kast` (bookcase).\n\nTwo groups break the first-syllable habit:\n- Loanwords from Latin, Greek, or French keep their original stress: `te-le-FOON`, `mu-ZIEK`, `re-stau-RANT`.\n- Verbs with an unstressed prefix (`be-`, `ge-`, `ver-`, `ont-`, `her-`) put the stress *after* the prefix: `be-GIN-nen` (to begin), `ver-GE-ten` (to forget), `ont-MOE-ten` (to meet).",
         "examples": [
           {
             "hindi": "WA-ter",
@@ -296,7 +296,7 @@
           {
             "hindi": "te-le-FOON",
             "english": "telephone",
-            "breakdown": "Greek loanword; keeps original final-syllable stress"
+            "breakdown": "loanword; keeps its original final-syllable stress"
           },
           {
             "hindi": "STAD-huis",
@@ -373,5 +373,6 @@
     "dutchgrammar.com (Dutch Grammar by Bieneke Berendsen)",
     "Taalthuis.nl (free NT2 course)",
     "Naar Nederland (NT2 inburgering programme)"
-  ]
+  ],
+  "level": "A1"
 }

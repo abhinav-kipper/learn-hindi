@@ -18,8 +18,24 @@ describe('dutch level-map', () => {
   })
 
   it('returns the level for known foundation IDs', () => {
-    expect(getLevel('numbers')).toBe('A1')
-    expect(getLevel('past-tense')).toBe('A2')
+    // Foundation JSONs use `dutch-` prefixed IDs. This test used to assert the
+    // bare forms ('numbers', 'past-tense'), which matched map keys that no
+    // content ever had, so every foundation silently fell through to the 'A1'
+    // default. Keys and assertions now both use the real IDs.
+    expect(getLevel('dutch-numbers')).toBe('A1')
+    expect(getLevel('dutch-questions')).toBe('A1')
+    expect(getLevel('dutch-past-tense')).toBe('A2')
+    expect(getLevel('dutch-comparatives')).toBe('A2')
+  })
+
+  it('has no bare (unprefixed) foundation keys left in the map', () => {
+    // A bare key can never match a content ID, so it would quietly inflate the
+    // stage bars with items that can never complete.
+    for (const level of ALL_LEVELS) {
+      for (const id of getItemsByLevel(level)) {
+        expect(id.startsWith('dutch-')).toBe(true)
+      }
+    }
   })
 
   it('returns "A1" as safe default for unknown ids', () => {

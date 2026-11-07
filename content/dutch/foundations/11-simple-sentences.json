@@ -1,5 +1,5 @@
 {
-  "id": "simple-sentences",
+  "id": "dutch-simple-sentences",
   "title": "Building a Sentence",
   "level": "A1",
   "exam_targeted": false,
@@ -21,7 +21,7 @@
       "hindi": "Zij woont in Utrecht.",
       "english": "She lives in Utrecht.",
       "context": "Same shape with a different subject. The verb 'woont' sits right after the subject 'zij'. Build most sentences from this pattern.",
-      "pronunciation": "zay WOONT in U-trecht."
+      "pronunciation": "zay WOONT in uu-TRECHT."
     },
     {
       "hindi": "Wij eten brood.",
@@ -45,7 +45,7 @@
       "hindi": "In Amsterdam woont mijn zus.",
       "english": "My sister lives in Amsterdam.",
       "context": "Start with a place and the verb 'woont' stays second, so the subject 'mijn zus' comes after it. The verb did not move; the subject did.",
-      "pronunciation": "in AM-ster-dam WOONT mayn ZUS."
+      "pronunciation": "in am-ster-DAM WOONT mayn ZUS."
     },
     {
       "hindi": "Er is een probleem.",
