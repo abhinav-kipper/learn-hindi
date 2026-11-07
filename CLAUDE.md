@@ -845,7 +845,7 @@ Items previously claimed as gaps but verified non-issues during the loose-end cl
 - Vercel CLI spams `ECONNRESET` errors from a broken plugin — ignore them
 - Must use pnpm for Vercel deploys (npm install crashes on their infra)
 - `ai` SDK v6 has no `useChat` hook export — custom implementation in practice page
-- Node 20.x pinned in engines (Vercel compatibility)
+- Node pinned to 26.x in `engines` + all four GitHub workflows. Vercel discontinues old Node majors and hard-fails the build with "Node.js Version \"X\" is discontinued", so this needs bumping whenever that lands (was 20.x until 2026-11-07). Keep `engines` and `node-version:` in the workflows in step.
 - `next/navigation` `useRouter` only — App Router, not pages-dir
 - `canvas-confetti` is imported synchronously in client components (LessonChaiGalli, quiz-results, practice page) — fine since they're all `'use client'`
 - TTS via `/api/tts` returns 502 in dev sandboxes without internet — the `speak()` function transparently falls back to browser `speechSynthesis`
