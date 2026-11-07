@@ -115,10 +115,23 @@ before pushing: a conflict resolution is new code nobody has tested.
 If something in that bar fails and can't be fixed in the same turn, do not push.
 Say what is red and leave `main` alone.
 
-*Known-failing baseline (not yours, don't chase):* 10 component test files in
-`__tests__/components/` fail at import inside `@testing-library/react`, and
-`tsc` reports ~18 matching errors in those same files. Confirm a failure is
-pre-existing by stashing and re-running, rather than assuming either way.
+**Install with `pnpm install --frozen-lockfile`, never `npm install`.** Only
+`pnpm-lock.yaml` is tracked; `package-lock.json` is untracked residue. Running
+`npm install` resolves a *different* dependency tree from the lockfile and
+produces failures that do not exist in CI or prod: it silently breaks
+`@testing-library/react` so 10 component test files fail to import, which also
+makes `tsc --noEmit` report ~18 phantom errors and hides ~70 tests (503 run on
+the real tree, 430 on the npm one). If you see those symptoms, you have the
+wrong tree, not a regression. `rm -rf node_modules && pnpm install
+--frozen-lockfile` fixes it.
+
+*CI Node is pinned to 24, prod to 26.* They are deliberately different: Vercel
+mandates 26, but jsdom 29 does not provide `localStorage` under Node 26, so
+every storage-backed test fails there. jsdom 31 supports 26 but changes CSS
+shorthand serialization, which breaks the Sticker/SpeechBubble tests that guard
+the Chai Galli border and shadow recipe. Keeping CI on 24 preserves those
+guards. Revisit when jsdom ships a release that supports Node 26 without the
+CSS change.
 
 **CI gate:** `.github/workflows/ci.yml` runs `tsc --noEmit` + `vitest run`
 plus three content lints on every push and PR:
