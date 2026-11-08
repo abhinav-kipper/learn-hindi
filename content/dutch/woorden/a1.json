@@ -1,0 +1,1037 @@
+{
+  "packs": [
+    {
+      "id": "a1-people-places",
+      "stage": "A1",
+      "title": "People and places",
+      "subtitle_nl": "mensen en plekken",
+      "blurb": "Who is around you and where things are: family and neighbours, rooms and streets, the weather, and the two untranslatable words Dutch people use constantly.",
+      "emoji": "🏘",
+      "entries": [
+        {
+          "id": "a1-de-vriend",
+          "chunk": "de vriend",
+          "gloss": "the friend",
+          "pos": "noun",
+          "pron": "de FREENT",
+          "pattern": "A de-word. The female form is `de vriendin`, and both can mean a partner in context.",
+          "examples": [
+            {
+              "nl": "Ik ga met een vriend naar de film.",
+              "en": "I am going to the cinema with a friend."
+            },
+            {
+              "nl": "Zij is mijn beste vriendin.",
+              "en": "She is my best friend."
+            }
+          ],
+          "tags": [
+            "people"
+          ],
+          "article": "de",
+          "family": [
+            "de vriendin",
+            "vriendelijk",
+            "de vriendschap"
+          ],
+          "pitfall": "`mijn vriend` usually means boyfriend. For a plain friend say `een vriend van mij`."
+        },
+        {
+          "id": "a1-de-buurman",
+          "chunk": "de buurman",
+          "gloss": "the neighbour",
+          "pos": "noun",
+          "pron": "de BUUR-man",
+          "pattern": "A de-word, built from `buur` plus `man`. The female form is `de buurvrouw`.",
+          "examples": [
+            {
+              "nl": "Mijn buurman heeft een hond.",
+              "en": "My neighbour has a dog."
+            },
+            {
+              "nl": "De buurvrouw neemt het pakje aan.",
+              "en": "The neighbour takes in the parcel."
+            }
+          ],
+          "tags": [
+            "people",
+            "home"
+          ],
+          "article": "de",
+          "hook": "`de buurt` is the neighbourhood and `de buren` the neighbours. One root, three words you need.",
+          "family": [
+            "de buurvrouw",
+            "de buren",
+            "de buurt"
+          ]
+        },
+        {
+          "id": "a1-het-gezin",
+          "chunk": "het gezin",
+          "gloss": "the family (household)",
+          "pos": "noun",
+          "pron": "ut che-ZIN",
+          "pattern": "A het-word, and a distinction English does not make.",
+          "examples": [
+            {
+              "nl": "Wij zijn een gezin van vier.",
+              "en": "We are a household of four."
+            },
+            {
+              "nl": "Mijn familie woont in India.",
+              "en": "My extended family lives in India."
+            }
+          ],
+          "tags": [
+            "people"
+          ],
+          "article": "het",
+          "family": [
+            "de familie"
+          ],
+          "pitfall": "`het gezin` is the household you live in. `de familie` is the wider family. Using familie for your own household sounds odd."
+        },
+        {
+          "id": "a1-getrouwd-zijn",
+          "chunk": "getrouwd zijn met",
+          "gloss": "to be married to",
+          "pos": "phrase",
+          "pron": "che-TROWT zayn met",
+          "pattern": "The fixed preposition is `met`, matching English, which makes this one of the easy ones.",
+          "examples": [
+            {
+              "nl": "Ik ben getrouwd met Sara.",
+              "en": "I am married to Sara."
+            },
+            {
+              "nl": "Zij zijn al tien jaar getrouwd.",
+              "en": "They have been married for ten years."
+            }
+          ],
+          "tags": [
+            "people"
+          ],
+          "family": [
+            "de trouwdag",
+            "trouwen"
+          ]
+        },
+        {
+          "id": "a1-hoe-ziet-eruit",
+          "chunk": "Hoe ziet hij eruit?",
+          "gloss": "What does he look like?",
+          "pos": "question",
+          "pron": "hoo ZEET hay er-OWT?",
+          "pattern": "`eruit zien` is a separable verb, so `uit` lands at the end and `er` sits in front of it.",
+          "examples": [
+            {
+              "nl": "Hoe ziet je nieuwe huis eruit?",
+              "en": "What does your new house look like?"
+            },
+            {
+              "nl": "Zij ziet er moe uit.",
+              "en": "She looks tired."
+            }
+          ],
+          "tags": [
+            "describing"
+          ],
+          "hook": "`Zij ziet er moe uit` is the pattern to own: subject, ziet, er, the adjective, then uit.",
+          "family": [
+            "eruit zien",
+            "er ... uit"
+          ]
+        },
+        {
+          "id": "a1-lang-kort",
+          "chunk": "lang / kort",
+          "gloss": "long, tall / short",
+          "pos": "adjective",
+          "pron": "LANG / KORT",
+          "pattern": "`lang` covers both long and tall. Dutch does not separate them.",
+          "examples": [
+            {
+              "nl": "Hij is heel lang.",
+              "en": "He is very tall."
+            },
+            {
+              "nl": "Het is maar een korte wandeling.",
+              "en": "It is only a short walk."
+            }
+          ],
+          "tags": [
+            "describing"
+          ],
+          "hook": "`Hoe lang?` can mean how tall or how long. Context decides, and nobody gets confused.",
+          "family": [
+            "de lengte",
+            "hoe lang"
+          ]
+        },
+        {
+          "id": "a1-de-stad",
+          "chunk": "de stad",
+          "gloss": "the city, town",
+          "pos": "noun",
+          "pron": "de STAT",
+          "pattern": "A de-word with an irregular plural: de steden.",
+          "examples": [
+            {
+              "nl": "Ik ga naar de stad.",
+              "en": "I am going into town."
+            },
+            {
+              "nl": "Welke steden ken je in Nederland?",
+              "en": "Which cities do you know in the Netherlands?"
+            }
+          ],
+          "tags": [
+            "places"
+          ],
+          "article": "de",
+          "hook": "`naar de stad` means into town. For the actual city centre, Dutch says `het centrum`.",
+          "family": [
+            "de steden",
+            "het centrum",
+            "het stadhuis"
+          ]
+        },
+        {
+          "id": "a1-de-straat",
+          "chunk": "de straat",
+          "gloss": "the street",
+          "pos": "noun",
+          "pron": "de STRAAT",
+          "pattern": "A de-word. You live `in` a street in Dutch, not on it.",
+          "examples": [
+            {
+              "nl": "Ik woon in de Kerkstraat.",
+              "en": "I live on Kerkstraat."
+            },
+            {
+              "nl": "De straat is afgesloten.",
+              "en": "The street is closed off."
+            }
+          ],
+          "tags": [
+            "places"
+          ],
+          "article": "de",
+          "pitfall": "Dutch says `in de straat`, where English says on the street. The preposition does not transfer."
+        },
+        {
+          "id": "a1-het-centrum",
+          "chunk": "het centrum",
+          "gloss": "the town centre",
+          "pos": "noun",
+          "pron": "ut SEN-trum",
+          "pattern": "A het-word. Any word ending in -um is a het-word, which is a reliable cue.",
+          "examples": [
+            {
+              "nl": "Het centrum is autovrij.",
+              "en": "The centre is car-free."
+            },
+            {
+              "nl": "We spreken af in het centrum.",
+              "en": "We will meet in the centre."
+            }
+          ],
+          "tags": [
+            "places"
+          ],
+          "article": "het",
+          "hook": "Words ending in -um are always het-words: het centrum, het museum, het album. A rare dependable rule."
+        },
+        {
+          "id": "a1-links-rechts",
+          "chunk": "links / rechts",
+          "gloss": "left / right",
+          "pos": "adverb",
+          "pron": "LINKS / RECHTS",
+          "pattern": "Directions. `rechts` is right-hand; `rechtdoor` is straight on. The two look alike and mean different things.",
+          "examples": [
+            {
+              "nl": "Ga bij de kerk rechts.",
+              "en": "Turn right at the church."
+            },
+            {
+              "nl": "Rechtdoor en dan links.",
+              "en": "Straight on and then left."
+            }
+          ],
+          "tags": [
+            "directions"
+          ],
+          "family": [
+            "rechtdoor",
+            "linksaf",
+            "rechtsaf"
+          ],
+          "pitfall": "`rechts` is right, `rechtdoor` is straight ahead. Mixing them up sends you the wrong way."
+        },
+        {
+          "id": "a1-naast",
+          "chunk": "naast",
+          "gloss": "next to",
+          "pos": "phrase",
+          "pron": "NAAST",
+          "pattern": "A position preposition. Pairs with tegenover, tussen and achter.",
+          "examples": [
+            {
+              "nl": "De bakker zit naast de apotheek.",
+              "en": "The baker is next to the pharmacy."
+            },
+            {
+              "nl": "Ik zit naast het raam.",
+              "en": "I am sitting next to the window."
+            }
+          ],
+          "tags": [
+            "directions"
+          ],
+          "hook": "Learn the position set together: naast, tegenover, tussen, achter, voor. They answer every `waar` question.",
+          "family": [
+            "tegenover",
+            "tussen",
+            "achter",
+            "voor"
+          ]
+        },
+        {
+          "id": "a1-dichtbij-ver",
+          "chunk": "dichtbij / ver weg",
+          "gloss": "nearby / far away",
+          "pos": "phrase",
+          "pron": "DICHT-bay / FER wech",
+          "pattern": "`ver` almost always travels with `weg` when it means far away.",
+          "examples": [
+            {
+              "nl": "Het station is dichtbij.",
+              "en": "The station is nearby."
+            },
+            {
+              "nl": "Woon je ver weg?",
+              "en": "Do you live far away?"
+            }
+          ],
+          "tags": [
+            "directions"
+          ],
+          "hook": "`ver` on its own sounds incomplete in speech. Store `ver weg` as the chunk."
+        },
+        {
+          "id": "a1-de-kamer",
+          "chunk": "de kamer",
+          "gloss": "the room",
+          "pos": "noun",
+          "pron": "de KAA-mer",
+          "pattern": "A de-word, and the base of several compound nouns you will need when house-hunting.",
+          "examples": [
+            {
+              "nl": "Onze kamer is klein maar licht.",
+              "en": "Our room is small but light."
+            },
+            {
+              "nl": "De woonkamer is beneden.",
+              "en": "The living room is downstairs."
+            }
+          ],
+          "tags": [
+            "home"
+          ],
+          "article": "de",
+          "hook": "One root, four rooms: woonkamer, slaapkamer, badkamer, wachtkamer. Dutch builds words by sticking them together.",
+          "family": [
+            "de woonkamer",
+            "de slaapkamer",
+            "de badkamer",
+            "de wachtkamer"
+          ]
+        },
+        {
+          "id": "a1-de-keuken",
+          "chunk": "de keuken",
+          "gloss": "the kitchen",
+          "pos": "noun",
+          "pron": "de KUH-ken",
+          "pattern": "A de-word. The `eu` is a rounded sound with no English equivalent.",
+          "examples": [
+            {
+              "nl": "De keuken is net nieuw.",
+              "en": "The kitchen is brand new."
+            },
+            {
+              "nl": "Ik sta de hele dag in de keuken.",
+              "en": "I am in the kitchen all day."
+            }
+          ],
+          "tags": [
+            "home"
+          ],
+          "article": "de"
+        },
+        {
+          "id": "a1-de-huur",
+          "chunk": "de huur",
+          "gloss": "the rent",
+          "pos": "noun",
+          "pron": "de HUUR",
+          "pattern": "A de-word. `huren` is to rent from someone, `verhuren` to rent out.",
+          "examples": [
+            {
+              "nl": "De huur is elke maand hetzelfde.",
+              "en": "The rent is the same every month."
+            },
+            {
+              "nl": "Wij huren dit appartement.",
+              "en": "We rent this flat."
+            }
+          ],
+          "tags": [
+            "home",
+            "official"
+          ],
+          "article": "de",
+          "hook": "`de huurder` rents, `de verhuurder` rents out. The `ver-` flips who is doing what to whom.",
+          "family": [
+            "huren",
+            "verhuren",
+            "de huurder",
+            "de verhuurder"
+          ]
+        },
+        {
+          "id": "a1-het-weer",
+          "chunk": "het weer",
+          "gloss": "the weather",
+          "pos": "noun",
+          "pron": "ut WAYR",
+          "pattern": "A het-word, and the safest small-talk topic in the country.",
+          "examples": [
+            {
+              "nl": "Wat een lekker weer!",
+              "en": "What lovely weather!"
+            },
+            {
+              "nl": "Het weer is slecht vandaag.",
+              "en": "The weather is bad today."
+            }
+          ],
+          "tags": [
+            "smalltalk"
+          ],
+          "article": "het",
+          "family": [
+            "het regent",
+            "het waait",
+            "de zon schijnt"
+          ],
+          "pitfall": "`weer` also means again. `Ik kom weer` is I am coming again, nothing to do with weather."
+        },
+        {
+          "id": "a1-het-regent",
+          "chunk": "het regent",
+          "gloss": "it is raining",
+          "pos": "phrase",
+          "pron": "ut RAY-chent",
+          "pattern": "Weather uses a dummy `het` as subject, exactly as English uses `it`.",
+          "examples": [
+            {
+              "nl": "Het regent al de hele dag.",
+              "en": "It has been raining all day."
+            },
+            {
+              "nl": "Als het regent, neem ik de bus.",
+              "en": "If it rains, I take the bus."
+            }
+          ],
+          "tags": [
+            "smalltalk",
+            "weather"
+          ],
+          "hook": "One pattern, four kinds of weather: het regent, het waait, het vriest, het sneeuwt.",
+          "family": [
+            "het waait",
+            "het vriest",
+            "het sneeuwt"
+          ]
+        },
+        {
+          "id": "a1-lekker",
+          "chunk": "lekker",
+          "gloss": "nice, tasty, pleasant",
+          "pos": "adjective",
+          "pron": "LEK-ker",
+          "pattern": "An untranslatable Dutch favourite. It covers food, weather, sleep, and feeling well.",
+          "examples": [
+            {
+              "nl": "Dat was een lekkere maaltijd.",
+              "en": "That was a tasty meal."
+            },
+            {
+              "nl": "Ik voel me niet lekker.",
+              "en": "I do not feel well."
+            }
+          ],
+          "tags": [
+            "core",
+            "culture"
+          ],
+          "hook": "`lekker` is the single most Dutch word on this list. Food, weather, a nap and your health can all be lekker.",
+          "pitfall": "`Ik voel me niet lekker` means I feel unwell. It has nothing to do with taste."
+        },
+        {
+          "id": "a1-gezellig",
+          "chunk": "gezellig",
+          "gloss": "cosy, convivial",
+          "pos": "adjective",
+          "pron": "che-ZEL-lich",
+          "pattern": "Famously untranslatable. It describes the warm feeling of good company, not a thing.",
+          "examples": [
+            {
+              "nl": "Het was heel gezellig gisteren.",
+              "en": "It was really lovely yesterday."
+            },
+            {
+              "nl": "Wat een gezellig cafe.",
+              "en": "What a cosy pub."
+            }
+          ],
+          "tags": [
+            "core",
+            "culture"
+          ],
+          "hook": "Dutch people use gezellig as a compliment about an evening, a room or a person. Using it correctly earns you a lot of goodwill."
+        },
+        {
+          "id": "a1-druk-rustig",
+          "chunk": "druk / rustig",
+          "gloss": "busy / quiet",
+          "pos": "adjective",
+          "pron": "DRUK / RUS-tich",
+          "pattern": "A pair worth learning together. `druk` describes both crowded places and busy people.",
+          "examples": [
+            {
+              "nl": "Het is druk in de winkel.",
+              "en": "The shop is busy."
+            },
+            {
+              "nl": "Ik heb het druk deze week.",
+              "en": "I am busy this week."
+            }
+          ],
+          "tags": [
+            "describing"
+          ],
+          "hook": "`Ik heb het druk` needs the `het`. Without it the sentence is wrong."
+        }
+      ]
+    },
+    {
+      "id": "a1-doing-things",
+      "stage": "A1",
+      "title": "Doing things",
+      "subtitle_nl": "dingen doen",
+      "blurb": "The high-frequency verbs in the chunks they actually live in, including the fixed prepositions and the pairs English merges into one word.",
+      "emoji": "🔧",
+      "entries": [
+        {
+          "id": "a1-werken-bij",
+          "chunk": "werken bij",
+          "gloss": "to work at (a company)",
+          "pos": "phrase",
+          "pron": "WER-ken bay",
+          "pattern": "The preposition depends on what follows: `bij` a company, `als` a job title, `in` a sector.",
+          "examples": [
+            {
+              "nl": "Ik werk bij een ziekenhuis.",
+              "en": "I work at a hospital."
+            },
+            {
+              "nl": "Zij werkt als verpleegkundige.",
+              "en": "She works as a nurse."
+            }
+          ],
+          "tags": [
+            "work"
+          ],
+          "hook": "Three prepositions, three meanings: bij the employer, als the role, in the field.",
+          "family": [
+            "werken als",
+            "werken in",
+            "het werk"
+          ]
+        },
+        {
+          "id": "a1-zin-hebben-in",
+          "chunk": "zin hebben in",
+          "gloss": "to fancy, to feel like",
+          "pos": "phrase",
+          "pron": "ZIN HEB-ben in",
+          "pattern": "A fixed phrase with the preposition `in`. The everyday way to suggest anything.",
+          "examples": [
+            {
+              "nl": "Heb je zin in koffie?",
+              "en": "Do you fancy a coffee?"
+            },
+            {
+              "nl": "Ik heb geen zin om te koken.",
+              "en": "I do not feel like cooking."
+            }
+          ],
+          "tags": [
+            "social"
+          ],
+          "hook": "A noun takes `zin in`, a verb takes `zin om te`: zin in koffie, but zin om te koken.",
+          "family": [
+            "zin in",
+            "zin om te"
+          ],
+          "pitfall": "This is how Dutch people invite you to things. A blunt `Wil je koffie?` is noticeably colder."
+        },
+        {
+          "id": "a1-afspreken",
+          "chunk": "iets afspreken",
+          "gloss": "to arrange to meet",
+          "pos": "phrase",
+          "pron": "EETS AF-spray-ken",
+          "pattern": "A separable verb, so `af` flies to the end in a plain sentence.",
+          "examples": [
+            {
+              "nl": "Zullen we iets afspreken?",
+              "en": "Shall we arrange something?"
+            },
+            {
+              "nl": "We spreken om zes uur af.",
+              "en": "We are meeting at six."
+            }
+          ],
+          "tags": [
+            "social"
+          ],
+          "hook": "`Afgesproken!` on its own means 'agreed, it is a deal'. A whole reply in one word.",
+          "family": [
+            "de afspraak",
+            "afgesproken"
+          ]
+        },
+        {
+          "id": "a1-ophalen",
+          "chunk": "iemand ophalen",
+          "gloss": "to pick someone up",
+          "pos": "phrase",
+          "pron": "EE-mant OP-haa-len",
+          "pattern": "A separable verb. `op` goes to the end: `Ik haal je op`.",
+          "examples": [
+            {
+              "nl": "Ik haal je om acht uur op.",
+              "en": "I will pick you up at eight."
+            },
+            {
+              "nl": "Kun jij de kinderen ophalen?",
+              "en": "Could you pick up the children?"
+            }
+          ],
+          "tags": [
+            "daily"
+          ],
+          "family": [
+            "afhalen",
+            "ophalen"
+          ],
+          "pitfall": "`afhalen` is for collecting a thing, often a takeaway. `ophalen` is for collecting a person."
+        },
+        {
+          "id": "a1-opbellen",
+          "chunk": "iemand opbellen",
+          "gloss": "to phone someone",
+          "pos": "phrase",
+          "pron": "EE-mant OP-bel-len",
+          "pattern": "Separable again. Dutch is full of these, and the prefix always carries the meaning.",
+          "examples": [
+            {
+              "nl": "Ik bel je morgen op.",
+              "en": "I will call you tomorrow."
+            },
+            {
+              "nl": "Ik heb de huisarts opgebeld.",
+              "en": "I phoned the doctor."
+            }
+          ],
+          "tags": [
+            "daily"
+          ],
+          "hook": "The participle wedges ge- into the middle: op + ge + beld.",
+          "family": [
+            "terugbellen",
+            "de telefoon"
+          ]
+        },
+        {
+          "id": "a1-nodig-hebben",
+          "chunk": "nodig hebben",
+          "gloss": "to need",
+          "pos": "phrase",
+          "pron": "NOH-dich HEB-ben",
+          "pattern": "Dutch has no single verb for need. It uses an adjective plus hebben, and `nodig` goes near the end.",
+          "examples": [
+            {
+              "nl": "Ik heb hulp nodig.",
+              "en": "I need help."
+            },
+            {
+              "nl": "Wat heb je nodig?",
+              "en": "What do you need?"
+            }
+          ],
+          "tags": [
+            "core"
+          ],
+          "hook": "The order is object first, `nodig` last: `Ik heb een pen nodig`, never `Ik heb nodig een pen`.",
+          "pitfall": "This word order trips up almost every learner. Practise it as a frame."
+        },
+        {
+          "id": "a1-moeten-mogen",
+          "chunk": "moeten / mogen",
+          "gloss": "must / to be allowed to",
+          "pos": "verb",
+          "pron": "MOO-ten / MOH-chen",
+          "pattern": "The two modals that decide obligation and permission. Both send the other verb to the end.",
+          "examples": [
+            {
+              "nl": "Ik moet morgen werken.",
+              "en": "I have to work tomorrow."
+            },
+            {
+              "nl": "Mag ik hier parkeren?",
+              "en": "Am I allowed to park here?"
+            }
+          ],
+          "tags": [
+            "core"
+          ],
+          "hook": "`moet niet` means must not, but Dutch often uses `hoeft niet` for 'need not'. The two are easy to confuse.",
+          "family": [
+            "kunnen",
+            "willen",
+            "zullen"
+          ]
+        },
+        {
+          "id": "a1-hoeven-niet",
+          "chunk": "hoeft niet",
+          "gloss": "does not need to",
+          "pos": "phrase",
+          "pron": "HOOFT neet",
+          "pattern": "`hoeven` appears almost only in the negative. It is the polite way to decline an offer.",
+          "examples": [
+            {
+              "nl": "Dat hoeft niet, dank je.",
+              "en": "That is not necessary, thanks."
+            },
+            {
+              "nl": "Je hoeft niet te komen.",
+              "en": "You do not have to come."
+            }
+          ],
+          "tags": [
+            "core",
+            "politeness"
+          ],
+          "hook": "`Dat hoeft niet` is the standard way to wave off an offer kindly. Worth having ready.",
+          "pitfall": "`Je moet niet komen` means you must not come. `Je hoeft niet te komen` means you need not. Very different."
+        },
+        {
+          "id": "a1-weten-kennen",
+          "chunk": "weten / kennen",
+          "gloss": "to know (a fact) / to know (a person)",
+          "pos": "verb",
+          "pron": "WAY-ten / KEN-nen",
+          "pattern": "English has one verb here and Dutch has two. Facts take weten, people and places take kennen.",
+          "examples": [
+            {
+              "nl": "Ik weet het niet.",
+              "en": "I do not know."
+            },
+            {
+              "nl": "Ken je die film?",
+              "en": "Do you know that film?"
+            }
+          ],
+          "tags": [
+            "core"
+          ],
+          "hook": "If you could follow it with `that ...`, use weten. If it is a person, a place or a work, use kennen.",
+          "pitfall": "`Ik ken het niet` about a fact is wrong. The sentence you want is `Ik weet het niet`."
+        },
+        {
+          "id": "a1-vinden",
+          "chunk": "iets vinden",
+          "gloss": "to think, to find",
+          "pos": "verb",
+          "pron": "EETS FIN-den",
+          "pattern": "Two meanings. With an opinion it means think; with an object it means find.",
+          "examples": [
+            {
+              "nl": "Wat vind je ervan?",
+              "en": "What do you think of it?"
+            },
+            {
+              "nl": "Ik kan mijn sleutels niet vinden.",
+              "en": "I cannot find my keys."
+            }
+          ],
+          "tags": [
+            "core",
+            "opinion"
+          ],
+          "hook": "`Wat vind je ervan?` is the standard invitation to give an opinion. Learn it whole.",
+          "family": [
+            "Wat vind je ervan?",
+            "Ik vind het mooi."
+          ]
+        },
+        {
+          "id": "a1-houden-van",
+          "chunk": "houden van",
+          "gloss": "to love, to be fond of",
+          "pos": "phrase",
+          "pron": "HOW-den van",
+          "pattern": "The fixed preposition is `van`. Works for people and for things.",
+          "examples": [
+            {
+              "nl": "Ik hou van stroopwafels.",
+              "en": "I love stroopwafels."
+            },
+            {
+              "nl": "Zij houdt van wandelen.",
+              "en": "She loves walking."
+            }
+          ],
+          "tags": [
+            "opinion"
+          ],
+          "hook": "In speech the `d` drops: `Ik hou van`, not `Ik houd van`. Both are written, only one is spoken."
+        },
+        {
+          "id": "a1-liever",
+          "chunk": "liever",
+          "gloss": "rather, prefer",
+          "pos": "adverb",
+          "pron": "LEE-ver",
+          "pattern": "The comparative of `graag`, and the easiest way to express a preference.",
+          "examples": [
+            {
+              "nl": "Ik drink liever thee.",
+              "en": "I would rather drink tea."
+            },
+            {
+              "nl": "Ik ga liever met de fiets.",
+              "en": "I prefer to go by bike."
+            }
+          ],
+          "tags": [
+            "opinion"
+          ],
+          "hook": "graag, liever, het liefst. Like good, better, best, but for how much you want something.",
+          "family": [
+            "graag",
+            "het liefst"
+          ]
+        },
+        {
+          "id": "a1-beginnen-met",
+          "chunk": "beginnen met",
+          "gloss": "to start with",
+          "pos": "phrase",
+          "pron": "be-CHIN-nen met",
+          "pattern": "A fixed pair. `beginnen` takes `zijn` in the perfect, which catches people out.",
+          "examples": [
+            {
+              "nl": "We beginnen met les een.",
+              "en": "We will start with lesson one."
+            },
+            {
+              "nl": "De film is net begonnen.",
+              "en": "The film has just started."
+            }
+          ],
+          "tags": [
+            "core"
+          ],
+          "pitfall": "Perfect tense is `is begonnen`, not `heeft begonnen`. It is a change-of-state verb, so it takes zijn."
+        },
+        {
+          "id": "a1-klaar-zijn-met",
+          "chunk": "klaar zijn met",
+          "gloss": "to be finished with",
+          "pos": "phrase",
+          "pron": "KLAAR zayn met",
+          "pattern": "`klaar` means both ready and finished. The preposition `met` sorts out which.",
+          "examples": [
+            {
+              "nl": "Ik ben klaar met mijn werk.",
+              "en": "I have finished my work."
+            },
+            {
+              "nl": "Ben je klaar? We gaan.",
+              "en": "Are you ready? We are leaving."
+            }
+          ],
+          "tags": [
+            "core"
+          ],
+          "hook": "`klaar met` is finished with. Plain `klaar` is ready. The preposition does the work."
+        },
+        {
+          "id": "a1-wachten-op",
+          "chunk": "wachten op",
+          "gloss": "to wait for",
+          "pos": "phrase",
+          "pron": "WACH-ten op",
+          "pattern": "The classic fixed pair. English says wait for, Dutch fixes on op, and no logic connects them.",
+          "examples": [
+            {
+              "nl": "Ik wacht op de bus.",
+              "en": "I am waiting for the bus."
+            },
+            {
+              "nl": "Wacht even op mij!",
+              "en": "Wait for me a moment!"
+            }
+          ],
+          "tags": [
+            "core"
+          ],
+          "pitfall": "`wachten voor` is wrong, however natural it feels coming from English."
+        },
+        {
+          "id": "a1-luisteren-naar",
+          "chunk": "luisteren naar",
+          "gloss": "to listen to",
+          "pos": "phrase",
+          "pron": "LOW-ste-ren naar",
+          "pattern": "Another fixed pair, and it sits in a family with kijken naar and zoeken naar.",
+          "examples": [
+            {
+              "nl": "Ik luister graag naar muziek.",
+              "en": "I like listening to music."
+            },
+            {
+              "nl": "Luister naar wat ik zeg.",
+              "en": "Listen to what I am saying."
+            }
+          ],
+          "tags": [
+            "core"
+          ],
+          "hook": "The `naar` group travels together: luisteren, kijken, zoeken, vragen. Learn them as a set.",
+          "family": [
+            "kijken naar",
+            "zoeken naar",
+            "vragen naar"
+          ]
+        },
+        {
+          "id": "a1-even",
+          "chunk": "even",
+          "gloss": "just, for a moment",
+          "pos": "adverb",
+          "pron": "AY-ven",
+          "pattern": "A tiny softener with no English equivalent. It turns an order into a request.",
+          "examples": [
+            {
+              "nl": "Wacht even.",
+              "en": "Hold on a moment."
+            },
+            {
+              "nl": "Mag ik even kijken?",
+              "en": "May I just have a look?"
+            }
+          ],
+          "tags": [
+            "politeness",
+            "culture"
+          ],
+          "hook": "Dropping `even` into a request is the cheapest politeness upgrade in Dutch. `Kom hier` is an order; `Kom even hier` is a request."
+        },
+        {
+          "id": "a1-gewoon",
+          "chunk": "gewoon",
+          "gloss": "just, simply, normal",
+          "pos": "adverb",
+          "pron": "che-WOHN",
+          "pattern": "Does two jobs: the adjective 'ordinary' and a filler meaning 'just'.",
+          "examples": [
+            {
+              "nl": "Doe maar gewoon.",
+              "en": "Just act normally."
+            },
+            {
+              "nl": "Ik wilde het gewoon even vragen.",
+              "en": "I just wanted to ask."
+            }
+          ],
+          "tags": [
+            "culture"
+          ],
+          "hook": "`Doe maar gewoon, dan doe je al gek genoeg` is a national saying: act normal, that is odd enough already. It tells you a lot about Dutch culture."
+        },
+        {
+          "id": "a1-de-les",
+          "chunk": "de les",
+          "gloss": "the lesson, the class",
+          "pos": "noun",
+          "pron": "de LES",
+          "pattern": "A de-word. `de cursus` is the whole course, `de les` one session of it.",
+          "examples": [
+            {
+              "nl": "De les begint om tien uur.",
+              "en": "The lesson starts at ten."
+            },
+            {
+              "nl": "Ik volg een cursus Nederlands.",
+              "en": "I am taking a Dutch course."
+            }
+          ],
+          "tags": [
+            "study"
+          ],
+          "article": "de",
+          "hook": "You `volg` a course in Dutch, you do not take or do one: `een cursus volgen`.",
+          "family": [
+            "de cursus",
+            "de docent",
+            "het huiswerk"
+          ]
+        },
+        {
+          "id": "a1-oefenen",
+          "chunk": "oefenen",
+          "gloss": "to practise",
+          "pos": "verb",
+          "pron": "OO-fe-nen",
+          "pattern": "The verb you will use about your own learning more than any other.",
+          "examples": [
+            {
+              "nl": "Ik oefen elke dag een beetje.",
+              "en": "I practise a little every day."
+            },
+            {
+              "nl": "We gaan de uitspraak oefenen.",
+              "en": "We are going to practise pronunciation."
+            }
+          ],
+          "tags": [
+            "study"
+          ],
+          "hook": "`het oefenexamen` is a practice exam. You will meet that word a lot on DUO's website.",
+          "family": [
+            "de oefening",
+            "het oefenexamen"
+          ]
+        }
+      ]
+    }
+  ]
+}

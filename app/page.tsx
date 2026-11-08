@@ -24,6 +24,11 @@ import { initBaseline, isInitialized, getUnseenIds, hasBeenSeen } from '@/lib/se
 import { getLearnedCount, getKnmQuestions } from '@/lib/dutch/knm'
 import { getSchrijfTasks, getDoneCount as getSchrijvenDone } from '@/lib/dutch/schrijven'
 import { getSpreekTasks, getDoneCount as getSprekenDone } from '@/lib/dutch/spreken'
+import {
+  getDueCount as getWordsDue,
+  getMasteredCount as getWordsKnown,
+  getAllEntries as getAllWordEntries,
+} from '@/lib/dutch/woorden'
 import { getStudiedCount as getLezenStudiedCount } from '@/lib/dutch/lezen'
 import { getOverallProgress as getCheatsheetProgress } from '@/lib/dutch/cheatsheet'
 import { getStudiedCount as getLuisterStudiedCount } from '@/lib/dutch/luisteren'
@@ -235,13 +240,18 @@ export default function Home() {
   const [dutchKnmLearned, setDutchKnmLearned] = useState(0)
   const [dutchSchrijvenDone, setDutchSchrijvenDone] = useState(0)
   const [dutchSprekenDone, setDutchSprekenDone] = useState(0)
+  const [dutchWordsDue, setDutchWordsDue] = useState(0)
+  const [dutchWordsKnown, setDutchWordsKnown] = useState(0)
   useEffect(() => {
     if (language === 'dutch') {
       setDutchKnmLearned(getLearnedCount())
       setDutchSchrijvenDone(getSchrijvenDone())
       setDutchSprekenDone(getSprekenDone())
+      setDutchWordsDue(getWordsDue())
+      setDutchWordsKnown(getWordsKnown())
     }
   }, [language])
+  const dutchWordsTotal = getAllWordEntries().length
 
   // Ambient soundscape: faint looping bed for the active track. Opt-in/off by
   // default (toggle in Settings). Tries on mount, and again on the first user
@@ -792,6 +802,25 @@ export default function Home() {
                     </div>
                     <div style={{ fontFamily: FONTS.body, fontSize: 12.5, color: COLORS.ink60, marginTop: 2 }}>
                       <em>de basis op een rij</em> · rules, tables, drills · {dutchCheatPassed}/{dutchCheatTotal} passed
+                    </div>
+                  </div>
+                  <span style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 20, color: COLORS.ink }}>→</span>
+                </div>
+              </Sticker>
+            </div>
+
+            {/* Word Lab: chunk-based vocabulary on a spacing schedule */}
+            <div style={{ padding: '14px 20px 0', maxWidth: 480, margin: '0 auto', position: 'relative', zIndex: 2 }}>
+              <Sticker color={COLORS.mint2} radius={18} padding={14} onClick={() => { playSound('pop'); router.push('/dutch/woorden') }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                  <span style={{ fontSize: 30 }}>🧠</span>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 17, color: COLORS.ink }}>
+                      Word Lab: words that stick
+                    </div>
+                    <div style={{ fontFamily: FONTS.body, fontSize: 12.5, color: COLORS.ink60, marginTop: 2 }}>
+                      <em>woordenschat</em> · whole chunks, A0 to A2 ·{' '}
+                      {dutchWordsDue > 0 ? `${dutchWordsDue} due today` : `${dutchWordsKnown}/${dutchWordsTotal} known`}
                     </div>
                   </div>
                   <span style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 20, color: COLORS.ink }}>→</span>

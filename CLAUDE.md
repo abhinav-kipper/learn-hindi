@@ -57,6 +57,7 @@ content/dutch/spreken.json → 16 Spreken (speaking) tasks w/ sentence frames, p
 content/dutch/pronunciation-course.json → 8-stage from-zero "Sounds" ladder (alphabet→linking)
 content/dutch/cheatsheet/    → 7 grouped concept-cheatsheet JSONs (35 topics, 318 drill questions)
 content/dutch/vocabulary.json → 208 Dutch words in 12 categories (nouns carry de/het)
+content/dutch/woorden/     → Word Lab: 3 staged JSONs (A0/A1/A2), 6 packs, 128 learnable chunks
 content/stories/        → 5 Hindi story JSONs (Chai Galli motion-comics)
 docs/audits/             → Content audit rubric + per-run reports + master summaries
 scripts/audit-content.mjs → Audit dispatcher (lists 57 units, builds per-unit prompts, aggregates reports)
@@ -212,6 +213,9 @@ shadows anywhere.
 | `/dutch/schrijven/[taskId]` | One writing task. Dutch prompt (w/ 🔊) + English below it, then the **marking checklist up front** ("your answer must …") because that is what the real paper scores. Forms render one labelled input per field; the other three types a textarea with a live sentence count and a "long enough" gate on the check button. "Check my writing" → `/api/schrijven-check` returns a band (not yet / nearly / pass / strong), a verdict, one strength, per-checklist-point ✓/✗, up to 5 fixes (strikethrough → green) and the learner's **own** answer corrected. Drafts autosave per task. A model answer (NL + EN, 🔊) is always available without the AI, so the page is useful offline. "Mark as done" persists. |
 | `/dutch/spreken` | Spreken (Speaking) module home. "The real paper" butter card (16 spoken answers, ~35 min, no second try), a mint card warning the mic is needed and stating plainly that picture tasks describe the scene in words rather than showing a photo, continue CTA, then the 16 tasks grouped under the paper's five task types (About you / Someone speaks to you / Describe a picture / Choose and explain / Tell a story). Each row shows its seconds, tier, best band and a green ✓ when done. |
 | `/dutch/spreken/[taskId]` | One speaking task. Dutch prompt (w/ 🔊) + English, then the scene / two options / three panels depending on type, then **the sentence frame before you record** (each line 🔊-able, with a fold of phrases to slot in) and the marking checklist. 🎙 records via `MediaRecorder` with a live countdown that **cuts you off at the task's real time limit**. On stop the clip is transcoded to WAV and posted to `/api/spreken-check`, which returns **a transcript of what was actually heard** (the headline output), per-point ✓/✗, a band, a verdict, a strength, separate fluency + pronunciation notes and up to 4 fixes. An `<audio>` player lets you hear yourself back, and survives a failed check. Model answer + tips always available without the network. Best band per task is kept, never downgraded. |
+| `/dutch/woorden` | **Word Lab** hub, the dedicated vocabulary section (separate from the `/vocabulary` swipe deck, which is unchanged). "How this works" card stating the design in one paragraph, a due-count CTA that becomes a learn-more CTA when the queue is empty, then the 3 stages (A0 From zero / A1 Getting by / A2 Exam level) each listing its packs with a mastery bar. Closes with a short note on the evidence behind the chunk-first approach. |
+| `/dutch/woorden/[packId]` | One pack, in two phases. **Meet:** each chunk on its own card with pronunciation + 🔊, gloss, a `de-word`/`het-word` badge for nouns, **the pattern named explicitly** in a mint block, both examples (each 🔊-able), and optional memory hook / etymology / word family (tappable chips) / pitfall. **Retrieve:** the same chunks come straight back as typed recall from the English gloss, scored, with every answer written into the SRS. |
+| `/dutch/woorden/review` | The daily spaced queue. Builds one interleaved sitting of up to 12 due chunks and serves three drill kinds: typed recall, the **de/het drill** (nouns only, bare noun shown, tap de or het) and cloze (the chunk blanked out of its own example). Combo chip, per-card feedback showing the full chunk + its pattern + the hook on a miss. An empty queue is explained as the schedule working rather than shown as an error. |
 | `/dutch/sounds` | "Sounds" module home (Dutch from-zero pronunciation). Orange header w/ Mr. Stroopwafel, `N/8 stages` count, and the 8-stage ladder as Stickers: complete (green ✓), unlocked (tappable + progress bar), locked (dimmed + 🔒). Rolling unlock — finishing a stage opens the next two. |
 | `/dutch/sounds/[stageId]` | Single pronunciation stage. Mr. Stroopwafel intro bubble + sound-card deck (grapheme + plain hint + anchor word/gloss + 🔊 Google TTS + got-it self-check) + optional minimal-pair ear-quiz + optional blend builder (word assembled part-by-part, each playable). On completion → Confetti + `pronStageDone` Chaina moment + "next stage" CTA. |
 | `/dutch/cheatsheet` | Concept-cheatsheet hub. Themed header band + "topics passed" mastery bar + orange "Mixed review" CTA (15 questions across every topic) + 7 collapsible group Stickers (First contact / Core grammar / People and description / Building sentences / Time and daily life / **Past and beyond** / **Exam skills**), each folding out its topic rows. Each row carries a green `✓ n/n` best-score badge and a **covered check circle**: tap it (or swipe the row right) to mark the topic as covered, swipe left or tap again to clear. |
@@ -252,6 +256,7 @@ shadows anywhere.
 | `dutch/schrijven.ts` | Schrijven (writing) loader + progress + drafts (TDD'd, 20 tests). `getSchrijfTasks/getTaskById/getTasksByType/getNextTask`, `TASK_TYPES` (the paper's four, in exam order), `EXAM_TASK_COUNT`/`EXAM_MINUTES`, done set (`markTaskDone`/`isTaskDone`/`getDoneCount`), per-task drafts (`saveDraft`/`getDraft`, forms stored as a field map), and the length helpers `countWords`/`countSentences`/`isLongEnough` that gate the check button. The tests double as content gates: all four task types present, every task's checklist ≥3 points, forms ≥5 fields, writing tasks `min_sentences` ≥3, ids unique. |
 | `dutch/spreken.ts` | Spreken (speaking) loader + progress + best-band history (TDD'd, 31 tests, which double as content gates). `getSpreekTasks/getTaskById/getTasksByType/getNextTask`, `TASK_TYPES` (the paper's five), `EXAM_TASK_COUNT` (16) / `EXAM_MINUTES` (35), `MIN_ANSWER_SECONDS`, done set, and `recordBand`/`getBestBand`/`getPassedCount` where `BANDS` is ranked so **a later worse attempt never erases a better one**. Content gates assert every task has a frame containing a `___` gap, ≥5 phrases, ≥3 checklist points, a model answer in both languages, a realistic 45 to 90s limit, and that story tasks have 3 panels, picture tasks a `scene_en` and choice tasks exactly 2 options. |
 | `audio-recorder.ts` (in `lib/`) | Shared browser audio capture for the pronunciation coach and Spreken. `pickMime`, `isRecordingSupported`, `blobToBase64`, `toMono`, `encodeWav`, `blobToWav`, `wavDurationSeconds`. TDD'd, 16 tests on the pure encoder. **Why it exists:** Gemini rejects the webm/mp4 MediaRecorder produces, so audio is re-encoded to 16 kHz mono WAV in the browser; and this is the only capture path that works on an iPhone, because the Web Speech API in `voice-button.tsx` is deliberately disabled on iOS Safari and iOS PWAs where it exists but does not function. |
+| `dutch/woorden.ts` | **Word Lab** engine (TDD'd, 38 tests, which double as content gates). Loader over `content/dutch/woorden/*.json` (6 packs / 128 chunks / 3 stages), met-set, mastery, session builder and answer checking. **Scheduling reuses `computeNextSchedule` from `lib/review.ts`** rather than adding a second scheduler, so the two review systems cannot drift. `MASTERY_HITS` is 8 (successful retrievals, not attempts). `buildSession` takes the oldest-due first then **interleaves across packs**. `pickDrill` gives nouns the de/het drill on alternate turns and never offers it for a non-noun. `checkRecall` **rejects a noun typed without its article**, which is the whole point of storing the chunk. Content gates assert every noun carries `de`/`het` as the first token of its chunk, every entry names its pattern, and every entry has ≥2 examples. |
 | `dutch/exam-target.ts` | Exam level the learner is sitting, `'a2' \| 'b1'`, **default a2**. `targetLabel`, `levelsForTarget`, `isBeyondTarget(level, target)`. Read by the Dutch home (goal banner, path, exam-scenario badges) and by the Lezen/Luisteren tier lists, so above-target content is dimmed and relabelled rather than hidden. Changeable in the welcome modal **and in Settings**. TDD'd, 12 tests. |
 | `dutch/level-map.ts` | Lookup table tagging every Dutch content ID with `A1` / `A2` / `B1`. Powers the 3-stage progress bars on the Dutch home. **Every key must be the exact `id` field of the content JSON, which is `dutch-` prefixed for all Dutch units.** A bare key never matches, so `getLevel` silently returns the `A1` default and the stage bar counts items that can never complete. Fixed for lessons 2026-05-26 and for foundations 2026-11-07 (7 foundation keys were still bare). Guarded by `__tests__/lib/dutch-content-ids.test.ts` + `lib/dutch/level-map.test.ts`. |
 | `dutch/id-migration.ts` | One-time localStorage remap for the 2026-11-07 Dutch foundation ID rename (bare ids → `dutch-` prefixed). Rewrites `dutch-progress` (completedLessons + lessonCompletedAt), `dutch-phrase-progress`, `dutch-quiz-scores` and `dutch-last-active-lesson`, then sets the flag `dutch-foundation-id-migration-v1`. Called once from `layout-shell.tsx` on mount. Idempotent, Dutch-prefix only, never throws. TDD'd, 8 tests. |
@@ -362,6 +367,8 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-schrijven-drafts` — `{ [taskId]: string }`. Writing is effortful, so every keystroke is autosaved and restored on return. Form tasks store a JSON-stringified field-label → value map in that same string slot; the other three types store the raw text.
 - `dutch-spreken-done` — JSON array of Spreken task ids marked done.
 - `dutch-spreken-scores` — `{ [taskId]: 'not yet' | 'nearly' | 'pass' | 'strong' }`, the **best** band ever reached on that task. `recordBand` compares ranks before writing, so one bad recording never wipes out a good one.
+- `dutch-woorden-met` — JSON array of Word Lab chunk ids the learner has been introduced to. Only met chunks ever enter the review queue.
+- `dutch-woorden-srs` — `{ [chunkId]: { hits, misses, interval, easeFactor, nextReviewAt, lastReviewed } }`. `hits` counts **successful** retrievals and drives mastery at 8; `interval`/`easeFactor`/`nextReviewAt` come straight from the shared `computeNextSchedule`.
 - `dutch-pron-cards-done` — JSON array of "Sounds" card ids marked got-it (blend words tracked as `blend:<whole>`).
 - `dutch-pron-earquiz-done` — JSON array of "Sounds" stage ids whose ear-quiz passed. Stage completion + the rolling unlock are derived from these two sets.
 - `dutch-cheatsheet-studied` — JSON array of cheatsheet topic ids marked as read.
@@ -369,6 +376,56 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-define-cache` — `{ [word]: Definition }` from `/api/define`, capped at 300, so tapped words resolve instantly and keep working offline once seen.
 
 ### Recent feature work log
+
+**2026-11-08 (Word Lab) — a dedicated vocabulary section, built on the research**
+
+A separate section at `/dutch/woorden`, distinct from the `/vocabulary` swipe
+deck (which is untouched). 128 chunks across 6 packs and 3 stages, A0 to A2.
+
+*The design is driven by the evidence, and the evidence changed two decisions.*
+Searched before building rather than after:
+
+- **The unit of learning is a chunk, not a word.** Collocation research finds
+  better retention when a sequence is presented **whole** than when the learner
+  has to assemble it from parts. So the content stores `elke dag`, not `elke`,
+  and the loader's tests enforce it.
+- **Every entry names its pattern.** Boers and Lindstromberg found that
+  *explicit attention* to the lexical pattern raises retention, so `pattern` is
+  a required field rendered in its own block, not a footnote. This was the
+  finding that most changed the build: the obvious design would have shown the
+  chunk and left the learner to notice the pattern.
+- **Nouns always carry their article.** L2 learners of Dutch systematically
+  overuse `de` on neuter nouns, and the research and teaching literature
+  converge on one fix: store `het huis` as a unit. So `checkRecall` **marks a
+  bare noun wrong**, and nouns get a dedicated de/het drill. Being strict here
+  is the point, not an oversight.
+- **Frequency ordering.** Roughly 2,000 word families reach about **96% of
+  informal spoken** text (much higher than the ~80% figure for written text),
+  and informal speech is what the A2 papers are made of. Packs are ordered on
+  that basis.
+- **Spaced retrieval, one scheduler.** `lib/dutch/woorden.ts` reuses
+  `computeNextSchedule` from `lib/review.ts`. This is also the first half of the
+  long-standing "wire Dutch into the SM-2 SRS" roadmap item.
+- **Mastery at 8 successful retrievals**, from the finding that around eight
+  exposures is where a collocation starts being processed at native-like speed.
+- **Productive recall, and interleaving.** Answers are typed, not picked from a
+  list, and `buildSession` spreads consecutive cards across packs.
+
+*Honest limits, worth keeping.* The "chunks beat words" claim is narrower than
+it sounds: the support is for holistic presentation of collocations and for
+explicit pattern attention, and the theory is contested (Ellis holds that
+chunking drives acquisition; Wray argues adults are essentially non-formulaic).
+The coverage percentages come from English frequency lists, so they are an
+analogy for Dutch rather than a measurement of it.
+
+Three routes, a home card, offline precache, 38 tests. Verified in a browser
+with 32 checks: all six packs open on their first chunk with the pattern and
+article badge showing, a full pack walked through meet-then-retrieve scoring
+24/24, the queue correctly **empty** right after a correct pass (and saying why
+rather than looking broken), overdue chunks returning once the clock is rewound,
+a 12-card sitting completing at 12/12, the de/het drill rejecting a wrong
+article and revealing `de man`, and a noun typed as `huis` rather than
+`het huis` being marked wrong. 624 tests, four lints and the prod build clean.
 
 **2026-11-08 (later still) — Four new Dutch foundations (14 to 18 chapters)**
 

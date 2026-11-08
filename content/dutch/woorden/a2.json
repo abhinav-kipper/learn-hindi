@@ -1,0 +1,1058 @@
+{
+  "packs": [
+    {
+      "id": "a2-official-life",
+      "stage": "A2",
+      "title": "Official life",
+      "subtitle_nl": "officiele zaken",
+      "blurb": "The words the exam actually asks about: the gemeente, the doctor, insurance, work and housing, with the compounds and fixed phrases they come wrapped in.",
+      "emoji": "🏛",
+      "entries": [
+        {
+          "id": "a2-de-gemeente",
+          "chunk": "de gemeente",
+          "gloss": "the municipality",
+          "pos": "noun",
+          "pron": "de che-MAYN-te",
+          "pattern": "A de-word, and the single most important institution word in Dutch civic life.",
+          "examples": [
+            {
+              "nl": "Ik moet naar de gemeente.",
+              "en": "I have to go to the municipality."
+            },
+            {
+              "nl": "U kunt dit bij de gemeente aanvragen.",
+              "en": "You can apply for this at the municipality."
+            }
+          ],
+          "tags": [
+            "official"
+          ],
+          "article": "de",
+          "hook": "The gemeente handles your registration, your address change, your marriage and your passport. KNM tests this.",
+          "family": [
+            "het gemeentehuis",
+            "de balie",
+            "inschrijven"
+          ]
+        },
+        {
+          "id": "a2-zich-inschrijven",
+          "chunk": "zich inschrijven bij",
+          "gloss": "to register with",
+          "pos": "phrase",
+          "pron": "zich IN-schray-ven bay",
+          "pattern": "Reflexive and separable at once. The `zich` matches your subject and `in` goes to the end.",
+          "examples": [
+            {
+              "nl": "U moet zich inschrijven bij de gemeente.",
+              "en": "You have to register with the municipality."
+            },
+            {
+              "nl": "Ik heb me ingeschreven voor de cursus.",
+              "en": "I have enrolled for the course."
+            }
+          ],
+          "tags": [
+            "official"
+          ],
+          "hook": "The participle is `ingeschreven`: in + ge + schreven. Both the prefix and the ge- are in there.",
+          "family": [
+            "zich aanmelden",
+            "de inschrijving"
+          ]
+        },
+        {
+          "id": "a2-de-aanvraag",
+          "chunk": "de aanvraag",
+          "gloss": "the application",
+          "pos": "noun",
+          "pron": "de AAN-vraach",
+          "pattern": "A de-word, from `aanvragen`, to apply for.",
+          "examples": [
+            {
+              "nl": "Mijn aanvraag is goedgekeurd.",
+              "en": "My application has been approved."
+            },
+            {
+              "nl": "Ik wil een uittreksel aanvragen.",
+              "en": "I would like to apply for an extract."
+            }
+          ],
+          "tags": [
+            "official"
+          ],
+          "article": "de",
+          "hook": "`goedgekeurd` means approved and `afgewezen` rejected. Two words worth recognising on a letter.",
+          "family": [
+            "aanvragen",
+            "goedkeuren",
+            "afwijzen"
+          ]
+        },
+        {
+          "id": "a2-het-bewijs",
+          "chunk": "het bewijs",
+          "gloss": "the proof, the certificate",
+          "pos": "noun",
+          "pron": "ut be-WAYS",
+          "pattern": "A het-word. Turns up constantly in official compounds.",
+          "examples": [
+            {
+              "nl": "Heeft u een bewijs van inschrijving?",
+              "en": "Do you have proof of registration?"
+            },
+            {
+              "nl": "Dit is het bewijs van betaling.",
+              "en": "This is the proof of payment."
+            }
+          ],
+          "tags": [
+            "official"
+          ],
+          "article": "het",
+          "hook": "`het rijbewijs` is a driving licence, literally a drive-proof. Dutch builds official words by stacking them.",
+          "family": [
+            "het identiteitsbewijs",
+            "het rijbewijs",
+            "bewijzen"
+          ]
+        },
+        {
+          "id": "a2-geldig",
+          "chunk": "geldig tot",
+          "gloss": "valid until",
+          "pos": "phrase",
+          "pron": "CHEL-dich tot",
+          "pattern": "You will read this on every document you own. `geldig` means valid, `verlopen` means expired.",
+          "examples": [
+            {
+              "nl": "Mijn paspoort is geldig tot 2030.",
+              "en": "My passport is valid until 2030."
+            },
+            {
+              "nl": "Deze kaart is verlopen.",
+              "en": "This card has expired."
+            }
+          ],
+          "tags": [
+            "official"
+          ],
+          "hook": "`verlengen` is to extend or renew. If something is `verlopen`, you need to `verlengen` it.",
+          "family": [
+            "verlopen",
+            "verlengen",
+            "de geldigheid"
+          ]
+        },
+        {
+          "id": "a2-de-huisarts",
+          "chunk": "de huisarts",
+          "gloss": "the GP, family doctor",
+          "pos": "noun",
+          "pron": "de HOWS-arts",
+          "pattern": "A de-word, literally house-doctor. The gatekeeper of Dutch healthcare.",
+          "examples": [
+            {
+              "nl": "Ik heb een afspraak bij de huisarts.",
+              "en": "I have an appointment with the GP."
+            },
+            {
+              "nl": "U heeft een verwijzing van de huisarts nodig.",
+              "en": "You need a referral from the GP."
+            }
+          ],
+          "tags": [
+            "health",
+            "official"
+          ],
+          "article": "de",
+          "hook": "You cannot go straight to a specialist in the Netherlands. The huisarts gives you a `verwijzing` first. KNM tests exactly this.",
+          "family": [
+            "de verwijzing",
+            "de specialist",
+            "de apotheek"
+          ]
+        },
+        {
+          "id": "a2-de-klacht",
+          "chunk": "de klacht",
+          "gloss": "the complaint, the symptom",
+          "pos": "noun",
+          "pron": "de KLACHT",
+          "pattern": "A de-word doing two jobs: a medical symptom and a formal complaint.",
+          "examples": [
+            {
+              "nl": "Wat zijn uw klachten?",
+              "en": "What are your symptoms?"
+            },
+            {
+              "nl": "Ik wil een klacht indienen.",
+              "en": "I would like to file a complaint."
+            }
+          ],
+          "tags": [
+            "health",
+            "official"
+          ],
+          "article": "de",
+          "hook": "At the doctor, `klachten` means symptoms, not complaints. The question `Wat zijn uw klachten?` is asking what hurts.",
+          "family": [
+            "klagen",
+            "een klacht indienen",
+            "de klachten"
+          ],
+          "pitfall": "Hearing it as 'what are your complaints' makes the doctor sound rude. It simply means what is wrong."
+        },
+        {
+          "id": "a2-last-hebben-van",
+          "chunk": "last hebben van",
+          "gloss": "to be bothered by, to suffer from",
+          "pos": "phrase",
+          "pron": "LAST HEB-ben van",
+          "pattern": "The standard way to describe a symptom. Fixed preposition `van`.",
+          "examples": [
+            {
+              "nl": "Ik heb last van hoofdpijn.",
+              "en": "I am suffering from a headache."
+            },
+            {
+              "nl": "Heeft u last van de buren?",
+              "en": "Are the neighbours bothering you?"
+            }
+          ],
+          "tags": [
+            "health"
+          ],
+          "hook": "This frame covers the whole doctor conversation: `Ik heb last van` plus any body part or symptom."
+        },
+        {
+          "id": "a2-de-verzekering",
+          "chunk": "de verzekering",
+          "gloss": "the insurance",
+          "pos": "noun",
+          "pron": "de ver-ZAY-ke-ring",
+          "pattern": "A de-word. Every word ending in -ing is a de-word, which is a dependable cue.",
+          "examples": [
+            {
+              "nl": "Heeft u een zorgverzekering?",
+              "en": "Do you have health insurance?"
+            },
+            {
+              "nl": "De verzekering betaalt dat niet.",
+              "en": "The insurance does not cover that."
+            }
+          ],
+          "tags": [
+            "official",
+            "health"
+          ],
+          "article": "de",
+          "hook": "Every -ing word is a de-word: de verzekering, de rekening, de betaling, de vergadering. One cue, many nouns.",
+          "family": [
+            "de zorgverzekering",
+            "het eigen risico",
+            "verzekerd"
+          ]
+        },
+        {
+          "id": "a2-de-rekening",
+          "chunk": "de rekening",
+          "gloss": "the bill, the account",
+          "pos": "noun",
+          "pron": "de RAY-ke-ning",
+          "pattern": "A de-word, and another -ing. Means both a restaurant bill and a bank account.",
+          "examples": [
+            {
+              "nl": "Mag ik de rekening?",
+              "en": "Could I have the bill?"
+            },
+            {
+              "nl": "Het geld staat op mijn rekening.",
+              "en": "The money is in my account."
+            }
+          ],
+          "tags": [
+            "money"
+          ],
+          "article": "de",
+          "hook": "Same word for the bill in a cafe and your bank account. Context separates them with no trouble.",
+          "family": [
+            "de bankrekening",
+            "betalen",
+            "het bedrag"
+          ]
+        },
+        {
+          "id": "a2-het-salaris",
+          "chunk": "het salaris",
+          "gloss": "the salary",
+          "pos": "noun",
+          "pron": "ut sa-LAA-ris",
+          "pattern": "A het-word. `het loon` is the more everyday word for wages.",
+          "examples": [
+            {
+              "nl": "Het salaris wordt maandelijks betaald.",
+              "en": "The salary is paid monthly."
+            },
+            {
+              "nl": "Hoeveel verdien je netto?",
+              "en": "How much do you earn net?"
+            }
+          ],
+          "tags": [
+            "work",
+            "money"
+          ],
+          "article": "het",
+          "hook": "`bruto` is before tax and `netto` after. Dutch job ads quote bruto, so the number is always higher than what arrives.",
+          "family": [
+            "het loon",
+            "bruto",
+            "netto",
+            "verdienen"
+          ]
+        },
+        {
+          "id": "a2-de-belasting",
+          "chunk": "de belasting",
+          "gloss": "the tax",
+          "pos": "noun",
+          "pron": "de be-LAS-ting",
+          "pattern": "A de-word, another -ing. `de Belastingdienst` is the tax office.",
+          "examples": [
+            {
+              "nl": "Ik moet belasting betalen.",
+              "en": "I have to pay tax."
+            },
+            {
+              "nl": "De Belastingdienst stuurt een brief.",
+              "en": "The tax office sends a letter."
+            }
+          ],
+          "tags": [
+            "official",
+            "money"
+          ],
+          "article": "de",
+          "hook": "`de toeslag` is a government allowance, like huurtoeslag or zorgtoeslag. A KNM favourite.",
+          "family": [
+            "de Belastingdienst",
+            "de aangifte",
+            "de toeslag"
+          ]
+        },
+        {
+          "id": "a2-de-sollicitatie",
+          "chunk": "de sollicitatie",
+          "gloss": "the job application",
+          "pos": "noun",
+          "pron": "de sol-lee-see-TAA-tsee",
+          "pattern": "A de-word. Every -tie word is a de-word.",
+          "examples": [
+            {
+              "nl": "Ik heb een sollicitatiegesprek.",
+              "en": "I have a job interview."
+            },
+            {
+              "nl": "Zij solliciteert bij een school.",
+              "en": "She is applying to a school."
+            }
+          ],
+          "tags": [
+            "work"
+          ],
+          "article": "de",
+          "hook": "`het gesprek` is the conversation, so `het sollicitatiegesprek` is the interview. Note the article flips with the compound's last word.",
+          "family": [
+            "solliciteren",
+            "het sollicitatiegesprek",
+            "de vacature"
+          ],
+          "pitfall": "A compound takes the article of its LAST part: `de sollicitatie` but `het sollicitatiegesprek`."
+        },
+        {
+          "id": "a2-de-ervaring",
+          "chunk": "de ervaring",
+          "gloss": "the experience",
+          "pos": "noun",
+          "pron": "de er-VAA-ring",
+          "pattern": "A de-word, and one you will need in any interview answer.",
+          "examples": [
+            {
+              "nl": "Ik heb vijf jaar ervaring.",
+              "en": "I have five years of experience."
+            },
+            {
+              "nl": "Dat was een goede ervaring.",
+              "en": "That was a good experience."
+            }
+          ],
+          "tags": [
+            "work"
+          ],
+          "article": "de",
+          "family": [
+            "ervaren",
+            "de werkervaring"
+          ]
+        },
+        {
+          "id": "a2-de-opleiding",
+          "chunk": "de opleiding",
+          "gloss": "the education, the training",
+          "pos": "noun",
+          "pron": "de OP-lay-ding",
+          "pattern": "A de-word. Covers formal study and vocational training alike.",
+          "examples": [
+            {
+              "nl": "Welke opleiding heeft u gedaan?",
+              "en": "What education have you done?"
+            },
+            {
+              "nl": "Ik volg een opleiding tot verpleegkundige.",
+              "en": "I am training to be a nurse."
+            }
+          ],
+          "tags": [
+            "work",
+            "study"
+          ],
+          "article": "de",
+          "hook": "You `volg` an opleiding, and `tot` names what you are training to become.",
+          "family": [
+            "opleiden",
+            "het diploma",
+            "de cursus"
+          ]
+        },
+        {
+          "id": "a2-de-woning",
+          "chunk": "de woning",
+          "gloss": "the home, the dwelling",
+          "pos": "noun",
+          "pron": "de WOH-ning",
+          "pattern": "A de-word, another -ing. The official word for a home on any form.",
+          "examples": [
+            {
+              "nl": "Ik zoek een woning in Utrecht.",
+              "en": "I am looking for a home in Utrecht."
+            },
+            {
+              "nl": "De woningcorporatie beheert deze flats.",
+              "en": "The housing association manages these flats."
+            }
+          ],
+          "tags": [
+            "home",
+            "official"
+          ],
+          "article": "de",
+          "hook": "`de woningcorporatie` runs social housing. Another word that appears in KNM.",
+          "family": [
+            "de woningcorporatie",
+            "de huurwoning",
+            "wonen"
+          ]
+        },
+        {
+          "id": "a2-kapot",
+          "chunk": "kapot",
+          "gloss": "broken",
+          "pos": "adjective",
+          "pron": "ka-POT",
+          "pattern": "The everyday word for anything that has stopped working. You will need it to report a fault.",
+          "examples": [
+            {
+              "nl": "De verwarming is kapot.",
+              "en": "The heating is broken."
+            },
+            {
+              "nl": "Er is iets kapot in de badkamer.",
+              "en": "Something is broken in the bathroom."
+            }
+          ],
+          "tags": [
+            "home"
+          ],
+          "hook": "Pair it with the `er is` frame: `Er is iets kapot` opens any complaint to a landlord.",
+          "family": [
+            "stuk",
+            "repareren",
+            "de storing"
+          ]
+        },
+        {
+          "id": "a2-het-probleem",
+          "chunk": "het probleem",
+          "gloss": "the problem",
+          "pos": "noun",
+          "pron": "ut proh-BLAYM",
+          "pattern": "A het-word. Sits inside the most useful complaint sentence in the language.",
+          "examples": [
+            {
+              "nl": "Er is een probleem met de verwarming.",
+              "en": "There is a problem with the heating."
+            },
+            {
+              "nl": "Geen probleem, hoor.",
+              "en": "No problem at all."
+            }
+          ],
+          "tags": [
+            "official",
+            "home"
+          ],
+          "article": "het",
+          "hook": "`Er is een probleem met ...` is worth memorising whole. It opens a conversation with a landlord, the gemeente or a shop.",
+          "family": [
+            "Er is een probleem met ...",
+            "oplossen",
+            "de oplossing"
+          ]
+        },
+        {
+          "id": "a2-oplossen",
+          "chunk": "een probleem oplossen",
+          "gloss": "to solve a problem",
+          "pos": "phrase",
+          "pron": "un proh-BLAYM OP-los-sen",
+          "pattern": "Separable, so `op` goes to the end: `Ik los het op`.",
+          "examples": [
+            {
+              "nl": "We lossen het probleem samen op.",
+              "en": "We will solve the problem together."
+            },
+            {
+              "nl": "Het is al opgelost.",
+              "en": "It has already been sorted out."
+            }
+          ],
+          "tags": [
+            "official"
+          ],
+          "hook": "`Het is opgelost` is the sentence you want to hear from a landlord. Recognise it.",
+          "family": [
+            "de oplossing",
+            "opgelost"
+          ]
+        },
+        {
+          "id": "a2-de-afspraak-verzetten",
+          "chunk": "een afspraak verzetten",
+          "gloss": "to move an appointment",
+          "pos": "phrase",
+          "pron": "un AF-spraak ver-ZET-ten",
+          "pattern": "The exact phrase the writing paper asks for. `verzetten` is to shift something to another time.",
+          "examples": [
+            {
+              "nl": "Kan ik mijn afspraak verzetten?",
+              "en": "Can I move my appointment?"
+            },
+            {
+              "nl": "Ik wil de afspraak verzetten naar dinsdag.",
+              "en": "I would like to move the appointment to Tuesday."
+            }
+          ],
+          "tags": [
+            "official"
+          ],
+          "hook": "`verzetten` moves it, `afzeggen` cancels it outright. The writing paper usually wants the first.",
+          "family": [
+            "afzeggen",
+            "verplaatsen"
+          ],
+          "pitfall": "`annuleren` exists but sounds formal and final. For a doctor's appointment, `verzetten` is what people say."
+        }
+      ]
+    },
+    {
+      "id": "a2-opinions-time",
+      "stage": "A2",
+      "title": "Opinions and time",
+      "subtitle_nl": "meningen en tijd",
+      "blurb": "How to say what you think, structure a reason, hedge safely and place something in time. These are the chunks that earn marks on the speaking and writing papers.",
+      "emoji": "💬",
+      "entries": [
+        {
+          "id": "a2-ik-vind-dat",
+          "chunk": "Ik vind dat ...",
+          "gloss": "I think that ...",
+          "pos": "phrase",
+          "pron": "ik FINT dat",
+          "pattern": "The opinion frame. `dat` sends the verb to the end of the clause that follows.",
+          "examples": [
+            {
+              "nl": "Ik vind dat het te duur is.",
+              "en": "I think that it is too expensive."
+            },
+            {
+              "nl": "Ik vind dat een goed idee.",
+              "en": "I think that is a good idea."
+            }
+          ],
+          "tags": [
+            "opinion"
+          ],
+          "hook": "After `dat` the verb goes last: `dat het te duur is`, not `dat het is te duur`.",
+          "family": [
+            "Ik denk dat",
+            "Volgens mij",
+            "Wat vind je ervan?"
+          ]
+        },
+        {
+          "id": "a2-volgens-mij",
+          "chunk": "volgens mij",
+          "gloss": "I think, in my view",
+          "pos": "phrase",
+          "pron": "FOL-chens may",
+          "pattern": "A hedge that lets you commit to an opinion without claiming certainty. Fills slot one, so the verb follows.",
+          "examples": [
+            {
+              "nl": "Volgens mij is de winkel dicht.",
+              "en": "I think the shop is closed."
+            },
+            {
+              "nl": "Volgens mij heb je gelijk.",
+              "en": "I think you are right."
+            }
+          ],
+          "tags": [
+            "opinion"
+          ],
+          "hook": "Starting with `Volgens mij` forces inversion: `Volgens mij is het`, never `Volgens mij het is`."
+        },
+        {
+          "id": "a2-het-hangt-ervan-af",
+          "chunk": "Het hangt ervan af.",
+          "gloss": "It depends.",
+          "pos": "phrase",
+          "pron": "ut HANGT er-van AF",
+          "pattern": "A complete answer in four words, and a graceful way to avoid committing.",
+          "examples": [
+            {
+              "nl": "Ga je mee? Het hangt ervan af.",
+              "en": "Are you coming? It depends."
+            },
+            {
+              "nl": "Het hangt ervan af hoe laat het wordt.",
+              "en": "It depends how late it gets."
+            }
+          ],
+          "tags": [
+            "opinion"
+          ],
+          "hook": "Three separate things in one phrase: `afhangen` is separable, `er` replaces the thing, and `van` is the fixed preposition. Learn it whole and unpack it later."
+        },
+        {
+          "id": "a2-aan-de-ene-kant",
+          "chunk": "aan de ene kant ... aan de andere kant",
+          "gloss": "on the one hand ... on the other hand",
+          "pos": "phrase",
+          "pron": "aan de AY-ne KANT",
+          "pattern": "The balancing frame. Worth a mark on its own in the speaking and writing papers.",
+          "examples": [
+            {
+              "nl": "Aan de ene kant is het goedkoper, aan de andere kant duurt het langer.",
+              "en": "On the one hand it is cheaper, on the other hand it takes longer."
+            },
+            {
+              "nl": "Aan de andere kant heb je wel meer ruimte.",
+              "en": "On the other hand you do have more space."
+            }
+          ],
+          "tags": [
+            "opinion",
+            "exam"
+          ],
+          "hook": "Both halves cause inversion. Say the frame and let the verb follow automatically."
+        },
+        {
+          "id": "a2-ten-eerste",
+          "chunk": "ten eerste ... ten tweede",
+          "gloss": "firstly ... secondly",
+          "pos": "phrase",
+          "pron": "ten AYR-ste",
+          "pattern": "The structure signal the markers look for. Costs no extra vocabulary and reads as organised.",
+          "examples": [
+            {
+              "nl": "Ten eerste is het goedkoper. Ten tweede is het gezonder.",
+              "en": "Firstly it is cheaper. Secondly it is healthier."
+            },
+            {
+              "nl": "Ten slotte wil ik nog iets zeggen.",
+              "en": "Finally I would like to say one more thing."
+            }
+          ],
+          "tags": [
+            "opinion",
+            "exam"
+          ],
+          "hook": "Structure is marked on both production papers. These are the cheapest marks available.",
+          "family": [
+            "tot slot",
+            "ten slotte",
+            "bovendien"
+          ]
+        },
+        {
+          "id": "a2-bovendien",
+          "chunk": "bovendien",
+          "gloss": "what is more, on top of that",
+          "pos": "connector",
+          "pron": "boh-ven-DEEN",
+          "pattern": "A stronger `ook`. Fills slot one, so the verb comes straight after.",
+          "examples": [
+            {
+              "nl": "Bovendien is het dichtbij.",
+              "en": "What is more, it is nearby."
+            },
+            {
+              "nl": "Het is goedkoop en bovendien snel.",
+              "en": "It is cheap and on top of that fast."
+            }
+          ],
+          "tags": [
+            "opinion",
+            "exam"
+          ],
+          "pitfall": "`Bovendien het is` is wrong. The verb must follow immediately: `Bovendien is het`."
+        },
+        {
+          "id": "a2-daarom",
+          "chunk": "daarom",
+          "gloss": "that is why",
+          "pos": "connector",
+          "pron": "DAAR-om",
+          "pattern": "A result connector. Also fills slot one and forces inversion.",
+          "examples": [
+            {
+              "nl": "Het regende. Daarom nam ik de bus.",
+              "en": "It was raining. That is why I took the bus."
+            },
+            {
+              "nl": "Daarom kies ik voor de fiets.",
+              "en": "That is why I choose the bike."
+            }
+          ],
+          "tags": [
+            "opinion",
+            "exam"
+          ],
+          "hook": "`Daarom` is a clean way to close a choice task: state the choice, give reasons, then `Daarom kies ik voor ...`.",
+          "family": [
+            "dus",
+            "want",
+            "omdat"
+          ]
+        },
+        {
+          "id": "a2-hoewel",
+          "chunk": "hoewel",
+          "gloss": "although",
+          "pos": "connector",
+          "pron": "hoo-WAYL",
+          "pattern": "A contrast connector that sends the verb to the end of its own clause.",
+          "examples": [
+            {
+              "nl": "Hoewel het duur is, koop ik het.",
+              "en": "Although it is expensive, I am buying it."
+            },
+            {
+              "nl": "Ik ga, hoewel ik moe ben.",
+              "en": "I am going, although I am tired."
+            }
+          ],
+          "tags": [
+            "opinion",
+            "exam"
+          ],
+          "hook": "Lead with hoewel and you get two verbs around the comma: `Hoewel het duur is, koop ik het`. That shape looks odd and is correct."
+        },
+        {
+          "id": "a2-eigenlijk",
+          "chunk": "eigenlijk",
+          "gloss": "actually, in fact",
+          "pos": "adverb",
+          "pron": "AY-chen-luk",
+          "pattern": "A softener Dutch speakers use constantly, often to introduce a mild correction.",
+          "examples": [
+            {
+              "nl": "Eigenlijk heb ik geen tijd.",
+              "en": "Actually I do not have time."
+            },
+            {
+              "nl": "Dat is eigenlijk wel een goed idee.",
+              "en": "That is actually quite a good idea."
+            }
+          ],
+          "tags": [
+            "culture",
+            "opinion"
+          ],
+          "hook": "`Eigenlijk` lets you disagree gently. It is the Dutch way of saying 'well, actually' without the edge."
+        },
+        {
+          "id": "a2-toch",
+          "chunk": "toch",
+          "gloss": "still, after all, right?",
+          "pos": "adverb",
+          "pron": "TOCH",
+          "pattern": "One of the hardest small words. It softens, it insists, and at the end of a sentence it asks for agreement.",
+          "examples": [
+            {
+              "nl": "Je komt toch?",
+              "en": "You are coming, right?"
+            },
+            {
+              "nl": "Het regent, maar ik ga toch.",
+              "en": "It is raining, but I am going anyway."
+            }
+          ],
+          "tags": [
+            "culture"
+          ],
+          "hook": "At the end of a question, `toch` means 'right?' and expects a yes. Mid-sentence it means anyway or nevertheless.",
+          "pitfall": "Do not try to translate it every time. Learn the two or three sentence shapes it appears in."
+        },
+        {
+          "id": "a2-meestal",
+          "chunk": "meestal",
+          "gloss": "usually",
+          "pos": "adverb",
+          "pron": "MAY-stal",
+          "pattern": "A frequency adverb. Sits in the family with altijd, vaak, soms and nooit.",
+          "examples": [
+            {
+              "nl": "Ik werk meestal thuis.",
+              "en": "I usually work at home."
+            },
+            {
+              "nl": "Meestal neem ik de fiets.",
+              "en": "I usually take the bike."
+            }
+          ],
+          "tags": [
+            "time",
+            "frequency"
+          ],
+          "hook": "Learn the whole scale at once: altijd, meestal, vaak, soms, zelden, nooit. It gives you six answers for the price of one.",
+          "family": [
+            "altijd",
+            "vaak",
+            "soms",
+            "nooit",
+            "zelden"
+          ]
+        },
+        {
+          "id": "a2-tegenwoordig",
+          "chunk": "tegenwoordig",
+          "gloss": "nowadays",
+          "pos": "adverb",
+          "pron": "tay-chen-WOHR-dich",
+          "pattern": "A time adverb that lifts an answer out of the immediate present.",
+          "examples": [
+            {
+              "nl": "Tegenwoordig werk ik vanuit huis.",
+              "en": "Nowadays I work from home."
+            },
+            {
+              "nl": "Tegenwoordig is alles duurder.",
+              "en": "Nowadays everything is more expensive."
+            }
+          ],
+          "tags": [
+            "time"
+          ],
+          "hook": "Useful in the speaking paper for contrasting then and now, which earns you a longer answer."
+        },
+        {
+          "id": "a2-vroeger",
+          "chunk": "vroeger",
+          "gloss": "in the past, formerly",
+          "pos": "adverb",
+          "pron": "FROO-cher",
+          "pattern": "The natural partner to tegenwoordig. Dutch uses it where English says 'I used to'.",
+          "examples": [
+            {
+              "nl": "Vroeger woonde ik in India.",
+              "en": "I used to live in India."
+            },
+            {
+              "nl": "Vroeger was alles anders.",
+              "en": "Things used to be different."
+            }
+          ],
+          "tags": [
+            "time"
+          ],
+          "hook": "Dutch has no 'used to'. `Vroeger` plus a past tense does the whole job.",
+          "pitfall": "This is one of the few places where the simple past is normal in speech: `Vroeger woonde ik`, not the perfect."
+        },
+        {
+          "id": "a2-sinds",
+          "chunk": "sinds",
+          "gloss": "since",
+          "pos": "phrase",
+          "pron": "SINTS",
+          "pattern": "A time preposition. Dutch keeps the present tense after it where English uses a perfect.",
+          "examples": [
+            {
+              "nl": "Ik woon hier sinds 2023.",
+              "en": "I have lived here since 2023."
+            },
+            {
+              "nl": "Sinds vorige week voel ik me beter.",
+              "en": "Since last week I have felt better."
+            }
+          ],
+          "tags": [
+            "time"
+          ],
+          "hook": "`Ik woon hier sinds 2023`, present tense. Saying `Ik heb hier gewoond sinds` is an English habit that does not transfer.",
+          "pitfall": "English uses the perfect with since; Dutch uses the present. This catches almost everybody."
+        },
+        {
+          "id": "a2-ongeveer",
+          "chunk": "ongeveer",
+          "gloss": "approximately, about",
+          "pos": "adverb",
+          "pron": "on-che-VAYR",
+          "pattern": "A hedge for numbers. Lets you answer a how-much question without being exact.",
+          "examples": [
+            {
+              "nl": "Het duurt ongeveer twintig minuten.",
+              "en": "It takes about twenty minutes."
+            },
+            {
+              "nl": "Er waren ongeveer vijftig mensen.",
+              "en": "There were about fifty people."
+            }
+          ],
+          "tags": [
+            "quantity"
+          ],
+          "hook": "`bijna` is just under, `ruim` just over, `ongeveer` either side. Three ways to avoid being wrong about a number.",
+          "family": [
+            "bijna",
+            "ruim",
+            "precies"
+          ]
+        },
+        {
+          "id": "a2-vooral",
+          "chunk": "vooral",
+          "gloss": "especially, above all",
+          "pos": "adverb",
+          "pron": "fohr-AL",
+          "pattern": "An intensifier that picks out one item from several. Useful for giving a main reason.",
+          "examples": [
+            {
+              "nl": "Ik hou van reizen, vooral in de zomer.",
+              "en": "I love travelling, especially in summer."
+            },
+            {
+              "nl": "Vooral het weer vond ik lastig.",
+              "en": "The weather in particular I found difficult."
+            }
+          ],
+          "tags": [
+            "opinion"
+          ]
+        },
+        {
+          "id": "a2-trouwens",
+          "chunk": "trouwens",
+          "gloss": "by the way",
+          "pos": "adverb",
+          "pron": "TROW-ens",
+          "pattern": "A conversational pivot. Lets you add something sideways without derailing the exchange.",
+          "examples": [
+            {
+              "nl": "Trouwens, heb je al gegeten?",
+              "en": "By the way, have you eaten yet?"
+            },
+            {
+              "nl": "Dat is trouwens een goed idee.",
+              "en": "That is a good idea, by the way."
+            }
+          ],
+          "tags": [
+            "social"
+          ],
+          "hook": "Useful in the speaking paper to extend an answer naturally when you are running short."
+        },
+        {
+          "id": "a2-in-ieder-geval",
+          "chunk": "in ieder geval",
+          "gloss": "in any case, at least",
+          "pos": "phrase",
+          "pron": "in EE-der che-VAL",
+          "pattern": "A four-word chunk that buys thinking time and sounds fluent.",
+          "examples": [
+            {
+              "nl": "In ieder geval bedankt voor je hulp.",
+              "en": "In any case, thanks for your help."
+            },
+            {
+              "nl": "Ik kom in ieder geval om zes uur.",
+              "en": "I will be there at six in any case."
+            }
+          ],
+          "tags": [
+            "social",
+            "exam"
+          ],
+          "hook": "Long fixed phrases like this one are gold under exam pressure: they fill time and they cannot go wrong."
+        },
+        {
+          "id": "a2-dat-klopt",
+          "chunk": "Dat klopt.",
+          "gloss": "That is right.",
+          "pos": "phrase",
+          "pron": "dat KLOPT",
+          "pattern": "The standard way to confirm something. `kloppen` means to be correct, and also to knock.",
+          "examples": [
+            {
+              "nl": "Uw adres is Kerkstraat 12? Dat klopt.",
+              "en": "Your address is Kerkstraat 12? That is right."
+            },
+            {
+              "nl": "Dat klopt niet.",
+              "en": "That is not right."
+            }
+          ],
+          "tags": [
+            "official",
+            "core"
+          ],
+          "hook": "You will be read your details back at every counter. `Dat klopt` is the expected reply."
+        },
+        {
+          "id": "a2-het-maakt-niet-uit",
+          "chunk": "Het maakt niet uit.",
+          "gloss": "It does not matter.",
+          "pos": "phrase",
+          "pron": "ut MAAKT neet OWT",
+          "pattern": "A separable verb inside a fixed phrase. Polite and very common.",
+          "examples": [
+            {
+              "nl": "Koffie of thee? Het maakt niet uit.",
+              "en": "Coffee or tea? It does not matter."
+            },
+            {
+              "nl": "Maakt het uit hoe laat ik kom?",
+              "en": "Does it matter what time I come?"
+            }
+          ],
+          "tags": [
+            "social"
+          ],
+          "hook": "`uitmaken` is separable, so `uit` ends up at the end even inside this fixed phrase."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1242 @@
+{
+  "packs": [
+    {
+      "id": "a0-first-words",
+      "stage": "A0",
+      "title": "First words",
+      "subtitle_nl": "de eerste woorden",
+      "blurb": "The handful of chunks that get you through a first conversation: greeting someone, saying who you are, and admitting when you are lost.",
+      "emoji": "👋",
+      "entries": [
+        {
+          "id": "a0-goedemorgen",
+          "chunk": "goedemorgen",
+          "gloss": "good morning",
+          "pos": "phrase",
+          "pron": "choo-de-MOR-chen",
+          "pattern": "Dutch glues the greeting together: goede + morgen. Same for goedemiddag and goedenavond.",
+          "examples": [
+            {
+              "nl": "Goedemorgen, mevrouw.",
+              "en": "Good morning, madam."
+            },
+            {
+              "nl": "Goedemorgen! Alles goed?",
+              "en": "Good morning! All well?"
+            }
+          ],
+          "tags": [
+            "greeting"
+          ],
+          "hook": "One word, not two. If you can say goedemorgen you can say the other three by swapping the time of day.",
+          "family": [
+            "goedemiddag",
+            "goedenavond",
+            "goedenacht"
+          ]
+        },
+        {
+          "id": "a0-hoe-gaat-het",
+          "chunk": "Hoe gaat het?",
+          "gloss": "How are you?",
+          "pos": "question",
+          "pron": "hoo CHAAT ut?",
+          "pattern": "A fixed question. Literally 'how goes it', so there is no word for 'you' in it at all.",
+          "examples": [
+            {
+              "nl": "Hoi! Hoe gaat het?",
+              "en": "Hi! How are you?"
+            },
+            {
+              "nl": "Hoe gaat het met je moeder?",
+              "en": "How is your mother doing?"
+            }
+          ],
+          "tags": [
+            "greeting"
+          ],
+          "hook": "Learn the four words as one sound. Picking it apart to find 'you' will only confuse you.",
+          "pitfall": "The reply is `Goed, en met jou?`, not a repeat of the question."
+        },
+        {
+          "id": "a0-alsjeblieft",
+          "chunk": "alsjeblieft",
+          "gloss": "please, here you go",
+          "pos": "phrase",
+          "pron": "als-ye-BLEEFT",
+          "pattern": "Does double duty: 'please' when asking, and 'here you are' when handing something over.",
+          "examples": [
+            {
+              "nl": "Een koffie, alsjeblieft.",
+              "en": "A coffee, please."
+            },
+            {
+              "nl": "Alsjeblieft, je wisselgeld.",
+              "en": "Here you go, your change."
+            }
+          ],
+          "tags": [
+            "politeness"
+          ],
+          "hook": "Say alstublieft to anyone you would call `u`. The `u` is literally sitting in the middle of the word.",
+          "origin": "Squashed from `als het u belieft`, 'if it pleases you'. That is why the polite form is alstublieft, with the `u` still visible inside it.",
+          "family": [
+            "alstublieft"
+          ]
+        },
+        {
+          "id": "a0-dank-je-wel",
+          "chunk": "dank je wel",
+          "gloss": "thank you",
+          "pos": "phrase",
+          "pron": "DANK ye wel",
+          "pattern": "Three words, always together. The polite version swaps je for u: dank u wel.",
+          "examples": [
+            {
+              "nl": "Dank je wel voor je hulp.",
+              "en": "Thank you for your help."
+            },
+            {
+              "nl": "Dank u wel, meneer.",
+              "en": "Thank you, sir."
+            }
+          ],
+          "tags": [
+            "politeness"
+          ],
+          "hook": "`bedankt` is the quick everyday version. `dank u wel` is the one for officials.",
+          "family": [
+            "dank u wel",
+            "bedankt"
+          ]
+        },
+        {
+          "id": "a0-sorry-hoor",
+          "chunk": "Sorry, hoor.",
+          "gloss": "Sorry about that.",
+          "pos": "phrase",
+          "pron": "SOR-ree, hohr",
+          "pattern": "`hoor` is a softener with no English translation. It takes the edge off whatever came before it.",
+          "examples": [
+            {
+              "nl": "Sorry hoor, dat wist ik niet.",
+              "en": "Sorry about that, I did not know."
+            },
+            {
+              "nl": "Het is niet erg, hoor.",
+              "en": "It is really no problem."
+            }
+          ],
+          "tags": [
+            "politeness"
+          ],
+          "hook": "Dutch sprinkles `hoor`, `even` and `maar` everywhere to sound friendly. Using one makes you sound far less abrupt."
+        },
+        {
+          "id": "a0-ik-heet",
+          "chunk": "Ik heet ...",
+          "gloss": "My name is ...",
+          "pos": "phrase",
+          "pron": "ik HAYT",
+          "pattern": "A whole verb that exists only for naming yourself. No 'is' and no 'name' in the sentence.",
+          "examples": [
+            {
+              "nl": "Ik heet Sara. En jij?",
+              "en": "My name is Sara. And you?"
+            },
+            {
+              "nl": "Hoe heet jij?",
+              "en": "What is your name?"
+            }
+          ],
+          "tags": [
+            "introductions"
+          ],
+          "hook": "`heten` means to be called. `Ik heet Sara` is literally 'I am-called Sara'.",
+          "pitfall": "`Mijn naam is ...` is understood but sounds stiff. Dutch people say `Ik heet ...`."
+        },
+        {
+          "id": "a0-ik-kom-uit",
+          "chunk": "Ik kom uit ...",
+          "gloss": "I come from ...",
+          "pos": "phrase",
+          "pron": "ik KOM owt",
+          "pattern": "`uit` is the fixed preposition for origin. Not `van`.",
+          "examples": [
+            {
+              "nl": "Ik kom uit India.",
+              "en": "I come from India."
+            },
+            {
+              "nl": "Waar kom je vandaan?",
+              "en": "Where are you from?"
+            }
+          ],
+          "tags": [
+            "introductions"
+          ],
+          "hook": "Pair it with its question. You will be asked `Waar kom je vandaan?` within a minute of meeting anyone.",
+          "family": [
+            "waar kom je vandaan?"
+          ]
+        },
+        {
+          "id": "a0-ik-woon-in",
+          "chunk": "Ik woon in ...",
+          "gloss": "I live in ...",
+          "pos": "phrase",
+          "pron": "ik WOHN in",
+          "pattern": "`wonen` is to live somewhere. `leven` is to be alive. Dutch keeps them separate.",
+          "examples": [
+            {
+              "nl": "Ik woon in Utrecht.",
+              "en": "I live in Utrecht."
+            },
+            {
+              "nl": "Hoe lang woon je hier al?",
+              "en": "How long have you lived here?"
+            }
+          ],
+          "tags": [
+            "introductions"
+          ],
+          "pitfall": "Do not use `leven` for your address. `Ik leef in Utrecht` sounds like you are merely surviving there."
+        },
+        {
+          "id": "a0-ja-nee",
+          "chunk": "ja / nee",
+          "gloss": "yes / no",
+          "pos": "phrase",
+          "pron": "YAA / NAY",
+          "pattern": "The two most useful words in any language, and a third one: `jawel`, which contradicts a negative.",
+          "examples": [
+            {
+              "nl": "Heb je honger? Ja.",
+              "en": "Are you hungry? Yes."
+            },
+            {
+              "nl": "Je komt toch niet? Jawel!",
+              "en": "You are not coming, are you? Yes I am!"
+            }
+          ],
+          "tags": [
+            "core"
+          ],
+          "hook": "`jawel` is for arguing back politely. It only exists to answer a question that assumed no.",
+          "family": [
+            "jawel"
+          ]
+        },
+        {
+          "id": "a0-misschien",
+          "chunk": "misschien",
+          "gloss": "maybe",
+          "pos": "adverb",
+          "pron": "mis-SCHEEN",
+          "pattern": "A hedge. Buys you time and keeps you from committing to something you are not sure of.",
+          "examples": [
+            {
+              "nl": "Misschien kom ik later.",
+              "en": "Maybe I will come later."
+            },
+            {
+              "nl": "Misschien is het dicht.",
+              "en": "Maybe it is closed."
+            }
+          ],
+          "tags": [
+            "core"
+          ],
+          "hook": "Starting a sentence with misschien pushes the verb to second place: `Misschien kom ik`, not `Misschien ik kom`.",
+          "origin": "From `mag schien`, 'may happen'. The 'it might happen' is still inside the word."
+        },
+        {
+          "id": "a0-een-beetje",
+          "chunk": "een beetje",
+          "gloss": "a little, a bit",
+          "pos": "phrase",
+          "pron": "un BAY-tye",
+          "pattern": "A quantity chunk. Also the honest answer to 'do you speak Dutch?'.",
+          "examples": [
+            {
+              "nl": "Ik spreek een beetje Nederlands.",
+              "en": "I speak a little Dutch."
+            },
+            {
+              "nl": "Mag ik een beetje suiker?",
+              "en": "Could I have a bit of sugar?"
+            }
+          ],
+          "tags": [
+            "quantity"
+          ],
+          "hook": "`beetje` is the small-and-cute form of `beet`, a bite. A bit is literally a little bite.",
+          "family": [
+            "beetje bij beetje"
+          ]
+        },
+        {
+          "id": "a0-heel-erg",
+          "chunk": "heel erg",
+          "gloss": "very, really",
+          "pos": "phrase",
+          "pron": "HAYL ERCH",
+          "pattern": "An intensifier pair. `heel erg bedankt` is the warmest everyday thank you.",
+          "examples": [
+            {
+              "nl": "Heel erg bedankt!",
+              "en": "Thank you very much!"
+            },
+            {
+              "nl": "Het is heel erg koud vandaag.",
+              "en": "It is really cold today."
+            }
+          ],
+          "tags": [
+            "core"
+          ],
+          "hook": "`erg` on its own means bad, but `heel erg` just means very. Context does the work."
+        },
+        {
+          "id": "a0-niet-geen",
+          "chunk": "niet / geen",
+          "gloss": "not / no (none)",
+          "pos": "phrase",
+          "pron": "NEET / CHAYN",
+          "pattern": "Two different no-words. `geen` cancels a noun, `niet` cancels everything else.",
+          "examples": [
+            {
+              "nl": "Ik heb geen tijd.",
+              "en": "I have no time."
+            },
+            {
+              "nl": "Ik kom niet.",
+              "en": "I am not coming."
+            }
+          ],
+          "tags": [
+            "core"
+          ],
+          "hook": "If you could put `een` or `a` in front of the thing, use `geen`. Otherwise use `niet`.",
+          "pitfall": "`Ik heb niet tijd` is the single most common beginner error. Nouns take geen."
+        },
+        {
+          "id": "a0-ik-begrijp-het-niet",
+          "chunk": "Ik begrijp het niet.",
+          "gloss": "I do not understand.",
+          "pos": "phrase",
+          "pron": "ik be-CHRAYP ut neet",
+          "pattern": "A survival sentence. Note that `het` is required: Dutch does not say `ik begrijp niet`.",
+          "examples": [
+            {
+              "nl": "Sorry, ik begrijp het niet.",
+              "en": "Sorry, I do not understand."
+            },
+            {
+              "nl": "Ik begrijp het nu wel.",
+              "en": "I do understand it now."
+            }
+          ],
+          "tags": [
+            "survival"
+          ],
+          "family": [
+            "Ik heb u niet verstaan."
+          ],
+          "pitfall": "`verstaan` is about hearing, `begrijpen` about meaning. If you simply did not catch it, say `Ik heb u niet verstaan`."
+        },
+        {
+          "id": "a0-kunt-u-dat-herhalen",
+          "chunk": "Kunt u dat herhalen?",
+          "gloss": "Could you repeat that?",
+          "pos": "question",
+          "pron": "kunt UU dat her-HAA-len",
+          "pattern": "The polite repair request. Worth knowing by heart before you need it.",
+          "examples": [
+            {
+              "nl": "Sorry, kunt u dat herhalen?",
+              "en": "Sorry, could you repeat that?"
+            },
+            {
+              "nl": "Kunt u wat langzamer praten?",
+              "en": "Could you speak a bit more slowly?"
+            }
+          ],
+          "tags": [
+            "survival"
+          ],
+          "hook": "Learn this one before any vocabulary. It buys you a second chance at every sentence you miss."
+        },
+        {
+          "id": "a0-hoeveel-kost",
+          "chunk": "Hoeveel kost het?",
+          "gloss": "How much does it cost?",
+          "pos": "question",
+          "pron": "hoo-VAYL KOST ut?",
+          "pattern": "`hoeveel` is one word, built from hoe + veel, 'how much'.",
+          "examples": [
+            {
+              "nl": "Hoeveel kost dit?",
+              "en": "How much does this cost?"
+            },
+            {
+              "nl": "Hoeveel kinderen heeft u?",
+              "en": "How many children do you have?"
+            }
+          ],
+          "tags": [
+            "shopping"
+          ],
+          "hook": "The `hoe` family is worth learning together: hoeveel, hoe laat, hoe lang, hoe ver.",
+          "family": [
+            "hoeveel",
+            "hoe laat",
+            "hoe lang"
+          ]
+        },
+        {
+          "id": "a0-waar-is",
+          "chunk": "Waar is ...?",
+          "gloss": "Where is ...?",
+          "pos": "question",
+          "pron": "WAAR is",
+          "pattern": "The question frame you will use most on the street.",
+          "examples": [
+            {
+              "nl": "Waar is het station?",
+              "en": "Where is the station?"
+            },
+            {
+              "nl": "Waar is de wc?",
+              "en": "Where is the toilet?"
+            }
+          ],
+          "tags": [
+            "directions"
+          ],
+          "family": [
+            "waarom",
+            "waarheen",
+            "waarvandaan"
+          ]
+        },
+        {
+          "id": "a0-de-man",
+          "chunk": "de man",
+          "gloss": "the man",
+          "pos": "noun",
+          "pron": "de MAN",
+          "pattern": "A de-word. Nearly every word for a person is a de-word, which is a rare piece of good luck.",
+          "examples": [
+            {
+              "nl": "De man naast mij is mijn buurman.",
+              "en": "The man next to me is my neighbour."
+            },
+            {
+              "nl": "Die man werkt hier.",
+              "en": "That man works here."
+            }
+          ],
+          "tags": [
+            "people"
+          ],
+          "article": "de",
+          "hook": "People are almost always `de`. That one rule covers a large slice of the nouns you will meet early on."
+        },
+        {
+          "id": "a0-het-kind",
+          "chunk": "het kind",
+          "gloss": "the child",
+          "pos": "noun",
+          "pron": "ut KINT",
+          "pattern": "A het-word, and irregular in the plural: de kinderen.",
+          "examples": [
+            {
+              "nl": "Het kind slaapt.",
+              "en": "The child is asleep."
+            },
+            {
+              "nl": "De kinderen spelen buiten.",
+              "en": "The children are playing outside."
+            }
+          ],
+          "tags": [
+            "people"
+          ],
+          "article": "het",
+          "hook": "`het kind` but `de kinderen`. Every plural is a de-word, so going plural always wipes the problem out.",
+          "family": [
+            "de kinderen"
+          ],
+          "pitfall": "One of the few people-words that is not `de`. Worth marking as an exception now."
+        },
+        {
+          "id": "a0-het-huis",
+          "chunk": "het huis",
+          "gloss": "the house",
+          "pos": "noun",
+          "pron": "ut HOWS",
+          "pattern": "A het-word. The plural softens the s to a z: de huizen.",
+          "examples": [
+            {
+              "nl": "Ons huis is klein.",
+              "en": "Our house is small."
+            },
+            {
+              "nl": "De huizen hier zijn oud.",
+              "en": "The houses here are old."
+            }
+          ],
+          "tags": [
+            "home"
+          ],
+          "article": "het",
+          "hook": "`thuis` (at home) and `naar huis` (homewards) both hide `huis` inside them.",
+          "family": [
+            "de huizen",
+            "thuis",
+            "naar huis"
+          ]
+        },
+        {
+          "id": "a0-de-dag",
+          "chunk": "de dag",
+          "gloss": "the day",
+          "pos": "noun",
+          "pron": "de DACH",
+          "pattern": "A de-word, and the backbone of every time expression you will build.",
+          "examples": [
+            {
+              "nl": "Een mooie dag vandaag.",
+              "en": "A lovely day today."
+            },
+            {
+              "nl": "Tot de volgende keer!",
+              "en": "Until next time!"
+            }
+          ],
+          "tags": [
+            "time"
+          ],
+          "article": "de",
+          "hook": "`vandaag` (today) is literally `van daag`, 'of day'.",
+          "family": [
+            "vandaag",
+            "elke dag",
+            "overdag"
+          ]
+        },
+        {
+          "id": "a0-elke-dag",
+          "chunk": "elke dag",
+          "gloss": "every day",
+          "pos": "phrase",
+          "pron": "EL-ke DACH",
+          "pattern": "Never learn `elke` alone. It changes shape with het-words (`elk kind`) and the useful thing is the whole time phrase.",
+          "examples": [
+            {
+              "nl": "Ik fiets elke dag naar mijn werk.",
+              "en": "I cycle to work every day."
+            },
+            {
+              "nl": "Elke dag een beetje oefenen helpt.",
+              "en": "Practising a little every day helps."
+            }
+          ],
+          "tags": [
+            "time",
+            "frequency"
+          ],
+          "hook": "Swap the noun and you have the whole family: elke week, elke maand, and `elk jaar` because jaar is a het-word.",
+          "family": [
+            "elke week",
+            "elke maand",
+            "elk jaar"
+          ],
+          "pitfall": "With a het-word it loses the -e: `elk kind`, `elk jaar`. That is why learning the chunk beats learning the word."
+        },
+        {
+          "id": "a0-de-week",
+          "chunk": "de week",
+          "gloss": "the week",
+          "pos": "noun",
+          "pron": "de WAYK",
+          "pattern": "A de-word. Pairs straight into the elke family.",
+          "examples": [
+            {
+              "nl": "Volgende week ben ik vrij.",
+              "en": "Next week I am free."
+            },
+            {
+              "nl": "Twee keer per week.",
+              "en": "Twice a week."
+            }
+          ],
+          "tags": [
+            "time"
+          ],
+          "article": "de",
+          "family": [
+            "volgende week",
+            "vorige week",
+            "per week"
+          ]
+        },
+        {
+          "id": "a0-het-jaar",
+          "chunk": "het jaar",
+          "gloss": "the year",
+          "pos": "noun",
+          "pron": "ut YAAR",
+          "pattern": "A het-word, and a unit that stays singular after a number.",
+          "examples": [
+            {
+              "nl": "Ik woon hier drie jaar.",
+              "en": "I have lived here for three years."
+            },
+            {
+              "nl": "Elk jaar gaan we naar Spanje.",
+              "en": "Every year we go to Spain."
+            }
+          ],
+          "tags": [
+            "time"
+          ],
+          "article": "het",
+          "hook": "Units after a number do not go plural: `drie jaar`, never `drie jaren`.",
+          "pitfall": "Because it is a het-word it takes `elk jaar`, not `elke jaar`."
+        }
+      ]
+    },
+    {
+      "id": "a0-everyday",
+      "stage": "A0",
+      "title": "Everyday things",
+      "subtitle_nl": "dagelijkse dingen",
+      "blurb": "The highest-frequency everyday nouns, each stored with its article, plus the fixed phrases they live inside.",
+      "emoji": "🚲",
+      "entries": [
+        {
+          "id": "a0-de-fiets",
+          "chunk": "de fiets",
+          "gloss": "the bicycle",
+          "pos": "noun",
+          "pron": "de FEETS",
+          "pattern": "A de-word, and the most Dutch noun there is.",
+          "examples": [
+            {
+              "nl": "Mijn fiets staat buiten.",
+              "en": "My bike is outside."
+            },
+            {
+              "nl": "Ik ga met de fiets.",
+              "en": "I go by bike."
+            }
+          ],
+          "tags": [
+            "transport"
+          ],
+          "article": "de",
+          "hook": "`met de fiets` is the fixed way to say by bike. Transport takes `met`, except on foot, which is `te voet`.",
+          "family": [
+            "fietsen",
+            "met de fiets"
+          ]
+        },
+        {
+          "id": "a0-met-de-trein",
+          "chunk": "met de trein",
+          "gloss": "by train",
+          "pos": "phrase",
+          "pron": "met de TRAYN",
+          "pattern": "Transport is always `met de` plus the vehicle. One pattern covers them all.",
+          "examples": [
+            {
+              "nl": "Ik ga met de trein naar Amsterdam.",
+              "en": "I go to Amsterdam by train."
+            },
+            {
+              "nl": "Met de bus is het sneller.",
+              "en": "By bus it is faster."
+            }
+          ],
+          "tags": [
+            "transport"
+          ],
+          "hook": "Learn the frame, not the nouns: met de trein, met de bus, met de auto, met de fiets.",
+          "family": [
+            "met de bus",
+            "met de auto",
+            "te voet"
+          ],
+          "pitfall": "On foot breaks the pattern: `te voet`, with no `met`."
+        },
+        {
+          "id": "a0-het-station",
+          "chunk": "het station",
+          "gloss": "the station",
+          "pos": "noun",
+          "pron": "ut sta-SHON",
+          "pattern": "A het-word. Note that Dutch says you are `op` the station, not `in` it.",
+          "examples": [
+            {
+              "nl": "Het station is dichtbij.",
+              "en": "The station is nearby."
+            },
+            {
+              "nl": "Ik wacht op het station.",
+              "en": "I am waiting at the station."
+            }
+          ],
+          "tags": [
+            "transport"
+          ],
+          "article": "het",
+          "hook": "`op het station` means inside it. `bij het station` means near it, outside. Arranging to meet with the wrong one leaves you in different places."
+        },
+        {
+          "id": "a0-de-winkel",
+          "chunk": "de winkel",
+          "gloss": "the shop",
+          "pos": "noun",
+          "pron": "de WIN-kel",
+          "pattern": "A de-word, and one that takes `-s` in the plural because it ends in an unstressed -el.",
+          "examples": [
+            {
+              "nl": "De winkel is open tot zes uur.",
+              "en": "The shop is open until six."
+            },
+            {
+              "nl": "Ik ga even naar de winkel.",
+              "en": "I am just popping to the shop."
+            }
+          ],
+          "tags": [
+            "shopping"
+          ],
+          "article": "de",
+          "family": [
+            "de winkels",
+            "boodschappen doen"
+          ]
+        },
+        {
+          "id": "a0-boodschappen-doen",
+          "chunk": "boodschappen doen",
+          "gloss": "to do the shopping",
+          "pos": "phrase",
+          "pron": "BOHT-schap-pen DOON",
+          "pattern": "A fixed verb-plus-noun pair. The noun is always plural and never takes an article here.",
+          "examples": [
+            {
+              "nl": "Ik ga zaterdag boodschappen doen.",
+              "en": "I am doing the shopping on Saturday."
+            },
+            {
+              "nl": "Heb jij al boodschappen gedaan?",
+              "en": "Have you done the shopping yet?"
+            }
+          ],
+          "tags": [
+            "shopping"
+          ],
+          "hook": "`boodschap` on its own means a message. Only in the plural, with `doen`, does it mean groceries.",
+          "pitfall": "Never `de boodschappen doen` with the article in this phrase."
+        },
+        {
+          "id": "a0-de-koffie",
+          "chunk": "de koffie",
+          "gloss": "the coffee",
+          "pos": "noun",
+          "pron": "de KOF-fee",
+          "pattern": "A de-word. Stress on the first syllable, not the second.",
+          "examples": [
+            {
+              "nl": "Wil je een kopje koffie?",
+              "en": "Would you like a cup of coffee?"
+            },
+            {
+              "nl": "Koffie met melk, graag.",
+              "en": "Coffee with milk, please."
+            }
+          ],
+          "tags": [
+            "food"
+          ],
+          "article": "de",
+          "family": [
+            "een kopje koffie"
+          ],
+          "pitfall": "Say KOF-fee, not kof-FEE. The English stress pattern marks you out instantly."
+        },
+        {
+          "id": "a0-het-water",
+          "chunk": "het water",
+          "gloss": "the water",
+          "pos": "noun",
+          "pron": "ut WAA-ter",
+          "pattern": "A het-word. The `w` is softer than the English one, closer to a `v`.",
+          "examples": [
+            {
+              "nl": "Mag ik een glas water?",
+              "en": "Could I have a glass of water?"
+            },
+            {
+              "nl": "Het water is koud.",
+              "en": "The water is cold."
+            }
+          ],
+          "tags": [
+            "food"
+          ],
+          "article": "het"
+        },
+        {
+          "id": "a0-het-brood",
+          "chunk": "het brood",
+          "gloss": "the bread",
+          "pos": "noun",
+          "pron": "ut BROHT",
+          "pattern": "A het-word. The small form `het broodje` is the roll you buy for lunch.",
+          "examples": [
+            {
+              "nl": "Ik koop elke dag brood.",
+              "en": "I buy bread every day."
+            },
+            {
+              "nl": "Een broodje kaas, alstublieft.",
+              "en": "A cheese roll, please."
+            }
+          ],
+          "tags": [
+            "food"
+          ],
+          "article": "het",
+          "hook": "Every small-and-cute `-je` form is a het-word, so `het broodje` needs no separate memorising.",
+          "family": [
+            "het broodje",
+            "de broodjes"
+          ]
+        },
+        {
+          "id": "a0-de-tijd",
+          "chunk": "de tijd",
+          "gloss": "the time",
+          "pos": "noun",
+          "pron": "de TAYT",
+          "pattern": "A de-word. Shows up in a dozen fixed phrases.",
+          "examples": [
+            {
+              "nl": "Ik heb geen tijd.",
+              "en": "I have no time."
+            },
+            {
+              "nl": "Neem de tijd.",
+              "en": "Take your time."
+            }
+          ],
+          "tags": [
+            "time"
+          ],
+          "article": "de",
+          "hook": "`op tijd` means on time. `de hele tijd` means the whole time. Both are worth having ready-made.",
+          "family": [
+            "op tijd",
+            "geen tijd",
+            "de hele tijd"
+          ]
+        },
+        {
+          "id": "a0-hoe-laat",
+          "chunk": "Hoe laat is het?",
+          "gloss": "What time is it?",
+          "pos": "question",
+          "pron": "hoo LAAT is ut?",
+          "pattern": "Literally 'how late is it'. Dutch measures the clock in lateness.",
+          "examples": [
+            {
+              "nl": "Hoe laat is het?",
+              "en": "What time is it?"
+            },
+            {
+              "nl": "Hoe laat begint de les?",
+              "en": "What time does the lesson start?"
+            }
+          ],
+          "tags": [
+            "time"
+          ],
+          "hook": "The answer uses `om`: `om acht uur`. Clock times always take om.",
+          "family": [
+            "hoe laat",
+            "om ... uur"
+          ]
+        },
+        {
+          "id": "a0-vandaag",
+          "chunk": "vandaag",
+          "gloss": "today",
+          "pos": "adverb",
+          "pron": "fan-DAACH",
+          "pattern": "One word, from `van daag`.",
+          "examples": [
+            {
+              "nl": "Vandaag is het maandag.",
+              "en": "Today is Monday."
+            },
+            {
+              "nl": "Wat doen we vandaag?",
+              "en": "What are we doing today?"
+            }
+          ],
+          "tags": [
+            "time"
+          ],
+          "hook": "Starting with vandaag flips the sentence: `Vandaag ga ik`, not `Vandaag ik ga`.",
+          "family": [
+            "gisteren",
+            "morgen",
+            "overmorgen",
+            "eergisteren"
+          ]
+        },
+        {
+          "id": "a0-morgen",
+          "chunk": "morgen",
+          "gloss": "tomorrow, morning",
+          "pos": "adverb",
+          "pron": "MOR-chen",
+          "pattern": "Two meanings in one word. Alone it means tomorrow; inside goedemorgen it means morning.",
+          "examples": [
+            {
+              "nl": "Tot morgen!",
+              "en": "See you tomorrow!"
+            },
+            {
+              "nl": "Morgenochtend heb ik een afspraak.",
+              "en": "Tomorrow morning I have an appointment."
+            }
+          ],
+          "tags": [
+            "time"
+          ],
+          "family": [
+            "morgenochtend",
+            "overmorgen",
+            "goedemorgen"
+          ],
+          "pitfall": "`morgenochtend` is tomorrow morning. Plain `morgen` on its own is always tomorrow."
+        },
+        {
+          "id": "a0-nu-straks",
+          "chunk": "nu / straks",
+          "gloss": "now / in a bit",
+          "pos": "adverb",
+          "pron": "NUU / STRAKS",
+          "pattern": "`straks` is a uniquely useful word: later today, soon, but not now.",
+          "examples": [
+            {
+              "nl": "Ik doe het straks.",
+              "en": "I will do it in a bit."
+            },
+            {
+              "nl": "Niet nu, straks.",
+              "en": "Not now, in a little while."
+            }
+          ],
+          "tags": [
+            "time"
+          ],
+          "hook": "`straks` means later today. `later` can mean any time at all. Dutch people use straks constantly.",
+          "family": [
+            "later",
+            "zo meteen"
+          ]
+        },
+        {
+          "id": "a0-de-vraag",
+          "chunk": "de vraag",
+          "gloss": "the question",
+          "pos": "noun",
+          "pron": "de FRAACH",
+          "pattern": "A de-word, from the verb `vragen`.",
+          "examples": [
+            {
+              "nl": "Ik heb een vraag.",
+              "en": "I have a question."
+            },
+            {
+              "nl": "Mag ik een vraag stellen?",
+              "en": "May I ask a question?"
+            }
+          ],
+          "tags": [
+            "core"
+          ],
+          "article": "de",
+          "hook": "You `stel` a question in Dutch, you do not ask it: `een vraag stellen`.",
+          "family": [
+            "vragen",
+            "een vraag stellen"
+          ]
+        },
+        {
+          "id": "a0-het-antwoord",
+          "chunk": "het antwoord",
+          "gloss": "the answer",
+          "pos": "noun",
+          "pron": "ut ANT-wohrt",
+          "pattern": "A het-word, and the natural partner to de vraag.",
+          "examples": [
+            {
+              "nl": "Dat is het goede antwoord.",
+              "en": "That is the right answer."
+            },
+            {
+              "nl": "Ik weet het antwoord niet.",
+              "en": "I do not know the answer."
+            }
+          ],
+          "tags": [
+            "core"
+          ],
+          "article": "het",
+          "hook": "Learn `de vraag` and `het antwoord` as a pair, and the opposite articles help you remember both.",
+          "family": [
+            "antwoorden"
+          ]
+        },
+        {
+          "id": "a0-ik-wil-graag",
+          "chunk": "Ik wil graag ...",
+          "gloss": "I would like ...",
+          "pos": "phrase",
+          "pron": "ik WIL CHRAACH",
+          "pattern": "The standard polite request. `graag` is what makes it polite rather than demanding.",
+          "examples": [
+            {
+              "nl": "Ik wil graag een kopje thee.",
+              "en": "I would like a cup of tea."
+            },
+            {
+              "nl": "Ik wil graag een afspraak maken.",
+              "en": "I would like to make an appointment."
+            }
+          ],
+          "tags": [
+            "politeness",
+            "requests"
+          ],
+          "hook": "Without `graag` it becomes `Ik wil`, which sounds blunt to the point of rude. The word is doing a lot of work.",
+          "family": [
+            "graag",
+            "liever",
+            "het liefst"
+          ]
+        },
+        {
+          "id": "a0-mag-ik",
+          "chunk": "Mag ik ...?",
+          "gloss": "May I ...?",
+          "pos": "question",
+          "pron": "mach ik",
+          "pattern": "The other polite request, slightly softer than `ik wil graag`.",
+          "examples": [
+            {
+              "nl": "Mag ik hier zitten?",
+              "en": "May I sit here?"
+            },
+            {
+              "nl": "Mag ik uw naam?",
+              "en": "Could I have your name?"
+            }
+          ],
+          "tags": [
+            "politeness",
+            "requests"
+          ]
+        },
+        {
+          "id": "a0-kunt-u-mij-helpen",
+          "chunk": "Kunt u mij helpen?",
+          "gloss": "Could you help me?",
+          "pos": "question",
+          "pron": "kunt UU may HEL-pen",
+          "pattern": "`helpen` takes `met` when you name the thing: `helpen met dit formulier`.",
+          "examples": [
+            {
+              "nl": "Kunt u mij helpen?",
+              "en": "Could you help me?"
+            },
+            {
+              "nl": "Kunt u mij helpen met dit formulier?",
+              "en": "Could you help me with this form?"
+            }
+          ],
+          "tags": [
+            "survival",
+            "requests"
+          ],
+          "family": [
+            "helpen met",
+            "de hulp"
+          ]
+        },
+        {
+          "id": "a0-de-afspraak",
+          "chunk": "de afspraak",
+          "gloss": "the appointment",
+          "pos": "noun",
+          "pron": "de AF-spraak",
+          "pattern": "A de-word, and the hinge of Dutch daily life.",
+          "examples": [
+            {
+              "nl": "Ik heb een afspraak om drie uur.",
+              "en": "I have an appointment at three."
+            },
+            {
+              "nl": "Kan ik een afspraak maken?",
+              "en": "Can I make an appointment?"
+            }
+          ],
+          "tags": [
+            "official"
+          ],
+          "article": "de",
+          "hook": "You `maak` an appointment in Dutch, you do not take or book one: `een afspraak maken`.",
+          "family": [
+            "een afspraak maken",
+            "afspreken"
+          ]
+        },
+        {
+          "id": "a0-een-afspraak-maken",
+          "chunk": "een afspraak maken",
+          "gloss": "to make an appointment",
+          "pos": "phrase",
+          "pron": "un AF-spraak MAA-ken",
+          "pattern": "A fixed verb-plus-noun pair. Opens almost every official phone call you will make.",
+          "examples": [
+            {
+              "nl": "Ik wil graag een afspraak maken.",
+              "en": "I would like to make an appointment."
+            },
+            {
+              "nl": "Kan ik vandaag nog een afspraak maken?",
+              "en": "Could I still make an appointment today?"
+            }
+          ],
+          "tags": [
+            "official",
+            "requests"
+          ],
+          "hook": "Learn it as one block with `Ik wil graag` in front. That single sentence opens the doctor, the gemeente and the bank."
+        },
+        {
+          "id": "a0-de-dokter",
+          "chunk": "de dokter",
+          "gloss": "the doctor",
+          "pos": "noun",
+          "pron": "de DOK-ter",
+          "pattern": "A de-word. The family doctor is `de huisarts`, literally the house-doctor.",
+          "examples": [
+            {
+              "nl": "Ik ga naar de dokter.",
+              "en": "I am going to the doctor."
+            },
+            {
+              "nl": "Ik ben bij de dokter geweest.",
+              "en": "I have been to the doctor."
+            }
+          ],
+          "tags": [
+            "health"
+          ],
+          "article": "de",
+          "hook": "`naar de dokter` for going, `bij de dokter` for being there. The preposition tells you which.",
+          "family": [
+            "de huisarts",
+            "de apotheek"
+          ]
+        },
+        {
+          "id": "a0-de-naam",
+          "chunk": "de naam",
+          "gloss": "the name",
+          "pos": "noun",
+          "pron": "de NAAM",
+          "pattern": "A de-word. You will be asked for it at every counter in the country.",
+          "examples": [
+            {
+              "nl": "Wat is uw naam?",
+              "en": "What is your name?"
+            },
+            {
+              "nl": "Mijn naam staat op het formulier.",
+              "en": "My name is on the form."
+            }
+          ],
+          "tags": [
+            "official"
+          ],
+          "article": "de",
+          "family": [
+            "de achternaam",
+            "de voornaam",
+            "heten"
+          ]
+        },
+        {
+          "id": "a0-het-formulier",
+          "chunk": "het formulier",
+          "gloss": "the form",
+          "pos": "noun",
+          "pron": "ut for-muu-LEER",
+          "pattern": "A het-word. Stress falls on the last syllable, unusually for Dutch.",
+          "examples": [
+            {
+              "nl": "Vul dit formulier in.",
+              "en": "Fill in this form."
+            },
+            {
+              "nl": "Ik heb het formulier ingevuld.",
+              "en": "I have filled in the form."
+            }
+          ],
+          "tags": [
+            "official"
+          ],
+          "article": "het",
+          "hook": "You `vul` a form `in`: `invullen` is separable, so `Vul dit formulier in` splits it.",
+          "family": [
+            "invullen",
+            "het formulier invullen"
+          ]
+        },
+        {
+          "id": "a0-alstublieft-u",
+          "chunk": "Spreekt u Engels?",
+          "gloss": "Do you speak English?",
+          "pos": "question",
+          "pron": "SPRAYKT uu ENG-els?",
+          "pattern": "Worth knowing, and worth using sparingly: most Dutch people will switch to English the moment you ask.",
+          "examples": [
+            {
+              "nl": "Sorry, spreekt u Engels?",
+              "en": "Sorry, do you speak English?"
+            },
+            {
+              "nl": "Ik wil graag Nederlands oefenen.",
+              "en": "I would like to practise Dutch."
+            }
+          ],
+          "tags": [
+            "survival"
+          ],
+          "hook": "Pair it with `Ik wil graag Nederlands oefenen`, or you will never get to practise. Dutch people switch to English out of politeness.",
+          "pitfall": "Asking this too early ends the Dutch conversation. Try `Kunt u dat herhalen?` first."
+        }
+      ]
+    }
+  ]
+}

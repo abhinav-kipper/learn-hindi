@@ -52,7 +52,8 @@ else they owe beyond the five papers.
 | KNM | 132 questions, all 8 themes |
 | Lezen | 10 texts (5 A1, 4 A2, 1 B1) |
 | Luisteren | 10 clips (4 A1, 4 A2, 2 B1) |
-| Vocabulary | 208 words, 12 categories |
+| Vocabulary | 208 words, 12 categories (swipe deck) |
+| Word Lab | 128 chunks, 6 packs, A0 to A2, on the SM-2 schedule |
 | Sounds | 8 pronunciation stages |
 
 ## 4. Decisions already made, and why
@@ -155,11 +156,22 @@ With every paper now covered, these are no longer second priority: **item 3 is
 the top of the whole list.** There is a great deal of Dutch content and nothing
 brings any of it back for review.
 
-**3. Wire Dutch into the spaced-repetition engine.** `lib/review.ts` is a full
-SM-2 implementation already powering the Hindi daily review. Feeding Dutch
-vocabulary, missed KNM questions and weak cheatsheet topics into one daily
-queue is the single cheapest large gain available, because retention under
-time pressure is what the exam actually measures. Revisit the decision in §4.
+**3. Wire Dutch into the spaced-repetition engine.** **Half done (2026-11-08).**
+The Word Lab (`/dutch/woorden`) now puts 128 vocabulary chunks on the existing
+SM-2 schedule, reusing `computeNextSchedule` from `lib/review.ts` rather than
+adding a second scheduler. **Still unscheduled: missed KNM questions, weak
+cheatsheet topics, and lesson phrases.** Feed those into the same engine next,
+and reuse `lib/dutch/woorden.ts` as the pattern: a met-set, a record store
+keyed by content id, and `computeNextSchedule` for the arithmetic.
+
+Three decisions in the Word Lab worth not re-opening, each with a reason:
+- **The unit is a chunk, not a word** (`elke dag`, not `elke`). Collocation
+  research supports holistic presentation over assembling from parts.
+- **`checkRecall` marks a bare noun wrong.** Typing `huis` for `het huis` fails
+  on purpose. Storing the article with the noun is the one fix the literature
+  agrees on for the de/het problem, and being lenient would defeat it.
+- **An empty queue is a success state**, shown with an explanation, not an
+  error. Reviewing before material fades wastes the spacing effect.
 
 **4. An exam-readiness view.** There is no answer to "am I ready to book?".
 A per-paper readiness signal, built from existing mock scores and studied
