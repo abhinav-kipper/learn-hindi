@@ -1,0 +1,1019 @@
+{
+  "tasks": [
+    {
+      "id": "spreken-001",
+      "type": "warmup",
+      "tier": "A1",
+      "seconds": 45,
+      "title_nl": "Vertel over uzelf",
+      "title_en": "Tell us about yourself",
+      "prompt_nl": "Vertel iets over uzelf.",
+      "prompt_en": "Tell us something about yourself.",
+      "min_sentences": 3,
+      "must_cover": [
+        "Your name",
+        "Where you come from",
+        "Where you live now",
+        "One more detail, such as your age, work or family"
+      ],
+      "frame": [
+        "Ik heet ___.",
+        "Ik kom uit ___.",
+        "Ik woon nu in ___.",
+        "Ik ben ___ jaar en ik werk als ___."
+      ],
+      "phrases": [
+        {
+          "nl": "Ik heet",
+          "en": "My name is"
+        },
+        {
+          "nl": "Ik kom uit",
+          "en": "I come from"
+        },
+        {
+          "nl": "Ik woon in",
+          "en": "I live in"
+        },
+        {
+          "nl": "sinds twee jaar",
+          "en": "for two years now"
+        },
+        {
+          "nl": "samen met mijn man",
+          "en": "together with my husband"
+        },
+        {
+          "nl": "Ik werk als",
+          "en": "I work as"
+        }
+      ],
+      "model_answer_nl": "Ik heet Sara. Ik kom uit Polen, uit een kleine stad bij Krakau. Ik woon nu twee jaar in Utrecht, samen met mijn man. Ik ben eenendertig jaar en ik werk als verpleegkundige in een ziekenhuis.",
+      "model_answer_en": "My name is Sara. I come from Poland, from a small town near Krakow. I have been living in Utrecht for two years now, together with my husband. I am thirty-one and I work as a nurse in a hospital.",
+      "tips_en": [
+        "Learn this one by heart. It is the most predictable question on the whole paper.",
+        "Four short sentences beat one long one that falls apart halfway.",
+        "Do not stop after your name. Silence costs more marks than a small mistake."
+      ]
+    },
+    {
+      "id": "spreken-002",
+      "type": "warmup",
+      "tier": "A1",
+      "seconds": 45,
+      "title_nl": "Uw weekend",
+      "title_en": "Your weekend",
+      "prompt_nl": "Wat doet u meestal in het weekend?",
+      "prompt_en": "What do you usually do at the weekend?",
+      "min_sentences": 3,
+      "must_cover": [
+        "At least two things you usually do",
+        "When you do them",
+        "Whether you like it, and why"
+      ],
+      "frame": [
+        "In het weekend ___ ik meestal.",
+        "Op zaterdag ___ ik vaak ___.",
+        "Soms ___ ik ___.",
+        "Ik vind dat leuk, want ___."
+      ],
+      "phrases": [
+        {
+          "nl": "meestal",
+          "en": "usually"
+        },
+        {
+          "nl": "soms",
+          "en": "sometimes"
+        },
+        {
+          "nl": "bijna altijd",
+          "en": "almost always"
+        },
+        {
+          "nl": "Ik vind dat leuk",
+          "en": "I like that"
+        },
+        {
+          "nl": "samen met vrienden",
+          "en": "together with friends"
+        },
+        {
+          "nl": "uitslapen",
+          "en": "to sleep in"
+        },
+        {
+          "nl": "boodschappen doen",
+          "en": "to do the shopping"
+        }
+      ],
+      "model_answer_nl": "In het weekend slaap ik meestal uit. Op zaterdag doe ik boodschappen en daarna maak ik het huis schoon. Zondag is mijn vrije dag. Dan ga ik vaak wandelen in het park, samen met een vriendin. Ik vind dat heel fijn, want in de week heb ik weinig tijd.",
+      "model_answer_en": "At the weekend I usually sleep in. On Saturday I do the shopping and then I clean the house. Sunday is my day off. Then I often go for a walk in the park with a friend. I really like that, because during the week I have little time.",
+      "tips_en": [
+        "Words like meestal, soms and vaak buy you thinking time and sound natural.",
+        "Finish with an opinion plus want. It adds a whole sentence for almost no effort."
+      ]
+    },
+    {
+      "id": "spreken-003",
+      "type": "warmup",
+      "tier": "A2",
+      "seconds": 45,
+      "title_nl": "Uw werk of opleiding",
+      "title_en": "Your work or study",
+      "prompt_nl": "Vertel over uw werk of uw opleiding.",
+      "prompt_en": "Tell us about your work or your study.",
+      "min_sentences": 3,
+      "must_cover": [
+        "What you do",
+        "Where you do it",
+        "What a normal day looks like",
+        "What you think of it"
+      ],
+      "frame": [
+        "Ik werk als ___ bij ___.",
+        "Ik begin om ___ uur en ik stop om ___ uur.",
+        "Op een gewone dag ___ ik ___.",
+        "Ik doe dit werk graag, omdat ___."
+      ],
+      "phrases": [
+        {
+          "nl": "Ik werk als",
+          "en": "I work as"
+        },
+        {
+          "nl": "Ik volg een opleiding",
+          "en": "I am doing a course"
+        },
+        {
+          "nl": "op een gewone dag",
+          "en": "on a normal day"
+        },
+        {
+          "nl": "collega's",
+          "en": "colleagues"
+        },
+        {
+          "nl": "Het is soms druk",
+          "en": "It is sometimes busy"
+        },
+        {
+          "nl": "omdat ik graag met mensen werk",
+          "en": "because I like working with people"
+        }
+      ],
+      "model_answer_nl": "Ik werk als verpleegkundige bij een ziekenhuis in Utrecht. Ik begin meestal om zeven uur en ik stop om vier uur. Op een gewone dag help ik patiënten en praat ik met de dokter. Het is vaak druk, maar ik doe dit werk graag, omdat ik graag met mensen werk.",
+      "model_answer_en": "I work as a nurse at a hospital in Utrecht. I usually start at seven and finish at four. On a normal day I help patients and talk to the doctor. It is often busy, but I like this work because I like working with people.",
+      "tips_en": [
+        "If you do not work, the same frame works for a course or for looking after your family.",
+        "Clock times are easy marks. Practise saying your own start and finish time out loud."
+      ]
+    },
+    {
+      "id": "spreken-004",
+      "type": "warmup",
+      "tier": "A1",
+      "seconds": 45,
+      "title_nl": "Hoe reist u?",
+      "title_en": "How do you travel?",
+      "prompt_nl": "Hoe gaat u naar uw werk of naar school?",
+      "prompt_en": "How do you get to your work or to school?",
+      "min_sentences": 3,
+      "must_cover": [
+        "How you travel",
+        "How long it takes",
+        "Why you travel that way"
+      ],
+      "frame": [
+        "Ik ga met ___ naar ___.",
+        "Dat duurt ongeveer ___ minuten.",
+        "Ik doe dat, omdat ___."
+      ],
+      "phrases": [
+        {
+          "nl": "met de fiets",
+          "en": "by bike"
+        },
+        {
+          "nl": "met de trein",
+          "en": "by train"
+        },
+        {
+          "nl": "met de bus",
+          "en": "by bus"
+        },
+        {
+          "nl": "te voet",
+          "en": "on foot"
+        },
+        {
+          "nl": "Dat duurt ongeveer",
+          "en": "That takes about"
+        },
+        {
+          "nl": "een half uur",
+          "en": "half an hour"
+        },
+        {
+          "nl": "het is goedkoper",
+          "en": "it is cheaper"
+        }
+      ],
+      "model_answer_nl": "Ik ga meestal met de fiets naar mijn werk. Dat duurt ongeveer twintig minuten. Ik doe dat, omdat het goedkoop is en ik dan meteen buiten ben. Als het hard regent, neem ik de bus.",
+      "model_answer_en": "I usually cycle to work. That takes about twenty minutes. I do that because it is cheap and I get outside straight away. If it rains hard, I take the bus.",
+      "tips_en": [
+        "Met de fiets, met de bus, met de trein, but te voet. That last one has no met.",
+        "Adding one if sentence (als het regent) lifts you from A1 to A2."
+      ]
+    },
+    {
+      "id": "spreken-005",
+      "type": "video",
+      "tier": "A1",
+      "seconds": 60,
+      "title_nl": "Uw nieuwe buurvrouw",
+      "title_en": "Your new neighbour",
+      "prompt_nl": "Uw buurvrouw zegt: \"Hallo! Ik ben Ans, ik woon sinds vorige week op nummer 12. Woont u hier al lang?\"",
+      "prompt_en": "Your neighbour says: \"Hello! I am Ans, I have lived at number 12 since last week. Have you lived here long?\"",
+      "min_sentences": 3,
+      "must_cover": [
+        "Greet her back and say your name",
+        "Answer how long you have lived there",
+        "Say something friendly or ask her a question back"
+      ],
+      "frame": [
+        "Hallo Ans, ik ben ___.",
+        "Ik woon hier al ___.",
+        "Welkom in de buurt!",
+        "Bevalt het u hier een beetje?"
+      ],
+      "phrases": [
+        {
+          "nl": "Welkom in de buurt",
+          "en": "Welcome to the neighbourhood"
+        },
+        {
+          "nl": "Aangenaam",
+          "en": "Pleased to meet you"
+        },
+        {
+          "nl": "sinds drie jaar",
+          "en": "for three years"
+        },
+        {
+          "nl": "Bevalt het u hier?",
+          "en": "Are you settling in all right?"
+        },
+        {
+          "nl": "Als u iets nodig heeft, zegt u het maar",
+          "en": "If you need anything, just say"
+        }
+      ],
+      "model_answer_nl": "Hallo Ans, ik ben Sara. Aangenaam! Ik woon hier al drie jaar, op nummer 14. Welkom in de buurt. Het is hier heel rustig, dat vind ik prettig. Bevalt het u hier een beetje? Als u iets nodig heeft, zegt u het maar.",
+      "model_answer_en": "Hello Ans, I am Sara. Pleased to meet you. I have lived here for three years, at number 14. Welcome to the neighbourhood. It is very quiet here, which I like. Are you settling in all right? If you need anything, just say.",
+      "tips_en": [
+        "Always answer the question that was actually asked first. Then add.",
+        "Asking something back is worth a mark and makes the minute easier to fill."
+      ]
+    },
+    {
+      "id": "spreken-006",
+      "type": "video",
+      "tier": "A2",
+      "seconds": 60,
+      "title_nl": "Een uitnodiging",
+      "title_en": "An invitation",
+      "prompt_nl": "Uw collega zegt: \"We gaan vrijdag na het werk iets drinken. Kom je ook?\"",
+      "prompt_en": "Your colleague says: \"We are going for a drink on Friday after work. Are you coming too?\"",
+      "min_sentences": 3,
+      "must_cover": [
+        "Say yes or no clearly",
+        "Give a reason",
+        "Say something practical, such as a time or a place",
+        "Be friendly about it"
+      ],
+      "frame": [
+        "Wat leuk, bedankt voor de uitnodiging!",
+        "Ja, graag. / Helaas kan ik niet, want ___.",
+        "Hoe laat spreken we af?",
+        "Tot vrijdag!"
+      ],
+      "phrases": [
+        {
+          "nl": "Wat leuk!",
+          "en": "How nice!"
+        },
+        {
+          "nl": "Ja, graag",
+          "en": "Yes, I would love to"
+        },
+        {
+          "nl": "Helaas kan ik niet",
+          "en": "Unfortunately I cannot"
+        },
+        {
+          "nl": "Ik moet mijn kinderen ophalen",
+          "en": "I have to pick up my children"
+        },
+        {
+          "nl": "Hoe laat spreken we af?",
+          "en": "What time shall we meet?"
+        },
+        {
+          "nl": "Waar spreken we af?",
+          "en": "Where shall we meet?"
+        },
+        {
+          "nl": "Een andere keer graag",
+          "en": "Another time, gladly"
+        },
+        {
+          "nl": "Tot vrijdag",
+          "en": "See you Friday"
+        }
+      ],
+      "model_answer_nl": "Wat leuk, bedankt voor de uitnodiging! Ja, graag, ik kom mee. Vrijdag komt mij goed uit, want dan hoef ik niet vroeg op. Hoe laat spreken we af, en waar gaan we naartoe? Dan zie ik jullie vrijdag.",
+      "model_answer_en": "How nice, thanks for the invitation. Yes please, I will come along. Friday suits me, because I do not have to get up early then. What time shall we meet, and where are we going? See you all on Friday.",
+      "tips_en": [
+        "A colleague is je, not u. Match the register you were spoken to in.",
+        "If you say no, always give a reason and offer another time. A bare nee sounds rude and scores less."
+      ]
+    },
+    {
+      "id": "spreken-007",
+      "type": "video",
+      "tier": "A2",
+      "seconds": 60,
+      "title_nl": "De huisartsenpraktijk belt",
+      "title_en": "The doctor's surgery",
+      "prompt_nl": "De assistente zegt: \"Goedemorgen, huisartsenpraktijk De Linde. Waarmee kan ik u helpen?\"",
+      "prompt_en": "The assistant says: \"Good morning, De Linde doctor's surgery. How can I help you?\"",
+      "min_sentences": 3,
+      "must_cover": [
+        "Say who you are",
+        "Say what is wrong",
+        "Say how long it has been going on",
+        "Ask for an appointment"
+      ],
+      "frame": [
+        "Goedemorgen, u spreekt met ___.",
+        "Ik wil graag een afspraak maken met de huisarts.",
+        "Ik heb al ___ dagen ___.",
+        "Kan dat deze week nog?"
+      ],
+      "phrases": [
+        {
+          "nl": "U spreekt met",
+          "en": "This is (on the phone)"
+        },
+        {
+          "nl": "Ik wil graag een afspraak maken",
+          "en": "I would like to make an appointment"
+        },
+        {
+          "nl": "Ik heb last van",
+          "en": "I am suffering from"
+        },
+        {
+          "nl": "keelpijn",
+          "en": "a sore throat"
+        },
+        {
+          "nl": "koorts",
+          "en": "a fever"
+        },
+        {
+          "nl": "sinds drie dagen",
+          "en": "for three days"
+        },
+        {
+          "nl": "Het gaat niet over",
+          "en": "It is not getting better"
+        },
+        {
+          "nl": "Kan dat vandaag nog?",
+          "en": "Would today still be possible?"
+        }
+      ],
+      "model_answer_nl": "Goedemorgen, u spreekt met Sara Nowak. Ik wil graag een afspraak maken met de huisarts. Ik heb al vier dagen keelpijn en sinds gisteren ook koorts. Het gaat niet over. Kan dat deze week nog? 's Middags komt mij het beste uit.",
+      "model_answer_en": "Good morning, this is Sara Nowak. I would like to make an appointment with the doctor. I have had a sore throat for four days and since yesterday a fever too. It is not getting better. Would this week still be possible? The afternoon suits me best.",
+      "tips_en": [
+        "On the phone, Dutch says u spreekt met, never ik ben.",
+        "The surgery is u, not je. Getting the register right is itself a marking criterion."
+      ]
+    },
+    {
+      "id": "spreken-008",
+      "type": "video",
+      "tier": "A2",
+      "seconds": 60,
+      "title_nl": "In de winkel",
+      "title_en": "In the shop",
+      "prompt_nl": "De verkoper zegt: \"Deze jas is helaas uitverkocht in maat 40. Wilt u een andere maat passen?\"",
+      "prompt_en": "The shop assistant says: \"This coat is unfortunately sold out in size 40. Would you like to try another size?\"",
+      "min_sentences": 3,
+      "must_cover": [
+        "React to the news",
+        "Say what you want to do now",
+        "Ask one useful question, about another size, another shop or when it is back in"
+      ],
+      "frame": [
+        "O, wat jammer.",
+        "Mag ik maat ___ passen?",
+        "Wanneer komt hij weer binnen?",
+        "Heeft u hem misschien in een andere kleur?"
+      ],
+      "phrases": [
+        {
+          "nl": "Wat jammer",
+          "en": "What a shame"
+        },
+        {
+          "nl": "Mag ik ... passen?",
+          "en": "May I try on ...?"
+        },
+        {
+          "nl": "de paskamer",
+          "en": "the fitting room"
+        },
+        {
+          "nl": "een maatje groter",
+          "en": "one size bigger"
+        },
+        {
+          "nl": "Wanneer komt hij weer binnen?",
+          "en": "When will it be back in stock?"
+        },
+        {
+          "nl": "Kunt u hem bestellen?",
+          "en": "Could you order it?"
+        },
+        {
+          "nl": "Ik denk er nog even over na",
+          "en": "I will think about it"
+        }
+      ],
+      "model_answer_nl": "O, wat jammer. Mag ik maat 42 dan even passen? Als die te groot is, komt u er misschien nog aan in maat 40? Weet u wanneer hij weer binnenkomt? Anders kijk ik volgende week nog een keer.",
+      "model_answer_en": "Oh, what a shame. May I try size 42 then? If that one is too big, might you be getting it in size 40 again? Do you know when it will be back in? Otherwise I will look again next week.",
+      "tips_en": [
+        "Reacting first (o, wat jammer) sounds far more natural than jumping straight to a request.",
+        "A coat is de jas, so you refer back to it with hij, not het."
+      ]
+    },
+    {
+      "id": "spreken-009",
+      "type": "foto",
+      "tier": "A1",
+      "seconds": 60,
+      "title_nl": "In de supermarkt",
+      "title_en": "At the supermarket",
+      "prompt_nl": "Kijk naar de foto. Wat ziet u? Vertel erover.",
+      "prompt_en": "Look at the photo. What do you see? Tell us about it.",
+      "min_sentences": 3,
+      "must_cover": [
+        "What you see in general",
+        "At least two people and what they are doing",
+        "One detail, such as a thing, a colour or the weather",
+        "What you think about it, or what happens next"
+      ],
+      "frame": [
+        "Op de foto zie ik ___.",
+        "Links staat ___ en rechts zie ik ___.",
+        "Een vrouw is ___ aan het ___.",
+        "Ik denk dat ___."
+      ],
+      "phrases": [
+        {
+          "nl": "Op de foto zie ik",
+          "en": "In the photo I see"
+        },
+        {
+          "nl": "links",
+          "en": "on the left"
+        },
+        {
+          "nl": "rechts",
+          "en": "on the right"
+        },
+        {
+          "nl": "op de voorgrond",
+          "en": "in the foreground"
+        },
+        {
+          "nl": "op de achtergrond",
+          "en": "in the background"
+        },
+        {
+          "nl": "Een man is aan het betalen",
+          "en": "A man is paying"
+        },
+        {
+          "nl": "de kassa",
+          "en": "the checkout"
+        },
+        {
+          "nl": "het winkelwagentje",
+          "en": "the shopping trolley"
+        },
+        {
+          "nl": "Ik denk dat het druk is",
+          "en": "I think it is busy"
+        }
+      ],
+      "model_answer_nl": "Op de foto zie ik een supermarkt. Het is druk, want er staan veel mensen in de rij. Op de voorgrond is een vrouw aan het betalen bij de kassa. Zij betaalt met haar pinpas. Links staat een man met een vol winkelwagentje. Hij wacht op zijn beurt. Ik denk dat het zaterdagmiddag is, want dan doen veel Nederlanders boodschappen.",
+      "model_answer_en": "In the photo I see a supermarket. It is busy, because there are a lot of people in the queue. In the foreground a woman is paying at the checkout. She is paying with her debit card. On the left there is a man with a full trolley. He is waiting his turn. I think it is Saturday afternoon, because that is when a lot of Dutch people do their shopping.",
+      "tips_en": [
+        "Op de foto zie ik is the safest opening sentence in the whole exam. Start every picture task with it.",
+        "Position words (links, rechts, op de voorgrond) are the cheapest way to keep talking.",
+        "Aan het + base form is the Dutch way to say someone is doing something right now."
+      ],
+      "scene_en": "A busy supermarket checkout. In front, a woman is paying with a card. On the left, a man waits with a full trolley. Behind them, a queue of about five people. Through the window it is grey and raining."
+    },
+    {
+      "id": "spreken-010",
+      "type": "foto",
+      "tier": "A1",
+      "seconds": 60,
+      "title_nl": "In het park",
+      "title_en": "In the park",
+      "prompt_nl": "Kijk naar de foto. Wat ziet u? Vertel erover.",
+      "prompt_en": "Look at the photo. What do you see? Tell us about it.",
+      "min_sentences": 3,
+      "must_cover": [
+        "What kind of place it is",
+        "At least two people and what they are doing",
+        "The weather or the season",
+        "Whether you would like to be there, and why"
+      ],
+      "frame": [
+        "Op de foto zie ik ___.",
+        "Het is ___ weer.",
+        "Op de achtergrond ___ twee mensen.",
+        "Ik zou daar graag willen zijn, omdat ___."
+      ],
+      "phrases": [
+        {
+          "nl": "het park",
+          "en": "the park"
+        },
+        {
+          "nl": "het gras",
+          "en": "the grass"
+        },
+        {
+          "nl": "de bank",
+          "en": "the bench"
+        },
+        {
+          "nl": "Het is mooi weer",
+          "en": "The weather is nice"
+        },
+        {
+          "nl": "De zon schijnt",
+          "en": "The sun is shining"
+        },
+        {
+          "nl": "spelen",
+          "en": "to play"
+        },
+        {
+          "nl": "de hond uitlaten",
+          "en": "to walk the dog"
+        },
+        {
+          "nl": "Ik zou daar graag willen zijn",
+          "en": "I would like to be there"
+        },
+        {
+          "nl": "Het ziet er gezellig uit",
+          "en": "It looks lovely"
+        }
+      ],
+      "model_answer_nl": "Op de foto zie ik een park. Het is mooi weer, de zon schijnt en de mensen dragen korte kleren. Ik denk dat het zomer is. Op de voorgrond zitten twee vrouwen op het gras. Zij praten en drinken koffie. Op de achtergrond speelt een kind met een bal en een man laat zijn hond uit. Het ziet er heel gezellig uit. Ik zou daar graag willen zijn, omdat ik graag buiten ben.",
+      "model_answer_en": "In the photo I see a park. The weather is nice, the sun is shining and people are wearing light clothes. I think it is summer. In the foreground two women are sitting on the grass. They are talking and drinking coffee. In the background a child is playing with a ball and a man is walking his dog. It looks very pleasant. I would like to be there, because I like being outside.",
+      "tips_en": [
+        "Guessing the season or the time of day from the picture is an easy extra sentence.",
+        "Ik zou graag willen is worth learning as one block. It sounds advanced and costs nothing."
+      ],
+      "scene_en": "A city park on a sunny day. In front, two women sit on the grass with coffee. Behind them a child plays with a ball, and a man walks a dog along the path. The trees are full and green."
+    },
+    {
+      "id": "spreken-011",
+      "type": "foto",
+      "tier": "A2",
+      "seconds": 60,
+      "title_nl": "In de wachtkamer",
+      "title_en": "In the waiting room",
+      "prompt_nl": "Kijk naar de foto. Wat ziet u? Wat denkt u dat er aan de hand is?",
+      "prompt_en": "Look at the photo. What do you see? What do you think is going on?",
+      "min_sentences": 3,
+      "must_cover": [
+        "Where it is",
+        "Who is there and what they are doing",
+        "How the people look or feel",
+        "What you think will happen next"
+      ],
+      "frame": [
+        "Op de foto zie ik ___.",
+        "Er zitten ___ mensen te wachten.",
+        "De vrouw links ziet er ___ uit.",
+        "Ik denk dat ___ gaat ___."
+      ],
+      "phrases": [
+        {
+          "nl": "de wachtkamer",
+          "en": "the waiting room"
+        },
+        {
+          "nl": "de balie",
+          "en": "the reception desk"
+        },
+        {
+          "nl": "Er zitten vier mensen",
+          "en": "There are four people sitting"
+        },
+        {
+          "nl": "Zij ziet er moe uit",
+          "en": "She looks tired"
+        },
+        {
+          "nl": "ongeduldig",
+          "en": "impatient"
+        },
+        {
+          "nl": "Ik denk dat hij zo aan de beurt is",
+          "en": "I think it is his turn soon"
+        },
+        {
+          "nl": "een tijdschrift lezen",
+          "en": "to read a magazine"
+        },
+        {
+          "nl": "op zijn telefoon kijken",
+          "en": "to look at his phone"
+        }
+      ],
+      "model_answer_nl": "Op de foto zie ik een wachtkamer, waarschijnlijk bij de huisarts. Er zitten vier mensen te wachten. Een oudere man leest een tijdschrift en een jonge vrouw kijkt op haar telefoon. De vrouw links ziet er moe uit. Misschien wacht zij al lang. Achter de balie staat de assistente. Zij belt met iemand. Ik denk dat de dokter zo de volgende patiënt roept.",
+      "model_answer_en": "In the photo I see a waiting room, probably at the doctor's. Four people are sitting waiting. An older man is reading a magazine and a young woman is looking at her phone. The woman on the left looks tired. Perhaps she has been waiting a long time. Behind the desk is the assistant. She is on the phone. I think the doctor will call the next patient soon.",
+      "tips_en": [
+        "Er zitten / er staan is how Dutch introduces what is in a scene. Practise it until it is automatic.",
+        "Hedging words (waarschijnlijk, misschien, ik denk dat) are safe and let you guess without being wrong."
+      ],
+      "scene_en": "A doctor's waiting room. Four people sit on chairs along the wall: an older man reading a magazine, a young woman on her phone, a tired-looking woman, and a child with a parent. Behind a reception desk, an assistant is on the telephone."
+    },
+    {
+      "id": "spreken-012",
+      "type": "keuze",
+      "tier": "A2",
+      "seconds": 60,
+      "title_nl": "Fiets of trein?",
+      "title_en": "Bike or train?",
+      "prompt_nl": "U ziet twee foto's: iemand op de fiets en iemand in de trein. Wat kiest u om naar uw werk te gaan? Waarom?",
+      "prompt_en": "You see two photos: someone on a bike and someone on a train. Which do you choose to get to work? Why?",
+      "min_sentences": 3,
+      "must_cover": [
+        "Say clearly which one you choose",
+        "Give at least two reasons",
+        "Say something about the other option as well",
+        "Finish with a conclusion"
+      ],
+      "frame": [
+        "Ik kies voor ___.",
+        "Ten eerste, ___. Ten tweede, ___.",
+        "De trein is ook goed, maar ___.",
+        "Daarom ga ik liever met ___."
+      ],
+      "phrases": [
+        {
+          "nl": "Ik kies voor",
+          "en": "I choose"
+        },
+        {
+          "nl": "Ik ga liever met",
+          "en": "I prefer to go by"
+        },
+        {
+          "nl": "Ten eerste",
+          "en": "Firstly"
+        },
+        {
+          "nl": "Ten tweede",
+          "en": "Secondly"
+        },
+        {
+          "nl": "goedkoper",
+          "en": "cheaper"
+        },
+        {
+          "nl": "sneller",
+          "en": "faster"
+        },
+        {
+          "nl": "gezonder",
+          "en": "healthier"
+        },
+        {
+          "nl": "Aan de andere kant",
+          "en": "On the other hand"
+        },
+        {
+          "nl": "Daarom",
+          "en": "That is why"
+        }
+      ],
+      "model_answer_nl": "Ik kies voor de fiets. Ten eerste is fietsen goedkoper, want ik hoef geen kaartje te kopen. Ten tweede is het gezonder, en ik ben meteen een half uur buiten. De trein is ook goed, vooral als het hard regent of als ik ver moet reizen. Maar mijn werk is dichtbij. Daarom ga ik liever met de fiets.",
+      "model_answer_en": "I choose the bike. Firstly, cycling is cheaper, because I do not have to buy a ticket. Secondly, it is healthier, and I am outside for half an hour straight away. The train is good too, especially if it is raining hard or if I have to travel far. But my work is close by. That is why I prefer the bike.",
+      "tips_en": [
+        "Ten eerste and ten tweede are worth a mark for structure on their own. Use them every time.",
+        "Mentioning the option you did not pick shows range. Do not just ignore it.",
+        "Comparatives are easy here: goedkoper, sneller, gezonder, makkelijker."
+      ],
+      "options": [
+        "Met de fiets naar het werk",
+        "Met de trein naar het werk"
+      ]
+    },
+    {
+      "id": "spreken-013",
+      "type": "keuze",
+      "tier": "A2",
+      "seconds": 60,
+      "title_nl": "Thuis eten of uit eten?",
+      "title_en": "Eat at home or eat out?",
+      "prompt_nl": "U ziet twee foto's: een verjaardag thuis en een verjaardag in een restaurant. Wat kiest u? Waarom?",
+      "prompt_en": "You see two photos: a birthday at home and a birthday in a restaurant. Which do you choose? Why?",
+      "min_sentences": 3,
+      "must_cover": [
+        "Say clearly which one you choose",
+        "Give at least two reasons",
+        "Say something about the other option as well",
+        "Finish with a conclusion"
+      ],
+      "frame": [
+        "Ik zou kiezen voor ___.",
+        "Ten eerste, ___. Ten tweede, ___.",
+        "Uit eten is ook leuk, maar ___.",
+        "Daarom vier ik mijn verjaardag liever ___."
+      ],
+      "phrases": [
+        {
+          "nl": "Ik zou kiezen voor",
+          "en": "I would choose"
+        },
+        {
+          "nl": "de verjaardag vieren",
+          "en": "to celebrate the birthday"
+        },
+        {
+          "nl": "gezellig",
+          "en": "cosy, sociable"
+        },
+        {
+          "nl": "Het is goedkoper",
+          "en": "It is cheaper"
+        },
+        {
+          "nl": "Je hoeft niet af te wassen",
+          "en": "You do not have to do the washing up"
+        },
+        {
+          "nl": "meer ruimte",
+          "en": "more room"
+        },
+        {
+          "nl": "Aan de andere kant",
+          "en": "On the other hand"
+        },
+        {
+          "nl": "Het hangt ervan af",
+          "en": "It depends"
+        }
+      ],
+      "model_answer_nl": "Ik zou kiezen voor een verjaardag thuis. Ten eerste is het veel goedkoper, zeker met veel gasten. Ten tweede is het gezelliger, want je kunt zelf de muziek kiezen en zo lang blijven als je wilt. In een restaurant is het natuurlijk makkelijker, want je hoeft niet te koken en niet af te wassen. Maar ik kook graag voor mijn vrienden. Daarom vier ik mijn verjaardag liever thuis.",
+      "model_answer_en": "I would choose a birthday at home. Firstly it is much cheaper, certainly with a lot of guests. Secondly it is cosier, because you can choose the music yourself and stay as long as you like. In a restaurant it is of course easier, since you do not have to cook or wash up. But I like cooking for my friends. That is why I prefer to celebrate my birthday at home.",
+      "tips_en": [
+        "Gezellig has no English equivalent and Dutch examiners hear it as natural. Use it.",
+        "Je as a general you (je hoeft niet af te wassen) is normal in spoken Dutch and sounds fluent."
+      ],
+      "options": [
+        "Een verjaardag thuis",
+        "Een verjaardag in een restaurant"
+      ]
+    },
+    {
+      "id": "spreken-014",
+      "type": "keuze",
+      "tier": "A2",
+      "seconds": 60,
+      "title_nl": "Welke cursus?",
+      "title_en": "Which course?",
+      "prompt_nl": "U wilt een cursus Nederlands volgen. Er is een cursus op dinsdagavond en een cursus op zaterdagochtend. Wat kiest u? Waarom?",
+      "prompt_en": "You want to take a Dutch course. There is a course on Tuesday evening and one on Saturday morning. Which do you choose? Why?",
+      "min_sentences": 3,
+      "must_cover": [
+        "Say clearly which one you choose",
+        "Give at least two reasons, linked to your own week",
+        "Say what the problem with the other one would be",
+        "Finish with a conclusion"
+      ],
+      "frame": [
+        "Ik kies de cursus op ___.",
+        "Dat komt mij beter uit, omdat ___.",
+        "Op ___ kan ik niet, want ___.",
+        "Daarom is ___ voor mij de beste keuze."
+      ],
+      "phrases": [
+        {
+          "nl": "Dat komt mij beter uit",
+          "en": "That suits me better"
+        },
+        {
+          "nl": "Ik ben dan vrij",
+          "en": "I am free then"
+        },
+        {
+          "nl": "Na een werkdag ben ik moe",
+          "en": "After a work day I am tired"
+        },
+        {
+          "nl": "Ik moet mijn kinderen ophalen",
+          "en": "I have to pick up my children"
+        },
+        {
+          "nl": "overdag",
+          "en": "during the day"
+        },
+        {
+          "nl": "'s avonds",
+          "en": "in the evening"
+        },
+        {
+          "nl": "Ik kan me beter concentreren",
+          "en": "I can concentrate better"
+        },
+        {
+          "nl": "de beste keuze",
+          "en": "the best choice"
+        }
+      ],
+      "model_answer_nl": "Ik kies de cursus op zaterdagochtend. Dat komt mij beter uit, omdat ik doordeweeks tot zes uur werk. Bovendien ben ik 's ochtends fris en kan ik me dan beter concentreren. Op dinsdagavond kan ik eigenlijk niet, want dan moet ik mijn dochter van sport halen, en na een lange werkdag ben ik ook moe. Daarom is zaterdag voor mij de beste keuze.",
+      "model_answer_en": "I choose the Saturday morning course. That suits me better, because during the week I work until six. What is more, I am fresh in the morning and can concentrate better then. Tuesday evening does not really work for me, because then I have to pick my daughter up from sport, and after a long day at work I am tired too. That is why Saturday is the best choice for me.",
+      "tips_en": [
+        "Reasons about your own life are easier to say under pressure than abstract ones.",
+        "Bovendien (what is more) is a strong linking word that examiners notice."
+      ],
+      "options": [
+        "Cursus op dinsdagavond",
+        "Cursus op zaterdagochtend"
+      ]
+    },
+    {
+      "id": "spreken-015",
+      "type": "verhaal",
+      "tier": "A2",
+      "seconds": 90,
+      "title_nl": "De bus gemist",
+      "title_en": "Missing the bus",
+      "prompt_nl": "U ziet drie plaatjes. Vertel het verhaal.",
+      "prompt_en": "You see three pictures. Tell the story.",
+      "min_sentences": 6,
+      "must_cover": [
+        "What happens in the first picture",
+        "What happens in the second picture",
+        "What happens in the third picture",
+        "Link the three with time words",
+        "Use the past tense"
+      ],
+      "frame": [
+        "Op het eerste plaatje ___.",
+        "Daarna / Vervolgens ___.",
+        "Op het laatste plaatje ___.",
+        "Uiteindelijk ___."
+      ],
+      "phrases": [
+        {
+          "nl": "Op het eerste plaatje",
+          "en": "In the first picture"
+        },
+        {
+          "nl": "Daarna",
+          "en": "After that"
+        },
+        {
+          "nl": "Vervolgens",
+          "en": "Next"
+        },
+        {
+          "nl": "Uiteindelijk",
+          "en": "In the end"
+        },
+        {
+          "nl": "Ik ben te laat opgestaan",
+          "en": "I got up too late"
+        },
+        {
+          "nl": "Ik heb de bus gemist",
+          "en": "I missed the bus"
+        },
+        {
+          "nl": "Ik ben naar de bushalte gerend",
+          "en": "I ran to the bus stop"
+        },
+        {
+          "nl": "Ik kwam te laat op mijn werk",
+          "en": "I arrived late at work"
+        },
+        {
+          "nl": "Gelukkig",
+          "en": "Luckily"
+        }
+      ],
+      "model_answer_nl": "Op het eerste plaatje wordt een man wakker. Hij kijkt geschrokken naar de wekker, want het is al kwart over acht. Hij is te laat opgestaan. Daarna rent hij naar de bushalte, met zijn jas nog in zijn hand. Maar hij is net te laat: op het tweede plaatje rijdt de bus al weg. Op het laatste plaatje staat hij bij zijn werk en kijkt zijn baas op de klok. De man legt uit wat er gebeurd is. Uiteindelijk is het gelukkig geen probleem, en gaat hij snel aan het werk.",
+      "model_answer_en": "In the first picture a man wakes up. He looks at the alarm clock in shock, because it is already quarter past eight. He got up too late. After that he runs to the bus stop, with his coat still in his hand. But he is just too late: in the second picture the bus is already driving away. In the last picture he is at his work and his boss is looking at the clock. The man explains what happened. In the end, luckily, it is not a problem, and he gets to work quickly.",
+      "tips_en": [
+        "You get ninety seconds here, more than anywhere else. Plan to use three or four sentences per picture.",
+        "The sequencing words are what the marker looks for: eerst, daarna, vervolgens, uiteindelijk.",
+        "Perfect tense is enough at A2: ik heb gemist, hij is gerend. You do not need the imperfect."
+      ],
+      "panels": [
+        "A man wakes up in bed and stares at the alarm clock. It reads 08:15. He looks shocked.",
+        "The same man runs down the street towards a bus stop, coat in hand. The bus is already pulling away.",
+        "He arrives at his workplace. His boss is standing by the door, looking at the clock on the wall."
+      ]
+    },
+    {
+      "id": "spreken-016",
+      "type": "verhaal",
+      "tier": "A2",
+      "seconds": 90,
+      "title_nl": "Het pakketje",
+      "title_en": "The parcel",
+      "prompt_nl": "U ziet drie plaatjes. Vertel het verhaal.",
+      "prompt_en": "You see three pictures. Tell the story.",
+      "min_sentences": 6,
+      "must_cover": [
+        "What happens in the first picture",
+        "What happens in the second picture",
+        "What happens in the third picture",
+        "Link the three with time words",
+        "Use the past tense"
+      ],
+      "frame": [
+        "Op het eerste plaatje ___.",
+        "Daarna / Vervolgens ___.",
+        "Op het derde plaatje ___.",
+        "Uiteindelijk ___."
+      ],
+      "phrases": [
+        {
+          "nl": "de bezorger",
+          "en": "the delivery driver"
+        },
+        {
+          "nl": "het pakketje",
+          "en": "the parcel"
+        },
+        {
+          "nl": "Er was niemand thuis",
+          "en": "Nobody was home"
+        },
+        {
+          "nl": "bij de buren afgeven",
+          "en": "to leave with the neighbours"
+        },
+        {
+          "nl": "een briefje in de bus doen",
+          "en": "to put a note through the letterbox"
+        },
+        {
+          "nl": "aanbellen",
+          "en": "to ring the doorbell"
+        },
+        {
+          "nl": "ophalen",
+          "en": "to collect"
+        },
+        {
+          "nl": "Gelukkig",
+          "en": "Luckily"
+        },
+        {
+          "nl": "blij",
+          "en": "happy"
+        }
+      ],
+      "model_answer_nl": "Op het eerste plaatje komt een bezorger met een pakketje bij een huis. Hij belt aan, maar er is niemand thuis. De gordijnen zijn dicht. Daarna gaat hij naar de buren. De buurvrouw doet open en neemt het pakketje aan. De bezorger doet ook een briefje in de brievenbus. Op het derde plaatje komt de vrouw thuis van haar werk. Zij vindt het briefje en leest dat het pakketje bij de buren ligt. Uiteindelijk haalt zij het op en is zij blij, want zij heeft lang op dat pakketje gewacht.",
+      "model_answer_en": "In the first picture a delivery driver arrives at a house with a parcel. He rings the bell, but nobody is home. The curtains are closed. Then he goes to the neighbours. The neighbour opens the door and takes the parcel. The driver also puts a note through the letterbox. In the third picture the woman comes home from work. She finds the note and reads that the parcel is at the neighbours'. In the end she collects it and is happy, because she had been waiting a long time for that parcel.",
+      "tips_en": [
+        "This is an everyday Dutch situation, so the vocabulary is worth knowing anyway.",
+        "You can tell the story in the present tense as long as you are consistent. Mixing tenses costs more than choosing the simpler one.",
+        "Finish with how someone felt (zij is blij). It closes the story properly."
+      ],
+      "panels": [
+        "A delivery driver rings the doorbell of a house, holding a parcel. The curtains are closed and nobody answers.",
+        "The driver hands the parcel to a neighbour next door, and posts a note through the first house's letterbox.",
+        "A woman comes home from work, finds the note on the mat, and reads it."
+      ]
+    }
+  ]
+}

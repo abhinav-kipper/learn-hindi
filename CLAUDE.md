@@ -53,6 +53,7 @@ content/dutch/foundations/ → 14 Dutch foundation JSONs (8 A1 + 6 A2)
 content/dutch/knm.json  → 132 KNM exam questions (bilingual, all 8 statutory themes)
 content/dutch/lezen.json → 10 Lezen B1-prep reading texts (bilingual, 40 MCQs)
 content/dutch/schrijven.json → 12 Schrijven (writing) tasks w/ marking checklists + model answers
+content/dutch/spreken.json → 16 Spreken (speaking) tasks w/ sentence frames, phrases + model answers
 content/dutch/pronunciation-course.json → 8-stage from-zero "Sounds" ladder (alphabet→linking)
 content/dutch/cheatsheet/    → 5 grouped concept-cheatsheet JSONs (25 topics, 214 drill questions)
 content/dutch/vocabulary.json → 208 Dutch words in 12 categories (nouns carry de/het)
@@ -209,6 +210,8 @@ shadows anywhere.
 | `/dutch/luisteren/mock` | 25-min timed Listening drill (audio-only, no transcript). 5 random clips × 4 Qs = 20 questions. Live timer pill pink under 5 min. Auto-advance 1.5s. Pass ≥16/20 → `luisterMockPassed` + Confetti. Save to `dutch-luisteren-mock-attempts`. |
 | `/dutch/schrijven` | Schrijven (Writing) module home. "The real paper" butter card stating the format (4 tasks, ~40 min, marked on coverage), orange continue/start CTA, then the 12 tasks grouped under the paper's four task types (Form / Short note / Email / Free writing), each row w/ tier chip + green ✓ when done. |
 | `/dutch/schrijven/[taskId]` | One writing task. Dutch prompt (w/ 🔊) + English below it, then the **marking checklist up front** ("your answer must …") because that is what the real paper scores. Forms render one labelled input per field; the other three types a textarea with a live sentence count and a "long enough" gate on the check button. "Check my writing" → `/api/schrijven-check` returns a band (not yet / nearly / pass / strong), a verdict, one strength, per-checklist-point ✓/✗, up to 5 fixes (strikethrough → green) and the learner's **own** answer corrected. Drafts autosave per task. A model answer (NL + EN, 🔊) is always available without the AI, so the page is useful offline. "Mark as done" persists. |
+| `/dutch/spreken` | Spreken (Speaking) module home. "The real paper" butter card (16 spoken answers, ~35 min, no second try), a mint card warning the mic is needed and stating plainly that picture tasks describe the scene in words rather than showing a photo, continue CTA, then the 16 tasks grouped under the paper's five task types (About you / Someone speaks to you / Describe a picture / Choose and explain / Tell a story). Each row shows its seconds, tier, best band and a green ✓ when done. |
+| `/dutch/spreken/[taskId]` | One speaking task. Dutch prompt (w/ 🔊) + English, then the scene / two options / three panels depending on type, then **the sentence frame before you record** (each line 🔊-able, with a fold of phrases to slot in) and the marking checklist. 🎙 records via `MediaRecorder` with a live countdown that **cuts you off at the task's real time limit**. On stop the clip is transcoded to WAV and posted to `/api/spreken-check`, which returns **a transcript of what was actually heard** (the headline output), per-point ✓/✗, a band, a verdict, a strength, separate fluency + pronunciation notes and up to 4 fixes. An `<audio>` player lets you hear yourself back, and survives a failed check. Model answer + tips always available without the network. Best band per task is kept, never downgraded. |
 | `/dutch/sounds` | "Sounds" module home (Dutch from-zero pronunciation). Orange header w/ Mr. Stroopwafel, `N/8 stages` count, and the 8-stage ladder as Stickers: complete (green ✓), unlocked (tappable + progress bar), locked (dimmed + 🔒). Rolling unlock — finishing a stage opens the next two. |
 | `/dutch/sounds/[stageId]` | Single pronunciation stage. Mr. Stroopwafel intro bubble + sound-card deck (grapheme + plain hint + anchor word/gloss + 🔊 Google TTS + got-it self-check) + optional minimal-pair ear-quiz + optional blend builder (word assembled part-by-part, each playable). On completion → Confetti + `pronStageDone` Chaina moment + "next stage" CTA. |
 | `/dutch/cheatsheet` | Concept-cheatsheet hub. Themed header band + "topics passed" mastery bar + orange "Mixed review" CTA (15 questions across every topic) + 5 collapsible group Stickers (First contact / Core grammar / People and description / Building sentences / Time and daily life), each folding out its topic rows. Each row carries a green `✓ n/n` best-score badge and a **covered check circle**: tap it (or swipe the row right) to mark the topic as covered, swipe left or tap again to clear. |
@@ -247,6 +250,8 @@ shadows anywhere.
 | `dutch/knm.ts` | KNM loader + `drawDrillSet(30)` (Fisher-Yates) + `scoreAttempt()` (80% pass) + attempt history (capped at 50) + per-question studied tracking. TDD'd, 12 tests. |
 | `dutch/lezen.ts` | Same shape as `knm.ts` for the Lezen module — `drawMockSet(5)`, 20-Q scoring, 25-min `MOCK_TIMER_MS` constant, studied set. TDD'd, 12 tests. |
 | `dutch/schrijven.ts` | Schrijven (writing) loader + progress + drafts (TDD'd, 20 tests). `getSchrijfTasks/getTaskById/getTasksByType/getNextTask`, `TASK_TYPES` (the paper's four, in exam order), `EXAM_TASK_COUNT`/`EXAM_MINUTES`, done set (`markTaskDone`/`isTaskDone`/`getDoneCount`), per-task drafts (`saveDraft`/`getDraft`, forms stored as a field map), and the length helpers `countWords`/`countSentences`/`isLongEnough` that gate the check button. The tests double as content gates: all four task types present, every task's checklist ≥3 points, forms ≥5 fields, writing tasks `min_sentences` ≥3, ids unique. |
+| `dutch/spreken.ts` | Spreken (speaking) loader + progress + best-band history (TDD'd, 31 tests, which double as content gates). `getSpreekTasks/getTaskById/getTasksByType/getNextTask`, `TASK_TYPES` (the paper's five), `EXAM_TASK_COUNT` (16) / `EXAM_MINUTES` (35), `MIN_ANSWER_SECONDS`, done set, and `recordBand`/`getBestBand`/`getPassedCount` where `BANDS` is ranked so **a later worse attempt never erases a better one**. Content gates assert every task has a frame containing a `___` gap, ≥5 phrases, ≥3 checklist points, a model answer in both languages, a realistic 45 to 90s limit, and that story tasks have 3 panels, picture tasks a `scene_en` and choice tasks exactly 2 options. |
+| `audio-recorder.ts` (in `lib/`) | Shared browser audio capture for the pronunciation coach and Spreken. `pickMime`, `isRecordingSupported`, `blobToBase64`, `toMono`, `encodeWav`, `blobToWav`, `wavDurationSeconds`. TDD'd, 16 tests on the pure encoder. **Why it exists:** Gemini rejects the webm/mp4 MediaRecorder produces, so audio is re-encoded to 16 kHz mono WAV in the browser; and this is the only capture path that works on an iPhone, because the Web Speech API in `voice-button.tsx` is deliberately disabled on iOS Safari and iOS PWAs where it exists but does not function. |
 | `dutch/exam-target.ts` | Exam level the learner is sitting, `'a2' \| 'b1'`, **default a2**. `targetLabel`, `levelsForTarget`, `isBeyondTarget(level, target)`. Read by the Dutch home (goal banner, path, exam-scenario badges) and by the Lezen/Luisteren tier lists, so above-target content is dimmed and relabelled rather than hidden. Changeable in the welcome modal **and in Settings**. TDD'd, 12 tests. |
 | `dutch/level-map.ts` | Lookup table tagging every Dutch content ID with `A1` / `A2` / `B1`. Powers the 3-stage progress bars on the Dutch home. **Every key must be the exact `id` field of the content JSON, which is `dutch-` prefixed for all Dutch units.** A bare key never matches, so `getLevel` silently returns the `A1` default and the stage bar counts items that can never complete. Fixed for lessons 2026-05-26 and for foundations 2026-11-07 (7 foundation keys were still bare). Guarded by `__tests__/lib/dutch-content-ids.test.ts` + `lib/dutch/level-map.test.ts`. |
 | `dutch/id-migration.ts` | One-time localStorage remap for the 2026-11-07 Dutch foundation ID rename (bare ids → `dutch-` prefixed). Rewrites `dutch-progress` (completedLessons + lessonCompletedAt), `dutch-phrase-progress`, `dutch-quiz-scores` and `dutch-last-active-lesson`, then sets the flag `dutch-foundation-id-migration-v1`. Called once from `layout-shell.tsx` on mount. Idempotent, Dutch-prefix only, never throws. TDD'd, 8 tests. |
@@ -355,6 +360,8 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-luisteren-mock-attempts` — same shape as the Lezen attempts, plus `clip_ids: string[]`.
 - `dutch-schrijven-done` — JSON array of Schrijven task ids marked done.
 - `dutch-schrijven-drafts` — `{ [taskId]: string }`. Writing is effortful, so every keystroke is autosaved and restored on return. Form tasks store a JSON-stringified field-label → value map in that same string slot; the other three types store the raw text.
+- `dutch-spreken-done` — JSON array of Spreken task ids marked done.
+- `dutch-spreken-scores` — `{ [taskId]: 'not yet' | 'nearly' | 'pass' | 'strong' }`, the **best** band ever reached on that task. `recordBand` compares ranks before writing, so one bad recording never wipes out a good one.
 - `dutch-pron-cards-done` — JSON array of "Sounds" card ids marked got-it (blend words tracked as `blend:<whole>`).
 - `dutch-pron-earquiz-done` — JSON array of "Sounds" stage ids whose ear-quiz passed. Stage completion + the rolling unlock are derived from these two sets.
 - `dutch-cheatsheet-studied` — JSON array of cheatsheet topic ids marked as read.
@@ -362,6 +369,58 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-define-cache` — `{ [word]: Definition }` from `/api/define`, capped at 300, so tapped words resolve instantly and keep working offline once seen.
 
 ### Recent feature work log
+
+**2026-11-08 — Spreken (A2 speaking): the last exam paper**
+
+All five papers are now covered. Speaking was the one with no practice of any
+kind, and the one candidates fail most.
+
+*What the paper is.* Checked before building: **16 spoken answers in about 35
+minutes**, on a computer. Since 1 March 2025 the multiple-choice items are gone,
+so every answer is spoken. Roughly a minute per task, recorded, **no second
+attempt**. Task types: short personal questions, a video question someone asks
+you, describing one picture, choosing between two with a reason, and a
+three-picture story (the longest, at 90 seconds). Timings and the grouping come
+from exam-prep publishers; DUO is the authority if they change.
+
+*The design decision that follows from it.* Under a one-minute timer with no
+retry, what decides the mark is not how much grammar you know, it is whether you
+have a sentence **frame** ready to fill in without thinking. So every task
+carries a frame plus the chunks to slot into it, and both are shown **before**
+the learner records, not as feedback afterwards. 16 tasks in the paper's own
+proportions (4 warm-up, 4 video, 3 picture, 3 choice, 2 story).
+
+*The dossier was half right about the backend.* `/api/pronounce` proved the
+audio path, but `components/voice-button.tsx` (Web Speech STT) is **deliberately
+disabled on iOS Safari and on an installed iOS PWA**, which is exactly where
+this gets used. So Spreken records with `MediaRecorder` and transcribes
+server-side instead. The capture pipeline that was inline in `PronounceButton`
+is now `lib/audio-recorder.ts`, shared by both and unit tested.
+
+- **Marker** `app/api/spreken-check/route.ts` sends the audio to Gemini, which
+  is multimodal and hears it directly, so there is no separate speech-to-text
+  step. The headline field is **`transcript`**, specified as exactly what was
+  heard and explicitly never tidied up: alone with no teacher, that is the only
+  way to tell "I said it wrong" from "I said it unclearly". It also returns
+  per-point coverage, a band, a strength, and **separate fluency and
+  pronunciation notes**, because delivery is marked separately from grammar.
+  An accent is told not to lower the band. A silent or non-Dutch answer is
+  forced to zero coverage server-side whatever else the model returned.
+- **Hearing yourself back** survives a failed check, since it costs nothing and
+  is half of what actually fixes speaking.
+- Best band per task is kept and **never downgraded**, so one bad recording does
+  not erase a good day.
+
+Verified in a browser with 48 checks over all 16 tasks. The container has no
+audio device, so `--use-fake-device-for-media-capture` has nothing to attach to
+and getUserMedia throws NotFoundError; the harness synthesizes a MediaStream
+from an oscillator instead, which still exercises MediaRecorder, the WAV
+transcode and the upload for real. Checks covered: every task's frame, checklist
+and time limit; recording starting and counting down; the under-2-second guard
+firing; the marker UI against a stubbed response (transcript, band, fluency,
+pronunciation, fixes, per-point ✓/✗); a worse later attempt not erasing a better
+best; and both failure paths degrading to self-marking. 584 tests, four lints
+and the prod build clean.
 
 **2026-11-07 (later still) — Schrijven (A2 writing) module**
 
@@ -946,7 +1005,8 @@ Still open:
 - **No XP / leveling arc** — `phrasesLearned` is just a stat tile, no progression visual.
 - **No audio assets** — only browser TTS. Native recordings would matter most for Phase 3 Luisteren (Dutch listening drills).
 - **Conjugation drill is verb-by-verb** — no mixed-verb sets, no spaced-repetition wiring.
-- **Dutch Phase 3-6 still pending:** ~~Luisteren (Listening)~~ shipped 2026-05-27 (TTS-based, full Lezen parity). ~~Schrijven (Writing)~~ shipped 2026-11-07 (12 tasks, checklist-first marking, AI marker w/ offline fallback). **Spreken (Speaking)** and a full **mock exam** still pending — each gets its own spec → plan → ship cycle. Spreken is the last uncovered paper and needs STT (`nl-NL`) plus a decision on how to score a spoken answer.
+- ~~**Dutch Phase 3-6**~~ **All five exam papers are now covered.** Luisteren shipped 2026-05-27 (TTS-based, full Lezen parity), Schrijven 2026-11-07 (12 tasks, checklist-first marking), Spreken 2026-11-08 (16 tasks, frame-first, audio marked by Gemini). What remains on the Dutch track is **a full mock-exam day** (all five papers end to end at real length) and **wiring Dutch into the SM-2 SRS**, which is now the biggest cheap win since there is a lot of content to retain and no review queue over it.
+- **Mock lengths are not yet calibrated to the real papers.** Lezen and Luisteren drill 20 questions against a real ~25, KNM 30 against a real 40, and Spreken has no timed 16-task run. Fix the lengths before building the mock-exam day on top of them.
 - **OV-chipkaart references in Lezen text 007** — system is being phased out in favor of OVpay (2023-2025). Naar Nederland A2 still uses this material so the audit flagged but didn't auto-rewrite.
 - **KNM date-anchored facts** ("AOW age 67 in 2026", "eigen risico €385", etc.) drift out of date annually. Worth a scheduled re-audit.
 

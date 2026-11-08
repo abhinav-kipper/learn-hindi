@@ -23,6 +23,7 @@ import { SearchOverlay } from '@/components/search-overlay'
 import { initBaseline, isInitialized, getUnseenIds, hasBeenSeen } from '@/lib/seen-lessons'
 import { getLearnedCount, getKnmQuestions } from '@/lib/dutch/knm'
 import { getSchrijfTasks, getDoneCount as getSchrijvenDone } from '@/lib/dutch/schrijven'
+import { getSpreekTasks, getDoneCount as getSprekenDone } from '@/lib/dutch/spreken'
 import { getStudiedCount as getLezenStudiedCount } from '@/lib/dutch/lezen'
 import { getOverallProgress as getCheatsheetProgress } from '@/lib/dutch/cheatsheet'
 import { getStudiedCount as getLuisterStudiedCount } from '@/lib/dutch/luisteren'
@@ -233,10 +234,12 @@ export default function Home() {
 
   const [dutchKnmLearned, setDutchKnmLearned] = useState(0)
   const [dutchSchrijvenDone, setDutchSchrijvenDone] = useState(0)
+  const [dutchSprekenDone, setDutchSprekenDone] = useState(0)
   useEffect(() => {
     if (language === 'dutch') {
       setDutchKnmLearned(getLearnedCount())
       setDutchSchrijvenDone(getSchrijvenDone())
+      setDutchSprekenDone(getSprekenDone())
     }
   }, [language])
 
@@ -875,7 +878,14 @@ export default function Home() {
                   live
                   onClick={() => router.push('/dutch/schrijven')}
                 />
-                <SkillCard label="Speaking"  subtitle="Spreken"   subDutch=""  status="soon" />
+                <SkillCard
+                  label="Speaking"
+                  subtitle="Spreken"
+                  subDutch=""
+                  status={`${dutchSprekenDone}/${getSpreekTasks().length} done`}
+                  live
+                  onClick={() => router.push('/dutch/spreken')}
+                />
               </div>
             </div>
 

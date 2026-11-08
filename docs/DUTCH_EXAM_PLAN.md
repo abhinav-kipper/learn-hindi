@@ -30,7 +30,7 @@ commercial and disagree on timings and question counts.
 | Lezen (reading) | ~25 questions, computer | live, thin at A2 |
 | Luisteren (listening) | ~25 questions, computer | live, TTS audio only |
 | Schrijven (writing) | ~40 min, pen and paper, 4 tasks: a form, a short note, an email, a short free text | live (shipped 2026-11-07), 12 tasks |
-| **Spreken (speaking)** | ~16 recorded tasks, ~35 min, 1 min each | **missing** |
+| Spreken (speaking) | 16 recorded tasks, ~35 min, about 1 min each, no retry | live (shipped 2026-11-08), 16 tasks |
 | KNM | 40 questions, 45 min, 8 statutory themes | live, strongest module |
 
 The eight statutory KNM themes: Werk en inkomen, Omgangsvormen/waarden en
@@ -93,21 +93,34 @@ Re-opening these without reason wastes a session.
 
 ## 6. Roadmap, in the order a teacher would choose
 
-The principle: **the exam is won on the two papers the app does not have.**
-Reading, listening and KNM are recognition tasks and the app already trains
-them. Writing and speaking are production and they are 40% of the exam.
-**Writing shipped on 2026-11-07**, so speaking is now the only paper with no
-practice of any kind, and therefore the single most valuable thing left to build.
+The old principle was "the exam is won on the two papers the app does not
+have". **Both of those now exist**: writing shipped 2026-11-07 and speaking
+2026-11-08, so all five papers are covered. The principle for what is left is
+different: **the app can now teach every paper, but it cannot yet tell you
+whether you are ready, and it does not make you revisit anything.**
 
 ### Tier 1 — decides pass or fail
 
-**1. Spreken (speaking).** The paper most people fail. You get about a minute
-per task, recorded, no retry, so what matters is automatic sentence frames
-rather than grammar knowledge. Four task types to build: a video question,
-describing one picture, choosing between two pictures, and a three-picture
-story. **The backend already exists**: `components/voice-button.tsx` takes a
-`locale` and documents `nl-NL`, and `app/api/pronounce/route.ts` already turns
-recorded audio into scored coaching. This is wiring plus prompts, not greenfield.
+**1. Spreken (speaking).** ✅ **Shipped 2026-11-08.** `/dutch/spreken`, 16 tasks
+across the paper's five types (4 warm-up, 4 video, 3 picture, 3 choice, 2 story).
+
+Two things to keep in mind before changing it:
+
+- **The frame is the feature.** You get about a minute, recorded, with no retry,
+  so what decides the mark is having a sentence pattern ready, not knowing more
+  grammar. The frame and its phrases are shown *before* recording on purpose.
+  Do not move them into the feedback.
+- **Web Speech STT does not work on an iPhone.** `components/voice-button.tsx`
+  disables itself on iOS Safari and on an installed iOS PWA, which is where
+  this app is actually used. Spreken therefore records with `MediaRecorder`
+  (`lib/audio-recorder.ts`) and lets Gemini hear the audio directly. Anything
+  new that needs the learner's voice must take the same path, not the Web
+  Speech one.
+
+The most valuable thing it returns is the **transcript**: practising alone, you
+otherwise cannot tell a wrong sentence from a correct one said unclearly.
+
+Still worth adding: a timed 16-task run that mirrors the real paper end to end.
 
 **2. Schrijven (writing).** ✅ **Shipped 2026-11-07.** `/dutch/schrijven`, 12 tasks
 in the paper's own proportions (3 forms, 3 short notes, 4 emails, 2 free texts).
@@ -131,6 +144,10 @@ paper end to end, which is the one thing the module does not yet rehearse.
 
 ### Tier 2 — multiplies what is already built
 
+With every paper now covered, these are no longer second priority: **item 3 is
+the top of the whole list.** There is a great deal of Dutch content and nothing
+brings any of it back for review.
+
 **3. Wire Dutch into the spaced-repetition engine.** `lib/review.ts` is a full
 SM-2 implementation already powering the Hindi daily review. Feeding Dutch
 vocabulary, missed KNM questions and weak cheatsheet topics into one daily
@@ -143,8 +160,11 @@ counts, would turn scattered progress into one decision. High motivational
 value for a learner with a deadline, low build cost.
 
 **5. Calibrate the mocks, then add a full mock-exam day.** Current drills are
-20/20/30 questions against a real ~25/~25/40. Fix the lengths first, then allow
-sitting all five papers back to back under time.
+20/20/30 questions against a real ~25/~25/40, and neither Schrijven nor Spreken
+has a timed full-paper run at all (4 tasks in 40 minutes, 16 tasks in 35).
+Fix the lengths first, then allow sitting all five papers back to back under
+time. Now that every paper exists, this is what turns the app into a real
+rehearsal rather than a set of exercises.
 
 ### Tier 3 — content depth
 

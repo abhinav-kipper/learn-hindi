@@ -3,64 +3,13 @@
 import { useEffect, useRef, useState } from 'react'
 import { Sticker, COLORS, FONTS, BORDER, SHADOW, useTheme } from '@/components/design'
 import { playSound } from '@/lib/sounds'
+import { pickMime, blobToBase64, blobToWav, isRecordingSupported } from '@/lib/audio-recorder'
 
 const W = '#fff' // @design-allow: white literal
 const MAX_MS = 5000
 
 type Feedback = { score: number; verdict: string; good: string; fix: string; close: boolean }
 type Phase = 'idle' | 'recording' | 'scoring' | 'result' | 'error'
-
-function pickMime(): string {
-  const types = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4', 'audio/aac', 'audio/ogg']
-  if (typeof MediaRecorder === 'undefined') return ''
-  return types.find((t) => { try { return MediaRecorder.isTypeSupported(t) } catch { return false } }) || ''
-}
-
-const blobToBase64 = (blob: Blob): Promise<string> =>
-  new Promise((resolve, reject) => {
-    const r = new FileReader()
-    r.onloadend = () => resolve(String(r.result).split(',')[1] ?? '')
-    r.onerror = reject
-    r.readAsDataURL(blob)
-  })
-
-/** Decode the recorded blob (webm/mp4 — formats Gemini won't accept) and
- *  re-encode to 16 kHz mono 16-bit WAV, which the Gemini audio API does accept. */
-async function blobToWav(blob: Blob): Promise<Blob> {
-  const AC = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext
-  const ctx = new AC()
-  try {
-    const audio = await ctx.decodeAudioData(await blob.arrayBuffer())
-    const sr = audio.sampleRate
-    const ch0 = audio.getChannelData(0)
-    let mono = ch0
-    if (audio.numberOfChannels > 1) {
-      const ch1 = audio.getChannelData(1)
-      mono = new Float32Array(ch0.length)
-      for (let i = 0; i < ch0.length; i++) mono[i] = (ch0[i] + ch1[i]) / 2
-    }
-    const target = 16000
-    const ratio = Math.max(1, sr / target)
-    const outLen = Math.floor(mono.length / ratio)
-    const dataSize = outLen * 2
-    const buf = new ArrayBuffer(44 + dataSize)
-    const dv = new DataView(buf)
-    const w = (o: number, s: string) => { for (let i = 0; i < s.length; i++) dv.setUint8(o + i, s.charCodeAt(i)) }
-    w(0, 'RIFF'); dv.setUint32(4, 36 + dataSize, true); w(8, 'WAVE'); w(12, 'fmt ')
-    dv.setUint32(16, 16, true); dv.setUint16(20, 1, true); dv.setUint16(22, 1, true)
-    dv.setUint32(24, target, true); dv.setUint32(28, target * 2, true); dv.setUint16(32, 2, true); dv.setUint16(34, 16, true)
-    w(36, 'data'); dv.setUint32(40, dataSize, true)
-    let off = 44
-    for (let i = 0; i < outLen; i++) {
-      const s = Math.max(-1, Math.min(1, mono[Math.floor(i * ratio)]))
-      dv.setInt16(off, s < 0 ? s * 0x8000 : s * 0x7fff, true)
-      off += 2
-    }
-    return new Blob([buf], { type: 'audio/wav' })
-  } finally {
-    try { await ctx.close() } catch {}
-  }
-}
 
 /** 🎙 record-and-compare: the learner says a word, Gemini coaches them. */
 export default function PronounceButton({
@@ -92,11 +41,7 @@ export default function PronounceButton({
   }
   useEffect(() => cleanup, [])
 
-  const supported =
-    typeof window !== 'undefined' &&
-    typeof navigator !== 'undefined' &&
-    !!navigator.mediaDevices?.getUserMedia &&
-    typeof MediaRecorder !== 'undefined'
+  const supported = isRecordingSupported()
 
   const start = async () => {
     if (!supported) { setErr('recording not supported here'); setPhase('error'); return }
