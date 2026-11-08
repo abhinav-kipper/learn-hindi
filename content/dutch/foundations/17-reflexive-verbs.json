@@ -1,0 +1,379 @@
+{
+  "id": "dutch-reflexive-verbs",
+  "title": "Reflexive Verbs: me, je, zich, ons",
+  "situation": "Foundation: the Dutch verbs that need a little word pointing back at the subject, the set that is reflexive in Dutch but not in English, where that word sits in the sentence, and how it behaves in the perfect tense and with a helper verb.",
+  "level": "A2",
+  "skills": [
+    "matching me, je, zich or ons to the subject",
+    "the verbs that are reflexive only in Dutch",
+    "placing the reflexive word in statements, questions and inversions",
+    "reflexive verbs in the perfect tense and with a helper verb"
+  ],
+  "phrases": [
+    {
+      "hindi": "Ik voel me niet lekker.",
+      "english": "I do not feel well.",
+      "context": "The single most useful reflexive sentence there is. This opens any conversation at the doctor.",
+      "pronunciation": "ik FOHL me neet LEK-ker"
+    },
+    {
+      "hindi": "Voelt u zich wel goed?",
+      "english": "Are you feeling all right?",
+      "context": "The polite version, with `u` and `zich`. You will be asked this, so recognise it.",
+      "pronunciation": "FOHLT uu zich wel CHOHT?"
+    },
+    {
+      "hindi": "Sorry, ik heb me vergist.",
+      "english": "Sorry, I made a mistake.",
+      "context": "`zich vergissen` is the normal, graceful way to admit an error in Dutch.",
+      "pronunciation": "SOR-ree, ik hep me ver-CHIST"
+    },
+    {
+      "hindi": "U moet zich eerst aanmelden.",
+      "english": "You have to register first.",
+      "context": "`zich aanmelden`, the verb that governs almost every visit to the gemeente.",
+      "pronunciation": "uu MOOT zich AYRST AAN-mel-den"
+    },
+    {
+      "hindi": "Wij moeten ons haasten.",
+      "english": "We have to hurry.",
+      "context": "`ons` is the giveaway form for `wij`. Note the word stays near the front while `haasten` goes to the end.",
+      "pronunciation": "way MOO-ten ons HAAS-ten"
+    },
+    {
+      "hindi": "Ik kan me zijn naam niet herinneren.",
+      "english": "I cannot remember his name.",
+      "context": "`zich herinneren`. Without the little word this sentence would mean something else entirely.",
+      "pronunciation": "ik kan me zayn NAAM neet her-IN-ner-en"
+    },
+    {
+      "hindi": "Mag ik me even voorstellen?",
+      "english": "May I introduce myself?",
+      "context": "A polished opener for a job interview or a first meeting, built entirely from this chapter.",
+      "pronunciation": "mach ik me AY-ven FOHR-stel-len?"
+    },
+    {
+      "hindi": "De kinderen vervelen zich.",
+      "english": "The children are bored.",
+      "context": "Plural subject, so `zich`, and the verb keeps its -en ending.",
+      "pronunciation": "de KIN-der-en ver-VAY-len zich"
+    },
+    {
+      "hindi": "Ik heb me ingeschreven voor de cursus.",
+      "english": "I have enrolled for the course.",
+      "context": "Perfect tense: reflexive verbs always take `hebben`, and the participle goes to the end.",
+      "pronunciation": "ik hep me IN-che-schray-ven fohr de KUR-sus"
+    }
+  ],
+  "grammar_notes": [
+    "Swap the dictionary `zich` for the form matching the subject: `me` with ik, `je` with jij and jullie, `ons` with wij, and `zich` with u, hij, zij, het and the plural zij.",
+    "A set of everyday verbs is reflexive in Dutch but not in English, so the little word has to be learned with the verb: `zich voelen`, `zich vergissen`, `zich haasten`, `zich herinneren`, `zich vervelen`, `zich voorstellen`, `zich aanmelden`, `zich inschrijven`.",
+    "The reflexive word goes straight after the conjugated verb, including after inversion (`Vandaag voel ik me beter`) and in questions (`Voel je je wel goed?`).",
+    "With `jij` the subject and the reflexive word are both `je`, so the word genuinely appears twice. This is correct, not a typo.",
+    "In the perfect tense reflexive verbs always take `hebben`, never `zijn`, and the little word stays near the front while the participle goes to the end."
+  ],
+  "culture_notes": [
+    "`Ik voel me niet lekker` is the standard opening at a Dutch doctor's surgery. `lekker` normally means tasty, but with `voelen` it simply means well, and nobody hears it as odd.",
+    "`zich aanmelden` and `zich inschrijven` are the verbs of Dutch officialdom. Registering with the gemeente, signing up for a course and joining a GP practice all use one or the other.",
+    "Admitting a mistake with `Ik heb me vergist` is completely normal and carries no embarrassment in Dutch. Directness about small errors is expected rather than awkward."
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "matching the word to the subject",
+      "explanation": "Only me and ons are distinctive; the rest is je or zich. Decide the subject first, then reach for the matching word, then let the rest of the sentence follow.",
+      "more_examples": [
+        {
+          "hindi": "Ik haast me.",
+          "english": "I am hurrying."
+        },
+        {
+          "hindi": "Jij vergist je.",
+          "english": "You are mistaken."
+        },
+        {
+          "hindi": "Hij voelt zich beter.",
+          "english": "He feels better."
+        },
+        {
+          "hindi": "Wij schrijven ons in.",
+          "english": "We are enrolling.",
+          "breakdown": "a separable verb as well, so `in` goes to the end"
+        }
+      ]
+    },
+    {
+      "skill": "the verbs English does not flag",
+      "explanation": "If a verb is on the Dutch-only list, treat the little word as part of the verb itself. Dropping it is the single most common error with these, and it is immediately audible to a Dutch speaker.",
+      "more_examples": [
+        {
+          "hindi": "Ik verveel me op zondag.",
+          "english": "I get bored on Sundays."
+        },
+        {
+          "hindi": "Herinner je je mijn broer nog?",
+          "english": "Do you still remember my brother?"
+        },
+        {
+          "hindi": "Haast je, de trein vertrekt zo!",
+          "english": "Hurry up, the train is about to leave!"
+        },
+        {
+          "hindi": "Zij stelt zich voor aan de buren.",
+          "english": "She introduces herself to the neighbours."
+        }
+      ]
+    },
+    {
+      "skill": "longer sentences",
+      "explanation": "The reflexive word stays close to the subject wherever the verb ends up. In the perfect it comes before the participle, with a helper verb it comes before the base form at the end, and in a subordinate clause it stays put while the verb travels.",
+      "more_examples": [
+        {
+          "hindi": "Ik heb me gisteren vergist.",
+          "english": "I made a mistake yesterday."
+        },
+        {
+          "hindi": "Je moet je nu echt haasten.",
+          "english": "You really have to hurry now."
+        },
+        {
+          "hindi": "Ik blijf thuis omdat ik me niet lekker voel.",
+          "english": "I am staying home because I do not feel well."
+        },
+        {
+          "hindi": "Hebt u zich al aangemeld?",
+          "english": "Have you registered yet?"
+        }
+      ]
+    }
+  ],
+  "practice_prompt": "You are a warm Dutch tutor drilling reflexive verbs with an A2 learner, one item at a time. Use `je` throughout, since this is an informal tutoring session.\n\nOpen with exactly this line: \"Hoi! Vandaag oefenen we wederkerende werkwoorden, dus me, je, zich en ons. Ik geef je een zin met een gat. Klaar? Eerste zin: Ik voel ... niet lekker.\"\n\nRun about eight items, one per turn. After each answer say in one short sentence whether it was right and why, then give the next gap. Build up in this order: `ik` (Ik voel ... niet lekker), `wij` (Wij moeten ... haasten), `hij` (Hij heeft ... vergist), the polite `u` (U moet ... aanmelden), a question with jij where the word appears twice (Voel ... ... wel goed?), a perfect-tense one (Ik heb ... ingeschreven), a modal one (Je moet ... haasten), and finally ask them to make their own sentence telling you how they feel today.\n\nPay particular attention to two errors and name them when they happen: dropping the little word entirely, which is the most common, and using `zijn` instead of `hebben` in the perfect, since reflexive verbs always take hebben.\n\nTag every real error exactly like this so the app can log it:\n[[CORRECTION: original=\"Ik voel niet lekker\" correct=\"Ik voel me niet lekker\" reason=\"voelen is reflexive in Dutch, so it needs me\"]]\nDo not tag typos or capitalisation.\n\nFinish with a one-line score, name the one verb they should learn by heart first, and end warmly.",
+  "theory": {
+    "intro": "You have almost certainly already learned `Ik voel me niet lekker` as a phrase for the doctor. This chapter explains the `me` in it, which turns one memorised sentence into a pattern you can build with. Dutch has a group of verbs that need a small word pointing back at whoever is doing the action. Some of them match English and give you no trouble. Others are reflexive only in Dutch, and those are the ones that quietly mark you out as a learner every time you leave the word off.",
+    "sections": [
+      {
+        "heading": "A verb that points back at you",
+        "body": "Some Dutch verbs need a second little word that points back at whoever is doing the action. `wassen` means to wash, but `zich wassen` means to wash **yourself**.\n\nIn the dictionary the verb is listed with `zich`, which is a placeholder. When you use it, you swap `zich` for the form that matches your subject. There are only four forms to learn, and two of them are the same word:",
+        "table": {
+          "caption": "The reflexive words",
+          "columns": [
+            "Subject",
+            "Word",
+            "Example"
+          ],
+          "rows": [
+            [
+              "ik",
+              "me",
+              "Ik was me."
+            ],
+            [
+              "jij / je",
+              "je",
+              "Jij wast je."
+            ],
+            [
+              "u",
+              "zich",
+              "U wast zich."
+            ],
+            [
+              "hij / zij / het",
+              "zich",
+              "Hij wast zich."
+            ],
+            [
+              "wij / we",
+              "ons",
+              "Wij wassen ons."
+            ],
+            [
+              "jullie",
+              "je",
+              "Jullie wassen je."
+            ],
+            [
+              "zij / ze (plural)",
+              "zich",
+              "Zij wassen zich."
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "tip",
+          "body": "Only `me` and `ons` are distinctive. Everything else is `je` or `zich`, so the table is far smaller than it looks."
+        },
+        "cutting_intro": "Some verbs need a little extra word pointing back at the person doing them. Four forms, and two of them are the same.",
+        "quick_check": {
+          "question": "What is the reflexive word for wij?",
+          "options": [
+            "me",
+            "je",
+            "zich",
+            "ons"
+          ],
+          "correct_index": 3,
+          "explanation": "wij takes ons: Wij wassen ons."
+        }
+      },
+      {
+        "heading": "The ones English does not warn you about",
+        "body": "If a verb is reflexive in both languages, you will get it right without thinking. The problem is the group that is reflexive **only in Dutch**, because your own language gives you no nudge at all.\n\nThese behave like fixed phrases. Learn the little word as part of the verb:\n- `zich voelen` (to feel): `Ik voel me niet lekker.`\n- `zich vergissen` (to be mistaken): `Sorry, ik heb me vergist.`\n- `zich haasten` (to hurry): `Je moet je haasten.`\n- `zich herinneren` (to remember): `Ik herinner me zijn naam niet.`\n- `zich vervelen` (to be bored): `De kinderen vervelen zich.`\n- `zich voorstellen` (to introduce yourself): `Mag ik me even voorstellen?`\n- `zich aanmelden` (to register): `U moet zich aanmelden bij de gemeente.`\n- `zich inschrijven` (to enrol): `Ik heb me ingeschreven voor de cursus.`\n\nTwo of these are worth more than the rest put together, because they open conversations you will certainly have: **`Ik voel me niet lekker`** at the doctor, and **`zich aanmelden`** or `zich inschrijven` at the gemeente.",
+        "examples": [
+          {
+            "hindi": "Ik voel me vandaag veel beter.",
+            "english": "I feel much better today.",
+            "breakdown": "`voelen` plus `me`, because the subject is `ik`."
+          },
+          {
+            "hindi": "Hij heeft zich vergist in het adres.",
+            "english": "He got the address wrong.",
+            "breakdown": "`zich vergissen` is the normal way to admit a mistake."
+          },
+          {
+            "hindi": "U moet zich eerst aanmelden bij de balie.",
+            "english": "You have to register at the desk first.",
+            "breakdown": "You will hear this exact sentence at the gemeente."
+          }
+        ],
+        "callout": {
+          "tone": "warning",
+          "body": "`Ik voel niet lekker` and `Ik herinner zijn naam niet` are both wrong, and both sound obviously off to a Dutch ear. If the verb is on this list, the little word is not optional."
+        },
+        "cutting_intro": "Here is the real work. These verbs are reflexive in Dutch but not in English, so nothing in your head reminds you to add the word.",
+        "quick_check": {
+          "question": "You are at the doctor. Which sentence is correct?",
+          "options": [
+            "Ik voel niet lekker.",
+            "Ik voel me niet lekker.",
+            "Ik me voel niet lekker.",
+            "Ik ben me niet lekker."
+          ],
+          "correct_index": 1,
+          "explanation": "voelen is reflexive in Dutch, and the little word comes straight after the verb."
+        }
+      },
+      {
+        "heading": "Where the little word sits",
+        "body": "The reflexive word goes **straight after the conjugated verb**, before nearly everything else.\n\n`Ik voel me vandaag veel beter.` The word `me` comes right after `voel`, and the rest of the sentence follows it.\n\nThat holds when the sentence is turned around too. If you start with a time word, the subject and verb swap, and the reflexive word still follows them: `Vandaag voel ik me veel beter.`\n\nIn a question the verb comes first, and the pattern is the same: `Voel je je wel goed?`\n\nThat sentence contains `je` twice and it is not a mistake. With `jij` the subject and the reflexive word happen to be the same word, so you really do say it twice. Dutch speakers do not find it odd.",
+        "examples": [
+          {
+            "hindi": "Vandaag voel ik me beter.",
+            "english": "Today I feel better.",
+            "breakdown": "The sentence starts with a time word, so `ik` moves behind the verb and `me` follows it."
+          },
+          {
+            "hindi": "Voelt u zich wel goed?",
+            "english": "Are you feeling all right?",
+            "breakdown": "The polite version, with `u` and `zich`."
+          },
+          {
+            "hindi": "Waarom haast je je zo?",
+            "english": "Why are you in such a hurry?",
+            "breakdown": "Again `je` twice, and again completely normal."
+          }
+        ],
+        "cutting_intro": "Position is simple: the little word hugs the conjugated verb. Even in questions, even when the sentence flips around.",
+        "quick_check": {
+          "question": "Which is the correct question form?",
+          "options": [
+            "Voel jij goed?",
+            "Voel je je wel goed?",
+            "Je voel je wel goed?",
+            "Voel wel je goed?"
+          ],
+          "correct_index": 1,
+          "explanation": "The verb comes first in a question, then the subject je, then the reflexive je. Saying je twice is normal."
+        }
+      },
+      {
+        "heading": "In the past and with a modal",
+        "body": "Two things change when the sentence gets longer, and both are easy.\n\n**In the perfect tense**, reflexive verbs always take `hebben`, never `zijn`. The little word stays up near the front and the participle goes to the end, exactly as usual:\n- `Ik heb me vergist.` (I made a mistake.)\n- `Hij heeft zich gehaast.` (He hurried.)\n- `Wij hebben ons ingeschreven.` (We have enrolled.)\n\n**With a helper verb like moeten or kunnen**, the main verb goes to the end in its base form (the dictionary form), and again the little word stays near the front:\n- `Je moet je haasten.`\n- `Ik kan me zijn naam niet herinneren.`\n- `U moet zich hier aanmelden.`\n\nSo wherever the verb itself ends up, **the reflexive word does not travel with it**. It stays close to the subject.",
+        "table": {
+          "caption": "The little word stays near the front",
+          "columns": [
+            "Sentence type",
+            "Example",
+            "Where the verb went"
+          ],
+          "rows": [
+            [
+              "plain",
+              "Ik haast me.",
+              "normal second place"
+            ],
+            [
+              "perfect",
+              "Ik heb me gehaast.",
+              "participle at the end"
+            ],
+            [
+              "with a modal",
+              "Ik moet me haasten.",
+              "base form at the end"
+            ],
+            [
+              "subordinate clause",
+              "..., omdat ik me haast.",
+              "verb at the end of its clause"
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "note",
+          "body": "Reflexive verbs take `hebben` in the perfect without exception, so this is one corner of the past tense where you never have to decide between hebben and zijn."
+        },
+        "cutting_intro": "Longer sentences now. The verb may fly off to the end, but the little word stays put near the subject.",
+        "quick_check": {
+          "question": "How do you say I made a mistake in the perfect tense?",
+          "options": [
+            "Ik ben me vergist.",
+            "Ik heb vergist me.",
+            "Ik heb me vergist.",
+            "Ik me heb vergist."
+          ],
+          "correct_index": 2,
+          "explanation": "Reflexive verbs always take hebben, the little word stays near the front, and the participle goes last."
+        }
+      },
+      {
+        "heading": "One verb, two meanings",
+        "body": "A few reflexive verbs mean something different from their plain version, and it is worth seeing the pairs side by side so the little word stops feeling like decoration.\n\n`wassen` is to wash something; `zich wassen` is to wash yourself. `voorstellen` is to propose or to introduce someone; `zich voorstellen` is to introduce **yourself**. `herinneren` on its own is to remind; `zich herinneren` is to remember.\n\nThe little word genuinely carries meaning, which is the best reason to stop treating it as something you can safely drop.\n\nOne handy pair for the exam: `Mag ik me even voorstellen?` (May I introduce myself?) is a polished opener for a job interview or a first meeting, and it is built entirely out of this chapter.",
+        "examples": [
+          {
+            "hindi": "Ik was de auto.",
+            "english": "I am washing the car.",
+            "breakdown": "plain verb, the object is the car"
+          },
+          {
+            "hindi": "Ik was me.",
+            "english": "I am washing myself.",
+            "breakdown": "reflexive, the object is me"
+          },
+          {
+            "hindi": "Mag ik me even voorstellen? Ik ben Sara.",
+            "english": "May I introduce myself? I am Sara.",
+            "breakdown": "A strong, polite opener for an interview or a first meeting."
+          }
+        ],
+        "cutting_intro": "Last piece. The little word is not decoration: for several verbs it changes the meaning outright.",
+        "quick_check": {
+          "question": "What does Mag ik me even voorstellen? mean?",
+          "options": [
+            "May I make a suggestion?",
+            "May I introduce myself?",
+            "May I imagine that?",
+            "May I introduce you?"
+          ],
+          "correct_index": 1,
+          "explanation": "With the reflexive word it means to introduce yourself. Without it, voorstellen means to propose or to introduce someone else."
+        }
+      }
+    ],
+    "wrap_up": "Four words to match to your subject: `me`, `je`, `ons`, `zich`. One short list of verbs that are reflexive in Dutch but not in English, which you learn whole rather than derive. One position rule: the little word hugs the conjugated verb and stays near the subject, even when the verb itself flies to the end. And one freebie: these verbs always take `hebben` in the perfect, so there is nothing to decide. Start with `Ik voel me niet lekker` and `U moet zich aanmelden`, because those two will carry you through the doctor and the gemeente."
+  },
+  "references": [
+    "dutchgrammar.com (Dutch Grammar by Bieneke Berendsen)",
+    "TaalCompleet A2 (KleurRijker NT2 method)",
+    "Nederlands in gang (Coutinho NT2 method)"
+  ]
+}

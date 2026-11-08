@@ -1,0 +1,391 @@
+{
+  "id": "dutch-plurals",
+  "title": "Plurals: One Thing or Many",
+  "situation": "Foundation: making Dutch nouns plural with -en, -s and -'s, the spelling shifts that come with -en, the units that stay singular after a number, and the short list of irregulars.",
+  "level": "A1",
+  "skills": [
+    "choosing -en, -s or -'s by the final sound",
+    "the spelling shifts (doubling, dropping, f to v, s to z)",
+    "units that stay singular after a number",
+    "the common irregular plurals"
+  ],
+  "phrases": [
+    {
+      "hindi": "Ik heb twee broers en een zus.",
+      "english": "I have two brothers and one sister.",
+      "context": "`broer` ends in -r so the plural is -s. A very common way to open a conversation about family.",
+      "pronunciation": "ik HEP TWAY BROORS en un ZUS"
+    },
+    {
+      "hindi": "De kinderen spelen buiten.",
+      "english": "The children are playing outside.",
+      "context": "`kind` is irregular: `kinderen`. Note that the plural takes `de` even though `het kind` is a het-word.",
+      "pronunciation": "de KIN-der-en SPAY-len BOW-ten (rounded ui)"
+    },
+    {
+      "hindi": "Hoeveel talen spreek jij?",
+      "english": "How many languages do you speak?",
+      "context": "`de taal` becomes `de talen`: the long vowel written twice drops one letter.",
+      "pronunciation": "hoo-VAYL TAA-len SPRAYK YAY?"
+    },
+    {
+      "hindi": "Mijn oma heeft veel foto's.",
+      "english": "My grandmother has a lot of photos.",
+      "context": "Both words end in a single vowel letter, so both take -'s.",
+      "pronunciation": "mayn OH-maa HAYFT FAYL FOH-tohs"
+    },
+    {
+      "hindi": "Ik woon hier al drie jaar.",
+      "english": "I have been living here for three years.",
+      "context": "After a number, a unit of time stays singular. Never `drie jaren`.",
+      "pronunciation": "ik WOHN heer al DREE YAAR"
+    },
+    {
+      "hindi": "Er liggen twee brieven op tafel.",
+      "english": "There are two letters on the table.",
+      "context": "`brief` becomes `brieven`: the f turns into a v between vowels.",
+      "pronunciation": "er LIG-gen TWAY BREE-ven op TAA-fel"
+    },
+    {
+      "hindi": "De huizen in deze straat zijn oud.",
+      "english": "The houses in this street are old.",
+      "context": "`huis` becomes `huizen`: the s turns into a z. One of the most quoted examples in Dutch.",
+      "pronunciation": "de HOW-zen in DAY-ze STRAAT zayn OWT"
+    },
+    {
+      "hindi": "Mag ik twee kopjes koffie?",
+      "english": "Could I have two cups of coffee?",
+      "context": "Every small-and-cute `-je` form takes -s. You will order something this way most days.",
+      "pronunciation": "mach ik TWAY KOP-yes KOF-fee?"
+    },
+    {
+      "hindi": "Dat kost vijf euro.",
+      "english": "That costs five euros.",
+      "context": "Money after a number stays singular, so you hear `vijf euro`, never `vijf euros`.",
+      "pronunciation": "dat KOST FAYF UU-roh"
+    }
+  ],
+  "grammar_notes": [
+    "`-en` is the default plural ending. `-s` is used after an unstressed `-el`, `-em`, `-en`, `-er` or `-je`.",
+    "Nouns ending in a single vowel letter (a, i, o, u, y) take `-'s`: `oma's`, `foto's`, `menu's`. A final `-e` does not: `tante` becomes `tantes`.",
+    "Adding `-en` can change the spelling: double the consonant after a short vowel (`man` to `mannen`), drop one vowel when it was written twice (`boot` to `boten`), `f` becomes `v` (`brief` to `brieven`), `s` becomes `z` (`huis` to `huizen`).",
+    "Every plural noun takes `de`, whatever article the singular had. `het kind` but `de kinderen`.",
+    "After a number, units of measurement stay singular: `drie jaar`, `twee uur`, `vijf euro`, `vier kilo`."
+  ],
+  "culture_notes": [
+    "Dutch uses the small-and-cute `-je` form far more than English uses any equivalent, so `-s` plurals turn up constantly in everyday speech: `kopjes`, `broodjes`, `kaartjes`.",
+    "Saying `drie jaren` instead of `drie jaar` is understood but marks you out immediately, because the singular form is so fixed in daily speech.",
+    "Because every plural is a de-word, going plural is a legitimate escape hatch when you genuinely cannot remember whether a noun is de or het."
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "picking the ending from the final sound",
+      "explanation": "Say the singular out loud. If it ends in an unstressed -el, -em, -en, -er or -je, add -s. If it ends in a single vowel letter, add -'s. Otherwise add -en, which is the default and covers most nouns.",
+      "more_examples": [
+        {
+          "hindi": "de lepel, de lepels",
+          "english": "the spoon, the spoons"
+        },
+        {
+          "hindi": "de winkel, de winkels",
+          "english": "the shop, the shops"
+        },
+        {
+          "hindi": "het broodje, de broodjes",
+          "english": "the roll, the rolls"
+        },
+        {
+          "hindi": "de auto, de auto's",
+          "english": "the car, the cars"
+        },
+        {
+          "hindi": "de trein, de treinen",
+          "english": "the train, the trains"
+        }
+      ]
+    },
+    {
+      "skill": "the spelling shifts that come with -en",
+      "explanation": "Dutch spelling protects the vowel sound. A short vowel needs its consonant doubled, a long vowel written twice loses a letter, and f and s soften to v and z between vowels. These are the same habits that govern the present tense.",
+      "more_examples": [
+        {
+          "hindi": "de bus, de bussen",
+          "english": "the bus, the buses",
+          "breakdown": "short vowel, so double the s"
+        },
+        {
+          "hindi": "het raam, de ramen",
+          "english": "the window, the windows",
+          "breakdown": "long vowel, so drop one a"
+        },
+        {
+          "hindi": "de wolf, de wolven",
+          "english": "the wolf, the wolves",
+          "breakdown": "f becomes v"
+        },
+        {
+          "hindi": "de neus, de neuzen",
+          "english": "the nose, the noses",
+          "breakdown": "s becomes z"
+        }
+      ]
+    },
+    {
+      "skill": "units and irregulars",
+      "explanation": "After a number, measurements of time, money and weight stay singular. Separately, a short list of very common nouns is irregular and has to be learned whole, most of them in the -eren group.",
+      "more_examples": [
+        {
+          "hindi": "Het duurt twee uur.",
+          "english": "It takes two hours."
+        },
+        {
+          "hindi": "Ik heb tien euro bij me.",
+          "english": "I have ten euros on me."
+        },
+        {
+          "hindi": "de eieren",
+          "english": "the eggs",
+          "breakdown": "irregular -eren group"
+        },
+        {
+          "hindi": "de steden",
+          "english": "the cities",
+          "breakdown": "the vowel changes"
+        }
+      ]
+    }
+  ],
+  "practice_prompt": "You are a warm, patient Dutch tutor drilling plural formation with an A1 learner, one item at a time. Use `je` throughout, since this is a friendly tutoring session rather than an official one.\n\nOpen with exactly this line: \"Hoi! Vandaag oefenen we het meervoud. Ik geef je een woord, jij maakt er het meervoud van. Klaar? Eerste woord: de stoel.\"\n\nWork through roughly eight items, one per turn, and after each answer say whether it was right and why in one short sentence, then give the next word. Start easy and build: a plain -en word (de stoel, de trein), then an -s word (de tafel, de bakker), then a -je word (het kopje), then one that needs a spelling shift (de man, de boot, de brief, het huis), then an apostrophe word (de foto, de oma), then a unit after a number (ask: hoe zeg je 'three years'?), and finish with an irregular (het kind).\n\nKeep your Dutch at A1: short sentences, everyday words, and always give the English in brackets for any instruction that is not obvious. Praise specifically rather than generically, for example \"Goed, je hebt de f in een v veranderd.\"\n\nWhen the learner makes a real mistake, tag it exactly like this so the app can log it:\n[[CORRECTION: original=\"briefen\" correct=\"brieven\" reason=\"the f turns into a v between vowels\"]]\nDo not tag a typo or a missing capital. Only tag a genuine plural error.\n\nAfter the last item give a one-line score, name the one pattern they should review, and end warmly.",
+  "theory": {
+    "intro": "You already know that Dutch nouns come with `de` or `het`. Now for the happier half of the story: what happens when there is more than one of something. Dutch has just two plural endings, the choice between them is decided by sound rather than by memory, and once a noun goes plural the de/het problem vanishes completely, because every plural takes `de`.",
+    "sections": [
+      {
+        "heading": "Two endings do almost all the work",
+        "body": "Dutch has two plural endings, and between them they cover nearly every noun you will meet:\n- **`-en`** is the default. Most nouns take it.\n- **`-s`** is the alternative, used after a short list of endings.\n\nSo `de stoel` (the chair) becomes `de stoelen`, and `de tafel` (the table) becomes `de tafels`.\n\nThere is one piece of very good news here. **Every plural takes `de`**, with no exceptions. `het kind` is a het-word, but `de kinderen` is a de-word. So the moment a noun goes plural, the de/het problem disappears.",
+        "table": {
+          "caption": "The two endings",
+          "columns": [
+            "Singular",
+            "Plural",
+            "Ending",
+            "English"
+          ],
+          "rows": [
+            [
+              "de stoel",
+              "de stoelen",
+              "-en",
+              "chair"
+            ],
+            [
+              "het huis",
+              "de huizen",
+              "-en",
+              "house"
+            ],
+            [
+              "de tafel",
+              "de tafels",
+              "-s",
+              "table"
+            ],
+            [
+              "het meisje",
+              "de meisjes",
+              "-s",
+              "girl"
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "tip",
+          "body": "If you are ever stuck, guess `-en`. It is the default and it is right far more often than `-s`."
+        },
+        "cutting_intro": "Two endings, -en and -s, and one lovely rule: every plural is a de-word. Let me show you.",
+        "quick_check": {
+          "question": "Which article does a plural noun always take?",
+          "options": [
+            "het",
+            "de",
+            "een",
+            "it depends on the noun"
+          ],
+          "correct_index": 1,
+          "explanation": "Every Dutch plural takes de, even when the singular was a het-word."
+        }
+      },
+      {
+        "heading": "Which ending? Listen to the last sound",
+        "body": "You do not have to memorise lists. The ending is decided by **how the singular word finishes**.\n\nTake **`-s`** when the word ends in an unstressed `-el`, `-em`, `-en`, `-er` or `-je`:\n- `de tafel` becomes `de tafels`\n- `de bezem` becomes `de bezems`\n- `de jongen` becomes `de jongens`\n- `de bakker` becomes `de bakkers`\n- `het kopje` becomes `de kopjes`\n\nThat last one matters a lot, because **every small-and-cute `-je` form takes `-s`**, and Dutch makes those constantly.\n\nEverything else takes **`-en`**: `de man` becomes `de mannen`, `het boek` becomes `de boeken`, `de vriend` becomes `de vrienden`.",
+        "examples": [
+          {
+            "hindi": "Ik heb twee broers en drie zussen.",
+            "english": "I have two brothers and three sisters.",
+            "breakdown": "`broer` ends in -r so it takes -s; `zus` is an ordinary word so it takes -en, with a doubled s."
+          },
+          {
+            "hindi": "De kinderen spelen met de buren.",
+            "english": "The children are playing with the neighbours.",
+            "breakdown": "`buur` takes -en; `kind` is irregular."
+          }
+        ],
+        "cutting_intro": "You never have to guess blindly. Say the word out loud and listen to how it ends. That is what picks the ending.",
+        "quick_check": {
+          "question": "What is the plural of het kopje (the little cup)?",
+          "options": [
+            "kopjen",
+            "kopjes",
+            "kopjeen",
+            "kopje"
+          ],
+          "correct_index": 1,
+          "explanation": "Words ending in -je always take -s, so het kopje becomes de kopjes."
+        }
+      },
+      {
+        "heading": "The spelling shifts when you add -en",
+        "body": "Adding `-en` can force a spelling change, because Dutch spelling protects the **sound** of the vowel. There are four patterns, and you already met three of them in the present tense.\n\n- **Short vowel, so double the consonant.** `de man` becomes `de mannen`. Without the extra n, `manen` would be read with a long a.\n- **Long vowel written twice, so drop one.** `de boot` becomes `de boten`. The vowel is already long in an open syllable, so the second o is not needed.\n- **An f turns into a v.** `de brief` becomes `de brieven`.\n- **An s turns into a z.** `het huis` becomes `de huizen`.\n\nThose last two look odd at first, but they follow the ear: between two vowels Dutch prefers the softer sound.",
+        "table": {
+          "caption": "The four spelling shifts",
+          "columns": [
+            "Pattern",
+            "Singular",
+            "Plural",
+            "Why"
+          ],
+          "rows": [
+            [
+              "double the consonant",
+              "de man",
+              "de mannen",
+              "keeps the a short"
+            ],
+            [
+              "drop one vowel",
+              "de boot",
+              "de boten",
+              "the o is already long"
+            ],
+            [
+              "f becomes v",
+              "de brief",
+              "de brieven",
+              "softer between vowels"
+            ],
+            [
+              "s becomes z",
+              "het huis",
+              "de huizen",
+              "softer between vowels"
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "note",
+          "body": "These are the same spelling habits that decide `ik werk` and `wij werken`. Learn them once and they pay off in the verbs too."
+        },
+        "cutting_intro": "Adding -en sometimes changes the spelling. It is not random: Dutch is protecting the vowel sound.",
+        "quick_check": {
+          "question": "What is the plural of de brief (the letter)?",
+          "options": [
+            "briefen",
+            "brieven",
+            "briefs",
+            "brievens"
+          ],
+          "correct_index": 1,
+          "explanation": "The f turns into a v between vowels, giving brieven."
+        }
+      },
+      {
+        "heading": "The apostrophe group, and numbers that stay singular",
+        "body": "A small group of nouns ends in a **single vowel letter** `a`, `i`, `o`, `u` or `y`. Those take **`-'s`**, with an apostrophe, so the vowel does not get swallowed:\n- `de oma` becomes `de oma's`\n- `de foto` becomes `de foto's`\n- `de baby` becomes `de baby's`\n- `het menu` becomes `de menu's`\n\nWords ending in an `-e` are not in this group: `de tante` simply becomes `de tantes`.\n\nThen there is a habit that surprises English speakers. After a number, **units of measurement stay singular**:\n- `drie jaar` (three years)\n- `twee uur` (two hours)\n- `vijf euro` (five euros)\n- `een kilo` and `twee kilo`\n\nYou say `Ik woon hier drie jaar`, never `drie jaren`.",
+        "examples": [
+          {
+            "hindi": "Mijn oma heeft veel foto's van vroeger.",
+            "english": "My grandmother has a lot of photos from the past.",
+            "breakdown": "Both `oma` and `foto` end in a single vowel, so both take -'s."
+          },
+          {
+            "hindi": "Ik werk hier al vier jaar.",
+            "english": "I have been working here for four years.",
+            "breakdown": "`jaar` is a unit after a number, so it stays singular."
+          }
+        ],
+        "cutting_intro": "Two small groups left. Words ending in a single vowel take an apostrophe, and measurements after a number do not change at all.",
+        "quick_check": {
+          "question": "How do you say five euros in Dutch?",
+          "options": [
+            "vijf euro's",
+            "vijf euroën",
+            "vijf euro",
+            "vijf euros"
+          ],
+          "correct_index": 2,
+          "explanation": "Units of measurement stay singular after a number, so it is vijf euro."
+        }
+      },
+      {
+        "heading": "The irregulars worth learning",
+        "body": "A handful of very common nouns do their own thing. There are not many, and you will use all of them, so learn them as whole words rather than trying to derive them.\n\nThe `-eren` group is the main one. These add a whole extra syllable:\n- `het kind` becomes `de kinderen`\n- `het ei` becomes `de eieren`\n\nA second group changes its vowel:\n- `de stad` becomes `de steden`\n- `het schip` becomes `de schepen`\n\nAnd `de koe` becomes `de koeien`, where a y-sound appears to keep the two vowels apart.\n\nThat really is the bulk of it. Everything else follows the rules above.",
+        "table": {
+          "caption": "The irregulars",
+          "columns": [
+            "Singular",
+            "Plural",
+            "English"
+          ],
+          "rows": [
+            [
+              "het kind",
+              "de kinderen",
+              "child"
+            ],
+            [
+              "het ei",
+              "de eieren",
+              "egg"
+            ],
+            [
+              "de stad",
+              "de steden",
+              "city"
+            ],
+            [
+              "het schip",
+              "de schepen",
+              "ship"
+            ],
+            [
+              "de koe",
+              "de koeien",
+              "cow"
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "tip",
+          "body": "Say `de kinderen` out loud a few times now. It is one of the most frequent nouns in the language and it is worth having automatic."
+        },
+        "cutting_intro": "Last stop: the handful of irregulars. The good news is the list is short and you will use every word on it.",
+        "quick_check": {
+          "question": "What is the plural of het kind?",
+          "options": [
+            "de kinds",
+            "de kinden",
+            "de kinderen",
+            "het kinderen"
+          ],
+          "correct_index": 2,
+          "explanation": "Kind is in the -eren group, and like every plural it takes de."
+        }
+      }
+    ],
+    "wrap_up": "That is the whole system. Add `-en` by default, add `-s` after an unstressed `-el`, `-em`, `-en`, `-er` or `-je`, and add `-'s` after a single vowel letter. Watch for the four spelling shifts, leave measurements singular after a number, and learn the short irregular list as whole words. Best of all, every plural you make is a de-word, so half the article problem disappears the moment you pluralise."
+  },
+  "references": [
+    "dutchgrammar.com (Dutch Grammar by Bieneke Berendsen)",
+    "TaalCompleet A2 (KleurRijker NT2 method)",
+    "Nederlands in gang (Coutinho NT2 method)"
+  ]
+}

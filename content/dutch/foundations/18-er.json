@@ -1,0 +1,375 @@
+{
+  "id": "dutch-er",
+  "title": "The Word er: Four Jobs in One",
+  "situation": "Foundation: the four separate jobs of the Dutch word er, covering there is and there are, standing in for a place already mentioned, replacing a thing after a preposition in forms like ermee and erover, and acting as a placeholder when you answer with a number.",
+  "level": "A2",
+  "skills": [
+    "er is and er zijn for saying something exists",
+    "er standing in for a place already mentioned",
+    "er plus a preposition (ermee, erover, eraan) and the split",
+    "er as a placeholder when answering with a number"
+  ],
+  "phrases": [
+    {
+      "hindi": "Er is een probleem met de verwarming.",
+      "english": "There is a problem with the heating.",
+      "context": "The opening line for almost any complaint to a landlord or the gemeente. Worth learning whole.",
+      "pronunciation": "er is un proh-BLAYM met de ver-WAR-ming"
+    },
+    {
+      "hindi": "Er zijn veel mensen in de wachtkamer.",
+      "english": "There are a lot of people in the waiting room.",
+      "context": "The verb agrees with `mensen`, not with `er`, so it is `zijn` rather than `is`.",
+      "pronunciation": "er zayn FAYL MEN-sen in de WACHT-kaa-mer"
+    },
+    {
+      "hindi": "Is er nog brood?",
+      "english": "Is there any bread left?",
+      "context": "In a question the verb comes first and `er` follows it.",
+      "pronunciation": "is er noch BROHT?"
+    },
+    {
+      "hindi": "Ik heb er drie jaar gewoond.",
+      "english": "I lived there for three years.",
+      "context": "`er` replaces a place already mentioned, and it sits early in the sentence rather than at the end.",
+      "pronunciation": "ik hep er DREE YAAR che-WOHNT"
+    },
+    {
+      "hindi": "Wat vind je ervan?",
+      "english": "What do you think of it?",
+      "context": "A fixed question you will use constantly. Built from `vinden van`.",
+      "pronunciation": "wat FINT ye er-VAN?"
+    },
+    {
+      "hindi": "Ik ben er heel blij mee.",
+      "english": "I am very happy with it.",
+      "context": "`ermee` split in half around `heel blij`. This split is what makes the construction hard to hear at first.",
+      "pronunciation": "ik ben er HAYL BLAY may"
+    },
+    {
+      "hindi": "Ik denk er nog over na.",
+      "english": "I am still thinking about it.",
+      "context": "From `nadenken over`, with the separable verb splitting as well. A useful way to buy time.",
+      "pronunciation": "ik DENK er noch OH-ver NAA"
+    },
+    {
+      "hindi": "Hoeveel kinderen heeft u? Ik heb er twee.",
+      "english": "How many children do you have? I have two.",
+      "context": "Answering with a number needs `er`. Without it the answer sounds unfinished in Dutch.",
+      "pronunciation": "hoo-VAYL KIN-der-en HAYFT uu? ik hep er TWAY"
+    },
+    {
+      "hindi": "Ik ga morgen naar de gemeente. Ben jij er al geweest?",
+      "english": "I am going to the gemeente tomorrow. Have you been there yet?",
+      "context": "`er` for the place just named, inside a perfect-tense question.",
+      "pronunciation": "ik chaa MOR-chen naar de che-MAYN-te. ben yay er al che-WAYST?"
+    }
+  ],
+  "grammar_notes": [
+    "`er` does four unrelated jobs: saying that something exists, standing in for a place already mentioned, replacing a thing after a preposition, and acting as a placeholder when you answer with a number.",
+    "For existence, `er` comes first and the verb follows it, with the thing itself after the verb. The verb agrees with that thing: `er is een probleem` but `er zijn veel mensen`.",
+    "For a thing after a preposition, Dutch fuses the two into `ermee`, `erover`, `eraan`, `ernaar`, `erop`, `ervan`. A bare `het` never follows a preposition.",
+    "That fused form usually splits, with the rest of the sentence in between: `Ik ben er blij mee`, `Ik denk er niet aan`.",
+    "Which preposition you need comes from the verb, so `wachten op` gives `erop` and `praten over` gives `erover`. For a person, use `met hem` or `over haar` instead."
+  ],
+  "culture_notes": [
+    "`Wat vind je ervan?` is the standard way Dutch people invite an opinion, and the directness is expected rather than confrontational. A straight answer is welcome.",
+    "`Er is een probleem met ...` is the normal, neutral way to report a fault. Dutch does not require softening or apology before raising an issue, so the plain sentence is polite enough on its own.",
+    "`Ik denk er nog over na` is a socially useful sentence. It declines to decide right now without closing the door, which fits Dutch conversation well."
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "er for saying something exists",
+      "explanation": "Put er first, the verb second and the thing itself after the verb. Make the verb agree with the thing rather than with er. This is the pattern for reporting a fault, which is one of the exam's favourite situations.",
+      "more_examples": [
+        {
+          "hindi": "Er staat iemand voor de deur.",
+          "english": "There is someone at the door."
+        },
+        {
+          "hindi": "Er zijn geen kaartjes meer.",
+          "english": "There are no tickets left."
+        },
+        {
+          "hindi": "Er is iets kapot in de badkamer.",
+          "english": "Something is broken in the bathroom."
+        },
+        {
+          "hindi": "Is er een apotheek in de buurt?",
+          "english": "Is there a pharmacy nearby?"
+        }
+      ]
+    },
+    {
+      "skill": "er plus a preposition",
+      "explanation": "Take the preposition the verb demands, glue er onto the front of it, then let the two halves split around the rest of the sentence. Use this for things only; a person takes met hem, over haar and so on.",
+      "more_examples": [
+        {
+          "hindi": "Ik wacht er al een uur op.",
+          "english": "I have been waiting for it for an hour.",
+          "breakdown": "from wachten op"
+        },
+        {
+          "hindi": "Zij praat er nooit over.",
+          "english": "She never talks about it.",
+          "breakdown": "from praten over"
+        },
+        {
+          "hindi": "Ben je er klaar mee?",
+          "english": "Are you finished with it?",
+          "breakdown": "from klaar met"
+        },
+        {
+          "hindi": "Ik kijk ernaar uit.",
+          "english": "I am looking forward to it.",
+          "breakdown": "from uitkijken naar"
+        }
+      ]
+    },
+    {
+      "skill": "er as a placeholder for a number",
+      "explanation": "When you answer with a number and drop the noun, Dutch still needs er in the sentence. English just omits the noun, so there is nothing in your own language reminding you.",
+      "more_examples": [
+        {
+          "hindi": "Hoeveel wil je er?",
+          "english": "How many do you want?"
+        },
+        {
+          "hindi": "Ik heb er nog twee.",
+          "english": "I still have two."
+        },
+        {
+          "hindi": "Er zijn er nog vier.",
+          "english": "There are four left.",
+          "breakdown": "er twice, doing two different jobs"
+        }
+      ]
+    }
+  ],
+  "practice_prompt": "You are a patient Dutch tutor drilling the word `er` with an A2 learner, one item at a time. Use `je` throughout, since this is an informal tutoring session.\n\nOpen with exactly this line: \"Hoi! Vandaag pakken we het lastigste woordje van het Nederlands aan: er. We doen het stap voor stap. Eerste vraag: hoe zeg je 'There is a problem with the heating'?\"\n\nRun about eight items, one per turn, and go job by job rather than mixing them from the start. After each answer say in one short sentence whether it was right and why, then give the next task. Work through this order: two existence sentences (there is a problem, there are a lot of people in the waiting room), one question form (is there any bread left), one place reference (you ask about a city they know and get them to say they lived there three years), two preposition ones (what do you think of it, and I am very happy with it), one number answer (ask how many brothers or sisters they have and require `er` in the answer), and finally a free sentence reporting any problem at home.\n\nThe two errors to watch for, and to name explicitly when they happen, are leaving `er` out entirely and writing a bare `het` after a preposition, as in `blij met het`.\n\nTag every real error exactly like this so the app can log it:\n[[CORRECTION: original=\"Ik ben blij met het\" correct=\"Ik ben er blij mee\" reason=\"a bare het never follows a preposition; a thing becomes ermee\"]]\nDo not tag typos or capitalisation.\n\nFinish with a one-line score, tell them which single job of `er` to start using in real conversation this week, and end warmly.",
+  "theory": {
+    "intro": "`er` is two letters long and it is the hardest word in A2 Dutch. Not because it is complicated in itself, but because it is doing four completely separate jobs, and not one of them has a tidy English equivalent. The result is that learners leave it out, the sentence still gets understood, and the habit never gets corrected. If you have ever felt that your Dutch is grammatically fine and still sounds foreign, this little word is a large part of the reason.",
+    "sections": [
+      {
+        "heading": "One word, four jobs",
+        "body": "`er` is the hardest small word in Dutch, and the reason is unusual: it is not difficult to pronounce or to spell, it is just doing **four unrelated jobs** that English handles in four different ways.\n\nBecause none of those jobs has a clean English equivalent, learners leave `er` out. The sentence is still understandable, which is exactly why the habit sticks. But leaving it out is a large part of what makes otherwise correct Dutch sound foreign.\n\nHere are the four jobs. The rest of the chapter takes them one at a time.",
+        "table": {
+          "caption": "The four jobs",
+          "columns": [
+            "Job",
+            "Example",
+            "Rough English"
+          ],
+          "rows": [
+            [
+              "there is / there are",
+              "Er is een probleem.",
+              "There is a problem."
+            ],
+            [
+              "a place already mentioned",
+              "Ik ben er nooit geweest.",
+              "I have never been there."
+            ],
+            [
+              "standing in for a thing after a preposition",
+              "Ik ben er blij mee.",
+              "I am happy with it."
+            ],
+            [
+              "with a number, instead of the noun",
+              "Ik heb er twee.",
+              "I have two."
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "tip",
+          "body": "If you only ever master two of the four, make them the first and the third. Those two carry the most weight in real conversation."
+        },
+        "cutting_intro": "Right. The hardest little word in Dutch, and it is hard for an odd reason: it is doing four completely different jobs.",
+        "quick_check": {
+          "question": "Why do learners tend to leave er out?",
+          "options": [
+            "It is hard to pronounce",
+            "It has no single English equivalent, and the sentence still makes sense without it",
+            "It is only used in formal Dutch",
+            "It changes depending on the gender of the noun"
+          ],
+          "correct_index": 1,
+          "explanation": "There is nothing in English prompting you to add it, and the sentence is still understood, so the habit of skipping it sticks."
+        }
+      },
+      {
+        "heading": "Job one: saying that something exists",
+        "body": "To say that something exists or is present, Dutch starts the sentence with **`er`** and then puts the verb. The thing itself comes **after** the verb, not before it.\n\n- `Er is een probleem met de verwarming.`\n- `Er zijn veel mensen in de wachtkamer.`\n- `Er woont een nieuwe buurvrouw naast ons.`\n\nNotice the verb agrees with the thing, not with `er`: one problem gives `er is`, many people give `er zijn`.\n\nThis pattern is worth real attention because it is how you **report a fault**, and reporting a fault is one of the exam's favourite scenarios. `Er is een probleem met ...` will open a conversation with a landlord, the gemeente or a shop on its own.",
+        "examples": [
+          {
+            "hindi": "Er is een probleem met de verwarming.",
+            "english": "There is a problem with the heating.",
+            "breakdown": "Your opening line for any complaint."
+          },
+          {
+            "hindi": "Is er nog brood?",
+            "english": "Is there any bread left?",
+            "breakdown": "In a question the verb comes first and `er` follows it."
+          },
+          {
+            "hindi": "Er staat iemand voor de deur.",
+            "english": "There is someone at the door.",
+            "breakdown": "Dutch often prefers a specific verb like `staan` or `liggen` where English just says there is."
+          }
+        ],
+        "cutting_intro": "Job one is the friendliest. Er, then the verb, then the thing. It is how you say there is and there are.",
+        "quick_check": {
+          "question": "Which sentence is correct?",
+          "options": [
+            "Zijn veel mensen in de wachtkamer.",
+            "Er zijn veel mensen in de wachtkamer.",
+            "Veel mensen er zijn in de wachtkamer.",
+            "Er veel mensen zijn in de wachtkamer."
+          ],
+          "correct_index": 1,
+          "explanation": "er comes first, then the verb, then the thing itself. The verb agrees with mensen, so it is zijn."
+        }
+      },
+      {
+        "heading": "Job two: a place you have already named",
+        "body": "Once a place is known from the conversation, Dutch does not name it again. It says **`er`**, where English would say *there*.\n\n- `Ken je Utrecht? Ik heb er drie jaar gewoond.`\n- `Ik ga morgen naar de gemeente. Ben jij er al geweest?`\n\nThis one is the gentlest of the four, because English does something similar. The only difference is that Dutch puts `er` **earlier** in the sentence than English puts *there*: `Ik heb er drie jaar gewoond`, not at the end.\n\nThere is a stressed version too. When you want to point at the place emphatically, Dutch uses `daar` instead: `Daar ben ik nooit geweest.` Use `er` as the neutral default and `daar` when you are making a point of it.",
+        "examples": [
+          {
+            "hindi": "Ik werk er al vijf jaar.",
+            "english": "I have been working there for five years."
+          },
+          {
+            "hindi": "We gaan er volgende week naartoe.",
+            "english": "We are going there next week.",
+            "breakdown": "With movement, `er` pairs up with `naartoe`."
+          }
+        ],
+        "cutting_intro": "Job two is the easy one, because English does much the same thing. Watch where it sits, though.",
+        "quick_check": {
+          "question": "Ken je Amsterdam? Ja, ik heb ... gewoond. Which word fills the gap?",
+          "options": [
+            "daar is the only option",
+            "er",
+            "het",
+            "hier"
+          ],
+          "correct_index": 1,
+          "explanation": "er replaces a place that was just mentioned. daar would also be possible but adds emphasis."
+        }
+      },
+      {
+        "heading": "Job three: er plus a preposition",
+        "body": "This is the job that makes the biggest difference to how natural you sound, and the one almost nobody picks up by accident.\n\nDutch does **not** say `met het` or `over het` when it means a thing. Instead it glues `er` onto the front of the preposition:\n- `met het` becomes **`ermee`**\n- `over het` becomes **`erover`**\n- `aan het` becomes **`eraan`**\n- `naar het` becomes **`ernaar`**\n- `op het` becomes **`erop`**\n\nAnd then the two halves usually **split apart**, with the rest of the sentence sitting between them:\n- `Ik ben er blij mee.` (I am happy with it.)\n- `Ik denk er niet aan.` (I am not thinking about it.)\n- `Wat vind je ervan?` (What do you think of it?)\n\nWhich preposition you need comes straight from the verb, which is why the prepositions chapter comes before this one. `wachten op` gives `erop`, `denken aan` gives `eraan`, `praten over` gives `erover`.\n\nFor a **person** you do not do this at all: you say `met hem`, `over haar`, `aan mijn broer`. The `er` form is for things only.",
+        "table": {
+          "caption": "Instead of preposition plus het",
+          "columns": [
+            "Not this",
+            "This",
+            "English"
+          ],
+          "rows": [
+            [
+              "met het",
+              "ermee",
+              "with it"
+            ],
+            [
+              "over het",
+              "erover",
+              "about it"
+            ],
+            [
+              "aan het",
+              "eraan",
+              "of it, on it"
+            ],
+            [
+              "naar het",
+              "ernaar",
+              "at it, to it"
+            ],
+            [
+              "op het",
+              "erop",
+              "on it, for it"
+            ],
+            [
+              "van het",
+              "ervan",
+              "of it, from it"
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "hindi": "Ik wacht erop.",
+            "english": "I am waiting for it.",
+            "breakdown": "from `wachten op`"
+          },
+          {
+            "hindi": "We hebben het er nog over.",
+            "english": "We will talk about it again.",
+            "breakdown": "from `praten over`, well split up"
+          },
+          {
+            "hindi": "Ik ben er niet blij mee.",
+            "english": "I am not happy with it.",
+            "breakdown": "`ermee` split around `niet blij`"
+          }
+        ],
+        "callout": {
+          "tone": "warning",
+          "body": "`Ik ben blij met het` is wrong. A bare `het` never follows a preposition in Dutch. Use `ermee` for a thing, or `met hem` and `met haar` for a person."
+        },
+        "cutting_intro": "This is the one that really changes how you sound. Dutch will not say 'with it', so it builds a new word instead, and then splits it in half.",
+        "quick_check": {
+          "question": "How do you say I am very happy with it?",
+          "options": [
+            "Ik ben heel blij met het.",
+            "Ik ben er heel blij mee.",
+            "Ik ben heel blij ermee het.",
+            "Ik ben met het heel blij."
+          ],
+          "correct_index": 1,
+          "explanation": "For a thing after a preposition Dutch uses ermee, and the two halves split around blij."
+        }
+      },
+      {
+        "heading": "Job four: with a number",
+        "body": "The last job is small and very common. When you answer with a number, Dutch slips in `er` instead of repeating the noun:\n\n- `Hoeveel kinderen heeft u?` `Ik heb er twee.`\n- `Zijn er nog kaartjes?` `Ja, er zijn er nog vier.`\n\nEnglish simply drops the noun and says *I have two*. Dutch needs the placeholder, and without it the answer sounds unfinished, rather the way *I have two* with no noun and no context sounds clipped in English.\n\nThat second example has `er` twice, doing two different jobs in one sentence: the first is the there-are job, the second is the number job. That looks alarming and is completely normal.\n\nYou now have all four. The honest advice is not to try to deploy them all at once. Add `Er is een probleem met ...` to your active speech this week, and `Wat vind je ervan?` next.",
+        "examples": [
+          {
+            "hindi": "Hoeveel wil je er?",
+            "english": "How many do you want?",
+            "breakdown": "You will hear this at a market stall."
+          },
+          {
+            "hindi": "Ik heb er nog drie over.",
+            "english": "I have three left."
+          }
+        ],
+        "cutting_intro": "Last job, and a small one. Answer with a number and Dutch needs a placeholder where English just drops the noun.",
+        "quick_check": {
+          "question": "Hoeveel broers heb je? What is the natural Dutch answer meaning I have two?",
+          "options": [
+            "Ik heb twee.",
+            "Ik heb er twee.",
+            "Ik heb twee er.",
+            "Er heb ik twee."
+          ],
+          "correct_index": 1,
+          "explanation": "Answering with a number needs er as a placeholder for the noun you are not repeating."
+        }
+      }
+    ],
+    "wrap_up": "Four jobs, one word. `Er is een probleem` to say something exists. `Ik heb er gewoond` for a place already named. `Ik ben er blij mee` for a thing after a preposition, split in half across the sentence. `Ik heb er twee` when you answer with a number. Do not try to use all four at once. Take `Er is een probleem met ...` and `Wat vind je ervan?` into your real conversations first, because those two alone will make you sound noticeably more Dutch."
+  },
+  "references": [
+    "dutchgrammar.com (Dutch Grammar by Bieneke Berendsen)",
+    "TaalCompleet A2 (KleurRijker NT2 method)",
+    "Nederlands in gang (Coutinho NT2 method)"
+  ]
+}

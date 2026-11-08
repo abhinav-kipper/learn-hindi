@@ -49,7 +49,7 @@ content/lessons/        → 10 Hindi situation JSON files (A1-A2)
 content/foundations/    → 9 Hindi foundation JSON files (A1-A2)
 content/vocabulary.json → 100 words in 6 categories
 content/dutch/lessons/  → 19 Dutch lesson JSONs (6 A1 conversational + 1 A2 social + 6 errand/casual + 6 A2/B1 exam-targeted)
-content/dutch/foundations/ → 14 Dutch foundation JSONs (8 A1 + 6 A2)
+content/dutch/foundations/ → 18 Dutch foundation JSONs (9 A1 + 9 A2)
 content/dutch/knm.json  → 132 KNM exam questions (bilingual, all 8 statutory themes)
 content/dutch/lezen.json → 10 Lezen B1-prep reading texts (bilingual, 40 MCQs)
 content/dutch/schrijven.json → 12 Schrijven (writing) tasks w/ marking checklists + model answers
@@ -243,7 +243,7 @@ shadows anywhere.
 | `stories.ts` | Loader for the 5 Hindi story JSONs in `content/stories/`. `getAllStories()` + `getStoryById(id)`. TDD'd. |
 | `stories-progress.ts` | Read-state tracking for Hindi stories. Storage key `learn-hindi:hindi-stories-read` (JSON array of read story IDs). TDD'd, 7 tests. |
 | `seen-lessons.ts` | localStorage-backed Set tracking which lessons a user has seen (per-language). `initBaseline()` silent-tags existing IDs on first detection so the popup never false-fires; `getUnseenIds()`, `markAsSeen()`, `hasBeenSeen()`, `unseeIds()`. TDD'd, 9 tests. |
-| `dutch/lessons.ts`, `dutch/foundations.ts` | Parallel loaders for Dutch content (11 lessons + 7 foundations). `getDutchAllContent()` returns both combined for cross-module use (e.g. search). |
+| `dutch/lessons.ts`, `dutch/foundations.ts` | Parallel loaders for Dutch content (19 lessons + 18 foundations). `getDutchAllContent()` returns both combined for cross-module use (e.g. search). The foundation array order is pedagogical, not alphabetical or by filename: A1 first, with `plurals` after `de-het` (that chapter leans on "every plural is a de-word"), then the A2 block ending in `prepositions` and `er`, in that order, because you cannot build `ermee` without knowing which preposition the verb takes. |
 | `dutch/pronunciation.ts` | "Sounds" module loader (TDD'd, 9 tests). 8-stage from-zero ladder from `content/dutch/pronunciation-course.json`. `getStages/getStage`, `markCardDone/isCardDone`, `markEarQuizPassed/isEarQuizPassed`, `isStageComplete` (derived), rolling-window `unlockedStageIds`/`isStageUnlocked` (finish → next 2 open), `getStageProgress`/`getCourseProgress`. |
 | `dutch/define.ts` | Tap-a-word dictionary layer for the cheatsheets (TDD'd, 19 tests). `defineTerm` is cache-first over the existing `/api/define` route, storing results in memory + `dutch-define-cache` and feeding the Word Lookup history; failures return `unavailable` so the sheet still speaks the term. `shouldLookUp` skips whole sentences (over 5 words). `splitCell` breaks a table cell into individually tappable terms (splits on `/`, on sentence boundaries, and on commas only when every piece is a single word, so `Sorry, dan kan ik niet.` stays whole). |
 | `dutch/cheatsheet.ts` | Concept-cheatsheet loader + drill engine (TDD'd, 25 tests). Flattens `content/dutch/cheatsheet/*.json` into 7 groups / 35 topics. `getGroups/getTopics/getTopicById/getGroupOfTopic/getNextTopic`, `drawTopicDrill`/`drawMixedReview(15)`/`scrambleWords` (never returns the answer order), `normalizeAnswer`/`isCorrect`/`scoreDrill` (80% pass), studied set + best-score-per-topic history, `getWeakTopics`/`getOverallProgress`. |
@@ -369,6 +369,65 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-define-cache` — `{ [word]: Definition }` from `/api/define`, capped at 300, so tapped words resolve instantly and keep working offline once seen.
 
 ### Recent feature work log
+
+**2026-11-08 (later still) — Four new Dutch foundations (14 to 18 chapters)**
+
+Audited what the 14 existing chapters actually teach rather than trusting their
+titles. Coverage was better than it looked (the perfect tense has a full
+chapter; separable verbs and subordinate clauses each have a real section inside
+`dutch-word-order`; adjective endings sit inside `dutch-de-het`), which ruled out
+the obvious candidates. Four genuine holes remained, all confirmed by counting
+occurrences across the whole content set rather than by impression.
+
+- **`dutch-prepositions` (A2)** was the biggest. No chapter, no cheatsheet, and
+  the fixed verb-plus-preposition pairs scored **zero**: `wachten op` 0,
+  `denken aan` 0, `kijken naar` 0, `zoeken naar` 0, `vragen om` 0. Covers the
+  core set, the `in`/`op`/`aan`/`bij` place problem (the `op` group is the one
+  English gives no hint about: op het station, op school, op kantoor, op
+  vakantie), movement and origin, time (`om`/`op`/`in`), and a 14-row table of
+  the fixed pairs presented explicitly as vocabulary rather than grammar.
+- **`dutch-reflexive-verbs` (A2)** had zero foundation coverage, while the doctor
+  lesson already taught `Ik voel me niet goed` as a phrase to memorise and the
+  gemeente lesson leans on `zich aanmelden`. The app was teaching the output
+  without the pattern, so the learner could say one fixed sentence and not
+  produce `Hij voelt zich beter`. Covers me/je/zich/ons, the Dutch-only set,
+  placement (including why `Voel je je wel goed?` says `je` twice), and the fact
+  that these always take `hebben` in the perfect.
+- **`dutch-er` (A2)**: only the `er is`/`er zijn` job was taught, inside
+  `simple-sentences`. `ermee` 0, `erover` 0, `eraan` 0 across all content. All
+  four jobs now, with the split (`Ik ben er blij mee`) given its own treatment.
+  Deliberately ordered **after** prepositions, since `erover` depends on knowing
+  the verb takes `over`.
+- **`dutch-plurals` (A1)** existed only as one passing clause inside a de-het
+  grammar note. That left an ordering hole: the A1 ladder taught de/het on the
+  strength of "every plural is de" before ever showing how to form one.
+
+*Why these and not others.* A foundation earns its place over a cheatsheet when
+the topic needs **live production practice**, because a foundation uniquely adds
+an AI conversation partner at `/practice/[id]`. Choosing a preposition, matching
+a reflexive pronoun to its subject and splitting `er` from its preposition are
+all errors you make while speaking. Imperative, diminutive and relative die/dat
+stay cheatsheet-only for the same reason; passive and conditional hypotheticals
+are B1 and above target.
+
+Each chapter is the full treatment: 5 theory sections with narration and a
+gating quick-check, 9 or 10 phrases, 5 grammar notes, 3 culture notes, 3
+skill_breakdowns and a ~200-word practice prompt with the correction tag format.
+Registered in `foundations.ts` and `level-map.ts`; the hardcoded expectation in
+`dutch-content-ids.test.ts` was extended, which is what that gate is for.
+
+Verified in a browser: all 18 chapters open with the right title and intro, no
+leaked markdown, no glued bullets and zero Hindi romanisation, all four appear in
+the home Foundations list, and `dutch-plurals` and `dutch-er` were walked page by
+page answering all five gating quick-checks to reach 7/7. 586 tests, four lints
+and the prod build clean.
+
+*Harness note.* Theory prose is markdown-lite, so a `` `token` `` renders as a
+chip and the rendered text contains no backticks. A scripted pass comparing
+against the raw JSON must strip `` ` `` and `*` first, or a chapter whose intro
+opens with a token looks "missing" (this produced a false failure on the
+untouched `dutch-modals`, which is what flagged the harness rather than the
+content). Chapters also open on their own intro page before section 1.
 
 **2026-11-08 (later) — Cheatsheets: A2 grammar + exam technique (25 to 35 topics)**
 

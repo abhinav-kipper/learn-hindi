@@ -47,7 +47,7 @@ else they owe beyond the five papers.
 | Module | Content |
 |---|---|
 | Lessons | 19 (11 A1, 5 A2, 3 B1) |
-| Foundations | 14 grammar chapters (8 A1, 6 A2) |
+| Foundations | 18 grammar chapters (9 A1, 9 A2) |
 | Cheatsheets | 35 topics, 318 drill questions (5 A1 groups, 1 A2 grammar, 1 exam technique) |
 | KNM | 132 questions, all 8 themes |
 | Lezen | 10 texts (5 A1, 4 A2, 1 B1) |
@@ -174,6 +174,21 @@ time. Now that every paper exists, this is what turns the app into a real
 rehearsal rather than a set of exercises.
 
 ### Tier 3 — content depth
+
+**5a. Grammar coverage is now complete to A2.** Four foundations were added on
+2026-11-08 (`prepositions`, `reflexive-verbs`, `er`, `plurals`) after an audit
+that counted occurrences rather than trusting chapter titles. Before deciding
+anything is "missing" again, run that same check: read the actual section
+headings, then grep the content set for the construction. Several obvious-looking
+gaps (perfect tense, separable verbs, subordinate clauses, adjective endings)
+turned out to be covered inside chapters whose titles do not mention them.
+
+The rule used for where a topic belongs: a **foundation** earns its place over a
+cheatsheet only when the topic needs live production practice, because a
+foundation uniquely adds an AI conversation partner. Imperative, diminutive and
+relative die/dat are deliberately cheatsheet-only. Passive and conditional
+hypotheticals are B1 and above target, so they stay out until the target changes.
+
 
 **6. Lezen genre and A2 depth.** Only 4 of 10 texts are A2, and they are
 narrative paragraphs ("My day", "What I eat"). The real paper uses authentic

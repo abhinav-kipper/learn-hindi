@@ -1,0 +1,498 @@
+{
+  "id": "dutch-prepositions",
+  "title": "Prepositions: in, op, aan, naar and the Fixed Pairs",
+  "situation": "Foundation: the core Dutch prepositions, the four that cause trouble with places, movement and origin, time prepositions, and the fixed verb-plus-preposition pairs that have to be learned as single vocabulary items.",
+  "level": "A2",
+  "skills": [
+    "choosing in, op, aan or bij for a place",
+    "naar, uit and van for movement and origin",
+    "om, op and in for time",
+    "fixed verb-plus-preposition pairs"
+  ],
+  "phrases": [
+    {
+      "hindi": "Ik wacht op de bus.",
+      "english": "I am waiting for the bus.",
+      "context": "`wachten op`, never `wachten voor`. One of the fixed pairs you will use most often.",
+      "pronunciation": "ik WACHT op de BUS"
+    },
+    {
+      "hindi": "Ik werk op kantoor.",
+      "english": "I work at the office.",
+      "context": "Dutch uses `op` for a long list of public places and institutions, with no article.",
+      "pronunciation": "ik WERK op kan-TOHR"
+    },
+    {
+      "hindi": "Ik kom uit India.",
+      "english": "I come from India.",
+      "context": "`uit` for where you are from. This sentence comes up in almost every first conversation.",
+      "pronunciation": "ik KOM owt IN-dee-aa"
+    },
+    {
+      "hindi": "Hoe laat ga je naar huis?",
+      "english": "What time are you going home?",
+      "context": "`naar huis` is fixed. Never `naar thuis`, because `thuis` already means at home.",
+      "pronunciation": "hoo LAAT chaa ye naar HOWS?"
+    },
+    {
+      "hindi": "Heb je zin in koffie?",
+      "english": "Do you fancy a coffee?",
+      "context": "`zin hebben in` is the everyday way to offer or suggest something.",
+      "pronunciation": "hep ye ZIN in KOF-fee?"
+    },
+    {
+      "hindi": "Kunt u mij helpen met dit formulier?",
+      "english": "Could you help me with this form?",
+      "context": "`helpen met`. You will need exactly this sentence at the gemeente.",
+      "pronunciation": "kunt UU may HEL-pen met dit for-muu-LEER?"
+    },
+    {
+      "hindi": "Ik denk vaak aan mijn familie.",
+      "english": "I often think of my family.",
+      "context": "`denken aan` for having someone in mind. `denken over` means to consider something.",
+      "pronunciation": "ik DENK VAAK aan mayn fa-MEE-lee"
+    },
+    {
+      "hindi": "De winkel is open van negen tot zes.",
+      "english": "The shop is open from nine until six.",
+      "context": "`van ... tot ...` for a stretch of time.",
+      "pronunciation": "de WIN-kel is OH-pen van NAY-chen tot ZES"
+    },
+    {
+      "hindi": "We spreken af om acht uur op het station.",
+      "english": "We are meeting at eight o'clock at the station.",
+      "context": "Three prepositions in one short sentence: `om` for the clock, `op` for the station.",
+      "pronunciation": "we SPRAY-ken AF om ACHT uur op het sta-SHON"
+    },
+    {
+      "hindi": "Waar kijk je naar?",
+      "english": "What are you watching?",
+      "context": "`kijken naar`. In a question the preposition can end up at the end of the sentence.",
+      "pronunciation": "WAAR KAYK ye NAAR?"
+    }
+  ],
+  "grammar_notes": [
+    "Dutch prepositions only partly overlap with English ones, so translating word for word is unreliable. Learn what each does rather than what it equals.",
+    "For places: `in` is genuinely inside, `op` covers surfaces plus many public places (op het station, op school, op kantoor, op de markt, op vakantie), `aan` is attached or alongside (aan tafel, aan de muur), and `bij` is at a person or near a place.",
+    "`naar` is movement towards, `uit` is origin, and `van ... tot ...` marks a stretch in space or time. `naar huis` and `thuis` are fixed: never `naar thuis`.",
+    "Time: `om` for clock times, `op` for days and dates, `in` for months, seasons and years.",
+    "Many verbs and adjectives take a fixed preposition that cannot be derived: `wachten op`, `kijken naar`, `luisteren naar`, `denken aan`, `houden van`, `zoeken naar`, `vragen om`, `praten over`, `beginnen met`, `zin hebben in`, `blij met`, `bang voor`, `trots op`. Learn each pair as one vocabulary item."
+  ],
+  "culture_notes": [
+    "`Heb je zin in ...?` is the normal way Dutch people suggest a drink, a walk or a plan. It is friendlier and far more common than a direct `Wil je ...?`.",
+    "Arranging to meet `op het station` means inside the building, while `bij het station` means outside near it. Dutch people are precise about this and will assume you meant what you said.",
+    "`op kantoor`, `op school` and `op vakantie` drop the article entirely. Adding one (`op het kantoor`) is not wrong but sounds like you mean one specific office building rather than work in general."
+  ],
+  "skill_breakdown": [
+    {
+      "skill": "choosing a preposition for a place",
+      "explanation": "Ask whether you are inside it (in), on its surface or in the public-place group (op), attached or alongside (aan), or at a person or near something (bij). The op group is the one to memorise, because English gives you no hint.",
+      "more_examples": [
+        {
+          "hindi": "Het boek ligt op de tafel.",
+          "english": "The book is on the table."
+        },
+        {
+          "hindi": "De foto hangt aan de muur.",
+          "english": "The photo is hanging on the wall."
+        },
+        {
+          "hindi": "Ik zit in de trein.",
+          "english": "I am on the train.",
+          "breakdown": "English says on, Dutch says in, because you are inside it."
+        },
+        {
+          "hindi": "We eten vanavond bij mijn ouders.",
+          "english": "We are eating at my parents' place tonight."
+        }
+      ]
+    },
+    {
+      "skill": "fixed verb and preposition pairs",
+      "explanation": "The verb decides the preposition and there is no rule behind the choice. Treat each pair as a single vocabulary item and write the preposition down the first time you meet the verb, because attaching it later is much harder.",
+      "more_examples": [
+        {
+          "hindi": "Ik luister graag naar de radio.",
+          "english": "I like listening to the radio."
+        },
+        {
+          "hindi": "Zij vroeg naar jou.",
+          "english": "She asked after you.",
+          "breakdown": "vragen naar is to ask about, vragen om is to ask for."
+        },
+        {
+          "hindi": "Ik hou van stroopwafels.",
+          "english": "I love stroopwafels."
+        },
+        {
+          "hindi": "We beginnen met de uitleg.",
+          "english": "We will start with the explanation."
+        },
+        {
+          "hindi": "Ik ben blij met mijn nieuwe baan.",
+          "english": "I am happy with my new job."
+        }
+      ]
+    },
+    {
+      "skill": "time prepositions",
+      "explanation": "These follow clean rules, unlike the place ones. om for a clock time, op for a day or date, in for a month, season or year, and van ... tot ... for a stretch.",
+      "more_examples": [
+        {
+          "hindi": "De les begint om tien uur.",
+          "english": "The lesson starts at ten o'clock."
+        },
+        {
+          "hindi": "Op vrijdag ben ik vrij.",
+          "english": "On Friday I am free."
+        },
+        {
+          "hindi": "In de zomer gaan we naar Spanje.",
+          "english": "In the summer we go to Spain."
+        },
+        {
+          "hindi": "Ik werk van maandag tot donderdag.",
+          "english": "I work from Monday to Thursday."
+        }
+      ]
+    }
+  ],
+  "practice_prompt": "You are a friendly Dutch tutor drilling prepositions with an A2 learner, one item at a time. Use `je` throughout, since this is an informal tutoring session.\n\nOpen with exactly this line: \"Hoi! Vandaag oefenen we voorzetsels. Ik geef je een zin met een gat, jij vult het juiste woord in. Klaar? Eerste zin: Ik wacht ... de bus.\"\n\nRun about eight items, one per turn. After each answer, say in one short sentence whether it was right and why, then give the next gap. Cover this spread, in roughly this order: a fixed verb pair (wachten op), a place in the op group (Ik werk ... kantoor), the in versus op contrast (Ik zit ... de trein), a movement one (Ik ga ... huis), a clock time (De les begint ... tien uur), a day (... zaterdag ben ik vrij), another fixed pair (Ik luister ... muziek), and finally ask them to make their own sentence with `zin hebben in`.\n\nWhen the learner picks a preposition that an English speaker would expect but Dutch does not use, say so explicitly, because that is the whole point of the lesson. For example, if they write `wachten voor`, explain that English says wait for but Dutch fixes on op.\n\nTag every real error exactly like this so the app can log it:\n[[CORRECTION: original=\"Ik wacht voor de bus\" correct=\"Ik wacht op de bus\" reason=\"wachten always takes op in Dutch\"]]\nDo not tag typos or capitalisation.\n\nFinish with a one-line score, name the single pair they should memorise next, and end warmly.",
+  "theory": {
+    "intro": "Prepositions are the smallest words in Dutch and they cause more small errors than anything else. The reason is simple: your own language is actively unhelpful here. English says *at school* and *at the station*, and Dutch says `op` for both. English says *wait for*, and Dutch fixes on `op`. This chapter sorts them into the parts you can reason about, mainly place and time, and the part you simply have to learn in pairs, which is where the real fluency lives.",
+    "sections": [
+      {
+        "heading": "The core set, and why they will not translate",
+        "body": "A preposition is a small word that places something: in, on, at, to, with. Dutch has the same kind of word, but **they do not map one to one onto English**. `op` is usually *on* and sometimes *at*. `aan` is usually *on* or *to* and sometimes *at*. The overlap is real but partial, so translating word for word from English will mislead you several times a day.\n\nHere is the working set. Learn what each one does rather than what it equals:",
+        "table": {
+          "caption": "The core prepositions",
+          "columns": [
+            "Dutch",
+            "Roughly",
+            "Typical use"
+          ],
+          "rows": [
+            [
+              "in",
+              "in",
+              "inside something: in de kamer"
+            ],
+            [
+              "op",
+              "on, at",
+              "on a surface, and many public places: op het station"
+            ],
+            [
+              "aan",
+              "on, to, at",
+              "attached to something: aan de muur, aan tafel"
+            ],
+            [
+              "bij",
+              "at, with, near",
+              "at a person or place: bij de dokter"
+            ],
+            [
+              "naar",
+              "to",
+              "movement towards: naar huis"
+            ],
+            [
+              "van",
+              "from, of",
+              "origin and possession: van mijn moeder"
+            ],
+            [
+              "met",
+              "with",
+              "accompaniment and means: met de trein"
+            ],
+            [
+              "voor",
+              "for, in front of",
+              "voor jou, voor het huis"
+            ],
+            [
+              "over",
+              "about, over",
+              "a topic: praten over"
+            ],
+            [
+              "uit",
+              "out of, from",
+              "origin: Ik kom uit India."
+            ],
+            [
+              "tot",
+              "until",
+              "an end point: tot vijf uur"
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "note",
+          "body": "Do not try to learn this table by heart today. Come back to it as a reference. The sections below teach the choices that actually cost you marks."
+        },
+        "cutting_intro": "These little words are everywhere, and they are the ones English will lie to you about. Let us meet them properly.",
+        "quick_check": {
+          "question": "Why is translating a preposition straight from English risky?",
+          "options": [
+            "Dutch has far more prepositions than English",
+            "Dutch prepositions only partly overlap with the English ones",
+            "Dutch prepositions always come at the end",
+            "Dutch prepositions change with the gender of the noun"
+          ],
+          "correct_index": 1,
+          "explanation": "The overlap is partial, so a word-for-word swap from English goes wrong often."
+        }
+      },
+      {
+        "heading": "Place: in, op, aan and bij",
+        "body": "These four cause more trouble than everything else combined, because English uses *at* for most of them.\n\n- **`in`** means genuinely inside something: `in de winkel`, `in het ziekenhuis`, `in de auto`.\n- **`op`** means on a surface, and it is also what Dutch uses for a long list of **public places and institutions**: `op het station`, `op kantoor`, `op school`, `op de markt`, `op vakantie`.\n- **`aan`** means attached to or alongside: `aan de muur` (on the wall), `aan tafel` (at the table), `aan de telefoon` (on the phone).\n- **`bij`** means at a person, or near something: `bij de dokter`, `bij mij thuis`, `bij het station` (near the station, as opposed to `op het station`, inside it).\n\nThe `op` group is the one to memorise, because English says *at school*, *at work*, *on holiday* and gives you no clue that Dutch picks `op` for all three.",
+        "examples": [
+          {
+            "hindi": "Ik werk op kantoor, niet thuis.",
+            "english": "I work at the office, not at home.",
+            "breakdown": "`op kantoor` with no article, a fixed expression."
+          },
+          {
+            "hindi": "Mijn zoon zit op school.",
+            "english": "My son is at school.",
+            "breakdown": "`op school`, again with no article."
+          },
+          {
+            "hindi": "We gaan deze zomer op vakantie.",
+            "english": "We are going on holiday this summer.",
+            "breakdown": "English says *on holiday* too here, but it says *at school*, so the pattern is not reliable."
+          },
+          {
+            "hindi": "Ik ben bij de dokter geweest.",
+            "english": "I have been to the doctor's.",
+            "breakdown": "`bij` for being at a person."
+          }
+        ],
+        "callout": {
+          "tone": "warning",
+          "body": "`op het station` means inside the station. `bij het station` means near it, outside. Arranging to meet someone with the wrong one leaves you standing in different places."
+        },
+        "cutting_intro": "Four little words, one big headache. English says 'at' for most of these, so you get no help from your own language.",
+        "quick_check": {
+          "question": "How do you say at the station in Dutch?",
+          "options": [
+            "in het station",
+            "aan het station",
+            "op het station",
+            "bij het station means the same thing"
+          ],
+          "correct_index": 2,
+          "explanation": "Dutch uses op for stations and many public places. bij het station would mean near it, outside."
+        }
+      },
+      {
+        "heading": "Movement and origin: naar, uit, van",
+        "body": "When something moves, Dutch is tidy and consistent.\n\n- **`naar`** is movement towards a place: `Ik ga naar Amsterdam`, `naar de dokter`, `naar huis`.\n- **`uit`** is out of, and it is what you use for where you come from: `Ik kom uit India`.\n- **`van ... tot ...`** marks a stretch, in space or in time: `van Utrecht tot Amsterdam`, `van negen tot vijf`.\n\nTwo fixed phrases drop the article entirely and are worth owning as single words: **`naar huis`** (homewards) and **`thuis`** (at home). `Ik ga naar huis` means I am going home; `Ik ben thuis` means I am at home. Never `naar thuis`.\n\nOne more trap: `naar` is movement, `in` is position. `Ik ga naar de stad` is I am going into town. `Ik ben in de stad` is I am in town.",
+        "examples": [
+          {
+            "hindi": "Ik kom uit India en ik woon nu in Nederland.",
+            "english": "I come from India and I live in the Netherlands now.",
+            "breakdown": "`uit` for origin, `in` for where you are now."
+          },
+          {
+            "hindi": "De winkel is open van negen tot zes.",
+            "english": "The shop is open from nine until six.",
+            "breakdown": "`van ... tot ...` for a stretch of time."
+          },
+          {
+            "hindi": "Hoe laat ga je naar huis?",
+            "english": "What time are you going home?"
+          }
+        ],
+        "cutting_intro": "Movement is the easy part of this chapter. naar takes you somewhere, uit says where you are from.",
+        "quick_check": {
+          "question": "Which is correct for I am going home?",
+          "options": [
+            "Ik ga naar thuis.",
+            "Ik ga thuis.",
+            "Ik ga naar huis.",
+            "Ik ga in huis."
+          ],
+          "correct_index": 2,
+          "explanation": "naar huis is the fixed phrase for going home. thuis already means at home, so it never takes naar."
+        }
+      },
+      {
+        "heading": "The pairs that must be learned whole",
+        "body": "This is the part of the chapter that actually decides whether you sound fluent. In Dutch, **the verb chooses its preposition**, and the choice is not logical. You cannot work out that `wachten` takes `op`; you simply have to know it.\n\nThese behave like single vocabulary items. Learn `wachten op` as one unit, the way you learned `de tafel` rather than `tafel`.\n\nThe same applies to adjectives: `blij met` (happy with), `bang voor` (afraid of), `trots op` (proud of), `klaar met` (finished with).",
+        "table": {
+          "caption": "Fixed verb and preposition pairs",
+          "columns": [
+            "Dutch",
+            "English",
+            "Example"
+          ],
+          "rows": [
+            [
+              "wachten op",
+              "to wait for",
+              "Ik wacht op de bus."
+            ],
+            [
+              "kijken naar",
+              "to watch, to look at",
+              "We kijken naar de film."
+            ],
+            [
+              "luisteren naar",
+              "to listen to",
+              "Ik luister naar muziek."
+            ],
+            [
+              "denken aan",
+              "to think of (have in mind)",
+              "Ik denk aan mijn familie."
+            ],
+            [
+              "denken over",
+              "to think about (consider)",
+              "Ik denk erover na."
+            ],
+            [
+              "houden van",
+              "to love, to be fond of",
+              "Ik hou van koffie."
+            ],
+            [
+              "zoeken naar",
+              "to search for",
+              "Ik zoek naar mijn sleutels."
+            ],
+            [
+              "vragen om",
+              "to ask for",
+              "Ik vraag om hulp."
+            ],
+            [
+              "vragen naar",
+              "to ask about",
+              "Zij vroeg naar jou."
+            ],
+            [
+              "praten over",
+              "to talk about",
+              "We praten over het werk."
+            ],
+            [
+              "praten met",
+              "to talk with",
+              "Ik praat met de buurman."
+            ],
+            [
+              "beginnen met",
+              "to start with",
+              "We beginnen met les een."
+            ],
+            [
+              "zin hebben in",
+              "to fancy, to feel like",
+              "Ik heb zin in koffie."
+            ],
+            [
+              "helpen met",
+              "to help with",
+              "Kun je me helpen met dit formulier?"
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "hindi": "Ik wacht al twintig minuten op de bus.",
+            "english": "I have been waiting for the bus for twenty minutes.",
+            "breakdown": "`wachten op`, not `wachten voor`."
+          },
+          {
+            "hindi": "Heb je zin in een kopje koffie?",
+            "english": "Do you fancy a cup of coffee?",
+            "breakdown": "`zin hebben in` is one of the most useful fixed phrases in the language."
+          },
+          {
+            "hindi": "Kunt u mij helpen met dit formulier?",
+            "english": "Could you help me with this form?",
+            "breakdown": "`helpen met`. You will need this exact sentence at the gemeente."
+          }
+        ],
+        "callout": {
+          "tone": "tip",
+          "body": "When you learn a new verb, write the preposition down with it from the first moment. Adding it later is much harder than learning them together."
+        },
+        "cutting_intro": "Here is the heart of it. The verb picks the preposition, and there is no logic to appeal to. These are vocabulary, not grammar.",
+        "quick_check": {
+          "question": "Which preposition goes with wachten (to wait)?",
+          "options": [
+            "voor",
+            "op",
+            "aan",
+            "naar"
+          ],
+          "correct_index": 1,
+          "explanation": "It is wachten op. Ik wacht op de bus. There is no rule behind it; it is learned as a pair."
+        }
+      },
+      {
+        "heading": "Time, and where the preposition sits",
+        "body": "Time prepositions are refreshingly rule-bound after that last section:\n- **`om`** for clock times: `om acht uur`\n- **`op`** for days and dates: `op maandag`, `op 3 mei`\n- **`in`** for months, seasons and years: `in januari`, `in de zomer`, `in 2026`\n- **`van ... tot ...`** for a stretch: `van negen tot vijf`\n\nFinally, position. A preposition normally sits **immediately before its noun**, exactly as in English: `op de tafel`, `met de trein`, `naar het station`. The whole group then moves around the sentence together.\n\nThere is one exception worth knowing now. When the thing after the preposition is a **thing rather than a person**, Dutch does not say `met het`. It glues the two together as `ermee`, and the two halves often separate: `Ik ben er blij mee`. That construction has a chapter of its own, and this one is the groundwork for it.",
+        "table": {
+          "caption": "Time prepositions",
+          "columns": [
+            "Preposition",
+            "Used for",
+            "Example"
+          ],
+          "rows": [
+            [
+              "om",
+              "clock times",
+              "om half negen"
+            ],
+            [
+              "op",
+              "days and dates",
+              "op zaterdag"
+            ],
+            [
+              "in",
+              "months, seasons, years",
+              "in de winter"
+            ],
+            [
+              "van ... tot ...",
+              "a stretch of time",
+              "van maandag tot vrijdag"
+            ]
+          ]
+        },
+        "callout": {
+          "tone": "note",
+          "body": "For a thing after a preposition, Dutch uses `ermee`, `erover`, `eraan` rather than `met het`, `over het`, `aan het`. You can use `met hem` or `met haar` for a person, but never a bare `het`."
+        },
+        "cutting_intro": "Time words follow clean rules, which is a relief. And one last thing: what happens when the preposition has a thing after it rather than a person.",
+        "quick_check": {
+          "question": "Which preposition goes with a clock time, as in at eight o'clock?",
+          "options": [
+            "op acht uur",
+            "in acht uur",
+            "om acht uur",
+            "aan acht uur"
+          ],
+          "correct_index": 2,
+          "explanation": "om is for clock times. op is for days, in is for months and seasons."
+        }
+      }
+    ],
+    "wrap_up": "Two halves to take away. The reasonable half: `in` is inside, `op` covers surfaces and the public-place group, `aan` is attached, `bij` is at a person or nearby, `naar` is movement, `uit` is origin, and time runs on `om`, `op` and `in`. The unreasonable half: the verb picks its own preposition, and `wachten op`, `kijken naar`, `denken aan`, `houden van` and `zin hebben in` are vocabulary rather than grammar. Write the preposition down with every new verb from now on. It costs nothing today and saves you a great deal later."
+  },
+  "references": [
+    "dutchgrammar.com (Dutch Grammar by Bieneke Berendsen)",
+    "TaalCompleet A2 (KleurRijker NT2 method)",
+    "Nederlands in gang (Coutinho NT2 method)"
+  ]
+}

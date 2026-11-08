@@ -42,12 +42,16 @@ const LEVEL_MAP: Record<string, Level> = {
   'dutch-negation':          'A1',
   'dutch-simple-sentences':  'A1',
   'dutch-de-het':            'A1',
+  'dutch-plurals':           'A1',
   'dutch-word-order':        'A2',
   'dutch-connectors':        'A2',
   'dutch-past-tense':        'A2',
   'dutch-future':            'A2',
   'dutch-modals':            'A2',
+  'dutch-reflexive-verbs':   'A2',
   'dutch-comparatives':      'A2',
+  'dutch-prepositions':      'A2',
+  'dutch-er':                'A2',
 }
 
 export function getLevel(id: string): Level {
