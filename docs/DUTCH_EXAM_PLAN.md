@@ -15,9 +15,10 @@ Last updated: 2026-11-07.
 - Hindi is a separate, casual track with no exam. Do not mix the two: a
   Hindi-grammar aside was found in a Dutch chapter and removed.
 - Tests on a phone against the live Vercel deploy, so work ships to `main`.
-- Has taken a real Dutch course (DE1, lessons 1-10). The 25 cheatsheet topics
-  were built against that syllabus and cover all ten of its grammar goals.
-  DE2 begins with the perfect tense.
+- Has taken a real Dutch course (DE1, lessons 1-10). The first 25 cheatsheet
+  topics were built against that syllabus and cover all ten of its grammar
+  goals. DE2 begins with the perfect tense, which the `a2grammar` group added
+  on 2026-11-08 along with the rest of the A2 core.
 
 ## 2. The exam, as of this writing
 
@@ -47,7 +48,7 @@ else they owe beyond the five papers.
 |---|---|
 | Lessons | 19 (11 A1, 5 A2, 3 B1) |
 | Foundations | 14 grammar chapters (8 A1, 6 A2) |
-| Cheatsheets | 25 topics, 214 drill questions |
+| Cheatsheets | 35 topics, 318 drill questions (5 A1 groups, 1 A2 grammar, 1 exam technique) |
 | KNM | 132 questions, all 8 themes |
 | Lezen | 10 texts (5 A1, 4 A2, 1 B1) |
 | Luisteren | 10 clips (4 A1, 4 A2, 2 B1) |
@@ -83,9 +84,15 @@ Re-opening these without reason wastes a session.
   cached stale-while-revalidate, so an installed PWA kept showing the previous
   deploy. Fixed, but **bump `CACHE_VERSION` in `public/sw.js` and the matching
   names in `lib/offline-cache.ts` together** on any caching change.
-- **Content JSON formatting.** The cheatsheet files are hand-formatted; never
-  round-trip them through `json.dumps(indent=2)`. The foundations, knm.json and
-  vocabulary.json are clean round-trips and safe to rewrite programmatically.
+- **Content JSON formatting.** The first five cheatsheet files (01 to 05) are
+  hand-formatted; never round-trip them through `json.dumps(indent=2)`. The two
+  newer ones (`06-a2grammar.json`, `07-exam.json`) were generated and are safe
+  to regenerate, as are the foundations, knm.json and vocabulary.json.
+- **Drill screens have no button roles.** In `DrillRunner`, MCQ options and the
+  "Next question" control are `Sticker`s, which are divs with onClick. Scripted
+  passes must use `getByText`, not `getByRole('button')`. Word tiles *are*
+  buttons, but a placed tile and its tray twin share a name with the placed one
+  first in the DOM, so use `.last()` to click the tray.
 - **Verify against a freshly rebuilt server.** `pkill -f "next start"` does not
   match the `next-server` process, which has produced false "clean" audits.
 
@@ -208,3 +215,8 @@ Feature work is only half of it. The study pattern matters as much:
    cheatsheet engine. Re-reading what you know feels productive and is not.
 5. **Simulate conditions before booking.** Timed, no notes, no pausing. A score
    under exam pressure is the only score that predicts the real one.
+6. **Read the Exam skills group early, not the week before.** It is the only
+   part of the app that teaches technique rather than Dutch, and the habits in
+   it (leading with a frame, talking around a word you have lost, covering
+   every point the task asked for) only help if they are automatic by exam day.
+   `sentence-frames` and `when-you-get-stuck` are the two to own by heart.

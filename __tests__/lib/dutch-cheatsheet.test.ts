@@ -50,13 +50,30 @@ beforeEach(() => {
 })
 
 describe('cheatsheet content', () => {
-  it('loads five groups, each with topics', () => {
+  it('loads seven groups, each with topics', () => {
     const groups = getGroups()
-    expect(groups).toHaveLength(5)
+    expect(groups).toHaveLength(7)
     for (const g of groups) {
       expect(g.topics.length).toBeGreaterThan(0)
       expect(g.id).toBeTruthy()
       expect(g.title).toBeTruthy()
+    }
+  })
+
+  it('covers A2 grammar and exam technique, not just the A1 course', () => {
+    const ids = getGroups().map((g) => g.id)
+    // The first five groups come from the learner's A1 course. These two are
+    // what the A2 exam itself needs, so losing either would quietly return the
+    // revision layer to A1-only.
+    expect(ids).toContain('a2grammar')
+    expect(ids).toContain('exam')
+
+    const topicIds = getTopics().map((t) => t.id)
+    for (const id of ['perfect-tense', 'separable-verbs', 'reflexive-verbs', 'er', 'subordinate-clauses']) {
+      expect(topicIds).toContain(id)
+    }
+    for (const id of ['sentence-frames', 'when-you-get-stuck', 'linking-words', 'formal-informal', 'exam-tactics']) {
+      expect(topicIds).toContain(id)
     }
   })
 
@@ -95,6 +112,23 @@ describe('cheatsheet content', () => {
         expect([...ex.words].sort()).toEqual([...ex.answer].sort())
       }
     }
+  })
+
+  // Previous waves verified this with a throwaway script that walked every
+  // drill in a browser. As a test it is a permanent gate: answer each exercise
+  // with the answer it itself declares, and the grader must accept it. Catches
+  // an mcq whose correct index points at a distractor, and a fill whose answer
+  // does not survive normalizeAnswer.
+  it('scores 100% when every exercise is answered with its own stated answer', () => {
+    const wrong: string[] = []
+    for (const t of getTopics()) {
+      for (const ex of t.exercises) {
+        const own =
+          ex.kind === 'mcq' ? ex.correct : ex.kind === 'fill' ? ex.answers[0] : ex.answer
+        if (!isCorrect(ex, own)) wrong.push(`${t.id}/${ex.id}`)
+      }
+    }
+    expect(wrong).toEqual([])
   })
 
   it('keeps table rows the same width as their headers', () => {

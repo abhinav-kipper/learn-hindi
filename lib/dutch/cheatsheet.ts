@@ -7,6 +7,8 @@ import grammarData from '@/content/dutch/cheatsheet/02-grammar.json'
 import peopleData from '@/content/dutch/cheatsheet/03-people.json'
 import sentencesData from '@/content/dutch/cheatsheet/04-sentences.json'
 import timeData from '@/content/dutch/cheatsheet/05-time.json'
+import a2GrammarData from '@/content/dutch/cheatsheet/06-a2grammar.json'
+import examData from '@/content/dutch/cheatsheet/07-exam.json'
 
 export const STUDIED_KEY = 'dutch-cheatsheet-studied'
 export const SCORES_KEY = 'dutch-cheatsheet-scores'
@@ -145,7 +147,17 @@ interface GroupFile {
   topics: CheatTopic[]
 }
 
-const FILES = [startData, grammarData, peopleData, sentencesData, timeData] as unknown as GroupFile[]
+// Order matters: this is the order the hub lists them in, so the A1 course
+// material comes first, then the A2 grammar, then the exam-technique layer.
+const FILES = [
+  startData,
+  grammarData,
+  peopleData,
+  sentencesData,
+  timeData,
+  a2GrammarData,
+  examData,
+] as unknown as GroupFile[]
 
 // ── Reads ───────────────────────────────────────────────────────────────────
 

@@ -1,0 +1,1992 @@
+{
+  "group": {
+    "id": "a2grammar",
+    "title": "Past and beyond",
+    "subtitle_nl": "de A2-grammatica",
+    "blurb": "The structures that separate A1 from a pass at A2: talking about the past, verbs that break in half, the little word er that Dutch cannot do without, and what happens to word order when you join two clauses.",
+    "emoji": "⏮"
+  },
+  "topics": [
+    {
+      "id": "perfect-tense",
+      "title": "The perfect tense",
+      "subtitle_nl": "de voltooide tijd",
+      "emoji": "⏮",
+      "summary": "How Dutch talks about the past in everyday speech: a helper verb in slot two and the participle thrown to the very end. Includes the spelling rule that decides -t or -d, and the short list of verbs that take zijn.",
+      "sections": [
+        {
+          "heading": "The shape of the sentence",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Dutch tells a past story with **two parts**: a form of `hebben` or `zijn` in the normal verb slot, and the **participle at the very end** of the sentence. Everything else sits in between."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Ik heb gisteren gewerkt.",
+                  "en": "I worked yesterday.",
+                  "note": "heb in slot two, gewerkt at the end"
+                },
+                {
+                  "nl": "Wij hebben een huis gekocht.",
+                  "en": "We have bought a house."
+                },
+                {
+                  "nl": "Zij is naar Utrecht gegaan.",
+                  "en": "She went to Utrecht.",
+                  "note": "gaan takes zijn"
+                },
+                {
+                  "nl": "Heb je het formulier ingevuld?",
+                  "en": "Have you filled in the form?",
+                  "note": "question, so the helper comes first"
+                }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "This is the past tense you need",
+              "body": "Spoken Dutch uses the perfect for almost everything that happened once. The simple past (`ik werkte`) is mostly for writing and for a few common verbs. At A2 you can tell your whole story in the perfect and sound completely natural."
+            }
+          ]
+        },
+        {
+          "heading": "Building the participle",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "For a regular verb: **ge- + the stem + t or d**. The stem is the base form (the one you look up) minus `-en`."
+            },
+            {
+              "kind": "table",
+              "headers": [
+                "Base form",
+                "Stem",
+                "Participle",
+                "English"
+              ],
+              "rows": [
+                [
+                  "werken",
+                  "werk",
+                  "gewerkt",
+                  "worked"
+                ],
+                [
+                  "horen",
+                  "hoor",
+                  "gehoord",
+                  "heard"
+                ],
+                [
+                  "maken",
+                  "maak",
+                  "gemaakt",
+                  "made"
+                ],
+                [
+                  "bellen",
+                  "bel",
+                  "gebeld",
+                  "called"
+                ],
+                [
+                  "praten",
+                  "praat",
+                  "gepraat",
+                  "talked"
+                ],
+                [
+                  "leren",
+                  "leer",
+                  "geleerd",
+                  "learned"
+                ]
+              ],
+              "nl_cols": [
+                0,
+                1,
+                2
+              ],
+              "en_col": 3
+            },
+            {
+              "kind": "rule",
+              "body": "**t or d?** Use the mnemonic **'t kofschip**. If the stem ends in one of the letters in `t k f s ch p`, the participle ends in **-t**. Every other ending takes **-d**."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "werken, stem werk, k is in 't kofschip",
+                  "en": "so gewerkt",
+                  "note": "ends in -t"
+                },
+                {
+                  "nl": "horen, stem hoor, r is not in 't kofschip",
+                  "en": "so gehoord",
+                  "note": "ends in -d"
+                }
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "Writing gewerkd or gehoort",
+              "body": "This is the single most common A2 spelling slip. Say the stem out loud, find its last sound, and check it against 't kofschip before you write. It is the same rule that decides `-te` or `-de` in the simple past, so learning it once pays twice."
+            }
+          ]
+        },
+        {
+          "heading": "Verbs that skip the ge-",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "A verb that already starts with an unstressed **be-, ge-, er-, her-, ver- or ont-** does **not** add `ge-`. The participle is just the verb with its normal ending."
+            },
+            {
+              "kind": "table",
+              "headers": [
+                "Base form",
+                "Participle",
+                "English"
+              ],
+              "rows": [
+                [
+                  "betalen",
+                  "betaald",
+                  "paid"
+                ],
+                [
+                  "vertellen",
+                  "verteld",
+                  "told"
+                ],
+                [
+                  "beginnen",
+                  "begonnen",
+                  "begun"
+                ],
+                [
+                  "ontmoeten",
+                  "ontmoet",
+                  "met"
+                ],
+                [
+                  "herhalen",
+                  "herhaald",
+                  "repeated"
+                ],
+                [
+                  "gebeuren",
+                  "gebeurd",
+                  "happened"
+                ]
+              ],
+              "nl_cols": [
+                0,
+                1
+              ],
+              "en_col": 2,
+              "note": "ontmoeten already ends in -t, so the participle looks identical to the stem."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Ik heb de rekening betaald.",
+                  "en": "I paid the bill."
+                },
+                {
+                  "nl": "Wat is er gebeurd?",
+                  "en": "What happened?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "hebben or zijn",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Most verbs take **hebben**. Use **zijn** for two groups: verbs of **going somewhere** (with a destination) and verbs of **becoming or changing**."
+            },
+            {
+              "kind": "table",
+              "headers": [
+                "Takes zijn",
+                "English",
+                "Why"
+              ],
+              "rows": [
+                [
+                  "gaan",
+                  "to go",
+                  "movement"
+                ],
+                [
+                  "komen",
+                  "to come",
+                  "movement"
+                ],
+                [
+                  "vertrekken",
+                  "to leave",
+                  "movement"
+                ],
+                [
+                  "blijven",
+                  "to stay",
+                  "fixed exception"
+                ],
+                [
+                  "worden",
+                  "to become",
+                  "change"
+                ],
+                [
+                  "beginnen",
+                  "to begin",
+                  "change"
+                ],
+                [
+                  "gebeuren",
+                  "to happen",
+                  "change"
+                ],
+                [
+                  "zijn",
+                  "to be",
+                  "fixed exception"
+                ]
+              ],
+              "nl_cols": [
+                0
+              ],
+              "en_col": 1
+            },
+            {
+              "kind": "rule",
+              "body": "A travel verb like `fietsen`, `lopen` or `rijden` takes **hebben** on its own, but **zijn** as soon as you say where you went."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Ik heb de hele dag gefietst.",
+                  "en": "I cycled all day.",
+                  "note": "no destination, so hebben"
+                },
+                {
+                  "nl": "Ik ben naar mijn werk gefietst.",
+                  "en": "I cycled to my work.",
+                  "note": "destination, so zijn"
+                },
+                {
+                  "nl": "Hij is ziek geworden.",
+                  "en": "He became ill.",
+                  "note": "a change, so zijn"
+                },
+                {
+                  "nl": "Wij zijn thuis gebleven.",
+                  "en": "We stayed at home.",
+                  "note": "blijven always takes zijn"
+                }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "When you truly cannot remember",
+              "body": "Pick `hebben`. It is right far more often, and a wrong helper verb is a much smaller slip than freezing mid-sentence or avoiding the past altogether."
+            }
+          ]
+        },
+        {
+          "heading": "Common irregular participles",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "These do not follow the `ge- + stem + t/d` pattern and have to be learned as whole words. They are also the verbs you use most, so they are worth the effort."
+            },
+            {
+              "kind": "vocab",
+              "items": [
+                {
+                  "nl": "zijn, geweest",
+                  "en": "to be, been",
+                  "note": "Ik ben in Utrecht geweest."
+                },
+                {
+                  "nl": "hebben, gehad",
+                  "en": "to have, had",
+                  "note": "Ik heb geen tijd gehad."
+                },
+                {
+                  "nl": "gaan, gegaan",
+                  "en": "to go, gone",
+                  "note": "takes zijn"
+                },
+                {
+                  "nl": "doen, gedaan",
+                  "en": "to do, done",
+                  "note": ""
+                },
+                {
+                  "nl": "zien, gezien",
+                  "en": "to see, seen",
+                  "note": ""
+                },
+                {
+                  "nl": "eten, gegeten",
+                  "en": "to eat, eaten",
+                  "note": ""
+                },
+                {
+                  "nl": "drinken, gedronken",
+                  "en": "to drink, drunk",
+                  "note": ""
+                },
+                {
+                  "nl": "schrijven, geschreven",
+                  "en": "to write, written",
+                  "note": ""
+                },
+                {
+                  "nl": "lezen, gelezen",
+                  "en": "to read, read",
+                  "note": ""
+                },
+                {
+                  "nl": "spreken, gesproken",
+                  "en": "to speak, spoken",
+                  "note": ""
+                },
+                {
+                  "nl": "nemen, genomen",
+                  "en": "to take, taken",
+                  "note": ""
+                },
+                {
+                  "nl": "komen, gekomen",
+                  "en": "to come, come",
+                  "note": "takes zijn"
+                },
+                {
+                  "nl": "krijgen, gekregen",
+                  "en": "to get, got",
+                  "note": ""
+                },
+                {
+                  "nl": "brengen, gebracht",
+                  "en": "to bring, brought",
+                  "note": ""
+                },
+                {
+                  "nl": "kopen, gekocht",
+                  "en": "to buy, bought",
+                  "note": ""
+                },
+                {
+                  "nl": "vinden, gevonden",
+                  "en": "to find, found",
+                  "note": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "A helper verb (hebben or zijn) sits in the normal verb slot and the participle goes to the very end.",
+        "Regular participle = ge- + stem + t or d, and 't kofschip decides which.",
+        "Verbs starting with be-, ge-, er-, her-, ver- or ont- never add ge-.",
+        "Use zijn for going somewhere and for becoming something, hebben for everything else.",
+        "If you cannot recall the helper verb, say hebben and keep going."
+      ],
+      "exercises": [
+        {
+          "id": "pf-1",
+          "kind": "fill",
+          "prompt": "Gisteren ___ ik de hele dag gewerkt.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "heb"
+          ],
+          "explain": "Werken takes hebben, and the helper goes in the normal verb slot."
+        },
+        {
+          "id": "pf-2",
+          "kind": "fill",
+          "prompt": "Zij ___ vorige week naar Spanje gegaan.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "is"
+          ],
+          "explain": "Gaan is movement to a destination, so it takes zijn."
+        },
+        {
+          "id": "pf-3",
+          "kind": "fill",
+          "prompt": "Write the participle of werken: Ik heb hard ___.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "gewerkt"
+          ],
+          "explain": "Stem werk ends in k, which is in 't kofschip, so the ending is -t."
+        },
+        {
+          "id": "pf-4",
+          "kind": "fill",
+          "prompt": "Write the participle of horen: Ik heb niets ___.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "gehoord"
+          ],
+          "explain": "Stem hoor ends in r, which is not in 't kofschip, so the ending is -d."
+        },
+        {
+          "id": "pf-5",
+          "kind": "fill",
+          "prompt": "Write the participle of betalen: Ik heb de rekening ___.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "betaald"
+          ],
+          "explain": "Betalen starts with be-, so it takes no ge-."
+        },
+        {
+          "id": "pf-6",
+          "kind": "mcq",
+          "prompt": "Which sentence puts the participle in the right place?",
+          "options": [
+            "Ik heb gekocht een nieuwe fiets.",
+            "Ik heb een nieuwe fiets gekocht.",
+            "Ik gekocht heb een nieuwe fiets.",
+            "Een nieuwe fiets ik heb gekocht."
+          ],
+          "correct": 1,
+          "explain": "The participle goes to the very end, after the object."
+        },
+        {
+          "id": "pf-7",
+          "kind": "mcq",
+          "prompt": "You cycled to work this morning. Which helper verb?",
+          "options": [
+            "Ik heb naar mijn werk gefietst.",
+            "Ik ben naar mijn werk gefietst.",
+            "Ik was naar mijn werk gefietst.",
+            "Ik word naar mijn werk gefietst."
+          ],
+          "correct": 1,
+          "explain": "Fietsen takes zijn once you name the destination."
+        },
+        {
+          "id": "pf-8",
+          "kind": "mcq",
+          "prompt": "Which participle is spelled correctly?",
+          "options": [
+            "gemaakd",
+            "gemaakt",
+            "maakte",
+            "gemaak"
+          ],
+          "correct": 1,
+          "explain": "Stem maak ends in k, which is in 't kofschip, so -t."
+        },
+        {
+          "id": "pf-9",
+          "kind": "mcq",
+          "prompt": "Which verb does NOT take zijn in the perfect?",
+          "options": [
+            "blijven",
+            "worden",
+            "kopen",
+            "komen"
+          ],
+          "correct": 2,
+          "explain": "Kopen is an ordinary action with no movement or change, so it takes hebben."
+        },
+        {
+          "id": "pf-10",
+          "kind": "order",
+          "prompt": "Say: I have spoken to the doctor.",
+          "words": [
+            "Ik",
+            "heb",
+            "met",
+            "de dokter",
+            "gesproken"
+          ],
+          "answer": [
+            "Ik",
+            "heb",
+            "met",
+            "de dokter",
+            "gesproken"
+          ],
+          "explain": "Helper in slot two, participle at the end, everything else in between."
+        },
+        {
+          "id": "pf-11",
+          "kind": "order",
+          "prompt": "Say: Yesterday we stayed at home. Start with Gisteren.",
+          "words": [
+            "Gisteren",
+            "zijn",
+            "we",
+            "thuis",
+            "gebleven"
+          ],
+          "answer": [
+            "Gisteren",
+            "zijn",
+            "we",
+            "thuis",
+            "gebleven"
+          ],
+          "explain": "Starting with a time word pushes the subject behind the verb, and blijven takes zijn."
+        },
+        {
+          "id": "pf-12",
+          "kind": "fill",
+          "prompt": "Wat is er gisteren ___? (gebeuren)",
+          "before": "",
+          "after": "",
+          "answers": [
+            "gebeurd"
+          ],
+          "explain": "Gebeuren starts with ge-, so no extra ge-, and the stem ends in r so the ending is -d."
+        }
+      ]
+    },
+    {
+      "id": "separable-verbs",
+      "title": "Separable verbs",
+      "subtitle_nl": "scheidbare werkwoorden",
+      "emoji": "✂️",
+      "summary": "Verbs like opbellen and meenemen that break in half in a normal sentence and come back together everywhere else. The prefix is not decoration: it usually carries the meaning.",
+      "sections": [
+        {
+          "heading": "What they are",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "A separable verb is a small word stuck onto the front of an ordinary verb: `op + bellen` = `opbellen`, to ring someone up. In a normal main clause the little word **breaks off and goes to the end**."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Ik bel je morgen op.",
+                  "en": "I will ring you tomorrow.",
+                  "note": "op travels to the end"
+                },
+                {
+                  "nl": "Zij neemt haar zoon mee.",
+                  "en": "She is bringing her son along."
+                },
+                {
+                  "nl": "De trein komt om tien uur aan.",
+                  "en": "The train arrives at ten o'clock."
+                },
+                {
+                  "nl": "Doe de deur even dicht.",
+                  "en": "Close the door, would you."
+                }
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "Leaving the prefix next to the verb",
+              "body": "`Ik opbel je morgen` is one of the clearest beginner errors there is. In a plain statement the prefix always travels to the end, however far away that is."
+            }
+          ]
+        },
+        {
+          "heading": "The ones you will actually need",
+          "blocks": [
+            {
+              "kind": "vocab",
+              "items": [
+                {
+                  "nl": "opbellen",
+                  "en": "to phone, to ring up",
+                  "note": "Ik bel de huisarts op."
+                },
+                {
+                  "nl": "meenemen",
+                  "en": "to bring along, to take with",
+                  "note": "Neem je paspoort mee."
+                },
+                {
+                  "nl": "aankomen",
+                  "en": "to arrive",
+                  "note": "De bus komt te laat aan."
+                },
+                {
+                  "nl": "opstaan",
+                  "en": "to get up",
+                  "note": "Ik sta om zeven uur op."
+                },
+                {
+                  "nl": "uitgaan",
+                  "en": "to go out",
+                  "note": "Wij gaan vrijdag uit."
+                },
+                {
+                  "nl": "meegaan",
+                  "en": "to come along",
+                  "note": "Ga je mee?"
+                },
+                {
+                  "nl": "invullen",
+                  "en": "to fill in",
+                  "note": "Vul dit formulier in."
+                },
+                {
+                  "nl": "afspreken",
+                  "en": "to arrange to meet",
+                  "note": "Zullen we iets afspreken?"
+                },
+                {
+                  "nl": "opruimen",
+                  "en": "to tidy up",
+                  "note": "Ik ruim de keuken op."
+                },
+                {
+                  "nl": "terugbellen",
+                  "en": "to call back",
+                  "note": "Ik bel u morgen terug."
+                },
+                {
+                  "nl": "uitleggen",
+                  "en": "to explain",
+                  "note": "Kunt u dat uitleggen?"
+                },
+                {
+                  "nl": "dichtdoen",
+                  "en": "to close",
+                  "note": "Doe het raam dicht."
+                }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "The prefix carries the meaning",
+              "body": "`bellen` is to ring, `opbellen` is to ring a person. `nemen` is to take, `meenemen` is to take along. Learning the whole verb as one unit is faster than learning the parts."
+            }
+          ]
+        },
+        {
+          "heading": "When it stays in one piece",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "The verb comes **back together** in three places: after `te`, in a subordinate clause, and as a participle (where `ge-` wedges into the middle)."
+            },
+            {
+              "kind": "table",
+              "headers": [
+                "Where",
+                "Example",
+                "What happens"
+              ],
+              "rows": [
+                [
+                  "Main clause",
+                  "Ik bel je op.",
+                  "splits"
+                ],
+                [
+                  "After te",
+                  "Ik probeer je op te bellen.",
+                  "te goes in the middle, three words"
+                ],
+                [
+                  "Subordinate clause",
+                  "..., omdat ik je opbel.",
+                  "whole, at the end"
+                ],
+                [
+                  "With a modal",
+                  "Ik moet je opbellen.",
+                  "whole, at the end"
+                ],
+                [
+                  "Perfect tense",
+                  "Ik heb je opgebeld.",
+                  "ge- wedges inside"
+                ]
+              ],
+              "nl_cols": [
+                1
+              ],
+              "note": "Only the plain main clause splits it. Everywhere else the verb is whole."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Ik moet mijn moeder opbellen.",
+                  "en": "I have to call my mother.",
+                  "note": "after a modal, whole and at the end"
+                },
+                {
+                  "nl": "Ik heb mijn moeder opgebeld.",
+                  "en": "I called my mother.",
+                  "note": "ge- sits between op and gebeld"
+                },
+                {
+                  "nl": "Ik probeer haar op te bellen.",
+                  "en": "I am trying to call her.",
+                  "note": "te splits it into three words"
+                },
+                {
+                  "nl": "Hij zegt dat hij morgen meegaat.",
+                  "en": "He says that he is coming along tomorrow.",
+                  "note": "subordinate clause, so whole"
+                }
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "Writing opgebeld as op gebeld or gebelop",
+              "body": "The participle keeps the prefix at the front and slides `ge-` in behind it: op + ge + beld. Same for meegenomen, aangekomen, opgestaan."
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "In a plain statement the prefix breaks off and goes to the very end of the sentence.",
+        "After te, after a modal, and in a subordinate clause the verb stays in one piece.",
+        "The participle wedges ge- in the middle: opbellen becomes opgebeld.",
+        "Learn the prefix with the verb, because it usually carries the meaning."
+      ],
+      "exercises": [
+        {
+          "id": "sep-1",
+          "kind": "order",
+          "prompt": "Say: I will ring you tomorrow. (opbellen)",
+          "words": [
+            "Ik",
+            "bel",
+            "je",
+            "morgen",
+            "op"
+          ],
+          "answer": [
+            "Ik",
+            "bel",
+            "je",
+            "morgen",
+            "op"
+          ],
+          "explain": "In a plain statement the prefix op travels all the way to the end."
+        },
+        {
+          "id": "sep-2",
+          "kind": "order",
+          "prompt": "Say: The train arrives at ten o'clock. (aankomen)",
+          "words": [
+            "De trein",
+            "komt",
+            "om tien uur",
+            "aan"
+          ],
+          "answer": [
+            "De trein",
+            "komt",
+            "om tien uur",
+            "aan"
+          ],
+          "explain": "Verb in slot two, prefix at the end."
+        },
+        {
+          "id": "sep-3",
+          "kind": "fill",
+          "prompt": "Ik sta elke dag om zeven uur ___. (opstaan)",
+          "before": "",
+          "after": "",
+          "answers": [
+            "op"
+          ],
+          "explain": "A plain statement, so the prefix goes to the end."
+        },
+        {
+          "id": "sep-4",
+          "kind": "fill",
+          "prompt": "Vergeet niet je paspoort ___ te nemen. (meenemen)",
+          "before": "",
+          "after": "",
+          "answers": [
+            "mee"
+          ],
+          "explain": "After te the verb splits into three words: mee te nemen."
+        },
+        {
+          "id": "sep-5",
+          "kind": "fill",
+          "prompt": "Ik heb de huisarts ___. (opbellen, perfect)",
+          "before": "",
+          "after": "",
+          "answers": [
+            "opgebeld"
+          ],
+          "explain": "The participle wedges ge- between the prefix and the verb."
+        },
+        {
+          "id": "sep-6",
+          "kind": "mcq",
+          "prompt": "Which sentence is correct?",
+          "options": [
+            "Ik opbel je morgen.",
+            "Ik bel morgen je op.",
+            "Ik bel je morgen op.",
+            "Ik bel op je morgen."
+          ],
+          "correct": 2,
+          "explain": "The prefix goes to the very end, and the object je sits close to the verb."
+        },
+        {
+          "id": "sep-7",
+          "kind": "mcq",
+          "prompt": "After a modal verb, what happens to a separable verb?",
+          "options": [
+            "It splits and the prefix goes to the end.",
+            "It stays whole and goes to the end.",
+            "It stays whole and stays in slot two.",
+            "It takes te in the middle."
+          ],
+          "correct": 1,
+          "explain": "Ik moet je opbellen. The second verb is whole and sits at the end."
+        },
+        {
+          "id": "sep-8",
+          "kind": "mcq",
+          "prompt": "Which is the correct participle of meenemen?",
+          "options": [
+            "gemeenomen",
+            "meegenomen",
+            "mee genomen",
+            "genomenmee"
+          ],
+          "correct": 1,
+          "explain": "Prefix first, then ge-, then the participle: mee + ge + nomen."
+        },
+        {
+          "id": "sep-9",
+          "kind": "mcq",
+          "prompt": "Which sentence keeps the verb whole, correctly?",
+          "options": [
+            "Ik denk dat hij morgen mee gaat.",
+            "Ik denk dat hij morgen meegaat.",
+            "Ik denk dat hij gaat morgen mee.",
+            "Ik denk dat hij meegaat morgen."
+          ],
+          "correct": 1,
+          "explain": "In a subordinate clause the verb is whole and sits at the end."
+        },
+        {
+          "id": "sep-10",
+          "kind": "fill",
+          "prompt": "Kunt u dat alstublieft ___? (uitleggen, after a modal)",
+          "before": "",
+          "after": "",
+          "answers": [
+            "uitleggen"
+          ],
+          "explain": "After a modal the verb stays in one piece at the end."
+        }
+      ]
+    },
+    {
+      "id": "reflexive-verbs",
+      "title": "Reflexive verbs",
+      "subtitle_nl": "wederkerende werkwoorden",
+      "emoji": "🔁",
+      "summary": "Verbs that need a little extra word pointing back at the subject. Some match English, several do not, and those are the ones that cost marks.",
+      "sections": [
+        {
+          "heading": "The pattern",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "A reflexive verb carries a second word that points back at whoever is doing it. The dictionary form shows it as `zich`, and you swap `zich` for the form that matches your subject."
+            },
+            {
+              "kind": "table",
+              "headers": [
+                "Subject",
+                "Reflexive word",
+                "Example"
+              ],
+              "rows": [
+                [
+                  "ik",
+                  "me",
+                  "Ik was me."
+                ],
+                [
+                  "jij / je",
+                  "je",
+                  "Jij wast je."
+                ],
+                [
+                  "u",
+                  "u / zich",
+                  "U wast zich."
+                ],
+                [
+                  "hij / zij / het",
+                  "zich",
+                  "Hij wast zich."
+                ],
+                [
+                  "wij / we",
+                  "ons",
+                  "Wij wassen ons."
+                ],
+                [
+                  "jullie",
+                  "je",
+                  "Jullie wassen je."
+                ],
+                [
+                  "zij / ze (plural)",
+                  "zich",
+                  "Zij wassen zich."
+                ]
+              ],
+              "nl_cols": [
+                1,
+                2
+              ],
+              "note": "Only ons and me are distinctive. Everything else is je or zich."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Ik voel me niet lekker.",
+                  "en": "I do not feel well.",
+                  "note": "the phrase you need at the doctor"
+                },
+                {
+                  "nl": "Hij heeft zich vergist.",
+                  "en": "He has made a mistake."
+                },
+                {
+                  "nl": "Wij moeten ons haasten.",
+                  "en": "We have to hurry."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "The ones that trip up English speakers",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "These verbs are reflexive in Dutch but not in English, so there is nothing in your own language reminding you to add the extra word. Learn them as fixed phrases."
+            },
+            {
+              "kind": "vocab",
+              "items": [
+                {
+                  "nl": "zich voelen",
+                  "en": "to feel (well, ill, happy)",
+                  "note": "Ik voel me goed."
+                },
+                {
+                  "nl": "zich vergissen",
+                  "en": "to be mistaken, to get it wrong",
+                  "note": "Sorry, ik heb me vergist."
+                },
+                {
+                  "nl": "zich haasten",
+                  "en": "to hurry",
+                  "note": "Je moet je haasten."
+                },
+                {
+                  "nl": "zich herinneren",
+                  "en": "to remember",
+                  "note": "Ik herinner me zijn naam niet."
+                },
+                {
+                  "nl": "zich vervelen",
+                  "en": "to be bored",
+                  "note": "De kinderen vervelen zich."
+                },
+                {
+                  "nl": "zich voorstellen",
+                  "en": "to introduce yourself, to imagine",
+                  "note": "Mag ik me even voorstellen?"
+                },
+                {
+                  "nl": "zich aanmelden",
+                  "en": "to register, to sign up",
+                  "note": "U moet zich aanmelden bij de gemeente."
+                },
+                {
+                  "nl": "zich inschrijven",
+                  "en": "to enrol, to register",
+                  "note": "Ik heb me ingeschreven voor de cursus."
+                }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "Two of these are exam gold",
+              "body": "`Ik voel me niet lekker` is the opening line of any doctor conversation, and `zich aanmelden` or `zich inschrijven` is what you do at the gemeente. Both situations come up again and again on the exam."
+            },
+            {
+              "kind": "pitfall",
+              "title": "Dropping the little word",
+              "body": "`Ik voel niet lekker` and `Ik herinner zijn naam niet` are both wrong, and both sound obviously off to a Dutch ear. If the verb is on this list, the extra word is not optional."
+            }
+          ]
+        },
+        {
+          "heading": "Where it sits in the sentence",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "The reflexive word goes **straight after the conjugated verb**, before almost everything else. In a question or after a time word it still follows the verb, so it ends up before the subject's other business."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Ik voel me vandaag veel beter.",
+                  "en": "I feel much better today."
+                },
+                {
+                  "nl": "Voel je je wel goed?",
+                  "en": "Are you feeling all right?",
+                  "note": "je twice: once the subject, once the reflexive"
+                },
+                {
+                  "nl": "Vandaag voel ik me beter.",
+                  "en": "Today I feel better.",
+                  "note": "after inversion it follows the subject"
+                },
+                {
+                  "nl": "Ik heb me gisteren vergist.",
+                  "en": "I made a mistake yesterday.",
+                  "note": "perfect tense, the little word stays up front"
+                }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "Voel je je is not a typo",
+              "body": "With `jij`, the subject and the reflexive word are both `je`, so you really do say it twice. Dutch speakers do not find it odd."
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Swap zich for me, je, ons or zich to match the subject.",
+        "A handful of everyday verbs are reflexive in Dutch but not in English, and those must be learned as whole phrases.",
+        "Ik voel me niet lekker and U moet zich aanmelden are two you will use on the exam.",
+        "The reflexive word follows the conjugated verb, even in the perfect tense."
+      ],
+      "exercises": [
+        {
+          "id": "rf-1",
+          "kind": "fill",
+          "prompt": "Ik voel ___ vandaag niet zo goed.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "me"
+          ],
+          "explain": "With ik the reflexive word is me."
+        },
+        {
+          "id": "rf-2",
+          "kind": "fill",
+          "prompt": "Wij moeten ___ haasten, de trein vertrekt zo.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "ons"
+          ],
+          "explain": "With wij the reflexive word is ons."
+        },
+        {
+          "id": "rf-3",
+          "kind": "fill",
+          "prompt": "Hij heeft ___ vergist in het adres.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "zich"
+          ],
+          "explain": "With hij the reflexive word is zich."
+        },
+        {
+          "id": "rf-4",
+          "kind": "fill",
+          "prompt": "U moet ___ eerst aanmelden bij de balie.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "zich",
+            "u"
+          ],
+          "explain": "With u the usual form is zich, though u is also accepted."
+        },
+        {
+          "id": "rf-5",
+          "kind": "mcq",
+          "prompt": "You are at the doctor. How do you say you do not feel well?",
+          "options": [
+            "Ik voel niet lekker.",
+            "Ik voel me niet lekker.",
+            "Ik me voel niet lekker.",
+            "Ik ben niet lekker voel."
+          ],
+          "correct": 1,
+          "explain": "Voelen is reflexive in Dutch, and the little word comes straight after the verb."
+        },
+        {
+          "id": "rf-6",
+          "kind": "mcq",
+          "prompt": "Which sentence is correct?",
+          "options": [
+            "Ik herinner zijn naam niet.",
+            "Ik herinner me zijn naam niet.",
+            "Ik me herinner zijn naam niet.",
+            "Ik herinner zijn naam me niet."
+          ],
+          "correct": 1,
+          "explain": "Zich herinneren is reflexive, and the word follows the conjugated verb."
+        },
+        {
+          "id": "rf-7",
+          "kind": "mcq",
+          "prompt": "Why does Voel je je wel goed? contain je twice?",
+          "options": [
+            "It is a spelling mistake.",
+            "One je is the subject and the other is the reflexive word.",
+            "Dutch repeats words in questions.",
+            "The second je means your."
+          ],
+          "correct": 1,
+          "explain": "With jij the subject and the reflexive word happen to look the same."
+        },
+        {
+          "id": "rf-8",
+          "kind": "order",
+          "prompt": "Say: I have to introduce myself first. (zich voorstellen)",
+          "words": [
+            "Ik",
+            "moet",
+            "me",
+            "eerst",
+            "voorstellen"
+          ],
+          "answer": [
+            "Ik",
+            "moet",
+            "me",
+            "eerst",
+            "voorstellen"
+          ],
+          "explain": "The reflexive word follows the conjugated verb, and the second verb goes to the end."
+        },
+        {
+          "id": "rf-9",
+          "kind": "fill",
+          "prompt": "De kinderen ___ zich als het regent. (vervelen)",
+          "before": "",
+          "after": "",
+          "answers": [
+            "vervelen"
+          ],
+          "explain": "Plural subject, so the verb keeps its -en ending."
+        },
+        {
+          "id": "rf-10",
+          "kind": "mcq",
+          "prompt": "Which of these is NOT reflexive in Dutch?",
+          "options": [
+            "zich haasten",
+            "zich vergissen",
+            "zich vervelen",
+            "werken"
+          ],
+          "correct": 3,
+          "explain": "Werken is an ordinary verb and takes no reflexive word."
+        }
+      ]
+    },
+    {
+      "id": "er",
+      "title": "The word er",
+      "subtitle_nl": "het woordje er",
+      "emoji": "🧭",
+      "summary": "One tiny word doing four unrelated jobs. Dutch uses er constantly and learners leave it out, which is what makes a correct sentence still sound foreign.",
+      "sections": [
+        {
+          "heading": "Why it is worth the trouble",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "`er` has no single English translation, which is exactly why it gets skipped. But Dutch sentences often **cannot stand** without it. Getting even two of its four jobs right makes your Dutch sound markedly more natural."
+            },
+            {
+              "kind": "table",
+              "headers": [
+                "Job",
+                "Example",
+                "Rough English"
+              ],
+              "rows": [
+                [
+                  "There is / there are",
+                  "Er staat een man voor de deur.",
+                  "There is a man at the door."
+                ],
+                [
+                  "A place already mentioned",
+                  "Ik ben er nooit geweest.",
+                  "I have never been there."
+                ],
+                [
+                  "Standing in for a thing after a preposition",
+                  "Ik ben er blij mee.",
+                  "I am happy with it."
+                ],
+                [
+                  "With a number, instead of repeating the noun",
+                  "Ik heb er drie.",
+                  "I have three (of them)."
+                ]
+              ],
+              "nl_cols": [
+                1
+              ],
+              "en_col": 2
+            }
+          ]
+        },
+        {
+          "heading": "Job one: there is, there are",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "To say that something exists or is present, Dutch starts with **er** and then puts the verb. The thing itself comes after the verb, not before it."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Er is een probleem met de verwarming.",
+                  "en": "There is a problem with the heating."
+                },
+                {
+                  "nl": "Er zijn veel mensen in de wachtkamer.",
+                  "en": "There are a lot of people in the waiting room."
+                },
+                {
+                  "nl": "Er woont een nieuwe buurvrouw naast ons.",
+                  "en": "A new neighbour lives next door to us."
+                },
+                {
+                  "nl": "Is er nog brood?",
+                  "en": "Is there any bread left?"
+                }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "This is your housing-problem opener",
+              "body": "Reporting a fault to a landlord or the gemeente almost always starts `Er is een probleem met ...`. It is one sentence that buys you a whole exam task."
+            }
+          ]
+        },
+        {
+          "heading": "Job two: a place you already named",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Once a place is known from the conversation, Dutch says `er` instead of naming it again. English would say *there*."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Ken je Utrecht? Ik heb er drie jaar gewoond.",
+                  "en": "Do you know Utrecht? I lived there for three years."
+                },
+                {
+                  "nl": "Ik ga morgen naar de gemeente. Ben jij er al geweest?",
+                  "en": "I am going to the gemeente tomorrow. Have you been there yet?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Job three: er plus a preposition",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Dutch does not say *met het* or *over het* for a thing. It glues `er` to the front of the preposition instead, and the two often **split apart** in the sentence."
+            },
+            {
+              "kind": "table",
+              "headers": [
+                "Instead of",
+                "Dutch says",
+                "English"
+              ],
+              "rows": [
+                [
+                  "met het",
+                  "ermee",
+                  "with it"
+                ],
+                [
+                  "over het",
+                  "erover",
+                  "about it"
+                ],
+                [
+                  "aan het",
+                  "eraan",
+                  "on it, of it"
+                ],
+                [
+                  "naar het",
+                  "ernaar",
+                  "at it, to it"
+                ],
+                [
+                  "op het",
+                  "erop",
+                  "on it"
+                ]
+              ],
+              "nl_cols": [
+                1
+              ],
+              "en_col": 2
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Ik ben er heel blij mee.",
+                  "en": "I am very happy with it.",
+                  "note": "ermee has split around blij"
+                },
+                {
+                  "nl": "Wat vind je ervan?",
+                  "en": "What do you think of it?",
+                  "note": "a very common fixed question"
+                },
+                {
+                  "nl": "Ik denk er nog over na.",
+                  "en": "I am still thinking about it."
+                }
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "Using het for a thing after a preposition",
+              "body": "`Ik ben blij met het` is wrong. For a thing, it has to be `ermee`. You can use `met hem` or `met haar` for a person, but never a bare `het` after a preposition."
+            }
+          ]
+        },
+        {
+          "heading": "Job four: with a number",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "When you answer with a number, Dutch slips in `er` instead of repeating the noun. English just drops the noun; Dutch needs the placeholder."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Hoeveel kinderen heeft u? Ik heb er twee.",
+                  "en": "How many children do you have? I have two."
+                },
+                {
+                  "nl": "Zijn er nog kaartjes? Ja, er zijn er nog vier.",
+                  "en": "Are there any tickets left? Yes, there are four left."
+                }
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "Answering Ik heb twee",
+              "body": "Without `er` this sounds unfinished to a Dutch ear, the way *I have two* with no noun sounds clipped in English. Add the `er` and the answer lands."
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Er is een probleem met ... is the sentence that opens most complaints.",
+        "Er replaces a place you have already mentioned.",
+        "For a thing after a preposition, use ermee, erover, eraan, never a bare het.",
+        "Answering with a number needs er: Ik heb er twee.",
+        "Leaving er out is what makes otherwise correct Dutch sound foreign."
+      ],
+      "exercises": [
+        {
+          "id": "er-1",
+          "kind": "fill",
+          "prompt": "___ is een probleem met de verwarming.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "Er",
+            "er"
+          ],
+          "explain": "To say that something exists, start with er and then the verb."
+        },
+        {
+          "id": "er-2",
+          "kind": "fill",
+          "prompt": "Hoeveel broers heb je? Ik heb ___ twee.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "er"
+          ],
+          "explain": "Answering with a number needs er instead of repeating the noun."
+        },
+        {
+          "id": "er-3",
+          "kind": "fill",
+          "prompt": "Ken je Amsterdam? Ja, ik heb ___ gewoond.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "er"
+          ],
+          "explain": "Er stands in for a place already mentioned."
+        },
+        {
+          "id": "er-4",
+          "kind": "mcq",
+          "prompt": "How do you say I am very happy with it?",
+          "options": [
+            "Ik ben heel blij met het.",
+            "Ik ben er heel blij mee.",
+            "Ik ben heel blij ermee het.",
+            "Ik ben met het heel blij."
+          ],
+          "correct": 1,
+          "explain": "For a thing after a preposition Dutch uses ermee, and it splits around blij."
+        },
+        {
+          "id": "er-5",
+          "kind": "mcq",
+          "prompt": "Which sentence is right?",
+          "options": [
+            "Zijn veel mensen in de wachtkamer.",
+            "Er zijn veel mensen in de wachtkamer.",
+            "Veel mensen er zijn in de wachtkamer.",
+            "Er veel mensen zijn in de wachtkamer."
+          ],
+          "correct": 1,
+          "explain": "Er comes first, then the verb, then the thing itself."
+        },
+        {
+          "id": "er-6",
+          "kind": "mcq",
+          "prompt": "Someone asks what you think of the new plan. Which is natural?",
+          "options": [
+            "Wat vind je van het?",
+            "Wat vind je ervan?",
+            "Wat vind je het van?",
+            "Wat van vind je?"
+          ],
+          "correct": 1,
+          "explain": "Ervan is the fixed way to say of it, and this is a very common question."
+        },
+        {
+          "id": "er-7",
+          "kind": "mcq",
+          "prompt": "Why is Ik heb twee an odd answer to Hoeveel kinderen heeft u?",
+          "options": [
+            "Twee is the wrong number word.",
+            "Dutch needs er as a placeholder for the noun.",
+            "It should use hebben, not heb.",
+            "The answer must repeat kinderen in full."
+          ],
+          "correct": 1,
+          "explain": "Without er the answer sounds unfinished in Dutch."
+        },
+        {
+          "id": "er-8",
+          "kind": "order",
+          "prompt": "Say: There is a problem with the heating.",
+          "words": [
+            "Er",
+            "is",
+            "een probleem",
+            "met de verwarming"
+          ],
+          "answer": [
+            "Er",
+            "is",
+            "een probleem",
+            "met de verwarming"
+          ],
+          "explain": "Er takes slot one, the verb follows, then what the problem is."
+        },
+        {
+          "id": "er-9",
+          "kind": "fill",
+          "prompt": "Ik ga morgen naar de gemeente. Ben jij ___ al geweest?",
+          "before": "",
+          "after": "",
+          "answers": [
+            "er"
+          ],
+          "explain": "Er replaces the place that was just named."
+        },
+        {
+          "id": "er-10",
+          "kind": "mcq",
+          "prompt": "Which of these does er NOT do?",
+          "options": [
+            "Say that something exists.",
+            "Replace a place already mentioned.",
+            "Stand in for a thing after a preposition.",
+            "Replace a person after a preposition."
+          ],
+          "correct": 3,
+          "explain": "For a person you use met hem or met haar, not ermee."
+        }
+      ]
+    },
+    {
+      "id": "subordinate-clauses",
+      "title": "Joining two clauses",
+      "subtitle_nl": "bijzinnen en betrekkelijke bijzinnen",
+      "emoji": "🔗",
+      "summary": "What happens to word order when you glue a second clause on: the verb walks to the end. Plus die and dat, the two words that let you describe something in one sentence instead of two.",
+      "sections": [
+        {
+          "heading": "The rule in one line",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "After a joining word like `omdat`, `dat`, `als`, `toen`, `terwijl` or `hoewel`, the verb **moves to the end of its own clause**. This is the single biggest structural difference between A1 and A2 Dutch."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Ik blijf thuis. Ik ben ziek.",
+                  "en": "I am staying home. I am ill.",
+                  "note": "two separate sentences"
+                },
+                {
+                  "nl": "Ik blijf thuis omdat ik ziek ben.",
+                  "en": "I am staying home because I am ill.",
+                  "note": "ben has walked to the end"
+                },
+                {
+                  "nl": "Ik weet dat hij morgen komt.",
+                  "en": "I know that he is coming tomorrow."
+                },
+                {
+                  "nl": "Als het regent, blijven we binnen.",
+                  "en": "If it rains, we stay inside.",
+                  "note": "see the next section for the comma"
+                }
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "want is not one of these",
+              "body": "`want` also means because, but it is a **joining word between equals** and changes nothing: `Ik blijf thuis, want ik ben ziek.` Only `omdat` sends the verb to the end. If you are unsure, `want` is the safer choice because it needs no reordering."
+            }
+          ]
+        },
+        {
+          "heading": "When the second clause comes first",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "If you lead with the subordinate clause, the whole clause fills slot one, so the main clause's verb comes **immediately after the comma**. You end up with two verbs meeting in the middle."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Omdat ik ziek ben, blijf ik thuis.",
+                  "en": "Because I am ill, I am staying home.",
+                  "note": "ben and blijf meet across the comma"
+                },
+                {
+                  "nl": "Als u klaar bent, kunt u hier tekenen.",
+                  "en": "When you are ready, you can sign here."
+                },
+                {
+                  "nl": "Toen ik in Nederland aankwam, sprak ik geen Nederlands.",
+                  "en": "When I arrived in the Netherlands, I spoke no Dutch."
+                }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "Two verbs around a comma is a good sign",
+              "body": "If your sentence has `..., verb subject ...` across the comma, you have almost certainly got it right. It looks strange to an English eye and is completely normal in Dutch."
+            }
+          ]
+        },
+        {
+          "heading": "The joining words worth knowing",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": [
+                "Dutch",
+                "English",
+                "Sends verb to the end?"
+              ],
+              "rows": [
+                [
+                  "omdat",
+                  "because",
+                  "yes"
+                ],
+                [
+                  "want",
+                  "because",
+                  "no"
+                ],
+                [
+                  "dat",
+                  "that",
+                  "yes"
+                ],
+                [
+                  "als",
+                  "if, when (repeated or future)",
+                  "yes"
+                ],
+                [
+                  "toen",
+                  "when (one moment in the past)",
+                  "yes"
+                ],
+                [
+                  "terwijl",
+                  "while",
+                  "yes"
+                ],
+                [
+                  "hoewel",
+                  "although",
+                  "yes"
+                ],
+                [
+                  "zodat",
+                  "so that",
+                  "yes"
+                ],
+                [
+                  "voordat",
+                  "before",
+                  "yes"
+                ],
+                [
+                  "nadat",
+                  "after",
+                  "yes"
+                ],
+                [
+                  "en / maar / of",
+                  "and / but / or",
+                  "no"
+                ]
+              ],
+              "nl_cols": [
+                0
+              ],
+              "en_col": 1
+            },
+            {
+              "kind": "pitfall",
+              "title": "als versus toen",
+              "body": "Both translate as *when*. Use **toen** for a single finished moment in the past (`Toen ik aankwam ...`) and **als** for anything repeated, present or future (`Als het regent ...`). Getting this wrong is a very visible A2 error."
+            }
+          ]
+        },
+        {
+          "heading": "die and dat: describing in one sentence",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "To add information about a noun you have just named, use **die** for a de-word and **dat** for a het-word. The verb in that added piece goes to the end, same as any other subordinate clause."
+            },
+            {
+              "kind": "table",
+              "headers": [
+                "Noun",
+                "Word to use",
+                "Example"
+              ],
+              "rows": [
+                [
+                  "de man",
+                  "die",
+                  "De man die daar staat, is mijn buurman."
+                ],
+                [
+                  "de fiets",
+                  "die",
+                  "De fiets die ik gekocht heb, was goedkoop."
+                ],
+                [
+                  "het huis",
+                  "dat",
+                  "Het huis dat wij huren, is klein."
+                ],
+                [
+                  "het boek",
+                  "dat",
+                  "Het boek dat ik lees, is spannend."
+                ],
+                [
+                  "plurals (always de)",
+                  "die",
+                  "De kinderen die hier wonen, zijn jong."
+                ]
+              ],
+              "nl_cols": [
+                0,
+                1,
+                2
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "Every plural is a de-word",
+              "body": "So every plural takes `die`, with no exceptions to remember. That alone covers a large share of the cases."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Ik zoek de brief die gisteren gekomen is.",
+                  "en": "I am looking for the letter that came yesterday."
+                },
+                {
+                  "nl": "Dit is het formulier dat u moet invullen.",
+                  "en": "This is the form that you have to fill in."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "After omdat, dat, als, toen, terwijl or hoewel the verb goes to the end of its clause.",
+        "want means because too but changes nothing, so it is the safe option under pressure.",
+        "Lead with the subordinate clause and the main verb jumps to just after the comma.",
+        "toen is for one finished moment in the past, als for anything repeated or still to come.",
+        "die for de-words and all plurals, dat for het-words."
+      ],
+      "exercises": [
+        {
+          "id": "sub-1",
+          "kind": "order",
+          "prompt": "Say: I am staying home because I am ill. (use omdat)",
+          "words": [
+            "Ik",
+            "blijf",
+            "thuis",
+            "omdat",
+            "ik",
+            "ziek",
+            "ben"
+          ],
+          "answer": [
+            "Ik",
+            "blijf",
+            "thuis",
+            "omdat",
+            "ik",
+            "ziek",
+            "ben"
+          ],
+          "explain": "Omdat sends ben to the very end of its own clause."
+        },
+        {
+          "id": "sub-2",
+          "kind": "order",
+          "prompt": "Say: Because I am ill, I am staying home. Start with Omdat.",
+          "words": [
+            "Omdat",
+            "ik",
+            "ziek",
+            "ben,",
+            "blijf",
+            "ik",
+            "thuis"
+          ],
+          "answer": [
+            "Omdat",
+            "ik",
+            "ziek",
+            "ben,",
+            "blijf",
+            "ik",
+            "thuis"
+          ],
+          "explain": "The whole clause fills slot one, so blijf comes straight after the comma and ik follows it."
+        },
+        {
+          "id": "sub-3",
+          "kind": "fill",
+          "prompt": "Ik weet dat hij morgen ___. (komen)",
+          "before": "",
+          "after": "",
+          "answers": [
+            "komt"
+          ],
+          "explain": "Dat sends the verb to the end, but it still agrees with hij."
+        },
+        {
+          "id": "sub-4",
+          "kind": "fill",
+          "prompt": "De man ___ daar staat, is mijn buurman.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "die"
+          ],
+          "explain": "Man is a de-word, so it takes die."
+        },
+        {
+          "id": "sub-5",
+          "kind": "fill",
+          "prompt": "Het formulier ___ u moet invullen, ligt op tafel.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "dat"
+          ],
+          "explain": "Formulier is a het-word, so it takes dat."
+        },
+        {
+          "id": "sub-6",
+          "kind": "mcq",
+          "prompt": "Which sentence is correct?",
+          "options": [
+            "Ik blijf thuis omdat ik ben ziek.",
+            "Ik blijf thuis omdat ziek ik ben.",
+            "Ik blijf thuis omdat ik ziek ben.",
+            "Ik blijf thuis omdat ben ik ziek."
+          ],
+          "correct": 2,
+          "explain": "After omdat the verb ben goes to the very end."
+        },
+        {
+          "id": "sub-7",
+          "kind": "mcq",
+          "prompt": "Which joining word does NOT move the verb?",
+          "options": [
+            "omdat",
+            "want",
+            "hoewel",
+            "terwijl"
+          ],
+          "correct": 1,
+          "explain": "Want joins two equal clauses and leaves the word order alone."
+        },
+        {
+          "id": "sub-8",
+          "kind": "mcq",
+          "prompt": "You are describing one finished moment in the past: ___ ik in Nederland aankwam, sprak ik geen Nederlands.",
+          "options": [
+            "Als",
+            "Toen",
+            "Wanneer",
+            "Dan"
+          ],
+          "correct": 1,
+          "explain": "Toen is for a single completed moment in the past."
+        },
+        {
+          "id": "sub-9",
+          "kind": "mcq",
+          "prompt": "Which is right for a repeated situation?",
+          "options": [
+            "Toen het regent, blijven we binnen.",
+            "Als het regent, blijven we binnen.",
+            "Toen het regende, blijven we binnen.",
+            "Dan het regent, blijven we binnen."
+          ],
+          "correct": 1,
+          "explain": "Als covers anything repeated, present or future."
+        },
+        {
+          "id": "sub-10",
+          "kind": "mcq",
+          "prompt": "De kinderen ___ hier wonen, zijn jong. Which word fits?",
+          "options": [
+            "dat",
+            "die",
+            "wat",
+            "deze"
+          ],
+          "correct": 1,
+          "explain": "Every plural is a de-word, so it takes die."
+        },
+        {
+          "id": "sub-11",
+          "kind": "fill",
+          "prompt": "Ik ga niet mee, ___ ik moet werken. (use the word that changes nothing)",
+          "before": "",
+          "after": "",
+          "answers": [
+            "want"
+          ],
+          "explain": "Want joins two equal clauses, so moet stays in its normal place."
+        },
+        {
+          "id": "sub-12",
+          "kind": "order",
+          "prompt": "Say: This is the house that we are renting.",
+          "words": [
+            "Dit",
+            "is",
+            "het huis",
+            "dat",
+            "wij",
+            "huren"
+          ],
+          "answer": [
+            "Dit",
+            "is",
+            "het huis",
+            "dat",
+            "wij",
+            "huren"
+          ],
+          "explain": "Huis is a het-word so it takes dat, and huren goes to the end of its clause."
+        }
+      ]
+    }
+  ]
+}

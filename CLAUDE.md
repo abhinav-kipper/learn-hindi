@@ -55,7 +55,7 @@ content/dutch/lezen.json → 10 Lezen B1-prep reading texts (bilingual, 40 MCQs)
 content/dutch/schrijven.json → 12 Schrijven (writing) tasks w/ marking checklists + model answers
 content/dutch/spreken.json → 16 Spreken (speaking) tasks w/ sentence frames, phrases + model answers
 content/dutch/pronunciation-course.json → 8-stage from-zero "Sounds" ladder (alphabet→linking)
-content/dutch/cheatsheet/    → 5 grouped concept-cheatsheet JSONs (25 topics, 214 drill questions)
+content/dutch/cheatsheet/    → 7 grouped concept-cheatsheet JSONs (35 topics, 318 drill questions)
 content/dutch/vocabulary.json → 208 Dutch words in 12 categories (nouns carry de/het)
 content/stories/        → 5 Hindi story JSONs (Chai Galli motion-comics)
 docs/audits/             → Content audit rubric + per-run reports + master summaries
@@ -214,7 +214,7 @@ shadows anywhere.
 | `/dutch/spreken/[taskId]` | One speaking task. Dutch prompt (w/ 🔊) + English, then the scene / two options / three panels depending on type, then **the sentence frame before you record** (each line 🔊-able, with a fold of phrases to slot in) and the marking checklist. 🎙 records via `MediaRecorder` with a live countdown that **cuts you off at the task's real time limit**. On stop the clip is transcoded to WAV and posted to `/api/spreken-check`, which returns **a transcript of what was actually heard** (the headline output), per-point ✓/✗, a band, a verdict, a strength, separate fluency + pronunciation notes and up to 4 fixes. An `<audio>` player lets you hear yourself back, and survives a failed check. Model answer + tips always available without the network. Best band per task is kept, never downgraded. |
 | `/dutch/sounds` | "Sounds" module home (Dutch from-zero pronunciation). Orange header w/ Mr. Stroopwafel, `N/8 stages` count, and the 8-stage ladder as Stickers: complete (green ✓), unlocked (tappable + progress bar), locked (dimmed + 🔒). Rolling unlock — finishing a stage opens the next two. |
 | `/dutch/sounds/[stageId]` | Single pronunciation stage. Mr. Stroopwafel intro bubble + sound-card deck (grapheme + plain hint + anchor word/gloss + 🔊 Google TTS + got-it self-check) + optional minimal-pair ear-quiz + optional blend builder (word assembled part-by-part, each playable). On completion → Confetti + `pronStageDone` Chaina moment + "next stage" CTA. |
-| `/dutch/cheatsheet` | Concept-cheatsheet hub. Themed header band + "topics passed" mastery bar + orange "Mixed review" CTA (15 questions across every topic) + 5 collapsible group Stickers (First contact / Core grammar / People and description / Building sentences / Time and daily life), each folding out its topic rows. Each row carries a green `✓ n/n` best-score badge and a **covered check circle**: tap it (or swipe the row right) to mark the topic as covered, swipe left or tap again to clear. |
+| `/dutch/cheatsheet` | Concept-cheatsheet hub. Themed header band + "topics passed" mastery bar + orange "Mixed review" CTA (15 questions across every topic) + 7 collapsible group Stickers (First contact / Core grammar / People and description / Building sentences / Time and daily life / **Past and beyond** / **Exam skills**), each folding out its topic rows. Each row carries a green `✓ n/n` best-score badge and a **covered check circle**: tap it (or swipe the row right) to mark the topic as covered, swipe left or tap again to clear. |
 | `/dutch/cheatsheet/[topicId]` | One concept sheet: summary Sticker, numbered sections rendering rule/tip/pitfall callouts, scrollable tables, and example/vocab lists with a per-line 🔊 (Dutch TTS). **Every Dutch string is tappable** (dotted underline): one tap speaks it and opens a butter bottom sheet with article, part of speech, meaning, an example and other senses. Ends with a mint "Remember this much" takeaway list, the practice CTA (shows best score), a "Mark as read" toggle and a "Next up" link. |
 | `/dutch/cheatsheet/[topicId]/practice` | Per-topic drill via `DrillRunner`. Shuffled mix of MCQ / fill-the-gap / tap-to-order questions, per-question segmented progress, combo chip, instant feedback sticker with the correct answer (🔊) plus the explanation. Done screen at 80% pass with Confetti; result saved as the topic's best score. Bottom nav hidden. |
 | `/dutch/cheatsheet/review` | Mixed review: 15 questions drawn at random across all 25 topics, same `DrillRunner` shell. Not scored per topic. Bottom nav hidden. |
@@ -246,7 +246,7 @@ shadows anywhere.
 | `dutch/lessons.ts`, `dutch/foundations.ts` | Parallel loaders for Dutch content (11 lessons + 7 foundations). `getDutchAllContent()` returns both combined for cross-module use (e.g. search). |
 | `dutch/pronunciation.ts` | "Sounds" module loader (TDD'd, 9 tests). 8-stage from-zero ladder from `content/dutch/pronunciation-course.json`. `getStages/getStage`, `markCardDone/isCardDone`, `markEarQuizPassed/isEarQuizPassed`, `isStageComplete` (derived), rolling-window `unlockedStageIds`/`isStageUnlocked` (finish → next 2 open), `getStageProgress`/`getCourseProgress`. |
 | `dutch/define.ts` | Tap-a-word dictionary layer for the cheatsheets (TDD'd, 19 tests). `defineTerm` is cache-first over the existing `/api/define` route, storing results in memory + `dutch-define-cache` and feeding the Word Lookup history; failures return `unavailable` so the sheet still speaks the term. `shouldLookUp` skips whole sentences (over 5 words). `splitCell` breaks a table cell into individually tappable terms (splits on `/`, on sentence boundaries, and on commas only when every piece is a single word, so `Sorry, dan kan ik niet.` stays whole). |
-| `dutch/cheatsheet.ts` | Concept-cheatsheet loader + drill engine (TDD'd, 21 tests). Flattens `content/dutch/cheatsheet/*.json` into 5 groups / 25 topics. `getGroups/getTopics/getTopicById/getGroupOfTopic/getNextTopic`, `drawTopicDrill`/`drawMixedReview(15)`/`scrambleWords` (never returns the answer order), `normalizeAnswer`/`isCorrect`/`scoreDrill` (80% pass), studied set + best-score-per-topic history, `getWeakTopics`/`getOverallProgress`. |
+| `dutch/cheatsheet.ts` | Concept-cheatsheet loader + drill engine (TDD'd, 25 tests). Flattens `content/dutch/cheatsheet/*.json` into 7 groups / 35 topics. `getGroups/getTopics/getTopicById/getGroupOfTopic/getNextTopic`, `drawTopicDrill`/`drawMixedReview(15)`/`scrambleWords` (never returns the answer order), `normalizeAnswer`/`isCorrect`/`scoreDrill` (80% pass), studied set + best-score-per-topic history, `getWeakTopics`/`getOverallProgress`. |
 | `dutch/knm.ts` | KNM loader + `drawDrillSet(30)` (Fisher-Yates) + `scoreAttempt()` (80% pass) + attempt history (capped at 50) + per-question studied tracking. TDD'd, 12 tests. |
 | `dutch/lezen.ts` | Same shape as `knm.ts` for the Lezen module — `drawMockSet(5)`, 20-Q scoring, 25-min `MOCK_TIMER_MS` constant, studied set. TDD'd, 12 tests. |
 | `dutch/schrijven.ts` | Schrijven (writing) loader + progress + drafts (TDD'd, 20 tests). `getSchrijfTasks/getTaskById/getTasksByType/getNextTask`, `TASK_TYPES` (the paper's four, in exam order), `EXAM_TASK_COUNT`/`EXAM_MINUTES`, done set (`markTaskDone`/`isTaskDone`/`getDoneCount`), per-task drafts (`saveDraft`/`getDraft`, forms stored as a field map), and the length helpers `countWords`/`countSentences`/`isLongEnough` that gate the check button. The tests double as content gates: all four task types present, every task's checklist ≥3 points, forms ≥5 fields, writing tasks `min_sentences` ≥3, ids unique. |
@@ -369,6 +369,64 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-define-cache` — `{ [word]: Definition }` from `/api/define`, capped at 300, so tapped words resolve instantly and keep working offline once seen.
 
 ### Recent feature work log
+
+**2026-11-08 (later) — Cheatsheets: A2 grammar + exam technique (25 to 35 topics)**
+
+The cheatsheets were the revision layer but every one of the 25 topics came from
+the learner's **A1** course (DE1), so the layer stopped exactly where the A2 exam
+starts. And nothing anywhere in the app taught how to *take* the exam. Two new
+groups, **214 to 318 exercises**.
+
+*Group 6, "Past and beyond" (`a2grammar`).* The five structures the A2 papers
+actually lean on:
+- `perfect-tense`, the workhorse. Helper in slot two, participle at the end,
+  `ge- + stem + t/d` with **'t kofschip** deciding which, the be-/ge-/er-/her-/
+  ver-/ont- verbs that take no `ge-`, hebben vs zijn (movement with a
+  destination, and change of state), and the irregulars worth memorising. The
+  advice when the helper verb will not come: say `hebben` and keep going.
+- `separable-verbs`. Splits in a main clause, whole after `te`, after a modal
+  and in a subordinate clause, and `ge-` wedged inside for the participle
+  (`opgebeld`).
+- `reflexive-verbs`. me/je/zich/ons, and the set that is reflexive in Dutch but
+  not English (`zich vergissen`, `zich haasten`, `zich aanmelden`), including the
+  two that are exam gold: `Ik voel me niet lekker` and `U moet zich aanmelden`.
+- `er`. Four unrelated jobs in one word, which is why learners drop it and why
+  dropping it is what makes correct Dutch still sound foreign.
+- `subordinate-clauses`. The verb walking to the end after `omdat`/`dat`/`als`/
+  `toen`, `want` deliberately flagged as the safe option because it moves
+  nothing, `toen` vs `als`, and relative `die`/`dat`.
+
+*Group 7, "Exam skills" (`exam`).* The technique layer, which did not exist:
+- `sentence-frames`, a bank of skeletons across the papers. This generalises what
+  made Spreken work: under a timer, a pattern you own beats grammar you have to
+  work out.
+- `when-you-get-stuck`. Circumlocution (`Het is een ding waarmee je ...`),
+  buying time (`Even denken`), repair (`Kunt u dat herhalen?`), and the
+  `verstaan` vs `begrijpen` distinction. Framed around one rule: silence scores
+  nothing.
+- `linking-words`. The cheapest marks on the paper, plus the inversion that
+  `bovendien` and `daarom` force.
+- `formal-informal`. u vs je, the verb agreement, and openings that must match
+  closings (`Geachte` with `Met vriendelijke groet`, never `Groetjes`).
+- `exam-tactics`. Per-paper tactics and traps for all five papers, plus the
+  practical day-of notes. Says plainly that DUO is the authority on arrangements.
+
+*Verification.* The old one-off scripted drill pass is now **a permanent test**:
+`dutch-cheatsheet.test.ts` answers every exercise in every topic with the answer
+it declares and asserts the real grader accepts it, which catches an mcq whose
+`correct` index points at a distractor or a fill that does not survive
+`normalizeAnswer`. A second new test pins that both new groups and all ten topic
+ids are present, so the layer cannot quietly revert to A1-only. In a browser: all
+35 topic pages render with no leaked markdown and every takeaway and heading
+present, and four drills (two from each new group) were played to 12/12, 12/12,
+10/10 and 10/10. 586 tests, four lints and the prod build clean.
+
+*Harness note for next time.* In `DrillRunner`, MCQ options and the "Next
+question" control are `Sticker`s, which are divs with onClick and therefore have
+**no button role**: drive them with `getByText`, not `getByRole('button')`. Only
+the word tiles are real buttons, and a placed tile shares its accessible name
+with its tray twin, with the placed one first in the DOM, so use `.last()` to hit
+the tray.
 
 **2026-11-08 — Spreken (A2 speaking): the last exam paper**
 

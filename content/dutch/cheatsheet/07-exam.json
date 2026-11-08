@@ -1,0 +1,1799 @@
+{
+  "group": {
+    "id": "exam",
+    "title": "Exam skills",
+    "subtitle_nl": "examenvaardigheden",
+    "blurb": "How to take the exam, not just what Dutch is. Sentence patterns you can lean on, what to say when a word deserts you, the linking words that lift an answer, getting u and je right, and the tactics and traps for each of the five papers.",
+    "emoji": "🎯"
+  },
+  "topics": [
+    {
+      "id": "sentence-frames",
+      "title": "Sentence frames that always work",
+      "subtitle_nl": "vaste zinspatronen",
+      "emoji": "🧱",
+      "summary": "A small set of skeletons you can fill with any words. Under exam pressure a frame you can say without thinking beats grammar you have to work out.",
+      "sections": [
+        {
+          "heading": "Why frames, not rules",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "On the speaking paper you get about a minute per answer and no second try. There is no time to assemble a sentence from rules. What gets you through is a **pattern you already own**, with a gap to drop today's words into."
+            },
+            {
+              "kind": "tip",
+              "title": "Learn five, not fifty",
+              "body": "Pick the five frames below that fit the tasks you find hardest, say them out loud until they are automatic, and you will never start an answer with silence again."
+            }
+          ]
+        },
+        {
+          "heading": "Saying what you see",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "For any picture task, these three sentences in this order already make a passing answer. Add detail only once the skeleton is out of your mouth."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Op de foto zie ik ...",
+                  "en": "In the photo I see ...",
+                  "note": "the safest opening in the whole exam"
+                },
+                {
+                  "nl": "Links staat ... en rechts zie ik ...",
+                  "en": "On the left there is ... and on the right I see ..."
+                },
+                {
+                  "nl": "Op de voorgrond is iemand aan het ...",
+                  "en": "In the foreground someone is ...",
+                  "note": "aan het + base form for an action in progress"
+                },
+                {
+                  "nl": "Op de achtergrond zie ik ...",
+                  "en": "In the background I see ..."
+                },
+                {
+                  "nl": "Ik denk dat het ... is.",
+                  "en": "I think it is ...",
+                  "note": "for a guess about place, season or time"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Giving an opinion and a reason",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Every choice task and most writing tasks want an opinion plus a reason. This frame covers both and signals structure at the same time."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Ik kies voor ... , want ...",
+                  "en": "I choose ... , because ..."
+                },
+                {
+                  "nl": "Ten eerste ... . Ten tweede ... .",
+                  "en": "Firstly ... . Secondly ... ."
+                },
+                {
+                  "nl": "Ik vind ... omdat het ... is.",
+                  "en": "I think ... because it is ..."
+                },
+                {
+                  "nl": "... is ook goed, maar ...",
+                  "en": "... is good too, but ..."
+                },
+                {
+                  "nl": "Daarom kies ik voor ...",
+                  "en": "That is why I choose ...",
+                  "note": "a clean closing line"
+                }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "Mention the option you did not pick",
+              "body": "It costs one sentence and shows you can handle a comparison, which is exactly what the task is testing."
+            }
+          ]
+        },
+        {
+          "heading": "Telling what happened",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "For a story task, these four joints carry you through three pictures without pausing to plan."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Op het eerste plaatje ...",
+                  "en": "In the first picture ..."
+                },
+                {
+                  "nl": "Daarna ... / Vervolgens ...",
+                  "en": "After that ... / Next ..."
+                },
+                {
+                  "nl": "Op het laatste plaatje ...",
+                  "en": "In the last picture ..."
+                },
+                {
+                  "nl": "Uiteindelijk ...",
+                  "en": "In the end ..."
+                }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "Pick one tense and stay in it",
+              "body": "Past or present, either is accepted. Switching halfway costs more marks than choosing the simpler one and sticking to it."
+            }
+          ]
+        },
+        {
+          "heading": "Asking and arranging",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "For the video tasks and for the writing paper, these do the practical work: making a request, proposing a time, and closing politely."
+            },
+            {
+              "kind": "vocab",
+              "items": [
+                {
+                  "nl": "Ik wil graag ...",
+                  "en": "I would like ...",
+                  "note": "the standard polite request"
+                },
+                {
+                  "nl": "Zou u ... kunnen?",
+                  "en": "Could you ...?",
+                  "note": "more formal than kunt u"
+                },
+                {
+                  "nl": "Mag ik ... ?",
+                  "en": "May I ... ?",
+                  "note": ""
+                },
+                {
+                  "nl": "Komt ... u goed uit?",
+                  "en": "Does ... suit you?",
+                  "note": "proposing a time"
+                },
+                {
+                  "nl": "Hoe laat spreken we af?",
+                  "en": "What time shall we meet?",
+                  "note": ""
+                },
+                {
+                  "nl": "Kunt u mij daarmee helpen?",
+                  "en": "Could you help me with that?",
+                  "note": ""
+                },
+                {
+                  "nl": "Alvast bedankt.",
+                  "en": "Thanks in advance.",
+                  "note": "closing a request"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Op de foto zie ik ... opens any picture task safely.",
+        "Ik kies voor ... want ... plus ten eerste and ten tweede covers any choice task.",
+        "Op het eerste plaatje, daarna, uiteindelijk carries a three-part story.",
+        "Learn five frames by heart rather than thirty you half remember.",
+        "A frame you can say without thinking beats grammar you have to work out."
+      ],
+      "exercises": [
+        {
+          "id": "fr-1",
+          "kind": "fill",
+          "prompt": "The safest way to start describing a photo: Op de foto ___ ik een supermarkt.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "zie"
+          ],
+          "explain": "Op de foto zie ik is the standard opening."
+        },
+        {
+          "id": "fr-2",
+          "kind": "fill",
+          "prompt": "Structure your reasons: ___ eerste is het goedkoper.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "ten",
+            "Ten"
+          ],
+          "explain": "Ten eerste and ten tweede are the clearest way to signal structure."
+        },
+        {
+          "id": "fr-3",
+          "kind": "fill",
+          "prompt": "Someone is paying right now: Een vrouw is ___ het betalen.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "aan"
+          ],
+          "explain": "Aan het plus the base form describes an action in progress."
+        },
+        {
+          "id": "fr-4",
+          "kind": "mcq",
+          "prompt": "Which opening works for any picture task?",
+          "options": [
+            "Ik denk de foto.",
+            "Op de foto zie ik ...",
+            "De foto is ik zie.",
+            "Ik heb de foto gezien."
+          ],
+          "correct": 1,
+          "explain": "Op de foto zie ik is the frame to start every picture answer with."
+        },
+        {
+          "id": "fr-5",
+          "kind": "mcq",
+          "prompt": "You have to choose between two options. Which closes your answer best?",
+          "options": [
+            "Dat is alles.",
+            "Daarom kies ik voor de fiets.",
+            "Ik weet het niet.",
+            "De fiets en de trein."
+          ],
+          "correct": 1,
+          "explain": "Daarom plus your choice is a clean, structured ending."
+        },
+        {
+          "id": "fr-6",
+          "kind": "mcq",
+          "prompt": "Which set of words is for telling a three-picture story?",
+          "options": [
+            "links, rechts, voorgrond",
+            "ten eerste, ten tweede, daarom",
+            "eerst, daarna, uiteindelijk",
+            "ik wil graag, mag ik, zou u"
+          ],
+          "correct": 2,
+          "explain": "Those are the sequencing joints a story needs."
+        },
+        {
+          "id": "fr-7",
+          "kind": "mcq",
+          "prompt": "Why learn frames rather than more grammar rules for the speaking paper?",
+          "options": [
+            "Grammar is not marked.",
+            "There is no time to build a sentence from rules under a one-minute timer.",
+            "Frames are worth extra points.",
+            "The examiner prefers fixed phrases."
+          ],
+          "correct": 1,
+          "explain": "With about a minute and no retry, an automatic pattern is what gets you through."
+        },
+        {
+          "id": "fr-8",
+          "kind": "order",
+          "prompt": "Say: In the photo I see a busy station.",
+          "words": [
+            "Op de foto",
+            "zie",
+            "ik",
+            "een druk station"
+          ],
+          "answer": [
+            "Op de foto",
+            "zie",
+            "ik",
+            "een druk station"
+          ],
+          "explain": "Starting with Op de foto pushes the verb to slot two and the subject behind it."
+        },
+        {
+          "id": "fr-9",
+          "kind": "fill",
+          "prompt": "Propose a time politely: ___ woensdag u goed uit?",
+          "before": "",
+          "after": "",
+          "answers": [
+            "Komt",
+            "komt"
+          ],
+          "explain": "Komt ... u goed uit? is the standard way to ask whether a time suits."
+        },
+        {
+          "id": "fr-10",
+          "kind": "mcq",
+          "prompt": "What should you do after saying your opening frame?",
+          "options": [
+            "Stop, because the frame is the answer.",
+            "Add detail, then an opinion or a guess.",
+            "Repeat the frame with different words.",
+            "Switch to English for the details."
+          ],
+          "correct": 1,
+          "explain": "The frame buys you a safe start; the marks come from what you add to it."
+        }
+      ]
+    },
+    {
+      "id": "when-you-get-stuck",
+      "title": "When you get stuck",
+      "subtitle_nl": "hulpzinnen en omschrijven",
+      "emoji": "🆘",
+      "summary": "What to say when a word deserts you, you did not catch the question, or your mind goes blank. Silence scores nothing; these sentences score something and buy you time.",
+      "sections": [
+        {
+          "heading": "The rule that matters most",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "A missing word is a small problem. **Saying nothing is a big one.** An answer that works around the gap still earns marks; an empty recording earns none. Everything on this page exists to keep you talking."
+            },
+            {
+              "kind": "pitfall",
+              "title": "Freezing on one word",
+              "body": "Learners often stop dead because they cannot remember a single noun. The examiner is marking whether you can communicate, not whether you know that noun. Describe it and move on."
+            }
+          ]
+        },
+        {
+          "heading": "Describing a word you cannot remember",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Dutch has ready-made ways to talk around a word. Any of these turns a blank into a full sentence."
+            },
+            {
+              "kind": "vocab",
+              "items": [
+                {
+                  "nl": "Het is een soort ...",
+                  "en": "It is a kind of ...",
+                  "note": "Het is een soort tas."
+                },
+                {
+                  "nl": "Het is een ding waarmee je ...",
+                  "en": "It is a thing you use to ...",
+                  "note": "waarmee je brood snijdt"
+                },
+                {
+                  "nl": "Het is iets voor ...",
+                  "en": "It is something for ...",
+                  "note": "iets voor in de keuken"
+                },
+                {
+                  "nl": "Hoe zeg je dat in het Nederlands?",
+                  "en": "How do you say that in Dutch?",
+                  "note": "perfectly acceptable to ask"
+                },
+                {
+                  "nl": "Ik weet het woord niet, maar ...",
+                  "en": "I do not know the word, but ...",
+                  "note": "then describe it"
+                },
+                {
+                  "nl": "Je gebruikt het om te ...",
+                  "en": "You use it to ...",
+                  "note": "om te plus the base form"
+                }
+              ]
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Ik weet het woord niet, maar het is een ding waarmee je brood snijdt.",
+                  "en": "I do not know the word, but it is a thing you use to cut bread.",
+                  "note": "this scores; silence does not"
+                },
+                {
+                  "nl": "Het is een soort jas, maar dunner.",
+                  "en": "It is a kind of coat, but thinner."
+                }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "This is a real skill, not a cheat",
+              "body": "Talking around a missing word is something fluent speakers do constantly in a second language. Examiners recognise it as competence, not as failure."
+            }
+          ]
+        },
+        {
+          "heading": "Buying a second to think",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Dutch has its own filler sounds. Using them is far better than an English *um*, and much better than dead air."
+            },
+            {
+              "kind": "vocab",
+              "items": [
+                {
+                  "nl": "Even denken ...",
+                  "en": "Let me think ...",
+                  "note": "the single most useful one"
+                },
+                {
+                  "nl": "Nou ...",
+                  "en": "Well ...",
+                  "note": ""
+                },
+                {
+                  "nl": "Hoe zal ik het zeggen ...",
+                  "en": "How shall I put it ...",
+                  "note": "buys a long moment"
+                },
+                {
+                  "nl": "Dat is een goede vraag.",
+                  "en": "That is a good question.",
+                  "note": "a whole sentence of thinking time"
+                },
+                {
+                  "nl": "Ik bedoel ...",
+                  "en": "I mean ...",
+                  "note": "for restarting a sentence that went wrong"
+                },
+                {
+                  "nl": "Sorry, ik begin opnieuw.",
+                  "en": "Sorry, I will start again.",
+                  "note": "allowed, and better than trailing off"
+                }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "Restarting is allowed",
+              "body": "If a sentence collapses halfway, say `Ik bedoel ...` and say it again properly. A clean second attempt reads better than a broken first one left hanging."
+            }
+          ]
+        },
+        {
+          "heading": "When you did not catch it",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Asking someone to repeat is normal, polite Dutch, and on the conversation tasks it is often the correct thing to do. Note the difference between not hearing and not understanding."
+            },
+            {
+              "kind": "table",
+              "headers": [
+                "Dutch",
+                "English",
+                "Use when"
+              ],
+              "rows": [
+                [
+                  "Sorry, kunt u dat herhalen?",
+                  "Sorry, could you repeat that?",
+                  "you did not hear it"
+                ],
+                [
+                  "Kunt u dat langzamer zeggen?",
+                  "Could you say that more slowly?",
+                  "too fast"
+                ],
+                [
+                  "Ik heb u niet goed verstaan.",
+                  "I did not catch what you said.",
+                  "the sound did not reach you"
+                ],
+                [
+                  "Ik begrijp het niet.",
+                  "I do not understand.",
+                  "you heard it but the meaning is unclear"
+                ],
+                [
+                  "Wat betekent ... ?",
+                  "What does ... mean?",
+                  "one specific word"
+                ],
+                [
+                  "Bedoelt u ... ?",
+                  "Do you mean ... ?",
+                  "checking you got it right"
+                ]
+              ],
+              "nl_cols": [
+                0
+              ],
+              "en_col": 1
+            },
+            {
+              "kind": "pitfall",
+              "title": "verstaan and begrijpen are not the same",
+              "body": "`verstaan` is about catching the sound, `begrijpen` is about getting the meaning. Saying `Ik begrijp u niet` to someone who simply spoke too quietly sends the wrong message."
+            }
+          ]
+        },
+        {
+          "heading": "If your mind goes completely blank",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Fall back to the simplest true sentence you can make about the topic, then build from there. A plain correct sentence is worth far more than an ambitious broken one."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Dat weet ik niet precies, maar ik denk dat ...",
+                  "en": "I do not know exactly, but I think that ..."
+                },
+                {
+                  "nl": "Daar heb ik geen ervaring mee, maar ...",
+                  "en": "I have no experience with that, but ..."
+                },
+                {
+                  "nl": "Ik vind het een moeilijke vraag. Voor mij is het zo: ...",
+                  "en": "I find that a difficult question. For me it is like this: ..."
+                }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "Simple and correct beats ambitious and broken",
+              "body": "At A2 you are not rewarded for complexity. Short, clear, finished sentences score well."
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Silence scores nothing, so always say something.",
+        "Talk around a missing word with Het is een soort ... or Het is een ding waarmee je ...",
+        "Even denken buys you a moment and sounds natural.",
+        "verstaan is about hearing, begrijpen is about understanding.",
+        "A simple correct sentence beats an ambitious broken one."
+      ],
+      "exercises": [
+        {
+          "id": "st-1",
+          "kind": "fill",
+          "prompt": "You cannot recall the word for a bread knife. Het is een ___ waarmee je brood snijdt.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "ding"
+          ],
+          "explain": "Het is een ding waarmee je ... turns a blank into a full sentence."
+        },
+        {
+          "id": "st-2",
+          "kind": "fill",
+          "prompt": "Buy yourself a moment: ___ denken ...",
+          "before": "",
+          "after": "",
+          "answers": [
+            "Even",
+            "even"
+          ],
+          "explain": "Even denken is the most useful filler in the exam."
+        },
+        {
+          "id": "st-3",
+          "kind": "fill",
+          "prompt": "You did not hear the question. Sorry, kunt u dat ___?",
+          "before": "",
+          "after": "",
+          "answers": [
+            "herhalen"
+          ],
+          "explain": "Kunt u dat herhalen? is the standard polite request to repeat."
+        },
+        {
+          "id": "st-4",
+          "kind": "mcq",
+          "prompt": "The examiner spoke too quietly and you caught nothing. Which is right?",
+          "options": [
+            "Ik begrijp het niet.",
+            "Ik heb u niet goed verstaan.",
+            "Ik weet het niet.",
+            "Dat is verkeerd."
+          ],
+          "correct": 1,
+          "explain": "Verstaan is about catching the sound. Begrijpen would say the meaning was unclear."
+        },
+        {
+          "id": "st-5",
+          "kind": "mcq",
+          "prompt": "You have forgotten a noun completely. What is the best move?",
+          "options": [
+            "Stay silent until you remember it.",
+            "Say the English word and carry on.",
+            "Describe the thing in Dutch and keep going.",
+            "Ask to skip the question."
+          ],
+          "correct": 2,
+          "explain": "Describing it keeps you scoring. Silence scores nothing."
+        },
+        {
+          "id": "st-6",
+          "kind": "mcq",
+          "prompt": "Your sentence collapses halfway through. What do you do?",
+          "options": [
+            "Stop and wait for the next question.",
+            "Say Ik bedoel ... and say it again properly.",
+            "Finish it in English.",
+            "Repeat the broken sentence louder."
+          ],
+          "correct": 1,
+          "explain": "Restarting cleanly is allowed and reads better than leaving it hanging."
+        },
+        {
+          "id": "st-7",
+          "kind": "mcq",
+          "prompt": "Which sentence means you heard the words but not the meaning?",
+          "options": [
+            "Ik heb u niet verstaan.",
+            "Ik begrijp het niet.",
+            "Kunt u dat herhalen?",
+            "Kunt u langzamer praten?"
+          ],
+          "correct": 1,
+          "explain": "Begrijpen is about meaning, verstaan is about sound."
+        },
+        {
+          "id": "st-8",
+          "kind": "order",
+          "prompt": "Say: I do not know the word, but it is a kind of bag.",
+          "words": [
+            "Ik",
+            "weet",
+            "het woord",
+            "niet,",
+            "maar",
+            "het is",
+            "een soort tas"
+          ],
+          "answer": [
+            "Ik",
+            "weet",
+            "het woord",
+            "niet,",
+            "maar",
+            "het is",
+            "een soort tas"
+          ],
+          "explain": "Naming the gap and then describing it is a complete, scoring answer."
+        },
+        {
+          "id": "st-9",
+          "kind": "fill",
+          "prompt": "Check you understood correctly: ___ u dat ik morgen moet komen?",
+          "before": "",
+          "after": "",
+          "answers": [
+            "Bedoelt",
+            "bedoelt"
+          ],
+          "explain": "Bedoelt u ...? checks your understanding without stopping the conversation."
+        },
+        {
+          "id": "st-10",
+          "kind": "mcq",
+          "prompt": "Why is a short correct sentence better than a long broken one at A2?",
+          "options": [
+            "Short answers finish faster.",
+            "A2 rewards clear communication, not complexity.",
+            "Long sentences are banned.",
+            "The examiner stops listening after ten words."
+          ],
+          "correct": 1,
+          "explain": "At A2 you are marked on getting the message across clearly."
+        }
+      ]
+    },
+    {
+      "id": "linking-words",
+      "title": "Linking words that lift a pass",
+      "subtitle_nl": "signaalwoorden",
+      "emoji": "🪜",
+      "summary": "The small words that turn a list of sentences into an argument. Structure is marked on both the writing and the speaking paper, and these are the cheapest marks on offer.",
+      "sections": [
+        {
+          "heading": "Why these are worth marks",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Two answers can contain the same facts and score differently. The one that **signals its structure** reads as organised; the one that does not reads as a list. These words are the signals, and there are only about a dozen to learn."
+            },
+            {
+              "kind": "tip",
+              "title": "Cheapest marks in the exam",
+              "body": "Adding `ten eerste`, `bovendien` and `daarom` to an answer you were going to give anyway takes no extra vocabulary and no extra grammar."
+            }
+          ]
+        },
+        {
+          "heading": "Ordering your points",
+          "blocks": [
+            {
+              "kind": "vocab",
+              "items": [
+                {
+                  "nl": "ten eerste",
+                  "en": "firstly",
+                  "note": "Ten eerste is het goedkoper."
+                },
+                {
+                  "nl": "ten tweede",
+                  "en": "secondly",
+                  "note": ""
+                },
+                {
+                  "nl": "ook",
+                  "en": "also",
+                  "note": "the simplest one, always safe"
+                },
+                {
+                  "nl": "bovendien",
+                  "en": "what is more, on top of that",
+                  "note": "stronger than ook"
+                },
+                {
+                  "nl": "tot slot",
+                  "en": "finally, to finish",
+                  "note": "closes an answer neatly"
+                }
+              ]
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Ten eerste is het goedkoper. Ten tweede is het sneller.",
+                  "en": "Firstly it is cheaper. Secondly it is faster.",
+                  "note": "note the inversion: ten eerste fills slot one, so the verb comes next"
+                }
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "Forgetting the inversion",
+              "body": "`Ten eerste` and `bovendien` fill the first slot of the sentence, so the verb has to come straight after: `Bovendien **is** het gezonder`, not `Bovendien het is gezonder`."
+            }
+          ]
+        },
+        {
+          "heading": "Giving reasons and results",
+          "blocks": [
+            {
+              "kind": "table",
+              "headers": [
+                "Dutch",
+                "English",
+                "Word order"
+              ],
+              "rows": [
+                [
+                  "want",
+                  "because",
+                  "changes nothing"
+                ],
+                [
+                  "omdat",
+                  "because",
+                  "verb to the end"
+                ],
+                [
+                  "daarom",
+                  "that is why",
+                  "fills slot one, so inversion"
+                ],
+                [
+                  "dus",
+                  "so",
+                  "usually fills slot one, so inversion"
+                ],
+                [
+                  "zodat",
+                  "so that",
+                  "verb to the end"
+                ]
+              ],
+              "nl_cols": [
+                0
+              ],
+              "en_col": 1,
+              "note": "want and omdat mean the same thing, but only omdat moves the verb."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Ik ga met de fiets, want het is dichtbij.",
+                  "en": "I go by bike, because it is close by."
+                },
+                {
+                  "nl": "Ik ga met de fiets omdat het dichtbij is.",
+                  "en": "I go by bike because it is close by.",
+                  "note": "omdat sends is to the end"
+                },
+                {
+                  "nl": "Het is dichtbij. Daarom ga ik met de fiets.",
+                  "en": "It is close by. That is why I go by bike.",
+                  "note": "daarom causes inversion"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Contrasting",
+          "blocks": [
+            {
+              "kind": "vocab",
+              "items": [
+                {
+                  "nl": "maar",
+                  "en": "but",
+                  "note": "the everyday one, changes nothing"
+                },
+                {
+                  "nl": "hoewel",
+                  "en": "although",
+                  "note": "sends the verb to the end"
+                },
+                {
+                  "nl": "aan de andere kant",
+                  "en": "on the other hand",
+                  "note": "fills slot one, so inversion"
+                },
+                {
+                  "nl": "toch",
+                  "en": "still, nevertheless",
+                  "note": "Het regent, maar ik ga toch."
+                }
+              ]
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "De trein is sneller, maar de fiets is goedkoper.",
+                  "en": "The train is faster, but the bike is cheaper."
+                },
+                {
+                  "nl": "Hoewel het duur is, koop ik het.",
+                  "en": "Although it is expensive, I am buying it.",
+                  "note": "verb to the end, then inversion after the comma"
+                },
+                {
+                  "nl": "Aan de andere kant is de trein comfortabeler.",
+                  "en": "On the other hand the train is more comfortable."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Softening and giving examples",
+          "blocks": [
+            {
+              "kind": "vocab",
+              "items": [
+                {
+                  "nl": "bijvoorbeeld",
+                  "en": "for example",
+                  "note": "the single most useful filler word"
+                },
+                {
+                  "nl": "misschien",
+                  "en": "maybe",
+                  "note": "safe way to guess"
+                },
+                {
+                  "nl": "waarschijnlijk",
+                  "en": "probably",
+                  "note": ""
+                },
+                {
+                  "nl": "volgens mij",
+                  "en": "I think, in my view",
+                  "note": "Volgens mij is het zaterdag."
+                },
+                {
+                  "nl": "het hangt ervan af",
+                  "en": "it depends",
+                  "note": "buys time and sounds thoughtful"
+                }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "Hedging is not weakness",
+              "body": "`Misschien`, `waarschijnlijk` and `ik denk dat` let you say something about a picture you are not sure of without being wrong. On a picture task you cannot be wrong if you hedge."
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Structure is marked, and these words are the cheapest way to show it.",
+        "Ten eerste, ten tweede, bovendien and tot slot order your points.",
+        "want changes nothing, omdat sends the verb to the end, daarom causes inversion.",
+        "Bovendien and daarom fill slot one, so the verb must follow them straight away.",
+        "Hedging with misschien or ik denk dat lets you guess safely."
+      ],
+      "exercises": [
+        {
+          "id": "lw-1",
+          "kind": "fill",
+          "prompt": "Signal your first reason: ___ eerste is het goedkoper.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "Ten",
+            "ten"
+          ],
+          "explain": "Ten eerste is the clearest way to open a list of reasons."
+        },
+        {
+          "id": "lw-2",
+          "kind": "fill",
+          "prompt": "Bovendien ___ het gezonder. Which verb form fits the gap?",
+          "before": "",
+          "after": "",
+          "answers": [
+            "is"
+          ],
+          "explain": "Bovendien fills slot one, so the verb comes straight after it."
+        },
+        {
+          "id": "lw-3",
+          "kind": "mcq",
+          "prompt": "Which sentence has the right word order?",
+          "options": [
+            "Bovendien het is gezonder.",
+            "Bovendien is het gezonder.",
+            "Het bovendien is gezonder.",
+            "Gezonder bovendien het is."
+          ],
+          "correct": 1,
+          "explain": "Bovendien takes the first slot, so the verb must follow immediately."
+        },
+        {
+          "id": "lw-4",
+          "kind": "mcq",
+          "prompt": "Which word means because but changes nothing about word order?",
+          "options": [
+            "omdat",
+            "want",
+            "zodat",
+            "hoewel"
+          ],
+          "correct": 1,
+          "explain": "Want joins two equal clauses, so nothing moves."
+        },
+        {
+          "id": "lw-5",
+          "kind": "mcq",
+          "prompt": "Ik ga met de fiets ___ het dichtbij is. Which fits?",
+          "options": [
+            "want",
+            "omdat",
+            "daarom",
+            "dus"
+          ],
+          "correct": 1,
+          "explain": "The verb is at the end of the clause, which is what omdat does."
+        },
+        {
+          "id": "lw-6",
+          "kind": "mcq",
+          "prompt": "You want to add a contrasting point. Which opens it best?",
+          "options": [
+            "Bovendien",
+            "Ten tweede",
+            "Aan de andere kant",
+            "Bijvoorbeeld"
+          ],
+          "correct": 2,
+          "explain": "Aan de andere kant signals that a contrast is coming."
+        },
+        {
+          "id": "lw-7",
+          "kind": "fill",
+          "prompt": "Give an example: Ik eet graag Nederlands eten, ___ stamppot.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "bijvoorbeeld"
+          ],
+          "explain": "Bijvoorbeeld introduces an example and fills space usefully."
+        },
+        {
+          "id": "lw-8",
+          "kind": "fill",
+          "prompt": "Hedge a guess about a photo: ___ mij is het zaterdagmiddag.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "Volgens",
+            "volgens"
+          ],
+          "explain": "Volgens mij lets you guess without being wrong."
+        },
+        {
+          "id": "lw-9",
+          "kind": "order",
+          "prompt": "Say: That is why I go by bike. Start with Daarom.",
+          "words": [
+            "Daarom",
+            "ga",
+            "ik",
+            "met de fiets"
+          ],
+          "answer": [
+            "Daarom",
+            "ga",
+            "ik",
+            "met de fiets"
+          ],
+          "explain": "Daarom fills slot one, so the verb comes next and the subject follows it."
+        },
+        {
+          "id": "lw-10",
+          "kind": "mcq",
+          "prompt": "Why do linking words earn marks even when the content is unchanged?",
+          "options": [
+            "They are longer words.",
+            "Structure is one of the things the paper is marked on.",
+            "They replace grammar mistakes.",
+            "They count towards the word total."
+          ],
+          "correct": 1,
+          "explain": "Both the writing and the speaking paper assess how well organised the answer is."
+        }
+      ]
+    },
+    {
+      "id": "formal-informal",
+      "title": "u or je, and how to open and close",
+      "subtitle_nl": "formeel of informeel",
+      "emoji": "🎩",
+      "summary": "Picking the wrong level of politeness is marked, and it is easy to avoid. Who gets u, who gets je, and the fixed openings and closings that have to match.",
+      "sections": [
+        {
+          "heading": "The quick decision",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Ask one question: **do I know this person, and are we equals?** If yes, `je`. If they are a stranger in an official role, or clearly older, `u`."
+            },
+            {
+              "kind": "table",
+              "headers": [
+                "Situation",
+                "Use",
+                "Why"
+              ],
+              "rows": [
+                [
+                  "Doctor, receptionist, civil servant",
+                  "u",
+                  "official role"
+                ],
+                [
+                  "Shop assistant you do not know",
+                  "u",
+                  "stranger, though je is creeping in"
+                ],
+                [
+                  "A colleague your own age",
+                  "je",
+                  "equals"
+                ],
+                [
+                  "A neighbour who introduced themselves by first name",
+                  "je",
+                  "they set the tone"
+                ],
+                [
+                  "A clearly older stranger",
+                  "u",
+                  "age"
+                ],
+                [
+                  "A child",
+                  "je",
+                  "always"
+                ],
+                [
+                  "A job interview",
+                  "u",
+                  "official until told otherwise"
+                ],
+                [
+                  "Writing to the gemeente",
+                  "u",
+                  "always"
+                ]
+              ],
+              "nl_cols": [
+                1
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "When genuinely unsure, pick u",
+              "body": "Being slightly too formal is a tiny misstep. Being too familiar with an official is a real one. The exam will not punish you for politeness."
+            }
+          ]
+        },
+        {
+          "heading": "Matching the verb",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "`u` always takes the **-t** form of the verb, even though it can mean one person or several."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "Hebt u een moment?",
+                  "en": "Do you have a moment?",
+                  "note": "heeft u is also accepted"
+                },
+                {
+                  "nl": "Kunt u mij helpen?",
+                  "en": "Can you help me?"
+                },
+                {
+                  "nl": "Woont u hier al lang?",
+                  "en": "Have you lived here long?"
+                },
+                {
+                  "nl": "Wat wilt u drinken?",
+                  "en": "What would you like to drink?"
+                }
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "Mixing u and je in one conversation",
+              "body": "Once you have chosen, stay with it. Starting with `u` and sliding into `je` halfway is noticeable and costs you on the register criterion."
+            }
+          ]
+        },
+        {
+          "heading": "Openings and closings must match",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "On the writing paper the opening and the closing are a **pair**. A formal opening with a casual sign-off is a clear error, and it is one of the easiest marks to lose."
+            },
+            {
+              "kind": "table",
+              "headers": [
+                "Opening",
+                "Closing that matches",
+                "Register"
+              ],
+              "rows": [
+                [
+                  "Geachte heer/mevrouw,",
+                  "Met vriendelijke groet,",
+                  "formal, name unknown"
+                ],
+                [
+                  "Geachte mevrouw De Vries,",
+                  "Met vriendelijke groet,",
+                  "formal, name known"
+                ],
+                [
+                  "Beste meneer Jansen,",
+                  "Met vriendelijke groet,",
+                  "semi-formal"
+                ],
+                [
+                  "Beste Anna,",
+                  "Groetjes,",
+                  "informal but written"
+                ],
+                [
+                  "Hoi Anna,",
+                  "Groetjes, / Groeten,",
+                  "informal note"
+                ]
+              ],
+              "nl_cols": [
+                0,
+                1
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "Geachte heer/mevrouw with Groetjes",
+              "body": "This is the mismatch examiners see most. If you opened with `Geachte`, you must close with `Met vriendelijke groet`."
+            },
+            {
+              "kind": "tip",
+              "title": "Always sign your name",
+              "body": "A note or email with no name underneath is marked as incomplete, however good the Dutch is."
+            }
+          ]
+        },
+        {
+          "heading": "On the phone",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Dutch has its own phone opening. You do not say `ik ben`."
+            },
+            {
+              "kind": "examples",
+              "items": [
+                {
+                  "nl": "U spreekt met Sara Nowak.",
+                  "en": "This is Sara Nowak.",
+                  "note": "the standard way to say who you are"
+                },
+                {
+                  "nl": "Met Sara.",
+                  "en": "Sara speaking.",
+                  "note": "informal version"
+                },
+                {
+                  "nl": "Kan ik een afspraak maken?",
+                  "en": "Can I make an appointment?"
+                },
+                {
+                  "nl": "Bedankt, tot ziens.",
+                  "en": "Thanks, goodbye."
+                }
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "Saying Ik ben Sara on the phone",
+              "body": "It is understandable but marks you out instantly as a learner. `U spreekt met ...` or `Met ...` is what Dutch speakers say."
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Stranger in an official role takes u, someone you know and are equal with takes je.",
+        "When unsure, choose u. Too formal is a small error, too familiar is a real one.",
+        "u always takes the -t form of the verb.",
+        "Geachte pairs with Met vriendelijke groet; Hoi pairs with Groetjes.",
+        "On the phone say U spreekt met ..., never Ik ben ..."
+      ],
+      "exercises": [
+        {
+          "id": "reg-1",
+          "kind": "fill",
+          "prompt": "At the doctor's desk: ___ u een moment?",
+          "before": "",
+          "after": "",
+          "answers": [
+            "Hebt",
+            "hebt",
+            "Heeft",
+            "heeft"
+          ],
+          "explain": "u takes the -t form, and both hebt and heeft are accepted."
+        },
+        {
+          "id": "reg-2",
+          "kind": "fill",
+          "prompt": "On the phone, say who you are: ___ spreekt met Sara Nowak.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "U",
+            "u"
+          ],
+          "explain": "U spreekt met is the standard Dutch phone opening."
+        },
+        {
+          "id": "reg-3",
+          "kind": "mcq",
+          "prompt": "You are writing to the gemeente. Which pair is right?",
+          "options": [
+            "Hoi, ... Met vriendelijke groet,",
+            "Geachte heer/mevrouw, ... Groetjes,",
+            "Geachte heer/mevrouw, ... Met vriendelijke groet,",
+            "Beste Anna, ... Hoogachtend,"
+          ],
+          "correct": 2,
+          "explain": "A formal opening has to be matched by a formal closing."
+        },
+        {
+          "id": "reg-4",
+          "kind": "mcq",
+          "prompt": "A colleague your own age invites you for a drink. Which do you use?",
+          "options": [
+            "u, because it is work",
+            "je, because you are equals",
+            "jullie, because it is a group",
+            "Either, it is never marked"
+          ],
+          "correct": 1,
+          "explain": "A colleague of your own age takes je, and register is marked."
+        },
+        {
+          "id": "reg-5",
+          "kind": "mcq",
+          "prompt": "You are not sure whether to use u or je. What is the safer choice?",
+          "options": [
+            "je, it sounds friendlier",
+            "u, because being too familiar is the bigger error",
+            "Avoid both by using the person's name",
+            "Switch between them to cover both"
+          ],
+          "correct": 1,
+          "explain": "Slightly too formal is a small misstep; too familiar with an official is a real one."
+        },
+        {
+          "id": "reg-6",
+          "kind": "mcq",
+          "prompt": "Which is wrong on the phone?",
+          "options": [
+            "U spreekt met Sara Nowak.",
+            "Met Sara.",
+            "Ik ben Sara.",
+            "Goedemorgen, u spreekt met Sara."
+          ],
+          "correct": 2,
+          "explain": "Dutch uses U spreekt met or Met, never Ik ben, to open a call."
+        },
+        {
+          "id": "reg-7",
+          "kind": "fill",
+          "prompt": "Close a formal email: Met vriendelijke ___,",
+          "before": "",
+          "after": "",
+          "answers": [
+            "groet"
+          ],
+          "explain": "Met vriendelijke groet is the standard formal sign-off."
+        },
+        {
+          "id": "reg-8",
+          "kind": "fill",
+          "prompt": "Close a note to a friend: ___,",
+          "before": "",
+          "after": "",
+          "answers": [
+            "Groetjes",
+            "groetjes",
+            "Groeten",
+            "groeten"
+          ],
+          "explain": "Groetjes or Groeten matches an informal opening."
+        },
+        {
+          "id": "reg-9",
+          "kind": "order",
+          "prompt": "Ask politely whether someone can help you. (use u)",
+          "words": [
+            "Kunt",
+            "u",
+            "mij",
+            "helpen?"
+          ],
+          "answer": [
+            "Kunt",
+            "u",
+            "mij",
+            "helpen?"
+          ],
+          "explain": "A question puts the verb first, and u takes the -t form."
+        },
+        {
+          "id": "reg-10",
+          "kind": "mcq",
+          "prompt": "What happens if you start a conversation with u and switch to je halfway?",
+          "options": [
+            "Nothing, both are correct.",
+            "It is noticeable and costs marks on register.",
+            "It shows range and scores higher.",
+            "Only switching from je to u is a problem."
+          ],
+          "correct": 1,
+          "explain": "Once you have chosen a level of politeness, stay with it."
+        }
+      ]
+    },
+    {
+      "id": "exam-tactics",
+      "title": "Tactics, paper by paper",
+      "subtitle_nl": "examentips per onderdeel",
+      "emoji": "🎯",
+      "summary": "What to actually do on the day: where the marks are on each of the five papers, the traps that cost people a pass, and how to spend the time.",
+      "sections": [
+        {
+          "heading": "The one habit that covers every paper",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "**Answer the question that was asked.** The commonest reason for losing marks at A2 is not bad Dutch, it is a good answer to a slightly different question. Before you write or speak, check what was actually requested."
+            },
+            {
+              "kind": "tip",
+              "title": "Count the asks",
+              "body": "Most tasks ask for two or three specific things. Count them, then check them off as you answer. The writing paper is marked on exactly this."
+            }
+          ]
+        },
+        {
+          "heading": "Lezen, the reading paper",
+          "blocks": [
+            {
+              "kind": "vocab",
+              "items": [
+                {
+                  "nl": "Read the questions first",
+                  "en": "Then read the text knowing what you are hunting for.",
+                  "note": "saves the most time of anything here"
+                },
+                {
+                  "nl": "The answer is in the text",
+                  "en": "Never pick an option because it sounds sensible in real life.",
+                  "note": "every answer is findable"
+                },
+                {
+                  "nl": "Watch for niet and geen",
+                  "en": "One small negative flips the whole meaning of a sentence.",
+                  "note": "a classic trap"
+                },
+                {
+                  "nl": "Do not stop at an unknown word",
+                  "en": "Read the whole sentence. The meaning usually survives one missing word.",
+                  "note": ""
+                },
+                {
+                  "nl": "Answer everything",
+                  "en": "There is no penalty for a wrong answer, so never leave a blank.",
+                  "note": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Luisteren, the listening paper",
+          "blocks": [
+            {
+              "kind": "vocab",
+              "items": [
+                {
+                  "nl": "Read the question before the audio starts",
+                  "en": "You get a moment. Use it to know what to listen for.",
+                  "note": ""
+                },
+                {
+                  "nl": "You will not catch every word",
+                  "en": "Nobody does. Listen for the one piece of information asked for.",
+                  "note": ""
+                },
+                {
+                  "nl": "Numbers and times are favourites",
+                  "en": "Practise hearing prices, clock times and dates specifically.",
+                  "note": ""
+                },
+                {
+                  "nl": "Let a missed word go",
+                  "en": "Chasing it means missing the next sentence too.",
+                  "note": "the biggest single trap"
+                },
+                {
+                  "nl": "Answer everything",
+                  "en": "A guess costs nothing and sometimes lands.",
+                  "note": ""
+                }
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "Freezing on one missed word",
+              "body": "Learners often stop listening while they try to work out a word they missed, and lose the rest of the clip. Let it go immediately and stay with the speaker."
+            }
+          ]
+        },
+        {
+          "heading": "Schrijven, the writing paper",
+          "blocks": [
+            {
+              "kind": "vocab",
+              "items": [
+                {
+                  "nl": "Cover every point asked for",
+                  "en": "This is the first thing marked, before any grammar.",
+                  "note": ""
+                },
+                {
+                  "nl": "Match your opening and closing",
+                  "en": "Geachte with Met vriendelijke groet, Hoi with Groetjes.",
+                  "note": ""
+                },
+                {
+                  "nl": "Sign your name",
+                  "en": "An unsigned note is marked as incomplete.",
+                  "note": ""
+                },
+                {
+                  "nl": "Short correct sentences",
+                  "en": "Three clear sentences beat one ambitious one that falls apart.",
+                  "note": ""
+                },
+                {
+                  "nl": "Check the form fields",
+                  "en": "On a form, a Dutch postcode is four digits and two letters, and dates run day, month, year.",
+                  "note": ""
+                }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "Write the checklist in the margin",
+              "body": "Jot the asks down before you start, then tick them off. It takes twenty seconds and is the difference between a pass and a near miss."
+            }
+          ]
+        },
+        {
+          "heading": "Spreken, the speaking paper",
+          "blocks": [
+            {
+              "kind": "vocab",
+              "items": [
+                {
+                  "nl": "Start immediately with a frame",
+                  "en": "Op de foto zie ik ... buys you a safe opening.",
+                  "note": ""
+                },
+                {
+                  "nl": "Keep going for the whole time",
+                  "en": "A short answer cannot score well, however correct it is.",
+                  "note": ""
+                },
+                {
+                  "nl": "Simple and finished beats complex and broken",
+                  "en": "Do not attempt sentences you cannot land.",
+                  "note": ""
+                },
+                {
+                  "nl": "An accent is fine",
+                  "en": "You are marked on being understood, not on sounding Dutch.",
+                  "note": ""
+                },
+                {
+                  "nl": "If you dry up, describe or hedge",
+                  "en": "Misschien ... , Ik denk dat ... , Het is een soort ...",
+                  "note": ""
+                }
+              ]
+            },
+            {
+              "kind": "pitfall",
+              "title": "Stopping after one sentence",
+              "body": "You have about a minute per answer. Finishing in ten seconds leaves most of the marks unclaimed, even if what you said was perfect."
+            }
+          ]
+        },
+        {
+          "heading": "KNM, the knowledge paper",
+          "blocks": [
+            {
+              "kind": "vocab",
+              "items": [
+                {
+                  "nl": "It is about how things work here",
+                  "en": "Not about opinions or your own country.",
+                  "note": ""
+                },
+                {
+                  "nl": "Think about which body does what",
+                  "en": "gemeente, UWV, SVB, Belastingdienst, IND each have their own job.",
+                  "note": ""
+                },
+                {
+                  "nl": "Pick the normal Dutch thing to do",
+                  "en": "When unsure, choose the ordinary, practical, direct option.",
+                  "note": ""
+                },
+                {
+                  "nl": "Numbers change, systems do not",
+                  "en": "Learn who does what rather than this year's amounts.",
+                  "note": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "On the day",
+          "blocks": [
+            {
+              "kind": "rule",
+              "body": "Practical things that are easy to forget and expensive to get wrong."
+            },
+            {
+              "kind": "vocab",
+              "items": [
+                {
+                  "nl": "Bring valid ID",
+                  "en": "You will not be admitted without it.",
+                  "note": ""
+                },
+                {
+                  "nl": "Arrive early",
+                  "en": "Being late can cost you the whole sitting.",
+                  "note": ""
+                },
+                {
+                  "nl": "Each paper is booked separately",
+                  "en": "You can pass them one at a time and retake only what you failed.",
+                  "note": ""
+                },
+                {
+                  "nl": "A retake is normal",
+                  "en": "Many people pass on a second attempt at one paper. It is not a verdict on you.",
+                  "note": ""
+                }
+              ]
+            },
+            {
+              "kind": "tip",
+              "title": "Check your own booking details with DUO",
+              "body": "Fees, booking and the exact rules change. This page teaches technique; DUO is the authority on arrangements."
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Answer the question that was actually asked, and count how many things it asks for.",
+        "Reading: read the questions first, and watch for niet and geen.",
+        "Listening: let a missed word go immediately rather than losing the next sentence.",
+        "Writing: cover every point, match your opening and closing, and sign it.",
+        "Speaking: start with a frame and keep going for the full time.",
+        "Never leave a blank, because a wrong answer costs nothing."
+      ],
+      "exercises": [
+        {
+          "id": "tac-1",
+          "kind": "mcq",
+          "prompt": "What is the most useful thing to do first on the reading paper?",
+          "options": [
+            "Translate the whole text.",
+            "Read the questions before the text.",
+            "Look up every unknown word.",
+            "Answer the last question first."
+          ],
+          "correct": 1,
+          "explain": "Knowing what you are hunting for saves more time than anything else."
+        },
+        {
+          "id": "tac-2",
+          "kind": "mcq",
+          "prompt": "You miss a word in the middle of a listening clip. What do you do?",
+          "options": [
+            "Stop and work it out.",
+            "Let it go and keep listening.",
+            "Ask for the clip to be replayed.",
+            "Write down what it sounded like."
+          ],
+          "correct": 1,
+          "explain": "Chasing a missed word costs you the sentences that follow."
+        },
+        {
+          "id": "tac-3",
+          "kind": "mcq",
+          "prompt": "What is marked first on the writing paper?",
+          "options": [
+            "Spelling.",
+            "Whether you covered every point the task asked for.",
+            "Handwriting.",
+            "How many words you wrote."
+          ],
+          "correct": 1,
+          "explain": "Coverage comes before language on the A2 writing paper."
+        },
+        {
+          "id": "tac-4",
+          "kind": "mcq",
+          "prompt": "Your speaking answer is correct but only ten seconds long. What happens?",
+          "options": [
+            "Full marks, since it was correct.",
+            "It cannot score well, because too little was said.",
+            "You get extra time.",
+            "It is marked as a pass automatically."
+          ],
+          "correct": 1,
+          "explain": "You have about a minute, and a short answer leaves most marks unclaimed."
+        },
+        {
+          "id": "tac-5",
+          "kind": "mcq",
+          "prompt": "You do not know an answer on a multiple-choice paper. What should you do?",
+          "options": [
+            "Leave it blank.",
+            "Guess, because a wrong answer costs nothing.",
+            "Pick the longest option.",
+            "Repeat your previous answer."
+          ],
+          "correct": 1,
+          "explain": "There is no penalty for a wrong answer, so never leave a blank."
+        },
+        {
+          "id": "tac-6",
+          "kind": "mcq",
+          "prompt": "Which small words most often flip the meaning of a reading sentence?",
+          "options": [
+            "de and het",
+            "niet and geen",
+            "een and de",
+            "en and of"
+          ],
+          "correct": 1,
+          "explain": "A single negative changes the whole sentence, and it is a classic trap."
+        },
+        {
+          "id": "tac-7",
+          "kind": "mcq",
+          "prompt": "On KNM, you are unsure which body handles something. What is the best approach?",
+          "options": [
+            "Pick the one with the longest name.",
+            "Think about which organisation does that job.",
+            "Choose the answer closest to your own country.",
+            "Always answer gemeente."
+          ],
+          "correct": 1,
+          "explain": "KNM tests how the system works, so reason from what each body is for."
+        },
+        {
+          "id": "tac-8",
+          "kind": "mcq",
+          "prompt": "Does a noticeable accent lower your speaking mark?",
+          "options": [
+            "Yes, pronunciation is the main criterion.",
+            "No, you are marked on being understood.",
+            "Only on the picture tasks.",
+            "Only if you speak slowly."
+          ],
+          "correct": 1,
+          "explain": "An accent is fine. Being hard to understand is the problem, and that is different."
+        },
+        {
+          "id": "tac-9",
+          "kind": "mcq",
+          "prompt": "You failed one paper and passed the others. What now?",
+          "options": [
+            "You have to sit all five again.",
+            "You retake only the paper you failed.",
+            "You wait a year before any retake.",
+            "The whole exam is void."
+          ],
+          "correct": 1,
+          "explain": "The papers are booked and passed separately."
+        },
+        {
+          "id": "tac-10",
+          "kind": "fill",
+          "prompt": "Before you start writing, count how many things the task ___ for.",
+          "before": "",
+          "after": "",
+          "answers": [
+            "asks"
+          ],
+          "explain": "Most tasks ask for two or three specific points, and coverage is marked first."
+        }
+      ]
+    }
+  ]
+}
