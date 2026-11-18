@@ -116,9 +116,17 @@ export function Zinsbouwer() {
     scoreRef.current = score
   }, [score])
 
+  const statusRef = useRef<Status>(null)
+  useEffect(() => {
+    statusRef.current = status
+  }, [status])
+
   useEffect(() => {
     if (phase !== 'playing' || mode !== 'sprint') return
     const t = window.setInterval(() => {
+      // Paused while feedback is up: the clock must not punish you for reading
+      // the correction.
+      if (statusRef.current) return
       setSecondsLeft((s) => {
         if (s <= 1) {
           window.clearInterval(t)
@@ -179,7 +187,6 @@ export function Zinsbouwer() {
       else playSound('correct')
       buzz([12, 30, 12])
       speak(builtWords.join(' '), 'nl')
-      if (mode === 'sprint') window.setTimeout(advance, 900)
     } else {
       setStatus('wrong')
       setStreak(0)
@@ -195,8 +202,6 @@ export function Zinsbouwer() {
         prefix,
         'quiz',
       )
-      // Longer than the correct-answer pause: there is a correction to read.
-      if (mode === 'sprint') window.setTimeout(advance, 2600)
     }
   }
 
@@ -218,7 +223,6 @@ export function Zinsbouwer() {
     })
   }
 
-  const tray = current ? current.tiles.filter((t) => !placed.includes(t.id)) : []
 
   return (
     <div
@@ -316,10 +320,8 @@ export function Zinsbouwer() {
           <Play
             build={current}
             placed={placed}
-            tray={tray}
             status={status}
             built={builtWords}
-            mode={mode}
             tileById={tileById}
             onPlace={place}
             onUnplace={unplace}
@@ -629,24 +631,28 @@ function Marked({ text }: { text: string }) {
   )
 }
 
-function Tile({ word, onClick, tone }: { word: string; onClick?: () => void; tone: 'tray' | 'placed' | 'correct' | 'wrong' }) {
+function Tile({ word, onClick, tone }: { word: string; onClick?: () => void; tone: 'tray' | 'placed' | 'correct' | 'wrong' | 'used' }) {
+  const used = tone === 'used'
   const bg =
-    tone === 'correct' ? COLORS.mint : tone === 'wrong' ? COLORS.redBg : tone === 'placed' ? COLORS.peach2 : W
+    tone === 'correct' ? COLORS.mint : tone === 'wrong' ? COLORS.redBg : tone === 'placed' ? COLORS.peach2 : used ? COLORS.lav2 : W
   return (
     <button
       type="button"
       onClick={onClick}
       disabled={!onClick}
+      aria-hidden={used}
       style={{
         background: bg,
+        // Same border width and padding as a live tile on purpose: the slot has
+        // to keep the exact geometry or the tiles around it would reflow.
         border: BORDER.sticker,
-        boxShadow: SHADOW.chip,
+        boxShadow: used ? 'none' : SHADOW.chip,
         borderRadius: 13,
         padding: '9px 13px',
         fontFamily: FONTS.display,
         fontWeight: 800,
         fontSize: 17,
-        color: COLORS.ink,
+        color: used ? 'transparent' : COLORS.ink,
         cursor: onClick ? 'pointer' : 'default',
       }}
     >
@@ -658,10 +664,8 @@ function Tile({ word, onClick, tone }: { word: string; onClick?: () => void; ton
 function Play({
   build,
   placed,
-  tray,
   status,
   built,
-  mode,
   tileById,
   onPlace,
   onUnplace,
@@ -671,10 +675,8 @@ function Play({
 }: {
   build: Build
   placed: number[]
-  tray: { id: number; w: string }[]
   status: Status
   built: string[]
-  mode: Mode
   tileById: (id: number) => { id: number; w: string } | undefined
   onPlace: (id: number) => void
   onUnplace: (id: number) => void
@@ -793,8 +795,6 @@ function Play({
               <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 16, color: COLORS.green, lineHeight: 1.35 }}>
                 {status === 'correct' ? displaySentence(item, built.join(' ')) : displaySentence(item)}
               </div>
-              {mode === 'practice' && (
-                <>
                   <div style={{ fontFamily: FONTS.body, fontWeight: 700, fontSize: 13, color: COLORS.ink, lineHeight: 1.45, marginTop: 8 }}>
                     {item.why}
                   </div>
@@ -810,8 +810,6 @@ function Play({
                       Also correct: {item.accept!.map((a) => displaySentence(item, a)).join(' / ')}
                     </div>
                   )}
-                </>
-              )}
             </Sticker>
           </motion.div>
         )}
@@ -819,26 +817,28 @@ function Play({
 
       <div style={{ flex: 1, minHeight: 12 }} />
 
-      {/* tile tray */}
+      {/* Tile tray. Every tile keeps its slot for the whole question: a used one
+          turns into a blank of identical size rather than being removed, so the
+          words you have not used yet never shift under your thumb. */}
       {!status && (
         <div id="zins-tray" style={{ display: 'flex', flexWrap: 'wrap', gap: 9, justifyContent: 'center', minHeight: 50, marginBottom: 12 }}>
-          <AnimatePresence>
-            {tray.map((t) => (
+          {build.tiles.map((t) => {
+            const used = placed.includes(t.id)
+            return (
               <motion.div
                 key={t.id}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.6 }}
                 transition={{ type: 'spring', stiffness: 380, damping: 26 }}
               >
-                <Tile word={t.w} tone="tray" onClick={() => onPlace(t.id)} />
+                <Tile word={t.w} tone={used ? 'used' : 'tray'} onClick={used ? undefined : () => onPlace(t.id)} />
               </motion.div>
-            ))}
-          </AnimatePresence>
+            )
+          })}
         </div>
       )}
 
-      {status && mode === 'practice' ? (
+      {status ? (
         <button
           type="button"
           onClick={onNext}
