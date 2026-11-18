@@ -1,9 +1,11 @@
 import type { SentenceGame, SentenceItem } from '@/types/game'
 import { words } from '@/lib/gloss'
 import sentenceBuilder from '@/content/games/hindi/sentence-builder.json'
-import sentenceBuilderNl from '@/content/games/dutch/sentence-builder.json'
 
-const GAMES: SentenceGame[] = [sentenceBuilder as SentenceGame, sentenceBuilderNl as SentenceGame]
+// Hindi only. The Dutch sentence builder moved to lib/dutch/zinsbouwer.ts, which
+// tags every sentence with the grammar point it drills and accepts the alternate
+// word orders Dutch allows. This engine does neither.
+const GAMES: SentenceGame[] = [sentenceBuilder as SentenceGame]
 
 export function getSentenceGames(language: string): SentenceGame[] {
   return GAMES.filter((g) => g.language === language)

@@ -1,0 +1,1393 @@
+{
+  "id": "zinsbouwer",
+  "title": "Sentence Builder",
+  "subtitle_nl": "Zinsbouwer",
+  "concepts": {
+    "v2": {
+      "label": "Verb in second place",
+      "nl": "hoofdzin",
+      "rule": "In a normal Dutch statement the conjugated verb is always the second thing in the sentence."
+    },
+    "inversion": {
+      "label": "Inversion",
+      "nl": "inversie",
+      "rule": "Start with a time or place instead of the subject and the verb still has to be second, so the subject hops behind it."
+    },
+    "question": {
+      "label": "Questions",
+      "nl": "vragen",
+      "rule": "Yes or no questions put the verb first. With a question word, the verb comes straight after it. Verbs lose their -t in front of je or jij."
+    },
+    "negation": {
+      "label": "niet or geen",
+      "nl": "ontkenning",
+      "rule": "Use geen in front of a noun with no article or with een. Everything else is negated with niet."
+    },
+    "modals": {
+      "label": "Modal verbs",
+      "nl": "modale werkwoorden",
+      "rule": "The modal (kunnen, moeten, mogen, willen) takes second place and sends the other verb to the very end in its base form."
+    },
+    "separable": {
+      "label": "Separable verbs",
+      "nl": "scheidbare werkwoorden",
+      "rule": "In a main clause the prefix breaks off and goes to the end. It stays attached after a modal, after te, and in a subordinate clause."
+    },
+    "imperative": {
+      "label": "Telling someone to do something",
+      "nl": "gebiedende wijs",
+      "rule": "Use the bare stem and put it first. Words like even and alstublieft are what keep it from sounding like an order."
+    },
+    "er-is": {
+      "label": "er is and er zijn",
+      "nl": "er is / er zijn",
+      "rule": "Dutch opens with er to say that something exists. Singular takes er is, plural takes er zijn."
+    },
+    "perfect": {
+      "label": "Perfect tense",
+      "nl": "voltooid tegenwoordige tijd",
+      "rule": "The helper verb (hebben or zijn) sits in second place and the past participle drops to the end of the sentence."
+    },
+    "past": {
+      "label": "Simple past",
+      "nl": "onvoltooid verleden tijd",
+      "rule": "The past form takes the normal second place. Dutch uses it most for was, had, and for describing how things used to be."
+    },
+    "subordinate": {
+      "label": "Subordinate clauses",
+      "nl": "bijzinnen",
+      "rule": "After omdat, dat, als, of and toen every verb walks to the end of its own clause."
+    },
+    "conjunctions": {
+      "label": "want, maar and en",
+      "nl": "voegwoorden",
+      "rule": "want, maar, en and dus join two normal sentences and change nothing. This is why want is the safe choice when omdat scares you."
+    },
+    "om-te": {
+      "label": "om ... te",
+      "nl": "om ... te",
+      "rule": "To say what something is for, wrap the base form in om ... te and park the whole thing at the end."
+    },
+    "reflexive": {
+      "label": "Reflexive verbs",
+      "nl": "wederkerende werkwoorden",
+      "rule": "me, je, zich or ons comes straight after the verb. A lot of Dutch verbs need it where English uses none."
+    },
+    "er": {
+      "label": "er with a preposition",
+      "nl": "er + voorzetsel",
+      "rule": "Dutch never says over het or met het about a thing. It becomes er, and the preposition often slides to the end."
+    },
+    "comparative": {
+      "label": "Comparing",
+      "nl": "vergelijken",
+      "rule": "Add -er to compare and -st to top the list. The word for than is dan, never als."
+    },
+    "tmp": {
+      "label": "Time, manner, place",
+      "nl": "tijd, wijze, plaats",
+      "rule": "When several details pile up they go in this order: when, how, where."
+    },
+    "future": {
+      "label": "Talking about later",
+      "nl": "toekomst",
+      "rule": "gaan plus the base form for plans, zullen for promises and offers. The second verb still lands at the end."
+    },
+    "passive": {
+      "label": "Passive",
+      "nl": "lijdende vorm",
+      "rule": "worden plus the past participle when the doer does not matter. Official letters are full of it, which is why the exam uses it."
+    },
+    "relative": {
+      "label": "die and dat",
+      "nl": "betrekkelijke bijzinnen",
+      "rule": "die for a de-word, dat for a het-word. The clause it opens is a subordinate clause, so its verb goes to the end."
+    },
+    "conditional": {
+      "label": "zou",
+      "nl": "voorwaardelijke wijs",
+      "rule": "zou plus the base form is how Dutch gets polite. It is the difference between wanting something and asking for it nicely."
+    }
+  },
+  "items": [
+    {
+      "id": "z001",
+      "nl": "ik woon in Nederland",
+      "en": "I live in the Netherlands",
+      "level": "A1",
+      "concept": "v2",
+      "why": "Subject first, then the verb. That is the default shape of a Dutch sentence."
+    },
+    {
+      "id": "z002",
+      "nl": "hij werkt bij de gemeente",
+      "en": "He works at the town hall",
+      "level": "A1",
+      "concept": "v2",
+      "why": "werkt is in second place, right behind the subject hij."
+    },
+    {
+      "id": "z003",
+      "nl": "zij spreekt een beetje Nederlands",
+      "en": "She speaks a little Dutch",
+      "level": "A1",
+      "concept": "v2",
+      "why": "The verb stays in slot two and everything else follows it."
+    },
+    {
+      "id": "z004",
+      "nl": "het kind speelt in de tuin",
+      "en": "The child is playing in the garden",
+      "level": "A1",
+      "concept": "v2",
+      "why": "Dutch has no separate -ing form. One present tense covers plays and is playing."
+    },
+    {
+      "id": "z005",
+      "nl": "ik heb twee kinderen",
+      "en": "I have two children",
+      "level": "A1",
+      "concept": "v2",
+      "why": "hebben in second place. Dutch does not add a word for do or does."
+    },
+    {
+      "id": "z006",
+      "nl": "mijn man werkt in Rotterdam",
+      "en": "My husband works in Rotterdam",
+      "level": "A1",
+      "concept": "v2",
+      "why": "mijn man counts as one unit in slot one, so the verb still comes second."
+    },
+    {
+      "id": "z007",
+      "nl": "de les begint om negen uur",
+      "en": "The lesson starts at nine o'clock",
+      "level": "A1",
+      "concept": "v2",
+      "why": "The subject is three words long but it is still one slot, so begint is second.",
+      "accept": [
+        "om negen uur begint de les"
+      ]
+    },
+    {
+      "id": "z008",
+      "nl": "ik ben nieuw in de buurt",
+      "en": "I am new in the neighbourhood",
+      "level": "A1",
+      "concept": "v2",
+      "why": "A handy opener when you meet the neighbours. ben is the ik form of zijn."
+    },
+    {
+      "id": "z009",
+      "nl": "wij wonen naast de school",
+      "en": "We live next to the school",
+      "level": "A1",
+      "concept": "v2",
+      "why": "wij takes the same form as the base verb, wonen."
+    },
+    {
+      "id": "z010",
+      "nl": "ik drink graag thee",
+      "en": "I like drinking tea",
+      "level": "A1",
+      "concept": "v2",
+      "why": "Dutch says I drink gladly. graag is how you say you like doing something."
+    },
+    {
+      "id": "z011",
+      "nl": "de winkel sluit om zes uur",
+      "en": "The shop closes at six o'clock",
+      "level": "A1",
+      "concept": "v2",
+      "why": "Verb second, then the time at the end.",
+      "accept": [
+        "om zes uur sluit de winkel"
+      ]
+    },
+    {
+      "id": "z012",
+      "nl": "wij drinken koffie in de pauze",
+      "en": "We drink coffee during the break",
+      "level": "A1",
+      "concept": "v2",
+      "why": "Subject, verb, object, then the time phrase."
+    },
+    {
+      "id": "z013",
+      "nl": "morgen ga ik naar de gemeente",
+      "en": "Tomorrow I am going to the town hall",
+      "level": "A1",
+      "concept": "inversion",
+      "why": "morgen took slot one, so the verb keeps slot two and ik moves behind it.",
+      "accept": [
+        "ik ga morgen naar de gemeente"
+      ]
+    },
+    {
+      "id": "z014",
+      "nl": "vandaag werk ik thuis",
+      "en": "Today I am working from home",
+      "level": "A1",
+      "concept": "inversion",
+      "why": "Starting with the time pushes the subject behind the verb. Never werk ik not: vandaag ik werk.",
+      "accept": [
+        "ik werk vandaag thuis"
+      ]
+    },
+    {
+      "id": "z015",
+      "nl": "daarna ga ik naar huis",
+      "en": "After that I go home",
+      "level": "A1",
+      "concept": "inversion",
+      "why": "daarna is in slot one, so it is ga ik and not ik ga.",
+      "accept": [
+        "ik ga daarna naar huis"
+      ]
+    },
+    {
+      "id": "z016",
+      "nl": "hier mag je niet parkeren",
+      "en": "You may not park here",
+      "level": "A1",
+      "concept": "inversion",
+      "why": "hier opens the sentence, the modal mag follows, and the base form parkeren waits at the end.",
+      "accept": [
+        "je mag hier niet parkeren"
+      ]
+    },
+    {
+      "id": "z017",
+      "nl": "nu heb ik geen tijd",
+      "en": "I don't have time right now",
+      "level": "A1",
+      "concept": "inversion",
+      "why": "Opening with nu flips heb and ik around.",
+      "accept": [
+        "ik heb nu geen tijd"
+      ]
+    },
+    {
+      "id": "z018",
+      "nl": "in het weekend sporten wij samen",
+      "en": "At the weekend we do sports together",
+      "level": "A1",
+      "concept": "inversion",
+      "why": "The whole phrase in het weekend fills slot one, so sporten comes before wij.",
+      "accept": [
+        "wij sporten samen in het weekend",
+        "wij sporten in het weekend samen"
+      ]
+    },
+    {
+      "id": "z019",
+      "nl": "vanavond blijf ik thuis",
+      "en": "I am staying home tonight",
+      "level": "A1",
+      "concept": "inversion",
+      "why": "Time first, verb second, subject third.",
+      "accept": [
+        "ik blijf vanavond thuis"
+      ]
+    },
+    {
+      "id": "z020",
+      "nl": "waar woon je",
+      "en": "Where do you live?",
+      "level": "A1",
+      "concept": "question",
+      "why": "Question word, then the verb. And woont loses its -t in front of je."
+    },
+    {
+      "id": "z021",
+      "nl": "hoe heet u",
+      "en": "What is your name?",
+      "level": "A1",
+      "concept": "question",
+      "why": "Dutch asks how you are called, not what your name is."
+    },
+    {
+      "id": "z022",
+      "nl": "spreekt u Engels",
+      "en": "Do you speak English?",
+      "level": "A1",
+      "concept": "question",
+      "why": "No question word, so the verb goes first. With u the -t stays on."
+    },
+    {
+      "id": "z023",
+      "nl": "heb je een afspraak",
+      "en": "Do you have an appointment?",
+      "level": "A1",
+      "concept": "question",
+      "why": "Verb first for a yes or no question, and hebt drops to heb in front of je."
+    },
+    {
+      "id": "z024",
+      "nl": "wanneer begint de cursus",
+      "en": "When does the course start?",
+      "level": "A1",
+      "concept": "question",
+      "why": "Question word, verb, subject. Dutch needs no word for does."
+    },
+    {
+      "id": "z025",
+      "nl": "hoeveel kinderen heeft u",
+      "en": "How many children do you have?",
+      "level": "A1",
+      "concept": "question",
+      "why": "hoeveel kinderen is one question phrase in slot one, so heeft comes next."
+    },
+    {
+      "id": "z026",
+      "nl": "waarom bent u hier",
+      "en": "Why are you here?",
+      "level": "A1",
+      "concept": "question",
+      "why": "bent is the u form of zijn in a question."
+    },
+    {
+      "id": "z027",
+      "nl": "kunt u dat herhalen",
+      "en": "Could you repeat that?",
+      "level": "A1",
+      "concept": "question",
+      "why": "Worth knowing by heart for the speaking exam. The base form herhalen sits at the end."
+    },
+    {
+      "id": "z028",
+      "nl": "mag ik uw paspoort zien",
+      "en": "May I see your passport?",
+      "level": "A1",
+      "concept": "question",
+      "why": "The modal mag goes first and zien waits at the end."
+    },
+    {
+      "id": "z029",
+      "nl": "wat kost een dagkaart",
+      "en": "How much is a day ticket?",
+      "level": "A1",
+      "concept": "question",
+      "why": "Dutch asks what it costs rather than how much it is."
+    },
+    {
+      "id": "z030",
+      "nl": "ik heb geen tijd",
+      "en": "I don't have time",
+      "level": "A1",
+      "concept": "negation",
+      "why": "tijd has no article in front of it, so the negative word is geen."
+    },
+    {
+      "id": "z031",
+      "nl": "hij spreekt geen Nederlands",
+      "en": "He doesn't speak Dutch",
+      "level": "A1",
+      "concept": "negation",
+      "why": "A bare noun gets geen, never niet."
+    },
+    {
+      "id": "z032",
+      "nl": "ik begrijp het niet",
+      "en": "I don't understand",
+      "level": "A1",
+      "concept": "negation",
+      "why": "het is a definite word, so you negate with niet, and niet comes after it."
+    },
+    {
+      "id": "z033",
+      "nl": "wij hebben geen auto",
+      "en": "We don't have a car",
+      "level": "A1",
+      "concept": "negation",
+      "why": "een auto becomes geen auto. geen already contains the een."
+    },
+    {
+      "id": "z034",
+      "nl": "dat is niet mijn fiets",
+      "en": "That is not my bike",
+      "level": "A1",
+      "concept": "negation",
+      "why": "mijn fiets is definite, so niet does the work and stands in front of it."
+    },
+    {
+      "id": "z035",
+      "nl": "ik ken die man niet",
+      "en": "I don't know that man",
+      "level": "A1",
+      "concept": "negation",
+      "why": "niet goes at the end, after the object die man."
+    },
+    {
+      "id": "z036",
+      "nl": "zij werkt hier niet meer",
+      "en": "She doesn't work here anymore",
+      "level": "A1",
+      "concept": "negation",
+      "why": "niet meer is the fixed pair for not anymore."
+    },
+    {
+      "id": "z037",
+      "nl": "ik moet naar de huisarts",
+      "en": "I have to go to the doctor",
+      "level": "A1",
+      "concept": "modals",
+      "why": "Dutch leaves gaan out after a modal when the direction is obvious."
+    },
+    {
+      "id": "z038",
+      "nl": "u mag hier niet roken",
+      "en": "You are not allowed to smoke here",
+      "level": "A1",
+      "concept": "modals",
+      "why": "The modal mag is second and roken goes last, with niet just before it."
+    },
+    {
+      "id": "z039",
+      "nl": "ik kan niet komen",
+      "en": "I can't come",
+      "level": "A1",
+      "concept": "modals",
+      "why": "kan second, komen at the end, niet in between."
+    },
+    {
+      "id": "z040",
+      "nl": "wij willen een huis huren",
+      "en": "We want to rent a house",
+      "level": "A1",
+      "concept": "modals",
+      "why": "The object een huis squeezes in between the modal and the base form at the end."
+    },
+    {
+      "id": "z041",
+      "nl": "zij moet morgen werken",
+      "en": "She has to work tomorrow",
+      "level": "A1",
+      "concept": "modals",
+      "why": "moet in second place, werken right at the back.",
+      "accept": [
+        "morgen moet zij werken"
+      ]
+    },
+    {
+      "id": "z042",
+      "nl": "ik wil graag een afspraak maken",
+      "en": "I would like to make an appointment",
+      "level": "A1",
+      "concept": "modals",
+      "why": "wil graag is the polite way to ask. maken still drops to the end."
+    },
+    {
+      "id": "z043",
+      "nl": "je moet eerst een nummer trekken",
+      "en": "You have to take a number first",
+      "level": "A1",
+      "concept": "modals",
+      "why": "Everything piles up between moet and trekken."
+    },
+    {
+      "id": "z044",
+      "nl": "ik kan vanavond niet naar de les komen",
+      "en": "I can't come to the lesson tonight",
+      "level": "A2",
+      "concept": "modals",
+      "why": "Long middle, but komen still lands at the very end.",
+      "accept": [
+        "vanavond kan ik niet naar de les komen"
+      ]
+    },
+    {
+      "id": "z045",
+      "nl": "ik sta om zeven uur op",
+      "en": "I get up at seven o'clock",
+      "level": "A1",
+      "concept": "separable",
+      "why": "opstaan splits: sta takes second place and op is left at the end.",
+      "accept": [
+        "om zeven uur sta ik op"
+      ]
+    },
+    {
+      "id": "z046",
+      "nl": "hij belt de gemeente op",
+      "en": "He calls the town hall",
+      "level": "A1",
+      "concept": "separable",
+      "why": "opbellen splits around the object."
+    },
+    {
+      "id": "z047",
+      "nl": "wij ruimen de keuken op",
+      "en": "We tidy up the kitchen",
+      "level": "A1",
+      "concept": "separable",
+      "why": "opruimen breaks in two, with op pushed to the back."
+    },
+    {
+      "id": "z048",
+      "nl": "de trein komt om tien uur aan",
+      "en": "The train arrives at ten o'clock",
+      "level": "A1",
+      "concept": "separable",
+      "why": "aankomen splits and aan waits behind the time.",
+      "accept": [
+        "om tien uur komt de trein aan"
+      ]
+    },
+    {
+      "id": "z049",
+      "nl": "zij vult het formulier in",
+      "en": "She fills in the form",
+      "level": "A1",
+      "concept": "separable",
+      "why": "invullen splits, which is the verb you meet on every Dutch form."
+    },
+    {
+      "id": "z050",
+      "nl": "ik neem de telefoon niet op",
+      "en": "I don't answer the phone",
+      "level": "A2",
+      "concept": "separable",
+      "why": "niet slips in just before the loose prefix op."
+    },
+    {
+      "id": "z051",
+      "nl": "het vliegtuig vertrekt om zes uur",
+      "en": "The plane leaves at six o'clock",
+      "level": "A1",
+      "concept": "v2",
+      "why": "vertrekken looks separable but is not. ver- never breaks off."
+    },
+    {
+      "id": "z052",
+      "nl": "doe de deur dicht",
+      "en": "Close the door",
+      "level": "A1",
+      "concept": "imperative",
+      "why": "Bare stem first, and dichtdoen still splits with dicht at the end."
+    },
+    {
+      "id": "z053",
+      "nl": "vul dit formulier in",
+      "en": "Fill in this form",
+      "level": "A1",
+      "concept": "imperative",
+      "why": "The stem vul leads and in drops to the end."
+    },
+    {
+      "id": "z054",
+      "nl": "wacht even alstublieft",
+      "en": "Please wait a moment",
+      "level": "A1",
+      "concept": "imperative",
+      "why": "even and alstublieft are what turn an order into a request."
+    },
+    {
+      "id": "z055",
+      "nl": "spreek alstublieft langzamer",
+      "en": "Please speak more slowly",
+      "level": "A1",
+      "concept": "imperative",
+      "why": "A sentence worth memorising before any speaking test."
+    },
+    {
+      "id": "z056",
+      "nl": "doe het licht uit",
+      "en": "Turn the light off",
+      "level": "A1",
+      "concept": "imperative",
+      "why": "uitdoen splits here too, exactly like in a normal sentence."
+    },
+    {
+      "id": "z057",
+      "nl": "er is een probleem met de verwarming",
+      "en": "There is a problem with the heating",
+      "level": "A1",
+      "concept": "er-is",
+      "why": "One problem, so er is. This is the sentence that starts a call to the landlord."
+    },
+    {
+      "id": "z058",
+      "nl": "er zijn veel mensen in de wachtkamer",
+      "en": "There are a lot of people in the waiting room",
+      "level": "A1",
+      "concept": "er-is",
+      "why": "mensen is plural, so er zijn."
+    },
+    {
+      "id": "z059",
+      "nl": "er staat een fiets voor de deur",
+      "en": "There is a bike in front of the door",
+      "level": "A2",
+      "concept": "er-is",
+      "why": "Dutch prefers a real verb like staan or liggen to say where something is."
+    },
+    {
+      "id": "z060",
+      "nl": "er is hier geen wifi",
+      "en": "There is no wifi here",
+      "level": "A1",
+      "concept": "er-is",
+      "why": "er is plus geen for something that is not there."
+    },
+    {
+      "id": "z061",
+      "nl": "er is vandaag geen les",
+      "en": "There is no lesson today",
+      "level": "A1",
+      "concept": "er-is",
+      "why": "er holds slot one so the verb can stay second.",
+      "accept": [
+        "vandaag is er geen les"
+      ]
+    },
+    {
+      "id": "z062",
+      "nl": "ik heb het formulier ingevuld",
+      "en": "I have filled in the form",
+      "level": "A2",
+      "concept": "perfect",
+      "why": "heb is second, and the participle ingevuld goes last. Separable verbs wedge ge- inside."
+    },
+    {
+      "id": "z063",
+      "nl": "wij hebben gisteren pizza gegeten",
+      "en": "We ate pizza yesterday",
+      "level": "A2",
+      "concept": "perfect",
+      "why": "Dutch uses the perfect where English uses a plain past.",
+      "accept": [
+        "gisteren hebben wij pizza gegeten"
+      ]
+    },
+    {
+      "id": "z064",
+      "nl": "hij is naar Nederland verhuisd",
+      "en": "He moved to the Netherlands",
+      "level": "A2",
+      "concept": "perfect",
+      "why": "Movement with a destination takes zijn, not hebben."
+    },
+    {
+      "id": "z065",
+      "nl": "zij heeft de hele dag gewerkt",
+      "en": "She worked all day",
+      "level": "A2",
+      "concept": "perfect",
+      "why": "werken takes hebben, and gewerkt ends with a t because k is in 't kofschip."
+    },
+    {
+      "id": "z066",
+      "nl": "ik ben met de trein gekomen",
+      "en": "I came by train",
+      "level": "A2",
+      "concept": "perfect",
+      "why": "komen takes zijn. The participle still waits at the end, behind the how."
+    },
+    {
+      "id": "z067",
+      "nl": "heb je de brief al gelezen",
+      "en": "Have you read the letter yet?",
+      "level": "A2",
+      "concept": "perfect",
+      "why": "A question, so heb goes first, but gelezen still ends the sentence."
+    },
+    {
+      "id": "z068",
+      "nl": "ik heb mijn paspoort thuis gelaten",
+      "en": "I left my passport at home",
+      "level": "A2",
+      "concept": "perfect",
+      "why": "The place thuis comes before the participle, because the participle is always last."
+    },
+    {
+      "id": "z069",
+      "nl": "de dokter heeft mij medicijnen voorgeschreven",
+      "en": "The doctor prescribed me medicine",
+      "level": "B1",
+      "concept": "perfect",
+      "why": "voorschrijven is separable, so ge- lands in the middle: voorgeschreven."
+    },
+    {
+      "id": "z070",
+      "nl": "wij zijn vorige week naar Utrecht geweest",
+      "en": "We went to Utrecht last week",
+      "level": "A2",
+      "concept": "perfect",
+      "why": "geweest is the participle of zijn and it always pairs with zijn.",
+      "accept": [
+        "vorige week zijn wij naar Utrecht geweest"
+      ]
+    },
+    {
+      "id": "z071",
+      "nl": "hij is gisteren om zes uur opgestaan",
+      "en": "He got up at six o'clock yesterday",
+      "level": "A2",
+      "concept": "perfect",
+      "why": "opstaan takes zijn and its ge- sits inside the word: opgestaan."
+    },
+    {
+      "id": "z072",
+      "nl": "het was gisteren erg koud",
+      "en": "It was very cold yesterday",
+      "level": "A2",
+      "concept": "past",
+      "why": "was and had are the two past forms Dutch really does use in speech.",
+      "accept": [
+        "gisteren was het erg koud"
+      ]
+    },
+    {
+      "id": "z073",
+      "nl": "vroeger woonde ik in een klein dorp",
+      "en": "I used to live in a small village",
+      "level": "A2",
+      "concept": "past",
+      "why": "The simple past is the normal choice for how things used to be.",
+      "accept": [
+        "ik woonde vroeger in een klein dorp"
+      ]
+    },
+    {
+      "id": "z074",
+      "nl": "wij hadden toen geen geld",
+      "en": "We had no money back then",
+      "level": "A2",
+      "concept": "past",
+      "why": "hadden is the plural past of hebben.",
+      "accept": [
+        "toen hadden wij geen geld"
+      ]
+    },
+    {
+      "id": "z075",
+      "nl": "ik wist het antwoord niet",
+      "en": "I didn't know the answer",
+      "level": "A2",
+      "concept": "past",
+      "why": "weten is irregular: wist in the past."
+    },
+    {
+      "id": "z076",
+      "nl": "de winkel was al dicht",
+      "en": "The shop was already closed",
+      "level": "A2",
+      "concept": "past",
+      "why": "was in second place, just like any other verb."
+    },
+    {
+      "id": "z077",
+      "nl": "ik blijf thuis omdat ik ziek ben",
+      "en": "I am staying home because I am sick",
+      "level": "A2",
+      "concept": "subordinate",
+      "why": "After omdat the verb walks to the end: ik ziek ben, not ik ben ziek."
+    },
+    {
+      "id": "z078",
+      "nl": "ik weet niet of hij komt",
+      "en": "I don't know whether he is coming",
+      "level": "A2",
+      "concept": "subordinate",
+      "why": "of means whether here, and it sends komt to the end."
+    },
+    {
+      "id": "z079",
+      "nl": "zij zegt dat ze morgen komt",
+      "en": "She says that she is coming tomorrow",
+      "level": "A2",
+      "concept": "subordinate",
+      "why": "dat pushes komt right past morgen to the end."
+    },
+    {
+      "id": "z080",
+      "nl": "als het regent neem ik de bus",
+      "en": "If it rains I take the bus",
+      "level": "A2",
+      "concept": "subordinate",
+      "why": "The als clause fills slot one, so the main clause flips to neem ik.",
+      "accept": [
+        "ik neem de bus als het regent"
+      ]
+    },
+    {
+      "id": "z081",
+      "nl": "ik kan niet komen omdat ik moet werken",
+      "en": "I can't come because I have to work",
+      "level": "A2",
+      "concept": "subordinate",
+      "why": "Both verbs go to the end of the omdat clause: ik moet werken."
+    },
+    {
+      "id": "z082",
+      "nl": "hij vraagt of u een afspraak heeft",
+      "en": "He asks whether you have an appointment",
+      "level": "A2",
+      "concept": "subordinate",
+      "why": "heeft travels all the way past the object to the end."
+    },
+    {
+      "id": "z083",
+      "nl": "ik hoop dat u mij kunt helpen",
+      "en": "I hope that you can help me",
+      "level": "A2",
+      "concept": "subordinate",
+      "why": "Both verbs end up at the back: kunt helpen."
+    },
+    {
+      "id": "z084",
+      "nl": "ik ga naar huis want ik ben moe",
+      "en": "I am going home because I am tired",
+      "level": "A2",
+      "concept": "conjunctions",
+      "why": "want changes nothing. Compare omdat, which would force ik moe ben."
+    },
+    {
+      "id": "z085",
+      "nl": "hij komt niet want hij heeft het druk",
+      "en": "He isn't coming because he is busy",
+      "level": "A2",
+      "concept": "conjunctions",
+      "why": "Two ordinary sentences glued together. het druk hebben is the fixed phrase for being busy."
+    },
+    {
+      "id": "z086",
+      "nl": "ik wil komen maar ik heb geen tijd",
+      "en": "I want to come but I don't have time",
+      "level": "A2",
+      "concept": "conjunctions",
+      "why": "maar joins two full sentences and leaves both alone."
+    },
+    {
+      "id": "z087",
+      "nl": "het regent dus ik neem de tram",
+      "en": "It is raining so I am taking the tram",
+      "level": "A2",
+      "concept": "conjunctions",
+      "why": "dus can join two sentences without moving anything."
+    },
+    {
+      "id": "z088",
+      "nl": "ik ga naar de winkel om brood te kopen",
+      "en": "I am going to the shop to buy bread",
+      "level": "A2",
+      "concept": "om-te",
+      "why": "om ... te wraps the reason, and te kopen closes the sentence."
+    },
+    {
+      "id": "z089",
+      "nl": "hij heeft geen tijd om te sporten",
+      "en": "He has no time to do sports",
+      "level": "A2",
+      "concept": "om-te",
+      "why": "With no object in between, om te sits together right at the end."
+    },
+    {
+      "id": "z090",
+      "nl": "ik bel u om een afspraak te maken",
+      "en": "I am calling you to make an appointment",
+      "level": "A2",
+      "concept": "om-te",
+      "why": "The object een afspraak slides in between om and te."
+    },
+    {
+      "id": "z091",
+      "nl": "het is belangrijk om Nederlands te leren",
+      "en": "It is important to learn Dutch",
+      "level": "A2",
+      "concept": "om-te",
+      "why": "After it is plus an adjective, Dutch adds om before te."
+    },
+    {
+      "id": "z092",
+      "nl": "ik voel me niet lekker",
+      "en": "I don't feel well",
+      "level": "A2",
+      "concept": "reflexive",
+      "why": "zich voelen always needs its pronoun. Say this one at the doctor."
+    },
+    {
+      "id": "z093",
+      "nl": "u moet zich eerst aanmelden",
+      "en": "You have to register first",
+      "level": "A2",
+      "concept": "reflexive",
+      "why": "With u the pronoun is zich, and it comes straight after the modal."
+    },
+    {
+      "id": "z094",
+      "nl": "hij vergist zich",
+      "en": "He is mistaken",
+      "level": "A2",
+      "concept": "reflexive",
+      "why": "English has no pronoun here at all, which is exactly why this gets forgotten."
+    },
+    {
+      "id": "z095",
+      "nl": "wij haasten ons naar het station",
+      "en": "We hurry to the station",
+      "level": "A2",
+      "concept": "reflexive",
+      "why": "Every subject has its own reflexive word, and wij takes ons rather than zich."
+    },
+    {
+      "id": "z096",
+      "nl": "voel je je al beter",
+      "en": "Are you feeling better already?",
+      "level": "A2",
+      "concept": "reflexive",
+      "why": "je twice, and both are needed: one is the subject, one is the reflexive."
+    },
+    {
+      "id": "z097",
+      "nl": "zij kleedt zich snel aan",
+      "en": "She gets dressed quickly",
+      "level": "B1",
+      "concept": "reflexive",
+      "why": "aankleden is both reflexive and separable, so zich sits in the middle and aan goes last."
+    },
+    {
+      "id": "z098",
+      "nl": "ik heb me bij de gemeente ingeschreven",
+      "en": "I registered at the town hall",
+      "level": "B1",
+      "concept": "reflexive",
+      "why": "The reflexive me comes early, the participle ingeschreven comes last."
+    },
+    {
+      "id": "z099",
+      "nl": "ik ben er blij mee",
+      "en": "I am happy with it",
+      "level": "B1",
+      "concept": "er",
+      "why": "blij met plus a thing becomes er ... mee, and met changes shape to mee."
+    },
+    {
+      "id": "z100",
+      "nl": "wij praten er morgen over",
+      "en": "We will talk about it tomorrow",
+      "level": "B1",
+      "concept": "er",
+      "why": "er and over split apart, with the time word sitting between them."
+    },
+    {
+      "id": "z101",
+      "nl": "ik heb er geen zin in",
+      "en": "I don't feel like it",
+      "level": "B1",
+      "concept": "er",
+      "why": "zin hebben in becomes er ... in. A very everyday sentence."
+    },
+    {
+      "id": "z102",
+      "nl": "hij denkt er nog over na",
+      "en": "He is still thinking about it",
+      "level": "B1",
+      "concept": "er",
+      "why": "nadenken over is separable too, so three pieces end up spread out: er, over, na."
+    },
+    {
+      "id": "z103",
+      "nl": "wat vind je ervan",
+      "en": "What do you think of it?",
+      "level": "B1",
+      "concept": "er",
+      "why": "Here er and van stay glued together as ervan."
+    },
+    {
+      "id": "z104",
+      "nl": "deze fiets is duurder dan die",
+      "en": "This bike is more expensive than that one",
+      "level": "A2",
+      "concept": "comparative",
+      "why": "duur plus -er, and than is dan."
+    },
+    {
+      "id": "z105",
+      "nl": "mijn Nederlands wordt steeds beter",
+      "en": "My Dutch is getting better and better",
+      "level": "A2",
+      "concept": "comparative",
+      "why": "beter is irregular, and steeds is how Dutch says more and more."
+    },
+    {
+      "id": "z106",
+      "nl": "dit is het goedkoopste abonnement",
+      "en": "This is the cheapest subscription",
+      "level": "A2",
+      "concept": "comparative",
+      "why": "The top of the list takes -ste and the het in front of it."
+    },
+    {
+      "id": "z107",
+      "nl": "de trein gaat sneller dan de bus",
+      "en": "The train goes faster than the bus",
+      "level": "A2",
+      "concept": "comparative",
+      "why": "Comparing two things always uses dan."
+    },
+    {
+      "id": "z108",
+      "nl": "hij woont dichter bij het station dan ik",
+      "en": "He lives closer to the station than I do",
+      "level": "B1",
+      "concept": "comparative",
+      "why": "Dutch stops at dan ik. There is no extra word for do."
+    },
+    {
+      "id": "z109",
+      "nl": "ik ga morgen met de bus naar mijn werk",
+      "en": "I am going to work by bus tomorrow",
+      "level": "A2",
+      "concept": "tmp",
+      "why": "When, then how, then where: morgen, met de bus, naar mijn werk.",
+      "accept": [
+        "morgen ga ik met de bus naar mijn werk"
+      ]
+    },
+    {
+      "id": "z110",
+      "nl": "zij fietst elke dag naar school",
+      "en": "She cycles to school every day",
+      "level": "A2",
+      "concept": "tmp",
+      "why": "Time before place, the opposite of the usual English order."
+    },
+    {
+      "id": "z111",
+      "nl": "wij gaan zaterdag samen naar de markt",
+      "en": "We are going to the market together on Saturday",
+      "level": "A2",
+      "concept": "tmp",
+      "why": "zaterdag is when, samen is how, naar de markt is where."
+    },
+    {
+      "id": "z112",
+      "nl": "ik heb gisteren met de dokter gebeld",
+      "en": "I called the doctor yesterday",
+      "level": "A2",
+      "concept": "tmp",
+      "why": "Time and manner line up in order, and the participle still closes the sentence."
+    },
+    {
+      "id": "z113",
+      "nl": "hij reist elke week met de trein naar Brussel",
+      "en": "He travels to Brussels by train every week",
+      "level": "B1",
+      "concept": "tmp",
+      "why": "All three details at once, in the order when, how, where."
+    },
+    {
+      "id": "z114",
+      "nl": "ik ga volgende week verhuizen",
+      "en": "I am going to move next week",
+      "level": "A2",
+      "concept": "future",
+      "why": "gaan plus the base form is the everyday way to talk about a plan.",
+      "accept": [
+        "volgende week ga ik verhuizen"
+      ]
+    },
+    {
+      "id": "z115",
+      "nl": "het zal morgen regenen",
+      "en": "It will rain tomorrow",
+      "level": "A2",
+      "concept": "future",
+      "why": "zullen plus the base form at the end. Used more for predictions than plans.",
+      "accept": [
+        "morgen zal het regenen"
+      ]
+    },
+    {
+      "id": "z116",
+      "nl": "wij zullen u morgen bellen",
+      "en": "We will call you tomorrow",
+      "level": "A2",
+      "concept": "future",
+      "why": "zullen is the form you want when you are promising something.",
+      "accept": [
+        "morgen zullen wij u bellen"
+      ]
+    },
+    {
+      "id": "z117",
+      "nl": "zal ik het raam opendoen",
+      "en": "Shall I open the window?",
+      "level": "A2",
+      "concept": "future",
+      "why": "Zal ik is how you offer to do something. The base form stays whole here."
+    },
+    {
+      "id": "z118",
+      "nl": "zullen we samen koffie drinken",
+      "en": "Shall we have coffee together?",
+      "level": "A2",
+      "concept": "future",
+      "why": "Zullen we is the standard way to suggest something."
+    },
+    {
+      "id": "z119",
+      "nl": "ik moet het formulier nog invullen",
+      "en": "I still have to fill in the form",
+      "level": "A2",
+      "concept": "separable",
+      "why": "After a modal the separable verb stays in one piece at the end."
+    },
+    {
+      "id": "z120",
+      "nl": "wij komen morgen bij u langs",
+      "en": "We will drop by your place tomorrow",
+      "level": "B1",
+      "concept": "separable",
+      "why": "langskomen splits and langs ends up behind everything else."
+    },
+    {
+      "id": "z121",
+      "nl": "vergeet niet je pas mee te nemen",
+      "en": "Don't forget to bring your card",
+      "level": "B1",
+      "concept": "om-te",
+      "why": "With te, a separable verb splits around it: mee te nemen."
+    },
+    {
+      "id": "z122",
+      "nl": "de taart wordt gebakken",
+      "en": "The cake is being baked",
+      "level": "B1",
+      "concept": "passive",
+      "why": "worden plus the past participle. The baker has disappeared from the sentence."
+    },
+    {
+      "id": "z123",
+      "nl": "het formulier wordt door de gemeente verwerkt",
+      "en": "The form is processed by the town hall",
+      "level": "B1",
+      "concept": "passive",
+      "why": "If you do name the doer, it comes in with door."
+    },
+    {
+      "id": "z124",
+      "nl": "de brief is vorige week verstuurd",
+      "en": "The letter was sent last week",
+      "level": "B1",
+      "concept": "passive",
+      "why": "A finished passive uses zijn, not worden."
+    },
+    {
+      "id": "z125",
+      "nl": "hier worden geen honden toegelaten",
+      "en": "No dogs are allowed here",
+      "level": "B1",
+      "concept": "passive",
+      "why": "The sign version. hier takes slot one, so worden comes second."
+    },
+    {
+      "id": "z126",
+      "nl": "uw aanvraag wordt binnen vier weken behandeld",
+      "en": "Your application will be processed within four weeks",
+      "level": "B1",
+      "concept": "passive",
+      "why": "Straight out of a letter from the town hall, which is why it is worth recognising."
+    },
+    {
+      "id": "z127",
+      "nl": "het huis wordt volgende maand verkocht",
+      "en": "The house will be sold next month",
+      "level": "B1",
+      "concept": "passive",
+      "why": "Present tense worden can point at the future, just like in English."
+    },
+    {
+      "id": "z128",
+      "nl": "de man die naast mij woont werkt bij de politie",
+      "en": "The man who lives next to me works for the police",
+      "level": "B1",
+      "concept": "relative",
+      "why": "de man is a de-word, so die. Inside that clause woont goes to the end."
+    },
+    {
+      "id": "z129",
+      "nl": "het boek dat ik gisteren kocht is heel goed",
+      "en": "The book I bought yesterday is very good",
+      "level": "B1",
+      "concept": "relative",
+      "why": "het boek is a het-word, so dat. English can drop the that, Dutch cannot."
+    },
+    {
+      "id": "z130",
+      "nl": "de brief die ik kreeg was in het Nederlands",
+      "en": "The letter I got was in Dutch",
+      "level": "B1",
+      "concept": "relative",
+      "why": "die for a de-word, and the main verb was waits until the clause has finished."
+    },
+    {
+      "id": "z131",
+      "nl": "dit is de vrouw met wie ik werk",
+      "en": "This is the woman I work with",
+      "level": "B1",
+      "concept": "relative",
+      "why": "For a person after a preposition, Dutch uses wie."
+    },
+    {
+      "id": "z132",
+      "nl": "ik zou graag een afspraak willen maken",
+      "en": "I would like to make an appointment",
+      "level": "B1",
+      "concept": "conditional",
+      "why": "zou plus graag is the polite upgrade of ik wil. Two base forms pile up at the end."
+    },
+    {
+      "id": "z133",
+      "nl": "zou u dat kunnen herhalen",
+      "en": "Could you repeat that?",
+      "level": "B1",
+      "concept": "conditional",
+      "why": "The politest version of kunt u dat herhalen."
+    },
+    {
+      "id": "z134",
+      "nl": "ik zou het niet doen",
+      "en": "I wouldn't do it",
+      "level": "B1",
+      "concept": "conditional",
+      "why": "zou second, doen at the end, niet in between."
+    },
+    {
+      "id": "z135",
+      "nl": "als ik meer tijd had zou ik vaker sporten",
+      "en": "If I had more time I would exercise more often",
+      "level": "B1",
+      "concept": "conditional",
+      "why": "The als clause sends had to its end, then the main clause flips to zou ik."
+    },
+    {
+      "id": "z136",
+      "nl": "omdat ik ziek was ben ik niet naar de les gegaan",
+      "en": "Because I was sick I didn't go to the lesson",
+      "level": "B1",
+      "concept": "subordinate",
+      "why": "The omdat clause fills slot one, so the main clause starts ben ik."
+    },
+    {
+      "id": "z137",
+      "nl": "nadat ik gegeten had ging ik naar bed",
+      "en": "After I had eaten I went to bed",
+      "level": "B1",
+      "concept": "subordinate",
+      "why": "Two verbs at the end of the nadat clause, then inversion in the main clause.",
+      "accept": [
+        "nadat ik had gegeten ging ik naar bed"
+      ]
+    },
+    {
+      "id": "z138",
+      "nl": "hoewel het regende zijn wij toch gaan fietsen",
+      "en": "Although it was raining we went cycling anyway",
+      "level": "B1",
+      "concept": "subordinate",
+      "why": "hoewel behaves like omdat, and gaan fietsen is a double base form at the end."
+    },
+    {
+      "id": "z139",
+      "nl": "ik had het formulier eerder moeten opsturen",
+      "en": "I should have sent the form earlier",
+      "level": "B1",
+      "concept": "modals",
+      "why": "Two base forms stack at the end, moeten opsturen, instead of a participle."
+    },
+    {
+      "id": "z140",
+      "nl": "wij gaan eerst eten en daarna kijken wij een film",
+      "en": "We will eat first and then we will watch a film",
+      "level": "B1",
+      "concept": "conjunctions",
+      "why": "en changes nothing, but daarna starts the second half, so that half inverts."
+    },
+    {
+      "id": "z141",
+      "nl": "kunt u mij helpen",
+      "en": "Can you help me?",
+      "level": "A1",
+      "concept": "question",
+      "why": "Verb first, then the person you are asking, with helpen at the end."
+    },
+    {
+      "id": "z142",
+      "nl": "ik zoek de dichtstbijzijnde apotheek",
+      "en": "I am looking for the nearest pharmacy",
+      "level": "A2",
+      "concept": "v2",
+      "why": "A long adjective still sits quietly between the article and the noun."
+    },
+    {
+      "id": "z143",
+      "nl": "mijn buurman maakt veel lawaai",
+      "en": "My neighbour makes a lot of noise",
+      "level": "A2",
+      "concept": "v2",
+      "why": "The opening line of many a complaint."
+    },
+    {
+      "id": "z144",
+      "nl": "ik heb een klacht over mijn woning",
+      "en": "I have a complaint about my home",
+      "level": "A2",
+      "concept": "v2",
+      "why": "klacht over is the fixed pair. Worth knowing for the housing topics."
+    },
+    {
+      "id": "z145",
+      "nl": "kunt u dat alstublieft opschrijven",
+      "en": "Could you write that down please",
+      "level": "A2",
+      "concept": "separable",
+      "why": "After a modal, opschrijven stays whole at the end."
+    },
+    {
+      "id": "z146",
+      "nl": "ik begrijp u wel maar ik versta u niet",
+      "en": "I understand you but I can't hear you clearly",
+      "level": "B1",
+      "concept": "conjunctions",
+      "why": "verstaan is hearing the sounds, begrijpen is getting the meaning. The exam tests the difference."
+    },
+    {
+      "id": "z147",
+      "nl": "hoe laat is het",
+      "en": "What time is it?",
+      "level": "A1",
+      "concept": "question",
+      "why": "Dutch asks how late it is."
+    },
+    {
+      "id": "z148",
+      "nl": "ik ben vorig jaar naar Nederland gekomen",
+      "en": "I came to the Netherlands last year",
+      "level": "A2",
+      "concept": "perfect",
+      "why": "komen takes zijn, and gekomen closes the sentence.",
+      "accept": [
+        "vorig jaar ben ik naar Nederland gekomen"
+      ]
+    },
+    {
+      "id": "z149",
+      "nl": "mijn zoon zit op de basisschool",
+      "en": "My son is at primary school",
+      "level": "A2",
+      "concept": "v2",
+      "why": "Dutch says sits at school, and school takes op rather than in."
+    },
+    {
+      "id": "z150",
+      "nl": "wij moeten dit samen oplossen",
+      "en": "We have to sort this out together",
+      "level": "B1",
+      "concept": "modals",
+      "why": "oplossen stays whole after the modal and lands at the end."
+    }
+  ]
+}

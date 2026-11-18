@@ -121,7 +121,7 @@ export function SentenceBuilderGame({ game }: { game: SentenceGame }) {
       if (nextCombo >= 2) playCombo(nextCombo)
       else playSound('correct')
       buzz([12, 30, 12])
-      speak(current.correct.join(' '), 'hi')
+      speak(current.correct.join(' '), config.ttsLocale)
     } else {
       setStatus('wrong')
       setCombo(0)

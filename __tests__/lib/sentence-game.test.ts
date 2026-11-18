@@ -16,15 +16,16 @@ import { words } from '@/lib/gloss'
 beforeEach(() => localStorage.clear())
 
 describe('sentence game loader', () => {
-  it('exposes a Hindi and a Dutch sentence builder, each tagged + uniquely id-ed', () => {
+  // Dutch has its own builder now (lib/dutch/zinsbouwer.ts), which knows what
+  // grammar each sentence drills. This engine is Hindi-only.
+  it('exposes the Hindi sentence builder and no Dutch one', () => {
     expect(getSentenceGames('hindi').length).toBeGreaterThan(0)
-    expect(getSentenceGames('dutch').length).toBeGreaterThan(0)
+    expect(getSentenceGames('dutch')).toEqual([])
     expect(getSentenceGameById('sentence-builder')?.language).toBe('hindi')
-    expect(getSentenceGameById('sentence-builder-nl')?.language).toBe('dutch')
   })
 
-  it('has at least PER_ROUND items in every difficulty tier (both languages)', () => {
-    for (const id of ['sentence-builder', 'sentence-builder-nl']) {
+  it('has at least PER_ROUND items in every difficulty tier', () => {
+    for (const id of ['sentence-builder']) {
       const g = getSentenceGameById(id)!
       for (const level of ['easy', 'medium', 'hard'] as const) {
         expect(g.items.filter((i) => i.level === level).length).toBeGreaterThanOrEqual(SENTENCE_PER_ROUND)

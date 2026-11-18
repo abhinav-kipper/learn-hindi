@@ -55,6 +55,7 @@ else they owe beyond the five papers.
 | Vocabulary | 208 words, 12 categories (swipe deck) |
 | Word Lab | 128 chunks, 6 packs, A0 to A2, on the SM-2 schedule |
 | Sounds | 8 pronunciation stages |
+| Sentence Builder | 150 sentences, 21 grammar concepts, A1 to B1, practice + 90s sprint |
 
 ## 4. Decisions already made, and why
 
@@ -94,6 +95,13 @@ Re-opening these without reason wastes a session.
   passes must use `getByText`, not `getByRole('button')`. Word tiles *are*
   buttons, but a placed tile and its tray twin share a name with the placed one
   first in the DOM, so use `.last()` to click the tray.
+- **A themed screen can keep the wrong brand colour forever on a hard load.**
+  The theme comes from the language in localStorage, so the prerendered shell is
+  always the Hindi one, and React does not repaint attributes that mismatch on
+  hydration. A later state change does not fix it, because React diffs against
+  its own previous virtual DOM, which already holds the right colour. Symptom:
+  Dutch screens rendering in Hindi pink. Fix: a mount gate in the route, so the
+  first client render is also the first render. `/play/duel/[id]` still has it.
 - **Verify against a freshly rebuilt server.** `pkill -f "next start"` does not
   match the `next-server` process, which has produced false "clean" audits.
 
