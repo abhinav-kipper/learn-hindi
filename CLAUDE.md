@@ -58,6 +58,7 @@ content/dutch/pronunciation-course.json → 8-stage from-zero "Sounds" ladder (a
 content/dutch/cheatsheet/    → 7 grouped concept-cheatsheet JSONs (35 topics, 318 drill questions)
 content/dutch/vocabulary.json → 208 Dutch words in 12 categories (nouns carry de/het)
 content/dutch/woorden/     → Word Lab: 3 staged JSONs (A0/A1/A2), 6 packs, 128 learnable chunks
+content/dutch/zinsbouwer.json → Sentence Builder: 150 sentences tagged by grammar concept + CEFR level
 content/stories/        → 5 Hindi story JSONs (Chai Galli motion-comics)
 docs/audits/             → Content audit rubric + per-run reports + master summaries
 scripts/audit-content.mjs → Audit dispatcher (lists 57 units, builds per-unit prompts, aggregates reports)
@@ -222,6 +223,7 @@ shadows anywhere.
 | `/dutch/cheatsheet/[topicId]` | One concept sheet: summary Sticker, numbered sections rendering rule/tip/pitfall callouts, scrollable tables, and example/vocab lists with a per-line 🔊 (Dutch TTS). **Every Dutch string is tappable** (dotted underline): one tap speaks it and opens a butter bottom sheet with article, part of speech, meaning, an example and other senses. Ends with a mint "Remember this much" takeaway list, the practice CTA (shows best score), a "Mark as read" toggle and a "Next up" link. |
 | `/dutch/cheatsheet/[topicId]/practice` | Per-topic drill via `DrillRunner`. Shuffled mix of MCQ / fill-the-gap / tap-to-order questions, per-question segmented progress, combo chip, instant feedback sticker with the correct answer (🔊) plus the explanation. Done screen at 80% pass with Confetti; result saved as the topic's best score. Bottom nav hidden. |
 | `/dutch/cheatsheet/review` | Mixed review: 15 questions drawn at random across all 25 topics, same `DrillRunner` shell. Not scored per topic. Bottom nav hidden. |
+| `/play/zinsbouwer` | **Sentence Builder (Zinsbouwer)**, Dutch only. Tap scrambled word tiles into the right order. Intro picks a level (A1 / A2 / B1 / mix), a mode (practice, or a 90s sprint) and optionally one of the 21 grammar concepts to drill on its own, each chip carrying your accuracy. Playing screen: score + streak chips (+ a countdown in sprint), the English prompt with its concept and level tags, a dashed answer row, a tile tray, and an explicit **check** button (so you can reorder before committing). On an answer, practice mode shows the sentence as a reader sees it, the why for that specific sentence, the concept's rule, and any other orders that would also have been accepted. Wrong answers file into the mistakes drill under `dutch-word-order`. Bottom nav hidden. |
 | `/stories/[id]` | Single Hindi story — tap-through 5-panel Chai Galli motion-comic. Each panel: scene background (composed SVG: ChaiStall / Bazaar / NaniHouse / NarratorCard) + character w/ idle motion (Cutting / Nani / Customer / Shopkeeper) + dialogue Sticker w/ syllable-stress pronunciation hint + 🔊 hear-it (browser TTS, hi-IN) + tap-to-reveal English (lavender → mint reveal-zone). Framer Motion slide-in panel transitions. Last panel marks story-read in `learn-hindi:hindi-stories-read` + fires Confetti + "✓ read more stories" CTA back to home. |
 
 ### Libraries (`lib/`)
@@ -257,6 +259,7 @@ shadows anywhere.
 | `dutch/spreken.ts` | Spreken (speaking) loader + progress + best-band history (TDD'd, 31 tests, which double as content gates). `getSpreekTasks/getTaskById/getTasksByType/getNextTask`, `TASK_TYPES` (the paper's five), `EXAM_TASK_COUNT` (16) / `EXAM_MINUTES` (35), `MIN_ANSWER_SECONDS`, done set, and `recordBand`/`getBestBand`/`getPassedCount` where `BANDS` is ranked so **a later worse attempt never erases a better one**. Content gates assert every task has a frame containing a `___` gap, ≥5 phrases, ≥3 checklist points, a model answer in both languages, a realistic 45 to 90s limit, and that story tasks have 3 panels, picture tasks a `scene_en` and choice tasks exactly 2 options. |
 | `audio-recorder.ts` (in `lib/`) | Shared browser audio capture for the pronunciation coach and Spreken. `pickMime`, `isRecordingSupported`, `blobToBase64`, `toMono`, `encodeWav`, `blobToWav`, `wavDurationSeconds`. TDD'd, 16 tests on the pure encoder. **Why it exists:** Gemini rejects the webm/mp4 MediaRecorder produces, so audio is re-encoded to 16 kHz mono WAV in the browser; and this is the only capture path that works on an iPhone, because the Web Speech API in `voice-button.tsx` is deliberately disabled on iOS Safari and iOS PWAs where it exists but does not function. |
 | `dutch/woorden.ts` | **Word Lab** engine (TDD'd, 38 tests, which double as content gates). Loader over `content/dutch/woorden/*.json` (6 packs / 128 chunks / 3 stages), met-set, mastery, session builder and answer checking. **Scheduling reuses `computeNextSchedule` from `lib/review.ts`** rather than adding a second scheduler, so the two review systems cannot drift. `MASTERY_HITS` is 8 (successful retrievals, not attempts). `buildSession` takes the oldest-due first then **interleaves across packs**. `pickDrill` gives nouns the de/het drill on alternate turns and never offers it for a non-noun. `checkRecall` **rejects a noun typed without its article**, which is the whole point of storing the chunk. Content gates assert every noun carries `de`/`het` as the first token of its chunk, every entry names its pattern, and every entry has ≥2 examples. |
+| `dutch/zinsbouwer.ts` | **Sentence Builder** engine (TDD'd, 31 tests, which double as content gates). Loader over `content/dutch/zinsbouwer.json` (150 sentences, 21 concepts, A1/A2/B1). `checkBuild` accepts the canonical order **and every order in the item's `accept` list**, because Dutch fronting means more than one tile arrangement is correct and marking a valid one wrong would teach a rule that does not exist. `drawQueue` weights the draw toward concepts you keep missing (6x under 50% right, 3x under 80%, 1x once mastered) and adds decoy tiles by level (A1 none, A2 one, B1 two), never drawing a negation word as a decoy since that could spell a different true sentence. `displaySentence` capitalises and punctuates, because tiles are stored lowercase so the capital cannot give away the first word. Per-concept stats drive `getWeakConcepts`; `recordSprint` never downgrades a best. Content gates assert every `accept` entry is the same multiset of words as the canonical order, every concept has at least 4 sentences, and every sentence's own declared answer is graded correct. |
 | `dutch/exam-target.ts` | Exam level the learner is sitting, `'a2' \| 'b1'`, **default a2**. `targetLabel`, `levelsForTarget`, `isBeyondTarget(level, target)`. Read by the Dutch home (goal banner, path, exam-scenario badges) and by the Lezen/Luisteren tier lists, so above-target content is dimmed and relabelled rather than hidden. Changeable in the welcome modal **and in Settings**. TDD'd, 12 tests. |
 | `dutch/level-map.ts` | Lookup table tagging every Dutch content ID with `A1` / `A2` / `B1`. Powers the 3-stage progress bars on the Dutch home. **Every key must be the exact `id` field of the content JSON, which is `dutch-` prefixed for all Dutch units.** A bare key never matches, so `getLevel` silently returns the `A1` default and the stage bar counts items that can never complete. Fixed for lessons 2026-05-26 and for foundations 2026-11-07 (7 foundation keys were still bare). Guarded by `__tests__/lib/dutch-content-ids.test.ts` + `lib/dutch/level-map.test.ts`. |
 | `dutch/id-migration.ts` | One-time localStorage remap for the 2026-11-07 Dutch foundation ID rename (bare ids → `dutch-` prefixed). Rewrites `dutch-progress` (completedLessons + lessonCompletedAt), `dutch-phrase-progress`, `dutch-quiz-scores` and `dutch-last-active-lesson`, then sets the flag `dutch-foundation-id-migration-v1`. Called once from `layout-shell.tsx` on mount. Idempotent, Dutch-prefix only, never throws. TDD'd, 8 tests. |
@@ -288,7 +291,7 @@ from these. Always import via the barrel `@/components/design`.
 
 | File | What it does |
 |------|--------------|
-| `bottom-nav.tsx` | Floating white sticker pill at the bottom of all non-fullscreen pages. Active-tab cream pill slides via Framer `layoutId`. Hidden on `/lessons/*`, `/practice/*`, `/play/duel/*`, `/onboarding`. Tabs: `home` (`/`), `play` (`/play`, Quizzes + Games), `learn` (`/learn`, Vocabulary + Sounds + Stories hub; was `words`→`/vocabulary`), `diary` (`/diary`, **Hindi-only**, coral book icon, inserted between learn and you), `you` (`/progress`), plus the language-toggle flag. Nav also hides on `/diary`. |
+| `bottom-nav.tsx` | Floating white sticker pill at the bottom of all non-fullscreen pages. Active-tab cream pill slides via Framer `layoutId`. Hidden on `/lessons/*`, `/practice/*`, `/play/duel/*`, `/play/sentence/*`, `/play/zinsbouwer`, `/onboarding`. Tabs: `home` (`/`), `play` (`/play`, Quizzes + Games), `learn` (`/learn`, Vocabulary + Sounds + Stories hub; was `words`→`/vocabulary`), `diary` (`/diary`, **Hindi-only**, coral book icon, inserted between learn and you), `you` (`/progress`), plus the language-toggle flag. Nav also hides on `/diary`. |
 | `design/MomentStage.tsx` | **Chaina moments system.** `ChainaProvider` mounts once in `app/layout.tsx`. `useChaina()` returns `{ play(key), stop() }`. **22 moments** registered in `moments.ts` (welcomeBack/correctAnswer/lessonComplete/streakMilestone/newContent/knmAttemptComplete/knmPassed/lezenStudyDone/lezenMockPassed/a2Milestone/dailyGoalReached/etc). Each moment fires `<Cutting>` + `<SpeechBubble>` w/ animations, plus voice via `chainaVoice.play()` (MP3 → speechSynthesis fallback). Frequency caps in `chainaFrequency.ts`. |
 | `search-overlay.tsx` | Full-screen search modal triggered from the home magnifying-glass. Language-aware index. Locks body scroll, restores focus on close, Esc to dismiss |
 | `daily-review-popup.tsx` | Butter bottom-sheet w/ Cutting, fires every 24h after first lesson complete. Mixes vocab + lesson phrases through SRS |
@@ -369,6 +372,8 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-spreken-scores` — `{ [taskId]: 'not yet' | 'nearly' | 'pass' | 'strong' }`, the **best** band ever reached on that task. `recordBand` compares ranks before writing, so one bad recording never wipes out a good one.
 - `dutch-woorden-met` — JSON array of Word Lab chunk ids the learner has been introduced to. Only met chunks ever enter the review queue.
 - `dutch-woorden-srs` — `{ [chunkId]: { hits, misses, interval, easeFactor, nextReviewAt, lastReviewed } }`. `hits` counts **successful** retrievals and drives mastery at 8; `interval`/`easeFactor`/`nextReviewAt` come straight from the shared `computeNextSchedule`.
+- `dutch-zinsbouwer-stats` — `{ [concept]: { seen, correct } }` for the 21 Sentence Builder concepts. Drives the weighted draw, the accuracy badge on each concept chip and the weak-spots card.
+- `dutch-zinsbouwer-best` — `{ [level]: number }`, the best 90s sprint score per level. Only ever raised.
 - `dutch-pron-cards-done` — JSON array of "Sounds" card ids marked got-it (blend words tracked as `blend:<whole>`).
 - `dutch-pron-earquiz-done` — JSON array of "Sounds" stage ids whose ear-quiz passed. Stage completion + the rolling unlock are derived from these two sets.
 - `dutch-cheatsheet-studied` — JSON array of cheatsheet topic ids marked as read.
@@ -376,6 +381,76 @@ All keyed by language prefix (`hindi` or `dutch`). Format `${prefix}-{name}`:
 - `dutch-define-cache` — `{ [word]: Definition }` from `/api/define`, capped at 300, so tapped words resolve instantly and keep working offline once seen.
 
 ### Recent feature work log
+
+**2026-11-18 (Sentence Builder) — Dutch word order as a game, with the alternates it actually allows**
+
+A Dutch-only game at `/play/zinsbouwer`, reached from the Play hub. 150 sentences,
+21 grammar concepts, A1 to B1. Built from a screenshot of another app's
+"Zinsbouwer", but the two decisions that matter are not in that screenshot.
+
+*Alternate orders are accepted, and that is the point.* `Morgen ga ik naar de
+gemeente` and `Ik ga morgen naar de gemeente` are both correct Dutch built from
+the same tiles. A builder that accepts only one of them teaches a rule that does
+not exist, which is worse than no practice at all. So items carry an `accept`
+list, `checkBuild` tests every entry, and a content gate asserts each alternate
+is **exactly the same multiset of words** as the canonical order (an alternate
+made of different words could never be tapped out of the tray, so it would be
+silent dead data). After a correct answer the screen echoes back the order the
+learner actually built, and names the other orders that would also have passed.
+
+*Every sentence declares what it is drilling.* The old builder had a flat
+easy/medium/hard split and no idea what any sentence taught. Here each one
+carries a concept (verb-second, inversion, questions, niet vs geen, modals,
+separable verbs, imperative, er is, perfect, simple past, subordinate clauses,
+want/maar/en, om te, reflexives, er plus preposition, comparatives,
+time-manner-place, future, passive, die/dat, zou) and its own one-line `why`.
+That makes two things possible that were not before: **drilling one concept on
+its own** from the intro, and a draw **weighted toward the concepts you keep
+missing** (6x under 50% right, 3x under 80%, 1x once mastered). Each concept
+chip shows your accuracy, and a card names your three worst.
+
+Other decisions worth keeping:
+- **Tiles are stored lowercase** and the built row is capitalised on screen. A
+  capitalised tile gives away which word starts the sentence, which is half the
+  puzzle. It also means alternates compare cleanly.
+- **An explicit check button**, not an auto-check when the row fills. With
+  decoys in the tray you want to reorder before committing.
+- **Decoys by level**: none at A1, one at A2, two at B1, and never `niet`,
+  `geen`, `wel`, `nooit` or `ook`, any of which could turn the remaining tiles
+  into a different true sentence. The screen says how many tiles are spare.
+- Misses file into the existing mistakes drill under `dutch-word-order`, with
+  the full corrected sentence and the why as the reason.
+- Content leans on the exam's own situations: gemeente, huisarts, formulier,
+  afspraak, cursus, verhuizen, aanvraag, wachtkamer.
+
+*The old Dutch sentence builder is retired* (`content/games/dutch/sentence-builder.json`
+removed, `lib/sentence-game.ts` is Hindi-only now). It was superseded on every
+axis, and it had two Dutch-specific bugs: it spoke Dutch sentences through the
+**Hindi** TTS locale, and filed Dutch misses with the reason "Hindi puts the verb
+at the end." That engine's `speak` call now takes the locale from the language
+config rather than hardcoding `hi`.
+
+*A hydration bug found on the way, worth knowing about.* On a **hard load** the
+game rendered in Hindi pink on the Dutch track. The theme comes from the
+language in localStorage, which the server cannot know, so the prerendered shell
+is always the Hindi one, and **React does not repaint attributes that mismatch
+on hydration**. Nothing re-renders the intro afterwards, so the wrong colour
+sticks for the life of the screen. A later state change does not fix it either,
+because React diffs against its own previous virtual DOM, which already says
+orange. The fix here is a mount gate in the route: render a plain background
+until mounted, so the first client render is also the first render.
+**`/play/duel/[id]` still has this bug** (verified: it is pink on a hard load
+with the language set to Dutch) and so would any other screen whose colours come
+from `useTheme()` and never re-render. It is pre-existing and left alone here.
+
+Verified in a browser with 40 checks: the hub card, the intro's levels, modes
+and all 21 concept chips, six A1 sentences built correctly in a row, a wrong
+build revealing the right order and resetting the streak, **two alternate orders
+accepted and echoed back**, the concept filter narrowing the set to exactly its
+6 passive sentences, B1 serving two decoys while A1 serves none, the sprint
+clock running down and auto-advancing without the explanation, the miss landing
+in the mistakes drill, per-concept stats accumulating, and the game staying
+hidden on the Hindi track. 655 tests, four lints and the prod build clean.
 
 **2026-11-08 (Word Lab) — a dedicated vocabulary section, built on the research**
 

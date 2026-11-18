@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { getDuels, getDuelBest } from '@/lib/games'
 import { getSentenceGames, getSentenceBest } from '@/lib/sentence-game'
+import { totalAnswered } from '@/lib/dutch/zinsbouwer'
 import { useLanguage } from '@/lib/language-context'
 import { playSound } from '@/lib/sounds'
 import {
@@ -27,8 +28,15 @@ export default function PlayPage() {
   const duels = getDuels(language)
   const sentenceGames = getSentenceGames(language)
   const [bests, setBests] = useState<Record<string, string>>({})
+  const [zinsStats, setZinsStats] = useState<string | undefined>(undefined)
 
   useEffect(() => {
+    if (language === 'dutch') {
+      const built = totalAnswered()
+      setZinsStats(built > 0 ? `🧱 ${built} sentences built` : undefined)
+    } else {
+      setZinsStats(undefined)
+    }
     const next: Record<string, string> = {}
     for (const d of duels) {
       const b = getDuelBest(config.storagePrefix, d.id)
@@ -103,6 +111,16 @@ export default function PlayPage() {
           </Sticker>
         ) : (
           <>
+            {language === 'dutch' && (
+              <GameCard
+                href="/play/zinsbouwer"
+                emoji="🧱"
+                bg={COLORS.teal}
+                title="Sentence Builder"
+                subtitle="Dutch word order, one concept at a time"
+                best={zinsStats}
+              />
+            )}
             {sentenceGames.map((g) => (
               <GameCard key={g.id} href={`/play/sentence/${g.id}`} emoji="🧩" bg={COLORS.teal} title={g.title} subtitle={g.subtitle} best={bests[g.id]} />
             ))}

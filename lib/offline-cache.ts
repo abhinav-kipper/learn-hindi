@@ -47,6 +47,7 @@ const STATIC_ROUTES = [
   '/learn',
   '/vocabulary',
   '/play',
+  '/play/zinsbouwer',
   '/drill/conjugation',
   '/sounds',
   '/onboarding',

@@ -45,6 +45,7 @@ export function BottomNav() {
     pathname.startsWith('/practice/') ||
     pathname.startsWith('/play/duel/') ||
     pathname.startsWith('/play/sentence/') ||
+    pathname === '/play/zinsbouwer' ||
     pathname.startsWith('/chaina') ||
     pathname.startsWith('/diary') ||
     (pathname.startsWith('/dutch/cheatsheet/') &&
