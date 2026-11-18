@@ -443,6 +443,19 @@ until mounted, so the first client render is also the first render.
 with the language set to Dutch) and so would any other screen whose colours come
 from `useTheme()` and never re-render. It is pre-existing and left alone here.
 
+*A trap worth recording.* The weighting test was written as an unseeded
+statistical assertion (60 draws, `share > 0.08`). It passed locally and **failed
+on CI at 0.069**, because a probabilistic claim with a tight margin is a coin
+flip, not a test. `drawQueue` takes every random choice through its `rnd`
+argument, so the fix is a seeded PRNG in the test plus a threshold derived from
+the corpus share rather than hardcoded. Any new test that leans on randomness
+should pass a seed the same way.
+
+*Also worth knowing:* this repo runs **two** workflows on a push, `ci` and
+`visual`. A script that reads `workflow_runs[0]` from the Actions API gets
+whichever finished last, not the one you care about, which is how a red `ci` got
+reported here as green. Filter by `name` when checking.
+
 Verified in a browser with 40 checks: the hub card, the intro's levels, modes
 and all 21 concept chips, six A1 sentences built correctly in a row, a wrong
 build revealing the right order and resetting the streak, **two alternate orders
