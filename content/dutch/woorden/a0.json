@@ -232,7 +232,7 @@
           "chunk": "misschien",
           "gloss": "maybe",
           "pos": "adverb",
-          "pron": "mis-SCHEEN",
+          "pron": "mi-s-CHEEN",
           "pattern": "A hedge. Buys you time and keeps you from committing to something you are not sure of.",
           "examples": [
             {
@@ -677,22 +677,22 @@
           "gloss": "the station",
           "pos": "noun",
           "pron": "ut sta-SHON",
-          "pattern": "A het-word. Note that Dutch says you are `op` the station, not `in` it.",
+          "pattern": "A het-word. Note that Dutch says you are `op` the station, where English says at.",
           "examples": [
             {
               "nl": "Het station is dichtbij.",
               "en": "The station is nearby."
             },
             {
-              "nl": "Ik wacht op het station.",
-              "en": "I am waiting at the station."
+              "nl": "Ik ben nu op het station.",
+              "en": "I am at the station now."
             }
           ],
           "tags": [
             "transport"
           ],
           "article": "het",
-          "hook": "`op het station` means inside it. `bij het station` means near it, outside. Arranging to meet with the wrong one leaves you in different places."
+          "hook": "`op het station` is the normal way to say at the station, hall and platforms included. `bij het station` means near it, outside. Arranging to meet with the wrong one leaves you in different places."
         },
         {
           "id": "a0-de-winkel",
@@ -723,25 +723,25 @@
         {
           "id": "a0-boodschappen-doen",
           "chunk": "boodschappen doen",
-          "gloss": "to do the shopping",
+          "gloss": "to do the grocery shopping",
           "pos": "phrase",
-          "pron": "BOHT-schap-pen DOON",
-          "pattern": "A fixed verb-plus-noun pair. The noun is always plural and never takes an article here.",
+          "pron": "BOHT-s-chap-pen DOON",
+          "pattern": "A fixed verb-plus-noun pair. The noun is always plural. Bare `boodschappen` is the default for the activity, and `de boodschappen doen` is for one particular shop, like the weekly one.",
           "examples": [
             {
               "nl": "Ik ga zaterdag boodschappen doen.",
-              "en": "I am doing the shopping on Saturday."
+              "en": "I am doing the grocery shopping on Saturday."
             },
             {
               "nl": "Heb jij al boodschappen gedaan?",
-              "en": "Have you done the shopping yet?"
+              "en": "Have you done the grocery shopping yet?"
             }
           ],
           "tags": [
             "shopping"
           ],
           "hook": "`boodschap` on its own means a message. Only in the plural, with `doen`, does it mean groceries.",
-          "pitfall": "Never `de boodschappen doen` with the article in this phrase."
+          "pitfall": "Groceries only. Clothes, browsing or a trip to the shops for fun is `winkelen` or `shoppen`, never `boodschappen doen`."
         },
         {
           "id": "a0-de-koffie",
