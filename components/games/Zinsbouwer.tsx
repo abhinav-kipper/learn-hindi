@@ -12,6 +12,7 @@ import {
   checkBuild,
   displaySentence,
   drawQueue,
+  explainMiss,
   recordResult,
   getStats,
   conceptAccuracy,
@@ -194,7 +195,8 @@ export function Zinsbouwer() {
         prefix,
         'quiz',
       )
-      if (mode === 'sprint') window.setTimeout(advance, 1600)
+      // Longer than the correct-answer pause: there is a correction to read.
+      if (mode === 'sprint') window.setTimeout(advance, 2600)
     }
   }
 
@@ -598,6 +600,35 @@ function Row({ label, children }: { label: string; children: React.ReactNode }) 
   )
 }
 
+/** Renders the `token` backticks the diagnosis uses as Chai Galli word chips. */
+function Marked({ text }: { text: string }) {
+  const parts = text.split(/(`[^`]+`)/g).filter(Boolean)
+  return (
+    <>
+      {parts.map((part, i) =>
+        part.startsWith('`') && part.endsWith('`') ? (
+          <span
+            key={i}
+            style={{
+              background: COLORS.butter,
+              border: BORDER.thin,
+              borderRadius: 7,
+              padding: '1px 5px',
+              fontFamily: FONTS.display,
+              fontWeight: 800,
+              whiteSpace: 'nowrap',
+            }}
+          >
+            {part.slice(1, -1)}
+          </span>
+        ) : (
+          <span key={i}>{part}</span>
+        ),
+      )}
+    </>
+  )
+}
+
 function Tile({ word, onClick, tone }: { word: string; onClick?: () => void; tone: 'tray' | 'placed' | 'correct' | 'wrong' }) {
   const bg =
     tone === 'correct' ? COLORS.mint : tone === 'wrong' ? COLORS.redBg : tone === 'placed' ? COLORS.peach2 : W
@@ -654,6 +685,8 @@ function Play({
   const item: SentenceEntry = build.item
   const concept = getConcept(item.concept)
   const expected = tokens(item.nl).length
+  // Why *their* sentence is wrong, not just what the right one was.
+  const miss = status === 'wrong' ? explainMiss(item, built) : null
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
@@ -737,7 +770,27 @@ function Play({
               <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 15, color: COLORS.ink, marginBottom: 5 }}>
                 {status === 'correct' ? 'Goed zo!' : 'Not quite'}
               </div>
-              <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 16, color: status === 'correct' ? COLORS.green : COLORS.ink, lineHeight: 1.35 }}>
+
+              {status === 'wrong' && miss && (
+                <>
+                  {/* What they built, so the correction has something to point at. */}
+                  <div style={{ fontFamily: FONTS.body, fontWeight: 700, fontSize: 12, color: COLORS.ink45 }}>
+                    you built
+                  </div>
+                  <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 15, color: COLORS.red, lineHeight: 1.35, marginBottom: 8 }}>
+                    {displaySentence(item, miss.yours)}
+                  </div>
+                  {/* The bit that was missing: what is actually wrong with it. */}
+                  <div style={{ fontFamily: FONTS.body, fontWeight: 800, fontSize: 13.5, color: COLORS.ink, lineHeight: 1.45, marginBottom: 9 }}>
+                    <Marked text={miss.headline} />
+                  </div>
+                  <div style={{ fontFamily: FONTS.body, fontWeight: 700, fontSize: 12, color: COLORS.ink45 }}>
+                    the right order
+                  </div>
+                </>
+              )}
+
+              <div style={{ fontFamily: FONTS.display, fontWeight: 800, fontSize: 16, color: COLORS.green, lineHeight: 1.35 }}>
                 {status === 'correct' ? displaySentence(item, built.join(' ')) : displaySentence(item)}
               </div>
               {mode === 'practice' && (

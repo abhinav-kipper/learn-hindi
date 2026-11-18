@@ -16,6 +16,7 @@ import {
   getStats,
   recordResult,
   conceptAccuracy,
+  explainMiss,
   getWeakConcepts,
   totalAnswered,
   resetStats,
@@ -130,6 +131,88 @@ describe('checkBuild', () => {
 
   it('rejects a build that is missing a word', () => {
     expect(checkBuild(item, tokens(item.nl).slice(0, -1))).toBe(false)
+  })
+})
+
+describe('explainMiss', () => {
+  const byId = (id: string) => getItemById(id) as SentenceEntry
+
+  it('names a spare tile that was used', () => {
+    const i = byId('z001') // ik woon in Nederland
+    const m = explainMiss(i, ['ik', 'woon', 'in', 'Brussel'])
+    expect(m.headline).toContain('Brussel')
+    expect(m.headline).toMatch(/spare tile|does not need/)
+  })
+
+  it('names a word that was left out', () => {
+    const i = byId('z001')
+    const m = explainMiss(i, ['ik', 'woon', 'Nederland'])
+    expect(m.headline).toBe('You left out `in`.')
+  })
+
+  it('names both when a spare tile replaced a needed word', () => {
+    const i = byId('z001')
+    const m = explainMiss(i, ['ik', 'woon', 'in', 'Utrecht'])
+    expect(m.headline).toContain('Utrecht')
+    expect(m.headline).toContain('Nederland')
+  })
+
+  it('catches the signature Dutch error: the end word is not at the end', () => {
+    // ik heb het formulier ingevuld
+    const i = byId('z062')
+    const m = explainMiss(i, ['ik', 'heb', 'ingevuld', 'het', 'formulier'])
+    expect(m.headline).toBe('`ingevuld` goes last here. You finished with `formulier`.')
+  })
+
+  it('catches the verb not being in second place', () => {
+    // de les begint om negen uur / om negen uur begint de les
+    const i = byId('z007')
+    const m = explainMiss(i, ['de', 'les', 'om', 'negen', 'uur', 'begint'])
+    // Both accepted orders end in a different word, so it reports the position
+    // it can actually vouch for rather than inventing a rule.
+    expect(m.headline).toMatch(/begint|uur/)
+  })
+
+  it('prefers the second-place rule, which is the lesson, over "it starts with"', () => {
+    const i = byId('z005') // ik heb twee kinderen
+    const m = explainMiss(i, ['heb', 'ik', 'twee', 'kinderen'])
+    expect(m.headline).toBe('`heb` has to be the second word. You put `ik` there.')
+  })
+
+  it('reports the first divergence when neither position rule applies', () => {
+    const i = byId('z012') // wij drinken koffie in de pauze
+    const m = explainMiss(i, ['wij', 'drinken', 'in', 'koffie', 'de', 'pauze'])
+    expect(m.headline).toBe('After `drinken` this order wants `koffie`, not `in`.')
+  })
+
+  it('always echoes back what the learner actually built', () => {
+    const i = byId('z001')
+    expect(explainMiss(i, ['Nederland', 'in', 'woon', 'ik']).yours).toBe('Nederland in woon ik')
+  })
+
+  // The guard that keeps the advice honest: a sentence with two valid orders
+  // must never be told a word "goes last" when only one of them puts it there.
+  it('never claims a position that the accepted orders disagree on', () => {
+    for (const item of getItems()) {
+      const orders = acceptedOrders(item).map((o) => tokens(o))
+      if (orders.length < 2) continue
+      const lastWords = new Set(orders.map((t) => t[t.length - 1].toLowerCase()))
+      const secondWords = new Set(orders.map((t) => t[1]?.toLowerCase()))
+      const scrambled = [...tokens(item.nl)].reverse()
+      const m = explainMiss(item, scrambled)
+      if (lastWords.size > 1) expect(m.headline, item.id).not.toContain('goes last here')
+      if (secondWords.size > 1) expect(m.headline, item.id).not.toContain('has to be the second word')
+    }
+  })
+
+  it('produces a usable line for every sentence in the corpus', () => {
+    for (const item of getItems()) {
+      const scrambled = [...tokens(item.nl)].reverse()
+      const m = explainMiss(item, scrambled)
+      expect(m.headline.length, item.id).toBeGreaterThan(10)
+      expect(m.headline, item.id).not.toContain('undefined')
+      expect(m.yours, item.id).toBe(scrambled.join(' '))
+    }
   })
 })
 

@@ -107,6 +107,114 @@ export function displaySentence(item: SentenceEntry, order?: string): string {
   return s.charAt(0).toUpperCase() + s.slice(1) + end
 }
 
+// ── Diagnosing a miss ────────────────────────────────────────────────────────
+
+export interface MissReason {
+  /** the sentence they actually built */
+  yours: string
+  /** one line naming the mistake they actually made */
+  headline: string
+}
+
+function countOf(words: string[]): Map<string, number> {
+  const m = new Map<string, number>()
+  for (const w of words) m.set(w, (m.get(w) ?? 0) + 1)
+  return m
+}
+
+/** Words in `a` that `b` does not have enough of. */
+function surplus(a: string[], b: string[]): string[] {
+  const left = countOf(b.map((w) => w.toLowerCase()))
+  const out: string[] = []
+  for (const w of a) {
+    const k = w.toLowerCase()
+    const n = left.get(k) ?? 0
+    if (n > 0) left.set(k, n - 1)
+    else out.push(w)
+  }
+  return out
+}
+
+/** The accepted order closest to what they built, so the advice is about their attempt. */
+function closestTarget(item: SentenceEntry, built: string[]): string[] {
+  const lower = built.map((w) => w.toLowerCase())
+  let best = tokens(item.nl)
+  let bestScore = -1
+  for (const order of acceptedOrders(item)) {
+    const t = tokens(order)
+    let score = 0
+    for (let i = 0; i < Math.min(t.length, lower.length); i++) {
+      if (t[i].toLowerCase() === lower[i]) score++
+    }
+    score -= Math.abs(t.length - lower.length)
+    if (score > bestScore) {
+      bestScore = score
+      best = t
+    }
+  }
+  return best
+}
+
+/**
+ * Say what went wrong with THIS attempt, not just what the right answer was.
+ *
+ * Every claim is checked against *all* accepted orders before it is made. A
+ * sentence with two valid orders must not be told a word "goes last" when only
+ * one of those orders puts it there, so the positional rules only fire when
+ * every accepted order agrees. Otherwise it falls back to naming the first
+ * place the attempt diverges, phrased as what this order wants rather than as
+ * a rule of Dutch.
+ */
+export function explainMiss(item: SentenceEntry, built: string[]): MissReason {
+  const yours = built.join(' ')
+  const target = closestTarget(item, built)
+  const extra = surplus(built, target)
+  const missing = surplus(target, built)
+
+  if (extra.length > 0 && missing.length > 0) {
+    return {
+      yours,
+      headline: `You used \`${extra[0]}\`, which this sentence does not need, and left out \`${missing[0]}\`.`,
+    }
+  }
+  if (extra.length > 0) {
+    return { yours, headline: `\`${extra[0]}\` is a spare tile. This sentence does not use it.` }
+  }
+  if (missing.length > 0) {
+    return { yours, headline: `You left out \`${missing[0]}\`.` }
+  }
+
+  const orders = acceptedOrders(item).map(tokens)
+  const agreeAt = (i: number): string | null => {
+    const at = (t: string[]) => (i < 0 ? t[t.length - 1] : t[i])
+    const first = at(orders[0])?.toLowerCase()
+    if (!first) return null
+    return orders.every((t) => at(t)?.toLowerCase() === first) ? at(orders[0]) : null
+  }
+
+  // The signature Dutch error: something that belongs at the end is not there.
+  const last = agreeAt(-1)
+  if (last && built[built.length - 1].toLowerCase() !== last.toLowerCase()) {
+    return {
+      yours,
+      headline: `\`${last}\` goes last here. You finished with \`${built[built.length - 1]}\`.`,
+    }
+  }
+
+  // The other signature error: the conjugated verb is not in second place.
+  const second = agreeAt(1)
+  if (second && built.length > 2 && built[1].toLowerCase() !== second.toLowerCase()) {
+    return { yours, headline: `\`${second}\` has to be the second word. You put \`${built[1]}\` there.` }
+  }
+
+  for (let i = 0; i < Math.min(target.length, built.length); i++) {
+    if (target[i].toLowerCase() === built[i].toLowerCase()) continue
+    if (i === 0) return { yours, headline: `This sentence starts with \`${target[0]}\`, not \`${built[0]}\`.` }
+    return { yours, headline: `After \`${target[i - 1]}\` this order wants \`${target[i]}\`, not \`${built[i]}\`.` }
+  }
+  return { yours, headline: 'The words are right but the order is not.' }
+}
+
 // ── Drawing a queue ──────────────────────────────────────────────────────────
 
 export interface Build {
